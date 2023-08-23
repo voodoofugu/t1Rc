@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <% if (process.env.NODE_ENV === 'development') { %>
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <% } else { %>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <% } %>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <% if (process.env.NODE_ENV === 'production') { %>
+    <!-- Подключаем общие стили -->
+    <link rel="stylesheet" href="../styles/_AaMain.css" />
+    <link rel="stylesheet" href="../styles/_fonts.css" />
+    <link rel="stylesheet" href="../styles/_var.css" />
+    <!-- Подключаем стили, соответствующие имени страницы, если они есть -->
+    <% const pageStylePath =
+    `../styles/${htmlWebpackPlugin.options.pageName}.scss`; %> <% try { %>
+    <link rel="stylesheet" href="<%= pageStylePath %>" />
+    <% } catch (error) { %>
+    <!-- Ничего не делаем, если стиля для страницы не существует -->
+    <% } %> <% } %>
+  </head>
+  <body>
+    <div id="root" data-page="<%= htmlWebpackPlugin.options.pageName %>"></div>
+  </body>
+</html>
