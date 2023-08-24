@@ -1,0 +1,2733 @@
+@charset "utf-8";
+@import "sass_commons.scss";
+
+body .main {
+    .left-side {
+        .left-panel {
+            .angels-all-box {
+                width: 1106px;
+                height: 515px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(0deg, #786358 0%, #584a49 100%);
+                box-shadow: inset 0 0 0 4px #9c8b7c,
+                    inset 0px 0px 16px rgba(0, 0, 0, 0.6);
+                border-radius: 10px 18px 18px 18px;
+                .color-btn.info {
+                    text-align: center;
+                    width: 25px;
+                    height: 25px;
+                    position: absolute;
+                    top: 22px;
+                    right: 22px;
+                    background: linear-gradient(
+                        0deg,
+                        #ffbc2c 0%,
+                        #ac7c14 50%,
+                        #ffe3ae 100%
+                    );
+                    font-style: italic;
+                    font-family: "Times New Roman", Times, serif;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    border: 2px solid #fff;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75),
+                        inset 0 0 6px rgba(0, 0, 0, 0.2);
+                    color: #fff;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+                    line-height: 25px;
+                    &:active {
+                        transform: scale(0.94);
+                    }
+                }
+                .angels-cards-content {
+                    .content-header {
+                        width: calc(100% - 10px);
+                        height: 76px;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        .title {
+                            width: 302px;
+                            height: 42px;
+                            line-height: 36px;
+                            margin: auto;
+                            background-image: url(darkworld-angels-title-bg-brown.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            margin-top: 18px;
+                            text-align: center;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 20px;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+                        }
+                        .color-btn.chest {
+                            position: absolute;
+                            left: 70px;
+                            top: 12px;
+                            width: 62px;
+                            height: 52px;
+                            background: linear-gradient(
+                                180deg,
+                                #ffe3ae 0%,
+                                #d87b0d 100%
+                            );
+                            .btn-img {
+                                width: 74px;
+                                height: 58px;
+                                background: url(darkworld-chest-agels.png);
+                                background-size: cover;
+                                margin: -7px 0 0 -10px;
+                            }
+                            &:active {
+                                .btn-img {
+                                    margin: -5px 0 0 -10px;
+                                }
+                            }
+                        }
+                    }
+                    .angels-scroll-box {
+                        margin: 81px 30px 10px 30px;
+                        height: 378px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        overflow-y: scroll;
+                        cursor: pointer;
+                        padding: 13px 18px 18px 30px;
+                        &::-webkit-scrollbar-track {
+                            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+                            border-radius: 10px;
+                        }
+                        &::-webkit-scrollbar {
+                            width: 10px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+                            background: linear-gradient(
+                                to right,
+                                #fff,
+                                #f5de80,
+                                #f4b766,
+                                #b26d12
+                            );
+                        }
+                        .angel-card-box {
+                            width: 225px;
+                            height: 328px;
+                            background: linear-gradient(
+                                159.21deg,
+                                #9f7c47 1.39%,
+                                #e9be88 35.56%,
+                                #946f3f 70.08%,
+                                #cca36f 84.6%,
+                                #b38952 98.01%
+                            );
+                            margin: 10px;
+                            transition: ease-in-out 0.1s;
+                            box-shadow: 0px 2px 0px #673d06,
+                                0px 4px 10px rgba(0, 0, 0, 0.4);
+                            border-radius: 14px;
+                            position: relative;
+                            &:hover {
+                                transform: scale(1.07);
+                                z-index: 1;
+                                transition: ease-in-out 0.1s;
+                                box-shadow: inset 0 1px 1px
+                                        rgba(255, 255, 255, 0.8),
+                                    0px 2px 0px #673d06,
+                                    0 0 0 2px rgba(0, 0, 0, 0.2),
+                                    0px 1px 11px rgba(0, 0, 0, 0.2);
+                                .img-wrap {
+                                    &:after {
+                                        opacity: 0.6;
+                                        left: 0px;
+                                        top: 0px;
+                                        transition: ease-in-out 0.1s;
+                                    }
+                                }
+                            }
+                            &:active {
+                                transform: scale(1.03);
+                                transition: ease-in-out 0.01s;
+                            }
+                            .img-wrap {
+                                width: 211px;
+                                height: 314px;
+                                position: absolute;
+                                left: 7px;
+                                top: 7px;
+                                border-radius: 9px;
+                                box-shadow: 0 0 0 1px #734407,
+                                    0px 0px 3px rgba(0, 0, 0, 0.4);
+                                overflow: hidden;
+                                display: flex;
+                                justify-content: center;
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    left: -10px;
+                                    top: -10px;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-image: url(darkworld-glow-cards.png);
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    background-position: center;
+                                    opacity: 0;
+                                    transition: ease-in-out 0.1s;
+                                }
+                                img {
+                                    width: auto;
+                                    height: 158%;
+                                }
+                            }
+                            .angel-name-box {
+                                width: 158px;
+                                height: 34px;
+                                position: absolute;
+                                top: 12px;
+                                left: 34px;
+                                background-image: url(wpck-ram1.png);
+                                background-size: 100%;
+                                filter: hue-rotate(24deg);
+                                .angel-name {
+                                    text-align: center;
+                                    color: #fff;
+                                    line-height: 27px;
+                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+                                }
+                            }
+                            .info-box {
+                                width: 211px;
+                                height: 80px;
+                                margin: auto;
+                                position: relative;
+                                top: 241px;
+                                background: rgba(0, 0, 0, 0.4);
+                                border-radius: 0 0 9px 9px;
+                                color: #fff;
+                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+                                .stars-box {
+                                    width: 100%;
+                                    height: 24px;
+                                    background: rgba(255, 255, 255, 0.4);
+                                    display: flex;
+                                    justify-content: center;
+                                    .star {
+                                        margin-top: 1px;
+                                        width: 22px;
+                                        height: 22px;
+                                        background-image: url(star-inactive-bg.png);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: cover;
+                                    }
+                                    .star.active {
+                                        background-image: url(star-active-bg.png);
+                                    }
+                                }
+                                .buff-level-info {
+                                    margin-top: 6px;
+                                }
+                                .buff-level-info,
+                                .buff-bonus-info {
+                                    margin-left: 12px;
+                                    line-height: 22px;
+                                    .level-value,
+                                    .buff-value {
+                                        display: inline-block;
+                                    }
+                                }
+                                .dps-box {
+                                    position: absolute;
+                                    top: 27px;
+                                    right: 12px;
+                                    width: 48px;
+                                    height: 50px;
+                                    border-radius: 10px 10px 22px 22px;
+                                    background: rgba(0, 0, 0, 0.2);
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    box-shadow: inset 0 1px 0
+                                            rgba(255, 255, 255, 0.6),
+                                        inset 0 0 0 2px #f8d887,
+                                        inset 0 18px 0 #f8d887,
+                                        inset 0 0 2px 1px rgba(0, 0, 0, 0.4),
+                                        0 1px 2px rgba(0, 0, 0, 0.4);
+                                    .dps-title {
+                                        font-weight: 700;
+                                        color: #000;
+                                        text-shadow: 0 1px 2px
+                                            rgba(255, 255, 255, 0.6);
+                                    }
+                                    .dps-value {
+                                        color: #ffeba3;
+                                        margin-top: 3px;
+                                    }
+                                }
+                            }
+                            .angel-card-progress-bar-wrap {
+                                display: none;
+                                width: 189px;
+                                height: 26px;
+                                background: linear-gradient(
+                                    180deg,
+                                    #ffe199 0%,
+                                    #f4c557 15.62%,
+                                    #ffe199 41.15%,
+                                    #f4c657 81.25%,
+                                    #ffe199 100%
+                                );
+                                background: linear-gradient(
+                                    180deg,
+                                    #444a4f 0%,
+                                    #62666a 50%,
+                                    #444a4f 100%
+                                );
+                                box-shadow: inset 0 0 0 1px #c19863,
+                                    0 2px 4px rgba(0, 0, 0, 0.3);
+                                border-radius: 8px;
+                                position: absolute;
+                                left: 18px;
+                                top: 284px;
+                                color: #fff;
+                                .progress {
+                                    position: absolute;
+                                    width: 185px;
+                                    height: 22px;
+                                    left: 2px;
+                                    top: 2px;
+                                    border-radius: 5px;
+                                    overflow: hidden;
+                                    .fulfilled {
+                                        height: 100%;
+                                        background: linear-gradient(
+                                            90deg,
+                                            #a7fa53 0%,
+                                            #00c64f 100%
+                                        );
+                                        border-radius: 5px;
+                                        box-shadow: inset 0 2px 4px
+                                                rgba(0, 0, 0, 0.25),
+                                            inset 0 10px 0
+                                                rgba(255, 255, 255, 0.3);
+                                    }
+                                }
+                                .value {
+                                    position: absolute;
+                                    display: flex;
+                                    left: 50%;
+                                    top: calc(50% - 1px);
+                                    transform: translate(-50%, -50%);
+                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6),
+                                        0 0px 4px rgba(0, 0, 0, 0.8);
+                                    line-height: 20px;
+                                    white-space: nowrap;
+                                    margin-top: 1px;
+                                    .from {
+                                        margin-left: 4px;
+                                    }
+                                    .to {
+                                        &:before {
+                                            content: "/";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .angel-card-box.lock {
+                            background: linear-gradient(
+                                159.21deg,
+                                #a3a3a3 1.39%,
+                                #e4e4e4 35.56%,
+                                #9a9a9a 70.08%,
+                                #cbcbcb 84.6%,
+                                #adadad 98.01%
+                            );
+                            box-shadow: 0px 2px 0px #5e5e5e,
+                                0px 4px 10px rgba(0, 0, 0, 0.4);
+                            .img-wrap,
+                            .angel-name-box {
+                                filter: grayscale(1);
+                            }
+                            &:after {
+                                content: "";
+                                width: 80px;
+                                height: 80px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                background-image: url(v2-lock-ic.png);
+                                background-size: 100%;
+                            }
+                            .info-box {
+                                display: none;
+                            }
+                            .angel-card-progress-bar-wrap {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .card-info-content {
+                    .trophy-res-box-all {
+                        .trophy-res-box {
+                            &.spirit {
+                                &:before {
+                                    content: "";
+                                    width: 32px;
+                                    height: 32px;
+                                    position: absolute;
+                                    top: 1px;
+                                    left: 3px;
+                                    background-image: url(v2-mn-soul-sg-160.png);
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                            &.spirit2 {
+                                &:before {
+                                    content: "";
+                                    width: 32px;
+                                    height: 32px;
+                                    position: absolute;
+                                    top: 1px;
+                                    left: 3px;
+                                    background-image: url(ic-yellow-butil.png);
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                        }
+                    }
+                    .content-header {
+                        background: linear-gradient(
+                            180deg,
+                            #544746 0%,
+                            #463c3a 100%
+                        );
+                        box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+                        width: calc(100% - 10px);
+                        height: 76px;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        border-radius: 6px 14px 0 0;
+                        .title {
+                            width: 302px;
+                            height: 42px;
+                            line-height: 36px;
+                            background-image: url(darkworld-angels-title-bg-brown.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            position: absolute;
+                            top: 18px;
+                            left: 220px;
+                            text-align: center;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 20px;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+                            .angel-name {
+                                display: inline-block;
+                            }
+                        }
+                        .dps {
+                            width: 126px;
+                            height: 37px;
+                            font-size: 18px;
+                            font-weight: bold;
+                            display: inline-block;
+                            @include prefix(border-radius, 7px);
+                            background: linear-gradient(
+                                79.88deg,
+                                #eecc60 15.85%,
+                                #ffeea7 31.54%,
+                                #cfa831 58.47%,
+                                #fbf1d8 75.55%,
+                                #eecc60 90.72%
+                            );
+                            box-shadow: inset 0 -1px 2px #452b05,
+                                0 0 2px #472624, 0 0 3px #472624;
+                            position: absolute;
+                            left: 810px;
+                            top: 442px;
+                            .value {
+                                width: 110px;
+                                height: 30px;
+                                position: absolute;
+                                top: 3px;
+                                right: 4px;
+                                @include prefix(border-radius, 5px);
+                                background-color: #5f4c36;
+                                box-shadow: inset 0 11px 0px
+                                        rgba(255, 255, 255, 0.08),
+                                    inset 0 2px 1px #3d3737;
+                                text-align: left;
+                                padding-left: 10px;
+                                color: #fff493;
+                                font-size: 18px;
+                                line-height: 30px;
+                                text-shadow: 0 1px 1px #000;
+                                display: flex;
+                                justify-content: space-evenly;
+                                &:before {
+                                    content: "Total ";
+                                    font-size: 16px;
+                                    color: #99e6f9;
+                                }
+                            }
+                            .dps-title {
+                                position: absolute;
+                                background: linear-gradient(
+                                    45deg,
+                                    #e8c34e,
+                                    #ffa,
+                                    #cfa831,
+                                    #fbf1d8
+                                );
+                                line-height: 26px;
+                                color: #3a2423;
+                                font-size: 19px;
+                                font-weight: 900;
+                                text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+                                height: 52px;
+                                width: 44px;
+                                left: -34px;
+                                top: -9px;
+                                border-radius: 60px;
+                                border-top-left-radius: 20px;
+                                border-top-right-radius: 20px;
+                                padding-top: 1px;
+                                text-align: center;
+                                box-shadow: 0 2px 0px #c87725, 0 4px 0px #3d3737,
+                                    -1px 0 0px #3d3737, inset 0 2px 1px #ffa;
+                                &:before {
+                                    content: "";
+                                    width: 36px;
+                                    height: 24px;
+                                    display: block;
+                                    position: absolute;
+                                    bottom: 4px;
+                                    left: 4px;
+                                    top: auto;
+                                    border-radius: 0 0 46px 46px;
+                                    line-height: 26px;
+                                    color: #ffa;
+                                    background: #5f4c36;
+                                    box-shadow: inset 0 2px 3px #000;
+                                    text-shadow: 0 2px 1px #000;
+                                }
+                                .icon-dps {
+                                    width: 38px;
+                                    height: 38px;
+                                    display: inline-block;
+                                    position: absolute;
+                                    left: 3px;
+                                    top: 21px;
+                                    background-image: url(ico-sword.png);
+                                    background-size: cover;
+                                }
+                            }
+                        }
+                        .angels-heros-title {
+                            width: 250px;
+                            height: 42px;
+                            line-height: 36px;
+                            background-image: url(darkworld-angels-title-bg-br.png);
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-position: center;
+                            position: absolute;
+                            top: 18px;
+                            left: 732px;
+                            text-align: center;
+                            color: #fff;
+                            font-weight: 700;
+                            font-size: 20px;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+                        }
+                    }
+                    .angels-icons-box-all {
+                        width: 86px;
+                        height: 414px;
+                        position: absolute;
+                        left: 14px;
+                        top: 88px;
+                        background: #4b3f3e;
+                        border-radius: 14px;
+                        box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.15),
+                            inset 0 1px 2px rgba(0, 0, 0, 0.2);
+                        .angels-icons-scroll-box {
+                            background: #312a29;
+                            border-radius: 10px;
+                            width: 74px;
+                            height: 332px;
+                            position: absolute;
+                            top: 6px;
+                            left: 6px;
+                            overflow-x: hidden;
+                            overflow-y: scroll;
+                            transform: scaleX(-1);
+                            box-shadow: inset -14px 0 0 #4b3f3e;
+                            &::-webkit-scrollbar-track {
+                                -webkit-box-shadow: inset 0 0 6px
+                                    rgba(0, 0, 0, 0.8);
+                                border-radius: 8px;
+                            }
+                            &::-webkit-scrollbar {
+                                width: 8px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                border-radius: 8px;
+                                box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+                                background: linear-gradient(
+                                    to right,
+                                    #fff,
+                                    #f5de80,
+                                    #f4b766,
+                                    #b26d12
+                                );
+                            }
+                            .angel-avatar-box {
+                                width: 52px;
+                                height: 52px;
+                                background: linear-gradient(
+                                    159.21deg,
+                                    #9f7c47 1.39%,
+                                    #fcd097 35.56%,
+                                    #946f3f 70.08%,
+                                    #f2c388 84.6%,
+                                    #b38952 98.01%
+                                );
+                                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+                                border-radius: 100%;
+                                position: relative;
+                                margin: 4px;
+                                transform: scaleX(-1);
+                                cursor: pointer;
+                                &:hover {
+                                    filter: brightness(1.1);
+                                }
+                                &:active {
+                                    transform: scaleX(-1) scale(0.94);
+                                }
+                                .angel-avatar-wrap {
+                                    width: 44px;
+                                    height: 44px;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 4px;
+                                    box-shadow: 0 0 0 1px #734407;
+                                    overflow: hidden;
+                                    border-radius: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: flex-start;
+                                    .angel-avatar {
+                                        width: 130%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                            .angel-avatar-box.lock {
+                                background: linear-gradient(
+                                    159.21deg,
+                                    #a0a0a0 1.39%,
+                                    #f0f0f0 35.56%,
+                                    #8a8a8a 70.08%,
+                                    #dfdfdf 84.6%,
+                                    #9c9c9c 98.01%
+                                );
+                                .angel-avatar-wrap {
+                                    filter: grayscale(1);
+                                }
+                            }
+                            .angel-avatar-box.selected {
+                                background: linear-gradient(
+                                    0deg,
+                                    #7cbc30 0%,
+                                    #baf279 100%
+                                );
+                                transform: scaleX(-1) scale(1.1);
+                                cursor: unset;
+                            }
+                        }
+                        .color-btn.chest {
+                            position: absolute;
+                            left: 12px;
+                            bottom: 12px;
+                            width: 62px;
+                            height: 52px;
+                            background: linear-gradient(
+                                180deg,
+                                #ffe3ae 0%,
+                                #d87b0d 100%
+                            );
+                            .btn-img {
+                                width: 74px;
+                                height: 58px;
+                                background: url(darkworld-chest-agels.png);
+                                background-size: cover;
+                                margin: -7px 0 0 -10px;
+                            }
+                            &:active {
+                                .btn-img {
+                                    margin: -5px 0 0 -10px;
+                                }
+                            }
+                        }
+                    }
+                    .selected-angel-box {
+                        position: absolute;
+                        top: 88px;
+                        left: 143px;
+                        background: #4b3f3e;
+                        border-radius: 14px;
+                        box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.15),
+                            inset 0 1px 2px rgba(0, 0, 0, 0.2);
+                        width: 484px;
+                        height: 336px;
+                        .angel-card-box {
+                            width: 338px;
+                            height: 323px;
+                            background: linear-gradient(
+                                159.21deg,
+                                #9f7c47 1.39%,
+                                #e9be88 35.56%,
+                                #946f3f 70.08%,
+                                #cca36f 84.6%,
+                                #b38952 98.01%
+                            );
+                            transition: ease-in-out 0.1s;
+                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+                            border-radius: 8px;
+                            position: absolute;
+                            left: 6px;
+                            top: 6px;
+                            .img-wrap {
+                                width: 324px;
+                                height: 309px;
+                                position: absolute;
+                                left: 7px;
+                                top: 7px;
+                                border-radius: 5px;
+                                box-shadow: 0 0 0 1px #734407,
+                                    0px 0px 3px rgba(0, 0, 0, 0.4);
+                                overflow: hidden;
+                                display: flex;
+                                justify-content: center;
+                                img {
+                                    width: auto;
+                                    height: 160%;
+                                }
+                                .b-fs {
+                                    display: inline-block;
+                                    width: 35px;
+                                    height: 35px;
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    background: none;
+                                    background-image: url(chahge-fullscr.png);
+                                    background-size: 100%;
+                                    cursor: pointer;
+                                    &:hover {
+                                        filter: brightness(1.1);
+                                    }
+                                    &:active {
+                                        transform: scale(0.96);
+                                    }
+                                }
+                            }
+                            .img-wrap.lock {
+                                img {
+                                    filter: grayscale(1) blur(2px);
+                                }
+                                .b-fs {
+                                    display: none;
+                                }
+                                &:after {
+                                    content: "";
+                                    width: 70px;
+                                    height: 70px;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    background-image: url(v2-lock-ic.png);
+                                    background-size: 100%;
+                                }
+                            }
+                            .info-box {
+                                width: 324px;
+                                height: 118px;
+                                margin: auto;
+                                position: relative;
+                                top: 198px;
+                                background: rgba(0, 0, 0, 0.4);
+                                border-radius: 0 0 4px 4px;
+                                color: #fff;
+                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+                                .stars-box {
+                                    width: 100%;
+                                    height: 28px;
+                                    background: rgba(255, 255, 255, 0.4);
+                                    display: flex;
+                                    justify-content: center;
+                                    .star {
+                                        margin-top: 1px;
+                                        width: 26px;
+                                        height: 26px;
+                                        background-image: url(star-inactive-bg.png);
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: cover;
+                                    }
+                                    .star.active {
+                                        background-image: url(star-active-bg.png);
+                                    }
+                                }
+                                .text-box {
+                                    display: flex;
+                                    .text1,
+                                    .text2 {
+                                        font-size: 14px;
+                                        line-height: 17px;
+                                        width: 162px;
+                                        text-align: center;
+                                        .buff-level-info,
+                                        .buff-bonus-info {
+                                            .level-value,
+                                            .buff-value {
+                                                display: inline-block;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .angel-card-progress-bar-wrap {
+                                width: 189px;
+                                height: 26px;
+                                background: linear-gradient(
+                                    180deg,
+                                    #31302c 0%,
+                                    #5d5b55 63.91%,
+                                    #3d3b35 100%
+                                );
+                                border-radius: 5px;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                top: 280px;
+                                color: #fff;
+                                text-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+                                .progress {
+                                    position: absolute;
+                                    width: 187px;
+                                    height: 24px;
+                                    left: 1px;
+                                    top: 1px;
+                                    border-radius: 4px;
+                                    overflow: hidden;
+                                    .fulfilled {
+                                        height: 100%;
+                                        background: linear-gradient(
+                                            90deg,
+                                            #86ea21 0%,
+                                            #0dbf34 100%
+                                        );
+                                        border-radius: 4px;
+                                        box-shadow: inset 0 2px 4px
+                                                rgba(0, 0, 0, 0.25),
+                                            inset 0 10px 0
+                                                rgba(255, 255, 255, 0.3);
+                                    }
+                                }
+                                .value {
+                                    position: absolute;
+                                    display: flex;
+                                    left: 50%;
+                                    top: 50%;
+                                    transform: translate(-50%, -50%);
+                                    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);
+                                    line-height: 20px;
+                                    white-space: nowrap;
+                                    .from {
+                                        margin-left: 4px;
+                                    }
+                                    .to {
+                                        &:before {
+                                            content: "/";
+                                        }
+                                    }
+                                }
+                            }
+                            .arrow-box-all {
+                                width: 292px;
+                                position: absolute;
+                                bottom: 13px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                display: flex;
+                                justify-content: space-between;
+                                .btn-scroll-card {
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 100%;
+                                    cursor: pointer;
+                                    background: linear-gradient(
+                                        180deg,
+                                        #fff789 0%,
+                                        #ffdd7c 100%
+                                    );
+                                    box-shadow: 0 0 0 1px #524237,
+                                        0px 2px 4px rgba(0, 0, 0, 0.45),
+                                        inset 0px -4px 0px rgba(0, 0, 0, 0.2);
+                                    position: relative;
+                                    &:hover {
+                                        filter: brightness(1.1);
+                                    }
+                                    &:active {
+                                        transform: scale(0.96);
+                                    }
+                                    &:before {
+                                        content: "";
+                                        width: 14px;
+                                        height: 22px;
+                                        background-image: url(rating-arrow.png);
+                                        background-size: cover;
+                                        position: absolute;
+                                        top: 4px;
+                                        left: 8px;
+                                    }
+                                }
+                                .btn-scroll-card.right {
+                                    &:before {
+                                        transform: scaleX(-1);
+                                        left: unset;
+                                        right: 8px;
+                                    }
+                                }
+                            }
+                            .color-btn.get-angel {
+                                display: none;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 118px;
+                                height: 46px;
+                            }
+                        }
+                        .angel-card-box.lock {
+                            .info-box {
+                                height: 76px;
+                                top: 240px;
+                            }
+                            .text-box,
+                            .arrow-box-all,
+                            .img-wrap .b-fs {
+                                display: none;
+                            }
+                            .color-btn.get-angel {
+                                display: block;
+                            }
+                            .img-wrap {
+                                img {
+                                    filter: grayscale(1);
+                                }
+                            }
+                        }
+                        .progress-box {
+                            position: absolute;
+                            left: 351px;
+                            top: 6px;
+                            width: 126px;
+                            height: 323px;
+                            border-radius: 8px;
+                            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+                            background: linear-gradient(
+                                0deg,
+                                #ffe199,
+                                #f4c657 18%,
+                                #ffe199 60%,
+                                #f4c657 85%,
+                                #ffe199
+                            );
+                            .selected-angel-icons-box {
+                                display: flex;
+                                flex-direction: column-reverse;
+                                justify-content: space-evenly;
+                                height: calc(100% - 7px);
+                                padding: 3.5px;
+                                .angel-avatar-box {
+                                    width: 72px;
+                                    height: 72px;
+                                    background: linear-gradient(
+                                        159.21deg,
+                                        #9f7c47 1.39%,
+                                        #e9be88 35.56%,
+                                        #946f3f 70.08%,
+                                        #cca36f 84.6%,
+                                        #b38952 98.01%
+                                    );
+                                    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+                                    border-radius: 6px;
+                                    margin: 3.5px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    position: relative;
+                                    cursor: pointer;
+                                    &:hover {
+                                        filter: brightness(110%);
+                                    }
+                                    &:active {
+                                        transform: scale(0.98);
+                                    }
+                                    .angel-avatar-wrap {
+                                        width: 64px;
+                                        height: 64px;
+                                        border-radius: 4px;
+                                        overflow: hidden;
+                                        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+                                        .angel-avatar {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                                .angel-avatar-box.lock {
+                                    cursor: unset;
+                                    &:active {
+                                        transform: scale(1);
+                                    }
+                                    &:after {
+                                        content: "";
+                                        width: 50px;
+                                        height: 50px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        background-image: url(v2-lock-ic.png);
+                                        background-size: 100%;
+                                    }
+                                    .angel-avatar-wrap {
+                                        filter: grayscale(1) brightness(0.6);
+                                    }
+                                }
+                            }
+                            .selected-angel-progress-bar-wrap {
+                                width: 311px;
+                                height: 34px;
+                                position: absolute;
+                                top: 145px;
+                                left: -52px;
+                                background: linear-gradient(
+                                    #2b2a26 0%,
+                                    #585751 52.58%,
+                                    #2b2a26 99.96%
+                                );
+                                box-shadow: inset 0 0 0 1px #404b4e;
+                                border-radius: 6px;
+                                transform: rotate(-90deg);
+                                .progress {
+                                    position: absolute;
+                                    width: 307px;
+                                    height: 30px;
+                                    left: 2px;
+                                    top: 2px;
+                                    border-radius: 4px;
+                                    overflow: hidden;
+                                    .fulfilled {
+                                        height: 100%;
+                                        background: linear-gradient(
+                                            #1e47ab 0%,
+                                            #5f93ff 23.96%,
+                                            #b1cbff 49.48%,
+                                            #5f93ff 79.69%,
+                                            #1e47ab 100%
+                                        );
+                                        border-radius: 4px;
+                                    }
+                                }
+                                .progress-level-wrap {
+                                    transform: rotate(90deg);
+                                    position: absolute;
+                                    top: -139px;
+                                    left: 138px;
+                                    height: 311px;
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                                    justify-content: space-evenly;
+                                    .progress-level {
+                                        height: calc(100% / 4);
+                                        .progress-level-txt {
+                                            width: 36px;
+                                            height: 16px;
+                                            background: linear-gradient(
+                                                89.99deg,
+                                                #d2a264 0%,
+                                                #653b05 7.29%,
+                                                #ddac70 51.04%,
+                                                #653b05 94.78%,
+                                                #d2a264 99.99%
+                                            );
+                                            box-shadow: 0px 1px 1px
+                                                    rgba(0, 0, 0, 0.4),
+                                                inset 0 1px 0
+                                                    rgba(255, 255, 255, 0.2);
+                                            color: #fff;
+                                            text-align: center;
+                                            line-height: 16px;
+                                            font-size: 12px;
+                                            text-shadow: 0 1px 2px #000,
+                                                0 0 4px rgba(0, 0, 0, 0.6);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .angels-heros-box-wrap {
+                        position: absolute;
+                        top: 88px;
+                        left: 656px;
+                        padding: 0 24px;
+                        &:before {
+                            content: "";
+                            width: 79px;
+                            height: 46px;
+                            position: absolute;
+                            right: 24px;
+                            bottom: -35px;
+                            border-radius: 0 0 14px 14px;
+                            background: #4b3f3e;
+                            box-shadow: 1px 2px 2px rgba(255, 255, 255, 0.15);
+                        }
+                        .angels-heros-box {
+                            background: #4b3f3e;
+                            border-radius: 14px;
+                            box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.15),
+                                inset 0 1px 2px rgba(0, 0, 0, 0.2);
+                            width: 354px;
+                            height: 328px;
+                            padding: 4px;
+                            .hero-page-wrapper {
+                                display: flex !important;
+                                flex-wrap: wrap;
+                            }
+                            .hero-btn-card-add {
+                                width: 110px;
+                                height: 156px;
+                                margin: 4px;
+                                position: relative;
+                                @include prefix(border-radius, 10px);
+                                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+                                background: linear-gradient(
+                                    155.68deg,
+                                    #d0b346 6.11%,
+                                    #ffdfb0 53.31%,
+                                    #da9a24 65.64%,
+                                    #ffe1a3 81.23%,
+                                    #d0a046 97.65%
+                                );
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                &:before {
+                                    content: "";
+                                    width: 100px;
+                                    height: 146px;
+                                    position: absolute;
+                                    background: url(cards-shirt.jpg),
+                                        radial-gradient(
+                                            66.3% 50% at 50% 50%,
+                                            #bfa47b 0%,
+                                            #5c5342 100%
+                                        );
+                                    border-radius: 6px;
+                                    background-size: cover;
+                                    background-blend-mode: soft-light;
+                                    background-position: center;
+                                }
+                                .color-btn.add {
+                                    width: 38px;
+                                    height: 38px;
+                                    background: linear-gradient(
+                                        180deg,
+                                        #ffe9c5 0%,
+                                        #ffda97 15.63%,
+                                        #ffe7bb 38.54%,
+                                        #ffcb74 62.5%,
+                                        #e0a137 100%
+                                    );
+                                    border: 2px solid #ffd18e;
+                                    border: 2px solid #ffd18e;
+                                    border-radius: 9px;
+                                    .color-btn-text {
+                                        color: #685127;
+                                        font-size: 30px;
+                                        text-shadow: 0 1px 2px #fff;
+                                    }
+                                }
+                            }
+                            .hero-card {
+                                width: 110px;
+                                height: 156px;
+                                position: relative;
+                                display: inline-block;
+                                background: rgb(118, 110, 95);
+                                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+                                margin: 4px;
+                                @include prefix(border-radius, 10px);
+                                &:hover {
+                                    background: rgb(139, 129, 112);
+                                }
+                                .hero-avatar-box {
+                                    width: 98px;
+                                    height: 98px;
+                                    position: absolute;
+                                    top: 6px;
+                                    left: 6px;
+                                    @include prefix(border-radius, 6px);
+                                    background: linear-gradient(
+                                        155.68deg,
+                                        #d0ad46 6.11%,
+                                        #ffdfb0 53.31%,
+                                        #daa224 65.64%,
+                                        #ffe1a3 81.23%,
+                                        #d0ad46 97.65%
+                                    );
+                                    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35),
+                                        inset 0 1px 2px rgba(0, 0, 0, 0.2),
+                                        0 1px 6px rgba(0, 0, 0, 0.4);
+                                    .hero-avatar-wrap {
+                                        position: absolute;
+                                        top: 4px;
+                                        left: 4px;
+                                        width: 90px;
+                                        height: 90px;
+                                        border-radius: 6px;
+                                        overflow: hidden;
+                                        display: flex;
+                                        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+                                        .hero-avatar {
+                                            width: auto;
+                                            height: 103px;
+                                        }
+                                    }
+                                    .sh2-icon-forgirl {
+                                        width: 25px;
+                                        height: 32px;
+                                        position: absolute;
+                                        top: 0px;
+                                        left: 2px;
+                                        img {
+                                            width: 25px;
+                                        }
+                                    }
+                                    .hero-level-box {
+                                        position: absolute;
+                                        top: 2px;
+                                        right: 2px;
+                                        background: linear-gradient(
+                                            270deg,
+                                            #1e70aa 0%,
+                                            #59cfe2 51.56%,
+                                            #1e70aa 100%
+                                        );
+                                        width: 56px;
+                                        height: 17px;
+                                        color: #c6f4ff;
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                        line-height: 16px;
+                                        text-shadow: 0 1px 2px
+                                            rgba(0, 0, 0, 0.6);
+                                        border-radius: 4px;
+                                        padding-left: 5px;
+                                        box-shadow: inset 0 0.5px 0.5px
+                                                rgba(255, 255, 255, 0.4),
+                                            inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+                                            0 0 4px 1px rgba(0, 0, 0, 0.4);
+                                        .hero-level {
+                                            color: #fff493;
+                                            display: inline-block;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            text-align: right;
+                                            position: absolute;
+                                            right: 5px;
+                                        }
+                                    }
+                                    .hero-dps-box {
+                                        width: 85px;
+                                        top: 78px;
+                                        border-radius: 0 0 3px 3px;
+                                        background: linear-gradient(
+                                            90deg,
+                                            #0a3c60 0%,
+                                            #1e70aa 51.04%,
+                                            #0a3c60 100%
+                                        );
+                                        height: 16px;
+                                        position: absolute;
+                                        right: 4px;
+                                        box-shadow: inset 0 10px 0
+                                                rgba(255, 255, 255, 0.1),
+                                            0 1px 1px rgba(0, 0, 0, 0.15);
+                                        color: #c6f4ff;
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                        line-height: 16px;
+                                        padding-left: 5px;
+                                        text-shadow: 0 1px 2px
+                                            rgba(0, 0, 0, 0.35);
+                                        .hero-dps {
+                                            width: 50px;
+                                            height: auto;
+                                            position: absolute;
+                                            right: 5px;
+                                            top: 0;
+                                            color: #fff493;
+                                            font-size: 14px;
+                                            line-height: 18px;
+                                            text-align: right;
+                                            text-transform: none;
+                                        }
+                                    }
+                                }
+                                .color-btn.green {
+                                    width: 98px;
+                                    position: absolute;
+                                    top: 109px;
+                                    right: 6px;
+                                    .color-btn-text {
+                                        .gold {
+                                            text-transform: none;
+                                            color: #222222;
+                                            text-shadow: 0 0 0;
+                                            font-size: 16px;
+                                            top: 2px;
+                                            position: relative;
+                                            .f-gold {
+                                                &:before {
+                                                    content: "";
+                                                    width: 18px;
+                                                    height: 18px;
+                                                    position: relative;
+                                                    display: inline-block;
+                                                    background-image: url(ic-yellow-butil.png);
+                                                    background-size: 100%;
+                                                    margin: 0 4px 0 4px;
+                                                    vertical-align: middle;
+                                                    top: -2px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .color-btn-text {
+                                        top: 0;
+                                    }
+                                    &:active {
+                                        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
+                                            inset 0 2px 2px rgba(0, 0, 0, 0.2);
+                                        .color-btn-text {
+                                            top: 1px;
+                                        }
+                                    }
+                                    &:hover {
+                                        filter: brightness(110%);
+                                        -webkit-filter: brightness(110%);
+                                    }
+                                }
+                            }
+                        }
+                        .btn-scroll-dark {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 18px;
+                            height: 72px;
+                            background-image: url(darkworld-slider-active.png);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            cursor: pointer;
+                            &:hover {
+                                filter: brightness(120%);
+                            }
+                        }
+                        .btn-scroll-dark.left {
+                            left: -28px;
+                            transform: translateY(-50%) rotateY(180deg);
+                        }
+                        .btn-scroll-dark.left:active {
+                            transform: translateY(-50%) rotateY(180deg)
+                                scale(0.9);
+                        }
+                        .btn-scroll-dark.right {
+                            right: -28px;
+                        }
+                        .btn-scroll-dark.right:active {
+                            transform: translateY(-50%) scale(0.9);
+                        }
+                        .btn-scroll-dark.slick-disabled {
+                            background-image: url(darkworld-slider-inactive.png);
+                            pointer-events: none;
+                            filter: grayscale(1);
+                        }
+                        .x2-btn {
+                            width: 62px;
+                            height: 26px;
+                            position: absolute;
+                            display: inline-block;
+                            background: linear-gradient(
+                                0deg,
+                                #7cbc30 0%,
+                                #baf279 100%
+                            );
+                            @include prefix(border-radius, 6px);
+                            right: 32px;
+                            bottom: -26px;
+                            box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25),
+                                0 2px 4px rgba(0, 0, 0, 0.55);
+                            cursor: pointer;
+                            &:hover {
+                                filter: brightness(110%);
+                            }
+                            .x2-btn-text {
+                                color: #fff;
+                                font-size: 16px;
+                                font-weight: bold;
+                                text-align: center;
+                                position: relative;
+                                top: 1px;
+                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+                            }
+                            &:active {
+                                pointer-events: none;
+                                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25),
+                                    inset 0 -2px 0 rgba(0, 0, 0, 0.25),
+                                    0 0 6px rgba(0, 0, 0, 0.25);
+                                .x2-btn-text {
+                                    top: 2px;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    .angels-heros-box-wrap.lock {
+                        .angels-heros-box {
+                            .hero-btn-card-add,
+                            .hero-card {
+                                filter: grayscale(1);
+                                pointer-events: none;
+                            }
+                        }
+                        .x2-btn {
+                            filter: grayscale(1);
+                            pointer-events: none;
+                        }
+                    }
+                    .supheros-bottom-content {
+                        position: absolute;
+                        top: 434px;
+                        left: 210px;
+                        background: #4b3f3e;
+                        border-radius: 14px;
+                        box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.15),
+                            inset 0 1px 2px rgba(0, 0, 0, 0.2);
+                        width: auto;
+                        height: 60px;
+                        padding: 0 10px;
+                        display: flex;
+                        align-items: center;
+                        .supheros-bonus-wrap {
+                            background: #373e56;
+                            border-radius: 6px;
+                            color: #99e6f9;
+                            font-weight: 700;
+                            font-size: 15px;
+                            line-height: 32px;
+                            text-shadow: 0 1px 1px #000;
+                            padding: 0 10px;
+                            margin: 0 4px;
+                            display: flex;
+                            box-shadow: inset 0 0 0 1px #c19863,
+                                inset 0 11px 0px rgba(255, 255, 255, 0.08),
+                                inset 0 2px 1px #3d3737,
+                                0 2px 6px rgba(0, 0, 0, 0.4);
+                            .supheros-bonus-value {
+                                display: inline-block;
+                                color: #fff493;
+                                font-size: 18px;
+                                min-width: 44px;
+                                text-align: center;
+                                margin-left: 10px;
+                                &:after {
+                                    content: "%";
+                                }
+                            }
+                        }
+                        .color-btn.supheros {
+                            margin-left: 10px;
+                            width: auto;
+                            padding: 0 14px;
+                            background: linear-gradient(
+                                180deg,
+                                #e7bcf5 0%,
+                                #e4a0ff 15.63%,
+                                #e6a9ff 27.08%,
+                                #b467d5 55.73%,
+                                #8722b7 100%
+                            );
+                            .color-btn-text {
+                                text-transform: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .m-popup.angels-heros {
+        width: 760px;
+        height: 584px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &:before {
+            background: linear-gradient(#564141, #9c8b7c);
+        }
+        .content {
+            margin: 30px;
+            margin-top: 80px;
+            .trophy-value {
+                position: absolute;
+                top: -64px;
+                right: 48px;
+                background: linear-gradient(90deg, #d59e3d, #af8b24);
+                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25),
+                    inset 0 14px 0 rgba(255, 255, 255, 0.15),
+                    0 1px 2px rgba(255, 255, 255, 0.6);
+                border-radius: 6px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 28px;
+                text-align: center;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+                padding: 0 20px;
+                width: 100px;
+                &:before {
+                    content: "";
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    top: 1px;
+                    left: 0px;
+                    background-image: url(v2-mn-soul-sg-160.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+                .trophy-value-btn-add {
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    top: 1px;
+                    right: 1px;
+                    font-size: 22px;
+                    color: #fff1c5;
+                    cursor: pointer;
+                    &:hover {
+                        color: #fff7df;
+                        font-size: 24px;
+                        top: 0.5px;
+                    }
+                    &:active {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .header-box {
+                .header-text-wrap {
+                    width: auto;
+                    line-height: 36px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    display: inline-block;
+                    @include prefix(border-radius, 7px);
+                    background: linear-gradient(
+                        79.88deg,
+                        #eecc60 15.85%,
+                        #ffeea7 31.54%,
+                        #cfa831 58.47%,
+                        #fbf1d8 75.55%,
+                        #eecc60 90.72%
+                    );
+                    box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                        0 0 3px #472624;
+                    position: relative;
+                    padding: 0 20px;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: calc(100% - 6px);
+                        height: calc(100% - 7px);
+                        left: 3px;
+                        top: 3px;
+                        background: #5f4b36;
+                        box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.08),
+                            inset 0px 2px 1px #412e28;
+                        border-radius: 5px;
+                    }
+                    .header-text {
+                        color: #fff;
+                        position: relative;
+                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+                        font-weight: 100;
+                    }
+                }
+            }
+            .add-heros-skrollbox-wrap {
+                background: linear-gradient(180deg, #353535, #6b6a68);
+                box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.25),
+                    inset 0px 1px 6px rgba(0, 0, 0, 0.35);
+                border-radius: 5px;
+                width: 564px;
+                margin: auto;
+                margin-top: 16px;
+                padding: 20px;
+                .add-heros-skrollbox {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row-reverse;
+                    height: 330px;
+                    padding: 0 25px;
+                    transform: scaleX(-1);
+                    &::-webkit-scrollbar-track {
+                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+                        border-radius: 8px;
+                    }
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 8px;
+                        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+                        background: linear-gradient(
+                            to right,
+                            #fff,
+                            #f5de80,
+                            #f4b766,
+                            #b26d12
+                        );
+                    }
+                    .hero-avatar-box {
+                        width: 112px;
+                        height: 112px;
+                        position: relative;
+                        @include prefix(border-radius, 6px);
+                        background: linear-gradient(
+                            155.68deg,
+                            #d0ad46 6.11%,
+                            #ffdfb0 53.31%,
+                            #daa224 65.64%,
+                            #ffe1a3 81.23%,
+                            #d0ad46 97.65%
+                        );
+                        box-shadow: 0px 2px 0px #9d6f29,
+                            0px 4px 4px 1px rgba(0, 0, 0, 0.35);
+                        margin: 6px;
+                        transform: scaleX(-1);
+                        cursor: pointer;
+                        &:hover {
+                            filter: brightness(1.1);
+                        }
+                        &:active {
+                            transform: scaleX(-1) scale(0.98);
+                        }
+                        .hero-avatar-wrap {
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            width: 102px;
+                            height: 102px;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            display: flex;
+                            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6);
+                            .hero-avatar {
+                                width: auto;
+                                height: 118px;
+                            }
+                        }
+                        .sh2-icon-forgirl {
+                            width: 25px;
+                            height: 32px;
+                            position: absolute;
+                            top: 0px;
+                            left: 2px;
+                            img {
+                                width: 25px;
+                            }
+                        }
+                        .hero-dps-box {
+                            width: 97px;
+                            top: 91px;
+                            border-radius: 0 0 4px 4px;
+                            background: linear-gradient(
+                                90deg,
+                                #0a3c60 0%,
+                                #1e70aa 51.04%,
+                                #0a3c60 100%
+                            );
+                            height: 16px;
+                            position: absolute;
+                            right: 5px;
+                            box-shadow: inset 0 10px 0 rgba(255, 255, 255, 0.1),
+                                0 1px 1px rgba(0, 0, 0, 0.15);
+                            color: #c6f4ff;
+                            font-size: 12px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            line-height: 16px;
+                            padding-left: 5px;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                            text-align: left;
+                            .hero-dps {
+                                width: 50px;
+                                height: auto;
+                                position: absolute;
+                                right: 5px;
+                                top: 0;
+                                color: #fff493;
+                                font-size: 14px;
+                                line-height: 16px;
+                                text-align: right;
+                                text-transform: none;
+                            }
+                        }
+                    }
+                    .hero-avatar-box.added {
+                        .hero-avatar-wrap {
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                width: 102px;
+                                height: 102px;
+                                background: rgba(0, 0, 0, 0.5) url(paycheck.png);
+                                background-repeat: no-repeat;
+                                background-size: 48px;
+                                background-position: center;
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                    .hero-avatar-box.selected {
+                        background: linear-gradient(
+                            0deg,
+                            #7cbc30 0%,
+                            #baf279 100%
+                        );
+                        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px #299d29,
+                            0px 2px 6px 1px rgba(46, 255, 18, 0.78),
+                            0px 1px 6px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px 1px rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+            .color-btn.add {
+                margin-top: 12px;
+                width: 170px;
+                height: 48px;
+                background: linear-gradient(
+                    180deg,
+                    #ffd585 0%,
+                    #ffc56f 15.62%,
+                    #ffd89d 27.6%,
+                    #f1a635 53.12%,
+                    #ac3e00 100%
+                );
+                .color-btn-text {
+                    flex-direction: row;
+                    font-size: 17px;
+                    .f-gold {
+                        margin-left: 34px;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            width: 34px;
+                            height: 34px;
+                            position: absolute;
+                            left: -34px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            display: inline-block;
+                            background-image: url(v2-mn-soul-sg-160.png);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+            .color-btn.add.unselected {
+                filter: brightness(0.8);
+            }
+        }
+    }
+
+    .m-popup.angels-supheros-notadded {
+        width: 540px;
+        height: 490px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &:before {
+            background: url(darkworld-rays-bg.png),
+                radial-gradient(
+                    circle at center 240px,
+                    #786358 10%,
+                    #584a49 80%
+                );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            margin: 30px;
+            margin-top: 80px;
+            .header-box {
+                width: 100%;
+                .header-text-wrap {
+                    width: auto;
+                    line-height: 22px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    display: inline-block;
+                    @include prefix(border-radius, 7px);
+                    background: linear-gradient(
+                        79.88deg,
+                        #eecc60 15.85%,
+                        #ffeea7 31.54%,
+                        #cfa831 58.47%,
+                        #fbf1d8 75.55%,
+                        #eecc60 90.72%
+                    );
+                    box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                        0 0 3px #472624;
+                    position: relative;
+                    padding: 10px 20px;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: calc(100% - 6px);
+                        height: calc(100% - 7px);
+                        left: 3px;
+                        top: 3px;
+                        background: #5f4b36;
+                        box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.08),
+                            inset 0px 2px 1px #412e28;
+                        border-radius: 5px;
+                    }
+                    .header-text {
+                        color: #fff;
+                        position: relative;
+                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+                        font-weight: 100;
+                        width: 192px;
+                    }
+                }
+            }
+            .suphero-btn-card-add {
+                width: 200px;
+                height: 280px;
+                margin: auto;
+                margin-top: 18px;
+                position: relative;
+                border-radius: 16px;
+                box-shadow: 0 3px 0 #a5865a, 0px 4px 4px 2px rgba(0, 0, 0, 0.35),
+                    inset 0 0 0 8px #ffd18e;
+                background: linear-gradient(
+                    155.68deg,
+                    #d08746 6.11%,
+                    #ffd8b0 53.31%,
+                    #da7824 65.64%,
+                    #ffcca3 81.23%,
+                    #d08d46 97.65%
+                );
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:before {
+                    content: "";
+                    width: 170px;
+                    height: 248px;
+                    position: absolute;
+                    background: url(cards-shirt.jpg),
+                        radial-gradient(
+                            66.3% 50% at 50% 50%,
+                            #bfa47b 0%,
+                            #5c5342 100%
+                        );
+                    border-radius: 4px;
+                    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+                    background-size: cover;
+                    background-blend-mode: soft-light;
+                    background-position: center;
+                }
+                .color-btn.add {
+                    width: 52px;
+                    height: 52px;
+                    background: linear-gradient(
+                        180deg,
+                        #ffe9c5 0%,
+                        #ffda97 15.63%,
+                        #ffe7bb 38.54%,
+                        #ffcb74 62.5%,
+                        #e0a137 100%
+                    );
+                    border: 4px solid #ffd18e;
+                    border-radius: 9px;
+                    .color-btn-text {
+                        color: #685127;
+                        font-size: 42px;
+                        text-shadow: 0 1px 2px #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .m-popup.angels-supheros-add {
+        width: 760px;
+        height: 584px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &:before {
+            background: linear-gradient(#564141, #9c8b7c);
+        }
+        .content {
+            margin: 30px;
+            margin-top: 80px;
+            .trophy-value {
+                position: absolute;
+                top: -64px;
+                right: 48px;
+                background: linear-gradient(90deg, #d59e3d, #af8b24);
+                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25),
+                    inset 0 14px 0 rgba(255, 255, 255, 0.15),
+                    0 1px 2px rgba(255, 255, 255, 0.6);
+                border-radius: 6px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 28px;
+                text-align: center;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+                padding: 0 20px;
+                width: 100px;
+                &:before {
+                    content: "";
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    top: 1px;
+                    left: 0px;
+                    background-image: url(v2-mn-soul-sg-160.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+                .trophy-value-btn-add {
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    top: 1px;
+                    right: 1px;
+                    font-size: 22px;
+                    color: #fff1c5;
+                    cursor: pointer;
+                    &:hover {
+                        color: #fff7df;
+                        font-size: 24px;
+                        top: 0.5px;
+                    }
+                    &:active {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .header-box {
+                .header-text-wrap {
+                    width: auto;
+                    line-height: 36px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    display: inline-block;
+                    @include prefix(border-radius, 7px);
+                    background: linear-gradient(
+                        79.88deg,
+                        #eecc60 15.85%,
+                        #ffeea7 31.54%,
+                        #cfa831 58.47%,
+                        #fbf1d8 75.55%,
+                        #eecc60 90.72%
+                    );
+                    box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                        0 0 3px #472624;
+                    position: relative;
+                    padding: 0 20px;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: calc(100% - 6px);
+                        height: calc(100% - 7px);
+                        left: 3px;
+                        top: 3px;
+                        background: #5f4b36;
+                        box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.08),
+                            inset 0px 2px 1px #412e28;
+                        border-radius: 5px;
+                    }
+                    .header-text {
+                        color: #fff;
+                        position: relative;
+                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+                        font-weight: 100;
+                    }
+                }
+            }
+            .add-supheros-scrollbox-wrap {
+                background: linear-gradient(180deg, #353535, #6b6a68);
+                box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.25),
+                    inset 0px 1px 6px rgba(0, 0, 0, 0.35);
+                border-radius: 5px;
+                width: 608px;
+                margin: auto;
+                margin-top: 16px;
+                padding: 20px;
+                .add-supheros-scrollbox {
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row-reverse;
+                    height: 330px;
+                    padding: 0 14px;
+                    transform: scaleX(-1);
+                    &::-webkit-scrollbar-track {
+                        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+                        border-radius: 8px;
+                    }
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 8px;
+                        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0);
+                        background: linear-gradient(
+                            to right,
+                            #fff,
+                            #f5de80,
+                            #f4b766,
+                            #b26d12
+                        );
+                    }
+                    .suphero-avatar-box {
+                        width: 102px;
+                        height: 114px;
+                        position: relative;
+                        @include prefix(border-radius, 6px);
+                        background: linear-gradient(
+                            155.68deg,
+                            #d0ad46 6.11%,
+                            #ffdfb0 53.31%,
+                            #daa224 65.64%,
+                            #ffe1a3 81.23%,
+                            #d0ad46 97.65%
+                        );
+                        box-shadow: 0px 2px 0px #9d5729,
+                            0px 4px 4px 1px rgba(0, 0, 0, 0.35);
+                        margin: 6px;
+                        transform: scaleX(-1);
+                        cursor: pointer;
+                        &:hover {
+                            filter: brightness(1.1);
+                        }
+                        &:active {
+                            transform: scaleX(-1) scale(0.98);
+                        }
+                        .suphero-avatar-wrap {
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            width: 92px;
+                            height: 104px;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            box-shadow: 0 0 0 1px #1b0a87;
+                            .suphero-avatar {
+                                width: auto;
+                                height: 178px;
+                            }
+                        }
+                        .stars-box {
+                            width: 92px;
+                            height: 17px;
+                            background: rgba(255, 255, 255, 0.5);
+                            display: flex;
+                            justify-content: center;
+                            position: absolute;
+                            left: 5px;
+                            bottom: 5px;
+                            border-radius: 0 0 4px 4px;
+                            .star {
+                                width: 16px;
+                                height: 16px;
+                                background-image: url(star-inactive-bg.png);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: cover;
+                            }
+                            .star.active {
+                                background-image: url(star-active-bg.png);
+                            }
+                        }
+                        .sh2-icon,
+                        .sh2-icon-forgirl {
+                            position: absolute;
+                            top: 0px;
+                            img {
+                                width: 24px;
+                            }
+                        }
+                        .sh2-icon {
+                            right: 8px;
+                        }
+                        .sh2-icon-forgirl {
+                            left: 8px;
+                        }
+                    }
+                    .suphero-avatar-box.added {
+                        .suphero-avatar-wrap {
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                width: 102px;
+                                height: 102px;
+                                background: rgba(0, 0, 0, 0.5) url(paycheck.png);
+                                background-repeat: no-repeat;
+                                background-size: 48px;
+                                background-position: center;
+                                opacity: 0.9;
+                            }
+                        }
+                    }
+                    .suphero-avatar-box.selected {
+                        background: linear-gradient(
+                            0deg,
+                            #7cbc30 0%,
+                            #baf279 100%
+                        );
+                        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px #299d29,
+                            0px 2px 6px 1px rgba(46, 255, 18, 0.78),
+                            0px 1px 6px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px 1px rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+            .color-btn.add {
+                margin-top: 12px;
+                width: 170px;
+                height: 48px;
+                background: linear-gradient(
+                    180deg,
+                    #ffd585 0%,
+                    #ffc56f 15.62%,
+                    #ffd89d 27.6%,
+                    #f1a635 53.12%,
+                    #ac3e00 100%
+                );
+                .color-btn-text {
+                    flex-direction: row;
+                    font-size: 17px;
+                    .f-gold {
+                        margin-left: 34px;
+                        position: relative;
+                        &:before {
+                            content: "";
+                            width: 34px;
+                            height: 34px;
+                            position: absolute;
+                            left: -34px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            display: inline-block;
+                            background-image: url(v2-mn-soul-sg-160.png);
+                            background-size: cover;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                        }
+                    }
+                }
+            }
+            .color-btn.add.unselected {
+                filter: brightness(0.8);
+            }
+        }
+    }
+
+    .m-popup.angels-currency-shop {
+        width: 700px;
+        height: 490px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &:before {
+            background: url(darkworld-rays-bg.png),
+                radial-gradient(
+                    circle at center 240px,
+                    #786358 10%,
+                    #584a49 80%
+                );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px;
+            margin-top: 100px;
+            .keys-card-box {
+                width: 184px;
+                height: 336px;
+                background: rgba(74, 37, 7, 0.5);
+                border: 1px solid rgba(74, 37, 7, 0.5);
+                border-radius: 6px;
+                transform: scale(1);
+                transition: ease-in-out 0.1s;
+                box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.2);
+                &:hover {
+                    transition: ease-in-out 0.1s;
+                    margin-top: -4px;
+                    transform: scale(1.04);
+                    border: 1px solid #c1ae00;
+                    background: rgba(100, 62, 19, 0.5);
+                    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.2);
+                    .keys-card-imgs-box {
+                        filter: brightness(1.1);
+                    }
+                }
+                .keys-card-imgs-box {
+                    position: relative;
+                    width: 168px;
+                    height: 172px;
+                    display: flex;
+                    justify-content: center;
+                    margin: auto;
+                    top: 32px;
+                    .currency-stand {
+                        position: absolute;
+                        width: 168px;
+                        height: 176px;
+                        background-image: url(darkworld-currency-stand.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .currency-icn {
+                        position: absolute;
+                        width: 122px;
+                        height: 122px;
+                        background-image: url(v2-mn-soul-sg-160.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                    .currency-value {
+                        position: absolute;
+                        color: #ffebc6;
+                        font-size: 21px;
+                        bottom: 3px;
+                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6),
+                            0 0 4px rgba(0, 0, 0, 0.4);
+                        font-weight: 700;
+                    }
+                }
+            }
+            .color-btn.bay {
+                top: 94px;
+                width: 140px;
+                height: 48px;
+                background: linear-gradient(
+                    180deg,
+                    #a6f880 0%,
+                    #75e74c 19.79%,
+                    #95ef76 34.9%,
+                    #5fcc38 50.52%,
+                    #2d8c00 100%
+                );
+                .color-btn-text {
+                    font-size: 26px;
+                    .f-gold {
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75),
+                            0 1px 6px rgba(0, 0, 0, 0.6);
+                        &:after {
+                            content: "$";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .m-popup.angels-info {
+        height: 530px;
+        width: 760px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &:before {
+            background: linear-gradient(#564141, #9c8b7c);
+        }
+        &:after {
+            content: "";
+            width: 330px;
+            height: 303px;
+            position: absolute;
+            right: -173px;
+            bottom: -55px;
+            background-image: url(break-girl634.png);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 100%;
+        }
+        .title {
+            color: #3c3934;
+        }
+        .content {
+            margin: 30px;
+            margin-top: 80px;
+            .text-box {
+                background: linear-gradient(180deg, #353535, #6b6a68);
+                box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.25),
+                    inset 0px 1px 6px rgba(0, 0, 0, 0.35);
+                border-radius: 5px;
+                padding: 30px;
+                .text {
+                    color: #fff;
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+                    font-size: 16px;
+                    text-align: left;
+                }
+            }
+            .color-btn.close {
+                margin-top: 20px;
+                width: 180px;
+                height: 50px;
+                .color-btn-text {
+                    font-size: 18px;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75),
+                        0 1px 4px rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+    }
+}
+
+body .main.world3 {
+    .left-side {
+        .left-panel {
+            .angels-all-box {
+                background: linear-gradient(180deg, #4b3a67 0%, #7b5da2 100%);
+                box-shadow: inset 0 0 0 4px #8c76a9,
+                    inset 0px 0px 16px rgba(0, 0, 0, 0.6);
+                .color-btn.info {
+                    background: linear-gradient(
+                        180deg,
+                        #6a4fd4,
+                        #43297b,
+                        #6a4fd4
+                    );
+                }
+                .card-info-content {
+                    .content-header {
+                        background: linear-gradient(
+                            180deg,
+                            #351b5f 0%,
+                            #442768 100%
+                        );
+                        .title {
+                            background-image: url(darkworld-angels-title-bg-brown.png);
+                        }
+                        .dps {
+                            .value {
+                                background-color: #36385f;
+                            }
+                            .dps-title {
+                                &:before {
+                                    background: #36385f;
+                                }
+                            }
+                        }
+                        .angels-heros-title {
+                            background-image: url(darkworld-angels-title-bg-blue.png);
+                        }
+                    }
+                    .angels-icons-box-all {
+                        background: #423061;
+                        .angels-icons-scroll-box {
+                            background: #21103f;
+                            box-shadow: inset -14px 0 0 #423061;
+                        }
+                    }
+                    .selected-angel-box {
+                        background: #423061;
+                    }
+                    .angels-heros-box-wrap {
+                        &:before {
+                            background: #423061;
+                        }
+                        .angels-heros-box {
+                            background: #423061;
+                            .hero-btn-card-add {
+                                background: linear-gradient(
+                                    155.68deg,
+                                    #4675d0 6.11%,
+                                    #b0c6ff 53.31%,
+                                    #2457da 65.64%,
+                                    #a3bcff 81.23%,
+                                    #4675d0 97.65%
+                                );
+                                &:before {
+                                    background: url(cards-shirt.jpg),
+                                        radial-gradient(
+                                            66.3% 50% at 50% 50%,
+                                            #af93ff 0%,
+                                            #2f157a 100%
+                                        );
+                                    background-size: cover;
+                                    background-position: center;
+                                }
+                                .color-btn.add {
+                                    background: linear-gradient(
+                                        180deg,
+                                        #c5d5ff 0%,
+                                        #97b6ff 15.63%,
+                                        #bbd0ff 38.54%,
+                                        #74a3ff 62.5%,
+                                        #3766e0 100%
+                                    );
+                                    .color-btn-text {
+                                        color: #442768;
+                                    }
+                                }
+                            }
+                            .hero-card {
+                                background: rgb(99, 72, 145);
+                                &:hover {
+                                    background: rgb(112, 82, 163);
+                                }
+                                .hero-avatar-box {
+                                    background: linear-gradient(
+                                        155.68deg,
+                                        #4675d0 6.11%,
+                                        #b0c6ff 53.31%,
+                                        #2457da 65.64%,
+                                        #a3bcff 81.23%,
+                                        #4675d0 97.65%
+                                    );
+                                    .hero-level-box {
+                                        background: linear-gradient(
+                                            270deg,
+                                            #30269e 0%,
+                                            #6459e2 51.56%,
+                                            #30269e 100%
+                                        );
+                                    }
+                                    .hero-dps-box {
+                                        background: linear-gradient(
+                                            90deg,
+                                            #0a3c60 0%,
+                                            #1e70aa 51.04%,
+                                            #0a3c60 100%
+                                        );
+                                    }
+                                }
+                            }
+                        }
+                        .btn-scroll-dark.slick-disabled {
+                            filter: none;
+                        }
+                    }
+                    .supheros-bottom-content {
+                        background: #423061;
+                    }
+                }
+            }
+        }
+    }
+    .popup-layer .m-popup.angels-heros {
+        .content {
+            .trophy-value {
+                background: linear-gradient(90deg, #3d69d5, #2444af);
+                .trophy-value-btn-add {
+                    color: #b3f8fe;
+                    &:hover {
+                        color: #dcfcff;
+                    }
+                }
+            }
+            .header-box {
+                .header-text-wrap {
+                    &:before {
+                        background: #36385f;
+                        box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.08),
+                            inset 0px 2px 1px #282841;
+                    }
+                }
+            }
+            .add-heros-skrollbox-wrap {
+                background: linear-gradient(180deg, #383167, #5648ae);
+                .add-heros-skrollbox {
+                    .hero-avatar-box {
+                        width: 112px;
+                        height: 112px;
+                        position: relative;
+                        @include prefix(border-radius, 6px);
+                        background: linear-gradient(
+                            155.68deg,
+                            #4675d0 6.11%,
+                            #b0c6ff 53.31%,
+                            #2457da 65.64%,
+                            #a3bcff 81.23%,
+                            #4675d0 97.65%
+                        );
+                        box-shadow: 0px 2px 0px #294a9d,
+                            0px 4px 4px 1px rgba(0, 0, 0, 0.35);
+                        .hero-dps-box {
+                            background: linear-gradient(
+                                90deg,
+                                #0a3c60 0%,
+                                #1e70aa 51.04%,
+                                #0a3c60 100%
+                            );
+                            color: #c6f4ff;
+                            .hero-dps {
+                                color: #fff493;
+                            }
+                        }
+                    }
+                    .hero-avatar-box.selected {
+                        background: linear-gradient(
+                            0deg,
+                            #7cbc30 0%,
+                            #baf279 100%
+                        );
+                        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px #299d29,
+                            0px 2px 6px 1px rgba(46, 255, 18, 0.78),
+                            0px 1px 6px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px 1px rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+            .color-btn.add {
+                background: linear-gradient(
+                    180deg,
+                    #ffd585 0%,
+                    #ffc56f 15.62%,
+                    #ffd89d 27.6%,
+                    #f1a635 53.12%,
+                    #ac3e00 100%
+                );
+            }
+        }
+    }
+
+    .popup-layer .m-popup.angels-supheros-notadded {
+        &:before {
+            background: url(darkworld-rays-bg.png),
+                radial-gradient(
+                    circle at center 240px,
+                    #b093ff 10%,
+                    #43297b 80%
+                );
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            .header-box {
+                .header-text-wrap {
+                    background: linear-gradient(
+                        79.88deg,
+                        #eecc60 15.85%,
+                        #ffeea7 31.54%,
+                        #cfa831 58.47%,
+                        #fbf1d8 75.55%,
+                        #eecc60 90.72%
+                    );
+                    box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                        0 0 3px #472624;
+                    &:before {
+                        background: #36385f;
+                        box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.08),
+                            inset 0px 2px 1px #282841;
+                    }
+                }
+            }
+            .suphero-btn-card-add {
+                box-shadow: 0 3px 0 #a5865a, 0px 4px 4px 2px rgba(0, 0, 0, 0.35),
+                    inset 0 0 0 8px #ffd18e;
+                background: linear-gradient(
+                    155.68deg,
+                    #c146d0 6.11%,
+                    #edb0ff 53.31%,
+                    #b924da 65.64%,
+                    #f2a3ff 81.23%,
+                    #b646d0 97.65%
+                );
+                &:before {
+                    background: url(cards-shirt.jpg),
+                        radial-gradient(
+                            66.3% 50% at 50% 50%,
+                            #b093ff 0%,
+                            #4d157a 100%
+                        );
+                    background-size: cover;
+                    background-position: center;
+                }
+                .color-btn.add {
+                    background: linear-gradient(
+                        180deg,
+                        #e1c5ff 0%,
+                        #c997ff 15.63%,
+                        #dcbbff 38.54%,
+                        #b274ff 62.5%,
+                        #8837e0 100%
+                    );
+                    .color-btn-text {
+                        color: #442768;
+                    }
+                }
+            }
+        }
+    }
+
+    .popup-layer .m-popup.angels-supheros-add {
+        .content {
+            .trophy-value {
+                background: linear-gradient(90deg, #3d69d5, #2444af);
+                .trophy-value-btn-add {
+                    color: #b3f8fe;
+                    &:hover {
+                        color: #dcfcff;
+                    }
+                }
+            }
+            .header-box {
+                .header-text-wrap {
+                    background: linear-gradient(
+                        79.88deg,
+                        #eecc60 15.85%,
+                        #ffeea7 31.54%,
+                        #cfa831 58.47%,
+                        #fbf1d8 75.55%,
+                        #eecc60 90.72%
+                    );
+                    box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                        0 0 3px #472624;
+                    &:before {
+                        background: #36385f;
+                        box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.08),
+                            inset 0px 2px 1px #282841;
+                    }
+                }
+            }
+            .add-supheros-scrollbox-wrap {
+                background: linear-gradient(180deg, #383167, #5648ae);
+                .add-supheros-scrollbox {
+                    .suphero-avatar-box {
+                        background: linear-gradient(
+                            155.68deg,
+                            #8e46d0 6.11%,
+                            #f1b0ff 53.31%,
+                            #8d24da 65.64%,
+                            #eea3ff 81.23%,
+                            #9a46d0 97.65%
+                        );
+                        box-shadow: 0px 2px 0px #79299d,
+                            0px 4px 4px 1px rgba(0, 0, 0, 0.35);
+                        .suphero-avatar-wrap {
+                            box-shadow: 0 0 0 1px #1b0a87;
+                        }
+                    }
+                    .suphero-avatar-box.selected {
+                        background: linear-gradient(
+                            0deg,
+                            #7cbc30 0%,
+                            #baf279 100%
+                        );
+                        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px #299d29,
+                            0px 2px 6px 1px rgba(46, 255, 18, 0.78),
+                            0px 1px 6px 1px rgba(255, 255, 255, 0.8),
+                            0px 2px 0px 1px rgba(255, 255, 255, 0.8);
+                    }
+                }
+            }
+        }
+    }
+
+    .popup-layer .m-popup.angels-currency-shop {
+        &:before {
+            background: url(darkworld-rays-bg.png),
+                radial-gradient(circle at center 60%, #b093ff 10%, #43297b 80%);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .content {
+            .keys-card-box {
+                background: rgba(8, 7, 74, 0.5);
+                border: 1px solid rgba(8, 7, 74, 0.5);
+                &:hover {
+                    border: 1px solid #00adc1;
+                    background: rgba(20, 19, 100, 0.5);
+                }
+            }
+        }
+    }
+
+    .popup-layer .m-popup.angels-info {
+        .content {
+            .text-box {
+                background: linear-gradient(180deg, #2a235a, #473b93);
+            }
+        }
+    }
+}

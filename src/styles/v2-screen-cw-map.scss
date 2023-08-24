@@ -1,0 +1,123 @@
+@charset "utf-8";
+@import "sass_commons.scss";
+
+body .main .main-bg{
+    &.cw-map{
+        background-image: url(v2-fw-map-bg.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+body .main{
+    .cw-map-name-box-all{
+        width: 344px; height: 80px; position: absolute; top: 5px; left: 428px;
+        .cw-map-name-box{
+            width: 344px; height: 80px; position: absolute; top: 0; left: 0;
+            background-image: url(red-lenta.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            text-align: center;
+            .cw-map-name, .cw-map-date{
+                width: 250px; height: auto; position: relative; top: 5px; display: inline-block;
+                color: #ffc000; font-size: 14px; font-weight: bold;
+                text-transform: uppercase;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);                
+            }
+            .cw-map-date{color: #fff; font-size: 16px;}
+        }
+        .cw-map-time-box{
+            width: 190px; height: 36px; position: absolute; bottom: 0; left: 77px;
+            background-color: rgba(0, 0, 0, 0.75);
+            @include prefix(border-radius, 0 0 20px 20px);
+            .cw-map-time1, .cw-map-time2{
+                width: 180px; height: 10px; position: absolute; left: 5px; top: 5px;
+                color: #ffc000; font-size: 10px; font-weight: bold; text-transform: uppercase;
+            }
+            .cw-map-time2{top: 18px;}
+        }
+    }
+    .cw-map-claim-box-all{
+        width: 1000px; height: auto; position: absolute; top: 94px; left: 98px;
+        font-size: 0px;
+        .cw-map-claim-box{
+            width: 124px; height: 96px; position: relative; display: inline-block;
+            background-color: rgba(255, 255, 255, 0.25);
+            margin-left: 3px;
+            margin-top: 3px;
+        }
+        .cw-map-mercs{
+            font-size: 0;
+            position: absolute;
+            left: 6px;
+            bottom: 6px;
+            
+            .cw-map-merc{
+                display: inline-block;
+                width: 14px;
+                height: 22px;
+                background-size: 22px;
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-image: url(v2-cw-pop-orange.png);
+                
+                &.occupied{
+                    background-image: url(v2-cw-pop-blue.png);
+                }
+            }
+        }
+    }
+    .cw-round-box-all{
+        width: 1200px; height: 40px; position: absolute; bottom: 0; left: 0;
+        background-color: #000; font-size: 0;
+        .cw-round-box-name{
+            width: 108px; height: 36px; position: absolute; top: 2px; left: 2px;
+            background: linear-gradient(0deg, #3fbae7 0%, #007aa7 50%, #3fbae7 100%);
+            color: #fff; font-size: 16px; font-weight: bold; text-transform: uppercase;
+            line-height: 36px;
+        }
+        .cw-round-box{
+            width: 1088px; height: 36px; position: absolute; left: 111px; top: 2px;
+            .cw-round-num{
+                width: 66px; height: 36px; position: relative; display: inline-block;
+                background: #555;
+                margin: 0 1px;
+                color: #000; font-size: 16px; font-weight: bold;
+                line-height: 36px;
+                &.check{
+                    background: linear-gradient(0deg, #f8b76c 0%, #f78500 18%, #f8b76c 60%, #f9981f 85%, #f8b76b 100%);
+                }
+                &.active{
+                    background: linear-gradient(0deg, #41d355 0%, #039117 18%, #41d355 60%, #0ca621 85%, #41d355 100%);
+                }
+            }
+        }
+    }
+    .cw-myfraction-box{
+        width: 130px; height: 210px; position: absolute; top: 6px; left: 6px;
+        .cw-myfraction-pic{
+            width: 130px; height: 210px; position: absolute; top: 0; left: 0;
+            img{width: 130px;}
+        }
+        .cw-myfraction-text{
+            width: 100px; height: 20px; position: absolute; top: 38px; left: 15px;
+            background: linear-gradient(0deg, #e9c44f 0%, #f7eec7 100%);
+            @include prefix (border-radius,20px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+            color: #382020; font-size: 12px; font-weight: bold; text-transform: uppercase;
+            line-height: 20px;
+        }
+        .cw-myfraction-name-box{
+            width: 100px; height: 30px; position: absolute; bottom: 16px; left: 15px; display: table;
+            .cw-myfraction-name{
+                width: 100%; height: 100%; position: relative; display: table-cell; vertical-align: middle;
+                color: #fff; font-size: 12px; font-weight: bold; text-transform: uppercase;
+                text-shadow: 0 1px 2px #000;
+            }
+        }
+    }
+}
+
+
+
+
+
