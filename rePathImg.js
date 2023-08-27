@@ -5,7 +5,7 @@ const glob = require("glob");
 function updatePathsInFile(filePath, imgPathAlias) {
   const content = fs.readFileSync(filePath, "utf8");
   const updatedContent = content.replace(
-    /((?:background(?:-image)?|cursor):\s*[^;]*url\([]?)(?!~)(.+?\.(png|jpg|jpeg|gif|svg))['"]?\)/g,
+    /((?:background(?:-image)?|cursor|content):\s*[^;]*url\([]?)(?!~)(.+?\.(png|jpg|jpeg|gif|svg))['"]?\)/g,
     // /(background(?:-image)?:\s*[^;]*url\(['"]?)([^)'"]+\.(png|jpg|jpeg|gif|svg))['"]?\)/g,
     (match, prefix, imagePath, extension) => {
       // Удаляем одинарные и двойные кавычки из пути к изображению
