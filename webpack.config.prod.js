@@ -80,4 +80,9 @@ module.exports = merge(webpackConfig, {
     }),
     ...plugins,
   ],
+  // resolve: {
+  //   alias: {
+  //     imgPath: path.resolve(__dirname, "src/rc"),
+  //   },
+  // },
 });
