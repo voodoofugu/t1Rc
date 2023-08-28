@@ -37,7 +37,7 @@
         bottom: -34px;
         left: 50%;
         transform: translate(-50%, 0%);
-        background-image: url(update-timer-bg.svg);
+        background-image: url(~imgPath/update-timer-bg.svg);
         background-size: cover;
         filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.8));
         background-position: center;
@@ -131,7 +131,7 @@
                         color: #50402a;
                         text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
                         text-transform: uppercase;
-                        background-image: url(portal-card-header-bg.svg);
+                        background-image: url(~imgPath/portal-card-header-bg.svg);
                         background-repeat: no-repeat;
                         filter: brightness(100%)
                             drop-shadow(0 4px 2px rgba(0, 0, 0, 0.2));
@@ -145,7 +145,7 @@
                         border-radius: 100%;
                         background-color: rgba(0, 0, 0, 0.14);
                         cursor: pointer;
-                        background-image: url(info.svg);
+                        background-image: url(~imgPath/info.svg);
                         background-size: 14px;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -185,7 +185,7 @@
                         width: 100px;
                         text-align: center;
                         //&:before {
-                        //  content: ""; background-image: url(v2-f-e1.png); width: 20px; height: 20px;
+                        //  content: ""; background-image: url(~imgPath/v2-f-e1.png); width: 20px; height: 20px;
                         //  position: absolute; left: 0px; background-size: 25px; background-position: center;
                         //  top: -1px;
                         //}
@@ -293,10 +293,10 @@
                             margin-bottom: 2px;
                         }
                         &.wheel_res:after {
-                            background-image: url(v2-f-e1.png);
+                            background-image: url(~imgPath/v2-f-e1.png);
                         }
                         &.diamonds:after {
-                            background-image: url(ic-diamond.png);
+                            background-image: url(~imgPath/ic-diamond.png);
                         }
                     }
                     .quantity {
@@ -381,7 +381,7 @@
                     justify-content: space-between;
                     &:before {
                         content: "";
-                        background-image: url(v2-fw-icon-w3.png);
+                        background-image: url(~imgPath/v2-fw-icon-w3.png);
                         width: 20px;
                         height: 20px;
                         position: relative;
@@ -423,22 +423,22 @@
                         display: inline-block;
                     }
                     &.wheel_res:before {
-                        background-image: url(v2-f-e1.png);
+                        background-image: url(~imgPath/v2-f-e1.png);
                     }
                     &.essence_pack:before {
-                        background-image: url(change-ic-essence.png);
+                        background-image: url(~imgPath/change-ic-essence.png);
                     }
                     &.spirit2_res:before {
-                        background-image: url(ic-yellow-butil.png);
+                        background-image: url(~imgPath/ic-yellow-butil.png);
                     }
                     &.cw_ct_res:before {
-                        background-image: url(ic-green-butil.png);
+                        background-image: url(~imgPath/ic-green-butil.png);
                     }
                     &.cw_gd_res:before {
-                        background-image: url(ic-blue-butil.png);
+                        background-image: url(~imgPath/ic-blue-butil.png);
                     }
                     &.chaos_res:before {
-                        background-image: url(v2-icon-chaos.png);
+                        background-image: url(~imgPath/v2-icon-chaos.png);
                     }
                 }
             }

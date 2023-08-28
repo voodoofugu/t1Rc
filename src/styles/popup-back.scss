@@ -6,7 +6,7 @@
         display: block; width: 725px; height: 480px; position: absolute; left: 100px; bottom:0px;
         // background: red;
         .person-girl{
-            display: block; width: 425px; height: 475px; background-image: url(back-girl.png); background-size: 425px;
+            display: block; width: 425px; height: 475px; background-image: url(~imgPath/back-girl.png); background-size: 425px;
             position: absolute; bottom: 0px; left: -145px;
         }
         .balloon-back{
@@ -39,13 +39,13 @@
                         position: absolute; top: 10px; margin-left: 10px; 
                     }
                     .gold-icon, .shards-icon, .diamonds-icon,{
-                        width: 130px; height: 130px; background-image: url(ic-abil-gold@2x.png); background-size: 130px; position: absolute; top: 10px; margin-left: 10px;
+                        width: 130px; height: 130px; background-image: url(~imgPath/ic-abil-gold@2x.png); background-size: 130px; position: absolute; top: 10px; margin-left: 10px;
                     }
                     .shards-icon{
-                        background-image: url(ic-abil-butil@2x.png);
+                        background-image: url(~imgPath/ic-abil-butil@2x.png);
                     }
                     .diamonds-icon{
-                        background-image: url(diamond6@2x.png);
+                        background-image: url(~imgPath/diamond6@2x.png);
                         height: 101px;
                         top: 18px;
                         margin-left: 9px;
@@ -96,7 +96,7 @@
                 }
             }
             .back-ballon{
-                display: block; width: 204px; height: 140px; position: absolute; top: -80px; margin-left: 8px; background-image: url(back-ballon.png);
+                display: block; width: 204px; height: 140px; position: absolute; top: -80px; margin-left: 8px; background-image: url(~imgPath/back-ballon.png);
                 background-size: 204px;
                 .ballon-text{
                     color: #4b4843; font-weight: bold; font-size: 14px; line-height: 14px; padding-top: 18px; 

@@ -2,7 +2,7 @@
 @import "sass_commons.scss";
 
 body .main {
-    background-image: url(https://cdn.faptitans.com/s1/__6fc1/images/back/new/12-Undersea-world.jpg);
+    background-image: url(~imgPath/images/back/new/12-Undersea-world.jpg);
     .portal-map-box {
         position: absolute;
         width: 1200px;
@@ -34,7 +34,7 @@ body .main {
                 content: "";
                 width: 100%;
                 height: 100%;
-                background: url(darkworld-back-arrow.png);
+                background: url(~imgPath/darkworld-back-arrow.png);
                 background-size: 70%;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -138,7 +138,7 @@ body .main {
                     left: 50%;
                     top: 0px;
                     transform: translateX(-50%);
-                    background-image: url(suphero-squad-frame-all@x2.png);
+                    background-image: url(~imgPath/suphero-squad-frame-all@x2.png);
                     background-position: 0px -556px;
                     background-repeat: no-repeat;
                     background-size: 100% auto;
@@ -177,8 +177,8 @@ body .main {
             transform: translateY(-50%);
             z-index: 3;
             cursor: pointer;
-            background-image: url(suphero-squad-frame-all@x2.png),
-                url(suphero-squad-frame-all@x2.png);
+            background-image: url(~imgPath/suphero-squad-frame-all@x2.png),
+                url(~imgPath/suphero-squad-frame-all@x2.png);
             background-position: -636px -858px;
             background-repeat: no-repeat;
             background-size: 1637px auto;
@@ -226,7 +226,7 @@ body .main {
                 height: 48px;
                 position: absolute;
                 top: -6px;
-                background-image: url(suphero-squad-frame-all@x2.png);
+                background-image: url(~imgPath/suphero-squad-frame-all@x2.png);
                 background-position: left -244px;
                 background-repeat: no-repeat;
                 background-size: 668px auto;
@@ -358,7 +358,7 @@ body .main {
                 display: block;
                 width: 100%;
                 height: 100%;
-                background: url(dungTreas-ic.png);
+                background: url(~imgPath/dungTreas-ic.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 100%;
@@ -370,7 +370,7 @@ body .main {
                 position: absolute;
                 left: 16px;
                 top: 14px;
-                background-image: url(tab-menu-icn-bg.png);
+                background-image: url(~imgPath/tab-menu-icn-bg.png);
                 background-size: auto 100%;
                 background-repeat: no-repeat;
                 background-position: -386px 0;
@@ -578,7 +578,7 @@ body .main {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background-image: url(suphero-squad-frame-all@x2.png);
+            background-image: url(~imgPath/suphero-squad-frame-all@x2.png);
             background-position: left -525px;
             background-repeat: no-repeat;
             background-size: 890px auto;
@@ -663,7 +663,7 @@ body .main {
                     box-shadow: 0 -1px rgba(255, 255, 255, 0.6),
                         0 0 0 1px #ff9b37, 0 1px 4px 2px rgba(0, 0, 0, 0.4),
                         0 0 0 2px rgba(0, 0, 0, 0.2);
-                    background: url(v2-trophy-bg.jpg), #7e6a5d;
+                    background: url(~imgPath/v2-trophy-bg.jpg), #7e6a5d;
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-blend-mode: soft-light;
@@ -851,7 +851,7 @@ body .main {
                     position: absolute;
                     left: 0;
                     top: 0;
-                    background-image: url(map-station.png);
+                    background-image: url(~imgPath/map-station.png);
                     background-repeat: no-repeat;
                     background-size: 90px;
                     background-position: center -9px;
@@ -861,7 +861,7 @@ body .main {
                         height: 100%;
                         position: absolute;
                         background-repeat: no-repeat;
-                        background-image: url(map-station-spritesheet.png);
+                        background-image: url(~imgPath/map-station-spritesheet.png);
                         background-size: 4956px 120px;
                         z-index: 1;
                         left: 0;
@@ -919,7 +919,7 @@ body .main {
                     position: absolute;
                     left: 0;
                     top: 0;
-                    background-image: url(map-station-lock1.png);
+                    background-image: url(~imgPath/map-station-lock1.png);
                     background-repeat: no-repeat;
                     background-position: center 84px;
                     background-size: 180px auto;
@@ -937,8 +937,8 @@ body .main {
                     left: 0;
                     top: 0;
                     pointer-events: none;
-                    background-image: url(map-station-lock2.png),
-                        url(map-station-lock1.png);
+                    background-image: url(~imgPath/map-station-lock2.png),
+                        url(~imgPath/map-station-lock1.png);
                     background-repeat: no-repeat;
                     background-size: 180px 180px, 180px auto;
                     background-position: center 88px, center 86px;
@@ -949,7 +949,7 @@ body .main {
                 }
                 .chest {
                     position: absolute;
-                    background-image: url(sh-sq-map-chests.png);
+                    background-image: url(~imgPath/sh-sq-map-chests.png);
                     width: 78px;
                     height: 78px;
                     pointer-events: auto;
@@ -1022,7 +1022,7 @@ body .main {
                             position: absolute;
                             left: 10px;
                             top: -16px;
-                            background-image: url(spritesheet.png);
+                            background-image: url(~imgPath/spritesheet.png);
                             background-repeat: no-repeat;
                             background-size: 1740px 78px;
                             animation: hero 2s steps(29) infinite;
@@ -1232,13 +1232,13 @@ body .main {
                 }
                 .chest-wrap {
                     &:before {
-                        background-image: url(map-station-lock1.png);
+                        background-image: url(~imgPath/map-station-lock1.png);
                         background-repeat: no-repeat;
                         background-position: center 102px;
                         background-size: 150px auto;
                     }
                     &:after {
-                        background: url(v2-lock-ic.png);
+                        background: url(~imgPath/v2-lock-ic.png);
                         background-position: center;
                         background-repeat: no-repeat;
                         background-size: 120px 120px;
@@ -1289,7 +1289,7 @@ body .main {
                         width: 120px;
                         height: 120px;
                         position: absolute;
-                        background-image: url(map-station-lockflare.png);
+                        background-image: url(~imgPath/map-station-lockflare.png);
                         background-repeat: no-repeat;
                         background-size: 100%;
                         background-position: center;
@@ -1303,8 +1303,8 @@ body .main {
                     &:after {
                         visibility: visible;
                         opacity: 1;
-                        background-image: url(map-station-lock2.png),
-                            url(map-station-lock1.png);
+                        background-image: url(~imgPath/map-station-lock2.png),
+                            url(~imgPath/map-station-lock1.png);
                         background-repeat: no-repeat;
                         background-size: 150px 150px, 150px auto;
                         background-position: center 104px, center 102px;
@@ -1371,7 +1371,8 @@ body .main {
         border-radius: 100%;
         position: absolute;
         z-index: 2;
-        background: url(gate-icn.png), linear-gradient(0deg, #836932, #62441d);
+        background: url(~imgPath/gate-icn.png),
+            linear-gradient(0deg, #836932, #62441d);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 28px, 100%;
@@ -1415,7 +1416,7 @@ body .main {
             }
         }
         &:hover {
-            background: url(gate-icn.png),
+            background: url(~imgPath/gate-icn.png),
                 linear-gradient(0deg, #937638, #724f22);
             background-position: center;
             background-repeat: no-repeat;
@@ -1609,7 +1610,7 @@ body .main {
     &.map-01 {
         .loc-box {
             .map-bg {
-                background: url(portal-map-location-01.jpg);
+                background: url(~imgPath/portal-map-location-01.jpg);
                 &.map-location1 {
                     background-position: 0 -320px;
                     .station-wrap {
@@ -1766,7 +1767,7 @@ body .main {
     &.map-02 {
         .loc-box {
             .map-bg {
-                background: url(portal-map-location-02.jpg);
+                background: url(~imgPath/portal-map-location-02.jpg);
                 &.map-location1 {
                     background-position: 0 -320px;
                     .station-wrap {

@@ -60,7 +60,7 @@
           height: 40px;
           position: absolute;
           margin-left: 1px;
-          background-image: url(chahge-fullscr.png);
+          background-image: url(~imgPath/chahge-fullscr.png);
           background-size: 100%;
           cursor: pointer;
           &:hover {
@@ -94,16 +94,16 @@
             height: 39px;
             position: relative;
             float: right;
-            background-image: url(star1.png);
+            background-image: url(~imgPath/star1.png);
             background-size: 100%;
           }
           .star2 {
             width: 71px;
-            background-image: url(star2.png);
+            background-image: url(~imgPath/star2.png);
           }
           .star3 {
             width: 101px;
-            background-image: url(star3.png);
+            background-image: url(~imgPath/star3.png);
           }
         }
       }
@@ -247,7 +247,7 @@
             position: absolute;
             top: 5px;
             margin-left: -38px;
-            background-image: url(change-sun1.png);
+            background-image: url(~imgPath/change-sun1.png);
             background-size: 100%;
           }
         }

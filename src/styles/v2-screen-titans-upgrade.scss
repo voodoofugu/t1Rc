@@ -55,7 +55,7 @@ body .main{
                         height: 490px;
                         top: 13px;
                         left: 9px;
-                        background-image: url(titans_bg.jpg);
+                        background-image: url(~imgPath/titans_bg.jpg);
                     }
 
                     .titans-left,
@@ -111,7 +111,7 @@ body .main{
                                     height: 20px;
                                     position: relative;
                                     display: inline-block;
-                                    background-image: url(v2_at_gear.png);
+                                    background-image: url(~imgPath/v2_at_gear.png);
                                     background-size: 100%;
                                     margin: 0 4px;
                                     top: -1px;
@@ -162,9 +162,9 @@ body .main{
                                         background-position: center;
                                     }
                                 }
-                                &.atk .value:before{background-image: url(v2_at_magicgun_2.png);}
-                                &.hp .value:before{background-image: url(v2_at_magic_plate_2.png);}
-                                &.pow .value:before{background-image: url(v2_at_manabomb_2.png);}
+                                &.atk .value:before{background-image: url(~imgPath/v2_at_magicgun_2.png);}
+                                &.hp .value:before{background-image: url(~imgPath/v2_at_magic_plate_2.png);}
+                                &.pow .value:before{background-image: url(~imgPath/v2_at_manabomb_2.png);}
                             }
                         }
 
@@ -184,7 +184,7 @@ body .main{
                             height: 468px;
                             top: 2px;
                             left: 2px;
-                            background-image: url(titans_enemy_bg.jpg);
+                            background-image: url(~imgPath/titans_enemy_bg.jpg);
                         }
 
                         .boss{
@@ -388,12 +388,12 @@ body .main{
                                         font-size: 18px;
                                         padding: 10px 11px 0 36px;
                                         &:before{
-                                            background-image: url(v2_at_gear.png);
+                                            background-image: url(~imgPath/v2_at_gear.png);
                                         }
                                     }
-                                    &.atk:before{background-image: url(v2_at_magicgun.png);}
-                                    &.hp:before{background-image: url(v2_at_magic_plate.png);}
-                                    &.pow:before{background-image: url(v2_at_manabomb.png);}
+                                    &.atk:before{background-image: url(~imgPath/v2_at_magicgun.png);}
+                                    &.hp:before{background-image: url(~imgPath/v2_at_magic_plate.png);}
+                                    &.pow:before{background-image: url(~imgPath/v2_at_manabomb.png);}
                                 }
                             }
                             .q-counter{
@@ -420,7 +420,7 @@ body .main{
 
                         .star{
                             display: inline-block;
-                            background-image: url(./star1.png);
+                            background-image: url(~imgPath/./star1.png);
                             background-size: 100%;
                             width: 24px;
                             height: 23px;
@@ -512,7 +512,7 @@ body .main{
                             &.gems{
                                 &:before{
                                     content: ""; width: 40px; height: 40px; position: absolute; top: -2px; left: -2px;
-                                    background-image: url(trophy-bonus-gems.png);
+                                    background-image: url(~imgPath/trophy-bonus-gems.png);
                                     background-size: 100%; background-repeat: no-repeat;
                                 }
                             }
@@ -520,7 +520,7 @@ body .main{
                                 left: 190px;
                                 &:before{
                                     content: ""; width: 40px; height: 40px; position: absolute; top: -2px; left: -2px;
-                                    background-image: url(trophy-bonus-gems.png);
+                                    background-image: url(~imgPath/trophy-bonus-gems.png);
                                     background-size: 100%; background-repeat: no-repeat;
                                 }
                             }

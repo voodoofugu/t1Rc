@@ -45,12 +45,12 @@
                     width: 30px; height: 30px; position: relative; display: inline-block; background-color: #3c3934;
                     @include prefix(border-radius, 100%); top: 2px;
                     &:before{
-                        content: ""; width: 28px; height: 21px; background-image: url(spinner-round-diamond.png); background-size: 100%;
+                        content: ""; width: 28px; height: 21px; background-image: url(~imgPath/spinner-round-diamond.png); background-size: 100%;
                         display: block; position: absolute; top: 5px; left: 1px;
                     }
                     &.diamond{
                         &:before{
-                            background-image: url(80-topup.png); top: 2px; height: 28px;
+                            background-image: url(~imgPath/80-topup.png); top: 2px; height: 28px;
                         }
                     }
 

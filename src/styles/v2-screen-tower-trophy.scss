@@ -136,7 +136,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(gold-ticket.png);
+                                    background-image: url(~imgPath/gold-ticket.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -229,7 +229,7 @@ body .main {
                                         position: absolute;
                                         top: -2px;
                                         left: -2px;
-                                        background-image: url(card-ic-koloda.png);
+                                        background-image: url(~imgPath/card-ic-koloda.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                     }
@@ -242,7 +242,7 @@ body .main {
                                 top: -10px;
                                 left: 5px;
                                 cursor: pointer;
-                                background-image: url(offer-bk-sm1.png);
+                                background-image: url(~imgPath/offer-bk-sm1.png);
                                 background-size: 100%;
                                 background-repeat: no-repeat;
                                 .relics-pop-event-btn-text {
@@ -331,7 +331,7 @@ body .main {
                                             position: absolute;
                                             top: 15px;
                                             left: 15px;
-                                            background-image: url(v2-trophy-bg.jpg);
+                                            background-image: url(~imgPath/v2-trophy-bg.jpg);
                                             background-size: 100%;
                                             background-repeat: no-repeat;
                                             @include prefix(
@@ -446,7 +446,7 @@ body .main {
                                             position: absolute;
                                             top: -2px;
                                             left: -2px;
-                                            background-image: url(gold-ticket.png);
+                                            background-image: url(~imgPath/gold-ticket.png);
                                             background-size: 100%;
                                             background-repeat: no-repeat;
                                         }

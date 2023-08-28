@@ -45,7 +45,7 @@
                     display: inline-block;
                     margin-right: 5px;
                     top: 6px;
-                    background-image: url(fapop-ic02.png);
+                    background-image: url(~imgPath/fapop-ic02.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
@@ -70,7 +70,7 @@
             position: absolute;
             top: -5px;
             left: -5px;
-            background-image: url(timer-back-50.png);
+            background-image: url(~imgPath/timer-back-50.png);
             background-size: 100%;
             background-repeat: no-repeat;
             .main-relics-timer-text,
@@ -97,7 +97,7 @@
             position: absolute;
             top: 5px;
             right: 5px;
-            background-image: url(i-ico.png);
+            background-image: url(~imgPath/i-ico.png);
             background-size: 100%;
             background-repeat: no-repeat;
             cursor: pointer;
@@ -108,7 +108,7 @@
             position: absolute;
             top: 150px;
             right: 0;
-            background-image: url(unipop-buble.png);
+            background-image: url(~imgPath/unipop-buble.png);
             background-size: 100%;
             background-repeat: no-repeat;
             .main-relics-girl-ballon-text-box {
@@ -145,7 +145,7 @@
                 position: absolute;
                 top: 5px;
                 left: 45px;
-                background-image: url(wpck-dps.png);
+                background-image: url(~imgPath/wpck-dps.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
                 .prize-dps-text {
@@ -166,7 +166,7 @@
                 position: absolute;
                 top: 5px;
                 right: 45px;
-                background-image: url(wpck-promote.png);
+                background-image: url(~imgPath/wpck-promote.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
                 .prize-promote-text {
@@ -241,7 +241,7 @@
                     position: relative;
                     top: 15px;
                     margin: 0 auto;
-                    background-image: url(card-ic-koloda@2x.png);
+                    background-image: url(~imgPath/card-ic-koloda@2x.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
@@ -272,7 +272,7 @@
                             height: 30px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(ic-diamond.png);
+                            background-image: url(~imgPath/ic-diamond.png);
                             background-size: 100%;
                             margin-right: 4px;
                             margin-left: 4px;
@@ -287,19 +287,19 @@
                 }
                 &.r2 {
                     .main-relics-set-pic {
-                        background-image: url(card-ic-koloda2@2x.png);
+                        background-image: url(~imgPath/card-ic-koloda2@2x.png);
                     }
                 }
                 &.r3 {
                     .main-relics-set-pic {
                         width: 150px;
-                        background-image: url(card-ic-koloda3@2x.png);
+                        background-image: url(~imgPath/card-ic-koloda3@2x.png);
                     }
                 }
                 &.r4 {
                     .main-relics-set-pic {
                         width: 150px;
-                        background-image: url(card-ic-koloda4@2x.png);
+                        background-image: url(~imgPath/card-ic-koloda4@2x.png);
                     }
                 }
             }
@@ -334,7 +334,7 @@
                     position: absolute;
                     top: 80px;
                     left: -16px;
-                    background-image: url(noobpackback.png);
+                    background-image: url(~imgPath/noobpackback.png);
                     background-size: 100%;
                 }
                 .relics-pack-opened-count,
@@ -434,7 +434,7 @@
                         position: absolute;
                         top: 10px;
                         left: 10px;
-                        background-image: url(paycheck.png);
+                        background-image: url(~imgPath/paycheck.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         display: none;
@@ -560,7 +560,7 @@
 
 .popup-layer .m-popup.main-relics-pop.xmas {
     &:before {
-        background-image: url(pop-bg-xmas.jpg);
+        background-image: url(~imgPath/pop-bg-xmas.jpg);
         background-size: 100%;
     }
     .main-relics-right-box-all {
@@ -621,7 +621,7 @@ body .main.world3 {
             }
         }
         &:before {
-            background-image: url(v2-vl-pop-bg.jpg);
+            background-image: url(~imgPath/v2-vl-pop-bg.jpg);
             background-size: 100%;
             box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.35),
                 0px -3px 1px rgba(0, 0, 0, 0.4),
@@ -687,7 +687,7 @@ body .main.world3 {
             }
         }
         &:before {
-            background-image: url(march-pop-bg.jpg);
+            background-image: url(~imgPath/march-pop-bg.jpg);
             background-size: 100%;
             box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.35),
                 0px -3px 1px rgba(0, 0, 0, 0.4),

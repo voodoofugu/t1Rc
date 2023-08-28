@@ -320,7 +320,7 @@
           .fortuna-promote {
             position: absolute;
             left: -5px;
-            background-image: url(top-arrow.png);
+            background-image: url(~imgPath/top-arrow.png);
             background-size: 100%;
             width: 40px;
             top: 40px;
@@ -334,14 +334,14 @@
             position: absolute;
             top: -5px;
             left: -5px;
-            background-image: url(fortuna-good.png);
+            background-image: url(~imgPath/fortuna-good.png);
             background-size: 100%;
             transition: 300ms;
           }
         }
         &.check {
           .fortuna-good {
-            background-image: url(fortuna-good-gold.png);
+            background-image: url(~imgPath/fortuna-good-gold.png);
           }
         }
         &.fortune_chance {
@@ -370,20 +370,20 @@
             position: relative;
             top: 56px;
             margin: 0 auto;
-            background-image: url(star1.png);
+            background-image: url(~imgPath/star1.png);
             background-size: 100%;
           }
         }
         &.pic-star2 {
           .fortuna-pic-star {
             width: 35px;
-            background-image: url(star2.png);
+            background-image: url(~imgPath/star2.png);
           }
         }
         &.pic-star3 {
           .fortuna-pic-star {
             width: 50px;
-            background-image: url(star3.png);
+            background-image: url(~imgPath/star3.png);
           }
         }
         &.doublespin {
@@ -409,7 +409,7 @@
         position: absolute;
         top: 4px;
         left: 12px;
-        background-image: url(fortuna-prg-bg2.png);
+        background-image: url(~imgPath/fortuna-prg-bg2.png);
         background-size: 100%;
         .f2-prgbar-empty,
         .f2-prgbar-full {
@@ -418,10 +418,10 @@
           position: absolute;
           top: 42px;
           left: 14px;
-          background-image: url(prg-bar-f1-empty.jpg);
+          background-image: url(~imgPath/prg-bar-f1-empty.jpg);
           background-size: 350px 100%;
           .f2-prgbar-full {
-            background-image: url(prg-bar-f1-full.jpg);
+            background-image: url(~imgPath/prg-bar-f1-full.jpg);
             top: 0;
             left: 0;
             transition: width 0.5s ease;
@@ -557,7 +557,7 @@
           }
           .fortuna-promote {
             position: absolute;
-            background-image: url(top-arrow.png);
+            background-image: url(~imgPath/top-arrow.png);
             background-size: 100%;
             width: 40px;
             height: 40px;
@@ -680,7 +680,7 @@
               height: 30px;
               position: relative;
               display: inline-block;
-              background-image: url(diamond@1x.png);
+              background-image: url(~imgPath/diamond@1x.png);
               background-size: 100%;
               margin: 0 4px 0 4px;
               vertical-align: middle;
@@ -693,7 +693,7 @@
               height: 28px;
               position: relative;
               display: inline-block;
-              background-image: url(heart1.png);
+              background-image: url(~imgPath/heart1.png);
               background-size: 100%;
               margin: 0 4px 0 4px;
               vertical-align: middle;
@@ -744,16 +744,16 @@
       }
     }
     .fortuna-wheel-box .fortuna-wheel.good .fortuna-good {
-      background-image: url(fortuna-good-ny2019.png);
+      background-image: url(~imgPath/fortuna-good-ny2019.png);
     }
     .fortuna-main-center-box {
       background-color: rgba(61, 104, 140, 0.75);
       .fortuna-prgbar-box {
-        background-image: url(fortuna-prg-bg-ny2019.png);
+        background-image: url(~imgPath/fortuna-prg-bg-ny2019.png);
         .fortuna-prgbar-empty {
-          background-image: url(fortuna-prgbar-empty.png);
+          background-image: url(~imgPath/fortuna-prgbar-empty.png);
           .fortuna-prgbar-full {
-            background-image: url(fortuna-prg-full-ny2019.png);
+            background-image: url(~imgPath/fortuna-prg-full-ny2019.png);
           }
         }
         .fortuna-lucky-txt {
@@ -780,7 +780,7 @@
     );
     &:before {
       content: "";
-      background-image: url(sv-sale-bg.jpg);
+      background-image: url(~imgPath/sv-sale-bg.jpg);
       background-size: 100%;
     }
     .title {
@@ -818,7 +818,7 @@
   position: absolute;
   top: -10px;
   margin-left: -10px;
-  background-image: url(timer-back.png);
+  background-image: url(~imgPath/timer-back.png);
   background-size: 100%;
   .time-left,
   .time-sec {

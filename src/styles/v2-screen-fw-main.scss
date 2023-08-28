@@ -296,7 +296,7 @@ body .main {
                     position: absolute;
                     top: 5px;
                     left: 5px;
-                    background-image: url(paycheck.png);
+                    background-image: url(~imgPath/paycheck.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                     visibility: hidden;
@@ -307,7 +307,7 @@ body .main {
                     position: absolute;
                     top: -2px;
                     left: -2px;
-                    background-image: url(fortuna-good.png);
+                    background-image: url(~imgPath/fortuna-good.png);
                     background-size: 100%;
                     visibility: hidden;
                   }
@@ -506,9 +506,9 @@ body .main {
               position: absolute;
               top: 0;
               left: 0;
-              background-image: url(v2-fw-girl-val.png);
+              background-image: url(~imgPath/v2-fw-girl-val.png);
               &.cw {
-                background-image: url(v2-fw-girl.png);
+                background-image: url(~imgPath/v2-fw-girl.png);
               }
               background-repeat: no-repeat;
               background-size: 100%;
@@ -634,7 +634,7 @@ body .main {
               inset 1px 0 2px rgba(0, 0, 0, 0.2);
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
             .fw-fraction-name {
-              background-image: url(wpck-ram1.png);
+              background-image: url(~imgPath/wpck-ram1.png);
               background-size: 100%;
               background-repeat: no-repeat;
               position: relative;
@@ -657,7 +657,7 @@ body .main {
             }
 
             .fw-fraction-rules-title {
-              background-image: url(wpck-ram1.png);
+              background-image: url(~imgPath/wpck-ram1.png);
               background-size: 100%;
               background-repeat: no-repeat;
               position: relative;
@@ -688,7 +688,7 @@ body .main {
             background-color: #8f7c68;
             font-size: 0;
             text-align: center;
-            background-image: url(v2-fw-map-bg.jpg);
+            background-image: url(~imgPath/v2-fw-map-bg.jpg);
             background-size: cover;
             overflow: hidden;
             border-radius: 10px 0 0 10px;
@@ -700,16 +700,16 @@ body .main {
               display: inline-block;
               top: 20px;
               margin: 0 20px;
-              background-image: url(v2-fw-flag-bg.png);
+              background-image: url(~imgPath/v2-fw-flag-bg.png);
 
               &.fr1 {
-                background-image: url(fr_bg1.png);
+                background-image: url(~imgPath/fr_bg1.png);
               }
               &.fr2 {
-                background-image: url(fr_bg2.png);
+                background-image: url(~imgPath/fr_bg2.png);
               }
               &.fr3 {
-                background-image: url(fr_bg3.png);
+                background-image: url(~imgPath/fr_bg3.png);
               }
 
               background-size: 100%;
@@ -805,18 +805,18 @@ body .main {
                   position: absolute;
                   top: -2px;
                   left: -2px;
-                  background-image: url(ic-contrip.png);
+                  background-image: url(~imgPath/ic-contrip.png);
                   background-size: 100%;
                   background-repeat: no-repeat;
                 }
                 &.cw {
                   &:before {
-                    background-image: url(ic-contrip-red.png);
+                    background-image: url(~imgPath/ic-contrip-red.png);
                   }
                 }
                 &.rating {
                   &:before {
-                    background-image: url(v2-ic-rating.png);
+                    background-image: url(~imgPath/v2-ic-rating.png);
                   }
                 }
               }

@@ -3,7 +3,7 @@
 
 body .main .main-bg{
     &.cw-map{
-        background-image: url(v2-fw-map-bg.jpg);
+        background-image: url(~imgPath/v2-fw-map-bg.jpg);
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -13,7 +13,7 @@ body .main{
         width: 344px; height: 80px; position: absolute; top: 5px; left: 428px;
         .cw-map-name-box{
             width: 344px; height: 80px; position: absolute; top: 0; left: 0;
-            background-image: url(red-lenta.png);
+            background-image: url(~imgPath/red-lenta.png);
             background-size: 100%;
             background-repeat: no-repeat;
             text-align: center;
@@ -58,10 +58,10 @@ body .main{
                 background-size: 22px;
                 background-position: 50%;
                 background-repeat: no-repeat;
-                background-image: url(v2-cw-pop-orange.png);
+                background-image: url(~imgPath/v2-cw-pop-orange.png);
                 
                 &.occupied{
-                    background-image: url(v2-cw-pop-blue.png);
+                    background-image: url(~imgPath/v2-cw-pop-blue.png);
                 }
             }
         }

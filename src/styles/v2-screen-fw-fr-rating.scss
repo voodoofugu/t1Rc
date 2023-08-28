@@ -127,7 +127,7 @@ body .main {
                             position: absolute;
                             top: 5px;
                             left: 44px;
-                            background-image: url(wpck-ram.png);
+                            background-image: url(~imgPath/wpck-ram.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                             color: #fff;
@@ -288,7 +288,7 @@ body .main {
                                 position: absolute;
                                 top: 0;
                                 left: 0;
-                                background-image: url(v2-master-pic1.png);
+                                background-image: url(~imgPath/v2-master-pic1.png);
                                 background-size: 100%;
                                 background-repeat: no-repeat;
                             }
@@ -383,15 +383,15 @@ body .main {
                                 display: inline-block;
                                 top: 20px;
                                 margin: 0 20px;
-                                background-image: url(v2-fw-flag-bg.png);
+                                background-image: url(~imgPath/v2-fw-flag-bg.png);
                                 &.fr1 {
-                                    background-image: url(fr_bg1.png);
+                                    background-image: url(~imgPath/fr_bg1.png);
                                 }
                                 &.fr2 {
-                                    background-image: url(fr_bg2.png);
+                                    background-image: url(~imgPath/fr_bg2.png);
                                 }
                                 &.fr3 {
-                                    background-image: url(fr_bg3.png);
+                                    background-image: url(~imgPath/fr_bg3.png);
                                 }
                                 background-size: 100%;
                                 background-repeat: no-repeat;

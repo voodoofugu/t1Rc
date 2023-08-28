@@ -107,7 +107,7 @@
             height: 18px;
             position: relative;
             display: inline-block;
-            background-image: url(v2-ic-filter.png);
+            background-image: url(~imgPath/v2-ic-filter.png);
             background-size: 100%;
             background-repeat: no-repeat;
             margin-right: 6px;
@@ -297,7 +297,7 @@
               position: relative;
               display: inline-block;
               top: 3px;
-              background-image: url(star48.png);
+              background-image: url(~imgPath/star48.png);
               background-size: 100%;
               background-repeat: no-repeat;
             }
@@ -511,7 +511,7 @@
         height: 210px;
         position: relative;
         text-align: center;
-        background-image: url(shop-pod.jpg);
+        background-image: url(~imgPath/shop-pod.jpg);
         background-size: 100%;
         &.blured {
           filter: blur(5px);
@@ -523,7 +523,7 @@
           top: 190px;
           left: 199px;
 
-          background-image: url(polka.png);
+          background-image: url(~imgPath/polka.png);
           background-size: 100%;
           z-index: 999;
           line-height: 32px;
@@ -576,7 +576,7 @@
                 height: 30px;
                 position: relative;
                 display: inline-block;
-                background-image: url(ic-diamond.png);
+                background-image: url(~imgPath/ic-diamond.png);
                 background-size: 100%;
                 margin-right: 4px;
                 margin-left: 4px;
@@ -614,7 +614,7 @@
               position: absolute;
               top: -2px;
               left: -4px;
-              background-image: url(offer-bk-sm.png);
+              background-image: url(~imgPath/offer-bk-sm.png);
               background-size: 100%;
               .store-timer-text {
                 width: 44px;
@@ -631,7 +631,7 @@
               }
             }
             .rate {
-              background-image: url(ic-abil-redline.png);
+              background-image: url(~imgPath/ic-abil-redline.png);
               font-size: 18px;
               color: #fff;
               line-height: 18px;
@@ -642,7 +642,7 @@
               top: 50px;
               left: -4px;
               &.shards {
-                background-image: url(ic-abil-greenline.png);
+                background-image: url(~imgPath/ic-abil-greenline.png);
               }
             }
           }
@@ -653,7 +653,7 @@
             position: absolute;
             top: 26px;
             margin-left: 111px;
-            background-image: url(i-ico.png);
+            background-image: url(~imgPath/i-ico.png);
             background-size: 100%;
           }
           .store-name {

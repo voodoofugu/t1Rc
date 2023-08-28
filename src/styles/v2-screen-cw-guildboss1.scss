@@ -16,7 +16,7 @@
             width: 190px; height: 230px; position: absolute;
             .cw-guildboss-box-bg{
                 width: 190px; height: 230px; position: absolute;
-                background-image: url(v2-cw-gbossbg.png);
+                background-image: url(~imgPath/v2-cw-gbossbg.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
             }
@@ -43,7 +43,7 @@
                     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
                     .ic-sw{
                         width: 22px; height: 22px; position: relative; display: inline-block;
-                        background-image: url(v2-fw-icon-w3.png);
+                        background-image: url(~imgPath/v2-fw-icon-w3.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         vertical-align: middle;
@@ -86,7 +86,7 @@
             .f-diamond{
                 &:before{
                     content: ""; width: 30px; height: 30px; position: relative; display: inline-block;
-                    background-image: url(ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
+                    background-image: url(~imgPath/ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
                     vertical-align: middle;
                 }
             }
@@ -102,7 +102,7 @@
             .f-diamond{
                 &:before{
                     content: ""; width: 30px; height: 30px; position: relative; display: inline-block;
-                    background-image: url(ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
+                    background-image: url(~imgPath/ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
                     vertical-align: middle;
                 }
             }

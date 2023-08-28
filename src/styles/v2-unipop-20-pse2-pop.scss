@@ -9,7 +9,7 @@
     left: 150px;
     top: 20px;
     .color-box {
-        background-image: url(ts_confirm_bk-1.jpg);
+        background-image: url(~imgPath/ts_confirm_bk-1.jpg);
         background-size: 100%;
         &:before {
             display: none;
@@ -24,7 +24,7 @@
         position: absolute;
         top: -10px;
         left: -46px;
-        background-image: url(unipop-bg1.png);
+        background-image: url(~imgPath/unipop-bg1.png);
         background-size: 100%;
         &:before {
             content: "";
@@ -33,7 +33,7 @@
             position: absolute;
             top: 540px;
             left: 190px;
-            background-image: url(unipop-bg2.png);
+            background-image: url(~imgPath/unipop-bg2.png);
             background-size: 100%;
         }
         &:after {
@@ -43,7 +43,7 @@
             position: absolute;
             top: 90px;
             left: 800px;
-            background-image: url(unipop-bg3.png);
+            background-image: url(~imgPath/unipop-bg3.png);
             background-size: 100%;
         }
     }
@@ -132,7 +132,7 @@
                         position: absolute;
                         top: 9px;
                         left: 148px;
-                        background-image: url(unipop-gold-arrow.png);
+                        background-image: url(~imgPath/unipop-gold-arrow.png);
                         background-size: 100%;
                         visibility: hidden;
                     }
@@ -187,7 +187,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-image: url(ts_confirm_bk-1.jpg);
+                background-image: url(~imgPath/ts_confirm_bk-1.jpg);
                 background-size: 100%;
                 background-position-y: bottom;
                 @include prefix(border-radius, 10px);
@@ -212,7 +212,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background-image: url(timer-back-50.png);
+                    background-image: url(~imgPath/timer-back-50.png);
                     background-size: 100%;
                     .time-text,
                     .time {
@@ -253,7 +253,7 @@
                             0 1px 4px 1px rgba(0, 0, 0, 0.4),
                             0 0 0 1px rgba(0, 0, 0, 0.2),
                             inset 0 0 0 2px #ff9b37;
-                        background: url(v2-trophy-bg.jpg), #7e6a5d;
+                        background: url(~imgPath/v2-trophy-bg.jpg), #7e6a5d;
                         background-size: 100%;
                         background-repeat: no-repeat;
                         background-blend-mode: soft-light;
@@ -360,7 +360,7 @@
                         text-align: center;
                         padding: 0 8px 0 16px;
                         line-height: 22px;
-                        background: url(banner-bg1.png);
+                        background: url(~imgPath/banner-bg1.png);
                         background-size: auto 100%;
                         background-repeat: no-repeat;
                         filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
@@ -440,7 +440,7 @@
                             top: 8px;
                             left: unset;
                             right: 5px;
-                            background-image: url(wpck-promote.png);
+                            background-image: url(~imgPath/wpck-promote.png);
                             background-size: 100%;
                             background-position: center;
                             background-repeat: no-repeat;

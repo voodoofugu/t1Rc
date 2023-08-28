@@ -30,7 +30,7 @@
             }
             .cw-clan-settings-name-btn{
                 width: 34px; height: 34px; position: absolute; top: -2px; right: 0; cursor: pointer;
-                background-image: url(btn-edit-small.png); background-size: 100%;
+                background-image: url(~imgPath/btn-edit-small.png); background-size: 100%;
                 &:active{
                     top: -1px; 
                 }
@@ -44,7 +44,7 @@
             .f-diamond{
                 &:before{
                     content: ""; width: 30px; height: 30px; position: relative; display: inline-block;
-                    background-image: url(ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
+                    background-image: url(~imgPath/ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
                     vertical-align: middle;
                 }
             }

@@ -82,7 +82,7 @@ body .main{
                                     width: 344px; height: 80px; position: absolute; top: 5px; left: 3px;
                                     .cw-map-name-box{
                                         width: 344px; height: 80px; position: absolute; top: 0; left: 0;
-                                        background-image: url(red-lenta.png);
+                                        background-image: url(~imgPath/red-lenta.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         text-align: center;
@@ -172,14 +172,14 @@ body .main{
                                     }
                                     .fw-level-rew-num-check{
                                         width: 50px; height: 50px; position: absolute; top: 5px; left: 5px;
-                                        background-image: url(paycheck.png);
+                                        background-image: url(~imgPath/paycheck.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         visibility: hidden;
                                     }
                                     .fw-level-rew-good{
                                         width: 64px; height: 64px; position: absolute; top: -2px; left: -2px;
-                                        background-image: url(fortuna-good.png); background-size: 100%;
+                                        background-image: url(~imgPath/fortuna-good.png); background-size: 100%;
                                         visibility: hidden;
                                     }
                                     .color-btn.green{
@@ -276,13 +276,13 @@ body .main{
                         display: none;
                         .fw-btlpass-girl{
                             width: 170px; height: 200px; position: absolute; top: 0; left: 0;
-                            background-image: url(v2-fw-girl.png);
+                            background-image: url(~imgPath/v2-fw-girl.png);
                             background-repeat: no-repeat;
                             background-size: 100%;
                         }
                         .fw-btlpass-info{
                             width: 26px; height: 26px; position: absolute; top: 5px; left: 5px;
-                            background-image: url(i-ico.png);
+                            background-image: url(~imgPath/i-ico.png);
                             background-repeat: no-repeat;
                             background-size: 100%;
                             cursor: pointer;

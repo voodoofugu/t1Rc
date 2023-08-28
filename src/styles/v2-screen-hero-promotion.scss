@@ -135,7 +135,7 @@
                             position: relative;
                             top: -2px;
                             display: inline-block;
-                            background-image: url(ic-diamond.png);
+                            background-image: url(~imgPath/ic-diamond.png);
                             background-size: cover;
                             background-position: center;
                             margin-right: 4px;
@@ -263,7 +263,7 @@
                     width: 94px;
                     height: 18px;
                     position: absolute;
-                    background-image: url(hero-star05-bg.png);
+                    background-image: url(~imgPath/hero-star05-bg.png);
                     background-size: 100%;
                     mix-blend-mode: hard-light;
                     filter: drop-shadow(0px 1px 1px rgba(255, 255, 255, 0.4));
@@ -272,8 +272,8 @@
                         width: 94px;
                         height: 18px;
                         position: absolute;
-                        background-image: url(hero-star05.png),
-                            url(hero-star05.png);
+                        background-image: url(~imgPath/hero-star05.png),
+                            url(~imgPath/hero-star05.png);
                         background-size: 100%;
                         background-blend-mode: soft-light;
                         filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.6));
@@ -527,7 +527,7 @@
                                         top: 50px;
                                         left: 50%;
                                         transform: translateX(-50%);
-                                        background-image: url(v2-lock-ic.png);
+                                        background-image: url(~imgPath/v2-lock-ic.png);
                                         background-size: 100%;
                                         filter: drop-shadow(
                                             0 1px 4px rgba(0, 0, 0, 0.4)
@@ -569,7 +569,7 @@
                                 top: 1px;
                                 left: 50%;
                                 transform: translateX(-50%);
-                                background-image: url(hero-star05-bg.png);
+                                background-image: url(~imgPath/hero-star05-bg.png);
                                 background-size: 100%;
                                 mix-blend-mode: hard-light;
                                 filter: drop-shadow(
@@ -580,8 +580,8 @@
                                     width: 94px;
                                     height: 18px;
                                     position: absolute;
-                                    background-image: url(hero-star05.png),
-                                        url(hero-star05.png);
+                                    background-image: url(~imgPath/hero-star05.png),
+                                        url(~imgPath/hero-star05.png);
                                     background-size: 100%;
                                     background-blend-mode: soft-light;
                                     filter: drop-shadow(

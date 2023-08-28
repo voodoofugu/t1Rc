@@ -132,8 +132,8 @@ body .main {
                             left: 5px;
                             bottom: 47px;
                             pointer-events: none;
-                            background-image: url(suphero-squad-frame-all@x2.png),
-                                url(suphero-squad-frame-all@x2.png);
+                            background-image: url(~imgPath/suphero-squad-frame-all@x2.png),
+                                url(~imgPath/suphero-squad-frame-all@x2.png);
                             background-position: -937px -562px, 245px -562px;
                             background-repeat: no-repeat;
                             background-size: 973px auto;
@@ -199,7 +199,7 @@ body .main {
                                     top: -4px;
                                     right: -39px;
                                     cursor: pointer;
-                                    background-image: url(btn-edit-small.png);
+                                    background-image: url(~imgPath/btn-edit-small.png);
                                     background-size: 100%;
                                     &:active {
                                         top: -3px;
@@ -209,7 +209,7 @@ body .main {
                                     }
                                 }
                                 .btn-enter-small {
-                                    background-image: url(btn-enter-small.png);
+                                    background-image: url(~imgPath/btn-enter-small.png);
                                 }
                                 .btn-enter-small {
                                     display: none;
@@ -369,7 +369,7 @@ body .main {
                                 &.stats {
                                     .txt {
                                         &:before {
-                                            background-image: url(tab-icn-all.png);
+                                            background-image: url(~imgPath/tab-icn-all.png);
                                             background-position: -68px center;
                                             background-repeat: no-repeat;
                                             background-size: auto 34px;
@@ -379,7 +379,7 @@ body .main {
                                 &.abil {
                                     .txt {
                                         &:before {
-                                            background-image: url(tab-icn-all.png);
+                                            background-image: url(~imgPath/tab-icn-all.png);
                                             background-position: 0 center;
                                             background-repeat: no-repeat;
                                             background-size: auto 34px;
@@ -389,7 +389,7 @@ body .main {
                                 &.skin {
                                     .txt {
                                         &:before {
-                                            background-image: url(tab-icn-all.png);
+                                            background-image: url(~imgPath/tab-icn-all.png);
                                             background-position: -102px center;
                                             background-repeat: no-repeat;
                                             background-size: auto 34px;
@@ -445,17 +445,17 @@ body .main {
                                         height: 30px;
                                         position: relative;
                                         display: inline-block;
-                                        background-image: url(ms-hand.png);
+                                        background-image: url(~imgPath/ms-hand.png);
                                         background-size: 100%;
                                         top: 1px;
                                         &.char {
-                                            background-image: url(ms-lips.png);
+                                            background-image: url(~imgPath/ms-lips.png);
                                         }
                                         &.int {
-                                            background-image: url(ms-lamp.png);
+                                            background-image: url(~imgPath/ms-lamp.png);
                                         }
                                         &.lck {
-                                            background-image: url(ms-podk.png);
+                                            background-image: url(~imgPath/ms-podk.png);
                                         }
                                     }
                                     .st-text {
@@ -481,7 +481,7 @@ body .main {
                                             rgba(255, 255, 255, 0.6),
                                         0 1px 4px 1px rgba(0, 0, 0, 0.4),
                                         inset 0 0 0 2px #ff9b37;
-                                    background: url(v2-trophy-bg.jpg);
+                                    background: url(~imgPath/v2-trophy-bg.jpg);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                     overflow: hidden;
@@ -497,18 +497,18 @@ body .main {
                                         top: 6px;
                                         left: 50%;
                                         transform: translateX(-50%);
-                                        background-image: url(ms-stone-orange.png);
+                                        background-image: url(~imgPath/ms-stone-orange.png);
                                         &.char {
-                                            background-image: url(ms-stone-blue.png);
+                                            background-image: url(~imgPath/ms-stone-blue.png);
                                         }
                                         &.int {
-                                            background-image: url(ms-stone-green.png);
+                                            background-image: url(~imgPath/ms-stone-green.png);
                                         }
                                         &.lck {
-                                            background-image: url(ms-stone-pink.png);
+                                            background-image: url(~imgPath/ms-stone-pink.png);
                                         }
                                         &.all {
-                                            background-image: url(ms-stone-all.png);
+                                            background-image: url(~imgPath/ms-stone-all.png);
                                         }
                                     }
                                     .energy {
@@ -517,7 +517,7 @@ body .main {
                                         position: absolute;
                                         top: 6px;
                                         left: 10px;
-                                        background-image: url(v2-icon-energy.png);
+                                        background-image: url(~imgPath/v2-icon-energy.png);
                                     }
                                     .stone-stat {
                                         width: 100px;
@@ -605,7 +605,7 @@ body .main {
                                             display: block;
                                             height: 100%;
                                             width: 17px;
-                                            background-image: url(darkworld-angels-title-bg-br.png);
+                                            background-image: url(~imgPath/darkworld-angels-title-bg-br.png);
                                             background-repeat: no-repeat;
                                             filter: brightness(0.58)
                                                 saturate(1.9);
@@ -737,7 +737,7 @@ body .main {
                                             top: 1px;
                                             width: 50%;
                                             height: 21px;
-                                            background-image: url(suphero-squad-frame-all@x2.png);
+                                            background-image: url(~imgPath/suphero-squad-frame-all@x2.png);
                                             background-position: 0 -554px;
                                             background-repeat: no-repeat;
                                             background-size: 818px auto;
@@ -856,9 +856,10 @@ body .main {
                                     left: 0;
                                     top: 0;
                                     border-radius: 13px;
-                                    background-image: url(corner-02.png),
-                                        url(corner-02.png), url(corner-02.png),
-                                        url(corner-02.png);
+                                    background-image: url(~imgPath/corner-02.png),
+                                        url(~imgPath/corner-02.png),
+                                        url(~imgPath/corner-02.png),
+                                        url(~imgPath/corner-02.png);
                                     background-position: -27px -26px,
                                         157px -26px, -27px 375px, 157px 375px;
                                     background-repeat: no-repeat;
@@ -965,7 +966,7 @@ body .main {
                                         width: 144px;
                                         height: 100px;
                                         display: inline-block;
-                                        background: url(tabs-menu-bg.png),
+                                        background: url(~imgPath/tabs-menu-bg.png),
                                             linear-gradient(
                                                 0deg,
                                                 #584b48,
@@ -1029,7 +1030,7 @@ body .main {
                                                             height: 18px;
                                                             position: relative;
                                                             display: inline-block;
-                                                            background-image: url(trophy-bonus-gems.png);
+                                                            background-image: url(~imgPath/trophy-bonus-gems.png);
                                                             background-size: 100%;
                                                             margin: 0 4px 0 4px;
                                                             vertical-align: middle;
@@ -1048,7 +1049,7 @@ body .main {
                                                             height: 18px;
                                                             position: relative;
                                                             display: inline-block;
-                                                            background-image: url(ic-diamond.png);
+                                                            background-image: url(~imgPath/ic-diamond.png);
                                                             background-size: 100%;
                                                             margin: 0 4px 0 4px;
                                                             vertical-align: middle;
@@ -1078,7 +1079,7 @@ body .main {
                                                 height: 56px;
                                                 position: relative;
                                                 margin: 1px auto;
-                                                background-image: url(paycheck.png);
+                                                background-image: url(~imgPath/paycheck.png);
                                                 background-size: 100%;
                                             }
                                         }
@@ -1145,10 +1146,10 @@ body .main {
                                                     rgba(0, 0, 0, 0.4);
                                             &:before,
                                             &:after {
-                                                background-image: url(suphero-squad-frame-all@x2.png),
-                                                    url(suphero-squad-frame-all@x2.png),
-                                                    url(suphero-squad-frame-all@x2.png),
-                                                    url(suphero-squad-frame-all@x2.png);
+                                                background-image: url(~imgPath/suphero-squad-frame-all@x2.png),
+                                                    url(~imgPath/suphero-squad-frame-all@x2.png),
+                                                    url(~imgPath/suphero-squad-frame-all@x2.png),
+                                                    url(~imgPath/suphero-squad-frame-all@x2.png);
                                                 background-position: -584px -280px,
                                                     -246px -280px, -595px -280px,
                                                     -235px -280px;
@@ -1164,8 +1165,8 @@ body .main {
                                             left: 0;
                                             bottom: 0;
                                             pointer-events: none;
-                                            background-image: url(suphero-squad-frame-all@x2.png),
-                                                url(suphero-squad-frame-all@x2.png);
+                                            background-image: url(~imgPath/suphero-squad-frame-all@x2.png),
+                                                url(~imgPath/suphero-squad-frame-all@x2.png);
                                             background-position: -576px 4px,
                                                 -252px 4px;
                                             background-repeat: no-repeat;
@@ -1186,10 +1187,10 @@ body .main {
                                         left: 0;
                                         top: 0;
                                         border-radius: 13px;
-                                        background-image: url(corner-02.png),
-                                            url(corner-02.png),
-                                            url(corner-02.png),
-                                            url(corner-02.png);
+                                        background-image: url(~imgPath/corner-02.png),
+                                            url(~imgPath/corner-02.png),
+                                            url(~imgPath/corner-02.png),
+                                            url(~imgPath/corner-02.png);
                                         background-position: -27px -26px,
                                             709px -26px, -27px 96px, 709px 96px;
                                         background-repeat: no-repeat;
@@ -1516,7 +1517,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(trophy-bonus-gems.png);
+                                    background-image: url(~imgPath/trophy-bonus-gems.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -1530,7 +1531,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(trophy-bonus-mithril.png);
+                                    background-image: url(~imgPath/trophy-bonus-mithril.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }

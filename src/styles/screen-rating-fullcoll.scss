@@ -57,7 +57,7 @@
         position: absolute;
         top: 30px;
         margin-left: -23px;
-        background-image: url(legendary-lock-2.png);
+        background-image: url(~imgPath/legendary-lock-2.png);
         background-size: 100%;
       }
       &.locked {
@@ -84,7 +84,7 @@
             position: absolute;
             margin-left: 22px;
             top: -45px;
-            background-image: url(bdiz.png);
+            background-image: url(~imgPath/bdiz.png);
             background-size: 100%;
             opacity: 0;
             z-index: 1;
@@ -232,7 +232,7 @@
           position: absolute;
           top: 6px;
           margin-left: 18px;
-          background-image: url(paycheck.png);
+          background-image: url(~imgPath/paycheck.png);
           background-size: 100%;
           display: block;
         }

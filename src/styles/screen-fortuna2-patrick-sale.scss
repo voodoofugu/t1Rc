@@ -14,7 +14,7 @@
   );
   &:before {
     content: "";
-    background-image: url(sv-sale-bg2.jpg);
+    background-image: url(~imgPath/sv-sale-bg2.jpg);
     background-size: 100%;
   }
   .title {
@@ -253,7 +253,7 @@
                   vertical-align: middle;
                   display: inline-block;
                   top: -3px;
-                  background-image: url(ico-gold.png);
+                  background-image: url(~imgPath/ico-gold.png);
                   background-size: 100%;
                 }
               }
@@ -438,7 +438,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(pt-h-bg1.png);
+      background-image: url(~imgPath/pt-h-bg1.png);
       background-size: 100%;
       &:before {
         content: "";
@@ -447,7 +447,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(pt-h-bg1-1.png);
+        background-image: url(~imgPath/pt-h-bg1-1.png);
         background-size: 100%;
       }
     }
@@ -457,7 +457,7 @@
       position: absolute;
       top: 0;
       left: 200px;
-      background-image: url(pt-h-bg2.png);
+      background-image: url(~imgPath/pt-h-bg2.png);
       background-size: 100%;
       &:before {
         content: "";
@@ -466,7 +466,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(pt-h-bg2-1.png);
+        background-image: url(~imgPath/pt-h-bg2-1.png);
         background-size: 100%;
       }
     }
@@ -476,7 +476,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(pt-h-chain-1.png);
+      background-image: url(~imgPath/pt-h-chain-1.png);
       background-size: 100%;
     }
     .sv-chain2 {
@@ -485,7 +485,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(pt-h-chain-2.png);
+      background-image: url(~imgPath/pt-h-chain-2.png);
       background-size: 100%;
     }
     .sv-reward-box {
@@ -547,16 +547,16 @@
         position: absolute;
         top: 30px;
         left: -5px;
-        background-image: url(legendary-lock.png);
+        background-image: url(~imgPath/legendary-lock.png);
         background-size: 100%;
       }
     }
     &.one {
       .sv-heart-left {
-        background-image: url(pt-h-bg1-g.png);
+        background-image: url(~imgPath/pt-h-bg1-g.png);
         &:before {
           content: "";
-          background-image: url(pt-h-bg1-1-g.png);
+          background-image: url(~imgPath/pt-h-bg1-1-g.png);
         }
       }
       .sv-chain1 {
@@ -565,10 +565,10 @@
     }
     &.two {
       .sv-heart-right {
-        background-image: url(pt-h-bg2-g.png);
+        background-image: url(~imgPath/pt-h-bg2-g.png);
         &:before {
           content: "";
-          background-image: url(pt-h-bg2-1-g.png);
+          background-image: url(~imgPath/pt-h-bg2-1-g.png);
         }
       }
       .sv-chain2 {
@@ -587,7 +587,7 @@
   position: absolute;
   top: -10px;
   margin-left: -10px;
-  background-image: url(timer-back.png);
+  background-image: url(~imgPath/timer-back.png);
   background-size: 100%;
   .time-left,
   .time-sec {

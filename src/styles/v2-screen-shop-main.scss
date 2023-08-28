@@ -7,9 +7,9 @@
         width: 118px; height: 450px; position: absolute; top: 50px; margin-left: 8px;
         .menu-box-all{
             width: 118px; height: 90px; position: relative;
-            background-image: url(shop-menu1.png); background-size: 100%; cursor: pointer;
+            background-image: url(~imgPath/shop-menu1.png); background-size: 100%; cursor: pointer;
             &:active{top: 1px;}
-            &.select{background-image: url(shop-menu2.png);}
+            &.select{background-image: url(~imgPath/shop-menu2.png);}
             .menu-pic{
                 width: 80px; height: 60px; position: absolute; margin-left: 19px;
             }
@@ -57,7 +57,7 @@
                     }
                     .store-item-all{
                         width: 668px; height: 210px; position: relative; text-align: center;
-                        background-image: url(shop-pod.jpg); background-size: 100%;
+                        background-image: url(~imgPath/shop-pod.jpg); background-size: 100%;
                         &.blured{
                             filter: blur(5px);
                             
@@ -66,7 +66,7 @@
                         .store-item-all-name{
                             margin-left: -135px;
                             width: 270px; height: 34px; position: absolute; top: 190px;
-                            background-image: url(polka.png); background-size: 100%; display: inline-block;
+                            background-image: url(~imgPath/polka.png); background-size: 100%; display: inline-block;
                             z-index: 999; line-height: 32px; color: #632e09; font-weight: bold; font-size: 14px;
                             text-transform: uppercase; text-shadow: 0 0 6px #fff8ab;
                         }
@@ -97,7 +97,7 @@
                                 }
                                 .store-timer-box{
                                     width: 50px; height: 50px; position: absolute; top: -2px; margin-left: -4px;
-                                    background-image: url(offer-bk-sm.png); background-size: 100%;
+                                    background-image: url(~imgPath/offer-bk-sm.png); background-size: 100%;
                                     .store-timer-text{
                                         width: 44px; height: 30px; position: absolute; top: 2px; margin-left: 2px;
                                         text-align: center; text-transform: uppercase;
@@ -106,7 +106,7 @@
                                     }
                                 }
                                 .rate{
-                                    background-image: url(ic-abil-redline.png);
+                                    background-image: url(~imgPath/ic-abil-redline.png);
                                     font-size: 18px;
                                     color: #fff;
                                     line-height: 18px;
@@ -117,14 +117,14 @@
                                     top: 50px;
                                     left: -4px;
                                     &.shards{
-                                        background-image: url(ic-abil-greenline.png);
+                                        background-image: url(~imgPath/ic-abil-greenline.png);
                                     }
                                 }
                             }
                             
                             .i-ico{
                                 width: 26px; height: 26px; position: absolute; top: 26px; margin-left: 111px;
-                                background-image: url(i-ico.png); background-size: 100%;
+                                background-image: url(~imgPath/i-ico.png); background-size: 100%;
                             }
                             .store-name{
                                 width: 140px; height: 24px; position: absolute; top: 0px; margin-left: 0px; 
@@ -145,7 +145,7 @@
                 @include prefix(border-radius, 10px);  box-shadow: 0 2px 2px 0 #5e544c;
                 &:before{
                     content: ""; width: 146px; height: 446px; position: absolute; top: 2px; margin-left: 2px;
-                    background-image: url(ts_confirm_bk-1.jpg); background-size: 412%; background-repeat: no-repeat;
+                    background-image: url(~imgPath/ts_confirm_bk-1.jpg); background-size: 412%; background-repeat: no-repeat;
                     overflow: hidden; background-position: center;
                     @include prefix(border-radius, 8px);
                 }
@@ -184,7 +184,7 @@
                             }
                             .store-timer-box{
                                 width: 50px; height: 50px; position: absolute; top: -2px; margin-left: -4px;
-                                background-image: url(offer-bk-sm.png); background-size: 100%;
+                                background-image: url(~imgPath/offer-bk-sm.png); background-size: 100%;
                                 .store-timer-text{
                                     width: 44px; height: 30px; position: absolute; top: 2px; margin-left: 2px;
                                     text-align: center; text-transform: uppercase;
@@ -200,7 +200,7 @@
                                 }
                             }
                             .rate{
-                                background-image: url(ic-abil-redline.png);
+                                background-image: url(~imgPath/ic-abil-redline.png);
                                 font-size: 18px;
                                 color: #fff;
                                 line-height: 18px;
@@ -215,7 +215,7 @@
                                 background-size: 98px 22px;
                                 text-align: center;
                                 &.shards{
-                                    background-image: url(ic-abil-greenline.png);
+                                    background-image: url(~imgPath/ic-abil-greenline.png);
                                 }
                             }
                         }

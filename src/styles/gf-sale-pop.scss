@@ -74,7 +74,7 @@
                                     vertical-align: middle;
                                     display: inline-block;
                                     top: -3px;
-                                    background-image: url(ico-gold.png);
+                                    background-image: url(~imgPath/ico-gold.png);
                                     background-size: 100%;
                                 }
                             }
@@ -90,7 +90,7 @@
     }
     .gf-ballon-box{
         width: 380px; height: 150px; position: absolute; top: 80px; left: 250px;
-        background-image: url(gf-ballon.png);
+        background-image: url(~imgPath/gf-ballon.png);
         background-size: 100%;
         background-repeat: no-repeat;
         .gf-ballon-text{
@@ -203,7 +203,7 @@
 
 .wpck-timer-box{
     width: 184px; height: 84px; position: absolute; top: -10px; margin-left: -10px;
-    background-image: url(timer-back.png); background-size: 100%;
+    background-image: url(~imgPath/timer-back.png); background-size: 100%;
     .time-left, .time-sec{
         width: 150px; height: 26px; position: absolute; top: 18px; margin-left: 18px;
         color: #fff000; font-size: 16px; font-weight: bold; text-transform: uppercase;

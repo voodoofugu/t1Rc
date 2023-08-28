@@ -17,7 +17,7 @@
             margin: 5px;
             .cw-guildboss-box-bg{
                 width: 190px; height: 230px; position: absolute;
-                background-image: url(v2-cw-gbossbg.png);
+                background-image: url(~imgPath/v2-cw-gbossbg.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
             }
@@ -46,7 +46,7 @@
             }
             .cw-guildboss-box-check{
                 width: 84px; height: 84px; position: absolute; top: 66px; left: 53px; display: none;
-                background-image: url(paycheck.png);
+                background-image: url(~imgPath/paycheck.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
             }
@@ -57,7 +57,7 @@
                 display: none;
                 .cw-guildboss-attack-pic{
                     width: 42px; height: 42px; position: absolute; top: 16px; left: 29px;
-                    background-image: url(v2-fw-icon-w3.png);
+                    background-image: url(~imgPath/v2-fw-icon-w3.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
@@ -75,7 +75,7 @@
                 .cw-guildboss-box-bg, .cw-guildboss-pic, .cw-guildboss-num-box{filter: grayscale(100%);}
             }
             &.select{
-                .cw-guildboss-box-bg{background-image: url(v2-cw-gbossbg-sel.png);}
+                .cw-guildboss-box-bg{background-image: url(~imgPath/v2-cw-gbossbg-sel.png);}
                 .cw-guildboss-attack-box{display: block;}
             }
         }
@@ -83,7 +83,7 @@
     }
     .cw-guildboss-arrow{
         width: 20px; height: 62px; position: absolute; top: 290px; left: 26px;
-        background-image: url(unipop-gold-arrow.png);
+        background-image: url(~imgPath/unipop-gold-arrow.png);
         background-size: 100%;
         background-repeat: no-repeat;
         transform: rotate(180deg);

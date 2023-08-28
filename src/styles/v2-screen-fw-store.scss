@@ -34,7 +34,7 @@
         position: absolute;
         bottom: 10px;
         left: -48px;
-        background-image: url(break-girl-fw.png);
+        background-image: url(~imgPath/break-girl-fw.png);
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -44,7 +44,7 @@
         position: absolute;
         bottom: 10px;
         left: -15px;
-        background-image: url(break-girl826.png);
+        background-image: url(~imgPath/break-girl826.png);
         background-size: 132%;
         background-position: -68px -28px;
         background-repeat: no-repeat;
@@ -79,7 +79,7 @@
             height: 30px;
             position: relative;
             display: inline-block;
-            background-image: url(ic-contrip.png);
+            background-image: url(~imgPath/ic-contrip.png);
             background-size: 100%;
             margin-right: 4px;
             margin-left: 4px;
@@ -87,17 +87,17 @@
         }
         &.cw {
             &:before {
-                background-image: url(ic-contrip-red.png);
+                background-image: url(~imgPath/ic-contrip-red.png);
             }
         }
         &.poly {
             &:before {
-                background-image: url(poly-chip-icon.png);
+                background-image: url(~imgPath/poly-chip-icon.png);
             }
         }
         &.spirit3 {
             &:before {
-                background-image: url(crow-70.png);
+                background-image: url(~imgPath/crow-70.png);
                 top: -2px;
                 filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
             }
@@ -147,7 +147,7 @@
                 height: 210px;
                 position: relative;
                 text-align: center;
-                background-image: url(shop-pod.jpg);
+                background-image: url(~imgPath/shop-pod.jpg);
                 background-size: 100%;
                 &.blured {
                     filter: blur(5px);
@@ -159,7 +159,7 @@
                     top: 190px;
                     left: 199px;
 
-                    background-image: url(polka.png);
+                    background-image: url(~imgPath/polka.png);
                     background-size: 100%;
                     z-index: 999;
                     line-height: 32px;
@@ -213,7 +213,7 @@
                         position: absolute;
                         right: 0px;
                         top: 15px;
-                        background-image: url(zvezda.png);
+                        background-image: url(~imgPath/zvezda.png);
                         background-size: 100%;
                         color: white;
                         font-size: 16px;
@@ -231,7 +231,7 @@
                         box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
                             0 1px 4px 1px rgba(0, 0, 0, 0.4),
                             inset 0 0 0 2px #ff9b37;
-                        background: url(v2-trophy-bg.jpg);
+                        background: url(~imgPath/v2-trophy-bg.jpg);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         .img-wrap {
@@ -264,7 +264,7 @@
                                 0 1px 4px rgba(0, 0, 0, 0.4);
                             text-align: center;
                             padding: 0 0 0 6px;
-                            background: url(banner-bg1.png);
+                            background: url(~imgPath/banner-bg1.png);
                             background-size: auto 100%;
                             background-repeat: no-repeat;
                             filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
@@ -279,7 +279,7 @@
                             position: absolute;
                             top: -2px;
                             left: -4px;
-                            background-image: url(offer-bk-sm.png);
+                            background-image: url(~imgPath/offer-bk-sm.png);
                             background-size: 100%;
                             .store-timer-text {
                                 width: 44px;
@@ -356,7 +356,7 @@
                                 height: 30px;
                                 position: relative;
                                 display: inline-block;
-                                background-image: url(ic-diamond.png);
+                                background-image: url(~imgPath/ic-diamond.png);
                                 background-size: 100%;
                                 margin-right: 4px;
                                 margin-left: 4px;
@@ -382,7 +382,7 @@
                         position: absolute;
                         top: 26px;
                         margin-left: 111px;
-                        background-image: url(i-ico.png);
+                        background-image: url(~imgPath/i-ico.png);
                         background-size: 100%;
                     }
                     .store-name {
@@ -446,7 +446,7 @@
         position: absolute;
         top: 2px;
         margin-left: -16px;
-        background-image: url(wpck-ram.png);
+        background-image: url(~imgPath/wpck-ram.png);
         background-size: 100%;
         font-size: 16px;
         color: #ffd200;
@@ -469,7 +469,7 @@
             position: relative;
             display: inline-block;
             top: 3px;
-            background-image: url(star48.png);
+            background-image: url(~imgPath/star48.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -500,15 +500,15 @@
         position: absolute;
         top: -4px;
         left: -4px;
-        background-image: url(v2-icon-chaos.png);
+        background-image: url(~imgPath/v2-icon-chaos.png);
         background-size: 100%;
         background-repeat: no-repeat;
     }
     .orb-icon {
-        background-image: url(v2-f-e1.png);
+        background-image: url(~imgPath/v2-f-e1.png);
     }
     .ore-icon {
-        background-image: url(v2-icon-sexped-ore.png);
+        background-image: url(~imgPath/v2-icon-sexped-ore.png);
     }
     .sexped-chaos-count {
         width: 84px;

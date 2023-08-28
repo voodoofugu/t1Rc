@@ -177,14 +177,14 @@ body .main {
                   top: -4px;
                   right: -39px;
                   cursor: pointer;
-                  background-image: url(btn-edit-small.png);
+                  background-image: url(~imgPath/btn-edit-small.png);
                   background-size: 100%;
                   &:active {
                     top: -3px;
                   }
                 }
                 .btn-enter-small {
-                  background-image: url(btn-enter-small.png);
+                  background-image: url(~imgPath/btn-enter-small.png);
                 }
                 .btn-enter-small {
                   display: none;
@@ -581,7 +581,7 @@ body .main {
                   position: absolute;
                   top: -2px;
                   left: -2px;
-                  background-image: url(trophy-bonus-gems.png);
+                  background-image: url(~imgPath/trophy-bonus-gems.png);
                   background-size: 100%;
                   background-repeat: no-repeat;
                 }
@@ -595,7 +595,7 @@ body .main {
                   position: absolute;
                   top: -2px;
                   left: -2px;
-                  background-image: url(trophy-bonus-gems.png);
+                  background-image: url(~imgPath/trophy-bonus-gems.png);
                   background-size: 100%;
                   background-repeat: no-repeat;
                 }

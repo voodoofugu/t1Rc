@@ -10,7 +10,7 @@
         content: "";
         // background: linear-gradient(136deg, #8e7453 0%, #e3c7a3 50%, #ae916a 85%, #8f7553 100%);
         background-color: #bb0148;
-        background-image: url(spinner-round-bg.jpg);
+        background-image: url(~imgPath/spinner-round-bg.jpg);
         background-size: 100%;
     }
     .title {
@@ -327,7 +327,7 @@
                     .fortuna-promote {
                         position: absolute;
                         left: -5px;
-                        background-image: url(top-arrow.png);
+                        background-image: url(~imgPath/top-arrow.png);
                         background-size: 100%;
                         width: 40px;
                         top: 40px;
@@ -341,14 +341,14 @@
                         position: absolute;
                         top: -5px;
                         left: -5px;
-                        background-image: url(fortuna-good.png);
+                        background-image: url(~imgPath/fortuna-good.png);
                         background-size: 100%;
                         transition: 300ms;
                     }
                 }
                 &.check {
                     .fortuna-good {
-                        background-image: url(fortuna-good-gold.png);
+                        background-image: url(~imgPath/fortuna-good-gold.png);
                     }
                 }
                 &.fortune_chance {
@@ -377,20 +377,20 @@
                         position: relative;
                         top: 56px;
                         margin: 0 auto;
-                        background-image: url(star1.png);
+                        background-image: url(~imgPath/star1.png);
                         background-size: 100%;
                     }
                 }
                 &.pic-star2 {
                     .fortuna-pic-star {
                         width: 35px;
-                        background-image: url(star2.png);
+                        background-image: url(~imgPath/star2.png);
                     }
                 }
                 &.pic-star3 {
                     .fortuna-pic-star {
                         width: 50px;
-                        background-image: url(star3.png);
+                        background-image: url(~imgPath/star3.png);
                     }
                 }
                 &.doublespin {
@@ -428,7 +428,7 @@
             position: absolute;
             top: 73px;
             left: 73px;
-            background-image: url(spinner-round-center.png);
+            background-image: url(~imgPath/spinner-round-center.png);
             background-position: 50% 50%;
             @include prefix(border-radius, 50%);
 
@@ -464,7 +464,7 @@
                 .color-btn {
                     width: 185px;
                     height: 55px;
-                    //background-image: url(spinner-round-button-up.png); background-size: 100%;
+                    //background-image: url(~imgPath/spinner-round-button-up.png); background-size: 100%;
                     //@include prefix(border-radius, 0);
                     line-height: 35px;
                     //box-shadow: none;
@@ -476,7 +476,7 @@
                     }
                     &.x10 {
                         margin-top: 15px;
-                        //background-image: url(spinner-round-button-down.png);
+                        //background-image: url(~imgPath/spinner-round-button-down.png);
                     }
                     &.tokens {
                         display: inline-block;
@@ -488,7 +488,7 @@
                             height: 40px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(v2-f-e1.png);
+                            background-image: url(~imgPath/v2-f-e1.png);
                             background-size: 100%;
                             margin: 0 4px 0 4px;
                             vertical-align: middle;
@@ -832,10 +832,10 @@
                         position: absolute;
                         top: 42px;
                         left: 118px;
-                        background-image: url(prg-bar-f3-empty.png);
+                        background-image: url(~imgPath/prg-bar-f3-empty.png);
                         background-size: 272px 100%;
                         .f2-prgbar-full {
-                            background-image: url(prg-bar-f3-full.png);
+                            background-image: url(~imgPath/prg-bar-f3-full.png);
                             top: 0;
                             left: 0;
                             transition: width 0.5s ease;
@@ -891,7 +891,7 @@
                 top: 355px;
                 left: 0px;
                 position: absolute;
-                //background-image: url(fortuna-prg-bg2.png);
+                //background-image: url(~imgPath/fortuna-prg-bg2.png);
                 //background-position: 50% 50%;
                 @include prefix(border-radius, 10px);
                 box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.4),

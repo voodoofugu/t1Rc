@@ -113,7 +113,7 @@ body .main{
                                 .ped-box-portrait {
                                     width: 66px;
                                     height: 66px;
-                                    background-image: url(gild-icon-66.png);
+                                    background-image: url(~imgPath/gild-icon-66.png);
                                     position: absolute;
                                     margin-left: 22px;
                                     bottom: 62px;
@@ -137,7 +137,7 @@ body .main{
                                     height: 84px;
                                     .ped-box-prize {
                                         width: 60px; height: 60px; left: 27px; top: 2px;
-                                        background-image: url(rating-sign-bronze@1x.png);
+                                        background-image: url(~imgPath/rating-sign-bronze@1x.png);
                                     }
                                 }
                                 &.rate2 {
@@ -145,21 +145,21 @@ body .main{
                                     background-color: #67564a;
                                     .ped-box-prize {
                                         width: 70px; height: 70px; left: 22px;
-                                        background-image: url(icon-sunduk-200-1.png);
+                                        background-image: url(~imgPath/icon-sunduk-200-1.png);
                                     }
                                 }
                                 &.rate3 {
                                     height: 124px; left: 244px;
                                     .ped-box-prize {
                                         width: 90px; height: 90px; left: 12px;
-                                        background-image: url(icon-sunduk-200-2.png);
+                                        background-image: url(~imgPath/icon-sunduk-200-2.png);
                                     }
                                 }
                                 &.rate4 {
                                     height: 144px; left: 366px;
                                     background-color: #67564a;
                                     .ped-box-prize {
-                                        background-image: url(icon-sunduk-200-3.png);
+                                        background-image: url(~imgPath/icon-sunduk-200-3.png);
                                     }
                                 }
                             }
@@ -328,7 +328,7 @@ body .main{
                                                 content: "";
                                                 width: 30px;
                                                 height: 30px;
-                                                background-image: url(diamond@1x.png);
+                                                background-image: url(~imgPath/diamond@1x.png);
                                                 background-size: 100%;
                                                 position: relative;
                                                 display: inline-block;
@@ -339,7 +339,7 @@ body .main{
                                                 content: "";
                                                 width: 30px;
                                                 height: 30px;
-                                                background-image: url(diamond@1x.png);
+                                                background-image: url(~imgPath/diamond@1x.png);
                                                 background-size: 100%;
                                                 position: relative;
                                                 display: inline-block;
@@ -404,7 +404,7 @@ body .main{
 }
 
 .ped-box-portrait {
-    width: 66px; height: 66px; background-image: url(gild-icon-66.png); position: absolute; 
+    width: 66px; height: 66px; background-image: url(~imgPath/gild-icon-66.png); position: absolute; 
     &.place0 {
         display: none;
     }

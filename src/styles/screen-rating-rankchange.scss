@@ -9,7 +9,7 @@
     left: calc(50% - 250px);
     top: 80px;
     .color-box {
-        background-image: url(ts_confirm_bk-1.jpg);
+        background-image: url(~imgPath/ts_confirm_bk-1.jpg);
         background-size: 100%;
         &:before {
             display: none;
@@ -36,11 +36,11 @@
         position: absolute;
         top: 62px;
         margin-left: 48px;
-        background-image: url(arrow-green.png);
+        background-image: url(~imgPath/arrow-green.png);
         background-size: 100%;
     }
     .rank-arrow-down {
-        background-image: url(arrow-red.png);
+        background-image: url(~imgPath/arrow-red.png);
     }
     &.up {
         .rank-arrow-down {
@@ -86,7 +86,7 @@
             }
         }
         .color-box {
-            background-image: url(ts_confirm_bk-2.jpg);
+            background-image: url(~imgPath/ts_confirm_bk-2.jpg);
             background-size: 100%;
             &:before {
                 display: none;

@@ -22,7 +22,7 @@
                     color: #fff; font-size: 12px; font-weight: bold; text-transform: uppercase;
                     .ic-filter{
                         width: 18px; height: 18px; position: relative; display: inline-block;
-                        background-image: url(v2-ic-filter.png);
+                        background-image: url(~imgPath/v2-ic-filter.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         margin-right: 6px;
@@ -156,7 +156,7 @@
 
             .star{
                 display: inline-block;
-                background-image: url(./star1.png);
+                background-image: url(~imgPath/./star1.png);
                 background-size: 100%;
                 width: 24px;
                 height: 23px;
@@ -284,7 +284,7 @@
                             height: 13px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(spinner-round-diamond.png);
+                            background-image: url(~imgPath/spinner-round-diamond.png);
                             background-size: 100%;
                             background-position: center;
                             margin: 0 2px 0 2px;

@@ -55,7 +55,7 @@ body .main{
                         height: 490px;
                         top: 13px;
                         left: 9px;
-                        background-image: url(titans_bg.jpg);
+                        background-image: url(~imgPath/titans_bg.jpg);
                     }
 
                     .titans-garage-scroll-box{
@@ -103,7 +103,7 @@ body .main{
                             left: 4px;
                             width: 278px;
                             height: 452px;
-                            background-image: url(titans_enemy_bg.jpg);
+                            background-image: url(~imgPath/titans_enemy_bg.jpg);
                             background-size: 100%;
                             @include prefix(border-radius, 6px);
                             overflow: hidden;
@@ -155,12 +155,12 @@ body .main{
                                     font-size: 18px;
                                     padding: 10px 11px 0 36px;
                                     &:before{
-                                        background-image: url(v2_at_gear.png);
+                                        background-image: url(~imgPath/v2_at_gear.png);
                                     }
                                 }
-                                &.atk:before{background-image: url(v2_at_magicgun.png);}
-                                &.hp:before{background-image: url(v2_at_magic_plate.png);}
-                                &.pow:before{background-image: url(v2_at_manabomb.png);}
+                                &.atk:before{background-image: url(~imgPath/v2_at_magicgun.png);}
+                                &.hp:before{background-image: url(~imgPath/v2_at_magic_plate.png);}
+                                &.pow:before{background-image: url(~imgPath/v2_at_manabomb.png);}
                             }
                         }
                         .titans-garage-item-image{
@@ -267,7 +267,7 @@ body .main{
 
                         .star{
                             display: inline-block;
-                            background-image: url(./star1.png);
+                            background-image: url(~imgPath/./star1.png);
                             background-size: 100%;
                             width: 24px;
                             height: 23px;
@@ -344,7 +344,7 @@ body .main{
                             &.gems{
                                 &:before{
                                     content: ""; width: 40px; height: 40px; position: absolute; top: -2px; left: -2px;
-                                    background-image: url(trophy-bonus-gems.png);
+                                    background-image: url(~imgPath/trophy-bonus-gems.png);
                                     background-size: 100%; background-repeat: no-repeat;
                                 }
                             }
@@ -352,7 +352,7 @@ body .main{
                                 left: 190px;
                                 &:before{
                                     content: ""; width: 40px; height: 40px; position: absolute; top: -2px; left: -2px;
-                                    background-image: url(trophy-bonus-gems.png);
+                                    background-image: url(~imgPath/trophy-bonus-gems.png);
                                     background-size: 100%; background-repeat: no-repeat;
                                 }
                             }
@@ -363,7 +363,7 @@ body .main{
                         @include prefix(border-radius, 10px 10px 0 0);
                         .essence-icon{
                             width: 40px; height: 40px; position: absolute; top: 2px; left: 10px;
-                            background-image: url(trophy-bonus-box.png); background-size: 100%;
+                            background-image: url(~imgPath/trophy-bonus-box.png); background-size: 100%;
                         }
                         .essence-coll{
                             width: auto; height: auto; position: absolute; font-size: 20px; color: #fff; line-height: 42px;

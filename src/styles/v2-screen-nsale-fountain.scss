@@ -6,10 +6,10 @@
     width: 988px; height: 605px; position: absolute; left: 106px; top: 17px;
     .mn-pop-bg-all{
         width: 760px; height: 360px; position: absolute; top: 110px; left: 115px;
-        background: url(v2-nsale-bg-fountain.jpg);    
+        background: url(~imgPath/v2-nsale-bg-fountain.jpg);    
         .mn-pop-bg{
             width:988px; height: 605px; position: absolute; top: -110px; left: -115px;
-            background-image: url(v2-nsale-bg.png);
+            background-image: url(~imgPath/v2-nsale-bg.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -34,7 +34,7 @@
         width: 600px; height: 86px; position: absolute; bottom: 18px; left: 194px; font-size: 0;
         .mn-pop-menu{
             width: 118px; height: 90px; position: relative; display: inline-block; margin: 0 10px;
-            background-image: url(shop-menu1.png);
+            background-image: url(~imgPath/shop-menu1.png);
             background-size: 100%;
             background-repeat: no-repeat;
             cursor: pointer;
@@ -48,14 +48,14 @@
                 color: #544746; font-size: 14px; font-weight: bold; text-transform: uppercase; line-height: 16px;
             }
             &.active{
-                background-image: url(shop-menu2.png);
+                background-image: url(~imgPath/shop-menu2.png);
             }
         }
         
     }
     .mn-pop-btn-close-x{
         width: 56px; height: 56px; position: absolute; top: 46px; right: 28px;
-        background-image: url(v2-nsale-bg-btnclose.png);
+        background-image: url(~imgPath/v2-nsale-bg-btnclose.png);
         background-size: 100%;
         background-repeat: no-repeat;
         cursor: pointer;
@@ -129,7 +129,7 @@
                 }
                 .nm-pop-fon-rew-box-check{
                     width: 60px; height: 60px; position: absolute; top: 10px; left: 10px; display: none;
-                    background-image: url(paycheck.png);
+                    background-image: url(~imgPath/paycheck.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }

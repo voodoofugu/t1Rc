@@ -103,7 +103,7 @@
             position: absolute;
             top: 8px;
             margin-left: 8px;
-            background-image: url(paycheck.png);
+            background-image: url(~imgPath/paycheck.png);
             background-size: 100%;
             display: none;
           }
@@ -157,10 +157,10 @@
           position: relative;
           top: -20px;
           margin: 0 auto;
-          background-image: url(change-sun1.png);
+          background-image: url(~imgPath/change-sun1.png);
           background-size: 100%;
           &.open {
-            background-image: url(change-sun3.png);
+            background-image: url(~imgPath/change-sun3.png);
           }
         }
         .change-line {
@@ -169,7 +169,7 @@
           position: absolute;
           top: 256px;
           margin-left: 142px;
-          background-image: url(change-line.png);
+          background-image: url(~imgPath/change-line.png);
           background-size: 100%;
         }
       }
@@ -235,7 +235,7 @@
       position: absolute;
       top: 17px;
       margin-left: 800px;
-      background-image: url(change-prgbar-ff1.png);
+      background-image: url(~imgPath/change-prgbar-ff1.png);
       background-size: 100%;
       &:before {
         content: "";
@@ -244,7 +244,7 @@
         position: absolute;
         margin-left: -790px;
         transform: scaleX(-1);
-        background-image: url(change-prgbar-ff1.png);
+        background-image: url(~imgPath/change-prgbar-ff1.png);
         background-size: 100%;
       }
     }
@@ -368,7 +368,7 @@
             position: relative;
             display: inline-block;
             top: -2px;
-            background-image: url(ico-real.png);
+            background-image: url(~imgPath/ico-real.png);
             background-size: 100%;
             margin-right: 4px;
           }

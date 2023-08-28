@@ -29,7 +29,7 @@
                 color: #fff; font-size: 24px; font-weight: bold;
                 .ic-pse-keygirl{
                     width: 30px; height: 30px; position: relative; display: inline-block; margin-right: 5px; top: 6px;
-                    background-image: url(pse-keygirl.png);
+                    background-image: url(~imgPath/pse-keygirl.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
@@ -47,7 +47,7 @@
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35); line-height: 26px;
             .info-btn{
                 width: 26px; height: 26px; position: absolute; top: 0; right: 5px;
-                background-image: url(i-ico.png);
+                background-image: url(~imgPath/i-ico.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
                 cursor: pointer;
@@ -126,7 +126,7 @@
                 
                 .pse-cf-arrow{
                     width: 20px; height: 62px; position: absolute; top: 10px; left: 454px;
-                    background-image: url(unipop-gold-arrow.png);
+                    background-image: url(~imgPath/unipop-gold-arrow.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                     cursor: pointer;
@@ -150,13 +150,13 @@
                         width: 30px; height: 100px; position: absolute; top: 5px; right: -36px;
                         .pse-cf-res-plus{
                             width: 26px; height: 26px; position: absolute; top: 16px; left: 3px;
-                            background-image: url(v2-nsale-plus.png);
+                            background-image: url(~imgPath/v2-nsale-plus.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                         }
                         .ic-pse-keygirl{
                             width: 30px; height: 30px; position: absolute; bottom: 16px;
-                            background-image: url(pse-keygirl.png);
+                            background-image: url(~imgPath/pse-keygirl.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                         }

@@ -35,7 +35,7 @@
         &.tickets:before,
         &.ice_gold:before {
             content: "";
-            background-image: url(ico-gold.png);
+            background-image: url(~imgPath/ico-gold.png);
             background-size: 22px;
             display: inline-block;
             width: 22px;
@@ -47,7 +47,7 @@
         }
         &.snowflake:before {
             content: "";
-            background-image: url(m-ico-gems-ny.png);
+            background-image: url(~imgPath/m-ico-gems-ny.png);
             background-size: 22px;
             display: inline-block;
             width: 22px;
@@ -58,48 +58,48 @@
             margin-bottom: -3px;
         }
         &.gems:before {
-            background-image: url(m-ico-gems.png);
+            background-image: url(~imgPath/m-ico-gems.png);
             background-size: 22px;
             top: -3px;
         }
         &.crowns:before {
-            background-image: url(ico-real.png);
+            background-image: url(~imgPath/ico-real.png);
             background-size: 22px;
             top: -4px;
             margin-right: 2px;
         }
         &.diamonds:before {
-            background-image: url(80-topup.png);
+            background-image: url(~imgPath/80-topup.png);
             background-size: 27px;
             top: -3px;
             margin-right: 2px;
         }
         &.tickets:before {
-            background-image: url(ico-ticket.png);
+            background-image: url(~imgPath/ico-ticket.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.shards:before {
-            background-image: url(ico-shards.png);
+            background-image: url(~imgPath/ico-shards.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.luck_res:before {
-            background-image: url(ms-stone-pink.png);
+            background-image: url(~imgPath/ms-stone-pink.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.dpc:before {
-            background-image: url(ico-click.png);
+            background-image: url(~imgPath/ico-click.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.ice_gold:before {
-            background-image: url(ic-ny-ledmoneta.png);
+            background-image: url(~imgPath/ic-ny-ledmoneta.png);
             top: -3px;
             margin-right: 2px;
         }
@@ -678,7 +678,7 @@
                 .gold {
                     width: 75px;
                     height: 75px;
-                    background-image: url(ic-abil-gold.png);
+                    background-image: url(~imgPath/ic-abil-gold.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -703,7 +703,7 @@
                 .gold-shards {
                     width: 75px;
                     height: 75px;
-                    background-image: url(ic-abil-gold-but.png);
+                    background-image: url(~imgPath/ic-abil-gold-but.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -743,7 +743,7 @@
                 .gems {
                     width: 75px;
                     height: 75px;
-                    background-image: url(ic-abil-rubin.png);
+                    background-image: url(~imgPath/ic-abil-rubin.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -768,7 +768,7 @@
                 .shards {
                     width: 75px;
                     height: 75px;
-                    background-image: url(ic-abil-butil.png);
+                    background-image: url(~imgPath/ic-abil-butil.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -798,13 +798,13 @@
                     top: 6px;
                     margin-left: 10px;
                     &.t1h {
-                        background-image: url(ic-clock1.png);
+                        background-image: url(~imgPath/ic-clock1.png);
                     }
                     &.t6h {
-                        background-image: url(ic-clock6.png);
+                        background-image: url(~imgPath/ic-clock6.png);
                     }
                     &.t24h {
-                        background-image: url(ic-clock24.png);
+                        background-image: url(~imgPath/ic-clock24.png);
                     }
                 }
                 &.clock {
@@ -1031,7 +1031,7 @@
                             display: block;
                             width: 105px;
                             height: 105px;
-                            background-image: url(offer-bk2.png);
+                            background-image: url(~imgPath/offer-bk2.png);
                             background-size: 105px 105px;
                             background-repeat: no-repeat;
                             // @include prefix(transform, rotate(-90deg));
@@ -1044,7 +1044,7 @@
                             position: absolute;
                             left: calc(50% - 22px);
                             top: 2px;
-                            background-image: url(time1.png);
+                            background-image: url(~imgPath/time1.png);
                             background-size: 38px;
                         }
                         .time,
@@ -1400,7 +1400,7 @@
                         position: absolute;
                         bottom: 10px;
                         left: 10px;
-                        background-image: url(ico-max.png);
+                        background-image: url(~imgPath/ico-max.png);
                         background-size: 30px;
                         @include prefix(border-radius, 5px);
                         cursor: pointer;
@@ -1415,7 +1415,7 @@
                         display: inline-block;
                         width: 29px;
                         height: 29px;
-                        background-image: url(star1.png);
+                        background-image: url(~imgPath/star1.png);
                         background-size: 29px;
                         position: absolute;
                         right: 36px;
@@ -1482,7 +1482,7 @@
                 line-height: 55px;
             }
             .color-box {
-                background-image: url(ts_confirm_bk.jpg);
+                background-image: url(~imgPath/ts_confirm_bk.jpg);
                 &:before,
                 &:after {
                     content: none;
@@ -1619,22 +1619,22 @@
                         clock-time-anim-1 0.5s linear 0s 3 forwards
                     );
                     &.gold {
-                        background-image: url(ic-abil-gold@2x.png);
+                        background-image: url(~imgPath/ic-abil-gold@2x.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
                     &.shards {
-                        background-image: url(ic-abil-butil@2x.png);
+                        background-image: url(~imgPath/ic-abil-butil@2x.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
                     &.ice_gold {
-                        background-image: url(ic-ice_gold.png);
+                        background-image: url(~imgPath/ic-ice_gold.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
                     &.snowflake {
-                        background-image: url(m-ico-gems-ny.png);
+                        background-image: url(~imgPath/m-ico-gems-ny.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
@@ -1671,7 +1671,7 @@
     top: -20px;
     width: 68px;
     height: 68px;
-    background-image: url(pop-sale-bg.png);
+    background-image: url(~imgPath/pop-sale-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1714,7 +1714,7 @@
     }
     &.chest {
         &:before {
-            background-image: url(change-sun1.png);
+            background-image: url(~imgPath/change-sun1.png);
         }
     }
     .res-value-btn-add {
@@ -1823,7 +1823,7 @@
             position: absolute;
             left: 3px;
             top: 21px;
-            background-image: url(ico-sword.png);
+            background-image: url(~imgPath/ico-sword.png);
             background-size: cover;
         }
     }
@@ -1843,7 +1843,7 @@
     text-align: center;
     padding: 0 8px 0 16px;
     line-height: 22px;
-    background: url(banner-bg.png);
+    background: url(~imgPath/banner-bg.png);
     background-size: auto 66px;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1854,13 +1854,13 @@
     pointer-events: none;
 }
 .progress-banner-gray {
-    background: url(banner-bg.png);
+    background: url(~imgPath/banner-bg.png);
     background-size: auto 66px;
     background-repeat: no-repeat;
     background-position: 0 -22px;
 }
 .progress-banner-green {
-    background: url(banner-bg.png);
+    background: url(~imgPath/banner-bg.png);
     background-size: auto 66px;
     background-repeat: no-repeat;
     background-position: 0 -44px;
@@ -1868,7 +1868,7 @@
 
 body .main.world3 .popup-layer .m-popup.ts_confirm {
     .color-box {
-        background-image: url(ts_confirm_bk_darkworld.jpg);
+        background-image: url(~imgPath/ts_confirm_bk_darkworld.jpg);
     }
     .timer {
         .time {
@@ -1876,7 +1876,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         }
     }
     .reward.dark_gold {
-        background-image: url(darkworld-dark-coins-icn.png);
+        background-image: url(~imgPath/darkworld-dark-coins-icn.png);
         .text {
             color: #2e0088;
         }
@@ -1890,7 +1890,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 1em;
         height: 1em;
         display: inline-block;
-        background-image: url(ic-girls-pieces.png);
+        background-image: url(~imgPath/ic-girls-pieces.png);
         background-position: center 0em;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1914,7 +1914,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
             width: 1em;
             height: 1em;
             display: inline-block;
-            background-image: url(ic-girls-pieces.png);
+            background-image: url(~imgPath/ic-girls-pieces.png);
             background-position: center -2em;
             background-repeat: no-repeat;
             background-size: 100%;
@@ -1931,7 +1931,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 28px;
         height: 28px;
         display: inline-block;
-        background-image: url(ic-girls-pieces.png);
+        background-image: url(~imgPath/ic-girls-pieces.png);
         background-position: center -28px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1947,7 +1947,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 28px;
         height: 28px;
         display: inline-block;
-        background-image: url(ic-girls-pieces.png);
+        background-image: url(~imgPath/ic-girls-pieces.png);
         background-position: center 0px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1963,7 +1963,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 28px;
         height: 28px;
         display: inline-block;
-        background-image: url(ic-girls-pieces.png);
+        background-image: url(~imgPath/ic-girls-pieces.png);
         background-position: center -56px;
         background-repeat: no-repeat;
         background-size: 100%;

@@ -14,7 +14,7 @@
   );
   &:before {
     content: "";
-    background-image: url(sv-sale-bg3.jpg);
+    background-image: url(~imgPath/sv-sale-bg3.jpg);
     background-size: 100%;
   }
   .title {
@@ -253,7 +253,7 @@
                   vertical-align: middle;
                   display: inline-block;
                   top: -3px;
-                  background-image: url(ico-gold.png);
+                  background-image: url(~imgPath/ico-gold.png);
                   background-size: 100%;
                 }
               }
@@ -432,12 +432,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(ph-bg1.png);
+      background-image: url(~imgPath/ph-bg1.png);
       background-size: 100%;
     }
     // .sv-heart-right{
     //     width: 200px; height: 300px; position: absolute; top: 0; left: 200px;
-    //     background-image: url(ph-bg2.png); background-size: 100%;
+    //     background-image: url(~imgPath/ph-bg2.png); background-size: 100%;
 
     // }
     .sv-chain1 {
@@ -446,7 +446,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(sv-h-chain-1.png);
+      background-image: url(~imgPath/sv-h-chain-1.png);
       background-size: 100%;
     }
     .sv-chain2 {
@@ -455,7 +455,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: url(sv-h-chain-2.png);
+      background-image: url(~imgPath/sv-h-chain-2.png);
       background-size: 100%;
     }
     .sv-reward-box {
@@ -508,13 +508,13 @@
         position: absolute;
         top: 30px;
         left: -7px;
-        background-image: url(legendary-lock.png);
+        background-image: url(~imgPath/legendary-lock.png);
         background-size: 100%;
       }
     }
     &.one {
       .sv-egg-all {
-        background-image: url(ph-bg1-p.png);
+        background-image: url(~imgPath/ph-bg1-p.png);
       }
       .sv-chain1 {
         display: none;
@@ -522,7 +522,7 @@
     }
     &.two {
       .sv-egg-all {
-        background-image: url(ph-bg2.png);
+        background-image: url(~imgPath/ph-bg2.png);
       }
       .sv-chain2 {
         display: none;
@@ -540,7 +540,7 @@
   position: absolute;
   top: -10px;
   margin-left: -10px;
-  background-image: url(timer-back.png);
+  background-image: url(~imgPath/timer-back.png);
   background-size: 100%;
   .time-left,
   .time-sec {

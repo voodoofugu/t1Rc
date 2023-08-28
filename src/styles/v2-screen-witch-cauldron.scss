@@ -101,7 +101,7 @@
         position: absolute;
         top: 72px;
         left: 220px;
-        background-image: url('pop-bg-hw.jpg');
+        background-image: url(~imgPath/pop-bg-hw.jpg);
         background-size: auto 100%;
         background-position: 100%;
         @include prefix(border-radius, 10px);
@@ -122,7 +122,7 @@
                 left: 50%;
                 top: 20px;
                 margin-left: -20px;
-                background-image: url(v2-nsale-plus.png); background-size: 100%;
+                background-image: url(~imgPath/v2-nsale-plus.png); background-size: 100%;
             }
             
             .witch-cauldron-item{

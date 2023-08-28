@@ -22,7 +22,7 @@
     .lb-girl {
         width: 425px;
         height: 475px;
-        background-image: url(back-girl.png);
+        background-image: url(~imgPath/back-girl.png);
         position: absolute;
         top: -26px;
         margin-left: -94px;
@@ -56,7 +56,7 @@
             position: absolute;
             top: 140px;
             margin-left: 28px;
-            background-image: url(lb-pic.jpg);
+            background-image: url(~imgPath/lb-pic.jpg);
             background-size: 100%;
             box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.65), inset 0 0 0 4px #fff;
             .boss-back-box {
@@ -84,14 +84,14 @@
                 position: relative;
                 top: 1px;
                 display: inline-block;
-                background-image: url(check-off.png);
+                background-image: url(~imgPath/check-off.png);
                 background-size: 100%;
                 cursor: pointer;
                 &:hover {
                     filter: brightness(1.1);
                 }
                 &.active {
-                    background-image: url(check-on.png);
+                    background-image: url(~imgPath/check-on.png);
                 }
             }
             .lb-checkbox-text {

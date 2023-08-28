@@ -10,16 +10,16 @@
         color: #572f14;
     }
     .color-box {
-        background-image: url(pop-bg-hw.jpg);
+        background-image: url(~imgPath/pop-bg-hw.jpg);
         box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
         &.bf {
-            background-image: url(v2-bf-pop-bg.jpg);
+            background-image: url(~imgPath/v2-bf-pop-bg.jpg);
         }
         &.xmas {
-            background-image: url(pop-bg-xmas.jpg);
+            background-image: url(~imgPath/pop-bg-xmas.jpg);
         }
         &.rpg {
-            background-image: url(ts_confirm_bk-1.jpg);
+            background-image: url(~imgPath/ts_confirm_bk-1.jpg);
         }
         background-size: 100%;
         background-repeat: no-repeat;
@@ -82,11 +82,11 @@
                             display: inline-block;
                             margin: 0;
                             top: 0;
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                             background-size: 100%;
                         }
                         &.bf:before {
-                            background-image: url(poly-chip-icon.png);
+                            background-image: url(~imgPath/poly-chip-icon.png);
                         }
                     }
                 }
@@ -194,11 +194,11 @@
                             display: inline-block;
                             margin: 0 5px 0 5px;
                             top: 8px;
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                             background-size: 100%;
                         }
                         &.bf:before {
-                            background-image: url(poly-chip-icon.png);
+                            background-image: url(~imgPath/poly-chip-icon.png);
                         }
                     }
                 }
@@ -329,7 +329,7 @@
                             position: absolute;
                             top: 5px;
                             left: 5px;
-                            background-image: url(paycheck.png);
+                            background-image: url(~imgPath/paycheck.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                             visibility: hidden;
@@ -340,7 +340,7 @@
                             position: absolute;
                             top: -2px;
                             left: -2px;
-                            background-image: url(fortuna-good.png);
+                            background-image: url(~imgPath/fortuna-good.png);
                             background-size: 100%;
                             visibility: hidden;
                         }
@@ -375,7 +375,7 @@
                             left: 0;
                             background-color: rgba(0, 0, 0, 0.6);
                             @include prefix(border-radius, 8px);
-                            //background-image: url(tower-lock.png);
+                            //background-image: url(~imgPath/tower-lock.png);
                             background-size: 50%;
                             background-repeat: no-repeat;
                             background-position: 15px;
@@ -808,7 +808,7 @@
                                 vertical-align: middle;
                                 display: inline-block;
                                 top: -3px;
-                                background-image: url(ico-gold.png);
+                                background-image: url(~imgPath/ico-gold.png);
                                 background-size: 100%;
                             }
                         }

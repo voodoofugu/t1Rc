@@ -64,11 +64,11 @@
           @include background-silver;
         }
         .cont-sign {
-          background-image: url(rating-sign-silver@1x.png);
+          background-image: url(~imgPath/rating-sign-silver@1x.png);
           background-size: 100%;
         }
         .cont-prize {
-          background-image: url(icon-sunduk-200-1.png);
+          background-image: url(~imgPath/icon-sunduk-200-1.png);
           background-size: 100%;
         }
       }
@@ -82,7 +82,7 @@
           position: absolute;
           top: 36px;
           margin-left: 27px;
-          background-image: url(rating-sign-gold@1x.png);
+          background-image: url(~imgPath/rating-sign-gold@1x.png);
           background-size: 100%;
         }
         .cont-prize {
@@ -91,7 +91,7 @@
           position: absolute;
           top: 160px;
           margin-left: 30px;
-          background-image: url(icon-sunduk-200-2.png);
+          background-image: url(~imgPath/icon-sunduk-200-2.png);
           background-size: 100%;
         }
       }
@@ -105,7 +105,7 @@
           position: absolute;
           top: 30px;
           margin-left: 22px;
-          background-image: url(rating-sign-top@1x.png);
+          background-image: url(~imgPath/rating-sign-top@1x.png);
           background-size: 100%;
         }
         .cont-prize {
@@ -114,7 +114,7 @@
           position: absolute;
           top: 156px;
           margin-left: 25px;
-          background-image: url(icon-sunduk-200-3.png);
+          background-image: url(~imgPath/icon-sunduk-200-3.png);
           background-size: 100%;
         }
       }
@@ -228,7 +228,7 @@
           position: absolute;
           top: 10px;
           margin-left: 492px;
-          background-image: url(rating-rules-close-btn@1x.png);
+          background-image: url(~imgPath/rating-rules-close-btn@1x.png);
           background-size: 100%;
           cursor: pointer;
           &:active {

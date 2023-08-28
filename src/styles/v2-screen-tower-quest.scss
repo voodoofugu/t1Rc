@@ -116,7 +116,7 @@ body .main {
             position: absolute;
             top: 39px;
             left: 10px;
-            background-image: url(trophy-quest-map-bg.jpg);
+            background-image: url(~imgPath/trophy-quest-map-bg.jpg);
             background-size: 100%;
             background-repeat: no-repeat;
             .map-box-left-all,
@@ -279,7 +279,7 @@ body .main {
                     top: 0;
                     left: 0;
                     background-color: rgba(185, 164, 137, 0.4);
-                    background-image: url(darkworld-glow-cards.png);
+                    background-image: url(~imgPath/darkworld-glow-cards.png);
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
@@ -292,7 +292,7 @@ body .main {
                       position: absolute;
                       top: 35px;
                       left: 15px;
-                      background-image: url(paycheck.png);
+                      background-image: url(~imgPath/paycheck.png);
                       background-size: 100%;
                       background-repeat: no-repeat;
                     }
@@ -304,7 +304,7 @@ body .main {
                       content: "";
                       width: 40px;
                       left: 25px;
-                      background-image: url(tower-lock.png);
+                      background-image: url(~imgPath/tower-lock.png);
                     }
                   }
                   &.check {
@@ -411,7 +411,7 @@ body .main {
               position: absolute;
               top: 140px;
               left: 429px;
-              background: url(raidboss-girl-reward-bg.png);
+              background: url(~imgPath/raidboss-girl-reward-bg.png);
               background-size: 100%;
               background-repeat: no-repeat;
               .hero-avatar-box {
@@ -527,7 +527,7 @@ body .main {
                   position: absolute;
                   top: -2px;
                   left: -2px;
-                  background-image: url(trophy-bonus-gems.png);
+                  background-image: url(~imgPath/trophy-bonus-gems.png);
                   background-size: 100%;
                   background-repeat: no-repeat;
                 }
@@ -541,7 +541,7 @@ body .main {
                   position: absolute;
                   top: -2px;
                   left: -2px;
-                  background-image: url(trophy-bonus-gems.png);
+                  background-image: url(~imgPath/trophy-bonus-gems.png);
                   background-size: 100%;
                   background-repeat: no-repeat;
                 }

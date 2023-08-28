@@ -21,7 +21,7 @@ body .main.world3 {
                 0 0 10px #000, 0 0 15px #000;
             &:before {
                 background: linear-gradient(0deg, #000000 0%, #282828 100%);
-                background-image: url(v2-bf-pop-bg.jpg);
+                background-image: url(~imgPath/v2-bf-pop-bg.jpg);
                 box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
                 background-size: 100%;
                 background-repeat: no-repeat;
@@ -42,7 +42,7 @@ body .main.world3 {
                     0 1px 1px #fff, 0 1px 10px #ffffff;
             }
             .v2-bf-sale {
-                background-image: url(v2-bf-sale.png);
+                background-image: url(~imgPath/v2-bf-sale.png);
             }
         }
         &.vl-event {
@@ -63,7 +63,7 @@ body .main.world3 {
                 border: solid 4px #ff3e3e;
             }
             &:before {
-                background-image: url(v2-vl-pop-bg.jpg);
+                background-image: url(~imgPath/v2-vl-pop-bg.jpg);
                 background-size: 100%;
             }
         }
@@ -82,7 +82,7 @@ body .main.world3 {
             position: absolute;
             top: -10px;
             margin-left: -10px;
-            background-image: url(timer-back.png);
+            background-image: url(~imgPath/timer-back.png);
             background-size: 100%;
             .time-left,
             .time-sec {
@@ -169,7 +169,7 @@ body .main.world3 {
             position: absolute;
             top: 204px;
             left: 34px;
-            background-image: url(v2-event-sale.png);
+            background-image: url(~imgPath/v2-event-sale.png);
             background-size: 100%;
             background-repeat: no-repeat;
             color: #fff;
@@ -424,7 +424,7 @@ body .main.world3 {
                                         vertical-align: middle;
                                         display: inline-block;
                                         top: -3px;
-                                        background-image: url(ico-gold.png);
+                                        background-image: url(~imgPath/ico-gold.png);
                                         background-size: 100%;
                                     }
                                 }

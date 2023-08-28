@@ -95,10 +95,10 @@
             .rank-arrow{
                 width: 34px; height: 45px; position: absolute; top: 22px; margin-left: 118px;
                 &.up{
-                    background-image: url(arrow-green.png); background-size: 100%;
+                    background-image: url(~imgPath/arrow-green.png); background-size: 100%;
                 }
                 &.down{
-                    background-image: url(arrow-red.png); background-size: 100%;
+                    background-image: url(~imgPath/arrow-red.png); background-size: 100%;
                 }
             }
         }

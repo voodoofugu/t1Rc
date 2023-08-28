@@ -14,9 +14,9 @@
         width: 118px; height: 450px; position: absolute; top: 75px; left: 20px;
         .menu-box-all{
             width: 118px; height: 90px; position: relative;
-            background-image: url(shop-menu1.png); background-size: 100%; cursor: pointer;
+            background-image: url(~imgPath/shop-menu1.png); background-size: 100%; cursor: pointer;
             &:active{top: 1px;}
-            &.select{background-image: url(shop-menu2.png);}
+            &.select{background-image: url(~imgPath/shop-menu2.png);}
             .menu-pic{
                 width: 80px; height: 60px; position: absolute; left: 19px;
             }
@@ -144,7 +144,7 @@
                     .f-diamond{
                         &:before{
                             content: ""; width: 30px; height: 30px; position: relative; display: inline-block;
-                            background-image: url(ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
+                            background-image: url(~imgPath/ic-diamond.png); background-size: 100%; margin-right: 4px; margin-left: 4px;
                             vertical-align: middle;
                         }
                     }
@@ -222,9 +222,9 @@
         @include prefix(border-radius, 4px);
         .crow-icon{
             width: 34px; height: 34px; position: relative; display: inline-block; 
-            background-image: url(ico-real.png); background-size: 100%; top: -5px;
+            background-image: url(~imgPath/ico-real.png); background-size: 100%; top: -5px;
             &.diamond{
-                background-image: url(80-topup.png); height: 30px; margin-top: 3px;
+                background-image: url(~imgPath/80-topup.png); height: 30px; margin-top: 3px;
             }
         }
         .crow-text{

@@ -178,14 +178,14 @@ body .main {
                   top: -4px;
                   right: -39px;
                   cursor: pointer;
-                  background-image: url(btn-edit-small.png);
+                  background-image: url(~imgPath/btn-edit-small.png);
                   background-size: 100%;
                   &:active {
                     top: -3px;
                   }
                 }
                 .btn-enter-small {
-                  background-image: url(btn-enter-small.png);
+                  background-image: url(~imgPath/btn-enter-small.png);
                 }
                 .btn-enter-small {
                   display: none;
@@ -383,7 +383,7 @@ body .main {
                             height: 18px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(trophy-bonus-gems.png);
+                            background-image: url(~imgPath/trophy-bonus-gems.png);
                             background-size: 100%;
                             margin: 0 4px 0 4px;
                             vertical-align: middle;
@@ -418,7 +418,7 @@ body .main {
                             height: 18px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(ic-diamond.png);
+                            background-image: url(~imgPath/ic-diamond.png);
                             background-size: 100%;
                             margin: 0 4px 0 4px;
                             vertical-align: middle;
@@ -447,7 +447,7 @@ body .main {
                         position: relative;
                         top: 42px;
                         margin: 0 auto;
-                        background-image: url(paycheck.png);
+                        background-image: url(~imgPath/paycheck.png);
                         background-size: 100%;
                       }
                     }
@@ -543,7 +543,7 @@ body .main {
                   position: absolute;
                   top: -2px;
                   left: -2px;
-                  background-image: url(trophy-bonus-gems.png);
+                  background-image: url(~imgPath/trophy-bonus-gems.png);
                   background-size: 100%;
                   background-repeat: no-repeat;
                 }
@@ -557,7 +557,7 @@ body .main {
                   position: absolute;
                   top: -2px;
                   left: -2px;
-                  background-image: url(trophy-bonus-mithril.png);
+                  background-image: url(~imgPath/trophy-bonus-mithril.png);
                   background-size: 100%;
                   background-repeat: no-repeat;
                 }

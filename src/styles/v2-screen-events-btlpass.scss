@@ -92,15 +92,15 @@
                             position: relative;
                             display: inline-block;
                             top: 4px;
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                             background-size: 100%;
                             transform: scale(1.4);
                         }
                         &.hw:before {
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                         }
                         &.bf:before {
-                            background-image: url(poly-chip-icon.png);
+                            background-image: url(~imgPath/poly-chip-icon.png);
                         }
                     }
                 }
@@ -210,15 +210,15 @@
                             position: relative;
                             display: inline-block;
                             top: 2px;
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                             background-size: 100%;
                             transform: scale(1.8);
                         }
                         &.hw:before {
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                         }
                         &.bf:before {
-                            background-image: url(poly-chip-icon.png);
+                            background-image: url(~imgPath/poly-chip-icon.png);
                         }
                     }
                 }
@@ -328,7 +328,7 @@
                         box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
                             0 1px 4px 1px rgba(0, 0, 0, 0.4),
                             inset 0 0 0 2px #ff9b37;
-                        background: url(v2-trophy-bg.jpg);
+                        background: url(~imgPath/v2-trophy-bg.jpg);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         overflow: hidden;
@@ -409,7 +409,7 @@
                             position: absolute;
                             top: 5px;
                             left: 5px;
-                            background-image: url(paycheck.png);
+                            background-image: url(~imgPath/paycheck.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                             visibility: hidden;
@@ -421,7 +421,7 @@
                             position: absolute;
                             top: -2px;
                             left: -2px;
-                            background-image: url(fortuna-good.png);
+                            background-image: url(~imgPath/fortuna-good.png);
                             background-size: 100%;
                             visibility: hidden;
                         }
@@ -490,7 +490,7 @@
                                 position: absolute;
                                 top: 3px;
                                 right: 3px;
-                                background: url(tower-lock.png);
+                                background: url(~imgPath/tower-lock.png);
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: cover;
@@ -674,7 +674,7 @@
 
 .popup-layer .m-popup.events-btlpass-pop.hw {
     &:before {
-        background: url(pop-bg-hw.jpg);
+        background: url(~imgPath/pop-bg-hw.jpg);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -702,7 +702,7 @@
                 .btlpass-collect-box-text {
                     .ic-event {
                         &:before {
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                         }
                     }
                 }
@@ -729,7 +729,7 @@
                     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
                     .ic-event {
                         &:before {
-                            background-image: url(ic-pumpkins.png);
+                            background-image: url(~imgPath/ic-pumpkins.png);
                         }
                     }
                 }
@@ -755,7 +755,7 @@
 
 .popup-layer .m-popup.events-btlpass-pop.bf {
     &:before {
-        background: url(girl-stand@2x.png), url(v2-bf-pop-bg.jpg);
+        background: url(~imgPath/girl-stand@2x.png), url(~imgPath/v2-bf-pop-bg.jpg);
         background-size: 354px 160px, 100%;
         background-position: -60px 350px, center;
         background-repeat: no-repeat;
@@ -772,7 +772,7 @@
                 .btlpass-collect-box-text {
                     .ic-event {
                         &:before {
-                            background-image: url(ic-tickets-bf.png);
+                            background-image: url(~imgPath/ic-tickets-bf.png);
                         }
                     }
                 }
@@ -799,7 +799,7 @@
                     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
                     .ic-event {
                         &:before {
-                            background-image: url(ic-tickets-bf.png);
+                            background-image: url(~imgPath/ic-tickets-bf.png);
                         }
                     }
                 }
@@ -839,7 +839,7 @@
 
 .popup-layer .m-popup.events-btlpass-pop.xmas {
     &:before {
-        background: url(girl-stand@2x.png), url(pop-bg-xmas.jpg);
+        background: url(~imgPath/girl-stand@2x.png), url(~imgPath/pop-bg-xmas.jpg);
         background-size: 354px 160px, 100%;
         background-position: -60px 350px, center;
         background-repeat: no-repeat;
@@ -866,7 +866,7 @@
                     color: #3ce2ff;
                     .ic-event {
                         &:before {
-                            background-image: url(ic-tickets-xmas.png);
+                            background-image: url(~imgPath/ic-tickets-xmas.png);
                         }
                     }
                 }
@@ -893,7 +893,7 @@
                     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
                     .ic-event {
                         &:before {
-                            background-image: url(ic-tickets-xmas.png);
+                            background-image: url(~imgPath/ic-tickets-xmas.png);
                         }
                     }
                 }
@@ -936,7 +936,7 @@
 
 .popup-layer .m-popup.events-btlpass-pop.vl {
     &:before {
-        background: url(girl-stand@2x.png), url(v2-vl-pop-bg.jpg);
+        background: url(~imgPath/girl-stand@2x.png), url(~imgPath/v2-vl-pop-bg.jpg);
         background-size: 354px 160px, 100%;
         background-position: -60px 350px, center;
         background-repeat: no-repeat;
@@ -963,7 +963,7 @@
                     color: #ffdeec;
                     .ic-event {
                         &:before {
-                            background-image: url(ic-tickets-vl.png);
+                            background-image: url(~imgPath/ic-tickets-vl.png);
                         }
                     }
                 }
@@ -990,7 +990,7 @@
                     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
                     .ic-event {
                         &:before {
-                            background-image: url(ic-tickets-vl.png);
+                            background-image: url(~imgPath/ic-tickets-vl.png);
                         }
                     }
                 }
@@ -1033,7 +1033,7 @@
 
 .popup-layer .m-popup.events-btlpass-pop.rpg {
     &:before {
-        background: url(ts_confirm_bk-1.jpg);
+        background: url(~imgPath/ts_confirm_bk-1.jpg);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -1042,7 +1042,7 @@
 
 .popup-layer .m-popup.events-btlpass-pop.spring {
     &:before {
-        background: url(girl-stand@2x.png), url(march-pop-bg.jpg);
+        background: url(~imgPath/girl-stand@2x.png), url(~imgPath/march-pop-bg.jpg);
         background-size: 354px 160px, 100%;
         background-position: -60px 350px, center;
         background-repeat: no-repeat;
@@ -1069,7 +1069,7 @@
                     color: #ffdeec;
                     .ic-event {
                         &:before {
-                            background-image: url(ic-march-flower-pink.png);
+                            background-image: url(~imgPath/ic-march-flower-pink.png);
                         }
                     }
                 }
@@ -1096,7 +1096,7 @@
                     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
                     .ic-event {
                         &:before {
-                            background-image: url(ic-march-flower-pink.png);
+                            background-image: url(~imgPath/ic-march-flower-pink.png);
                         }
                     }
                 }
@@ -1139,7 +1139,7 @@
 
 .popup-layer .m-popup.events-btlpass-pop.autumn {
     &:before {
-        background: url(girl-stand@2x.png), url(march-pop-bg.jpg);
+        background: url(~imgPath/girl-stand@2x.png), url(~imgPath/march-pop-bg.jpg);
         background-size: 354px 160px, 100%;
         background-position: -60px 350px, center;
         background-repeat: no-repeat;
@@ -1166,7 +1166,7 @@
                     color: #ffdeec;
                     .ic-event {
                         &:before {
-                            background-image: url(ic-march-flower-pink.png);
+                            background-image: url(~imgPath/ic-march-flower-pink.png);
                         }
                     }
                 }
@@ -1193,7 +1193,7 @@
                     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
                     .ic-event {
                         &:before {
-                            background-image: url(ic-march-flower-pink.png);
+                            background-image: url(~imgPath/ic-march-flower-pink.png);
                         }
                     }
                 }
@@ -1241,7 +1241,7 @@
                 .btlpass-collect-box-text {
                     .ic-event {
                         &:before {
-                            background-image: url(ic-march-flower-dark-blue.png);
+                            background-image: url(~imgPath/ic-march-flower-dark-blue.png);
                             filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
                         }
                     }
@@ -1251,7 +1251,7 @@
                 .prg-all-text {
                     .ic-event {
                         &:before {
-                            background-image: url(ic-march-flower-dark-blue.png);
+                            background-image: url(~imgPath/ic-march-flower-dark-blue.png);
                             filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
                         }
                     }
@@ -1489,7 +1489,7 @@
                                 vertical-align: middle;
                                 display: inline-block;
                                 top: -3px;
-                                background-image: url(ico-gold.png);
+                                background-image: url(~imgPath/ico-gold.png);
                                 background-size: 100%;
                             }
                         }

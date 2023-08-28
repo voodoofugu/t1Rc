@@ -195,7 +195,7 @@
                     content: "";
                     width: 30px;
                     height: 30px;
-                    background-image: url(diamond@1x.png);
+                    background-image: url(~imgPath/diamond@1x.png);
                     background-size: 100%;
                     position: relative;
                     display: inline-block;
@@ -206,7 +206,7 @@
                     content: "";
                     width: 30px;
                     height: 30px;
-                    background-image: url(diamond@1x.png);
+                    background-image: url(~imgPath/diamond@1x.png);
                     background-size: 100%;
                     position: relative;
                     display: inline-block;
@@ -292,7 +292,7 @@
             position: absolute;
             top: 4px;
             left: 1px;
-            background-image: url(icon-sunduk-200-3.png);
+            background-image: url(~imgPath/icon-sunduk-200-3.png);
             background-size: 100%;
           }
           .ped-box-noreward {
@@ -319,7 +319,7 @@
               width: 70px;
               height: 70px;
               left: 22px;
-              background-image: url(icon-sunduk-200-1.png);
+              background-image: url(~imgPath/icon-sunduk-200-1.png);
             }
           }
           &.rate3 {
@@ -331,7 +331,7 @@
               width: 90px;
               height: 90px;
               left: 10px;
-              background-image: url(icon-sunduk-200-2.png);
+              background-image: url(~imgPath/icon-sunduk-200-2.png);
             }
           }
           &.rate4 {
@@ -340,7 +340,7 @@
             margin-left: 0px;
             .ped-box-prize {
               margin-left: 0px;
-              background-image: url(icon-sunduk-200-3.png);
+              background-image: url(~imgPath/icon-sunduk-200-3.png);
             }
           }
           .ped-box-portrait {
@@ -349,7 +349,7 @@
             position: absolute;
             left: 64px;
             top: -5px;
-            background-image: url(v2-master-pic1.png);
+            background-image: url(~imgPath/v2-master-pic1.png);
             display: none;
           }
         }
@@ -363,7 +363,7 @@
       left: 10px;
       .cardnameback {
         height: 50px;
-        background-image: url(noobpackback-line.png);
+        background-image: url(~imgPath/noobpackback-line.png);
         min-width: 230px;
         position: relative;
         top: 0;
@@ -376,7 +376,7 @@
           position: absolute;
           right: -38px;
           display: block;
-          background-image: url(noobpackback-l.png);
+          background-image: url(~imgPath/noobpackback-l.png);
           transform: scale(-1, 1);
           top: 0px;
         }
@@ -387,7 +387,7 @@
           position: absolute;
           margin-left: -38px;
           display: block;
-          background-image: url(noobpackback-l.png);
+          background-image: url(~imgPath/noobpackback-l.png);
           top: 0px;
         }
         .card-text {
@@ -611,7 +611,7 @@
                     vertical-align: middle;
                     display: inline-block;
                     top: -3px;
-                    background-image: url(ico-gold.png);
+                    background-image: url(~imgPath/ico-gold.png);
                     background-size: 100%;
                   }
                 }

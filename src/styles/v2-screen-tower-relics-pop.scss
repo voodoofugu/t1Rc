@@ -50,7 +50,7 @@
                 position: absolute;
                 top: 10px;
                 left: 12px;
-                background-image: url(v2-rb-card-bg.jpg);
+                background-image: url(~imgPath/v2-rb-card-bg.jpg);
                 background-size: 100%;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25),
                     0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -80,7 +80,7 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        background-image: url(paycheck.png);
+                        background-image: url(~imgPath/paycheck.png);
                         background-size: 100px;
                         background-position: center;
                         background-repeat: no-repeat;
@@ -120,7 +120,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background-image: url(rb-card-light.png);
+                    background-image: url(~imgPath/rb-card-light.png);
                     background-size: 100%;
                     display: none;
                 }
@@ -143,7 +143,7 @@
                         height: 30px;
                         position: relative;
                         display: inline-block;
-                        background-image: url(ic-diamond.png);
+                        background-image: url(~imgPath/ic-diamond.png);
                         background-size: 100%;
                         margin-right: 4px;
                         margin-left: 4px;
@@ -171,7 +171,7 @@
                 }
                 &.gold {
                     .card-box-back {
-                        background-image: url(v2-rb-card-bg-gold.jpg);
+                        background-image: url(~imgPath/v2-rb-card-bg-gold.jpg);
                         .card-vis {
                             display: none;
                         }
@@ -200,7 +200,7 @@
                 }
                 &.silver {
                     .card-box-back {
-                        background-image: url(v2-rb-card-bg-silver.jpg);
+                        background-image: url(~imgPath/v2-rb-card-bg-silver.jpg);
                         .card-vis {
                             display: none;
                         }
@@ -229,7 +229,7 @@
                 }
                 &.bronze {
                     .card-box-back {
-                        background-image: url(v2-rb-card-bg-bronze.jpg);
+                        background-image: url(~imgPath/v2-rb-card-bg-bronze.jpg);
                         .card-vis {
                             display: none;
                         }

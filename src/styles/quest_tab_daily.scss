@@ -251,7 +251,7 @@ body .main {
                                 &:before {
                                     content: "";
                                     position: absolute;
-                                    background-image: url(map-station-lockflare.png);
+                                    background-image: url(~imgPath/map-station-lockflare.png);
                                     background-repeat: no-repeat;
                                     background-size: 100%;
                                     background-position: center;
@@ -274,7 +274,7 @@ body .main {
                                     top: 6px;
                                     left: 50%;
                                     transform: translateX(-50%);
-                                    background-image: url(paycheck.png);
+                                    background-image: url(~imgPath/paycheck.png);
                                     background-size: cover;
                                     background-position: center;
                                     background-repeat: no-repeat;
@@ -504,7 +504,7 @@ body .main {
                                         position: absolute;
                                         top: 0;
                                         left: 0;
-                                        background-image: url(paycheck.png);
+                                        background-image: url(~imgPath/paycheck.png);
                                         background-size: 84px;
                                         background-position: center;
                                         background-repeat: no-repeat;

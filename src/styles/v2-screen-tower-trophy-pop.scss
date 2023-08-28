@@ -11,7 +11,7 @@
     }
     .tower-trophy-bg-all{
         width: 440px; height: 530px; position: absolute; bottom: 10px; left: 10px;
-        background-image: url(v2-trophy-pop-bg.jpg);
+        background-image: url(~imgPath/v2-trophy-pop-bg.jpg);
         background-size: 100%; background-repeat: no-repeat;
         &:before{
             content: ""; width: 260px; height: 260px; position: absolute; top: 125px; left: 90px;
@@ -24,11 +24,11 @@
         }
         .tower-trophy-prgbar-empty{
             width: 280px; height: 86px; position: absolute; bottom: 5px; left: 80px;
-            background-image: url(v2-trophy-pop-bg1.jpg);
+            background-image: url(~imgPath/v2-trophy-pop-bg1.jpg);
             background-size: 100%; background-repeat: no-repeat;
             .tower-trophy-prgbar-full{
                 width: 280px; height: 86px; position: absolute; bottom: 0; left: 0;
-                background-image: url(v2-trophy-pop-bg2.jpg);
+                background-image: url(~imgPath/v2-trophy-pop-bg2.jpg);
                 transition: width 0.5s ease;
                 background-position: center left;
             }

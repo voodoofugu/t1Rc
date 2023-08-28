@@ -57,7 +57,7 @@
               position: relative;
               top: 7px;
               margin-right: 3px;
-              background-image: url(time1.png);
+              background-image: url(~imgPath/time1.png);
               background-size: 24px;
             }
           }
@@ -175,7 +175,7 @@
           display: block;
           width: 34px;
           height: 34px;
-          background-image: url(arrow_up1.png);
+          background-image: url(~imgPath/arrow_up1.png);
           background-size: 34px;
           position: absolute;
           left: 8px;
@@ -411,9 +411,9 @@
     }
     // .time{
     //     width: 55px; height: 40px; position: absolute; top: 44px; left: 30px;
-    //     &.t1h{background-image: url(ic-abil-time1h.png);}
-    //     &.t6h{background-image: url(ic-abil-time6h.png);}
-    //     &.t24h{background-image: url(ic-abil-time24h.png);}
+    //     &.t1h{background-image: url(~imgPath/ic-abil-time1h.png);}
+    //     &.t6h{background-image: url(~imgPath/ic-abil-time6h.png);}
+    //     &.t24h{background-image: url(~imgPath/ic-abil-time24h.png);}
     // }
     .rate {
       font-size: 18px;
@@ -426,13 +426,13 @@
       top: 50px;
       left: -6px;
       &.red {
-        background-image: url(ic-abil-redline.png);
+        background-image: url(~imgPath/ic-abil-redline.png);
       }
       &.green {
-        background-image: url(ic-abil-greenline.png);
+        background-image: url(~imgPath/ic-abil-greenline.png);
       }
       &.blue {
-        background-image: url(ic-abil-blueline.png);
+        background-image: url(~imgPath/ic-abil-blueline.png);
       }
     }
     &.time {
@@ -613,13 +613,13 @@
             top: 6px;
             margin-left: 10px;
             &.t1h {
-              background-image: url(ic-clock1.png);
+              background-image: url(~imgPath/ic-clock1.png);
             }
             &.t6h {
-              background-image: url(ic-clock6.png);
+              background-image: url(~imgPath/ic-clock6.png);
             }
             &.t24h {
-              background-image: url(ic-clock24.png);
+              background-image: url(~imgPath/ic-clock24.png);
             }
           }
           &.clock {
@@ -636,7 +636,7 @@
           .reborn {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-reborn.png);
+            background-image: url(~imgPath/ic-abil-reborn.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -658,7 +658,7 @@
                 height: 26px;
                 vertical-align: middle;
                 position: relative;
-                background-image: url(reb-rub.png);
+                background-image: url(~imgPath/reb-rub.png);
                 background-size: 26px;
                 margin-right: 5px;
               }
@@ -667,7 +667,7 @@
           .balancer {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-rubin@2x.png);
+            background-image: url(~imgPath/ic-abil-rubin@2x.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -676,7 +676,7 @@
           .gold {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-gold.png);
+            background-image: url(~imgPath/ic-abil-gold.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -686,7 +686,7 @@
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(ic-abil-gold.png);
+              background-image: url(~imgPath/ic-abil-gold.png);
               position: absolute;
               top: 4px;
               margin-left: 55px;
@@ -696,7 +696,7 @@
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(ic-abil-gold.png);
+              background-image: url(~imgPath/ic-abil-gold.png);
               position: absolute;
               top: 5px;
               margin-left: -53px;
@@ -706,7 +706,7 @@
             display: none;
             width: 75px;
             height: 75px;
-            background-image: url(ic-ice_gold.png);
+            background-image: url(~imgPath/ic-ice_gold.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -717,7 +717,7 @@
               height: 75px;
               display: block;
               background-size: contain;
-              background-image: url(ic-ice_gold.png);
+              background-image: url(~imgPath/ic-ice_gold.png);
               position: absolute;
               top: 4px;
               margin-left: 55px;
@@ -728,7 +728,7 @@
               height: 75px;
               display: block;
               background-size: contain;
-              background-image: url(ic-ice_gold.png);
+              background-image: url(~imgPath/ic-ice_gold.png);
               position: absolute;
               top: 5px;
               margin-left: -53px;
@@ -756,7 +756,7 @@
           .gold-shards {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-gold-but.png);
+            background-image: url(~imgPath/ic-abil-gold-but.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -765,7 +765,7 @@
           .gems {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-rubin.png);
+            background-image: url(~imgPath/ic-abil-rubin.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -774,7 +774,7 @@
           .shards {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-butil.png);
+            background-image: url(~imgPath/ic-abil-butil.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -784,7 +784,7 @@
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(ic-abil-butil.png);
+              background-image: url(~imgPath/ic-abil-butil.png);
               position: absolute;
               top: 4px;
               margin-left: 55px;
@@ -794,7 +794,7 @@
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(ic-abil-butil.png);
+              background-image: url(~imgPath/ic-abil-butil.png);
               position: absolute;
               top: 5px;
               margin-left: -53px;
@@ -1209,7 +1209,7 @@
             display: block;
             width: 105px;
             height: 105px;
-            background-image: url(offer-bk2.png);
+            background-image: url(~imgPath/offer-bk2.png);
             background-size: 105px 105px;
             background-repeat: no-repeat;
             // @include prefix(transform, rotate(-90deg));
@@ -1222,7 +1222,7 @@
             position: absolute;
             left: calc(50% - 22px);
             top: 2px;
-            background-image: url(time1.png);
+            background-image: url(~imgPath/time1.png);
             background-size: 38px;
           }
           .time,
@@ -1381,7 +1381,7 @@
         position: absolute;
         right: 0px;
         top: 0px;
-        background-image: url(offer-bk-sm.png);
+        background-image: url(~imgPath/offer-bk-sm.png);
         background-size: 40px 45px;
         .text {
           font-size: 14px;
@@ -1391,7 +1391,7 @@
         }
 
         &.time {
-          background-image: url(offer-bk-sm1.png);
+          background-image: url(~imgPath/offer-bk-sm1.png);
           background-size: 40px 45px;
           &:after {
             content: "";
@@ -1401,7 +1401,7 @@
             position: absolute;
             left: 3px;
             top: 5px;
-            background-image: url(time1.png);
+            background-image: url(~imgPath/time1.png);
             background-size: 32px;
           }
         }
@@ -1409,7 +1409,7 @@
           display: block;
           width: 108px;
           height: 41px;
-          background-image: url(offer-bk-vip.png);
+          background-image: url(~imgPath/offer-bk-vip.png);
           background-size: 108px 41px;
           position: absolute;
           // right:11px;
@@ -1548,16 +1548,16 @@
         //     }
         //     .time{
         //         width: 55px; height: 40px; position: absolute; top: 44px; left: 30px;
-        //         &.t1h{background-image: url(ic-abil-time1h.png);}
-        //         &.t6h{background-image: url(ic-abil-time6h.png);}
-        //         &.t24h{background-image: url(ic-abil-time24h.png);}
+        //         &.t1h{background-image: url(~imgPath/ic-abil-time1h.png);}
+        //         &.t6h{background-image: url(~imgPath/ic-abil-time6h.png);}
+        //         &.t24h{background-image: url(~imgPath/ic-abil-time24h.png);}
         //     }
         //     .rate{
         //         font-size: 18px; color: #fff; line-height: 18px; text-shadow: 0 1px 3px #2f2f2f;
         //         width: 87px; height: 22px; position: absolute; top: 50px; left: -6px;
-        //         &.red{background-image: url(ic-abil-redline.png);}
-        //         &.green{background-image: url(ic-abil-greenline.png);}
-        //         &.blue{background-image: url(ic-abil-blueline.png);}
+        //         &.red{background-image: url(~imgPath/ic-abil-redline.png);}
+        //         &.green{background-image: url(~imgPath/ic-abil-greenline.png);}
+        //         &.blue{background-image: url(~imgPath/ic-abil-blueline.png);}
         //     }
         //     &.time{.rate{display: none};}
         //     &.rate{.time{display: none};}
@@ -1795,7 +1795,7 @@
           position: absolute;
           left: calc(50% - 25px);
           top: -30px;
-          background-image: url(ico-real-big.png);
+          background-image: url(~imgPath/ico-real-big.png);
           background-size: 50px;
         }
       }
@@ -1923,7 +1923,7 @@
             font-style: normal;
             // box-shadow: inset 0 2px 0px #400;
             // background: #d56b6b;
-            background-image: url(vip-s1.png);
+            background-image: url(~imgPath/vip-s1.png);
             background-size: 55px;
           }
         }
@@ -1977,46 +1977,46 @@
         }
       }
       .vip-row:nth-child(3) p.h .vn {
-        background-image: url(vip-s2.png);
+        background-image: url(~imgPath/vip-s2.png);
         background-size: 55px;
       }
       .vip-row:nth-child(4) p.h .vn {
-        background-image: url(vip-s3.png);
+        background-image: url(~imgPath/vip-s3.png);
         background-size: 55px;
         color: #444;
       }
       .vip-row:nth-child(5) p.h .vn {
-        background-image: url(vip-s4.png);
+        background-image: url(~imgPath/vip-s4.png);
         background-size: 55px;
         color: #444;
       }
       .vip-row:nth-child(6) p.h .vn {
-        background-image: url(vip-s5.png);
+        background-image: url(~imgPath/vip-s5.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(7) p.h .vn {
-        background-image: url(vip-s6.png);
+        background-image: url(~imgPath/vip-s6.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(8) p.h .vn {
-        background-image: url(vip-s7.png);
+        background-image: url(~imgPath/vip-s7.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(9) p.h .vn {
-        background-image: url(vip-s8.png);
+        background-image: url(~imgPath/vip-s8.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(10) p.h .vn {
-        background-image: url(vip-s9.png);
+        background-image: url(~imgPath/vip-s9.png);
         background-size: 55px;
         color: #580349;
       }
       .vip-row:nth-child(11) p.h .vn {
-        background-image: url(vip-s10.png);
+        background-image: url(~imgPath/vip-s10.png);
         background-size: 55px;
         color: #580349;
       }
@@ -2100,7 +2100,7 @@
       display: block;
       width: 150px;
       height: 200px;
-      background-image: url(offer-bk4.png);
+      background-image: url(~imgPath/offer-bk4.png);
       background-size: 150px 200px;
       background-repeat: no-repeat;
       position: absolute;
@@ -2231,7 +2231,7 @@
             display: inline-block;
             width: 44px;
             height: 44px;
-            background-image: url(time1.png);
+            background-image: url(~imgPath/time1.png);
             background-size: 44px;
             position: absolute;
             left: -3px;
@@ -2347,7 +2347,7 @@
             display: block;
             width: 34px;
             height: 34px;
-            background-image: url(arrow_up1.png);
+            background-image: url(~imgPath/arrow_up1.png);
             background-size: 34px;
             position: absolute;
             left: 8px;
@@ -2371,14 +2371,14 @@
             font-size: 0;
             &:after {
               height: 47px;
-              background-image: url(lock-gold.png);
+              background-image: url(~imgPath/lock-gold.png);
               background-size: 34px;
             }
           }
         }
 
         &.ascented:before {
-          background-image: url(card2.jpg);
+          background-image: url(~imgPath/card2.jpg);
           background-size: 175px;
         }
 
@@ -2389,7 +2389,7 @@
           position: absolute;
           bottom: 0;
           left: 0px;
-          background-image: url(asc-already.png);
+          background-image: url(~imgPath/asc-already.png);
           background-size: 185px;
           font-size: 15px;
           font-weight: bold;
@@ -2430,7 +2430,7 @@
         position: absolute;
         left: 18px;
         top: 56px;
-        background-image: url(3-rand-heroes.png);
+        background-image: url(~imgPath/3-rand-heroes.png);
         background-size: 150px;
       }
       .text {
@@ -2614,7 +2614,7 @@
     //                 @include prefix(border-radius, 5px);
     //                 box-shadow: inset 0 0 4px #000;
     //                 &.ru{
-    //                     background-image: url(flag-ru.jpg);
+    //                     background-image: url(~imgPath/flag-ru.jpg);
     //                     background-size: 38px;
     //                 }
     //             }
@@ -2727,7 +2727,7 @@
             position: absolute;
             left: 2px;
             top: 2px;
-            background-image: url(ico-real-big.png);
+            background-image: url(~imgPath/ico-real-big.png);
             background-size: 43px;
           }
         }
@@ -2789,7 +2789,7 @@
         //     position: absolute;
         //     right: 145px;
         //     top: -3px;
-        //     background-image: url(offer-bk-sm.png);
+        //     background-image: url(~imgPath/offer-bk-sm.png);
         //     background-size: 40px 45px;
         //     .text {
         //         font-size: 14px; font-weight: bold; color: #ff9;
@@ -2799,11 +2799,11 @@
         //     }
 
         //     &.hit{
-        //         background-image: url(offer-bk-sm2.png);
+        //         background-image: url(~imgPath/offer-bk-sm2.png);
         //         background-size: 40px 45px;
         //     }
         //     &.time{
-        //         background-image: url(offer-bk-sm1.png);
+        //         background-image: url(~imgPath/offer-bk-sm1.png);
         //         background-size: 40px 45px;
         //         &:after {
         //             content: "";
@@ -2813,7 +2813,7 @@
         //             position: absolute;
         //             left: 3px;
         //             top: 5px;
-        //             background-image: url(time1.png);
+        //             background-image: url(~imgPath/time1.png);
         //             background-size: 32px;
         //         }
         //         .text{
@@ -2888,7 +2888,7 @@
       display: block;
       width: 150px;
       height: 200px;
-      background-image: url(offer-bk4.png);
+      background-image: url(~imgPath/offer-bk4.png);
       background-size: 150px 200px;
       background-repeat: no-repeat;
       position: absolute;
@@ -2952,7 +2952,7 @@
         left: calc(50% - 28px);
         top: -30px;
         background: #640706;
-        background-image: url(time1.png);
+        background-image: url(~imgPath/time1.png);
         background-size: 46px;
         @include prefix(border-radius, 100%);
         border: solid 5px #640706;
@@ -3166,7 +3166,7 @@
           bottom: auto;
           width: 70px;
           height: 85px;
-          background-image: url(offer-bk2.png);
+          background-image: url(~imgPath/offer-bk2.png);
           background-size: 70px 85px;
           background-repeat: no-repeat;
           font-size: 22px;
@@ -3455,7 +3455,7 @@
               position: absolute;
               top: 0;
               margin-left: -36px;
-              background-image: url(snez2017.png);
+              background-image: url(~imgPath/snez2017.png);
               background-size: 100%;
             }
             .snplas-num {
@@ -3539,7 +3539,7 @@
       //             content: "";
       //             display: block; width: 67px; height: 60px;
       //             position: absolute; left: 5px; top: 9px;
-      //             background-image: url(m-ico-gold.png);
+      //             background-image: url(~imgPath/m-ico-gold.png);
       //             background-size: 67px;
       //         }
       //     }
@@ -3654,7 +3654,7 @@
         //     //         display: block;
         //     //         width: 70px;
         //     //         height: 70px;
-        //     //         background-image: url(offer-bk2.png);
+        //     //         background-image: url(~imgPath/offer-bk2.png);
         //     //         background-size: 70px 70px;
         //     //         background-repeat: no-repeat;
         //     //         position: absolute; left:-308px; top: -20px;
@@ -3692,7 +3692,7 @@
         //     //                 position: absolute;
         //     //                 left: calc(50% - 15px);
         //     //                 top: 2px;
-        //     //                 background-image: url(time1.png);
+        //     //                 background-image: url(~imgPath/time1.png);
         //     //                 background-size: 30px;
         //     //             }
         //     //         }
@@ -3718,7 +3718,7 @@
       //         }
       //         .img:after{
       //             height: 67px; top: 5px;
-      //             background-image: url(m-ico-gems.png);
+      //             background-image: url(~imgPath/m-ico-gems.png);
       //             background-size: 67px;
       //         }
       //     }
@@ -3734,7 +3734,7 @@
       //         }
       //         .img:after{
       //             height: 67px; top: 5px;
-      //             background-image: url(m-ico-shards.png);
+      //             background-image: url(~imgPath/m-ico-shards.png);
       //             background-size: 67px;
       //         }
       //     }
@@ -3813,7 +3813,7 @@
   position: absolute;
   top: 4px;
   margin-left: 4px;
-  background-image: url(saleoff.png);
+  background-image: url(~imgPath/saleoff.png);
   background-size: 114px;
   .saletext {
     width: 80px;
@@ -3844,7 +3844,7 @@
   position: relative;
   display: inline-block;
   top: 3px;
-  background: url(ico-nutaku2.png);
+  background: url(~imgPath/ico-nutaku2.png);
   background-size: 100%;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.8));
 }
@@ -3935,7 +3935,7 @@ body .main.world3 .popup-layer {
               line-height: 34px;
               padding: 3px 0;
               &:before {
-                background-image: url(dark.png);
+                background-image: url(~imgPath/dark.png);
                 top: -3px;
                 margin-right: 3px;
               }

@@ -15,7 +15,7 @@
     color: #98320d;
   }
   .color-box {
-    background-image: url(ts_confirm_bk-1.jpg);
+    background-image: url(~imgPath/ts_confirm_bk-1.jpg);
     background-size: 100%;
     &:after,
     &:before {
@@ -61,7 +61,7 @@
         position: absolute;
         top: 2px;
         margin-left: -16px;
-        background-image: url(wpck-ram.png);
+        background-image: url(~imgPath/wpck-ram.png);
         background-size: 100%;
         font-size: 16px;
         color: #ffd200;
@@ -81,7 +81,7 @@
         position: absolute;
         top: 298px;
         margin-left: 6px;
-        background-image: url(wpck-dps.png);
+        background-image: url(~imgPath/wpck-dps.png);
         background-size: 100%;
         .prize-dps-text {
           width: 70px;
@@ -101,7 +101,7 @@
         position: absolute;
         top: 298px;
         margin-left: 154px;
-        background-image: url(wpck-promote.png);
+        background-image: url(~imgPath/wpck-promote.png);
         background-size: 100%;
         .prize-promote-text {
           width: 60px;
@@ -280,7 +280,7 @@
       }
     }
     .rate.gold {
-      background-image: url(ic-abil-redline.png);
+      background-image: url(~imgPath/ic-abil-redline.png);
       font-size: 18px;
       color: #fff;
       line-height: 18px;
@@ -354,7 +354,7 @@
         position: absolute;
         top: -20px;
         margin-left: 674px;
-        background-image: url(zvezda.png);
+        background-image: url(~imgPath/zvezda.png);
         background-size: 100%;
         .value-num,
         .value-text {
@@ -381,7 +381,7 @@
     position: absolute;
     top: -10px;
     margin-left: -10px;
-    background-image: url(timer-back.png);
+    background-image: url(~imgPath/timer-back.png);
     background-size: 100%;
     .time-left,
     .time-sec {

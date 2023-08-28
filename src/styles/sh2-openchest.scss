@@ -12,7 +12,7 @@ body .main {
             left: 50%;
             transform: translate(-50%, -50%);
             &:before {
-                background-image: url(ts_confirm_bk-1.jpg);
+                background-image: url(~imgPath/ts_confirm_bk-1.jpg);
                 background-size: 100%;
             }
             .title {
@@ -55,17 +55,17 @@ body .main {
                             position: absolute;
                             margin-left: 4px;
                             top: 2px;
-                            background-image: url(https://cdn.faptitans.com/s1/rc/sh2-chest-ic-28.png);
+                            background-image: url(~imgPath/sh2-chest-ic-28.png);
                             background-size: 100%;
                         }
                         .f-sh2d-chest {
-                            background-image: url(sh-icon-chest-dark-28.png);
+                            background-image: url(~imgPath/sh-icon-chest-dark-28.png);
                         }
                         .f-black-butil {
-                            background-image: url(ic-black-butil-40.png);
+                            background-image: url(~imgPath/ic-black-butil-40.png);
                         }
                         .f-diamond {
-                            background-image: url(v2-res-diamond.png);
+                            background-image: url(~imgPath/v2-res-diamond.png);
                         }
                     }
                 }
@@ -84,7 +84,7 @@ body .main {
                 position: absolute;
                 top: -10px;
                 margin-left: -90px;
-                background-image: url(break-girl.png);
+                background-image: url(~imgPath/break-girl.png);
                 background-size: 100%;
             }
         }
@@ -169,7 +169,7 @@ body .main {
                                         height: 30px;
                                         position: relative;
                                         display: inline-block;
-                                        background-image: url(v2-res-diamond.png);
+                                        background-image: url(~imgPath/v2-res-diamond.png);
                                         background-size: 100%;
                                         margin-left: 2px;
                                         vertical-align: middle;
@@ -185,7 +185,7 @@ body .main {
                                         background-size: 100%;
                                         margin-left: 2px;
                                         vertical-align: middle;
-                                        background-image: url(ic-black-butil-40.png);
+                                        background-image: url(~imgPath/ic-black-butil-40.png);
                                     }
                                 }
                             }
@@ -345,7 +345,7 @@ body .main .popup-layer .m-popup.sh2-openchest3 {
                     .sh2-prgbar-all {
                         .sh2-prgbar-text {
                             &:after {
-                                background-image: url(ic-girls-pieces.png);
+                                background-image: url(~imgPath/ic-girls-pieces.png);
                                 background-position: center -1em;
                                 background-repeat: no-repeat;
                                 background-size: 100%;
@@ -357,7 +357,7 @@ body .main .popup-layer .m-popup.sh2-openchest3 {
                     .sh2-prgbar-all {
                         .sh2-prgbar-text {
                             &:after {
-                                background-image: url(ic-girls-pieces.png);
+                                background-image: url(~imgPath/ic-girls-pieces.png);
                                 background-position: center -2em;
                                 background-repeat: no-repeat;
                                 background-size: 100%;
@@ -420,7 +420,7 @@ body .main.world3 .popup-layer {
             color: #ffffff;
         }
         &:before {
-            background-image: url(ts_confirm_bk-1.jpg);
+            background-image: url(~imgPath/ts_confirm_bk-1.jpg);
             background-size: 100%;
             filter: hue-rotate(200deg);
         }
@@ -439,7 +439,7 @@ body .main.world3 .popup-layer {
             }
         }
         .winner-girl {
-            background-image: url(break-girl2.png);
+            background-image: url(~imgPath/break-girl2.png);
             transform: scaleX(-1);
         }
     }

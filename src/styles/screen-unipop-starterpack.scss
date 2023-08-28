@@ -8,20 +8,20 @@
         color: #fff;
     }
     .color-box{
-        background-image: url(ts_confirm_bk-1.jpg); background-size: 100%;
+        background-image: url(~imgPath/ts_confirm_bk-1.jpg); background-size: 100%;
         &:before{display: none};
         &:after{display: none};
     }
     .color-box-decor{
         width: 170px; height: 620px; position: absolute; top: -10px; left: -46px;
-        background-image: url(unipop-bg1.png); background-size: 100%;
+        background-image: url(~imgPath/unipop-bg1.png); background-size: 100%;
         &:before{
             content: ""; width: 168px; height: 86px; position: absolute; top: 540px; left: 190px;
-            background-image: url(unipop-bg2.png); background-size: 100%;
+            background-image: url(~imgPath/unipop-bg2.png); background-size: 100%;
         }
         &:after{
             content: ""; width: 200px; height: 540px; position: absolute; top: 90px; left: 800px;
-            background-image: url(unipop-bg3.png); background-size: 100%;
+            background-image: url(~imgPath/unipop-bg3.png); background-size: 100%;
         }
     }
     .unipop-box-content-all{
@@ -60,7 +60,7 @@
                     }
                     .unipop-gold-arrow{
                         width: 20px; height: 62px; position: absolute; top: 9px; left: 148px;
-                        background-image: url(unipop-gold-arrow.png); background-size: 100%;
+                        background-image: url(~imgPath/unipop-gold-arrow.png); background-size: 100%;
                         visibility: hidden;
                     }
                     .unipop-box-pic{
@@ -84,7 +84,7 @@
             width: 640px; height: 480px; position: absolute; top: 10px; left: 200px;
             .right-box-f{
                 width: 640px; height: 480px; position: absolute; top: 0; left: 0;
-                background-image: url(ts_confirm_bk-1.jpg); background-size: 100%;
+                background-image: url(~imgPath/ts_confirm_bk-1.jpg); background-size: 100%;
                 background-position-y: bottom;
                 @include prefix(border-radius, 10px);
                 .right-box-f-name-box{
@@ -96,7 +96,7 @@
                 }
                 .red-timer-box{
                     width: 110px; height: 50px; position: absolute; top: 0; left: 0;
-                    background-image: url(timer-back-50.png); background-size: 100%;
+                    background-image: url(~imgPath/timer-back-50.png); background-size: 100%;
                     .time-text, .time{
                         color: #fff000; text-shadow: 0 1px 2px #680000; font-size: 16px; font-weight: bold;
                         position: relative; top: 8px;
@@ -118,15 +118,15 @@
                     .cardnameback{
                         height: 50px;
                         min-width: 102px;
-                        background-image: url(noobpackback-line.png); max-width: 200px;
+                        background-image: url(~imgPath/noobpackback-line.png); max-width: 200px;
                         position: relative; top: -11px; display: inline-block; margin: auto;
                         &:before{
                             content: ""; width: 38px; height: 50px; position: absolute; right: -38px; display: block;
-                            background-image: url(noobpackback-l.png); transform: scale(-1, 1); top: 0px;
+                            background-image: url(~imgPath/noobpackback-l.png); transform: scale(-1, 1); top: 0px;
                         }
                         &:after{
                             content: ""; width: 38px; height: 50px; position: absolute; left: -38px; display: block;
-                            background-image: url(noobpackback-l.png); top: 0px;
+                            background-image: url(~imgPath/noobpackback-l.png); top: 0px;
                         }
                         .card-text{
                             font-size: 18px; color: #fff; text-shadow: 0 0 6px #000; position: relative; height: 33px;
@@ -386,7 +386,7 @@
                 }
                 .sale-box{
                     width: 110px; height: 110px; position: absolute; top: 362px; right: -6px;
-                    background-image: url(zvezda.png); background-size: 100%; display: table;
+                    background-image: url(~imgPath/zvezda.png); background-size: 100%; display: table;
                     .sale-text{
                         position: absolute;
                         top: 50%;
@@ -407,10 +407,10 @@
 
 .moredps-box{
     width: 110px; height: 110px; position: absolute;
-    background-image: url(zvezda.png); background-size: 100%;
+    background-image: url(~imgPath/zvezda.png); background-size: 100%;
     &:before{
         content: ""; width: 75px; height: 75px; position: absolute; top: 17px; left: 16px;
-        background-image: url(ic-abil-dps2.png); background-size: 100%;
+        background-image: url(~imgPath/ic-abil-dps2.png); background-size: 100%;
     }
 }
 

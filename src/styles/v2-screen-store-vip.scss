@@ -14,9 +14,9 @@
         width: 118px; height: 450px; position: absolute; top: 75px; left: 20px;
         .menu-box-all{
             width: 118px; height: 90px; position: relative;
-            background-image: url(shop-menu1.png); background-size: 100%; cursor: pointer;
+            background-image: url(~imgPath/shop-menu1.png); background-size: 100%; cursor: pointer;
             &:active{top: 1px;}
-            &.select{background-image: url(shop-menu2.png);}
+            &.select{background-image: url(~imgPath/shop-menu2.png);}
             .menu-pic{
                 width: 80px; height: 60px; position: absolute; left: 19px;
             }
@@ -33,7 +33,7 @@
         .vip-red-box{
             width: 860px; height: 120px; position: absolute;
             @include prefix(border-radius, 8px); overflow: hidden;
-            background-image: url(store-vip-bg.jpg); background-size: 100%;
+            background-image: url(~imgPath/store-vip-bg.jpg); background-size: 100%;
             box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
             .vip-name{
                 width: 400px; height: 40px; position: absolute; top: 12px; left: 60px;
@@ -123,17 +123,17 @@
                 @include prefix(border-radius, 6px);
                 .vip-lvl, .vip-lvl-next{
                     width: 169px; height: 80px; position: absolute; top: 18px; left: 10px;
-                    &.lvl0{background-image: url(vip-p0_0.png); background-size: 100%;}
-                    &.lvl1{background-image: url(vip-p1_0.png); background-size: 100%;}
-                    &.lvl2{background-image: url(vip-p2_0.png); background-size: 100%;}
-                    &.lvl3{background-image: url(vip-p3_0.png); background-size: 100%;}
-                    &.lvl4{background-image: url(vip-p4_0.png); background-size: 100%;}
-                    &.lvl5{background-image: url(vip-p5_0.png); background-size: 100%;}
-                    &.lvl6{background-image: url(vip-p6_0.png); background-size: 100%;}
-                    &.lvl7{background-image: url(vip-p7_0.png); background-size: 100%;}
-                    &.lvl8{background-image: url(vip-p8_0.png); background-size: 100%;}
-                    &.lvl9{background-image: url(vip-p9_0.png); background-size: 100%;}
-                    &.lvl10{background-image: url(vip-p10_0.png); background-size: 100%;}
+                    &.lvl0{background-image: url(~imgPath/vip-p0_0.png); background-size: 100%;}
+                    &.lvl1{background-image: url(~imgPath/vip-p1_0.png); background-size: 100%;}
+                    &.lvl2{background-image: url(~imgPath/vip-p2_0.png); background-size: 100%;}
+                    &.lvl3{background-image: url(~imgPath/vip-p3_0.png); background-size: 100%;}
+                    &.lvl4{background-image: url(~imgPath/vip-p4_0.png); background-size: 100%;}
+                    &.lvl5{background-image: url(~imgPath/vip-p5_0.png); background-size: 100%;}
+                    &.lvl6{background-image: url(~imgPath/vip-p6_0.png); background-size: 100%;}
+                    &.lvl7{background-image: url(~imgPath/vip-p7_0.png); background-size: 100%;}
+                    &.lvl8{background-image: url(~imgPath/vip-p8_0.png); background-size: 100%;}
+                    &.lvl9{background-image: url(~imgPath/vip-p9_0.png); background-size: 100%;}
+                    &.lvl10{background-image: url(~imgPath/vip-p10_0.png); background-size: 100%;}
                 }
                 .vip-lvl-next{
                     left: 546px;
@@ -167,7 +167,7 @@
                     border: 1px solid #f8f2bd; box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.35), 0 2px 4px 0 rgba(0, 0, 0, 0.75);
                     &:before{
                         content: ""; width: 110px; height: 110px; position: absolute; top: 2px; left: 15px;
-                        background-image: url(sunduk.png); background-size: 100%;
+                        background-image: url(~imgPath/sunduk.png); background-size: 100%;
                     }
                     .vip-btn-box{
                         width: 120px; height: 60px; position: absolute; top: 72px; left: 10px;
@@ -223,9 +223,9 @@
         @include prefix(border-radius, 4px);
         .crow-icon{
             width: 34px; height: 34px; position: relative; display: inline-block; 
-            background-image: url(ico-real.png); background-size: 100%; top: -5px;
+            background-image: url(~imgPath/ico-real.png); background-size: 100%; top: -5px;
             &.diamond{
-                background-image: url(80-topup.png); height: 30px; margin-top: 3px;
+                background-image: url(~imgPath/80-topup.png); height: 30px; margin-top: 3px;
             }
         }
         .crow-text{

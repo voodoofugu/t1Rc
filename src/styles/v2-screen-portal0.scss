@@ -9,17 +9,17 @@
 }
 .suphero-squad-window.bronze-bg-fg {
   &:after {
-    background-image: url(bronze-squad-fg.png);
+    background-image: url(~imgPath/bronze-squad-fg.png);
   }
 }
 .hero-pic-box.bronze-card-fg {
   &:after {
-    background-image: url(bronze-card-fg.png);
+    background-image: url(~imgPath/bronze-card-fg.png);
   }
 }
 .suphero-card.bronze-card-flare {
   &:after {
-    background-image: url(bronze-flare.png);
+    background-image: url(~imgPath/bronze-flare.png);
   }
   &:hover {
       background: #EDCEA9; border-radius: 6px;
@@ -47,22 +47,22 @@
 // silver
 .suphero-squad-wrap.silver-bg-fg {
   &:before {
-    background-image: url(silver-squad-bg.png);
+    background-image: url(~imgPath/silver-squad-bg.png);
   }
 }
 .suphero-squad-window.silver-bg-fg {
   &:after {
-    background-image: url(silver-squad-fg.png);
+    background-image: url(~imgPath/silver-squad-fg.png);
   }
 }
 .hero-pic-box.silver-card-fg {
   &:after {
-    background-image: url(silver-card-fg.png);
+    background-image: url(~imgPath/silver-card-fg.png);
   }
 }
 .suphero-card.silver-card-flare {
   &:after {
-    background-image: url(silver-flare.png);
+    background-image: url(~imgPath/silver-flare.png);
   }
   &:hover {
       background: #E6E6E6; border-radius: 6px;
@@ -90,22 +90,22 @@
 // gold
 .suphero-squad-wrap.gold-bg-fg {
   &:before {
-    background-image: url(gold-squad-bg.png);
+    background-image: url(~imgPath/gold-squad-bg.png);
   }
 }
 .suphero-squad-window.gold-bg-fg {
   &:after {
-    background-image: url(gold-squad-fg.png);
+    background-image: url(~imgPath/gold-squad-fg.png);
   }
 }
 .hero-pic-box.gold-card-fg {
   &:after {
-    background-image: url(gold-card-fg.png);
+    background-image: url(~imgPath/gold-card-fg.png);
   }
 }
 .suphero-card.gold-card-flare {
   &:after {
-    background-image: url(gold-flare.png);
+    background-image: url(~imgPath/gold-flare.png);
   }
   &:hover {
       background: #F4E6BE; border-radius: 6px;
@@ -133,22 +133,22 @@
 // platinum
 .suphero-squad-wrap.platinum-bg-fg {
   &:before {
-    background-image: url(platinum-squad-bg.png);
+    background-image: url(~imgPath/platinum-squad-bg.png);
   }
 }
 .suphero-squad-window.platinum-bg-fg {
   &:after {
-    background-image: url(platinum-squad-fg.png);
+    background-image: url(~imgPath/platinum-squad-fg.png);
   }
 }
 .hero-pic-box.platinum-card-fg {
   &:after {
-    background-image: url(platinum-card-fg.png);
+    background-image: url(~imgPath/platinum-card-fg.png);
   }
 }
 .suphero-card.platinum-card-flare {
   &:after {
-    background-image: url(platinum-flare.png);
+    background-image: url(~imgPath/platinum-flare.png);
   }
   &:hover {
       background: #E6E6E6; border-radius: 6px;
@@ -176,22 +176,22 @@
 // diamond
 .suphero-squad-wrap.diamond-bg-fg {
   &:before {
-    background-image: url(diamond-squad-bg.png);
+    background-image: url(~imgPath/diamond-squad-bg.png);
   }
 }
 .suphero-squad-window.diamond-bg-fg {
   &:after {
-    background-image: url(diamond-squad-fg.png);
+    background-image: url(~imgPath/diamond-squad-fg.png);
   }
 }
 .hero-pic-box.diamond-card-fg {
   &:after {
-    background-image: url(diamond-card-fg.png);
+    background-image: url(~imgPath/diamond-card-fg.png);
   }
 }
 .suphero-card.diamond-card-flare {
   &:after {
-    background-image: url(diamond-flare.png);
+    background-image: url(~imgPath/diamond-flare.png);
   }
   &:hover {
       background: #B3F2F5; border-radius: 6px;
@@ -412,7 +412,7 @@ body .main{
                                 box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                 &:before {
                                   content: ""; width: 22px; height: 22px; position: absolute;
-                                  background-image: url(ico-click.png); background-repeat: no-repeat;
+                                  background-image: url(~imgPath/ico-click.png); background-repeat: no-repeat;
                                   background-size: 22px; top: 3px; left: 3px;
                                 }
                                 .dpc-info {
@@ -429,7 +429,7 @@ body .main{
                                 box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                 &:before {
                                   content: ""; width: 22px; height: 22px; position: absolute;
-                                  background-image: url(ico-sword.png); background-repeat: no-repeat;
+                                  background-image: url(~imgPath/ico-sword.png); background-repeat: no-repeat;
                                   background-size: 22px; top: 3px; left: 3px;
                                 }
                                 .dps-info {
@@ -452,7 +452,7 @@ body .main{
                           box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.3); margin-bottom: 10px;
                           &:before {
                             content: ""; width: 40px; height: 40px; position: absolute;
-                            top: 6px; left: 6px; background-image: url(trophy-bonus-gems.png);
+                            top: 6px; left: 6px; background-image: url(~imgPath/trophy-bonus-gems.png);
                             background-size: 100%; background-repeat: no-repeat;
                           }
                           .gacha-value {
@@ -493,7 +493,7 @@ body .main{
                             width: 90px; height: 44px;
                             position: absolute; left: 65px; margin-top: 8px;
                             .avatar-box {
-                              width: 52px; height: 52px; background-image: url(v2-master-pic1.png);
+                              width: 52px; height: 52px; background-image: url(~imgPath/v2-master-pic1.png);
                               background-size: 100%; background-repeat: no-repeat; margin-top: -4px; border-radius: 6px;
                               position: absolute; margin-left: -16px;
                             }
@@ -518,19 +518,19 @@ body .main{
                             margin-top: 63px;
                             .character-information-dpc {
                               &:before {
-                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(ico-click.png);
+                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(~imgPath/ico-click.png);
                                 background-repeat: no-repeat; background-size: 22px; left: 12px;
                               }
                             }
                             .character-information-dps {
                               &:before {
-                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(ico-sword.png);
+                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(~imgPath/ico-sword.png);
                                 background-repeat: no-repeat; background-size: 22px; left: 12px;
                               }
                             }
                             .character-information-killing {
                               &:before {
-                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(v2-fw-icon-w3.png);
+                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(~imgPath/v2-fw-icon-w3.png);
                                 background-repeat: no-repeat; background-size: 22px; left: 12px;
                               }
                             }
@@ -546,7 +546,7 @@ body .main{
                           }
                         }
                         .special-offer-box {
-                          width: 216px; height: 100px; background-image: url(unipop-m-wsale227.jpg); background-size: 100%;
+                          width: 216px; height: 100px; background-image: url(~imgPath/unipop-m-wsale227.jpg); background-size: 100%;
                           background-repeat: no-repeat; margin-bottom: 15px; border-radius: 6px;
                         }
                         .togacha-box {
@@ -555,7 +555,7 @@ body .main{
                           box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.5), 0 1px 0px 1px rgba(0, 0, 0, 0.2);
                           border-radius: 6px; margin-bottom: 15px;
                           &:before {
-                            content: ""; width: 80px; height: 80px; background-image: url(change-sun2.png);
+                            content: ""; width: 80px; height: 80px; background-image: url(~imgPath/change-sun2.png);
                             background-size: 100%; background-repeat: no-repeat; position: absolute;
                             margin: -10px 0 0 -35px;
                           }
@@ -644,50 +644,50 @@ body .main{
     @include prefix(border-radius, 0 0 4px 4px);
     .herostar{
         width: 94px; height: 18px; position: absolute;
-        background-image: url(hero-star05-bg.png); background-size: 100%;
+        background-image: url(~imgPath/hero-star05-bg.png); background-size: 100%;
         &:before{
             content: ""; width: 94px; height: 18px; position: absolute;
         }
         &.lvl00{
             &:before{
                 content: ""; width: 0px; background-repeat: no-repeat; background-size: 470%;
-                background-image: url(hero-star05.png);
+                background-image: url(~imgPath/hero-star05.png);
             }
         }
         &.lvl02{
             &:before{
                 content: ""; width: 20px; background-repeat: no-repeat; background-size: 470%;
-                background-image: url(hero-star05.png);
+                background-image: url(~imgPath/hero-star05.png);
             }
         }
         &.lvl04{
             &:before{
                 content: ""; width: 40px; background-repeat: no-repeat; background-size: 235%;
-                background-image: url(hero-star05.png);
+                background-image: url(~imgPath/hero-star05.png);
             }
         }
         &.lvl06{
             &:before{
                 content: ""; width: 56px; background-repeat: no-repeat; background-size: 168%;
-                background-image: url(hero-star05.png);
+                background-image: url(~imgPath/hero-star05.png);
             }
         }
         &.lvl08{
             &:before{
                 content: ""; width: 72px; background-repeat: no-repeat; background-size: 131%;
-                background-image: url(hero-star05.png);
+                background-image: url(~imgPath/hero-star05.png);
             }
         }
         &.lvl010{
             &:before{
                 content: ""; width: 94px; background-repeat: no-repeat; background-size: 100%;
-                background-image: url(hero-star05.png);
+                background-image: url(~imgPath/hero-star05.png);
             }
         }
         &.ult{
             &:before{
                 content: ""; width: 94px; background-repeat: no-repeat; background-size: 100%;
-                background-image: url(big-hero-star05-purple.png);
+                background-image: url(~imgPath/big-hero-star05-purple.png);
             }
         }
     }
@@ -702,7 +702,7 @@ body .main{
         @include prefix(border-radius, 4px);
         .essence-icon{
             width: 34px; height: 34px; position: relative; display: inline-block;
-            background-image: url(essence-80x80.png); background-size: 100%; top: -5px;
+            background-image: url(~imgPath/essence-80x80.png); background-size: 100%; top: -5px;
         }
         .essence-text{
             text-align: center; font-size: 16px; font-weight: bold; color: #fedf87; position: relative;

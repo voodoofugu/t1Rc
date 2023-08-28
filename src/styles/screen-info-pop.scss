@@ -10,7 +10,7 @@ body .main .popup-layer {
         transform: translate(-50%, -50%);
         &:before {
             background: linear-gradient(#564141, #9c8b7c);
-            background: url(tabs-menu-bg.png),
+            background: url(~imgPath/tabs-menu-bg.png),
                 linear-gradient(180deg, #353535, #6b6a68);
             background-position: center bottom, 0;
             background-repeat: no-repeat;
@@ -25,7 +25,7 @@ body .main .popup-layer {
             right: -173px;
             top: 50%;
             transform: translateY(17px);
-            background-image: url(break-girl634.png);
+            background-image: url(~imgPath/break-girl634.png);
             background-repeat: no-repeat;
             background-position: top center;
             background-size: 100%;
@@ -99,7 +99,7 @@ body .main.world3 .popup-layer {
             position: absolute;
             right: -173px;
             bottom: -55px;
-            background-image: url(break-girl634.png);
+            background-image: url(~imgPath/break-girl634.png);
             background-repeat: no-repeat;
             background-position: top center;
             background-size: 100%;

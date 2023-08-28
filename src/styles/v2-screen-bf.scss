@@ -59,12 +59,12 @@
     position: absolute;
     top: 80px;
     left: 20px;
-    background-image: url(v2-bf-sale.png);
+    background-image: url(~imgPath/v2-bf-sale.png);
     background-size: 100%;
     background-repeat: no-repeat;
 
     &.friday_hero2 {
-      background-image: url(v2-bf-sale.png);
+      background-image: url(~imgPath/v2-bf-sale.png);
     }
   }
   .bf-hero-box-all {
@@ -277,7 +277,7 @@
                   vertical-align: middle;
                   display: inline-block;
                   top: -3px;
-                  background-image: url(ico-gold.png);
+                  background-image: url(~imgPath/ico-gold.png);
                   background-size: 100%;
                 }
               }

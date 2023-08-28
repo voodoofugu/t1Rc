@@ -57,7 +57,7 @@
           .reborn {
             width: 140px;
             height: 140px;
-            background-image: url(ic-abil-reborn@2x.png);
+            background-image: url(~imgPath/ic-abil-reborn@2x.png);
             background-size: 140spx;
             position: absolute;
             top: 112px;
@@ -79,7 +79,7 @@
                 height: 26px;
                 vertical-align: middle;
                 position: relative;
-                background-image: url(reb-rub.png);
+                background-image: url(~imgPath/reb-rub.png);
                 background-size: 26px;
                 margin-right: 5px;
               }
@@ -88,7 +88,7 @@
           .balancer {
             width: 140px;
             height: 140px;
-            background-image: url(ic-abil-rubin@2x.png);
+            background-image: url(~imgPath/ic-abil-rubin@2x.png);
             background-size: 140px;
             position: absolute;
             top: 112px;
@@ -97,7 +97,7 @@
           .gold {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-gold.png);
+            background-image: url(~imgPath/ic-abil-gold.png);
             background-size: 75px;
             position: absolute;
             top: 112px;
@@ -107,7 +107,7 @@
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(ic-abil-gold.png);
+              background-image: url(~imgPath/ic-abil-gold.png);
               position: absolute;
               top: 4px;
               margin-left: 55px;
@@ -117,7 +117,7 @@
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(ic-abil-gold.png);
+              background-image: url(~imgPath/ic-abil-gold.png);
               position: absolute;
               top: 5px;
               margin-left: -53px;
@@ -126,7 +126,7 @@
           .gold-shards {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-gold-but.png);
+            background-image: url(~imgPath/ic-abil-gold-but.png);
             background-size: 75px;
             position: absolute;
             top: 112px;
@@ -135,7 +135,7 @@
           .gems {
             width: 75px;
             height: 75px;
-            background-image: url(ic-abil-rubin.png);
+            background-image: url(~imgPath/ic-abil-rubin.png);
             background-size: 75px;
             position: absolute;
             top: 112px;
@@ -375,16 +375,16 @@
               }
             }
             .gold {
-              background-image: url(ic-abil-gold@2x.png);
+              background-image: url(~imgPath/ic-abil-gold@2x.png);
             }
             .shards {
-              background-image: url(ic-abil-butil@2x.png);
+              background-image: url(~imgPath/ic-abil-butil@2x.png);
             }
             .gems {
-              background-image: url(ic-abil-rubin@2x.png);
+              background-image: url(~imgPath/ic-abil-rubin@2x.png);
             }
             .gold-shards {
-              background-image: url(ic-abil-gold-but@2x.png);
+              background-image: url(~imgPath/ic-abil-gold-but@2x.png);
             }
             .clock {
               display: none;
@@ -550,7 +550,7 @@
   position: absolute;
   top: 4px;
   margin-left: 4px;
-  background-image: url(saleoff.png);
+  background-image: url(~imgPath/saleoff.png);
   background-size: 114px;
   .saletext {
     width: 80px;
@@ -572,7 +572,7 @@
   top: 44px;
   left: 30px;
   background-size: 55px;
-  background-image: url(ic-clock-all.png);
+  background-image: url(~imgPath/ic-clock-all.png);
   .newclocktime {
     width: 20px;
     height: 10px;

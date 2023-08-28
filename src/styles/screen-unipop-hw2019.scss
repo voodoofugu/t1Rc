@@ -13,7 +13,7 @@
     color: #fff;
   }
   .color-box {
-    background-image: url(ts_confirm_bk-1.jpg);
+    background-image: url(~imgPath/ts_confirm_bk-1.jpg);
     background-size: 100%;
     &:before {
       display: none;
@@ -28,7 +28,7 @@
     position: absolute;
     top: -10px;
     left: -46px;
-    background-image: url(unipop-bg1.png);
+    background-image: url(~imgPath/unipop-bg1.png);
     background-size: 100%;
     &:before {
       content: "";
@@ -37,7 +37,7 @@
       position: absolute;
       top: 540px;
       left: 190px;
-      background-image: url(unipop-bg2.png);
+      background-image: url(~imgPath/unipop-bg2.png);
       background-size: 100%;
     }
     &:after {
@@ -47,7 +47,7 @@
       position: absolute;
       top: 90px;
       left: 800px;
-      background-image: url(unipop-bg3.png);
+      background-image: url(~imgPath/unipop-bg3.png);
       background-size: 100%;
     }
   }
@@ -126,7 +126,7 @@
             position: absolute;
             top: 9px;
             left: 148px;
-            background-image: url(unipop-gold-arrow.png);
+            background-image: url(~imgPath/unipop-gold-arrow.png);
             background-size: 100%;
             visibility: hidden;
           }
@@ -170,16 +170,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(pop-bg-hw.jpg);
+        background-image: url(~imgPath/pop-bg-hw.jpg);
         background-size: 128%;
         &.bf {
-          background-image: url(v2-bf-pop-bg.jpg);
+          background-image: url(~imgPath/v2-bf-pop-bg.jpg);
         }
         &.ny {
-          background-image: url(pop-bg-xmas.jpg);
+          background-image: url(~imgPath/pop-bg-xmas.jpg);
         }
         &.sv {
-          background-image: url(pop-bg-hw.jpg);
+          background-image: url(~imgPath/pop-bg-hw.jpg);
         }
         background-position-y: bottom;
         background-repeat: no-repeat;
@@ -205,7 +205,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          background-image: url(timer-back-50.png);
+          background-image: url(~imgPath/timer-back-50.png);
           background-size: 100%;
           .time-text,
           .time {
@@ -230,7 +230,7 @@
           position: absolute;
           bottom: 5px;
           left: 5px;
-          background-image: url(break-girl15-hw.png);
+          background-image: url(~imgPath/break-girl15-hw.png);
           background-size: 100%;
         }
         .color-btn.red.orgy {
@@ -414,7 +414,7 @@
               content: "";
               width: 20px;
               height: 20px;
-              background: url(darkworld-back-arrow.png);
+              background: url(~imgPath/darkworld-back-arrow.png);
               background-size: 100%;
               background-position: center;
               background-repeat: no-repeat;
@@ -436,7 +436,7 @@
               content: "";
               width: 20px;
               height: 20px;
-              background: url(darkworld-back-arrow.png);
+              background: url(~imgPath/darkworld-back-arrow.png);
               background-size: 100%;
               background-position: center;
               background-repeat: no-repeat;
@@ -461,7 +461,7 @@
           position: absolute;
           top: 158px;
           left: 108px;
-          background-image: url(unipop-buble.png);
+          background-image: url(~imgPath/unipop-buble.png);
           background-size: 100%;
           .girl-buble-text-box {
             width: 170px;
