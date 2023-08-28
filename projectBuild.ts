@@ -11,6 +11,10 @@ const componDir = path.join(__dirname, "src/components");
 const componMapFilename = "AaComponMap.jsx";
 const componMapPath = path.join(componDir, componMapFilename);
 
+const htmlPages = fs
+    .readdirSync(pagesDir)
+    .filter((file) => file.endsWith(".html"));
+
 function generateComponentName(pageName: string): string {
     const cleanedName = pageName
         .replace(".html", "")
@@ -20,16 +24,19 @@ function generateComponentName(pageName: string): string {
     );
 }
 
+const formattedPageNames = htmlPages.map((page) => generateComponentName(page));
+
 const imports: string[] = [];
 let existingComponents: string[] = [];
 
 function wrapPageWithComponent(componentName: string): string {
     return `import React from "react";
+import styles from "../styles/${componentName}.scss";
 
 const ${componentName} = () => {
-return (
-  <></>
-);
+    return (
+        <></>
+    );
 };
 
 export default React.memo(${componentName});
@@ -97,66 +104,43 @@ export default AaComponMap;`;
 
 generateAaComponMap();
 
-fs.readdir(pagesDir, (err, files) => {
-    if (err) {
-        console.error("Error reading pages directory:", err);
-        return;
+formattedPageNames.forEach((componentName, index) => {
+    const page = htmlPages[index];
+    const componentPath = path.join(componentsDir, `${componentName}.jsx`);
+
+    if (fs.existsSync(componentPath)) {
+        console.log(`Component for ${page} already exists. Skipping.`);
+    } else {
+        const componentCode = wrapPageWithComponent(componentName);
+
+        fs.writeFileSync(componentPath, componentCode);
+        console.log(`Created component for ${page}`);
     }
 
-    existingComponents = fs
-        .readdirSync(componentsDir)
-        .filter((file) => file.endsWith(".jsx"))
-        .map((file) => path.basename(file, ".jsx"));
-
-    const pagesComponents = files
-        .filter((file) => file.endsWith(".html"))
-        .map(generateComponentName);
-
-    files.forEach((file) => {
-        if (file.endsWith(".html")) {
-            const pageName = path.basename(file);
-            const componentName = generateComponentName(pageName);
-            const componentPath = path.join(
-                componentsDir,
-                `${componentName}.jsx`
-            );
-
-            if (fs.existsSync(componentPath)) {
-                console.log(
-                    `Component for ${pageName} already exists. Skipping.`
-                );
-            } else {
-                const componentCode = wrapPageWithComponent(componentName);
-
-                fs.writeFileSync(componentPath, componentCode);
-                console.log(`Created component for ${pageName}`);
-            }
-
-            imports.push(
-                `const ${componentName} = React.lazy(() => import("./${componentName}.jsx"));`
-            );
-        }
-    });
-
-    const componentsToKeep = ["TemplateComponent"];
-    const componentsToDelete = existingComponents.filter(
-        (component) =>
-            !componentsToKeep.includes(component) &&
-            !pagesComponents.includes(component) &&
-            component !== componMapFilename
+    imports.push(
+        `const ${componentName} = React.lazy(() => import("./${componentName}.jsx"));`
     );
+});
 
-    componentsToDelete.forEach((component) => {
-        const componentPath = path.join(componentsDir, `${component}.jsx`);
-        fs.unlinkSync(componentPath);
-        console.log(`Deleted component ${component}.jsx`);
-    });
+const componentsToKeep = ["TemplateComponent"];
+const componentsToDelete = existingComponents.filter(
+    (component) =>
+        !componentsToKeep.includes(component) &&
+        !formattedPageNames.includes(component) &&
+        component !== componMapFilename
+);
 
-    const componentsMapCode = `import React from "react";
+componentsToDelete.forEach((component) => {
+    const componentPath = path.join(componentsDir, `${component}.jsx`);
+    fs.unlinkSync(componentPath);
+    console.log(`Deleted component ${component}.jsx`);
+});
+
+const componentsMapCode = `import React from "react";
 ${imports.join("\n")}
 
 const AaPagesComponentMap = {
-    ${pagesComponents
+    ${formattedPageNames
         .map((pageComponent) => {
             const importName = generateComponentName(pageComponent);
             return `  ${importName.replace(
@@ -169,8 +153,7 @@ const AaPagesComponentMap = {
 
 export default AaPagesComponentMap;`;
 
-    fs.writeFileSync(componentsMapPath, componentsMapCode);
-    console.log("Created AaPagesComponentMap.jsx");
+fs.writeFileSync(componentsMapPath, componentsMapCode);
+console.log("Created AaPagesComponentMap.jsx");
 
-    updateStylesMap();
-});
+updateStylesMap();
