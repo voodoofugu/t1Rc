@@ -5,8 +5,6 @@ const pagesDir = path.join(__dirname, "src/pages");
 const componentsDir = path.join(__dirname, "src/pagesComponents");
 const componentsMapFilename = "AaPagesComponentMap.jsx";
 const componentsMapPath = path.join(componentsDir, componentsMapFilename);
-const stylesDir = path.join(__dirname, "src/styles");
-const stylesMapPath = path.join(__dirname, "src/stylesMap.jsx");
 const componDir = path.join(__dirname, "src/components");
 const componMapFilename = "AaComponMap.jsx";
 const componMapPath = path.join(componDir, componMapFilename);
@@ -16,12 +14,12 @@ const htmlPages = fs
     .filter((file) => file.endsWith(".html"));
 
 function generateComponentName(pageName: string): string {
-    const cleanedName = pageName
-        .replace(".html", "")
-        .replace(/[^a-zA-Z0-9]/g, "");
-    return (
-        cleanedName.charAt(0).toUpperCase() + cleanedName.slice(1) + "Component"
-    );
+    const cleanedName =
+        pageName
+            .replace(".html", "")
+            .replace(/[-_](\w)/g, (_, letter) => letter.toUpperCase())
+            .replace(/^\w/, (c) => c.toUpperCase()) + "Component";
+    return cleanedName;
 }
 
 const formattedPageNames = htmlPages.map((page) => generateComponentName(page));
@@ -41,21 +39,6 @@ const ${componentName} = () => {
 
 export default React.memo(${componentName});
 `;
-}
-
-function getStylesImports(): string {
-    const stylesFiles = fs.readdirSync(stylesDir);
-    const stylesImports = stylesFiles
-        .filter((file) => file.endsWith(".scss"))
-        .map((file) => `import "./styles/${file}";`);
-    return stylesImports.join("\n");
-}
-
-function updateStylesMap(): void {
-    const stylesImports = getStylesImports();
-    const content = `import "../node_modules/normalize.css/normalize.css";\n${stylesImports}\n`;
-    fs.writeFileSync(stylesMapPath, content);
-    console.log("Updated src/stylesMap.jsx");
 }
 
 function generateAaComponMap(): void {
@@ -155,5 +138,3 @@ export default AaPagesComponentMap;`;
 
 fs.writeFileSync(componentsMapPath, componentsMapCode);
 console.log("Created AaPagesComponentMap.jsx");
-
-updateStylesMap();

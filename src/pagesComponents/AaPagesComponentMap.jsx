@@ -1,220 +1,430 @@
 import React from "react";
-const Mainscreen00regComponent = React.lazy(() => import("./Mainscreen00regComponent.jsx"));
-const Mainscreen01allpopupsComponent = React.lazy(() => import("./Mainscreen01allpopupsComponent.jsx"));
-const Mainscreen16fortunaroundmainpopComponent = React.lazy(() => import("./Mainscreen16fortunaroundmainpopComponent.jsx"));
-const Mainscreen16fortunaroundmainpop16xComponent = React.lazy(() => import("./Mainscreen16fortunaroundmainpop16xComponent.jsx"));
-const Mainscreen16fortunaroundmainpop16xbuyresComponent = React.lazy(() => import("./Mainscreen16fortunaroundmainpop16xbuyresComponent.jsx"));
-const Mainscreen16fortunaroundratingpopupComponent = React.lazy(() => import("./Mainscreen16fortunaroundratingpopupComponent.jsx"));
-const Mainscreen16fortunaroundrewardspopupComponent = React.lazy(() => import("./Mainscreen16fortunaroundrewardspopupComponent.jsx"));
-const Mainscreen22unipop04wavepack10Component = React.lazy(() => import("./Mainscreen22unipop04wavepack10Component.jsx"));
-const Mainscreen22unipop14subscriptionComponent = React.lazy(() => import("./Mainscreen22unipop14subscriptionComponent.jsx"));
-const Mainscreen23fapopolymainComponent = React.lazy(() => import("./Mainscreen23fapopolymainComponent.jsx"));
-const Mainscreen25gfsalepopComponent = React.lazy(() => import("./Mainscreen25gfsalepopComponent.jsx"));
+const MainScreen00RegComponent = React.lazy(() =>
+    import("./MainScreen00RegComponent.jsx")
+);
+const MainScreen01AllPopupsComponent = React.lazy(() =>
+    import("./MainScreen01AllPopupsComponent.jsx")
+);
+const MainScreen16FortunaRoundMainpopComponent = React.lazy(() =>
+    import("./MainScreen16FortunaRoundMainpopComponent.jsx")
+);
+const MainScreen16FortunaRoundMainpop16xComponent = React.lazy(() =>
+    import("./MainScreen16FortunaRoundMainpop16xComponent.jsx")
+);
+const MainScreen16FortunaRoundMainpop16xBuyresComponent = React.lazy(() =>
+    import("./MainScreen16FortunaRoundMainpop16xBuyresComponent.jsx")
+);
+const MainScreen16FortunaRoundRatingPopupComponent = React.lazy(() =>
+    import("./MainScreen16FortunaRoundRatingPopupComponent.jsx")
+);
+const MainScreen16FortunaRoundRewardsPopupComponent = React.lazy(() =>
+    import("./MainScreen16FortunaRoundRewardsPopupComponent.jsx")
+);
+const MainScreen22Unipop04wavepack10Component = React.lazy(() =>
+    import("./MainScreen22Unipop04wavepack10Component.jsx")
+);
+const MainScreen22Unipop14subscriptionComponent = React.lazy(() =>
+    import("./MainScreen22Unipop14subscriptionComponent.jsx")
+);
+const MainScreen23FapopolyMainComponent = React.lazy(() =>
+    import("./MainScreen23FapopolyMainComponent.jsx")
+);
+const MainScreen25GfSalePopComponent = React.lazy(() =>
+    import("./MainScreen25GfSalePopComponent.jsx")
+);
 const Page404Component = React.lazy(() => import("./Page404Component.jsx"));
 const TemplateComponent = React.lazy(() => import("./TemplateComponent.jsx"));
-const V2unipop20eventsComponent = React.lazy(() => import("./V2unipop20eventsComponent.jsx"));
-const V2unipop20psepopComponent = React.lazy(() => import("./V2unipop20psepopComponent.jsx"));
-const V2unipop20pse2popComponent = React.lazy(() => import("./V2unipop20pse2popComponent.jsx"));
-const V2unipop20sexpedpopComponent = React.lazy(() => import("./V2unipop20sexpedpopComponent.jsx"));
-const V2unipop20starterpacknew1Component = React.lazy(() => import("./V2unipop20starterpacknew1Component.jsx"));
-const V2unipop20starterpacknew2Component = React.lazy(() => import("./V2unipop20starterpacknew2Component.jsx"));
-const V2unipop20starterpackComponent = React.lazy(() => import("./V2unipop20starterpackComponent.jsx"));
-const V2mainscreen01darkworldComponent = React.lazy(() => import("./V2mainscreen01darkworldComponent.jsx"));
-const V2mainscreen01relicspopComponent = React.lazy(() => import("./V2mainscreen01relicspopComponent.jsx"));
-const V2mainscreen01Component = React.lazy(() => import("./V2mainscreen01Component.jsx"));
-const V2mainscreen02guildclantrophiesComponent = React.lazy(() => import("./V2mainscreen02guildclantrophiesComponent.jsx"));
-const V2mainscreen02guildguildhallComponent = React.lazy(() => import("./V2mainscreen02guildguildhallComponent.jsx"));
-const V2mainscreen02guildmainComponent = React.lazy(() => import("./V2mainscreen02guildmainComponent.jsx"));
-const V2mainscreen02guildmain1Component = React.lazy(() => import("./V2mainscreen02guildmain1Component.jsx"));
-const V2mainscreen02guildmasterComponent = React.lazy(() => import("./V2mainscreen02guildmasterComponent.jsx"));
-const V2mainscreen02guildmineComponent = React.lazy(() => import("./V2mainscreen02guildmineComponent.jsx"));
-const V2mainscreen02guildshrineComponent = React.lazy(() => import("./V2mainscreen02guildshrineComponent.jsx"));
-const V2mainscreen02guildtowerComponent = React.lazy(() => import("./V2mainscreen02guildtowerComponent.jsx"));
-const V2mainscreen02guildtrophyroomComponent = React.lazy(() => import("./V2mainscreen02guildtrophyroomComponent.jsx"));
-const V2mainscreen02guildwarehouseComponent = React.lazy(() => import("./V2mainscreen02guildwarehouseComponent.jsx"));
-const V2mainscreen03storediamondsComponent = React.lazy(() => import("./V2mainscreen03storediamondsComponent.jsx"));
-const V2mainscreen03storeheroesComponent = React.lazy(() => import("./V2mainscreen03storeheroesComponent.jsx"));
-const V2mainscreen03storemainComponent = React.lazy(() => import("./V2mainscreen03storemainComponent.jsx"));
-const V2mainscreen03storevipComponent = React.lazy(() => import("./V2mainscreen03storevipComponent.jsx"));
-const V2mainscreen05fwagitpopComponent = React.lazy(() => import("./V2mainscreen05fwagitpopComponent.jsx"));
-const V2mainscreen05fwarmysetupComponent = React.lazy(() => import("./V2mainscreen05fwarmysetupComponent.jsx"));
-const V2mainscreen05fwfrratingComponent = React.lazy(() => import("./V2mainscreen05fwfrratingComponent.jsx"));
-const V2mainscreen05fwmainComponent = React.lazy(() => import("./V2mainscreen05fwmainComponent.jsx"));
-const V2mainscreen05fwmapwarpopComponent = React.lazy(() => import("./V2mainscreen05fwmapwarpopComponent.jsx"));
-const V2mainscreen05fwmapComponent = React.lazy(() => import("./V2mainscreen05fwmapComponent.jsx"));
-const V2mainscreen05fwpratingComponent = React.lazy(() => import("./V2mainscreen05fwpratingComponent.jsx"));
-const V2mainscreen05fwstartComponent = React.lazy(() => import("./V2mainscreen05fwstartComponent.jsx"));
-const V2mainscreen05fwstoreComponent = React.lazy(() => import("./V2mainscreen05fwstoreComponent.jsx"));
-const V2mainscreen06ratingComponent = React.lazy(() => import("./V2mainscreen06ratingComponent.jsx"));
-const V2mainscreen07albumComponent = React.lazy(() => import("./V2mainscreen07albumComponent.jsx"));
-const V2mainscreen08ukidailyComponent = React.lazy(() => import("./V2mainscreen08ukidailyComponent.jsx"));
-const V2mainscreen08ukimainComponent = React.lazy(() => import("./V2mainscreen08ukimainComponent.jsx"));
-const V2mainscreen08ukimainnewComponent = React.lazy(() => import("./V2mainscreen08ukimainnewComponent.jsx"));
-const V2mainscreen08ukistoryComponent = React.lazy(() => import("./V2mainscreen08ukistoryComponent.jsx"));
-const V2mainscreen09hwfapopolyComponent = React.lazy(() => import("./V2mainscreen09hwfapopolyComponent.jsx"));
-const V2mainscreen10blackfridayeventbuykeyspopComponent = React.lazy(() => import("./V2mainscreen10blackfridayeventbuykeyspopComponent.jsx"));
-const V2mainscreen10blackfridayeventchestComponent = React.lazy(() => import("./V2mainscreen10blackfridayeventchestComponent.jsx"));
-const V2mainscreen10blackfridayeventchestsComponent = React.lazy(() => import("./V2mainscreen10blackfridayeventchestsComponent.jsx"));
-const V2mainscreen10blackfridayComponent = React.lazy(() => import("./V2mainscreen10blackfridayComponent.jsx"));
-const V2mainscreen11xmaspop1Component = React.lazy(() => import("./V2mainscreen11xmaspop1Component.jsx"));
-const V2mainscreen11xmaspop2Component = React.lazy(() => import("./V2mainscreen11xmaspop2Component.jsx"));
-const V2mainscreen11xmaspop3Component = React.lazy(() => import("./V2mainscreen11xmaspop3Component.jsx"));
-const V2mainscreen12sexpedmainComponent = React.lazy(() => import("./V2mainscreen12sexpedmainComponent.jsx"));
-const V2mainscreen12sexpedquesteventComponent = React.lazy(() => import("./V2mainscreen12sexpedquesteventComponent.jsx"));
-const V2mainscreen14nsalefountainComponent = React.lazy(() => import("./V2mainscreen14nsalefountainComponent.jsx"));
-const V2mainscreen14nsalemainComponent = React.lazy(() => import("./V2mainscreen14nsalemainComponent.jsx"));
-const V2mainscreen14nsaleshopComponent = React.lazy(() => import("./V2mainscreen14nsaleshopComponent.jsx"));
-const V2mainscreen14nsalestupenpopComponent = React.lazy(() => import("./V2mainscreen14nsalestupenpopComponent.jsx"));
-const V2mainscreen14nsalestupenComponent = React.lazy(() => import("./V2mainscreen14nsalestupenComponent.jsx"));
-const V2mainscreen15cwarmysetupComponent = React.lazy(() => import("./V2mainscreen15cwarmysetupComponent.jsx"));
-const V2mainscreen15cwgladeComponent = React.lazy(() => import("./V2mainscreen15cwgladeComponent.jsx"));
-const V2mainscreen15cwguildbosspopComponent = React.lazy(() => import("./V2mainscreen15cwguildbosspopComponent.jsx"));
-const V2mainscreen15cwguildboss1popComponent = React.lazy(() => import("./V2mainscreen15cwguildboss1popComponent.jsx"));
-const V2mainscreen15cwguildboss2popComponent = React.lazy(() => import("./V2mainscreen15cwguildboss2popComponent.jsx"));
-const V2mainscreen15cwguildflagpopComponent = React.lazy(() => import("./V2mainscreen15cwguildflagpopComponent.jsx"));
-const V2mainscreen15cwguildlogpopComponent = React.lazy(() => import("./V2mainscreen15cwguildlogpopComponent.jsx"));
-const V2mainscreen15cwguildmanageppopComponent = React.lazy(() => import("./V2mainscreen15cwguildmanageppopComponent.jsx"));
-const V2mainscreen15cwguildmanagepopComponent = React.lazy(() => import("./V2mainscreen15cwguildmanagepopComponent.jsx"));
-const V2mainscreen15cwguildorderpopComponent = React.lazy(() => import("./V2mainscreen15cwguildorderpopComponent.jsx"));
-const V2mainscreen15cwguildrankpopComponent = React.lazy(() => import("./V2mainscreen15cwguildrankpopComponent.jsx"));
-const V2mainscreen15cwguildrenamepopComponent = React.lazy(() => import("./V2mainscreen15cwguildrenamepopComponent.jsx"));
-const V2mainscreen15cwguildsettingspopComponent = React.lazy(() => import("./V2mainscreen15cwguildsettingspopComponent.jsx"));
-const V2mainscreen15cwguildupgradepopComponent = React.lazy(() => import("./V2mainscreen15cwguildupgradepopComponent.jsx"));
-const V2mainscreen15cwmainComponent = React.lazy(() => import("./V2mainscreen15cwmainComponent.jsx"));
-const V2mainscreen15cwmain2Component = React.lazy(() => import("./V2mainscreen15cwmain2Component.jsx"));
-const V2mainscreen15cwmain3Component = React.lazy(() => import("./V2mainscreen15cwmain3Component.jsx"));
-const V2mainscreen15cwmapwarpopComponent = React.lazy(() => import("./V2mainscreen15cwmapwarpopComponent.jsx"));
-const V2mainscreen15cwmapComponent = React.lazy(() => import("./V2mainscreen15cwmapComponent.jsx"));
-const V2mainscreen15cwofferpopComponent = React.lazy(() => import("./V2mainscreen15cwofferpopComponent.jsx"));
-const V2mainscreen15cwtrophyroomComponent = React.lazy(() => import("./V2mainscreen15cwtrophyroomComponent.jsx"));
-const V2mainscreen16pseinfopopComponent = React.lazy(() => import("./V2mainscreen16pseinfopopComponent.jsx"));
-const V2mainscreen16psemainpopComponent = React.lazy(() => import("./V2mainscreen16psemainpopComponent.jsx"));
-const V2mainscreen16pseshoppopComponent = React.lazy(() => import("./V2mainscreen16pseshoppopComponent.jsx"));
-const V2mainscreen16valentinecauldronpopComponent = React.lazy(() => import("./V2mainscreen16valentinecauldronpopComponent.jsx"));
-const V2mainscreen16witchcauldronpopComponent = React.lazy(() => import("./V2mainscreen16witchcauldronpopComponent.jsx"));
-const V2mainscreen16witchcauldronscrollpopComponent = React.lazy(() => import("./V2mainscreen16witchcauldronscrollpopComponent.jsx"));
-const V2mainscreen17titansarmyComponent = React.lazy(() => import("./V2mainscreen17titansarmyComponent.jsx"));
-const V2mainscreen17titansgarageComponent = React.lazy(() => import("./V2mainscreen17titansgarageComponent.jsx"));
-const V2mainscreen17titansmainComponent = React.lazy(() => import("./V2mainscreen17titansmainComponent.jsx"));
-const V2mainscreen17titansupgradeComponent = React.lazy(() => import("./V2mainscreen17titansupgradeComponent.jsx"));
-const V2mainscreen18minechestComponent = React.lazy(() => import("./V2mainscreen18minechestComponent.jsx"));
-const V2mainscreen18mineComponent = React.lazy(() => import("./V2mainscreen18mineComponent.jsx"));
-const V2mainscreen19superheroesloungeComponent = React.lazy(() => import("./V2mainscreen19superheroesloungeComponent.jsx"));
-const V2mainscreen21goddessmainComponent = React.lazy(() => import("./V2mainscreen21goddessmainComponent.jsx"));
-const V2mainscreen22portalshopComponent = React.lazy(() => import("./V2mainscreen22portalshopComponent.jsx"));
-const V2mainscreen22portalsquadComponent = React.lazy(() => import("./V2mainscreen22portalsquadComponent.jsx"));
-const V2mainscreen22squadmainComponent = React.lazy(() => import("./V2mainscreen22squadmainComponent.jsx"));
-const V2mainscreen23portalmapComponent = React.lazy(() => import("./V2mainscreen23portalmapComponent.jsx"));
-const V2mainscreen24rpgpolyComponent = React.lazy(() => import("./V2mainscreen24rpgpolyComponent.jsx"));
+const V2Unipop20EventsComponent = React.lazy(() =>
+    import("./V2Unipop20EventsComponent.jsx")
+);
+const V2Unipop20PsePopComponent = React.lazy(() =>
+    import("./V2Unipop20PsePopComponent.jsx")
+);
+const V2Unipop20Pse2PopComponent = React.lazy(() =>
+    import("./V2Unipop20Pse2PopComponent.jsx")
+);
+const V2Unipop20SexpedPopComponent = React.lazy(() =>
+    import("./V2Unipop20SexpedPopComponent.jsx")
+);
+const V2Unipop20StarterpackNew1Component = React.lazy(() =>
+    import("./V2Unipop20StarterpackNew1Component.jsx")
+);
+const V2Unipop20StarterpackNew2Component = React.lazy(() =>
+    import("./V2Unipop20StarterpackNew2Component.jsx")
+);
+const V2Unipop20StarterpackComponent = React.lazy(() =>
+    import("./V2Unipop20StarterpackComponent.jsx")
+);
+const V2MainScreen01DarkWorldComponent = React.lazy(() =>
+    import("./V2MainScreen01DarkWorldComponent.jsx")
+);
+const V2MainScreen01RelicsPopComponent = React.lazy(() =>
+    import("./V2MainScreen01RelicsPopComponent.jsx")
+);
+const V2MainScreen01Component = React.lazy(() =>
+    import("./V2MainScreen01Component.jsx")
+);
+const V2MainScreen02GuildClanTrophiesComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildClanTrophiesComponent.jsx")
+);
+const V2MainScreen02GuildGuildhallComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildGuildhallComponent.jsx")
+);
+const V2MainScreen02GuildMainComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildMainComponent.jsx")
+);
+const V2MainScreen02GuildMain1Component = React.lazy(() =>
+    import("./V2MainScreen02GuildMain1Component.jsx")
+);
+const V2MainScreen02GuildMasterComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildMasterComponent.jsx")
+);
+const V2MainScreen02GuildMineComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildMineComponent.jsx")
+);
+const V2MainScreen02GuildShrineComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildShrineComponent.jsx")
+);
+const V2MainScreen02GuildTowerComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildTowerComponent.jsx")
+);
+const V2MainScreen02GuildTrophyroomComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildTrophyroomComponent.jsx")
+);
+const V2MainScreen02GuildWarehouseComponent = React.lazy(() =>
+    import("./V2MainScreen02GuildWarehouseComponent.jsx")
+);
+const V2MainScreen03StoreDiamondsComponent = React.lazy(() =>
+    import("./V2MainScreen03StoreDiamondsComponent.jsx")
+);
+const V2MainScreen03StoreHeroesComponent = React.lazy(() =>
+    import("./V2MainScreen03StoreHeroesComponent.jsx")
+);
+const V2MainScreen03StoreMainComponent = React.lazy(() =>
+    import("./V2MainScreen03StoreMainComponent.jsx")
+);
+const V2MainScreen03StoreVipComponent = React.lazy(() =>
+    import("./V2MainScreen03StoreVipComponent.jsx")
+);
+const V2MainScreen05FwAgitPopComponent = React.lazy(() =>
+    import("./V2MainScreen05FwAgitPopComponent.jsx")
+);
+const V2MainScreen05FwArmySetupComponent = React.lazy(() =>
+    import("./V2MainScreen05FwArmySetupComponent.jsx")
+);
+const V2MainScreen05FwFrRatingComponent = React.lazy(() =>
+    import("./V2MainScreen05FwFrRatingComponent.jsx")
+);
+const V2MainScreen05FwMainComponent = React.lazy(() =>
+    import("./V2MainScreen05FwMainComponent.jsx")
+);
+const V2MainScreen05FwMapWarpopComponent = React.lazy(() =>
+    import("./V2MainScreen05FwMapWarpopComponent.jsx")
+);
+const V2MainScreen05FwMapComponent = React.lazy(() =>
+    import("./V2MainScreen05FwMapComponent.jsx")
+);
+const V2MainScreen05FwPRatingComponent = React.lazy(() =>
+    import("./V2MainScreen05FwPRatingComponent.jsx")
+);
+const V2MainScreen05FwStartComponent = React.lazy(() =>
+    import("./V2MainScreen05FwStartComponent.jsx")
+);
+const V2MainScreen05FwStoreComponent = React.lazy(() =>
+    import("./V2MainScreen05FwStoreComponent.jsx")
+);
+const V2MainScreen06RatingComponent = React.lazy(() =>
+    import("./V2MainScreen06RatingComponent.jsx")
+);
+const V2MainScreen07AlbumComponent = React.lazy(() =>
+    import("./V2MainScreen07AlbumComponent.jsx")
+);
+const V2MainScreen08UkiDailyComponent = React.lazy(() =>
+    import("./V2MainScreen08UkiDailyComponent.jsx")
+);
+const V2MainScreen08UkiMainComponent = React.lazy(() =>
+    import("./V2MainScreen08UkiMainComponent.jsx")
+);
+const V2MainScreen08UkiMainNewComponent = React.lazy(() =>
+    import("./V2MainScreen08UkiMainNewComponent.jsx")
+);
+const V2MainScreen08UkiStoryComponent = React.lazy(() =>
+    import("./V2MainScreen08UkiStoryComponent.jsx")
+);
+const V2MainScreen09HwFapopolyComponent = React.lazy(() =>
+    import("./V2MainScreen09HwFapopolyComponent.jsx")
+);
+const V2MainScreen10BlackfridayEventBuyKeysPopComponent = React.lazy(() =>
+    import("./V2MainScreen10BlackfridayEventBuyKeysPopComponent.jsx")
+);
+const V2MainScreen10BlackfridayEventChestComponent = React.lazy(() =>
+    import("./V2MainScreen10BlackfridayEventChestComponent.jsx")
+);
+const V2MainScreen10BlackfridayEventChestsComponent = React.lazy(() =>
+    import("./V2MainScreen10BlackfridayEventChestsComponent.jsx")
+);
+const V2MainScreen10BlackfridayComponent = React.lazy(() =>
+    import("./V2MainScreen10BlackfridayComponent.jsx")
+);
+const V2MainScreen11XmasPop1Component = React.lazy(() =>
+    import("./V2MainScreen11XmasPop1Component.jsx")
+);
+const V2MainScreen11XmasPop2Component = React.lazy(() =>
+    import("./V2MainScreen11XmasPop2Component.jsx")
+);
+const V2MainScreen11XmasPop3Component = React.lazy(() =>
+    import("./V2MainScreen11XmasPop3Component.jsx")
+);
+const V2MainScreen12SexpedMainComponent = React.lazy(() =>
+    import("./V2MainScreen12SexpedMainComponent.jsx")
+);
+const V2MainScreen12SexpedQuesteventComponent = React.lazy(() =>
+    import("./V2MainScreen12SexpedQuesteventComponent.jsx")
+);
+const V2MainScreen14NsaleFountainComponent = React.lazy(() =>
+    import("./V2MainScreen14NsaleFountainComponent.jsx")
+);
+const V2MainScreen14NsaleMainComponent = React.lazy(() =>
+    import("./V2MainScreen14NsaleMainComponent.jsx")
+);
+const V2MainScreen14NsaleShopComponent = React.lazy(() =>
+    import("./V2MainScreen14NsaleShopComponent.jsx")
+);
+const V2MainScreen14NsaleStupenPopComponent = React.lazy(() =>
+    import("./V2MainScreen14NsaleStupenPopComponent.jsx")
+);
+const V2MainScreen14NsaleStupenComponent = React.lazy(() =>
+    import("./V2MainScreen14NsaleStupenComponent.jsx")
+);
+const V2MainScreen15CwArmySetupComponent = React.lazy(() =>
+    import("./V2MainScreen15CwArmySetupComponent.jsx")
+);
+const V2MainScreen15CwGladeComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGladeComponent.jsx")
+);
+const V2MainScreen15CwGuildbossPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildbossPopComponent.jsx")
+);
+const V2MainScreen15CwGuildboss1PopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildboss1PopComponent.jsx")
+);
+const V2MainScreen15CwGuildboss2PopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildboss2PopComponent.jsx")
+);
+const V2MainScreen15CwGuildflagPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildflagPopComponent.jsx")
+);
+const V2MainScreen15CwGuildlogPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildlogPopComponent.jsx")
+);
+const V2MainScreen15CwGuildmanagePPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildmanagePPopComponent.jsx")
+);
+const V2MainScreen15CwGuildmanagePopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildmanagePopComponent.jsx")
+);
+const V2MainScreen15CwGuildorderPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildorderPopComponent.jsx")
+);
+const V2MainScreen15CwGuildrankPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildrankPopComponent.jsx")
+);
+const V2MainScreen15CwGuildrenamePopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildrenamePopComponent.jsx")
+);
+const V2MainScreen15CwGuildsettingsPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildsettingsPopComponent.jsx")
+);
+const V2MainScreen15CwGuildupgradePopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwGuildupgradePopComponent.jsx")
+);
+const V2MainScreen15CwMainComponent = React.lazy(() =>
+    import("./V2MainScreen15CwMainComponent.jsx")
+);
+const V2MainScreen15CwMain2Component = React.lazy(() =>
+    import("./V2MainScreen15CwMain2Component.jsx")
+);
+const V2MainScreen15CwMain3Component = React.lazy(() =>
+    import("./V2MainScreen15CwMain3Component.jsx")
+);
+const V2MainScreen15CwMapWarpopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwMapWarpopComponent.jsx")
+);
+const V2MainScreen15CwMapComponent = React.lazy(() =>
+    import("./V2MainScreen15CwMapComponent.jsx")
+);
+const V2MainScreen15CwOfferPopComponent = React.lazy(() =>
+    import("./V2MainScreen15CwOfferPopComponent.jsx")
+);
+const V2MainScreen15CwTrophyroomComponent = React.lazy(() =>
+    import("./V2MainScreen15CwTrophyroomComponent.jsx")
+);
+const V2MainScreen16PseInfoPopComponent = React.lazy(() =>
+    import("./V2MainScreen16PseInfoPopComponent.jsx")
+);
+const V2MainScreen16PseMainPopComponent = React.lazy(() =>
+    import("./V2MainScreen16PseMainPopComponent.jsx")
+);
+const V2MainScreen16PseShopPopComponent = React.lazy(() =>
+    import("./V2MainScreen16PseShopPopComponent.jsx")
+);
+const V2MainScreen16ValentineCauldronPopComponent = React.lazy(() =>
+    import("./V2MainScreen16ValentineCauldronPopComponent.jsx")
+);
+const V2MainScreen16WitchCauldronPopComponent = React.lazy(() =>
+    import("./V2MainScreen16WitchCauldronPopComponent.jsx")
+);
+const V2MainScreen16WitchCauldronScrollPopComponent = React.lazy(() =>
+    import("./V2MainScreen16WitchCauldronScrollPopComponent.jsx")
+);
+const V2MainScreen17TitansArmyComponent = React.lazy(() =>
+    import("./V2MainScreen17TitansArmyComponent.jsx")
+);
+const V2MainScreen17TitansGarageComponent = React.lazy(() =>
+    import("./V2MainScreen17TitansGarageComponent.jsx")
+);
+const V2MainScreen17TitansMainComponent = React.lazy(() =>
+    import("./V2MainScreen17TitansMainComponent.jsx")
+);
+const V2MainScreen17TitansUpgradeComponent = React.lazy(() =>
+    import("./V2MainScreen17TitansUpgradeComponent.jsx")
+);
+const V2MainScreen18MineChestComponent = React.lazy(() =>
+    import("./V2MainScreen18MineChestComponent.jsx")
+);
+const V2MainScreen18MineComponent = React.lazy(() =>
+    import("./V2MainScreen18MineComponent.jsx")
+);
+const V2MainScreen19SuperheroesLoungeComponent = React.lazy(() =>
+    import("./V2MainScreen19SuperheroesLoungeComponent.jsx")
+);
+const V2MainScreen21GoddessMainComponent = React.lazy(() =>
+    import("./V2MainScreen21GoddessMainComponent.jsx")
+);
+const V2MainScreen22PortalShopComponent = React.lazy(() =>
+    import("./V2MainScreen22PortalShopComponent.jsx")
+);
+const V2MainScreen22PortalSquadComponent = React.lazy(() =>
+    import("./V2MainScreen22PortalSquadComponent.jsx")
+);
+const V2MainScreen22SquadMainComponent = React.lazy(() =>
+    import("./V2MainScreen22SquadMainComponent.jsx")
+);
+const V2MainScreen23PortalMapComponent = React.lazy(() =>
+    import("./V2MainScreen23PortalMapComponent.jsx")
+);
+const V2MainScreen24RpgPolyComponent = React.lazy(() =>
+    import("./V2MainScreen24RpgPolyComponent.jsx")
+);
 
 const AaPagesComponentMap = {
-      Mainscreen00regComponent,
-  Mainscreen01allpopupsComponent,
-  Mainscreen16fortunaroundmainpopComponent,
-  Mainscreen16fortunaroundmainpop16xComponent,
-  Mainscreen16fortunaroundmainpop16xbuyresComponent,
-  Mainscreen16fortunaroundratingpopupComponent,
-  Mainscreen16fortunaroundrewardspopupComponent,
-  Mainscreen22unipop04wavepack10Component,
-  Mainscreen22unipop14subscriptionComponent,
-  Mainscreen23fapopolymainComponent,
-  Mainscreen25gfsalepopComponent,
-  Page404Component,
-  TemplateComponent,
-  V2unipop20eventsComponent,
-  V2unipop20psepopComponent,
-  V2unipop20pse2popComponent,
-  V2unipop20sexpedpopComponent,
-  V2unipop20starterpacknew1Component,
-  V2unipop20starterpacknew2Component,
-  V2unipop20starterpackComponent,
-  V2mainscreen01darkworldComponent,
-  V2mainscreen01relicspopComponent,
-  V2mainscreen01Component,
-  V2mainscreen02guildclantrophiesComponent,
-  V2mainscreen02guildguildhallComponent,
-  V2mainscreen02guildmainComponent,
-  V2mainscreen02guildmain1Component,
-  V2mainscreen02guildmasterComponent,
-  V2mainscreen02guildmineComponent,
-  V2mainscreen02guildshrineComponent,
-  V2mainscreen02guildtowerComponent,
-  V2mainscreen02guildtrophyroomComponent,
-  V2mainscreen02guildwarehouseComponent,
-  V2mainscreen03storediamondsComponent,
-  V2mainscreen03storeheroesComponent,
-  V2mainscreen03storemainComponent,
-  V2mainscreen03storevipComponent,
-  V2mainscreen05fwagitpopComponent,
-  V2mainscreen05fwarmysetupComponent,
-  V2mainscreen05fwfrratingComponent,
-  V2mainscreen05fwmainComponent,
-  V2mainscreen05fwmapwarpopComponent,
-  V2mainscreen05fwmapComponent,
-  V2mainscreen05fwpratingComponent,
-  V2mainscreen05fwstartComponent,
-  V2mainscreen05fwstoreComponent,
-  V2mainscreen06ratingComponent,
-  V2mainscreen07albumComponent,
-  V2mainscreen08ukidailyComponent,
-  V2mainscreen08ukimainComponent,
-  V2mainscreen08ukimainnewComponent,
-  V2mainscreen08ukistoryComponent,
-  V2mainscreen09hwfapopolyComponent,
-  V2mainscreen10blackfridayeventbuykeyspopComponent,
-  V2mainscreen10blackfridayeventchestComponent,
-  V2mainscreen10blackfridayeventchestsComponent,
-  V2mainscreen10blackfridayComponent,
-  V2mainscreen11xmaspop1Component,
-  V2mainscreen11xmaspop2Component,
-  V2mainscreen11xmaspop3Component,
-  V2mainscreen12sexpedmainComponent,
-  V2mainscreen12sexpedquesteventComponent,
-  V2mainscreen14nsalefountainComponent,
-  V2mainscreen14nsalemainComponent,
-  V2mainscreen14nsaleshopComponent,
-  V2mainscreen14nsalestupenpopComponent,
-  V2mainscreen14nsalestupenComponent,
-  V2mainscreen15cwarmysetupComponent,
-  V2mainscreen15cwgladeComponent,
-  V2mainscreen15cwguildbosspopComponent,
-  V2mainscreen15cwguildboss1popComponent,
-  V2mainscreen15cwguildboss2popComponent,
-  V2mainscreen15cwguildflagpopComponent,
-  V2mainscreen15cwguildlogpopComponent,
-  V2mainscreen15cwguildmanageppopComponent,
-  V2mainscreen15cwguildmanagepopComponent,
-  V2mainscreen15cwguildorderpopComponent,
-  V2mainscreen15cwguildrankpopComponent,
-  V2mainscreen15cwguildrenamepopComponent,
-  V2mainscreen15cwguildsettingspopComponent,
-  V2mainscreen15cwguildupgradepopComponent,
-  V2mainscreen15cwmainComponent,
-  V2mainscreen15cwmain2Component,
-  V2mainscreen15cwmain3Component,
-  V2mainscreen15cwmapwarpopComponent,
-  V2mainscreen15cwmapComponent,
-  V2mainscreen15cwofferpopComponent,
-  V2mainscreen15cwtrophyroomComponent,
-  V2mainscreen16pseinfopopComponent,
-  V2mainscreen16psemainpopComponent,
-  V2mainscreen16pseshoppopComponent,
-  V2mainscreen16valentinecauldronpopComponent,
-  V2mainscreen16witchcauldronpopComponent,
-  V2mainscreen16witchcauldronscrollpopComponent,
-  V2mainscreen17titansarmyComponent,
-  V2mainscreen17titansgarageComponent,
-  V2mainscreen17titansmainComponent,
-  V2mainscreen17titansupgradeComponent,
-  V2mainscreen18minechestComponent,
-  V2mainscreen18mineComponent,
-  V2mainscreen19superheroesloungeComponent,
-  V2mainscreen21goddessmainComponent,
-  V2mainscreen22portalshopComponent,
-  V2mainscreen22portalsquadComponent,
-  V2mainscreen22squadmainComponent,
-  V2mainscreen23portalmapComponent,
-  V2mainscreen24rpgpolyComponent,
+    MainScreen00RegComponent,
+    MainScreen01AllPopupsComponent,
+    MainScreen16FortunaRoundMainpopComponent,
+    MainScreen16FortunaRoundMainpop16xComponent,
+    MainScreen16FortunaRoundMainpop16xBuyresComponent,
+    MainScreen16FortunaRoundRatingPopupComponent,
+    MainScreen16FortunaRoundRewardsPopupComponent,
+    MainScreen22Unipop04wavepack10Component,
+    MainScreen22Unipop14subscriptionComponent,
+    MainScreen23FapopolyMainComponent,
+    MainScreen25GfSalePopComponent,
+    Page404Component,
+    TemplateComponent,
+    V2Unipop20EventsComponent,
+    V2Unipop20PsePopComponent,
+    V2Unipop20Pse2PopComponent,
+    V2Unipop20SexpedPopComponent,
+    V2Unipop20StarterpackNew1Component,
+    V2Unipop20StarterpackNew2Component,
+    V2Unipop20StarterpackComponent,
+    V2MainScreen01DarkWorldComponent,
+    V2MainScreen01RelicsPopComponent,
+    V2MainScreen01Component,
+    V2MainScreen02GuildClanTrophiesComponent,
+    V2MainScreen02GuildGuildhallComponent,
+    V2MainScreen02GuildMainComponent,
+    V2MainScreen02GuildMain1Component,
+    V2MainScreen02GuildMasterComponent,
+    V2MainScreen02GuildMineComponent,
+    V2MainScreen02GuildShrineComponent,
+    V2MainScreen02GuildTowerComponent,
+    V2MainScreen02GuildTrophyroomComponent,
+    V2MainScreen02GuildWarehouseComponent,
+    V2MainScreen03StoreDiamondsComponent,
+    V2MainScreen03StoreHeroesComponent,
+    V2MainScreen03StoreMainComponent,
+    V2MainScreen03StoreVipComponent,
+    V2MainScreen05FwAgitPopComponent,
+    V2MainScreen05FwArmySetupComponent,
+    V2MainScreen05FwFrRatingComponent,
+    V2MainScreen05FwMainComponent,
+    V2MainScreen05FwMapWarpopComponent,
+    V2MainScreen05FwMapComponent,
+    V2MainScreen05FwPRatingComponent,
+    V2MainScreen05FwStartComponent,
+    V2MainScreen05FwStoreComponent,
+    V2MainScreen06RatingComponent,
+    V2MainScreen07AlbumComponent,
+    V2MainScreen08UkiDailyComponent,
+    V2MainScreen08UkiMainComponent,
+    V2MainScreen08UkiMainNewComponent,
+    V2MainScreen08UkiStoryComponent,
+    V2MainScreen09HwFapopolyComponent,
+    V2MainScreen10BlackfridayEventBuyKeysPopComponent,
+    V2MainScreen10BlackfridayEventChestComponent,
+    V2MainScreen10BlackfridayEventChestsComponent,
+    V2MainScreen10BlackfridayComponent,
+    V2MainScreen11XmasPop1Component,
+    V2MainScreen11XmasPop2Component,
+    V2MainScreen11XmasPop3Component,
+    V2MainScreen12SexpedMainComponent,
+    V2MainScreen12SexpedQuesteventComponent,
+    V2MainScreen14NsaleFountainComponent,
+    V2MainScreen14NsaleMainComponent,
+    V2MainScreen14NsaleShopComponent,
+    V2MainScreen14NsaleStupenPopComponent,
+    V2MainScreen14NsaleStupenComponent,
+    V2MainScreen15CwArmySetupComponent,
+    V2MainScreen15CwGladeComponent,
+    V2MainScreen15CwGuildbossPopComponent,
+    V2MainScreen15CwGuildboss1PopComponent,
+    V2MainScreen15CwGuildboss2PopComponent,
+    V2MainScreen15CwGuildflagPopComponent,
+    V2MainScreen15CwGuildlogPopComponent,
+    V2MainScreen15CwGuildmanagePPopComponent,
+    V2MainScreen15CwGuildmanagePopComponent,
+    V2MainScreen15CwGuildorderPopComponent,
+    V2MainScreen15CwGuildrankPopComponent,
+    V2MainScreen15CwGuildrenamePopComponent,
+    V2MainScreen15CwGuildsettingsPopComponent,
+    V2MainScreen15CwGuildupgradePopComponent,
+    V2MainScreen15CwMainComponent,
+    V2MainScreen15CwMain2Component,
+    V2MainScreen15CwMain3Component,
+    V2MainScreen15CwMapWarpopComponent,
+    V2MainScreen15CwMapComponent,
+    V2MainScreen15CwOfferPopComponent,
+    V2MainScreen15CwTrophyroomComponent,
+    V2MainScreen16PseInfoPopComponent,
+    V2MainScreen16PseMainPopComponent,
+    V2MainScreen16PseShopPopComponent,
+    V2MainScreen16ValentineCauldronPopComponent,
+    V2MainScreen16WitchCauldronPopComponent,
+    V2MainScreen16WitchCauldronScrollPopComponent,
+    V2MainScreen17TitansArmyComponent,
+    V2MainScreen17TitansGarageComponent,
+    V2MainScreen17TitansMainComponent,
+    V2MainScreen17TitansUpgradeComponent,
+    V2MainScreen18MineChestComponent,
+    V2MainScreen18MineComponent,
+    V2MainScreen19SuperheroesLoungeComponent,
+    V2MainScreen21GoddessMainComponent,
+    V2MainScreen22PortalShopComponent,
+    V2MainScreen22PortalSquadComponent,
+    V2MainScreen22SquadMainComponent,
+    V2MainScreen23PortalMapComponent,
+    V2MainScreen24RpgPolyComponent,
 };
 
 export default AaPagesComponentMap;

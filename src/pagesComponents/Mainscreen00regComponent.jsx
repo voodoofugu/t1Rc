@@ -1,9 +1,49 @@
 import React from "react";
 
-const Mainscreen00regComponent = () => {
-return (
-  <></>
-);
+const MainScreen00RegComponent = () => {
+    return (
+        <>
+            <div className="main">
+                {/* <div className="pers">
+        <img
+          className="img"
+          src="http://az.faptitans.com/static/rc/tutor-hero3@1.png"
+        />
+      </div> */}
+                <div className="info">
+                    <p className="billing-text">
+                        You are now logged out.
+                        <br />
+                        Use Sign In button to log in again.
+                        <br />
+                        Thanks for playing with us!
+                    </p>
+                    <form className="login-form" method="POST" action="/login/">
+                        <input
+                            type="hidden"
+                            name="csrfmiddlewaretoken"
+                            value="X0fX169q4DxodCywajQduWlFWMjMoy49Z9kQfg6CyxjlhLjXvSSU3DcBndee4J3r"
+                        />
+                        <div>
+                            <label className="login-label">Username: </label>
+                            <input type="text" name="username" size="15" />
+                        </div>
+                        <div>
+                            <label className="login-label">Password: </label>
+                            <input type="password" name="password" size="15" />
+                        </div>
+                        <button className="btn-ok">Sign in</button>
+                    </form>
+                    <p></p>
+                </div>
+            </div>
+
+            <div id="screen">
+                <div id="app"></div>
+                <div id="clickBox"></div>
+            </div>
+        </>
+    );
 };
 
-export default React.memo(Mainscreen00regComponent);
+export default React.memo(MainScreen00RegComponent);

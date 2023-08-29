@@ -1,9 +1,852 @@
 import React from "react";
 
-const V2mainscreen22squadmainComponent = () => {
-return (
-  <></>
-);
+const V2MainScreen22SquadMainComponent = () => {
+    return (
+        <>
+            <div className="main lang-ru world2">
+                <div className="btn-admin"></div>
+                <div
+                    className="main-bg"
+                    style="
+                    background-image: url('__675b/images/back/new/09-River.jpg');
+                "></div>
+                <div className="header">
+                    <div className="resource-panel">
+                        <div className="avatar-box-all">
+                            <div className="avatar-box-pic">
+                                <img src="rc/v2-master-pic1.png" />
+                            </div>
+                            <div className="avatar-box-name">Rank 1</div>
+                        </div>
+                        <div className="resource-gold">
+                            <div className="value">100Q</div>
+                            <div className="value-bonus">
+                                <span>+30%</span>
+                            </div>
+                            <div className="resource-btn-add"></div>
+                            <div className="resource-pic">
+                                <img src="rc/v2-res-gold.png" />
+                            </div>
+                            <div className="anim-in-p gold"></div>
+                        </div>
+                        <div className="resource-vip lvl0">
+                            <div className="value-vip-diamond">
+                                1003003000000
+                            </div>
+                            <div className="value-vip-ticket">0</div>
+                            <div className="resource-btn-add"></div>
+                            <div className="resource-pic-vip">
+                                <div className="viplvl">VIP</div>
+                            </div>
+                        </div>
+                        <div className="might-box-all">
+                            <div>
+                                <div className="might-box-pic">
+                                    <img
+                                        className="bg"
+                                        src="rc/v2-cw-bg01.png"
+                                    />
+                                    <img
+                                        className="fg"
+                                        src="rc/v2-cw-p01.png"
+                                    />
+                                </div>
+                                <div className="might-box-name">Clan</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="shop-chest-box-all">
+                        <div className="res-shop-btn">
+                            <div className="res-shop-btn-text">shop</div>
+                        </div>
+                        <div>
+                            <div className="res-chest-btn">
+                                <div className="res-chest-btn-text">Купить</div>
+                                <div className="res-chest-btn-count">0</div>
+                            </div>
+                            <div className="picmeh-ex-box">
+                                <div className="color-btn green">
+                                    <div className="color-btn-text">
+                                        exclusive offer
+                                    </div>
+                                    <div className="color-btn-timer">
+                                        21:34:55
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="btn signinout-btn in">
+                        <div className="icon-reg"></div>
+                        <div className="icon-reg2"></div>
+                    </div>
+                </div>
+                <div className="quest-box-all quests">
+                    <div className="quest-box-scroll">
+                        <div className="quest-box">
+                            <li className="quest quest-box">
+                                <img className="icon" src="rc/ic-quests.png" />
+                                <div className="quest-notif notif notif10"></div>
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 0ms">
+                                <img
+                                    className="icon"
+                                    src="rc/change-sun3.png"
+                                />
+                            </li>
+                            <li
+                                className="quest angel-pop open"
+                                style="animation-delay: 150ms">
+                                <img
+                                    className="icon"
+                                    src="rc/picmeh-ic-angel-pop.png"
+                                />
+                            </li>
+                            <li className="quest-fortune open">
+                                <img
+                                    className="icon"
+                                    src="rc/fapop-right-icon.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">00:00:00</div>
+                                </div>
+                            </li>
+                            <li className="quest-fortune">
+                                <img className="icon" src="rc/ic-fortuna.png" />
+                                <div className="timerbox">
+                                    <div className="timer">SPIN!</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 300ms">
+                                <img
+                                    className="icon"
+                                    src="rc/rating-sign-gold@1x.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">146:36:30</div>
+                                </div>
+                            </li>
+                            <li className="quest startpack wide">
+                                <img
+                                    className="icon"
+                                    src="rc/v2-ns-chest.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">6D 02:36</div>
+                                </div>
+                            </li>
+                            <li className="quest startpack wide">
+                                <img
+                                    className="icon"
+                                    src="rc/v2-mn-pr-100-in.png"
+                                />
+                                0
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 450ms">
+                                <img
+                                    className="icon"
+                                    src="rc/icn-dual-ball.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">00:00:00</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 600ms">
+                                <img
+                                    className="icon"
+                                    src="rc/ic-blackfriday.png"
+                                />
+                                <div className="timerbox" style="top: 46px">
+                                    <div className="timer">17D 23:36:30</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 750ms">
+                                <img
+                                    className="icon"
+                                    src="rc/v2-xmas-chest-red.png"
+                                />
+                                0
+                            </li>
+                            <li className="quest startpack wide">
+                                <img
+                                    className="icon"
+                                    src="rc/v2-mn-soul-sg-160.png"
+                                />
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 900ms">
+                                <img className="icon" src="rc/m-ico-gold.png" />
+                                <div className="timerbox">
+                                    <div className="timer">21:33:40</div>
+                                </div>
+                            </li>
+                            <li className="quest-fortune picmeh-info info">
+                                <img
+                                    className="icon"
+                                    src="rc/picmeh-ic-diamond.png"
+                                />
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 1050ms">
+                                <img
+                                    className="icon"
+                                    src="rc/v2-fw-icon-fr0.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">75:36:30</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 1200ms">
+                                <img className="icon" src="rc/ic-bf.png" />
+                                <div className="timerbox">
+                                    <div className="timer">482:36:30</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 1350ms">
+                                <img
+                                    className="icon"
+                                    src="rc/zetta-icon-70.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">69:34:55</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 1500ms">
+                                <img className="icon" src="rc/sunduk-60.png" />
+                                <div className="timerbox">
+                                    <div className="timer">21:34:52</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 1650ms">
+                                <img
+                                    className="icon"
+                                    src="rc/m-ico-quest.png"
+                                />
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 1800ms">
+                                <img
+                                    className="icon"
+                                    src="rc/m-ico-quest.png"
+                                />
+                            </li>
+                        </div>
+                    </div>
+                    <div className="opt-panel-box">
+                        <div className="color-bg"></div>
+                        <div className="btn feedback"></div>
+                        <div className="btn statistic"></div>
+                        <div className="btn settings"></div>
+                        <div className="btn ru"></div>
+                    </div>
+                    <a
+                        className="btn-discord"
+                        href="https://discord.gg/7pjeXF3emj"
+                        target="_blank"></a>
+                </div>
+                <div className="left-side false false">
+                    <div className="left-panel false false">
+                        <div className="container undefined">
+                            <div className="container">
+                                <div
+                                    className="heroes-list-all-box"
+                                    style="visibility: visible">
+                                    <div className="dps-dpc-panel-box dps-x2">
+                                        <div className="dpc">
+                                            <div className="value">1.41K</div>
+                                            <div className="mlt-prm"></div>
+                                            <div className="title">
+                                                DPC
+                                                <div className="icon-dpc"></div>
+                                            </div>
+                                        </div>
+                                        <div className="dps">
+                                            <div className="value">35.5K</div>
+                                            <div className="mlt-prm">
+                                                <span>
+                                                    +5%<span> idle</span>
+                                                </span>
+                                            </div>
+                                            <div className="title">
+                                                DPS
+                                                <div className="icon-dps"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div className="dps-dpc-panel-d1"></div>
+                                            <div className="dps-dpc-panel-d2"></div>
+                                        </div>
+                                    </div>
+                                    <div className="all-heroes-box">
+                                        <div className="all-heroes-box-scroll">
+                                            <div className="hero-card-box-all">
+                                                <div className="hero-card-wrap bronze-color-bg">
+                                                    <div className="hero-card">
+                                                        <div className="squad-info-buttons">
+                                                            <div className="suphero-buttons-info">
+                                                                Squad #1
+                                                            </div>
+                                                            <div className="suphero-buttons-dpc">
+                                                                <div className="dpc-info">
+                                                                    200
+                                                                </div>
+                                                            </div>
+                                                            <div className="suphero-buttons-dps">
+                                                                <div className="dps-info">
+                                                                    6.33K
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="hero-level-box">
+                                                            Rank
+                                                            <div className="hero-level">
+                                                                bronze
+                                                            </div>
+                                                        </div>
+                                                        <div className="specialization-icon">
+                                                            <div className="cls">
+                                                                <img src="rc/cur2-wizard.png" />
+                                                            </div>
+                                                            <div className="elem">
+                                                                <img src="rc/elements/Water.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="squad-card-heroes">
+                                                            <div className="squad-card-hero-wrap lvl0">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__1ed9/images/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl1">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__4ec9/images/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl1">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__e9cc/images/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl2">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__0a10/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl2">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__7cdd/images/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl2">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__83a0/images/hero-all/tithero-5006/x1/ava/tithero-5006-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="hero-card-wrap silver-color-bg">
+                                                    <div className="hero-card">
+                                                        <div className="squad-info-buttons">
+                                                            <div className="suphero-buttons-info">
+                                                                Squad #2
+                                                            </div>
+                                                            <div className="suphero-buttons-dpc">
+                                                                <div className="dpc-info">
+                                                                    100
+                                                                </div>
+                                                            </div>
+                                                            <div className="suphero-buttons-dps">
+                                                                <div className="dps-info">
+                                                                    1.78K
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="hero-level-box">
+                                                            Rank
+                                                            <div className="hero-level">
+                                                                silver
+                                                            </div>
+                                                        </div>
+                                                        <div className="specialization-icon">
+                                                            <div className="cls">
+                                                                <img src="rc/cur2-druid.png" />
+                                                            </div>
+                                                            <div className="elem">
+                                                                <img src="rc/elements/Fire.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="squad-card-heroes">
+                                                            <div className="squad-card-hero-wrap lvl3">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__96c7/images/hero-all/tithero-5007/x1/ava/tithero-5007-4-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl3">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__9ff8/images/hero-all/tithero-5008/x1/ava/tithero-5008-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl3">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__9e07/images/hero-all/tithero-5009/x1/ava/tithero-5009-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl4">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__bbab/images/hero-all/tithero-5010/x1/ava/tithero-5010-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl4">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__9f6d/images/hero-all/tithero-11/x1/ava/tithero-11-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl4">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__eaa8/images/hero-all/tithero-13/x1/ava/tithero-13-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="hero-card-wrap gold-color-bg">
+                                                    <div className="hero-card">
+                                                        <div className="squad-info-buttons">
+                                                            <div className="suphero-buttons-info">
+                                                                Squad #3
+                                                            </div>
+                                                            <div className="suphero-buttons-dpc">
+                                                                <div className="dpc-info">
+                                                                    100
+                                                                </div>
+                                                            </div>
+                                                            <div className="suphero-buttons-dps">
+                                                                <div className="dps-info">
+                                                                    1.89K
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="hero-level-box">
+                                                            Rank
+                                                            <div className="hero-level">
+                                                                gold
+                                                            </div>
+                                                        </div>
+                                                        <div className="specialization-icon">
+                                                            <div className="hero-level"></div>
+                                                            <div className="cls">
+                                                                <img src="rc/cur2-cleric.png" />
+                                                            </div>
+                                                            <div className="elem">
+                                                                <img src="rc/elements/Earth.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="squad-card-heroes">
+                                                            <div className="squad-card-hero-wrap lvl5">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__6b77/images/hero-all/tithero-14/x1/ava/tithero-14-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl5">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__f069/images/hero-all/tithero-15/x1/ava/tithero-15-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl5">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__b08d/images/hero-all/tithero-16/x1/ava/tithero-16-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl6">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__119a/images/hero-all/tithero-17/x1/ava/tithero-17-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl6">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__5f6c/images/hero-all/tithero-18/x1/ava/tithero-18-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl6">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__29af/images/hero-all/tithero-19/x1/ava/tithero-19-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="hero-card-wrap platinum-color-bg">
+                                                    <div className="hero-card">
+                                                        <div className="squad-info-buttons">
+                                                            <div className="suphero-buttons-info">
+                                                                Squad #4
+                                                            </div>
+                                                            <div className="suphero-buttons-dpc">
+                                                                <div className="dpc-info">
+                                                                    100
+                                                                </div>
+                                                            </div>
+                                                            <div className="suphero-buttons-dps">
+                                                                <div className="dps-info">
+                                                                    2K
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="hero-level-box">
+                                                            Rank
+                                                            <div className="hero-level">
+                                                                platinum
+                                                            </div>
+                                                        </div>
+                                                        <div className="specialization-icon">
+                                                            <div className="hero-level"></div>
+                                                            <div className="cls">
+                                                                <img src="rc/cur2-barbarian.png" />
+                                                            </div>
+                                                            <div className="elem">
+                                                                <img src="rc/elements/Air.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="squad-card-heroes">
+                                                            <div className="squad-card-hero-wrap lvl7">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__28fb/images/hero-all/tithero-20/x1/ava/tithero-20-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl7">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__8563/images/hero-all/tithero-21/x1/ava/tithero-21-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl7">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__c20a/images/hero-all/tithero-22/x1/ava/tithero-22-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl8">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__cd48/images/hero-all/tithero-23/x1/ava/tithero-23-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl8">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__d31e/images/hero-all/tithero-24/x1/ava/tithero-24-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl8">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__9d85/images/hero-all/tithero-25/x1/ava/tithero-25-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="hero-card-wrap diamond-color-bg">
+                                                    <div className="hero-card">
+                                                        <div className="squad-info-buttons">
+                                                            <div className="suphero-buttons-info">
+                                                                Squad #5
+                                                            </div>
+                                                            <div className="suphero-buttons-dpc">
+                                                                <div className="dpc-info">
+                                                                    200
+                                                                </div>
+                                                            </div>
+                                                            <div className="suphero-buttons-dps">
+                                                                <div className="dps-info">
+                                                                    9.67K
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="hero-level-box">
+                                                            Rank
+                                                            <div className="hero-level">
+                                                                diamond
+                                                            </div>
+                                                        </div>
+                                                        <div className="specialization-icon">
+                                                            <div className="hero-level"></div>
+                                                            <div className="cls">
+                                                                <img src="rc/cur2-gun.png" />
+                                                            </div>
+                                                            <div className="elem">
+                                                                <img src="rc/elements/Death.png" />
+                                                            </div>
+                                                        </div>
+                                                        <div className="squad-card-heroes">
+                                                            <div className="squad-card-hero-wrap lvl9">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__67fe/images/hero-all/tithero-26/x1/ava/tithero-26-4-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl9">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__d4ad/images/hero-all/tithero-27/x1/ava/tithero-27-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl9">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__2344/images/hero-all/tithero-28/x1/ava/tithero-28-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl10">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__72a8/images/hero-all/tithero-29/x1/ava/tithero-29-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl10">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__e88e/images/hero-all/tithero-30/x1/ava/tithero-30-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <div className="squad-card-hero-wrap lvl10">
+                                                                <div className="squad-card-hero">
+                                                                    <img
+                                                                        className="squad-card-hero-img"
+                                                                        src="https://cdn.faptitans.com/s1/__5255/images/hero-all/tithero-31/x1/ava/tithero-31-5-ava.jpg"
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="x2-btn-all-box">
+                                        <div className="x2-btn wide">
+                                            <div className="x2-btn-text">
+                                                ALL SQUADS
+                                            </div>
+                                        </div>
+                                        <div className="x2-btn wide">
+                                            <div className="x2-btn-text">
+                                                PROMOTE SQUADS
+                                            </div>
+                                        </div>
+                                        <div className="x2-btn wide">
+                                            <div className="x2-btn-text">
+                                                WORLD QUESTS
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="tab-loading-wrapper border"></div>
+                            </div>
+                            <div className="skills-all-box">
+                                <div className="skills-all">
+                                    <div className="skills-pic">
+                                        <img
+                                            className="icon"
+                                            src="rc/skill-icons/skill-icon01.png"
+                                        />
+                                        <div className="skills-pic-disabled"></div>
+                                    </div>
+                                    <div className="skills-pic">
+                                        <img
+                                            className="icon"
+                                            src="rc/skill-icons/skill-icon02.png"
+                                        />
+                                        <div className="skills-pic-disabled"></div>
+                                    </div>
+                                    <div className="skills-pic">
+                                        <img
+                                            className="icon"
+                                            src="rc/skill-icons/skill-icon03.png"
+                                        />
+                                        <div className="skills-pic-disabled"></div>
+                                    </div>
+                                    <div className="skills-pic">
+                                        <img
+                                            className="icon"
+                                            src="rc/skill-icons/skill-icon04.png"
+                                        />
+                                        <div className="skills-pic-disabled"></div>
+                                    </div>
+                                    <div className="skills-pic">
+                                        <img
+                                            className="icon"
+                                            src="rc/skill-icons/skill-icon05.png"
+                                        />
+                                        <div className="skills-pic-disabled"></div>
+                                    </div>
+                                    <div className="skills-pic">
+                                        <img
+                                            className="icon"
+                                            src="rc/skill-icons/skill-icon06.png"
+                                        />
+                                        <div className="skills-pic-disabled"></div>
+                                    </div>
+                                    <div className="skills-pic">
+                                        <img
+                                            className="icon"
+                                            src="rc/skill-icons/skill-icon07.png"
+                                        />
+                                        <div className="skills-pic-disabled"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="tabs-all-box">
+                        <a
+                            className="tabs-all heroes selected"
+                            href="#/"
+                            aria-current="page">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Heroes</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <a className="tabs-all guild" href="#/guild">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Guild base</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                </div>
+                            </div>
+                            <div className="v2-tab-notif notif notif20"></div>
+                        </a>
+                        <a className="tabs-all album" href="#/galery/pictures">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Gallery</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <a className="tabs-all rating" href="#/rating/jewerly">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Rating Tab</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <a className="tabs-all squests" href="#/quests/daily">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Quests</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 };
 
-export default React.memo(V2mainscreen22squadmainComponent);
+export default React.memo(V2MainScreen22SquadMainComponent);

@@ -1,9 +1,516 @@
 import React from "react";
+import v2ScreenMine from "../styles/v2-screen-mine.scss";
 
-const V2mainscreen02guildmineComponent = () => {
-return (
-  <></>
-);
+const V2MainScreen02GuildMineComponent = () => {
+    return (
+        <>
+            <div className="main lang-ru world1">
+                <div
+                    className="main-bg"
+                    style="
+                    background-image: url('https://cdn.faptitans.com/s1/__bbaa/images/back/new/07-Cemetery.jpg');
+                "></div>
+                <div className="header">
+                    <div className="resource-panel">
+                        <div className="avatar-box-all">
+                            <div className="avatar-box-pic">
+                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                            </div>
+                            <div className="avatar-box-name">Rank 27</div>
+                        </div>
+                        <div className="resource-gold">
+                            <div className="value">6.57BD22</div>
+                            <div className="value-bonus">
+                                <span>+29.9M%</span>
+                            </div>
+                            <div className="resource-btn-add"></div>
+                            <div className="resource-pic">
+                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-gold.png" />
+                            </div>
+                            <div className="anim-in-p gold"></div>
+                        </div>
+                        <div className="resource-vip lvl0">
+                            <div className="value-vip-diamond">21</div>
+                            <div className="value-vip-ticket">2</div>
+                            <div className="resource-btn-add"></div>
+                            <div className="resource-pic-vip">
+                                <div className="viplvl">VIP</div>
+                            </div>
+                        </div>
+                        <div className="might-box-all">
+                            <div>
+                                <div className="might-box-pic">
+                                    <img
+                                        className="bg"
+                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
+                                    />
+                                    <img
+                                        className="fg"
+                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
+                                    />
+                                </div>
+                                <div className="might-box-name">Valhalla</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="shop-chest-box-all">
+                        <div className="res-shop-btn">
+                            <div className="res-shop-btn-text">shop</div>
+                        </div>
+                        <div>
+                            <div className="res-chest-btn">
+                                <div className="res-chest-btn-text">
+                                    Открыть
+                                </div>
+                                <div className="res-chest-btn-count">15</div>
+                                <div className="v2-bosschest-notif notif"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="btn signinout-btn out">
+                        <div className="icon-reg"></div>
+                        <div className="icon-reg2"></div>
+                    </div>
+                </div>
+                <div className="quest-box-all quests">
+                    <div className="quest-box-scroll">
+                        <div className="quest-box">
+                            <li className="quest quest-box">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/ic-quests.png"
+                                />
+                                <div className="quest-notif notif notif10"></div>
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 0ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
+                                />
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 150ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
+                                />
+                            </li>
+                            <li
+                                className="quest angel-pop open"
+                                style="animation-delay: 300ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png"
+                                />
+                            </li>
+                            <li className="quest-fortune">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/ic-fortuna.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">SPIN!</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 450ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">23:03:34</div>
+                                </div>
+                            </li>
+                            <li className="quest startpack wide">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-chest.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">23:03:34</div>
+                                </div>
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 600ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">23:03:34</div>
+                                </div>
+                            </li>
+                            <li className="quest startpack wide">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                />
+                            </li>
+                            <li
+                                className="quest startpack open"
+                                style="animation-delay: 750ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png"
+                                />
+                                <div className="timerbox">
+                                    <div className="timer">09:48:42</div>
+                                </div>
+                            </li>
+                            <li className="quest-fortune picmeh-info info">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/picmeh-ic-diamond.png"
+                                />
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 900ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
+                                />
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 1050ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
+                                />
+                            </li>
+                            <li
+                                className="quest open"
+                                style="animation-delay: 1200ms">
+                                <img
+                                    className="icon"
+                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
+                                />
+                            </li>
+                        </div>
+                    </div>
+                    <div className="opt-panel-box">
+                        <div className="color-bg"></div>
+                        <div className="btn feedback"></div>
+                        <div className="btn statistic"></div>
+                        <div className="btn settings"></div>
+                        <div className="btn ru"></div>
+                    </div>
+                    <a
+                        className="btn-discord"
+                        href="https://discord.gg/7pjeXF3emj"
+                        target="_blank"></a>
+                </div>
+                <div className="left-side false false">
+                    <div className="left-panel wide false false">
+                        <div className="">
+                            <div className="tab-panel-box mine">
+                                <div className="tab-panel-box-title">mine</div>
+                                <div className="leftside-box-all">
+                                    <div className="guildhall-leftside-title-box">
+                                        <div className="guildhall-leftside-title-name">
+                                            Building level: <span>6</span>
+                                        </div>
+                                    </div>
+                                    <div className="guildhall-leftside-building">
+                                        <div className="guildhall-building-pic-mine"></div>
+                                    </div>
+                                    <div className="guildhall-lvlup-box">
+                                        <div className="guildhall-lvlup-count-box">
+                                            <div className="guildhall-lvlup-count">
+                                                18
+                                            </div>
+                                        </div>
+                                        <div className="guildhall-lvlup-count-box two">
+                                            <div className="guildhall-lvlup-count">
+                                                520
+                                            </div>
+                                        </div>
+                                        <div className="color-btn green disabled">
+                                            <div className="color-btn-text">
+                                                level up
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="guildhall-nownext-box">
+                                        <div className="guildhall-nownext-name">
+                                            now
+                                        </div>
+                                        <div className="guildhall-nownext-pic">
+                                            <img src="https://cdn.faptitans.com/s1/rc/v2-res-mithril2.png" />
+                                        </div>
+                                        <div className="guildhall-nownext-count">
+                                            28 / 3m 45s
+                                        </div>
+                                    </div>
+                                    <div className="str-right"></div>
+                                    <div className="guildhall-nownext-box next">
+                                        <div className="guildhall-nownext-name">
+                                            следующий lvl
+                                        </div>
+                                        <div className="guildhall-nownext-pic">
+                                            <img src="https://cdn.faptitans.com/s1/rc/v2-res-mithril2.png" />
+                                        </div>
+                                        <div className="guildhall-nownext-count">
+                                            34 / 3m 45s
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mine-rightside-box-all">
+                                    <div className="mine-prg-box-all">
+                                        <div className="mine-prgbar-all">
+                                            <div
+                                                className="mine-prgbar"
+                                                style="width: 0%"></div>
+                                            <div className="mine-prgbar-text">
+                                                Warehouse is full!
+                                            </div>
+                                        </div>
+                                        <div className="mine-res-box">
+                                            <div className="mine-value">
+                                                22.7M
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="mine-workers-name">
+                                        workers
+                                    </div>
+                                    <div className="mine-worker-box-all">
+                                        <div className="mine-worker-box">
+                                            <div
+                                                className="mine-worker-pic"
+                                                style="
+                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
+                                                background-position: 0% center;
+                                                background-size: cover;
+                                            ">
+                                                <canvas
+                                                    width="800"
+                                                    height="600"
+                                                    style="
+                                                    touch-action: none;
+                                                    width: 120px;
+                                                    height: 305px;
+                                                    cursor: inherit;
+                                                "></canvas>
+                                            </div>
+                                            <div className="mine-buy-plus"></div>
+                                            <div className="color-btn mithril">
+                                                <div className="color-btn-text">
+                                                    <div>
+                                                        buy
+                                                        <span className="f-mithril">
+                                                            1000
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mine-res-timer-box">
+                                                <div className="mine-res-timer-name">
+                                                    resource timer
+                                                </div>
+                                                <div className="mine-res-timer">
+                                                    -12.5%
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="mine-worker-box">
+                                            <div
+                                                className="mine-worker-pic"
+                                                style="
+                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
+                                                background-position: 31% center;
+                                                background-size: cover;
+                                            ">
+                                                <canvas
+                                                    width="800"
+                                                    height="600"
+                                                    style="
+                                                    touch-action: none;
+                                                    width: 120px;
+                                                    height: 305px;
+                                                    cursor: inherit;
+                                                "></canvas>
+                                            </div>
+                                            <div className="mine-buy-plus"></div>
+                                            <div className="color-btn mithril">
+                                                <div className="color-btn-text">
+                                                    <div>
+                                                        buy
+                                                        <span className="f-mithril">
+                                                            5000
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mine-res-timer-box">
+                                                <div className="mine-res-timer-name">
+                                                    resource timer
+                                                </div>
+                                                <div className="mine-res-timer">
+                                                    -12.5%
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="mine-worker-box buy">
+                                            <div
+                                                className="mine-worker-pic"
+                                                style="
+                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
+                                                background-position: 70% center;
+                                                background-size: cover;
+                                            ">
+                                                <canvas
+                                                    width="800"
+                                                    height="600"
+                                                    style="
+                                                    touch-action: none;
+                                                    width: 120px;
+                                                    height: 305px;
+                                                    cursor: inherit;
+                                                "></canvas>
+                                            </div>
+                                            <div className="mine-buy-plus"></div>
+                                            <div className="color-btn diamond">
+                                                <div className="color-btn-text">
+                                                    <div>
+                                                        buy
+                                                        <span className="f-diamond">
+                                                            100
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mine-res-timer-box">
+                                                <div className="mine-res-timer-name">
+                                                    resource timer
+                                                </div>
+                                                <div className="mine-res-timer">
+                                                    -12.5%
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="mine-worker-box buy">
+                                            <div
+                                                className="mine-worker-pic"
+                                                style="
+                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
+                                                background-position: 100% center;
+                                                background-size: cover;
+                                            ">
+                                                <canvas
+                                                    width="800"
+                                                    height="600"
+                                                    style="
+                                                    touch-action: none;
+                                                    width: 120px;
+                                                    height: 305px;
+                                                    cursor: inherit;
+                                                "></canvas>
+                                            </div>
+                                            <div className="mine-buy-plus"></div>
+                                            <div
+                                                className="color-btn diamond"
+                                                style="filter: grayscale(100%)">
+                                                <div className="color-btn-text">
+                                                    <div>
+                                                        buy
+                                                        <span className="f-diamond">
+                                                            500
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="mine-res-timer-box">
+                                                <div className="mine-res-timer-name">
+                                                    resource timer
+                                                </div>
+                                                <div className="mine-res-timer">
+                                                    -12.5%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="btn-close-x"></div>
+                                <div className="guildhall-res-box-all">
+                                    <div className="guildhall-res-box gems">
+                                        <div
+                                            className="guildhall-value"
+                                            style="width: 120px">
+                                            17
+                                        </div>
+                                    </div>
+                                    <div className="guildhall-res-box mithril">
+                                        <div className="guildhall-value">
+                                            22.7M
+                                        </div>
+                                        <div className="guildhall-value-btn-add"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="tabs-all-box">
+                        <a className="tabs-all heroes" href="#/">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Heroes</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <a
+                            className="tabs-all guild selected"
+                            href="#/guild"
+                            aria-current="page">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Guild base</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <a className="tabs-all album" href="#/galery/pictures">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Gallery</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <a className="tabs-all rating" href="#/rating/jewerly">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Rating Tab</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                </div>
+                            </div>
+                        </a>
+                        <a className="tabs-all squests" href="#/quests/daily">
+                            <div style="width: 100%; height: 100%">
+                                <div className="tabs-name">Quests</div>
+                                <div className="tabs-pic">
+                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div></div>
+                <div id="dialogWrapper" className="popup-layer">
+                    <div className="screen-blend-55"></div>
+                    <div id="dialogContainer"></div>
+                </div>
+            </div>
+        </>
+    );
 };
 
-export default React.memo(V2mainscreen02guildmineComponent);
+export default React.memo(V2MainScreen02GuildMineComponent);

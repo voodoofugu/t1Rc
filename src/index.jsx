@@ -44,7 +44,7 @@ function capitalizeFirstLetter(string) {
                 } else {
                     PageComponent =
                         pageComponents[currentPage] ||
-                        AaPagesComponentMap.Page404Component;
+                        AaPagesComponentMap.MainScreen16FortunaRoundMainpop16xBuyresComponent;
                 }
 
                 window.__REACT_ROOT__.render(
