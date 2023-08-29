@@ -10,7 +10,7 @@ const V2MainScreen06RatingComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -19,7 +19,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -82,7 +82,7 @@ const V2MainScreen06RatingComponent = () => {
                         <div className="container">
                             <div
                                 className="tab-panel rating-panel"
-                                style="visibility: visible">
+                                style={{ visibility: "visible" }}>
                                 <div>
                                     <div className="rating-left-box">
                                         <div className="rating-topbtn-box">
@@ -1302,7 +1302,7 @@ const V2MainScreen06RatingComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -1310,7 +1310,7 @@ const V2MainScreen06RatingComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all guild" href="#/guild">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
@@ -1319,7 +1319,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div className="v2-tab-notif notif notif20"></div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -1330,7 +1330,7 @@ const V2MainScreen06RatingComponent = () => {
                             className="tabs-all rating selected"
                             href="#/rating/jewerly"
                             aria-current="page">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
@@ -1338,7 +1338,7 @@ const V2MainScreen06RatingComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />

@@ -349,14 +349,14 @@ const MainScreen22Unipop04wavepack10Component = () => {
                     </ul>
                 </div>
 
-                <div className="popup-layer" style="display: block;">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
+                        style={{ display: "block" }}></div>
 
                     <div
                         className="m-popup unipop-wavepack10"
-                        style="display: block;">
+                        style={{ display: "block" }}>
                         <div className="title">annoucement</div>
                         <div className="color-box"></div>
                         <div className="color-box-decor"></div>
@@ -365,43 +365,43 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                 <div className="unipop-scroll-box">
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-wom-pack.jpg" />
+                                            <img src="unipop-m-wom-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-sed-pack.jpg" />
+                                            <img src="unipop-m-sed-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-lov-pack.jpg" />
+                                            <img src="unipop-m-lov-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-don-pack.jpg" />
+                                            <img src="unipop-m-don-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-plb-pack.jpg" />
+                                            <img src="unipop-m-plb-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-cas-pack.jpg" />
+                                            <img src="unipop-m-cas-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-fortuna.jpg" />
+                                            <img src="unipop-m-fortuna.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
@@ -421,13 +421,13 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                     <div className="rew-box-all">
                                         <div className="rew-box">
                                             <div className="item-box">
-                                                <img src="rc/change-ic-gold.png" />
+                                                <img src="change-ic-gold.png" />
                                                 <div className="item-count">
                                                     6969
                                                 </div>
                                             </div>
                                             <div className="item-box">
-                                                <img src="rc/change-ic-gold.png" />
+                                                <img src="change-ic-gold.png" />
                                                 <div className="item-count">
                                                     6969
                                                 </div>

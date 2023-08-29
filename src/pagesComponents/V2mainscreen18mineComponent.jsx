@@ -3,14 +3,15 @@ import React from "react";
 const V2MainScreen18MineComponent = () => {
     return (
         <>
-            <div id="root" style="display: block">
+            <div id="root" style={{ display: "block" }}>
                 <div>
                     <div className="main lang-ru world1">
                         <div
                             className="main-bg"
-                            style="
-                            background-image: url('images/back/new/04-Town-Square-1.jpg');
-                        "></div>
+                            style={{
+                                "background-image":
+                                    "url('images/back/new/04-Town-Square-1.jpg')",
+                            }}></div>
                         <div className="mine-event-screen">
                             <div className="mine-event-screen__head">
                                 <div className="next-count">
@@ -23,7 +24,7 @@ const V2MainScreen18MineComponent = () => {
                                     <div className="mine-quest-prg">
                                         <div
                                             className="mine-quest-prgbar"
-                                            style="width: 6.66667%"></div>
+                                            style={{ width: "6.66667%" }}></div>
                                         <div className="mine-quest-prg-text">
                                             2/30
                                         </div>
@@ -36,7 +37,7 @@ const V2MainScreen18MineComponent = () => {
                                     <div className="mine-quest-prg">
                                         <div
                                             className="mine-quest-prgbar"
-                                            style="width: 0%"></div>
+                                            style={{ width: "0%" }}></div>
                                         <div className="mine-quest-prg-text">
                                             0/25
                                         </div>
@@ -49,7 +50,7 @@ const V2MainScreen18MineComponent = () => {
                                     <div className="mine-quest-prg">
                                         <div
                                             className="mine-quest-prgbar"
-                                            style="width: 6.66667%"></div>
+                                            style={{ width: "6.66667%" }}></div>
                                         <div className="mine-quest-prg-text">
                                             2/30
                                         </div>
@@ -68,11 +69,9 @@ const V2MainScreen18MineComponent = () => {
                                     <img
                                         src="rc/v2-mn-pr1.png"
                                         alt=""
-                                        style="
-                                        filter: drop-shadow(
-                                            rgb(255, 255, 255) 0px 0px 15px
-                                        );
-                                    "
+                                        style={{
+                                            filter: "drop-shadow(\r\n                                            rgb(255, 255, 255) 0px 0px 15px\r\n                                        )",
+                                        }}
                                     />
                                     <div className="resource__count">97</div>
                                 </div>
@@ -80,7 +79,7 @@ const V2MainScreen18MineComponent = () => {
                                     <img
                                         src="rc/v2-mn-pr2.png"
                                         alt=""
-                                        style=""
+                                        style={{}}
                                     />
                                     <div className="resource__count">50</div>
                                 </div>
@@ -88,7 +87,7 @@ const V2MainScreen18MineComponent = () => {
                                     <img
                                         src="rc/v2-mn-pr3.png"
                                         alt=""
-                                        style=""
+                                        style={{}}
                                     />
                                     <div className="resource__count">10</div>
                                 </div>
@@ -96,18 +95,23 @@ const V2MainScreen18MineComponent = () => {
                                     <img
                                         src="rc/v2-mn-pr4.png"
                                         alt=""
-                                        style=""
+                                        style={{}}
                                     />
                                     <div className="resource__count">5</div>
                                 </div>
                             </div>
                             <div
                                 className="mine-event-screen__wrapper"
-                                style="background-image: url('rc/v2-mn-bg1.jpg')">
+                                style={{
+                                    "background-image":
+                                        "url('rc/v2-mn-bg1.jpg')",
+                                }}>
                                 <div className="x-info-btn">?</div>
                                 <div
                                     className="mine"
-                                    style="cursor: url('rc/cursor.png'), auto">
+                                    style={{
+                                        cursor: "url('rc/cursor.png'), auto",
+                                    }}>
                                     <div className="mine__row">
                                         <div className="mine-cell">
                                             <div className="content"></div>
@@ -124,62 +128,62 @@ const V2MainScreen18MineComponent = () => {
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st solid">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div className="mine__row">
@@ -201,52 +205,52 @@ const V2MainScreen18MineComponent = () => {
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div className="mine__row">
@@ -265,63 +269,63 @@ const V2MainScreen18MineComponent = () => {
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                             0
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div className="mine__row">
@@ -337,72 +341,72 @@ const V2MainScreen18MineComponent = () => {
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st solid">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div className="mine__row">
@@ -415,82 +419,82 @@ const V2MainScreen18MineComponent = () => {
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st solid">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st solid">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div className="mine__row">
@@ -500,92 +504,92 @@ const V2MainScreen18MineComponent = () => {
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div className="mine__row">
@@ -595,102 +599,102 @@ const V2MainScreen18MineComponent = () => {
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell st">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                         <div className="mine-cell gr">
                                             <div className="content"></div>
                                             <div
-                                                style="
-                                                position: absolute;
-                                                inset: 0px;
-                                                background: rgb(0, 0, 0);
-                                                opacity: 0.33;
-                                            "></div>
+                                                style={{
+                                                    position: "absolute",
+                                                    inset: "0px",
+                                                    background: "rgb(0, 0, 0)",
+                                                    opacity: "0.33",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div
                                         className="position player"
-                                        style="left: 26%">
+                                        style={{ left: "26%" }}>
                                         <div className="value">Floor: 1</div>
                                     </div>
                                     <div
                                         className="position player"
-                                        style="left: 51%">
+                                        style={{ left: "51%" }}>
                                         <div className="value">
                                             Level: 0 / 100
                                         </div>
@@ -713,7 +717,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box piecesHero">
                                                         <div className="img-wrap">
-                                                            <img src="rc/unknown-hero-ava.jpg" />
+                                                            <img src="unknown-hero-ava.jpg" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -726,9 +730,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy
@@ -758,9 +762,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy
@@ -790,9 +794,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy
@@ -822,9 +826,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy
@@ -843,7 +847,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box undefined">
                                                         <div className="img-wrap">
-                                                            <img src="rc/sh-icon-chest-dark.png" />
+                                                            <img src="sh-icon-chest-dark.png" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -856,9 +860,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy
@@ -875,7 +879,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box undefined">
                                                         <div className="img-wrap">
-                                                            <img src="rc/sh-icon-chest-dark.png" />
+                                                            <img src="sh-icon-chest-dark.png" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -888,9 +892,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy
@@ -920,9 +924,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy
@@ -952,9 +956,9 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div
                                                         className="color-btn diamond"
-                                                        style="
-                                                        filter: grayscale(1);
-                                                    ">
+                                                        style={{
+                                                            filter: "grayscale(1)",
+                                                        }}>
                                                         <div className="color-btn-text">
                                                             <div>
                                                                 buy

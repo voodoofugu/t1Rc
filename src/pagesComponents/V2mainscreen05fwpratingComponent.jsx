@@ -9,7 +9,7 @@ const V2MainScreen05FwPRatingComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen05FwPRatingComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -86,14 +86,14 @@ const V2MainScreen05FwPRatingComponent = () => {
                                 </div>
                                 <div className="lhero-box">
                                     <div className="lhero-pic">
-                                        <img src="rc/hero0075@1x.jpg" />
+                                        <img src="hero0075@1x.jpg" />
                                     </div>
                                     <div className="topname-box">
                                         <div className="sh2-icon left">
-                                            <img src="rc/cur-r.png" />
+                                            <img src="cur-r.png" />
                                         </div>
                                         <div className="sh2-icon-forgirl right">
-                                            <img src="rc/cur2-sword.png" />
+                                            <img src="cur2-sword.png" />
                                         </div>
                                         <div className="lhero-name-box">
                                             <div className="lhero-name">
@@ -110,7 +110,7 @@ const V2MainScreen05FwPRatingComponent = () => {
                                         </div>
                                         <div className="girl-bonus-box">
                                             <div className="girl-bonus-pic">
-                                                <img src="rc/01suphero-ava.jpg" />
+                                                <img src="01suphero-ava.jpg" />
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@ const V2MainScreen05FwPRatingComponent = () => {
                                                 <div className="bonus-lvl-box-bonus">
                                                     Увеличение DPS + 5000%
                                                     <span className="ff-sh2-icon">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </span>
                                                 </div>
                                             </div>
@@ -136,7 +136,7 @@ const V2MainScreen05FwPRatingComponent = () => {
                                                 <div className="bonus-lvl-box-bonus">
                                                     Увеличение DPS + 5000%
                                                     <span className="ff-sh2-icon">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </span>
                                                 </div>
                                             </div>
@@ -478,7 +478,7 @@ const V2MainScreen05FwPRatingComponent = () => {
                             <div className="fw-right-side">
                                 <div
                                     className="fw-right-side-content-box"
-                                    style="bottom: 30px">
+                                    style={{ bottom: "30px" }}>
                                     <div className="fw-rating-ped-box-all check-p0">
                                         <div className="fw-rating-ped-box-p1 rate1">
                                             <div className="fw-rating-ped-pic">
@@ -542,7 +542,7 @@ const V2MainScreen05FwPRatingComponent = () => {
                                         </div>
                                         <div
                                             className="list-disabled-text"
-                                            style="left: 232px">
+                                            style={{ left: "232px" }}>
                                             Получи хотя бы 1 очко, чтобы попасть
                                             в рейтинг
                                         </div>
@@ -556,25 +556,25 @@ const V2MainScreen05FwPRatingComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>

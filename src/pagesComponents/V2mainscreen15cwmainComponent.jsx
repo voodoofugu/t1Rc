@@ -9,7 +9,7 @@ const V2MainScreen15CwMainComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -121,13 +121,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         That's really going to
@@ -142,13 +138,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I have 117 heros now
@@ -160,13 +152,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         On my hero list I got 54
@@ -182,13 +170,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Jim4:
                                                         </span>
                                                         i dont understand what
@@ -201,13 +185,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Jim4:
                                                         </span>
                                                         Yo bigdog
@@ -219,13 +199,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         How. Ome I just got 54
@@ -238,13 +214,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Jim4:
                                                         </span>
                                                         Yo
@@ -256,13 +228,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             EnriqueVS:
                                                         </span>
                                                         hi
@@ -274,13 +242,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             EnriqueVS:
                                                         </span>
                                                         hi
@@ -292,13 +256,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Jim4:
                                                         </span>
                                                         Happy new year
@@ -310,13 +270,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             MrYellow:
                                                         </span>
                                                         ok! thanks :D
@@ -328,13 +284,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Jim4:
                                                         </span>
                                                         tip:less heroes you have
@@ -347,13 +299,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Jim4:
                                                         </span>
                                                         promotions on heroes
@@ -365,13 +313,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             MrYellow:
                                                         </span>
                                                         How is the rating
@@ -385,13 +329,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Keep an eye on the
@@ -404,13 +344,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         We might finally break
@@ -423,13 +359,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Jim4:
                                                         </span>
                                                         wow guys you dominating
@@ -442,13 +374,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Were doing good people.
@@ -461,13 +389,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Did we lose special
@@ -481,13 +405,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Dru1da:
                                                         </span>
                                                         other way is in your
@@ -507,13 +427,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Dru1da:
                                                         </span>
                                                         on the right there is a
@@ -533,13 +449,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             outcastknight:
                                                         </span>
                                                         how do you open the
@@ -552,13 +464,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Special agent.. what is
@@ -572,13 +480,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         All that without any
@@ -592,13 +496,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I have 69M gems just
@@ -614,13 +514,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         My gold is qD20. Dpc is
@@ -635,13 +531,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         When playing you would
@@ -659,13 +551,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         What if I told you when
@@ -678,13 +566,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         It's about playing
@@ -697,13 +581,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Now it Bout getting the
@@ -718,13 +598,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Even in dark tower last
@@ -742,13 +618,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I don't compete against
@@ -764,13 +636,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         You don't need to be
@@ -786,13 +654,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Unknown Stand User:
                                                         </span>
                                                         I'm not as competitive
@@ -806,13 +670,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Unknown Stand User:
                                                         </span>
                                                         Alright, I get it
@@ -824,13 +684,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         It's just me and jim4 on
@@ -845,13 +701,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I've found lots of
@@ -872,13 +724,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I went from M to T in
@@ -891,13 +739,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I don't want someone
@@ -914,13 +758,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I can tell you what to
@@ -938,13 +778,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Promotions for my heros.
@@ -958,13 +794,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I only at the games that
@@ -977,13 +809,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         When I played fapopoly I
@@ -1002,13 +830,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Unknown Stand User:
                                                         </span>
                                                         I see
@@ -1020,13 +844,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         If it does nothing to
@@ -1042,13 +862,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         I don't play fapopoly..
@@ -1062,13 +878,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             amthebigdog:
                                                         </span>
                                                         Never reborn
@@ -1080,13 +892,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Unknown Stand User:
                                                         </span>
                                                         How'd we get destroyed
@@ -1099,13 +907,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Unknown Stand User:
                                                         </span>
                                                         Are we out of this clan
@@ -1118,13 +922,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div className="cw-log-text">
                                                         <span
-                                                            style="
-                                                            color: rgb(
-                                                                84,
-                                                                71,
-                                                                70
-                                                            );
-                                                        ">
+                                                            style={{
+                                                                color: "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                                                            }}>
                                                             Unknown Stand User:
                                                         </span>
                                                         Also, isn't it next to
@@ -1207,7 +1007,9 @@ const V2MainScreen15CwMainComponent = () => {
                                                     </div>
                                                     <div
                                                         className="cw-main-right-a-box-lvl-prg"
-                                                        style="width: 100%"></div>
+                                                        style={{
+                                                            width: "100%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                             <div className="cw-main-clan-stats">
@@ -2503,7 +2305,7 @@ const V2MainScreen15CwMainComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -2514,7 +2316,7 @@ const V2MainScreen15CwMainComponent = () => {
                             className="tabs-all guild selected"
                             aria-current="page"
                             href="#/guild">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
@@ -2523,7 +2325,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div className="v2-tab-notif notif notif20"></div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -2531,7 +2333,7 @@ const V2MainScreen15CwMainComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
@@ -2539,7 +2341,7 @@ const V2MainScreen15CwMainComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />

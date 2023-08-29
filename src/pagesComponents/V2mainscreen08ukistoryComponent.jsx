@@ -11,7 +11,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -20,7 +20,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -246,12 +246,12 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             />
                                             <div
                                                 className="journal-comics-ballon-box"
-                                                style="
-                                                top: 0px;
-                                                left: 80px;
-                                                width: 170px;
-                                                opacity: 1;
-                                            ">
+                                                style={{
+                                                    top: "0px",
+                                                    left: "80px",
+                                                    width: "170px",
+                                                    opacity: "1",
+                                                }}>
                                                 <div className="journal-comics-ballon-text">
                                                     Damn it... we're out of gold
                                                     again.
@@ -259,12 +259,12 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div
                                                 className="journal-comics-ballon-box"
-                                                style="
-                                                bottom: 15px;
-                                                right: 20px;
-                                                width: 230px;
-                                                opacity: 1;
-                                            ">
+                                                style={{
+                                                    bottom: "15px",
+                                                    right: "20px",
+                                                    width: "230px",
+                                                    opacity: "1",
+                                                }}>
                                                 <div className="journal-comics-ballon-text">
                                                     The best monster orders are
                                                     taken by the Guilders
@@ -284,7 +284,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -292,7 +292,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all guild" href="#/guild">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
@@ -301,7 +301,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div className="v2-tab-notif notif notif20"></div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -309,7 +309,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
@@ -320,7 +320,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             className="tabs-all squests selected"
                             href="#/quests/story"
                             aria-current="page">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />

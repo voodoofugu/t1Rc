@@ -5,14 +5,12 @@ import v2ScreenAlbum from "../styles/v2-screen-album.scss";
 const V2MainScreen07AlbumComponent = () => {
     return (
         <>
-            <div id="root" style="display: block">
+            <div id="root" style={{"display":"block"}}>
                 <div>
                     <div className="main lang-ru world1">
                         <div
                             className="main-bg"
-                            style="
-                            background-image: url('https://cdn.faptitans.com/s1/__bbaa/images/back/new/07-Cemetery.jpg');
-                        "></div>
+                            style={{"background-image":"url('https"}}></div>
                         <div className="header">
                             <div className="resource-panel">
                                 <div className="avatar-box-all">
@@ -95,7 +93,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest open"
-                                        style="animation-delay: 0ms">
+                                        style={{"animation-delay":"0ms"}}>
                                         <img
                                             className="icon"
                                             src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
@@ -103,7 +101,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest open"
-                                        style="animation-delay: 150ms">
+                                        style={{"animation-delay":"150ms"}}>
                                         <img
                                             className="icon"
                                             src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
@@ -111,7 +109,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest angel-pop open"
-                                        style="animation-delay: 300ms">
+                                        style={{"animation-delay":"300ms"}}>
                                         <img
                                             className="icon"
                                             src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png"
@@ -130,7 +128,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style="animation-delay: 450ms">
+                                        style={{"animation-delay":"450ms"}}>
                                         <img
                                             className="icon"
                                             src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
@@ -149,7 +147,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style="animation-delay: 600ms">
+                                        style={{"animation-delay":"600ms"}}>
                                         <img
                                             className="icon"
                                             src="https://cdn.faptitans.com/s1/rc/ic-hero-327.png"
@@ -168,7 +166,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style="animation-delay: 750ms">
+                                        style={{"animation-delay":"750ms"}}>
                                         <img
                                             className="icon"
                                             src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png"
@@ -181,7 +179,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest open"
-                                        style="animation-delay: 900ms">
+                                        style={{"animation-delay":"900ms"}}>
                                         <img
                                             className="icon"
                                             src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
@@ -204,7 +202,7 @@ const V2MainScreen07AlbumComponent = () => {
                         <div className="left-side false false">
                             <div className="left-panel wide false false">
                                 <div className="container">
-                                    <div style="display: block">
+                                    <div style={{"display":"block"}}>
                                         <div className="tab-panel change-main">
                                             <div className="all-content">
                                                 <div className="change-top-menu">
@@ -1684,9 +1682,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                             <div className="prgbar-box">
                                                                 <div
                                                                     className="prgbar"
-                                                                    style="
-                                                                    width: 8%;
-                                                                "></div>
+                                                                    style={{"width":"8%"}}></div>
                                                             </div>
                                                             <div className="prgbar-text">
                                                                 2/25
@@ -1712,9 +1708,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <img
                                                                     className="img"
                                                                     src="https://cdn.faptitans.com/ths/5/a/1/o5a1f021f42eb6d20744d778bf203156e.jpg"
-                                                                    style="
-                                                                    visibility: visible;
-                                                                "
+                                                                    style={{"visibility":"visible"}}
                                                                 />
                                                                 <div className="info">
                                                                     Художник:
@@ -1728,9 +1722,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <img
                                                                     className="img"
                                                                     src="https://cdn.faptitans.com/ths/5/c/5/o5c5a586b394a238e00ce50064271c97b.jpg"
-                                                                    style="
-                                                                    visibility: visible;
-                                                                "
+                                                                    style={{"visibility":"visible"}}
                                                                 />
                                                                 <div className="info">
                                                                     Художник:
@@ -1754,7 +1746,7 @@ const V2MainScreen07AlbumComponent = () => {
                                         </div>
                                         <div className="btn-close-x"></div>
                                     </div>
-                                    <div style="visibility: visible">
+                                    <div style={{"visibility":"visible"}}>
                                         <div className="tab-panel change-bonuses">
                                             <div className="change-top-menu">
                                                 <div className="color-btn pictures">
@@ -1781,9 +1773,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="prg-box">
                                                                         <div
                                                                             className="prgbar"
-                                                                            style="
-                                                                            width: 83.75%;
-                                                                        "></div>
+                                                                            style={{"width":"83.75%"}}></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2259,7 +2249,7 @@ const V2MainScreen07AlbumComponent = () => {
                             </div>
                             <div className="tabs-all-box">
                                 <a className="tabs-all heroes" href="#/">
-                                    <div style="width: 100%; height: 100%">
+                                    <div style={{"width":"100%","height":"100%"}}>
                                         <div className="tabs-name">Heroes</div>
                                         <div className="tabs-pic">
                                             <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -2267,7 +2257,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </div>
                                 </a>
                                 <a className="tabs-all guild" href="#/guild">
-                                    <div style="width: 100%; height: 100%">
+                                    <div style={{"width":"100%","height":"100%"}}>
                                         <div className="tabs-name">
                                             Guild base
                                         </div>
@@ -2281,7 +2271,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     className="tabs-all album selected"
                                     href="#/galery/pictures"
                                     aria-current="page">
-                                    <div style="width: 100%; height: 100%">
+                                    <div style={{"width":"100%","height":"100%"}}>
                                         <div className="tabs-name">Gallery</div>
                                         <div className="tabs-pic">
                                             <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -2291,7 +2281,7 @@ const V2MainScreen07AlbumComponent = () => {
                                 <a
                                     className="tabs-all rating"
                                     href="#/rating/jewerly">
-                                    <div style="width: 100%; height: 100%">
+                                    <div style={{"width":"100%","height":"100%"}}>
                                         <div className="tabs-name">
                                             Rating Tab
                                         </div>
@@ -2303,7 +2293,7 @@ const V2MainScreen07AlbumComponent = () => {
                                 <a
                                     className="tabs-all squests"
                                     href="#/quests/daily">
-                                    <div style="width: 100%; height: 100%">
+                                    <div style={{"width":"100%","height":"100%"}}>
                                         <div className="tabs-name">Quests</div>
                                         <div className="tabs-pic">
                                             <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
@@ -2333,9 +2323,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                     <div className="prg-box">
                                                         <div
                                                             className="prgbar"
-                                                            style="
-                                                            width: 81.6%;
-                                                        "></div>
+                                                            style={{"width":"81.6%"}}></div>
                                                     </div>
                                                 </div>
                                             </div>

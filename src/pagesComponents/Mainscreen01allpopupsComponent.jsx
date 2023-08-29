@@ -23,14 +23,15 @@ const MainScreen01AllPopupsComponent = () => {
             <div className="main world1">
                 <div
                     className="main-bg"
-                    style="
-                    background-image: url('/images/back/new/09-River.jpg');
-                "></div>
+                    style={{
+                        "background-image":
+                            "url('/images/back/new/09-River.jpg')",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -39,7 +40,7 @@ const MainScreen01AllPopupsComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -218,7 +219,9 @@ const MainScreen01AllPopupsComponent = () => {
                                         className="icon"
                                         src="rc/ic-blackfriday.png"
                                     />
-                                    <div className="timerbox" style="top: 46px">
+                                    <div
+                                        className="timerbox"
+                                        style={{ top: "46px" }}>
                                         <div className="timer">9D 00:44:09</div>
                                     </div>
                                 </div>
@@ -365,12 +368,12 @@ const MainScreen01AllPopupsComponent = () => {
                                 </div>
                                 <div
                                     className="quest rating-girl"
-                                    style="
-                                    top: 0;
-                                    background-size: 150%;
-                                    background-position: center top;
-                                    border-radius: 100%;
-                                ">
+                                    style={{
+                                        top: "0",
+                                        "background-size": "150%",
+                                        "background-position": "center top",
+                                        "border-radius": "100%",
+                                    }}>
                                     {/* <img className="icon" src="rc/rating-girl.png" /> */}
                                     <div className="timerbox">
                                         <div className="timer">ratingpop</div>
@@ -379,11 +382,11 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="quest congra">
                                     <img
                                         className="icon"
-                                        style="
-                                        border-radius: 100%;
-                                        width: 90%;
-                                        height: 90%;
-                                    "
+                                        style={{
+                                            "border-radius": "100%",
+                                            width: "90%",
+                                            height: "90%",
+                                        }}
                                         src="rc/ts_confirm_bk-1.jpg"
                                     />
                                     <div className="timerbox">
@@ -417,7 +420,7 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="quest rating-top">
                                     <img
                                         className="icon"
-                                        style="width: 80%"
+                                        style={{ width: "80%" }}
                                         src="rc/arrow-green.png"
                                     />
                                     <div className="timerbox">
@@ -427,7 +430,7 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="quest ts_confirm">
                                     <img
                                         className="icon"
-                                        style="width: 80%"
+                                        style={{ width: "80%" }}
                                         src="rc/ic-abil-gold@2x.png"
                                     />
                                     <div className="timerbox">
@@ -462,7 +465,7 @@ const MainScreen01AllPopupsComponent = () => {
                     <div className="left-panel">
                         <div
                             className="heroes-list-all-box"
-                            style="display: block">
+                            style={{ display: "block" }}>
                             <div className="dps-dpc-panel-box">
                                 <div className="dpc">
                                     <div className="value">20349</div>
@@ -487,11 +490,11 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="hero-card starterpack">
                                             <div
                                                 className="btn-close-x"
-                                                style="
-                                                zoom: 0.75;
-                                                top: 0px;
-                                                right: 0px;
-                                            "></div>
+                                                style={{
+                                                    zoom: "0.75",
+                                                    top: "0px",
+                                                    right: "0px",
+                                                }}></div>
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
@@ -527,7 +530,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -574,7 +577,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -613,7 +616,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -623,7 +626,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -662,7 +665,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -672,7 +675,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -711,7 +714,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -721,7 +724,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -760,7 +763,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -770,7 +773,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -809,7 +812,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                     </div>
@@ -841,7 +844,7 @@ const MainScreen01AllPopupsComponent = () => {
                         </div>
                         <div
                             className="womens-btns-screen"
-                            style="display: none">
+                            style={{ display: "none" }}>
                             <div className="womens-btns-content">
                                 <div className="women-btn-wrap heros">
                                     <div className="title">HEROS</div>
@@ -869,7 +872,9 @@ const MainScreen01AllPopupsComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="angels-all-box" style="display: none">
+                        <div
+                            className="angels-all-box"
+                            style={{ display: "none" }}>
                             <div className="angels-cards-content">
                                 <div className="content-header">
                                     <div className="title">ANGELS</div>
@@ -925,7 +930,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -980,7 +987,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1035,7 +1044,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1090,7 +1101,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1145,7 +1158,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1200,7 +1215,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1255,7 +1272,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1310,7 +1329,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1323,7 +1344,7 @@ const MainScreen01AllPopupsComponent = () => {
                             </div>
                             <div
                                 className="card-info-content"
-                                style="display: none">
+                                style={{ display: "none" }}>
                                 <div className="trophy-res-box-all">
                                     <div className="trophy-res-box spirit">
                                         <div className="trophy-value">1000</div>
@@ -1480,7 +1501,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 <div className="from">500</div>
@@ -1536,7 +1559,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 60%"></div>
+                                                    style={{
+                                                        width: "60%",
+                                                    }}></div>
                                             </div>
                                             <div className="progress-level-wrap">
                                                 <div className="progress-level l1">
@@ -1584,7 +1609,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1621,7 +1646,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1658,7 +1683,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1695,7 +1720,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1732,7 +1757,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1783,10 +1808,12 @@ const MainScreen01AllPopupsComponent = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="skills-all-box" style="display: block">
+                        <div
+                            className="skills-all-box"
+                            style={{ display: "block" }}>
                             <div className="skills-all">
                                 <div className="skills-pic in-progress">
-                                    <img src="rc/skill-icons/skill-icon01.png" />
+                                    <img src="skill-icons/skill-icon01.png" />
                                     <div className="timer">00:00:20</div>
                                     <div className="skills-pic-disabled"></div>
                                 </div>
@@ -1799,23 +1826,23 @@ const MainScreen01AllPopupsComponent = () => {
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon03.png" />
+                                    <img src="skill-icons/skill-icon03.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon04.png" />
+                                    <img src="skill-icons/skill-icon04.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon05.png" />
+                                    <img src="skill-icons/skill-icon05.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon06.png" />
+                                    <img src="skill-icons/skill-icon06.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon07.png" />
+                                    <img src="skill-icons/skill-icon07.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                             </div>
@@ -1825,37 +1852,37 @@ const MainScreen01AllPopupsComponent = () => {
                         <div className="tabs-all heroes selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                         <div className="tabs-all w-house2">
                             <div className="tabs-name">Women's</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-11.png" />
+                                <img src="tab-11.png" />
                             </div>
                         </div>
                         <div className="tabs-all w-house">
                             <div className="tabs-name">Angels</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-12.png" />
+                                <img src="tab-12.png" />
                             </div>
                         </div>
                     </div>
@@ -2066,12 +2093,12 @@ const MainScreen01AllPopupsComponent = () => {
                                             <img
                                                 className="pic"
                                                 src="https://cdn.faptitans.com/thb/2/3/1/o231f56a131ef2248aa8efb3133a380eb.jpg"
-                                                style="
-                                                left: 33.3333px;
-                                                top: 0px;
-                                                width: 533.333px;
-                                                height: 400px;
-                                            "
+                                                style={{
+                                                    left: "33.3333px",
+                                                    top: "0px",
+                                                    width: "533.333px",
+                                                    height: "400px",
+                                                }}
                                             />
                                         </div>
                                         <div className="change-info-box">
@@ -2095,7 +2122,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgbar-box">
                                                 <div
                                                     className="prgbar"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="prgbar-text">
                                                 2/5
@@ -2138,7 +2167,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prg-box">
                                                 <div
                                                     className="prgbar"
-                                                    style="width: 68%"></div>
+                                                    style={{
+                                                        width: "68%",
+                                                    }}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -2295,7 +2326,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -2474,7 +2507,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-elite">
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2490,7 +2523,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2506,7 +2539,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2522,7 +2555,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2538,7 +2571,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2554,7 +2587,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2570,7 +2603,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2586,7 +2619,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2602,7 +2635,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2618,7 +2651,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2634,7 +2667,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2650,7 +2683,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2666,7 +2699,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2682,7 +2715,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2698,7 +2731,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2714,7 +2747,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2730,7 +2763,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2746,7 +2779,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2762,7 +2795,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2778,7 +2811,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2794,7 +2827,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2810,7 +2843,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2826,7 +2859,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2842,7 +2875,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2874,7 +2907,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2890,7 +2923,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2906,7 +2939,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2922,7 +2955,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2938,7 +2971,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2954,7 +2987,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -2970,7 +3003,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3002,7 +3035,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3018,7 +3051,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3034,7 +3067,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3050,7 +3083,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3066,7 +3099,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3082,7 +3115,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3098,7 +3131,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3114,7 +3147,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3130,7 +3163,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3146,7 +3179,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3162,7 +3195,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3178,7 +3211,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3194,7 +3227,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3210,7 +3243,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3226,7 +3259,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3242,7 +3275,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3277,7 +3310,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="btlpass-girl">
-                                    <img src="rc/break-suphero-779.png" />
+                                    <img src="break-suphero-779.png" />
                                 </div>
                                 <div className="btlpass-btn-box">
                                     <div className="color-btn">
@@ -3287,7 +3320,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn"
-                                        style="left: 552px">
+                                        style={{ left: "552px" }}>
                                         <div className="color-btn-text">
                                             {/* Buy Pumpkins */}
                                             Buy Tickets
@@ -3341,7 +3374,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -3520,7 +3555,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-elite">
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3536,7 +3571,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3552,7 +3587,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3568,7 +3603,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3584,7 +3619,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3600,7 +3635,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3616,7 +3651,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3632,7 +3667,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3648,7 +3683,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3664,7 +3699,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3680,7 +3715,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3696,7 +3731,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3712,7 +3747,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3728,7 +3763,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3744,7 +3779,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3760,7 +3795,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3776,7 +3811,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3792,7 +3827,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3808,7 +3843,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3824,7 +3859,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3840,7 +3875,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3856,7 +3891,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3872,7 +3907,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3888,7 +3923,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3920,7 +3955,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3936,7 +3971,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3952,7 +3987,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3968,7 +4003,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -3984,7 +4019,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4000,7 +4035,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4016,7 +4051,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4048,7 +4083,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4064,7 +4099,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4080,7 +4115,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4096,7 +4131,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4112,7 +4147,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4128,7 +4163,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4144,7 +4179,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4160,7 +4195,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4176,7 +4211,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4192,7 +4227,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4208,7 +4243,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4224,7 +4259,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4240,7 +4275,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4256,7 +4291,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4272,7 +4307,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4288,7 +4323,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4323,7 +4358,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="btlpass-girl">
-                                    <img src="rc/break-girl331.png" />
+                                    <img src="break-girl331.png" />
                                 </div>
                                 <div className="btlpass-btn-box">
                                     <div className="color-btn">
@@ -4333,7 +4368,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn"
-                                        style="left: 552px">
+                                        style={{ left: "552px" }}>
                                         <div className="color-btn-text">
                                             Buy Pumpkins
                                         </div>
@@ -4386,7 +4421,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -4565,7 +4602,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-elite">
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4581,7 +4618,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4597,7 +4634,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4613,7 +4650,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4629,7 +4666,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4645,7 +4682,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4661,7 +4698,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4677,7 +4714,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4693,7 +4730,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4709,7 +4746,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4725,7 +4762,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4741,7 +4778,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4757,7 +4794,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4773,7 +4810,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4789,7 +4826,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4805,7 +4842,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4821,7 +4858,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4837,7 +4874,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4853,7 +4890,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4869,7 +4906,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4885,7 +4922,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4901,7 +4938,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4917,7 +4954,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4933,7 +4970,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4965,7 +5002,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4981,7 +5018,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -4997,7 +5034,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5013,7 +5050,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5029,7 +5066,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5045,7 +5082,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5061,7 +5098,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5093,7 +5130,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5109,7 +5146,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5125,7 +5162,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5141,7 +5178,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5157,7 +5194,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5173,7 +5210,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5189,7 +5226,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5205,7 +5242,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5221,7 +5258,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5237,7 +5274,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5253,7 +5290,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5269,7 +5306,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5285,7 +5322,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5301,7 +5338,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5317,7 +5354,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5333,7 +5370,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5368,7 +5405,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="btlpass-girl">
-                                    <img src="rc/break-girl761-event-pass.png" />
+                                    <img src="break-girl761-event-pass.png" />
                                 </div>
                                 <div className="btlpass-btn-box">
                                     <div className="color-btn">
@@ -5378,7 +5415,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn"
-                                        style="left: 552px">
+                                        style={{ left: "552px" }}>
                                         <div className="color-btn-text">
                                             Buy Pumpkins
                                         </div>
@@ -5439,7 +5476,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -5618,7 +5657,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-elite">
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5634,7 +5673,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5650,7 +5689,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5666,7 +5705,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5682,7 +5721,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5698,7 +5737,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5714,7 +5753,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5730,7 +5769,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5746,7 +5785,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5762,7 +5801,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5778,7 +5817,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5794,7 +5833,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5810,7 +5849,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5826,7 +5865,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5842,7 +5881,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5858,7 +5897,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5874,7 +5913,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5890,7 +5929,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5906,7 +5945,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5922,7 +5961,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5938,7 +5977,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5954,7 +5993,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5970,7 +6009,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -5986,7 +6025,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6018,7 +6057,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6034,7 +6073,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6050,7 +6089,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6066,7 +6105,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6082,7 +6121,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6098,7 +6137,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6114,7 +6153,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6146,7 +6185,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6162,7 +6201,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6178,7 +6217,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6194,7 +6233,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6210,7 +6249,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6226,7 +6265,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6242,7 +6281,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6258,7 +6297,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6274,7 +6313,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6290,7 +6329,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6306,7 +6345,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6322,7 +6361,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6338,7 +6377,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6354,7 +6393,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6370,7 +6409,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6386,7 +6425,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6421,7 +6460,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="btlpass-girl">
-                                    <img src="rc/break-girl798-vd.png" />
+                                    <img src="break-girl798-vd.png" />
                                 </div>
                                 <div className="btlpass-btn-box">
                                     <div className="color-btn">
@@ -6431,7 +6470,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn"
-                                        style="left: 552px">
+                                        style={{ left: "552px" }}>
                                         <div className="color-btn-text">
                                             {/* Buy Pumpkins */}
                                             Buy Tickets
@@ -6493,7 +6532,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -6672,7 +6713,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-elite">
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6688,7 +6729,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6704,7 +6745,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6720,7 +6761,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6736,7 +6777,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6752,7 +6793,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6768,7 +6809,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6784,7 +6825,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6800,7 +6841,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6816,7 +6857,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6832,7 +6873,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6848,7 +6889,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6864,7 +6905,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6880,7 +6921,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6896,7 +6937,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6912,7 +6953,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6928,7 +6969,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6944,7 +6985,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6960,7 +7001,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6976,7 +7017,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -6992,7 +7033,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7008,7 +7049,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7024,7 +7065,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7040,7 +7081,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7072,7 +7113,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7088,7 +7129,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7104,7 +7145,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7120,7 +7161,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7136,7 +7177,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7152,7 +7193,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7168,7 +7209,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7200,7 +7241,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7216,7 +7257,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7232,7 +7273,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7248,7 +7289,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7264,7 +7305,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7280,7 +7321,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7296,7 +7337,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7312,7 +7353,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7328,7 +7369,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7344,7 +7385,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7360,7 +7401,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7376,7 +7417,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7392,7 +7433,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7408,7 +7449,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7424,7 +7465,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7440,7 +7481,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7475,7 +7516,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="btlpass-girl">
-                                    <img src="rc/break-girl842.png" />
+                                    <img src="break-girl842.png" />
                                 </div>
                                 <div className="btlpass-btn-box">
                                     <div className="color-btn">
@@ -7485,7 +7526,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn"
-                                        style="left: 552px">
+                                        style={{ left: "552px" }}>
                                         <div className="color-btn-text">
                                             {/* Buy Pumpkins */}
                                             Buy Tickets
@@ -7547,7 +7588,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -7726,7 +7769,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-elite">
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7742,7 +7785,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7758,7 +7801,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7774,7 +7817,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7790,7 +7833,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7806,7 +7849,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7822,7 +7865,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7838,7 +7881,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7854,7 +7897,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7870,7 +7913,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7886,7 +7929,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7902,7 +7945,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7918,7 +7961,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7934,7 +7977,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7950,7 +7993,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7966,7 +8009,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7982,7 +8025,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -7998,7 +8041,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8014,7 +8057,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8030,7 +8073,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8046,7 +8089,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8062,7 +8105,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8078,7 +8121,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8094,7 +8137,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8126,7 +8169,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8142,7 +8185,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8158,7 +8201,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8174,7 +8217,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8190,7 +8233,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8206,7 +8249,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8222,7 +8265,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8254,7 +8297,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8270,7 +8313,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8286,7 +8329,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8302,7 +8345,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8318,7 +8361,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8334,7 +8377,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8350,7 +8393,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8366,7 +8409,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8382,7 +8425,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8398,7 +8441,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8414,7 +8457,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8430,7 +8473,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8446,7 +8489,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8462,7 +8505,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8478,7 +8521,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8494,7 +8537,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -8529,7 +8572,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="btlpass-girl">
-                                    <img src="rc/break-girl848.png" />
+                                    <img src="break-girl848.png" />
                                 </div>
                                 <div className="btlpass-btn-box">
                                     <div className="color-btn">
@@ -8539,7 +8582,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn"
-                                        style="left: 552px">
+                                        style={{ left: "552px" }}>
                                         <div className="color-btn-text">
                                             {/* Buy Pumpkins */}
                                             Buy Tickets
@@ -8554,22 +8597,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-xmas-1.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-xmas-1.png')",
+                                        }}></div>
                                     <div className="essence-price">305</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $2
                                             </span>
                                         </div>
@@ -8578,22 +8625,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-xmas-2.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-xmas-2.png')",
+                                        }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $9.99
                                             </span>
                                         </div>
@@ -8602,22 +8653,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-xmas-3.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-xmas-3.png')",
+                                        }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $24.99
                                             </span>
                                         </div>
@@ -8631,22 +8686,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-pumpkins-150-1.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-pumpkins-150-1.png')",
+                                        }}></div>
                                     <div className="essence-price">305</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $2
                                             </span>
                                         </div>
@@ -8655,22 +8714,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-pumpkins-150-2.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-pumpkins-150-2.png')",
+                                        }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $9.99
                                             </span>
                                         </div>
@@ -8679,22 +8742,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-pumpkins-150-3.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-pumpkins-150-3.png')",
+                                        }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $24.99
                                             </span>
                                         </div>
@@ -8708,22 +8775,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-bf-1.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-bf-1.png')",
+                                        }}></div>
                                     <div className="essence-price">305</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $2
                                             </span>
                                         </div>
@@ -8732,22 +8803,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-bf-2.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-bf-2.png')",
+                                        }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $9.99
                                             </span>
                                         </div>
@@ -8756,22 +8831,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-bf-3.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-bf-3.png')",
+                                        }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $24.99
                                             </span>
                                         </div>
@@ -8785,22 +8864,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-vl-1.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-vl-1.png')",
+                                        }}></div>
                                     <div className="essence-price">305</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $2
                                             </span>
                                         </div>
@@ -8809,22 +8892,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-vl-2.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-vl-2.png')",
+                                        }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $9.99
                                             </span>
                                         </div>
@@ -8833,22 +8920,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-tickets-vl-3.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-tickets-vl-3.png')",
+                                        }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $24.99
                                             </span>
                                         </div>
@@ -8862,22 +8953,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-autumn-leaf-1.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-autumn-leaf-1.png')",
+                                        }}></div>
                                     <div className="essence-price">305</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $2
                                             </span>
                                         </div>
@@ -8886,22 +8981,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-autumn-leaf-2.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-autumn-leaf-2.png')",
+                                        }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $9.99
                                             </span>
                                         </div>
@@ -8910,22 +9009,26 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        width: 150px;
-                                        height: 150px;
-                                        margin-left: 40px;
-                                        background-image: url('rc/ic-autumn-leaf-3.png');
-                                    "></div>
+                                        style={{
+                                            width: "150px",
+                                            height: "150px",
+                                            "margin-left": "40px",
+                                            "background-image":
+                                                "url('rc/ic-autumn-leaf-3.png')",
+                                        }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
                                         className="essebtn-box"
-                                        style="box-shadow: none; background: none">
+                                        style={{
+                                            "box-shadow": "none",
+                                            background: "none",
+                                        }}>
                                         <div
                                             className="store-button"
-                                            style="top: 7px">
+                                            style={{ top: "7px" }}>
                                             <span
                                                 className="coron-price"
-                                                style="top: 4px">
+                                                style={{ top: "4px" }}>
                                                 $24.99
                                             </span>
                                         </div>
@@ -9191,9 +9294,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                                     <div className="progress">
                                                                         <div
                                                                             className="fulfilled"
-                                                                            style="
-                                                                            width: 50%;
-                                                                        "></div>
+                                                                            style={{
+                                                                                width: "50%",
+                                                                            }}></div>
                                                                     </div>
                                                                     <div className="value">
                                                                         <div className="from">
@@ -9262,14 +9365,14 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="bf-hero-box-all">
                                     <div className="lhero-box">
                                         <div className="lhero-pic">
-                                            <img src="rc/hero0075@1x.jpg" />
+                                            <img src="hero0075@1x.jpg" />
                                         </div>
                                         <div className="topname-box">
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-r.png" />
+                                                <img src="cur-r.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -9299,7 +9402,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9312,7 +9415,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9321,14 +9424,14 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div className="lhero-box">
                                         <div className="lhero-pic">
-                                            <img src="rc/hero0075@1x.jpg" />
+                                            <img src="hero0075@1x.jpg" />
                                         </div>
                                         <div className="topname-box">
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-r.png" />
+                                                <img src="cur-r.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -9358,7 +9461,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9371,7 +9474,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9380,14 +9483,14 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div className="lhero-box">
                                         <div className="lhero-pic">
-                                            <img src="rc/hero0075@1x.jpg" />
+                                            <img src="hero0075@1x.jpg" />
                                         </div>
                                         <div className="topname-box">
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-r.png" />
+                                                <img src="cur-r.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -9417,7 +9520,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9430,7 +9533,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9472,14 +9575,14 @@ const MainScreen01AllPopupsComponent = () => {
                                 <div className="bf-hero-box-all">
                                     <div className="lhero-box">
                                         <div className="lhero-pic">
-                                            <img src="rc/hero0075@1x.jpg" />
+                                            <img src="hero0075@1x.jpg" />
                                         </div>
                                         <div className="topname-box">
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-r.png" />
+                                                <img src="cur-r.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -9509,7 +9612,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9522,7 +9625,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9531,14 +9634,14 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div className="lhero-box">
                                         <div className="lhero-pic">
-                                            <img src="rc/hero0075@1x.jpg" />
+                                            <img src="hero0075@1x.jpg" />
                                         </div>
                                         <div className="topname-box">
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-r.png" />
+                                                <img src="cur-r.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -9568,7 +9671,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9581,7 +9684,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9590,14 +9693,14 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div className="lhero-box">
                                         <div className="lhero-pic">
-                                            <img src="rc/hero0075@1x.jpg" />
+                                            <img src="hero0075@1x.jpg" />
                                         </div>
                                         <div className="topname-box">
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-r.png" />
+                                                <img src="cur-r.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -9627,7 +9730,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9640,7 +9743,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                     <div className="bonus-lvl-box-bonus">
                                                         Увеличение DPS + 5000%
                                                         <span className="ff-sh2-icon">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </span>
                                                     </div>
                                                 </div>
@@ -9791,7 +9894,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="progress">
                                                     <div
                                                         className="fulfilled"
-                                                        style="width: 50%"></div>
+                                                        style={{
+                                                            width: "50%",
+                                                        }}></div>
                                                 </div>
                                                 <div className="value">
                                                     <div className="from">
@@ -9958,10 +10063,10 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="topname-box">
                                             <div className="lrare-box uncommon"></div>
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-u.png" />
+                                                <img src="cur-u.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-ranger.png" />
+                                                <img src="cur2-ranger.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -9973,7 +10078,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     0/10
                                                 </div>
@@ -10008,7 +10115,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         <div className="bonus-lvl-box-bonus">
                                                             +2.15% dps to
                                                             <div className="ff-sh2-icon">
-                                                                <img src="rc/cur2-ranger.png" />
+                                                                <img src="cur2-ranger.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -10037,7 +10144,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/pse-uncommons.png" />
+                                                <img src="pse-uncommons.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 <span>20</span>
@@ -10045,7 +10152,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/ic-green-butil.png" />
+                                                <img src="ic-green-butil.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 <span>1000</span>
@@ -10061,10 +10168,10 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="topname-box">
                                             <div className="lrare-box common"></div>
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-c.png" />
+                                                <img src="cur-c.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -10076,7 +10183,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     0/10
                                                 </div>
@@ -10110,7 +10219,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         <div className="bonus-lvl-box-bonus">
                                                             +1.1% dps to
                                                             <div className="ff-sh2-icon">
-                                                                <img src="rc/cur2-sword.png" />
+                                                                <img src="cur2-sword.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -10142,7 +10251,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/pse-rares.png" />
+                                                <img src="pse-rares.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 <span>10</span>
@@ -10150,7 +10259,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/diamond6-shop.png" />
+                                                <img src="diamond6-shop.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 150
@@ -10158,7 +10267,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/ic-blue-butil.png" />
+                                                <img src="ic-blue-butil.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 <span>1000</span>
@@ -10175,7 +10284,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div className="sv-reward-box">
                                         <div className="sv-reward-pic">
-                                            <img src="rc/fapop-token4.png" />
+                                            <img src="fapop-token4.png" />
                                         </div>
                                         <div className="sv-reward-count">
                                             <span>100</span>
@@ -10184,7 +10293,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div className="sv-reward-box">
                                         <div className="sv-reward-pic">
-                                            <img src="rc/ic-tickets-bf-1.png" />
+                                            <img src="ic-tickets-bf-1.png" />
                                         </div>
                                         <div className="sv-reward-count">
                                             350
@@ -10215,7 +10324,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prg-box">
                                                 <div
                                                     className="prg"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                             </div>
                                         </div>
                                         <div className="rewards">
@@ -10253,7 +10364,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     <div className="qsun-box">
                                         <div className="chest-box-all">
                                             <div className="chest-box">
-                                                <img src="rc/sh-icon-chest-128.png" />
+                                                <img src="sh-icon-chest-128.png" />
                                             </div>
                                         </div>
                                         <div className="sh2-5">5</div>
@@ -10268,7 +10379,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     <div className="qsun-box">
                                         <div className="chest-box-all">
                                             <div className="chest-box">
-                                                <img src="rc/sh-icon-chest-128.png" />
+                                                <img src="sh-icon-chest-128.png" />
                                             </div>
                                         </div>
                                         <div className="sh2-5">5</div>
@@ -10283,7 +10394,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     <div className="qsun-box">
                                         <div className="chest-box-all">
                                             <div className="chest-box">
-                                                <img src="rc/sh-icon-chest-128.png" />
+                                                <img src="sh-icon-chest-128.png" />
                                             </div>
                                         </div>
                                         <div className="sh2-5">5</div>
@@ -10306,7 +10417,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="prg-keys">
                                             <div
                                                 className="prg-all"
-                                                style="width: 0%"></div>
+                                                style={{ width: "0%" }}></div>
                                         </div>
                                         <div className="keys-num">0/5</div>
                                         <div className="keys-pic"></div>
@@ -10451,15 +10562,17 @@ const MainScreen01AllPopupsComponent = () => {
                                                 />
                                             </div>
                                             <div className="sh2-icon-forgirl">
-                                                <img src="rc/cur2-druid.png" />
+                                                <img src="cur2-druid.png" />
                                             </div>
                                             <div className="sh2-icon">
-                                                <img src="rc/cur-c.png" />
+                                                <img src="cur-c.png" />
                                             </div>
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     5/10
                                                 </div>
@@ -10471,26 +10584,29 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="images/hero-all/tithero-5010/x1/ava/tithero-5010-1-ava.jpg"
-                                                    style="width: 130px"
+                                                    style={{ width: "130px" }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
                                                         className=""
                                                         src="rc/powerHero-pieces-ic.png"
-                                                        style="
-                                                        position: absolute;
-                                                        width: 70px;
-                                                        height: 70px;
-                                                        left: 3px;
-                                                        top: 70px;
-                                                    "
+                                                        style={{
+                                                            position:
+                                                                "absolute",
+                                                            width: "70px",
+                                                            height: "70px",
+                                                            left: "3px",
+                                                            top: "70px",
+                                                        }}
                                                     />
                                                 </div>
                                             </div>
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     5/10
                                                 </div>
@@ -10504,15 +10620,17 @@ const MainScreen01AllPopupsComponent = () => {
                                                 />
                                             </div>
                                             <div className="sh2-icon-forgirl">
-                                                <img src="rc/cur2-barbarian.png" />
+                                                <img src="cur2-barbarian.png" />
                                             </div>
                                             <div className="sh2-icon">
-                                                <img src="rc/cur-e.png" />
+                                                <img src="cur-e.png" />
                                             </div>
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     5/10
                                                 </div>
@@ -10530,7 +10648,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     1
                                                 </div>
@@ -10541,29 +10661,30 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="images/hero-all/tithero-15/x1/ava/tithero-15-1-ava.jpg"
-                                                    style="width: 130px"
+                                                    style={{ width: "130px" }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
                                                         className=""
                                                         src="rc/powerHero-pieces-ic.png"
-                                                        style="
-                                                        position: absolute;
-                                                        width: 70px;
-                                                        height: 70px;
-                                                        left: 3px;
-                                                        top: 70px;
-                                                    "
+                                                        style={{
+                                                            position:
+                                                                "absolute",
+                                                            width: "70px",
+                                                            height: "70px",
+                                                            left: "3px",
+                                                            top: "70px",
+                                                        }}
                                                     />
                                                 </div>
                                                 <div
                                                     className="sh2-5"
-                                                    style="
-                                                    left: unset;
-                                                    right: 5px;
-                                                    top: unset;
-                                                    bottom: 5px;
-                                                ">
+                                                    style={{
+                                                        left: "unset",
+                                                        right: "5px",
+                                                        top: "unset",
+                                                        bottom: "5px",
+                                                    }}>
                                                     10
                                                 </div>
                                             </div>
@@ -10576,15 +10697,17 @@ const MainScreen01AllPopupsComponent = () => {
                                                 />
                                             </div>
                                             <div className="sh2-icon-forgirl">
-                                                <img src="rc/cur2-quitar.png" />
+                                                <img src="cur2-quitar.png" />
                                             </div>
                                             <div className="sh2-icon">
-                                                <img src="rc/cur-u.png" />
+                                                <img src="cur-u.png" />
                                             </div>
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     5/10
                                                 </div>
@@ -10596,29 +10719,30 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="images/hero-all/tithero-5005/x1/ava/tithero-5005-1-ava.jpg"
-                                                    style="width: 130px"
+                                                    style={{ width: "130px" }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
                                                         className=""
                                                         src="rc/powerHero-pieces-ic.png"
-                                                        style="
-                                                        position: absolute;
-                                                        width: 70px;
-                                                        height: 70px;
-                                                        left: 3px;
-                                                        top: 70px;
-                                                    "
+                                                        style={{
+                                                            position:
+                                                                "absolute",
+                                                            width: "70px",
+                                                            height: "70px",
+                                                            left: "3px",
+                                                            top: "70px",
+                                                        }}
                                                     />
                                                 </div>
                                                 <div
                                                     className="sh2-5"
-                                                    style="
-                                                    left: unset;
-                                                    right: 5px;
-                                                    top: unset;
-                                                    bottom: 5px;
-                                                ">
+                                                    style={{
+                                                        left: "unset",
+                                                        right: "5px",
+                                                        top: "unset",
+                                                        bottom: "5px",
+                                                    }}>
                                                     10
                                                 </div>
                                             </div>
@@ -10631,15 +10755,17 @@ const MainScreen01AllPopupsComponent = () => {
                                                 />
                                             </div>
                                             <div className="sh2-icon-forgirl">
-                                                <img src="rc/cur2-cleric.png" />
+                                                <img src="cur2-cleric.png" />
                                             </div>
                                             <div className="sh2-icon">
-                                                <img src="rc/cur-u.png" />
+                                                <img src="cur-u.png" />
                                             </div>
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     5/10
                                                 </div>
@@ -10651,29 +10777,30 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="images/hero-all/tithero-11/x1/ava/tithero-11-1-ava.jpg"
-                                                    style="width: 130px"
+                                                    style={{ width: "130px" }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
                                                         className=""
                                                         src="rc/powerHero-pieces-ic.png"
-                                                        style="
-                                                        position: absolute;
-                                                        width: 70px;
-                                                        height: 70px;
-                                                        left: 3px;
-                                                        top: 70px;
-                                                    "
+                                                        style={{
+                                                            position:
+                                                                "absolute",
+                                                            width: "70px",
+                                                            height: "70px",
+                                                            left: "3px",
+                                                            top: "70px",
+                                                        }}
                                                     />
                                                 </div>
                                                 <div
                                                     className="sh2-5"
-                                                    style="
-                                                    left: unset;
-                                                    right: 5px;
-                                                    top: unset;
-                                                    bottom: 5px;
-                                                ">
+                                                    style={{
+                                                        left: "unset",
+                                                        right: "5px",
+                                                        top: "unset",
+                                                        bottom: "5px",
+                                                    }}>
                                                     10
                                                 </div>
                                             </div>
@@ -10686,15 +10813,17 @@ const MainScreen01AllPopupsComponent = () => {
                                                 />
                                             </div>
                                             <div className="sh2-icon-forgirl">
-                                                <img src="rc/cur2-cleric.png" />
+                                                <img src="cur2-cleric.png" />
                                             </div>
                                             <div className="sh2-icon">
-                                                <img src="rc/cur-c.png" />
+                                                <img src="cur-c.png" />
                                             </div>
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     5/10
                                                 </div>
@@ -10706,29 +10835,30 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="images/hero-all/tithero-5006/x1/ava/tithero-5006-1-ava.jpg"
-                                                    style="width: 130px"
+                                                    style={{ width: "130px" }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
                                                         className=""
                                                         src="rc/powerHero-pieces-ic.png"
-                                                        style="
-                                                        position: absolute;
-                                                        width: 70px;
-                                                        height: 70px;
-                                                        left: 3px;
-                                                        top: 70px;
-                                                    "
+                                                        style={{
+                                                            position:
+                                                                "absolute",
+                                                            width: "70px",
+                                                            height: "70px",
+                                                            left: "3px",
+                                                            top: "70px",
+                                                        }}
                                                     />
                                                 </div>
                                                 <div
                                                     className="sh2-5"
-                                                    style="
-                                                    left: unset;
-                                                    right: 5px;
-                                                    top: unset;
-                                                    bottom: 5px;
-                                                ">
+                                                    style={{
+                                                        left: "unset",
+                                                        right: "5px",
+                                                        top: "unset",
+                                                        bottom: "5px",
+                                                    }}>
                                                     10
                                                 </div>
                                             </div>
@@ -10784,7 +10914,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="item-box">
-                                                <img src="rc/ic-abil-gold.png" />
+                                                <img src="ic-abil-gold.png" />
                                                 <div className="rate gold">
                                                     +500%
                                                 </div>
@@ -11035,7 +11165,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="fortuna-btn-box get-tokens">
                                                 <div
                                                     className="color-btn"
-                                                    style="top: 35px">
+                                                    style={{ top: "35px" }}>
                                                     <div className="color-btn-text">
                                                         Spin the wheel!
                                                     </div>
@@ -11104,7 +11234,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -11143,7 +11275,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-simple">
                                                 <div className="btlpass-level-rew-box check">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11159,7 +11291,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11175,7 +11307,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11191,7 +11323,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11207,7 +11339,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11223,7 +11355,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11239,7 +11371,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11255,7 +11387,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11271,7 +11403,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11287,7 +11419,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11303,7 +11435,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11319,7 +11451,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11335,7 +11467,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11351,7 +11483,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11367,7 +11499,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11383,7 +11515,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11399,7 +11531,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11415,7 +11547,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11431,7 +11563,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11447,7 +11579,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11463,7 +11595,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11479,7 +11611,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11495,7 +11627,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11511,7 +11643,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11543,7 +11675,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11559,7 +11691,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11575,7 +11707,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11591,7 +11723,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11607,7 +11739,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11623,7 +11755,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11639,7 +11771,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11671,7 +11803,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11687,7 +11819,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11703,7 +11835,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11719,7 +11851,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11735,7 +11867,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11751,7 +11883,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11767,7 +11899,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11783,7 +11915,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11799,7 +11931,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11815,7 +11947,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11831,7 +11963,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11847,7 +11979,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11863,7 +11995,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11879,7 +12011,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11895,7 +12027,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -11911,7 +12043,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12100,7 +12232,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="btlpass-level-elite">
                                                 <div className="btlpass-level-rew-box collect">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12116,7 +12248,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12132,7 +12264,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12148,7 +12280,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12164,7 +12296,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12180,7 +12312,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12196,7 +12328,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12212,7 +12344,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12228,7 +12360,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12244,7 +12376,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12260,7 +12392,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12276,7 +12408,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12292,7 +12424,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12308,7 +12440,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12324,7 +12456,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12340,7 +12472,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12356,7 +12488,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12372,7 +12504,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12388,7 +12520,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12404,7 +12536,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12420,7 +12552,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12436,7 +12568,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12452,7 +12584,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12468,7 +12600,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12500,7 +12632,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12516,7 +12648,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12532,7 +12664,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12548,7 +12680,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12564,7 +12696,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12580,7 +12712,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12596,7 +12728,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12628,7 +12760,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12644,7 +12776,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12660,7 +12792,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12676,7 +12808,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12692,7 +12824,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12708,7 +12840,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12724,7 +12856,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12740,7 +12872,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12756,7 +12888,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12772,7 +12904,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12788,7 +12920,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12804,7 +12936,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12820,7 +12952,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12836,7 +12968,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12852,7 +12984,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -12868,7 +13000,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="btlpass-level-rew-box block">
                                                     <div className="btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="btlpass-level-rew-good"></div>
                                                     <div className="btlpass-level-rew-num">
@@ -13154,14 +13286,14 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                     <div className="rewards-wrap">
                                         <div className="reward-box">
-                                            <img src="rc/v2-mn-soul-sg-160.png" />
+                                            <img src="v2-mn-soul-sg-160.png" />
                                             <div className="reward-icn"></div>
                                             <div className="reward-value">
                                                 x100
                                             </div>
                                         </div>
                                         <div className="reward-box">
-                                            <img src="rc/ic-black-butil-160.png" />
+                                            <img src="ic-black-butil-160.png" />
                                             <div className="reward-icn"></div>
                                             <div className="reward-value">
                                                 x100
@@ -13319,7 +13451,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 Superhero Chest
                                             </div>
                                             <div className="item">
-                                                <img src="rc/sh-icon-chest-dark.png" />
+                                                <img src="sh-icon-chest-dark.png" />
                                                 <div className="reward-value">
                                                     100
                                                 </div>
@@ -13336,7 +13468,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 Angel Chest
                                             </div>
                                             <div className="item">
-                                                <img src="rc/darkworld-chest-agels.png" />
+                                                <img src="darkworld-chest-agels.png" />
                                                 <div className="reward-value">
                                                     100
                                                 </div>
@@ -14291,7 +14423,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 85%"></div>
+                                                    style={{
+                                                        width: "85%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 повышение 20
@@ -14455,7 +14589,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 25%"></div>
+                                                    style={{
+                                                        width: "25%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 you have 0/9.63K
@@ -14478,7 +14614,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="xmas-level-level">
                                                 <div
                                                     className="xmas-level-level-prg"
-                                                    style="width: 1%"></div>
+                                                    style={{
+                                                        width: "1%",
+                                                    }}></div>
                                                 <div className="xmas-level-level-num-box">
                                                     <div className="xmas-level-level-num">
                                                         1
@@ -14635,7 +14773,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="xmas-level-reward">
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         153BD3
@@ -14650,7 +14788,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14665,7 +14803,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/photo-ic@2x.png" />
+                                                        <img src="photo-ic@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         2
@@ -14680,7 +14818,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         160
@@ -14695,7 +14833,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14710,7 +14848,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14725,7 +14863,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14740,7 +14878,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         230
@@ -14755,7 +14893,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         153BD3
@@ -14770,7 +14908,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14785,7 +14923,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/photo-ic@2x.png" />
+                                                        <img src="photo-ic@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         2
@@ -14800,7 +14938,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         160
@@ -14815,7 +14953,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14830,7 +14968,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14845,7 +14983,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         4
@@ -14860,7 +14998,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         230
@@ -14875,7 +15013,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         153BD3
@@ -14890,7 +15028,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         6
@@ -14905,7 +15043,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/photo-ic@2x.png" />
+                                                        <img src="photo-ic@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         2
@@ -14920,7 +15058,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         400
@@ -14935,7 +15073,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -14950,7 +15088,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -14965,7 +15103,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -14980,7 +15118,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         575
@@ -14995,7 +15133,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-ny-sneg-8.png" />
+                                                        <img src="ic-ny-sneg-8.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         5K
@@ -15010,7 +15148,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         6
@@ -15025,7 +15163,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/photo-ic@2x.png" />
+                                                        <img src="photo-ic@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         2
@@ -15040,7 +15178,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         400
@@ -15055,7 +15193,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15070,7 +15208,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15085,7 +15223,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         6
@@ -15100,7 +15238,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         575
@@ -15115,7 +15253,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-ny-sneg-9.png" />
+                                                        <img src="ic-ny-sneg-9.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         5K
@@ -15130,7 +15268,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         6
@@ -15145,7 +15283,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/photo-ic@2x.png" />
+                                                        <img src="photo-ic@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         2
@@ -15160,7 +15298,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         400
@@ -15175,7 +15313,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15190,7 +15328,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15205,7 +15343,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15220,7 +15358,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         575
@@ -15235,7 +15373,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         153BD3
@@ -15250,7 +15388,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         6
@@ -15265,7 +15403,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/photo-ic@2x.png" />
+                                                        <img src="photo-ic@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         2
@@ -15280,7 +15418,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         400
@@ -15295,7 +15433,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15310,7 +15448,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15325,7 +15463,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         10
@@ -15340,7 +15478,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         575
@@ -15355,7 +15493,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-ny-sneg-10.png" />
+                                                        <img src="ic-ny-sneg-10.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         5K
@@ -15370,7 +15508,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="xmas-level-rew-box false false block">
                                                     <div className="xmas-level-rew-pic">
-                                                        <img src="rc/ic-ny-sneg-11.png" />
+                                                        <img src="ic-ny-sneg-11.png" />
                                                     </div>
                                                     <div className="xmas-level-rew-num">
                                                         5K
@@ -15388,7 +15526,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="xmas-girl">
-                                    <img src="rc/break-girl-mas-event-pass-02.png" />
+                                    <img src="break-girl-mas-event-pass-02.png" />
                                 </div>
                                 <div className="xmas-btn-box">
                                     <div className="color-btn quest">
@@ -15427,7 +15565,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 25%"></div>
+                                                    style={{
+                                                        width: "25%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 you have 0/9.63K
@@ -15446,7 +15586,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 1 XMas Chest
                                             </div>
                                             <div className="item-box">
-                                                <img src="rc/v2-xmas-chest-red.png" />
+                                                <img src="v2-xmas-chest-red.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -15464,7 +15604,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 3 XMas Chests
                                             </div>
                                             <div className="item-box">
-                                                <img src="rc/v2-xmas-chest-red.png" />
+                                                <img src="v2-xmas-chest-red.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -15482,7 +15622,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 5 XMas Chests
                                             </div>
                                             <div className="item-box">
-                                                <img src="rc/v2-xmas-chest-red.png" />
+                                                <img src="v2-xmas-chest-red.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -15500,7 +15640,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 10 XMas Chests
                                             </div>
                                             <div className="item-box">
-                                                <img src="rc/v2-xmas-chest-red.png" />
+                                                <img src="v2-xmas-chest-red.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -15516,7 +15656,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     </div>
                                 </div>
                                 <div className="xmas-girl">
-                                    <img src="rc/break-girl-mas-event-pass-02.png" />
+                                    <img src="break-girl-mas-event-pass-02.png" />
                                 </div>
                                 <div className="xmas-btn-box">
                                     <div className="color-btn">
@@ -15542,7 +15682,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="xmas-prg-bar">
                                             <div
                                                 className="xmas-prg"
-                                                style="width: 25%"></div>
+                                                style={{ width: "25%" }}></div>
                                         </div>
                                     </div>
                                     <div className="xmas-reward-chest-box undefined undefined undefined">
@@ -15552,7 +15692,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             </div>
                                         </div>
                                         <div className="xmas-level-rew-pic">
-                                            <img src="rc/v2-xmas-chest-red.png" />
+                                            <img src="v2-xmas-chest-red.png" />
                                         </div>
                                         <div className="xmas-level-rew-num-check"></div>
                                         <div className="color-btn green">
@@ -15569,7 +15709,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             </div>
                                         </div>
                                         <div className="xmas-level-rew-pic">
-                                            <img src="rc/v2-xmas-chest-red.png" />
+                                            <img src="v2-xmas-chest-red.png" />
                                         </div>
                                         <div className="xmas-level-rew-num-check"></div>
                                         <div className="color-btn green">
@@ -15586,7 +15726,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             </div>
                                         </div>
                                         <div className="xmas-level-rew-pic">
-                                            <img src="rc/v2-xmas-chest-red.png" />
+                                            <img src="v2-xmas-chest-red.png" />
                                         </div>
                                         <div className="xmas-level-rew-num-check"></div>
                                         <div className="color-btn green">
@@ -15606,7 +15746,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-prgbar-all">
                                                 <div
                                                     className="daily-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="daily-prgbar-text">
                                                     0/3
                                                 </div>
@@ -15614,7 +15756,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-parth-claim-box">
                                                 <div className="daily-reward">
                                                     <div className="daily-reward-pic">
-                                                        <img src="rc/ic-dildo-gold.png" />
+                                                        <img src="ic-dildo-gold.png" />
                                                     </div>
                                                     <div className="daily-reward-count">
                                                         20
@@ -15636,7 +15778,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-prgbar-all">
                                                 <div
                                                     className="daily-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="daily-prgbar-text">
                                                     0/1
                                                 </div>
@@ -15644,7 +15788,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-parth-claim-box">
                                                 <div className="daily-reward">
                                                     <div className="daily-reward-pic">
-                                                        <img src="rc/ic-dildo-gold.png" />
+                                                        <img src="ic-dildo-gold.png" />
                                                     </div>
                                                     <div className="daily-reward-count">
                                                         10
@@ -15667,7 +15811,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-prgbar-all">
                                                 <div
                                                     className="daily-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="daily-prgbar-text">
                                                     0/10
                                                 </div>
@@ -15675,7 +15821,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-parth-claim-box">
                                                 <div className="daily-reward">
                                                     <div className="daily-reward-pic">
-                                                        <img src="rc/ic-dildo-gold.png" />
+                                                        <img src="ic-dildo-gold.png" />
                                                     </div>
                                                     <div className="daily-reward-count">
                                                         10
@@ -15698,7 +15844,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-prgbar-all">
                                                 <div
                                                     className="daily-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="daily-prgbar-text">
                                                     0/5
                                                 </div>
@@ -15706,7 +15854,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-parth-claim-box">
                                                 <div className="daily-reward">
                                                     <div className="daily-reward-pic">
-                                                        <img src="rc/ic-dildo-gold.png" />
+                                                        <img src="ic-dildo-gold.png" />
                                                     </div>
                                                     <div className="daily-reward-count">
                                                         10
@@ -15729,7 +15877,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-prgbar-all">
                                                 <div
                                                     className="daily-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="daily-prgbar-text">
                                                     0/10
                                                 </div>
@@ -15737,7 +15887,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-parth-claim-box">
                                                 <div className="daily-reward">
                                                     <div className="daily-reward-pic">
-                                                        <img src="rc/ic-dildo-gold.png" />
+                                                        <img src="ic-dildo-gold.png" />
                                                     </div>
                                                     <div className="daily-reward-count">
                                                         20
@@ -15760,7 +15910,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-prgbar-all">
                                                 <div
                                                     className="daily-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="daily-prgbar-text">
                                                     0/15
                                                 </div>
@@ -15768,7 +15920,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="daily-parth-claim-box">
                                                 <div className="daily-reward">
                                                     <div className="daily-reward-pic">
-                                                        <img src="rc/ic-dildo-gold.png" />
+                                                        <img src="ic-dildo-gold.png" />
                                                     </div>
                                                     <div className="daily-reward-count">
                                                         30
@@ -15941,7 +16093,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16060,7 +16214,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16179,7 +16335,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16298,7 +16456,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16417,7 +16577,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0.896%"></div>
+                                                        style={{
+                                                            width: "0.896%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16536,7 +16698,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16698,7 +16862,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-vl-heart-dark-blue.png" />
+                                                    <img src="ic-vl-heart-dark-blue.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -16711,7 +16875,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16744,7 +16910,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -16763,7 +16929,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -16782,7 +16948,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -16817,7 +16983,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-vl-heart-red.png" />
+                                                    <img src="ic-vl-heart-red.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -16830,7 +16996,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16863,7 +17031,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -16882,7 +17050,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -16901,7 +17069,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -16936,7 +17104,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-vl-heart-dark-lilac.png" />
+                                                    <img src="ic-vl-heart-dark-lilac.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -16949,7 +17117,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -16982,7 +17152,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17001,7 +17171,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17020,7 +17190,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17055,7 +17225,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-vl-heart-green.png" />
+                                                    <img src="ic-vl-heart-green.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -17068,7 +17238,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17101,7 +17273,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17120,7 +17292,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17139,7 +17311,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17174,7 +17346,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-vl-heart-pink.png" />
+                                                    <img src="ic-vl-heart-pink.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     224/10K
@@ -17187,7 +17359,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0.896%"></div>
+                                                        style={{
+                                                            width: "0.896%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17220,7 +17394,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17239,7 +17413,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17258,7 +17432,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17293,7 +17467,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-vl-heart-blue.png" />
+                                                    <img src="ic-vl-heart-blue.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -17306,7 +17480,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17339,7 +17515,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17358,7 +17534,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17377,7 +17553,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/v2-vl-candys-box.png" />
+                                                        <img src="v2-vl-candys-box.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17466,7 +17642,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-march-flower-dark-blue.png" />
+                                                    <img src="ic-march-flower-dark-blue.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -17479,7 +17655,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17512,7 +17690,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17531,7 +17709,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17550,7 +17728,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17585,7 +17763,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-march-flower-red.png" />
+                                                    <img src="ic-march-flower-red.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -17598,7 +17776,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17631,7 +17811,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17650,7 +17830,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17669,7 +17849,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17704,7 +17884,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-march-flower-lilac.png" />
+                                                    <img src="ic-march-flower-lilac.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -17717,7 +17897,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17750,7 +17932,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17769,7 +17951,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17788,7 +17970,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17823,7 +18005,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-march-flower-green.png" />
+                                                    <img src="ic-march-flower-green.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -17836,7 +18018,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17869,7 +18053,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17888,7 +18072,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17907,7 +18091,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -17942,7 +18126,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-march-flower-pink.png" />
+                                                    <img src="ic-march-flower-pink.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     224/10K
@@ -17955,7 +18139,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0.896%"></div>
+                                                        style={{
+                                                            width: "0.896%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -17988,7 +18174,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -18007,7 +18193,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -18026,7 +18212,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -18061,7 +18247,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="relics-prize-box-all">
                                             <div className="relics-pack-opened-box">
                                                 <div className="relics-pack-opened-name">
-                                                    <img src="rc/ic-march-flower-blue.png" />
+                                                    <img src="ic-march-flower-blue.png" />
                                                 </div>
                                                 <div className="relics-pack-opened-count">
                                                     0/10K
@@ -18074,7 +18260,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <div className="prg-box">
                                                     <div
                                                         className="prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -18107,7 +18295,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -18126,7 +18314,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -18145,7 +18333,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                 </div>
                                                 <div className="relics-coll">
                                                     <div className="relics-coll-pic">
-                                                        <img src="rc/ic-march-bouquet.png" />
+                                                        <img src="ic-march-bouquet.png" />
                                                     </div>
                                                 </div>
                                                 <div className="relics-coll-check"></div>
@@ -18210,10 +18398,10 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="topname-box">
                                             <div className="lrare-box uncommon"></div>
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-u.png" />
+                                                <img src="cur-u.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-ranger.png" />
+                                                <img src="cur2-ranger.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -18225,7 +18413,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     0/10
                                                 </div>
@@ -18257,7 +18447,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         <div className="bonus-lvl-box-bonus">
                                                             +2.15% dps to
                                                             <div className="ff-sh2-icon">
-                                                                <img src="rc/cur2-ranger.png" />
+                                                                <img src="cur2-ranger.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -18284,7 +18474,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/sh-icon-chest-128.png" />
+                                                <img src="sh-icon-chest-128.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 20
@@ -18300,10 +18490,10 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="topname-box">
                                             <div className="lrare-box common"></div>
                                             <div className="sh2-icon left">
-                                                <img src="rc/cur-c.png" />
+                                                <img src="cur-c.png" />
                                             </div>
                                             <div className="sh2-icon-forgirl right">
-                                                <img src="rc/cur2-sword.png" />
+                                                <img src="cur2-sword.png" />
                                             </div>
                                             <div className="lhero-name-box">
                                                 <div className="lhero-name">
@@ -18315,7 +18505,9 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="sh2-prgbar-all undefined">
                                                 <div
                                                     className="sh2-prgbar"
-                                                    style="width: 0%"></div>
+                                                    style={{
+                                                        width: "0%",
+                                                    }}></div>
                                                 <div className="sh2-prgbar-text">
                                                     0/10
                                                 </div>
@@ -18346,7 +18538,7 @@ const MainScreen01AllPopupsComponent = () => {
                                                         <div className="bonus-lvl-box-bonus">
                                                             +1.1% dps to
                                                             <div className="ff-sh2-icon">
-                                                                <img src="rc/cur2-sword.png" />
+                                                                <img src="cur2-sword.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -18373,7 +18565,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/sh-icon-chest-128.png" />
+                                                <img src="sh-icon-chest-128.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 75
@@ -18381,7 +18573,7 @@ const MainScreen01AllPopupsComponent = () => {
                                         </div>
                                         <div className="sv-reward-box">
                                             <div className="sv-reward-pic">
-                                                <img src="rc/diamond6-shop.png" />
+                                                <img src="diamond6-shop.png" />
                                             </div>
                                             <div className="sv-reward-count">
                                                 150
@@ -18396,7 +18588,7 @@ const MainScreen01AllPopupsComponent = () => {
                                     <div className="sv-chain2"></div>
                                     <div className="sv-reward-box">
                                         <div className="sv-reward-pic">
-                                            <img src="rc/sh-icon-chest-128.png" />
+                                            <img src="sh-icon-chest-128.png" />
                                         </div>
                                         <div className="sv-reward-count">
                                             100
@@ -18450,7 +18642,7 @@ const MainScreen01AllPopupsComponent = () => {
                     </div>
                 </div>
 
-                <div className="slider-layer" style="display: block">
+                <div className="slider-layer" style={{ display: "block" }}>
                     <div className="slider-popup open">
                         <div className="title">Новое достижение: Opulence!</div>
                         <div className="icon">

@@ -10,7 +10,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -19,7 +19,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -108,7 +108,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -138,7 +138,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -148,7 +148,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -178,7 +178,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -194,7 +194,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -225,7 +225,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
@@ -235,7 +235,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -266,7 +266,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -333,7 +333,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                 <div className="tower-relics-box-scroll">
                                     <div className="tower-relics-box gold">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -345,7 +345,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box bronze">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -357,7 +357,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box silver">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -369,7 +369,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box silver">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -381,7 +381,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box gold">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -393,7 +393,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box bronze">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -405,7 +405,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box silver">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -417,7 +417,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box gold">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -429,7 +429,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box bronze">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -441,7 +441,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box silver">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -453,7 +453,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box silver">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -465,7 +465,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box gold">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -477,7 +477,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box bronze">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -489,7 +489,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                     </div>
                                     <div className="tower-relics-box silver">
                                         <div className="tower-relics-pic">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -507,41 +507,41 @@ const V2MainScreen01RelicsPopComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
+                        style={{ display: "block" }}></div>
                     <div
                         className="m-popup main-relics-pop"
-                        style="display: block">
+                        style={{ display: "block" }}>
                         <div className="title">buy relics</div>
                         <div className="color-box"></div>
                         <div className="main-relics-girl-box">
                             <div className="main-relics-girl-pic">
-                                <img src="rc/hero0075@1x.jpg" />
+                                <img src="hero0075@1x.jpg" />
                             </div>
                             <div className="main-relics-timer-box">
                                 <div className="main-relics-timer-text">
@@ -654,7 +654,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                         </div>
                                         <div className="relics-coll">
                                             <div className="relics-coll-pic">
-                                                <img src="rc/change-ic-diamond.png" />
+                                                <img src="change-ic-diamond.png" />
                                             </div>
                                         </div>
                                         <div className="relics-coll-check"></div>
@@ -673,7 +673,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                         </div>
                                         <div className="relics-coll">
                                             <div className="relics-coll-pic">
-                                                <img src="rc/change-ic-diamond.png" />
+                                                <img src="change-ic-diamond.png" />
                                             </div>
                                         </div>
                                         <div className="relics-coll-check"></div>
@@ -692,7 +692,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                         </div>
                                         <div className="relics-coll">
                                             <div className="relics-coll-pic">
-                                                <img src="rc/change-ic-diamond.png" />
+                                                <img src="change-ic-diamond.png" />
                                             </div>
                                         </div>
                                         <div className="relics-coll-check"></div>
@@ -711,7 +711,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                                         </div>
                                         <div className="relics-coll">
                                             <div className="relics-coll-pic">
-                                                <img src="rc/change-ic-diamond.png" />
+                                                <img src="change-ic-diamond.png" />
                                             </div>
                                         </div>
                                         <div className="relics-coll-check"></div>

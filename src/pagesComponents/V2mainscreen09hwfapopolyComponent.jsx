@@ -7,17 +7,19 @@ const V2MainScreen09HwFapopolyComponent = () => {
             <div className="main world1">
                 <div
                     className="main-bg"
-                    style="background-image: url('rc/v2-fapop-hw1.jpg')"></div>
+                    style={{
+                        "background-image": "url('rc/v2-fapop-hw1.jpg')",
+                    }}></div>
                 <div className="fapop-content-all">
                     <div>
                         <div
-                            style="
-                            width: 1200px;
-                            height: 640px;
-                            position: absolute;
-                            top: 0px;
-                            left: 0px;
-                        ">
+                            style={{
+                                width: "1200px",
+                                height: "640px",
+                                position: "absolute",
+                                top: "0px",
+                                left: "0px",
+                            }}>
                             <div className="fp-portal disabled">
                                 <div item="[object Object]" top_offset="100">
                                     <img
@@ -27,558 +29,654 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 150px;
-                                width: 100px;
-                                left: 429px;
-                                top: 328px;
-                                z-index: 11;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "150px",
+                                    width: "100px",
+                                    left: "429px",
+                                    top: "328px",
+                                    "z-index": "11",
+                                }}>
                                 <div
                                     className="fapop-player"
-                                    style="width: 100%; height: 100%">
+                                    style={{ width: "100%", height: "100%" }}>
                                     <div className="fapop-player-name">
                                         guest24783
                                     </div>
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 389.5px;
-                                top: 346px;
-                                z-index: 10;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "389.5px",
+                                    top: "346px",
+                                    "z-index": "10",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic10.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 331.5px;
-                                top: 374px;
-                                z-index: 11;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "331.5px",
+                                    top: "374px",
+                                    "z-index": "11",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic03.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 273.5px;
-                                top: 346px;
-                                z-index: 10;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "273.5px",
+                                    top: "346px",
+                                    "z-index": "10",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic11.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 216.5px;
-                                top: 317px;
-                                z-index: 9;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "216.5px",
+                                    top: "317px",
+                                    "z-index": "9",
+                                }}>
                                 <div>
                                     <img
                                         src="rc/fapop-ic02.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 272.5px;
-                                top: 288px;
-                                z-index: 8;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "272.5px",
+                                    top: "288px",
+                                    "z-index": "8",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic08.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 215.5px;
-                                top: 261px;
-                                z-index: 7;
-                            "></div>
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "215.5px",
+                                    top: "261px",
+                                    "z-index": "7",
+                                }}></div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 160.5px;
-                                top: 234px;
-                                z-index: 6;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "160.5px",
+                                    top: "234px",
+                                    "z-index": "6",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic10.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 218.5px;
-                                top: 207px;
-                                z-index: 5;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "218.5px",
+                                    top: "207px",
+                                    "z-index": "5",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic13.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 271.5px;
-                                top: 179px;
-                                z-index: 4;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "271.5px",
+                                    top: "179px",
+                                    "z-index": "4",
+                                }}>
                                 <div top_offset="50">
                                     <img
                                         src="rc/fapop-ic12.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 330.5px;
-                                top: 206px;
-                                z-index: 5;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "330.5px",
+                                    top: "206px",
+                                    "z-index": "5",
+                                }}>
                                 <div>
                                     <img
                                         src="rc/fapop-ic02.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 388.5px;
-                                top: 173px;
-                                z-index: 4;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "388.5px",
+                                    top: "173px",
+                                    "z-index": "4",
+                                }}>
                                 <div top_offset="50">
                                     <img
                                         src="rc/fapop-ic06.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 445.5px;
-                                top: 202px;
-                                z-index: 5;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "445.5px",
+                                    top: "202px",
+                                    "z-index": "5",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic11.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 501.5px;
-                                top: 174px;
-                                z-index: 4;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "501.5px",
+                                    top: "174px",
+                                    "z-index": "4",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic08.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 558.5px;
-                                top: 146px;
-                                z-index: 3;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "558.5px",
+                                    top: "146px",
+                                    "z-index": "3",
+                                }}>
                                 <div>
                                     <img
                                         src="rc/fapop-ic02.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 613.5px;
-                                top: 119px;
-                                z-index: 2;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "613.5px",
+                                    top: "119px",
+                                    "z-index": "2",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic07.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 667.5px;
-                                top: 91px;
-                                z-index: 1;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "667.5px",
+                                    top: "91px",
+                                    "z-index": "1",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic13.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 723.5px;
-                                top: 117px;
-                                z-index: 2;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "723.5px",
+                                    top: "117px",
+                                    "z-index": "2",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic07.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 779.5px;
-                                top: 147px;
-                                z-index: 3;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "779.5px",
+                                    top: "147px",
+                                    "z-index": "3",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic03.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 838.5px;
-                                top: 172px;
-                                z-index: 4;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "838.5px",
+                                    top: "172px",
+                                    "z-index": "4",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic10.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 895.5px;
-                                top: 194px;
-                                z-index: 5;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "895.5px",
+                                    top: "194px",
+                                    "z-index": "5",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic09.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 951.5px;
-                                top: 224px;
-                                z-index: 6;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "951.5px",
+                                    top: "224px",
+                                    "z-index": "6",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic05.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 1010.5px;
-                                top: 252px;
-                                z-index: 7;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "1010.5px",
+                                    top: "252px",
+                                    "z-index": "7",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic07.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 953.5px;
-                                top: 280px;
-                                z-index: 8;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "953.5px",
+                                    top: "280px",
+                                    "z-index": "8",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic05.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 1010.5px;
-                                top: 308px;
-                                z-index: 9;
-                            "></div>
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "1010.5px",
+                                    top: "308px",
+                                    "z-index": "9",
+                                }}></div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 954.5px;
-                                top: 336px;
-                                z-index: 10;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "954.5px",
+                                    top: "336px",
+                                    "z-index": "10",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic09.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 898.5px;
-                                top: 366px;
-                                z-index: 11;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "898.5px",
+                                    top: "366px",
+                                    "z-index": "11",
+                                }}>
                                 <div>
                                     <img
                                         src="rc/fapop-ic02.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 842.5px;
-                                top: 335px;
-                                z-index: 10;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "842.5px",
+                                    top: "335px",
+                                    "z-index": "10",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic09.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 783.5px;
-                                top: 311px;
-                                z-index: 9;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "783.5px",
+                                    top: "311px",
+                                    "z-index": "9",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic11.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 728.5px;
-                                top: 330px;
-                                z-index: 10;
-                            "></div>
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "728.5px",
+                                    top: "330px",
+                                    "z-index": "10",
+                                }}></div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 672.5px;
-                                top: 366px;
-                                z-index: 11;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "672.5px",
+                                    top: "366px",
+                                    "z-index": "11",
+                                }}>
                                 <div top_offset="50">
                                     <img
                                         src="rc/fapop-ic12.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 727.5px;
-                                top: 393px;
-                                z-index: 12;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "727.5px",
+                                    top: "393px",
+                                    "z-index": "12",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic03.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 672.5px;
-                                top: 419px;
-                                z-index: 13;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "672.5px",
+                                    top: "419px",
+                                    "z-index": "13",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic05.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 618.5px;
-                                top: 449px;
-                                z-index: 14;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "618.5px",
+                                    top: "449px",
+                                    "z-index": "14",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic09.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 558.5px;
-                                top: 421px;
-                                z-index: 13;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "558.5px",
+                                    top: "421px",
+                                    "z-index": "13",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic08.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
                             <div
-                                style="
-                                position: absolute;
-                                height: 100px;
-                                width: 67px;
-                                left: 505.5px;
-                                top: 398px;
-                                z-index: 12;
-                            ">
+                                style={{
+                                    position: "absolute",
+                                    height: "100px",
+                                    width: "67px",
+                                    left: "505.5px",
+                                    top: "398px",
+                                    "z-index": "12",
+                                }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
                                         src="rc/fapop-ic13.png"
-                                        style="width: 100%; height: 100%"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}
                                     />
                                 </div>
                             </div>
@@ -607,50 +705,50 @@ const V2MainScreen09HwFapopolyComponent = () => {
                             </div>
                             <div
                                 className="color-btn fr gblue fp"
-                                style="width: 120px">
+                                style={{ width: "120px" }}>
                                 <img className="domik" src="rc/pse-epic3.png" />
                                 <div
                                     className="color-btn-text"
-                                    style="width: 80px">
+                                    style={{ width: "80px" }}>
                                     shop
                                 </div>
                             </div>
                             <div
                                 className="color-btn fr bordo"
-                                style="width: 160px">
+                                style={{ width: "160px" }}>
                                 <img
                                     className="domik"
                                     src="rc/pse-keygirl.png"
                                 />
                                 <div
                                     className="color-btn-text"
-                                    style="right: 5px; width: 128px">
+                                    style={{ right: "5px", width: "128px" }}>
                                     Collections
                                 </div>
                             </div>
                             <div
                                 className="color-btn fr bordo magic"
-                                style="width: 165px">
+                                style={{ width: "165px" }}>
                                 <img
                                     className="domik"
                                     src="rc/icn-dual-ball.png"
                                 />
                                 <div
                                     className="color-btn-text"
-                                    style="right: 15px; width: 95px">
+                                    style={{ right: "15px", width: "95px" }}>
                                     Dual Pack
                                 </div>
                             </div>
                             <div
                                 className="color-btn fr gblue"
-                                style="width: 165px">
+                                style={{ width: "165px" }}>
                                 <img
                                     className="domik"
                                     src="rc/val2021_res1.png"
                                 />
                                 <div
                                     className="color-btn-text"
-                                    style="right: 15px; width: 95px">
+                                    style={{ right: "15px", width: "95px" }}>
                                     Craftery
                                 </div>
                             </div>
@@ -660,7 +758,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 <div className="fapop-times-around-prgbar">
                                     <div
                                         className="fapop-times-around-prgbar-full"
-                                        style="height: 17%"></div>
+                                        style={{ height: "17%" }}></div>
                                     <div className="fapop-times-around-text">
                                         Floor
                                         <br />
@@ -689,28 +787,28 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="rc/ic-abil-dps-plus@2x.png" />
+                                            <img src="ic-abil-dps-plus@2x.png" />
                                         </div>
                                         <div className="fapop-rew-pts">x2</div>
                                         <div className="fapop-pts-num">50</div>
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="rc/arrow_up1.png" />
+                                            <img src="arrow_up1.png" />
                                         </div>
                                         <div className="fapop-rew-pts">15</div>
                                         <div className="fapop-pts-num">35</div>
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="rc/sh-icon-chest-128.png" />
+                                            <img src="sh-icon-chest-128.png" />
                                         </div>
                                         <div className="fapop-rew-pts">35</div>
                                         <div className="fapop-pts-num">20</div>
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="rc/ic-abil-gold-up.png" />
+                                            <img src="ic-abil-gold-up.png" />
                                         </div>
                                         <div className="fapop-rew-pts">
                                             10K%
@@ -719,7 +817,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     </div>
                                     <div className="fapop-rewards claim">
                                         <div className="fapop-rew-pic">
-                                            <img src="rc/sh-icon-chest-128.png" />
+                                            <img src="sh-icon-chest-128.png" />
                                         </div>
                                         <div className="fapop-rew-pts">
                                             claim
@@ -737,7 +835,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                             className="fapop-prgbar-box-all">
                             <div className="fapop-prgbar-reward-box">
                                 <div className="fapop-prgbar-reward-pic">
-                                    <img src="rc/fapop-token-ic.png" />
+                                    <img src="fapop-token-ic.png" />
                                 </div>
                                 <div className="fapop-prgbar-reward-text">
                                     1
@@ -746,7 +844,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                             <div className="fapop-prgbar-box">
                                 <div
                                     className="fapop-prgbar-full"
-                                    style="width: 40%"></div>
+                                    style={{ width: "40%" }}></div>
                                 <div className="fapop-prgbar-text">
                                     Kill 50 minions
                                 </div>
@@ -783,10 +881,10 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 </div>
                             </div>
                             <div className="fapop-dice-end-1">
-                                <img src="rc/fapop-dice-end1.png" />
+                                <img src="fapop-dice-end1.png" />
                             </div>
                             <div className="fapop-dice-end-2">
-                                <img src="rc/fapop-dice-end1.png" />
+                                <img src="fapop-dice-end1.png" />
                             </div>
                             <div className="fapop-dice-end-rolled">
                                 <div className="fapop-dice-rolled-text">
@@ -849,7 +947,9 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                             <div className="prgall-prom">
                                                 <div
                                                     className="prg-all-bar"
-                                                    style="width: 20%"></div>
+                                                    style={{
+                                                        width: "20%",
+                                                    }}></div>
                                             </div>
                                             <div className="prg-all-text">
                                                 <span>
@@ -1028,7 +1128,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                             <div className="hw-btlpass-level-elite">
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1044,7 +1144,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1060,7 +1160,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1076,7 +1176,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1092,7 +1192,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1108,7 +1208,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1124,7 +1224,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1140,7 +1240,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1156,7 +1256,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1172,7 +1272,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1188,7 +1288,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1204,7 +1304,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1220,7 +1320,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1236,7 +1336,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1252,7 +1352,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1268,7 +1368,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1284,7 +1384,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1300,7 +1400,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1316,7 +1416,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1332,7 +1432,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1348,7 +1448,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1364,7 +1464,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1380,7 +1480,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1396,7 +1496,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1428,7 +1528,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1444,7 +1544,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/1.png" />
+                                                        <img src="rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1460,7 +1560,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1476,7 +1576,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1492,7 +1592,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1508,7 +1608,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1524,7 +1624,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1556,7 +1656,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1572,7 +1672,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/2.png" />
+                                                        <img src="rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1588,7 +1688,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1604,7 +1704,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1620,7 +1720,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1636,7 +1736,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1652,7 +1752,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1668,7 +1768,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-abil-gold@2x.png" />
+                                                        <img src="ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1684,7 +1784,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/sh-icon-chest-128.png" />
+                                                        <img src="sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1700,7 +1800,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/rpg-poly/item/3.png" />
+                                                        <img src="rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1716,7 +1816,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-orange.png" />
+                                                        <img src="ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1732,7 +1832,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-blue.png" />
+                                                        <img src="ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1748,7 +1848,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-green.png" />
+                                                        <img src="ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1764,7 +1864,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ms-stone-pink.png" />
+                                                        <img src="ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1780,7 +1880,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-krasn-butil@2x.png" />
+                                                        <img src="ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1796,7 +1896,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rc/ic-diamond.png" />
+                                                        <img src="ic-diamond.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1831,7 +1931,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     </div>
                                 </div>
                                 <div className="hw-btlpass-girl">
-                                    <img src="rc/break-girl753-hw.png" />
+                                    <img src="break-girl753-hw.png" />
                                 </div>
                                 <div className="hw-btlpass-btn-box">
                                     <div className="color-btn">
@@ -1841,7 +1941,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn"
-                                        style="left: 552px">
+                                        style={{ left: "552px" }}>
                                         <div className="color-btn-text">
                                             Buy Pumpkins
                                         </div>
@@ -2466,7 +2566,9 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 <div className="sh2-prgbar-all undefined">
                                                     <div
                                                         className="sh2-prgbar"
-                                                        style="width: 0%"></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                     <div className="sh2-prgbar-text">
                                                         0/30
                                                     </div>

@@ -9,7 +9,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -107,7 +107,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,7 +137,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -147,7 +147,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +177,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -193,7 +193,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,7 +224,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
@@ -234,7 +234,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +265,7 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,53 +296,53 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
+                        style={{ display: "block" }}></div>
                     <div
                         className="m-popup witch-cauldron-scroll"
-                        style="display: block">
+                        style={{ display: "block" }}>
                         <div className="title">witch's cauldron</div>
                         <div className="color-box"></div>
                         <div className="witch-cauldron-scroll-all">
                             <div className="witch-cauldron-scroll-scroll">
                                 <div className="witch-cauldron-scroll-card">
                                     <div className="witch-cauldron-scroll-card-img">
-                                        <img src="rc/232sh-1.jpg" alt="" />
+                                        <img src="232sh-1.jpg" alt="" />
                                     </div>
                                     <div className="witch-cauldron-scroll-boiler-all">
                                         <div className="witch-cauldron-scroll-item first-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-epic1.png" />
+                                                <img src="pse-epic1.png" />
                                             </div>
                                         </div>
                                         <div className="witch-cauldron-scroll-item second-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-uncommon1.png" />
+                                                <img src="pse-uncommon1.png" />
                                             </div>
                                         </div>
                                     </div>
@@ -352,17 +352,17 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                 </div>
                                 <div className="witch-cauldron-scroll-card">
                                     <div className="witch-cauldron-scroll-card-img">
-                                        <img src="rc/232sh-1.jpg" alt="" />
+                                        <img src="232sh-1.jpg" alt="" />
                                     </div>
                                     <div className="witch-cauldron-scroll-boiler-all">
                                         <div className="witch-cauldron-scroll-item first-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-epic1.png" />
+                                                <img src="pse-epic1.png" />
                                             </div>
                                         </div>
                                         <div className="witch-cauldron-scroll-item second-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-uncommon1.png" />
+                                                <img src="pse-uncommon1.png" />
                                             </div>
                                         </div>
                                     </div>
@@ -372,17 +372,17 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                 </div>
                                 <div className="witch-cauldron-scroll-card">
                                     <div className="witch-cauldron-scroll-card-img">
-                                        <img src="rc/232sh-1.jpg" alt="" />
+                                        <img src="232sh-1.jpg" alt="" />
                                     </div>
                                     <div className="witch-cauldron-scroll-boiler-all">
                                         <div className="witch-cauldron-scroll-item first-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-epic1.png" />
+                                                <img src="pse-epic1.png" />
                                             </div>
                                         </div>
                                         <div className="witch-cauldron-scroll-item second-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-uncommon1.png" />
+                                                <img src="pse-uncommon1.png" />
                                             </div>
                                         </div>
                                     </div>
@@ -392,17 +392,17 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                 </div>
                                 <div className="witch-cauldron-scroll-card">
                                     <div className="witch-cauldron-scroll-card-img">
-                                        <img src="rc/232sh-1.jpg" alt="" />
+                                        <img src="232sh-1.jpg" alt="" />
                                     </div>
                                     <div className="witch-cauldron-scroll-boiler-all">
                                         <div className="witch-cauldron-scroll-item first-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-epic1.png" />
+                                                <img src="pse-epic1.png" />
                                             </div>
                                         </div>
                                         <div className="witch-cauldron-scroll-item second-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-uncommon1.png" />
+                                                <img src="pse-uncommon1.png" />
                                             </div>
                                         </div>
                                     </div>
@@ -412,17 +412,17 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                 </div>
                                 <div className="witch-cauldron-scroll-card">
                                     <div className="witch-cauldron-scroll-card-img">
-                                        <img src="rc/232sh-1.jpg" alt="" />
+                                        <img src="232sh-1.jpg" alt="" />
                                     </div>
                                     <div className="witch-cauldron-scroll-boiler-all">
                                         <div className="witch-cauldron-scroll-item first-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-epic1.png" />
+                                                <img src="pse-epic1.png" />
                                             </div>
                                         </div>
                                         <div className="witch-cauldron-scroll-item second-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-uncommon1.png" />
+                                                <img src="pse-uncommon1.png" />
                                             </div>
                                         </div>
                                     </div>
@@ -432,17 +432,17 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
                                 </div>
                                 <div className="witch-cauldron-scroll-card">
                                     <div className="witch-cauldron-scroll-card-img">
-                                        <img src="rc/232sh-1.jpg" alt="" />
+                                        <img src="232sh-1.jpg" alt="" />
                                     </div>
                                     <div className="witch-cauldron-scroll-boiler-all">
                                         <div className="witch-cauldron-scroll-item first-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-epic1.png" />
+                                                <img src="pse-epic1.png" />
                                             </div>
                                         </div>
                                         <div className="witch-cauldron-scroll-item second-item">
                                             <div className="witch-cauldron-scroll-res-pic">
-                                                <img src="rc/pse-uncommon1.png" />
+                                                <img src="pse-uncommon1.png" />
                                             </div>
                                         </div>
                                     </div>

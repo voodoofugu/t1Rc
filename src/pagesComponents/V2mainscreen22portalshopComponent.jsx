@@ -7,14 +7,14 @@ const V2MainScreen22PortalShopComponent = () => {
             <div className="main">
                 <div className="main-bg"></div>
 
-                <div className="popup-layer" style="display: block;">
+                <div className="popup-layer" style={{"display":"block"}}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
+                        style={{"display":"block"}}></div>
 
                     <div
                         className="m-popup bf-event__buy-keys-pop"
-                        style="display: block;">
+                        style={{"display":"block"}}>
                         <div className="timer-text">
                             До обновления магазина:
                         </div>

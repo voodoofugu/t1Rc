@@ -7,9 +7,10 @@ const V2MainScreen12SexpedMainComponent = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style="
-                    background-image: url('images/back/new/01-Forest-1.jpg');
-                "></div>
+                    style={{
+                        "background-image":
+                            "url('images/back/new/01-Forest-1.jpg')",
+                    }}></div>
                 <div className="sexped-header">
                     <div className="title-wrap">
                         <div className="header-title">Sexpedition</div>
@@ -31,7 +32,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                             <div className="sexped-prgbar-100">
                                 <div
                                     className="sexped-prgbar"
-                                    style="width: 100%"></div>
+                                    style={{ width: "100%" }}></div>
                             </div>
                             <div className="sexped-prgbar-text">
                                 energy: 1.04K/50
@@ -41,17 +42,17 @@ const V2MainScreen12SexpedMainComponent = () => {
                     <div className="sexped-top-btn-box">
                         <div className="color-btn quest">
                             <div className="sexped-btn-pic">
-                                <img src="rc/v2-ic-book.png" />
+                                <img src="v2-ic-book.png" />
                             </div>
                         </div>
                         <div className="color-btn rating">
                             <div className="sexped-btn-pic">
-                                <img src="rc/v2-ic-rating.png" />
+                                <img src="v2-ic-rating.png" />
                             </div>
                         </div>
                         <div className="color-btn dual-pack">
                             <div className="sexped-btn-pic">
-                                <img src="rc/v2-sexpedition-ball.png" />
+                                <img src="v2-sexpedition-ball.png" />
                             </div>
                         </div>
                     </div>
@@ -271,7 +272,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                         </div>
                         <div
                             className="sexped-mission-scroll-all-box"
-                            style="visibility: visible">
+                            style={{ visibility: "visible" }}>
                             <div className="sexped-mission-filter-box">
                                 <div className="fw-as-filter">
                                     <div className="fw-as-filter-name">
@@ -281,28 +282,28 @@ const V2MainScreen12SexpedMainComponent = () => {
                                 </div>
                                 <div className="sexped-filter">
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-sword.png" />
+                                        <img src="cur2-sword.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-quitar.png" />
+                                        <img src="cur2-quitar.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-cleric.png" />
+                                        <img src="cur2-cleric.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-druid.png" />
+                                        <img src="cur2-druid.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-barbarian.png" />
+                                        <img src="cur2-barbarian.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-ranger.png" />
+                                        <img src="cur2-ranger.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-wizard.png" />
+                                        <img src="cur2-wizard.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="rc/cur2-gun.png" />
+                                        <img src="cur2-gun.png" />
                                     </div>
                                 </div>
                             </div>
@@ -310,154 +311,187 @@ const V2MainScreen12SexpedMainComponent = () => {
                                 <div className="sexped-mission-scroll">
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box selected">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-235/x1/ava/tithero-235-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-quitar.png" />
+                                                <img src="cur2-quitar.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-234/x1/ava/tithero-234-2.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-barbarian.png" />
+                                                <img src="cur2-barbarian.png" />
                                             </div>
                                             <div className="fw-as-num">24</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-233/x1/ava/tithero-233-1.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-cleric.png" />
+                                                <img src="cur2-cleric.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-163/x1/ava/tithero-163-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-barbarian.png" />
+                                                <img src="cur2-barbarian.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-160/x1/ava/tithero-160-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-wizard.png" />
+                                                <img src="cur2-wizard.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-wizard.png" />
+                                                <img src="cur2-wizard.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-5002/x1/ava/tithero-5002-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-cleric.png" />
+                                                <img src="cur2-cleric.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-5001/x1/ava/tithero-5001-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-gun.png" />
+                                                <img src="cur2-gun.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-wizard.png" />
+                                                <img src="cur2-wizard.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-5002/x1/ava/tithero-5002-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-cleric.png" />
+                                                <img src="cur2-cleric.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
                                     </div>
                                     <div
                                         draggable="true"
-                                        style="opacity: 1; position: relative">
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}>
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
                                                 src="images/hero-all/tithero-5001/x1/ava/tithero-5001-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-gun.png" />
+                                                <img src="cur2-gun.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -465,7 +499,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                 </div>
                                 <div className="sexped-mission-scroll">
                                     <div
-                                        style="opacity: 1; position: relative"
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}
                                         draggable="true">
                                         <div className="hero-avatar-box superheroines false">
                                             <img
@@ -473,10 +510,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                                 src="images/superhero/suphero-830/x1/avatar/830sh-ava-1.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-quitar.png" />
+                                                <img src="cur2-quitar.png" />
                                             </div>
                                             <div className="sh3-icon">
-                                                <img src="rc/icon-rare.png" />
+                                                <img src="icon-rare.png" />
                                             </div>
                                             <div className="fw-as-num">
                                                 +100%
@@ -484,7 +521,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         </div>
                                     </div>
                                     <div
-                                        style="opacity: 1; position: relative"
+                                        style={{
+                                            opacity: "1",
+                                            position: "relative",
+                                        }}
                                         draggable="true">
                                         <div className="hero-avatar-box superheroines false">
                                             <img
@@ -492,10 +532,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                                 src="images/superhero/suphero-831/x1/avatar/831sh-ava-1.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="rc/cur2-cleric.png" />
+                                                <img src="cur2-cleric.png" />
                                             </div>
                                             <div className="sh3-icon">
-                                                <img src="rc/cur-c.png" />
+                                                <img src="cur-c.png" />
                                             </div>
                                             <div className="fw-as-num">
                                                 +100%
@@ -684,7 +724,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                             src="images/hero-all/tithero-185/x1/ava/tithero-185-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="rc/cur2-barbarian.png" />
+                                            <img src="cur2-barbarian.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -759,7 +799,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     1st clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="rc/v2-icon-sexped-ore.png" />
+                                    <img src="v2-icon-sexped-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     100
@@ -771,7 +811,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     1st clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="rc/v2-sexped-chest-ore.png" />
+                                    <img src="v2-sexped-chest-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     1
@@ -783,7 +823,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     2-4th clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic firstclear">
-                                    <img src="rc/v2-icon-sexped-ore.png" />
+                                    <img src="v2-icon-sexped-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     10
@@ -795,7 +835,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     5th clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="rc/v2-sexped-chest-ore.png" />
+                                    <img src="v2-sexped-chest-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     1
@@ -807,7 +847,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     x
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="rc/v2-icon-sexped-ore.png" />
+                                    <img src="v2-icon-sexped-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     10
@@ -843,7 +883,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                 <div className="p100">
                                     <div
                                         className="prg"
-                                        style="width: 0%"></div>
+                                        style={{ width: "0%" }}></div>
                                 </div>
                                 <div className="num pulse">
                                     <div className="from">0</div>
@@ -1021,7 +1061,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                             src="images/hero-all/tithero-163/x1/ava/tithero-163-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="rc/cur2-barbarian.png" />
+                                            <img src="cur2-barbarian.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -1047,7 +1087,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                             src="images/hero-all/tithero-160/x1/ava/tithero-160-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="rc/cur2-wizard.png" />
+                                            <img src="cur2-wizard.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -1073,7 +1113,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                             src="images/hero-all/tithero-185/x1/ava/tithero-185-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="rc/cur2-barbarian.png" />
+                                            <img src="cur2-barbarian.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -1129,7 +1169,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                 <div className="p100">
                                     <div
                                         className="prg"
-                                        style="width: 92%"></div>
+                                        style={{ width: "92%" }}></div>
                                 </div>
                                 <div className="num pulse">
                                     <div className="from">780</div>
@@ -1140,7 +1180,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                 <div className="p100">
                                     <div
                                         className="prg"
-                                        style="width: 72.1367%"></div>
+                                        style={{ width: "72.1367%" }}></div>
                                 </div>
                                 <div className="time run">
                                     <div className="txt">0:21</div>
@@ -1224,7 +1264,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     <div className="xmas-prg-bar">
                                         <div
                                             className="xmas-prg"
-                                            style="width: 0%"></div>
+                                            style={{ width: "0%" }}></div>
                                     </div>
                                 </div>
                                 <div className="xmas-reward-chest-box undefined undefined undefined">
@@ -1234,7 +1274,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         </div>
                                     </div>
                                     <div className="xmas-level-rew-pic">
-                                        <img src="rc/v2-sexped-chest-ore.png" />
+                                        <img src="v2-sexped-chest-ore.png" />
                                     </div>
                                     <div className="xmas-level-rew-num-check"></div>
                                     <div className="color-btn green">
@@ -1251,7 +1291,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         </div>
                                     </div>
                                     <div className="xmas-level-rew-pic">
-                                        <img src="rc/v2-sexped-chest-ore.png" />
+                                        <img src="v2-sexped-chest-ore.png" />
                                     </div>
                                     <div className="xmas-level-rew-num-check"></div>
                                     <div className="color-btn green">
@@ -1268,7 +1308,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         </div>
                                     </div>
                                     <div className="xmas-level-rew-pic">
-                                        <img src="rc/v2-sexped-chest-ore.png" />
+                                        <img src="v2-sexped-chest-ore.png" />
                                     </div>
                                     <div className="xmas-level-rew-num-check"></div>
                                     <div className="color-btn green">
@@ -1288,7 +1328,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-prgbar-all">
                                             <div
                                                 className="daily-prgbar"
-                                                style="width: 0%"></div>
+                                                style={{ width: "0%" }}></div>
                                             <div className="daily-prgbar-text">
                                                 0/5
                                             </div>
@@ -1296,7 +1336,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="rc/ic-dildo-purple.png" />
+                                                    <img src="ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     10
@@ -1316,7 +1356,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-prgbar-all">
                                             <div
                                                 className="daily-prgbar"
-                                                style="width: 0%"></div>
+                                                style={{ width: "0%" }}></div>
                                             <div className="daily-prgbar-text">
                                                 0/3
                                             </div>
@@ -1324,7 +1364,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="rc/ic-dildo-purple.png" />
+                                                    <img src="ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     20
@@ -1344,7 +1384,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-prgbar-all">
                                             <div
                                                 className="daily-prgbar"
-                                                style="width: 0%"></div>
+                                                style={{ width: "0%" }}></div>
                                             <div className="daily-prgbar-text">
                                                 0/10
                                             </div>
@@ -1352,7 +1392,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="rc/ic-dildo-purple.png" />
+                                                    <img src="ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     10
@@ -1373,7 +1413,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-prgbar-all">
                                             <div
                                                 className="daily-prgbar"
-                                                style="width: 0%"></div>
+                                                style={{ width: "0%" }}></div>
                                             <div className="daily-prgbar-text">
                                                 0/5
                                             </div>
@@ -1381,7 +1421,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="rc/ic-dildo-purple.png" />
+                                                    <img src="ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     10
@@ -1402,7 +1442,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-prgbar-all">
                                             <div
                                                 className="daily-prgbar"
-                                                style="width: 0%"></div>
+                                                style={{ width: "0%" }}></div>
                                             <div className="daily-prgbar-text">
                                                 0/5
                                             </div>
@@ -1410,7 +1450,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="rc/ic-dildo-purple.png" />
+                                                    <img src="ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     30
@@ -1430,7 +1470,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-prgbar-all">
                                             <div
                                                 className="daily-prgbar"
-                                                style="width: 0%"></div>
+                                                style={{ width: "0%" }}></div>
                                             <div className="daily-prgbar-text">
                                                 0/55
                                             </div>
@@ -1438,7 +1478,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="rc/ic-dildo-purple.png" />
+                                                    <img src="ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     20

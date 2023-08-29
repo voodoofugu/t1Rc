@@ -355,14 +355,14 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                     </ul>
                 </div>
 
-                <div className="popup-layer" style="display: block;">
+                <div className="popup-layer" style={{"display":"block"}}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
+                        style={{"display":"block"}}></div>
 
                     <div
                         className="m-popup fortuna-main-round-rating"
-                        style="display: block;">
+                        style={{"display":"block"}}>
                         <div className="title">Rating</div>
                         <div className="rating-main-box">
                             <div className="fw-right-side-content-box">

@@ -7,14 +7,14 @@ const V2Unipop20StarterpackComponent = () => {
             <div className="main">
                 <div className="main-bg"></div>
 
-                <div className="popup-layer" style="display: block;">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
+                        style={{ display: "block" }}></div>
 
                     <div
                         className="m-popup unipop-starterpack"
-                        style="display: block;">
+                        style={{ display: "block" }}>
                         <div className="title">announcement</div>
                         <div className="color-box"></div>
                         <div className="color-box-decor"></div>
@@ -23,19 +23,19 @@ const V2Unipop20StarterpackComponent = () => {
                                 <div className="unipop-scroll-box">
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-back.jpg" />
+                                            <img src="unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-sale.jpg" />
+                                            <img src="unipop-m-sale.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-starterpack.jpg" />
+                                            <img src="unipop-m-starterpack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
@@ -64,7 +64,7 @@ const V2Unipop20StarterpackComponent = () => {
                                         </div>
                                         <div className="moregold-box noob">
                                             <div className="pack-pack">
-                                                <img src="rc/change-ic-gold.png" />
+                                                <img src="change-ic-gold.png" />
                                                 <div className="rate-text">
                                                     +500%
                                                 </div>
@@ -161,7 +161,7 @@ const V2Unipop20StarterpackComponent = () => {
                                         </div>
                                         <div className="moregold-box king">
                                             <div className="pack-pack">
-                                                <img src="rc/change-sun1.png" />
+                                                <img src="change-sun1.png" />
                                                 <div className="rate-text small-text">
                                                     Boss chests x50
                                                 </div>
@@ -169,7 +169,7 @@ const V2Unipop20StarterpackComponent = () => {
                                         </div>
                                         <div className="moregold-box king two">
                                             <div className="pack-pack">
-                                                <img src="rc/change-ic-gold.png" />
+                                                <img src="change-ic-gold.png" />
                                                 <div className="rate-text">
                                                     +1000%
                                                 </div>

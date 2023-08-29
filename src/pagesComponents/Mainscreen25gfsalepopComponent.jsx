@@ -355,24 +355,26 @@ const MainScreen25GfSalePopComponent = () => {
                     </ul>
                 </div>
 
-                <div className="popup-layer" style="display: block;">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
+                        style={{ display: "block" }}></div>
 
-                    <div className="m-popup gf-sale" style="display: block;">
+                    <div
+                        className="m-popup gf-sale"
+                        style={{ display: "block" }}>
                         <div className="title">girlfriend pack</div>
                         <div className="sv-sale-pack-box">
                             <div className="lhero-box">
                                 <div className="lhero-pic">
-                                    <img src="rc/hero0075@1x.jpg" />
+                                    <img src="hero0075@1x.jpg" />
                                 </div>
                                 <div className="topname-box">
                                     <div className="sh2-icon left">
-                                        <img src="rc/cur-r.png" />
+                                        <img src="cur-r.png" />
                                     </div>
                                     <div className="sh2-icon-forgirl right">
-                                        <img src="rc/cur2-sword.png" />
+                                        <img src="cur2-sword.png" />
                                     </div>
                                     <div className="lhero-name-box">
                                         <div className="lhero-name">
@@ -389,7 +391,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>
@@ -402,7 +404,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>
@@ -413,13 +415,13 @@ const MainScreen25GfSalePopComponent = () => {
                         <div className="sv-reward-box-all gf-plus">
                             <div className="sv-reward-box">
                                 <div className="sv-reward-pic">
-                                    <img src="rc/tithero-11-1-ava.jpg" />
+                                    <img src="tithero-11-1-ava.jpg" />
                                 </div>
                                 <div className="sv-reward-count">999</div>
                             </div>
                             <div className="sv-reward-box plus">
                                 <div className="sv-reward-pic">
-                                    <img src="rc/tithero-11-1-ava.jpg" />
+                                    <img src="tithero-11-1-ava.jpg" />
                                 </div>
                                 <div className="sv-reward-count">999</div>
                             </div>
@@ -428,14 +430,14 @@ const MainScreen25GfSalePopComponent = () => {
                         <div className="sv-sale-pack-box next">
                             <div className="lhero-box lock">
                                 <div className="lhero-pic">
-                                    <img src="rc/hero0075@1x.jpg" />
+                                    <img src="hero0075@1x.jpg" />
                                 </div>
                                 <div className="topname-box">
                                     <div className="sh2-icon left">
-                                        <img src="rc/cur-r.png" />
+                                        <img src="cur-r.png" />
                                     </div>
                                     <div className="sh2-icon-forgirl right">
-                                        <img src="rc/cur2-sword.png" />
+                                        <img src="cur2-sword.png" />
                                     </div>
                                     <div className="lhero-name-box">
                                         <div className="lhero-name">
@@ -452,7 +454,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>
@@ -465,7 +467,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>

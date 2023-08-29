@@ -8,14 +8,15 @@ const V2MainScreen22PortalSquadComponent = () => {
                 <div className="btn-admin"></div>
                 <div
                     className="main-bg"
-                    style="
-                    background-image: url('__675b/images/back/new/09-River.jpg');
-                "></div>
+                    style={{
+                        "background-image":
+                            "url('__675b/images/back/new/09-River.jpg')",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/v2-master-pic1.png" />
+                                <img src="v2-master-pic1.png" />
                             </div>
                             <div className="avatar-box-name">Rank 1</div>
                         </div>
@@ -26,7 +27,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                             <div className="anim-in-p gold"></div>
                         </div>
@@ -91,7 +92,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 0ms">
+                                style={{ "animation-delay": "0ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/change-sun3.png"
@@ -99,7 +100,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest angel-pop open"
-                                style="animation-delay: 150ms">
+                                style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/picmeh-ic-angel-pop.png"
@@ -122,7 +123,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 300ms">
+                                style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/rating-sign-gold@1x.png"
@@ -149,7 +150,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 450ms">
+                                style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/icn-dual-ball.png"
@@ -160,18 +161,20 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 600ms">
+                                style={{ "animation-delay": "600ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/ic-blackfriday.png"
                                 />
-                                <div className="timerbox" style="top: 46px">
+                                <div
+                                    className="timerbox"
+                                    style={{ top: "46px" }}>
                                     <div className="timer">17D 23:36:30</div>
                                 </div>
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 750ms">
+                                style={{ "animation-delay": "750ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/v2-xmas-chest-red.png"
@@ -186,7 +189,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 900ms">
+                                style={{ "animation-delay": "900ms" }}>
                                 <img className="icon" src="rc/m-ico-gold.png" />
                                 <div className="timerbox">
                                     <div className="timer">21:33:40</div>
@@ -200,7 +203,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1050ms">
+                                style={{ "animation-delay": "1050ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/v2-fw-icon-fr0.png"
@@ -211,7 +214,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1200ms">
+                                style={{ "animation-delay": "1200ms" }}>
                                 <img className="icon" src="rc/ic-bf.png" />
                                 <div className="timerbox">
                                     <div className="timer">482:36:30</div>
@@ -219,7 +222,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1350ms">
+                                style={{ "animation-delay": "1350ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/zetta-icon-70.png"
@@ -230,7 +233,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1500ms">
+                                style={{ "animation-delay": "1500ms" }}>
                                 <img className="icon" src="rc/sunduk-60.png" />
                                 <div className="timerbox">
                                     <div className="timer">21:34:52</div>
@@ -238,7 +241,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1650ms">
+                                style={{ "animation-delay": "1650ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/m-ico-quest.png"
@@ -246,7 +249,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1800ms">
+                                style={{ "animation-delay": "1800ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/m-ico-quest.png"
@@ -887,34 +890,34 @@ const V2MainScreen22PortalSquadComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="rc/tab-01.png" />
+                                    <img src="tab-01.png" />
                                 </div>
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="rc/tab-02.png" />
+                                    <img src="tab-02.png" />
                                 </div>
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="rc/tab-10.png" />
+                                    <img src="tab-10.png" />
                                 </div>
                             </div>
                         </a>
                         <a className="tabs-all squads selected" href="#/squads">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Squads</div>
                                 <div className="tabs-pic">
-                                    <img src="rc/2vip-s6.png" />
+                                    <img src="2vip-s6.png" />
                                 </div>
                             </div>
                         </a>
@@ -939,7 +942,9 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 </div>
                                                 <div
                                                     className="color-btn diamond"
-                                                    style="filter: grayscale(1)">
+                                                    style={{
+                                                        filter: "grayscale(1)",
+                                                    }}>
                                                     <div className="color-btn-text">
                                                         <div>
                                                             buy
@@ -959,7 +964,9 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 </div>
                                                 <div
                                                     className="color-btn diamond"
-                                                    style="filter: grayscale(1)">
+                                                    style={{
+                                                        filter: "grayscale(1)",
+                                                    }}>
                                                     <div className="color-btn-text">
                                                         <div>
                                                             buy
@@ -1011,7 +1018,9 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 </div>
                                                 <div
                                                     className="color-btn diamond"
-                                                    style="filter: grayscale(1)">
+                                                    style={{
+                                                        filter: "grayscale(1)",
+                                                    }}>
                                                     <div className="color-btn-text">
                                                         <div>
                                                             buy
@@ -1151,7 +1160,9 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 </div>
                                                 <div
                                                     className="color-btn diamond"
-                                                    style="filter: grayscale(1)">
+                                                    style={{
+                                                        filter: "grayscale(1)",
+                                                    }}>
                                                     <div className="color-btn-text">
                                                         <div>
                                                             buy
@@ -1369,9 +1380,9 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e2.png');
-                                    "></div>
+                                        style={{
+                                            "background-image": "url('https",
+                                        }}></div>
                                     <div className="essence-price">
                                         <div>5K</div>
                                     </div>
@@ -1380,12 +1391,12 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn diamonds"
-                                        style="
-                                        position: absolute;
-                                        bottom: 20px;
-                                        left: 40px;
-                                        width: 150px;
-                                    ">
+                                        style={{
+                                            position: "absolute",
+                                            bottom: "20px",
+                                            left: "40px",
+                                            width: "150px",
+                                        }}>
                                         <div className="color-btn-text">
                                             <div className="diamonds">
                                                 <span className="f-diamonds">
@@ -1398,9 +1409,9 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e4.png');
-                                    "></div>
+                                        style={{
+                                            "background-image": "url('https",
+                                        }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
                                     </div>
@@ -1409,12 +1420,12 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     </div>
                                     <div
                                         className="color-btn diamonds"
-                                        style="
-                                        position: absolute;
-                                        bottom: 20px;
-                                        left: 40px;
-                                        width: 150px;
-                                    ">
+                                        style={{
+                                            position: "absolute",
+                                            bottom: "20px",
+                                            left: "40px",
+                                            width: "150px",
+                                        }}>
                                         <div className="color-btn-text">
                                             <div className="diamonds">
                                                 <span className="f-diamonds">
@@ -1427,20 +1438,20 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e3.png');
-                                    "></div>
+                                        style={{
+                                            "background-image": "url('https",
+                                        }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
                                     </div>
                                     <div
                                         className="color-btn diamonds"
-                                        style="
-                                        position: absolute;
-                                        bottom: 20px;
-                                        left: 40px;
-                                        width: 150px;
-                                    ">
+                                        style={{
+                                            position: "absolute",
+                                            bottom: "20px",
+                                            left: "40px",
+                                            width: "150px",
+                                        }}>
                                         <div className="color-btn-text">
                                             <div className="diamonds">
                                                 <span className="">$4.99</span>
@@ -1451,20 +1462,20 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 <div className="essence-card-box">
                                     <div
                                         className="essence-but-box"
-                                        style="
-                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e4.png');
-                                    "></div>
+                                        style={{
+                                            "background-image": "url('https",
+                                        }}></div>
                                     <div className="essence-price">
                                         <div>250K</div>
                                     </div>
                                     <div
                                         className="color-btn diamonds"
-                                        style="
-                                        position: absolute;
-                                        bottom: 20px;
-                                        left: 40px;
-                                        width: 150px;
-                                    ">
+                                        style={{
+                                            position: "absolute",
+                                            bottom: "20px",
+                                            left: "40px",
+                                            width: "150px",
+                                        }}>
                                         <div className="color-btn-text">
                                             <div className="diamonds">
                                                 <span className="">$49.99</span>

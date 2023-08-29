@@ -25,24 +25,24 @@ const V2MainScreen05FwMapWarpopComponent = () => {
                     <div className="fw-map-claim-box"></div>
                     <div className="fw-map-claim-box fr1 w1">
                         <div className="fw-icon-fr">
-                            <img src="rc/v2-fw-icon-fr1.png" />
+                            <img src="v2-fw-icon-fr1.png" />
                         </div>
                         <div className="fw-icon-ws">
-                            <img src="rc/v2-fw-icon-w1.png" />
+                            <img src="v2-fw-icon-w1.png" />
                         </div>
                         <div className="fw-icon-sword">
-                            <img src="rc/v2-fw-icon-w3.png" />
+                            <img src="v2-fw-icon-w3.png" />
                         </div>
                     </div>
                     <div className="fw-map-claim-box fr1">
                         <div className="fw-icon-fr">
-                            <img src="rc/v2-fw-icon-fr1.png" />
+                            <img src="v2-fw-icon-fr1.png" />
                         </div>
                         <div className="fw-icon-ws">
-                            <img src="rc/v2-fw-icon-w2.png" />
+                            <img src="v2-fw-icon-w2.png" />
                         </div>
                         <div className="fw-icon-sword">
-                            <img src="rc/v2-fw-icon-w3.png" />
+                            <img src="v2-fw-icon-w3.png" />
                         </div>
                     </div>
                     <div className="fw-map-claim-box fr1"></div>
@@ -50,13 +50,13 @@ const V2MainScreen05FwMapWarpopComponent = () => {
                     <div className="fw-map-claim-box"></div>
                     <div className="fw-map-claim-box fr2 select">
                         <div className="fw-icon-fr">
-                            <img src="rc/v2-fw-icon-fr2.png" />
+                            <img src="v2-fw-icon-fr2.png" />
                         </div>
                         <div className="fw-icon-ws">
-                            <img src="rc/v2-fw-icon-w2.png" />
+                            <img src="v2-fw-icon-w2.png" />
                         </div>
                         <div className="fw-icon-sword">
-                            <img src="rc/v2-fw-icon-w3.png" />
+                            <img src="v2-fw-icon-w3.png" />
                         </div>
                     </div>
                     <div className="fw-map-claim-box fr2"></div>
@@ -64,13 +64,13 @@ const V2MainScreen05FwMapWarpopComponent = () => {
                     <div className="fw-map-claim-box fr2"></div>
                     <div className="fw-map-claim-box">
                         <div className="fw-icon-fr">
-                            <img src="rc/v2-fw-icon-fr4.png" />
+                            <img src="v2-fw-icon-fr4.png" />
                         </div>
                         <div className="fw-icon-ws">
-                            <img src="rc/v2-fw-icon-w1.png" />
+                            <img src="v2-fw-icon-w1.png" />
                         </div>
                         <div className="fw-icon-sword">
-                            <img src="rc/v2-fw-icon-w3.png" />
+                            <img src="v2-fw-icon-w3.png" />
                         </div>
                     </div>
                     <div className="fw-map-claim-box"></div>
@@ -78,25 +78,25 @@ const V2MainScreen05FwMapWarpopComponent = () => {
                     <div className="fw-map-claim-box"></div>
                     <div className="fw-map-claim-box fr3">
                         <div className="fw-icon-fr">
-                            <img src="rc/v2-fw-icon-fr3.png" />
+                            <img src="v2-fw-icon-fr3.png" />
                         </div>
                         <div className="fw-icon-ws">
-                            <img src="rc/v2-fw-icon-w2.png" />
+                            <img src="v2-fw-icon-w2.png" />
                         </div>
                         <div className="fw-icon-sword">
-                            <img src="rc/v2-fw-icon-w3.png" />
+                            <img src="v2-fw-icon-w3.png" />
                         </div>
                     </div>
                     <div className="fw-map-claim-box fr3"></div>
                     <div className="fw-map-claim-box fr3">
                         <div className="fw-icon-fr">
-                            <img src="rc/v2-fw-icon-fr1.png" />
+                            <img src="v2-fw-icon-fr1.png" />
                         </div>
                         <div className="fw-icon-ws">
-                            <img src="rc/v2-fw-icon-w1.png" />
+                            <img src="v2-fw-icon-w1.png" />
                         </div>
                         <div className="fw-icon-sword">
-                            <img src="rc/v2-fw-icon-w3.png" />
+                            <img src="v2-fw-icon-w3.png" />
                         </div>
                     </div>
                     <div className="fw-map-claim-box fr3"></div>
@@ -137,7 +137,7 @@ const V2MainScreen05FwMapWarpopComponent = () => {
                         </div>
                     </div>
                     <div className="fw-warpop-box-pic">
-                        <img src="rc/v2-fw-map-bg3-1.jpg" />
+                        <img src="v2-fw-map-bg3-1.jpg" />
                     </div>
                     <div className="fw-warpop-box-name">Enemy Faction</div>
                     <div className="fw-warpop-effect-box-all">
@@ -162,7 +162,7 @@ const V2MainScreen05FwMapWarpopComponent = () => {
                         <div className="fw-warpop-def-box">
                             <div className="fw-warpop-def-name">defence</div>
                             <div className="fw-warpop-def-pic">
-                                <img src="rc/v2-fw-icon-fr2.png" />
+                                <img src="v2-fw-icon-fr2.png" />
                             </div>
                             <div className="fw-warpop-def-num">696969</div>
                         </div>
@@ -170,19 +170,19 @@ const V2MainScreen05FwMapWarpopComponent = () => {
                             <div className="fw-warpop-at-name">attackers</div>
                             <div className="fw-warpop-at-box">
                                 <div className="fw-warpop-at-pic">
-                                    <img src="rc/v2-fw-icon-fr1.png" />
+                                    <img src="v2-fw-icon-fr1.png" />
                                 </div>
                                 <div className="fw-warpop-at-num">696969</div>
                             </div>
                             <div className="fw-warpop-at-box">
                                 <div className="fw-warpop-at-pic">
-                                    <img src="rc/v2-fw-icon-fr3.png" />
+                                    <img src="v2-fw-icon-fr3.png" />
                                 </div>
                                 <div className="fw-warpop-at-num">696969</div>
                             </div>
                             <div className="fw-warpop-at-box">
                                 <div className="fw-warpop-at-pic">
-                                    <img src="rc/v2-fw-icon-fr4.png" />
+                                    <img src="v2-fw-icon-fr4.png" />
                                 </div>
                                 <div className="fw-warpop-at-num">696969</div>
                             </div>

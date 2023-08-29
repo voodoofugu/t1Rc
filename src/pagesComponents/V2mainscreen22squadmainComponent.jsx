@@ -7,14 +7,15 @@ const V2MainScreen22SquadMainComponent = () => {
                 <div className="btn-admin"></div>
                 <div
                     className="main-bg"
-                    style="
-                    background-image: url('__675b/images/back/new/09-River.jpg');
-                "></div>
+                    style={{
+                        "background-image":
+                            "url('__675b/images/back/new/09-River.jpg')",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/v2-master-pic1.png" />
+                                <img src="v2-master-pic1.png" />
                             </div>
                             <div className="avatar-box-name">Rank 1</div>
                         </div>
@@ -25,7 +26,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                             <div className="anim-in-p gold"></div>
                         </div>
@@ -90,7 +91,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 0ms">
+                                style={{ "animation-delay": "0ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/change-sun3.png"
@@ -98,7 +99,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest angel-pop open"
-                                style="animation-delay: 150ms">
+                                style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/picmeh-ic-angel-pop.png"
@@ -121,7 +122,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 300ms">
+                                style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/rating-sign-gold@1x.png"
@@ -148,7 +149,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 450ms">
+                                style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/icn-dual-ball.png"
@@ -159,18 +160,20 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 600ms">
+                                style={{ "animation-delay": "600ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/ic-blackfriday.png"
                                 />
-                                <div className="timerbox" style="top: 46px">
+                                <div
+                                    className="timerbox"
+                                    style={{ top: "46px" }}>
                                     <div className="timer">17D 23:36:30</div>
                                 </div>
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 750ms">
+                                style={{ "animation-delay": "750ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/v2-xmas-chest-red.png"
@@ -185,7 +188,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 900ms">
+                                style={{ "animation-delay": "900ms" }}>
                                 <img className="icon" src="rc/m-ico-gold.png" />
                                 <div className="timerbox">
                                     <div className="timer">21:33:40</div>
@@ -199,7 +202,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1050ms">
+                                style={{ "animation-delay": "1050ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/v2-fw-icon-fr0.png"
@@ -210,7 +213,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1200ms">
+                                style={{ "animation-delay": "1200ms" }}>
                                 <img className="icon" src="rc/ic-bf.png" />
                                 <div className="timerbox">
                                     <div className="timer">482:36:30</div>
@@ -218,7 +221,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1350ms">
+                                style={{ "animation-delay": "1350ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/zetta-icon-70.png"
@@ -229,7 +232,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 1500ms">
+                                style={{ "animation-delay": "1500ms" }}>
                                 <img className="icon" src="rc/sunduk-60.png" />
                                 <div className="timerbox">
                                     <div className="timer">21:34:52</div>
@@ -237,7 +240,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1650ms">
+                                style={{ "animation-delay": "1650ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/m-ico-quest.png"
@@ -245,7 +248,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1800ms">
+                                style={{ "animation-delay": "1800ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/m-ico-quest.png"
@@ -271,7 +274,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <div className="container">
                                 <div
                                     className="heroes-list-all-box"
-                                    style="visibility: visible">
+                                    style={{ visibility: "visible" }}>
                                     <div className="dps-dpc-panel-box dps-x2">
                                         <div className="dpc">
                                             <div className="value">1.41K</div>
@@ -326,10 +329,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         </div>
                                                         <div className="specialization-icon">
                                                             <div className="cls">
-                                                                <img src="rc/cur2-wizard.png" />
+                                                                <img src="cur2-wizard.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="rc/elements/Water.png" />
+                                                                <img src="elements/Water.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -409,10 +412,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         </div>
                                                         <div className="specialization-icon">
                                                             <div className="cls">
-                                                                <img src="rc/cur2-druid.png" />
+                                                                <img src="cur2-druid.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="rc/elements/Fire.png" />
+                                                                <img src="elements/Fire.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -493,10 +496,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         <div className="specialization-icon">
                                                             <div className="hero-level"></div>
                                                             <div className="cls">
-                                                                <img src="rc/cur2-cleric.png" />
+                                                                <img src="cur2-cleric.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="rc/elements/Earth.png" />
+                                                                <img src="elements/Earth.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -577,10 +580,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         <div className="specialization-icon">
                                                             <div className="hero-level"></div>
                                                             <div className="cls">
-                                                                <img src="rc/cur2-barbarian.png" />
+                                                                <img src="cur2-barbarian.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="rc/elements/Air.png" />
+                                                                <img src="elements/Air.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -661,10 +664,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         <div className="specialization-icon">
                                                             <div className="hero-level"></div>
                                                             <div className="cls">
-                                                                <img src="rc/cur2-gun.png" />
+                                                                <img src="cur2-gun.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="rc/elements/Death.png" />
+                                                                <img src="elements/Death.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -802,7 +805,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             className="tabs-all heroes selected"
                             href="#/"
                             aria-current="page">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -810,7 +813,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all guild" href="#/guild">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
@@ -819,7 +822,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <div className="v2-tab-notif notif notif20"></div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -827,7 +830,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
@@ -835,7 +838,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />

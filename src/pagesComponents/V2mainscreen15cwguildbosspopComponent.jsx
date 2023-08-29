@@ -9,7 +9,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -107,7 +107,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,7 +137,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -147,7 +147,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +177,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -193,7 +193,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,7 +224,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
@@ -234,7 +234,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +265,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,41 +296,43 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
-                    <div className="m-popup guildboss" style="display: block">
+                        style={{ display: "block" }}></div>
+                    <div
+                        className="m-popup guildboss"
+                        style={{ display: "block" }}>
                         <div className="title">guild boss</div>
                         <div className="color-box"></div>
                         <div className="cw-guildboss-box-all">
                             <div className="cw-guildboss-box check">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>
@@ -346,7 +348,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="cw-guildboss-box check">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>
@@ -362,7 +364,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="cw-guildboss-box check">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>
@@ -378,7 +380,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="cw-guildboss-box check">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>
@@ -394,7 +396,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="cw-guildboss-box select">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>
@@ -410,7 +412,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="cw-guildboss-box">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>
@@ -426,7 +428,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="cw-guildboss-box">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>
@@ -442,7 +444,7 @@ const V2MainScreen15CwGuildbossPopComponent = () => {
                             <div className="cw-guildboss-box">
                                 <div className="cw-guildboss-box-bg"></div>
                                 <div className="cw-guildboss-pic">
-                                    <img src="rc/232sh-1.jpg" />
+                                    <img src="232sh-1.jpg" />
                                 </div>
                                 <div className="cw-guildboss-num-box">
                                     <div className="cw-guildboss-num">150</div>

@@ -10,7 +10,7 @@ const V2MainScreen05FwMainComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -19,7 +19,7 @@ const V2MainScreen05FwMainComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -87,7 +87,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         map of war
                                     </div>
                                     <div className="fw-main-bl-pic">
-                                        <img src="rc/v2-fw-icon-maps.png" />
+                                        <img src="v2-fw-icon-maps.png" />
                                     </div>
                                     <div className="color-btn">
                                         <div className="color-btn-text">
@@ -100,7 +100,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         fraction shop
                                     </div>
                                     <div className="fw-main-bl-pic">
-                                        <img src="rc/v2-fw-icon-shop.png" />
+                                        <img src="v2-fw-icon-shop.png" />
                                     </div>
                                     <div className="color-btn">
                                         <div className="color-btn-text">
@@ -113,7 +113,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         fraction
                                     </div>
                                     <div className="fw-main-bl-pic">
-                                        <img src="rc/v2-fw-icon-fraction.png" />
+                                        <img src="v2-fw-icon-fraction.png" />
                                     </div>
                                     <div className="color-btn">
                                         <div className="color-btn-text">
@@ -132,7 +132,7 @@ const V2MainScreen05FwMainComponent = () => {
                                     <div className="fw-level-simple">
                                         <div className="fw-level-rew-box">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -147,7 +147,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box collect">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -162,7 +162,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box check">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-good"></div>
                                             <div className="fw-level-rew-num">
@@ -178,7 +178,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box girl">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/hero0093-ava.jpg" />
+                                                <img src="hero0093-ava.jpg" />
                                             </div>
                                             <div className="fw-level-rew-good"></div>
                                             <div className="fw-level-rew-num">
@@ -194,7 +194,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box empty">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -209,7 +209,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -224,7 +224,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -239,7 +239,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -321,7 +321,7 @@ const V2MainScreen05FwMainComponent = () => {
                                     <div className="fw-level-elite">
                                         <div className="fw-level-rew-box">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -336,7 +336,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box collect">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -351,7 +351,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box check">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -366,7 +366,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -381,7 +381,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -396,7 +396,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -411,7 +411,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -426,7 +426,7 @@ const V2MainScreen05FwMainComponent = () => {
                                         </div>
                                         <div className="fw-level-rew-box block">
                                             <div className="fw-level-rew-pic">
-                                                <img src="rc/change-ic-rubin.png" />
+                                                <img src="change-ic-rubin.png" />
                                             </div>
                                             <div className="fw-level-rew-num">
                                                 99999
@@ -459,25 +459,25 @@ const V2MainScreen05FwMainComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>

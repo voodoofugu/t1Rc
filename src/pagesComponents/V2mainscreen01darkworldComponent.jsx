@@ -10,14 +10,14 @@ const V2MainScreen01DarkWorldComponent = () => {
             <div className="main world3 heroes-list">
                 <div
                     className="main-bg main-bg-offset"
-                    style="
-                    background-image: url(/images/back/clan/bg_01.jpg);
-                "></div>
+                    style={{
+                        "background-image": "url(/images/back/clan/bg_01.jpg)",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -26,7 +26,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-dark.png" />
+                                <img src="v2-res-dark.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -92,7 +92,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 0ms">
+                                style={{ "animation-delay": "0ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/ic-superhero-70.png"
@@ -106,7 +106,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 150ms">
+                                style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png"
@@ -117,7 +117,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 450ms">
+                                style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/ic-hero-211.png"
@@ -129,7 +129,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 600ms">
+                                style={{ "animation-delay": "600ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/v2-ico-gold.png"
@@ -140,7 +140,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 750ms">
+                                style={{ "animation-delay": "750ms" }}>
                                 <img
                                     className="icon"
                                     src="rc/v2-ico-quest.png"
@@ -164,13 +164,13 @@ const V2MainScreen01DarkWorldComponent = () => {
                             <div className="progress">
                                 <div
                                     className="fulfilled"
-                                    style="width: 40%"></div>
+                                    style={{ width: "40%" }}></div>
                             </div>
                             <div className="value">400/1000</div>
                         </div>
                     </div>
                     <div className="world-portal world1">
-                        <img src="rc/portal-world1.png" />
+                        <img src="portal-world1.png" />
                         <div className="title">Earthworld</div>
                     </div>
                     <div className="buster-box">
@@ -279,7 +279,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -312,7 +312,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -322,7 +322,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -355,7 +355,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -365,7 +365,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -398,7 +398,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -408,7 +408,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -441,7 +441,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -451,7 +451,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -484,7 +484,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -494,7 +494,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -527,7 +527,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                     </div>
@@ -607,7 +607,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -662,7 +664,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -717,7 +721,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -772,7 +778,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -827,7 +835,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -882,7 +892,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -937,7 +949,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -992,7 +1006,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1160,7 +1176,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 <div className="from">500</div>
@@ -1216,7 +1234,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 60%"></div>
+                                                    style={{
+                                                        width: "60%",
+                                                    }}></div>
                                             </div>
                                             <div className="progress-level-wrap">
                                                 <div className="progress-level l1">
@@ -1264,7 +1284,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1301,7 +1321,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1338,7 +1358,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1375,7 +1395,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1412,7 +1432,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1466,31 +1486,31 @@ const V2MainScreen01DarkWorldComponent = () => {
                         <div className="skills-all-box">
                             <div className="skills-all">
                                 <div className="skills-pic idle">
-                                    <img src="rc/skill-icons/skill-icon01.png" />
+                                    <img src="skill-icons/skill-icon01.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic in-progress">
-                                    <img src="rc/skill-icons/skill-icon02.png" />
+                                    <img src="skill-icons/skill-icon02.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon03.png" />
+                                    <img src="skill-icons/skill-icon03.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon04.png" />
+                                    <img src="skill-icons/skill-icon04.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon05.png" />
+                                    <img src="skill-icons/skill-icon05.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon06.png" />
+                                    <img src="skill-icons/skill-icon06.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon07.png" />
+                                    <img src="skill-icons/skill-icon07.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                             </div>
@@ -1500,19 +1520,19 @@ const V2MainScreen01DarkWorldComponent = () => {
                         <div className="tabs-all heroes selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all w-house">
                             <div className="tabs-name">Angels</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-12.png" />
+                                <img src="tab-12.png" />
                             </div>
                         </div>
                         <div className="tabs-all squests">
                             <div className="tabs-name">Quests</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-10.png" />
+                                <img src="tab-10.png" />
                             </div>
                         </div>
                     </div>
@@ -1521,7 +1541,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="bd-name">предметы боссов</div>
                     <div className="bd-drops">
                         <div className="bd-stone">
-                            <img src="rc/ms-stone-blue.png" />
+                            <img src="ms-stone-blue.png" />
                         </div>
                         <div className="bd-check-box check">
                             <div className="bd-check"></div>
@@ -1529,7 +1549,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     </div>
                     <div className="bd-drops two">
                         <div className="bd-stone">
-                            <img src="rc/ms-stone-green.png" />
+                            <img src="ms-stone-green.png" />
                         </div>
                         <div className="bd-check-box">
                             <div className="bd-check"></div>
@@ -1537,7 +1557,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     </div>
                     <div className="bd-drops chest received">
                         <div className="bd-stone">
-                            <img src="rc/change-sun1.png" />
+                            <img src="change-sun1.png" />
                         </div>
                         <div className="bd-check-box1 check">
                             <div className="bd-check"></div>
@@ -1682,7 +1702,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1699,7 +1719,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1716,7 +1736,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1733,7 +1753,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1750,7 +1770,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1767,7 +1787,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1784,7 +1804,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1801,7 +1821,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1818,7 +1838,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1835,7 +1855,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1852,7 +1872,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1869,7 +1889,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1886,7 +1906,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1903,7 +1923,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1920,7 +1940,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -1937,7 +1957,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2040,7 +2060,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                         </div>
                                                         <div className="color-btn">
                                                             <div className="color-btn-text">
-                                                                <img src="rc/star1-purple.png" />
+                                                                <img src="star1-purple.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2382,9 +2402,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                         <div className="sh2-prgbar-all gold">
                                                             <div
                                                                 className="sh2-prgbar"
-                                                                style="
-                                                                width: 36.6667%;
-                                                            "></div>
+                                                                style={{
+                                                                    width: "36.6667%",
+                                                                }}></div>
                                                             <div className="sh2-prgbar-text">
                                                                 110/300
                                                             </div>
@@ -2509,9 +2529,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                             <div className="sh2-prgbar-all">
                                                                 <div
                                                                     className="sh2-prgbar"
-                                                                    style="
-                                                                    width: 73.3333%;
-                                                                "></div>
+                                                                    style={{
+                                                                        width: "73.3333%",
+                                                                    }}></div>
                                                                 <div className="sh2-prgbar-text">
                                                                     110/150
                                                                 </div>
@@ -2525,9 +2545,9 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                             <div className="sh2-prgbar-all">
                                                                 <div
                                                                     className="sh2-prgbar"
-                                                                    style="
-                                                                    width: 36.6667%;
-                                                                "></div>
+                                                                    style={{
+                                                                        width: "36.6667%",
+                                                                    }}></div>
                                                                 <div className="sh2-prgbar-text">
                                                                     55/150
                                                                 </div>
@@ -3255,7 +3275,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="rc/v2-res-dark.png" />
+                                                <img src="v2-res-dark.png" />
                                             </div>
                                             <div className="newtime t1h">
                                                 <div className="newclocktime">
@@ -3314,7 +3334,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="rc/v2-res-dark.png" />
+                                                <img src="v2-res-dark.png" />
                                             </div>
                                             <div className="newtime t6h">
                                                 <div className="newclocktime">
@@ -3373,7 +3393,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="rc/v2-res-dark.png" />
+                                                <img src="v2-res-dark.png" />
                                             </div>
                                             <div className="newtime t24h">
                                                 <div className="newclocktime">
@@ -3432,7 +3452,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                 <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="rc/v2-res-dark.png" />
+                                                <img src="v2-res-dark.png" />
                                             </div>
                                             <div className="newtime t72h">
                                                 <div className="newclocktime">

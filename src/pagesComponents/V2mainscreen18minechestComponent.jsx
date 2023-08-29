@@ -20,14 +20,14 @@ const V2MainScreen18MineChestComponent = () => {
                             </div>
                             <div className="color-btn duhbuy duhbuy2">
                                 <div className="color-btn-icon">
-                                    <img src="rc/v2-mn-soul-sg-160.png" />
+                                    <img src="v2-mn-soul-sg-160.png" />
                                 </div>
                                 <div className="color-btn-text">Buy</div>
                             </div>
                             <div className="gray-holder third"></div>
                             <div className="color-btn duhbuy bp">
                                 <div className="color-btn-icon">
-                                    <img src="rc/v2-mn-ic-mine.png" />
+                                    <img src="v2-mn-ic-mine.png" />
                                 </div>
                                 <div className="color-btn-text">
                                     Battle Pass
@@ -35,7 +35,7 @@ const V2MainScreen18MineChestComponent = () => {
                             </div>
                             <div className="color-btn duhbuy">
                                 <div className="color-btn-icon">
-                                    <img src="rc/v2-mn-pr-100-in.png" />
+                                    <img src="v2-mn-pr-100-in.png" />
                                 </div>
                                 <div className="color-btn-text">Mine</div>
                             </div>
@@ -47,7 +47,7 @@ const V2MainScreen18MineChestComponent = () => {
                     <div className="gacha-quest-prg">
                         <div
                             className="gacha-quest-prgbar"
-                            style="width: 0%"></div>
+                            style={{ width: "0%" }}></div>
                         <div className="gacha-quest-prg-text">0/1000</div>
                     </div>
                     <div className="mn-chest-box chest-silver"></div>
@@ -143,9 +143,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -169,9 +169,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -195,9 +195,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -221,9 +221,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -247,9 +247,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -273,9 +273,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -299,9 +299,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -325,9 +325,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -351,9 +351,9 @@ const V2MainScreen18MineChestComponent = () => {
                                                     <div className="progress">
                                                         <div
                                                             className="fulfilled"
-                                                            style="
-                                                            width: 40%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "40%",
+                                                            }}></div>
                                                     </div>
                                                     <div className="value">
                                                         <div className="from">
@@ -453,7 +453,7 @@ const V2MainScreen18MineChestComponent = () => {
 
                             <div
                                 className="m-popup angels-info"
-                                style="display: block">
+                                style={{ display: "block" }}>
                                 <div className="title">Angels Info</div>
                                 <div className="content">
                                     <div className="text-box">

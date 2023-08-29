@@ -7,9 +7,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style="
-                    background-image: url('https://cdn.faptitans.com/s1/__73e1/images/back/new/04-Town-Square-2.jpg');
-                "></div>
+                    style={{ "background-image": "url('https" }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
@@ -81,7 +79,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 0ms">
+                                style={{ "animation-delay": "0ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
@@ -89,7 +87,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 150ms">
+                                style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
@@ -106,7 +104,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 300ms">
+                                style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png"
@@ -126,7 +124,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 450ms">
+                                style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
@@ -143,7 +141,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 600ms">
+                                style={{ "animation-delay": "600ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png"
@@ -160,7 +158,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 750ms">
+                                style={{ "animation-delay": "750ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
@@ -180,7 +178,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                         <div className="container">
                             <div
                                 className="tab-panel-box suphero"
-                                style="visibility: visible">
+                                style={{ visibility: "visible" }}>
                                 <div className="tab-panel-box-title">
                                     superheroes lounge
                                 </div>
@@ -216,7 +214,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="color-btn">
                                                         <div className="color-btn-text">
-                                                            <img src="rc/star1-purple.png" />
+                                                            <img src="star1-purple.png" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -547,9 +545,9 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     <div className="sh2-prgbar-all gold">
                                                         <div
                                                             className="sh2-prgbar"
-                                                            style="
-                                                            width: 36.6667%;
-                                                        "></div>
+                                                            style={{
+                                                                width: "36.6667%",
+                                                            }}></div>
                                                         <div className="sh2-prgbar-text">
                                                             110/300
                                                         </div>
@@ -671,9 +669,9 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                         <div className="sh2-prgbar-all">
                                                             <div
                                                                 className="sh2-prgbar"
-                                                                style="
-                                                                width: 73.3333%;
-                                                            "></div>
+                                                                style={{
+                                                                    width: "73.3333%",
+                                                                }}></div>
                                                             <div className="sh2-prgbar-text">
                                                                 110/150
                                                             </div>
@@ -687,9 +685,9 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                         <div className="sh2-prgbar-all">
                                                             <div
                                                                 className="sh2-prgbar"
-                                                                style="
-                                                                width: 36.6667%;
-                                                            "></div>
+                                                                style={{
+                                                                    width: "36.6667%",
+                                                                }}></div>
                                                             <div className="sh2-prgbar-text">
                                                                 55/150
                                                             </div>
@@ -751,7 +749,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -759,7 +757,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all guild selected" href="#/guild">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
@@ -767,7 +765,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -775,7 +773,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
@@ -783,7 +781,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />

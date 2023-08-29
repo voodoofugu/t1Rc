@@ -246,7 +246,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                         <div className="fortuna-btn-box get-tokens">
                                             <div
                                                 className="color-btn"
-                                                style="top: 35px">
+                                                style={{"top":"35px"}}>
                                                 <div className="color-btn-text">
                                                     Spin the wheel!
                                                 </div>

@@ -7,10 +7,10 @@ const V2Unipop20EventsComponent = () => {
             <div className="main world1">
                 <div className="main-bg"></div>
 
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{"display":"block"}}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
+                        style={{"display":"block"}}></div>
 
                     <div className="m-popup unipop-hw2019 sv">
                         <div className="title">Welcome Back!</div>
@@ -37,16 +37,7 @@ const V2Unipop20EventsComponent = () => {
                                             <div>
                                                 <img
                                                     src="rc/ic-hero-330.png"
-                                                    style="
-                          position: absolute;
-                          width: 55px;
-                          height: 55px;
-                          border-radius: 60px;
-                          left: 75px;
-                          top: 5px;
-                          border: 3px solid rgb(243, 199, 88);
-                          box-shadow: rgb(0, 0, 0) 0px 0px 1px;
-                        "
+                                                    style={{"position":"absolute","width":"55px","height":"55px","border-radius":"60px","left":"75px","top":"5px","border":"3px solid rgb(243, 199, 88)","box-shadow":"rgb(0, 0, 0) 0px 0px 1px"}}
                                                 />
                                             </div>
                                         </div>
@@ -90,16 +81,7 @@ const V2Unipop20EventsComponent = () => {
                                             <div>
                                                 <img
                                                     src="__509e/images/hero-all/tithero-188/x2/ava/tithero-188-1-ava.jpg"
-                                                    style="
-                          position: absolute;
-                          width: 55px;
-                          height: 55px;
-                          border-radius: 60px;
-                          left: 75px;
-                          top: 5px;
-                          border: 3px solid rgb(243, 199, 88);
-                          box-shadow: rgb(0, 0, 0) 0px 0px 1px;
-                        "
+                                                    style={{"position":"absolute","width":"55px","height":"55px","border-radius":"60px","left":"75px","top":"5px","border":"3px solid rgb(243, 199, 88)","box-shadow":"rgb(0, 0, 0) 0px 0px 1px"}}
                                                 />
                                                 <div className="v2-whale-notif notif notif20"></div>
                                             </div>
@@ -117,16 +99,7 @@ const V2Unipop20EventsComponent = () => {
                                             <div>
                                                 <img
                                                     src="__b4eb/images/superhero_new/suphero-757/x2/avatar/757sh-ava-1.jpg"
-                                                    style="
-                          position: absolute;
-                          width: 55px;
-                          height: 55px;
-                          border-radius: 60px;
-                          left: 75px;
-                          top: 5px;
-                          border: 3px solid rgb(243, 199, 88);
-                          box-shadow: rgb(0, 0, 0) 0px 0px 1px;
-                        "
+                                                    style={{"position":"absolute","width":"55px","height":"55px","border-radius":"60px","left":"75px","top":"5px","border":"3px solid rgb(243, 199, 88)","box-shadow":"rgb(0, 0, 0) 0px 0px 1px"}}
                                                 />
                                                 <div className="v2-whale-notif notif notif20"></div>
                                             </div>

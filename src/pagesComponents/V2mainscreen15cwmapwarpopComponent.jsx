@@ -89,7 +89,7 @@ const V2MainScreen15CwMapWarpopComponent = () => {
                 <div className="cw-warpop-box-all">
                     {/*available classes: left*/}
                     <div className="cw-warpop-box-pic">
-                        <img src="rc/v2-cw-map-bg3-1.jpg" />
+                        <img src="v2-cw-map-bg3-1.jpg" />
                     </div>
                     <div className="cw-warpop-box-name">Enemy Faction</div>
                     <div className="cw-warpop-effect-box-all">
@@ -122,7 +122,7 @@ const V2MainScreen15CwMapWarpopComponent = () => {
                         <div className="cw-warpop-def-box">
                             <div className="cw-warpop-def-name">defence</div>
                             <div className="cw-warpop-def-pic">
-                                <img src="rc/v2-fw-icon-fr2.png" />
+                                <img src="v2-fw-icon-fr2.png" />
                             </div>
                             <div className="cw-warpop-def-num">696969</div>
                         </div>
@@ -130,19 +130,19 @@ const V2MainScreen15CwMapWarpopComponent = () => {
                             <div className="cw-warpop-at-name">attackers</div>
                             <div className="cw-warpop-at-box">
                                 <div className="cw-warpop-at-pic">
-                                    <img src="rc/v2-fw-icon-fr1.png" />
+                                    <img src="v2-fw-icon-fr1.png" />
                                 </div>
                                 <div className="cw-warpop-at-num">696969</div>
                             </div>
                             <div className="cw-warpop-at-box">
                                 <div className="cw-warpop-at-pic">
-                                    <img src="rc/v2-fw-icon-fr3.png" />
+                                    <img src="v2-fw-icon-fr3.png" />
                                 </div>
                                 <div className="cw-warpop-at-num">696969</div>
                             </div>
                             <div className="cw-warpop-at-box">
                                 <div className="cw-warpop-at-pic">
-                                    <img src="rc/v2-fw-icon-fr4.png" />
+                                    <img src="v2-fw-icon-fr4.png" />
                                 </div>
                                 <div className="cw-warpop-at-num">696969</div>
                             </div>
@@ -184,7 +184,7 @@ const V2MainScreen15CwMapWarpopComponent = () => {
                 </div>
                 <div className="cw-myfraction-box">
                     <div className="cw-myfraction-pic">
-                        <img src="rc/v2-fw-fr-2.png" />
+                        <img src="v2-fw-fr-2.png" />
                     </div>
                     <div className="cw-myfraction-text">моя фракция</div>
                     <div className="cw-myfraction-name-box">

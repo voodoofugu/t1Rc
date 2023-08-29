@@ -9,7 +9,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -119,18 +119,21 @@ const V2MainScreen21GoddessMainComponent = () => {
                                     <div className="hero-avatar-box cursor-pointer">
                                         <div
                                             className="notif notif20"
-                                            style="right: -6px; top: -3px"></div>
+                                            style={{
+                                                right: "-6px",
+                                                top: "-3px",
+                                            }}></div>
                                         <img
                                             className="hero-avatar"
                                             src="https://cdn.faptitans.com/s1/rc/v2-mn-chest-gold-open.png"
-                                            style="height: 90px"
+                                            style={{ height: "90px" }}
                                         />
                                     </div>
                                 </div>
                             </div>
                             <div className="gd-box-goddess">
                                 <div className="x-info-btn">?</div>
-                                <div className="gd-box-goddess-pic" style="">
+                                <div className="gd-box-goddess-pic" style={{}}>
                                     <div className="b-fs"></div>
                                     <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/goddess-4-1.jpg" />
                                 </div>
@@ -161,7 +164,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                         <div className="gd-prgbar">
                                             <div
                                                 className="gd-prgbar-all"
-                                                style="width: 93%"></div>
+                                                style={{ width: "93%" }}></div>
                                         </div>
                                         <div className="gd-prgbar-text">
                                             327/350
@@ -173,8 +176,8 @@ const V2MainScreen21GoddessMainComponent = () => {
                             <div className="gd-right-box-all">
                                 <div
                                     className="gd-attr-box-all"
-                                    style="top: 10px">
-                                    <div className="gd-attr-box" style="">
+                                    style={{ top: "10px" }}>
+                                    <div className="gd-attr-box" style={{}}>
                                         <div className="gd-attr-girl-box">
                                             <div className="hero-avatar-box">
                                                 <img
@@ -648,7 +651,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                     <div className="gd-girl-prg-bal-all">
                                         <div
                                             className="gd-girl-prg"
-                                            style="width: 55.75%"></div>
+                                            style={{ width: "55.75%" }}></div>
                                         <div className="gd-girl-prg-rd p1">
                                             <div className="gd-girl-prg-rd-txt">
                                                 200
@@ -671,14 +674,14 @@ const V2MainScreen21GoddessMainComponent = () => {
                                 <div className="trophy-res-box spirit">
                                     <div
                                         className="trophy-value"
-                                        style="width: 120px">
+                                        style={{ width: "120px" }}>
                                         35
                                     </div>
                                 </div>
                                 <div className="trophy-res-box spirit2">
                                     <div
                                         className="trophy-value"
-                                        style="width: 120px">
+                                        style={{ width: "120px" }}>
                                         692
                                     </div>
                                 </div>
@@ -690,25 +693,25 @@ const V2MainScreen21GoddessMainComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>

@@ -8,9 +8,7 @@ const V2MainScreen02GuildMasterComponent = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style="
-                    background-image: url('https://cdn.faptitans.com/s1/__3bb5/images/back/new/02-Forest-2.jpg');
-                "></div>
+                    style={{ "background-image": "url('https" }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
@@ -85,7 +83,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 0ms">
+                                style={{ "animation-delay": "0ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
@@ -93,7 +91,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 150ms">
+                                style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
@@ -101,7 +99,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest angel-pop open"
-                                style="animation-delay: 300ms">
+                                style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png"
@@ -118,7 +116,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 450ms">
+                                style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png"
@@ -138,7 +136,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 600ms">
+                                style={{ "animation-delay": "600ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
@@ -155,7 +153,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 750ms">
+                                style={{ "animation-delay": "750ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png"
@@ -172,7 +170,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 900ms">
+                                style={{ "animation-delay": "900ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
@@ -180,7 +178,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1050ms">
+                                style={{ "animation-delay": "1050ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
@@ -188,7 +186,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1200ms">
+                                style={{ "animation-delay": "1200ms" }}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
@@ -211,7 +209,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                 <div className="left-side false false">
                     <div className="left-panel wide false false">
                         <div className="container">
-                            <div style="visibility: visible">
+                            <div style={{ visibility: "visible" }}>
                                 <div className="tab-panel-box master">
                                     <div className="tab-panel-box-title">
                                         master house
@@ -312,9 +310,9 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                             <div className="st-prgbar">
                                                                 <div
                                                                     className="st-prgbar-all"
-                                                                    style="
-                                                                    width: 42%;
-                                                                "></div>
+                                                                    style={{
+                                                                        width: "42%",
+                                                                    }}></div>
                                                             </div>
                                                             <div className="st-prgbar-text">
                                                                 42 %
@@ -381,9 +379,9 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                             <div className="st-prgbar">
                                                                 <div
                                                                     className="st-prgbar-all"
-                                                                    style="
-                                                                    width: 0%;
-                                                                "></div>
+                                                                    style={{
+                                                                        width: "0%",
+                                                                    }}></div>
                                                             </div>
                                                             <div className="st-prgbar-text">
                                                                 0 %
@@ -450,9 +448,9 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                             <div className="st-prgbar">
                                                                 <div
                                                                     className="st-prgbar-all"
-                                                                    style="
-                                                                    width: 57%;
-                                                                "></div>
+                                                                    style={{
+                                                                        width: "57%",
+                                                                    }}></div>
                                                             </div>
                                                             <div className="st-prgbar-text">
                                                                 57 %
@@ -522,9 +520,9 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                             <div className="st-prgbar">
                                                                 <div
                                                                     className="st-prgbar-all"
-                                                                    style="
-                                                                    width: 28%;
-                                                                "></div>
+                                                                    style={{
+                                                                        width: "28%",
+                                                                    }}></div>
                                                             </div>
                                                             <div className="st-prgbar-text">
                                                                 28 %
@@ -571,7 +569,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                     <div className="abil-card-box">
                                                         <div className="abil-box">
                                                             <div className="skills-pic">
-                                                                <img src="rc/skill-icons/skill-icon01.png" />
+                                                                <img src="skill-icons/skill-icon01.png" />
                                                             </div>
                                                         </div>
                                                         <div className="skills-ef cd check">
@@ -612,7 +610,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                     <div className="abil-card-box">
                                                         <div className="abil-box">
                                                             <div className="skills-pic">
-                                                                <img src="rc/skill-icons/skill-icon02.png" />
+                                                                <img src="skill-icons/skill-icon02.png" />
                                                             </div>
                                                         </div>
                                                         <div className="skills-ef cd check">
@@ -653,7 +651,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                     <div className="abil-card-box">
                                                         <div className="abil-box">
                                                             <div className="skills-pic">
-                                                                <img src="rc/skill-icons/skill-icon03.png" />
+                                                                <img src="skill-icons/skill-icon03.png" />
                                                             </div>
                                                         </div>
                                                         <div className="skills-ef cd check">
@@ -694,7 +692,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                     <div className="abil-card-box">
                                                         <div className="abil-box">
                                                             <div className="skills-pic">
-                                                                <img src="rc/skill-icons/skill-icon04.png" />
+                                                                <img src="skill-icons/skill-icon04.png" />
                                                             </div>
                                                         </div>
                                                         <div className="skills-ef cd check">
@@ -746,7 +744,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                     <div className="abil-card-box">
                                                         <div className="abil-box">
                                                             <div className="skills-pic">
-                                                                <img src="rc/skill-icons/skill-icon05.png" />
+                                                                <img src="skill-icons/skill-icon05.png" />
                                                             </div>
                                                         </div>
                                                         <div className="skills-ef cd check">
@@ -798,7 +796,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                     <div className="abil-card-box">
                                                         <div className="abil-box">
                                                             <div className="skills-pic">
-                                                                <img src="rc/skill-icons/skill-icon06.png" />
+                                                                <img src="skill-icons/skill-icon06.png" />
                                                             </div>
                                                         </div>
                                                         <div className="skills-ef cd check">
@@ -849,7 +847,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                     <div className="abil-card-box">
                                                         <div className="abil-box">
                                                             <div className="skills-pic">
-                                                                <img src="rc/skill-icons/skill-icon07.png" />
+                                                                <img src="skill-icons/skill-icon07.png" />
                                                             </div>
                                                         </div>
                                                         <div className="skills-ef cd check">
@@ -1428,7 +1426,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -1436,7 +1434,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all guild selected" href="#/guild">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
@@ -1444,7 +1442,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -1452,7 +1450,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
@@ -1460,7 +1458,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />

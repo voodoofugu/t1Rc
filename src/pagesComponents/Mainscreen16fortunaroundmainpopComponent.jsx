@@ -356,14 +356,14 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     </ul>
                 </div>
 
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
+                        style={{ display: "block" }}></div>
 
                     <div
                         className="m-popup fortuna-main-round"
-                        style="display: block">
+                        style={{ display: "block" }}>
                         <div className="title">wheel of fortune</div>
                         <div className="fortuna-main-box">
                             <div className="color-btn blue rating">
@@ -652,7 +652,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/change-ic-gold.png" />
+                                                    <img src="change-ic-gold.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -662,7 +662,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/change-ic-gold.png" />
+                                                    <img src="change-ic-gold.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -672,7 +672,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -682,7 +682,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -724,7 +724,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/change-ic-gold.png" />
+                                                    <img src="change-ic-gold.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -734,7 +734,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/change-ic-gold.png" />
+                                                    <img src="change-ic-gold.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -744,7 +744,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -754,7 +754,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -787,7 +787,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="f2-prgbar-empty">
                                             <div
                                                 className="f2-prgbar-full"
-                                                style="width: 15%"></div>
+                                                style={{ width: "15%" }}></div>
                                             <div className="f2-prgbar-text">
                                                 100/1500
                                             </div>
@@ -797,7 +797,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box claim-btn">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -807,7 +807,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -817,7 +817,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -827,7 +827,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                             <div className="fortuna-reward-claim-btn">
@@ -837,7 +837,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="fortuna-reward-box">
                                             <div className="fortuna-reward-bg">
                                                 <div className="fortuna-reward">
-                                                    <img src="rc/ms-stone-pink.png" />
+                                                    <img src="ms-stone-pink.png" />
                                                 </div>
                                             </div>
                                         </div>

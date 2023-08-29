@@ -9,7 +9,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -107,7 +107,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,7 +137,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -147,7 +147,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +177,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -193,7 +193,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,7 +224,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
@@ -234,7 +234,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +265,7 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,34 +296,36 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
-                    <div className="m-popup guildorder" style="display: block">
+                        style={{ display: "block" }}></div>
+                    <div
+                        className="m-popup guildorder"
+                        style={{ display: "block" }}>
                         <div className="title">guild order</div>
                         <div className="color-box"></div>
                         <div className="cw-clan-order-box-all">
@@ -340,12 +342,12 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                             <div className="cw-clan-order-ab-box-all">
                                 <div className="cw-clan-order-ab-box">
                                     <div className="cw-clan-order-ab-pic">
-                                        <img src="rc/change-ic-gem-master.png" />
+                                        <img src="change-ic-gem-master.png" />
                                     </div>
                                     <div className="cw-clan-order-ab-prg-box">
                                         <div
                                             className="cw-clan-order-ab-prg"
-                                            style="width: 80%"></div>
+                                            style={{ width: "80%" }}></div>
                                         <div className="cw-clan-order-ab-prg-text">
                                             1:00:00
                                         </div>
@@ -353,12 +355,12 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                 </div>
                                 <div className="cw-clan-order-ab-box">
                                     <div className="cw-clan-order-ab-pic">
-                                        <img src="rc/change-ic-gem-master.png" />
+                                        <img src="change-ic-gem-master.png" />
                                     </div>
                                     <div className="cw-clan-order-ab-prg-box">
                                         <div
                                             className="cw-clan-order-ab-prg"
-                                            style="width: 5%"></div>
+                                            style={{ width: "5%" }}></div>
                                         <div className="cw-clan-order-ab-prg-text">
                                             1:00:00
                                         </div>
@@ -366,12 +368,12 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                 </div>
                                 <div className="cw-clan-order-ab-box">
                                     <div className="cw-clan-order-ab-pic">
-                                        <img src="rc/change-ic-gem-master.png" />
+                                        <img src="change-ic-gem-master.png" />
                                     </div>
                                     <div className="cw-clan-order-ab-prg-box">
                                         <div
                                             className="cw-clan-order-ab-prg"
-                                            style="width: 30%"></div>
+                                            style={{ width: "30%" }}></div>
                                         <div className="cw-clan-order-ab-prg-text">
                                             1:00:00
                                         </div>
@@ -385,12 +387,12 @@ const V2MainScreen15CwGuildorderPopComponent = () => {
                                 <div className="cw-clan-order-rew-box">
                                     <div className="cw-clan-order-rew">
                                         <div className="cw-clan-order-rew-img">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                     </div>
                                     <div className="cw-clan-order-rew">
                                         <div className="cw-clan-order-rew-img">
-                                            <img src="rc/change-sun1.png" />
+                                            <img src="change-sun1.png" />
                                         </div>
                                     </div>
                                 </div>

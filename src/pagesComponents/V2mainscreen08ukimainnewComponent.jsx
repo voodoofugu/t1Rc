@@ -9,7 +9,7 @@ const V2MainScreen08UkiMainNewComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen08UkiMainNewComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -125,7 +125,9 @@ const V2MainScreen08UkiMainNewComponent = () => {
                                                 <div className="daily-prgbar-all">
                                                     <div
                                                         className="daily-prgbar"
-                                                        style="width: 100%"></div>
+                                                        style={{
+                                                            width: "100%",
+                                                        }}></div>
                                                     <div className="daily-prgbar-text">
                                                         Completed
                                                     </div>
@@ -376,31 +378,31 @@ const V2MainScreen08UkiMainNewComponent = () => {
                         <div className="skills-all-box">
                             <div className="skills-all">
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon01.png" />
+                                    <img src="skill-icons/skill-icon01.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon02.png" />
+                                    <img src="skill-icons/skill-icon02.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon03.png" />
+                                    <img src="skill-icons/skill-icon03.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon04.png" />
+                                    <img src="skill-icons/skill-icon04.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon05.png" />
+                                    <img src="skill-icons/skill-icon05.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon06.png" />
+                                    <img src="skill-icons/skill-icon06.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon07.png" />
+                                    <img src="skill-icons/skill-icon07.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                             </div>
@@ -410,25 +412,25 @@ const V2MainScreen08UkiMainNewComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>

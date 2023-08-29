@@ -9,7 +9,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -107,7 +107,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,7 +137,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -147,7 +147,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +177,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -193,7 +193,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,7 +224,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
@@ -234,7 +234,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +265,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,36 +296,36 @@ const V2MainScreen14NsaleStupenComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
+                        style={{ display: "block" }}></div>
                     <div
                         className="mn-popup nsale-stupen"
-                        style="display: block">
+                        style={{ display: "block" }}>
                         <div className="mn-pop-bg-all">
                             <div className="mn-pop-bg"></div>
                         </div>
@@ -337,25 +337,25 @@ const V2MainScreen14NsaleStupenComponent = () => {
                         <div className="mn-pop-menu-box">
                             <div className="mn-pop-menu">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="rc/v2-ns-chest.png" />
+                                    <img src="v2-ns-chest.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">chest</div>
                             </div>
                             <div className="mn-pop-menu">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="rc/v2-ns-ball.png" />
+                                    <img src="v2-ns-ball.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">magic</div>
                             </div>
                             <div className="mn-pop-menu active">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="rc/v2-ns-coin2.png" />
+                                    <img src="v2-ns-coin2.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">fountain</div>
                             </div>
                             <div className="mn-pop-menu">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="rc/v2-ns-money.png" />
+                                    <img src="v2-ns-money.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">offer</div>
                             </div>
@@ -364,7 +364,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                         <div className="nm-pop-content">
                             <div className="nm-pop-stupen-buble-box one">
                                 <div className="nm-pop-stupen-buble">
-                                    <img src="rc/v2-ns-ball.png" />
+                                    <img src="v2-ns-ball.png" />
                                 </div>
                                 <div className="nm-pop-stupen-name">
                                     stage 1
@@ -372,7 +372,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                             </div>
                             <div className="nm-pop-stupen-buble-box two">
                                 <div className="nm-pop-stupen-buble">
-                                    <img src="rc/v2-ns-ball.png" />
+                                    <img src="v2-ns-ball.png" />
                                 </div>
                                 <div className="nm-pop-stupen-name">
                                     stage 2
@@ -380,7 +380,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                             </div>
                             <div className="nm-pop-stupen-buble-box three">
                                 <div className="nm-pop-stupen-buble">
-                                    <img src="rc/v2-lock-ic.png" />
+                                    <img src="v2-lock-ic.png" />
                                 </div>
                                 <div className="nm-pop-stupen-name">
                                     stage 3
@@ -388,7 +388,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                             </div>
                             <div className="nm-pop-stupen-buble-box four">
                                 <div className="nm-pop-stupen-buble">
-                                    <img src="rc/v2-lock-ic.png" />
+                                    <img src="v2-lock-ic.png" />
                                 </div>
                                 <div className="nm-pop-stupen-name">
                                     stage 4
@@ -396,7 +396,7 @@ const V2MainScreen14NsaleStupenComponent = () => {
                             </div>
                             <div className="nm-pop-stupen-buble-box five">
                                 <div className="nm-pop-stupen-buble">
-                                    <img src="rc/v2-lock-ic.png" />
+                                    <img src="v2-lock-ic.png" />
                                 </div>
                                 <div className="nm-pop-stupen-name">
                                     stage 5

@@ -12,10 +12,10 @@ const V2MainScreen24RpgPolyComponent = () => {
                         <div className="questlist-popup-wrap">
                             <div
                                 className="popupWrapper questlist-popup"
-                                style="display: block;">
+                                style={{"display":"block"}}>
                                 <div
                                     className="m-popup"
-                                    style="display: block;">
+                                    style={{"display":"block"}}>
                                     <div className="title">Quests</div>
                                     <div className="popup-wrap">
                                         <div className="bar_quest">
@@ -149,7 +149,7 @@ const V2MainScreen24RpgPolyComponent = () => {
                             <div className="bar-scale">
                                 <div
                                     className="bar-scale-patf"
-                                    style="width: 40%;"></div>
+                                    style={{"width":"40%"}}></div>
                             </div>
                         </div>
                     </div>
@@ -221,11 +221,11 @@ const V2MainScreen24RpgPolyComponent = () => {
 
                 <div
                     className="popupWrapper backpack-popup"
-                    style="display: none;">
+                    style={{"display":"none"}}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
-                    <div className="m-popup" style="display: block;">
+                        style={{"display":"block"}}></div>
+                    <div className="m-popup" style={{"display":"block"}}>
                         <div className="title">Backpack</div>
                         <div className="popup-wrap">
                             <div className="quest-item-wrap">
@@ -346,8 +346,8 @@ const V2MainScreen24RpgPolyComponent = () => {
                 <div className="quest-popup-wrap">
                     <div
                         className="popupWrapper quest-popup"
-                        style="display: block;">
-                        <div className="m-popup" style="display: block;">
+                        style={{"display":"block"}}>
+                        <div className="m-popup" style={{"display":"block"}}>
                             <div className="title">Event</div>
                             <div className="popup-wrap">
                                 <div className="quest-character_img"></div>
@@ -437,11 +437,11 @@ const V2MainScreen24RpgPolyComponent = () => {
                     </div>
                 </div>
 
-                <div className="popupWrapper shop-popup" style="display: none;">
+                <div className="popupWrapper shop-popup" style={{"display":"none"}}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
-                    <div className="m-popup" style="display: block;">
+                        style={{"display":"block"}}></div>
+                    <div className="m-popup" style={{"display":"block"}}>
                         <div className="title">Shop</div>
                         <div className="popup-wrap">
                             <div className="currency-parameter parameters">
@@ -694,7 +694,7 @@ const V2MainScreen24RpgPolyComponent = () => {
 
                 <div
                     className="popupWrapper rating-popup"
-                    style="display: none;">
+                    style={{"display":"none"}}>
                     <div className="screen-blend-55"></div>
                     <div className="m-popup">
                         <div className="title">poly rating</div>
@@ -1046,7 +1046,7 @@ const V2MainScreen24RpgPolyComponent = () => {
                     </div>
                 </div>
 
-                <div className="notification-popup" style="display: none;">
+                <div className="notification-popup" style={{"display":"none"}}>
                     <div className="notif-pop-box">
                         <div className="title">reward</div>
                         <div className="popup-wrap">
@@ -1060,7 +1060,7 @@ const V2MainScreen24RpgPolyComponent = () => {
 
                 <div
                     className="popupWrapper reward-popup"
-                    style="display: none;">
+                    style={{"display":"none"}}>
                     <div className="screen-blend-55"></div>
                     <div className="m-popup fortuna-winpop2">
                         <div className="title">Congratulations</div>

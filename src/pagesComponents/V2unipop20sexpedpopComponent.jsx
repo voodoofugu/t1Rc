@@ -7,13 +7,13 @@ const V2Unipop20SexpedPopComponent = () => {
         <>
             <div className="main">
                 <div className="main-bg"></div>
-                <div className="popup-layer" style="display: block;">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block;"></div>
+                        style={{ display: "block" }}></div>
                     <div
                         className="m-popup unipop-sexped-pop"
-                        style="display: block;">
+                        style={{ display: "block" }}>
                         <div className="title">annoucement</div>
                         <div className="color-box"></div>
                         <div className="color-box-decor"></div>
@@ -22,25 +22,25 @@ const V2Unipop20SexpedPopComponent = () => {
                                 <div className="unipop-scroll-box">
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-back.jpg" />
+                                            <img src="unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-back.jpg" />
+                                            <img src="unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-back.jpg" />
+                                            <img src="unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="rc/unipop-m-back.jpg" />
+                                            <img src="unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
@@ -67,7 +67,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                     </div>
                                     <div className="sexped-girl-left-box">
                                         <div className="sexped-girl">
-                                            <img src="rc/bre-sexped2.png" />
+                                            <img src="bre-sexped2.png" />
                                         </div>
                                         <div className="sexped-girl-buble">
                                             collect other rewards!
@@ -75,7 +75,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                         <div className="sexped-reward-box-all">
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="rc/v2-res-gems.png" />
+                                                    <img src="v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -83,7 +83,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="rc/v2-res-gems.png" />
+                                                    <img src="v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -91,7 +91,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="rc/v2-res-gems.png" />
+                                                    <img src="v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -101,7 +101,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                     </div>
                                     <div className="sexped-girl-right-box">
                                         <div className="sexped-girl">
-                                            <img src="rc/bre-sexped1.png" />
+                                            <img src="bre-sexped1.png" />
                                         </div>
                                         <div className="sexped-girl-buble">
                                             take top and get us!
@@ -109,7 +109,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                         <div className="sexped-reward-box-all">
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="rc/v2-res-gems.png" />
+                                                    <img src="v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -117,7 +117,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="rc/v2-res-gems.png" />
+                                                    <img src="v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -125,7 +125,7 @@ const V2Unipop20SexpedPopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="rc/v2-res-gems.png" />
+                                                    <img src="v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969

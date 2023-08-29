@@ -308,7 +308,7 @@ const V2MainScreen23PortalMapComponent = () => {
                         <div className="bar-scale">
                             <div
                                 className="bar-scale-patf"
-                                style="width: 40%"></div>
+                                style={{ width: "40%" }}></div>
                         </div>
                         <div className="bar-value">40/100 LP</div>
                         <div className="bar-text">
@@ -356,7 +356,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                 <div className="value">100</div>
                             </div>
                             <div className="pop-up-girl girl-2">
-                                <img src="rc/essence-80x80.png" />
+                                <img src="essence-80x80.png" />
                                 <div className="value">100</div>
                             </div>
                             <div className="pop-up-girl girl-3">

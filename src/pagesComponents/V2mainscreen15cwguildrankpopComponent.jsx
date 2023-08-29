@@ -9,7 +9,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -107,7 +107,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,7 +137,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -147,7 +147,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +177,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -193,7 +193,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,7 +224,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
@@ -234,7 +234,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                             src="rc/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="rc/cur2-barbarian.png" />
+                                                            <img src="cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +265,7 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="rc/icons/ic-abil-78.jpg" />
+                                                        <img src="icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,34 +296,36 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="popup-layer" style="display: block">
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style="display: block"></div>
-                    <div className="m-popup guildrank" style="display: block">
+                        style={{ display: "block" }}></div>
+                    <div
+                        className="m-popup guildrank"
+                        style={{ display: "block" }}>
                         <div className="title">guild rank</div>
                         <div className="color-box"></div>
                         <div className="cw-clan-box-all">
@@ -331,16 +333,16 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                 <div className="cw-clan-box">
                                     <div className="cw-clan-rait-box">
                                         <div className="cw-clan-rait">
-                                            <img src="rc/2vip-s7.png" />
+                                            <img src="2vip-s7.png" />
                                             <div className="cw-clan-rait-num">
                                                 215
                                             </div>
                                         </div>
                                     </div>
                                     <div className="cw-clan-logo-bg">
-                                        <img src="rc/v2-cw-bg01.png" />
+                                        <img src="v2-cw-bg01.png" />
                                         <div className="cw-clan-logo">
-                                            <img src="rc/v2-cw-p03.png" />
+                                            <img src="v2-cw-p03.png" />
                                         </div>
                                     </div>
                                     <div className="cw-clan-name-box">
@@ -362,16 +364,16 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                 <div className="cw-clan-box">
                                     <div className="cw-clan-rait-box">
                                         <div className="cw-clan-rait">
-                                            <img src="rc/2vip-s4.png" />
+                                            <img src="2vip-s4.png" />
                                             <div className="cw-clan-rait-num">
                                                 215
                                             </div>
                                         </div>
                                     </div>
                                     <div className="cw-clan-logo-bg">
-                                        <img src="rc/v2-cw-bg38.png" />
+                                        <img src="v2-cw-bg38.png" />
                                         <div className="cw-clan-logo">
-                                            <img src="rc/v2-cw-p03.png" />
+                                            <img src="v2-cw-p03.png" />
                                         </div>
                                     </div>
                                     <div className="cw-clan-name-box">
@@ -393,16 +395,16 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                 <div className="cw-clan-box">
                                     <div className="cw-clan-rait-box">
                                         <div className="cw-clan-rait">
-                                            <img src="rc/2vip-s3.png" />
+                                            <img src="2vip-s3.png" />
                                             <div className="cw-clan-rait-num">
                                                 215
                                             </div>
                                         </div>
                                     </div>
                                     <div className="cw-clan-logo-bg">
-                                        <img src="rc/v2-cw-bg27.png" />
+                                        <img src="v2-cw-bg27.png" />
                                         <div className="cw-clan-logo">
-                                            <img src="rc/v2-cw-p03.png" />
+                                            <img src="v2-cw-p03.png" />
                                         </div>
                                     </div>
                                     <div className="cw-clan-name-box">
@@ -424,16 +426,16 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                 <div className="cw-clan-box">
                                     <div className="cw-clan-rait-box">
                                         <div className="cw-clan-rait">
-                                            <img src="rc/2vip-s1.png" />
+                                            <img src="2vip-s1.png" />
                                             <div className="cw-clan-rait-num">
                                                 215
                                             </div>
                                         </div>
                                     </div>
                                     <div className="cw-clan-logo-bg">
-                                        <img src="rc/v2-cw-bg25.png" />
+                                        <img src="v2-cw-bg25.png" />
                                         <div className="cw-clan-logo">
-                                            <img src="rc/v2-cw-p03.png" />
+                                            <img src="v2-cw-p03.png" />
                                         </div>
                                     </div>
                                     <div className="cw-clan-name-box">
@@ -455,16 +457,16 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                 <div className="cw-clan-box">
                                     <div className="cw-clan-rait-box">
                                         <div className="cw-clan-rait">
-                                            <img src="rc/2vip-s2.png" />
+                                            <img src="2vip-s2.png" />
                                             <div className="cw-clan-rait-num">
                                                 215
                                             </div>
                                         </div>
                                     </div>
                                     <div className="cw-clan-logo-bg">
-                                        <img src="rc/v2-cw-bg15.png" />
+                                        <img src="v2-cw-bg15.png" />
                                         <div className="cw-clan-logo">
-                                            <img src="rc/v2-cw-p03.png" />
+                                            <img src="v2-cw-p03.png" />
                                         </div>
                                     </div>
                                     <div className="cw-clan-name-box">
@@ -486,16 +488,16 @@ const V2MainScreen15CwGuildrankPopComponent = () => {
                                 <div className="cw-clan-box">
                                     <div className="cw-clan-rait-box">
                                         <div className="cw-clan-rait">
-                                            <img src="rc/2vip-s8.png" />
+                                            <img src="2vip-s8.png" />
                                             <div className="cw-clan-rait-num">
                                                 215
                                             </div>
                                         </div>
                                     </div>
                                     <div className="cw-clan-logo-bg">
-                                        <img src="rc/v2-cw-bg03.png" />
+                                        <img src="v2-cw-bg03.png" />
                                         <div className="cw-clan-logo">
-                                            <img src="rc/v2-cw-p03.png" />
+                                            <img src="v2-cw-p03.png" />
                                         </div>
                                     </div>
                                     <div className="cw-clan-name-box">

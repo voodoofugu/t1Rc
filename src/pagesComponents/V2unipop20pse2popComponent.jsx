@@ -6,11 +6,16 @@ const V2Unipop20Pse2PopComponent = () => {
         <>
             <div className="main world1">
                 <div className="main-bg"></div>
-                <div className="quest-box-all quests" style="z-index: 99999">
+                <div
+                    className="quest-box-all quests"
+                    style={{ "z-index": "99999" }}>
                     <div className="quest-box-scroll">
                         <div
                             className="quest-box wrap"
-                            style="top: 50%; transform: translateY(-50%)">
+                            style={{
+                                top: "50%",
+                                transform: "translateY(-50%)",
+                            }}>
                             <div className="quest-title-btn">offers</div>
                             <div className="quest-wrap">
                                 <li className="quest welcome-back">
@@ -33,7 +38,7 @@ const V2Unipop20Pse2PopComponent = () => {
                     <div
                         id="popupWrapper"
                         className="popup-layer"
-                        style="display: block">
+                        style={{ display: "block" }}>
                         <div className="screen-blend-55"></div>
                         <div id="popupContainer" className="popup-in">
                             <div className="m-popup unipop-pse2-pop">
@@ -123,7 +128,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             </div>
                                             <div className="pse2-girl-right-box">
                                                 <div className="pse2-girl">
-                                                    <img src="rc/rating-girl.png" />
+                                                    <img src="rating-girl.png" />
                                                 </div>
                                                 <div className="pse2-girl-buble">
                                                     Rewards waiting for you!
@@ -227,7 +232,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                 <div className="unipop-box-content-all">
                                     <div
                                         className="unipop-box-right-box"
-                                        style="left: 100px">
+                                        style={{ left: "100px" }}>
                                         <div className="right-box-f">
                                             <div className="right-box-f-name-box">
                                                 Squad Hero pack

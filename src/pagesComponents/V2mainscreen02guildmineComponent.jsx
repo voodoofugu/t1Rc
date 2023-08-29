@@ -7,9 +7,7 @@ const V2MainScreen02GuildMineComponent = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style="
-                    background-image: url('https://cdn.faptitans.com/s1/__bbaa/images/back/new/07-Cemetery.jpg');
-                "></div>
+                    style={{"background-image":"url('https"}}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
@@ -84,7 +82,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 0ms">
+                                style={{"animation-delay":"0ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
@@ -92,7 +90,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 150ms">
+                                style={{"animation-delay":"150ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
@@ -100,7 +98,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest angel-pop open"
-                                style="animation-delay: 300ms">
+                                style={{"animation-delay":"300ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png"
@@ -117,7 +115,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 450ms">
+                                style={{"animation-delay":"450ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png"
@@ -137,7 +135,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 600ms">
+                                style={{"animation-delay":"600ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
@@ -154,7 +152,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style="animation-delay: 750ms">
+                                style={{"animation-delay":"750ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png"
@@ -171,7 +169,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 900ms">
+                                style={{"animation-delay":"900ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
@@ -179,7 +177,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1050ms">
+                                style={{"animation-delay":"1050ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
@@ -187,7 +185,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style="animation-delay: 1200ms">
+                                style={{"animation-delay":"1200ms"}}>
                                 <img
                                     className="icon"
                                     src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
@@ -267,7 +265,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                         <div className="mine-prgbar-all">
                                             <div
                                                 className="mine-prgbar"
-                                                style="width: 0%"></div>
+                                                style={{"width":"0%"}}></div>
                                             <div className="mine-prgbar-text">
                                                 Warehouse is full!
                                             </div>
@@ -285,20 +283,11 @@ const V2MainScreen02GuildMineComponent = () => {
                                         <div className="mine-worker-box">
                                             <div
                                                 className="mine-worker-pic"
-                                                style="
-                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
-                                                background-position: 0% center;
-                                                background-size: cover;
-                                            ">
+                                                style={{"background-image":"url('https","background-position":"0% center","background-size":"cover"}}>
                                                 <canvas
                                                     width="800"
                                                     height="600"
-                                                    style="
-                                                    touch-action: none;
-                                                    width: 120px;
-                                                    height: 305px;
-                                                    cursor: inherit;
-                                                "></canvas>
+                                                    style={{"touch-action":"none","width":"120px","height":"305px","cursor":"inherit"}}></canvas>
                                             </div>
                                             <div className="mine-buy-plus"></div>
                                             <div className="color-btn mithril">
@@ -323,20 +312,11 @@ const V2MainScreen02GuildMineComponent = () => {
                                         <div className="mine-worker-box">
                                             <div
                                                 className="mine-worker-pic"
-                                                style="
-                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
-                                                background-position: 31% center;
-                                                background-size: cover;
-                                            ">
+                                                style={{"background-image":"url('https","background-position":"31% center","background-size":"cover"}}>
                                                 <canvas
                                                     width="800"
                                                     height="600"
-                                                    style="
-                                                    touch-action: none;
-                                                    width: 120px;
-                                                    height: 305px;
-                                                    cursor: inherit;
-                                                "></canvas>
+                                                    style={{"touch-action":"none","width":"120px","height":"305px","cursor":"inherit"}}></canvas>
                                             </div>
                                             <div className="mine-buy-plus"></div>
                                             <div className="color-btn mithril">
@@ -361,20 +341,11 @@ const V2MainScreen02GuildMineComponent = () => {
                                         <div className="mine-worker-box buy">
                                             <div
                                                 className="mine-worker-pic"
-                                                style="
-                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
-                                                background-position: 70% center;
-                                                background-size: cover;
-                                            ">
+                                                style={{"background-image":"url('https","background-position":"70% center","background-size":"cover"}}>
                                                 <canvas
                                                     width="800"
                                                     height="600"
-                                                    style="
-                                                    touch-action: none;
-                                                    width: 120px;
-                                                    height: 305px;
-                                                    cursor: inherit;
-                                                "></canvas>
+                                                    style={{"touch-action":"none","width":"120px","height":"305px","cursor":"inherit"}}></canvas>
                                             </div>
                                             <div className="mine-buy-plus"></div>
                                             <div className="color-btn diamond">
@@ -399,25 +370,16 @@ const V2MainScreen02GuildMineComponent = () => {
                                         <div className="mine-worker-box buy">
                                             <div
                                                 className="mine-worker-pic"
-                                                style="
-                                                background-image: url('https://cdn.faptitans.com/s1/images/back/06-Cave.jpg');
-                                                background-position: 100% center;
-                                                background-size: cover;
-                                            ">
+                                                style={{"background-image":"url('https","background-position":"100% center","background-size":"cover"}}>
                                                 <canvas
                                                     width="800"
                                                     height="600"
-                                                    style="
-                                                    touch-action: none;
-                                                    width: 120px;
-                                                    height: 305px;
-                                                    cursor: inherit;
-                                                "></canvas>
+                                                    style={{"touch-action":"none","width":"120px","height":"305px","cursor":"inherit"}}></canvas>
                                             </div>
                                             <div className="mine-buy-plus"></div>
                                             <div
                                                 className="color-btn diamond"
-                                                style="filter: grayscale(100%)">
+                                                style={{"filter":"grayscale(100%)"}}>
                                                 <div className="color-btn-text">
                                                     <div>
                                                         buy
@@ -443,7 +405,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                     <div className="guildhall-res-box gems">
                                         <div
                                             className="guildhall-value"
-                                            style="width: 120px">
+                                            style={{"width":"120px"}}>
                                             17
                                         </div>
                                     </div>
@@ -459,7 +421,7 @@ const V2MainScreen02GuildMineComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{"width":"100%","height":"100%"}}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
@@ -470,7 +432,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             className="tabs-all guild selected"
                             href="#/guild"
                             aria-current="page">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{"width":"100%","height":"100%"}}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
@@ -478,7 +440,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{"width":"100%","height":"100%"}}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
@@ -486,7 +448,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{"width":"100%","height":"100%"}}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
@@ -494,7 +456,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style="width: 100%; height: 100%">
+                            <div style={{"width":"100%","height":"100%"}}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
                                     <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />

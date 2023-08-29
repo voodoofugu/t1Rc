@@ -10,12 +10,15 @@ const V2MainScreen01Component = () => {
             <div className="main world1">
                 <div
                     className="main-bg"
-                    style="background-image: url('/images/back/new/09-River.jpg')"></div>
+                    style={{
+                        "background-image":
+                            "url('/images/back/new/09-River.jpg')",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="rc/hero0093-ava.jpg" />
+                                <img src="hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -24,7 +27,7 @@ const V2MainScreen01Component = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="rc/v2-res-gold.png" />
+                                <img src="v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -91,7 +94,7 @@ const V2MainScreen01Component = () => {
                                 </li>
                                 <li
                                     className="quest default-hero"
-                                    style="animation-delay: 0ms">
+                                    style={{ "animation-delay": "0ms" }}>
                                     <img
                                         className="icon"
                                         src="rc/ic-superhero-10.png"
@@ -105,7 +108,7 @@ const V2MainScreen01Component = () => {
                                 </li>
                                 <li
                                     className="quest startpack open"
-                                    style="animation-delay: 450ms">
+                                    style={{ "animation-delay": "450ms" }}>
                                     <img
                                         className="icon"
                                         src="https://cdn.faptitans.com/s1/rc/ic-hero-211.png"
@@ -117,7 +120,7 @@ const V2MainScreen01Component = () => {
                                 </li>
                                 <li
                                     className="quest startpack open"
-                                    style="animation-delay: 600ms">
+                                    style={{ "animation-delay": "600ms" }}>
                                     <img
                                         className="icon"
                                         src="rc/v2-ico-gold.png"
@@ -142,7 +145,7 @@ const V2MainScreen01Component = () => {
                                 </li>
                                 <li
                                     className="quest startpack open"
-                                    style="animation-delay: 150ms">
+                                    style={{ "animation-delay": "150ms" }}>
                                     <img
                                         className="icon"
                                         src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png"
@@ -159,7 +162,7 @@ const V2MainScreen01Component = () => {
                                 </li>
                                 <li
                                     className="quest open"
-                                    style="animation-delay: 750ms">
+                                    style={{ "animation-delay": "750ms" }}>
                                     <img
                                         className="icon"
                                         src="rc/v2-ico-quest.png"
@@ -188,7 +191,9 @@ const V2MainScreen01Component = () => {
                 <div className="right-side">
                     <div className="darkness-progress-bar-wrap">
                         <div className="progress">
-                            <div className="fulfilled" style="width: 40%"></div>
+                            <div
+                                className="fulfilled"
+                                style={{ width: "40%" }}></div>
                         </div>
                         <div className="value">
                             <div className="from">400</div>
@@ -196,11 +201,11 @@ const V2MainScreen01Component = () => {
                         </div>
                     </div>
                     <div className="world-portal underworld">
-                        <img src="rc/portal-underworld.png" />
+                        <img src="portal-underworld.png" />
                         <div className="title">Underworld</div>
                     </div>
                     <div className="world-portal darkworld">
-                        <img src="rc/portal-darkworld.png" />
+                        <img src="portal-darkworld.png" />
                         <div className="title">Darkworld</div>
                     </div>
                     <div className="buster-box">
@@ -275,7 +280,7 @@ const V2MainScreen01Component = () => {
                         <div className="bd-name">предметы боссов</div>
                         <div className="bd-drops">
                             <div className="bd-stone">
-                                <img src="rc/ms-stone-blue.png" />
+                                <img src="ms-stone-blue.png" />
                             </div>
                             <div className="bd-check-box check">
                                 <div className="bd-check"></div>
@@ -283,7 +288,7 @@ const V2MainScreen01Component = () => {
                         </div>
                         <div className="bd-drops two">
                             <div className="bd-stone">
-                                <img src="rc/ms-stone-green.png" />
+                                <img src="ms-stone-green.png" />
                             </div>
                             <div className="bd-check-box">
                                 <div className="bd-check"></div>
@@ -291,7 +296,7 @@ const V2MainScreen01Component = () => {
                         </div>
                         <div className="bd-drops chest received">
                             <div className="bd-stone">
-                                <img src="rc/change-sun1.png" />
+                                <img src="change-sun1.png" />
                             </div>
                             <div className="bd-check-box1 check">
                                 <div className="bd-check"></div>
@@ -335,7 +340,11 @@ const V2MainScreen01Component = () => {
                                         <div className="hero-card starterpack">
                                             <div
                                                 className="btn-close-x"
-                                                style="zoom: 0.75; top: 0px; right: 0px"></div>
+                                                style={{
+                                                    zoom: "0.75",
+                                                    top: "0px",
+                                                    right: "0px",
+                                                }}></div>
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
@@ -371,7 +380,7 @@ const V2MainScreen01Component = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -411,7 +420,7 @@ const V2MainScreen01Component = () => {
                                             </div>
                                             <div className="v2-hero-notif notif notif10"></div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card disabled">
@@ -421,7 +430,7 @@ const V2MainScreen01Component = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -467,7 +476,7 @@ const V2MainScreen01Component = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -506,7 +515,7 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card silverCard">
@@ -516,7 +525,7 @@ const V2MainScreen01Component = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -555,7 +564,7 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card goldCard">
@@ -565,7 +574,7 @@ const V2MainScreen01Component = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -604,7 +613,7 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
@@ -614,7 +623,7 @@ const V2MainScreen01Component = () => {
                                                     src="rc/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -653,7 +662,7 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="rc/icons/ic-abil-78.jpg" />
+                                                <img src="icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                     </div>
@@ -767,7 +776,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -822,7 +833,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -877,7 +890,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -932,7 +947,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -987,7 +1004,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1042,7 +1061,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1097,7 +1118,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1152,7 +1175,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 40%"></div>
+                                                    style={{
+                                                        width: "40%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 You collect
@@ -1320,7 +1345,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 50%"></div>
+                                                    style={{
+                                                        width: "50%",
+                                                    }}></div>
                                             </div>
                                             <div className="value">
                                                 <div className="from">500</div>
@@ -1376,7 +1403,9 @@ const V2MainScreen01Component = () => {
                                             <div className="progress">
                                                 <div
                                                     className="fulfilled"
-                                                    style="width: 60%"></div>
+                                                    style={{
+                                                        width: "60%",
+                                                    }}></div>
                                             </div>
                                             <div className="progress-level-wrap">
                                                 <div className="progress-level l1">
@@ -1424,7 +1453,7 @@ const V2MainScreen01Component = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1461,7 +1490,7 @@ const V2MainScreen01Component = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1498,7 +1527,7 @@ const V2MainScreen01Component = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1535,7 +1564,7 @@ const V2MainScreen01Component = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1572,7 +1601,7 @@ const V2MainScreen01Component = () => {
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="rc/cur2-barbarian.png" />
+                                                        <img src="cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1626,7 +1655,7 @@ const V2MainScreen01Component = () => {
                         <div className="skills-all-box">
                             <div className="skills-all">
                                 <div className="skills-pic in-progress">
-                                    <img src="rc/skill-icons/skill-icon01.png" />
+                                    <img src="skill-icons/skill-icon01.png" />
                                     <div className="timer">00:00:20</div>
                                     <div className="skills-pic-disabled"></div>
                                 </div>
@@ -1639,23 +1668,23 @@ const V2MainScreen01Component = () => {
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon03.png" />
+                                    <img src="skill-icons/skill-icon03.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="rc/skill-icons/skill-icon04.png" />
+                                    <img src="skill-icons/skill-icon04.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon05.png" />
+                                    <img src="skill-icons/skill-icon05.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon06.png" />
+                                    <img src="skill-icons/skill-icon06.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="rc/skill-icons/skill-icon07.png" />
+                                    <img src="skill-icons/skill-icon07.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                             </div>
@@ -1665,37 +1694,37 @@ const V2MainScreen01Component = () => {
                         <div className="tabs-all heroes selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-01.png" />
+                                <img src="tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-05.png" />
+                                <img src="tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-08.png" />
+                                <img src="tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-02.png" />
+                                <img src="tab-02.png" />
                             </div>
                         </div>
                         <div className="tabs-all w-house2">
                             <div className="tabs-name">Women's</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-11.png" />
+                                <img src="tab-11.png" />
                             </div>
                         </div>
                         <div className="tabs-all w-house">
                             <div className="tabs-name">Angels</div>
                             <div className="tabs-pic">
-                                <img src="rc/tab-12.png" />
+                                <img src="tab-12.png" />
                             </div>
                         </div>
                     </div>
@@ -1869,7 +1898,7 @@ const V2MainScreen01Component = () => {
                                                 Superhero Chest
                                             </div>
                                             <div className="item">
-                                                <img src="rc/sh-icon-chest-dark.png" />
+                                                <img src="sh-icon-chest-dark.png" />
                                                 <div className="reward-value">
                                                     100
                                                 </div>
@@ -1886,7 +1915,7 @@ const V2MainScreen01Component = () => {
                                                 Angel Chest
                                             </div>
                                             <div className="item">
-                                                <img src="rc/darkworld-chest-agels.png" />
+                                                <img src="darkworld-chest-agels.png" />
                                                 <div className="reward-value">
                                                     100
                                                 </div>
@@ -2204,7 +2233,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2221,7 +2250,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2238,7 +2267,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2255,7 +2284,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2272,7 +2301,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2289,7 +2318,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2306,7 +2335,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2323,7 +2352,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2340,7 +2369,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2357,7 +2386,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2374,7 +2403,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2391,7 +2420,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2408,7 +2437,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2425,7 +2454,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2442,7 +2471,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2459,7 +2488,7 @@ const V2MainScreen01Component = () => {
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="rc/cur2-barbarian.png" />
+                                                    <img src="cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2562,7 +2591,7 @@ const V2MainScreen01Component = () => {
                                                         </div>
                                                         <div className="color-btn">
                                                             <div className="color-btn-text">
-                                                                <img src="rc/star1-purple.png" />
+                                                                <img src="star1-purple.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2904,7 +2933,9 @@ const V2MainScreen01Component = () => {
                                                         <div className="sh2-prgbar-all gold">
                                                             <div
                                                                 className="sh2-prgbar"
-                                                                style="width: 36.6667%"></div>
+                                                                style={{
+                                                                    width: "36.6667%",
+                                                                }}></div>
                                                             <div className="sh2-prgbar-text">
                                                                 110/300
                                                             </div>
@@ -3029,7 +3060,9 @@ const V2MainScreen01Component = () => {
                                                             <div className="sh2-prgbar-all">
                                                                 <div
                                                                     className="sh2-prgbar"
-                                                                    style="width: 73.3333%"></div>
+                                                                    style={{
+                                                                        width: "73.3333%",
+                                                                    }}></div>
                                                                 <div className="sh2-prgbar-text">
                                                                     110/150
                                                                 </div>
@@ -3043,7 +3076,9 @@ const V2MainScreen01Component = () => {
                                                             <div className="sh2-prgbar-all">
                                                                 <div
                                                                     className="sh2-prgbar"
-                                                                    style="width: 36.6667%"></div>
+                                                                    style={{
+                                                                        width: "36.6667%",
+                                                                    }}></div>
                                                                 <div className="sh2-prgbar-text">
                                                                     55/150
                                                                 </div>
