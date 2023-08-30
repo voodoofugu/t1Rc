@@ -226,7 +226,7 @@ const V2MainScreen02GuildMain1Component = () => {
                             </div>
                             <div
                                 className="btn-close-x"
-                                style={{ "z-index": "10000" }}></div>
+                                style={{ zIndex: "10000" }}></div>
                             <div className="trophy-res-box-all">
                                 <div className="trophy-res-box gems">
                                     <div

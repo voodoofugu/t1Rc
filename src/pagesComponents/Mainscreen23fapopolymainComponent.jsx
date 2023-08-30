@@ -4,7 +4,7 @@ import screenFapopolyMain from "../styles/screen-fapopoly-main.scss";
 const MainScreen23FapopolyMainComponent = () => {
     return (
         <>
-            <div className="main world1">
+            <div className="main">
                 <div className="main-bg easter"></div>
                 <div className="fapop-content-all">
                     <div className="fapop-exit-box">

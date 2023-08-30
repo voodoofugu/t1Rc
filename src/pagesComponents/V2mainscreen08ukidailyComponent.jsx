@@ -76,7 +76,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 </li>
                                 <li
                                     className="quest default-hero"
-                                    style={{ "animation-delay": "0ms" }}>
+                                    style={{ animationDelay: "0ms" }}>
                                     <img
                                         className="icon"
                                         src="img/ic-superhero-10.png"
@@ -90,7 +90,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 </li>
                                 <li
                                     className="quest startpack open"
-                                    style={{ "animation-delay": "450ms" }}>
+                                    style={{ animationDelay: "450ms" }}>
                                     <img
                                         className="icon"
                                         src="ic-hero-211.png"
@@ -102,7 +102,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 </li>
                                 <li
                                     className="quest startpack open"
-                                    style={{ "animation-delay": "600ms" }}>
+                                    style={{ animationDelay: "600ms" }}>
                                     <img
                                         className="icon"
                                         src="img/v2-ico-gold.png"
@@ -127,7 +127,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 </li>
                                 <li
                                     className="quest startpack open"
-                                    style={{ "animation-delay": "150ms" }}>
+                                    style={{ animationDelay: "150ms" }}>
                                     <img
                                         className="icon"
                                         src="v2-fw-icon-fr0.png"
@@ -156,7 +156,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <div className="quest-wrap">
                                 <li
                                     className="quest quest1"
-                                    style={{ "animation-delay": "750ms" }}>
+                                    style={{ animationDelay: "750ms" }}>
                                     <img
                                         className="icon"
                                         src="img/m-ico-quest.png"
@@ -164,7 +164,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 </li>
                                 <li
                                     className="quest quest2"
-                                    style={{ "animation-delay": "750ms" }}>
+                                    style={{ animationDelay: "750ms" }}>
                                     <img
                                         className="icon"
                                         src="img/m-ico-quest-gift.png"

@@ -93,7 +93,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest open"
-                                        style={{ "animation-delay": "0ms" }}>
+                                        style={{ animationDelay: "0ms" }}>
                                         <img
                                             className="icon"
                                             src="change-sun3.png"
@@ -101,7 +101,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest open"
-                                        style={{ "animation-delay": "150ms" }}>
+                                        style={{ animationDelay: "150ms" }}>
                                         <img
                                             className="icon"
                                             src="ic-abil-reborn.png"
@@ -109,7 +109,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest angel-pop open"
-                                        style={{ "animation-delay": "300ms" }}>
+                                        style={{ animationDelay: "300ms" }}>
                                         <img
                                             className="icon"
                                             src="picmeh-ic-angel-pop.png"
@@ -128,7 +128,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style={{ "animation-delay": "450ms" }}>
+                                        style={{ animationDelay: "450ms" }}>
                                         <img
                                             className="icon"
                                             src="v2-ns-ball.png"
@@ -147,7 +147,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style={{ "animation-delay": "600ms" }}>
+                                        style={{ animationDelay: "600ms" }}>
                                         <img
                                             className="icon"
                                             src="ic-hero-327.png"
@@ -166,7 +166,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style={{ "animation-delay": "750ms" }}>
+                                        style={{ animationDelay: "750ms" }}>
                                         <img
                                             className="icon"
                                             src="v2-fw-icon-fr0.png"
@@ -179,7 +179,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest open"
-                                        style={{ "animation-delay": "900ms" }}>
+                                        style={{ animationDelay: "900ms" }}>
                                         <img
                                             className="icon"
                                             src="m-ico-quest.png"

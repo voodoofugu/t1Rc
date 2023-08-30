@@ -3,6 +3,7 @@ import React, { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import AaPagesComponentMap from "./pagesComponents/AaPagesComponentMap";
+import AaComponMap from "./components/AaComponMap.jsx";
 
 // Функция для приведения первой буквы к верхнему регистру
 function capitalizeFirstLetter(string) {
@@ -39,7 +40,7 @@ function generateComponentName(pageName) {
         window.__REACT_ROOT__.render(
             // <StrictMode>
             <BrowserRouter>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<AaComponMap.Loading />}>
                     <PageComponent />
                 </Suspense>
             </BrowserRouter>

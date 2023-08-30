@@ -86,7 +86,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "0ms" }}>
+                                style={{ animationDelay: "0ms" }}>
                                 <img
                                     className="icon"
                                     src="img/ic-superhero-70.png"
@@ -100,7 +100,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "150ms" }}>
+                                style={{ animationDelay: "150ms" }}>
                                 <img
                                     className="icon"
                                     src="v2-fw-icon-fr0.png"
@@ -111,7 +111,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "450ms" }}>
+                                style={{ animationDelay: "450ms" }}>
                                 <img className="icon" src="ic-hero-211.png" />
                                 <div className="timerbox">
                                     <div className="timer">23:29:14</div>
@@ -120,7 +120,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "600ms" }}>
+                                style={{ animationDelay: "600ms" }}>
                                 <img
                                     className="icon"
                                     src="img/v2-ico-gold.png"
@@ -131,7 +131,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "750ms" }}>
+                                style={{ animationDelay: "750ms" }}>
                                 <img
                                     className="icon"
                                     src="img/v2-ico-quest.png"

@@ -135,9 +135,9 @@ const V2Unipop20PsePopComponent = () => {
                                     </div>
 
                                     <div className="color-btn green">
-                                        <duv className="color-btn-text">
+                                        <div className="color-btn-text">
                                             go to event
-                                        </duv>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

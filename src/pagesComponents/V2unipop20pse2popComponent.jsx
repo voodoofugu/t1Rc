@@ -8,7 +8,7 @@ const V2Unipop20Pse2PopComponent = () => {
                 <div className="main-bg"></div>
                 <div
                     className="quest-box-all quests"
-                    style={{ "z-index": "99999" }}>
+                    style={{ zIndex: "99999" }}>
                     <div className="quest-box-scroll">
                         <div
                             className="quest-box wrap"

@@ -92,7 +92,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "0ms" }}>
+                                style={{ animationDelay: "0ms" }}>
                                 <img
                                     className="icon"
                                     src="img/change-sun3.png"
@@ -100,7 +100,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest angel-pop open"
-                                style={{ "animation-delay": "150ms" }}>
+                                style={{ animationDelay: "150ms" }}>
                                 <img
                                     className="icon"
                                     src="img/picmeh-ic-angel-pop.png"
@@ -126,7 +126,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "300ms" }}>
+                                style={{ animationDelay: "300ms" }}>
                                 <img
                                     className="icon"
                                     src="img/rating-sign-gold@1x.png"
@@ -153,7 +153,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "450ms" }}>
+                                style={{ animationDelay: "450ms" }}>
                                 <img
                                     className="icon"
                                     src="img/icn-dual-ball.png"
@@ -164,7 +164,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "600ms" }}>
+                                style={{ animationDelay: "600ms" }}>
                                 <img
                                     className="icon"
                                     src="img/ic-blackfriday.png"
@@ -177,7 +177,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "750ms" }}>
+                                style={{ animationDelay: "750ms" }}>
                                 <img
                                     className="icon"
                                     src="img/v2-xmas-chest-red.png"
@@ -192,7 +192,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "900ms" }}>
+                                style={{ animationDelay: "900ms" }}>
                                 <img
                                     className="icon"
                                     src="img/m-ico-gold.png"
@@ -209,7 +209,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "1050ms" }}>
+                                style={{ animationDelay: "1050ms" }}>
                                 <img
                                     className="icon"
                                     src="img/v2-fw-icon-fr0.png"
@@ -220,7 +220,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "1200ms" }}>
+                                style={{ animationDelay: "1200ms" }}>
                                 <img className="icon" src="img/ic-bf.png" />
                                 <div className="timerbox">
                                     <div className="timer">482:36:30</div>
@@ -228,7 +228,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "1350ms" }}>
+                                style={{ animationDelay: "1350ms" }}>
                                 <img
                                     className="icon"
                                     src="img/zetta-icon-70.png"
@@ -239,7 +239,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "1500ms" }}>
+                                style={{ animationDelay: "1500ms" }}>
                                 <img className="icon" src="img/sunduk-60.png" />
                                 <div className="timerbox">
                                     <div className="timer">21:34:52</div>
@@ -247,7 +247,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "1650ms" }}>
+                                style={{ animationDelay: "1650ms" }}>
                                 <img
                                     className="icon"
                                     src="img/m-ico-quest.png"
@@ -255,7 +255,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "1800ms" }}>
+                                style={{ animationDelay: "1800ms" }}>
                                 <img
                                     className="icon"
                                     src="img/m-ico-quest.png"

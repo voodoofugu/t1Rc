@@ -70,12 +70,12 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "0ms" }}>
+                                style={{ animationDelay: "0ms" }}>
                                 <img className="icon" src="change-sun3.png" />
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "150ms" }}>
+                                style={{ animationDelay: "150ms" }}>
                                 <img
                                     className="icon"
                                     src="ic-abil-reborn.png"
@@ -89,7 +89,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "300ms" }}>
+                                style={{ animationDelay: "300ms" }}>
                                 <img
                                     className="icon"
                                     src="rating-sign-gold@1x.png"
@@ -109,7 +109,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "450ms" }}>
+                                style={{ animationDelay: "450ms" }}>
                                 <img className="icon" src="v2-ns-ball.png" />
                                 <div className="timerbox">
                                     <div className="timer">68:49:25</div>
@@ -123,7 +123,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{ "animation-delay": "600ms" }}>
+                                style={{ animationDelay: "600ms" }}>
                                 <img className="icon" src="m-ico-gold.png" />
                                 <div className="timerbox">
                                     <div className="timer">18:22:05</div>
@@ -137,7 +137,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </li>
                             <li
                                 className="quest open"
-                                style={{ "animation-delay": "750ms" }}>
+                                style={{ animationDelay: "750ms" }}>
                                 <img className="icon" src="m-ico-quest.png" />
                             </li>
                         </div>

@@ -35,7 +35,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "100px",
                                     left: "429px",
                                     top: "328px",
-                                    "z-index": "11",
+                                    zIndex: "11",
                                 }}>
                                 <div
                                     className="fapop-player"
@@ -52,7 +52,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "389.5px",
                                     top: "346px",
-                                    "z-index": "10",
+                                    zIndex: "10",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -71,7 +71,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "331.5px",
                                     top: "374px",
-                                    "z-index": "11",
+                                    zIndex: "11",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -90,7 +90,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "273.5px",
                                     top: "346px",
-                                    "z-index": "10",
+                                    zIndex: "10",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -109,7 +109,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "216.5px",
                                     top: "317px",
-                                    "z-index": "9",
+                                    zIndex: "9",
                                 }}>
                                 <div>
                                     <img
@@ -128,7 +128,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "272.5px",
                                     top: "288px",
-                                    "z-index": "8",
+                                    zIndex: "8",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -147,7 +147,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "215.5px",
                                     top: "261px",
-                                    "z-index": "7",
+                                    zIndex: "7",
                                 }}></div>
                             <div
                                 style={{
@@ -156,7 +156,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "160.5px",
                                     top: "234px",
-                                    "z-index": "6",
+                                    zIndex: "6",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -175,7 +175,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "218.5px",
                                     top: "207px",
-                                    "z-index": "5",
+                                    zIndex: "5",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -194,7 +194,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "271.5px",
                                     top: "179px",
-                                    "z-index": "4",
+                                    zIndex: "4",
                                 }}>
                                 <div top_offset="50">
                                     <img
@@ -213,7 +213,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "330.5px",
                                     top: "206px",
-                                    "z-index": "5",
+                                    zIndex: "5",
                                 }}>
                                 <div>
                                     <img
@@ -232,7 +232,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "388.5px",
                                     top: "173px",
-                                    "z-index": "4",
+                                    zIndex: "4",
                                 }}>
                                 <div top_offset="50">
                                     <img
@@ -251,7 +251,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "445.5px",
                                     top: "202px",
-                                    "z-index": "5",
+                                    zIndex: "5",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -270,7 +270,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "501.5px",
                                     top: "174px",
-                                    "z-index": "4",
+                                    zIndex: "4",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -289,7 +289,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "558.5px",
                                     top: "146px",
-                                    "z-index": "3",
+                                    zIndex: "3",
                                 }}>
                                 <div>
                                     <img
@@ -308,7 +308,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "613.5px",
                                     top: "119px",
-                                    "z-index": "2",
+                                    zIndex: "2",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -327,7 +327,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "667.5px",
                                     top: "91px",
-                                    "z-index": "1",
+                                    zIndex: "1",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -346,7 +346,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "723.5px",
                                     top: "117px",
-                                    "z-index": "2",
+                                    zIndex: "2",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -365,7 +365,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "779.5px",
                                     top: "147px",
-                                    "z-index": "3",
+                                    zIndex: "3",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -384,7 +384,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "838.5px",
                                     top: "172px",
-                                    "z-index": "4",
+                                    zIndex: "4",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -403,7 +403,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "895.5px",
                                     top: "194px",
-                                    "z-index": "5",
+                                    zIndex: "5",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -422,7 +422,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "951.5px",
                                     top: "224px",
-                                    "z-index": "6",
+                                    zIndex: "6",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -441,7 +441,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "1010.5px",
                                     top: "252px",
-                                    "z-index": "7",
+                                    zIndex: "7",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -460,7 +460,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "953.5px",
                                     top: "280px",
-                                    "z-index": "8",
+                                    zIndex: "8",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -479,7 +479,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "1010.5px",
                                     top: "308px",
-                                    "z-index": "9",
+                                    zIndex: "9",
                                 }}></div>
                             <div
                                 style={{
@@ -488,7 +488,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "954.5px",
                                     top: "336px",
-                                    "z-index": "10",
+                                    zIndex: "10",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -507,7 +507,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "898.5px",
                                     top: "366px",
-                                    "z-index": "11",
+                                    zIndex: "11",
                                 }}>
                                 <div>
                                     <img
@@ -526,7 +526,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "842.5px",
                                     top: "335px",
-                                    "z-index": "10",
+                                    zIndex: "10",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -545,7 +545,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "783.5px",
                                     top: "311px",
-                                    "z-index": "9",
+                                    zIndex: "9",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -564,7 +564,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "728.5px",
                                     top: "330px",
-                                    "z-index": "10",
+                                    zIndex: "10",
                                 }}></div>
                             <div
                                 style={{
@@ -573,7 +573,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "672.5px",
                                     top: "366px",
-                                    "z-index": "11",
+                                    zIndex: "11",
                                 }}>
                                 <div top_offset="50">
                                     <img
@@ -592,7 +592,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "727.5px",
                                     top: "393px",
-                                    "z-index": "12",
+                                    zIndex: "12",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -611,7 +611,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "672.5px",
                                     top: "419px",
-                                    "z-index": "13",
+                                    zIndex: "13",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -630,7 +630,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "618.5px",
                                     top: "449px",
-                                    "z-index": "14",
+                                    zIndex: "14",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -649,7 +649,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "558.5px",
                                     top: "421px",
-                                    "z-index": "13",
+                                    zIndex: "13",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
@@ -668,7 +668,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     width: "67px",
                                     left: "505.5px",
                                     top: "398px",
-                                    "z-index": "12",
+                                    zIndex: "12",
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
