@@ -1,11 +1,10 @@
 import React from "react";
-
 import screenUnipopSubscription from "../styles/screen-unipop-subscription.scss";
 
 const MainScreen22Unipop14subscriptionComponent = () => {
     return (
         <>
-            <div className="main">
+            <div className="main world1">
                 <div className="main-bg"></div>
 
                 <div className="header">
@@ -83,7 +82,7 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava1.png"
+                                                src="img/ava1.png"
                                             />
                                         </div>
                                         <div className="dps">234234 K</div>
@@ -104,7 +103,7 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava2.jpg"
+                                                src="img/ava2.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -126,7 +125,7 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava3.jpg"
+                                                src="img/ava3.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -148,7 +147,7 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava4.jpg"
+                                                src="img/ava4.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -242,44 +241,44 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill idle">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                     <div className="timer">10:12</div>
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                             </ul>
@@ -289,7 +288,7 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                             {" "}
                             {/* back */}
                             <div className="loc-back">
-                                <img className="icon" src="rc/ico-loc.png" />
+                                <img className="icon" src="img/ico-loc.png" />
                                 <div className="text">2561</div>
                                 <div className="text1">GO BACK</div>
                             </div>
@@ -297,42 +296,42 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2556</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2557</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2558</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2559</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2560</div>
                                 </li>
                                 <li className="loc current">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2561</div>
                                 </li>
@@ -365,19 +364,19 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                 <div className="unipop-scroll-box">
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-back.jpg" />
+                                            <img src="img/unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-sale.jpg" />
+                                            <img src="img/unipop-m-sale.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-starterpack.jpg" />
+                                            <img src="img/unipop-m-starterpack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
@@ -400,136 +399,134 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                                                     card
                                                     <br />
                                                 </div>
-                                                <div className="sub-purhase-box">
-                                                    <div className="sub-purhase-text">
-                                                        first purchase
-                                                    </div>
-                                                    <div className="sub-purhase">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                    <div className="sub-purhase chest">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
+                                            </div>
+                                            <div className="sub-purhase-box">
+                                                <div className="sub-purhase-text">
+                                                    first purchase
+                                                </div>
+                                                <div className="sub-purhase">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
                                                     </div>
                                                 </div>
-                                                <div className="sub-purhase-box daily">
-                                                    <div className="sub-purhase-text">
-                                                        daily rewards
-                                                    </div>
-                                                    <div className="sub-purhase">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                    <div className="sub-purhase chest">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="sub-purhase-box total">
-                                                    <div className="sub-purhase-text">
-                                                        total rewards
-                                                    </div>
-                                                    <div className="sub-purhase">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                    <div className="sub-purhase chest">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="store-button">
-                                                    <div className="but-price">
-                                                        $19.99
+                                                <div className="sub-purhase chest">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="sub-box gold">
-                                                <div className="sub-box-name-box">
-                                                    <div className="sub-box-name-text">
-                                                        deluxe mountly
-                                                        subscription card
+                                            <div className="sub-purhase-box daily">
+                                                <div className="sub-purhase-text">
+                                                    daily rewards
+                                                </div>
+                                                <div className="sub-purhase">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
                                                     </div>
                                                 </div>
-                                                <div className="sub-purhase-box">
-                                                    <div className="sub-purhase-text">
-                                                        first purchase
-                                                    </div>
-                                                    <div className="sub-purhase">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                    <div className="sub-purhase chest">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
+                                                <div className="sub-purhase chest">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
                                                     </div>
                                                 </div>
-                                                <div className="sub-purhase-box daily">
-                                                    <div className="sub-purhase-text">
-                                                        daily rewards
-                                                    </div>
-                                                    <div className="sub-purhase">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                    <div className="sub-purhase chest">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
+                                            </div>
+                                            <div className="sub-purhase-box total">
+                                                <div className="sub-purhase-text">
+                                                    total rewards
+                                                </div>
+                                                <div className="sub-purhase">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
                                                     </div>
                                                 </div>
-                                                <div className="sub-purhase-box total">
-                                                    <div className="sub-purhase-text">
-                                                        total rewards
-                                                    </div>
-                                                    <div className="sub-purhase">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
-                                                    </div>
-                                                    <div className="sub-purhase chest">
-                                                        <div className="sub-purhase-pic"></div>
-                                                        <div className="sub-purhase-num">
-                                                            6868
-                                                        </div>
+                                                <div className="sub-purhase chest">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
                                                     </div>
                                                 </div>
-                                                <div className="store-button">
-                                                    <div className="but-price">
-                                                        $49.99
-                                                    </div>
+                                            </div>
+                                            <div className="store-button">
+                                                <div className="but-price">
+                                                    $19.99
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <div className="sub-bg-girl"></div>
+                                        <div className="sub-box gold">
+                                            <div className="sub-box-name-box">
+                                                <div className="sub-box-name-text">
+                                                    deluxe mountly subscription
+                                                    card
+                                                </div>
+                                            </div>
+                                            <div className="sub-purhase-box">
+                                                <div className="sub-purhase-text">
+                                                    first purchase
+                                                </div>
+                                                <div className="sub-purhase">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
+                                                    </div>
+                                                </div>
+                                                <div className="sub-purhase chest">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="sub-purhase-box daily">
+                                                <div className="sub-purhase-text">
+                                                    daily rewards
+                                                </div>
+                                                <div className="sub-purhase">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
+                                                    </div>
+                                                </div>
+                                                <div className="sub-purhase chest">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="sub-purhase-box total">
+                                                <div className="sub-purhase-text">
+                                                    total rewards
+                                                </div>
+                                                <div className="sub-purhase">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
+                                                    </div>
+                                                </div>
+                                                <div className="sub-purhase chest">
+                                                    <div className="sub-purhase-pic"></div>
+                                                    <div className="sub-purhase-num">
+                                                        6868
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="store-button">
+                                                <div className="but-price">
+                                                    $49.99
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div className="sub-bg-girl"></div>
                                 </div>
                             </div>
-
-                            <div className="btn-close-x"></div>
                         </div>
+                        <div className="btn-close-x"></div>
                     </div>
                 </div>
             </div>

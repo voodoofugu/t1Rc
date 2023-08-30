@@ -1,9 +1,10 @@
 import React from "react";
+import screenUnipopSubscription from "../styles/v2-screen-fortuna-buyres.scss";
 
 const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
     return (
         <>
-            <div className="main">
+            <div className="main world1">
                 <div className="main-bg"></div>
 
                 <div className="popup-layer" style={{ display: "block" }}>
@@ -17,7 +18,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
                         <div className="title">Buy energy</div>
                         <div className="keys-card-box">
                             <div className="keys-but-box">
-                                <img src="v2-f-e1.png" alt="" />
+                                <img src="img/v2-f-e1.png" alt="" />
                             </div>
                             <div className="keys-price">5</div>
                             {/* <div className="keys-bonus">+5 free</div> */}
@@ -27,7 +28,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
                         </div>
                         <div className="keys-card-box">
                             <div className="keys-but-box">
-                                <img src="v2-f-e2.png" alt="" />
+                                <img src="img/v2-f-e2.png" alt="" />
                             </div>
                             <div className="keys-price">30</div>
                             {/*                <div className="keys-bonus">+20 free</div>*/}
@@ -37,7 +38,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
                         </div>
                         <div className="keys-card-box">
                             <div className="keys-but-box">
-                                <img src="v2-f-e3.png" alt="" />
+                                <img src="img/v2-f-e3.png" alt="" />
                             </div>
                             <div className="keys-price">160</div>
                             {/*                <div className="keys-bonus">+200 free</div>*/}
@@ -47,7 +48,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
                         </div>
                         <div className="keys-card-box">
                             <div className="keys-but-box">
-                                <img src="v2-f-e4.png" alt="" />
+                                <img src="img/v2-f-e4.png" alt="" />
                             </div>
                             <div className="keys-price">450</div>
                             {/*                <div className="keys-bonus">+2000 free</div>*/}

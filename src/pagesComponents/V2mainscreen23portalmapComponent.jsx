@@ -333,7 +333,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                     <div className="mark">
                                         <img
                                             className="prize-pic"
-                                            src="rc/dungTreas-res-ic.png"
+                                            src="img/dungTreas-res-ic.png"
                                         />
                                         <div className="dungTreas-text">
                                             <p>*special reward</p>
@@ -352,15 +352,15 @@ const V2MainScreen23PortalMapComponent = () => {
                     <div className="chests-scroll-box">
                         <div className="chests-scroll">
                             <div className="pop-up-girl girl-1">
-                                <img src="images/hero-all/tithero-5007/x1/ava/tithero-5007-1-ava.jpg" />
+                                <img src="img/images/hero-all/tithero-5007/x1/ava/tithero-5007-1-ava.jpg" />
                                 <div className="value">100</div>
                             </div>
                             <div className="pop-up-girl girl-2">
-                                <img src="essence-80x80.png" />
+                                <img src="img/essence-80x80.png" />
                                 <div className="value">100</div>
                             </div>
                             <div className="pop-up-girl girl-3">
-                                <img src="images/hero-all/tithero-5009/x1/ava/tithero-5009-1-ava.jpg" />
+                                <img src="img/images/hero-all/tithero-5009/x1/ava/tithero-5009-1-ava.jpg" />
                                 <div className="value">100</div>
                             </div>
                         </div>
@@ -389,7 +389,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             <div className="fortuna-prize">
                                                 <img
                                                     className="prize-pic"
-                                                    src="rc/dungTreas-res-ic.png"
+                                                    src="img/dungTreas-res-ic.png"
                                                 />
                                                 <div className="fortuna-check-num res-amount">
                                                     4.53sD15
@@ -402,7 +402,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             <div className="fortuna-prize">
                                                 <img
                                                     className="prize-pic"
-                                                    src="rc/gold.png"
+                                                    src="img/gold.png"
                                                 />
                                                 <div className="fortuna-check-num res-amount">
                                                     4.53sD15
@@ -415,7 +415,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             <div className="fortuna-prize">
                                                 <img
                                                     className="prize-pic"
-                                                    src="rc/gold.png"
+                                                    src="img/gold.png"
                                                 />
                                                 <div className="fortuna-check-num res-amount">
                                                     4.53sD15
@@ -428,7 +428,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             <div className="fortuna-prize">
                                                 <img
                                                     className="prize-pic"
-                                                    src="images/superhero/suphero-761/x2/avatar/761sh-ava-1.jpg"
+                                                    src="img/images/superhero/suphero-761/x2/avatar/761sh-ava-1.jpg"
                                                 />
                                                 <div className="fortuna-check-num res-amount">
                                                     4.53sD15
@@ -467,7 +467,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             tooltiptext="1 order"
                                             topdistance="120">
                                             <div className="cw-clan-order-ab-pic">
-                                                <img src="https://cdn.faptitans.com/s1/rc/change-ic-essence.png" />
+                                                <img src="img/change-ic-essence.png" />
                                             </div>
                                             <div className="cw-clan-order-ab-prg-box">
                                                 <div className="cw-clan-order-ab-prg false"></div>
@@ -481,7 +481,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             tooltiptext="2 order"
                                             topdistance="120">
                                             <div className="cw-clan-order-ab-pic">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-yellow-butil.png" />
+                                                <img src="img/ic-yellow-butil.png" />
                                             </div>
                                             <div className="cw-clan-order-ab-prg-box">
                                                 <div className="cw-clan-order-ab-prg false"></div>
@@ -495,7 +495,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             tooltiptext="3 order"
                                             topdistance="120">
                                             <div className="cw-clan-order-ab-pic">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                <img src="img/ic-green-butil.png" />
                                             </div>
                                             <div className="cw-clan-order-ab-prg-box">
                                                 <div className="cw-clan-order-ab-prg red"></div>
@@ -509,7 +509,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             tooltiptext="4 order"
                                             topdistance="120">
                                             <div className="cw-clan-order-ab-pic">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                <img src="img/ic-blue-butil.png" />
                                             </div>
                                             <div className="cw-clan-order-ab-prg-box">
                                                 <div className="cw-clan-order-ab-prg false"></div>
@@ -523,7 +523,7 @@ const V2MainScreen23PortalMapComponent = () => {
                                             tooltiptext="5 order"
                                             topdistance="120">
                                             <div className="cw-clan-order-ab-pic">
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-icon-chaos.png" />
+                                                <img src="img/v2-icon-chaos.png" />
                                             </div>
                                             <div className="cw-clan-order-ab-prg-box">
                                                 <div className="cw-clan-order-ab-prg false"></div>

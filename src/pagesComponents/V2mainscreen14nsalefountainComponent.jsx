@@ -9,7 +9,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -47,25 +47,46 @@ const V2MainScreen14NsaleFountainComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -104,10 +125,10 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,17 +158,17 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +198,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -190,10 +211,10 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="rc/tithero-11-1-ava.jpg"
+                                                            src="img/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,17 +245,17 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="icons/ic-abil-78.jpg" />
+                                                        <img src="img/icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="rc/tithero-11-1-ava.jpg"
+                                                            src="img/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +286,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="icons/ic-abil-78.jpg" />
+                                                        <img src="img/icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,25 +317,25 @@ const V2MainScreen14NsaleFountainComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="tab-01.png" />
+                                <img src="img/tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="tab-05.png" />
+                                <img src="img/tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="tab-08.png" />
+                                <img src="img/tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="tab-02.png" />
+                                <img src="img/tab-02.png" />
                             </div>
                         </div>
                     </div>
@@ -337,25 +358,25 @@ const V2MainScreen14NsaleFountainComponent = () => {
                         <div className="mn-pop-menu-box">
                             <div className="mn-pop-menu">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="v2-ns-chest.png" />
+                                    <img src="img/v2-ns-chest.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">chest</div>
                             </div>
                             <div className="mn-pop-menu">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="v2-ns-ball.png" />
+                                    <img src="img/v2-ns-ball.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">magic</div>
                             </div>
                             <div className="mn-pop-menu active">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="v2-ns-coin2.png" />
+                                    <img src="img/v2-ns-coin2.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">fountain</div>
                             </div>
                             <div className="mn-pop-menu">
                                 <div className="mn-pop-menu-pic">
-                                    <img src="v2-ns-money.png" />
+                                    <img src="img/v2-ns-money.png" />
                                 </div>
                                 <div className="mn-pop-menu-text">offer</div>
                             </div>
@@ -366,7 +387,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                 <div className="nsale-pr-box">
                                     <div className="nsale-pr-box-pic-box">
                                         <div className="nsale-pr-box-pic">
-                                            <img src="v2-res-mithril2.png" />
+                                            <img src="img/v2-res-mithril2.png" />
                                         </div>
                                         <div className="nsale-pr-box-count">
                                             9999
@@ -379,13 +400,13 @@ const V2MainScreen14NsaleFountainComponent = () => {
                             </div>
                             <div className="nm-pop-fon-coin-box">
                                 <div className="nm-pop-fon-coin">
-                                    <img src="v2-ns-coin1.png" />
+                                    <img src="img/v2-ns-coin1.png" />
                                 </div>
                                 <div className="nm-pop-fon-coin-count">333</div>
                             </div>
                             <div className="nm-pop-fon-coin-box silver">
                                 <div className="nm-pop-fon-coin">
-                                    <img src="v2-ns-coin2.png" />
+                                    <img src="img/v2-ns-coin2.png" />
                                 </div>
                                 <div className="nm-pop-fon-coin-count">333</div>
                             </div>
@@ -394,7 +415,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                 <div className="nsale-pr-box check">
                                     <div className="nsale-pr-box-pic-box">
                                         <div className="nsale-pr-box-pic">
-                                            <img src="v2-res-mithril2.png" />
+                                            <img src="img/v2-res-mithril2.png" />
                                         </div>
                                         <div className="nsale-pr-box-count">
                                             9999
@@ -408,7 +429,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                 <div className="nsale-pr-box">
                                     <div className="nsale-pr-box-pic-box">
                                         <div className="nsale-pr-box-pic">
-                                            <img src="v2-res-mithril2.png" />
+                                            <img src="img/v2-res-mithril2.png" />
                                         </div>
                                         <div className="nsale-pr-box-count">
                                             9999
@@ -422,7 +443,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                 <div className="nsale-pr-box">
                                     <div className="nsale-pr-box-pic-box">
                                         <div className="nsale-pr-box-pic">
-                                            <img src="v2-res-mithril2.png" />
+                                            <img src="img/v2-res-mithril2.png" />
                                         </div>
                                         <div className="nsale-pr-box-count">
                                             9999
@@ -436,7 +457,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                 <div className="nsale-pr-box">
                                     <div className="nsale-pr-box-pic-box">
                                         <div className="nsale-pr-box-pic">
-                                            <img src="v2-res-mithril2.png" />
+                                            <img src="img/v2-res-mithril2.png" />
                                         </div>
                                         <div className="nsale-pr-box-count">
                                             9999
@@ -450,7 +471,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                 <div className="nsale-pr-box">
                                     <div className="nsale-pr-box-pic-box">
                                         <div className="nsale-pr-box-pic">
-                                            <img src="v2-res-mithril2.png" />
+                                            <img src="img/v2-res-mithril2.png" />
                                         </div>
                                         <div className="nsale-pr-box-count">
                                             9999
@@ -464,7 +485,7 @@ const V2MainScreen14NsaleFountainComponent = () => {
                                 <div className="nsale-pr-box">
                                     <div className="nsale-pr-box-pic-box">
                                         <div className="nsale-pr-box-pic">
-                                            <img src="v2-res-mithril2.png" />
+                                            <img src="img/v2-res-mithril2.png" />
                                         </div>
                                         <div className="nsale-pr-box-count">
                                             9999

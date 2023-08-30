@@ -1,4 +1,5 @@
 import React from "react";
+import screenFortunaRoundMain16x from "../styles/screen-fortuna-round-main_16x.scss";
 
 const MainScreen16FortunaRoundMainpop16xComponent = () => {
     return (
@@ -22,7 +23,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/diamond2.png"
+                                                        src="img/diamond2.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         70%
@@ -36,7 +37,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-f-e1.png"
+                                                        src="v2-f-e1.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         1K
@@ -50,7 +51,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/diamond2.png"
+                                                        src="img/diamond2.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         x3
@@ -64,7 +65,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-f-e1.png"
+                                                        src="v2-f-e1.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         500
@@ -78,7 +79,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/change-ic-diamond.png"
+                                                        src="img/change-ic-diamond.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         50%
@@ -92,7 +93,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-f-e1.png"
+                                                        src="v2-f-e1.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         100
@@ -106,7 +107,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/change-ic-diamond.png"
+                                                        src="img/change-ic-diamond.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         x2
@@ -120,7 +121,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-ns-chest.png"
+                                                        src="img/v2-ns-chest.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         10
@@ -134,7 +135,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/ic-th-176.png"
+                                                        src="img/ic-th-176.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         50%
@@ -148,7 +149,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/fapop-token-ic.png"
+                                                        src="fapop-token-ic.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         10
@@ -162,7 +163,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/ic-th-176.png"
+                                                        src="img/ic-th-176.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         33%
@@ -176,7 +177,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-f-e2.png"
+                                                        src="img/v2-f-e2.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         x2
@@ -190,7 +191,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/ic-th-176.png"
+                                                        src="img/ic-th-176.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         25%
@@ -204,7 +205,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-f-e2.png"
+                                                        src="img/v2-f-e2.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         50%
@@ -218,7 +219,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                                        src="v2-mn-soul-sg-160.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         50%
@@ -232,7 +233,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                                        src="v2-mn-soul-sg-160.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         x2
@@ -246,7 +247,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                         <div className="fortuna-btn-box get-tokens">
                                             <div
                                                 className="color-btn"
-                                                style={{"top":"35px"}}>
+                                                style={{ top: "35px" }}>
                                                 <div className="color-btn-text">
                                                     Spin the wheel!
                                                 </div>

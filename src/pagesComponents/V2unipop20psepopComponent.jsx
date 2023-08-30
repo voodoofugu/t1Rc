@@ -22,25 +22,25 @@ const V2Unipop20PsePopComponent = () => {
                                 <div className="unipop-scroll-box">
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-back.jpg" />
+                                            <img src="img/unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-back.jpg" />
+                                            <img src="img/unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-back.jpg" />
+                                            <img src="img/unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-back.jpg" />
+                                            <img src="img/unipop-m-back.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
@@ -67,7 +67,7 @@ const V2Unipop20PsePopComponent = () => {
                                     </div>
                                     <div className="sexped-girl-left-box">
                                         <div className="sexped-girl">
-                                            <img src="bre-pse2.png" />
+                                            <img src="img/bre-pse2.png" />
                                         </div>
                                         <div className="sexped-girl-buble">
                                             collect resources!
@@ -75,7 +75,7 @@ const V2Unipop20PsePopComponent = () => {
                                         <div className="sexped-reward-box-all">
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="v2-res-gems.png" />
+                                                    <img src="img/v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -83,7 +83,7 @@ const V2Unipop20PsePopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="v2-res-gems.png" />
+                                                    <img src="img/v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -91,7 +91,7 @@ const V2Unipop20PsePopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="v2-res-gems.png" />
+                                                    <img src="img/v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -101,7 +101,7 @@ const V2Unipop20PsePopComponent = () => {
                                     </div>
                                     <div className="sexped-girl-right-box">
                                         <div className="sexped-girl">
-                                            <img src="bre-pse1.png" />
+                                            <img src="img/bre-pse1.png" />
                                         </div>
                                         <div className="sexped-girl-buble">
                                             exchange them for girls
@@ -109,7 +109,7 @@ const V2Unipop20PsePopComponent = () => {
                                         <div className="sexped-reward-box-all">
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="v2-res-gems.png" />
+                                                    <img src="img/v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -117,7 +117,7 @@ const V2Unipop20PsePopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="v2-res-gems.png" />
+                                                    <img src="img/v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969
@@ -125,7 +125,7 @@ const V2Unipop20PsePopComponent = () => {
                                             </div>
                                             <div className="sexped-reward">
                                                 <div className="sexped-pic">
-                                                    <img src="v2-res-gems.png" />
+                                                    <img src="img/v2-res-gems.png" />
                                                 </div>
                                                 <div className="sexped-num">
                                                     696969

@@ -6,12 +6,12 @@ const V2MainScreen05FwStartComponent = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style={{"background-image":"url('https"}}></div>
+                    style={{ backgroundImage: "url('https" }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                <img src="img/v2-master-pic1.png" />
                             </div>
                             <div className="avatar-box-name">Rank 27</div>
                         </div>
@@ -22,7 +22,7 @@ const V2MainScreen05FwStartComponent = () => {
                             </div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                             <div className="anim-in-p gold"></div>
                         </div>
@@ -37,14 +37,8 @@ const V2MainScreen05FwStartComponent = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img
-                                        className="bg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-                                    />
-                                    <img
-                                        className="fg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-                                    />
+                                    <img className="bg" src="v2-cw-bg34.png" />
+                                    <img className="fg" src="v2-cw-p03.png" />
                                 </div>
                                 <div className="might-box-name">Valhalla</div>
                             </div>
@@ -73,42 +67,36 @@ const V2MainScreen05FwStartComponent = () => {
                     <div className="quest-box-scroll">
                         <div className="quest-box">
                             <li className="quest quest-box">
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-quests.png"
-                                />
+                                <img className="icon" src="ic-quests.png" />
                                 <div className="quest-notif notif notif10"></div>
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"0ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
-                                />
+                                style={{ "animation-delay": "0ms" }}>
+                                <img className="icon" src="change-sun3.png" />
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"150ms"}}>
+                                style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
+                                    src="ic-abil-reborn.png"
                                 />
                             </li>
                             <li
                                 className="quest angel-pop open"
-                                style={{"animation-delay":"300ms"}}>
+                                style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png"
+                                    src="picmeh-ic-angel-pop.png"
                                 />
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{"animation-delay":"450ms"}}>
+                                style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png"
+                                    src="rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">47:13:52</div>
@@ -117,7 +105,7 @@ const V2MainScreen05FwStartComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-chest.png"
+                                    src="img/v2-ns-chest.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">1D 23:13</div>
@@ -125,11 +113,8 @@ const V2MainScreen05FwStartComponent = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{"animation-delay":"600ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
-                                />
+                                style={{ "animation-delay": "600ms" }}>
+                                <img className="icon" src="v2-ns-ball.png" />
                                 <div className="timerbox">
                                     <div className="timer">47:13:52</div>
                                 </div>
@@ -137,16 +122,13 @@ const V2MainScreen05FwStartComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                    src="v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{"animation-delay":"750ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png"
-                                />
+                                style={{ "animation-delay": "750ms" }}>
+                                <img className="icon" src="m-ico-gold.png" />
                                 <div className="timerbox">
                                     <div className="timer">05:15:30</div>
                                 </div>
@@ -154,31 +136,28 @@ const V2MainScreen05FwStartComponent = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/picmeh-ic-diamond.png"
+                                    src="picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"900ms"}}>
+                                style={{ "animation-delay": "900ms" }}>
+                                <img className="icon" src="m-ico-quest.png" />
+                            </li>
+                            <li
+                                className="quest open"
+                                style={{ "animation-delay": "1050ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
+                                    src="m-ico-quest-gift.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"1050ms"}}>
+                                style={{ "animation-delay": "1200ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
-                                />
-                            </li>
-                            <li
-                                className="quest open"
-                                style={{"animation-delay":"1200ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
+                                    src="m-ico-quest-gift.png"
                                 />
                             </li>
                         </div>
@@ -207,7 +186,7 @@ const V2MainScreen05FwStartComponent = () => {
                                         <div className="fw-right-side-content-box">
                                             <div className="fw-flag-box fr1">
                                                 <div className="fw-flag">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/v2-fw-fr-1.png" />
+                                                    <img src="img/v2-fw-fr-1.png" />
                                                 </div>
                                                 <div className="fw-flag-name"></div>
                                                 <div className="color-btn disabled0">
@@ -270,7 +249,7 @@ const V2MainScreen05FwStartComponent = () => {
                                         <div className="trophy-res-box ctb">
                                             <div
                                                 className="trophy-value"
-                                                style={{"width":"120px"}}>
+                                                style={{ width: "120px" }}>
                                                 30.2K
                                             </div>
                                         </div>
@@ -281,10 +260,10 @@ const V2MainScreen05FwStartComponent = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -292,35 +271,35 @@ const V2MainScreen05FwStartComponent = () => {
                             className="tabs-all guild selected"
                             href="#/guild"
                             aria-current="page">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                             <div className="v2-tab-notif notif notif20"></div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>

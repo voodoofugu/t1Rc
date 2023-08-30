@@ -20,7 +20,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                     <div className="cw-mer-box-all">
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -38,7 +38,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -63,7 +63,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -81,7 +81,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -99,7 +99,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -117,7 +117,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -143,7 +143,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                 <div className="cw-mer-box-all mini">
                                     <div className="cw-mer-box">
                                         <div className="cw-mer-pic">
-                                            <img src="p-master-a12.jpg" />
+                                            <img src="img/p-master-a12.jpg" />
                                         </div>
                                         <div className="cw-mer-count">x10</div>
                                         <div className="cw-mer-descr">
@@ -157,7 +157,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                     </div>
                                     <div className="cw-mer-box">
                                         <div className="cw-mer-pic">
-                                            <img src="p-master-a12.jpg" />
+                                            <img src="img/p-master-a12.jpg" />
                                         </div>
                                         <div className="cw-mer-count">x10</div>
                                         <div className="cw-mer-descr">
@@ -171,7 +171,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                     </div>
                                     <div className="cw-mer-box">
                                         <div className="cw-mer-pic">
-                                            <img src="p-master-a12.jpg" />
+                                            <img src="img/p-master-a12.jpg" />
                                         </div>
                                         <div className="cw-mer-count">x10</div>
                                         <div className="cw-mer-descr">
@@ -196,7 +196,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                     <div className="cw-mer-box-all mini">
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -214,7 +214,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -232,7 +232,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -250,7 +250,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -268,7 +268,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -286,7 +286,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -304,7 +304,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -322,7 +322,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -340,7 +340,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -358,7 +358,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -376,7 +376,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -394,7 +394,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -421,7 +421,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                     <div className="cw-mer-box-all mini">
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -439,7 +439,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -457,7 +457,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -475,7 +475,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -493,7 +493,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -511,7 +511,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -529,7 +529,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -547,7 +547,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -565,7 +565,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -583,7 +583,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -601,7 +601,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10
@@ -619,7 +619,7 @@ const V2MainScreen15CwArmySetupComponent = () => {
                                         </div>
                                         <div className="cw-mer-box">
                                             <div className="cw-mer-pic">
-                                                <img src="p-master-a12.jpg" />
+                                                <img src="img/p-master-a12.jpg" />
                                             </div>
                                             <div className="cw-mer-count">
                                                 x10

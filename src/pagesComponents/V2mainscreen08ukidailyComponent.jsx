@@ -9,14 +9,13 @@ const V2MainScreen08UkiDailyComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        "background-image":
-                            "url('/images/back/new/09-River.jpg')",
+                        backgroundImage: "url('/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -25,7 +24,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -56,7 +55,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <li className="quest">
                                 <img
                                     className="icon"
-                                    src="rc/ic-abil-reborn.png"
+                                    src="img/ic-abil-reborn.png"
                                 />
                             </li>
                         </div>
@@ -66,13 +65,13 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 <li className="quest angel-pop">
                                     <img
                                         className="icon"
-                                        src="rc/picmeh-ic-angel-pop.png"
+                                        src="img/picmeh-ic-angel-pop.png"
                                     />
                                 </li>
                                 <li className="quest angel-pop-x3">
                                     <img
                                         className="icon"
-                                        src="rc/picmeh-ic-angel-pop-x3.png"
+                                        src="img/picmeh-ic-angel-pop-x3.png"
                                     />
                                 </li>
                                 <li
@@ -80,13 +79,13 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ "animation-delay": "0ms" }}>
                                     <img
                                         className="icon"
-                                        src="rc/ic-superhero-10.png"
+                                        src="img/ic-superhero-10.png"
                                     />
                                 </li>
                                 <li className="quest picmeh-info info">
                                     <img
                                         className="icon"
-                                        src="rc/picmeh-ic-diamond.png"
+                                        src="img/picmeh-ic-diamond.png"
                                     />
                                 </li>
                                 <li
@@ -94,7 +93,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ "animation-delay": "450ms" }}>
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/ic-hero-211.png"
+                                        src="ic-hero-211.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">23:29:14</div>
@@ -106,7 +105,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ "animation-delay": "600ms" }}>
                                     <img
                                         className="icon"
-                                        src="rc/v2-ico-gold.png"
+                                        src="img/v2-ico-gold.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">23:36:10</div>
@@ -120,7 +119,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 <li className="quest startpack wide">
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/cw-quest-icon.png"
+                                        src="cw-quest-icon.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">1D 03:08</div>
@@ -131,7 +130,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ "animation-delay": "150ms" }}>
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png"
+                                        src="v2-fw-icon-fr0.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">71:32:33</div>
@@ -140,13 +139,13 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 <li className="quest startpack wide">
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                        src="v2-mn-soul-sg-160.png"
                                     />
                                 </li>
                                 <li className="quest marked">
                                     <img
                                         className="icon"
-                                        src="rc/ic-quests.png"
+                                        src="img/ic-quests.png"
                                     />
                                     <div className="quest-notif"></div>
                                 </li>
@@ -160,7 +159,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ "animation-delay": "750ms" }}>
                                     <img
                                         className="icon"
-                                        src="rc/m-ico-quest.png"
+                                        src="img/m-ico-quest.png"
                                     />
                                 </li>
                                 <li
@@ -168,7 +167,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ "animation-delay": "750ms" }}>
                                     <img
                                         className="icon"
-                                        src="rc/m-ico-quest-gift.png"
+                                        src="img/m-ico-quest-gift.png"
                                     />
                                 </li>
                             </div>
@@ -227,7 +226,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     </div>
                                     <div className="daily-reward">
                                         <div className="daily-reward-pic">
-                                            <img src="diamond1.png" />
+                                            <img src="img/diamond1.png" />
                                         </div>
                                         <div className="daily-reward-count">
                                             3
@@ -259,7 +258,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="daily-parth-claim-box">
                                                     <div className="daily-reward">
                                                         <div className="daily-reward-pic">
-                                                            <img src="gold.png" />
+                                                            <img src="img/gold.png" />
                                                         </div>
                                                         <div className="daily-reward-count">
                                                             23.1UD13
@@ -287,7 +286,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="daily-parth-claim-box">
                                                     <div className="daily-reward">
                                                         <div className="daily-reward-pic">
-                                                            <img src="change-ic-gem-master.png" />
+                                                            <img src="img/change-ic-gem-master.png" />
                                                         </div>
                                                         <div className="daily-reward-count">
                                                             1 pack
@@ -320,7 +319,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="daily-parth-claim-box">
                                                     <div className="daily-reward">
                                                         <div className="daily-reward-pic">
-                                                            <img src="top-arrow@2x.png" />
+                                                            <img src="img/top-arrow@2x.png" />
                                                         </div>
                                                         <div className="daily-reward-count">
                                                             1
@@ -349,7 +348,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="daily-parth-claim-box">
                                                     <div className="daily-reward">
                                                         <div className="daily-reward-pic">
-                                                            <img src="essence.png" />
+                                                            <img src="img/essence.png" />
                                                         </div>
                                                         <div className="daily-reward-count">
                                                             2 pack
@@ -378,7 +377,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="daily-parth-claim-box">
                                                     <div className="daily-reward">
                                                         <div className="daily-reward-pic">
-                                                            <img src="essence.png" />
+                                                            <img src="img/essence.png" />
                                                         </div>
                                                         <div className="daily-reward-count">
                                                             1 pack
@@ -407,7 +406,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="daily-parth-claim-box">
                                                     <div className="daily-reward">
                                                         <div className="daily-reward-pic">
-                                                            <img src="gold.png" />
+                                                            <img src="img/gold.png" />
                                                         </div>
                                                         <div className="daily-reward-count">
                                                             23.1UD13
@@ -486,7 +485,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -522,10 +521,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -566,10 +565,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -617,10 +616,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -668,10 +667,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -712,10 +711,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -767,7 +766,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -803,10 +802,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -847,10 +846,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -898,10 +897,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -949,10 +948,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -993,10 +992,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -1048,7 +1047,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1084,10 +1083,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -1128,10 +1127,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -1179,10 +1178,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -1230,10 +1229,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -1274,10 +1273,10 @@ const V2MainScreen08UkiDailyComponent = () => {
                                                 <div className="journal-reward">
                                                     <div className="journal-reward-pic-wrap">
                                                         <div className="journal-reward-pic story-icn">
-                                                            <img src="story/t/p3-c1.jpg" />
+                                                            <img src="img/story/t/p3-c1.jpg" />
                                                         </div>
                                                         <div className="journal-reward-pic">
-                                                            <img src="change-ic-gold.png" />
+                                                            <img src="img/change-ic-gold.png" />
                                                             <div className="journal-reward-value">
                                                                 1000
                                                             </div>
@@ -1301,7 +1300,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p1-c1.png" />
+                                                    <img src="img/story/t/p1-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1312,7 +1311,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p1-c2.png" />
+                                                    <img src="img/story/t/p1-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1323,7 +1322,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p1-c3.png" />
+                                                    <img src="img/story/t/p1-c3.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1339,7 +1338,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p2-c1.png" />
+                                                    <img src="img/story/t/p2-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1350,7 +1349,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p2-c2.png" />
+                                                    <img src="img/story/t/p2-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1366,7 +1365,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box active">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p3-c1.png" />
+                                                    <img src="img/story/t/p3-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1377,7 +1376,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p3-c2.png" />
+                                                    <img src="img/story/t/p3-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1388,7 +1387,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p3-c3.png" />
+                                                    <img src="img/story/t/p3-c3.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1404,7 +1403,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p4-c1.png" />
+                                                    <img src="img/story/t/p4-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1415,7 +1414,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                             </div>
                                             <div className="journal-comics-box lock">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="story/t/p4-c2.png" />
+                                                    <img src="img/story/t/p4-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -1434,49 +1433,49 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 <div className="skills-pic">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon01.png"
+                                        src="img/skill-icons/skill-icon01.png"
                                     />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon02.png"
+                                        src="img/skill-icons/skill-icon02.png"
                                     />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon03.png"
+                                        src="img/skill-icons/skill-icon03.png"
                                     />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon04.png"
+                                        src="img/skill-icons/skill-icon04.png"
                                     />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon05.png"
+                                        src="img/skill-icons/skill-icon05.png"
                                     />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon06.png"
+                                        src="img/skill-icons/skill-icon06.png"
                                     />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon07.png"
+                                        src="img/skill-icons/skill-icon07.png"
                                     />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
@@ -1489,7 +1488,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     <div className="journal-comics">
                                         <img
                                             className="pic"
-                                            src="rc/story/p1-c1.png"
+                                            src="img/story/p1-c1.png"
                                         />
                                         <div
                                             className="journal-comics-ballon-box"
@@ -1535,7 +1534,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -1543,7 +1542,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                             <div className="v2-tab-notif notif notif20"></div>
@@ -1552,7 +1551,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
@@ -1560,7 +1559,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -1571,7 +1570,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>
@@ -1587,7 +1586,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     <div className="journal-comics">
                                         <img
                                             className="pic"
-                                            src="rc/story/p1-c1.png"
+                                            src="img/story/p1-c1.png"
                                         />
                                         <div
                                             className="journal-comics-ballon-box"
@@ -1655,7 +1654,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                         <p className="icon">
                                             <img
                                                 className="img"
-                                                src="rc/ms-stone-orange.png"
+                                                src="img/ms-stone-orange.png"
                                             />
                                         </p>
                                         <p className="n">10</p>
@@ -1690,7 +1689,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                         <p className="icon">
                                             <img
                                                 className="img"
-                                                src="rc/ico-click.png"
+                                                src="img/ico-click.png"
                                             />
                                         </p>
                                         <p className="n">8</p>

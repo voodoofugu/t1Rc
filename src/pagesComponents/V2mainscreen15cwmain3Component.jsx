@@ -8,12 +8,12 @@ const V2MainScreen15CwMain3Component = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style={{"background-image":"url('https"}}></div>
+                    style={{ backgroundImage: "url('https" }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                <img src="img/v2-master-pic1.png" />
                             </div>
                             <div className="avatar-box-name">Rank 27</div>
                         </div>
@@ -24,7 +24,7 @@ const V2MainScreen15CwMain3Component = () => {
                             </div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                             <div className="anim-in-p gold"></div>
                         </div>
@@ -39,14 +39,8 @@ const V2MainScreen15CwMain3Component = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img
-                                        className="bg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-                                    />
-                                    <img
-                                        className="fg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-                                    />
+                                    <img className="bg" src="v2-cw-bg34.png" />
+                                    <img className="fg" src="v2-cw-p03.png" />
                                 </div>
                                 <div className="might-box-name">Valhalla</div>
                             </div>
@@ -75,51 +69,42 @@ const V2MainScreen15CwMain3Component = () => {
                     <div className="quest-box-scroll">
                         <div className="quest-box">
                             <li className="quest quest-box">
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-quests.png"
-                                />
+                                <img className="icon" src="ic-quests.png" />
                                 <div className="quest-notif notif notif10"></div>
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"0ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
-                                />
+                                style={{ "animation-delay": "0ms" }}>
+                                <img className="icon" src="change-sun3.png" />
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"150ms"}}>
+                                style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
+                                    src="ic-abil-reborn.png"
                                 />
                             </li>
                             <li
                                 className="quest angel-pop open"
-                                style={{"animation-delay":"300ms"}}>
+                                style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png"
+                                    src="picmeh-ic-angel-pop.png"
                                 />
                             </li>
                             <li className="quest-fortune">
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-fortuna.png"
-                                />
+                                <img className="icon" src="ic-fortuna.png" />
                                 <div className="timerbox">
                                     <div className="timer">SPIN!</div>
                                 </div>
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{"animation-delay":"450ms"}}>
+                                style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png"
+                                    src="rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">17:25:18</div>
@@ -128,7 +113,7 @@ const V2MainScreen15CwMain3Component = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-chest.png"
+                                    src="img/v2-ns-chest.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">17:25:18</div>
@@ -136,11 +121,8 @@ const V2MainScreen15CwMain3Component = () => {
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{"animation-delay":"600ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
-                                />
+                                style={{ "animation-delay": "600ms" }}>
+                                <img className="icon" src="v2-ns-ball.png" />
                                 <div className="timerbox">
                                     <div className="timer">17:25:18</div>
                                 </div>
@@ -148,16 +130,13 @@ const V2MainScreen15CwMain3Component = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                    src="v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
                                 className="quest startpack open"
-                                style={{"animation-delay":"750ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png"
-                                />
+                                style={{ "animation-delay": "750ms" }}>
+                                <img className="icon" src="m-ico-gold.png" />
                                 <div className="timerbox">
                                     <div className="timer">04:10:27</div>
                                 </div>
@@ -165,31 +144,28 @@ const V2MainScreen15CwMain3Component = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/picmeh-ic-diamond.png"
+                                    src="picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"900ms"}}>
+                                style={{ "animation-delay": "900ms" }}>
+                                <img className="icon" src="m-ico-quest.png" />
+                            </li>
+                            <li
+                                className="quest open"
+                                style={{ "animation-delay": "1050ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
+                                    src="m-ico-quest-gift.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
-                                style={{"animation-delay":"1050ms"}}>
+                                style={{ "animation-delay": "1200ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
-                                />
-                            </li>
-                            <li
-                                className="quest open"
-                                style={{"animation-delay":"1200ms"}}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png"
+                                    src="m-ico-quest-gift.png"
                                 />
                             </li>
                         </div>
@@ -221,11 +197,13 @@ const V2MainScreen15CwMain3Component = () => {
                                                 map of war
                                             </div>
                                             <div className="fw-main-bl-pic">
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-maps.png" />
+                                                <img src="img/v2-fw-icon-maps.png" />
                                             </div>
                                             <div
                                                 className="color-btn"
-                                                style={{"filter":"grayscale(1)"}}>
+                                                style={{
+                                                    filter: "grayscale(1)",
+                                                }}>
                                                 <div className="color-btn-text">
                                                     <div className="t">
                                                         00:00:00
@@ -236,8 +214,8 @@ const V2MainScreen15CwMain3Component = () => {
                                         <div className="fw-main-bl shop">
                                             <div
                                                 className="fw-main-bl-pic"
-                                                style={{"top":"75px"}}>
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-shop.png" />
+                                                style={{ top: "75px" }}>
+                                                <img src="img/v2-fw-icon-shop.png" />
                                             </div>
                                             <div className="color-btn shop">
                                                 <div className="color-btn-text">
@@ -246,7 +224,9 @@ const V2MainScreen15CwMain3Component = () => {
                                             </div>
                                             <div
                                                 className="color-btn"
-                                                style={{"filter":"grayscale(1)"}}>
+                                                style={{
+                                                    filter: "grayscale(1)",
+                                                }}>
                                                 <div className="color-btn-text">
                                                     Clans
                                                 </div>
@@ -281,11 +261,13 @@ const V2MainScreen15CwMain3Component = () => {
                                                 rating
                                             </div>
                                             <div className="fw-main-bl-pic">
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fraction.png" />
+                                                <img src="img/v2-fw-icon-fraction.png" />
                                             </div>
                                             <div
                                                 className="color-btn"
-                                                style={{"filter":"grayscale(1)"}}>
+                                                style={{
+                                                    filter: "grayscale(1)",
+                                                }}>
                                                 <div className="color-btn-text">
                                                     rating
                                                 </div>
@@ -322,7 +304,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                 <div className="fw-level-simple">
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -338,7 +320,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -354,7 +336,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -370,7 +352,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -386,7 +368,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -402,7 +384,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -418,7 +400,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -434,7 +416,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-yellow-butil.png" />
+                                                            <img src="img/ic-yellow-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -450,7 +432,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -466,7 +448,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -482,7 +464,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -498,7 +480,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -514,7 +496,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -530,7 +512,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                            <img src="img/ic-green-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -546,7 +528,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -562,7 +544,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -578,7 +560,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -594,7 +576,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                            <img src="img/ic-blue-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -610,7 +592,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -626,7 +608,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -642,7 +624,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -658,7 +640,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -674,7 +656,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -690,7 +672,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -706,7 +688,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -722,7 +704,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -738,7 +720,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -754,7 +736,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-yellow-butil.png" />
+                                                            <img src="img/ic-yellow-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -770,7 +752,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -786,7 +768,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -802,7 +784,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -818,7 +800,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -834,7 +816,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -850,7 +832,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                            <img src="img/ic-green-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -866,7 +848,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -882,7 +864,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -898,7 +880,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -914,7 +896,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -930,7 +912,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -946,7 +928,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -962,7 +944,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                            <img src="img/ic-blue-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -978,7 +960,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -994,7 +976,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1010,7 +992,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1026,7 +1008,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1042,7 +1024,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1058,7 +1040,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                            <img src="img/ic-green-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1074,7 +1056,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1090,7 +1072,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/heroup-150.png" />
+                                                            <img src="img/heroup-150.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1106,7 +1088,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block girl">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/__5e98/images/superhero_new/suphero-264/x2/avatar/264sh-ava-1.jpg" />
+                                                            <img src="img/__5e98/images/superhero_new/suphero-264/x2/avatar/264sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1124,7 +1106,9 @@ const V2MainScreen15CwMain3Component = () => {
                                                 <div className="fw-level-level">
                                                     <div
                                                         className="fw-level-level-prg"
-                                                        style={{"width":"0%"}}></div>
+                                                        style={{
+                                                            width: "0%",
+                                                        }}></div>
                                                     <div className="fw-level-level-num-box">
                                                         <div className="fw-level-level-num">
                                                             1
@@ -1281,7 +1265,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                 <div className="fw-level-elite">
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1297,7 +1281,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1313,7 +1297,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1329,7 +1313,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1345,7 +1329,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1361,7 +1345,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1377,7 +1361,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1393,7 +1377,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                            <img src="img/ic-green-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1409,7 +1393,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1425,7 +1409,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1441,7 +1425,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1457,7 +1441,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1473,7 +1457,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1489,7 +1473,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1505,7 +1489,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1521,7 +1505,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                            <img src="img/ic-blue-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1537,7 +1521,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1553,7 +1537,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1569,7 +1553,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1585,7 +1569,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1601,7 +1585,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1617,7 +1601,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1633,7 +1617,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1649,7 +1633,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-yellow-butil.png" />
+                                                            <img src="img/ic-yellow-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1665,7 +1649,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block girl">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/__2dfc/images/superhero_new/suphero-265/x2/avatar/265sh-ava-1.jpg" />
+                                                            <img src="img/__2dfc/images/superhero_new/suphero-265/x2/avatar/265sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1681,7 +1665,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1697,7 +1681,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1713,7 +1697,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1729,7 +1713,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1745,7 +1729,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1761,7 +1745,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1777,7 +1761,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                            <img src="img/ic-green-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1793,7 +1777,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1809,7 +1793,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1825,7 +1809,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1841,7 +1825,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1857,7 +1841,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1873,7 +1857,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1889,7 +1873,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1905,7 +1889,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                            <img src="img/ic-blue-butil.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1921,7 +1905,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ic-krasn-butil@2x.png" />
+                                                            <img src="img/ic-krasn-butil@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1937,7 +1921,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png" />
+                                                            <img src="img/sh-icon-chest-128.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1953,7 +1937,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png" />
+                                                            <img src="img/photo-ic@2x.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1969,7 +1953,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-orange.png" />
+                                                            <img src="img/ms-stone-orange.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1985,7 +1969,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-blue.png" />
+                                                            <img src="img/ms-stone-blue.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -2001,7 +1985,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-green.png" />
+                                                            <img src="img/ms-stone-green.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -2017,7 +2001,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png" />
+                                                            <img src="img/ms-stone-pink.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -2033,7 +2017,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block girl">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/trophy/gt_03-a-ava.png" />
+                                                            <img src="img/trophy/gt_03-a-ava.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -2049,7 +2033,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/heroup-150.png" />
+                                                            <img src="img/heroup-150.png" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -2065,7 +2049,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block girl">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/__8abe/images/superhero_new/suphero-266/x2/avatar/266sh-ava-1.jpg" />
+                                                            <img src="img/__8abe/images/superhero_new/suphero-266/x2/avatar/266sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -2087,7 +2071,7 @@ const V2MainScreen15CwMain3Component = () => {
                                         <div className="trophy-res-box ctb cw">
                                             <div
                                                 className="trophy-value"
-                                                style={{"width":"120px"}}>
+                                                style={{ width: "120px" }}>
                                                 60.5K
                                             </div>
                                         </div>
@@ -2098,10 +2082,10 @@ const V2MainScreen15CwMain3Component = () => {
                     </div>
                     <div className="tabs-all-box">
                         <a className="tabs-all heroes" href="#/">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -2109,35 +2093,35 @@ const V2MainScreen15CwMain3Component = () => {
                             className="tabs-all guild selected"
                             aria-current="page"
                             href="#/guild">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                             <div className="v2-tab-notif notif notif20"></div>
                         </a>
                         <a className="tabs-all album" href="#/galery/pictures">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
                         <a className="tabs-all rating" href="#/rating/jewerly">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
                         <a className="tabs-all squests" href="#/quests/daily">
-                            <div style={{"width":"100%","height":"100%"}}>
+                            <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>

@@ -7,12 +7,12 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style={{ "background-image": "url('https" }}></div>
+                    style={{ backgroundImage: "url('https" }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                <img src="img/v2-master-pic1.png" />
                             </div>
                             <div className="avatar-box-name">Rank 27</div>
                         </div>
@@ -23,7 +23,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             </div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                             <div className="anim-in-p gold"></div>
                         </div>
@@ -38,14 +38,8 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img
-                                        className="bg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-                                    />
-                                    <img
-                                        className="fg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-                                    />
+                                    <img className="bg" src="v2-cw-bg34.png" />
+                                    <img className="fg" src="v2-cw-p03.png" />
                                 </div>
                                 <div className="might-box-name">Valhalla</div>
                             </div>
@@ -71,33 +65,24 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                     <div className="quest-box-scroll">
                         <div className="quest-box">
                             <li className="quest quest-box">
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-quests.png"
-                                />
+                                <img className="icon" src="ic-quests.png" />
                                 <div className="quest-notif notif notif10"></div>
                             </li>
                             <li
                                 className="quest open"
                                 style={{ "animation-delay": "0ms" }}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
-                                />
+                                <img className="icon" src="change-sun3.png" />
                             </li>
                             <li
                                 className="quest open"
                                 style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
+                                    src="ic-abil-reborn.png"
                                 />
                             </li>
                             <li className="quest-fortune">
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/ic-fortuna.png"
-                                />
+                                <img className="icon" src="ic-fortuna.png" />
                                 <div className="timerbox">
                                     <div className="timer">SPIN!</div>
                                 </div>
@@ -107,7 +92,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                 style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png"
+                                    src="rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">68:49:25</div>
@@ -116,7 +101,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-chest.png"
+                                    src="img/v2-ns-chest.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">2D 20:49</div>
@@ -125,10 +110,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "450ms" }}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
-                                />
+                                <img className="icon" src="v2-ns-ball.png" />
                                 <div className="timerbox">
                                     <div className="timer">68:49:25</div>
                                 </div>
@@ -136,16 +118,13 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                    src="v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "600ms" }}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png"
-                                />
+                                <img className="icon" src="m-ico-gold.png" />
                                 <div className="timerbox">
                                     <div className="timer">18:22:05</div>
                                 </div>
@@ -153,16 +132,13 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/picmeh-ic-diamond.png"
+                                    src="picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
                                 style={{ "animation-delay": "750ms" }}>
-                                <img
-                                    className="icon"
-                                    src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
-                                />
+                                <img className="icon" src="m-ico-quest.png" />
                             </li>
                         </div>
                     </div>
@@ -189,32 +165,32 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <div className="btn-stars-wrap">
                                                     <div className="color-btn">
                                                         <div className="color-btn-text">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                            <img src="img/star1.png" />
                                                         </div>
                                                     </div>
                                                     <div className="color-btn green">
                                                         <div className="color-btn-text">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                            <img src="img/star1.png" />
                                                         </div>
                                                     </div>
                                                     <div className="color-btn">
                                                         <div className="color-btn-text">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                            <img src="img/star1.png" />
                                                         </div>
                                                     </div>
                                                     <div className="color-btn">
                                                         <div className="color-btn-text">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                            <img src="img/star1.png" />
                                                         </div>
                                                     </div>
                                                     <div className="color-btn">
                                                         <div className="color-btn-text">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                            <img src="img/star1.png" />
                                                         </div>
                                                     </div>
                                                     <div className="color-btn">
                                                         <div className="color-btn-text">
-                                                            <img src="star1-purple.png" />
+                                                            <img src="img/star1-purple.png" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -227,77 +203,77 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                         <div className="filter-options-box">
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                                    <img src="img/cur-c.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-u.png" />
+                                                                    <img src="img/cur-u.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-r.png" />
+                                                                    <img src="img/cur-r.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-e.png" />
+                                                                    <img src="img/cur-e.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                                    <img src="img/cur2-sword.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-quitar.png" />
+                                                                    <img src="img/cur2-quitar.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-cleric.png" />
+                                                                    <img src="img/cur2-cleric.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-druid.png" />
+                                                                    <img src="img/cur2-druid.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                                    <img src="img/cur2-barbarian.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-ranger.png" />
+                                                                    <img src="img/cur2-ranger.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                                    <img src="img/cur2-wizard.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                                    <img src="img/cur2-gun.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/ico-click.png" />
+                                                                    <img src="img/ico-click.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/ico-sword.png" />
+                                                                    <img src="img/ico-sword.png" />
                                                                 </div>
                                                             </div>
                                                             <div className="color-btn">
                                                                 <div className="color-btn-text">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/ico-gold.png" />
+                                                                    <img src="img/ico-gold.png" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -308,204 +284,204 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card check">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                        <img src="img/cur-c.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                        <img src="img/cur2-sword.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/icon-rare.png" />
+                                                        <img src="img/icon-rare.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-quitar.png" />
+                                                        <img src="img/cur2-quitar.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-03/x1/avatar/03sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-03/x1/avatar/03sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                        <img src="img/cur-c.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-cleric.png" />
+                                                        <img src="img/cur2-cleric.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-04/x1/avatar/04sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-04/x1/avatar/04sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-u.png" />
+                                                        <img src="img/cur-u.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-druid.png" />
+                                                        <img src="img/cur2-druid.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-07/x1/avatar/07sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-07/x1/avatar/07sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                        <img src="img/cur-c.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-08/x1/avatar/08sh-ava-2.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-08/x1/avatar/08sh-ava-2.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl04"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-u.png" />
+                                                        <img src="img/cur-u.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-ranger.png" />
+                                                        <img src="img/cur2-ranger.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl04"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/icon-rare.png" />
+                                                        <img src="img/icon-rare.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                        <img src="img/cur2-wizard.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-e.png" />
+                                                        <img src="img/cur-e.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                        <img src="img/cur2-gun.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                        <img src="img/cur-c.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl04"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/icon-rare.png" />
+                                                        <img src="img/icon-rare.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                        <img src="img/cur2-wizard.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-e.png" />
+                                                        <img src="img/cur-e.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                        <img src="img/cur2-gun.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
                                                         </div>
                                                     </div>
                                                     <div className="sh2-icon">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                        <img src="img/cur-c.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="v2-sh1-notif notif notif20"></div>
                                                 </li>
@@ -516,19 +492,19 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                         <div className="suphero-right-box">
                                             <div className="lhero-box">
                                                 <div className="lhero-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/01sh-5.jpg" />
+                                                    <img src="img/images/superhero_new/suphero-01/x1/01sh-5.jpg" />
                                                     <img
                                                         className="star-up"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/01sh-5.jpg"
+                                                        src="img/images/superhero_new/suphero-01/x1/01sh-5.jpg"
                                                     />
                                                 </div>
                                                 <div className="topname-box">
                                                     <div className="lrare-box common"></div>
                                                     <div className="sh2-icon left">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                        <img src="img/cur-c.png" />
                                                     </div>
                                                     <div className="sh2-icon-forgirl right">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                        <img src="img/cur2-sword.png" />
                                                     </div>
                                                     <div className="lhero-name-box">
                                                         <div className="lhero-name">
@@ -554,7 +530,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="girl-bonus-box">
                                                         <div className="girl-bonus-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -594,7 +570,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                             <div className="bonus-lvl-box-bonus">
                                                                 +259.2% dps to
                                                                 <div className="ff-sh2-icon">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                                    <img src="img/cur2-sword.png" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -663,7 +639,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="girl-bonus-box">
                                                         <div className="girl-bonus-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="girl-5star"></div>
                                                         <div className="sh2-prgbar-all">
@@ -679,7 +655,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="girl-bonus-box next">
                                                         <div className="girl-bonus-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="girl-5star"></div>
                                                         <div className="sh2-prgbar-all">
@@ -695,7 +671,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="bonus-hero-pic-box-upgrade">
                                                         <div className="bonus-hero-pic">
-                                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x2/avatar/01sh-ava-6.jpg" />
+                                                            <img src="img/images/superhero_new/suphero-01/x2/avatar/01sh-ava-6.jpg" />
                                                         </div>
                                                     </div>
                                                     <div className="bonus-buy-box-all">
@@ -752,7 +728,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -760,7 +736,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                         </a>
@@ -768,7 +744,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
@@ -776,7 +752,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -784,7 +760,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>

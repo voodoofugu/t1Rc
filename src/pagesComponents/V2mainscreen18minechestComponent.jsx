@@ -20,14 +20,14 @@ const V2MainScreen18MineChestComponent = () => {
                             </div>
                             <div className="color-btn duhbuy duhbuy2">
                                 <div className="color-btn-icon">
-                                    <img src="v2-mn-soul-sg-160.png" />
+                                    <img src="img/v2-mn-soul-sg-160.png" />
                                 </div>
                                 <div className="color-btn-text">Buy</div>
                             </div>
                             <div className="gray-holder third"></div>
                             <div className="color-btn duhbuy bp">
                                 <div className="color-btn-icon">
-                                    <img src="v2-mn-ic-mine.png" />
+                                    <img src="img/v2-mn-ic-mine.png" />
                                 </div>
                                 <div className="color-btn-text">
                                     Battle Pass
@@ -35,7 +35,7 @@ const V2MainScreen18MineChestComponent = () => {
                             </div>
                             <div className="color-btn duhbuy">
                                 <div className="color-btn-icon">
-                                    <img src="v2-mn-pr-100-in.png" />
+                                    <img src="img/v2-mn-pr-100-in.png" />
                                 </div>
                                 <div className="color-btn-text">Mine</div>
                             </div>
@@ -136,7 +136,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -162,7 +162,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -188,7 +188,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -214,7 +214,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -240,7 +240,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -266,7 +266,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -292,7 +292,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -318,7 +318,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">
@@ -344,7 +344,7 @@ const V2MainScreen18MineChestComponent = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="angel-card-progress-bar-wrap">

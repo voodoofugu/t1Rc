@@ -4,7 +4,7 @@ import screenFortunaRoundRating from "../styles/screen-fortuna-round-rating.scss
 const MainScreen16FortunaRoundRatingPopupComponent = () => {
     return (
         <>
-            <div className="main">
+            <div className="main world1">
                 <div className="main-bg"></div>
 
                 <div className="header">
@@ -82,7 +82,7 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava1.png"
+                                                src="img/ava1.png"
                                             />
                                         </div>
                                         <div className="dps">234234 K</div>
@@ -103,7 +103,7 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava2.jpg"
+                                                src="img/ava2.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -125,7 +125,7 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava3.jpg"
+                                                src="img/ava3.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -147,7 +147,7 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava4.jpg"
+                                                src="img/ava4.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -241,51 +241,51 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill idle">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                     <div className="timer">10:12</div>
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 {/*                     <li className="skill disabled">
-                                            <img className="icon" src="rc/skill-ico2.png" />
+                                            <img className="icon" src="img/skill-ico2.png" />
                                         </li>
                                         <li className="skill disabled">
-                                            <img className="icon" src="rc/skill-ico2.png" />
+                                            <img className="icon" src="img/skill-ico2.png" />
                                         </li>
                      */}{" "}
                             </ul>
@@ -295,7 +295,7 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                             {" "}
                             {/* back */}
                             <div className="loc-back">
-                                <img className="icon" src="rc/ico-loc.png" />
+                                <img className="icon" src="img/ico-loc.png" />
                                 <div className="text">2561</div>
                                 <div className="text1">GO BACK</div>
                             </div>
@@ -303,42 +303,42 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2556</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2557</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2558</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2559</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2560</div>
                                 </li>
                                 <li className="loc current">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2561</div>
                                 </li>
@@ -355,14 +355,14 @@ const MainScreen16FortunaRoundRatingPopupComponent = () => {
                     </ul>
                 </div>
 
-                <div className="popup-layer" style={{"display":"block"}}>
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style={{"display":"block"}}></div>
+                        style={{ display: "block" }}></div>
 
                     <div
                         className="m-popup fortuna-main-round-rating"
-                        style={{"display":"block"}}>
+                        style={{ display: "block" }}>
                         <div className="title">Rating</div>
                         <div className="rating-main-box">
                             <div className="fw-right-side-content-box">

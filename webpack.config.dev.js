@@ -7,87 +7,87 @@ const fs = require("fs");
 
 // Функция для динамической генерации HtmlWebpackPlugin
 function generateHtmlPlugins() {
-  const pageFiles = fs.readdirSync("./src/pages");
+    const pageFiles = fs.readdirSync("./src/pages");
 
-  return pageFiles.map((file) => {
-    const pageName = path.parse(file).name;
+    return pageFiles.map((file) => {
+        const pageName = path.parse(file).name;
 
-    if (file === "template.html") {
-      return new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "htmlContent.ejs"),
-        filename: "index.html", // этой строчкой мы и определяем какой файл будет открываться по адресу сервера
-        title: "Template",
-        pageName: pageName,
-      });
-    } else {
-      return new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, "src", "htmlContent.ejs"),
-        filename: file.replace(".html", ".html"),
-        minify: true,
-        inject: true,
-        excludeChunks: ["template"],
-        title: pageName,
-        pageName: pageName,
-      });
-    }
-  });
+        if (file === "template.html") {
+            return new HtmlWebpackPlugin({
+                template: path.resolve(__dirname, "src", "htmlContent.ejs"),
+                filename: "index.html", // этой строчкой мы и определяем какой файл будет открываться по адресу сервера
+                title: "Template",
+                pageName: pageName,
+            });
+        } else {
+            return new HtmlWebpackPlugin({
+                template: path.resolve(__dirname, "src", "htmlContent.ejs"),
+                filename: file.replace(".html", ".html"),
+                minify: true,
+                inject: true,
+                excludeChunks: ["template"],
+                title: pageName,
+                pageName: pageName,
+            });
+        }
+    });
 }
 const plugins = [...generateHtmlPlugins()];
 
 const devServerConfig = {
-  devServer: {
-    port: 3000,
-    open: true,
-    hot: true,
-    historyApiFallback: {
-      index: "/",
-    }, // штука устанавливает маршрутизацию, если вырубить можно будет попадать на страницы статических файлов ниже, видить что есть, Включаем поддержку HTML5 History API, чтобы react-router работал во время разработки
-    headers: {
-      "Access-Control-Allow-Origin": "*",
+    devServer: {
+        port: 3000,
+        open: true,
+        hot: true,
+        historyApiFallback: {
+            index: "/",
+        }, // штука устанавливает маршрутизацию, если вырубить можно будет попадать на страницы статических файлов ниже, видить что есть, Включаем поддержку HTML5 History API, чтобы react-router работал во время разработки
+        headers: {
+            "Access-Control-Allow-Origin": "*",
+        },
+        client: {
+            overlay: {
+                errors: true,
+                warnings: false,
+            },
+        },
+        static: [
+            // Добавляем пути для обслуживания статических файлов
+            {
+                directory: path.join(__dirname, "src", "img"),
+                publicPath: "/img/",
+            },
+            {
+                directory: path.join(__dirname, "src", "pages"),
+                publicPath: "/pages/",
+                watch: true,
+            },
+            {
+                directory: path.join(__dirname, "src", "scripts"),
+                publicPath: "/scripts/",
+            },
+        ],
     },
-    client: {
-      overlay: {
-        errors: true,
-        warnings: false,
-      },
-    },
-    static: [
-      // Добавляем пути для обслуживания статических файлов
-      // {
-      //   directory: path.join(__dirname, "src", "img"),
-      //   publicPath: "/img/",
-      // },
-      {
-        directory: path.join(__dirname, "src", "pages"),
-        publicPath: "/pages/",
-        watch: true,
-      },
-      {
-        directory: path.join(__dirname, "src", "scripts"),
-        publicPath: "/scripts/",
-      },
-    ],
-  },
 };
 
 module.exports = merge(webpackConfig, {
-  mode: "development",
-  output: {
-    filename: "[name].js",
-    chunkFilename: "[name].js",
-    assetModuleFilename: "[name][ext]",
-    publicPath: "/",
-  },
-  devtool: "eval-cheap-module-source-map",
-  plugins: [
-    // Добавляем плагин для горячей перезагрузки
-    new ReactRefreshWebpackPlugin(),
-    ...plugins,
-  ],
-  resolve: {
-    alias: {
-      imgPath: path.resolve(__dirname, "src/img"),
+    mode: "development",
+    output: {
+        filename: "[name].js",
+        chunkFilename: "[name].js",
+        assetModuleFilename: "[name][ext]",
+        publicPath: "/",
     },
-  },
-  ...devServerConfig,
+    devtool: "eval-cheap-module-source-map",
+    plugins: [
+        // Добавляем плагин для горячей перезагрузки
+        new ReactRefreshWebpackPlugin(),
+        ...plugins,
+    ],
+    resolve: {
+        alias: {
+            imgPath: path.resolve(__dirname, "src/img"),
+        },
+    },
+    ...devServerConfig,
 });

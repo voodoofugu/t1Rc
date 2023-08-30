@@ -1,4 +1,4 @@
-import "./stylesMap"; //это можно только для режима разработки добавить
+import "./stylesMap";
 import React, { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
@@ -9,62 +9,45 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+// Функция для генерации имени компонента на основе имени страницы
+function generateComponentName(pageName) {
+    const cleanedName =
+        pageName
+            .replace(".html", "")
+            .replace(/[-_](\w)/g, (_, letter) => letter.toUpperCase())
+            .replace(/^\w/, (c) => c.toUpperCase()) + "Component";
+    return cleanedName;
+}
+
 (async () => {
     const currentPage =
         document.getElementById("root").getAttribute("data-page") + ".html";
     console.log("Current Page:", currentPage);
 
-    // Динамически создаем pageComponents из AaPagesComponentMap
-    const pageComponents = Object.entries(AaPagesComponentMap).reduce(
-        (components, [key, Component]) => {
-            const pageName =
-                key === "template.html"
-                    ? ""
-                    : key.replace("Component", "").toLowerCase() + ".html";
-            components[pageName] = AaPagesComponentMap[key];
-            return components;
-        },
-        {}
-    );
+    const PageComponent =
+        generateComponentName(currentPage) === "TemplateComponent"
+            ? AaPagesComponentMap.TemplateComponent
+            : AaPagesComponentMap[generateComponentName(currentPage)] ||
+              AaPagesComponentMap.Page404Component;
 
-    // Функция для рендеринга страницы
-    async function renderPage(currentPage) {
-        try {
-            const Root = document.getElementById("root");
-            if (Root) {
-                if (!window.__REACT_ROOT__) {
-                    window.__REACT_ROOT__ = createRoot(Root);
-                }
-
-                let PageComponent;
-
-                // Используем TemplateComponent только для главной страницы
-                if (currentPage === "") {
-                    PageComponent = AaPagesComponentMap.TemplateComponent;
-                } else {
-                    PageComponent =
-                        pageComponents[currentPage] ||
-                        AaPagesComponentMap.MainScreen16FortunaRoundMainpop16xBuyresComponent;
-                }
-
-                window.__REACT_ROOT__.render(
-                    <StrictMode>
-                        <BrowserRouter>
-                            <Suspense fallback={<div>Loading...</div>}>
-                                <PageComponent />
-                            </Suspense>
-                        </BrowserRouter>
-                    </StrictMode>
-                );
-            } else {
-                console.warn("Element with id 'root' not found.");
-            }
-        } catch (error) {
-            console.error("Error rendering page:", error);
+    const Root = document.getElementById("root");
+    if (Root) {
+        if (!window.__REACT_ROOT__) {
+            window.__REACT_ROOT__ = createRoot(Root);
         }
-    }
 
-    await renderPage(currentPage); // Вызываем функцию для рендеринга компонентов на текущей странице
+        window.__REACT_ROOT__.render(
+            // <StrictMode>
+            <BrowserRouter>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <PageComponent />
+                </Suspense>
+            </BrowserRouter>
+            // </StrictMode>
+        );
+    } else {
+        console.warn("Element with id 'root' not found.");
+    }
 })();
 
 if (module.hot) {

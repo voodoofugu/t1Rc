@@ -10,7 +10,7 @@ const V2MainScreen06RatingComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -19,7 +19,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -48,25 +48,46 @@ const V2MainScreen06RatingComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -683,7 +704,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Мадока Кайто
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="https://cdn.faptitans.com/s1/__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg" />
+                                                        <img src="img/__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -697,40 +718,40 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-1_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                                    <img src="img/rating-neck-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-1_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-1_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right lock">
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                                    <img src="img/rating-bras-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
@@ -739,7 +760,7 @@ const V2MainScreen06RatingComponent = () => {
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -753,7 +774,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Акэми Имма
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="https://cdn.faptitans.com/s1/__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg" />
+                                                        <img src="img/__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -767,57 +788,57 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-green@1x.png" />
+                                                                    <img src="img/rating-neck-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                                    <img src="img/rating-ring-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                                    <img src="img/rating-ring-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_4.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_4.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-green@1x.png" />
+                                                                    <img src="img/rating-bras-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom legendary">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_Full.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-2_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -831,7 +852,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Амая Карасу
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="https://cdn.faptitans.com/s1/__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg" />
+                                                        <img src="img/__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -845,40 +866,40 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-3_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-blue@1x.png" />
+                                                                    <img src="img/rating-neck-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-3_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                                    <img src="img/rating-ring-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-3_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                                    <img src="img/rating-ring-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right lock">
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-blue@1x.png" />
+                                                                    <img src="img/rating-bras-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
@@ -887,7 +908,7 @@ const V2MainScreen06RatingComponent = () => {
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-3_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -901,7 +922,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Цубаса Акума
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="https://cdn.faptitans.com/s1/__890f/images/superhero/suphero-04/x1/04suphero-02.jpg" />
+                                                        <img src="img/images/superhero/suphero-04/x1/04suphero-02.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -915,40 +936,40 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-4_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                                    <img src="img/rating-neck-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-4_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-4_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right lock">
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                                    <img src="img/rating-bras-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
@@ -957,7 +978,7 @@ const V2MainScreen06RatingComponent = () => {
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-4_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -986,7 +1007,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="https://cdn.faptitans.com/s1/__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg"
+                                                            src="__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -999,40 +1020,40 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-1_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                                    <img src="img/rating-neck-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-1_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-1_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right lock">
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                                    <img src="img/rating-bras-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
@@ -1041,7 +1062,7 @@ const V2MainScreen06RatingComponent = () => {
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -1063,7 +1084,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="https://cdn.faptitans.com/s1/__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg"
+                                                            src="__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -1076,57 +1097,57 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-green@1x.png" />
+                                                                    <img src="img/rating-neck-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                                    <img src="img/rating-ring-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                                    <img src="img/rating-ring-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_4.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_4.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-green@1x.png" />
+                                                                    <img src="img/rating-bras-green@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom legendary">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-2_Full.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-2_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -1148,7 +1169,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="https://cdn.faptitans.com/s1/__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg"
+                                                            src="__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -1162,40 +1183,40 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-3_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-blue@1x.png" />
+                                                                    <img src="img/rating-neck-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-3_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                                    <img src="img/rating-ring-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-3_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                                    <img src="img/rating-ring-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right lock">
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-blue@1x.png" />
+                                                                    <img src="img/rating-bras-blue@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
@@ -1204,7 +1225,7 @@ const V2MainScreen06RatingComponent = () => {
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-3_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -1226,7 +1247,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="https://cdn.faptitans.com/s1/__890f/images/superhero/suphero-04/x1/04suphero-02.jpg"
+                                                            src="images/superhero/suphero-04/x1/04suphero-02.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -1239,40 +1260,40 @@ const V2MainScreen06RatingComponent = () => {
                                                         <div>
                                                             <div className="rating-slot bottom-left">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_1.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-4_1.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                                    <img src="img/rating-neck-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet epic"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot top-right">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_2.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-4_2.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot">
                                                                 <div className="rating-video">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_3.jpg" />
+                                                                    <img src="img/rating-video-thumbnails/Sc-4_3.jpg" />
                                                                     <div className="rating-video-play"></div>
                                                                 </div>
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                                    <img src="img/rating-ring-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet common"></div>
                                                                 <div className="check"></div>
                                                             </div>
                                                             <div className="rating-slot bottom-right lock">
                                                                 <div className="rating-lock locked">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                                    <img src="img/rating-bras-red@1x.png" />
                                                                 </div>
                                                                 <div className="raritet rare"></div>
                                                                 <div className="check"></div>
@@ -1281,7 +1302,7 @@ const V2MainScreen06RatingComponent = () => {
                                                                 <div>
                                                                     <div className="rating-lock locked"></div>
                                                                     <div className="legend-video-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_Full.jpg" />
+                                                                        <img src="img/rating-video-thumbnails/Sc-4_Full.jpg" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="raritet legendary"></div>
@@ -1305,7 +1326,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -1313,7 +1334,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                             <div className="v2-tab-notif notif notif20"></div>
@@ -1322,7 +1343,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
@@ -1333,7 +1354,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -1341,7 +1362,7 @@ const V2MainScreen06RatingComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>

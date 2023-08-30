@@ -8,14 +8,14 @@ const V2MainScreen22SquadMainComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        "background-image":
+                        backgroundImage:
                             "url('__675b/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="v2-master-pic1.png" />
+                                <img src="img/v2-master-pic1.png" />
                             </div>
                             <div className="avatar-box-name">Rank 1</div>
                         </div>
@@ -26,7 +26,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             </div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                             <div className="anim-in-p gold"></div>
                         </div>
@@ -45,11 +45,11 @@ const V2MainScreen22SquadMainComponent = () => {
                                 <div className="might-box-pic">
                                     <img
                                         className="bg"
-                                        src="rc/v2-cw-bg01.png"
+                                        src="img/v2-cw-bg01.png"
                                     />
                                     <img
                                         className="fg"
-                                        src="rc/v2-cw-p01.png"
+                                        src="img/v2-cw-p01.png"
                                     />
                                 </div>
                                 <div className="might-box-name">Clan</div>
@@ -86,7 +86,7 @@ const V2MainScreen22SquadMainComponent = () => {
                     <div className="quest-box-scroll">
                         <div className="quest-box">
                             <li className="quest quest-box">
-                                <img className="icon" src="rc/ic-quests.png" />
+                                <img className="icon" src="img/ic-quests.png" />
                                 <div className="quest-notif notif notif10"></div>
                             </li>
                             <li
@@ -94,7 +94,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "0ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/change-sun3.png"
+                                    src="img/change-sun3.png"
                                 />
                             </li>
                             <li
@@ -102,20 +102,23 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/picmeh-ic-angel-pop.png"
+                                    src="img/picmeh-ic-angel-pop.png"
                                 />
                             </li>
                             <li className="quest-fortune open">
                                 <img
                                     className="icon"
-                                    src="rc/fapop-right-icon.png"
+                                    src="img/fapop-right-icon.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">00:00:00</div>
                                 </div>
                             </li>
                             <li className="quest-fortune">
-                                <img className="icon" src="rc/ic-fortuna.png" />
+                                <img
+                                    className="icon"
+                                    src="img/ic-fortuna.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">SPIN!</div>
                                 </div>
@@ -125,7 +128,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/rating-sign-gold@1x.png"
+                                    src="img/rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">146:36:30</div>
@@ -134,7 +137,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="rc/v2-ns-chest.png"
+                                    src="img/v2-ns-chest.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">6D 02:36</div>
@@ -143,7 +146,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="rc/v2-mn-pr-100-in.png"
+                                    src="img/v2-mn-pr-100-in.png"
                                 />
                                 0
                             </li>
@@ -152,7 +155,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/icn-dual-ball.png"
+                                    src="img/icn-dual-ball.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">00:00:00</div>
@@ -163,7 +166,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "600ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/ic-blackfriday.png"
+                                    src="img/ic-blackfriday.png"
                                 />
                                 <div
                                     className="timerbox"
@@ -176,20 +179,23 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "750ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/v2-xmas-chest-red.png"
+                                    src="img/v2-xmas-chest-red.png"
                                 />
                                 0
                             </li>
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="rc/v2-mn-soul-sg-160.png"
+                                    src="img/v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "900ms" }}>
-                                <img className="icon" src="rc/m-ico-gold.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-gold.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">21:33:40</div>
                                 </div>
@@ -197,7 +203,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="rc/picmeh-ic-diamond.png"
+                                    src="img/picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
@@ -205,7 +211,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "1050ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/v2-fw-icon-fr0.png"
+                                    src="img/v2-fw-icon-fr0.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">75:36:30</div>
@@ -214,7 +220,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "1200ms" }}>
-                                <img className="icon" src="rc/ic-bf.png" />
+                                <img className="icon" src="img/ic-bf.png" />
                                 <div className="timerbox">
                                     <div className="timer">482:36:30</div>
                                 </div>
@@ -224,7 +230,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "1350ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/zetta-icon-70.png"
+                                    src="img/zetta-icon-70.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">69:34:55</div>
@@ -233,7 +239,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "1500ms" }}>
-                                <img className="icon" src="rc/sunduk-60.png" />
+                                <img className="icon" src="img/sunduk-60.png" />
                                 <div className="timerbox">
                                     <div className="timer">21:34:52</div>
                                 </div>
@@ -243,7 +249,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "1650ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/m-ico-quest.png"
+                                    src="img/m-ico-quest.png"
                                 />
                             </li>
                             <li
@@ -251,7 +257,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                 style={{ "animation-delay": "1800ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/m-ico-quest.png"
+                                    src="img/m-ico-quest.png"
                                 />
                             </li>
                         </div>
@@ -329,10 +335,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         </div>
                                                         <div className="specialization-icon">
                                                             <div className="cls">
-                                                                <img src="cur2-wizard.png" />
+                                                                <img src="img/cur2-wizard.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="elements/Water.png" />
+                                                                <img src="img/elements/Water.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -340,7 +346,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__1ed9/images/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
+                                                                        src="__1ed9/images/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -348,7 +354,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__4ec9/images/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
+                                                                        src="__4ec9/images/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -356,7 +362,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__e9cc/images/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
+                                                                        src="__e9cc/images/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -364,7 +370,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__0a10/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
+                                                                        src="__0a10/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -372,7 +378,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__7cdd/images/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
+                                                                        src="__7cdd/images/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -380,7 +386,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__83a0/images/hero-all/tithero-5006/x1/ava/tithero-5006-5-ava.jpg"
+                                                                        src="__83a0/images/hero-all/tithero-5006/x1/ava/tithero-5006-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -412,10 +418,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         </div>
                                                         <div className="specialization-icon">
                                                             <div className="cls">
-                                                                <img src="cur2-druid.png" />
+                                                                <img src="img/cur2-druid.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="elements/Fire.png" />
+                                                                <img src="img/elements/Fire.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -423,7 +429,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__96c7/images/hero-all/tithero-5007/x1/ava/tithero-5007-4-ava.jpg"
+                                                                        src="__96c7/images/hero-all/tithero-5007/x1/ava/tithero-5007-4-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -431,7 +437,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__9ff8/images/hero-all/tithero-5008/x1/ava/tithero-5008-5-ava.jpg"
+                                                                        src="__9ff8/images/hero-all/tithero-5008/x1/ava/tithero-5008-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -439,7 +445,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__9e07/images/hero-all/tithero-5009/x1/ava/tithero-5009-5-ava.jpg"
+                                                                        src="__9e07/images/hero-all/tithero-5009/x1/ava/tithero-5009-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -447,7 +453,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__bbab/images/hero-all/tithero-5010/x1/ava/tithero-5010-5-ava.jpg"
+                                                                        src="__bbab/images/hero-all/tithero-5010/x1/ava/tithero-5010-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -455,7 +461,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__9f6d/images/hero-all/tithero-11/x1/ava/tithero-11-5-ava.jpg"
+                                                                        src="__9f6d/images/hero-all/tithero-11/x1/ava/tithero-11-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -463,7 +469,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__eaa8/images/hero-all/tithero-13/x1/ava/tithero-13-5-ava.jpg"
+                                                                        src="__eaa8/images/hero-all/tithero-13/x1/ava/tithero-13-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -496,10 +502,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         <div className="specialization-icon">
                                                             <div className="hero-level"></div>
                                                             <div className="cls">
-                                                                <img src="cur2-cleric.png" />
+                                                                <img src="img/cur2-cleric.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="elements/Earth.png" />
+                                                                <img src="img/elements/Earth.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -507,7 +513,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__6b77/images/hero-all/tithero-14/x1/ava/tithero-14-5-ava.jpg"
+                                                                        src="__6b77/images/hero-all/tithero-14/x1/ava/tithero-14-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -515,7 +521,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__f069/images/hero-all/tithero-15/x1/ava/tithero-15-5-ava.jpg"
+                                                                        src="__f069/images/hero-all/tithero-15/x1/ava/tithero-15-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -523,7 +529,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__b08d/images/hero-all/tithero-16/x1/ava/tithero-16-5-ava.jpg"
+                                                                        src="__b08d/images/hero-all/tithero-16/x1/ava/tithero-16-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -531,7 +537,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__119a/images/hero-all/tithero-17/x1/ava/tithero-17-5-ava.jpg"
+                                                                        src="__119a/images/hero-all/tithero-17/x1/ava/tithero-17-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -539,7 +545,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__5f6c/images/hero-all/tithero-18/x1/ava/tithero-18-5-ava.jpg"
+                                                                        src="__5f6c/images/hero-all/tithero-18/x1/ava/tithero-18-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -547,7 +553,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__29af/images/hero-all/tithero-19/x1/ava/tithero-19-5-ava.jpg"
+                                                                        src="__29af/images/hero-all/tithero-19/x1/ava/tithero-19-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -580,10 +586,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         <div className="specialization-icon">
                                                             <div className="hero-level"></div>
                                                             <div className="cls">
-                                                                <img src="cur2-barbarian.png" />
+                                                                <img src="img/cur2-barbarian.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="elements/Air.png" />
+                                                                <img src="img/elements/Air.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -591,7 +597,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__28fb/images/hero-all/tithero-20/x1/ava/tithero-20-5-ava.jpg"
+                                                                        src="__28fb/images/hero-all/tithero-20/x1/ava/tithero-20-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -599,7 +605,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__8563/images/hero-all/tithero-21/x1/ava/tithero-21-5-ava.jpg"
+                                                                        src="__8563/images/hero-all/tithero-21/x1/ava/tithero-21-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -607,7 +613,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__c20a/images/hero-all/tithero-22/x1/ava/tithero-22-5-ava.jpg"
+                                                                        src="__c20a/images/hero-all/tithero-22/x1/ava/tithero-22-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -615,7 +621,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__cd48/images/hero-all/tithero-23/x1/ava/tithero-23-5-ava.jpg"
+                                                                        src="__cd48/images/hero-all/tithero-23/x1/ava/tithero-23-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -623,7 +629,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__d31e/images/hero-all/tithero-24/x1/ava/tithero-24-5-ava.jpg"
+                                                                        src="__d31e/images/hero-all/tithero-24/x1/ava/tithero-24-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -631,7 +637,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__9d85/images/hero-all/tithero-25/x1/ava/tithero-25-5-ava.jpg"
+                                                                        src="__9d85/images/hero-all/tithero-25/x1/ava/tithero-25-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -664,10 +670,10 @@ const V2MainScreen22SquadMainComponent = () => {
                                                         <div className="specialization-icon">
                                                             <div className="hero-level"></div>
                                                             <div className="cls">
-                                                                <img src="cur2-gun.png" />
+                                                                <img src="img/cur2-gun.png" />
                                                             </div>
                                                             <div className="elem">
-                                                                <img src="elements/Death.png" />
+                                                                <img src="img/elements/Death.png" />
                                                             </div>
                                                         </div>
                                                         <div className="squad-card-heroes">
@@ -675,7 +681,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__67fe/images/hero-all/tithero-26/x1/ava/tithero-26-4-ava.jpg"
+                                                                        src="__67fe/images/hero-all/tithero-26/x1/ava/tithero-26-4-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -683,7 +689,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__d4ad/images/hero-all/tithero-27/x1/ava/tithero-27-5-ava.jpg"
+                                                                        src="__d4ad/images/hero-all/tithero-27/x1/ava/tithero-27-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -691,7 +697,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__2344/images/hero-all/tithero-28/x1/ava/tithero-28-5-ava.jpg"
+                                                                        src="__2344/images/hero-all/tithero-28/x1/ava/tithero-28-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -699,7 +705,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__72a8/images/hero-all/tithero-29/x1/ava/tithero-29-5-ava.jpg"
+                                                                        src="__72a8/images/hero-all/tithero-29/x1/ava/tithero-29-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -707,7 +713,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__e88e/images/hero-all/tithero-30/x1/ava/tithero-30-5-ava.jpg"
+                                                                        src="__e88e/images/hero-all/tithero-30/x1/ava/tithero-30-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -715,7 +721,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="https://cdn.faptitans.com/s1/__5255/images/hero-all/tithero-31/x1/ava/tithero-31-5-ava.jpg"
+                                                                        src="__5255/images/hero-all/tithero-31/x1/ava/tithero-31-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -750,49 +756,49 @@ const V2MainScreen22SquadMainComponent = () => {
                                     <div className="skills-pic">
                                         <img
                                             className="icon"
-                                            src="rc/skill-icons/skill-icon01.png"
+                                            src="img/skill-icons/skill-icon01.png"
                                         />
                                         <div className="skills-pic-disabled"></div>
                                     </div>
                                     <div className="skills-pic">
                                         <img
                                             className="icon"
-                                            src="rc/skill-icons/skill-icon02.png"
+                                            src="img/skill-icons/skill-icon02.png"
                                         />
                                         <div className="skills-pic-disabled"></div>
                                     </div>
                                     <div className="skills-pic">
                                         <img
                                             className="icon"
-                                            src="rc/skill-icons/skill-icon03.png"
+                                            src="img/skill-icons/skill-icon03.png"
                                         />
                                         <div className="skills-pic-disabled"></div>
                                     </div>
                                     <div className="skills-pic">
                                         <img
                                             className="icon"
-                                            src="rc/skill-icons/skill-icon04.png"
+                                            src="img/skill-icons/skill-icon04.png"
                                         />
                                         <div className="skills-pic-disabled"></div>
                                     </div>
                                     <div className="skills-pic">
                                         <img
                                             className="icon"
-                                            src="rc/skill-icons/skill-icon05.png"
+                                            src="img/skill-icons/skill-icon05.png"
                                         />
                                         <div className="skills-pic-disabled"></div>
                                     </div>
                                     <div className="skills-pic">
                                         <img
                                             className="icon"
-                                            src="rc/skill-icons/skill-icon06.png"
+                                            src="img/skill-icons/skill-icon06.png"
                                         />
                                         <div className="skills-pic-disabled"></div>
                                     </div>
                                     <div className="skills-pic">
                                         <img
                                             className="icon"
-                                            src="rc/skill-icons/skill-icon07.png"
+                                            src="img/skill-icons/skill-icon07.png"
                                         />
                                         <div className="skills-pic-disabled"></div>
                                     </div>
@@ -808,7 +814,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -816,7 +822,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                             <div className="v2-tab-notif notif notif20"></div>
@@ -825,7 +831,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
@@ -833,7 +839,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -841,7 +847,7 @@ const V2MainScreen22SquadMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>

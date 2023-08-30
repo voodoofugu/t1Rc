@@ -9,7 +9,7 @@ const V2MainScreen08UkiMainNewComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen08UkiMainNewComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -47,25 +47,46 @@ const V2MainScreen08UkiMainNewComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -143,7 +164,7 @@ const V2MainScreen08UkiMainNewComponent = () => {
                                             <div className="journal-reward">
                                                 <div className="journal-reward-pic-wrap">
                                                     <div className="journal-reward-pic story-icn">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c1.jpg" />
+                                                        <img src="img/story/t/p3-c1.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="color-btn green">
@@ -180,10 +201,10 @@ const V2MainScreen08UkiMainNewComponent = () => {
                                             <div className="journal-reward disabled">
                                                 <div className="journal-reward-pic-wrap">
                                                     <div className="journal-reward-pic story-icn">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c1.jpg" />
+                                                        <img src="img/story/t/p3-c1.jpg" />
                                                     </div>
                                                     <div className="journal-reward-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/change-ic-gold.png" />
+                                                        <img src="img/change-ic-gold.png" />
                                                         <div className="journal-reward-value">
                                                             1000
                                                         </div>
@@ -223,10 +244,10 @@ const V2MainScreen08UkiMainNewComponent = () => {
                                             <div className="journal-reward">
                                                 <div className="journal-reward-pic-wrap">
                                                     <div className="journal-reward-pic story-icn">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c1.jpg" />
+                                                        <img src="img/story/t/p3-c1.jpg" />
                                                     </div>
                                                     <div className="journal-reward-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/change-ic-gold.png" />
+                                                        <img src="img/change-ic-gold.png" />
                                                         <div className="journal-reward-value">
                                                             1000
                                                         </div>
@@ -269,10 +290,10 @@ const V2MainScreen08UkiMainNewComponent = () => {
                                             <div className="journal-reward">
                                                 <div className="journal-reward-pic-wrap">
                                                     <div className="journal-reward-pic story-icn">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c1.jpg" />
+                                                        <img src="img/story/t/p3-c1.jpg" />
                                                     </div>
                                                     <div className="journal-reward-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/change-ic-gold.png" />
+                                                        <img src="img/change-ic-gold.png" />
                                                         <div className="journal-reward-value">
                                                             1000
                                                         </div>
@@ -312,10 +333,10 @@ const V2MainScreen08UkiMainNewComponent = () => {
                                             <div className="journal-reward">
                                                 <div className="journal-reward-pic-wrap">
                                                     <div className="journal-reward-pic story-icn">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c1.jpg" />
+                                                        <img src="img/story/t/p3-c1.jpg" />
                                                     </div>
                                                     <div className="journal-reward-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/change-ic-gold.png" />
+                                                        <img src="img/change-ic-gold.png" />
                                                         <div className="journal-reward-value">
                                                             1000
                                                         </div>
@@ -355,10 +376,10 @@ const V2MainScreen08UkiMainNewComponent = () => {
                                             <div className="journal-reward">
                                                 <div className="journal-reward-pic-wrap">
                                                     <div className="journal-reward-pic story-icn">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c1.jpg" />
+                                                        <img src="img/story/t/p3-c1.jpg" />
                                                     </div>
                                                     <div className="journal-reward-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/change-ic-gold.png" />
+                                                        <img src="img/change-ic-gold.png" />
                                                         <div className="journal-reward-value">
                                                             1000
                                                         </div>
@@ -378,31 +399,31 @@ const V2MainScreen08UkiMainNewComponent = () => {
                         <div className="skills-all-box">
                             <div className="skills-all">
                                 <div className="skills-pic">
-                                    <img src="skill-icons/skill-icon01.png" />
+                                    <img src="img/skill-icons/skill-icon01.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="skill-icons/skill-icon02.png" />
+                                    <img src="img/skill-icons/skill-icon02.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="skill-icons/skill-icon03.png" />
+                                    <img src="img/skill-icons/skill-icon03.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="skill-icons/skill-icon04.png" />
+                                    <img src="img/skill-icons/skill-icon04.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="skill-icons/skill-icon05.png" />
+                                    <img src="img/skill-icons/skill-icon05.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="skill-icons/skill-icon06.png" />
+                                    <img src="img/skill-icons/skill-icon06.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="skill-icons/skill-icon07.png" />
+                                    <img src="img/skill-icons/skill-icon07.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                             </div>
@@ -412,25 +433,25 @@ const V2MainScreen08UkiMainNewComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="tab-01.png" />
+                                <img src="img/tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="tab-05.png" />
+                                <img src="img/tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="tab-08.png" />
+                                <img src="img/tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="tab-02.png" />
+                                <img src="img/tab-02.png" />
                             </div>
                         </div>
                     </div>

@@ -17,10 +17,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                     <div className="titans-garage-item">
                                         <div
                                             className="titans-garage-item-inner"
-                                            style={{"background-image":"url('https"}}>
+                                            style={{
+                                                backgroundImage: "url('https",
+                                            }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="https://cdn.faptitans.com/s1/rc/trophy/trophy/002_1.png"
+                                                    src="trophy/trophy/002_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -37,7 +39,9 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             <div className="titan-progress gold">
                                                 <div
                                                     className="titan-progress__bar"
-                                                    style={{"width":"70%"}}></div>
+                                                    style={{
+                                                        width: "70%",
+                                                    }}></div>
                                                 <div className="titan-progress__text">
                                                     100/200
                                                 </div>
@@ -47,10 +51,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                     <div className="titans-garage-item">
                                         <div
                                             className="titans-garage-item-inner"
-                                            style={{"background-image":"url('https"}}>
+                                            style={{
+                                                backgroundImage: "url('https",
+                                            }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="https://cdn.faptitans.com/s1/rc/trophy/trophy/003_1.png"
+                                                    src="trophy/trophy/003_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -72,7 +78,9 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             <div className="titan-progress gold">
                                                 <div
                                                     className="titan-progress__bar"
-                                                    style={{"width":"0px"}}></div>
+                                                    style={{
+                                                        width: "0px",
+                                                    }}></div>
                                                 <div className="titan-progress__text">
                                                     0/100
                                                 </div>
@@ -82,10 +90,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                     <div className="titans-garage-item">
                                         <div
                                             className="titans-garage-item-inner"
-                                            style={{"background-image":"url('https"}}>
+                                            style={{
+                                                backgroundImage: "url('https",
+                                            }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="https://cdn.faptitans.com/s1/rc/trophy/trophy/004_1.png"
+                                                    src="trophy/trophy/004_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -107,7 +117,9 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             <div className="titan-progress gold">
                                                 <div
                                                     className="titan-progress__bar"
-                                                    style={{"width":"0px"}}></div>
+                                                    style={{
+                                                        width: "0px",
+                                                    }}></div>
                                                 <div className="titan-progress__text">
                                                     380/400
                                                 </div>
@@ -117,10 +129,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                     <div className="titans-garage-item locked">
                                         <div
                                             className="titans-garage-item-inner"
-                                            style={{"background-image":"url('https"}}>
+                                            style={{
+                                                backgroundImage: "url('https",
+                                            }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="https://cdn.faptitans.com/s1/rc/trophy/trophy/006_1.png"
+                                                    src="trophy/trophy/006_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -131,7 +145,9 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             <div className="titan-progress gold">
                                                 <div
                                                     className="titan-progress__bar"
-                                                    style={{"width":"0px"}}></div>
+                                                    style={{
+                                                        width: "0px",
+                                                    }}></div>
                                                 <div className="titan-progress__text">
                                                     0/100
                                                 </div>
@@ -141,10 +157,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                     <div className="titans-garage-item locked">
                                         <div
                                             className="titans-garage-item-inner"
-                                            style={{"background-image":"url('https"}}>
+                                            style={{
+                                                backgroundImage: "url('https",
+                                            }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="https://cdn.faptitans.com/s1/rc/trophy/trophy/007_1.png"
+                                                    src="trophy/trophy/007_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -155,7 +173,9 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             <div className="titan-progress gold">
                                                 <div
                                                     className="titan-progress__bar"
-                                                    style={{"width":"0px"}}></div>
+                                                    style={{
+                                                        width: "0px",
+                                                    }}></div>
                                                 <div className="titan-progress__text">
                                                     0/100
                                                 </div>
@@ -187,11 +207,10 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                 <div className="color-box"></div>
                                 <div
                                     className="popup-trophy-image"
-                                    style={{"background-image":"url('https"}}>
-                                    <img
-                                        src="https://cdn.faptitans.com/s1/rc/trophy/trophy/004_1.png"
-                                        alt=""
-                                    />
+                                    style={{
+                                        backgroundImage: "url('https",
+                                    }}>
+                                    <img src="trophy/trophy/004_1.png" alt="" />
                                     <div className="popup-stars">
                                         <div className="star checked"></div>
                                         <div className="star checked"></div>
@@ -219,7 +238,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             <div className="bonus-lvl-box-bonus-box">
                                                 <div className="bonus-lvl-box-bonus">
                                                     <div className="bonus-lvl-box-bonus">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                        <img src="img/ic-blue-butil.png" />
                                                         600 to Loot
                                                     </div>
                                                 </div>
@@ -281,7 +300,9 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             <div className="bonus-lvl-box-bonus-box">
                                                 <div
                                                     className="color-btn get-button"
-                                                    style={{"filter":"grayscale(1)"}}>
+                                                    style={{
+                                                        filter: "grayscale(1)",
+                                                    }}>
                                                     <div className="color-btn-text">
                                                         Get in events
                                                     </div>

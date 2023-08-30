@@ -21,13 +21,13 @@ const V2Unipop20Pse2PopComponent = () => {
                                 <li className="quest welcome-back">
                                     <img
                                         className="icon"
-                                        src="rc/ic-superhero-60.png"
+                                        src="img/ic-superhero-60.png"
                                     />
                                 </li>
                                 <li className="quest squad-hero">
                                     <img
                                         className="icon"
-                                        src="rc/ic-hero-327.png"
+                                        src="img/ic-hero-327.png"
                                     />
                                 </li>
                             </div>
@@ -51,11 +51,11 @@ const V2Unipop20Pse2PopComponent = () => {
                                             <div className="unipop-box select">
                                                 <div className="unipop-box-pic">
                                                     <img
-                                                        src="https://cdn.faptitans.com/s1/rc/unipop-m-wsale.jpg"
+                                                        src="unipop-m-wsale.jpg"
                                                         alt="offermania.regular2"
                                                     />
                                                     <div>
-                                                        <img src="https://cdn.faptitans.com/s1/images/hero-all/tithero-351/icons/ic-hero-351.png" />
+                                                        <img src="img/images/hero-all/tithero-351/icons/ic-hero-351.png" />
                                                     </div>
                                                 </div>
                                                 <div className="unipop-gold-arrow"></div>
@@ -66,7 +66,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             <div className="unipop-box">
                                                 <div className="unipop-box-pic">
                                                     <img
-                                                        src="https://cdn.faptitans.com/s1/rc/unipop-m-back.jpg"
+                                                        src="unipop-m-back.jpg"
                                                         alt="welcomeBack"
                                                     />
                                                 </div>
@@ -74,7 +74,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             <div className="unipop-box">
                                                 <div className="unipop-box-pic">
                                                     <img
-                                                        src="https://cdn.faptitans.com/s1/rc/unipop-m-sale.jpg"
+                                                        src="unipop-m-sale.jpg"
                                                         alt="todaySale"
                                                     />
                                                 </div>
@@ -82,7 +82,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             <div className="unipop-box">
                                                 <div className="unipop-box-pic">
                                                     <img
-                                                        src="https://cdn.faptitans.com/s1/rc/unipop-m-news.jpg"
+                                                        src="unipop-m-news.jpg"
                                                         alt="news"
                                                     />
                                                 </div>
@@ -90,7 +90,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             <div className="unipop-box">
                                                 <div className="unipop-box-pic">
                                                     <img
-                                                        src="https://cdn.faptitans.com/s1/rc/unipop-m-plb-pack.jpg"
+                                                        src="unipop-m-plb-pack.jpg"
                                                         alt="smartPack"
                                                     />
                                                 </div>
@@ -107,7 +107,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             </div>
                                             <div className="pse2-girl-left-box">
                                                 <div className="pse2-girl">
-                                                    <img src="https://cdn.faptitans.com/s1/__e503/images\hero-all\tithero-351\x1/tithero-351-1.jpg" />
+                                                    <img src="img/__e503/images\hero-all\tithero-351\x1/tithero-351-1.jpg" />
                                                 </div>
                                                 <div className="info-box">
                                                     <div className="dps-extra">
@@ -128,7 +128,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             </div>
                                             <div className="pse2-girl-right-box">
                                                 <div className="pse2-girl">
-                                                    <img src="rating-girl.png" />
+                                                    <img src="img/rating-girl.png" />
                                                 </div>
                                                 <div className="pse2-girl-buble">
                                                     Rewards waiting for you!
@@ -137,7 +137,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                             <div className="pse2-reward-box-all">
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/__900f/images/superhero_new/suphero-26/x1/avatar/26sh-ava-1.jpg" />
+                                                        <img src="img/__900f/images/superhero_new/suphero-26/x1/avatar/26sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         700
@@ -145,7 +145,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/__900f/images/superhero_new/suphero-25/x1/avatar/25sh-ava-1.jpg" />
+                                                        <img src="img/__900f/images/superhero_new/suphero-25/x1/avatar/25sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         700
@@ -153,7 +153,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/__dfb6/images/superhero_new/suphero-251/x1/avatar/251sh-ava-1.jpg" />
+                                                        <img src="img/__dfb6/images/superhero_new/suphero-251/x1/avatar/251sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         100
@@ -161,7 +161,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png" />
+                                                        <img src="img/ic-abil-dps-plus@2x.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         x2
@@ -169,7 +169,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png" />
+                                                        <img src="img/v2-fw-icon-fr0.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         1600
@@ -177,7 +177,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cw-quest-icon.png" />
+                                                        <img src="img/cw-quest-icon.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         1200
@@ -185,7 +185,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                        <img src="img/ic-blue-butil.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         500
@@ -193,7 +193,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                        <img src="img/ic-green-butil.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         500
@@ -201,7 +201,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                        <img src="img/ic-green-butil.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         500
@@ -239,12 +239,12 @@ const V2Unipop20Pse2PopComponent = () => {
                                             </div>
                                             <div className="pse2-girl-left-box">
                                                 <div className="pse2-girl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/break-girl238.png" />
+                                                    <img src="img/break-girl238.png" />
                                                 </div>
                                             </div>
                                             <div className="pse2-girl-right-box">
                                                 <div className="pse2-girl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/bre-pse1.png" />
+                                                    <img src="img/bre-pse1.png" />
                                                 </div>
                                                 <div className="pse2-girl-buble">
                                                     I'm ready for EVERYTHING
@@ -253,12 +253,12 @@ const V2Unipop20Pse2PopComponent = () => {
                                             <div className="pse2-reward-box-all">
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/__fe08/images/hero-all/tithero-108/x1/ava/tithero-108-1-ava.jpg" />
+                                                        <img src="img/__fe08/images/hero-all/tithero-108/x1/ava/tithero-108-1-ava.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/__2090/images/superhero_new/suphero-211/x1/avatar/211sh-ava-1.jpg" />
+                                                        <img src="img/__2090/images/superhero_new/suphero-211/x1/avatar/211sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         700
@@ -266,7 +266,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/__e8a1/images/superhero_new/suphero-600/x1/avatar/600sh-ava-1.jpg" />
+                                                        <img src="img/__e8a1/images/superhero_new/suphero-600/x1/avatar/600sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         100
@@ -274,7 +274,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png" />
+                                                        <img src="img/ic-abil-dps-plus@2x.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         x2
@@ -282,7 +282,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png" />
+                                                        <img src="img/v2-fw-icon-fr0.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         1600
@@ -290,7 +290,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/cw-quest-icon.png" />
+                                                        <img src="img/cw-quest-icon.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         1200
@@ -298,7 +298,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />
+                                                        <img src="img/ic-blue-butil.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         500
@@ -306,7 +306,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/ic-green-butil.png" />
+                                                        <img src="img/ic-green-butil.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         500
@@ -314,7 +314,7 @@ const V2Unipop20Pse2PopComponent = () => {
                                                 </div>
                                                 <div className="pse2-reward">
                                                     <div className="pse2-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/rc/elements/Dark.png" />
+                                                        <img src="img/elements/Dark.png" />
                                                     </div>
                                                     <div className="pse2-num">
                                                         Squad #14

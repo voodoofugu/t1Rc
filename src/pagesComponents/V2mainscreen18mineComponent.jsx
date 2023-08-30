@@ -9,7 +9,7 @@ const V2MainScreen18MineComponent = () => {
                         <div
                             className="main-bg"
                             style={{
-                                "background-image":
+                                backgroundImage:
                                     "url('images/back/new/04-Town-Square-1.jpg')",
                             }}></div>
                         <div className="mine-event-screen">
@@ -67,7 +67,7 @@ const V2MainScreen18MineComponent = () => {
                             <div className="mine-event-screen__resources">
                                 <div className="resource">
                                     <img
-                                        src="rc/v2-mn-pr1.png"
+                                        src="img/v2-mn-pr1.png"
                                         alt=""
                                         style={{
                                             filter: "drop-shadow(\r\n                                            rgb(255, 255, 255) 0px 0px 15px\r\n                                        )",
@@ -77,7 +77,7 @@ const V2MainScreen18MineComponent = () => {
                                 </div>
                                 <div className="resource">
                                     <img
-                                        src="rc/v2-mn-pr2.png"
+                                        src="img/v2-mn-pr2.png"
                                         alt=""
                                         style={{}}
                                     />
@@ -85,7 +85,7 @@ const V2MainScreen18MineComponent = () => {
                                 </div>
                                 <div className="resource">
                                     <img
-                                        src="rc/v2-mn-pr3.png"
+                                        src="img/v2-mn-pr3.png"
                                         alt=""
                                         style={{}}
                                     />
@@ -93,7 +93,7 @@ const V2MainScreen18MineComponent = () => {
                                 </div>
                                 <div className="resource">
                                     <img
-                                        src="rc/v2-mn-pr4.png"
+                                        src="img/v2-mn-pr4.png"
                                         alt=""
                                         style={{}}
                                     />
@@ -103,8 +103,7 @@ const V2MainScreen18MineComponent = () => {
                             <div
                                 className="mine-event-screen__wrapper"
                                 style={{
-                                    "background-image":
-                                        "url('rc/v2-mn-bg1.jpg')",
+                                    backgroundImage: "url('rc/v2-mn-bg1.jpg')",
                                 }}>
                                 <div className="x-info-btn">?</div>
                                 <div
@@ -717,7 +716,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box piecesHero">
                                                         <div className="img-wrap">
-                                                            <img src="unknown-hero-ava.jpg" />
+                                                            <img src="img/unknown-hero-ava.jpg" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -749,7 +748,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box piecesHero">
                                                         <div className="img-wrap">
-                                                            <img src="images/hero-all/tithero-230/x1/ava/tithero-230-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-230/x1/ava/tithero-230-1-ava.jpg" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -781,7 +780,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box piecesHero">
                                                         <div className="img-wrap">
-                                                            <img src="images/hero-all/tithero-231/x1/ava/tithero-231-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-231/x1/ava/tithero-231-1-ava.jpg" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -813,7 +812,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box piecesHero">
                                                         <div className="img-wrap">
-                                                            <img src="images/hero-all/tithero-310/x1/ava/tithero-310-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-310/x1/ava/tithero-310-1-ava.jpg" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -847,7 +846,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box undefined">
                                                         <div className="img-wrap">
-                                                            <img src="sh-icon-chest-dark.png" />
+                                                            <img src="img/sh-icon-chest-dark.png" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -879,7 +878,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box undefined">
                                                         <div className="img-wrap">
-                                                            <img src="sh-icon-chest-dark.png" />
+                                                            <img src="img/sh-icon-chest-dark.png" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -911,7 +910,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box piecesHero">
                                                         <div className="img-wrap">
-                                                            <img src="images/hero-all/tithero-311/x1/ava/tithero-311-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-311/x1/ava/tithero-311-1-ava.jpg" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">
@@ -943,7 +942,7 @@ const V2MainScreen18MineComponent = () => {
                                                     </div>
                                                     <div className="item-box piecesHero">
                                                         <div className="img-wrap">
-                                                            <img src="images/hero-all/tithero-360/x1/ava/tithero-360-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-360/x1/ava/tithero-360-1-ava.jpg" />
                                                         </div>
                                                         <div className="store-quant">
                                                             <div className="quantity">

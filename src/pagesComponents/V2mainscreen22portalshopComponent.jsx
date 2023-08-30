@@ -7,14 +7,14 @@ const V2MainScreen22PortalShopComponent = () => {
             <div className="main">
                 <div className="main-bg"></div>
 
-                <div className="popup-layer" style={{"display":"block"}}>
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style={{"display":"block"}}></div>
+                        style={{ display: "block" }}></div>
 
                     <div
                         className="m-popup bf-event__buy-keys-pop"
-                        style={{"display":"block"}}>
+                        style={{ display: "block" }}>
                         <div className="timer-text">
                             До обновления магазина:
                         </div>
@@ -58,7 +58,7 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="card-info-btn"></div>
                                         <div className="keys-but-box">
                                             <img
-                                                src="rc/chest-shop-1.png"
+                                                src="img/chest-shop-1.png"
                                                 alt=""
                                             />
                                         </div>
@@ -68,7 +68,7 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="offer-attributes">
                                             <img
                                                 className="squad-color"
-                                                src="rc/cur2-barbarian.png"
+                                                src="img/cur2-barbarian.png"
                                                 alt=""
                                             />
                                         </div>
@@ -87,7 +87,7 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="card-info-btn"></div>
                                         <div className="keys-but-box">
                                             <img
-                                                src="rc/chest-shop-2.png"
+                                                src="img/chest-shop-2.png"
                                                 alt=""
                                             />
                                         </div>
@@ -97,7 +97,7 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="offer-attributes">
                                             <img
                                                 className="squad-class"
-                                                src="rc/cur2-ranger.png"
+                                                src="img/cur2-ranger.png"
                                                 alt=""
                                             />
                                         </div>
@@ -116,7 +116,7 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="card-info-btn"></div>
                                         <div className="keys-but-box">
                                             <img
-                                                src="rc/chest-shop-3.png"
+                                                src="img/chest-shop-3.png"
                                                 alt=""
                                             />
                                         </div>
@@ -126,12 +126,12 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="offer-attributes">
                                             <img
                                                 className="squad-color"
-                                                src="rc/cur2-druid.png"
+                                                src="img/cur2-druid.png"
                                                 alt=""
                                             />
                                             <img
                                                 className="squad-class"
-                                                src="rc/cur2-gun.png"
+                                                src="img/cur2-gun.png"
                                                 alt=""
                                             />
                                         </div>
@@ -150,7 +150,7 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="card-info-btn"></div>
                                         <div className="keys-but-box">
                                             <img
-                                                src="rc/chest-shop-4.png"
+                                                src="img/chest-shop-4.png"
                                                 alt=""
                                             />
                                         </div>

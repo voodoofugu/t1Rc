@@ -9,7 +9,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -47,25 +47,46 @@ const V2MainScreen21GoddessMainComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -83,37 +104,37 @@ const V2MainScreen21GoddessMainComponent = () => {
                                     <div className="hero-avatar-box cursor-pointer">
                                         <img
                                             className="hero-avatar"
-                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="hero-avatar-box cursor-pointer">
                                         <img
                                             className="hero-avatar"
-                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/ava/goddess-2-1-ava.jpg"
+                                            src="img/images/goddess/goddess-2/x2/ava/goddess-2-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="hero-avatar-box cursor-pointer">
                                         <img
                                             className="hero-avatar"
-                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-3/x2/ava/goddess-3-1-ava.jpg"
+                                            src="img/images/goddess/goddess-3/x2/ava/goddess-3-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="hero-avatar-box cursor-pointer">
                                         <img
                                             className="hero-avatar"
-                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/ava/goddess-4-1-ava.jpg"
+                                            src="img/images/goddess/goddess-4/x2/ava/goddess-4-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="hero-avatar-box cursor-pointer">
                                         <img
                                             className="hero-avatar"
-                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-5/x2/ava/goddess-5-1-ava.jpg"
+                                            src="img/images/goddess/goddess-5/x2/ava/goddess-5-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="hero-avatar-box cursor-pointer">
                                         <img
                                             className="hero-avatar"
-                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                                            src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="hero-avatar-box cursor-pointer">
@@ -125,7 +146,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             }}></div>
                                         <img
                                             className="hero-avatar"
-                                            src="https://cdn.faptitans.com/s1/rc/v2-mn-chest-gold-open.png"
+                                            src="v2-mn-chest-gold-open.png"
                                             style={{ height: "90px" }}
                                         />
                                     </div>
@@ -135,7 +156,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                 <div className="x-info-btn">?</div>
                                 <div className="gd-box-goddess-pic" style={{}}>
                                     <div className="b-fs"></div>
-                                    <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/goddess-4-1.jpg" />
+                                    <img src="img/images/goddess/goddess-4/x2/goddess-4-1.jpg" />
                                 </div>
                                 <div className="gd-box-goddess-name-box">
                                     <div className="gd-box-goddess-name">
@@ -182,10 +203,10 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="https://cdn.faptitans.com/s1/__7950/images/hero-all/tithero-20/x1/ava/tithero-20-1-ava.jpg"
+                                                    src="__7950/images/hero-all/tithero-20/x1/ava/tithero-20-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="gd-hero-name">
                                                     Mi Hyo
@@ -255,10 +276,10 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="https://cdn.faptitans.com/s1/__1d9c/images/hero-all/tithero-21/x1/ava/tithero-21-1-ava.jpg"
+                                                    src="__1d9c/images/hero-all/tithero-21/x1/ava/tithero-21-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                    <img src="img/cur2-wizard.png" />
                                                 </div>
                                                 <div className="gd-hero-name">
                                                     Rika Mahojo
@@ -328,10 +349,10 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="https://cdn.faptitans.com/s1/__e8e9/images/hero-all/tithero-22/x1/ava/tithero-22-1-ava.jpg"
+                                                    src="__e8e9/images/hero-all/tithero-22/x1/ava/tithero-22-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-quitar.png" />
+                                                    <img src="img/cur2-quitar.png" />
                                                 </div>
                                                 <div className="gd-hero-name">
                                                     Sango Yudoku
@@ -401,10 +422,10 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="https://cdn.faptitans.com/s1/__c076/images/hero-all/tithero-23/x1/ava/tithero-23-1-ava.jpg"
+                                                    src="__c076/images/hero-all/tithero-23/x1/ava/tithero-23-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-cleric.png" />
+                                                    <img src="img/cur2-cleric.png" />
                                                 </div>
                                                 <div className="gd-hero-name">
                                                     Takaro Kaminoken
@@ -474,10 +495,10 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="https://cdn.faptitans.com/s1/__cb17/images/hero-all/tithero-24/x1/ava/tithero-24-1-ava.jpg"
+                                                    src="__cb17/images/hero-all/tithero-24/x1/ava/tithero-24-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                    <img src="img/cur2-wizard.png" />
                                                 </div>
                                                 <div className="gd-hero-name">
                                                     Ume Shinpu
@@ -547,10 +568,10 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="https://cdn.faptitans.com/s1/__3c4d/images/hero-all/tithero-25/x1/ava/tithero-25-1-ava.jpg"
+                                                    src="__3c4d/images/hero-all/tithero-25/x1/ava/tithero-25-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-druid.png" />
+                                                    <img src="img/cur2-druid.png" />
                                                 </div>
                                                 <div className="gd-hero-name">
                                                     Amaya Karasu
@@ -623,7 +644,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                         <div className="hero-avatar-box cursor-pointer">
                                             <img
                                                 className="hero-avatar"
-                                                src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/comics/ava/goddess-4-1-com-ava.jpg"
+                                                src="img/images/goddess/goddess-4/comics/ava/goddess-4-1-com-ava.jpg"
                                             />
                                             <div className="gd-av-bg-black">
                                                 <div className="gd-av-block"></div>
@@ -632,7 +653,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                         <div className="hero-avatar-box cursor-pointer">
                                             <img
                                                 className="hero-avatar"
-                                                src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/comics/ava/goddess-4-2-com-ava.jpg"
+                                                src="img/images/goddess/goddess-4/comics/ava/goddess-4-2-com-ava.jpg"
                                             />
                                             <div className="gd-av-bg-black">
                                                 <div className="gd-av-block"></div>
@@ -641,7 +662,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                         <div className="hero-avatar-box cursor-pointer block">
                                             <img
                                                 className="hero-avatar"
-                                                src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/comics/ava/goddess-4-3-com-ava.jpg"
+                                                src="img/images/goddess/goddess-4/comics/ava/goddess-4-3-com-ava.jpg"
                                             />
                                             <div className="gd-av-bg-black">
                                                 <div className="gd-av-block"></div>
@@ -693,25 +714,25 @@ const V2MainScreen21GoddessMainComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="tab-01.png" />
+                                <img src="img/tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="tab-05.png" />
+                                <img src="img/tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="tab-08.png" />
+                                <img src="img/tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="tab-02.png" />
+                                <img src="img/tab-02.png" />
                             </div>
                         </div>
                     </div>
@@ -723,7 +744,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                             <div className="btn-close-x"></div>
                             <img
                                 className="img-goddess-picture"
-                                src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/goddess-4-1.jpg"
+                                src="img/images/goddess/goddess-4/x2/goddess-4-1.jpg"
                             />
                         </div>
                     </div>

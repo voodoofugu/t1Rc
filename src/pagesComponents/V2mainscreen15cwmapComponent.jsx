@@ -87,7 +87,7 @@ const V2MainScreen15CwMapComponent = () => {
                 </div>
                 <div className="cw-myfraction-box">
                     <div className="cw-myfraction-pic">
-                        <img src="v2-fw-fr-2.png" />
+                        <img src="img/v2-fw-fr-2.png" />
                     </div>
                     <div className="cw-myfraction-text">моя фракция</div>
                     <div className="cw-myfraction-name-box">

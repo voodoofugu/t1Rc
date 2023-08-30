@@ -5,7 +5,7 @@ import screenUnipopWavepack10 from "../styles/screen-unipop-wavepack10.scss";
 const MainScreen22Unipop04wavepack10Component = () => {
     return (
         <>
-            <div className="main">
+            <div className="main world1">
                 <div className="main-bg"></div>
 
                 <div className="header">
@@ -83,7 +83,7 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava1.png"
+                                                src="img/ava1.png"
                                             />
                                         </div>
                                         <div className="dps">234234 K</div>
@@ -104,7 +104,7 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava2.jpg"
+                                                src="img/ava2.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -126,7 +126,7 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava3.jpg"
+                                                src="img/ava3.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -148,7 +148,7 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava4.jpg"
+                                                src="img/ava4.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -242,44 +242,44 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill idle">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                     <div className="timer">10:12</div>
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                             </ul>
@@ -289,7 +289,7 @@ const MainScreen22Unipop04wavepack10Component = () => {
                             {" "}
                             {/* back */}
                             <div className="loc-back">
-                                <img className="icon" src="rc/ico-loc.png" />
+                                <img className="icon" src="img/ico-loc.png" />
                                 <div className="text">2561</div>
                                 <div className="text1">GO BACK</div>
                             </div>
@@ -297,42 +297,42 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2556</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2557</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2558</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2559</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2560</div>
                                 </li>
                                 <li className="loc current">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2561</div>
                                 </li>
@@ -365,43 +365,43 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                 <div className="unipop-scroll-box">
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-wom-pack.jpg" />
+                                            <img src="img/unipop-m-wom-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-sed-pack.jpg" />
+                                            <img src="img/unipop-m-sed-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-lov-pack.jpg" />
+                                            <img src="img/unipop-m-lov-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-don-pack.jpg" />
+                                            <img src="img/unipop-m-don-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-plb-pack.jpg" />
+                                            <img src="img/unipop-m-plb-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-cas-pack.jpg" />
+                                            <img src="img/unipop-m-cas-pack.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
-                                            <img src="unipop-m-fortuna.jpg" />
+                                            <img src="img/unipop-m-fortuna.jpg" />
                                         </div>
                                         <div className="unipop-gold-arrow"></div>
                                     </div>
@@ -421,13 +421,13 @@ const MainScreen22Unipop04wavepack10Component = () => {
                                     <div className="rew-box-all">
                                         <div className="rew-box">
                                             <div className="item-box">
-                                                <img src="change-ic-gold.png" />
+                                                <img src="img/change-ic-gold.png" />
                                                 <div className="item-count">
                                                     6969
                                                 </div>
                                             </div>
                                             <div className="item-box">
-                                                <img src="change-ic-gold.png" />
+                                                <img src="img/change-ic-gold.png" />
                                                 <div className="item-count">
                                                     6969
                                                 </div>

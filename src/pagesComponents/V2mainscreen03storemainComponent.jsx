@@ -9,7 +9,7 @@ const V2MainScreen03StoreMainComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen03StoreMainComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -47,25 +47,46 @@ const V2MainScreen03StoreMainComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -104,10 +125,10 @@ const V2MainScreen03StoreMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,17 +158,17 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +198,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -190,10 +211,10 @@ const V2MainScreen03StoreMainComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="rc/tithero-11-1-ava.jpg"
+                                                            src="img/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,17 +245,17 @@ const V2MainScreen03StoreMainComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="icons/ic-abil-78.jpg" />
+                                                        <img src="img/icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="rc/tithero-11-1-ava.jpg"
+                                                            src="img/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +286,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="icons/ic-abil-78.jpg" />
+                                                        <img src="img/icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,25 +317,25 @@ const V2MainScreen03StoreMainComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="tab-01.png" />
+                                <img src="img/tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="tab-05.png" />
+                                <img src="img/tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="tab-08.png" />
+                                <img src="img/tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="tab-02.png" />
+                                <img src="img/tab-02.png" />
                             </div>
                         </div>
                     </div>
@@ -331,31 +352,31 @@ const V2MainScreen03StoreMainComponent = () => {
                         <div className="store-menu-box">
                             <div className="menu-box-all select">
                                 <div className="menu-pic">
-                                    <img src="80-item.png" />
+                                    <img src="img/80-item.png" />
                                 </div>
                                 <div className="menu-text">item</div>
                             </div>
                             <div className="menu-box-all">
                                 <div className="menu-pic">
-                                    <img src="80-topup.png" />
+                                    <img src="img/80-topup.png" />
                                 </div>
                                 <div className="menu-text">diamonds</div>
                             </div>
                             <div className="menu-box-all">
                                 <div className="menu-pic">
-                                    <img src="80-hero.png" />
+                                    <img src="img/80-hero.png" />
                                 </div>
                                 <div className="menu-text">heroes</div>
                             </div>
                             <div className="menu-box-all">
                                 <div className="menu-pic">
-                                    <img src="80-vip.png" />
+                                    <img src="img/80-vip.png" />
                                 </div>
                                 <div className="menu-text">vip</div>
                             </div>
                             <div className="menu-box-all">
                                 <div className="menu-pic">
-                                    <img src="80-ticket.png" />
+                                    <img src="img/80-ticket.png" />
                                 </div>
                                 <div className="menu-text">tickets</div>
                             </div>
@@ -372,7 +393,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -389,7 +410,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -406,7 +427,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -423,80 +444,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-gold.png" />
-                                            </div>
-                                            <div className="color-btn diamond">
-                                                <div className="color-btn-text">
-                                                    buy
-                                                    <span className="f-diamond">
-                                                        696
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="i-ico"></div>
-                                        </div>
-                                    </div>
-                                    <div className="store-item-all">
-                                        <div className="store-item-all-name">
-                                            Gold and Shards multipliers
-                                        </div>
-                                        <div className="store-item-box">
-                                            <div className="store-name">
-                                                More Gold
-                                            </div>
-                                            <div className="item-box">
-                                                <img src="ic-abil-rubin.png" />
-                                            </div>
-                                            <div className="color-btn diamond">
-                                                <div className="color-btn-text">
-                                                    buy
-                                                    <span className="f-diamond">
-                                                        696
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="i-ico"></div>
-                                        </div>
-                                        <div className="store-item-box">
-                                            <div className="store-name">
-                                                More Gold
-                                            </div>
-                                            <div className="item-box">
-                                                <img src="ic-abil-gold.png" />
-                                            </div>
-                                            <div className="color-btn diamond">
-                                                <div className="color-btn-text">
-                                                    buy
-                                                    <span className="f-diamond">
-                                                        696
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="i-ico"></div>
-                                        </div>
-                                        <div className="store-item-box">
-                                            <div className="store-name">
-                                                More Gold
-                                            </div>
-                                            <div className="item-box">
-                                                <img src="ic-abil-rubin.png" />
-                                            </div>
-                                            <div className="color-btn diamond">
-                                                <div className="color-btn-text">
-                                                    buy
-                                                    <span className="f-diamond">
-                                                        696
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div className="i-ico"></div>
-                                        </div>
-                                        <div className="store-item-box">
-                                            <div className="store-name">
-                                                More Gold
-                                            </div>
-                                            <div className="item-box">
-                                                <img src="ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -518,7 +466,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -535,7 +483,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -552,7 +500,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -569,7 +517,80 @@ const V2MainScreen03StoreMainComponent = () => {
                                                 More Gold
                                             </div>
                                             <div className="item-box">
-                                                <img src="ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
+                                            </div>
+                                            <div className="color-btn diamond">
+                                                <div className="color-btn-text">
+                                                    buy
+                                                    <span className="f-diamond">
+                                                        696
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div className="i-ico"></div>
+                                        </div>
+                                    </div>
+                                    <div className="store-item-all">
+                                        <div className="store-item-all-name">
+                                            Gold and Shards multipliers
+                                        </div>
+                                        <div className="store-item-box">
+                                            <div className="store-name">
+                                                More Gold
+                                            </div>
+                                            <div className="item-box">
+                                                <img src="img/ic-abil-rubin.png" />
+                                            </div>
+                                            <div className="color-btn diamond">
+                                                <div className="color-btn-text">
+                                                    buy
+                                                    <span className="f-diamond">
+                                                        696
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div className="i-ico"></div>
+                                        </div>
+                                        <div className="store-item-box">
+                                            <div className="store-name">
+                                                More Gold
+                                            </div>
+                                            <div className="item-box">
+                                                <img src="img/ic-abil-gold.png" />
+                                            </div>
+                                            <div className="color-btn diamond">
+                                                <div className="color-btn-text">
+                                                    buy
+                                                    <span className="f-diamond">
+                                                        696
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div className="i-ico"></div>
+                                        </div>
+                                        <div className="store-item-box">
+                                            <div className="store-name">
+                                                More Gold
+                                            </div>
+                                            <div className="item-box">
+                                                <img src="img/ic-abil-rubin.png" />
+                                            </div>
+                                            <div className="color-btn diamond">
+                                                <div className="color-btn-text">
+                                                    buy
+                                                    <span className="f-diamond">
+                                                        696
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div className="i-ico"></div>
+                                        </div>
+                                        <div className="store-item-box">
+                                            <div className="store-name">
+                                                More Gold
+                                            </div>
+                                            <div className="item-box">
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="color-btn diamond">
                                                 <div className="color-btn-text">
@@ -596,7 +617,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                             </div>
                                         </div>
                                         <div className="store-sale-pic">
-                                            <img src="ic-abil-gold.png" />
+                                            <img src="img/ic-abil-gold.png" />
                                             <div className="store-timer-box">
                                                 <div className="store-timer-text">
                                                     70% off
@@ -620,7 +641,7 @@ const V2MainScreen03StoreMainComponent = () => {
                                             </div>
                                         </div>
                                         <div className="store-sale-pic">
-                                            <img src="ic-abil-gold.png" />
+                                            <img src="img/ic-abil-gold.png" />
                                             <div className="store-timer-box">
                                                 <div className="store-timer-text">
                                                     70% off

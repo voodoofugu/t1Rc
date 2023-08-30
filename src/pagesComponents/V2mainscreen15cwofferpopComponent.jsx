@@ -18,7 +18,7 @@ const V2MainScreen15CwOfferPopComponent = () => {
                         <div className="title">Clan wars offer</div>
                         <div className="offers-card-box">
                             <div className="offers-but-box">
-                                <img src="v2-x2.png" alt="" />
+                                <img src="img/v2-x2.png" alt="" />
                             </div>
                             <div className="offers-text-box">
                                 <div className="offers-text">
@@ -37,7 +37,7 @@ const V2MainScreen15CwOfferPopComponent = () => {
                         </div>
                         <div className="offers-card-box">
                             <div className="offers-but-box">
-                                <img src="v2-cw-icon-maps.png" alt="" />
+                                <img src="img/v2-cw-icon-maps.png" alt="" />
                             </div>
                             <div className="offers-text-box">
                                 <div className="offers-text">
@@ -52,7 +52,7 @@ const V2MainScreen15CwOfferPopComponent = () => {
                         </div>
                         <div className="offers-card-box">
                             <div className="offers-but-box">
-                                <img src="v2-cw-icon-maps.png" alt="" />
+                                <img src="img/v2-cw-icon-maps.png" alt="" />
                             </div>
                             <div className="offers-text-box">
                                 <div className="offers-text">
@@ -67,7 +67,10 @@ const V2MainScreen15CwOfferPopComponent = () => {
                         </div>
                         <div className="offers-card-box">
                             <div className="offers-but-box">
-                                <img src="v2-cw-icon-maps-both.png" alt="" />
+                                <img
+                                    src="img/v2-cw-icon-maps-both.png"
+                                    alt=""
+                                />
                             </div>
                             <div className="offers-text-box">
                                 <div className="offers-text">

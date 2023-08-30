@@ -12,14 +12,14 @@ const V2MainScreen02GuildTowerComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        "background-image":
+                        backgroundImage:
                             "url('/images/back/new/02-Forest-2.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -28,7 +28,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -59,7 +59,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div className="quest">
                                 <img
                                     className="icon"
-                                    src="rc/rating-sign-gold@1x.png"
+                                    src="img/rating-sign-gold@1x.png"
                                 />
                             </div>
                             <div
@@ -72,7 +72,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div className="quest trophy-pop">
                                 <img
                                     className="icon"
-                                    src="rc/v2-relics-stone.png"
+                                    src="img/v2-relics-stone.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">Trophy</div>
@@ -81,7 +81,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div className="quest tower-trophy-pop">
                                 <img
                                     className="icon"
-                                    src="rc/trophy/v2-trophy-dragon-head-c.png"
+                                    src="img/trophy/v2-trophy-dragon-head-c.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">Relics</div>
@@ -90,7 +90,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div className="quest tower-mag-box">
                                 <img
                                     className="icon"
-                                    src="rc/v2-ns-chest.png"
+                                    src="img/v2-ns-chest.png"
                                 />
                             </div>
                         </div>
@@ -146,16 +146,16 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div
                                                             className="hero-avatar-box"
                                                             style={{
-                                                                "background-image":
+                                                                backgroundImage:
                                                                     "url('rc/ts_confirm_bk-1-ny.jpg')",
-                                                                "background-size":
+                                                                backgroundSize:
                                                                     "cover",
-                                                                "background-position":
+                                                                backgroundPosition:
                                                                     "center center",
                                                             }}>
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="rc/ic-tickets-xmas-1.png"
+                                                                src="img/ic-tickets-xmas-1.png"
                                                             />
                                                         </div>
                                                         <div className="hero-level-box">
@@ -181,10 +181,10 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div className="hero-avatar-box special">
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="images/hero-all/tithero-328/x2/ava/tithero-328-3-ava.jpg"
+                                                                src="img/images/hero-all/tithero-328/x2/ava/tithero-328-3-ava.jpg"
                                                             />
                                                             <div className="sh2-icon-forgirl">
-                                                                <img src="cur2-gun.png" />
+                                                                <img src="img/cur2-gun.png" />
                                                             </div>
                                                         </div>
                                                         <div className="hero-level-box">
@@ -221,10 +221,10 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div className="hero-avatar-box">
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="images/hero-all/tithero-336/x2/ava/tithero-336-1-ava.jpg"
+                                                                src="img/images/hero-all/tithero-336/x2/ava/tithero-336-1-ava.jpg"
                                                             />
                                                             <div className="sh2-icon-forgirl">
-                                                                <img src="cur2-druid.png" />
+                                                                <img src="img/cur2-druid.png" />
                                                             </div>
                                                         </div>
                                                         <div className="hero-level-box">
@@ -261,10 +261,10 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div className="hero-avatar-box">
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="images/hero-all/tithero-335/x2/ava/tithero-335-1-ava.jpg"
+                                                                src="img/images/hero-all/tithero-335/x2/ava/tithero-335-1-ava.jpg"
                                                             />
                                                             <div className="sh2-icon-forgirl">
-                                                                <img src="cur2-sword.png" />
+                                                                <img src="img/cur2-sword.png" />
                                                             </div>
                                                         </div>
                                                         <div className="hero-level-box">
@@ -301,10 +301,10 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div className="hero-avatar-box">
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="images/hero-all/tithero-334/x2/ava/tithero-334-1-ava.jpg"
+                                                                src="img/images/hero-all/tithero-334/x2/ava/tithero-334-1-ava.jpg"
                                                             />
                                                             <div className="sh2-icon-forgirl">
-                                                                <img src="cur2-wizard.png" />
+                                                                <img src="img/cur2-wizard.png" />
                                                             </div>
                                                         </div>
                                                         <div className="hero-level-box">
@@ -341,10 +341,10 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div className="hero-avatar-box">
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="images/hero-all/tithero-323/x2/ava/tithero-323-1-ava.jpg"
+                                                                src="img/images/hero-all/tithero-323/x2/ava/tithero-323-1-ava.jpg"
                                                             />
                                                             <div className="sh2-icon-forgirl">
-                                                                <img src="cur2-gun.png" />
+                                                                <img src="img/cur2-gun.png" />
                                                             </div>
                                                         </div>
                                                         <div className="hero-level-box">
@@ -381,10 +381,10 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div className="hero-avatar-box">
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="images/hero-all/tithero-325/x2/ava/tithero-325-1-ava.jpg"
+                                                                src="img/images/hero-all/tithero-325/x2/ava/tithero-325-1-ava.jpg"
                                                             />
                                                             <div className="sh2-icon-forgirl">
-                                                                <img src="cur2-wizard.png" />
+                                                                <img src="img/cur2-wizard.png" />
                                                             </div>
                                                         </div>
                                                         <div className="hero-level-box">
@@ -421,10 +421,10 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                         <div className="hero-avatar-box">
                                                             <img
                                                                 className="hero-avatar"
-                                                                src="images/hero-all/tithero-324/x2/ava/tithero-324-1-ava.jpg"
+                                                                src="img/images/hero-all/tithero-324/x2/ava/tithero-324-1-ava.jpg"
                                                             />
                                                             <div className="sh2-icon-forgirl">
-                                                                <img src="cur2-barbarian.png" />
+                                                                <img src="img/cur2-barbarian.png" />
                                                             </div>
                                                         </div>
                                                         <div className="hero-level-box">
@@ -1372,49 +1372,49 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                     <div className="skills-pic disabled">
                                                         <img
                                                             className="icon"
-                                                            src="rc/skill-icons/skill-icon01.png"
+                                                            src="img/skill-icons/skill-icon01.png"
                                                         />
                                                         <div className="skills-pic-disabled"></div>
                                                     </div>
                                                     <div className="skills-pic disabled">
                                                         <img
                                                             className="icon"
-                                                            src="rc/skill-icons/skill-icon02.png"
+                                                            src="img/skill-icons/skill-icon02.png"
                                                         />
                                                         <div className="skills-pic-disabled"></div>
                                                     </div>
                                                     <div className="skills-pic disabled">
                                                         <img
                                                             className="icon"
-                                                            src="rc/skill-icons/skill-icon03.png"
+                                                            src="img/skill-icons/skill-icon03.png"
                                                         />
                                                         <div className="skills-pic-disabled"></div>
                                                     </div>
                                                     <div className="skills-pic disabled">
                                                         <img
                                                             className="icon"
-                                                            src="rc/skill-icons/skill-icon04.png"
+                                                            src="img/skill-icons/skill-icon04.png"
                                                         />
                                                         <div className="skills-pic-disabled"></div>
                                                     </div>
                                                     <div className="skills-pic disabled">
                                                         <img
                                                             className="icon"
-                                                            src="rc/skill-icons/skill-icon05.png"
+                                                            src="img/skill-icons/skill-icon05.png"
                                                         />
                                                         <div className="skills-pic-disabled"></div>
                                                     </div>
                                                     <div className="skills-pic disabled">
                                                         <img
                                                             className="icon"
-                                                            src="rc/skill-icons/skill-icon06.png"
+                                                            src="img/skill-icons/skill-icon06.png"
                                                         />
                                                         <div className="skills-pic-disabled"></div>
                                                     </div>
                                                     <div className="skills-pic disabled">
                                                         <img
                                                             className="icon"
-                                                            src="rc/skill-icons/skill-icon07.png"
+                                                            src="img/skill-icons/skill-icon07.png"
                                                         />
                                                         <div className="skills-pic-disabled"></div>
                                                     </div>
@@ -1575,7 +1575,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             <div className="color-btn gblue rb-koi">
                                                 <img
                                                     className="domik"
-                                                    src="rc/v2-ns-chest.png"
+                                                    src="img/v2-ns-chest.png"
                                                 />
                                                 <div className="color-btn-text">
                                                     Magic Boxes
@@ -1761,38 +1761,38 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                             <div className="rb-rignt-box">
                                                                 <div className="rb-rating-slot lock">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                     <div className="rb-lock"></div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
@@ -1803,7 +1803,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                                 </div>
                                                                 <div className="rb-girl-slot">
                                                                     <div className="rb-girl-avatar">
-                                                                        <img src="hero0093-ava.jpg" />
+                                                                        <img src="img/hero0093-ava.jpg" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1826,37 +1826,37 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                             <div className="rb-rignt-box">
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
@@ -1867,7 +1867,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                                 </div>
                                                                 <div className="rb-girl-slot">
                                                                     <div className="rb-girl-avatar">
-                                                                        <img src="hero0093-ava.jpg" />
+                                                                        <img src="img/hero0093-ava.jpg" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1890,37 +1890,37 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                             <div className="rb-rignt-box">
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="rb-rating-slot">
                                                                     <div className="rb-rating-video">
-                                                                        <img src="http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                        <img src="img/http://cdn3.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
                                                                         <div className="rating-video-play"></div>
                                                                     </div>
                                                                 </div>
@@ -1931,7 +1931,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                                 </div>
                                                                 <div className="rb-girl-slot">
                                                                     <div className="rb-girl-avatar">
-                                                                        <img src="hero0093-ava.jpg" />
+                                                                        <img src="img/hero0093-ava.jpg" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1967,7 +1967,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box gold">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -1981,7 +1981,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box bronze">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -1995,7 +1995,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box silver">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2009,7 +2009,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box silver">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2023,7 +2023,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box gold">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2037,7 +2037,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box bronze">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2051,7 +2051,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box silver">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2065,7 +2065,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box gold">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2079,7 +2079,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box bronze">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2093,7 +2093,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box silver">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2107,7 +2107,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box silver">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2121,7 +2121,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box gold">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2135,7 +2135,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box bronze">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2149,7 +2149,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 </div>
                                                 <div className="tower-relics-box silver">
                                                     <div className="tower-relics-pic">
-                                                        <img src="change-sun1.png" />
+                                                        <img src="img/change-sun1.png" />
                                                     </div>
                                                     <div className="tower-relics-text-box">
                                                         <div className="tower-relics-text">
@@ -2166,7 +2166,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 <div className="tower-trophy-box">
                                                     <div className="trophy-bonus-pic-box">
                                                         <div className="trophy-bonus-pic">
-                                                            <img src="change-ic-gem-master.png" />
+                                                            <img src="img/change-ic-gem-master.png" />
                                                         </div>
                                                         <div className="trophy-bonus-lvl">
                                                             Level 6969K
@@ -2207,7 +2207,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 <div className="tower-trophy-box">
                                                     <div className="trophy-bonus-pic-box">
                                                         <div className="trophy-bonus-pic">
-                                                            <img src="change-ic-gem-master.png" />
+                                                            <img src="img/change-ic-gem-master.png" />
                                                         </div>
                                                         <div className="trophy-bonus-lvl">
                                                             Level 6969K
@@ -2248,7 +2248,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 <div className="tower-trophy-box">
                                                     <div className="trophy-bonus-pic-box">
                                                         <div className="trophy-bonus-pic">
-                                                            <img src="change-ic-gem-master.png" />
+                                                            <img src="img/change-ic-gem-master.png" />
                                                         </div>
                                                         <div className="trophy-bonus-lvl">
                                                             Level 6969K
@@ -2308,19 +2308,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2348,19 +2348,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic2">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s1-a.png" />
+                                                    <img src="img/raidboss-map-s1-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3leo.png" />
+                                                    <img src="img/raidboss-map-3leo.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s1-b.png" />
+                                                    <img src="img/raidboss-map-s1-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2381,19 +2381,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic1">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s2-a.png" />
+                                                    <img src="img/raidboss-map-s2-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s2-b.png" />
+                                                    <img src="img/raidboss-map-s2-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2414,19 +2414,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2449,19 +2449,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2482,19 +2482,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic1 pic2">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3leo.png" />
+                                                    <img src="img/raidboss-map-3leo.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2515,19 +2515,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2548,19 +2548,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2583,19 +2583,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2616,19 +2616,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic1 pic2">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3leo.png" />
+                                                    <img src="img/raidboss-map-3leo.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2649,19 +2649,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2682,19 +2682,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2719,19 +2719,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2752,19 +2752,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic2">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s1-a.png" />
+                                                    <img src="img/raidboss-map-s1-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3leo.png" />
+                                                    <img src="img/raidboss-map-3leo.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s1-b.png" />
+                                                    <img src="img/raidboss-map-s1-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2785,19 +2785,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic1">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s2-a.png" />
+                                                    <img src="img/raidboss-map-s2-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s2-b.png" />
+                                                    <img src="img/raidboss-map-s2-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2818,19 +2818,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2853,19 +2853,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2886,19 +2886,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic1 pic2">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3leo.png" />
+                                                    <img src="img/raidboss-map-3leo.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2919,19 +2919,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2952,19 +2952,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -2987,19 +2987,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -3020,19 +3020,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s pic1 pic2">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3leo.png" />
+                                                    <img src="img/raidboss-map-3leo.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -3053,19 +3053,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -3086,19 +3086,19 @@ const V2MainScreen02GuildTowerComponent = () => {
                                             </div>
                                             <div className="map-s shop">
                                                 <div className="s-pic-s1a">
-                                                    <img src="raidboss-map-s3-a.png" />
+                                                    <img src="img/raidboss-map-s3-a.png" />
                                                 </div>
                                                 <div className="s-pic-3pic1">
-                                                    <img src="raidboss-map-3tower.png" />
+                                                    <img src="img/raidboss-map-3tower.png" />
                                                 </div>
                                                 <div className="s-pic-3pic2">
-                                                    <img src="raidboss-map-3sun.png" />
+                                                    <img src="img/raidboss-map-3sun.png" />
                                                 </div>
                                                 <div className="s-pic-s1b">
-                                                    <img src="raidboss-map-s3-b.png" />
+                                                    <img src="img/raidboss-map-s3-b.png" />
                                                 </div>
                                                 <div className="s-shop">
-                                                    <img src="ic-abil-rubin.png" />
+                                                    <img src="img/ic-abil-rubin.png" />
                                                 </div>
                                             </div>
                                             <div className="map-quest-prgbar-all">
@@ -3125,7 +3125,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                     <div className="hero-avatar-box">
                                         <img
                                             className="hero-avatar"
-                                            src="rc/tithero-11-1-ava.jpg"
+                                            src="img/tithero-11-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="color-btn green">
@@ -3144,7 +3144,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -3152,7 +3152,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                         </a>
@@ -3162,7 +3162,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
@@ -3170,7 +3170,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -3178,7 +3178,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>
@@ -3195,7 +3195,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                     <div className="card-box-back">
                                         <div className="card-vis">?</div>
                                         <div className="reward-pic">
-                                            <img src="skill-icons/skill-icon01x2.png" />
+                                            <img src="img/skill-icons/skill-icon01x2.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -3216,7 +3216,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                     <div className="card-box-back">
                                         <div className="card-vis">?</div>
                                         <div className="reward-pic">
-                                            <img src="skill-icons/skill-icon01x2.png" />
+                                            <img src="img/skill-icons/skill-icon01x2.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -3239,7 +3239,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                     <div className="card-box-back">
                                         <div className="card-vis">?</div>
                                         <div className="reward-pic">
-                                            <img src="skill-icons/skill-icon01x2.png" />
+                                            <img src="img/skill-icons/skill-icon01x2.png" />
                                         </div>
                                         <div className="tower-relics-text-box">
                                             <div className="tower-relics-text">
@@ -3272,7 +3272,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                             <div className="color-box"></div>
                             <div className="tower-trophy-bg-all">
                                 <div className="tower-trophy-pic">
-                                    <img src="trophy/v2-trophy-dragon-head-c.png" />
+                                    <img src="img/trophy/v2-trophy-dragon-head-c.png" />
                                 </div>
                                 <div className="tower-trophy-prgbar-empty">
                                     <div

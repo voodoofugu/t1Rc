@@ -8,7 +8,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        "background-image": "url('rc/v2-fapop-hw1.jpg')",
+                        backgroundImage: "url('rc/v2-fapop-hw1.jpg')",
                     }}></div>
                 <div className="fapop-content-all">
                     <div>
@@ -24,7 +24,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 <div item="[object Object]" top_offset="100">
                                     <img
                                         className="fp-portal-img"
-                                        src="rc/v2-portal1.png"
+                                        src="img/v2-portal1.png"
                                     />
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic10.png"
+                                        src="img/fapop-ic10.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -75,7 +75,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic03.png"
+                                        src="img/fapop-ic03.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -94,7 +94,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic11.png"
+                                        src="img/fapop-ic11.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -113,7 +113,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div>
                                     <img
-                                        src="rc/fapop-ic02.png"
+                                        src="img/fapop-ic02.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -132,7 +132,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic08.png"
+                                        src="img/fapop-ic08.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -160,7 +160,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic10.png"
+                                        src="img/fapop-ic10.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -179,7 +179,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic13.png"
+                                        src="img/fapop-ic13.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -198,7 +198,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div top_offset="50">
                                     <img
-                                        src="rc/fapop-ic12.png"
+                                        src="img/fapop-ic12.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -217,7 +217,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div>
                                     <img
-                                        src="rc/fapop-ic02.png"
+                                        src="img/fapop-ic02.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -236,7 +236,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div top_offset="50">
                                     <img
-                                        src="rc/fapop-ic06.png"
+                                        src="img/fapop-ic06.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -255,7 +255,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic11.png"
+                                        src="img/fapop-ic11.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -274,7 +274,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic08.png"
+                                        src="img/fapop-ic08.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -293,7 +293,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div>
                                     <img
-                                        src="rc/fapop-ic02.png"
+                                        src="img/fapop-ic02.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -312,7 +312,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic07.png"
+                                        src="img/fapop-ic07.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -331,7 +331,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic13.png"
+                                        src="img/fapop-ic13.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -350,7 +350,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic07.png"
+                                        src="img/fapop-ic07.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -369,7 +369,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic03.png"
+                                        src="img/fapop-ic03.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -388,7 +388,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic10.png"
+                                        src="img/fapop-ic10.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -407,7 +407,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic09.png"
+                                        src="img/fapop-ic09.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -426,7 +426,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic05.png"
+                                        src="img/fapop-ic05.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -445,7 +445,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic07.png"
+                                        src="img/fapop-ic07.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -464,7 +464,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic05.png"
+                                        src="img/fapop-ic05.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -492,7 +492,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic09.png"
+                                        src="img/fapop-ic09.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -511,7 +511,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div>
                                     <img
-                                        src="rc/fapop-ic02.png"
+                                        src="img/fapop-ic02.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -530,7 +530,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic09.png"
+                                        src="img/fapop-ic09.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -549,7 +549,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic11.png"
+                                        src="img/fapop-ic11.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -577,7 +577,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div top_offset="50">
                                     <img
-                                        src="rc/fapop-ic12.png"
+                                        src="img/fapop-ic12.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -596,7 +596,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic03.png"
+                                        src="img/fapop-ic03.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -615,7 +615,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic05.png"
+                                        src="img/fapop-ic05.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -634,7 +634,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic09.png"
+                                        src="img/fapop-ic09.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -653,7 +653,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic08.png"
+                                        src="img/fapop-ic08.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -672,7 +672,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 }}>
                                 <div item="[object Object]" top_offset="50">
                                     <img
-                                        src="rc/fapop-ic13.png"
+                                        src="img/fapop-ic13.png"
                                         style={{
                                             width: "100%",
                                             height: "100%",
@@ -690,7 +690,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                             </a>
                         </div>
                         <div className="bfIcon">
-                            <img className="icon" src="rc/ic-hw.png" />
+                            <img className="icon" src="img/ic-hw.png" />
                         </div>
                         <div className="fapop-rating-tokens-box">
                             <div className="color-btn fl rating">
@@ -699,14 +699,17 @@ const V2MainScreen09HwFapopolyComponent = () => {
                             <div className="color-btn fl token">
                                 <img
                                     className="domik"
-                                    src="rc/fapop-token-ic.png"
+                                    src="img/fapop-token-ic.png"
                                 />
                                 <div className="color-btn-text">tokens</div>
                             </div>
                             <div
                                 className="color-btn fr gblue fp"
                                 style={{ width: "120px" }}>
-                                <img className="domik" src="rc/pse-epic3.png" />
+                                <img
+                                    className="domik"
+                                    src="img/pse-epic3.png"
+                                />
                                 <div
                                     className="color-btn-text"
                                     style={{ width: "80px" }}>
@@ -718,7 +721,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 style={{ width: "160px" }}>
                                 <img
                                     className="domik"
-                                    src="rc/pse-keygirl.png"
+                                    src="img/pse-keygirl.png"
                                 />
                                 <div
                                     className="color-btn-text"
@@ -731,7 +734,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 style={{ width: "165px" }}>
                                 <img
                                     className="domik"
-                                    src="rc/icn-dual-ball.png"
+                                    src="img/icn-dual-ball.png"
                                 />
                                 <div
                                     className="color-btn-text"
@@ -744,7 +747,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 style={{ width: "165px" }}>
                                 <img
                                     className="domik"
-                                    src="rc/val2021_res1.png"
+                                    src="img/val2021_res1.png"
                                 />
                                 <div
                                     className="color-btn-text"
@@ -777,7 +780,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 <div className="fapop-rewards-box">
                                     <div className="fapop-rewards girl good">
                                         <div className="fapop-rew-pic">
-                                            <img src="__3e87/images/superhero_new/suphero-08/x1/avatar/08sh-ava-1.jpg" />
+                                            <img src="img/__3e87/images/superhero_new/suphero-08/x1/avatar/08sh-ava-1.jpg" />
                                         </div>
                                         <div className="fapop-rew-pts">
                                             Sidzuki Yano
@@ -787,28 +790,28 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="ic-abil-dps-plus@2x.png" />
+                                            <img src="img/ic-abil-dps-plus@2x.png" />
                                         </div>
                                         <div className="fapop-rew-pts">x2</div>
                                         <div className="fapop-pts-num">50</div>
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="arrow_up1.png" />
+                                            <img src="img/arrow_up1.png" />
                                         </div>
                                         <div className="fapop-rew-pts">15</div>
                                         <div className="fapop-pts-num">35</div>
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="sh-icon-chest-128.png" />
+                                            <img src="img/sh-icon-chest-128.png" />
                                         </div>
                                         <div className="fapop-rew-pts">35</div>
                                         <div className="fapop-pts-num">20</div>
                                     </div>
                                     <div className="fapop-rewards">
                                         <div className="fapop-rew-pic">
-                                            <img src="ic-abil-gold-up.png" />
+                                            <img src="img/ic-abil-gold-up.png" />
                                         </div>
                                         <div className="fapop-rew-pts">
                                             10K%
@@ -817,7 +820,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     </div>
                                     <div className="fapop-rewards claim">
                                         <div className="fapop-rew-pic">
-                                            <img src="sh-icon-chest-128.png" />
+                                            <img src="img/sh-icon-chest-128.png" />
                                         </div>
                                         <div className="fapop-rew-pts">
                                             claim
@@ -835,7 +838,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                             className="fapop-prgbar-box-all">
                             <div className="fapop-prgbar-reward-box">
                                 <div className="fapop-prgbar-reward-pic">
-                                    <img src="fapop-token-ic.png" />
+                                    <img src="img/fapop-token-ic.png" />
                                 </div>
                                 <div className="fapop-prgbar-reward-text">
                                     1
@@ -881,10 +884,10 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 </div>
                             </div>
                             <div className="fapop-dice-end-1">
-                                <img src="fapop-dice-end1.png" />
+                                <img src="img/fapop-dice-end1.png" />
                             </div>
                             <div className="fapop-dice-end-2">
-                                <img src="fapop-dice-end1.png" />
+                                <img src="img/fapop-dice-end1.png" />
                             </div>
                             <div className="fapop-dice-end-rolled">
                                 <div className="fapop-dice-rolled-text">
@@ -922,7 +925,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 <div className="hero-avatar-box">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="rc/unknown-hero-ava.jpg"
+                                                        src="img/unknown-hero-ava.jpg"
                                                     />
                                                 </div>
                                             </div>
@@ -930,7 +933,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 <div className="hero-avatar-box">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
+                                                        src="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
                                                     />
                                                 </div>
                                             </div>
@@ -938,7 +941,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 <div className="hero-avatar-box">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg"
+                                                        src="img/images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg"
                                                     />
                                                 </div>
                                             </div>
@@ -1128,7 +1131,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                             <div className="hw-btlpass-level-elite">
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-abil-gold@2x.png" />
+                                                        <img src="img/ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1144,7 +1147,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="sh-icon-chest-128.png" />
+                                                        <img src="img/sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1160,7 +1163,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rpg-poly/item/1.png" />
+                                                        <img src="img/rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1176,7 +1179,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-orange.png" />
+                                                        <img src="img/ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1192,7 +1195,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-blue.png" />
+                                                        <img src="img/ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1208,7 +1211,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-green.png" />
+                                                        <img src="img/ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1224,7 +1227,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-pink.png" />
+                                                        <img src="img/ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1240,7 +1243,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-krasn-butil@2x.png" />
+                                                        <img src="img/ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1256,7 +1259,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-abil-gold@2x.png" />
+                                                        <img src="img/ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1272,7 +1275,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="sh-icon-chest-128.png" />
+                                                        <img src="img/sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1288,7 +1291,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rpg-poly/item/2.png" />
+                                                        <img src="img/rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1304,7 +1307,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-orange.png" />
+                                                        <img src="img/ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1320,7 +1323,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-blue.png" />
+                                                        <img src="img/ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1336,7 +1339,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-green.png" />
+                                                        <img src="img/ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1352,7 +1355,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-pink.png" />
+                                                        <img src="img/ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1368,7 +1371,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-krasn-butil@2x.png" />
+                                                        <img src="img/ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1384,7 +1387,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-abil-gold@2x.png" />
+                                                        <img src="img/ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1400,7 +1403,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="sh-icon-chest-128.png" />
+                                                        <img src="img/sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1416,7 +1419,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rpg-poly/item/3.png" />
+                                                        <img src="img/rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1432,7 +1435,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-orange.png" />
+                                                        <img src="img/ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1448,7 +1451,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-blue.png" />
+                                                        <img src="img/ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1464,7 +1467,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-green.png" />
+                                                        <img src="img/ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1480,7 +1483,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-pink.png" />
+                                                        <img src="img/ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1496,7 +1499,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-krasn-butil@2x.png" />
+                                                        <img src="img/ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1512,7 +1515,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block girl">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="__7055/images/superhero_new/suphero-652/x1/avatar/652sh-ava-1.jpg" />
+                                                        <img src="img/images/superhero_new/suphero-652/x1/avatar/652sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1528,7 +1531,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="sh-icon-chest-128.png" />
+                                                        <img src="img/sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1544,7 +1547,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rpg-poly/item/1.png" />
+                                                        <img src="img/rpg-poly/item/1.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1560,7 +1563,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-orange.png" />
+                                                        <img src="img/ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1576,7 +1579,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-blue.png" />
+                                                        <img src="img/ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1592,7 +1595,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-green.png" />
+                                                        <img src="img/ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1608,7 +1611,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-diamond.png" />
+                                                        <img src="img/ic-diamond.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1624,7 +1627,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-krasn-butil@2x.png" />
+                                                        <img src="img/ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1640,7 +1643,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block girl">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="__1cd8/images/superhero_new/suphero-653/x1/avatar/653sh-ava-1.jpg" />
+                                                        <img src="img/images/superhero_new/suphero-653/x1/avatar/653sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1656,7 +1659,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="sh-icon-chest-128.png" />
+                                                        <img src="img/sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1672,7 +1675,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rpg-poly/item/2.png" />
+                                                        <img src="img/rpg-poly/item/2.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1688,7 +1691,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-orange.png" />
+                                                        <img src="img/ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1704,7 +1707,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-blue.png" />
+                                                        <img src="img/ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1720,7 +1723,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-green.png" />
+                                                        <img src="img/ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1736,7 +1739,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-pink.png" />
+                                                        <img src="img/ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1752,7 +1755,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-krasn-butil@2x.png" />
+                                                        <img src="img/ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1768,7 +1771,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-abil-gold@2x.png" />
+                                                        <img src="img/ic-abil-gold@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1784,7 +1787,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="sh-icon-chest-128.png" />
+                                                        <img src="img/sh-icon-chest-128.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1800,7 +1803,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="rpg-poly/item/3.png" />
+                                                        <img src="img/rpg-poly/item/3.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1816,7 +1819,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-orange.png" />
+                                                        <img src="img/ms-stone-orange.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1832,7 +1835,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-blue.png" />
+                                                        <img src="img/ms-stone-blue.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1848,7 +1851,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-green.png" />
+                                                        <img src="img/ms-stone-green.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1864,7 +1867,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ms-stone-pink.png" />
+                                                        <img src="img/ms-stone-pink.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1880,7 +1883,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-krasn-butil@2x.png" />
+                                                        <img src="img/ic-krasn-butil@2x.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1896,7 +1899,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="ic-diamond.png" />
+                                                        <img src="img/ic-diamond.png" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1912,7 +1915,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block girl">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="__41e3/images/superhero_new/suphero-656/x1/avatar/656sh-ava-1.jpg" />
+                                                        <img src="img/__41e3/images/superhero_new/suphero-656/x1/avatar/656sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1931,7 +1934,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                     </div>
                                 </div>
                                 <div className="hw-btlpass-girl">
-                                    <img src="break-girl753-hw.png" />
+                                    <img src="img/break-girl753-hw.png" />
                                 </div>
                                 <div className="hw-btlpass-btn-box">
                                     <div className="color-btn">
@@ -2546,15 +2549,15 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                         </div>
                                         <div className="lhero-box">
                                             <div className="lhero-pic">
-                                                <img src="https://cdn.faptitans.com/s1/__4e91/images/superhero_new/suphero-250/x2/250sh-1.jpg" />
+                                                <img src="img/__4e91/images/superhero_new/suphero-250/x2/250sh-1.jpg" />
                                             </div>
                                             <div className="topname-box">
                                                 <div className="lrare-box common"></div>
                                                 <div className="sh2-icon left">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl right">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                                 <div className="lhero-name-box">
                                                     <div className="lhero-name">
@@ -2575,7 +2578,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="girl-bonus-box">
                                                     <div className="girl-bonus-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/__3c7f/images/superhero_new/suphero-250/x2/avatar/250sh-ava-1.jpg" />
+                                                        <img src="img/__3c7f/images/superhero_new/suphero-250/x2/avatar/250sh-ava-1.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -2600,7 +2603,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                             <div className="bonus-lvl-box-bonus">
                                                                 +4.1% dps to
                                                                 <div className="ff-sh2-icon">
-                                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                                    <img src="img/cur2-gun.png" />
                                                                 </div>
                                                             </div>
                                                         </div>

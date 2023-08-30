@@ -11,14 +11,13 @@ const V2MainScreen01Component = () => {
                 <div
                     className="main-bg"
                     style={{
-                        "background-image":
-                            "url('/images/back/new/09-River.jpg')",
+                        backgroundImage: "url('/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -27,7 +26,7 @@ const V2MainScreen01Component = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -41,14 +40,8 @@ const V2MainScreen01Component = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img
-                                        className="bg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-                                    />
-                                    <img
-                                        className="fg"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-                                    />
+                                    <img className="bg" src="v2-cw-bg34.png" />
+                                    <img className="fg" src="v2-cw-p03.png" />
                                 </div>
                                 <div className="might-box-name">Clan</div>
                             </div>
@@ -73,7 +66,7 @@ const V2MainScreen01Component = () => {
                             <li className="quest">
                                 <img
                                     className="icon"
-                                    src="rc/ic-abil-reborn.png"
+                                    src="img/ic-abil-reborn.png"
                                 />
                             </li>
                         </div>
@@ -83,13 +76,13 @@ const V2MainScreen01Component = () => {
                                 <li className="quest angel-pop">
                                     <img
                                         className="icon"
-                                        src="rc/picmeh-ic-angel-pop.png"
+                                        src="img/picmeh-ic-angel-pop.png"
                                     />
                                 </li>
                                 <li className="quest angel-pop-x3">
                                     <img
                                         className="icon"
-                                        src="rc/picmeh-ic-angel-pop-x3.png"
+                                        src="img/picmeh-ic-angel-pop-x3.png"
                                     />
                                 </li>
                                 <li
@@ -97,13 +90,13 @@ const V2MainScreen01Component = () => {
                                     style={{ "animation-delay": "0ms" }}>
                                     <img
                                         className="icon"
-                                        src="rc/ic-superhero-10.png"
+                                        src="img/ic-superhero-10.png"
                                     />
                                 </li>
                                 <li className="quest picmeh-info info">
                                     <img
                                         className="icon"
-                                        src="rc/picmeh-ic-diamond.png"
+                                        src="img/picmeh-ic-diamond.png"
                                     />
                                 </li>
                                 <li
@@ -111,7 +104,7 @@ const V2MainScreen01Component = () => {
                                     style={{ "animation-delay": "450ms" }}>
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/ic-hero-211.png"
+                                        src="ic-hero-211.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">23:29:14</div>
@@ -123,7 +116,7 @@ const V2MainScreen01Component = () => {
                                     style={{ "animation-delay": "600ms" }}>
                                     <img
                                         className="icon"
-                                        src="rc/v2-ico-gold.png"
+                                        src="img/v2-ico-gold.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">23:36:10</div>
@@ -137,7 +130,7 @@ const V2MainScreen01Component = () => {
                                 <li className="quest startpack wide">
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/cw-quest-icon.png"
+                                        src="cw-quest-icon.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">1D 03:08</div>
@@ -148,7 +141,7 @@ const V2MainScreen01Component = () => {
                                     style={{ "animation-delay": "150ms" }}>
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png"
+                                        src="v2-fw-icon-fr0.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">71:32:33</div>
@@ -157,7 +150,7 @@ const V2MainScreen01Component = () => {
                                 <li className="quest startpack wide">
                                     <img
                                         className="icon"
-                                        src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                        src="v2-mn-soul-sg-160.png"
                                     />
                                 </li>
                                 <li
@@ -165,13 +158,13 @@ const V2MainScreen01Component = () => {
                                     style={{ "animation-delay": "750ms" }}>
                                     <img
                                         className="icon"
-                                        src="rc/v2-ico-quest.png"
+                                        src="img/v2-ico-quest.png"
                                     />
                                 </li>
                                 <li className="quest marked">
                                     <img
                                         className="icon"
-                                        src="rc/ic-quests.png"
+                                        src="img/ic-quests.png"
                                     />
                                     <div className="quest-notif"></div>
                                 </li>
@@ -201,11 +194,11 @@ const V2MainScreen01Component = () => {
                         </div>
                     </div>
                     <div className="world-portal underworld">
-                        <img src="portal-underworld.png" />
+                        <img src="img/portal-underworld.png" />
                         <div className="title">Underworld</div>
                     </div>
                     <div className="world-portal darkworld">
-                        <img src="portal-darkworld.png" />
+                        <img src="img/portal-darkworld.png" />
                         <div className="title">Darkworld</div>
                     </div>
                     <div className="buster-box">
@@ -280,7 +273,7 @@ const V2MainScreen01Component = () => {
                         <div className="bd-name">предметы боссов</div>
                         <div className="bd-drops">
                             <div className="bd-stone">
-                                <img src="ms-stone-blue.png" />
+                                <img src="img/ms-stone-blue.png" />
                             </div>
                             <div className="bd-check-box check">
                                 <div className="bd-check"></div>
@@ -288,7 +281,7 @@ const V2MainScreen01Component = () => {
                         </div>
                         <div className="bd-drops two">
                             <div className="bd-stone">
-                                <img src="ms-stone-green.png" />
+                                <img src="img/ms-stone-green.png" />
                             </div>
                             <div className="bd-check-box">
                                 <div className="bd-check"></div>
@@ -296,7 +289,7 @@ const V2MainScreen01Component = () => {
                         </div>
                         <div className="bd-drops chest received">
                             <div className="bd-stone">
-                                <img src="change-sun1.png" />
+                                <img src="img/change-sun1.png" />
                             </div>
                             <div className="bd-check-box1 check">
                                 <div className="bd-check"></div>
@@ -348,10 +341,10 @@ const V2MainScreen01Component = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="https://cdn.faptitans.com/s1/__a62a/images/hero-all/tithero-328/x2/ava/tithero-328-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-328/x2/ava/tithero-328-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -377,10 +370,10 @@ const V2MainScreen01Component = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -420,17 +413,17 @@ const V2MainScreen01Component = () => {
                                             </div>
                                             <div className="v2-hero-notif notif notif10"></div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card disabled">
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -473,10 +466,10 @@ const V2MainScreen01Component = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -515,17 +508,17 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card silverCard">
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -564,17 +557,17 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card goldCard">
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -613,17 +606,17 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -662,7 +655,7 @@ const V2MainScreen01Component = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                     </div>
@@ -698,7 +691,7 @@ const V2MainScreen01Component = () => {
                                     <div className="title">HEROS</div>
                                     <div className="women-btn-box">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5001/x2/tithero-5001-1.jpg" />
+                                            <img src="img/images/hero-all/tithero-5001/x2/tithero-5001-1.jpg" />
                                         </div>
                                     </div>
                                 </div>
@@ -706,7 +699,7 @@ const V2MainScreen01Component = () => {
                                     <div className="title">SUPERHEROS</div>
                                     <div className="women-btn-box">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-03/x2/03sh-1.jpg" />
+                                            <img src="img/images/superhero_new/suphero-03/x2/03sh-1.jpg" />
                                         </div>
                                     </div>
                                 </div>
@@ -714,7 +707,7 @@ const V2MainScreen01Component = () => {
                                     <div className="title">ANGELS</div>
                                     <div className="women-btn-box">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/goddess-1-1.jpg" />
+                                            <img src="img/images/goddess/goddess-1/x2/goddess-1-1.jpg" />
                                         </div>
                                     </div>
                                 </div>
@@ -732,7 +725,7 @@ const V2MainScreen01Component = () => {
                                 <div className="angels-scroll-box">
                                     <div className="angel-card-box">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/goddess-1-1.jpg" />
+                                            <img src="img/images/goddess/goddess-1/x2/goddess-1-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -789,7 +782,7 @@ const V2MainScreen01Component = () => {
                                     </div>
                                     <div className="angel-card-box">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
+                                            <img src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -846,7 +839,7 @@ const V2MainScreen01Component = () => {
                                     </div>
                                     <div className="angel-card-box lock">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-3/x2/goddess-3-1.jpg" />
+                                            <img src="img/images/goddess/goddess-3/x2/goddess-3-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -903,7 +896,7 @@ const V2MainScreen01Component = () => {
                                     </div>
                                     <div className="angel-card-box lock">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/goddess-4-1.jpg" />
+                                            <img src="img/images/goddess/goddess-4/x2/goddess-4-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -960,7 +953,7 @@ const V2MainScreen01Component = () => {
                                     </div>
                                     <div className="angel-card-box lock">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-5/x2/goddess-5-1.jpg" />
+                                            <img src="img/images/goddess/goddess-5/x2/goddess-5-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -1017,7 +1010,7 @@ const V2MainScreen01Component = () => {
                                     </div>
                                     <div className="angel-card-box lock">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-6/x2/goddess-6-1.jpg" />
+                                            <img src="img/images/goddess/goddess-6/x2/goddess-6-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -1074,7 +1067,7 @@ const V2MainScreen01Component = () => {
                                     </div>
                                     <div className="angel-card-box lock">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
+                                            <img src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -1131,7 +1124,7 @@ const V2MainScreen01Component = () => {
                                     </div>
                                     <div className="angel-card-box lock">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
+                                            <img src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
                                         </div>
                                         <div className="angel-name-box">
                                             <div className="angel-name">
@@ -1225,7 +1218,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1233,7 +1226,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/ava/goddess-2-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-2/x2/ava/goddess-2-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1241,7 +1234,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-3/x2/ava/goddess-3-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-3/x2/ava/goddess-3-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1249,7 +1242,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/ava/goddess-4-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-4/x2/ava/goddess-4-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1257,7 +1250,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-5/x2/ava/goddess-5-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-5/x2/ava/goddess-5-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1265,7 +1258,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1273,7 +1266,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1281,7 +1274,7 @@ const V2MainScreen01Component = () => {
                                             <div className="angel-avatar-wrap">
                                                 <img
                                                     className="angel-avatar"
-                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                                                    src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
                                                 />
                                             </div>
                                         </div>
@@ -1293,7 +1286,7 @@ const V2MainScreen01Component = () => {
                                 <div className="selected-angel-box">
                                     <div className="angel-card-box">
                                         <div className="img-wrap">
-                                            <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
+                                            <img src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg" />
                                             <div className="b-fs"></div>
                                         </div>
                                         <div className="info-box">
@@ -1370,7 +1363,7 @@ const V2MainScreen01Component = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/comics/ava/goddess-2-1-com-ava.jpg"
+                                                        src="img/images/goddess/goddess-2/comics/ava/goddess-2-1-com-ava.jpg"
                                                     />
                                                 </div>
                                             </div>
@@ -1378,7 +1371,7 @@ const V2MainScreen01Component = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/comics/ava/goddess-2-2-com-ava.jpg"
+                                                        src="img/images/goddess/goddess-2/comics/ava/goddess-2-2-com-ava.jpg"
                                                     />
                                                 </div>
                                             </div>
@@ -1386,7 +1379,7 @@ const V2MainScreen01Component = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/comics/ava/goddess-2-3-com-ava.jpg"
+                                                        src="img/images/goddess/goddess-2/comics/ava/goddess-2-3-com-ava.jpg"
                                                     />
                                                 </div>
                                             </div>
@@ -1394,7 +1387,7 @@ const V2MainScreen01Component = () => {
                                                 <div className="angel-avatar-wrap">
                                                     <img
                                                         className="angel-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/comics/ava/goddess-2-4-com-ava.jpg"
+                                                        src="img/images/goddess/goddess-2/comics/ava/goddess-2-4-com-ava.jpg"
                                                     />
                                                 </div>
                                             </div>
@@ -1449,11 +1442,11 @@ const V2MainScreen01Component = () => {
                                                     <div className="hero-avatar-wrap">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1486,11 +1479,11 @@ const V2MainScreen01Component = () => {
                                                     <div className="hero-avatar-wrap">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1523,11 +1516,11 @@ const V2MainScreen01Component = () => {
                                                     <div className="hero-avatar-wrap">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1560,11 +1553,11 @@ const V2MainScreen01Component = () => {
                                                     <div className="hero-avatar-wrap">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1597,11 +1590,11 @@ const V2MainScreen01Component = () => {
                                                     <div className="hero-avatar-wrap">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                                         />
                                                     </div>
                                                     <div className="sh2-icon-forgirl">
-                                                        <img src="cur2-barbarian.png" />
+                                                        <img src="img/cur2-barbarian.png" />
                                                     </div>
                                                     <div className="hero-level-box">
                                                         lvl
@@ -1655,36 +1648,36 @@ const V2MainScreen01Component = () => {
                         <div className="skills-all-box">
                             <div className="skills-all">
                                 <div className="skills-pic in-progress">
-                                    <img src="skill-icons/skill-icon01.png" />
+                                    <img src="img/skill-icons/skill-icon01.png" />
                                     <div className="timer">00:00:20</div>
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic idle">
                                     <img
                                         className="icon"
-                                        src="rc/skill-icons/skill-icon02.png"
+                                        src="img/skill-icons/skill-icon02.png"
                                     />
                                     <div className="timer">00:01:11</div>
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="skill-icons/skill-icon03.png" />
+                                    <img src="img/skill-icons/skill-icon03.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic">
-                                    <img src="skill-icons/skill-icon04.png" />
+                                    <img src="img/skill-icons/skill-icon04.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="skill-icons/skill-icon05.png" />
+                                    <img src="img/skill-icons/skill-icon05.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="skill-icons/skill-icon06.png" />
+                                    <img src="img/skill-icons/skill-icon06.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                                 <div className="skills-pic disabled">
-                                    <img src="skill-icons/skill-icon07.png" />
+                                    <img src="img/skill-icons/skill-icon07.png" />
                                     <div className="skills-pic-disabled"></div>
                                 </div>
                             </div>
@@ -1694,37 +1687,37 @@ const V2MainScreen01Component = () => {
                         <div className="tabs-all heroes selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="tab-01.png" />
+                                <img src="img/tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="tab-05.png" />
+                                <img src="img/tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="tab-08.png" />
+                                <img src="img/tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="tab-02.png" />
+                                <img src="img/tab-02.png" />
                             </div>
                         </div>
                         <div className="tabs-all w-house2">
                             <div className="tabs-name">Women's</div>
                             <div className="tabs-pic">
-                                <img src="tab-11.png" />
+                                <img src="img/tab-11.png" />
                             </div>
                         </div>
                         <div className="tabs-all w-house">
                             <div className="tabs-name">Angels</div>
                             <div className="tabs-pic">
-                                <img src="tab-12.png" />
+                                <img src="img/tab-12.png" />
                             </div>
                         </div>
                     </div>
@@ -1861,7 +1854,7 @@ const V2MainScreen01Component = () => {
                                                 Boss Chest
                                             </div>
                                             <div className="item">
-                                                <img src="https://cdn.faptitans.com/s1/rc/change-sun1.png" />
+                                                <img src="img/change-sun1.png" />
                                                 <div className="reward-value">
                                                     100
                                                 </div>
@@ -1880,7 +1873,7 @@ const V2MainScreen01Component = () => {
                                             <div className="item">
                                                 <img
                                                     className="winner-prize"
-                                                    src="https://cdn.faptitans.com/s1/rc/sh-icon-chest-128.png"
+                                                    src="sh-icon-chest-128.png"
                                                 />
                                                 <div className="reward-value">
                                                     100
@@ -1898,7 +1891,7 @@ const V2MainScreen01Component = () => {
                                                 Superhero Chest
                                             </div>
                                             <div className="item">
-                                                <img src="sh-icon-chest-dark.png" />
+                                                <img src="img/sh-icon-chest-dark.png" />
                                                 <div className="reward-value">
                                                     100
                                                 </div>
@@ -1915,7 +1908,7 @@ const V2MainScreen01Component = () => {
                                                 Angel Chest
                                             </div>
                                             <div className="item">
-                                                <img src="darkworld-chest-agels.png" />
+                                                <img src="img/darkworld-chest-agels.png" />
                                                 <div className="reward-value">
                                                     100
                                                 </div>
@@ -1970,25 +1963,25 @@ const V2MainScreen01Component = () => {
                                     <div className="item undefined">
                                         <div className="icon gold time">
                                             <div className="reborn">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png" />
+                                                <img src="img/ic-abil-reborn.png" />
                                             </div>
                                             <div className="gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-dark.png" />
+                                                <img src="img/v2-res-dark.png" />
                                             </div>
                                             <div className="shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-butil.png" />
+                                                <img src="img/ic-abil-butil.png" />
                                             </div>
                                             <div className="gems">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="gold-shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold-but.png" />
+                                                <img src="img/ic-abil-gold-but.png" />
                                             </div>
                                             <div className="ice_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
+                                                <img src="img/ic-ice_gold.png" />
                                             </div>
                                             <div className="newtime t1h">
                                                 <div className="newclocktime">
@@ -2029,25 +2022,25 @@ const V2MainScreen01Component = () => {
                                     <div className="item undefined">
                                         <div className="icon gold time">
                                             <div className="reborn">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png" />
+                                                <img src="img/ic-abil-reborn.png" />
                                             </div>
                                             <div className="gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-dark.png" />
+                                                <img src="img/v2-res-dark.png" />
                                             </div>
                                             <div className="shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-butil.png" />
+                                                <img src="img/ic-abil-butil.png" />
                                             </div>
                                             <div className="gems">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="gold-shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold-but.png" />
+                                                <img src="img/ic-abil-gold-but.png" />
                                             </div>
                                             <div className="ice_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
+                                                <img src="img/ic-ice_gold.png" />
                                             </div>
                                             <div className="newtime t6h">
                                                 <div className="newclocktime">
@@ -2088,25 +2081,25 @@ const V2MainScreen01Component = () => {
                                     <div className="item undefined">
                                         <div className="icon gold time">
                                             <div className="reborn">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png" />
+                                                <img src="img/ic-abil-reborn.png" />
                                             </div>
                                             <div className="gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-dark.png" />
+                                                <img src="img/v2-res-dark.png" />
                                             </div>
                                             <div className="shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-butil.png" />
+                                                <img src="img/ic-abil-butil.png" />
                                             </div>
                                             <div className="gems">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="gold-shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold-but.png" />
+                                                <img src="img/ic-abil-gold-but.png" />
                                             </div>
                                             <div className="ice_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
+                                                <img src="img/ic-ice_gold.png" />
                                             </div>
                                             <div className="newtime t24h">
                                                 <div className="newclocktime">
@@ -2147,25 +2140,25 @@ const V2MainScreen01Component = () => {
                                     <div className="item undefined">
                                         <div className="icon gold time">
                                             <div className="reborn">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png" />
+                                                <img src="img/ic-abil-reborn.png" />
                                             </div>
                                             <div className="gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <img src="img/ic-abil-gold.png" />
                                             </div>
                                             <div className="dark_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/v2-res-dark.png" />
+                                                <img src="img/v2-res-dark.png" />
                                             </div>
                                             <div className="shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-butil.png" />
+                                                <img src="img/ic-abil-butil.png" />
                                             </div>
                                             <div className="gems">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-rubin.png" />
+                                                <img src="img/ic-abil-rubin.png" />
                                             </div>
                                             <div className="gold-shards">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold-but.png" />
+                                                <img src="img/ic-abil-gold-but.png" />
                                             </div>
                                             <div className="ice_gold">
-                                                <img src="https://cdn.faptitans.com/s1/rc/ic-ice_gold.png" />
+                                                <img src="img/ic-ice_gold.png" />
                                             </div>
                                             <div className="newtime t72h">
                                                 <div className="newclocktime">
@@ -2229,11 +2222,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2246,11 +2239,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2263,11 +2256,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2280,11 +2273,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2297,11 +2290,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2314,11 +2307,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2331,11 +2324,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2348,11 +2341,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2365,11 +2358,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2382,11 +2375,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2399,11 +2392,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2416,11 +2409,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2433,11 +2426,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2450,11 +2443,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2467,11 +2460,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2484,11 +2477,11 @@ const V2MainScreen01Component = () => {
                                                 <div className="hero-avatar-wrap">
                                                     <img
                                                         className="hero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
+                                                        src="img/images/hero-all/tithero-5004/x2/ava/tithero-5004-1-ava.jpg"
                                                     />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                                 <div className="hero-dps-box">
                                                     dps
@@ -2566,32 +2559,32 @@ const V2MainScreen01Component = () => {
                                                     <div className="btn-stars-wrap">
                                                         <div className="color-btn">
                                                             <div className="color-btn-text">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                                <img src="img/star1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="color-btn green">
                                                             <div className="color-btn-text">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                                <img src="img/star1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="color-btn">
                                                             <div className="color-btn-text">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                                <img src="img/star1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="color-btn">
                                                             <div className="color-btn-text">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                                <img src="img/star1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="color-btn">
                                                             <div className="color-btn-text">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/star1.png" />
+                                                                <img src="img/star1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="color-btn">
                                                             <div className="color-btn-text">
-                                                                <img src="star1-purple.png" />
+                                                                <img src="img/star1-purple.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2606,77 +2599,77 @@ const V2MainScreen01Component = () => {
                                                             <div className="filter-options-box">
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                                        <img src="img/cur-c.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-u.png" />
+                                                                        <img src="img/cur-u.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-r.png" />
+                                                                        <img src="img/cur-r.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur-e.png" />
+                                                                        <img src="img/cur-e.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                                        <img src="img/cur2-sword.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-quitar.png" />
+                                                                        <img src="img/cur2-quitar.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-cleric.png" />
+                                                                        <img src="img/cur2-cleric.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-druid.png" />
+                                                                        <img src="img/cur2-druid.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                                        <img src="img/cur2-barbarian.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-ranger.png" />
+                                                                        <img src="img/cur2-ranger.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                                        <img src="img/cur2-wizard.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                                        <img src="img/cur2-gun.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/ico-click.png" />
+                                                                        <img src="img/ico-click.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/ico-sword.png" />
+                                                                        <img src="img/ico-sword.png" />
                                                                     </div>
                                                                 </div>
                                                                 <div className="color-btn">
                                                                     <div className="color-btn-text">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/ico-gold.png" />
+                                                                        <img src="img/ico-gold.png" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2696,204 +2689,204 @@ const V2MainScreen01Component = () => {
                                                     <li className="suphero-card check">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl010"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                            <img src="img/cur-c.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                            <img src="img/cur2-sword.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl010"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/icon-rare.png" />
+                                                            <img src="img/icon-rare.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-quitar.png" />
+                                                            <img src="img/cur2-quitar.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-03/x1/avatar/03sh-ava-5.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-03/x1/avatar/03sh-ava-5.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl010"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                            <img src="img/cur-c.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-cleric.png" />
+                                                            <img src="img/cur2-cleric.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-04/x1/avatar/04sh-ava-5.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-04/x1/avatar/04sh-ava-5.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl010"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-u.png" />
+                                                            <img src="img/cur-u.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-druid.png" />
+                                                            <img src="img/cur2-druid.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-07/x1/avatar/07sh-ava-1.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-07/x1/avatar/07sh-ava-1.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl02"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                            <img src="img/cur-c.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-08/x1/avatar/08sh-ava-2.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-08/x1/avatar/08sh-ava-2.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl04"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-u.png" />
+                                                            <img src="img/cur-u.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-ranger.png" />
+                                                            <img src="img/cur2-ranger.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl04"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/icon-rare.png" />
+                                                            <img src="img/icon-rare.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                            <img src="img/cur2-wizard.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl02"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-e.png" />
+                                                            <img src="img/cur-e.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                            <img src="img/cur2-gun.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl02"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                            <img src="img/cur-c.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl04"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/icon-rare.png" />
+                                                            <img src="img/icon-rare.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                                            <img src="img/cur2-wizard.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl02"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-e.png" />
+                                                            <img src="img/cur-e.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                            <img src="img/cur2-gun.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
                                                     <li className="suphero-card">
                                                         <div className="hero-pic-box">
                                                             <div className="hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
                                                             </div>
                                                             <div className="herostar-box">
                                                                 <div className="herostar lvl02"></div>
                                                             </div>
                                                         </div>
                                                         <div className="sh2-icon">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                            <img src="img/cur-c.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                         <div className="v2-sh1-notif notif notif20"></div>
                                                     </li>
@@ -2904,19 +2897,19 @@ const V2MainScreen01Component = () => {
                                             <div className="suphero-right-box">
                                                 <div className="lhero-box">
                                                     <div className="lhero-pic">
-                                                        <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/01sh-5.jpg" />
+                                                        <img src="img/images/superhero_new/suphero-01/x1/01sh-5.jpg" />
                                                         <img
                                                             className="star-up"
-                                                            src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/01sh-5.jpg"
+                                                            src="img/images/superhero_new/suphero-01/x1/01sh-5.jpg"
                                                         />
                                                     </div>
                                                     <div className="topname-box">
                                                         <div className="lrare-box common"></div>
                                                         <div className="sh2-icon left">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                            <img src="img/cur-c.png" />
                                                         </div>
                                                         <div className="sh2-icon-forgirl right">
-                                                            <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                            <img src="img/cur2-sword.png" />
                                                         </div>
                                                         <div className="lhero-name-box">
                                                             <div className="lhero-name">
@@ -2942,7 +2935,7 @@ const V2MainScreen01Component = () => {
                                                         </div>
                                                         <div className="girl-bonus-box">
                                                             <div className="girl-bonus-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2983,7 +2976,7 @@ const V2MainScreen01Component = () => {
                                                                     +259.2% dps
                                                                     to
                                                                     <div className="ff-sh2-icon">
-                                                                        <img src="https://cdn.faptitans.com/s1/rc/cur2-sword.png" />
+                                                                        <img src="img/cur2-sword.png" />
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -3054,7 +3047,7 @@ const V2MainScreen01Component = () => {
                                                         </div>
                                                         <div className="girl-bonus-box">
                                                             <div className="girl-bonus-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                             </div>
                                                             <div className="girl-5star"></div>
                                                             <div className="sh2-prgbar-all">
@@ -3070,7 +3063,7 @@ const V2MainScreen01Component = () => {
                                                         </div>
                                                         <div className="girl-bonus-box next">
                                                             <div className="girl-bonus-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
                                                             </div>
                                                             <div className="girl-5star"></div>
                                                             <div className="sh2-prgbar-all">
@@ -3086,7 +3079,7 @@ const V2MainScreen01Component = () => {
                                                         </div>
                                                         <div className="bonus-hero-pic-box-upgrade">
                                                             <div className="bonus-hero-pic">
-                                                                <img src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-01/x2/avatar/01sh-ava-6.jpg" />
+                                                                <img src="img/images/superhero_new/suphero-01/x2/avatar/01sh-ava-6.jpg" />
                                                             </div>
                                                         </div>
                                                         <div className="bonus-buy-box-all">
@@ -3147,7 +3140,7 @@ const V2MainScreen01Component = () => {
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3158,17 +3151,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3179,17 +3172,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3200,17 +3193,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box selected">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3221,17 +3214,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3242,17 +3235,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3263,17 +3256,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3284,17 +3277,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3305,17 +3298,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3326,17 +3319,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3347,17 +3340,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3368,17 +3361,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3389,17 +3382,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3410,17 +3403,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3431,17 +3424,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3452,17 +3445,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3473,17 +3466,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3494,17 +3487,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3515,17 +3508,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3536,17 +3529,17 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                             <div className="suphero-avatar-box">
                                                 <div className="suphero-avatar-wrap">
                                                     <img
                                                         className="suphero-avatar"
-                                                        src="https://cdn.faptitans.com/s1/images/superhero_new/suphero-92/x2/92sh-1.jpg"
+                                                        src="img/images/superhero_new/suphero-92/x2/92sh-1.jpg"
                                                     />
                                                 </div>
                                                 <div className="stars-box">
@@ -3557,10 +3550,10 @@ const V2MainScreen01Component = () => {
                                                     <div className="star"></div>
                                                 </div>
                                                 <div className="sh2-icon">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                                    <img src="img/cur-c.png" />
                                                 </div>
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                    <img src="img/cur2-gun.png" />
                                                 </div>
                                             </div>
                                         </div>

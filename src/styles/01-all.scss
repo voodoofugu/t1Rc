@@ -4,6 +4,14 @@
 @import "01-all-res.scss";
 @import "vip-btn.scss";
 
+#root {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .az-btn {
     width: 100px;
     height: 20px;

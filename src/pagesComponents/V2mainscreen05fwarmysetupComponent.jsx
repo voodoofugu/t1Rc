@@ -9,7 +9,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -47,25 +47,46 @@ const V2MainScreen05FwArmySetupComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -104,10 +125,10 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -137,17 +158,17 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="rc/tithero-11-1-ava.jpg"
+                                                    src="img/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </div>
                                             </div>
                                             <div className="hero-level-box">
@@ -177,7 +198,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                                 </div>
                                             </div>
                                             <div className="hero-abil-icon">
-                                                <img src="icons/ic-abil-78.jpg" />
+                                                <img src="img/icons/ic-abil-78.jpg" />
                                             </div>
                                         </div>
                                         <div className="new-heroes-box">
@@ -190,10 +211,10 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="rc/tithero-11-1-ava.jpg"
+                                                            src="img/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -224,17 +245,17 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="icons/ic-abil-78.jpg" />
+                                                        <img src="img/icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                                 <div className="hero-card">
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="rc/tithero-11-1-ava.jpg"
+                                                            src="img/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
-                                                            <img src="cur2-barbarian.png" />
+                                                            <img src="img/cur2-barbarian.png" />
                                                         </div>
                                                     </div>
                                                     <div className="hero-level-box">
@@ -265,7 +286,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                                         </div>
                                                     </div>
                                                     <div className="hero-abil-icon">
-                                                        <img src="icons/ic-abil-78.jpg" />
+                                                        <img src="img/icons/ic-abil-78.jpg" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -296,25 +317,25 @@ const V2MainScreen05FwArmySetupComponent = () => {
                         <div className="tabs-all selected">
                             <div className="tabs-name">Heroes</div>
                             <div className="tabs-pic">
-                                <img src="tab-01.png" />
+                                <img src="img/tab-01.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Album</div>
                             <div className="tabs-pic">
-                                <img src="tab-05.png" />
+                                <img src="img/tab-05.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Guild</div>
                             <div className="tabs-pic">
-                                <img src="tab-08.png" />
+                                <img src="img/tab-08.png" />
                             </div>
                         </div>
                         <div className="tabs-all">
                             <div className="tabs-name">Rating</div>
                             <div className="tabs-pic">
-                                <img src="tab-02.png" />
+                                <img src="img/tab-02.png" />
                             </div>
                         </div>
                     </div>
@@ -388,7 +409,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="fw-mer-box-all">
                                     <div className="fw-mer-box">
                                         <div className="fw-mer-pic">
-                                            <img src="images/mercenaries/mer-01.jpg" />
+                                            <img src="img/images/mercenaries/mer-01.jpg" />
                                         </div>
                                         <div className="fw-mer-count">x10</div>
                                         <div className="fw-mer-num">696969</div>
@@ -403,7 +424,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                     </div>
                                     <div className="fw-mer-box">
                                         <div className="fw-mer-pic">
-                                            <img src="images/mercenaries/mer-07.jpg" />
+                                            <img src="img/images/mercenaries/mer-07.jpg" />
                                         </div>
                                         <div className="fw-mer-count">x10</div>
                                         <div className="fw-mer-num">696969</div>
@@ -418,7 +439,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                     </div>
                                     <div className="fw-mer-box">
                                         <div className="fw-mer-pic">
-                                            <img src="images/mercenaries/mer-04.jpg" />
+                                            <img src="img/images/mercenaries/mer-04.jpg" />
                                         </div>
                                         <div className="fw-mer-count">x10</div>
                                         <div className="fw-mer-num">696969</div>
@@ -435,7 +456,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box locked">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                     <div className="fw-army-locked-box">
@@ -447,21 +468,21 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box select">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box locked">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                     <div className="fw-army-locked-box">
@@ -473,84 +494,84 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
@@ -570,56 +591,56 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="rc/tithero-11-1-ava.jpg"
+                                        src="img/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>

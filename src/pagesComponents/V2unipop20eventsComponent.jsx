@@ -7,10 +7,10 @@ const V2Unipop20EventsComponent = () => {
             <div className="main world1">
                 <div className="main-bg"></div>
 
-                <div className="popup-layer" style={{"display":"block"}}>
+                <div className="popup-layer" style={{ display: "block" }}>
                     <div
                         className="screen-blend-55"
-                        style={{"display":"block"}}></div>
+                        style={{ display: "block" }}></div>
 
                     <div className="m-popup unipop-hw2019 sv">
                         <div className="title">Welcome Back!</div>
@@ -22,7 +22,7 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box select">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-vl-2023.jpg"
+                                                src="img/unipop-vl-2023.jpg"
                                                 alt="nyDust"
                                             />
                                         </div>
@@ -31,13 +31,23 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-wsale.jpg"
+                                                src="img/unipop-m-wsale.jpg"
                                                 alt="offermania.regular2"
                                             />
                                             <div>
                                                 <img
-                                                    src="rc/ic-hero-330.png"
-                                                    style={{"position":"absolute","width":"55px","height":"55px","border-radius":"60px","left":"75px","top":"5px","border":"3px solid rgb(243, 199, 88)","box-shadow":"rgb(0, 0, 0) 0px 0px 1px"}}
+                                                    src="img/ic-hero-330.png"
+                                                    style={{
+                                                        position: "absolute",
+                                                        width: "55px",
+                                                        height: "55px",
+                                                        borderRadius: "60px",
+                                                        left: "75px",
+                                                        top: "5px",
+                                                        border: "3px solid rgb(243, 199, 88)",
+                                                        boxShadow:
+                                                            "rgb(0, 0, 0) 0px 0px 1px",
+                                                    }}
                                                 />
                                             </div>
                                         </div>
@@ -48,7 +58,7 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-fp.jpg"
+                                                src="img/unipop-m-fp.jpg"
                                                 alt="fapopoly"
                                             />
                                         </div>
@@ -59,7 +69,7 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-koi.jpg"
+                                                src="img/unipop-m-koi.jpg"
                                                 alt="koi"
                                             />
                                         </div>
@@ -67,7 +77,7 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-sale.jpg"
+                                                src="img/unipop-m-sale.jpg"
                                                 alt="todaySale"
                                             />
                                         </div>
@@ -75,13 +85,23 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-wsale.jpg"
+                                                src="img/unipop-m-wsale.jpg"
                                                 alt="offermania.whalesale"
                                             />
                                             <div>
                                                 <img
                                                     src="__509e/images/hero-all/tithero-188/x2/ava/tithero-188-1-ava.jpg"
-                                                    style={{"position":"absolute","width":"55px","height":"55px","border-radius":"60px","left":"75px","top":"5px","border":"3px solid rgb(243, 199, 88)","box-shadow":"rgb(0, 0, 0) 0px 0px 1px"}}
+                                                    style={{
+                                                        position: "absolute",
+                                                        width: "55px",
+                                                        height: "55px",
+                                                        borderRadius: "60px",
+                                                        left: "75px",
+                                                        top: "5px",
+                                                        border: "3px solid rgb(243, 199, 88)",
+                                                        boxShadow:
+                                                            "rgb(0, 0, 0) 0px 0px 1px",
+                                                    }}
                                                 />
                                                 <div className="v2-whale-notif notif notif20"></div>
                                             </div>
@@ -93,13 +113,23 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-wsale.jpg"
+                                                src="img/unipop-m-wsale.jpg"
                                                 alt="offermania.whalesupersale"
                                             />
                                             <div>
                                                 <img
                                                     src="__b4eb/images/superhero_new/suphero-757/x2/avatar/757sh-ava-1.jpg"
-                                                    style={{"position":"absolute","width":"55px","height":"55px","border-radius":"60px","left":"75px","top":"5px","border":"3px solid rgb(243, 199, 88)","box-shadow":"rgb(0, 0, 0) 0px 0px 1px"}}
+                                                    style={{
+                                                        position: "absolute",
+                                                        width: "55px",
+                                                        height: "55px",
+                                                        borderRadius: "60px",
+                                                        left: "75px",
+                                                        top: "5px",
+                                                        border: "3px solid rgb(243, 199, 88)",
+                                                        boxShadow:
+                                                            "rgb(0, 0, 0) 0px 0px 1px",
+                                                    }}
                                                 />
                                                 <div className="v2-whale-notif notif notif20"></div>
                                             </div>
@@ -111,7 +141,7 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-starterpack.jpg"
+                                                src="img/unipop-m-starterpack.jpg"
                                                 alt="starterPack"
                                             />
                                         </div>
@@ -122,7 +152,7 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-tower.jpg"
+                                                src="img/unipop-m-tower.jpg"
                                                 alt="raid_bosses"
                                             />
                                         </div>
@@ -133,7 +163,7 @@ const V2Unipop20EventsComponent = () => {
                                     <div className="unipop-box">
                                         <div className="unipop-box-pic">
                                             <img
-                                                src="rc/unipop-m-news.jpg"
+                                                src="img/unipop-m-news.jpg"
                                                 alt="news"
                                             />
                                         </div>
@@ -209,7 +239,7 @@ const V2Unipop20EventsComponent = () => {
                                         <div className="angel-title">Angel</div>
                                         <div className="angel-avatar-box">
                                             <div className="img-wrap">
-                                                <img src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/goddess-1-1.jpg" />
+                                                <img src="img/images/goddess/goddess-1/x2/goddess-1-1.jpg" />
                                             </div>
                                         </div>
                                     </div>

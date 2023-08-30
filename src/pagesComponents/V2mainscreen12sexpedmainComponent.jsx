@@ -8,7 +8,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        "background-image":
+                        backgroundImage:
                             "url('images/back/new/01-Forest-1.jpg')",
                     }}></div>
                 <div className="sexped-header">
@@ -42,17 +42,17 @@ const V2MainScreen12SexpedMainComponent = () => {
                     <div className="sexped-top-btn-box">
                         <div className="color-btn quest">
                             <div className="sexped-btn-pic">
-                                <img src="v2-ic-book.png" />
+                                <img src="img/v2-ic-book.png" />
                             </div>
                         </div>
                         <div className="color-btn rating">
                             <div className="sexped-btn-pic">
-                                <img src="v2-ic-rating.png" />
+                                <img src="img/v2-ic-rating.png" />
                             </div>
                         </div>
                         <div className="color-btn dual-pack">
                             <div className="sexped-btn-pic">
-                                <img src="v2-sexpedition-ball.png" />
+                                <img src="img/v2-sexpedition-ball.png" />
                             </div>
                         </div>
                     </div>
@@ -282,28 +282,28 @@ const V2MainScreen12SexpedMainComponent = () => {
                                 </div>
                                 <div className="sexped-filter">
                                     <div className="sexped-fl false">
-                                        <img src="cur2-sword.png" />
+                                        <img src="img/cur2-sword.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="cur2-quitar.png" />
+                                        <img src="img/cur2-quitar.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="cur2-cleric.png" />
+                                        <img src="img/cur2-cleric.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="cur2-druid.png" />
+                                        <img src="img/cur2-druid.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="cur2-barbarian.png" />
+                                        <img src="img/cur2-barbarian.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="cur2-ranger.png" />
+                                        <img src="img/cur2-ranger.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="cur2-wizard.png" />
+                                        <img src="img/cur2-wizard.png" />
                                     </div>
                                     <div className="sexped-fl false">
-                                        <img src="cur2-gun.png" />
+                                        <img src="img/cur2-gun.png" />
                                     </div>
                                 </div>
                             </div>
@@ -318,10 +318,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box selected">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-235/x1/ava/tithero-235-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-235/x1/ava/tithero-235-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-quitar.png" />
+                                                <img src="img/cur2-quitar.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -335,10 +335,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-234/x1/ava/tithero-234-2.jpg"
+                                                src="img/images/hero-all/tithero-234/x1/ava/tithero-234-2.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-barbarian.png" />
+                                                <img src="img/cur2-barbarian.png" />
                                             </div>
                                             <div className="fw-as-num">24</div>
                                         </div>
@@ -352,10 +352,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-233/x1/ava/tithero-233-1.jpg"
+                                                src="img/images/hero-all/tithero-233/x1/ava/tithero-233-1.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-cleric.png" />
+                                                <img src="img/cur2-cleric.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -369,10 +369,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-163/x1/ava/tithero-163-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-163/x1/ava/tithero-163-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-barbarian.png" />
+                                                <img src="img/cur2-barbarian.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -386,10 +386,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-160/x1/ava/tithero-160-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-160/x1/ava/tithero-160-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-wizard.png" />
+                                                <img src="img/cur2-wizard.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -403,10 +403,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-wizard.png" />
+                                                <img src="img/cur2-wizard.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -420,10 +420,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-5002/x1/ava/tithero-5002-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-5002/x1/ava/tithero-5002-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-cleric.png" />
+                                                <img src="img/cur2-cleric.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -437,10 +437,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-5001/x1/ava/tithero-5001-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-5001/x1/ava/tithero-5001-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-gun.png" />
+                                                <img src="img/cur2-gun.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -454,10 +454,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-wizard.png" />
+                                                <img src="img/cur2-wizard.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -471,10 +471,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-5002/x1/ava/tithero-5002-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-5002/x1/ava/tithero-5002-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-cleric.png" />
+                                                <img src="img/cur2-cleric.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -488,10 +488,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/hero-all/tithero-5001/x1/ava/tithero-5001-1-ava.jpg"
+                                                src="img/images/hero-all/tithero-5001/x1/ava/tithero-5001-1-ava.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-gun.png" />
+                                                <img src="img/cur2-gun.png" />
                                             </div>
                                             <div className="fw-as-num">20</div>
                                         </div>
@@ -507,13 +507,13 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box superheroines false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/superhero/suphero-830/x1/avatar/830sh-ava-1.jpg"
+                                                src="img/images/superhero/suphero-830/x1/avatar/830sh-ava-1.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-quitar.png" />
+                                                <img src="img/cur2-quitar.png" />
                                             </div>
                                             <div className="sh3-icon">
-                                                <img src="icon-rare.png" />
+                                                <img src="img/icon-rare.png" />
                                             </div>
                                             <div className="fw-as-num">
                                                 +100%
@@ -529,13 +529,13 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="hero-avatar-box superheroines false">
                                             <img
                                                 className="hero-avatar"
-                                                src="images/superhero/suphero-831/x1/avatar/831sh-ava-1.jpg"
+                                                src="img/images/superhero/suphero-831/x1/avatar/831sh-ava-1.jpg"
                                             />
                                             <div className="sh3-icon-forgirl">
-                                                <img src="cur2-cleric.png" />
+                                                <img src="img/cur2-cleric.png" />
                                             </div>
                                             <div className="sh3-icon">
-                                                <img src="cur-c.png" />
+                                                <img src="img/cur-c.png" />
                                             </div>
                                             <div className="fw-as-num">
                                                 +100%
@@ -721,10 +721,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     <div className="hero-avatar-box undefined">
                                         <img
                                             className="hero-avatar"
-                                            src="images/hero-all/tithero-185/x1/ava/tithero-185-1-ava.jpg"
+                                            src="img/images/hero-all/tithero-185/x1/ava/tithero-185-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="cur2-barbarian.png" />
+                                            <img src="img/cur2-barbarian.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -799,7 +799,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     1st clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="v2-icon-sexped-ore.png" />
+                                    <img src="img/v2-icon-sexped-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     100
@@ -811,7 +811,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     1st clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="v2-sexped-chest-ore.png" />
+                                    <img src="img/v2-sexped-chest-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     1
@@ -823,7 +823,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     2-4th clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic firstclear">
-                                    <img src="v2-icon-sexped-ore.png" />
+                                    <img src="img/v2-icon-sexped-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     10
@@ -835,7 +835,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     5th clear
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="v2-sexped-chest-ore.png" />
+                                    <img src="img/v2-sexped-chest-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     1
@@ -847,7 +847,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     x
                                 </div>
                                 <div className="sexped-mission-rewards-pic">
-                                    <img src="v2-icon-sexped-ore.png" />
+                                    <img src="img/v2-icon-sexped-ore.png" />
                                 </div>
                                 <div className="sexped-mission-rewards-num">
                                     10
@@ -1058,10 +1058,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     <div className="hero-avatar-box undefined">
                                         <img
                                             className="hero-avatar"
-                                            src="images/hero-all/tithero-163/x1/ava/tithero-163-1-ava.jpg"
+                                            src="img/images/hero-all/tithero-163/x1/ava/tithero-163-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="cur2-barbarian.png" />
+                                            <img src="img/cur2-barbarian.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -1084,10 +1084,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     <div className="hero-avatar-box undefined">
                                         <img
                                             className="hero-avatar"
-                                            src="images/hero-all/tithero-160/x1/ava/tithero-160-1-ava.jpg"
+                                            src="img/images/hero-all/tithero-160/x1/ava/tithero-160-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="cur2-wizard.png" />
+                                            <img src="img/cur2-wizard.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -1110,10 +1110,10 @@ const V2MainScreen12SexpedMainComponent = () => {
                                     <div className="hero-avatar-box undefined">
                                         <img
                                             className="hero-avatar"
-                                            src="images/hero-all/tithero-185/x1/ava/tithero-185-1-ava.jpg"
+                                            src="img/images/hero-all/tithero-185/x1/ava/tithero-185-1-ava.jpg"
                                         />
                                         <div className="sh3-icon-forgirl">
-                                            <img src="cur2-barbarian.png" />
+                                            <img src="img/cur2-barbarian.png" />
                                         </div>
                                         <div className="fw-as-num">20</div>
                                     </div>
@@ -1274,7 +1274,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         </div>
                                     </div>
                                     <div className="xmas-level-rew-pic">
-                                        <img src="v2-sexped-chest-ore.png" />
+                                        <img src="img/v2-sexped-chest-ore.png" />
                                     </div>
                                     <div className="xmas-level-rew-num-check"></div>
                                     <div className="color-btn green">
@@ -1291,7 +1291,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         </div>
                                     </div>
                                     <div className="xmas-level-rew-pic">
-                                        <img src="v2-sexped-chest-ore.png" />
+                                        <img src="img/v2-sexped-chest-ore.png" />
                                     </div>
                                     <div className="xmas-level-rew-num-check"></div>
                                     <div className="color-btn green">
@@ -1308,7 +1308,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         </div>
                                     </div>
                                     <div className="xmas-level-rew-pic">
-                                        <img src="v2-sexped-chest-ore.png" />
+                                        <img src="img/v2-sexped-chest-ore.png" />
                                     </div>
                                     <div className="xmas-level-rew-num-check"></div>
                                     <div className="color-btn green">
@@ -1336,7 +1336,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="ic-dildo-purple.png" />
+                                                    <img src="img/ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     10
@@ -1364,7 +1364,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="ic-dildo-purple.png" />
+                                                    <img src="img/ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     20
@@ -1392,7 +1392,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="ic-dildo-purple.png" />
+                                                    <img src="img/ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     10
@@ -1421,7 +1421,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="ic-dildo-purple.png" />
+                                                    <img src="img/ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     10
@@ -1450,7 +1450,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="ic-dildo-purple.png" />
+                                                    <img src="img/ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     30
@@ -1478,7 +1478,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                                         <div className="daily-parth-claim-box">
                                             <div className="daily-reward">
                                                 <div className="daily-reward-pic">
-                                                    <img src="ic-dildo-purple.png" />
+                                                    <img src="img/ic-dildo-purple.png" />
                                                 </div>
                                                 <div className="daily-reward-count">
                                                     20

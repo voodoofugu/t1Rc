@@ -5,17 +5,17 @@ import v2ScreenAlbum from "../styles/v2-screen-album.scss";
 const V2MainScreen07AlbumComponent = () => {
     return (
         <>
-            <div id="root" style={{"display":"block"}}>
+            <div id="root" style={{ display: "block" }}>
                 <div>
                     <div className="main lang-ru world1">
                         <div
                             className="main-bg"
-                            style={{"background-image":"url('https"}}></div>
+                            style={{ backgroundImage: "url('https" }}></div>
                         <div className="header">
                             <div className="resource-panel">
                                 <div className="avatar-box-all">
                                     <div className="avatar-box-pic">
-                                        <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                        <img src="img/v2-master-pic1.png" />
                                     </div>
                                     <div className="avatar-box-name">
                                         Rank 27
@@ -28,7 +28,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     </div>
                                     <div className="resource-btn-add"></div>
                                     <div className="resource-pic">
-                                        <img src="https://cdn.faptitans.com/s1/rc/v2-res-gold.png" />
+                                        <img src="img/v2-res-gold.png" />
                                     </div>
                                     <div className="anim-in-p gold"></div>
                                 </div>
@@ -45,11 +45,11 @@ const V2MainScreen07AlbumComponent = () => {
                                         <div className="might-box-pic">
                                             <img
                                                 className="bg"
-                                                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
+                                                src="v2-cw-bg34.png"
                                             />
                                             <img
                                                 className="fg"
-                                                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
+                                                src="v2-cw-p03.png"
                                             />
                                         </div>
                                         <div className="might-box-name">
@@ -87,38 +87,38 @@ const V2MainScreen07AlbumComponent = () => {
                                     <li className="quest quest-box">
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/ic-quests.png"
+                                            src="ic-quests.png"
                                         />
                                         <div className="quest-notif notif notif10"></div>
                                     </li>
                                     <li
                                         className="quest open"
-                                        style={{"animation-delay":"0ms"}}>
+                                        style={{ "animation-delay": "0ms" }}>
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/change-sun3.png"
+                                            src="change-sun3.png"
                                         />
                                     </li>
                                     <li
                                         className="quest open"
-                                        style={{"animation-delay":"150ms"}}>
+                                        style={{ "animation-delay": "150ms" }}>
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png"
+                                            src="ic-abil-reborn.png"
                                         />
                                     </li>
                                     <li
                                         className="quest angel-pop open"
-                                        style={{"animation-delay":"300ms"}}>
+                                        style={{ "animation-delay": "300ms" }}>
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png"
+                                            src="picmeh-ic-angel-pop.png"
                                         />
                                     </li>
                                     <li className="quest startpack wide">
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/v2-mn-pr-100-in.png"
+                                            src="v2-mn-pr-100-in.png"
                                         />
                                         <div className="timerbox">
                                             <div className="timer">
@@ -128,10 +128,10 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style={{"animation-delay":"450ms"}}>
+                                        style={{ "animation-delay": "450ms" }}>
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png"
+                                            src="v2-ns-ball.png"
                                         />
                                         <div className="timerbox">
                                             <div className="timer">
@@ -142,15 +142,15 @@ const V2MainScreen07AlbumComponent = () => {
                                     <li className="quest startpack wide">
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png"
+                                            src="v2-mn-soul-sg-160.png"
                                         />
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style={{"animation-delay":"600ms"}}>
+                                        style={{ "animation-delay": "600ms" }}>
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/ic-hero-327.png"
+                                            src="ic-hero-327.png"
                                         />
                                         <div className="timerbox">
                                             <div className="timer">
@@ -161,15 +161,15 @@ const V2MainScreen07AlbumComponent = () => {
                                     <li className="quest-fortune picmeh-info info">
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/picmeh-ic-diamond.png"
+                                            src="picmeh-ic-diamond.png"
                                         />
                                     </li>
                                     <li
                                         className="quest startpack open"
-                                        style={{"animation-delay":"750ms"}}>
+                                        style={{ "animation-delay": "750ms" }}>
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png"
+                                            src="v2-fw-icon-fr0.png"
                                         />
                                         <div className="timerbox">
                                             <div className="timer">
@@ -179,10 +179,10 @@ const V2MainScreen07AlbumComponent = () => {
                                     </li>
                                     <li
                                         className="quest open"
-                                        style={{"animation-delay":"900ms"}}>
+                                        style={{ "animation-delay": "900ms" }}>
                                         <img
                                             className="icon"
-                                            src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png"
+                                            src="m-ico-quest.png"
                                         />
                                     </li>
                                 </div>
@@ -202,7 +202,7 @@ const V2MainScreen07AlbumComponent = () => {
                         <div className="left-side false false">
                             <div className="left-panel wide false false">
                                 <div className="container">
-                                    <div style={{"display":"block"}}>
+                                    <div style={{ display: "block" }}>
                                         <div className="tab-panel change-main">
                                             <div className="all-content">
                                                 <div className="change-top-menu">
@@ -223,7 +223,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 value=""
                                                             />
                                                             <div className="sbutton">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/search-ic.png" />
+                                                                <img src="img/search-ic.png" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1682,7 +1682,9 @@ const V2MainScreen07AlbumComponent = () => {
                                                             <div className="prgbar-box">
                                                                 <div
                                                                     className="prgbar"
-                                                                    style={{"width":"8%"}}></div>
+                                                                    style={{
+                                                                        width: "8%",
+                                                                    }}></div>
                                                             </div>
                                                             <div className="prgbar-text">
                                                                 2/25
@@ -1708,7 +1710,10 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <img
                                                                     className="img"
                                                                     src="https://cdn.faptitans.com/ths/5/a/1/o5a1f021f42eb6d20744d778bf203156e.jpg"
-                                                                    style={{"visibility":"visible"}}
+                                                                    style={{
+                                                                        visibility:
+                                                                            "visible",
+                                                                    }}
                                                                 />
                                                                 <div className="info">
                                                                     Художник:
@@ -1722,7 +1727,10 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <img
                                                                     className="img"
                                                                     src="https://cdn.faptitans.com/ths/5/c/5/o5c5a586b394a238e00ce50064271c97b.jpg"
-                                                                    style={{"visibility":"visible"}}
+                                                                    style={{
+                                                                        visibility:
+                                                                            "visible",
+                                                                    }}
                                                                 />
                                                                 <div className="info">
                                                                     Художник:
@@ -1746,7 +1754,7 @@ const V2MainScreen07AlbumComponent = () => {
                                         </div>
                                         <div className="btn-close-x"></div>
                                     </div>
-                                    <div style={{"visibility":"visible"}}>
+                                    <div style={{ visibility: "visible" }}>
                                         <div className="tab-panel change-bonuses">
                                             <div className="change-top-menu">
                                                 <div className="color-btn pictures">
@@ -1773,7 +1781,9 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="prg-box">
                                                                         <div
                                                                             className="prgbar"
-                                                                            style={{"width":"83.75%"}}></div>
+                                                                            style={{
+                                                                                width: "83.75%",
+                                                                            }}></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1781,7 +1791,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                        src="ic-abil-dps-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         +500%
@@ -1789,7 +1799,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                            src="ic-abil-dps-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1805,7 +1815,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in check">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="https://cdn.faptitans.com/s1/__ccfe/images/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
+                                                                                src="__ccfe/images/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -1814,7 +1824,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="https://cdn.faptitans.com/s1/__ccfe/images/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
+                                                                                    src="__ccfe/images/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>
@@ -1830,7 +1840,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-gold@2x.png"
+                                                                        src="ic-abil-gold@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         144
@@ -1839,7 +1849,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-gold@2x.png"
+                                                                            src="ic-abil-gold@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1853,7 +1863,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/change-ic-ticket.png"
+                                                                        src="change-ic-ticket.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         100
@@ -1861,7 +1871,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/change-ic-ticket.png"
+                                                                            src="change-ic-ticket.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1875,7 +1885,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                        src="ic-abil-dps-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         +10K%
@@ -1883,7 +1893,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                            src="ic-abil-dps-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1897,7 +1907,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                        src="ic-abil-dpc-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         +10K%
@@ -1905,7 +1915,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                            src="ic-abil-dpc-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1921,7 +1931,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in check">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="https://cdn.faptitans.com/s1/__47bc/images/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
+                                                                                src="__47bc/images/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -1930,7 +1940,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="https://cdn.faptitans.com/s1/__47bc/images/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
+                                                                                    src="__47bc/images/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>
@@ -1946,7 +1956,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-gold@2x.png"
+                                                                        src="ic-abil-gold@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         288
@@ -1955,7 +1965,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-gold@2x.png"
+                                                                            src="ic-abil-gold@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1969,7 +1979,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/change-ic-ticket.png"
+                                                                        src="change-ic-ticket.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         50
@@ -1977,7 +1987,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/change-ic-ticket.png"
+                                                                            src="change-ic-ticket.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1991,7 +2001,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/change-ic-ticket.png"
+                                                                        src="change-ic-ticket.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         150
@@ -1999,7 +2009,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/change-ic-ticket.png"
+                                                                            src="change-ic-ticket.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2013,7 +2023,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                        src="ic-abil-dps-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         +25K%
@@ -2021,7 +2031,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                            src="ic-abil-dps-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2035,7 +2045,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                        src="ic-abil-dpc-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         +25K%
@@ -2043,7 +2053,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                            src="ic-abil-dpc-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2059,7 +2069,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in check">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="https://cdn.faptitans.com/s1/__579e/images/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
+                                                                                src="__579e/images/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -2068,7 +2078,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="https://cdn.faptitans.com/s1/__579e/images/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
+                                                                                    src="__579e/images/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>
@@ -2084,7 +2094,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png"
+                                                                        src="ms-stone-pink.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         x2
@@ -2092,7 +2102,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ms-stone-pink.png"
+                                                                            src="ms-stone-pink.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2106,7 +2116,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                        src="ic-abil-dpc-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         x2
@@ -2114,7 +2124,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                            src="ic-abil-dpc-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2128,7 +2138,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                        src="ic-abil-dps-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         +50K%
@@ -2136,7 +2146,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                            src="ic-abil-dps-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2150,7 +2160,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                        src="ic-abil-dpc-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         +50K%
@@ -2158,7 +2168,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dpc-plus@2x.png"
+                                                                            src="ic-abil-dpc-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2172,7 +2182,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                        src="ic-abil-dps-plus@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         x2
@@ -2180,7 +2190,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-dps-plus@2x.png"
+                                                                            src="ic-abil-dps-plus@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2194,7 +2204,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="https://cdn.faptitans.com/s1/rc/ic-abil-gold-up@2x.png"
+                                                                        src="ic-abil-gold-up@2x.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         x2
@@ -2202,7 +2212,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="https://cdn.faptitans.com/s1/rc/ic-abil-gold-up@2x.png"
+                                                                            src="ic-abil-gold-up@2x.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2218,7 +2228,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="https://cdn.faptitans.com/s1/__98aa/images/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
+                                                                                src="__98aa/images/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -2227,7 +2237,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="https://cdn.faptitans.com/s1/__98aa/images/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
+                                                                                    src="__98aa/images/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>
@@ -2249,20 +2259,28 @@ const V2MainScreen07AlbumComponent = () => {
                             </div>
                             <div className="tabs-all-box">
                                 <a className="tabs-all heroes" href="#/">
-                                    <div style={{"width":"100%","height":"100%"}}>
+                                    <div
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}>
                                         <div className="tabs-name">Heroes</div>
                                         <div className="tabs-pic">
-                                            <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                            <img src="img/tab-01.png" />
                                         </div>
                                     </div>
                                 </a>
                                 <a className="tabs-all guild" href="#/guild">
-                                    <div style={{"width":"100%","height":"100%"}}>
+                                    <div
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}>
                                         <div className="tabs-name">
                                             Guild base
                                         </div>
                                         <div className="tabs-pic">
-                                            <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                            <img src="img/tab-08.png" />
                                         </div>
                                     </div>
                                     <div className="v2-tab-notif notif notif20"></div>
@@ -2271,32 +2289,44 @@ const V2MainScreen07AlbumComponent = () => {
                                     className="tabs-all album selected"
                                     href="#/galery/pictures"
                                     aria-current="page">
-                                    <div style={{"width":"100%","height":"100%"}}>
+                                    <div
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}>
                                         <div className="tabs-name">Gallery</div>
                                         <div className="tabs-pic">
-                                            <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                            <img src="img/tab-05.png" />
                                         </div>
                                     </div>
                                 </a>
                                 <a
                                     className="tabs-all rating"
                                     href="#/rating/jewerly">
-                                    <div style={{"width":"100%","height":"100%"}}>
+                                    <div
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}>
                                         <div className="tabs-name">
                                             Rating Tab
                                         </div>
                                         <div className="tabs-pic">
-                                            <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                            <img src="img/tab-02.png" />
                                         </div>
                                     </div>
                                 </a>
                                 <a
                                     className="tabs-all squests"
                                     href="#/quests/daily">
-                                    <div style={{"width":"100%","height":"100%"}}>
+                                    <div
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                        }}>
                                         <div className="tabs-name">Quests</div>
                                         <div className="tabs-pic">
-                                            <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                            <img src="img/tab-10.png" />
                                         </div>
                                     </div>
                                 </a>
@@ -2323,7 +2353,9 @@ const V2MainScreen07AlbumComponent = () => {
                                                     <div className="prg-box">
                                                         <div
                                                             className="prgbar"
-                                                            style={{"width":"81.6%"}}></div>
+                                                            style={{
+                                                                width: "81.6%",
+                                                            }}></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2332,7 +2364,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                     <div className="openchest-in check">
                                                         <img
                                                             className="inchest-pic"
-                                                            src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png"
+                                                            src="img/photo-ic@2x.png"
                                                         />
                                                         <div className="openchest-in-count">
                                                             2
@@ -2351,7 +2383,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                     <div className="openchest-in check">
                                                         <img
                                                             className="inchest-pic"
-                                                            src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png"
+                                                            src="img/photo-ic@2x.png"
                                                         />
                                                         <div className="openchest-in-count">
                                                             4
@@ -2370,7 +2402,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                     <div className="openchest-in check">
                                                         <img
                                                             className="inchest-pic"
-                                                            src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png"
+                                                            src="img/photo-ic@2x.png"
                                                         />
                                                         <div className="openchest-in-count">
                                                             6
@@ -2389,7 +2421,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                     <div className="openchest-in check">
                                                         <img
                                                             className="inchest-pic"
-                                                            src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png"
+                                                            src="img/photo-ic@2x.png"
                                                         />
                                                         <div className="openchest-in-count">
                                                             6
@@ -2408,7 +2440,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                     <div className="openchest-in">
                                                         <img
                                                             className="inchest-pic"
-                                                            src="https://cdn.faptitans.com/s1/rc/photo-ic@2x.png"
+                                                            src="img/photo-ic@2x.png"
                                                         />
                                                         <div className="openchest-in-count">
                                                             8

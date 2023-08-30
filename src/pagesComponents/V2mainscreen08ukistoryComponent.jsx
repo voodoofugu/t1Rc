@@ -11,7 +11,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -20,7 +20,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -49,25 +49,46 @@ const V2MainScreen08UkiStoryComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -113,7 +134,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p1-c1.jpg" />
+                                                    <img src="img/story/t/p1-c1.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -124,7 +145,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p1-c2.jpg" />
+                                                    <img src="img/story/t/p1-c2.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -135,7 +156,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p1-c3.jpg" />
+                                                    <img src="img/story/t/p1-c3.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -149,7 +170,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p2-c1.jpg" />
+                                                    <img src="img/story/t/p2-c1.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -160,7 +181,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p2-c2.jpg" />
+                                                    <img src="img/story/t/p2-c2.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -174,7 +195,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c1.jpg" />
+                                                    <img src="img/story/t/p3-c1.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -185,7 +206,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c2.jpg" />
+                                                    <img src="img/story/t/p3-c2.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -196,7 +217,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p3-c3.jpg" />
+                                                    <img src="img/story/t/p3-c3.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -210,7 +231,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p4-c1.jpg" />
+                                                    <img src="img/story/t/p4-c1.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -221,7 +242,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/story/t/p4-c2.jpg" />
+                                                    <img src="img/story/t/p4-c2.jpg" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -242,7 +263,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                         <div className="journal-comics">
                                             <img
                                                 className="pic"
-                                                src="https://cdn.faptitans.com/s1/rc/story/p1-c1.jpg"
+                                                src="story/p1-c1.jpg"
                                             />
                                             <div
                                                 className="journal-comics-ballon-box"
@@ -287,7 +308,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -295,7 +316,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                             <div className="v2-tab-notif notif notif20"></div>
@@ -304,7 +325,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
@@ -312,7 +333,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -323,7 +344,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>

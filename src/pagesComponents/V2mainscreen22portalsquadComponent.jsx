@@ -9,14 +9,14 @@ const V2MainScreen22PortalSquadComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        "background-image":
+                        backgroundImage:
                             "url('__675b/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="v2-master-pic1.png" />
+                                <img src="img/v2-master-pic1.png" />
                             </div>
                             <div className="avatar-box-name">Rank 1</div>
                         </div>
@@ -27,7 +27,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             </div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                             <div className="anim-in-p gold"></div>
                         </div>
@@ -46,11 +46,11 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 <div className="might-box-pic">
                                     <img
                                         className="bg"
-                                        src="rc/v2-cw-bg01.png"
+                                        src="img/v2-cw-bg01.png"
                                     />
                                     <img
                                         className="fg"
-                                        src="rc/v2-cw-p01.png"
+                                        src="img/v2-cw-p01.png"
                                     />
                                 </div>
                                 <div className="might-box-name">Clan</div>
@@ -87,7 +87,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                     <div className="quest-box-scroll">
                         <div className="quest-box">
                             <li className="quest quest-box">
-                                <img className="icon" src="rc/ic-quests.png" />
+                                <img className="icon" src="img/ic-quests.png" />
                                 <div className="quest-notif notif notif10"></div>
                             </li>
                             <li
@@ -95,7 +95,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "0ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/change-sun3.png"
+                                    src="img/change-sun3.png"
                                 />
                             </li>
                             <li
@@ -103,20 +103,23 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "150ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/picmeh-ic-angel-pop.png"
+                                    src="img/picmeh-ic-angel-pop.png"
                                 />
                             </li>
                             <li className="quest-fortune open">
                                 <img
                                     className="icon"
-                                    src="rc/fapop-right-icon.png"
+                                    src="img/fapop-right-icon.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">00:00:00</div>
                                 </div>
                             </li>
                             <li className="quest-fortune">
-                                <img className="icon" src="rc/ic-fortuna.png" />
+                                <img
+                                    className="icon"
+                                    src="img/ic-fortuna.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">SPIN!</div>
                                 </div>
@@ -126,7 +129,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/rating-sign-gold@1x.png"
+                                    src="img/rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">146:36:30</div>
@@ -135,7 +138,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="rc/v2-ns-chest.png"
+                                    src="img/v2-ns-chest.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">6D 02:36</div>
@@ -144,7 +147,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="rc/v2-mn-pr-100-in.png"
+                                    src="img/v2-mn-pr-100-in.png"
                                 />
                                 0
                             </li>
@@ -153,7 +156,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "450ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/icn-dual-ball.png"
+                                    src="img/icn-dual-ball.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">00:00:00</div>
@@ -164,7 +167,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "600ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/ic-blackfriday.png"
+                                    src="img/ic-blackfriday.png"
                                 />
                                 <div
                                     className="timerbox"
@@ -177,20 +180,23 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "750ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/v2-xmas-chest-red.png"
+                                    src="img/v2-xmas-chest-red.png"
                                 />
                                 0
                             </li>
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="rc/v2-mn-soul-sg-160.png"
+                                    src="img/v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "900ms" }}>
-                                <img className="icon" src="rc/m-ico-gold.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-gold.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">21:33:40</div>
                                 </div>
@@ -198,7 +204,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="rc/picmeh-ic-diamond.png"
+                                    src="img/picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
@@ -206,7 +212,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "1050ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/v2-fw-icon-fr0.png"
+                                    src="img/v2-fw-icon-fr0.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">75:36:30</div>
@@ -215,7 +221,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "1200ms" }}>
-                                <img className="icon" src="rc/ic-bf.png" />
+                                <img className="icon" src="img/ic-bf.png" />
                                 <div className="timerbox">
                                     <div className="timer">482:36:30</div>
                                 </div>
@@ -225,7 +231,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "1350ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/zetta-icon-70.png"
+                                    src="img/zetta-icon-70.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">69:34:55</div>
@@ -234,7 +240,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ "animation-delay": "1500ms" }}>
-                                <img className="icon" src="rc/sunduk-60.png" />
+                                <img className="icon" src="img/sunduk-60.png" />
                                 <div className="timerbox">
                                     <div className="timer">21:34:52</div>
                                 </div>
@@ -244,7 +250,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "1650ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/m-ico-quest.png"
+                                    src="img/m-ico-quest.png"
                                 />
                             </li>
                             <li
@@ -252,7 +258,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                 style={{ "animation-delay": "1800ms" }}>
                                 <img
                                     className="icon"
-                                    src="rc/m-ico-quest.png"
+                                    src="img/m-ico-quest.png"
                                 />
                             </li>
                         </div>
@@ -299,17 +305,17 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-specialization">
                                                     <img
                                                         className="specialization-icon cls"
-                                                        src="rc/cur2-wizard.png"
+                                                        src="img/cur2-wizard.png"
                                                     />
                                                     <img
                                                         className="specialization-icon elem"
-                                                        src="rc/elements/Water.png"
+                                                        src="img/elements/Water.png"
                                                     />
                                                 </li>
                                                 <li className="suphero-card lvl0">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-299/x1/ava/tithero-299-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-299/x1/ava/tithero-299-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             0/100
@@ -320,7 +326,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl1">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-300/x1/ava/tithero-300-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-300/x1/ava/tithero-300-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             100/200
@@ -331,7 +337,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl1">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-301/x1/ava/tithero-301-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-301/x1/ava/tithero-301-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             100/200
@@ -342,7 +348,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl2">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-302/x1/ava/tithero-302-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-302/x1/ava/tithero-302-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             200/300
@@ -353,7 +359,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl2">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-303/x1/ava/tithero-303-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-303/x1/ava/tithero-303-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             200/300
@@ -364,7 +370,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl2">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-304/x1/ava/tithero-304-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-304/x1/ava/tithero-304-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             200/300
@@ -415,17 +421,17 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-specialization">
                                                     <img
                                                         className="specialization-icon cls"
-                                                        src="rc/cur2-gun.png"
+                                                        src="img/cur2-gun.png"
                                                     />
                                                     <img
                                                         className="specialization-icon elem"
-                                                        src="rc/elements/Fire.png"
+                                                        src="img/elements/Fire.png"
                                                     />
                                                 </li>
                                                 <li className="suphero-card lvl3">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-286/x1/ava/tithero-286-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-286/x1/ava/tithero-286-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             300/400
@@ -436,7 +442,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl3">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-287/x1/ava/tithero-287-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-287/x1/ava/tithero-287-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             300/400
@@ -447,7 +453,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl3">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-288/x1/ava/tithero-288-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-288/x1/ava/tithero-288-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             300/400
@@ -458,7 +464,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl4">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-289/x1/ava/tithero-289-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-289/x1/ava/tithero-289-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             400/500
@@ -469,7 +475,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl4">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-290/x1/ava/tithero-290-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-290/x1/ava/tithero-290-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             400/500
@@ -480,7 +486,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl4">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-291/x1/ava/tithero-291-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-291/x1/ava/tithero-291-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             400/500
@@ -526,17 +532,17 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-specialization">
                                                     <img
                                                         className="specialization-icon cls"
-                                                        src="rc/cur2-ranger.png"
+                                                        src="img/cur2-ranger.png"
                                                     />
                                                     <img
                                                         className="specialization-icon elem"
-                                                        src="rc/elements/Water.png"
+                                                        src="img/elements/Water.png"
                                                     />
                                                 </li>
                                                 <li className="suphero-card lvl5">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-280/x1/ava/tithero-280-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-280/x1/ava/tithero-280-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             500/600
@@ -547,7 +553,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl5">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-281/x1/ava/tithero-281-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-281/x1/ava/tithero-281-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             500/600
@@ -558,7 +564,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl5">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-282/x1/ava/tithero-282-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-282/x1/ava/tithero-282-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             500/600
@@ -569,7 +575,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl6">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-283/x1/ava/tithero-283-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-283/x1/ava/tithero-283-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             600/700
@@ -580,7 +586,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl6">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-284/x1/ava/tithero-284-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-284/x1/ava/tithero-284-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             600/700
@@ -591,7 +597,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl6">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-285/x1/ava/tithero-285-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-285/x1/ava/tithero-285-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             600/700
@@ -632,17 +638,17 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-specialization">
                                                     <img
                                                         className="specialization-icon cls"
-                                                        src="rc/cur2-sword.png"
+                                                        src="img/cur2-sword.png"
                                                     />
                                                     <img
                                                         className="specialization-icon elem"
-                                                        src="rc/elements/Life.png"
+                                                        src="img/elements/Life.png"
                                                     />
                                                 </li>
                                                 <li className="suphero-card lvl7">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-269/x1/ava/tithero-269-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-269/x1/ava/tithero-269-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             700/800
@@ -653,7 +659,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl7">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-270/x1/ava/tithero-270-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-270/x1/ava/tithero-270-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             700/800
@@ -664,7 +670,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl7">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-271/x1/ava/tithero-271-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-271/x1/ava/tithero-271-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             700/800
@@ -675,7 +681,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl8">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-272/x1/ava/tithero-272-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-272/x1/ava/tithero-272-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             800/900
@@ -686,7 +692,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl8">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-273/x1/ava/tithero-273-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-273/x1/ava/tithero-273-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             800/900
@@ -697,7 +703,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl8">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-274/x1/ava/tithero-274-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-274/x1/ava/tithero-274-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             800/900
@@ -738,17 +744,17 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-specialization">
                                                     <img
                                                         className="specialization-icon cls"
-                                                        src="rc/cur2-barbarian.png"
+                                                        src="img/cur2-barbarian.png"
                                                     />
                                                     <img
                                                         className="specialization-icon elem"
-                                                        src="rc/elements/Fire.png"
+                                                        src="img/elements/Fire.png"
                                                     />
                                                 </li>
                                                 <li className="suphero-card lvl9">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-256/x1/ava/tithero-256-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-256/x1/ava/tithero-256-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             900/1000
@@ -759,7 +765,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl9">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-263/x1/ava/tithero-263-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-263/x1/ava/tithero-263-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             900/1000
@@ -770,7 +776,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl9">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-264/x1/ava/tithero-264-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-264/x1/ava/tithero-264-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             900/1000
@@ -781,7 +787,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl10">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-265/x1/ava/tithero-265-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-265/x1/ava/tithero-265-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             max
@@ -792,7 +798,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl10">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-266/x1/ava/tithero-266-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-266/x1/ava/tithero-266-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             max
@@ -803,7 +809,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <li className="suphero-card lvl10">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic undefined-card-flare disabled0">
-                                                            <img src="images/hero-all/tithero-267/x1/ava/tithero-267-1-ava.jpg" />
+                                                            <img src="img/images/hero-all/tithero-267/x1/ava/tithero-267-1-ava.jpg" />
                                                         </div>
                                                         <div className="hero-pic-gacha">
                                                             max
@@ -867,7 +873,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                             </div>
                                         </div>
                                         <div className="world-map">
-                                            <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-maps.png" />
+                                            <img src="img/v2-fw-icon-maps.png" />
                                             <div className="world-map-heading">
                                                 Map
                                             </div>
@@ -893,7 +899,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -901,7 +907,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -909,7 +915,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>
@@ -917,7 +923,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Squads</div>
                                 <div className="tabs-pic">
-                                    <img src="2vip-s6.png" />
+                                    <img src="img/2vip-s6.png" />
                                 </div>
                             </div>
                         </a>
@@ -938,7 +944,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     Underworld chest
                                                 </div>
                                                 <div className="item-box">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/v2-xmas-chest-purple.png" />
+                                                    <img src="img/v2-xmas-chest-purple.png" />
                                                 </div>
                                                 <div
                                                     className="color-btn diamond"
@@ -960,7 +966,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     Underworld chest
                                                 </div>
                                                 <div className="item-box">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/v2-xmas-chest-purple.png" />
+                                                    <img src="img/v2-xmas-chest-purple.png" />
                                                 </div>
                                                 <div
                                                     className="color-btn diamond"
@@ -987,7 +993,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                    <img src="img/ic-abil-gold.png" />
                                                     <div className="rate gold">
                                                         +100%
                                                     </div>
@@ -1011,7 +1017,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                    <img src="img/ic-abil-gold.png" />
                                                     <div className="rate gold">
                                                         +1K%
                                                     </div>
@@ -1039,7 +1045,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                    <img src="img/ic-abil-gold.png" />
                                                     <div className="newtime t1h">
                                                         <div className="newclocktime">
                                                             1
@@ -1065,7 +1071,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                    <img src="img/ic-abil-gold.png" />
                                                     <div className="newtime t1h">
                                                         <div className="newclocktime">
                                                             6
@@ -1093,7 +1099,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/ms-stone-all.png" />
+                                                    <img src="img/ms-stone-all.png" />
                                                 </div>
                                                 <div className="color-btn diamond">
                                                     <div className="color-btn-text">
@@ -1114,7 +1120,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/ms-stone-all.png" />
+                                                    <img src="img/ms-stone-all.png" />
                                                 </div>
                                                 <div className="color-btn diamond">
                                                     <div className="color-btn-text">
@@ -1135,7 +1141,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/essence-80x80.png" />
+                                                    <img src="img/essence-80x80.png" />
                                                 </div>
                                                 <div className="color-btn diamond">
                                                     <div className="color-btn-text">
@@ -1156,7 +1162,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                     className="item-box"
                                                     item="[object Object]"
                                                     top_offset="50">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/essence-80x80.png" />
+                                                    <img src="img/essence-80x80.png" />
                                                 </div>
                                                 <div
                                                     className="color-btn diamond"
@@ -1237,7 +1243,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <div className="card-info-btn"></div>
                                                 <div className="keys-but-box">
                                                     <img
-                                                        src="rc/chest-shop-1.png"
+                                                        src="img/chest-shop-1.png"
                                                         alt=""
                                                     />
                                                 </div>
@@ -1247,7 +1253,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <div className="offer-attributes">
                                                     <img
                                                         className="squad-color"
-                                                        src="rc/cur2-barbarian.png"
+                                                        src="img/cur2-barbarian.png"
                                                         alt=""
                                                     />
                                                 </div>
@@ -1270,7 +1276,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <div className="card-info-btn"></div>
                                                 <div className="keys-but-box">
                                                     <img
-                                                        src="rc/chest-shop-2.png"
+                                                        src="img/chest-shop-2.png"
                                                         alt=""
                                                     />
                                                 </div>
@@ -1280,7 +1286,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <div className="offer-attributes">
                                                     <img
                                                         className="squad-class"
-                                                        src="rc/cur2-ranger.png"
+                                                        src="img/cur2-ranger.png"
                                                         alt=""
                                                     />
                                                 </div>
@@ -1303,7 +1309,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <div className="card-info-btn"></div>
                                                 <div className="keys-but-box">
                                                     <img
-                                                        src="rc/chest-shop-3.png"
+                                                        src="img/chest-shop-3.png"
                                                         alt=""
                                                     />
                                                 </div>
@@ -1313,12 +1319,12 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <div className="offer-attributes">
                                                     <img
                                                         className="squad-color"
-                                                        src="rc/cur2-druid.png"
+                                                        src="img/cur2-druid.png"
                                                         alt=""
                                                     />
                                                     <img
                                                         className="squad-class"
-                                                        src="rc/cur2-gun.png"
+                                                        src="img/cur2-gun.png"
                                                         alt=""
                                                     />
                                                 </div>
@@ -1341,7 +1347,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                                 <div className="card-info-btn"></div>
                                                 <div className="keys-but-box">
                                                     <img
-                                                        src="rc/chest-shop-4.png"
+                                                        src="img/chest-shop-4.png"
                                                         alt=""
                                                     />
                                                 </div>
@@ -1381,7 +1387,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            "background-image": "url('https",
+                                            backgroundImage: "url('https",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>5K</div>
@@ -1410,7 +1416,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            "background-image": "url('https",
+                                            backgroundImage: "url('https",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
@@ -1439,7 +1445,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            "background-image": "url('https",
+                                            backgroundImage: "url('https",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
@@ -1463,7 +1469,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            "background-image": "url('https",
+                                            backgroundImage: "url('https",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>250K</div>

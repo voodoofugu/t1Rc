@@ -82,7 +82,7 @@ const MainScreen25GfSalePopComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava1.png"
+                                                src="img/ava1.png"
                                             />
                                         </div>
                                         <div className="dps">234234 K</div>
@@ -103,7 +103,7 @@ const MainScreen25GfSalePopComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava2.jpg"
+                                                src="img/ava2.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -125,7 +125,7 @@ const MainScreen25GfSalePopComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava3.jpg"
+                                                src="img/ava3.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -147,7 +147,7 @@ const MainScreen25GfSalePopComponent = () => {
                                         <div className="avatar">
                                             <img
                                                 className="ava"
-                                                src="rc/ava4.jpg"
+                                                src="img/ava4.jpg"
                                             />
                                         </div>
                                         <div className="abil-ready"></div>
@@ -241,51 +241,51 @@ const MainScreen25GfSalePopComponent = () => {
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                 </li>
                                 <li className="skill">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill idle">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico1.png"
+                                        src="img/skill-ico1.png"
                                     />
                                     <div className="timer">10:12</div>
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 <li className="skill disabled">
                                     <img
                                         className="icon"
-                                        src="rc/skill-ico2.png"
+                                        src="img/skill-ico2.png"
                                     />
                                 </li>
                                 {/*                     <li className="skill disabled">
-                        <img className="icon" src="rc/skill-ico2.png" />
+                        <img className="icon" src="img/skill-ico2.png" />
                     </li>
                     <li className="skill disabled">
-                        <img className="icon" src="rc/skill-ico2.png" />
+                        <img className="icon" src="img/skill-ico2.png" />
                     </li>
  */}{" "}
                             </ul>
@@ -295,7 +295,7 @@ const MainScreen25GfSalePopComponent = () => {
                             {" "}
                             {/* back */}
                             <div className="loc-back">
-                                <img className="icon" src="rc/ico-loc.png" />
+                                <img className="icon" src="img/ico-loc.png" />
                                 <div className="text">2561</div>
                                 <div className="text1">GO BACK</div>
                             </div>
@@ -303,42 +303,42 @@ const MainScreen25GfSalePopComponent = () => {
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2556</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2557</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2558</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2559</div>
                                 </li>
                                 <li className="loc">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2560</div>
                                 </li>
                                 <li className="loc current">
                                     <img
                                         className="icon"
-                                        src="rc/ico-loc.png"
+                                        src="img/ico-loc.png"
                                     />
                                     <div className="text">2561</div>
                                 </li>
@@ -367,14 +367,14 @@ const MainScreen25GfSalePopComponent = () => {
                         <div className="sv-sale-pack-box">
                             <div className="lhero-box">
                                 <div className="lhero-pic">
-                                    <img src="hero0075@1x.jpg" />
+                                    <img src="img/hero0075@1x.jpg" />
                                 </div>
                                 <div className="topname-box">
                                     <div className="sh2-icon left">
-                                        <img src="cur-r.png" />
+                                        <img src="img/cur-r.png" />
                                     </div>
                                     <div className="sh2-icon-forgirl right">
-                                        <img src="cur2-sword.png" />
+                                        <img src="img/cur2-sword.png" />
                                     </div>
                                     <div className="lhero-name-box">
                                         <div className="lhero-name">
@@ -391,7 +391,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>
@@ -404,7 +404,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>
@@ -415,13 +415,13 @@ const MainScreen25GfSalePopComponent = () => {
                         <div className="sv-reward-box-all gf-plus">
                             <div className="sv-reward-box">
                                 <div className="sv-reward-pic">
-                                    <img src="tithero-11-1-ava.jpg" />
+                                    <img src="img/tithero-11-1-ava.jpg" />
                                 </div>
                                 <div className="sv-reward-count">999</div>
                             </div>
                             <div className="sv-reward-box plus">
                                 <div className="sv-reward-pic">
-                                    <img src="tithero-11-1-ava.jpg" />
+                                    <img src="img/tithero-11-1-ava.jpg" />
                                 </div>
                                 <div className="sv-reward-count">999</div>
                             </div>
@@ -430,14 +430,14 @@ const MainScreen25GfSalePopComponent = () => {
                         <div className="sv-sale-pack-box next">
                             <div className="lhero-box lock">
                                 <div className="lhero-pic">
-                                    <img src="hero0075@1x.jpg" />
+                                    <img src="img/hero0075@1x.jpg" />
                                 </div>
                                 <div className="topname-box">
                                     <div className="sh2-icon left">
-                                        <img src="cur-r.png" />
+                                        <img src="img/cur-r.png" />
                                     </div>
                                     <div className="sh2-icon-forgirl right">
-                                        <img src="cur2-sword.png" />
+                                        <img src="img/cur2-sword.png" />
                                     </div>
                                     <div className="lhero-name-box">
                                         <div className="lhero-name">
@@ -454,7 +454,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>
@@ -467,7 +467,7 @@ const MainScreen25GfSalePopComponent = () => {
                                             <div className="bonus-lvl-box-bonus">
                                                 Увеличение DPS + 5000%
                                                 <span className="ff-sh2-icon">
-                                                    <img src="cur2-barbarian.png" />
+                                                    <img src="img/cur2-barbarian.png" />
                                                 </span>
                                             </div>
                                         </div>

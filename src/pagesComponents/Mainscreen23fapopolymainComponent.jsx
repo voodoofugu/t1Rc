@@ -4,7 +4,7 @@ import screenFapopolyMain from "../styles/screen-fapopoly-main.scss";
 const MainScreen23FapopolyMainComponent = () => {
     return (
         <>
-            <div className="main">
+            <div className="main world1">
                 <div className="main-bg easter"></div>
                 <div className="fapop-content-all">
                     <div className="fapop-exit-box">
@@ -43,7 +43,7 @@ const MainScreen23FapopolyMainComponent = () => {
                         <div className="fapop-rewards-box">
                             <div className="fapop-rewards girl good">
                                 <div className="fapop-rew-pic">
-                                    <img src="hero0093-ava.jpg" />
+                                    <img src="img/hero0093-ava.jpg" />
                                 </div>
                                 <div className="fapop-rew-pts">100</div>
                                 <div className="fapop-rew-good"></div>
@@ -51,28 +51,28 @@ const MainScreen23FapopolyMainComponent = () => {
                             </div>
                             <div className="fapop-rewards">
                                 <div className="fapop-rew-pic">
-                                    <img src="change-ic-essence.png" />
+                                    <img src="img/change-ic-essence.png" />
                                 </div>
                                 <div className="fapop-rew-pts">100</div>
                                 <div className="fapop-pts-num">1500 pt</div>
                             </div>
                             <div className="fapop-rewards">
                                 <div className="fapop-rew-pic">
-                                    <img src="change-ic-essence.png" />
+                                    <img src="img/change-ic-essence.png" />
                                 </div>
                                 <div className="fapop-rew-pts">100</div>
                                 <div className="fapop-pts-num">1500 pt</div>
                             </div>
                             <div className="fapop-rewards">
                                 <div className="fapop-rew-pic">
-                                    <img src="change-ic-essence.png" />
+                                    <img src="img/change-ic-essence.png" />
                                 </div>
                                 <div className="fapop-rew-pts">100</div>
                                 <div className="fapop-pts-num">1500 pt</div>
                             </div>
                             <div className="fapop-rewards claimed">
                                 <div className="fapop-rew-pic">
-                                    <img src="change-ic-essence.png" />
+                                    <img src="img/change-ic-essence.png" />
                                 </div>
                                 <div className="fapop-rew-pts">claim</div>
                                 <div className="fapop-rew-claimed"></div>
@@ -80,7 +80,7 @@ const MainScreen23FapopolyMainComponent = () => {
                             </div>
                             <div className="fapop-rewards claim">
                                 <div className="fapop-rew-pic">
-                                    <img src="change-ic-essence.png" />
+                                    <img src="img/change-ic-essence.png" />
                                 </div>
                                 <div className="fapop-rew-pts">claim</div>
                                 <div className="fapop-pts-num">1500 pt</div>
@@ -90,7 +90,7 @@ const MainScreen23FapopolyMainComponent = () => {
                     <div className="fapop-prgbar-box-all">
                         <div className="fapop-prgbar-reward-box claim">
                             <div className="fapop-prgbar-reward-pic">
-                                <img src="rating-ring-red@1x.png" />
+                                <img src="img/rating-ring-red@1x.png" />
                             </div>
                             <div className="fapop-prgbar-reward-text">
                                 claim
@@ -135,10 +135,10 @@ const MainScreen23FapopolyMainComponent = () => {
                             </div>
                         </div>
                         <div className="fapop-dice-end-1">
-                            <img src="fapop-dice-end4.png" />{" "}
+                            <img src="img/fapop-dice-end4.png" />{" "}
                         </div>
                         <div className="fapop-dice-end-2">
-                            <img src="fapop-dice-end6.png" />{" "}
+                            <img src="img/fapop-dice-end6.png" />{" "}
                         </div>
                         <div className="fapop-dice-end-rolled">
                             <div className="fapop-dice-rolled-text">

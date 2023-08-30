@@ -21,11 +21,11 @@ const TemplateComponent = () => {
 
     const css = `
         body {
-            background: #e6e7f1;
+            background: #e6e7f1 !important;
             font-family: "Montserrat", sans-serif;
         }
         body.dark-theme {
-            background: #2a3451;
+            background: #2a3451 !important;
             color: #fff;
         }
     `;

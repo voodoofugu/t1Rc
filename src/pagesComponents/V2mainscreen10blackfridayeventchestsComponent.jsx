@@ -10,14 +10,14 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
         <div className="header">
             <div className="resource-panel">
                 <div className="avatar-box-all">
-                    <div className="avatar-box-pic"><img src="hero0093-ava.jpg" /></div>
+                    <div className="avatar-box-pic"><img src="img/hero0093-ava.jpg" /></div>
                     <div className="avatar-box-name">Dormidont</div>
                 </div>
                 <div className="resource-gold">
                     <div className="value">6969K</div>
                     <div className="value-bonus">+6969K%</div>
                     <div className="resource-btn-add"></div>
-                    <div className="resource-pic"><img src="v2-res-gold.png"/></div>
+                    <div className="resource-pic"><img src="img/v2-res-gold.png"/></div>
                 </div>
                 <div className="resource-vip lvl5">
                     <div className="value-vip-diamond">6969K</div>
@@ -44,13 +44,13 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
         <div className="quest-box-all">
             <div className="quest-box-all-text">квесты</div>
             <div className="quest-box">
-                <div className="quest"><img className="icon" src="rc/ic-abil-reborn.png" /></div>
-                <div className="quest"><img className="icon" src="rc/ic-abil-reborn.png" /></div>
-                <div className="quest"><img className="icon" src="rc/ic-abil-reborn.png" /></div>
-                <div className="quest"><img className="icon" src="rc/ic-abil-reborn.png" /></div>
-                <div className="quest"><img className="icon" src="rc/ic-abil-reborn.png" /></div>
-                <div className="quest"><img className="icon" src="rc/ic-abil-reborn.png" /></div>
-                <div className="quest"><img className="icon" src="rc/ic-abil-reborn.png" /></div>
+                <div className="quest"><img className="icon" src="img/ic-abil-reborn.png" /></div>
+                <div className="quest"><img className="icon" src="img/ic-abil-reborn.png" /></div>
+                <div className="quest"><img className="icon" src="img/ic-abil-reborn.png" /></div>
+                <div className="quest"><img className="icon" src="img/ic-abil-reborn.png" /></div>
+                <div className="quest"><img className="icon" src="img/ic-abil-reborn.png" /></div>
+                <div className="quest"><img className="icon" src="img/ic-abil-reborn.png" /></div>
+                <div className="quest"><img className="icon" src="img/ic-abil-reborn.png" /></div>
             </div>
             <div className="opt-panel-box">
                 <div className="btn feedback"></div>
@@ -81,8 +81,8 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                             <div className="hero-card-box-all">
                                 <div className="hero-card">
                                     <div className="hero-avatar-box">
-                                        <img className="hero-avatar" src="rc/tithero-11-1-ava.jpg" />
-                                        <div className="sh2-icon-forgirl"><img src="cur2-barbarian.png"/></div>
+                                        <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                        <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                     </div>
                                     <div className="hero-level-box">level
                                         <div className="hero-level">6969K</div>
@@ -97,12 +97,12 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                         <div className="color-btn-text gold"><span className="f-gold"></span>6969K</div>
                                         <div className="color-btn-text">lvl up</div>
                                     </div>
-                                    <div className="hero-abil-icon"><img src="icons/ic-abil-78.jpg"/></div>
+                                    <div className="hero-abil-icon"><img src="img/icons/ic-abil-78.jpg"/></div>
                                 </div>
                                 <div className="hero-card">
                                     <div className="hero-avatar-box">
-                                        <img className="hero-avatar" src="rc/tithero-11-1-ava.jpg" />
-                                        <div className="sh2-icon-forgirl"><img src="cur2-barbarian.png"/></div>
+                                        <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                        <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                     </div>
                                     <div className="hero-level-box">level
                                         <div className="hero-level">6969K</div>
@@ -117,15 +117,15 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                         <div className="color-btn-text gold"><span className="f-gold"></span>6969K</div>
                                         <div className="color-btn-text">lvl up</div>
                                     </div>
-                                    <div className="hero-abil-icon"><img src="icons/ic-abil-78.jpg"/></div>
+                                    <div className="hero-abil-icon"><img src="img/icons/ic-abil-78.jpg"/></div>
                                 </div>
                                 <div className="new-heroes-box">
                                     <div className="new-heroes-title">Зарабатывай золото и нанимай новых героев</div>
                                     <div className="new-heroes">
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
-                                                <img className="hero-avatar" src="rc/tithero-11-1-ava.jpg" />
-                                                <div className="sh2-icon-forgirl"><img src="cur2-barbarian.png"/></div>
+                                                <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                                <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                             </div>
                                             <div className="hero-level-box">level
                                                 <div className="hero-level">6969K</div>
@@ -140,12 +140,12 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                                 <div className="color-btn-text gold"><span className="f-gold"></span>6969K</div>
                                                 <div className="color-btn-text">lvl up</div>
                                             </div>
-                                            <div className="hero-abil-icon"><img src="icons/ic-abil-78.jpg"/></div>
+                                            <div className="hero-abil-icon"><img src="img/icons/ic-abil-78.jpg"/></div>
                                         </div>
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
-                                                <img className="hero-avatar" src="rc/tithero-11-1-ava.jpg" />
-                                                <div className="sh2-icon-forgirl"><img src="cur2-barbarian.png"/></div>
+                                                <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                                <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                             </div>
                                             <div className="hero-level-box">level
                                                 <div className="hero-level">6969K</div>
@@ -160,7 +160,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                                 <div className="color-btn-text gold"><span className="f-gold"></span>6969K</div>
                                                 <div className="color-btn-text">lvl up</div>
                                             </div>
-                                            <div className="hero-abil-icon"><img src="icons/ic-abil-78.jpg"/></div>
+                                            <div className="hero-abil-icon"><img src="img/icons/ic-abil-78.jpg"/></div>
                                         </div>
                                     </div>
                                 </div>
@@ -220,19 +220,19 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
             <div className="tabs-all-box">
                 <div className="tabs-all selected">
                     <div className="tabs-name">Heroes</div>
-                    <div className="tabs-pic"><img src="tab-01.png"/></div>
+                    <div className="tabs-pic"><img src="img/tab-01.png"/></div>
                 </div>
                 <div className="tabs-all">
                     <div className="tabs-name">Album</div>
-                    <div className="tabs-pic"><img src="tab-05.png"/></div>
+                    <div className="tabs-pic"><img src="img/tab-05.png"/></div>
                 </div>
                 <div className="tabs-all">
                     <div className="tabs-name">Guild</div>
-                    <div className="tabs-pic"><img src="tab-08.png"/></div>
+                    <div className="tabs-pic"><img src="img/tab-08.png"/></div>
                 </div>
                 <div className="tabs-all">
                     <div className="tabs-name">Rating</div>
-                    <div className="tabs-pic"><img src="tab-02.png"/></div>
+                    <div className="tabs-pic"><img src="img/tab-02.png"/></div>
                 </div>
             </div>
         </div>
@@ -249,7 +249,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                         <div className="bf-chests-all">
                             <div className="chest">
                                 <div className="chest__image">
-                                    <img src="change-sun1.png" />
+                                    <img src="img/change-sun1.png" />
                                 </div>
                                 <div className="chest__label">
                                     Silver and black chest
@@ -264,7 +264,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                             </div>
                             <div className="chest">
                                 <div className="chest__image">
-                                    <img src="change-sun1.png" />
+                                    <img src="img/change-sun1.png" />
                                 </div>
                                 <div className="chest__label">
                                     Silver and black chest
@@ -281,7 +281,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                         <div className="bf-keys-all">
                             <div className="key">
                                 <div className="key__image">
-                                    <img src="icn-bf-key.png" alt="" />
+                                    <img src="img/icn-bf-key.png" alt="" />
                                 </div>
                                 <div className="key__count">99</div>
                                 <div className="color-btn green">
@@ -290,7 +290,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                             </div>
                             <div className="key">
                                 <div className="key__image">
-                                    <img src="icn-bf-key.png" alt="" />
+                                    <img src="img/icn-bf-key.png" alt="" />
                                 </div>
                                 <div className="key__count">99</div>
                                 <div className="color-btn green">
@@ -314,7 +314,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                             <div className="bf-rewards__items">
                                 <div className="equip-item">
                                     <div className="equip-item__picture">
-                                        <img src="ms-stone-blue.png" />
+                                        <img src="img/ms-stone-blue.png" />
                                     </div>
                                     <div className="equip-item__count">
                                         27/30
@@ -322,7 +322,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                 </div>
                                 <div className="equip-item">
                                     <div className="equip-item__picture">
-                                        <img src="ms-stone-blue.png" />
+                                        <img src="img/ms-stone-blue.png" />
                                     </div>
                                     <div className="equip-item__count">
                                         27/30
@@ -330,7 +330,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                 </div>
                                 <div className="equip-item">
                                     <div className="equip-item__picture">
-                                        <img src="ms-stone-blue.png" />
+                                        <img src="img/ms-stone-blue.png" />
                                     </div>
                                     <div className="equip-item__count">
                                         27/30
@@ -338,7 +338,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                 </div>
                                 <div className="equip-item">
                                     <div className="equip-item__picture">
-                                        <img src="ms-stone-blue.png" />
+                                        <img src="img/ms-stone-blue.png" />
                                     </div>
                                     <div className="equip-item__count">
                                         27/30
@@ -347,7 +347,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                             </div>
                             <div className="bf-rewards__collected">
                                 <div className="collected__img">
-                                    <img src="v2-res-mithril.png" />
+                                    <img src="img/v2-res-mithril.png" />
                                 </div>
                                 <div className="collected__label">
                                     Ballons collected

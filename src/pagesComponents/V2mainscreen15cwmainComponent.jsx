@@ -9,7 +9,7 @@ const V2MainScreen15CwMainComponent = () => {
                     <div className="resource-panel">
                         <div className="avatar-box-all">
                             <div className="avatar-box-pic">
-                                <img src="hero0093-ava.jpg" />
+                                <img src="img/hero0093-ava.jpg" />
                             </div>
                             <div className="avatar-box-name">Dormidont</div>
                         </div>
@@ -18,7 +18,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div className="value-bonus">+6969K%</div>
                             <div className="resource-btn-add"></div>
                             <div className="resource-pic">
-                                <img src="v2-res-gold.png" />
+                                <img src="img/v2-res-gold.png" />
                             </div>
                         </div>
                         <div className="resource-vip lvl5">
@@ -47,25 +47,46 @@ const V2MainScreen15CwMainComponent = () => {
                     <div className="quest-box-all-text">квесты</div>
                     <div className="quest-box">
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                         <div className="quest">
-                            <img className="icon" src="rc/ic-abil-reborn.png" />
+                            <img
+                                className="icon"
+                                src="img/ic-abil-reborn.png"
+                            />
                         </div>
                     </div>
                     <div className="opt-panel-box">
@@ -994,10 +1015,10 @@ const V2MainScreen15CwMainComponent = () => {
                                             <div className="cw-clan-logo-box">
                                                 <img
                                                     className="cw-clan-bg"
-                                                    src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
+                                                    src="v2-cw-bg34.png"
                                                 />
                                                 <div className="cw-clan-img">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png" />
+                                                    <img src="img/v2-cw-p03.png" />
                                                 </div>
                                             </div>
                                             <div className="cw-main-right-a-box-lvl-box">
@@ -1014,7 +1035,7 @@ const V2MainScreen15CwMainComponent = () => {
                                             </div>
                                             <div className="cw-main-clan-stats">
                                                 <div className="rating">
-                                                    <img src="https://cdn.faptitans.com/s1/rc/2vip-s7.png" />
+                                                    <img src="img/2vip-s7.png" />
                                                     <div className="rating-scores">
                                                         237K
                                                     </div>
@@ -1046,7 +1067,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1070,7 +1091,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1094,7 +1115,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1118,7 +1139,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1142,7 +1163,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1166,7 +1187,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1190,7 +1211,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1214,7 +1235,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1238,7 +1259,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1262,7 +1283,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1286,7 +1307,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1310,7 +1331,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1334,7 +1355,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1358,7 +1379,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1382,7 +1403,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1406,7 +1427,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1433,7 +1454,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1457,7 +1478,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1481,7 +1502,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1505,7 +1526,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1529,7 +1550,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1553,7 +1574,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1577,7 +1598,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1601,7 +1622,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1625,7 +1646,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1649,7 +1670,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1673,7 +1694,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1697,7 +1718,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1721,7 +1742,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1745,7 +1766,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1769,7 +1790,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1793,7 +1814,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1817,7 +1838,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1841,7 +1862,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1865,7 +1886,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1889,7 +1910,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1913,7 +1934,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1937,7 +1958,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1961,7 +1982,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -1985,7 +2006,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2009,7 +2030,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2033,7 +2054,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2057,7 +2078,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2081,7 +2102,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2105,7 +2126,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2129,7 +2150,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2153,7 +2174,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2177,7 +2198,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2201,7 +2222,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2225,7 +2246,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2249,7 +2270,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2273,7 +2294,7 @@ const V2MainScreen15CwMainComponent = () => {
                                                     <div className="cw-main-right-b-av">
                                                         <div className="cw-main-girl-ava">
                                                             <div className="cw-main-girl-ava-img">
-                                                                <img src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                                                                <img src="img/v2-master-pic1.png" />
                                                             </div>
                                                         </div>
                                                         <div className="cw-girl-num-big">
@@ -2308,7 +2329,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Heroes</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                                    <img src="img/tab-01.png" />
                                 </div>
                             </div>
                         </a>
@@ -2319,7 +2340,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Guild base</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                                    <img src="img/tab-08.png" />
                                 </div>
                             </div>
                             <div className="v2-tab-notif notif notif20"></div>
@@ -2328,7 +2349,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Gallery</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                                    <img src="img/tab-05.png" />
                                 </div>
                             </div>
                         </a>
@@ -2336,7 +2357,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Rating Tab</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                                    <img src="img/tab-02.png" />
                                 </div>
                             </div>
                         </a>
@@ -2344,7 +2365,7 @@ const V2MainScreen15CwMainComponent = () => {
                             <div style={{ width: "100%", height: "100%" }}>
                                 <div className="tabs-name">Quests</div>
                                 <div className="tabs-pic">
-                                    <img src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                                    <img src="img/tab-10.png" />
                                 </div>
                             </div>
                         </a>
