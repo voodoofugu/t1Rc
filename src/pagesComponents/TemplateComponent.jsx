@@ -1,23 +1,31 @@
-import React, { useEffect } from "react";
-import AaComponMap from "../components/AaComponMap.jsx";
+import React, { useEffect, useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import AaComponMap from "../components/AaComponMap.jsx";
 
 const TemplateComponent = () => {
+    const [stylesLoaded, setStylesLoaded] = useState(false);
+
     useEffect(() => {
         if (process.env.NODE_ENV === "development") {
             import("../styles/notExported/template.css").then(() => {
-                // Здесь можно добавить код для инициализации скриптов
                 console.log("Styles loaded!");
+                setStylesLoaded(true); // Отметить, что стили загружены
             });
-            import("../scripts/notExported/template.js").then(() => {
-                console.log("Script loaded!");
-            });
+            window.onload = () => {
+                import("../scripts/notExported/template.js").then(() => {
+                    console.log("Script loaded!");
+                });
+            };
         }
 
         return () => {
             // Здесь можно добавить код для очистки скриптов при размонтировании компонента
         };
     }, []);
+
+    if (!stylesLoaded) {
+        return null; // Возвращаем null, если стили и скрипты не загружены
+    }
 
     const css = `
         body {
@@ -45,9 +53,13 @@ const TemplateComponent = () => {
                     <div className="btn-ic"></div>
                 </div>
             </div>
-            <AaComponMap.ProjectBox />
+            <div className="templatePage template-container">
+                <AaComponMap.ProjectBox />
+            </div>
         </HelmetProvider>
     );
 };
 
-export default React.memo(TemplateComponent);
+const MemoizedTemplateComponent = React.memo(TemplateComponent);
+
+export default MemoizedTemplateComponent;

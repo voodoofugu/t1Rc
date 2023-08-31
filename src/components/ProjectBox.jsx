@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import html2canvas from "html2canvas";
 import LazyLoad from "react-lazy-load";
 import _ from "lodash"; // Импортируем lodash для мемоизации функций
+import AaComponMap from "../components/AaComponMap.jsx";
 
 const fileContexts = [require.context("/src/pages", true, /\.html$/)];
 const canvasInstances = [];
@@ -15,8 +16,16 @@ const ProjectBox = () => {
     const [projectBoxes, setProjectBoxes] = useState([]);
     const projectBoxesRef = useRef(projectBoxes);
 
+    // Добавляем состояние для отслеживания полной загрузки iframe для каждого проектного блока
+    const [iframeLoadedMap, setIframeLoadedMap] = useState({});
     // Мемоизируем функцию для улучшения производительности
     const handleIframeLoad = useCallback((event, projectBox) => {
+        // Обновляем состояние для отметки, что iframe загружен
+        setIframeLoadedMap((prevIframeLoadedMap) => ({
+            ...prevIframeLoadedMap,
+            [projectBox.title]: true,
+        }));
+
         updateProjectBox(projectBox).then((updatedProjectBox) => {
             setProjectBoxes((prevProjectBoxes) =>
                 prevProjectBoxes.map((box) =>
@@ -41,16 +50,26 @@ const ProjectBox = () => {
             const canvasInstance = getCanvasInstance();
 
             try {
-                const screenshot = await canvasInstance(element, {
-                    useCORS: true,
-                    logging: false,
-                    allowTaint: true,
-                    scale: 0.5,
-                });
+                if (
+                    element &&
+                    element.offsetWidth > 0 &&
+                    element.offsetHeight > 0
+                ) {
+                    const screenshot = await canvasInstance(element, {
+                        useCORS: true,
+                        logging: false,
+                        allowTaint: true,
+                        scale: 0.5,
+                    });
 
-                releaseCanvasInstance(canvasInstance);
+                    releaseCanvasInstance(canvasInstance);
 
-                return screenshot.toDataURL("image/png");
+                    return screenshot.toDataURL("image/png");
+                } else {
+                    console.warn("Element has no content or size.");
+                    releaseCanvasInstance(canvasInstance);
+                    return null;
+                }
             } catch (error) {
                 console.error("Failed to capture screenshot", error);
                 releaseCanvasInstance(canvasInstance);
@@ -77,7 +96,7 @@ const ProjectBox = () => {
                 projectBox.screenshot = null;
 
                 iframe.style.display = "block";
-                await new Promise((resolve) => setTimeout(resolve, 1000));
+                await new Promise((resolve) => setTimeout(resolve, 100));
 
                 if (iframeExists(projectBox.title)) {
                     const screenshot = await captureScreenshot(
@@ -183,7 +202,7 @@ const ProjectBox = () => {
     }, []);
 
     return (
-        <div className="templatePage template-container">
+        <>
             {batchedProjectBoxes.map((batch, batchIndex) => (
                 <React.Fragment key={batchIndex}>
                     {batch.map((projectBox, index) => (
@@ -191,6 +210,7 @@ const ProjectBox = () => {
                             key={projectBox.file}
                             id={`project-box-${index + 1}`}
                             className="project-box">
+                            {/* Отображение информации о файле и заголовке */}
                             <div className="fileInfoIc">
                                 <div
                                     className="fileInfo"
@@ -199,22 +219,30 @@ const ProjectBox = () => {
                                     }}></div>
                             </div>
                             <a href={projectBox.file}>{projectBox.title}</a>
+
+                            {/* Использование LazyLoad и Iframe */}
                             <LazyLoad height={200} offset={100}>
                                 <>
+                                    {/* Отображение Iframe и скриншота */}
                                     <iframe
                                         id={`${projectBox.title}`}
                                         src={projectBox.file}
                                         width="1200"
                                         height="640"
-                                        onLoad={(e) =>
-                                            handleIframeLoad(e, projectBox)
-                                        }></iframe>
+                                        scrolling="no"
+                                        onLoad={(e) => {
+                                            setTimeout(() => {
+                                                handleIframeLoad(e, projectBox);
+                                            }, 10000);
+                                        }}></iframe>
                                     <div className="screenshot-container">
-                                        {projectBox.screenshot && (
+                                        {projectBox.screenshot ? (
                                             <img
                                                 src={projectBox.screenshot}
                                                 alt="Screenshot"
                                             />
+                                        ) : (
+                                            <AaComponMap.Loading />
                                         )}
                                     </div>
                                 </>
@@ -223,7 +251,7 @@ const ProjectBox = () => {
                     ))}
                 </React.Fragment>
             ))}
-        </div>
+        </>
     );
 };
 

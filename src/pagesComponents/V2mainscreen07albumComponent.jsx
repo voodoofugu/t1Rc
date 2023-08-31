@@ -220,7 +220,6 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 className="search"
                                                                 name="search"
                                                                 placeholder="Поиск"
-                                                                value=""
                                                             />
                                                             <div className="sbutton">
                                                                 <img src="img/search-ic.png" />

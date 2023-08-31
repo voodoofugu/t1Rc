@@ -26,10 +26,8 @@ function generateComponentName(pageName) {
     console.log("Current Page:", currentPage);
 
     const PageComponent =
-        generateComponentName(currentPage) === "TemplateComponent"
-            ? AaPagesComponentMap.TemplateComponent
-            : AaPagesComponentMap[generateComponentName(currentPage)] ||
-              AaPagesComponentMap.Page404Component;
+        AaPagesComponentMap[generateComponentName(currentPage)] ||
+        AaPagesComponentMap.Page404Component;
 
     const Root = document.getElementById("root");
     if (Root) {

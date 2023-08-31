@@ -1583,7 +1583,6 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     type="text"
                                                     name="username"
                                                     className="itext username"
-                                                    value=""
                                                 />
                                             </label>
                                             <label className="tfield password">
@@ -1592,7 +1591,6 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     type="password"
                                                     name="password"
                                                     className="itext password"
-                                                    value=""
                                                 />
                                                 <div className="note">
                                                     Забыли пароль?
@@ -1647,7 +1645,6 @@ const V2MainScreen01DarkWorldComponent = () => {
                                                     type="text"
                                                     name="code"
                                                     className="itext code"
-                                                    value=""
                                                 />
                                             </label>
                                             <label className="tfield check">
