@@ -415,13 +415,13 @@ const MainScreen25GfSalePopComponent = () => {
                         <div className="sv-reward-box-all gf-plus">
                             <div className="sv-reward-box">
                                 <div className="sv-reward-pic">
-                                    <img src="img/tithero-11-1-ava.jpg" />
+                                    <img src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                 </div>
                                 <div className="sv-reward-count">999</div>
                             </div>
                             <div className="sv-reward-box plus">
                                 <div className="sv-reward-pic">
-                                    <img src="img/tithero-11-1-ava.jpg" />
+                                    <img src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                 </div>
                                 <div className="sv-reward-count">999</div>
                             </div>

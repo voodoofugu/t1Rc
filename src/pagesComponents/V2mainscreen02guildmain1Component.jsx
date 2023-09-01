@@ -31,8 +31,14 @@ const V2MainScreen02GuildMain1Component = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img className="bg" src="v2-cw-bg34.png" />
-                                    <img className="fg" src="v2-cw-p03.png" />
+                                    <img
+                                        className="bg"
+                                        src="img/v2-cw-bg34.png"
+                                    />
+                                    <img
+                                        className="fg"
+                                        src="img/v2-cw-p03.png"
+                                    />
                                 </div>
                                 <div className="might-box-name">Clan</div>
                             </div>

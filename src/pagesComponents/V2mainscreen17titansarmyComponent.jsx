@@ -125,7 +125,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -165,7 +165,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -211,7 +211,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />
@@ -252,7 +252,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />
@@ -388,7 +388,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                 <div className="hero-avatar-box locked">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                     <div className="at-army-locked-box">
@@ -400,21 +400,21 @@ const V2MainScreen17TitansArmyComponent = () => {
                                 <div className="hero-avatar-box select">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box locked">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                     <div className="at-army-locked-box">
@@ -426,84 +426,84 @@ const V2MainScreen17TitansArmyComponent = () => {
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="at-num">696969</div>
                                 </div>
@@ -532,7 +532,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                     <div className="pwr">+686868% PWR</div>
                                     <div className="ava">
                                         <img
-                                            src="./images/superhero/suphero-246/x1/avatar/246sh-ava-1.jpg"
+                                            src="img/images/superhero/suphero-246/x1/avatar/246sh-ava-1.jpg"
                                             alt=""
                                         />
                                         <div className="stars">
@@ -556,7 +556,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                     <div className="pwr">+686868% PWR</div>
                                     <div className="ava">
                                         <img
-                                            src="./images/superhero/suphero-245/x1/avatar/245sh-ava-1.jpg"
+                                            src="img/images/superhero/suphero-245/x1/avatar/245sh-ava-1.jpg"
                                             alt=""
                                         />
                                         <div className="stars">
@@ -580,7 +580,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                     <div className="pwr">+686868% PWR</div>
                                     <div className="ava">
                                         <img
-                                            src="./images/superhero/suphero-244/x1/avatar/244sh-ava-1.jpg"
+                                            src="img/images/superhero/suphero-244/x1/avatar/244sh-ava-1.jpg"
                                             alt=""
                                         />
                                         <div className="stars">
@@ -604,7 +604,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                     <div className="pwr">+686868% PWR</div>
                                     <div className="ava">
                                         <img
-                                            src="./images/superhero/suphero-243/x1/avatar/243sh-ava-1.jpg"
+                                            src="img/images/superhero/suphero-243/x1/avatar/243sh-ava-1.jpg"
                                             alt=""
                                         />
                                         <div className="stars">
@@ -628,7 +628,7 @@ const V2MainScreen17TitansArmyComponent = () => {
                                     <div className="pwr">+686868% PWR</div>
                                     <div className="ava">
                                         <img
-                                            src="./images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg"
+                                            src="img/images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg"
                                             alt=""
                                         />
                                         <div className="stars">

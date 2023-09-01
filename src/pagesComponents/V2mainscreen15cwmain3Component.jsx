@@ -39,8 +39,14 @@ const V2MainScreen15CwMain3Component = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img className="bg" src="v2-cw-bg34.png" />
-                                    <img className="fg" src="v2-cw-p03.png" />
+                                    <img
+                                        className="bg"
+                                        src="img/v2-cw-bg34.png"
+                                    />
+                                    <img
+                                        className="fg"
+                                        src="img/v2-cw-p03.png"
+                                    />
                                 </div>
                                 <div className="might-box-name">Valhalla</div>
                             </div>
@@ -125,7 +131,10 @@ const V2MainScreen15CwMain3Component = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "600ms" }}>
-                                <img className="icon" src="v2-ns-ball.png" />
+                                <img
+                                    className="icon"
+                                    src="img/v2-ns-ball.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">17:25:18</div>
                                 </div>
@@ -133,7 +142,7 @@ const V2MainScreen15CwMain3Component = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="v2-mn-soul-sg-160.png"
+                                    src="img/v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
@@ -1091,7 +1100,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block girl">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="img/__5e98/images/superhero_new/suphero-264/x2/avatar/264sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-264/x2/avatar/264sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -1652,7 +1661,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block girl">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="img/__2dfc/images/superhero_new/suphero-265/x2/avatar/265sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-265/x2/avatar/265sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">
@@ -2052,7 +2061,7 @@ const V2MainScreen15CwMain3Component = () => {
                                                     </div>
                                                     <div className="fw-level-rew-box block girl">
                                                         <div className="fw-level-rew-pic">
-                                                            <img src="img/__8abe/images/superhero_new/suphero-266/x2/avatar/266sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-266/x2/avatar/266sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="fw-level-rew-good"></div>
                                                         <div className="fw-level-rew-num">

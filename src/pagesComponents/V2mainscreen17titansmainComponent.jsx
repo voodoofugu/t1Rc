@@ -149,7 +149,7 @@ const V2MainScreen17TitansMainComponent = () => {
                                         <div className="pwr">+686868% PWR</div>
                                         <div className="ava">
                                             <img
-                                                src="./images/superhero/suphero-246/x1/avatar/246sh-ava-1.jpg"
+                                                src="img/images/superhero/suphero-246/x1/avatar/246sh-ava-1.jpg"
                                                 alt=""
                                             />
                                             <div className="stars">
@@ -168,7 +168,7 @@ const V2MainScreen17TitansMainComponent = () => {
                                         <div className="pwr">+686868% PWR</div>
                                         <div className="ava">
                                             <img
-                                                src="./images/superhero/suphero-245/x1/avatar/245sh-ava-1.jpg"
+                                                src="img/images/superhero/suphero-245/x1/avatar/245sh-ava-1.jpg"
                                                 alt=""
                                             />
                                             <div className="stars">
@@ -187,7 +187,7 @@ const V2MainScreen17TitansMainComponent = () => {
                                         <div className="pwr">+686868% PWR</div>
                                         <div className="ava">
                                             <img
-                                                src="./images/superhero/suphero-244/x1/avatar/244sh-ava-1.jpg"
+                                                src="img/images/superhero/suphero-244/x1/avatar/244sh-ava-1.jpg"
                                                 alt=""
                                             />
                                             <div className="stars">
@@ -206,7 +206,7 @@ const V2MainScreen17TitansMainComponent = () => {
                                         <div className="pwr">+686868% PWR</div>
                                         <div className="ava">
                                             <img
-                                                src="./images/superhero/suphero-243/x1/avatar/243sh-ava-1.jpg"
+                                                src="img/images/superhero/suphero-243/x1/avatar/243sh-ava-1.jpg"
                                                 alt=""
                                             />
                                             <div className="stars">
@@ -225,7 +225,7 @@ const V2MainScreen17TitansMainComponent = () => {
                                         <div className="pwr">+686868% PWR</div>
                                         <div className="ava">
                                             <img
-                                                src="./images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg"
+                                                src="img/images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg"
                                                 alt=""
                                             />
                                             <div className="stars">

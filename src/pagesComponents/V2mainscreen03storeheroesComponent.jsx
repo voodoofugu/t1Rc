@@ -125,7 +125,7 @@ const V2MainScreen03StoreHeroesComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -165,7 +165,7 @@ const V2MainScreen03StoreHeroesComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -211,7 +211,7 @@ const V2MainScreen03StoreHeroesComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />
@@ -252,7 +252,7 @@ const V2MainScreen03StoreHeroesComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />
@@ -392,34 +392,34 @@ const V2MainScreen03StoreHeroesComponent = () => {
                                             <div className="spinpic-center"></div>
                                             <div className="spinroll-box">
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-04-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-04/x2/ava/tithero-04-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-10-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-10/x2/ava/tithero-10-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-11-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-19-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-19/x2/ava/tithero-19-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-30-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-30/x2/ava/tithero-30-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-31-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-31/x2/ava/tithero-31-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-32-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-32/x2/ava/tithero-32-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-33-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-33/x2/ava/tithero-33-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-34-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-34/x2/ava/tithero-34-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-35-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-35/x2/ava/tithero-35-2-ava.jpg" />
                                                 </div>
                                             </div>
                                             <div className="filter-blur"></div>
@@ -435,34 +435,34 @@ const V2MainScreen03StoreHeroesComponent = () => {
                                             <div className="spinpic-center"></div>
                                             <div className="spinroll-box">
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-04-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-04/x2/ava/tithero-04-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-10-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-10/x2/ava/tithero-10-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-11-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-19-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-19/x2/ava/tithero-19-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-30-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-30/x2/ava/tithero-30-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-31-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-31/x2/ava/tithero-31-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-32-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-32/x2/ava/tithero-32-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-33-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-33/x2/ava/tithero-33-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-34-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-34/x2/ava/tithero-34-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-35-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-35/x2/ava/tithero-35-2-ava.jpg" />
                                                 </div>
                                             </div>
                                             <div className="filter-blur"></div>
@@ -481,34 +481,34 @@ const V2MainScreen03StoreHeroesComponent = () => {
                                             <div className="spinpic-center"></div>
                                             <div className="spinroll-box">
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-04-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-04/x2/ava/tithero-04-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-10-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-10/x2/ava/tithero-10-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-11-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-19-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-19/x2/ava/tithero-19-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-30-1-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-30/x2/ava/tithero-30-1-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-31-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-31/x2/ava/tithero-31-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-32-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-32/x2/ava/tithero-32-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-33-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-33/x2/ava/tithero-33-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-34-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-34/x2/ava/tithero-34-2-ava.jpg" />
                                                 </div>
                                                 <div className="spinroll-girl">
-                                                    <img src="img/tithero-35-2-ava.jpg" />
+                                                    <img src="img/images/hero-all/tithero-35/x2/ava/tithero-35-2-ava.jpg" />
                                                 </div>
                                             </div>
                                             <div className="filter-blur"></div>

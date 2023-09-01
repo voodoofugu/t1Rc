@@ -81,7 +81,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                             <div className="hero-card-box-all">
                                 <div className="hero-card">
                                     <div className="hero-avatar-box">
-                                        <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                        <img className="hero-avatar" src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                         <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                     </div>
                                     <div className="hero-level-box">level
@@ -101,7 +101,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                 </div>
                                 <div className="hero-card">
                                     <div className="hero-avatar-box">
-                                        <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                        <img className="hero-avatar" src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                         <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                     </div>
                                     <div className="hero-level-box">level
@@ -124,7 +124,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                     <div className="new-heroes">
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
-                                                <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                                <img className="hero-avatar" src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                                 <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                             </div>
                                             <div className="hero-level-box">level
@@ -144,7 +144,7 @@ const V2MainScreen10BlackfridayEvent_chestsComponent = () => {
                                         </div>
                                         <div className="hero-card">
                                             <div className="hero-avatar-box">
-                                                <img className="hero-avatar" src="img/tithero-11-1-ava.jpg" />
+                                                <img className="hero-avatar" src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg" />
                                                 <div className="sh2-icon-forgirl"><img src="img/cur2-barbarian.png"/></div>
                                             </div>
                                             <div className="hero-level-box">level

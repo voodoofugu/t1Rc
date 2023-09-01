@@ -122,19 +122,19 @@ const ProjectBox = () => {
     const batchSize = 5;
     const batchedProjectBoxes = _.chunk(projectBoxes, batchSize); // Используем lodash для группировки проектных блоков
 
-    const handleBatchUpdate = async (batch) => {
-        const updatedBatch = await Promise.all(
-            batch.map(async (projectBox) => await updateProjectBox(projectBox))
-        );
-        setProjectBoxes((prevProjectBoxes) =>
-            prevProjectBoxes.map(
-                (box) =>
-                    updatedBatch.find(
-                        (updatedBox) => updatedBox.title === box.title
-                    ) || box
-            )
-        );
-    };
+    // const handleBatchUpdate = async (batch) => {
+    //     const updatedBatch = await Promise.all(
+    //         batch.map(async (projectBox) => await updateProjectBox(projectBox))
+    //     );
+    //     setProjectBoxes((prevProjectBoxes) =>
+    //         prevProjectBoxes.map(
+    //             (box) =>
+    //                 updatedBatch.find(
+    //                     (updatedBox) => updatedBox.title === box.title
+    //                 ) || box
+    //         )
+    //     );
+    // };
 
     useEffect(() => {
         const generatePages = async () => {
@@ -179,27 +179,27 @@ const ProjectBox = () => {
         });
     }, [projectBoxes, handleIframeLoad]);
 
-    useEffect(() => {
-        if (module.hot) {
-            module.hot.addStatusHandler((status) => {
-                if (status === "apply") {
-                    projectBoxesRef.current.forEach((projectBox) => {
-                        updateProjectBox(projectBox).then(
-                            (updatedProjectBox) => {
-                                setProjectBoxes((prevProjectBoxes) =>
-                                    prevProjectBoxes.map((box) =>
-                                        box.title === updatedProjectBox.title
-                                            ? updatedProjectBox
-                                            : box
-                                    )
-                                );
-                            }
-                        );
-                    });
-                }
-            });
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (module.hot) {
+    //         module.hot.addStatusHandler((status) => {
+    //             if (status === "apply") {
+    //                 projectBoxesRef.current.forEach((projectBox) => {
+    //                     updateProjectBox(projectBox).then(
+    //                         (updatedProjectBox) => {
+    //                             setProjectBoxes((prevProjectBoxes) =>
+    //                                 prevProjectBoxes.map((box) =>
+    //                                     box.title === updatedProjectBox.title
+    //                                         ? updatedProjectBox
+    //                                         : box
+    //                                 )
+    //                             );
+    //                         }
+    //                     );
+    //                 });
+    //             }
+    //         });
+    //     }
+    // }, []);
 
     return (
         <>

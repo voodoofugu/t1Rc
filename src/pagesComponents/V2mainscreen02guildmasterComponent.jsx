@@ -39,8 +39,14 @@ const V2MainScreen02GuildMasterComponent = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img className="bg" src="v2-cw-bg34.png" />
-                                    <img className="fg" src="v2-cw-p03.png" />
+                                    <img
+                                        className="bg"
+                                        src="img/v2-cw-bg34.png"
+                                    />
+                                    <img
+                                        className="fg"
+                                        src="img/v2-cw-p03.png"
+                                    />
                                 </div>
                                 <div className="might-box-name">Valhalla</div>
                             </div>
@@ -125,7 +131,10 @@ const V2MainScreen02GuildMasterComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "600ms" }}>
-                                <img className="icon" src="v2-ns-ball.png" />
+                                <img
+                                    className="icon"
+                                    src="img/v2-ns-ball.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">19:31:07</div>
                                 </div>
@@ -133,7 +142,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="v2-mn-soul-sg-160.png"
+                                    src="img/v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
@@ -215,7 +224,6 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                             type="text"
                                                             name="name"
                                                             maxlength="20"
-                                                            value="adad"
                                                         />
                                                         <div className="btn-edit-small"></div>
                                                         <div className="btn-enter-small"></div>

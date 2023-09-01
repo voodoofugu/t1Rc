@@ -125,7 +125,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -165,7 +165,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -211,7 +211,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />
@@ -252,7 +252,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />
@@ -456,7 +456,7 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box locked">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                     <div className="fw-army-locked-box">
@@ -468,21 +468,21 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box select">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box locked">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                     <div className="fw-army-locked-box">
@@ -494,84 +494,84 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
@@ -591,56 +591,56 @@ const V2MainScreen05FwArmySetupComponent = () => {
                                 <div className="hero-avatar-box">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>
                                 <div className="hero-avatar-box plus">
                                     <img
                                         className="hero-avatar"
-                                        src="img/tithero-11-1-ava.jpg"
+                                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                     />
                                     <div className="fw-as-num">696969</div>
                                 </div>

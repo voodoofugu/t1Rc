@@ -37,7 +37,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="v2-f-e1.png"
+                                                        src="img/v2-f-e1.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         1K
@@ -65,7 +65,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="v2-f-e1.png"
+                                                        src="img/v2-f-e1.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         500
@@ -93,7 +93,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="v2-f-e1.png"
+                                                        src="img/v2-f-e1.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         100
@@ -219,7 +219,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="v2-mn-soul-sg-160.png"
+                                                        src="img/v2-mn-soul-sg-160.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         50%
@@ -233,7 +233,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
                                                 <div className="fortuna-prize">
                                                     <img
                                                         className="prize-pic"
-                                                        src="v2-mn-soul-sg-160.png"
+                                                        src="img/v2-mn-soul-sg-160.png"
                                                     />
                                                     <div className="fortuna-check-num res-amount">
                                                         x2

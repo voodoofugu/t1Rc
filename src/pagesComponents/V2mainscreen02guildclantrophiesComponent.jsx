@@ -22,7 +22,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="trophy/trophy/002_1.png"
+                                                    src="img/trophy/gt_02-c-ava.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -56,7 +56,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="trophy/trophy/003_1.png"
+                                                    src="img/trophy/gt_03-c-ava.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -95,7 +95,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="trophy/trophy/004_1.png"
+                                                    src="img/trophy/gt_04-c-ava.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -134,7 +134,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="trophy/trophy/006_1.png"
+                                                    src="img/trophy/gt_06-c-ava.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -162,7 +162,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="trophy/trophy/007_1.png"
+                                                    src="img/trophy/gt_05-c-ava.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -210,7 +210,10 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                     style={{
                                         backgroundImage: "url('https",
                                     }}>
-                                    <img src="trophy/trophy/004_1.png" alt="" />
+                                    <img
+                                        src="img/trophy/gt_04-c-ava.png"
+                                        alt=""
+                                    />
                                     <div className="popup-stars">
                                         <div className="star checked"></div>
                                         <div className="star checked"></div>

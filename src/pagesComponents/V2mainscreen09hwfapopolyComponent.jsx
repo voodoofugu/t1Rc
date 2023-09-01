@@ -780,7 +780,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                 <div className="fapop-rewards-box">
                                     <div className="fapop-rewards girl good">
                                         <div className="fapop-rew-pic">
-                                            <img src="img/__3e87/images/superhero_new/suphero-08/x1/avatar/08sh-ava-1.jpg" />
+                                            <img src="img/images/superhero/suphero-08/x1/avatar/08sh-ava-1.jpg" />
                                         </div>
                                         <div className="fapop-rew-pts">
                                             Sidzuki Yano
@@ -1515,7 +1515,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block girl">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="img/images/superhero_new/suphero-652/x1/avatar/652sh-ava-1.jpg" />
+                                                        <img src="img/images/superhero/suphero-652/x1/avatar/652sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1643,7 +1643,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block girl">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="img/images/superhero_new/suphero-653/x1/avatar/653sh-ava-1.jpg" />
+                                                        <img src="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -1915,7 +1915,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="hw-btlpass-level-rew-box block girl">
                                                     <div className="hw-btlpass-level-rew-pic">
-                                                        <img src="img/__41e3/images/superhero_new/suphero-656/x1/avatar/656sh-ava-1.jpg" />
+                                                        <img src="img/images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg" />
                                                     </div>
                                                     <div className="hw-btlpass-level-rew-good"></div>
                                                     <div className="hw-btlpass-level-rew-num">
@@ -2549,7 +2549,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                         </div>
                                         <div className="lhero-box">
                                             <div className="lhero-pic">
-                                                <img src="img/__4e91/images/superhero_new/suphero-250/x2/250sh-1.jpg" />
+                                                <img src="img/images/superhero/suphero-250/x2/250sh-1.jpg" />
                                             </div>
                                             <div className="topname-box">
                                                 <div className="lrare-box common"></div>
@@ -2578,7 +2578,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                                                 </div>
                                                 <div className="girl-bonus-box">
                                                     <div className="girl-bonus-pic">
-                                                        <img src="img/__3c7f/images/superhero_new/suphero-250/x2/avatar/250sh-ava-1.jpg" />
+                                                        <img src="img/images/superhero/suphero-250/x2/avatar/250sh-ava-1.jpg" />
                                                     </div>
                                                 </div>
                                             </div>

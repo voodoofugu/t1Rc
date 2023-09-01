@@ -13,7 +13,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('/images/back/new/02-Forest-2.jpg')",
+                            "url('img/images/back/new/02-Forest-2.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
@@ -3125,7 +3125,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                     <div className="hero-avatar-box">
                                         <img
                                             className="hero-avatar"
-                                            src="img/tithero-11-1-ava.jpg"
+                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                         />
                                     </div>
                                     <div className="color-btn green">

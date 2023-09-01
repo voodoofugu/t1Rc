@@ -38,8 +38,14 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img className="bg" src="v2-cw-bg34.png" />
-                                    <img className="fg" src="v2-cw-p03.png" />
+                                    <img
+                                        className="bg"
+                                        src="img/v2-cw-bg34.png"
+                                    />
+                                    <img
+                                        className="fg"
+                                        src="img/v2-cw-p03.png"
+                                    />
                                 </div>
                                 <div className="might-box-name">Valhalla</div>
                             </div>
@@ -113,7 +119,10 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "450ms" }}>
-                                <img className="icon" src="v2-ns-ball.png" />
+                                <img
+                                    className="icon"
+                                    src="img/v2-ns-ball.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">68:49:25</div>
                                 </div>
@@ -121,7 +130,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="v2-mn-soul-sg-160.png"
+                                    src="img/v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li
@@ -287,7 +296,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card check">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
@@ -304,7 +313,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero/suphero-02/x1/avatar/02sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
@@ -321,7 +330,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-03/x1/avatar/03sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero/suphero-03/x1/avatar/03sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
@@ -338,7 +347,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-04/x1/avatar/04sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero/suphero-04/x1/avatar/04sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl010"></div>
@@ -355,7 +364,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-07/x1/avatar/07sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-07/x1/avatar/07sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
@@ -372,7 +381,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-08/x1/avatar/08sh-ava-2.jpg" />
+                                                            <img src="img/images/superhero/suphero-08/x1/avatar/08sh-ava-2.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl04"></div>
@@ -389,7 +398,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
+                                                            <img src="img/images/superhero/suphero-09/x1/avatar/09sh-ava-2.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl04"></div>
@@ -406,7 +415,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-10/x1/avatar/10sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
@@ -423,7 +432,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-13/x1/avatar/13sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
@@ -440,7 +449,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-09/x1/avatar/09sh-ava-2.jpg" />
+                                                            <img src="img/images/superhero/suphero-09/x1/avatar/09sh-ava-2.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl04"></div>
@@ -457,7 +466,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-10/x1/avatar/10sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-10/x1/avatar/10sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
@@ -474,7 +483,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                 <li className="suphero-card">
                                                     <div className="hero-pic-box">
                                                         <div className="hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-13/x1/avatar/13sh-ava-1.jpg" />
+                                                            <img src="img/images/superhero/suphero-13/x1/avatar/13sh-ava-1.jpg" />
                                                         </div>
                                                         <div className="herostar-box">
                                                             <div className="herostar lvl02"></div>
@@ -495,10 +504,10 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                         <div className="suphero-right-box">
                                             <div className="lhero-box">
                                                 <div className="lhero-pic">
-                                                    <img src="img/images/superhero_new/suphero-01/x1/01sh-5.jpg" />
+                                                    <img src="img/images/superhero/suphero-01/x1/01sh-5.jpg" />
                                                     <img
                                                         className="star-up"
-                                                        src="img/images/superhero_new/suphero-01/x1/01sh-5.jpg"
+                                                        src="img/images/superhero/suphero-01/x1/01sh-5.jpg"
                                                     />
                                                 </div>
                                                 <div className="topname-box">
@@ -533,7 +542,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="girl-bonus-box">
                                                         <div className="girl-bonus-pic">
-                                                            <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -642,7 +651,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="girl-bonus-box">
                                                         <div className="girl-bonus-pic">
-                                                            <img src="img/images/superhero_new/suphero-01/x1/avatar/01sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero/suphero-01/x1/avatar/01sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="girl-5star"></div>
                                                         <div className="sh2-prgbar-all">
@@ -658,7 +667,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="girl-bonus-box next">
                                                         <div className="girl-bonus-pic">
-                                                            <img src="img/images/superhero_new/suphero-02/x1/avatar/02sh-ava-5.jpg" />
+                                                            <img src="img/images/superhero/suphero-02/x1/avatar/02sh-ava-5.jpg" />
                                                         </div>
                                                         <div className="girl-5star"></div>
                                                         <div className="sh2-prgbar-all">
@@ -674,7 +683,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                                     </div>
                                                     <div className="bonus-hero-pic-box-upgrade">
                                                         <div className="bonus-hero-pic">
-                                                            <img src="img/images/superhero_new/suphero-01/x2/avatar/01sh-ava-6.jpg" />
+                                                            <img src="img/images/superhero/suphero-01/x2/avatar/01sh-ava-6.jpg" />
                                                         </div>
                                                     </div>
                                                     <div className="bonus-buy-box-all">

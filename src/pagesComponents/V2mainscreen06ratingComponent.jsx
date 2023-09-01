@@ -704,7 +704,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Мадока Кайто
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="img/__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg" />
+                                                        <img src="img/images/hero-all/tithero-05/x1/tithero-05-1.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -774,7 +774,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Акэми Имма
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="img/__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg" />
+                                                        <img src="img/images/hero-all/tithero-13/x1/tithero-13-1.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -852,7 +852,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Амая Карасу
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="img/__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg" />
+                                                        <img src="img/images/hero-all/tithero-25/x1/tithero-25-1.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -1007,7 +1007,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="imgimages/hero-all/tithero-05/x1/tithero-05-1.jpg"
+                                                            src="img/images/hero-all/tithero-05/x1/tithero-05-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -1084,7 +1084,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="imgimages/hero-all/tithero-13/x1/tithero-13-1.jpg"
+                                                            src="img/images/hero-all/tithero-13/x1/tithero-13-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -1169,7 +1169,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="imgimages/hero-all/tithero-25/x1/tithero-25-1.jpg"
+                                                            src="img/images/hero-all/tithero-25/x1/tithero-25-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">

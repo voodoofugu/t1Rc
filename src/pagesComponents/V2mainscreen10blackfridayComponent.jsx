@@ -127,7 +127,7 @@ const V2MainScreen10BlackfridayComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -167,7 +167,7 @@ const V2MainScreen10BlackfridayComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="img/tithero-11-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -213,7 +213,7 @@ const V2MainScreen10BlackfridayComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />
@@ -254,7 +254,7 @@ const V2MainScreen10BlackfridayComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="img/tithero-11-1-ava.jpg"
+                                                            src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
                                                         />
                                                         <div className="sh2-icon-forgirl">
                                                             <img src="img/cur2-barbarian.png" />

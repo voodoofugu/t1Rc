@@ -1015,7 +1015,7 @@ const V2MainScreen15CwMainComponent = () => {
                                             <div className="cw-clan-logo-box">
                                                 <img
                                                     className="cw-clan-bg"
-                                                    src="v2-cw-bg34.png"
+                                                    src="img/v2-cw-bg34.png"
                                                 />
                                                 <div className="cw-clan-img">
                                                     <img src="img/v2-cw-p03.png" />

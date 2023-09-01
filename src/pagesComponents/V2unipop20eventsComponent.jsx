@@ -90,7 +90,7 @@ const V2Unipop20EventsComponent = () => {
                                             />
                                             <div>
                                                 <img
-                                                    src="imgimages/hero-all/tithero-188/x2/ava/tithero-188-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-188/x2/ava/tithero-188-1-ava.jpg"
                                                     style={{
                                                         position: "absolute",
                                                         width: "55px",
@@ -118,7 +118,7 @@ const V2Unipop20EventsComponent = () => {
                                             />
                                             <div>
                                                 <img
-                                                    src="imgimages/superhero_new/suphero-757/x2/avatar/757sh-ava-1.jpg"
+                                                    src="img/images/superhero/suphero-757/x2/avatar/757sh-ava-1.jpg"
                                                     style={{
                                                         position: "absolute",
                                                         width: "55px",
@@ -196,7 +196,7 @@ const V2Unipop20EventsComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="images\superhero\suphero-778\x1\avatar\778sh-ava-1.jpg"
+                                                            src="img/images\superhero\suphero-778\x1\avatar\778sh-ava-1.jpg"
                                                         />
                                                     </div>
                                                 </div>
@@ -204,7 +204,7 @@ const V2Unipop20EventsComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="images\superhero\suphero-777\x1\avatar\777sh-ava-1.jpg"
+                                                            src="img/images\superhero\suphero-777\x1\avatar\777sh-ava-1.jpg"
                                                         />
                                                     </div>
                                                 </div>
@@ -212,7 +212,7 @@ const V2Unipop20EventsComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="images\superhero\suphero-776\x1\avatar\776sh-ava-1.jpg"
+                                                            src="img/images\superhero\suphero-776\x1\avatar\776sh-ava-1.jpg"
                                                         />
                                                     </div>
                                                 </div>
@@ -220,7 +220,7 @@ const V2Unipop20EventsComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="images\superhero\suphero-771\x1\avatar\771sh-ava-1.jpg"
+                                                            src="img/images\superhero\suphero-771\x1\avatar\771sh-ava-1.jpg"
                                                         />
                                                     </div>
                                                 </div>
@@ -228,7 +228,7 @@ const V2Unipop20EventsComponent = () => {
                                                     <div className="hero-avatar-box">
                                                         <img
                                                             className="hero-avatar"
-                                                            src="images\superhero\suphero-767\x1\avatar\767sh-ava-1.jpg"
+                                                            src="img/images\superhero\suphero-767\x1\avatar\767sh-ava-1.jpg"
                                                         />
                                                     </div>
                                                 </div>

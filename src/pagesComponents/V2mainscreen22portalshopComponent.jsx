@@ -36,7 +36,7 @@ const V2MainScreen22PortalShopComponent = () => {
                                         <div className="card-info-btn"></div>
                                         <div className="keys-but-box">
                                             <img
-                                                src="images\superhero\suphero-506\x2\506sh-1.jpg"
+                                                src="img/images\superhero\suphero-506\x2\506sh-1.jpg"
                                                 alt=""
                                             />
                                         </div>

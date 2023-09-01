@@ -77,7 +77,7 @@ const V2Unipop20StarterpackComponent = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-194/x2/tithero-194-1.jpg"
+                                                    src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">
@@ -113,7 +113,7 @@ const V2Unipop20StarterpackComponent = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-194/x2/tithero-194-1.jpg"
+                                                    src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">
@@ -133,7 +133,7 @@ const V2Unipop20StarterpackComponent = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-194/x2/tithero-194-1.jpg"
+                                                    src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">
@@ -148,7 +148,7 @@ const V2Unipop20StarterpackComponent = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-194/x2/tithero-194-1.jpg"
+                                                    src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">

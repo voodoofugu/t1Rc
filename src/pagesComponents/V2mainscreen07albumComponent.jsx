@@ -45,11 +45,11 @@ const V2MainScreen07AlbumComponent = () => {
                                         <div className="might-box-pic">
                                             <img
                                                 className="bg"
-                                                src="v2-cw-bg34.png"
+                                                src="img/v2-cw-bg34.png"
                                             />
                                             <img
                                                 className="fg"
-                                                src="v2-cw-p03.png"
+                                                src="img/v2-cw-p03.png"
                                             />
                                         </div>
                                         <div className="might-box-name">
@@ -118,7 +118,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     <li className="quest startpack wide">
                                         <img
                                             className="icon"
-                                            src="v2-mn-pr-100-in.png"
+                                            src="img/v2-mn-pr-100-in.png"
                                         />
                                         <div className="timerbox">
                                             <div className="timer">
@@ -131,7 +131,7 @@ const V2MainScreen07AlbumComponent = () => {
                                         style={{ animationDelay: "450ms" }}>
                                         <img
                                             className="icon"
-                                            src="v2-ns-ball.png"
+                                            src="img/v2-ns-ball.png"
                                         />
                                         <div className="timerbox">
                                             <div className="timer">
@@ -142,7 +142,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     <li className="quest startpack wide">
                                         <img
                                             className="icon"
-                                            src="v2-mn-soul-sg-160.png"
+                                            src="img/v2-mn-soul-sg-160.png"
                                         />
                                     </li>
                                     <li
@@ -169,7 +169,7 @@ const V2MainScreen07AlbumComponent = () => {
                                         style={{ animationDelay: "750ms" }}>
                                         <img
                                             className="icon"
-                                            src="v2-fw-icon-fr0.png"
+                                            src="img/v2-fw-icon-fr0.png"
                                         />
                                         <div className="timerbox">
                                             <div className="timer">
@@ -1814,7 +1814,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in check">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="imgimages/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
+                                                                                src="img/images/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -1823,7 +1823,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="imgimages/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
+                                                                                    src="img/images/hero-all/tithero-50/x1/ava/tithero-50-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>
@@ -1930,7 +1930,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in check">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="imgimages/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
+                                                                                src="img/images/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -1939,7 +1939,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="imgimages/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
+                                                                                    src="img/images/hero-all/tithero-51/x1/ava/tithero-51-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>
@@ -2068,7 +2068,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in check">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="imgimages/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
+                                                                                src="img/images/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -2077,7 +2077,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="imgimages/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
+                                                                                    src="img/images/hero-all/tithero-52/x1/ava/tithero-52-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>
@@ -2227,7 +2227,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                         <div className="openchest-in">
                                                                             <img
                                                                                 className="inchest-pic hero-pic"
-                                                                                src="imgimages/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
+                                                                                src="img/images/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
                                                                             />
                                                                             <div className="openchest-in-count">
                                                                                 New
@@ -2236,7 +2236,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                             <div className="openchest-bonus-pic">
                                                                                 <img
                                                                                     className="openchest-pic"
-                                                                                    src="imgimages/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
+                                                                                    src="img/images/hero-all/tithero-53/x1/ava/tithero-53-1-ava.jpg"
                                                                                 />
                                                                             </div>
                                                                             <div className="openchest-in-check"></div>

@@ -38,8 +38,14 @@ const V2MainScreen02GuildMineComponent = () => {
                         <div className="might-box-all">
                             <div>
                                 <div className="might-box-pic">
-                                    <img className="bg" src="v2-cw-bg34.png" />
-                                    <img className="fg" src="v2-cw-p03.png" />
+                                    <img
+                                        className="bg"
+                                        src="img/v2-cw-bg34.png"
+                                    />
+                                    <img
+                                        className="fg"
+                                        src="img/v2-cw-p03.png"
+                                    />
                                 </div>
                                 <div className="might-box-name">Valhalla</div>
                             </div>
@@ -124,7 +130,10 @@ const V2MainScreen02GuildMineComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "600ms" }}>
-                                <img className="icon" src="v2-ns-ball.png" />
+                                <img
+                                    className="icon"
+                                    src="img/v2-ns-ball.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">23:03:34</div>
                                 </div>
@@ -132,7 +141,7 @@ const V2MainScreen02GuildMineComponent = () => {
                             <li className="quest startpack wide">
                                 <img
                                     className="icon"
-                                    src="v2-mn-soul-sg-160.png"
+                                    src="img/v2-mn-soul-sg-160.png"
                                 />
                             </li>
                             <li

@@ -64,7 +64,7 @@ const V2Unipop20StarterpackNew1Component = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-156/x2/ava/tithero-156-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-156/x2/ava/tithero-156-1-ava.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">
@@ -127,7 +127,7 @@ const V2Unipop20StarterpackNew1Component = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-159/x2/tithero-159-1.jpg"
+                                                    src="img/images/hero-all/tithero-159/x2/tithero-159-1.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">
@@ -142,7 +142,7 @@ const V2Unipop20StarterpackNew1Component = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-160/x2/tithero-160-1.jpg"
+                                                    src="img/images/hero-all/tithero-160/x2/tithero-160-1.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">
@@ -157,7 +157,7 @@ const V2Unipop20StarterpackNew1Component = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-163/x2/tithero-163-1.jpg"
+                                                    src="img/images/hero-all/tithero-163/x2/tithero-163-1.jpg"
                                                 />
                                             </div>
                                             <div className="card-name">
@@ -172,7 +172,7 @@ const V2Unipop20StarterpackNew1Component = () => {
                                             <div className="card">
                                                 <img
                                                     className="card-img"
-                                                    src="./images/hero-all/tithero-156/x2/ava/tithero-156-1-ava.jpg"
+                                                    src="img/images/hero-all/tithero-156/x2/ava/tithero-156-1-ava.jpg"
                                                 />
                                             </div>
                                             <div className="cardnameback">

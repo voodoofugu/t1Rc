@@ -9,7 +9,8 @@ const V2MainScreen08UkiDailyComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        backgroundImage: "url('/images/back/new/09-River.jpg')",
+                        backgroundImage:
+                            "url('img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
@@ -79,7 +80,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ animationDelay: "0ms" }}>
                                     <img
                                         className="icon"
-                                        src="img/ic-superhero-10.png"
+                                        src="img/ic-sh-28.png"
                                     />
                                 </li>
                                 <li className="quest picmeh-info info">
@@ -119,7 +120,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 <li className="quest startpack wide">
                                     <img
                                         className="icon"
-                                        src="cw-quest-icon.png"
+                                        src="img/cw-quest-icon.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">1D 03:08</div>
@@ -130,7 +131,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                     style={{ animationDelay: "150ms" }}>
                                     <img
                                         className="icon"
-                                        src="v2-fw-icon-fr0.png"
+                                        src="img/v2-fw-icon-fr0.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">71:32:33</div>
@@ -139,7 +140,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                                 <li className="quest startpack wide">
                                     <img
                                         className="icon"
-                                        src="v2-mn-soul-sg-160.png"
+                                        src="img/v2-mn-soul-sg-160.png"
                                     />
                                 </li>
                                 <li className="quest marked">

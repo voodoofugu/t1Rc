@@ -346,7 +346,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="imgimages/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -354,7 +354,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="imgimages/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -362,7 +362,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="imgimages/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -370,7 +370,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="imgimages/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -378,7 +378,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="imgimages/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
