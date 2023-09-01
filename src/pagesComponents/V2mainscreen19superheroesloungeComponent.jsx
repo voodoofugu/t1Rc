@@ -77,7 +77,10 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "0ms" }}>
-                                <img className="icon" src="change-sun3.png" />
+                                <img
+                                    className="icon"
+                                    src="img/change-sun3.png"
+                                />
                             </li>
                             <li
                                 className="quest open"
@@ -136,7 +139,10 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "600ms" }}>
-                                <img className="icon" src="m-ico-gold.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-gold.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">18:22:05</div>
                                 </div>
@@ -144,13 +150,16 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="picmeh-ic-diamond.png"
+                                    src="img/picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "750ms" }}>
-                                <img className="icon" src="m-ico-quest.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-quest.png"
+                                />
                             </li>
                         </div>
                     </div>

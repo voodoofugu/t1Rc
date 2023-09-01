@@ -96,7 +96,7 @@ const V2MainScreen07AlbumComponent = () => {
                                         style={{ animationDelay: "0ms" }}>
                                         <img
                                             className="icon"
-                                            src="change-sun3.png"
+                                            src="img/change-sun3.png"
                                         />
                                     </li>
                                     <li
@@ -112,7 +112,7 @@ const V2MainScreen07AlbumComponent = () => {
                                         style={{ animationDelay: "300ms" }}>
                                         <img
                                             className="icon"
-                                            src="picmeh-ic-angel-pop.png"
+                                            src="img/picmeh-ic-angel-pop.png"
                                         />
                                     </li>
                                     <li className="quest startpack wide">
@@ -161,7 +161,7 @@ const V2MainScreen07AlbumComponent = () => {
                                     <li className="quest-fortune picmeh-info info">
                                         <img
                                             className="icon"
-                                            src="picmeh-ic-diamond.png"
+                                            src="img/picmeh-ic-diamond.png"
                                         />
                                     </li>
                                     <li
@@ -182,7 +182,7 @@ const V2MainScreen07AlbumComponent = () => {
                                         style={{ animationDelay: "900ms" }}>
                                         <img
                                             className="icon"
-                                            src="m-ico-quest.png"
+                                            src="img/m-ico-quest.png"
                                         />
                                     </li>
                                 </div>
@@ -1862,7 +1862,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="change-ic-ticket.png"
+                                                                        src="img/change-ic-ticket.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         100
@@ -1870,7 +1870,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="change-ic-ticket.png"
+                                                                            src="img/change-ic-ticket.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -1978,7 +1978,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="change-ic-ticket.png"
+                                                                        src="img/change-ic-ticket.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         50
@@ -1986,7 +1986,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="change-ic-ticket.png"
+                                                                            src="img/change-ic-ticket.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2000,7 +2000,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="change-ic-ticket.png"
+                                                                        src="img/change-ic-ticket.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         150
@@ -2008,7 +2008,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="change-ic-ticket.png"
+                                                                            src="img/change-ic-ticket.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>
@@ -2093,7 +2093,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                 <div className="openchest-in check">
                                                                     <img
                                                                         className="inchest-pic"
-                                                                        src="ms-stone-pink.png"
+                                                                        src="img/ms-stone-pink.png"
                                                                     />
                                                                     <div className="openchest-in-count">
                                                                         x2
@@ -2101,7 +2101,7 @@ const V2MainScreen07AlbumComponent = () => {
                                                                     <div className="openchest-bonus-pic">
                                                                         <img
                                                                             className="openchest-pic"
-                                                                            src="ms-stone-pink.png"
+                                                                            src="img/ms-stone-pink.png"
                                                                         />
                                                                     </div>
                                                                     <div className="openchest-in-check"></div>

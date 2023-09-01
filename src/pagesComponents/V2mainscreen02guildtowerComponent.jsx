@@ -147,7 +147,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                             className="hero-avatar-box"
                                                             style={{
                                                                 backgroundImage:
-                                                                    "url('rc/ts_confirm_bk-1-ny.jpg')",
+                                                                    "url('img/ts_confirm_bk-1-ny.jpg')",
                                                                 backgroundSize:
                                                                     "cover",
                                                                 backgroundPosition:
@@ -1426,7 +1426,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                 width="491"
                                                 height="540"
                                                 style={{
-                                                    "touch-action": "none",
+                                                    touchAction: "none",
                                                     width: "491px",
                                                     height: "540px",
                                                     cursor: "inherit",

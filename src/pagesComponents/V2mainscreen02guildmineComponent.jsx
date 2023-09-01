@@ -80,7 +80,10 @@ const V2MainScreen02GuildMineComponent = () => {
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "0ms" }}>
-                                <img className="icon" src="change-sun3.png" />
+                                <img
+                                    className="icon"
+                                    src="img/change-sun3.png"
+                                />
                             </li>
                             <li
                                 className="quest open"
@@ -95,7 +98,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                 style={{ animationDelay: "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="picmeh-ic-angel-pop.png"
+                                    src="img/picmeh-ic-angel-pop.png"
                                 />
                             </li>
                             <li className="quest-fortune">
@@ -147,7 +150,10 @@ const V2MainScreen02GuildMineComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "750ms" }}>
-                                <img className="icon" src="m-ico-gold.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-gold.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">09:48:42</div>
                                 </div>
@@ -155,20 +161,23 @@ const V2MainScreen02GuildMineComponent = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="picmeh-ic-diamond.png"
+                                    src="img/picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "900ms" }}>
-                                <img className="icon" src="m-ico-quest.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-quest.png"
+                                />
                             </li>
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "1050ms" }}>
                                 <img
                                     className="icon"
-                                    src="m-ico-quest-gift.png"
+                                    src="img/m-ico-quest-gift.png"
                                 />
                             </li>
                             <li
@@ -176,7 +185,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                 style={{ animationDelay: "1200ms" }}>
                                 <img
                                     className="icon"
-                                    src="m-ico-quest-gift.png"
+                                    src="img/m-ico-quest-gift.png"
                                 />
                             </li>
                         </div>
@@ -282,7 +291,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                     width="800"
                                                     height="600"
                                                     style={{
-                                                        "touch-action": "none",
+                                                        touchAction: "none",
                                                         width: "120px",
                                                         height: "305px",
                                                         cursor: "inherit",
@@ -322,7 +331,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                     width="800"
                                                     height="600"
                                                     style={{
-                                                        "touch-action": "none",
+                                                        touchAction: "none",
                                                         width: "120px",
                                                         height: "305px",
                                                         cursor: "inherit",
@@ -362,7 +371,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                     width="800"
                                                     height="600"
                                                     style={{
-                                                        "touch-action": "none",
+                                                        touchAction: "none",
                                                         width: "120px",
                                                         height: "305px",
                                                         cursor: "inherit",
@@ -402,7 +411,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                     width="800"
                                                     height="600"
                                                     style={{
-                                                        "touch-action": "none",
+                                                        touchAction: "none",
                                                         width: "120px",
                                                         height: "305px",
                                                         cursor: "inherit",

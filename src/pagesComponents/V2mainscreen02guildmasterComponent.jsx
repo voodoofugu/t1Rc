@@ -81,7 +81,10 @@ const V2MainScreen02GuildMasterComponent = () => {
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "0ms" }}>
-                                <img className="icon" src="change-sun3.png" />
+                                <img
+                                    className="icon"
+                                    src="img/change-sun3.png"
+                                />
                             </li>
                             <li
                                 className="quest open"
@@ -96,7 +99,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                 style={{ animationDelay: "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="picmeh-ic-angel-pop.png"
+                                    src="img/picmeh-ic-angel-pop.png"
                                 />
                             </li>
                             <li className="quest-fortune">
@@ -148,7 +151,10 @@ const V2MainScreen02GuildMasterComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "750ms" }}>
-                                <img className="icon" src="m-ico-gold.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-gold.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">06:16:16</div>
                                 </div>
@@ -156,20 +162,23 @@ const V2MainScreen02GuildMasterComponent = () => {
                             <li className="quest-fortune picmeh-info info">
                                 <img
                                     className="icon"
-                                    src="picmeh-ic-diamond.png"
+                                    src="img/picmeh-ic-diamond.png"
                                 />
                             </li>
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "900ms" }}>
-                                <img className="icon" src="m-ico-quest.png" />
+                                <img
+                                    className="icon"
+                                    src="img/m-ico-quest.png"
+                                />
                             </li>
                             <li
                                 className="quest open"
                                 style={{ animationDelay: "1050ms" }}>
                                 <img
                                     className="icon"
-                                    src="m-ico-quest-gift.png"
+                                    src="img/m-ico-quest-gift.png"
                                 />
                             </li>
                             <li
@@ -177,7 +186,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                 style={{ animationDelay: "1200ms" }}>
                                 <img
                                     className="icon"
-                                    src="m-ico-quest-gift.png"
+                                    src="img/m-ico-quest-gift.png"
                                 />
                             </li>
                         </div>
@@ -209,7 +218,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                             <div>
                                                 <div className="master-box">
                                                     <img
-                                                        src="p-master-a1.jpg"
+                                                        src="img/p-master-a1.jpg"
                                                         className="master-hero"
                                                     />
                                                 </div>
@@ -223,7 +232,7 @@ const V2MainScreen02GuildMasterComponent = () => {
                                                             id="bob"
                                                             type="text"
                                                             name="name"
-                                                            maxlength="20"
+                                                            maxLength="20"
                                                         />
                                                         <div className="btn-edit-small"></div>
                                                         <div className="btn-enter-small"></div>

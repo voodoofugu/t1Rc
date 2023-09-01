@@ -1877,7 +1877,7 @@ const V2MainScreen01Component = () => {
                                             <div className="item">
                                                 <img
                                                     className="winner-prize"
-                                                    src="sh-icon-chest-128.png"
+                                                    src="img/sh-icon-chest-128.png"
                                                 />
                                                 <div className="reward-value">
                                                     100

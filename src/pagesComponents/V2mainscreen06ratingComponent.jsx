@@ -922,7 +922,7 @@ const V2MainScreen06RatingComponent = () => {
                                                         Цубаса Акума
                                                     </div>
                                                     <div className="card-girl-box">
-                                                        <img src="img/images/superhero/suphero-04/x1/04suphero-02.jpg" />
+                                                        <img src="img/images/superhero/suphero-04/x1/04sh-2.jpg" />
                                                     </div>
                                                     <div className="rating-visual">
                                                         <div className="rating-str">
@@ -1247,7 +1247,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="images/superhero/suphero-04/x1/04suphero-02.jpg"
+                                                            src="images/superhero/suphero-04/x1/04sh-2.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">

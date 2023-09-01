@@ -9,7 +9,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('images/back/new/01-Forest-1.jpg')",
+                            "url('img/images/back/new/01-Forest-1.jpg')",
                     }}></div>
                 <div className="sexped-header">
                     <div className="title-wrap">

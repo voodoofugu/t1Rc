@@ -134,7 +134,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p1-c1.jpg" />
+                                                    <img src="img/story/t/p1-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -145,7 +145,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p1-c2.jpg" />
+                                                    <img src="img/story/t/p1-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -156,7 +156,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p1-c3.jpg" />
+                                                    <img src="img/story/t/p1-c3.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -170,7 +170,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p2-c1.jpg" />
+                                                    <img src="img/story/t/p2-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -181,7 +181,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p2-c2.jpg" />
+                                                    <img src="img/story/t/p2-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -195,7 +195,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p3-c1.jpg" />
+                                                    <img src="img/story/t/p3-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -206,7 +206,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p3-c2.jpg" />
+                                                    <img src="img/story/t/p3-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -217,7 +217,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p3-c3.jpg" />
+                                                    <img src="img/story/t/p3-c3.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -231,7 +231,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p4-c1.jpg" />
+                                                    <img src="img/story/t/p4-c1.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -242,7 +242,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                             </div>
                                             <div className="journal-comics-box false">
                                                 <div className="journal-prw-comics-pic">
-                                                    <img src="img/story/t/p4-c2.jpg" />
+                                                    <img src="img/story/t/p4-c2.png" />
                                                 </div>
                                                 <div className="journal-prw-comics-lock"></div>
                                                 <div className="journal-prw-comics-text-box">
@@ -263,7 +263,7 @@ const V2MainScreen08UkiStoryComponent = () => {
                                         <div className="journal-comics">
                                             <img
                                                 className="pic"
-                                                src="story/p1-c1.jpg"
+                                                src="img/story/p1-c1.png"
                                             />
                                             <div
                                                 className="journal-comics-ballon-box"

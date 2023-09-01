@@ -8,7 +8,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        backgroundImage: "url('rc/v2-fapop-hw1.jpg')",
+                        backgroundImage: "url('img/v2-fapop-hw1.jpg')",
                     }}></div>
                 <div className="fapop-content-all">
                     <div>
