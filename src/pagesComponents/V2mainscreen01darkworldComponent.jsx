@@ -112,7 +112,10 @@ const V2MainScreen01DarkWorldComponent = () => {
                             <li
                                 className="quest startpack open"
                                 style={{ animationDelay: "450ms" }}>
-                                <img className="icon" src="ic-hero-211.png" />
+                                <img
+                                    className="icon"
+                                    src="img/ic-hero-211.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">23:29:14</div>
                                 </div>

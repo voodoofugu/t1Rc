@@ -69,7 +69,7 @@ const V2MainScreen15CwMain3Component = () => {
                     <div className="quest-box-scroll">
                         <div className="quest-box">
                             <li className="quest quest-box">
-                                <img className="icon" src="ic-quests.png" />
+                                <img className="icon" src="img/ic-quests.png" />
                                 <div className="quest-notif notif notif10"></div>
                             </li>
                             <li
@@ -82,7 +82,7 @@ const V2MainScreen15CwMain3Component = () => {
                                 style={{ animationDelay: "150ms" }}>
                                 <img
                                     className="icon"
-                                    src="ic-abil-reborn.png"
+                                    src="img/ic-abil-reborn.png"
                                 />
                             </li>
                             <li
@@ -94,7 +94,10 @@ const V2MainScreen15CwMain3Component = () => {
                                 />
                             </li>
                             <li className="quest-fortune">
-                                <img className="icon" src="ic-fortuna.png" />
+                                <img
+                                    className="icon"
+                                    src="img/ic-fortuna.png"
+                                />
                                 <div className="timerbox">
                                     <div className="timer">SPIN!</div>
                                 </div>

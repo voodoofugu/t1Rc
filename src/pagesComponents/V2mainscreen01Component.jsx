@@ -104,7 +104,7 @@ const V2MainScreen01Component = () => {
                                     style={{ animationDelay: "450ms" }}>
                                     <img
                                         className="icon"
-                                        src="ic-hero-211.png"
+                                        src="img/ic-hero-211.png"
                                     />
                                     <div className="timerbox">
                                         <div className="timer">23:29:14</div>

@@ -10,7 +10,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('__675b/images/back/new/09-River.jpg')",
+                            "url('img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

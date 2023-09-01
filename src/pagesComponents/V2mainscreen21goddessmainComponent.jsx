@@ -203,7 +203,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="__7950/images/hero-all/tithero-20/x1/ava/tithero-20-1-ava.jpg"
+                                                    src="imgimages/hero-all/tithero-20/x1/ava/tithero-20-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-barbarian.png" />
@@ -276,7 +276,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="__1d9c/images/hero-all/tithero-21/x1/ava/tithero-21-1-ava.jpg"
+                                                    src="imgimages/hero-all/tithero-21/x1/ava/tithero-21-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-wizard.png" />
@@ -349,7 +349,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="__e8e9/images/hero-all/tithero-22/x1/ava/tithero-22-1-ava.jpg"
+                                                    src="imgimages/hero-all/tithero-22/x1/ava/tithero-22-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-quitar.png" />
@@ -422,7 +422,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="__c076/images/hero-all/tithero-23/x1/ava/tithero-23-1-ava.jpg"
+                                                    src="imgimages/hero-all/tithero-23/x1/ava/tithero-23-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-cleric.png" />
@@ -495,7 +495,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="__cb17/images/hero-all/tithero-24/x1/ava/tithero-24-1-ava.jpg"
+                                                    src="imgimages/hero-all/tithero-24/x1/ava/tithero-24-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-wizard.png" />
@@ -568,7 +568,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                                             <div className="hero-avatar-box">
                                                 <img
                                                     className="hero-avatar"
-                                                    src="__3c4d/images/hero-all/tithero-25/x1/ava/tithero-25-1-ava.jpg"
+                                                    src="imgimages/hero-all/tithero-25/x1/ava/tithero-25-1-ava.jpg"
                                                 />
                                                 <div className="sh2-icon-forgirl">
                                                     <img src="img/cur2-druid.png" />

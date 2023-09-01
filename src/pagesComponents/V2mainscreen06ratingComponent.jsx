@@ -1007,7 +1007,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg"
+                                                            src="imgimages/hero-all/tithero-05/x1/tithero-05-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -1084,7 +1084,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg"
+                                                            src="imgimages/hero-all/tithero-13/x1/tithero-13-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">
@@ -1169,7 +1169,7 @@ const V2MainScreen06RatingComponent = () => {
                                                     <div className="girl-card-box">
                                                         <img
                                                             className="girl-card"
-                                                            src="__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg"
+                                                            src="imgimages/hero-all/tithero-25/x1/tithero-25-1.jpg"
                                                         />
                                                     </div>
                                                     <div className="girl-bonus-fullset">

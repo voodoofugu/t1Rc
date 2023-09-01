@@ -90,7 +90,7 @@ const V2Unipop20EventsComponent = () => {
                                             />
                                             <div>
                                                 <img
-                                                    src="__509e/images/hero-all/tithero-188/x2/ava/tithero-188-1-ava.jpg"
+                                                    src="imgimages/hero-all/tithero-188/x2/ava/tithero-188-1-ava.jpg"
                                                     style={{
                                                         position: "absolute",
                                                         width: "55px",
@@ -118,7 +118,7 @@ const V2Unipop20EventsComponent = () => {
                                             />
                                             <div>
                                                 <img
-                                                    src="__b4eb/images/superhero_new/suphero-757/x2/avatar/757sh-ava-1.jpg"
+                                                    src="imgimages/superhero_new/suphero-757/x2/avatar/757sh-ava-1.jpg"
                                                     style={{
                                                         position: "absolute",
                                                         width: "55px",

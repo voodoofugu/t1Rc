@@ -9,7 +9,7 @@ const V2MainScreen22SquadMainComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('__675b/images/back/new/09-River.jpg')",
+                            "url('img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
@@ -346,7 +346,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__1ed9/images/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
+                                                                        src="imgimages/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -354,7 +354,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__4ec9/images/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
+                                                                        src="imgimages/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -362,7 +362,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__e9cc/images/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
+                                                                        src="imgimages/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -370,7 +370,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__0a10/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
+                                                                        src="imgimages/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -378,7 +378,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__7cdd/images/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
+                                                                        src="imgimages/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -386,7 +386,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__83a0/images/hero-all/tithero-5006/x1/ava/tithero-5006-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5006/x1/ava/tithero-5006-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -429,7 +429,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__96c7/images/hero-all/tithero-5007/x1/ava/tithero-5007-4-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5007/x1/ava/tithero-5007-4-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -437,7 +437,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__9ff8/images/hero-all/tithero-5008/x1/ava/tithero-5008-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5008/x1/ava/tithero-5008-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -445,7 +445,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__9e07/images/hero-all/tithero-5009/x1/ava/tithero-5009-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5009/x1/ava/tithero-5009-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -453,7 +453,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__bbab/images/hero-all/tithero-5010/x1/ava/tithero-5010-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-5010/x1/ava/tithero-5010-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -461,7 +461,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__9f6d/images/hero-all/tithero-11/x1/ava/tithero-11-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-11/x1/ava/tithero-11-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -469,7 +469,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__eaa8/images/hero-all/tithero-13/x1/ava/tithero-13-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-13/x1/ava/tithero-13-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -513,7 +513,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__6b77/images/hero-all/tithero-14/x1/ava/tithero-14-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-14/x1/ava/tithero-14-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -521,7 +521,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__f069/images/hero-all/tithero-15/x1/ava/tithero-15-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-15/x1/ava/tithero-15-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -529,7 +529,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__b08d/images/hero-all/tithero-16/x1/ava/tithero-16-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-16/x1/ava/tithero-16-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -537,7 +537,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__119a/images/hero-all/tithero-17/x1/ava/tithero-17-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-17/x1/ava/tithero-17-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -545,7 +545,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__5f6c/images/hero-all/tithero-18/x1/ava/tithero-18-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-18/x1/ava/tithero-18-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -553,7 +553,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__29af/images/hero-all/tithero-19/x1/ava/tithero-19-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-19/x1/ava/tithero-19-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -597,7 +597,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__28fb/images/hero-all/tithero-20/x1/ava/tithero-20-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-20/x1/ava/tithero-20-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -605,7 +605,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__8563/images/hero-all/tithero-21/x1/ava/tithero-21-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-21/x1/ava/tithero-21-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -613,7 +613,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__c20a/images/hero-all/tithero-22/x1/ava/tithero-22-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-22/x1/ava/tithero-22-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -621,7 +621,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__cd48/images/hero-all/tithero-23/x1/ava/tithero-23-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-23/x1/ava/tithero-23-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -629,7 +629,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__d31e/images/hero-all/tithero-24/x1/ava/tithero-24-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-24/x1/ava/tithero-24-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -637,7 +637,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__9d85/images/hero-all/tithero-25/x1/ava/tithero-25-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-25/x1/ava/tithero-25-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -681,7 +681,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__67fe/images/hero-all/tithero-26/x1/ava/tithero-26-4-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-26/x1/ava/tithero-26-4-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -689,7 +689,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__d4ad/images/hero-all/tithero-27/x1/ava/tithero-27-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-27/x1/ava/tithero-27-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -697,7 +697,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__2344/images/hero-all/tithero-28/x1/ava/tithero-28-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-28/x1/ava/tithero-28-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -705,7 +705,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__72a8/images/hero-all/tithero-29/x1/ava/tithero-29-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-29/x1/ava/tithero-29-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -713,7 +713,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__e88e/images/hero-all/tithero-30/x1/ava/tithero-30-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-30/x1/ava/tithero-30-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -721,7 +721,7 @@ const V2MainScreen22SquadMainComponent = () => {
                                                                 <div className="squad-card-hero">
                                                                     <img
                                                                         className="squad-card-hero-img"
-                                                                        src="__5255/images/hero-all/tithero-31/x1/ava/tithero-31-5-ava.jpg"
+                                                                        src="img/images/hero-all/tithero-31/x1/ava/tithero-31-5-ava.jpg"
                                                                     />
                                                                 </div>
                                                             </div>

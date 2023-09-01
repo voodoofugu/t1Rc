@@ -2635,7 +2635,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             <div className="openchest-bonus-pic">
                                                 <img
                                                     className="openchest-pic"
-                                                    src="ic-abil-gold@2x.png"
+                                                    src="img/ic-abil-gold@2x.png"
                                                 />
                                             </div>
                                             <div className="openchest-in-check"></div>
