@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import v2Unipop20Pse2Pop from "../styles/v2-unipop-20-pse2-pop.scss";
 import screenBank from "../styles/screen-bank.scss";
 

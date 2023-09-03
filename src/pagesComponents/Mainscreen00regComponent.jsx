@@ -229,7 +229,7 @@ position: relative;
       <Helmet>
         <style>{css}</style>
       </Helmet>
-      <div className="main world1">
+      <div className="main">
         {/* <div className="pers">
                     <img
                         className="img"

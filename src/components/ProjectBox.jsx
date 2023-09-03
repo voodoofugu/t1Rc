@@ -1,7 +1,14 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  Suspense,
+} from "react";
 import html2canvas from "html2canvas";
 import LazyLoad from "react-lazy-load";
 import _ from "lodash"; // Импортируем lodash для мемоизации функций
+import AaComponMap from "../components/AaComponMap.jsx";
 
 const fileContexts = [require.context("/src/pages", true, /\.html$/)];
 const canvasInstances = [];
@@ -15,8 +22,16 @@ const ProjectBox = () => {
   const [projectBoxes, setProjectBoxes] = useState([]);
   const projectBoxesRef = useRef(projectBoxes);
 
+  // Добавляем состояние для отслеживания полной загрузки iframe для каждого проектного блока
+  const [iframeLoadedMap, setIframeLoadedMap] = useState({});
   // Мемоизируем функцию для улучшения производительности
   const handleIframeLoad = useCallback((event, projectBox) => {
+    // Обновляем состояние для отметки, что iframe загружен
+    setIframeLoadedMap((prevIframeLoadedMap) => ({
+      ...prevIframeLoadedMap,
+      [projectBox.title]: true,
+    }));
+
     updateProjectBox(projectBox).then((updatedProjectBox) => {
       setProjectBoxes((prevProjectBoxes) =>
         prevProjectBoxes.map((box) =>
@@ -39,16 +54,22 @@ const ProjectBox = () => {
       const canvasInstance = getCanvasInstance();
 
       try {
-        const screenshot = await canvasInstance(element, {
-          useCORS: true,
-          logging: false,
-          allowTaint: true,
-          scale: 0.5,
-        });
+        if (element && element.offsetWidth > 0 && element.offsetHeight > 0) {
+          const screenshot = await canvasInstance(element, {
+            useCORS: true,
+            logging: false,
+            allowTaint: true,
+            scale: 0.5,
+          });
 
-        releaseCanvasInstance(canvasInstance);
+          releaseCanvasInstance(canvasInstance);
 
-        return screenshot.toDataURL("image/png");
+          return screenshot.toDataURL("image/png");
+        } else {
+          console.warn("Element has no content or size.");
+          releaseCanvasInstance(canvasInstance);
+          return null;
+        }
       } catch (error) {
         console.error("Failed to capture screenshot", error);
         releaseCanvasInstance(canvasInstance);
@@ -71,7 +92,7 @@ const ProjectBox = () => {
         projectBox.screenshot = null;
 
         iframe.style.display = "block";
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 100));
 
         if (iframeExists(projectBox.title)) {
           const screenshot = await captureScreenshot(
@@ -97,18 +118,19 @@ const ProjectBox = () => {
   const batchSize = 5;
   const batchedProjectBoxes = _.chunk(projectBoxes, batchSize); // Используем lodash для группировки проектных блоков
 
-  const handleBatchUpdate = async (batch) => {
-    const updatedBatch = await Promise.all(
-      batch.map(async (projectBox) => await updateProjectBox(projectBox))
-    );
-    setProjectBoxes((prevProjectBoxes) =>
-      prevProjectBoxes.map(
-        (box) =>
-          updatedBatch.find((updatedBox) => updatedBox.title === box.title) ||
-          box
-      )
-    );
-  };
+  // const handleBatchUpdate = async (batch) => {
+  //     const updatedBatch = await Promise.all(
+  //         batch.map(async (projectBox) => await updateProjectBox(projectBox))
+  //     );
+  //     setProjectBoxes((prevProjectBoxes) =>
+  //         prevProjectBoxes.map(
+  //             (box) =>
+  //                 updatedBatch.find(
+  //                     (updatedBox) => updatedBox.title === box.title
+  //                 ) || box
+  //         )
+  //     );
+  // };
 
   useEffect(() => {
     const generatePages = async () => {
@@ -153,28 +175,30 @@ const ProjectBox = () => {
     });
   }, [projectBoxes, handleIframeLoad]);
 
-  useEffect(() => {
-    if (module.hot) {
-      module.hot.addStatusHandler((status) => {
-        if (status === "apply") {
-          projectBoxesRef.current.forEach((projectBox) => {
-            updateProjectBox(projectBox).then((updatedProjectBox) => {
-              setProjectBoxes((prevProjectBoxes) =>
-                prevProjectBoxes.map((box) =>
-                  box.title === updatedProjectBox.title
-                    ? updatedProjectBox
-                    : box
-                )
-              );
-            });
-          });
-        }
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //     if (module.hot) {
+  //         module.hot.addStatusHandler((status) => {
+  //             if (status === "apply") {
+  //                 projectBoxesRef.current.forEach((projectBox) => {
+  //                     updateProjectBox(projectBox).then(
+  //                         (updatedProjectBox) => {
+  //                             setProjectBoxes((prevProjectBoxes) =>
+  //                                 prevProjectBoxes.map((box) =>
+  //                                     box.title === updatedProjectBox.title
+  //                                         ? updatedProjectBox
+  //                                         : box
+  //                                 )
+  //                             );
+  //                         }
+  //                     );
+  //                 });
+  //             }
+  //         });
+  //     }
+  // }, []);
 
   return (
-    <div className="templatePage template-container">
+    <>
       {batchedProjectBoxes.map((batch, batchIndex) => (
         <React.Fragment key={batchIndex}>
           {batch.map((projectBox, index) => (
@@ -192,27 +216,38 @@ const ProjectBox = () => {
                 ></div>
               </div>
               <a href={projectBox.file}>{projectBox.title}</a>
-              <LazyLoad height={200} offset={100}>
-                <>
-                  <iframe
-                    id={`${projectBox.title}`}
-                    src={projectBox.file}
-                    width="1200"
-                    height="640"
-                    onLoad={(e) => handleIframeLoad(e, projectBox)}
-                  ></iframe>
-                  <div className="screenshot-container">
-                    {projectBox.screenshot && (
-                      <img src={projectBox.screenshot} alt="Screenshot" />
-                    )}
-                  </div>
-                </>
-              </LazyLoad>
+
+              {/* Использование LazyLoad и Iframe */}
+              <Suspense fallback={"Iframe Loading..."}>
+                <LazyLoad height={200} offset={100}>
+                  <>
+                    <iframe
+                      id={`${projectBox.title}`}
+                      src={projectBox.file}
+                      width="1200"
+                      height="640"
+                      scrolling="no"
+                      onLoad={(e) => {
+                        setTimeout(() => {
+                          handleIframeLoad(e, projectBox);
+                        }, 10000);
+                      }}
+                    ></iframe>
+                    <div className="screenshot-container">
+                      {projectBox.screenshot ? (
+                        <img src={projectBox.screenshot} alt="Screenshot" />
+                      ) : (
+                        <AaComponMap.Loading />
+                      )}
+                    </div>
+                  </>
+                </LazyLoad>
+              </Suspense>
             </div>
           ))}
         </React.Fragment>
       ))}
-    </div>
+    </>
   );
 };
 
