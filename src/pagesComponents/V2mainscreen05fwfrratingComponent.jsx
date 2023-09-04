@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenFwFrRating from "../styles/v2-screen-fw-fr-rating.scss";
 
 const V2MainScreen05FwFrRatingComponent = () => {
     return (

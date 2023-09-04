@@ -1,12 +1,453 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import screenBank from "../styles/screen-bank.scss";
 import screenBank1 from "../styles/screen-bank1.scss";
+import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
 import angelTab from "../styles/angel-tab.scss";
 import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen01Component = () => {
+    useEffect(() => {
+        // кнопка перехода в тёмный мир
+        let btn = document.createElement("div");
+        let btnText = document.createElement("div");
+        btn.className = "color-btn green world-btn";
+        btnText.className = "color-btn-text";
+        btnText.innerHTML = "To Darkworld";
+        btn.append(btnText);
+        document.body.append(btn);
+        const main = document.querySelector(".main");
+        const reG = document.querySelector(
+            ".resource-panel > div:nth-child(2)"
+        );
+        const reI = document.querySelector(".resource-pic > img");
+        const vvT = document.querySelector(".value-vip-ticket");
+        btn.addEventListener("click", () => {
+            if (main.classList.contains("world1")) {
+                main.classList.remove("world1");
+                main.classList.add("world3");
+                btnText.innerHTML = "To Earthworld";
+
+                reG.classList.remove("resource-gold");
+                reG.classList.add("resource-dark_gold");
+                reI.src = "rc/v2-res-dark.png";
+                vvT.style.display = "none";
+            } else {
+                main.classList.remove("world3");
+                main.classList.add("world1");
+                btnText.innerHTML = "To Darkworld";
+
+                reG.classList.remove("resource-dark_gold");
+                reG.classList.add("resource-gold");
+                reI.src = "rc/v2-res-gold.png";
+                vvT.style.display = "block";
+            }
+        });
+
+        // все попапы
+        [...document.querySelectorAll(".m-popup")].map((i) => {
+            i.style.display = "none";
+        });
+
+        const po = document.getElementById("popupAll");
+        const re = document.querySelector(".popup-layer");
+        const pIn = document.querySelector(".pop-in");
+        const pRg = document.querySelector(".pop-reg");
+        const pS = document.querySelector(".m-popup.chests-shop");
+        const gC = document.querySelector(".m-popup.busters.gold-coins");
+        const aG = document.querySelector(".m-popup.add-resources-popup");
+        const aH = document.querySelector(".m-popup.angels-heros");
+        const aN = document.querySelector(".m-popup.angels-supheros-notadded");
+        const aS = document.querySelector(".m-popup.angels-supheros-added");
+        const aA = document.querySelector(".m-popup.angels-supheros-add");
+        const sC = document.querySelector(".m-popup.angels-currency-shop");
+        const aI = document.querySelector(".m-popup.angels-info");
+
+        // закрытие попапов
+        [
+            ...document.querySelectorAll(
+                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+            ),
+        ].map((i) => {
+            i.style.display = "none";
+            // закрываем все попапы при клике на затемнение
+            const blS = document.querySelector(".screen-blend-55");
+            blS.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+        [
+            ...document.querySelectorAll(
+                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+            ),
+        ].map((i) => {
+            i.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.closest(
+                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                    ).style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+
+        const si = document.querySelector(".signinout-btn");
+        si.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                pIn.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const reg = document.querySelector(".go");
+        reg.addEventListener("click", () => {
+            po.classList.remove("dialog-emersion-enter");
+            po.classList.add("dialog-emersion-exit");
+            setTimeout(function () {
+                pIn.style.display = "none";
+                po.classList.remove("dialog-emersion-exit");
+            }, 104);
+            re.style.display = "block";
+            setTimeout(function () {
+                pRg.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const bC = document.querySelector(".res-chest-btn-count");
+        bC.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                pS.style.display = "block";
+                po.classList.add("popup-view");
+            }, 100);
+        });
+
+        const bGb = document.querySelector(".buster-btn.buster-gold");
+        bGb.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                gC.style.display = "block";
+                po.classList.add("popup-view");
+            }, 100);
+        });
+
+        const aGb = document.querySelector(".resource-gold .resource-btn-add");
+        aGb.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                aG.style.display = "block";
+                po.classList.add("popup-view");
+            }, 100);
+        });
+
+        const ba = document.querySelector(".color-btn.add");
+        ba.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                aH.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const bs = document.querySelector(".color-btn.supheros");
+        bs.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                aN.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const ad = document.querySelector(
+            ".angels-supheros-notadded .color-btn.add"
+        );
+        ad.addEventListener("click", () => {
+            po.classList.remove("dialog-emersion-enter");
+            po.classList.add("dialog-emersion-exit");
+            setTimeout(function () {
+                aN.style.display = "none";
+                po.classList.remove("dialog-emersion-exit");
+            }, 104);
+            re.style.display = "block";
+            setTimeout(function () {
+                aS.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const sd = document.querySelector(
+            ".angels-supheros-added .color-btn.add"
+        );
+        sd.addEventListener("click", () => {
+            po.classList.remove("dialog-emersion-enter");
+            po.classList.add("dialog-emersion-exit");
+            setTimeout(function () {
+                aS.style.display = "none";
+                po.classList.remove("dialog-emersion-exit");
+            }, 104);
+            re.style.display = "block";
+            setTimeout(function () {
+                aA.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        [...document.querySelectorAll(".trophy-value-btn-add.angels")].map(
+            (i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        aH.style.display = "none";
+                        aA.style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 104);
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        sC.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+            }
+        );
+
+        [...document.querySelectorAll(".color-btn.info")].map((i) => {
+            i.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    aI.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
+            });
+        });
+
+        // вкладки
+        const taH = document.querySelector(".tabs-all.heroes");
+        const taW = document.querySelector(".tabs-all.w-house2");
+        const tbW = document.querySelector(".tabs-all.w-house");
+
+        const conH = document.querySelector(".heroes-list-all-box");
+        const conW = document.querySelector(".womens-btns-screen");
+        const abH = document.querySelector(".angels-all-box");
+        const conS = document.querySelector(".skills-all-box");
+        conW.style.display = "none";
+        abH.style.display = "none";
+
+        const le = document.querySelector(".left-panel");
+
+        taH.addEventListener("click", () => {
+            le.classList.remove("wide");
+            taW.classList.remove("selected");
+            tbW.classList.remove("selected");
+            conW.style.display = "none";
+            abH.style.display = "none";
+            taH.classList.add("selected");
+            conH.style.display = "block";
+            conS.style.display = "block";
+        });
+        taW.addEventListener("click", () => {
+            le.classList.add("wide");
+            taH.classList.remove("selected");
+            tbW.classList.remove("selected");
+            conH.style.display = "none";
+            conS.style.display = "none";
+            abH.style.display = "none";
+            taW.classList.add("selected");
+            conW.style.display = "block";
+        });
+        tbW.addEventListener("click", () => {
+            le.classList.add("wide");
+            taH.classList.remove("selected");
+            taW.classList.remove("selected");
+            conH.style.display = "none";
+            conS.style.display = "none";
+            conW.style.display = "none";
+            tbW.classList.add("selected");
+            abH.style.display = "block";
+        });
+
+        const ac = document.querySelector(".angels-cards-content");
+        const ci = document.querySelector(".card-info-content");
+        ci.style.display = "none";
+        const bb = document.querySelector(".content-header > .btn-close-x");
+        [...document.querySelectorAll(".angel-card-box")].map((i) => {
+            i.addEventListener("click", () => {
+                ac.style.display = "none";
+                ci.style.display = "block";
+            });
+        });
+        bb.addEventListener("click", () => {
+            ci.style.display = "none";
+            ac.style.display = "block";
+        });
+
+        const ab = document.querySelectorAll(
+            ".angels-icons-scroll-box .angel-avatar-box"
+        );
+        ab.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                ab.forEach((el) => {
+                    el.classList.remove("selected");
+                });
+                item.classList.add("selected");
+                sa.classList.remove("lock");
+                ah.classList.remove("lock");
+            });
+        });
+
+        const ai = document.querySelector(
+            ".selected-angel-box .angel-card-box .img-wrap img"
+        );
+        const bl = document.querySelector(".btn-scroll-card.left");
+        const br = document.querySelector(".btn-scroll-card.right");
+        br.addEventListener("click", () => {
+            ai.src =
+                "https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-2-2.jpg";
+            ai.closest(
+                ".selected-angel-box .angel-card-box .img-wrap"
+            ).classList.add("lock");
+        });
+        bl.addEventListener("click", () => {
+            ai.src =
+                "https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-2-1.jpg";
+            ai.closest(
+                ".selected-angel-box .angel-card-box .img-wrap"
+            ).classList.remove("lock");
+        });
+
+        const sa = document.querySelector(
+            ".selected-angel-box .angel-card-box"
+        );
+        const ah = document.querySelector(".angels-heros-box-wrap");
+        const sm = document.querySelector(
+            ".selected-angel-box .angel-card-box .img-wrap"
+        );
+        [
+            ...document.querySelectorAll(
+                ".angels-icons-scroll-box .angel-avatar-box.lock"
+            ),
+        ].map((i) => {
+            i.addEventListener("click", () => {
+                sa.classList.add("lock");
+                ah.classList.add("lock");
+                sm.classList.remove("lock");
+            });
+        });
+
+        const cf = document.querySelector(
+            ".angels-heros .color-btn.add .f-gold"
+        );
+        cf.innerHTML = "";
+        const hA = document.querySelectorAll(
+            ".add-heros-skrollbox .hero-avatar-box"
+        );
+        hA.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                hA.forEach((el) => {
+                    el.classList.remove("selected");
+                });
+                item.classList.add("selected");
+                cf.closest(".color-btn.add").classList.remove("unselected");
+                if (item.classList.contains("added")) {
+                    cf.closest(".color-btn-text").style.display = "none";
+                } else {
+                    cf.closest(".color-btn-text").style.display = "flex";
+                    cf.textContent = 500;
+                }
+            });
+        });
+
+        const cg = document.querySelector(
+            ".angels-supheros-add .color-btn.add .f-gold"
+        );
+        cg.innerHTML = "";
+        const sA = document.querySelectorAll(
+            ".add-supheros-scrollbox .suphero-avatar-box"
+        );
+        sA.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                sA.forEach((el) => {
+                    el.classList.remove("selected");
+                });
+                item.classList.add("selected");
+                cg.closest(".color-btn.add").classList.remove("unselected");
+                if (item.classList.contains("added")) {
+                    cg.closest(".color-btn-text").style.display = "none";
+                } else {
+                    cg.closest(".color-btn-text").style.display = "flex";
+                    cg.innerHTML = "500";
+                }
+            });
+
+            const sC = document.querySelectorAll(".suphero-card");
+            sC.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    sC.forEach((el) => {
+                        el.classList.remove("check");
+                    });
+                    item.classList.add("check");
+                });
+            });
+        });
+
+        // кнопка с уровнями игры
+        const loB = document.querySelector(".loc-back");
+        loB.addEventListener("click", () => {
+            loB.closest(".loc-list").classList.remove("back");
+        });
+        const lo = document.querySelector(".locs");
+        lo.addEventListener("click", () => {
+            lo.closest(".loc-list").classList.toggle("opened");
+        });
+
+        const quTb = document.querySelectorAll(".quest-title-btn");
+        quTb.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                if (item.closest(".quest-box").classList.contains("closed")) {
+                    item.closest(".quest-box").classList.remove("closed");
+                } else {
+                    item.closest(".quest-box").classList.add("closed");
+                }
+            });
+        });
+
+        const xBtn = document.querySelectorAll(".x2-btn");
+        xBtn.forEach((i) => {
+            i.addEventListener("click", (e) => {
+                xBtn.forEach((el) => {
+                    el.classList.remove("selected");
+                });
+                i.classList.add("selected");
+            });
+        });
+        return () => {};
+    }, []);
+    const css = `
+        .world-btn {
+            position: absolute;
+            top: 660px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: "Roboto", sans-serif;
+            width: 140px;
+        }
+    `;
     return (
-        <>
+        <HelmetProvider>
+            <Helmet>
+                <style>{css}</style>
+            </Helmet>
             <div className="main world1">
                 <div
                     className="main-bg"
@@ -3688,7 +4129,7 @@ const V2MainScreen01Component = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </HelmetProvider>
     );
 };
 

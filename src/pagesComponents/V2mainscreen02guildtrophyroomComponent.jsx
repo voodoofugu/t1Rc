@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenTrophyroom from "../styles/v2-screen-trophyroom.scss";
 
 const V2MainScreen02GuildTrophyroomComponent = () => {
     return (

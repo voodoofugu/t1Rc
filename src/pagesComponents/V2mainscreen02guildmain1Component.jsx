@@ -1,4 +1,6 @@
 import React from "react";
+import v2ScreenGuildMain from "../styles/v2-screen-guild-main.scss";
+import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
 
 const V2MainScreen02GuildMain1Component = () => {
     return (

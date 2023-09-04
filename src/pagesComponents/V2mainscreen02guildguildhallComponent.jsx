@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenGuildhall from "../styles/v2-screen-guildhall.scss";
 
 const V2MainScreen02GuildGuildhallComponent = () => {
     return (

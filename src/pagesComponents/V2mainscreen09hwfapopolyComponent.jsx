@@ -1,7 +1,76 @@
-import React from "react";
+import React, { useEffect } from "react";
+import screenFapopolyMain from "../styles/screen-fapopoly-main.scss";
+import v2ScreenHwBtlpass from "../styles/v2-screen-hw-btlpass.scss";
 import v2ScreenTower from "../styles/v2-screen-tower.scss";
+import screenFapopolyRating from "../styles/screen-fapopoly-rating.scss";
 
 const V2MainScreen09HwFapopolyComponent = () => {
+    useEffect(() => {
+        [...document.querySelectorAll(".popup-layer, .m-popup")].map((i) => {
+            i.style.display = "none";
+        });
+        const po = document.getElementById("popupAll");
+        const re = document.querySelector(".popup-layer");
+        const hP = document.querySelector(".m-popup.hw-btlpass-pop");
+        const rP = document.querySelector(".m-popup.fapop-rating");
+
+        [
+            ...document.querySelectorAll(
+                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+            ),
+        ].map((i) => {
+            i.style.display = "none";
+
+            // закрываем все попапы при клике на затемнение
+            const blS = document.querySelector(".screen-blend-55");
+            blS.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+        [
+            ...document.querySelectorAll(
+                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+            ),
+        ].map((i) => {
+            i.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.closest(
+                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                    ).style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+
+        const hPb = document.querySelector(".bfIcon");
+        hPb.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                hP.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const rB = document.querySelector(".color-btn.rating");
+        rB.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                rP.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        return () => {};
+    }, []);
     return (
         <>
             <div className="main world1">

@@ -1,7 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
 import clanTrophies from "../styles/clan-trophies.scss";
+import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen02GuildClanTrophiesComponent = () => {
+    useEffect(() => {
+        [...document.querySelectorAll(".m-popup")].map((i) => {
+            i.style.display = "none";
+        });
+
+        const re = document.querySelector(".popup-layer");
+        re.style.display = "none";
+        const po = document.getElementById("popupAll");
+        const cT = document.querySelector(".m-popup.clan-trophy");
+
+        [...document.querySelectorAll(".btn-close-x")].map((i) => {
+            i.addEventListener("click", () => {
+                po.classList.remove("popup-view");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    cT.style.display = "none";
+                }, 104);
+            });
+        });
+
+        [...document.querySelectorAll(".titans-garage-item-inner")].map((i) => {
+            i.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    cT.style.display = "block";
+                    po.classList.add("popup-view");
+                }, 100);
+            });
+        });
+        return () => {};
+    }, []);
     return (
         <>
             <div className="main world1">
@@ -18,11 +51,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                         <div
                                             className="titans-garage-item-inner"
                                             style={{
-                                                backgroundImage: "url('https",
+                                                backgroundImage:
+                                                    "url('img/images/back/clan/bg_01.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="img/trophy/gt_02-c-ava.png"
+                                                    src="img/trophy/trophy/002_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -52,11 +86,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                         <div
                                             className="titans-garage-item-inner"
                                             style={{
-                                                backgroundImage: "url('https",
+                                                backgroundImage:
+                                                    "url('img/images/back/clan/bg_02.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="img/trophy/gt_03-c-ava.png"
+                                                    src="img/trophy/trophy/003_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -91,11 +126,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                         <div
                                             className="titans-garage-item-inner"
                                             style={{
-                                                backgroundImage: "url('https",
+                                                backgroundImage:
+                                                    "url('img/images/back/clan/bg_03.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="img/trophy/gt_04-c-ava.png"
+                                                    src="img/trophy/trophy/004_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -130,11 +166,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                         <div
                                             className="titans-garage-item-inner"
                                             style={{
-                                                backgroundImage: "url('https",
+                                                backgroundImage:
+                                                    "url('img/images/back/clan/bg_04.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="img/trophy/gt_06-c-ava.png"
+                                                    src="img/trophy/trophy/006_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -158,11 +195,12 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                         <div
                                             className="titans-garage-item-inner"
                                             style={{
-                                                backgroundImage: "url('https",
+                                                backgroundImage:
+                                                    "url('img/images/back/clan/bg_07.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
-                                                    src="img/trophy/gt_05-c-ava.png"
+                                                    src="img/trophy/trophy/007_1.png"
                                                     alt=""
                                                 />
                                             </div>
@@ -208,10 +246,11 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                 <div
                                     className="popup-trophy-image"
                                     style={{
-                                        backgroundImage: "url('https",
+                                        backgroundImage:
+                                            "url('img/images/back/clan/bg_03.jpg')",
                                     }}>
                                     <img
-                                        src="img/trophy/gt_04-c-ava.png"
+                                        src="img/trophy/trophy/004_1.png"
                                         alt=""
                                     />
                                     <div className="popup-stars">

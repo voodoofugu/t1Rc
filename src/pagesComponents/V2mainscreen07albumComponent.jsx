@@ -1,8 +1,95 @@
-import React from "react";
+import React, { useEffect } from "react";
+import screenChangeMain from "../styles/screen-change-main.scss";
+import screenChangeBonuses from "../styles/screen-change-bonuses.scss";
+import screenChangeCollpop from "../styles/screen-change-collpop.scss";
 import screenAlbum from "../styles/screen-album.scss";
-import v2ScreenAlbum from "../styles/v2-screen-album.scss";
 
 const V2MainScreen07AlbumComponent = () => {
+    useEffect(() => {
+        [...document.querySelectorAll(".m-popup")].map((i) => {
+            i.style.display = "none";
+        });
+
+        const po = document.getElementById("popupAll");
+        const re = document.querySelector(".popup-layer");
+        re.style.display = "none";
+        const cC = document.querySelector(".m-popup.change-collpop");
+
+        [...document.querySelectorAll(".btn-close-x, .color-btn.close")].map(
+            (i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        cC.style.display = "none";
+
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 104);
+                });
+            }
+        );
+
+        const bI = document.querySelector(".change-btn-info");
+        bI.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                cC.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const bA = document.querySelectorAll(".box-all");
+        bA.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                bA.forEach((el) => {
+                    el.classList.remove("opened");
+                });
+                item.classList.add("opened");
+            });
+        });
+
+        const tL = document.querySelectorAll(".tags-line");
+        tL.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                tL.forEach((el) => {
+                    el.classList.remove("selected");
+                });
+                item.classList.add("selected");
+            });
+        });
+
+        const fB = document.querySelectorAll(".fav-box");
+        fB.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                if (item.classList.contains("fav")) {
+                    item.classList.remove("fav");
+                } else {
+                    item.classList.add("fav");
+                }
+            });
+        });
+
+        const cM = document.querySelector(
+            ".left-panel > div > div:nth-child(1)"
+        );
+        const cMb = document.querySelector(".color-btn.pictures");
+        const cB = document.querySelector(
+            ".left-panel > div > div:nth-child(2)"
+        );
+        const cBb = document.querySelector(".color-btn.bonuses");
+        cB.style.display = "none";
+        cBb.addEventListener("click", () => {
+            cM.style.display = "none";
+            cB.style.display = "block";
+        });
+        cMb.addEventListener("click", () => {
+            cB.style.display = "none";
+            cM.style.display = "block";
+        });
+
+        return () => {};
+    }, []);
     return (
         <>
             <div id="root" style={{ display: "block" }}>

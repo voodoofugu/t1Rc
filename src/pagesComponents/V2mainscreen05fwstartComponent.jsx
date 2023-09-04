@@ -1,12 +1,16 @@
 import React from "react";
+import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
 
 const V2MainScreen05FwStartComponent = () => {
     return (
         <>
-            <div className="main lang-ru world1">
+            <div className="main world1">
                 <div
                     className="main-bg"
-                    style={{ backgroundImage: "url('https" }}></div>
+                    style={{
+                        backgroundImage:
+                            "url('img/images/back/new/01-Forest-1.jpg')",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">

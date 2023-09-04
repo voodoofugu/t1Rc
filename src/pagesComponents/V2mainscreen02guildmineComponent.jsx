@@ -7,7 +7,10 @@ const V2MainScreen02GuildMineComponent = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style={{ backgroundImage: "url('https" }}></div>
+                    style={{
+                        backgroundImage:
+                            "url('img/images/back/new/07-Cemetery.jpg')",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">
@@ -282,7 +285,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('https",
+                                                        "url('img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "0% center",
                                                     backgroundSize: "cover",
@@ -322,7 +325,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('https",
+                                                        "url('img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "31% center",
                                                     backgroundSize: "cover",
@@ -362,7 +365,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('https",
+                                                        "url('img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "70% center",
                                                     backgroundSize: "cover",
@@ -402,7 +405,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('https",
+                                                        "url('img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "100% center",
                                                     backgroundSize: "cover",

@@ -11,11 +11,6 @@ const TemplateComponent = () => {
                 console.log("Styles loaded!");
                 setStylesLoaded(true); // Отметить, что стили загружены
             });
-            window.onload = () => {
-                import("../scripts/notExported/template.js").then(() => {
-                    console.log("Script loaded!");
-                });
-            };
         }
 
         return () => {
@@ -37,6 +32,11 @@ const TemplateComponent = () => {
             color: #fff;
         }
     `;
+    const templateJs = `
+        import("../scripts/notExported/template.js").then(() => {
+            console.log("Script loaded!");
+        });
+    `;
 
     return (
         <HelmetProvider>
@@ -56,10 +56,11 @@ const TemplateComponent = () => {
             <div className="templatePage template-container">
                 <AaComponMap.ProjectBox />
             </div>
+            <Helmet>
+                <script>{templateJs}</script>
+            </Helmet>
         </HelmetProvider>
     );
 };
 
-const MemoizedTemplateComponent = React.memo(TemplateComponent);
-
-export default MemoizedTemplateComponent;
+export default React.memo(TemplateComponent);

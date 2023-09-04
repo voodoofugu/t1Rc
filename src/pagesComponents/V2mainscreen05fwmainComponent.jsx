@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
 import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
 
 const V2MainScreen05FwMainComponent = () => {
@@ -464,14 +465,13 @@ const V2MainScreen05FwMainComponent = () => {
                                 </div>
                             </div>
                             <div className="btn-close-x"></div>
-                            <div className="fw-btlpass-buy-box-all">
-                                <div className="fw-btlpass-girl"></div>
-                                <div className="fw-btlpass-info"></div>
-                                <div className="store-button">
-                                    <div className="but-price-text">
+                            <div class="fw-btlpass-buy-box-all">
+                                <div class="fw-btlpass-girl"></div>
+                                <div class="store-button both">
+                                    <div class="but-price-text">
                                         become elite
                                     </div>
-                                    <div className="but-price">$49.99</div>
+                                    <div class="but-price">$19.99</div>
                                 </div>
                             </div>
                         </div>
