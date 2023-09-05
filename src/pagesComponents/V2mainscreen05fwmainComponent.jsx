@@ -465,13 +465,13 @@ const V2MainScreen05FwMainComponent = () => {
                                 </div>
                             </div>
                             <div className="btn-close-x"></div>
-                            <div class="fw-btlpass-buy-box-all">
-                                <div class="fw-btlpass-girl"></div>
-                                <div class="store-button both">
-                                    <div class="but-price-text">
+                            <div className="fw-btlpass-buy-box-all">
+                                <div className="fw-btlpass-girl"></div>
+                                <div className="store-button both">
+                                    <div className="but-price-text">
                                         become elite
                                     </div>
-                                    <div class="but-price">$19.99</div>
+                                    <div className="but-price">$19.99</div>
                                 </div>
                             </div>
                         </div>

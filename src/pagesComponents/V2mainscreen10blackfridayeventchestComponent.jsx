@@ -1,7 +1,7 @@
 import React from "react";
 import v2ScreenTower from "../styles/v2-screen-tower.scss";
 
-const V2MainScreen10BlackfridayEvent_chestComponent = () => {
+const V2MainScreen10BlackfridayEventChestComponent = () => {
     return (
         <>
             <div className="main world1">
@@ -394,4 +394,4 @@ const V2MainScreen10BlackfridayEvent_chestComponent = () => {
     );
 };
 
-export default React.memo(V2MainScreen10BlackfridayEvent_chestComponent);
+export default React.memo(V2MainScreen10BlackfridayEventChestComponent);
