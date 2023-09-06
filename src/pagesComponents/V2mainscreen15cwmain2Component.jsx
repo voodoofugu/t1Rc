@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenCwMain2 from "../styles/v2-screen-cw-main2.scss";
 
 const V2MainScreen15CwMain2Component = () => {
     return (

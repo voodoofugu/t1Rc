@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenCwMain3 from "../styles/v2-screen-cw-main3.scss";
+import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
 import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
 
 const V2MainScreen15CwMain3Component = () => {
@@ -8,7 +8,10 @@ const V2MainScreen15CwMain3Component = () => {
             <div className="main lang-ru world1">
                 <div
                     className="main-bg"
-                    style={{ backgroundImage: "url('https" }}></div>
+                    style={{
+                        backgroundImage:
+                            "url('img/images/back/new/02-Forest-2.jpg')",
+                    }}></div>
                 <div className="header">
                     <div className="resource-panel">
                         <div className="avatar-box-all">

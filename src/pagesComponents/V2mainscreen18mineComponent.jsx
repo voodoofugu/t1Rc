@@ -1,6 +1,60 @@
-import React from "react";
+import React, { useEffect } from "react";
+import v2ScreenMineEvent from "../styles/v2-screen-mine-event.scss";
+import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
 
 const V2MainScreen18MineComponent = () => {
+    useEffect(() => {
+        // все попапы
+        [...document.querySelectorAll(".m-popup")].map((i) => {
+            i.style.display = "none";
+        });
+
+        const po = document.getElementById("popupWrapper");
+        const re = document.querySelector(".popup-layer");
+        const pStr = document.querySelector(".m-popup.fw-store");
+
+        // закрытие попапов
+        [...document.querySelectorAll(".m-popup")].map((i) => {
+            i.style.display = "none";
+            // закрываем все попапы при клике на затемнение
+            const blS = document.querySelector(".screen-blend-55");
+            blS.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+        [
+            ...document.querySelectorAll(
+                ".btn-close-x, div.uki-story-nav-box.btn2 > div:nth-child(1)"
+            ),
+        ].map((i) => {
+            i.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.closest(".m-popup").style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+
+        const pic = document.querySelector(".score-count.spirit3");
+        pic.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                pStr.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        return () => {};
+    }, []);
     return (
         <>
             <div id="root" style={{ display: "block" }}>

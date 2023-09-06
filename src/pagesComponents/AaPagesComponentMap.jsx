@@ -157,35 +157,8 @@ const V2MainScreen10BlackfridayEventChestsComponent = lazy(() =>
 const V2MainScreen10BlackfridayComponent = lazy(() =>
     import("./V2MainScreen10BlackfridayComponent.jsx")
 );
-const V2MainScreen11XmasPop1Component = lazy(() =>
-    import("./V2MainScreen11XmasPop1Component.jsx")
-);
-const V2MainScreen11XmasPop2Component = lazy(() =>
-    import("./V2MainScreen11XmasPop2Component.jsx")
-);
-const V2MainScreen11XmasPop3Component = lazy(() =>
-    import("./V2MainScreen11XmasPop3Component.jsx")
-);
 const V2MainScreen12SexpedMainComponent = lazy(() =>
     import("./V2MainScreen12SexpedMainComponent.jsx")
-);
-const V2MainScreen12SexpedQuesteventComponent = lazy(() =>
-    import("./V2MainScreen12SexpedQuesteventComponent.jsx")
-);
-const V2MainScreen14NsaleFountainComponent = lazy(() =>
-    import("./V2MainScreen14NsaleFountainComponent.jsx")
-);
-const V2MainScreen14NsaleMainComponent = lazy(() =>
-    import("./V2MainScreen14NsaleMainComponent.jsx")
-);
-const V2MainScreen14NsaleShopComponent = lazy(() =>
-    import("./V2MainScreen14NsaleShopComponent.jsx")
-);
-const V2MainScreen14NsaleStupenPopComponent = lazy(() =>
-    import("./V2MainScreen14NsaleStupenPopComponent.jsx")
-);
-const V2MainScreen14NsaleStupenComponent = lazy(() =>
-    import("./V2MainScreen14NsaleStupenComponent.jsx")
 );
 const V2MainScreen15CwArmySetupComponent = lazy(() =>
     import("./V2MainScreen15CwArmySetupComponent.jsx")
@@ -205,9 +178,6 @@ const V2MainScreen15CwGuildboss2PopComponent = lazy(() =>
 const V2MainScreen15CwGuildflagPopComponent = lazy(() =>
     import("./V2MainScreen15CwGuildflagPopComponent.jsx")
 );
-const V2MainScreen15CwGuildlogPopComponent = lazy(() =>
-    import("./V2MainScreen15CwGuildlogPopComponent.jsx")
-);
 const V2MainScreen15CwGuildmanagePPopComponent = lazy(() =>
     import("./V2MainScreen15CwGuildmanagePPopComponent.jsx")
 );
@@ -226,9 +196,6 @@ const V2MainScreen15CwGuildrenamePopComponent = lazy(() =>
 const V2MainScreen15CwGuildsettingsPopComponent = lazy(() =>
     import("./V2MainScreen15CwGuildsettingsPopComponent.jsx")
 );
-const V2MainScreen15CwGuildupgradePopComponent = lazy(() =>
-    import("./V2MainScreen15CwGuildupgradePopComponent.jsx")
-);
 const V2MainScreen15CwMainComponent = lazy(() =>
     import("./V2MainScreen15CwMainComponent.jsx")
 );
@@ -240,9 +207,6 @@ const V2MainScreen15CwMain3Component = lazy(() =>
 );
 const V2MainScreen15CwMapWarpopComponent = lazy(() =>
     import("./V2MainScreen15CwMapWarpopComponent.jsx")
-);
-const V2MainScreen15CwMapComponent = lazy(() =>
-    import("./V2MainScreen15CwMapComponent.jsx")
 );
 const V2MainScreen15CwOfferPopComponent = lazy(() =>
     import("./V2MainScreen15CwOfferPopComponent.jsx")
@@ -363,35 +327,23 @@ const AaPagesComponentMap = {
     V2MainScreen10BlackfridayEventChestComponent,
     V2MainScreen10BlackfridayEventChestsComponent,
     V2MainScreen10BlackfridayComponent,
-    V2MainScreen11XmasPop1Component,
-    V2MainScreen11XmasPop2Component,
-    V2MainScreen11XmasPop3Component,
     V2MainScreen12SexpedMainComponent,
-    V2MainScreen12SexpedQuesteventComponent,
-    V2MainScreen14NsaleFountainComponent,
-    V2MainScreen14NsaleMainComponent,
-    V2MainScreen14NsaleShopComponent,
-    V2MainScreen14NsaleStupenPopComponent,
-    V2MainScreen14NsaleStupenComponent,
     V2MainScreen15CwArmySetupComponent,
     V2MainScreen15CwGladeComponent,
     V2MainScreen15CwGuildbossPopComponent,
     V2MainScreen15CwGuildboss1PopComponent,
     V2MainScreen15CwGuildboss2PopComponent,
     V2MainScreen15CwGuildflagPopComponent,
-    V2MainScreen15CwGuildlogPopComponent,
     V2MainScreen15CwGuildmanagePPopComponent,
     V2MainScreen15CwGuildmanagePopComponent,
     V2MainScreen15CwGuildorderPopComponent,
     V2MainScreen15CwGuildrankPopComponent,
     V2MainScreen15CwGuildrenamePopComponent,
     V2MainScreen15CwGuildsettingsPopComponent,
-    V2MainScreen15CwGuildupgradePopComponent,
     V2MainScreen15CwMainComponent,
     V2MainScreen15CwMain2Component,
     V2MainScreen15CwMain3Component,
     V2MainScreen15CwMapWarpopComponent,
-    V2MainScreen15CwMapComponent,
     V2MainScreen15CwOfferPopComponent,
     V2MainScreen15CwTrophyroomComponent,
     V2MainScreen16PseInfoPopComponent,

@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
 
 const V2MainScreen22SquadMainComponent = () => {
     return (

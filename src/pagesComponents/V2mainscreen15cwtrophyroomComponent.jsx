@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenCwTrophyroom from "../styles/v2-screen-cw-trophyroom.scss";
 
 const V2MainScreen15CwTrophyroomComponent = () => {
     return (

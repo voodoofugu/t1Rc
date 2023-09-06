@@ -30,12 +30,30 @@ const Loading = ({ text, className }) => {
         height: 100%;
         border-radius: 50%;  
       }
+
+      .inner:before {
+        content: '';
+        position: absolute;
+        box-sizing: border-box;
+        width: 18%;
+        height: 18%;
+        border-radius: 50%;
+        background: #FFF;
+        // color: #FFF;
+        // font-size: 20px;
+      }
       
       .inner.one {
         left: 0%;
         top: 0%;
         animation: rotate-one 1s linear infinite;
         border-bottom: 3px solid #EFEFFA;
+      }
+      .inner.one:before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: rotateBefore-one 1s linear infinite;
       }
       
       .inner.two {
@@ -44,6 +62,12 @@ const Loading = ({ text, className }) => {
         animation: rotate-two 1s linear infinite;
         border-right: 3px solid #EFEFFA;
       }
+      .inner.two:before {
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        animation: rotateBefore-two 1s linear infinite;
+      }
       
       .inner.three {
         right: 0%;
@@ -51,7 +75,14 @@ const Loading = ({ text, className }) => {
         animation: rotate-three 1s linear infinite;
         border-top: 3px solid #EFEFFA;
       }
+      .inner.three:before {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: rotateBefore-three 1s linear infinite;
+      }
       
+
       @keyframes rotate-one {
         0% {
           transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
@@ -60,7 +91,6 @@ const Loading = ({ text, className }) => {
           transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
         }
       }
-      
       @keyframes rotate-two {
         0% {
           transform: rotateX(50deg) rotateY(0deg) rotateZ(0deg);
@@ -69,13 +99,65 @@ const Loading = ({ text, className }) => {
           transform: rotateX(50deg) rotateY(0deg) rotateZ(360deg);
         }
       }
-      
       @keyframes rotate-three {
         0% {
           transform: rotateX(35deg) rotateY(45deg) rotateZ(0deg);
         }
         100% {
           transform: rotateX(35deg) rotateY(45deg) rotateZ(360deg);
+        }
+      }
+
+
+      @keyframes rotateBefore-one {
+        0% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(-45deg);
+        }
+        25% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(45deg);
+        }
+        50% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(-45deg);
+        }
+        75% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(45deg);
+        }
+        100% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(-45deg);
+        }
+      }
+      @keyframes rotateBefore-two {
+        0% {
+          transform: translateY(-50%) rotateX(0deg) rotateY(-45deg);
+        }
+        25% {
+          transform: translateY(-50%) rotateX(45deg) rotateY(0deg);
+        }
+        50% {
+          transform: translateY(-50%) rotateX(0deg) rotateY(-45deg);
+        }
+        75% {
+          transform: translateY(-50%) rotateX(45deg) rotateY(0deg);
+        }
+        100% {
+          transform: translateY(-50%) rotateX(0deg) rotateY(-45deg);
+        }
+      }
+      @keyframes rotateBefore-three {
+        0% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(-45deg);
+        }
+        25% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(45deg);
+        }
+        50% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(-45deg);
+        }
+        75% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(45deg);
+        }
+        100% {
+          transform: translateX(-50%) rotateX(-35deg) rotateY(-45deg);
         }
       }
     `;

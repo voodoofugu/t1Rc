@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenTitansUpgrade from "../styles/v2-screen-titans-upgrade.scss";
 
 const V2MainScreen17TitansUpgradeComponent = () => {
     return (

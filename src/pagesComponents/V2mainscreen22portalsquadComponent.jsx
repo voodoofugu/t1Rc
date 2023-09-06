@@ -1,7 +1,84 @@
-import React from "react";
+import React, { useEffect } from "react";
+import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
+import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
+import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
 import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen22PortalSquadComponent = () => {
+    useEffect(() => {
+        // все попапы
+        const po = document.getElementById("popupAll");
+        const re = document.querySelector(".popup-layer");
+        const fwp = document.querySelector(".m-popup.fw-store");
+        const bfp = document.querySelector(".m-popup.bf-event__buy-keys-pop");
+        const ebp = document.querySelector(".m-popup.essence-buy");
+
+        [
+            ...document.querySelectorAll(
+                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+            ),
+        ].map((i) => {
+            i.style.display = "none";
+            // закрываем все попапы при клике на затемнение
+            const blS = document.querySelector(".screen-blend-55");
+            blS.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+
+        [
+            ...document.querySelectorAll(
+                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+            ),
+        ].map((i) => {
+            i.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.closest(
+                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                    ).style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+
+        const fwb = document.querySelector(".shop-btn.under-shop");
+        fwb.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                fwp.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const bfb = document.querySelector(".shop-btn.promote");
+        bfb.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                bfp.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const ebb = document.querySelector(".trophy-value-btn-add");
+        ebb.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                ebp.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        return () => {};
+    }, []);
     return (
         <>
             <div className="main lang-ru world1">
@@ -1387,7 +1464,8 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            backgroundImage: "url('https",
+                                            backgroundImage:
+                                                "url('img/v2-f-e1.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>5K</div>
@@ -1416,7 +1494,8 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            backgroundImage: "url('https",
+                                            backgroundImage:
+                                                "url('img/v2-f-e2.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
@@ -1445,7 +1524,8 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            backgroundImage: "url('https",
+                                            backgroundImage:
+                                                "url('img/v2-f-e3.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
@@ -1469,7 +1549,8 @@ const V2MainScreen22PortalSquadComponent = () => {
                                     <div
                                         className="essence-but-box"
                                         style={{
-                                            backgroundImage: "url('https",
+                                            backgroundImage:
+                                                "url('img/v2-f-e4.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>250K</div>

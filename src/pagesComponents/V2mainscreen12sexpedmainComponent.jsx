@@ -1,7 +1,151 @@
-import React from "react";
+import React, { useEffect } from "react";
+import v2ScreenSexpedMain from "../styles/v2-screen-sexped-main.scss";
 import screenInfoPop from "../styles/screen-info-pop.scss";
+import v2ScreenSexpedQuestevent from "../styles/v2-screen-sexped-questevent.scss";
 
 const V2MainScreen12SexpedMainComponent = () => {
+    useEffect(() => {
+        // все попапы
+        const po = document.getElementById("popupAll");
+        const re = document.querySelector(".popup-layer");
+        const pInf = document.querySelector(".m-popup.info-pop");
+        const pQuest = document.querySelector(".m-popup.sexped-questevent");
+
+        // закрытие попапов
+        [
+            ...document.querySelectorAll(
+                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+            ),
+        ].map((i) => {
+            i.style.display = "none";
+            // закрываем все попапы при клике на затемнение
+            const blS = document.querySelector(".screen-blend-55");
+            blS.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+        [
+            ...document.querySelectorAll(
+                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+            ),
+        ].map((i) => {
+            i.addEventListener("click", () => {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(function () {
+                    re.style.display = "none";
+                    i.closest(
+                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                    ).style.display = "none";
+                    po.classList.remove("dialog-emersion-exit");
+                }, 100);
+            });
+        });
+
+        const bInf = document.querySelector(".color-btn-info");
+        bInf.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                pInf.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        const bQuest = document.querySelector(".color-btn.quest");
+        bQuest.addEventListener("click", () => {
+            re.style.display = "block";
+            setTimeout(function () {
+                pQuest.style.display = "block";
+                po.classList.add("dialog-emersion-enter");
+            }, 100);
+        });
+
+        // окна игрофой механики
+        const mainBg = document.querySelector(
+            ".main-bg-scroll-box.indiana-scroll-container"
+        );
+        const seMiS = document.querySelector(".sexped-mission-screen");
+        const seFiS = document.querySelector(".sexped-fight-screen");
+        seMiS.style.display = "none";
+        seFiS.style.display = "none";
+
+        const seMiB = document.querySelector(".lastDone");
+        seMiB.addEventListener("click", (e) => {
+            seMiS.style.display = "block";
+            seFiS.style.display = "none";
+        });
+
+        let btn = document.querySelectorAll(
+            ".sexped-mission-btn-box .color-btn"
+        );
+        btn.item(0).addEventListener("click", (e) => {
+            seMiS.style.display = "none";
+            seFiS.style.display = "none";
+        });
+        btn.item(1).addEventListener("click", (e) => {
+            seMiS.style.display = "none";
+            seFiS.style.display = "block";
+            mainBg.style.display = "none";
+        });
+        btn.item(2).addEventListener("click", (e) => {
+            seMiS.style.display = "none";
+            seFiS.style.display = "none";
+            mainBg.style.display = "block";
+        });
+
+        const sMis = document.querySelectorAll(".sexped-mission-scroll");
+        sMis.item(1).style.display = "none";
+        // переключалка
+        const tabAll = document.querySelectorAll(".tabs-menu-btn");
+        tabAll.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                // меню
+                tabAll.forEach((el) => {
+                    el.classList.remove("active");
+                });
+                item.classList.add("active");
+                // окна
+                if (tabAll.item(0).classList.contains("active")) {
+                    sMis.item(0).style.display = "flex";
+                    sMis.item(1).style.display = "none";
+                }
+                if (tabAll.item(1).classList.contains("active")) {
+                    sMis.item(0).style.display = "none";
+                    sMis.item(1).style.display = "flex";
+                }
+            });
+        });
+        // фильтры
+        const filtr = document.querySelectorAll(".sexped-fl");
+        filtr.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                // меню
+                filtr.forEach((el) => {
+                    el.classList.remove("select");
+                });
+                item.classList.add("select");
+            });
+        });
+        // карты
+        const heroAva = document.querySelectorAll(".hero-avatar-box");
+        heroAva.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                // меню
+                heroAva.forEach((el) => {
+                    el.classList.remove("selected");
+                });
+                item.classList.add("selected");
+            });
+        });
+
+        return () => {};
+    }, []);
     return (
         <>
             <div className="main lang-ru world1">

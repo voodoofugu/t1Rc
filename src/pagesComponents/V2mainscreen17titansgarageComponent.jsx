@@ -1,4 +1,5 @@
 import React from "react";
+import v2ScreenTitansGarage from "../styles/v2-screen-titans-garage.scss";
 
 const V2MainScreen17TitansGarageComponent = () => {
     return (
