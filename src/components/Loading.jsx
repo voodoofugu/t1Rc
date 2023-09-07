@@ -22,6 +22,30 @@ const Loading = ({ text, className }) => {
         perspective: 800px;
         filter: drop-shadow(0 0 2px rgba(255, 255, 255, 1)) drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
       }
+      .loader:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #FFF;  
+        animation: ripple 2s linear infinite;
+      }
+      .loader:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background: #FFF;
+        animation: ripple 2s linear infinite 1s;  
+      }
       
       .inner {
         position: absolute;
@@ -31,12 +55,12 @@ const Loading = ({ text, className }) => {
         border-radius: 50%;  
       }
 
-      .inner.two:before {
+      .inner:before {
         content: '';
         position: absolute;
         box-sizing: border-box;
-        width: 6px;
-        height: 10px;
+        width: 4px;
+        height: 6px;
         border-radius: 50%;
         background: #FFF;
       }
@@ -48,9 +72,8 @@ const Loading = ({ text, className }) => {
         border-bottom: 3px solid #EFEFFA;
       }
       .inner.one:before {
-        top: -5px;
-        left: 50%;
-        transform: translateX(-50%);
+        top: 32px;
+        left: 0;
         animation: rotateBefore-one 1s linear infinite;
       }
       
@@ -61,9 +84,8 @@ const Loading = ({ text, className }) => {
         border-right: 3px solid #EFEFFA;
       }
       .inner.two:before {
-        top: 50%;
-        left: -5px;
-        transform: translateY(-50%) ;
+        top: 64px;
+        right: 32px;
         animation: rotateBefore-two 1s linear infinite;
       }
       
@@ -74,9 +96,8 @@ const Loading = ({ text, className }) => {
         border-top: 3px solid #EFEFFA;
       }
       .inner.three:before {
-        bottom: -5px;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 32px;
+        left: 64px;
         animation: rotateBefore-three 1s linear infinite;
       }
       
@@ -138,6 +159,21 @@ const Loading = ({ text, className }) => {
         }
         100% {
           transform: translateX(-50%) rotateZ(-360deg);
+        }
+      }
+
+      @keyframes ripple {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(0);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
         }
       }
     `;
