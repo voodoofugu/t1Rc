@@ -269,7 +269,6 @@ position: relative;
                 <div id="app"></div>
                 <div id="clickBox"></div>
             </div>
-            <AaComponMap.Loading />
         </HelmetProvider>
     );
 };

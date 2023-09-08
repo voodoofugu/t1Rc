@@ -2,149 +2,155 @@ import React, { useEffect } from "react";
 import v2ScreenRpgPoly from "../styles/v2-screen-rpg_poly.scss";
 
 const V2MainScreen24RpgPolyComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        const ba = document.querySelector(".backpack-button");
-        const sh = document.querySelector(".shop-button");
-        const ra = document.querySelector(".rating-button");
-        const sb = document.querySelectorAll(".color-btn_shop");
-        const po = document.querySelector(".popupWrapper.backpack-popup");
-        const sp = document.querySelector(".popupWrapper.shop-popup");
-        const rp = document.querySelector(".popupWrapper.rating-popup");
-        const pr = document.querySelector(".popupWrapper.reward-popup");
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            const ba = document.querySelector(".backpack-button");
+            const sh = document.querySelector(".shop-button");
+            const ra = document.querySelector(".rating-button");
+            const sb = document.querySelectorAll(".color-btn_shop");
+            const po = document.querySelector(".popupWrapper.backpack-popup");
+            const sp = document.querySelector(".popupWrapper.shop-popup");
+            const rp = document.querySelector(".popupWrapper.rating-popup");
+            const pr = document.querySelector(".popupWrapper.reward-popup");
 
-        ba.addEventListener("click", () => {
-            po.style.display = "block";
-        });
-        sh.addEventListener("click", () => {
-            sp.style.display = "block";
-        });
-        ra.addEventListener("click", () => {
-            rp.style.display = "block";
-        });
-
-        const x = [
-            ...document.querySelectorAll(
-                ".btn-close-x, .screen-blend-55, .pop-close"
-            ),
-        ];
-        x.map((el) => {
-            el.addEventListener("click", () => {
-                po.style.display = "none";
-                sp.style.display = "none";
-                rp.style.display = "none";
-                pr.style.display = "none";
+            ba.addEventListener("click", () => {
+                po.style.display = "block";
             });
-        });
-
-        const tm = [
-            ...document.querySelectorAll(
-                ".quest_item-reward-wrap .quest-item-wrap .quest-item"
-            ),
-        ];
-        tm.map((el) => {
-            el.addEventListener("click", () => {
+            sh.addEventListener("click", () => {
                 sp.style.display = "block";
             });
-        });
-
-        const pl = [...document.querySelectorAll(".quest-item.item-plus")];
-        pl.map((el) => {
-            el.addEventListener("click", () => {
-                po.style.display = "none";
-                sp.style.display = "block";
+            ra.addEventListener("click", () => {
+                rp.style.display = "block";
             });
-        });
 
-        const wr = document.querySelector(".quest_item-reward-wrap");
-        const it = document.querySelector(".quest_item-button");
-        const re = document.querySelector(".quest_reward-button");
-
-        it.addEventListener("click", () => {
-            wr.classList.remove("reward_activ");
-            wr.classList.add("item_activ");
-        });
-        re.addEventListener("click", () => {
-            wr.classList.remove("item_activ");
-            wr.classList.add("reward_activ");
-        });
-
-        const op = document.querySelector(".btn-open");
-        const qa = document.querySelector(".quest-popup-wrap");
-
-        op.addEventListener("click", () => {
-            qa.classList.toggle("activ");
-        });
-
-        const qi = document.querySelector(".quest_info-button");
-        const qw = document.querySelector(".questlist-popup-wrap");
-        const px = [
-            ...document.querySelectorAll(
-                ".questlist-popup .m-popup .btn-close-x"
-            ),
-        ];
-
-        qi.addEventListener("click", () => {
-            qw.classList.toggle("activ");
-        });
-        px.map((el) => {
-            el.addEventListener("click", () => {
-                qw.classList.remove("activ");
-            });
-        });
-
-        const cw = document.querySelector(".quest-done-wrap");
-        const co = document.querySelector(".quest-done_button");
-        co.addEventListener("click", () => {
-            cw.classList.add("disabled");
-            pr.style.display = "block";
-            sp.style.display = "none";
-            notice.style.display = "block";
-            setTimeout(function () {
-                notice.style.display = "none";
-            }, 3000);
-        });
-
-        const notice = document.querySelector(".notification-popup");
-        const popUp = document.querySelector(".chest-pop-up");
-        const chests = document.querySelectorAll(".store-item-box.chest");
-        const win = document.querySelector(".main");
-        [...chests].map((chest) => {
-            chest.addEventListener("mouseenter", () => {
-                popUp.style.left =
-                    chest.getBoundingClientRect().x -
-                    win.getBoundingClientRect().x +
-                    "px";
-                popUp.style.top = chest.getBoundingClientRect().y + "px";
-                popUp.classList.add("active");
-                chest.style.opacity = "1";
-                chest.classList.add("active");
-                [...chests].map((chest) => {
-                    chest.classList.add("unactive");
+            const x = [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .screen-blend-55, .pop-close"
+                ),
+            ];
+            x.map((el) => {
+                el.addEventListener("click", () => {
+                    po.style.display = "none";
+                    sp.style.display = "none";
+                    rp.style.display = "none";
+                    pr.style.display = "none";
                 });
-                chest.classList.remove("unactive");
-                [...sb].map((el) => {
-                    el.addEventListener("click", () => {
-                        pr.style.display = "block";
-                        sp.style.display = "none";
-                        notice.style.display = "block";
-                        setTimeout(function () {
-                            notice.style.display = "none";
-                        }, 3000);
+            });
+
+            const tm = [
+                ...document.querySelectorAll(
+                    ".quest_item-reward-wrap .quest-item-wrap .quest-item"
+                ),
+            ];
+            tm.map((el) => {
+                el.addEventListener("click", () => {
+                    sp.style.display = "block";
+                });
+            });
+
+            const pl = [...document.querySelectorAll(".quest-item.item-plus")];
+            pl.map((el) => {
+                el.addEventListener("click", () => {
+                    po.style.display = "none";
+                    sp.style.display = "block";
+                });
+            });
+
+            const wr = document.querySelector(".quest_item-reward-wrap");
+            const it = document.querySelector(".quest_item-button");
+            const re = document.querySelector(".quest_reward-button");
+
+            it.addEventListener("click", () => {
+                wr.classList.remove("reward_activ");
+                wr.classList.add("item_activ");
+            });
+            re.addEventListener("click", () => {
+                wr.classList.remove("item_activ");
+                wr.classList.add("reward_activ");
+            });
+
+            const op = document.querySelector(".btn-open");
+            const qa = document.querySelector(".quest-popup-wrap");
+
+            op.addEventListener("click", () => {
+                qa.classList.toggle("activ");
+            });
+
+            const qi = document.querySelector(".quest_info-button");
+            const qw = document.querySelector(".questlist-popup-wrap");
+            const px = [
+                ...document.querySelectorAll(
+                    ".questlist-popup .m-popup .btn-close-x"
+                ),
+            ];
+
+            qi.addEventListener("click", () => {
+                qw.classList.toggle("activ");
+            });
+            px.map((el) => {
+                el.addEventListener("click", () => {
+                    qw.classList.remove("activ");
+                });
+            });
+
+            const cw = document.querySelector(".quest-done-wrap");
+            const co = document.querySelector(".quest-done_button");
+            co.addEventListener("click", () => {
+                cw.classList.add("disabled");
+                pr.style.display = "block";
+                sp.style.display = "none";
+                notice.style.display = "block";
+                setTimeout(function () {
+                    notice.style.display = "none";
+                }, 3000);
+            });
+
+            const notice = document.querySelector(".notification-popup");
+            const popUp = document.querySelector(".chest-pop-up");
+            const chests = document.querySelectorAll(".store-item-box.chest");
+            const win = document.querySelector(".main");
+            [...chests].map((chest) => {
+                chest.addEventListener("mouseenter", () => {
+                    popUp.style.left =
+                        chest.getBoundingClientRect().x -
+                        win.getBoundingClientRect().x +
+                        "px";
+                    popUp.style.top = chest.getBoundingClientRect().y + "px";
+                    popUp.classList.add("active");
+                    chest.style.opacity = "1";
+                    chest.classList.add("active");
+                    [...chests].map((chest) => {
+                        chest.classList.add("unactive");
+                    });
+                    chest.classList.remove("unactive");
+                    [...sb].map((el) => {
+                        el.addEventListener("click", () => {
+                            pr.style.display = "block";
+                            sp.style.display = "none";
+                            notice.style.display = "block";
+                            setTimeout(function () {
+                                notice.style.display = "none";
+                            }, 3000);
+                        });
+                    });
+                });
+                chest.addEventListener("mouseleave", () => {
+                    popUp.classList.remove("active");
+                    chest.classList.remove("active");
+                    [...chests].map((chest) => {
+                        chest.classList.remove("unactive");
                     });
                 });
             });
-            chest.addEventListener("mouseleave", () => {
-                popUp.classList.remove("active");
-                chest.classList.remove("active");
-                [...chests].map((chest) => {
-                    chest.classList.remove("unactive");
-                });
-            });
-        });
-
-        return () => {
-            // Здесь можно добавить код для очистки скриптов при размонтировании компонента
-        };
+            return;
+        }
+        return () => {};
     }, []);
     return (
         <>

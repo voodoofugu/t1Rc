@@ -5,78 +5,88 @@ import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
 import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen22PortalSquadComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        // все попапы
-        const po = document.getElementById("popupAll");
-        const re = document.querySelector(".popup-layer");
-        const fwp = document.querySelector(".m-popup.fw-store");
-        const bfp = document.querySelector(".m-popup.bf-event__buy-keys-pop");
-        const ebp = document.querySelector(".m-popup.essence-buy");
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            // все попапы
+            const po = document.getElementById("popupAll");
+            const re = document.querySelector(".popup-layer");
+            const fwp = document.querySelector(".m-popup.fw-store");
+            const bfp = document.querySelector(
+                ".m-popup.bf-event__buy-keys-pop"
+            );
+            const ebp = document.querySelector(".m-popup.essence-buy");
 
-        [
-            ...document.querySelectorAll(
-                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
-            ),
-        ].map((i) => {
-            i.style.display = "none";
-            // закрываем все попапы при клике на затемнение
-            const blS = document.querySelector(".screen-blend-55");
-            blS.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
+            [
+                ...document.querySelectorAll(
+                    ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                ),
+            ].map((i) => {
+                i.style.display = "none";
+                // закрываем все попапы при клике на затемнение
+                const blS = document.querySelector(".screen-blend-55");
+                blS.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
+
+            [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                ),
+            ].map((i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.closest(
+                            ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                        ).style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
+
+            const fwb = document.querySelector(".shop-btn.under-shop");
+            fwb.addEventListener("click", () => {
+                re.style.display = "block";
                 setTimeout(function () {
-                    re.style.display = "none";
-                    i.style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
+                    fwp.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
                 }, 100);
             });
-        });
 
-        [
-            ...document.querySelectorAll(
-                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
-            ),
-        ].map((i) => {
-            i.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
+            const bfb = document.querySelector(".shop-btn.promote");
+            bfb.addEventListener("click", () => {
+                re.style.display = "block";
                 setTimeout(function () {
-                    re.style.display = "none";
-                    i.closest(
-                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
-                    ).style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
+                    bfp.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
                 }, 100);
             });
-        });
 
-        const fwb = document.querySelector(".shop-btn.under-shop");
-        fwb.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                fwp.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        const bfb = document.querySelector(".shop-btn.promote");
-        bfb.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                bfp.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        const ebb = document.querySelector(".trophy-value-btn-add");
-        ebb.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                ebp.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
+            const ebb = document.querySelector(".trophy-value-btn-add");
+            ebb.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    ebp.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
+            });
+            return;
+        }
         return () => {};
     }, []);
     return (

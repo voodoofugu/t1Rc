@@ -13,9 +13,7 @@ const TemplateComponent = () => {
             });
         }
 
-        return () => {
-            // Здесь можно добавить код для очистки скриптов при размонтировании компонента
-        };
+        return () => {};
     }, []);
 
     if (!stylesLoaded) {
@@ -54,7 +52,8 @@ const TemplateComponent = () => {
                 </div>
             </div>
             <div className="templatePage template-container">
-                <AaComponMap.ProjectBox />
+                {/* <AaComponMap.ProjectBox /> */}
+                <AaComponMap.ProjectBoxTwo />
             </div>
             <Helmet>
                 <script>{templateJs}</script>

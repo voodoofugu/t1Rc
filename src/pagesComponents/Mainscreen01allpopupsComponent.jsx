@@ -44,560 +44,590 @@ import screenBank from "../styles/screen-bank.scss";
 import screenRatingFullcoll from "../styles/screen-rating-fullcoll.scss";
 
 const MainScreen01AllPopupsComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        // кнопка перехода в тёмный мир
-        let btn = document.createElement("div");
-        let btnText = document.createElement("div");
-        btn.className = "color-btn green world-btn";
-        btnText.className = "color-btn-text";
-        btnText.innerHTML = "To Darkworld";
-        btn.append(btnText);
-        document.body.append(btn);
-        const main = document.querySelector(".main");
-        const reG = document.querySelector(
-            ".resource-panel > div:nth-child(2)"
-        );
-        const reI = document.querySelector(".resource-pic > img");
-        const vvT = document.querySelector(".value-vip-ticket");
-        btn.addEventListener("click", () => {
-            if (main.classList.contains("world1")) {
-                main.classList.remove("world1");
-                main.classList.add("world3");
-                btnText.innerHTML = "To Earthworld";
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            // кнопка перехода в тёмный мир
+            let btn = document.createElement("div");
+            let btnText = document.createElement("div");
+            btn.className = "color-btn green world-btn";
+            btnText.className = "color-btn-text";
+            btnText.innerHTML = "To Darkworld";
+            btn.append(btnText);
+            document.querySelector("#root").append(btn);
+            const main = document.querySelector(".main");
+            const reG = document.querySelector(
+                ".resource-panel > div:nth-child(2)"
+            );
+            const reI = document.querySelector(".resource-pic > img");
+            const vvT = document.querySelector(".value-vip-ticket");
+            btn.addEventListener("click", () => {
+                if (main.classList.contains("world1")) {
+                    main.classList.remove("world1");
+                    main.classList.add("world3");
+                    btnText.innerHTML = "To Earthworld";
 
-                reG.classList.remove("resource-gold");
-                reG.classList.add("resource-dark_gold");
-                reI.src = "img/v2-res-dark.png";
-                vvT.style.display = "none";
-            } else {
-                main.classList.remove("world3");
-                main.classList.add("world1");
-                btnText.innerHTML = "To Darkworld";
+                    reG.classList.remove("resource-gold");
+                    reG.classList.add("resource-dark_gold");
+                    reI.src = "rc/v2-res-dark.png";
+                    vvT.style.display = "none";
+                } else {
+                    main.classList.remove("world3");
+                    main.classList.add("world1");
+                    btnText.innerHTML = "To Darkworld";
 
-                reG.classList.remove("resource-dark_gold");
-                reG.classList.add("resource-gold");
-                reI.src = "img/v2-res-gold.png";
-                vvT.style.display = "block";
+                    reG.classList.remove("resource-dark_gold");
+                    reG.classList.add("resource-gold");
+                    reI.src = "rc/v2-res-gold.png";
+                    vvT.style.display = "block";
+                }
+            });
+
+            // кнопки попапа с анимацией наград
+            const colB = document.querySelector(".color-btn.collect");
+            const rrBo = document.querySelector(".rating-reward-box");
+            const ch1 = document.querySelector(
+                ".rating-reward-box > div:nth-child(1)"
+            );
+            colB.addEventListener("click", () => {
+                if (rrBo.classList.contains("open")) {
+                    [
+                        ...document.querySelectorAll(
+                            ".rating-reward-box .reward-box"
+                        ),
+                    ].map((i) => {
+                        i.classList.remove("empty");
+                        i.classList.add("prize");
+                    });
+                    colB.querySelector(".color-btn-text").innerHTML = "закрыть";
+                    colB.classList.add("btn-close");
+                } else {
+                    rrBo.classList.add("open");
+                    ch1.style.display = "none";
+                    colB.querySelector(".color-btn-text").innerHTML =
+                        "показать все";
+                }
+                if (colB.classList.contains("btn-close")) {
+                    colB.addEventListener("click", () => {
+                        po.classList.remove("dialog-emersion-enter");
+                        po.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            rrP.style.display = "none";
+                            po.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                }
+            });
+
+            // все попапы
+            const po = document.getElementById("popupAll");
+            const re = document.querySelector(".popup-layer");
+            const eBx = document.querySelector(
+                ".m-popup.events-btlpass-pop.xmas"
+            );
+            const eBh = document.querySelector(
+                ".m-popup.events-btlpass-pop.hw"
+            );
+            const eBb = document.querySelector(
+                ".m-popup.events-btlpass-pop.bf"
+            );
+            const eBv = document.querySelector(
+                ".m-popup.events-btlpass-pop.vl"
+            );
+            const spP = document.querySelector(
+                ".m-popup.events-btlpass-pop.spring"
+            );
+            const apP = document.querySelector(
+                ".m-popup.events-btlpass-pop.autumn"
+            );
+            const eByx = document.querySelector(".m-popup.essence-buy.xmas");
+            const eByh = document.querySelector(".m-popup.essence-buy.hw");
+            const eByb = document.querySelector(".m-popup.essence-buy.bf");
+            const eByv = document.querySelector(".m-popup.essence-buy.vl");
+            const eBya = document.querySelector(".m-popup.essence-buy.au");
+            const fR = document.querySelector(".m-popup.fapop-rules");
+            const lB = document.querySelector(".m-popup.lose-boss");
+            const aP3 = document.querySelector(".m-popup.angel-pop-x3");
+            const bfP = document.querySelector(".m-popup.bf-event");
+            const vlP = document.querySelector(".m-popup.vl-event");
+            const ocP = document.querySelector(".m-popup.openchest");
+            const gpP = document.querySelector(".m-popup.change-givepic");
+            const clP = document.querySelector(".m-popup.change-collpop");
+            const bcP = document.querySelector(".m-popup.cw-offers-pop");
+            const erP = document.querySelector(".m-popup.error-popup");
+            const anP = document.querySelector(".m-popup.angel-pop");
+            const hoP = document.querySelector(".m-popup.hero-pop");
+            const raP = document.querySelector(".ratingpop-box");
+            const duP = document.querySelector(
+                ".m-popup.fortuna-main.uni-sale"
+            );
+            const duPv = document.querySelector(
+                ".m-popup.fortuna-main.sv-sale"
+            );
+            const quP = document.querySelector(".quest-popup");
+            const cqP = document.querySelector(".m-popup.chest-quest");
+            const coP = document.querySelector(".m-popup.fortuna-winpop2");
+            const csP1 = document.querySelector(".m-popup.sh2-openchest1");
+            const csP3 = document.querySelector(".m-popup.sh2-openchest3");
+            const lpP = document.querySelector(".popup.wpck-end");
+            const frP = document.querySelector(".m-popup.fortuna-main-round");
+            const saP = document.querySelector(".m-popup.wpck5");
+            const reP = document.querySelector(".reborn-popup");
+            const drP = document.querySelector(".m-popup.reborn-dark-popup");
+            const scP = document.querySelector(".m-popup.chests-shop");
+            const caP = document.querySelector(".m-popup.change-addchest");
+            const dbP = document.querySelector(".m-popup.diamond-buy");
+            const rrP = document.querySelector(".m-popup.rating-reward");
+            const rcP = document.querySelector(".m-popup.rankchange");
+            const heP = document.querySelector(".m-popup.hero-popup");
+            const tsP = document.querySelector(".m-popup.ts_confirm");
+            const xm1P = document.querySelector(".m-popup.xmas-pop1");
+            const xm2P = document.querySelector(".m-popup.xmas-pop2");
+            const xm3P = document.querySelector(".m-popup.xmas-pop3");
+            const xm4P = document.querySelector(
+                ".m-popup.main-relics-pop.xmas"
+            );
+            const vl2P = document.querySelector(".m-popup.main-relics-pop.vl");
+            const maP = document.querySelector(
+                ".m-popup.main-relics-pop.march"
+            );
+            const pIn = document.querySelector(".pop-in");
+            const pRg = document.querySelector(".pop-reg");
+            const paI = document.querySelector(".m-popup.info-pop");
+            const dbtP = document.querySelector(".m-popup.dark-btlpas");
+
+            const allPops = [
+                ...document.querySelectorAll(
+                    ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                ),
+            ];
+            allPops.forEach((popup) => {
+                popup.style.display = "none";
+            });
+
+            // Функция для показа попапа
+            function showPopup(popupElement) {
+                re.style.display = "block";
+                setTimeout(function () {
+                    popupElement.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
             }
-        });
 
-        // кнопки попапа с анимацией наград
-        const colB = document.querySelector(".color-btn.collect");
-        const rrBo = document.querySelector(".rating-reward-box");
-        const ch1 = document.querySelector(
-            ".rating-reward-box > div:nth-child(1)"
-        );
-        colB.addEventListener("click", () => {
-            if (rrBo.classList.contains("open")) {
-                [
-                    ...document.querySelectorAll(
-                        ".rating-reward-box .reward-box"
+            // Функция для скрытия попапа
+            function hidePopup(popupElements) {
+                po.classList.remove("dialog-emersion-enter");
+                po.classList.add("dialog-emersion-exit");
+                setTimeout(() => {
+                    re.style.display = "none";
+                    if (Array.isArray(popupElements)) {
+                        popupElements.forEach((popupElement) => {
+                            popupElement.style.display = "none";
+                        });
+                    } else {
+                        popupElements.style.display = "none";
+                    }
+                    po.classList.remove("dialog-emersion-exit");
+                }, 104);
+            }
+
+            // Функция для привязки действий к кнопке закрытия
+            function bindCloseAction(button, popupElement) {
+                button.addEventListener("click", () => {
+                    hidePopup(popupElement);
+                });
+            }
+
+            // Привязка действий к кнопкам закрытия
+            [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                ),
+            ].forEach((button) => {
+                bindCloseAction(
+                    button,
+                    button.closest(
+                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                    )
+                );
+            });
+
+            // Привязка действий к кнопкам открытия попапов
+            const popupTriggers = [
+                {
+                    trigger: document.querySelector(".quest.xmas"),
+                    popup: eBx,
+                },
+                {
+                    trigger: document.querySelector(".quest.hw"),
+                    popup: eBh,
+                },
+                {
+                    trigger: document.querySelector(".quest.bf"),
+                    popup: eBb,
+                },
+                {
+                    trigger: document.querySelector(".quest.vl-pass"),
+                    popup: eBv,
+                },
+                {
+                    trigger: document.querySelector(".quest.lose-boss"),
+                    popup: lB,
+                },
+                {
+                    trigger: document.querySelector(".quest.pop-x3"),
+                    popup: aP3,
+                },
+                {
+                    trigger: document.querySelector(".quest.bf-sale"),
+                    popup: bfP,
+                },
+                {
+                    trigger: document.querySelector(".quest.vl-sale"),
+                    popup: vlP,
+                },
+                {
+                    trigger: document.querySelector(".quest.chest-get-img"),
+                    popup: ocP,
+                },
+                {
+                    trigger: document.querySelector(".quest.boss-chest"),
+                    popup: bcP,
+                },
+                {
+                    trigger: document.querySelector(".quest.error"),
+                    popup: erP,
+                },
+                {
+                    trigger: document.querySelector(".quest.angel-pop"),
+                    popup: anP,
+                },
+                {
+                    trigger: document.querySelector(".quest.hero-pop"),
+                    popup: hoP,
+                },
+                {
+                    trigger: document.querySelector(".quest.rating-girl"),
+                    popup: raP,
+                },
+                {
+                    trigger: document.querySelector(".quest.dual-pack"),
+                    popup: duP,
+                },
+                {
+                    trigger: document.querySelector(".quest.dual-pack-vl"),
+                    popup: duPv,
+                },
+                {
+                    trigger: document.querySelector(".quest.quest-pop"),
+                    popup: quP,
+                },
+                {
+                    trigger: document.querySelector(".quest.chest-quest"),
+                    popup: cqP,
+                },
+                {
+                    trigger: document.querySelector(".quest.congra"),
+                    popup: coP,
+                },
+                {
+                    trigger: document.querySelector(".quest.chests1"),
+                    popup: csP1,
+                },
+                {
+                    trigger: document.querySelector(".quest.chests3"),
+                    popup: csP3,
+                },
+                {
+                    trigger: document.querySelector(".quest.lover-pack"),
+                    popup: lpP,
+                },
+                {
+                    trigger: document.querySelector(".quest.fortuna-round"),
+                    popup: frP,
+                },
+                {
+                    trigger: document.querySelector(".quest.dark-btlpas"),
+                    popup: dbtP,
+                },
+                {
+                    trigger: document.querySelector(".quest.blackhole-sale"),
+                    popup: saP,
+                },
+                {
+                    trigger: document.querySelector(".quest.reborn"),
+                    popup: reP,
+                },
+                {
+                    trigger: document.querySelector(".dark-reborn"),
+                    popup: drP,
+                },
+                {
+                    trigger: document.querySelector(".res-chest-btn"),
+                    popup: scP,
+                },
+                {
+                    trigger: document.querySelector(".res-chest-btn"),
+                    popup: scP,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".resource-vip.lvl5 > .resource-btn-add"
                     ),
-                ].map((i) => {
-                    i.classList.remove("empty");
-                    i.classList.add("prize");
+                    popup: dbP,
+                },
+                {
+                    trigger: document.querySelector(".rating-reward"),
+                    popup: rrP,
+                },
+                {
+                    trigger: document.querySelector(".rating-top"),
+                    popup: rcP,
+                },
+                {
+                    trigger: document.querySelector(".quest.ts_confirm"),
+                    popup: tsP,
+                },
+                {
+                    trigger: document.querySelector(".quest.xmas1"),
+                    popup: xm1P,
+                },
+                {
+                    trigger: document.querySelector(".quest.xmas-ny"),
+                    popup: xm4P,
+                },
+                {
+                    trigger: document.querySelector(".quest.vl"),
+                    popup: vl2P,
+                },
+                {
+                    trigger: document.querySelector(".quest.spring"),
+                    popup: spP,
+                },
+                {
+                    trigger: document.querySelector(".quest.autumn"),
+                    popup: apP,
+                },
+                {
+                    trigger: document.querySelector(".quest.march"),
+                    popup: maP,
+                },
+                {
+                    trigger: document.querySelector(".signinout-btn"),
+                    popup: pIn,
+                },
+            ];
+            popupTriggers.forEach((popupTrigger) => {
+                popupTrigger.trigger.addEventListener("click", () => {
+                    showPopup(popupTrigger.popup);
                 });
-                colB.querySelector(".color-btn-text").innerHTML = "закрыть";
-                colB.classList.add("btn-close");
-            } else {
-                rrBo.classList.add("open");
-                ch1.style.display = "none";
-                colB.querySelector(".color-btn-text").innerHTML =
-                    "показать все";
-            }
-            if (colB.classList.contains("btn-close")) {
-                colB.addEventListener("click", () => {
-                    po.classList.remove("dialog-emersion-enter");
-                    po.classList.add("dialog-emersion-exit");
-                    setTimeout(function () {
-                        re.style.display = "none";
-                        rrP.style.display = "none";
-                        po.classList.remove("dialog-emersion-exit");
-                    }, 100);
-                });
-            }
-        });
+            });
 
-        // все попапы
-        const po = document.getElementById("popupAll");
-        const re = document.querySelector(".popup-layer");
-        const eBx = document.querySelector(".m-popup.events-btlpass-pop.xmas");
-        const eBh = document.querySelector(".m-popup.events-btlpass-pop.hw");
-        const eBb = document.querySelector(".m-popup.events-btlpass-pop.bf");
-        const eBv = document.querySelector(".m-popup.events-btlpass-pop.vl");
-        const spP = document.querySelector(
-            ".m-popup.events-btlpass-pop.spring"
-        );
-        const apP = document.querySelector(
-            ".m-popup.events-btlpass-pop.autumn"
-        );
-        const eByx = document.querySelector(".m-popup.essence-buy.xmas");
-        const eByh = document.querySelector(".m-popup.essence-buy.hw");
-        const eByb = document.querySelector(".m-popup.essence-buy.bf");
-        const eByv = document.querySelector(".m-popup.essence-buy.vl");
-        const eBya = document.querySelector(".m-popup.essence-buy.au");
-        const fR = document.querySelector(".m-popup.fapop-rules");
-        const lB = document.querySelector(".m-popup.lose-boss");
-        const aP3 = document.querySelector(".m-popup.angel-pop-x3");
-        const bfP = document.querySelector(".m-popup.bf-event");
-        const vlP = document.querySelector(".m-popup.vl-event");
-        const ocP = document.querySelector(".m-popup.openchest");
-        const gpP = document.querySelector(".m-popup.change-givepic");
-        const clP = document.querySelector(".m-popup.change-collpop");
-        const bcP = document.querySelector(".m-popup.cw-offers-pop");
-        const erP = document.querySelector(".m-popup.error-popup");
-        const anP = document.querySelector(".m-popup.angel-pop");
-        const hoP = document.querySelector(".m-popup.hero-pop");
-        const raP = document.querySelector(".ratingpop-box");
-        const duP = document.querySelector(".m-popup.fortuna-main.uni-sale");
-        const duPv = document.querySelector(".m-popup.fortuna-main.sv-sale");
-        const quP = document.querySelector(".quest-popup");
-        const cqP = document.querySelector(".m-popup.chest-quest");
-        const coP = document.querySelector(".m-popup.fortuna-winpop2");
-        const csP1 = document.querySelector(".m-popup.sh2-openchest1");
-        const csP3 = document.querySelector(".m-popup.sh2-openchest3");
-        const lpP = document.querySelector(".popup.wpck-end");
-        const frP = document.querySelector(".m-popup.fortuna-main-round");
-        const saP = document.querySelector(".m-popup.wpck5");
-        const reP = document.querySelector(".reborn-popup");
-        const drP = document.querySelector(".m-popup.reborn-dark-popup");
-        const scP = document.querySelector(".m-popup.chests-shop");
-        const caP = document.querySelector(".m-popup.change-addchest");
-        const dbP = document.querySelector(".m-popup.diamond-buy");
-        const rrP = document.querySelector(".m-popup.rating-reward");
-        const rcP = document.querySelector(".m-popup.rankchange");
-        const heP = document.querySelector(".m-popup.hero-popup");
-        const tsP = document.querySelector(".m-popup.ts_confirm");
-        const xm1P = document.querySelector(".m-popup.xmas-pop1");
-        const xm2P = document.querySelector(".m-popup.xmas-pop2");
-        const xm3P = document.querySelector(".m-popup.xmas-pop3");
-        const xm4P = document.querySelector(".m-popup.main-relics-pop.xmas");
-        const vl2P = document.querySelector(".m-popup.main-relics-pop.vl");
-        const maP = document.querySelector(".m-popup.main-relics-pop.march");
-        const pIn = document.querySelector(".pop-in");
-        const pRg = document.querySelector(".pop-reg");
-        const paI = document.querySelector(".m-popup.info-pop");
-        const dbtP = document.querySelector(".m-popup.dark-btlpas");
+            // попап с инфо, массив кнопок
+            const infPopBtns = [...document.querySelectorAll(".bp-info-btn")];
+            // массив попапов для закрытия для инфо
+            const closePopups = [eBx, eBh, eBb, eBv, spP, apP];
 
-        const allPops = [
-            ...document.querySelectorAll(
-                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
-            ),
-        ];
-        allPops.forEach((popup) => {
-            popup.style.display = "none";
-        });
-
-        // Функция для показа попапа
-        function showPopup(popupElement) {
-            re.style.display = "block";
-            setTimeout(function () {
-                popupElement.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        }
-
-        // Функция для скрытия попапа
-        function hidePopup(popupElements) {
-            po.classList.remove("dialog-emersion-enter");
-            po.classList.add("dialog-emersion-exit");
-            setTimeout(() => {
-                re.style.display = "none";
-                if (Array.isArray(popupElements)) {
-                    popupElements.forEach((popupElement) => {
-                        popupElement.style.display = "none";
+            // Привязка действий к кнопкам, которые закрывают один попап и открывают другой
+            const popupSwitchers = [
+                {
+                    trigger: document.querySelector(
+                        ".openchest-bonus-box.free.chest > .openchest-bonus-btn.free"
+                    ),
+                    closePopup: ocP,
+                    openPopup: gpP,
+                },
+                {
+                    trigger: document.querySelector(".change-btn-info"),
+                    closePopup: gpP,
+                    openPopup: clP,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".item-box > div:nth-child(1) > .color-btn"
+                    ),
+                    closePopup: scP,
+                    openPopup: caP,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".m-popup.chests-shop .content-header .color-btn.info"
+                    ),
+                    closePopup: scP,
+                    openPopup: paI,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".xmas-btn-box .color-btn.shop"
+                    ),
+                    closePopup: xm1P,
+                    openPopup: xm2P,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".xmas-btn-box .color-btn.quest"
+                    ),
+                    closePopup: xm1P,
+                    openPopup: xm3P,
+                },
+                {
+                    trigger: document.querySelector(".go"),
+                    closePopup: pIn,
+                    openPopup: pRg,
+                },
+                {
+                    trigger: infPopBtns,
+                    closePopup: closePopups,
+                    openPopup: fR,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".m-popup.events-btlpass-pop.xmas > .btlpass-btn-box > div:nth-child(2)"
+                    ),
+                    closePopup: closePopups,
+                    openPopup: eByx,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".m-popup.events-btlpass-pop.hw > .btlpass-btn-box > div:nth-child(2)"
+                    ),
+                    closePopup: closePopups,
+                    openPopup: eByh,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".m-popup.events-btlpass-pop.bf > .btlpass-btn-box > div:nth-child(2)"
+                    ),
+                    closePopup: closePopups,
+                    openPopup: eByb,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".m-popup.events-btlpass-pop.vl > .btlpass-btn-box > div:nth-child(2)"
+                    ),
+                    closePopup: closePopups,
+                    openPopup: eByv,
+                },
+                {
+                    trigger: document.querySelector(
+                        ".m-popup.events-btlpass-pop.autumn > .btlpass-btn-box > div:nth-child(2)"
+                    ),
+                    closePopup: closePopups,
+                    openPopup: eBya,
+                },
+            ];
+            popupSwitchers.forEach((popupSwitcher) => {
+                if (Array.isArray(popupSwitcher.trigger)) {
+                    popupSwitcher.trigger.forEach((btn) => {
+                        btn.addEventListener("click", () => {
+                            hidePopup(popupSwitcher.closePopup);
+                            setTimeout(function () {
+                                showPopup(popupSwitcher.openPopup);
+                            }, 104);
+                        });
                     });
                 } else {
-                    popupElements.style.display = "none";
-                }
-                po.classList.remove("dialog-emersion-exit");
-            }, 104);
-        }
-
-        // Функция для привязки действий к кнопке закрытия
-        function bindCloseAction(button, popupElement) {
-            button.addEventListener("click", () => {
-                hidePopup(popupElement);
-            });
-        }
-
-        // Привязка действий к кнопкам закрытия
-        [
-            ...document.querySelectorAll(
-                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
-            ),
-        ].forEach((button) => {
-            bindCloseAction(
-                button,
-                button.closest(".m-popup, .ratingpop-box, .quest-popup, .popup")
-            );
-        });
-
-        // Привязка действий к кнопкам открытия попапов
-        const popupTriggers = [
-            {
-                trigger: document.querySelector(".quest.xmas"),
-                popup: eBx,
-            },
-            {
-                trigger: document.querySelector(".quest.hw"),
-                popup: eBh,
-            },
-            {
-                trigger: document.querySelector(".quest.bf"),
-                popup: eBb,
-            },
-            {
-                trigger: document.querySelector(".quest.vl-pass"),
-                popup: eBv,
-            },
-            {
-                trigger: document.querySelector(".quest.lose-boss"),
-                popup: lB,
-            },
-            {
-                trigger: document.querySelector(".quest.pop-x3"),
-                popup: aP3,
-            },
-            {
-                trigger: document.querySelector(".quest.bf-sale"),
-                popup: bfP,
-            },
-            {
-                trigger: document.querySelector(".quest.vl-sale"),
-                popup: vlP,
-            },
-            {
-                trigger: document.querySelector(".quest.chest-get-img"),
-                popup: ocP,
-            },
-            {
-                trigger: document.querySelector(".quest.boss-chest"),
-                popup: bcP,
-            },
-            {
-                trigger: document.querySelector(".quest.error"),
-                popup: erP,
-            },
-            {
-                trigger: document.querySelector(".quest.angel-pop"),
-                popup: anP,
-            },
-            {
-                trigger: document.querySelector(".quest.hero-pop"),
-                popup: hoP,
-            },
-            {
-                trigger: document.querySelector(".quest.rating-girl"),
-                popup: raP,
-            },
-            {
-                trigger: document.querySelector(".quest.dual-pack"),
-                popup: duP,
-            },
-            {
-                trigger: document.querySelector(".quest.dual-pack-vl"),
-                popup: duPv,
-            },
-            {
-                trigger: document.querySelector(".quest.quest-pop"),
-                popup: quP,
-            },
-            {
-                trigger: document.querySelector(".quest.chest-quest"),
-                popup: cqP,
-            },
-            {
-                trigger: document.querySelector(".quest.congra"),
-                popup: coP,
-            },
-            {
-                trigger: document.querySelector(".quest.chests1"),
-                popup: csP1,
-            },
-            {
-                trigger: document.querySelector(".quest.chests3"),
-                popup: csP3,
-            },
-            {
-                trigger: document.querySelector(".quest.lover-pack"),
-                popup: lpP,
-            },
-            {
-                trigger: document.querySelector(".quest.fortuna-round"),
-                popup: frP,
-            },
-            {
-                trigger: document.querySelector(".quest.dark-btlpas"),
-                popup: dbtP,
-            },
-            {
-                trigger: document.querySelector(".quest.blackhole-sale"),
-                popup: saP,
-            },
-            {
-                trigger: document.querySelector(".quest.reborn"),
-                popup: reP,
-            },
-            {
-                trigger: document.querySelector(".dark-reborn"),
-                popup: drP,
-            },
-            {
-                trigger: document.querySelector(".res-chest-btn"),
-                popup: scP,
-            },
-            {
-                trigger: document.querySelector(".res-chest-btn"),
-                popup: scP,
-            },
-            {
-                trigger: document.querySelector(
-                    ".resource-vip.lvl5 > .resource-btn-add"
-                ),
-                popup: dbP,
-            },
-            {
-                trigger: document.querySelector(".rating-reward"),
-                popup: rrP,
-            },
-            {
-                trigger: document.querySelector(".rating-top"),
-                popup: rcP,
-            },
-            {
-                trigger: document.querySelector(".quest.ts_confirm"),
-                popup: tsP,
-            },
-            {
-                trigger: document.querySelector(".quest.xmas1"),
-                popup: xm1P,
-            },
-            {
-                trigger: document.querySelector(".quest.xmas-ny"),
-                popup: xm4P,
-            },
-            {
-                trigger: document.querySelector(".quest.vl"),
-                popup: vl2P,
-            },
-            {
-                trigger: document.querySelector(".quest.spring"),
-                popup: spP,
-            },
-            {
-                trigger: document.querySelector(".quest.autumn"),
-                popup: apP,
-            },
-            {
-                trigger: document.querySelector(".quest.march"),
-                popup: maP,
-            },
-            {
-                trigger: document.querySelector(".signinout-btn"),
-                popup: pIn,
-            },
-        ];
-        popupTriggers.forEach((popupTrigger) => {
-            popupTrigger.trigger.addEventListener("click", () => {
-                showPopup(popupTrigger.popup);
-            });
-        });
-
-        // попап с инфо, массив кнопок
-        const infPopBtns = [...document.querySelectorAll(".bp-info-btn")];
-        // массив попапов для закрытия для инфо
-        const closePopups = [eBx, eBh, eBb, eBv, spP, apP];
-
-        // Привязка действий к кнопкам, которые закрывают один попап и открывают другой
-        const popupSwitchers = [
-            {
-                trigger: document.querySelector(
-                    ".openchest-bonus-box.free.chest > .openchest-bonus-btn.free"
-                ),
-                closePopup: ocP,
-                openPopup: gpP,
-            },
-            {
-                trigger: document.querySelector(".change-btn-info"),
-                closePopup: gpP,
-                openPopup: clP,
-            },
-            {
-                trigger: document.querySelector(
-                    ".item-box > div:nth-child(1) > .color-btn"
-                ),
-                closePopup: scP,
-                openPopup: caP,
-            },
-            {
-                trigger: document.querySelector(
-                    ".m-popup.chests-shop .content-header .color-btn.info"
-                ),
-                closePopup: scP,
-                openPopup: paI,
-            },
-            {
-                trigger: document.querySelector(
-                    ".xmas-btn-box .color-btn.shop"
-                ),
-                closePopup: xm1P,
-                openPopup: xm2P,
-            },
-            {
-                trigger: document.querySelector(
-                    ".xmas-btn-box .color-btn.quest"
-                ),
-                closePopup: xm1P,
-                openPopup: xm3P,
-            },
-            {
-                trigger: document.querySelector(".go"),
-                closePopup: pIn,
-                openPopup: pRg,
-            },
-            {
-                trigger: infPopBtns,
-                closePopup: closePopups,
-                openPopup: fR,
-            },
-            {
-                trigger: document.querySelector(
-                    ".m-popup.events-btlpass-pop.xmas > .btlpass-btn-box > div:nth-child(2)"
-                ),
-                closePopup: closePopups,
-                openPopup: eByx,
-            },
-            {
-                trigger: document.querySelector(
-                    ".m-popup.events-btlpass-pop.hw > .btlpass-btn-box > div:nth-child(2)"
-                ),
-                closePopup: closePopups,
-                openPopup: eByh,
-            },
-            {
-                trigger: document.querySelector(
-                    ".m-popup.events-btlpass-pop.bf > .btlpass-btn-box > div:nth-child(2)"
-                ),
-                closePopup: closePopups,
-                openPopup: eByb,
-            },
-            {
-                trigger: document.querySelector(
-                    ".m-popup.events-btlpass-pop.vl > .btlpass-btn-box > div:nth-child(2)"
-                ),
-                closePopup: closePopups,
-                openPopup: eByv,
-            },
-            {
-                trigger: document.querySelector(
-                    ".m-popup.events-btlpass-pop.autumn > .btlpass-btn-box > div:nth-child(2)"
-                ),
-                closePopup: closePopups,
-                openPopup: eBya,
-            },
-        ];
-        popupSwitchers.forEach((popupSwitcher) => {
-            if (Array.isArray(popupSwitcher.trigger)) {
-                popupSwitcher.trigger.forEach((btn) => {
-                    btn.addEventListener("click", () => {
+                    popupSwitcher.trigger.addEventListener("click", () => {
                         hidePopup(popupSwitcher.closePopup);
                         setTimeout(function () {
                             showPopup(popupSwitcher.openPopup);
                         }, 104);
                     });
-                });
-            } else {
-                popupSwitcher.trigger.addEventListener("click", () => {
-                    hidePopup(popupSwitcher.closePopup);
-                    setTimeout(function () {
-                        showPopup(popupSwitcher.openPopup);
-                    }, 104);
-                });
-            }
-        });
-
-        // прочее
-        const chB = document.querySelector(".lb-checkbox");
-        chB.addEventListener("click", () => {
-            chB.classList.toggle("active");
-        });
-
-        // *переключалка инфы
-        const inBr = document.querySelector(".openchest-btn-info.right");
-        const inBl = document.querySelector(".openchest-btn-info.left");
-        const orB = document.querySelector(".openchest-right-box");
-        inBr.addEventListener("click", () => {
-            orB.classList.add("info");
-            inBr.style.display = "none";
-            inBl.style.display = "block";
-        });
-        inBl.addEventListener("click", () => {
-            orB.classList.remove("info");
-            inBl.style.display = "none";
-            inBr.style.display = "block";
-        });
-
-        // попап на картах
-        const heB = document.querySelectorAll(".hero-card");
-        heB.forEach((i) => {
-            i.addEventListener("click", (e) => {
-                re.style.display = "block";
-                setTimeout(function () {
-                    heP.style.display = "block";
-                    po.classList.add("dialog-emersion-enter");
-                }, 100);
-            });
-        });
-        const hrW = document.querySelector(
-            ".m-popup.hero-popup > div:nth-child(5)"
-        );
-        const hrB = document.querySelector(".m-popup.hero-popup .abils-btn");
-        const hpW = document.querySelector(
-            ".m-popup.hero-popup .hero-right-side.promotion"
-        );
-        hpW.style.display = "none";
-        const hpB = document.querySelector(
-            ".m-popup.hero-popup .promotion-btn"
-        );
-        hrB.addEventListener("click", (e) => {
-            hrW.style.display = "block";
-            hpW.style.display = "none";
-        });
-        hpB.addEventListener("click", (e) => {
-            hpW.style.display = "block";
-            hrW.style.display = "none";
-        });
-        const tmB = document.querySelectorAll(".tabs-menu-btn");
-        tmB.forEach((i) => {
-            i.addEventListener("click", (e) => {
-                tmB.forEach((el) => {
-                    el.classList.remove("active");
-                });
-                i.classList.add("active");
-            });
-        });
-        const gB = document.querySelectorAll(".girl-box-scroll .girl-box");
-        gB.forEach((i) => {
-            i.addEventListener("click", (e) => {
-                gB.forEach((el) => {
-                    el.classList.remove("active");
-                });
-                i.classList.add("active");
-            });
-        });
-
-        const quTb = document.querySelectorAll(".quest-title-btn");
-        quTb.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                if (item.closest(".quest-box").classList.contains("closed")) {
-                    item.closest(".quest-box").classList.remove("closed");
-                } else {
-                    item.closest(".quest-box").classList.add("closed");
                 }
             });
-        });
 
+            // прочее
+            const chB = document.querySelector(".lb-checkbox");
+            chB.addEventListener("click", () => {
+                chB.classList.toggle("active");
+            });
+
+            // *переключалка инфы
+            const inBr = document.querySelector(".openchest-btn-info.right");
+            const inBl = document.querySelector(".openchest-btn-info.left");
+            const orB = document.querySelector(".openchest-right-box");
+            inBr.addEventListener("click", () => {
+                orB.classList.add("info");
+                inBr.style.display = "none";
+                inBl.style.display = "block";
+            });
+            inBl.addEventListener("click", () => {
+                orB.classList.remove("info");
+                inBl.style.display = "none";
+                inBr.style.display = "block";
+            });
+
+            // попап на картах
+            const heB = document.querySelectorAll(".hero-card");
+            heB.forEach((i) => {
+                i.addEventListener("click", (e) => {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        heP.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+            });
+            const hrW = document.querySelector(
+                ".m-popup.hero-popup > div:nth-child(5)"
+            );
+            const hrB = document.querySelector(
+                ".m-popup.hero-popup .abils-btn"
+            );
+            const hpW = document.querySelector(
+                ".m-popup.hero-popup .hero-right-side.promotion"
+            );
+            hpW.style.display = "none";
+            const hpB = document.querySelector(
+                ".m-popup.hero-popup .promotion-btn"
+            );
+            hrB.addEventListener("click", (e) => {
+                hrW.style.display = "block";
+                hpW.style.display = "none";
+            });
+            hpB.addEventListener("click", (e) => {
+                hpW.style.display = "block";
+                hrW.style.display = "none";
+            });
+            const tmB = document.querySelectorAll(".tabs-menu-btn");
+            tmB.forEach((i) => {
+                i.addEventListener("click", (e) => {
+                    tmB.forEach((el) => {
+                        el.classList.remove("active");
+                    });
+                    i.classList.add("active");
+                });
+            });
+            const gB = document.querySelectorAll(".girl-box-scroll .girl-box");
+            gB.forEach((i) => {
+                i.addEventListener("click", (e) => {
+                    gB.forEach((el) => {
+                        el.classList.remove("active");
+                    });
+                    i.classList.add("active");
+                });
+            });
+
+            const quTb = document.querySelectorAll(".quest-title-btn");
+            quTb.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    if (
+                        item.closest(".quest-box").classList.contains("closed")
+                    ) {
+                        item.closest(".quest-box").classList.remove("closed");
+                    } else {
+                        item.closest(".quest-box").classList.add("closed");
+                    }
+                });
+            });
+            return;
+        }
         return () => {};
     }, []);
 

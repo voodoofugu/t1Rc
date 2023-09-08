@@ -5,258 +5,266 @@ import screenFortunaWinpop from "../styles/screen-fortuna-winpop.scss";
 import v2ScreenWorldDistrict from "../styles/v2-screen-world-district.scss";
 
 const V2MainScreen23PortalMapComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        // все попапы
-        const po = document.getElementById("popupAll");
-        const re = document.querySelector(".popup-layer");
-        const pInf = document.querySelector(".m-popup.fortuna-winpop2");
-        const distPop = document.querySelector(".m-popup.world-district");
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            // все попапы
+            const po = document.getElementById("popupAll");
+            const re = document.querySelector(".popup-layer");
+            const pInf = document.querySelector(".m-popup.fortuna-winpop2");
+            const distPop = document.querySelector(".m-popup.world-district");
 
-        // закрытие попапов
-        [
-            ...document.querySelectorAll(
-                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
-            ),
-        ].map((i) => {
-            i.style.display = "none";
-            // закрываем все попапы при клике на затемнение
-            const blS = document.querySelector(".screen-blend-55");
-            blS.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
-                setTimeout(function () {
-                    re.style.display = "none";
-                    i.style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
-                }, 100);
+            // закрытие попапов
+            [
+                ...document.querySelectorAll(
+                    ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                ),
+            ].map((i) => {
+                i.style.display = "none";
+                // закрываем все попапы при клике на затемнение
+                const blS = document.querySelector(".screen-blend-55");
+                blS.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
             });
-        });
-        [
-            ...document.querySelectorAll(
-                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
-            ),
-        ].map((i) => {
-            i.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
-                setTimeout(function () {
-                    re.style.display = "none";
-                    i.closest(
-                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
-                    ).style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
-                }, 100);
+            [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                ),
+            ].map((i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.closest(
+                            ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                        ).style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
             });
-        });
 
-        const dungTreas = document.querySelector(".dungTreas-btn");
-        dungTreas.addEventListener("click", () => {
-            if (dungTreas.classList.contains("active")) {
+            const dungTreas = document.querySelector(".dungTreas-btn");
+            dungTreas.addEventListener("click", () => {
+                if (dungTreas.classList.contains("active")) {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        pInf.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                }
+                dungTreas.classList.toggle("active");
+            });
+
+            const distPopB = document.querySelector(".progres-bar");
+            distPopB.addEventListener("click", () => {
                 re.style.display = "block";
                 setTimeout(function () {
-                    pInf.style.display = "block";
+                    distPop.style.display = "block";
                     po.classList.add("dialog-emersion-enter");
                 }, 100);
-            }
-            dungTreas.classList.toggle("active");
-        });
-
-        const distPopB = document.querySelector(".progres-bar");
-        distPopB.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                distPop.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        // имена локаций
-        let locName1 = [
-            // карта1
-            "start tower",
-            "old cathedral",
-            "gorge of death I",
-            "gorge of death II",
-            "mysterious ziggurat",
-            "royal court",
-            "house on the cliff",
-            "path to the bridge",
-            "fighting arena",
-            "entry to the dungeon",
-        ];
-        let locName2 = [
-            // карта2
-            "exit to the tower",
-            "cursed castle",
-            "watch tower",
-            "suspicious steppe",
-            "great tree",
-            "sleeping dragon",
-            "waterfall of truth",
-            "lake of the lost",
-            "troll cave",
-            "outpost of change",
-        ];
-        let headTit = document.querySelector(".header-title");
-
-        const locations = [...document.querySelectorAll(".map-bg")];
-        locations.map((el) => {
-            el.addEventListener("click", () => {
-                if (el.closest(".loc-box").classList.contains("foropen")) {
-                    el.closest(".loc-box").classList.remove("foropen");
-                }
-
-                if (!el.closest(".loc-box").classList.contains("lock")) {
-                    locations.map((el) => {
-                        el.closest(".loc-box").classList.remove("active");
-                    });
-                    el.closest(".loc-box").classList.add("active");
-                }
             });
-        });
 
-        const popUp = document.querySelector(".chest-pop-up");
-        const chests = document.querySelectorAll(".chest");
-        const win = document.querySelector(".main");
-        [...chests].map((chest, index) => {
-            if (chest.classList.contains("close")) {
-                chest.querySelector(".chest-notif").innerHTML = "LP 1000";
-            }
-            // всплывашка
-            if (!chest.classList.contains("open")) {
-                chest.addEventListener("mouseenter", () => {
-                    // двигаем по X
-                    popUp.style.transform = `translateX(${
-                        chest.getBoundingClientRect().x -
-                        win.getBoundingClientRect().x -
-                        popUp.getBoundingClientRect().width / 2 +
-                        chest.getBoundingClientRect().width / 2
-                    }px)`;
-                    // двигаем по Y
-                    popUp.style.transform += ` translateY(${
-                        chest.getBoundingClientRect().y -
-                        win.getBoundingClientRect().y
-                    }px)`;
+            // имена локаций
+            let locName1 = [
+                // карта1
+                "start tower",
+                "old cathedral",
+                "gorge of death I",
+                "gorge of death II",
+                "mysterious ziggurat",
+                "royal court",
+                "house on the cliff",
+                "path to the bridge",
+                "fighting arena",
+                "entry to the dungeon",
+            ];
+            let locName2 = [
+                // карта2
+                "exit to the tower",
+                "cursed castle",
+                "watch tower",
+                "suspicious steppe",
+                "great tree",
+                "sleeping dragon",
+                "waterfall of truth",
+                "lake of the lost",
+                "troll cave",
+                "outpost of change",
+            ];
+            let headTit = document.querySelector(".header-title");
 
-                    popUp.classList.add("active");
-
-                    const addLeft = [0, 1, 2, 3];
-                    if (addLeft.includes(index)) {
-                        popUp.classList.add("left");
+            const locations = [...document.querySelectorAll(".map-bg")];
+            locations.map((el) => {
+                el.addEventListener("click", () => {
+                    if (el.closest(".loc-box").classList.contains("foropen")) {
+                        el.closest(".loc-box").classList.remove("foropen");
                     }
-                    const addRigt = [16, 17, 18, 19];
-                    if (addRigt.includes(index)) {
-                        popUp.classList.add("right");
-                    }
-                    const center = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-                    if (center.includes(index)) {
-                        popUp.classList.remove("left");
-                        popUp.classList.remove("right");
+
+                    if (!el.closest(".loc-box").classList.contains("lock")) {
+                        locations.map((el) => {
+                            el.closest(".loc-box").classList.remove("active");
+                        });
+                        el.closest(".loc-box").classList.add("active");
                     }
                 });
-                chest.addEventListener("mouseleave", () => {
-                    popUp.classList.remove("active");
-                });
-            }
+            });
 
-            // переключаем состояния сундуков
-            chest.addEventListener("click", () => {
-                let currentClassName = "";
-                if (chest.classList.contains("ready")) {
-                    currentClassName = "ready";
+            const popUp = document.querySelector(".chest-pop-up");
+            const chests = document.querySelectorAll(".chest");
+            const win = document.querySelector(".main");
+            [...chests].map((chest, index) => {
+                if (chest.classList.contains("close")) {
+                    chest.querySelector(".chest-notif").innerHTML = "LP 1000";
                 }
-                if (chest.classList.contains("open")) {
-                    currentClassName = "open";
-                }
-                if (chest.classList.contains("closed")) {
-                    currentClassName = "closed";
-                }
+                // всплывашка
+                if (!chest.classList.contains("open")) {
+                    chest.addEventListener("mouseenter", () => {
+                        // двигаем по X
+                        popUp.style.transform = `translateX(${
+                            chest.getBoundingClientRect().x -
+                            win.getBoundingClientRect().x -
+                            popUp.getBoundingClientRect().width / 2 +
+                            chest.getBoundingClientRect().width / 2
+                        }px)`;
+                        // двигаем по Y
+                        popUp.style.transform += ` translateY(${
+                            chest.getBoundingClientRect().y -
+                            win.getBoundingClientRect().y
+                        }px)`;
 
-                if (currentClassName === "ready") {
-                    chest.classList.remove("ready");
-                    chest.classList.add("open");
+                        popUp.classList.add("active");
 
-                    const chestOpen = [
-                        ...document.querySelectorAll(".chest.open"),
-                    ];
-                    chestOpen.map((el) => {
-                        el.style.pointerEvents = "all";
+                        const addLeft = [0, 1, 2, 3];
+                        if (addLeft.includes(index)) {
+                            popUp.classList.add("left");
+                        }
+                        const addRigt = [16, 17, 18, 19];
+                        if (addRigt.includes(index)) {
+                            popUp.classList.add("right");
+                        }
+                        const center = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+                        if (center.includes(index)) {
+                            popUp.classList.remove("left");
+                            popUp.classList.remove("right");
+                        }
+                    });
+                    chest.addEventListener("mouseleave", () => {
+                        popUp.classList.remove("active");
                     });
                 }
-                if (currentClassName === "open") {
-                    chest.classList.remove("open");
-                    chest.classList.add("closed");
-                }
-                if (currentClassName === "closed") {
-                    chest.classList.remove("closed");
-                    chest.classList.add("ready");
-                }
+
+                // переключаем состояния сундуков
+                chest.addEventListener("click", () => {
+                    let currentClassName = "";
+                    if (chest.classList.contains("ready")) {
+                        currentClassName = "ready";
+                    }
+                    if (chest.classList.contains("open")) {
+                        currentClassName = "open";
+                    }
+                    if (chest.classList.contains("closed")) {
+                        currentClassName = "closed";
+                    }
+
+                    if (currentClassName === "ready") {
+                        chest.classList.remove("ready");
+                        chest.classList.add("open");
+
+                        const chestOpen = [
+                            ...document.querySelectorAll(".chest.open"),
+                        ];
+                        chestOpen.map((el) => {
+                            el.style.pointerEvents = "all";
+                        });
+                    }
+                    if (currentClassName === "open") {
+                        chest.classList.remove("open");
+                        chest.classList.add("closed");
+                    }
+                    if (currentClassName === "closed") {
+                        chest.classList.remove("closed");
+                        chest.classList.add("ready");
+                    }
+                });
             });
-        });
 
-        // стрелки смена карты
-        const mapLoc = document.querySelector(".map-locs-wrap");
-        const arL = document.querySelector(".arrow.left");
-        const arR = document.querySelector(".arrow.right");
-        arR.addEventListener("click", () => {
-            if (mapLoc.classList.contains("map-01")) {
-                mapLoc.classList.remove("map-01");
-                mapLoc.classList.add("map-02");
-            }
-            if (mapLoc.classList.contains("map-02")) {
-                arR.classList.add("unactive");
-                arL.classList.remove("unactive");
-            }
-        });
-        arL.addEventListener("click", () => {
-            if (mapLoc.classList.contains("map-02")) {
-                mapLoc.classList.remove("map-02");
-                mapLoc.classList.add("map-01");
-            }
-            if (mapLoc.classList.contains("map-01")) {
-                arL.classList.add("unactive");
-                arR.classList.remove("unactive");
-            }
-        });
-
-        // смена заголовков
-        const locBox = document.querySelectorAll(".loc-box");
-        locBox.forEach((item, index) => {
-            item.addEventListener("click", () => {
+            // стрелки смена карты
+            const mapLoc = document.querySelector(".map-locs-wrap");
+            const arL = document.querySelector(".arrow.left");
+            const arR = document.querySelector(".arrow.right");
+            arR.addEventListener("click", () => {
                 if (mapLoc.classList.contains("map-01")) {
-                    headTit.innerHTML = locName1[index];
+                    mapLoc.classList.remove("map-01");
+                    mapLoc.classList.add("map-02");
                 }
                 if (mapLoc.classList.contains("map-02")) {
-                    headTit.innerHTML = locName2[index];
+                    arR.classList.add("unactive");
+                    arL.classList.remove("unactive");
                 }
             });
-        });
-
-        // тултип
-        const tooltip = document.querySelector(".tooltip-layer");
-        tooltip.style.display = "none";
-        const acHint = document.querySelector(".achiev-hint");
-        const popGirl = document.querySelectorAll(".pop-up-girl");
-        [...popGirl].map((popGirl) => {
-            popGirl.addEventListener("mouseenter", () => {
-                tooltip.style.display = "block";
-                acHint.style.left =
-                    popGirl.getBoundingClientRect().x -
-                    win.getBoundingClientRect().x -
-                    acHint.getBoundingClientRect().width / 2 +
-                    popGirl.getBoundingClientRect().width / 2 +
-                    "px";
-                acHint.style.top =
-                    popGirl.getBoundingClientRect().y -
-                    win.getBoundingClientRect().y +
-                    56 +
-                    "px";
+            arL.addEventListener("click", () => {
+                if (mapLoc.classList.contains("map-02")) {
+                    mapLoc.classList.remove("map-02");
+                    mapLoc.classList.add("map-01");
+                }
+                if (mapLoc.classList.contains("map-01")) {
+                    arL.classList.add("unactive");
+                    arR.classList.remove("unactive");
+                }
             });
-            popUp.addEventListener("mouseleave", () => {
-                tooltip.style.display = "none";
-            });
-        });
 
+            // смена заголовков
+            const locBox = document.querySelectorAll(".loc-box");
+            locBox.forEach((item, index) => {
+                item.addEventListener("click", () => {
+                    if (mapLoc.classList.contains("map-01")) {
+                        headTit.innerHTML = locName1[index];
+                    }
+                    if (mapLoc.classList.contains("map-02")) {
+                        headTit.innerHTML = locName2[index];
+                    }
+                });
+            });
+
+            // тултип
+            const tooltip = document.querySelector(".tooltip-layer");
+            tooltip.style.display = "none";
+            const acHint = document.querySelector(".achiev-hint");
+            const popGirl = document.querySelectorAll(".pop-up-girl");
+            [...popGirl].map((popGirl) => {
+                popGirl.addEventListener("mouseenter", () => {
+                    tooltip.style.display = "block";
+                    acHint.style.left =
+                        popGirl.getBoundingClientRect().x -
+                        win.getBoundingClientRect().x -
+                        acHint.getBoundingClientRect().width / 2 +
+                        popGirl.getBoundingClientRect().width / 2 +
+                        "px";
+                    acHint.style.top =
+                        popGirl.getBoundingClientRect().y -
+                        win.getBoundingClientRect().y +
+                        56 +
+                        "px";
+                });
+                popUp.addEventListener("mouseleave", () => {
+                    tooltip.style.display = "none";
+                });
+            });
+            return;
+        }
         return () => {};
     }, []);
     return (

@@ -11,237 +11,249 @@ import v2ScreenTowerRelicsPop from "../styles/v2-screen-tower-relics-pop.scss";
 import v2ScreenTowerTrophyPop from "../styles/v2-screen-tower-trophy-pop.scss";
 
 const V2MainScreen02GuildTowerComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        // кнопка перехода в тёмный мир
-        let btn = document.createElement("div");
-        let btnText = document.createElement("div");
-        btn.className = "color-btn green world-btn";
-        btnText.className = "color-btn-text";
-        btnText.innerHTML = "To Darkworld";
-        btn.append(btnText);
-        document.body.append(btn);
-        const main = document.querySelector(".main");
-        const reG = document.querySelector(
-            ".resource-panel > div:nth-child(2)"
-        );
-        const reI = document.querySelector(".resource-pic > img");
-        const vvT = document.querySelector(".value-vip-ticket");
-        btn.addEventListener("click", () => {
-            if (main.classList.contains("world1")) {
-                main.classList.remove("world1");
-                main.classList.add("world3");
-                btnText.innerHTML = "To Earthworld";
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            // кнопка перехода в тёмный мир
+            let btn = document.createElement("div");
+            let btnText = document.createElement("div");
+            btn.className = "color-btn green world-btn";
+            btnText.className = "color-btn-text";
+            btnText.innerHTML = "To Darkworld";
+            btn.append(btnText);
+            document.querySelector("#root").append(btn);
+            const main = document.querySelector(".main");
+            const reG = document.querySelector(
+                ".resource-panel > div:nth-child(2)"
+            );
+            const reI = document.querySelector(".resource-pic > img");
+            const vvT = document.querySelector(".value-vip-ticket");
+            btn.addEventListener("click", () => {
+                if (main.classList.contains("world1")) {
+                    main.classList.remove("world1");
+                    main.classList.add("world3");
+                    btnText.innerHTML = "To Earthworld";
 
-                reG.classList.remove("resource-gold");
-                reG.classList.add("resource-dark_gold");
-                reI.src = "rc/v2-res-dark.png";
-                vvT.style.display = "none";
-            } else {
-                main.classList.remove("world3");
-                main.classList.add("world1");
-                btnText.innerHTML = "To Darkworld";
+                    reG.classList.remove("resource-gold");
+                    reG.classList.add("resource-dark_gold");
+                    reI.src = "rc/v2-res-dark.png";
+                    vvT.style.display = "none";
+                } else {
+                    main.classList.remove("world3");
+                    main.classList.add("world1");
+                    btnText.innerHTML = "To Darkworld";
 
-                reG.classList.remove("resource-dark_gold");
-                reG.classList.add("resource-gold");
-                reI.src = "rc/v2-res-gold.png";
-                vvT.style.display = "block";
-            }
-        });
+                    reG.classList.remove("resource-dark_gold");
+                    reG.classList.add("resource-gold");
+                    reI.src = "rc/v2-res-gold.png";
+                    vvT.style.display = "block";
+                }
+            });
 
-        // попапы
-        [...document.querySelectorAll(".popup-layer, .m-popup")].map((i) => {
-            i.style.display = "none";
-        });
-        const po = document.getElementById("popupWrapper");
-        const re = document.querySelector(".popup-layer");
-        const trP = document.querySelector(".m-popup.tower-relics-pop");
-        const ttP = document.querySelector(".m-popup.tower-trophy-pop");
-
-        // закрываем все попапы при клике на затемнение
-        [
-            ...document.querySelectorAll(
-                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
-            ),
-        ].map((i) => {
-            i.style.display = "none";
-            const blS = document.querySelector(".screen-blend-55");
-            blS.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
-                setTimeout(function () {
-                    re.style.display = "none";
+            // попапы
+            [...document.querySelectorAll(".popup-layer, .m-popup")].map(
+                (i) => {
                     i.style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
-                }, 100);
-            });
-        });
-        // закрываем все попапы при клике на x
-        [...document.querySelectorAll(".m-popup .btn-close-x")].map((i) => {
-            i.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
-                setTimeout(function () {
-                    re.style.display = "none";
-                    i.closest(
-                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
-                    ).style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
-                }, 100);
-            });
-        });
+                }
+            );
+            const po = document.getElementById("popupWrapper");
+            const re = document.querySelector(".popup-layer");
+            const trP = document.querySelector(".m-popup.tower-relics-pop");
+            const ttP = document.querySelector(".m-popup.tower-trophy-pop");
 
-        const tprB = document.querySelector(".quest.trophy-pop");
-        tprB.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                trP.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        const tttB = document.querySelector(".quest.tower-trophy-pop");
-        tttB.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                ttP.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        // переключалки контента
-        const lP = document.querySelector(".left-panel");
-        const lpD = document.querySelector(".left-panel > div:nth-child(1)");
-        const tB1 = document.querySelector(
-            ".tower-btn-box-all > a:nth-child(1)"
-        );
-        const tB2 = document.querySelector(
-            ".tower-btn-box-all > a:nth-child(2)"
-        );
-        const tB3 = document.querySelector(
-            ".tower-btn-box-all > a:nth-child(3)"
-        );
-        const tB4 = document.querySelector(
-            ".tower-btn-box-all > a:nth-child(4)"
-        );
-        const tB5 = document.querySelector(
-            ".tower-btn-box-all > a:nth-child(5)"
-        );
-        const tB = document.querySelectorAll(".tower-btn-box-all > a");
-        const twF = document.querySelector(".tower-wall.a1 > .color-btn");
-
-        const atB = document.querySelector(".all-tower-box");
-        //   atB.style.display = "none";
-        const raB = document.querySelector(".raidboss-animation-box");
-        raB.style.display = "none";
-        const trB = document.querySelector(".tower-relics-box-scroll");
-        trB.style.display = "none";
-        const tpB = document.querySelector(".tab-panel-box.tower-quest");
-        tpB.style.display = "none";
-        const ttB = document.querySelector(".tower-trophy-box-scroll");
-        ttB.style.display = "none";
-
-        tB.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                tB.forEach((el) => {
-                    el.classList.remove("select");
+            // закрываем все попапы при клике на затемнение
+            [
+                ...document.querySelectorAll(
+                    ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                ),
+            ].map((i) => {
+                i.style.display = "none";
+                const blS = document.querySelector(".screen-blend-55");
+                blS.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
                 });
-                item.classList.add("select");
-                if (tB1.classList.contains("select")) {
-                    lP.className = "left-panel tower wide";
-                    atB.style.display = "block";
-                    raB.style.display = "none";
-                    trB.style.display = "none";
-                    tpB.style.display = "none";
-                    ttB.style.display = "none";
+            });
+            // закрываем все попапы при клике на x
+            [...document.querySelectorAll(".m-popup .btn-close-x")].map((i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.closest(
+                            ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                        ).style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
 
-                    ahb[0].style.display = "block";
-                    ahb[1].style.display = "none";
+            const tprB = document.querySelector(".quest.trophy-pop");
+            tprB.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    trP.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
+            });
 
-                    x2B.style.display = "flex";
-                }
-                if (tB2.classList.contains("select")) {
-                    lP.className = "left-panel top wide";
-                    raB.style.display = "block";
-                    atB.style.display = "none";
-                    trB.style.display = "none";
-                    tpB.style.display = "none";
-                    ttB.style.display = "none";
+            const tttB = document.querySelector(".quest.tower-trophy-pop");
+            tttB.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    ttP.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
+            });
 
-                    ahb[0].style.display = "none";
-                    ahb[1].style.display = "block";
+            // переключалки контента
+            const lP = document.querySelector(".left-panel");
+            const lpD = document.querySelector(
+                ".left-panel > div:nth-child(1)"
+            );
+            const tB1 = document.querySelector(
+                ".tower-btn-box-all > a:nth-child(1)"
+            );
+            const tB2 = document.querySelector(
+                ".tower-btn-box-all > a:nth-child(2)"
+            );
+            const tB3 = document.querySelector(
+                ".tower-btn-box-all > a:nth-child(3)"
+            );
+            const tB4 = document.querySelector(
+                ".tower-btn-box-all > a:nth-child(4)"
+            );
+            const tB5 = document.querySelector(
+                ".tower-btn-box-all > a:nth-child(5)"
+            );
+            const tB = document.querySelectorAll(".tower-btn-box-all > a");
+            const twF = document.querySelector(".tower-wall.a1 > .color-btn");
 
-                    x2B.style.display = "none";
-                }
-                if (tB3.classList.contains("select")) {
-                    lP.className = "left-panel relics wide";
-                    trB.style.display = "block";
-                    raB.style.display = "none";
-                    atB.style.display = "none";
-                    tpB.style.display = "none";
-                    ttB.style.display = "none";
+            const atB = document.querySelector(".all-tower-box");
+            //   atB.style.display = "none";
+            const raB = document.querySelector(".raidboss-animation-box");
+            raB.style.display = "none";
+            const trB = document.querySelector(".tower-relics-box-scroll");
+            trB.style.display = "none";
+            const tpB = document.querySelector(".tab-panel-box.tower-quest");
+            tpB.style.display = "none";
+            const ttB = document.querySelector(".tower-trophy-box-scroll");
+            ttB.style.display = "none";
 
-                    ahb[0].style.display = "block";
-                    ahb[1].style.display = "none";
-
-                    x2B.style.display = "flex";
-                }
-                if (tB4.classList.contains("select")) {
-                    lP.className = "left-panel wide";
-                    lpD.style.display = "none";
-                    tpB.style.display = "block";
-                    atB.style.display = "block";
-                    trB.style.display = "none";
-                    raB.style.display = "none";
-                    ttB.style.display = "none";
-                    const btX = document.querySelector(
-                        ".tower-quest > .btn-close-x"
-                    );
-                    btX.addEventListener("click", () => {
-                        lP.className = "left-panel tower wide";
-                        lpD.style.display = "block";
-                        tpB.style.display = "none";
-                        tB4.classList.remove("select");
-                        tB1.classList.add("select");
+            tB.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    tB.forEach((el) => {
+                        el.classList.remove("select");
                     });
+                    item.classList.add("select");
+                    if (tB1.classList.contains("select")) {
+                        lP.className = "left-panel tower wide";
+                        atB.style.display = "block";
+                        raB.style.display = "none";
+                        trB.style.display = "none";
+                        tpB.style.display = "none";
+                        ttB.style.display = "none";
 
-                    ahb[0].style.display = "block";
-                    ahb[1].style.display = "none";
+                        ahb[0].style.display = "block";
+                        ahb[1].style.display = "none";
 
-                    x2B.style.display = "flex";
-                }
-                if (tB5.classList.contains("select")) {
-                    lP.className = "left-panel trophy wide";
-                    ttB.style.display = "block";
-                    tpB.style.display = "none";
-                    trB.style.display = "none";
-                    raB.style.display = "none";
-                    atB.style.display = "none";
+                        x2B.style.display = "flex";
+                    }
+                    if (tB2.classList.contains("select")) {
+                        lP.className = "left-panel top wide";
+                        raB.style.display = "block";
+                        atB.style.display = "none";
+                        trB.style.display = "none";
+                        tpB.style.display = "none";
+                        ttB.style.display = "none";
 
-                    ahb[0].style.display = "block";
-                    ahb[1].style.display = "none";
+                        ahb[0].style.display = "none";
+                        ahb[1].style.display = "block";
 
-                    x2B.style.display = "flex";
-                }
+                        x2B.style.display = "none";
+                    }
+                    if (tB3.classList.contains("select")) {
+                        lP.className = "left-panel relics wide";
+                        trB.style.display = "block";
+                        raB.style.display = "none";
+                        atB.style.display = "none";
+                        tpB.style.display = "none";
+                        ttB.style.display = "none";
+
+                        ahb[0].style.display = "block";
+                        ahb[1].style.display = "none";
+
+                        x2B.style.display = "flex";
+                    }
+                    if (tB4.classList.contains("select")) {
+                        lP.className = "left-panel wide";
+                        lpD.style.display = "none";
+                        tpB.style.display = "block";
+                        atB.style.display = "block";
+                        trB.style.display = "none";
+                        raB.style.display = "none";
+                        ttB.style.display = "none";
+                        const btX = document.querySelector(
+                            ".tower-quest > .btn-close-x"
+                        );
+                        btX.addEventListener("click", () => {
+                            lP.className = "left-panel tower wide";
+                            lpD.style.display = "block";
+                            tpB.style.display = "none";
+                            tB4.classList.remove("select");
+                            tB1.classList.add("select");
+                        });
+
+                        ahb[0].style.display = "block";
+                        ahb[1].style.display = "none";
+
+                        x2B.style.display = "flex";
+                    }
+                    if (tB5.classList.contains("select")) {
+                        lP.className = "left-panel trophy wide";
+                        ttB.style.display = "block";
+                        tpB.style.display = "none";
+                        trB.style.display = "none";
+                        raB.style.display = "none";
+                        atB.style.display = "none";
+
+                        ahb[0].style.display = "block";
+                        ahb[1].style.display = "none";
+
+                        x2B.style.display = "flex";
+                    }
+                });
             });
-        });
 
-        twF.addEventListener("click", () => {
-            lP.className = "left-panel tower wide fight";
-            const tR = document.querySelector(".tower-right-wrap");
-            tR.style.display = "none";
-        });
-
-        // кнопки покупки в попапк реликвий
-        [...document.querySelectorAll(".color-btn.purple")].map((i) => {
-            i.addEventListener("click", () => {
-                i.closest(".cardreward-box").classList.add("collected");
+            twF.addEventListener("click", () => {
+                lP.className = "left-panel tower wide fight";
+                const tR = document.querySelector(".tower-right-wrap");
+                tR.style.display = "none";
             });
-        });
 
-        const ahb = document.querySelectorAll(".all-heroes-box");
-        ahb[1].style.display = "none";
-        const x2B = document.querySelector(".x2-btn-all-box");
+            // кнопки покупки в попапк реликвий
+            [...document.querySelectorAll(".color-btn.purple")].map((i) => {
+                i.addEventListener("click", () => {
+                    i.closest(".cardreward-box").classList.add("collected");
+                });
+            });
 
+            const ahb = document.querySelectorAll(".all-heroes-box");
+            ahb[1].style.display = "none";
+            const x2B = document.querySelector(".x2-btn-all-box");
+            return;
+        }
         return () => {};
     }, []);
     const css = `

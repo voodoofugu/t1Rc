@@ -5,18 +5,26 @@ import screenChangeCollpop from "../styles/screen-change-collpop.scss";
 import screenAlbum from "../styles/screen-album.scss";
 
 const V2MainScreen07AlbumComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        [...document.querySelectorAll(".m-popup")].map((i) => {
-            i.style.display = "none";
-        });
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            [...document.querySelectorAll(".m-popup")].map((i) => {
+                i.style.display = "none";
+            });
 
-        const po = document.getElementById("popupAll");
-        const re = document.querySelector(".popup-layer");
-        re.style.display = "none";
-        const cC = document.querySelector(".m-popup.change-collpop");
+            const po = document.getElementById("popupAll");
+            const re = document.querySelector(".popup-layer");
+            re.style.display = "none";
+            const cC = document.querySelector(".m-popup.change-collpop");
 
-        [...document.querySelectorAll(".btn-close-x, .color-btn.close")].map(
-            (i) => {
+            [
+                ...document.querySelectorAll(".btn-close-x, .color-btn.close"),
+            ].map((i) => {
                 i.addEventListener("click", () => {
                     po.classList.remove("dialog-emersion-enter");
                     po.classList.add("dialog-emersion-exit");
@@ -27,67 +35,67 @@ const V2MainScreen07AlbumComponent = () => {
                         po.classList.remove("dialog-emersion-exit");
                     }, 104);
                 });
-            }
-        );
+            });
 
-        const bI = document.querySelector(".change-btn-info");
-        bI.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                cC.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
+            const bI = document.querySelector(".change-btn-info");
+            bI.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    cC.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
+            });
 
-        const bA = document.querySelectorAll(".box-all");
-        bA.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                bA.forEach((el) => {
-                    el.classList.remove("opened");
+            const bA = document.querySelectorAll(".box-all");
+            bA.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    bA.forEach((el) => {
+                        el.classList.remove("opened");
+                    });
+                    item.classList.add("opened");
                 });
-                item.classList.add("opened");
             });
-        });
 
-        const tL = document.querySelectorAll(".tags-line");
-        tL.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                tL.forEach((el) => {
-                    el.classList.remove("selected");
+            const tL = document.querySelectorAll(".tags-line");
+            tL.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    tL.forEach((el) => {
+                        el.classList.remove("selected");
+                    });
+                    item.classList.add("selected");
                 });
-                item.classList.add("selected");
             });
-        });
 
-        const fB = document.querySelectorAll(".fav-box");
-        fB.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                if (item.classList.contains("fav")) {
-                    item.classList.remove("fav");
-                } else {
-                    item.classList.add("fav");
-                }
+            const fB = document.querySelectorAll(".fav-box");
+            fB.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    if (item.classList.contains("fav")) {
+                        item.classList.remove("fav");
+                    } else {
+                        item.classList.add("fav");
+                    }
+                });
             });
-        });
 
-        const cM = document.querySelector(
-            ".left-panel > div > div:nth-child(1)"
-        );
-        const cMb = document.querySelector(".color-btn.pictures");
-        const cB = document.querySelector(
-            ".left-panel > div > div:nth-child(2)"
-        );
-        const cBb = document.querySelector(".color-btn.bonuses");
-        cB.style.display = "none";
-        cBb.addEventListener("click", () => {
-            cM.style.display = "none";
-            cB.style.display = "block";
-        });
-        cMb.addEventListener("click", () => {
+            const cM = document.querySelector(
+                ".left-panel > div > div:nth-child(1)"
+            );
+            const cMb = document.querySelector(".color-btn.pictures");
+            const cB = document.querySelector(
+                ".left-panel > div > div:nth-child(2)"
+            );
+            const cBb = document.querySelector(".color-btn.bonuses");
             cB.style.display = "none";
-            cM.style.display = "block";
-        });
-
+            cBb.addEventListener("click", () => {
+                cM.style.display = "none";
+                cB.style.display = "block";
+            });
+            cMb.addEventListener("click", () => {
+                cB.style.display = "none";
+                cM.style.display = "block";
+            });
+            return;
+        }
         return () => {};
     }, []);
     return (

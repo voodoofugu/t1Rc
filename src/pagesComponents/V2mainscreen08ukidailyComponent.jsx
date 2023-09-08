@@ -4,296 +4,316 @@ import questsUi from "../styles/quests-ui.scss";
 import v2ScreenUkiStoryPop from "../styles/v2-screen-uki-story-pop.scss";
 
 const V2MainScreen08UkiDailyComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        // все попапы
-        [...document.querySelectorAll(".m-popup")].map((i) => {
-            i.style.display = "none";
-        });
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            // все попапы
+            [...document.querySelectorAll(".m-popup")].map((i) => {
+                i.style.display = "none";
+            });
 
-        const re = document.querySelector(".popup-layer");
-        const pStr = document.querySelector(".m-popup.uki-story-popup");
-        const quPop = document.querySelectorAll(".quest-popup");
+            const re = document.querySelector(".popup-layer");
+            const pStr = document.querySelector(".m-popup.uki-story-popup");
+            const quPop = document.querySelectorAll(".quest-popup");
 
-        // закрытие попапов
-        [...document.querySelectorAll(".m-popup, .quest-popup")].map((i) => {
-            i.style.display = "none";
-            // закрываем все попапы при клике на затемнение
-            const blS = document.querySelector(".screen-blend-55");
-            blS.addEventListener("click", () => {
-                re.classList.remove("dialog-emersion-enter");
-                re.classList.add("dialog-emersion-exit");
-                setTimeout(function () {
-                    re.style.display = "none";
+            // закрытие попапов
+            [...document.querySelectorAll(".m-popup, .quest-popup")].map(
+                (i) => {
                     i.style.display = "none";
-                    re.classList.remove("dialog-emersion-exit");
-                }, 100);
+                    // закрываем все попапы при клике на затемнение
+                    const blS = document.querySelector(".screen-blend-55");
+                    blS.addEventListener("click", () => {
+                        re.classList.remove("dialog-emersion-enter");
+                        re.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            i.style.display = "none";
+                            re.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                }
+            );
+            [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .btn-close, div.uki-story-nav-box.btn2 > div:nth-child(1)"
+                ),
+            ].map((i) => {
+                i.addEventListener("click", () => {
+                    re.classList.remove("dialog-emersion-enter");
+                    re.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.closest(".m-popup").style.display = "none";
+                        i.closest(".quest-popup").style.display = "none";
+                        re.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
             });
-        });
-        [
-            ...document.querySelectorAll(
-                ".btn-close-x, .btn-close, div.uki-story-nav-box.btn2 > div:nth-child(1)"
-            ),
-        ].map((i) => {
-            i.addEventListener("click", () => {
-                re.classList.remove("dialog-emersion-enter");
-                re.classList.add("dialog-emersion-exit");
+
+            // попапы
+            const pic = document.querySelector(".pic");
+            pic.addEventListener("click", () => {
+                re.style.display = "block";
                 setTimeout(function () {
-                    re.style.display = "none";
-                    i.closest(".m-popup").style.display = "none";
-                    i.closest(".quest-popup").style.display = "none";
-                    re.classList.remove("dialog-emersion-exit");
+                    pStr.style.display = "block";
+                    re.classList.add("dialog-emersion-enter");
                 }, 100);
             });
-        });
 
-        // попапы
-        const pic = document.querySelector(".pic");
-        pic.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                pStr.style.display = "block";
-                re.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        const quB1 = document.querySelector(".quest1");
-        quB1.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                quPop[0].style.display = "block";
-                re.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        const quB2 = document.querySelector(".quest2");
-        quB2.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                quPop[1].style.display = "block";
-                re.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        // переключалка меню
-        const tmAll = document.querySelectorAll(".tabs-menu-btn");
-        const tmD = document.querySelector(".tabs-menu-btn.quest-daily");
-        const tmM = document.querySelector(".tabs-menu-btn.quest-main");
-        const tmS = document.querySelector(".tabs-menu-btn.quest-story");
-
-        const tmDin1 = document.querySelector(".daily-mission-box");
-        const tmDin2 = document.querySelector(".daily-mission-box-scroll");
-        const tmDin3 = document.querySelector(".daily-mission-reset");
-
-        const tmMin1 = document.querySelector(".journal-parth-header");
-        tmMin1.style.display = "none";
-        const tmMin2 = document.querySelectorAll(".journal-parth-box-scroll");
-        tmMin2[0].style.display = "none";
-        tmMin2[1].style.display = "none";
-        tmMin2[2].style.display = "none";
-        tmMin2[3].style.display = "none";
-
-        const tmSin1 = document.querySelector(
-            ".journal-parth-box-scroll.story"
-        );
-        const skBx = document.querySelector(".skills-all-box");
-        const jrRiBx = document.querySelector(".journal-rightside-box-all");
-        tmSin1.style.display = "none";
-        jrRiBx.style.display = "none";
-
-        const leftPanel = document.querySelector(".left-panel");
-
-        tmAll.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                tmAll.forEach((el) => {
-                    el.classList.remove("active");
-                });
-                item.classList.add("active");
-
-                if (tmD.classList.contains("active")) {
-                    tmDin1.style.display = "block";
-                    tmDin2.style.display = "block";
-                    tmDin3.style.display = "block";
-                    skBx.style.display = "block";
-
-                    tmMin1.style.display = "none";
-                    tmMin2[0].style.display = "none";
-                    tmMin2[1].style.display = "none";
-                    tmMin2[2].style.display = "none";
-                    tmMin2[3].style.display = "none";
-
-                    jrRiBx.style.display = "none";
-
-                    leftPanel.classList.remove("wide");
-                }
-                if (tmM.classList.contains("active")) {
-                    tmDin1.style.display = "none";
-                    tmDin2.style.display = "none";
-                    tmDin3.style.display = "none";
-
-                    jrRiBx.style.display = "none";
-
-                    tmMin1.style.display = "block";
-                    tmMin2[0].style.display = "block";
-                    tmMin2[1].style.display = "block";
-                    tmMin2[2].style.display = "block";
-                    tmMin2[3].style.display = "none";
-                    skBx.style.display = "block";
-
-                    leftPanel.classList.remove("wide");
-                }
-                if (tmS.classList.contains("active")) {
-                    tmDin1.style.display = "none";
-                    tmDin2.style.display = "none";
-                    tmDin3.style.display = "none";
-
-                    tmMin1.style.display = "none";
-                    tmMin2[0].style.display = "none";
-                    tmMin2[1].style.display = "none";
-                    tmMin2[2].style.display = "none";
-
-                    skBx.style.display = "none";
-
-                    tmMin2[3].style.display = "block";
-                    jrRiBx.style.display = "block";
-
-                    leftPanel.classList.add("wide");
-                }
+            const quB1 = document.querySelector(".quest1");
+            quB1.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    quPop[0].style.display = "block";
+                    re.classList.add("dialog-emersion-enter");
+                }, 100);
             });
-        });
 
-        const jp = document.querySelectorAll(".journal-parth-wrap");
-        [...jp].map((el) => {
-            el.addEventListener("click", () => {
-                el.parentNode.classList.toggle("view");
+            const quB2 = document.querySelector(".quest2");
+            quB2.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    quPop[1].style.display = "block";
+                    re.classList.add("dialog-emersion-enter");
+                }, 100);
             });
-            // console.log(el);
-        });
 
-        const jc = document.querySelectorAll(".journal-comics-box");
-        jc.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                jc.forEach((el) => {
-                    el.classList.remove("active");
-                });
-                item.classList.add("active");
-            });
-        });
+            // переключалка меню
+            const tmAll = document.querySelectorAll(".tabs-menu-btn");
+            const tmD = document.querySelector(".tabs-menu-btn.quest-daily");
+            const tmM = document.querySelector(".tabs-menu-btn.quest-main");
+            const tmS = document.querySelector(".tabs-menu-btn.quest-story");
 
-        // переключалка в main квестах
-        const secN = document.querySelectorAll(".section-name");
-        let elements = Array.from(
-            document.querySelectorAll(".journal-parth-box-scroll")
-        );
-        elements.pop(); // убираем последний элемент
-        console.log(elements);
-        const arr = document.querySelectorAll(".arrow");
+            const tmDin1 = document.querySelector(".daily-mission-box");
+            const tmDin2 = document.querySelector(".daily-mission-box-scroll");
+            const tmDin3 = document.querySelector(".daily-mission-reset");
 
-        arr[1].addEventListener("click", () => {
-            if (!arr[1].classList.contains("unactive")) {
-                // заголовки
-                secN.forEach((element) => {
-                    if (
-                        !element.classList.contains("disabLeft") &&
-                        !element.classList.contains("disabRight")
-                    ) {
-                        const elementIndex = Array.from(secN).indexOf(element);
+            const tmMin1 = document.querySelector(".journal-parth-header");
+            tmMin1.style.display = "none";
+            const tmMin2 = document.querySelectorAll(
+                ".journal-parth-box-scroll"
+            );
+            tmMin2[0].style.display = "none";
+            tmMin2[1].style.display = "none";
+            tmMin2[2].style.display = "none";
+            tmMin2[3].style.display = "none";
 
-                        const nextElement = secN[elementIndex + 1];
-                        setTimeout(function () {
-                            nextElement.classList.remove("disabRight");
-                        }, 10);
+            const tmSin1 = document.querySelector(
+                ".journal-parth-box-scroll.story"
+            );
+            const skBx = document.querySelector(".skills-all-box");
+            const jrRiBx = document.querySelector(".journal-rightside-box-all");
+            tmSin1.style.display = "none";
+            jrRiBx.style.display = "none";
 
-                        element.classList.add("disabLeft");
+            const leftPanel = document.querySelector(".left-panel");
+
+            tmAll.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    tmAll.forEach((el) => {
+                        el.classList.remove("active");
+                    });
+                    item.classList.add("active");
+
+                    if (tmD.classList.contains("active")) {
+                        tmDin1.style.display = "block";
+                        tmDin2.style.display = "block";
+                        tmDin3.style.display = "block";
+                        skBx.style.display = "block";
+
+                        tmMin1.style.display = "none";
+                        tmMin2[0].style.display = "none";
+                        tmMin2[1].style.display = "none";
+                        tmMin2[2].style.display = "none";
+                        tmMin2[3].style.display = "none";
+
+                        jrRiBx.style.display = "none";
+
+                        leftPanel.classList.remove("wide");
+                    }
+                    if (tmM.classList.contains("active")) {
+                        tmDin1.style.display = "none";
+                        tmDin2.style.display = "none";
+                        tmDin3.style.display = "none";
+
+                        jrRiBx.style.display = "none";
+
+                        tmMin1.style.display = "block";
+                        tmMin2[0].style.display = "block";
+                        tmMin2[1].style.display = "block";
+                        tmMin2[2].style.display = "block";
+                        tmMin2[3].style.display = "none";
+                        skBx.style.display = "block";
+
+                        leftPanel.classList.remove("wide");
+                    }
+                    if (tmS.classList.contains("active")) {
+                        tmDin1.style.display = "none";
+                        tmDin2.style.display = "none";
+                        tmDin3.style.display = "none";
+
+                        tmMin1.style.display = "none";
+                        tmMin2[0].style.display = "none";
+                        tmMin2[1].style.display = "none";
+                        tmMin2[2].style.display = "none";
+
+                        skBx.style.display = "none";
+
+                        tmMin2[3].style.display = "block";
+                        jrRiBx.style.display = "block";
+
+                        leftPanel.classList.add("wide");
                     }
                 });
-                arrowCheck();
-                // квесты
-                elements.forEach((element) => {
-                    if (
-                        !element.classList.contains("disabLeft") &&
-                        !element.classList.contains("disabRight")
-                    ) {
-                        const elementIndex =
-                            Array.from(elements).indexOf(element);
+            });
 
-                        const nextElement = elements[elementIndex + 1];
-                        setTimeout(function () {
-                            nextElement.classList.remove("disabRight");
-                        }, 10);
-
-                        element.classList.add("disabLeft");
-                    }
+            const jp = document.querySelectorAll(".journal-parth-wrap");
+            [...jp].map((el) => {
+                el.addEventListener("click", () => {
+                    el.parentNode.classList.toggle("view");
                 });
+                // console.log(el);
+            });
+
+            const jc = document.querySelectorAll(".journal-comics-box");
+            jc.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    jc.forEach((el) => {
+                        el.classList.remove("active");
+                    });
+                    item.classList.add("active");
+                });
+            });
+
+            // переключалка в main квестах
+            const secN = document.querySelectorAll(".section-name");
+            let elements = Array.from(
+                document.querySelectorAll(".journal-parth-box-scroll")
+            );
+            elements.pop(); // убираем последний элемент
+            console.log(elements);
+            const arr = document.querySelectorAll(".arrow");
+
+            arr[1].addEventListener("click", () => {
+                if (!arr[1].classList.contains("unactive")) {
+                    // заголовки
+                    secN.forEach((element) => {
+                        if (
+                            !element.classList.contains("disabLeft") &&
+                            !element.classList.contains("disabRight")
+                        ) {
+                            const elementIndex =
+                                Array.from(secN).indexOf(element);
+
+                            const nextElement = secN[elementIndex + 1];
+                            setTimeout(function () {
+                                nextElement.classList.remove("disabRight");
+                            }, 10);
+
+                            element.classList.add("disabLeft");
+                        }
+                    });
+                    arrowCheck();
+                    // квесты
+                    elements.forEach((element) => {
+                        if (
+                            !element.classList.contains("disabLeft") &&
+                            !element.classList.contains("disabRight")
+                        ) {
+                            const elementIndex =
+                                Array.from(elements).indexOf(element);
+
+                            const nextElement = elements[elementIndex + 1];
+                            setTimeout(function () {
+                                nextElement.classList.remove("disabRight");
+                            }, 10);
+
+                            element.classList.add("disabLeft");
+                        }
+                    });
+                }
+            });
+            arr[0].addEventListener("click", () => {
+                if (!arr[0].classList.contains("unactive")) {
+                    // заголовки
+                    secN.forEach((element) => {
+                        if (
+                            !element.classList.contains("disabLeft") &&
+                            !element.classList.contains("disabRight")
+                        ) {
+                            const elementIndex =
+                                Array.from(secN).indexOf(element);
+
+                            const nextElement = secN[elementIndex - 1];
+                            setTimeout(function () {
+                                nextElement.classList.remove("disabLeft");
+                            }, 10);
+
+                            element.classList.add("disabRight");
+                        }
+                    });
+                    arrowCheck();
+                    // квесты
+                    elements.forEach((element) => {
+                        if (
+                            !element.classList.contains("disabLeft") &&
+                            !element.classList.contains("disabRight")
+                        ) {
+                            const elementIndex =
+                                Array.from(elements).indexOf(element);
+
+                            const nextElement = elements[elementIndex - 1];
+                            setTimeout(function () {
+                                nextElement.classList.remove("disabLeft");
+                            }, 10);
+
+                            element.classList.add("disabRight");
+                        }
+                    });
+                }
+            });
+
+            function arrowCheck() {
+                setTimeout(function () {
+                    if (!secN[0].classList.contains("disabLeft")) {
+                        arr[0].classList.add("unactive");
+                    }
+                    if (
+                        !secN[secN.length - 1].classList.contains("disabRight")
+                    ) {
+                        arr[1].classList.add("unactive");
+                    }
+                    if (secN[0].classList.contains("disabLeft")) {
+                        arr[0].classList.remove("unactive");
+                    }
+                    if (
+                        secN[secN.length - 1].classList.contains("disabRight")
+                    ) {
+                        arr[1].classList.remove("unactive");
+                    }
+                }, 10);
             }
-        });
-        arr[0].addEventListener("click", () => {
-            if (!arr[0].classList.contains("unactive")) {
-                // заголовки
-                secN.forEach((element) => {
+            arrowCheck();
+
+            const quTb = document.querySelectorAll(".quest-title-btn");
+            quTb.forEach((item) => {
+                item.addEventListener("click", (e) => {
                     if (
-                        !element.classList.contains("disabLeft") &&
-                        !element.classList.contains("disabRight")
+                        item.closest(".quest-box").classList.contains("closed")
                     ) {
-                        const elementIndex = Array.from(secN).indexOf(element);
-
-                        const nextElement = secN[elementIndex - 1];
-                        setTimeout(function () {
-                            nextElement.classList.remove("disabLeft");
-                        }, 10);
-
-                        element.classList.add("disabRight");
+                        item.closest(".quest-box").classList.remove("closed");
+                    } else {
+                        item.closest(".quest-box").classList.add("closed");
                     }
                 });
-                arrowCheck();
-                // квесты
-                elements.forEach((element) => {
-                    if (
-                        !element.classList.contains("disabLeft") &&
-                        !element.classList.contains("disabRight")
-                    ) {
-                        const elementIndex =
-                            Array.from(elements).indexOf(element);
-
-                        const nextElement = elements[elementIndex - 1];
-                        setTimeout(function () {
-                            nextElement.classList.remove("disabLeft");
-                        }, 10);
-
-                        element.classList.add("disabRight");
-                    }
-                });
-            }
-        });
-
-        function arrowCheck() {
-            setTimeout(function () {
-                if (!secN[0].classList.contains("disabLeft")) {
-                    arr[0].classList.add("unactive");
-                }
-                if (!secN[secN.length - 1].classList.contains("disabRight")) {
-                    arr[1].classList.add("unactive");
-                }
-                if (secN[0].classList.contains("disabLeft")) {
-                    arr[0].classList.remove("unactive");
-                }
-                if (secN[secN.length - 1].classList.contains("disabRight")) {
-                    arr[1].classList.remove("unactive");
-                }
-            }, 10);
+            });
+            return;
         }
-        arrowCheck();
-
-        const quTb = document.querySelectorAll(".quest-title-btn");
-        quTb.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                if (item.closest(".quest-box").classList.contains("closed")) {
-                    item.closest(".quest-box").classList.remove("closed");
-                } else {
-                    item.closest(".quest-box").classList.add("closed");
-                }
-            });
-        });
-
         return () => {};
     }, []);
     return (

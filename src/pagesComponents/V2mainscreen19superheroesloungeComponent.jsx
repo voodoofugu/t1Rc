@@ -2,60 +2,72 @@ import React, { useEffect } from "react";
 import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen19SuperheroesLoungeComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        const sA = document.querySelectorAll(".btn-stars-wrap .color-btn");
-        sA.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                sA.forEach((el) => {
-                    el.classList.remove("green");
-                });
-                item.classList.add("green");
-            });
-        });
-
-        const fB = document.querySelectorAll(".filter-options-box .color-btn");
-        fB.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                var clonedNode = item
-                    .querySelector(".color-btn-text")
-                    .cloneNode(true);
-                const bIf = item
-                    .closest(".filter-btn-wrap")
-                    .querySelector(".filter-btn-value");
-
-                if (item.classList.contains("green")) {
-                    fB.forEach((el) => {
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            const sA = document.querySelectorAll(".btn-stars-wrap .color-btn");
+            sA.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    sA.forEach((el) => {
                         el.classList.remove("green");
-                        item.closest(".filter-btn-wrap").classList.remove(
-                            "active"
-                        );
-                    });
-                    bIf.innerHTML = "";
-                } else {
-                    fB.forEach((el) => {
-                        el.classList.remove("green");
-                        item.closest(".filter-btn-wrap").classList.remove(
-                            "active"
-                        );
-                        bIf.innerHTML = "";
                     });
                     item.classList.add("green");
-                    item.closest(".filter-btn-wrap").classList.add("active");
-                    bIf.appendChild(clonedNode);
-                }
-            });
-        });
-
-        const sC = document.querySelectorAll(".suphero-card");
-        sC.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                sC.forEach((el) => {
-                    el.classList.remove("check");
                 });
-                item.classList.add("check");
             });
-        });
 
+            const fB = document.querySelectorAll(
+                ".filter-options-box .color-btn"
+            );
+            fB.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    var clonedNode = item
+                        .querySelector(".color-btn-text")
+                        .cloneNode(true);
+                    const bIf = item
+                        .closest(".filter-btn-wrap")
+                        .querySelector(".filter-btn-value");
+
+                    if (item.classList.contains("green")) {
+                        fB.forEach((el) => {
+                            el.classList.remove("green");
+                            item.closest(".filter-btn-wrap").classList.remove(
+                                "active"
+                            );
+                        });
+                        bIf.innerHTML = "";
+                    } else {
+                        fB.forEach((el) => {
+                            el.classList.remove("green");
+                            item.closest(".filter-btn-wrap").classList.remove(
+                                "active"
+                            );
+                            bIf.innerHTML = "";
+                        });
+                        item.classList.add("green");
+                        item.closest(".filter-btn-wrap").classList.add(
+                            "active"
+                        );
+                        bIf.appendChild(clonedNode);
+                    }
+                });
+            });
+
+            const sC = document.querySelectorAll(".suphero-card");
+            sC.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    sC.forEach((el) => {
+                        el.classList.remove("check");
+                    });
+                    item.classList.add("check");
+                });
+            });
+            return;
+        }
         return () => {};
     }, []);
     return (

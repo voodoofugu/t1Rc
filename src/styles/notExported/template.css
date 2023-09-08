@@ -231,6 +231,7 @@
     transition: ease-in-out 0.1s;
     -webkit-transform: scale(0.99);
     transform: scale(0.99);
+    overflow: hidden;
 }
 .templatePage .project-box:hover {
     background: linear-gradient(
@@ -281,19 +282,20 @@
     text-decoration: none;
     text-transform: uppercase;
 }
-.templatePage .project-box iframe {
-    -webkit-transform: scale(0.2);
-    transform: scale(0.2);
-    margin: -200px 0px 0px -421px;
+.templatePage .project-box .projectComponent {
+    -webkit-transform: scale(0.180134);
+    transform: scale(0.180134);
+    margin: -260px 0px 0px -480px;
     pointer-events: none;
     border: none;
-    position: relative;
+    position: absolute;
     top: 26px;
     border-radius: 40px;
-    width: 1080px;
-    height: 520px;
+    /* width: 1200px;
+    height: 640px; */
     box-shadow: 0 0 0 10px #e6e7f1, 20px 20px 40px rgba(0, 1, 60, 0.06),
         -20px -20px 40px rgba(255, 255, 255, 0.6);
+    overflow: hidden;
 }
 .templatePage .project-box .screenshot-container {
     pointer-events: none;
@@ -469,7 +471,7 @@ body.dark-theme .template-container .project-box:active {
 body.dark-theme .template-container .project-box a {
     text-shadow: 1px 1px 2px rgba(0, 1, 60, 0.6);
 }
-body.dark-theme .template-container .project-box iframe {
+body.dark-theme .template-container .project-box .projectComponent {
     box-shadow: 0 0 0 10px #2a3451, 20px 20px 40px rgb(0, 1, 60),
         -20px -20px 40px rgba(255, 255, 255, 0.24);
 }

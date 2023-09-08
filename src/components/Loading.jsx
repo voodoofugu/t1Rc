@@ -28,8 +28,8 @@ const Loading = ({ text, className }) => {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
+        width: 16px;
+        height: 16px;
         border-radius: 100%;
         background: #FFF;  
         animation: ripple 2s linear infinite;
@@ -40,10 +40,11 @@ const Loading = ({ text, className }) => {
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 10px;
-        height: 10px;
+        width: 16px;
+        height: 16px;
         border-radius: 100%;
         background: #FFF;
+        opacity: 0;
         animation: ripple 2s linear infinite 1s;  
       }
       
@@ -164,16 +165,16 @@ const Loading = ({ text, className }) => {
 
       @keyframes ripple {
         0% {
-          transform: scale(1);
-          opacity: 1;
+          transform: translate(-50%, -50%) scale(0.2);
+          opacity: 0.8;
         }
         50% {
-          transform: scale(0);
+          transform: translate(-50%, -50%) scale(1);
           opacity: 0;
         }
         100% {
-          transform: scale(1);
-          opacity: 1;
+          transform: translate(-50%, -50%) scale(0.2);
+          opacity: 0.8;
         }
       }
     `;

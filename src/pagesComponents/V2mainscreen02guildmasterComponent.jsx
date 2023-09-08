@@ -4,118 +4,127 @@ import screenMasterHouse from "../styles/screen-master-house.scss";
 import screenInfoPop from "../styles/screen-info-pop.scss";
 
 const V2MainScreen02GuildMasterComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        // все попапы
-        const po = document.getElementById("popupAll");
-        const re = document.querySelector(".popup-layer");
-        const pInf = document.querySelector(".m-popup.info-pop");
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            // все попапы
+            const po = document.getElementById("popupAll");
+            const re = document.querySelector(".popup-layer");
+            const pInf = document.querySelector(".m-popup.info-pop");
 
-        // закрытие попапов
-        [
-            ...document.querySelectorAll(
-                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
-            ),
-        ].map((i) => {
-            i.style.display = "none";
-            // закрываем все попапы при клике на затемнение
-            const blS = document.querySelector(".screen-blend-55");
-            blS.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
-                setTimeout(function () {
-                    re.style.display = "none";
-                    i.style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
-                }, 100);
-            });
-        });
-        [
-            ...document.querySelectorAll(
-                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
-            ),
-        ].map((i) => {
-            i.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
-                setTimeout(function () {
-                    re.style.display = "none";
-                    i.closest(
-                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
-                    ).style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
-                }, 100);
-            });
-        });
-
-        const bInf = document.querySelector(".color-btn-info");
-        bInf.addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                pInf.style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-
-        // окна
-        const stB = document.querySelector(".stats-box-all");
-        const abB = document.querySelector(".abils-box-all");
-        const skB = document.querySelector(".skin-box-all");
-        abB.style.display = "none";
-        skB.style.display = "none";
-        // переключалка
-        const tabAll = document.querySelectorAll(".tabs-menu-btn");
-        tabAll.forEach((item) => {
-            item.addEventListener("click", (e) => {
-                // меню
-                tabAll.forEach((el) => {
-                    el.classList.remove("active");
+            // закрытие попапов
+            [
+                ...document.querySelectorAll(
+                    ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                ),
+            ].map((i) => {
+                i.style.display = "none";
+                // закрываем все попапы при клике на затемнение
+                const blS = document.querySelector(".screen-blend-55");
+                blS.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
                 });
-                item.classList.add("active");
-                // окна
-                if (tabAll.item(0).classList.contains("active")) {
-                    stB.style.display = "flex";
-                    abB.style.display = "none";
-                    skB.style.display = "none";
-                }
-                if (tabAll.item(1).classList.contains("active")) {
-                    stB.style.display = "none";
-                    abB.style.display = "flex";
-                    skB.style.display = "none";
-                }
-                if (tabAll.item(2).classList.contains("active")) {
-                    stB.style.display = "none";
-                    abB.style.display = "none";
-                    skB.style.display = "flex";
-                }
             });
-        });
+            [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                ),
+            ].map((i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.closest(
+                            ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                        ).style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
 
-        const nameBox = document.querySelector(".master-name-box");
-        const nameEdit = document.querySelector(".master-name-edit");
-        const btnEdit = document.querySelector(".btn-edit-small");
-        const btnEnter = document.querySelector(".btn-enter-small");
-        btnEdit.addEventListener("click", (e) => {
-            nameBox.classList.add("edit");
-            nameEdit.style.display = "block";
-        });
-        btnEnter.addEventListener("click", (e) => {
-            nameBox.classList.remove("edit");
-            nameEdit.style.display = "none";
-        });
+            const bInf = document.querySelector(".color-btn-info");
+            bInf.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    pInf.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
+            });
 
-        // скин боксы
-        const skinB = document.querySelectorAll(".master-skin-box-all");
-        skinB.forEach((item) => {
+            // окна
+            const stB = document.querySelector(".stats-box-all");
+            const abB = document.querySelector(".abils-box-all");
+            const skB = document.querySelector(".skin-box-all");
+            abB.style.display = "none";
+            skB.style.display = "none";
             // переключалка
-            if (!item.classList.contains("lock")) {
+            const tabAll = document.querySelectorAll(".tabs-menu-btn");
+            tabAll.forEach((item) => {
                 item.addEventListener("click", (e) => {
-                    skinB.forEach((el) => {
+                    // меню
+                    tabAll.forEach((el) => {
                         el.classList.remove("active");
                     });
                     item.classList.add("active");
+                    // окна
+                    if (tabAll.item(0).classList.contains("active")) {
+                        stB.style.display = "flex";
+                        abB.style.display = "none";
+                        skB.style.display = "none";
+                    }
+                    if (tabAll.item(1).classList.contains("active")) {
+                        stB.style.display = "none";
+                        abB.style.display = "flex";
+                        skB.style.display = "none";
+                    }
+                    if (tabAll.item(2).classList.contains("active")) {
+                        stB.style.display = "none";
+                        abB.style.display = "none";
+                        skB.style.display = "flex";
+                    }
                 });
-            }
-        });
+            });
+
+            const nameBox = document.querySelector(".master-name-box");
+            const nameEdit = document.querySelector(".master-name-edit");
+            const btnEdit = document.querySelector(".btn-edit-small");
+            const btnEnter = document.querySelector(".btn-enter-small");
+            btnEdit.addEventListener("click", (e) => {
+                nameBox.classList.add("edit");
+                nameEdit.style.display = "block";
+            });
+            btnEnter.addEventListener("click", (e) => {
+                nameBox.classList.remove("edit");
+                nameEdit.style.display = "none";
+            });
+
+            // скин боксы
+            const skinB = document.querySelectorAll(".master-skin-box-all");
+            skinB.forEach((item) => {
+                // переключалка
+                if (!item.classList.contains("lock")) {
+                    item.addEventListener("click", (e) => {
+                        skinB.forEach((el) => {
+                            el.classList.remove("active");
+                        });
+                        item.classList.add("active");
+                    });
+                }
+            });
+            return;
+        }
 
         return () => {};
     }, []);

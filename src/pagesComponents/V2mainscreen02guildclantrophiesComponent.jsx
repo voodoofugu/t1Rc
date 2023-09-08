@@ -4,35 +4,46 @@ import clanTrophies from "../styles/clan-trophies.scss";
 import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen02GuildClanTrophiesComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        [...document.querySelectorAll(".m-popup")].map((i) => {
-            i.style.display = "none";
-        });
-
-        const re = document.querySelector(".popup-layer");
-        re.style.display = "none";
-        const po = document.getElementById("popupAll");
-        const cT = document.querySelector(".m-popup.clan-trophy");
-
-        [...document.querySelectorAll(".btn-close-x")].map((i) => {
-            i.addEventListener("click", () => {
-                po.classList.remove("popup-view");
-                setTimeout(function () {
-                    re.style.display = "none";
-                    cT.style.display = "none";
-                }, 104);
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            [...document.querySelectorAll(".m-popup")].map((i) => {
+                i.style.display = "none";
             });
-        });
 
-        [...document.querySelectorAll(".titans-garage-item-inner")].map((i) => {
-            i.addEventListener("click", () => {
-                re.style.display = "block";
-                setTimeout(function () {
-                    cT.style.display = "block";
-                    po.classList.add("popup-view");
-                }, 100);
+            const re = document.querySelector(".popup-layer");
+            re.style.display = "none";
+            const po = document.getElementById("popupAll");
+            const cT = document.querySelector(".m-popup.clan-trophy");
+
+            [...document.querySelectorAll(".btn-close-x")].map((i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("popup-view");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        cT.style.display = "none";
+                    }, 104);
+                });
             });
-        });
+
+            [...document.querySelectorAll(".titans-garage-item-inner")].map(
+                (i) => {
+                    i.addEventListener("click", () => {
+                        re.style.display = "block";
+                        setTimeout(function () {
+                            cT.style.display = "block";
+                            po.classList.add("popup-view");
+                        }, 100);
+                    });
+                }
+            );
+            return;
+        }
         return () => {};
     }, []);
     return (

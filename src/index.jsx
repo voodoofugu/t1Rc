@@ -34,7 +34,8 @@ function generateComponentName(pageName) {
             // <StrictMode>
             <BrowserRouter>
                 <Suspense fallback={<AaComponMap.Loading />}>
-                    <PageComponent />
+                    {/* <PageComponent /> */}
+                    <AaPagesComponentMap.TemplateComponent />
                 </Suspense>
             </BrowserRouter>
             // </StrictMode>

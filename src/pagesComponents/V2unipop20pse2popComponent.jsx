@@ -3,67 +3,76 @@ import v2Unipop20Pse2Pop from "../styles/v2-unipop-20-pse2-pop.scss";
 import screenBank from "../styles/screen-bank.scss";
 
 const V2Unipop20Pse2PopComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        // все попапы
-        const po = document.getElementById("popupAll");
-        const re = document.querySelector(".popup-layer");
-        const mPop = document.querySelectorAll(".unipop-pse2-pop");
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            // все попапы
+            const po = document.getElementById("popupAll");
+            const re = document.querySelector(".popup-layer");
+            const mPop = document.querySelectorAll(".unipop-pse2-pop");
 
-        // закрытие попапов
-        [
-            ...document.querySelectorAll(
-                ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
-            ),
-        ].map((i) => {
-            i.style.display = "none";
-            // закрываем все попапы при клике на затемнение
-            const blS = document.querySelector(".screen-blend-55");
-            blS.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
+            // закрытие попапов
+            [
+                ...document.querySelectorAll(
+                    ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                ),
+            ].map((i) => {
+                i.style.display = "none";
+                // закрываем все попапы при клике на затемнение
+                const blS = document.querySelector(".screen-blend-55");
+                blS.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
+            [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                ),
+            ].map((i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.closest(
+                            ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                        ).style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
+
+            const mPopB = document.querySelectorAll(".quest");
+            mPop.item(0).style.display = "block";
+            mPopB.item(0).addEventListener("click", () => {
+                re.style.display = "block";
                 setTimeout(function () {
-                    re.style.display = "none";
-                    i.style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
+                    mPop.item(0).style.display = "block";
+                    mPop.item(1).style.display = "none";
+                    po.classList.add("dialog-emersion-enter");
                 }, 100);
             });
-        });
-        [
-            ...document.querySelectorAll(
-                ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
-            ),
-        ].map((i) => {
-            i.addEventListener("click", () => {
-                po.classList.remove("dialog-emersion-enter");
-                po.classList.add("dialog-emersion-exit");
+            mPopB.item(1).addEventListener("click", () => {
+                re.style.display = "block";
                 setTimeout(function () {
-                    re.style.display = "none";
-                    i.closest(
-                        ".m-popup, .ratingpop-box, .quest-popup, .popup"
-                    ).style.display = "none";
-                    po.classList.remove("dialog-emersion-exit");
+                    mPop.item(0).style.display = "none";
+                    mPop.item(1).style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
                 }, 100);
             });
-        });
-
-        const mPopB = document.querySelectorAll(".quest");
-        mPop.item(0).style.display = "block";
-        mPopB.item(0).addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                mPop.item(0).style.display = "block";
-                mPop.item(1).style.display = "none";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
-        mPopB.item(1).addEventListener("click", () => {
-            re.style.display = "block";
-            setTimeout(function () {
-                mPop.item(0).style.display = "none";
-                mPop.item(1).style.display = "block";
-                po.classList.add("dialog-emersion-enter");
-            }, 100);
-        });
+            return;
+        }
         return () => {};
     }, []);
     return (

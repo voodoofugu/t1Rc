@@ -4,26 +4,36 @@ import screenRatingMaintabColl from "../styles/screen-rating-maintab-coll.scss";
 import screenRating from "../styles/screen-rating.scss";
 
 const V2MainScreen06RatingComponent = () => {
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
+
     useEffect(() => {
-        const jB = document.querySelector(".color-btn.jewerly");
-        const cB = document.querySelector(".color-btn.collection");
-        const jW = document.querySelector(".animations");
-        const cW = document.querySelector(".rating-card-list-box.collection");
-        cW.style.display = "none";
-
-        cB.addEventListener("click", () => {
-            jB.classList.remove("blue");
-            jW.style.display = "none";
-            cB.classList.add("blue");
-            cW.style.display = "block";
-        });
-        jB.addEventListener("click", () => {
-            cB.classList.remove("blue");
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            const jB = document.querySelector(".color-btn.jewerly");
+            const cB = document.querySelector(".color-btn.collection");
+            const jW = document.querySelector(".animations");
+            const cW = document.querySelector(
+                ".rating-card-list-box.collection"
+            );
             cW.style.display = "none";
-            jB.classList.add("blue");
-            jW.style.display = "block";
-        });
 
+            cB.addEventListener("click", () => {
+                jB.classList.remove("blue");
+                jW.style.display = "none";
+                cB.classList.add("blue");
+                cW.style.display = "block";
+            });
+            jB.addEventListener("click", () => {
+                cB.classList.remove("blue");
+                cW.style.display = "none";
+                jB.classList.add("blue");
+                jW.style.display = "block";
+            });
+            return;
+        }
         return () => {};
     }, []);
     return (

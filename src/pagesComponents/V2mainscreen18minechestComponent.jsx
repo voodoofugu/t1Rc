@@ -3,39 +3,49 @@ import v2ScreenMineEventChest from "../styles/v2-screen-mine-event-chest.scss";
 import screenInfoPop from "../styles/screen-info-pop.scss";
 
 const V2MainScreen18MineChestComponent = () => {
-    useEffect(() => {
-        [...document.querySelectorAll(".m-popup")].map((i) => {
-            i.style.display = "none";
-        });
-        const aC = document.querySelector(".m-popup.angel-chests-info");
-        const aI = document.querySelector(".m-popup.info-pop");
-        const re = document.querySelector(".popup-layer");
+    // создаём такой же айди как у родителя здесь и так попадаем к нему
+    const currentUrl = window.location.href;
+    const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
+    const pageContainerId = `root-${fileNameWithoutExtension}`;
+    const pageContainer = document.getElementById(pageContainerId);
 
-        [...document.querySelectorAll(".btn-close-x, .screen-blend-55")].map(
-            (i) => {
+    useEffect(() => {
+        if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+            [...document.querySelectorAll(".m-popup")].map((i) => {
+                i.style.display = "none";
+            });
+            const aC = document.querySelector(".m-popup.angel-chests-info");
+            const aI = document.querySelector(".m-popup.info-pop");
+            const re = document.querySelector(".popup-layer");
+
+            [
+                ...document.querySelectorAll(".btn-close-x, .screen-blend-55"),
+            ].map((i) => {
                 i.addEventListener("click", () => {
                     re.style.display = "none";
                     aC.style.display = "none";
                     aI.style.display = "none";
                 });
-            }
-        );
-
-        [...document.querySelectorAll(".mn-btn-box .x-info-btn")].map((i) => {
-            i.addEventListener("click", () => {
-                re.style.display = "block";
-                aC.style.display = "block";
             });
-        });
 
-        const aIb = document.querySelector(
-            ".mine-event-screen-head .x-info-btn"
-        );
-        aIb.addEventListener("click", () => {
-            re.style.display = "block";
-            aI.style.display = "block";
-        });
+            [...document.querySelectorAll(".mn-btn-box .x-info-btn")].map(
+                (i) => {
+                    i.addEventListener("click", () => {
+                        re.style.display = "block";
+                        aC.style.display = "block";
+                    });
+                }
+            );
 
+            const aIb = document.querySelector(
+                ".mine-event-screen-head .x-info-btn"
+            );
+            aIb.addEventListener("click", () => {
+                re.style.display = "block";
+                aI.style.display = "block";
+            });
+            return;
+        }
         return () => {};
     }, []);
     return (
