@@ -1,10 +1,10 @@
 import React from "react";
-import AaStyleComponentsMap from "../styleComponents/AaStyleComponentsMap.jsx";
+import ScreenFortunaRoundMain16x from "../styleComponents/ScreenFortunaRoundMain16x.jsx";
 // import screenFortunaRoundMain16x from "../styles/screen-fortuna-round-main_16x.scss";
 
 const MainScreen16FortunaRoundMainpop16xComponent = () => {
   return (
-    <AaStyleComponentsMap.ScreenFortunaRoundMain16x>
+    <ScreenFortunaRoundMain16x>
       <div className="main world1">
         <div className="main-bg"></div>
         <div
@@ -212,7 +212,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
           </div>
         </div>
       </div>
-    </AaStyleComponentsMap.ScreenFortunaRoundMain16x>
+    </ScreenFortunaRoundMain16x>
   );
 };
 
