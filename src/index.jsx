@@ -7,44 +7,44 @@ import AaComponMap from "./components/AaComponMap.jsx";
 
 // Функция для генерации имени компонента на основе имени страницы
 function generateComponentName(pageName) {
-    const cleanedName =
-        pageName
-            .replace(".html", "")
-            .replace(/[-_](\w)/g, (_, letter) => letter.toUpperCase())
-            .replace(/^\w/, (c) => c.toUpperCase()) + "Component";
-    return cleanedName;
+  const cleanedName =
+    pageName
+      .replace(".html", "")
+      .replace(/[-_](\w)/g, (_, letter) => letter.toUpperCase())
+      .replace(/^\w/, (c) => c.toUpperCase()) + "Component";
+  return cleanedName;
 }
 
 (async () => {
-    const currentPage =
-        document.getElementById("root").getAttribute("data-page") + ".html";
-    console.log("Current Page:", currentPage);
+  const currentPage =
+    document.getElementById("root").getAttribute("data-page") + ".html";
+  console.log("Current Page:", currentPage);
 
-    const PageComponent =
-        AaPagesComponentMap[generateComponentName(currentPage)] ||
-        AaPagesComponentMap.Page404Component;
+  const PageComponent =
+    AaPagesComponentMap[generateComponentName(currentPage)] ||
+    AaPagesComponentMap.Page404Component;
 
-    const Root = document.getElementById("root");
-    if (Root) {
-        if (!window.__REACT_ROOT__) {
-            window.__REACT_ROOT__ = createRoot(Root);
-        }
-
-        window.__REACT_ROOT__.render(
-            // <StrictMode>
-            <BrowserRouter>
-                <Suspense fallback={<AaComponMap.Loading />}>
-                    {/* <PageComponent /> */}
-                    <AaPagesComponentMap.TemplateComponent />
-                </Suspense>
-            </BrowserRouter>
-            // </StrictMode>
-        );
-    } else {
-        console.warn("Element with id 'root' not found.");
+  const Root = document.getElementById("root");
+  if (Root) {
+    if (!window.__REACT_ROOT__) {
+      window.__REACT_ROOT__ = createRoot(Root);
     }
+
+    window.__REACT_ROOT__.render(
+      // <StrictMode>
+      <BrowserRouter>
+        <Suspense fallback={<AaComponMap.Loading />}>
+          {/* <PageComponent /> */}
+          <AaPagesComponentMap.TemplateComponent />
+        </Suspense>
+      </BrowserRouter>
+      // </StrictMode>
+    );
+  } else {
+    console.warn("Element with id 'root' not found.");
+  }
 })();
 
 if (module.hot) {
-    module.hot.accept();
+  module.hot.accept();
 }

@@ -1,0 +1,716 @@
+
+import styled from "styled-components";
+
+const V2ScreenMainRelicsPop = styled.div`
+  @charset "utf-8";
+@import "sass_commons.scss";
+
+.popup-layer .m-popup.main-relics-pop {
+    width: 1070px;
+    height: 600px;
+    left: 65px;
+    top: 20px;
+    &:before {
+        background: linear-gradient(0deg, #645143 0%, #8e8177 100%);
+    }
+    .title {
+        color: #572f14;
+    }
+    .main-relics-girl-box {
+        width: 300px;
+        height: 446px;
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        @include prefix(border-radius, 10px);
+        @include background-silver;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+
+        .pse-count-res-box {
+            width: 300px;
+            height: 40px;
+            position: absolute;
+            bottom: -55px;
+            background-color: #3ab3d8;
+            @include prefix(border-radius, 10px);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+            .pse-count-res-text {
+                width: auto;
+                height: auto;
+                position: relative;
+                top: -2px;
+                color: #fff;
+                font-size: 24px;
+                font-weight: bold;
+                .ic-pse-keygirl {
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    display: inline-block;
+                    margin-right: 5px;
+                    top: 6px;
+                    background-image: url(~imgPath/fapop-ic02.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+
+        .main-relics-girl-pic {
+            width: 292px;
+            height: 438px;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            overflow: hidden;
+            @include prefix(border-radius, 8px);
+            img {
+                height: 438px;
+            }
+        }
+        .main-relics-timer-box {
+            width: 110px;
+            height: 50px;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            background-image: url(~imgPath/timer-back-50.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            .main-relics-timer-text,
+            .main-relics-timer {
+                width: 90px;
+                height: auto;
+                position: relative;
+                top: 10px;
+                margin: 0 auto;
+                color: #ffe400;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 10px;
+            }
+            .main-relics-timer {
+                top: 8px;
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+        .main-relics-info {
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-image: url(~imgPath/i-ico.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+        .main-relics-girl-ballon {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            top: 150px;
+            right: 0;
+            background-image: url(~imgPath/unipop-buble.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            .main-relics-girl-ballon-text-box {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                top: 25px;
+                left: 20px;
+                display: table;
+                .main-relics-girl-ballon-text {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: #000;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .main-relics-prize-box {
+            width: 100%;
+            height: 90px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.35);
+            @include prefix(border-radius, 0 0 8px 8px);
+            .prize-dps-box {
+                width: 150px;
+                height: 80px;
+                position: absolute;
+                top: 5px;
+                left: 45px;
+                background-image: url(~imgPath/wpck-dps.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                .prize-dps-text {
+                    width: 70px;
+                    height: 26px;
+                    position: absolute;
+                    top: 10px;
+                    left: 70px;
+                    color: #a3e7fa;
+                    font-size: 20px;
+                    font-weight: bold;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+                }
+            }
+            .prize-promote-box {
+                width: 60px;
+                height: 80px;
+                position: absolute;
+                top: 5px;
+                right: 45px;
+                background-image: url(~imgPath/wpck-promote.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                .prize-promote-text {
+                    width: 60px;
+                    height: 20px;
+                    position: absolute;
+                    top: 8px;
+                    left: 0px;
+                    color: #311400;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-shadow: 0 0 4px #fff;
+                }
+            }
+        }
+    }
+
+    .main-buttons {
+        position: absolute;
+        bottom: 30px;
+        width: 710px;
+        right: 20px;
+        .color-btn.green {
+            margin-right: 10px;
+            width: 200px;
+        }
+    }
+
+    .main-relics-right-box-all {
+        width: 710px;
+        height: 446px;
+        position: absolute;
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            background-color: #7c665c;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            box-shadow: inset 0 0 3px #796b60;
+            background: linear-gradient(
+                to left,
+                #fff,
+                #f5de80,
+                #f4b766,
+                #b26d12
+            );
+        }
+        top: 70px;
+        right: 20px;
+        font-size: 0px;
+        .main-relics-set-box {
+            width: 720px;
+            height: 220px;
+            position: absolute;
+            top: 0;
+            left: -5px;
+            font-size: 0;
+            .main-relics-set {
+                width: 170px;
+                height: 220px;
+                position: relative;
+                display: inline-block;
+                background-color: #5f4e49;
+                margin: 0 5px 0 5px;
+                .main-relics-set-pic {
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    top: 15px;
+                    margin: 0 auto;
+                    background-image: url(~imgPath/card-ic-koloda@2x.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+                .main-relics-set-text {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    bottom: 70px;
+                    color: #fff;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+                .color-btn.diamond {
+                    width: 156px;
+                    height: 50px;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 7px;
+                    .color-btn-text {
+                        font-size: 14px;
+                        top: 10px;
+                    }
+                    .f-diamond {
+                        &:before {
+                            content: "";
+                            width: 30px;
+                            height: 30px;
+                            position: relative;
+                            display: inline-block;
+                            background-image: url(~imgPath/ic-diamond.png);
+                            background-size: 100%;
+                            margin-right: 4px;
+                            margin-left: 4px;
+                            vertical-align: middle;
+                        }
+                    }
+                    &:active {
+                        .color-btn-text {
+                            top: 11px;
+                        }
+                    }
+                }
+                &.r2 {
+                    .main-relics-set-pic {
+                        background-image: url(~imgPath/card-ic-koloda2@2x.png);
+                    }
+                }
+                &.r3 {
+                    .main-relics-set-pic {
+                        width: 150px;
+                        background-image: url(~imgPath/card-ic-koloda3@2x.png);
+                    }
+                }
+                &.r4 {
+                    .main-relics-set-pic {
+                        width: 150px;
+                        background-image: url(~imgPath/card-ic-koloda4@2x.png);
+                    }
+                }
+            }
+        }
+        .main-relics-bonus-box {
+            width: 100%;
+            height: 210px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: #5f4e49;
+            .relics-pack-opened-box {
+                width: 90px;
+                height: 100px;
+                position: absolute;
+                top: 20px;
+                left: 15px;
+                background: linear-gradient(
+                    0deg,
+                    #bdee6e 0%,
+                    #7fa740 23%,
+                    #bdee6d 50%,
+                    #d3f699 100%
+                );
+                @include prefix(border-radius, 6px);
+                font-size: 0px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45);
+                &:before {
+                    content: "";
+                    width: 120px;
+                    height: 32px;
+                    position: absolute;
+                    top: 80px;
+                    left: -16px;
+                    background-image: url(~imgPath/noobpackback.png);
+                    background-size: 100%;
+                }
+                .relics-pack-opened-count,
+                .relics-pack-opened-name {
+                    width: 90px;
+                    height: 20px;
+                    position: relative;
+                    top: 65px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                }
+                .relics-pack-opened-name {
+                    top: 8px;
+                    color: #26430a;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    text-shadow: 0 1px 2px #fff;
+                }
+            }
+            .relics-coll-box-all {
+                width: 530px;
+                height: 172px;
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                .relics-coll-box {
+                    width: 100px;
+                    height: 172px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    .relics-coll-line {
+                        width: 5px;
+                        height: 74px;
+                        position: absolute;
+                        top: 98px;
+                        left: 48px;
+                        @include background-gold;
+                    }
+                    .relics-coll-count-box {
+                        width: 40px;
+                        height: 20px;
+                        position: absolute;
+                        top: 105px;
+                        left: 30px;
+                        background: linear-gradient(
+                            0deg,
+                            #8c9195 0%,
+                            #e2e6e9 99%,
+                            #e2e6e9 100%
+                        );
+                        @include prefix(border-radius, 6px);
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                        .relics-coll-count {
+                            width: 100%;
+                            height: auto;
+                            position: relative;
+                            color: #000;
+                            font-size: 12px;
+                            font-weight: bold;
+                            top: 3px;
+                            text-shadow: 0 1px 2px #fff;
+                        }
+                    }
+                    .relics-coll {
+                        width: 100px;
+                        height: 100px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: linear-gradient(
+                            0deg,
+                            #e9b039 0%,
+                            #fffe9a 100%
+                        );
+                        @include prefix(border-radius, 10px);
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                        .relics-coll-pic {
+                            overflow: hidden;
+                            width: 80px;
+                            height: 80px;
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            border-radius: 4px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .relics-coll-check {
+                        width: 80px;
+                        height: 80px;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        background-image: url(~imgPath/paycheck.png);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        display: none;
+                    }
+                    .color-btn.blue {
+                        width: 90px;
+                        height: 26px;
+                        top: 68px;
+                        left: 5px;
+                        display: none;
+                        .color-btn-text {
+                            top: 4px;
+                        }
+                        &:active {
+                            .color-btn-text {
+                                top: 5px;
+                            }
+                        }
+                    }
+                    &.r2 {
+                        left: 115px;
+                    }
+                    &.r3 {
+                        left: 230px;
+                    }
+                    &.r4 {
+                        left: 345px;
+                    }
+                    &.r5 {
+                        left: 460px;
+                    }
+                    &.check {
+                        .relics-coll-check {
+                            display: block;
+                        }
+                    }
+                    &.claim {
+                        .color-btn.blue {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .relics-prg-box-all {
+                width: 610px;
+                height: 60px;
+                position: absolute;
+                bottom: 10px;
+                left: 50px;
+                .relics-prg-box {
+                    width: 600px;
+                    height: 44px;
+                    position: absolute;
+                    top: 8px;
+                    left: 5px;
+                    @include background-bronze;
+                    @include prefix(border-radius, 6px);
+                    box-shadow: 0 2px 4px 0 rgba(#000, 0.45);
+                    &:before {
+                        content: "";
+                        width: 592px;
+                        height: 36px;
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        background: linear-gradient(
+                            0deg,
+                            #543f38 0%,
+                            #412d26 100%
+                        );
+                        @include prefix(border-radius, 4px);
+                    }
+                    .prg-box {
+                        width: 588px;
+                        height: 32px;
+                        position: absolute;
+                        top: 6px;
+                        left: 6px;
+                    }
+                    .prgbar {
+                        width: 100%;
+                        height: 32px;
+                        position: relative;
+                        background: linear-gradient(
+                            0deg,
+                            #307ac7 0%,
+                            #82b4e8 100%
+                        );
+                        @include prefix(border-radius, 2px);
+                        transition: width 0.5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup-layer .m-popup.main-relics-pop.tower {
+    height: 536px;
+    top: 50%;
+    transform: translateY(-50%);
+    .main-relics-set,
+    .main-relics-bonus-box {
+        border-radius: 10px;
+        box-shadow: 0 1px 2px rgba(255, 255, 255, 0.2),
+            inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    .main-relics-bonus-box {
+        .relics-coll-box-all {
+            width: 512px;
+            .relics-coll-box.r2 {
+                left: 146px;
+            }
+            .relics-coll-box.r3 {
+                left: 294px;
+            }
+            .relics-coll-box.r4 {
+                left: 438px;
+            }
+        }
+    }
+}
+
+.popup-layer .m-popup.main-relics-pop.xmas {
+    &:before {
+        background-image: url(~imgPath/pop-bg-xmas.jpg);
+        background-size: 100%;
+    }
+    .main-relics-right-box-all {
+        overflow-y: scroll;
+        .main-relics-set-box {
+            position: relative;
+        }
+        .main-relics-bonus-box {
+            position: relative;
+            background: none;
+        }
+    }
+}
+
+body .main.world1,
+body .main.world2,
+body .main.world3 {
+    .popup-layer .m-popup.main-relics-pop.vl {
+        background: linear-gradient(-22deg, #ffccc7, #e43a3a, #ff6161, #ffdbdb);
+        .title {
+            background: linear-gradient(to right, #ffa6a6, #ff6262, #ffb9b9);
+            border: solid 4px #ff3e3e;
+            line-height: 58px;
+            font-size: 22px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            width: unset;
+            transform: none;
+            border-radius: 10px;
+            height: 52px;
+            text-shadow: 0 0 1px #413753, 0 1px 1px #fff,
+                0 1px 10px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            filter: none;
+            box-shadow: inset 0 2px 10px #fff,
+                inset 0 28px 5px rgba(255, 255, 0, 0.15);
+            &:before,
+            &:after {
+                content: none;
+            }
+        }
+        .btn-close-x {
+            box-shadow: 0 0 7px #000;
+            background: linear-gradient(
+                22deg,
+                #fffbc7,
+                #ffe3ab,
+                #ffb229,
+                #fffbc7
+            );
+            border: solid 4px #ffbe43;
+            &:before,
+            &:after {
+                color: #757;
+                text-shadow: 0 0 2px #757, 0 0 2px #757, 0 0 2px #757,
+                    0 0 2px #757, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+            }
+        }
+        &:before {
+            background-image: url(~imgPath/v2-vl-pop-bg.jpg);
+            background-size: 100%;
+            box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.35),
+                0px -3px 1px rgba(0, 0, 0, 0.4),
+                0px 2px 2px 1px rgba(255, 255, 255, 0.6),
+                inset 0px 2px 6px 1px rgba(0, 0, 0, 0.35);
+        }
+        .main-relics-right-box-all {
+            overflow-y: scroll;
+            .main-relics-set-box {
+                position: relative;
+            }
+            .main-relics-bonus-box {
+                position: relative;
+                background: none;
+            }
+        }
+    }
+}
+
+body .main.world1,
+body .main.world2,
+body .main.world3 {
+    .popup-layer .m-popup.main-relics-pop.march {
+        background: linear-gradient(-22deg, #ffccc7, #e43a3a, #ff6161, #ffdbdb);
+        .title {
+            background: linear-gradient(to right, #ffa6a6, #ff6262, #ffb9b9);
+            border: solid 4px #ff3e3e;
+            line-height: 58px;
+            font-size: 22px;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            width: unset;
+            transform: none;
+            border-radius: 10px;
+            height: 52px;
+            text-shadow: 0 0 1px #413753, 0 1px 1px #fff,
+                0 1px 10px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            filter: none;
+            box-shadow: inset 0 2px 10px #fff,
+                inset 0 28px 5px rgba(255, 255, 0, 0.15);
+            &:before,
+            &:after {
+                content: none;
+            }
+        }
+        .btn-close-x {
+            box-shadow: 0 0 7px #000;
+            background: linear-gradient(
+                22deg,
+                #fffbc7,
+                #ffe3ab,
+                #ffb229,
+                #fffbc7
+            );
+            border: solid 4px #ffbe43;
+            &:before,
+            &:after {
+                color: #757;
+                text-shadow: 0 0 2px #757, 0 0 2px #757, 0 0 2px #757,
+                    0 0 2px #757, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+            }
+        }
+        &:before {
+            background-image: url(~imgPath/march-pop-bg.jpg);
+            background-size: 100%;
+            box-shadow: 0px 2px 0px rgba(255, 255, 255, 0.35),
+                0px -3px 1px rgba(0, 0, 0, 0.4),
+                0px 2px 2px 1px rgba(255, 255, 255, 0.6),
+                inset 0px 2px 6px 1px rgba(0, 0, 0, 0.35);
+        }
+        .main-relics-right-box-all {
+            overflow-y: scroll;
+            .main-relics-set-box {
+                position: relative;
+            }
+            .main-relics-bonus-box {
+                position: relative;
+                background: none;
+            }
+        }
+    }
+}
+
+`;
+
+export default V2ScreenMainRelicsPop;

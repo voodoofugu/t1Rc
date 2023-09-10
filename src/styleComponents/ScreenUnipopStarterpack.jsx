@@ -1,0 +1,439 @@
+
+import styled from "styled-components";
+
+const ScreenUnipopStarterpack = styled.div`
+  @charset "utf-8";
+@import "sass_commons.scss";
+
+.popup-layer .m-popup.unipop-starterpack{
+    display: block; width: 900px; height: 600px; position: absolute; left: 62px; top: 20px;
+    .title{
+        background: linear-gradient(to right, #fad488, #dd9200, #fad488);
+        color: #fff;
+    }
+    .color-box{
+        background-image: url(~imgPath/ts_confirm_bk-1.jpg); background-size: 100%;
+        &:before{display: none};
+        &:after{display: none};
+    }
+    .color-box-decor{
+        width: 170px; height: 620px; position: absolute; top: -10px; left: -46px;
+        background-image: url(~imgPath/unipop-bg1.png); background-size: 100%;
+        &:before{
+            content: ""; width: 168px; height: 86px; position: absolute; top: 540px; left: 190px;
+            background-image: url(~imgPath/unipop-bg2.png); background-size: 100%;
+        }
+        &:after{
+            content: ""; width: 200px; height: 540px; position: absolute; top: 90px; left: 800px;
+            background-image: url(~imgPath/unipop-bg3.png); background-size: 100%;
+        }
+    }
+    .unipop-box-content-all{
+        width: 850px; height: 500px; position: absolute; top: 74px; left: 24px;
+        background: rgba(255, 238, 200, 0.8);
+        box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.55);
+        .unipop-box-left-box{
+            width: 190px; height: 500px; position: absolute; top: 0; left: 0;
+            background: rgba(230, 181, 84, 0.7);
+            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.35);
+            .unipop-scroll-box{
+                width: 185px; height: 490px; position: absolute; top: 5px; left: 5px; font-size: 0;
+                overflow: hidden; overflow-y: scroll; transform: rotateY(180deg);
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); border-radius: 10px; background-color: #7c665c;
+                }
+                &::-webkit-scrollbar {width: 10px;}
+                &::-webkit-scrollbar-thumb { 
+                    border-radius: 10px; box-shadow: inset 0 0 3px #796b60;
+                    background: linear-gradient(to left, #fff, #f5de80, #f4b766, #b26d12);
+                }
+                .unipop-box{
+                    width: 150px; height: 80px; position: relative; display: inline-block; margin: 2px 0 2px 0;
+                    transform: rotateY(180deg); top: 0; left: 4px; cursor: pointer;
+                    @include prefix(border-radius, 10px);
+                    @include background-bronze;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+                    &:before{ 
+                        content: ""; width: 146px; height: 76px; position: absolute; top: 2px; left: 2px;
+                        background: linear-gradient(0deg, #8e7453 0%, #e3c7a3 100%);
+                        @include prefix(border-radius, 8px);
+                    }
+                    .text{
+                        width: 100%; height: 100%; position: relative;
+                        color: #fff; font-size: 20px;
+                    }
+                    .unipop-gold-arrow{
+                        width: 20px; height: 62px; position: absolute; top: 9px; left: 148px;
+                        background-image: url(~imgPath/unipop-gold-arrow.png); background-size: 100%;
+                        visibility: hidden;
+                    }
+                    .unipop-box-pic{
+                        width: 140px; height: 70px; position: absolute; top: 5px; left: 5px;
+                        @include prefix(border-radius, 6px); overflow: hidden;
+                        img{width: 140px;}
+                    }
+                    &.select{
+                        @include background-gold;
+                        &:before{
+                            content: ""; background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+                        }
+                        .unipop-gold-arrow{visibility: visible;}
+                    }
+                    &:active{top: 1px;}
+                }
+                
+            }
+        }
+        .unipop-box-right-box{
+            width: 640px; height: 480px; position: absolute; top: 10px; left: 200px;
+            .right-box-f{
+                width: 640px; height: 480px; position: absolute; top: 0; left: 0;
+                background-image: url(~imgPath/ts_confirm_bk-1.jpg); background-size: 100%;
+                background-position-y: bottom;
+                @include prefix(border-radius, 10px);
+                .right-box-f-name-box{
+                    width: 640px; height: 50px; position: absolute; top: 0; left: 0;
+                    @include background-gold; @include prefix(border-radius, 10px 10px 0 0);
+                    color: #3c3934; font-weight: bold; font-size: 26px; line-height: 50px;
+                    text-transform: uppercase;
+                    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+                }
+                .red-timer-box{
+                    width: 110px; height: 50px; position: absolute; top: 0; left: 0;
+                    background-image: url(~imgPath/timer-back-50.png); background-size: 100%;
+                    .time-text, .time{
+                        color: #fff000; text-shadow: 0 1px 2px #680000; font-size: 16px; font-weight: bold;
+                        position: relative; top: 8px;
+                    }
+                    .time{
+                        color: #fff; font-size: 14px; top: 5px; font-weight: normal;
+                    }
+                }
+                .noobpack-box, .kingpack-box{
+                    width: 220px; height: 416px; 
+                    background: linear-gradient(0deg, #6f5b51 0%, #bfafa8 54%, #e3dad7 56%, #6f5b52 100%);
+                    position: absolute; top: 60px; left: 10px;
+                    @include prefix(border-radius, 10px); box-shadow: 0 1px 12px #000;
+                    &:before{
+                        content: ""; width: 214px; height: 410px; 
+                        display: block; position: absolute; top: 3px; left: 3px; background-color: #ffdfa2;
+                        @include prefix(border-radius, 8px); box-shadow: inset 0 0 80px #ffecbd, inset 0 0 100px #ffecbd;
+                    }
+                    .cardnameback{
+                        height: 50px;
+                        min-width: 102px;
+                        background-image: url(~imgPath/noobpackback-line.png); max-width: 200px;
+                        position: relative; top: -11px; display: inline-block; margin: auto;
+                        &:before{
+                            content: ""; width: 38px; height: 50px; position: absolute; right: -38px; display: block;
+                            background-image: url(~imgPath/noobpackback-l.png); transform: scale(-1, 1); top: 0px;
+                        }
+                        &:after{
+                            content: ""; width: 38px; height: 50px; position: absolute; left: -38px; display: block;
+                            background-image: url(~imgPath/noobpackback-l.png); top: 0px;
+                        }
+                        .card-text{
+                            font-size: 18px; color: #fff; text-shadow: 0 0 6px #000; position: relative; height: 33px;
+                            display: inline-block; z-index: 10; line-height: 34px; text-transform: uppercase;
+                            background: linear-gradient(90deg, transparent, rgba(3, 235, 245, .7), rgba(3, 235, 245, .7), transparent);
+                        }
+                    }
+                    .moredps-box{
+                        top: 28px; left: 56px;
+                    }
+                    .moregold-box{
+                        display: block; width: 100px; height: 240px; position: absolute;
+                        &.noob{
+                            width: 100px; height: 144px; left: 10px; top: 140px;
+                            .pack-pack{
+                                background-color: #e2c283;
+                                //box-shadow: 0 0 20px #ffecbd, 0 0 40px #ffecbd, 0 0 60px #ffecbd;
+                                img{
+                                    width: 100px;
+                                }
+                                .rate-text{
+                                    width: 100px;
+                                    height: 26px;
+                                    top: 52px;
+                                    line-height: 26px;
+                                    font-size: 20px;
+                                }
+                                .more-text{
+                                    width: 88px;
+                                    height: 60px;
+                                    font-size: 16px;
+                                    line-height: 16px;
+                                    top: 98px;
+                                    left: 50%;
+                                    transform: translate(-50%);
+                                }
+                            }
+                        }
+                        &.two{left: 112px;}
+                        .pack-pack{
+                            width: 90px;
+                            height: 90px;
+                            background-color: #f9c035;
+                            position: relative;
+                            display: inline-block;
+                            @include prefix(border-radius, 100%);
+                            //box-shadow: 0 0 20px #ffe59f, 0 0 40px #ffe59f, 0 0 60px #ffe59f;
+                            img{
+                                width: 100px;
+                                position: absolute;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            .rate-text{
+                                width: 100px;
+                                height: 25px;
+                                background: linear-gradient(90deg, #A80000 0%, #db0000 10%, #db0000 90%, #A80000 100%);
+                                @include prefix(border-radius, 4px);
+                                position: absolute;
+                                top: 56px;
+                                left: -5px;
+                                color: #fff;
+                                font-size: 18px;
+                                font-weight: bolder;
+                                text-shadow: 0 0 8px #480000;
+                                line-height: 26px;
+                                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
+                                text-transform: uppercase;
+    
+                                &.small-text{
+                                    font-size: 10px;
+                                }
+                            }
+                            .more-text{
+                                width: 110px; height: 80px; font-weight: bolder; color: #61490d; text-shadow: 0 0 4px #fff, 0 0 8px #fff;
+                                position: absolute; top: 146px; font-size: 20px; text-transform: uppercase; line-height: 22px; 
+                                left: 10px;
+                            }
+                            
+                        }
+                    }
+                    .buy-box{
+                        display: block; width: 210px; height: 108px; position: absolute; top: 302px; left: 5px;
+                        background-color: rgba(248, 211, 139, 0.75); @include prefix(border-radius, 0 0 6px 6px);
+                        .buy-text-box{
+                            position: absolute;
+                            top: 5px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            
+                            //display: inline-block;
+                            height: 46px;
+                            width: 190px;
+                            color: #4d3a10;
+                            font-weight: bold;
+                            //padding: 4px;
+                            .moregold-oldprice{
+                                font-size: 14px;
+                                color: #5a4915;
+                                text-shadow: 0 1px 0px #fff;
+                                
+                                span.ss{text-decoration: line-through;}
+                            }
+                            .moregold-newprice{
+                                font-size: 22px;
+                                font-weight: bold;
+                                color: #fff;
+                                text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 4px #fe9200;
+                                margin-top: 4px;
+                                height: 33px;
+                            }
+                        }
+                        .color-btn{
+                            position: absolute;
+                            bottom: 5px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            width: 180px;
+                            line-height: 20px;
+                            height: 46px;
+                            
+                            .color-btn-text{
+                                font-size: 20px;
+                            }
+                        }
+                        //.btn-box{
+                        //    width: 210px; height: 56px; position: absolute; top: 52px;
+                        //    .btn-simple-green.btn-ok{
+                        //        bottom: -4px;
+                        //    }
+                        //}
+                    }
+                    .card-box{
+                        width: 142px; height: 270px; position: relative; display: inline-block;
+                        top: 4px; @include prefix(border-radius, 6px); box-shadow: 0 0 6px #855e00, 0 0 10px #855e00;
+                        background: linear-gradient(0deg, #be8f19 0%, #af8617 25%, #fcf8ed 50%, #e3ae20 83%, #775b11 100%);
+                        &:first-child{
+                            z-index: 1;
+                        }
+                        .card{
+                            width: 136px; height: 264px; position: absolute; top: 3px; left: 3px;
+                            @include prefix(border-radius, 4px); overflow: hidden;
+                            .card-img{
+                                width: auto; height: 100%; position: absolute;
+                                //left: -30px;
+                                left: 50%;
+                                transform: translate(-50%);
+                            }
+                        }
+                        .card-name{
+                            width: 150px;
+                            height: 40px;
+                            box-sizing: border-box;
+                            padding-top: 2px;
+                            background: linear-gradient(90deg, #5687a5 0%, #7bbae3 50%, #5687a5 100%);
+                            @include prefix(border-radius, 6px);
+                            position: absolute;
+                            bottom: 5px;
+                            left: 50%;
+                            transform: translate(-50%);
+                            //top: 246px;
+                            //left: -5px;
+                            font-weight: bold;
+                            color: #fff;
+                            font-size: 16px;
+                            text-shadow: 0 0 6px #05456e;
+                            line-height: 16px;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
+                            span.cn{
+                                font-size: 12px;
+                            }
+                        }
+                        .cardnameback{top: -15px;}
+        
+                        &.mini{
+                            position: absolute;
+                            left: 20px;
+                            top: 25px;
+                            width: 94px;
+                            height: 180px;
+            
+                            .card{
+                                width: 88px;
+                                height: 174px;
+                            }
+            
+                            .card-name {
+                                width: 100px;
+                                height: 30px;
+                                font-size: 12px;
+                                line-height: 10px;
+                                span.cn{
+                                    font-size: 8px;
+                                }
+                            }
+            
+                            &+.mini{
+                                left: initial;
+                                right: 20px;
+                            }
+                        }
+                    }
+                }
+                .noobpack-box{
+                    .card-box.mini{
+                        left: initial;
+                        right: 12px;
+                        top: 120px;
+                        z-index: 1;
+                    }
+                }
+                .kingpack-box{
+                    width: 394px; left: 238px;
+                    background: linear-gradient(180deg, #795b13 0%, #e5b427 20%, #e3dad7 40%, #bf8e17 100%);
+                    
+                    &:before{
+                        content: ""; width: 388px; 
+                        background-color: #ffc73e; box-shadow: inset 0 0 80px #ffe59f, inset 0 0 100px #ffe59f;
+                    }
+                    .moregold-box{
+                        &.king{
+                            top: 208px; left: 8px; width: 110px;
+                            .pack-pack{
+                                .rate-text{left: -5px;}
+                                .more-text{left: 0;}
+                            }
+                        }
+                        &.two{left: initial; right: 8px;}
+                        &.noob{
+                            display: none;
+                        }
+                    }
+                    .buy-box{
+                        width: 384px; left: 5px; background-color: rgba(242, 184, 44, 0.75);
+                        .btn-box{
+                            width: 384px;
+                        }
+                    }
+                    .moredps-box{
+                        top: 302px; left: -12px;
+                    }
+                }
+                .or-box{
+                    width: 50px;
+                    height: 30px;
+                    position: absolute;
+                    top: 122px;
+                    left: 206px;
+                    line-height: 30px;
+                    font-size: 18px;
+                    color: #fff;
+                    text-shadow: 0 0 6px #000;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
+                    @include prefix(border-radius, 8px); 
+                    background: linear-gradient(90deg, #0191b2 0%, #02c8d8 50%, #0191b2 100%);
+                }
+                .sale-box{
+                    width: 110px; height: 110px; position: absolute; top: 362px; right: -6px;
+                    background-image: url(~imgPath/zvezda.png); background-size: 100%; display: table;
+                    .sale-text{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-weight: bold;
+                        font-size: 30px;
+                        line-height: 30px;
+                        color: #fff000;
+                        text-shadow: 0 0 10px #541800;
+                        text-transform: uppercase;
+                    }
+                }            
+            }
+        }
+    }
+}
+
+.moredps-box{
+    width: 110px; height: 110px; position: absolute;
+    background-image: url(~imgPath/zvezda.png); background-size: 100%;
+    &:before{
+        content: ""; width: 75px; height: 75px; position: absolute; top: 17px; left: 16px;
+        background-image: url(~imgPath/ic-abil-dps2.png); background-size: 100%;
+    }
+}
+
+.color-btn{
+    width: 90px; height: 50px; position: relative; display: inline-block;
+    @include prefix(border-radius, 6px);
+    background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
+    cursor: pointer;
+    .color-btn-text{
+        top: 10px; position: relative; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+        text-align: center; font-weight: bold; text-transform: uppercase; font-size: 14px;
+    }
+    &:active{
+        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.20), inset 0 2px 2px rgba(0, 0, 0, 0.20);
+        .color-btn-text{top: 12px;}
+    }
+    &.green{background: linear-gradient(0deg, #7cbc30 0%, #BAF279 100%);}
+}
+`;
+
+export default ScreenUnipopStarterpack;

@@ -1,0 +1,427 @@
+
+import styled from "styled-components";
+
+const QuestTabStory = styled.div`
+  @charset "utf-8";
+@import "sass_commons.scss";
+
+body .main {
+    .left-side {
+        width: 620px;
+        height: 555px;
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        .tabs-all-box {
+            width: 600px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 0;
+            .tabs-all {
+                width: 118px;
+                height: 40px;
+                position: relative;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                margin: 0 2px 0 0;
+                cursor: pointer;
+                background-color: #9c8b7c;
+                @include prefix(border-radius, 24px 24px 0 0);
+                &:before {
+                    content: "";
+                    width: 110px;
+                    height: 36px;
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    background-color: #544746;
+                    @include prefix(border-radius, 20px 20px 0 0);
+                    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
+                }
+                .tabs-name {
+                    width: 60px;
+                    height: 40px;
+                    position: absolute;
+                    right: 14px;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 44px;
+                    text-align: center;
+                }
+                .tabs-pic {
+                    width: 50px;
+                    height: 32px;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    img {
+                        width: 50px;
+                    }
+                }
+                &.selected {
+                    &:before {
+                        content: "";
+                        background-color: #9c8b7c;
+                    }
+                }
+            }
+        }
+        .left-panel {
+            width: 620px;
+            height: 515px;
+            position: absolute;
+            left: 0;
+            top: 40px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            &:before {
+                content: "";
+                width: 620px;
+                height: 5px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #9c8b7c;
+                z-index: 999;
+            }
+            &.wide.journal-story {
+                width: 1106px;
+                .journal-story {
+                    .heroes-list-all-box {
+                        width: 1106px;
+                    }
+                }
+            }
+            .journal-story {
+                .heroes-list-all-box {
+                    &:after {
+                        content: "";
+                        width: 1106px;
+                    }
+                    &:before {
+                        content: "";
+                        width: 5px;
+                        right: 0;
+                    }
+                    .journal-menu-box {
+                        width: 500px;
+                        height: 40px;
+                        position: absolute;
+                        top: 10px;
+                        left: 12px;
+                        font-size: 0;
+                        text-align: center;
+                        .color-btn {
+                            width: 160px;
+                            margin: 0 3px 0 3px;
+                            &.blue {
+                                box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2),
+                                    inset 0 2px 2px rgba(0, 0, 0, 0.2);
+                                pointer-events: none;
+                                .color-btn-text {
+                                    top: 1px !important;
+                                }
+                            }
+                        }
+                    }
+                    .journal-parth-box-all {
+                        width: 500px;
+                        height: 445px;
+                        position: absolute;
+                        top: 58px;
+                        left: 12px;
+                        background-color: #9c8b7c;
+                        border-radius: 10px;
+                        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2),
+                            inset 0 -2px 0px rgba(0, 0, 0, 0.2),
+                            0 1px 3px rgba(0, 0, 0, 0.2);
+                        .journal-parth-box-scroll {
+                            width: 480px;
+                            height: 424px;
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            overflow: hidden;
+                            overflow-y: scroll;
+                            font-size: 0;
+                            &::-webkit-scrollbar-track {
+                                -webkit-box-shadow: inset 0 0 6px
+                                    rgba(0, 0, 0, 0.5);
+                                border-radius: 10px;
+                                background-color: #7c665c;
+                            }
+                            &::-webkit-scrollbar {
+                                width: 10px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                border-radius: 10px;
+                                -webkit-box-shadow: inset 0 0 3px #796b60;
+                                background: linear-gradient(
+                                    to right,
+                                    #fff,
+                                    #f5de80,
+                                    #f4b766,
+                                    #b26d12
+                                );
+                            }
+                            .journal-parth-box {
+                                width: 460px;
+                                height: auto;
+                                position: relative;
+                                display: inline-block;
+                                text-align: center;
+                                .journal-parth-name {
+                                    width: 460px;
+                                    height: 40px;
+                                    position: relative;
+                                    display: inline-block;
+                                    background-color: #705d4e;
+                                    text-align: center;
+                                    line-height: 40px;
+                                    color: #ffd700;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    @include prefix(border-radius, 10px);
+                                    margin: 10px 0 10px 0;
+                                    box-shadow: 0 1px 1px
+                                            rgba(255, 255, 255, 0.1),
+                                        inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+                                }
+                                .journal-comics-box {
+                                    width: 105px;
+                                    height: 105px;
+                                    position: relative;
+                                    display: inline-block;
+                                    background-color: #b7a597;
+                                    @include prefix(border-radius, 10px);
+                                    font-size: 0;
+                                    cursor: pointer;
+                                    margin: 5px;
+                                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                                    .journal-prw-comics-pic {
+                                        width: 105px;
+                                        height: 105px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        overflow: hidden;
+                                        @include prefix(border-radius, 10px);
+                                        img {
+                                            height: 105px;
+                                        }
+                                    }
+                                    .journal-prw-comics-lock {
+                                        width: 105px;
+                                        height: 105px;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        background-color: rgba(0, 0, 0, 0.55);
+                                        @include prefix(border-radius, 10px);
+                                        display: none;
+                                        &:before {
+                                            content: "";
+                                            width: 40px;
+                                            height: 60px;
+                                            position: absolute;
+                                            top: 10px;
+                                            left: 32px;
+                                            background-image: url(~imgPath/tower-lock.png);
+                                            background-size: 100%;
+                                            background-repeat: no-repeat;
+                                        }
+                                    }
+                                    .journal-prw-comics-text-box {
+                                        width: 105px;
+                                        height: 30px;
+                                        position: absolute;
+                                        top: 70px;
+                                        left: 0;
+                                        display: none;
+                                        .journal-prw-comics-text {
+                                            width: 105px;
+                                            height: 30px;
+                                            position: relative;
+                                            display: table-cell;
+                                            vertical-align: middle;
+                                            text-align: center;
+                                            color: #fff;
+                                            font-size: 10px;
+                                            font-weight: bold;
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                    &.lock {
+                                        .journal-prw-comics-lock {
+                                            display: block;
+                                        }
+                                        .journal-prw-comics-text-box {
+                                            display: table;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .journal-rightside-box-all {
+                    width: 578px;
+                    height: 507px;
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    background-color: #b7a597;
+                    border-radius: 0 14px 14px 0;
+                    box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2),
+                        inset 2px 0 0 rgba(0, 0, 0, 0.2),
+                        0 0 4px rgba(0, 0, 0, 0.2);
+                    .journal-parth-name {
+                        width: 556px;
+                        height: 40px;
+                        position: absolute;
+                        top: 14px;
+                        left: 12px;
+                        background-color: #705d4e;
+                        text-align: center;
+                        line-height: 40px;
+                        color: #ffd700;
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        @include prefix(border-radius, 10px);
+                        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
+                            inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+                    }
+                    .journal-comics-view-box {
+                        width: 556px;
+                        height: 430px;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 12px;
+                        background-color: #9c8b7c;
+                        @include prefix(border-radius, 10px);
+                        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
+                            inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+                        .journal-comics-view {
+                            width: 520px;
+                            height: 360px;
+                            position: absolute;
+                            top: 10px;
+                            left: 18px;
+                            .journal-comics {
+                                width: 520px;
+                                height: 360px;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                display: block;
+                                img {
+                                    width: 520px;
+                                }
+                                .journal-comics-ballon-box {
+                                    width: 100px;
+                                    height: 90px;
+                                    position: absolute;
+                                    background-color: #fff;
+                                    border: 2px solid #000;
+                                    display: table;
+                                    .journal-comics-ballon-text {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                        color: #000;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                        font-style: italic;
+                                        line-height: 16px;
+                                        padding: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .journal-comics-view-nav-box {
+                        width: 300px;
+                        height: 40px;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        .journal-comics-view-nav {
+                            width: 40px;
+                            height: 40px;
+                            position: absolute;
+                            top: 0;
+                            left: 70px;
+                            @include background-resourcebg;
+                            @include prefix(border-radius, 10px);
+                            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                            cursor: pointer;
+                            z-index: 1;
+                            &:hover {
+                                filter: brightness(1.1);
+                            }
+                            &:before {
+                                content: "";
+                                width: 20px;
+                                height: 28px;
+                                position: absolute;
+                                top: 6px;
+                                left: 10px;
+                                background-image: url(~imgPath/rating-arrow.png);
+                                background-size: 100%;
+                                background-repeat: no-repeat;
+                            }
+                            &:active {
+                                transform: scale(0.99);
+                                top: 1px;
+                                &:before {
+                                    top: 7px;
+                                }
+                            }
+                            &.right {
+                                left: auto;
+                                right: 70px;
+                                &:before {
+                                    content: "";
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                        .journal-comics-view-nav-count {
+                            width: 100px;
+                            height: 40px;
+                            position: relative;
+                            text-align: center;
+                            margin: 0 auto;
+                            line-height: 40px;
+                            color: #fff;
+                            font-size: 18px;
+                            font-weight: bold;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body .main.world1,
+body .main.world2,
+body .main.world3 {
+    .left-side .left-panel .journal-story .heroes-list-all-box {
+        width: 1106px;
+    }
+}
+
+`;
+
+export default QuestTabStory;

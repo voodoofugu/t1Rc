@@ -1,0 +1,393 @@
+
+import styled from "styled-components";
+
+const VipBtn = styled.div`
+  @charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext,cyrillic);
+@import "sass_commons.scss";
+@import "01-all-res.scss";
+
+
+.vip-box{
+    width: 169px; height: 80px; position: absolute; right:209px; top: 2px;
+    .n-vip-btn{
+        width: 169px; height: 80px; position: absolute;
+        background-image: url(~imgPath/n-vip-p0_0.png); background-size: 169px;
+        cursor: pointer;
+        .n-num{
+            display: block; height: 36px; line-height: 36px;
+            text-align: center; font-size: 26px; font-weight: bold; color: #FFCD2A;
+            position: relative; top: 17px;
+            text-shadow: 0 -1px 0 #fff, 0 2px 0 #554949,
+            0 0 3px #f90,0 0 3px #f90,0 0 3px #f90,
+            0 0 6px #303030, 0 0 6px #333032, 0 0 6px #412727,
+            0 3px 1px #000;
+        }
+        .n-vip-plus{
+        display: block; width: 50px; height: 50px; position: absolute; top: 0px; margin-left: 108px;
+        background-image: url(~imgPath/n-vip-plus1.png); background-size: 50px; cursor: pointer;
+        }
+        &.lvl0{
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl0-1{
+            background-image: url(~imgPath/n-vip-p0_1-none.png); background-size: 169px;
+            .n-num{
+            color: #ccc;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;
+            }
+        }
+        &.lvl1{
+            background-image: url(~imgPath/n-vip-p1_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl1-1{
+            background-image: url(~imgPath/n-vip-p1_1-none.png); background-size: 169px;
+            .n-num{
+            color: #C2782B;;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus2.png); background-size: 50px;
+            }
+        }
+        &.lvl2{
+            background-image: url(~imgPath/n-vip-p2_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl2-1{
+            background-image: url(~imgPath/n-vip-p2_1-none.png); background-size: 169px;
+            .n-num{
+            color: #C2782B;;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus2.png); background-size: 50px;
+            }
+        }
+        &.lvl3{
+            background-image: url(~imgPath/n-vip-p3_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl3-1{
+            background-image: url(~imgPath/n-vip-p3_1-none.png); background-size: 169px;
+            .n-num{
+            color: #ccc;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+        }
+        &.lvl4{
+            background-image: url(~imgPath/n-vip-p4_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl4-1{
+            background-image: url(~imgPath/n-vip-p0_1-none.png); background-size: 169px;
+            .n-num{
+            color: #ccc;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+        }
+        &.lvl5{
+            background-image: url(~imgPath/n-vip-p5_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl5-1{
+            background-image: url(~imgPath/n-vip-p5_1-none.png); background-size: 169px;
+            .n-num{
+            color: #f4d96b;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus3.png); background-size: 50px;
+            }
+        }
+        &.lvl6{
+            background-image: url(~imgPath/n-vip-p6_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl6-1{
+            background-image: url(~imgPath/n-vip-p6_1-none.png); background-size: 169px;
+            .n-num{
+            color: #f4d96b;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus3.png); background-size: 50px;
+            }
+        }
+        &.lvl7{
+            background-image: url(~imgPath/n-vip-p7_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl7-1{
+            background-image: url(~imgPath/n-vip-p7_1-none.png); background-size: 169px;
+            .n-num{
+            color: #f4d96b;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus3.png); background-size: 50px;
+            }
+        }
+        &.lvl8{
+            background-image: url(~imgPath/n-vip-p8_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl8-1{
+            background-image: url(~imgPath/n-vip-p8_1-none.png); background-size: 169px;
+            .n-num{
+            color: #f4d96b;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus3.png); background-size: 50px;
+            }
+        }
+        &.lvl9{
+            background-image: url(~imgPath/n-vip-p9_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl9-1{
+            background-image: url(~imgPath/n-vip-p9_1-none.png); background-size: 169px;
+            .n-num{
+            color: #cce;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus4.png); background-size: 50px;
+            }
+        }
+        &.lvl10{
+            background-image: url(~imgPath/n-vip-p10_0.png); background-size: 169px;
+            .n-num{display: none;}
+            .n-vip-plus{display: none;}
+        }
+        &.lvl10-1{
+            background-image: url(~imgPath/n-vip-p10_1-none.png); background-size: 169px;
+            .n-num{
+            color: #cce;
+            text-shadow: 0 -1px 0 #fff,
+                0 0px 2px #ccc,
+                0 3px 1px #000;  
+            }
+            .n-vip-plus{
+                background-image: url(~imgPath/n-vip-plus4.png); background-size: 50px;
+            }
+        }
+    }    
+}
+    // .num{
+    //     display: block; height: 18px; height: 36px; line-height: 36px;
+    //     // background: red;
+    //     text-align: center;
+    //     font-size: 25px; font-weight: bold; color: #FFCD2A;
+    //     position: absolute; left: 10px; right: 10px;
+    //     top: 16px;
+    //     text-shadow: 0 -1px 0 #fff, 0 2px 0 #554949,
+    //         0 0 3px #f90,0 0 3px #f90,0 0 3px #f90,
+    //         0 0 6px #303030, 0 0 6px #333032, 0 0 6px #412727,
+    //         0 3px 1px #000;
+    // }
+    // &:hover{
+    //     @include prefix(transform, scale3d(1.025,1.025,1));
+    // }
+    // &:active{
+    //     @include prefix(transform, scale3d(1,1,1));
+    // }
+
+    // &.lvl0-0, &.lvl0{
+    //     background-image: url(~imgPath/vip-p0_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl0-1{
+    //     background-image: url(~imgPath/vip-p0_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{
+    //         color: #ccc;
+    //         text-shadow: 0 -1px 0 #fff,
+    //             0 0px 2px #ccc,
+    //             0 3px 1px #000;
+    //     }
+    // }
+    // &.lvl1-0{
+    //     background-image: url(~imgPath/vip-p1_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl1-1{
+    //     background-image: url(~imgPath/vip-p1_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{
+    //         color: #C2782B;
+    //     }
+    // }
+    // &.lvl2-0{
+    //     background-image: url(~imgPath/vip-p2_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl2-1{
+    //     background-image: url(~imgPath/vip-p2_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{
+    //         color: #D99247;
+    //     }
+    // }
+    // &.lvl3-0{
+    //     background-image: url(~imgPath/vip-p3_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl3-1{
+    //     background-image: url(~imgPath/vip-p3_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{
+    //         color: #ccc;
+    //         text-shadow: 0 -1px 0 #fff,
+    //             0 0px 2px #ccc,
+    //             0 3px 1px #000;
+    //     }
+    // }
+    // &.lvl4-0{
+    //     background-image: url(~imgPath/vip-p4_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl4-1{
+    //     background-image: url(~imgPath/vip-p4_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{
+    //         color: #ccc;
+    //         text-shadow: 0 -1px 0 #fff,
+    //             0 0px 2px #ccc,
+    //             0 3px 1px #000;
+    //     }
+    // }
+    // &.lvl5-0{
+    //     background-image: url(~imgPath/vip-p5_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl5-1{
+    //     background-image: url(~imgPath/vip-p5_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    // }
+    // &.lvl6-0{
+    //     background-image: url(~imgPath/vip-p6_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl6-1{
+    //     background-image: url(~imgPath/vip-p6_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    // }
+    // &.lvl7-0{
+    //     background-image: url(~imgPath/vip-p7_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl7-1{
+    //     background-image: url(~imgPath/vip-p7_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    // }
+    // &.lvl8-0{
+    //     background-image: url(~imgPath/vip-p8_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl8-1{
+    //     background-image: url(~imgPath/vip-p8_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    // }
+    // &.lvl9-0{
+    //     background-image: url(~imgPath/vip-p9_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl9-1{
+    //     background-image: url(~imgPath/vip-p9_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{
+    //         color: #cce;
+    //         text-shadow: 0 -1px 0 #fff,
+    //             0 0px 2px #ccc,
+    //             0 3px 1px #000;
+    //     }
+    // }
+    // &.lvl10-0{
+    //     background-image: url(~imgPath/vip-p10_0.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{ display: none; }
+    // }
+    // &.lvl10-1{
+    //     background-image: url(~imgPath/vip-p10_1.png);
+    //     background-size: 169px;
+    //     top: 2px;
+    //     .num{
+    //         color: #cce;
+    //         text-shadow: 0 -1px 0 #fff,
+    //             0 0px 2px #ccc,
+    //             0 3px 1px #000;
+    //     }
+    // }
+
+
+.body{
+    cursor: url(~imgPath/clock3.png);
+}
+
+`;
+
+export default VipBtn;
