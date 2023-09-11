@@ -1,48 +1,52 @@
 import React, { useEffect } from "react";
+import styled from "styled-components";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import allRes from "../styles/01-all-res.scss";
-import screenFapopolyRules from "../styles/screen-fapopoly-rules.scss";
-import screenUnipopSubscription from "../styles/screen-unipop-subscription.scss";
-import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-import v2ScreenTower from "../styles/v2-screen-tower.scss";
-import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
-import v2ScreenEventsBtlpass from "../styles/v2-screen-events-btlpass.scss";
-import screenSuperhero from "../styles/screen-superhero.scss";
-import popupLoseboss from "../styles/popup-loseboss.scss";
-import screenEventMainSale from "../styles/screen-event_main-sale.scss";
-import screenChangeOpenchest from "../styles/screen-change-openchest.scss";
-import screenChangeAll from "../styles/screen-change-all.scss";
-import screenChangeGivepic from "../styles/screen-change-givepic.scss";
-import screenChangeCollpop from "../styles/screen-change-collpop.scss";
-import v2ScreenOfferBossChestPop from "../styles/v2-screen-offer-boss-chest-pop.scss";
-import v2ScreenError from "../styles/v2-screen-error.scss";
-import screenRating from "../styles/screen-rating.scss";
-import screenRatingPopstart from "../styles/screen-rating-popstart.scss";
-import screenFortunaDualPack from "../styles/screen-fortuna-dual-pack.scss";
-import questsUi from "../styles/quests-ui.scss";
-import screenFortunaWinpop from "../styles/screen-fortuna-winpop.scss";
-import popWpckEnd from "../styles/pop-wpck-end.scss";
-import popWpckAll from "../styles/pop-wpck-all.scss";
-import screenFortunaRoundMain16x from "../styles/screen-fortuna-round-main_16x.scss";
-import screenBase from "../styles/screen-base.scss";
-import screenChangeAddchest from "../styles/screen-change-addchest.scss";
-import shopDiamondbuy from "../styles/shop-diamondbuy.scss";
-import screenRatingReward from "../styles/screen-rating-reward.scss";
-import screenRatingRankchange from "../styles/screen-rating-rankchange.scss";
-import v2ScreenHero from "../styles/v2-screen-hero.scss";
-import v2ScreenHeroPromotion from "../styles/v2-screen-hero-promotion.scss";
-import v2ScreenXmasPop1 from "../styles/v2-screen-xmas-pop1.scss";
-import v2ScreenXmasPop2 from "../styles/v2-screen-xmas-pop2.scss";
-import v2ScreenXmasPop3 from "../styles/v2-screen-xmas-pop3.scss";
-import sh2Openchest from "../styles/sh2-openchest.scss";
-import v2ScreenOffer from "../styles/v2-screen-offer.scss";
-import v2ScreenMainRelicsPop from "../styles/v2-screen-main-relics-pop.scss";
-import screenChestsShop from "../styles/screen-chests-shop.scss";
-import screenInfoPop from "../styles/screen-info-pop.scss";
-import popDarkBtlpas from "../styles/pop-dark-btlpas.scss";
-import screenBank from "../styles/screen-bank.scss";
-import screenRatingFullcoll from "../styles/screen-rating-fullcoll.scss";
 
+// import Mainscreen01allpopupsComponentStylesMap from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
+import WorldBtnBox from "../stylesMaps/WorldBtnBox";
+
+// import AllRes from "../styleComponents/AllRes";
+// import ScreenFapopolyRules from "../styleComponents/ScreenFapopolyRules";
+// import ScreenUnipopSubscription from "../styleComponents/ScreenUnipopSubscription";
+// import V2ScreenMainDarkWorld from "../styleComponents/V2ScreenMainDarkWorld";
+// import V2ScreenTower from "../styleComponents/V2ScreenTower";
+// import V2ScreenTowerRelics from "../styleComponents/V2ScreenTowerRelics";
+// import V2ScreenEventsBtlpass from "../styleComponents/V2ScreenEventsBtlpass";
+// import ScreenSuperhero from "../styleComponents/ScreenSuperhero";
+// import PopupLoseboss from "../styleComponents/PopupLoseboss";
+// import ScreenEventMainSale from "../styleComponents/ScreenEventMainSale";
+// import ScreenChangeOpenchest from "../styleComponents/ScreenChangeOpenchest";
+// import ScreenChangeAll from "../styleComponents/ScreenChangeAll";
+// import ScreenChangeGivepic from "../styleComponents/ScreenChangeGivepic";
+// import ScreenChangeCollpop from "../styleComponents/ScreenChangeCollpop";
+// import V2ScreenOfferBossChestPop from "../styleComponents/V2ScreenOfferBossChestPop";
+// import V2ScreenError from "../styleComponents/V2ScreenError";
+// import ScreenRating from "../styleComponents/ScreenRating";
+// import ScreenRatingPopstart from "../styleComponents/ScreenRatingPopstart";
+// import ScreenFortunaDualPack from "../styleComponents/ScreenFortunaDualPack";
+// import QuestsUi from "../styleComponents/QuestsUi";
+// import ScreenFortunaWinpop from "../styleComponents/ScreenFortunaWinpop";
+// import PopWpckEnd from "../styleComponents/PopWpckEnd";
+// import PopWpckAll from "../styleComponents/PopWpckAll";
+// import ScreenFortunaRoundMain16x from "../styleComponents/ScreenFortunaRoundMain16x";
+// import ScreenBase from "../styleComponents/ScreenBase";
+// import ScreenChangeAddchest from "../styleComponents/ScreenChangeAddchest";
+// import ShopDiamondbuy from "../styleComponents/ShopDiamondbuy";
+// import ScreenRatingReward from "../styleComponents/ScreenRatingReward";
+// import ScreenRatingRankchange from "../styleComponents/ScreenRatingRankchange";
+// import V2ScreenHero from "../styleComponents/V2ScreenHero";
+// import V2ScreenHeroPromotion from "../styleComponents/V2ScreenHeroPromotion";
+// import V2ScreenXmasPop1 from "../styleComponents/V2ScreenXmasPop1";
+// import V2ScreenXmasPop2 from "../styleComponents/V2ScreenXmasPop2";
+// import V2ScreenXmasPop3 from "../styleComponents/V2ScreenXmasPop3";
+// import Sh2Openchest from "../styleComponents/Sh2Openchest";
+// import V2ScreenOffer from "../styleComponents/V2ScreenOffer";
+// import V2ScreenMainRelicsPop from "../styleComponents/V2ScreenMainRelicsPop";
+// import ScreenChestsShop from "../styleComponents/ScreenChestsShop";
+// import ScreenInfoPop from "../styleComponents/ScreenInfoPop";
+// import PopDarkBtlpas from "../styleComponents/PopDarkBtlpas";
+// import ScreenBank from "../styleComponents/ScreenBank";
+// import ScreenRatingFullcoll from "../styleComponents/ScreenRatingFullcoll";
 const MainScreen01AllPopupsComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
     const currentUrl = window.location.href;
@@ -52,42 +56,6 @@ const MainScreen01AllPopupsComponent = () => {
 
     useEffect(() => {
         if (pageContainer && !pageContainer.classList.contains("noScripts")) {
-            // кнопка перехода в тёмный мир
-            let btn = document.createElement("div");
-            let btnText = document.createElement("div");
-            btn.className = "color-btn green world-btn";
-            btnText.className = "color-btn-text";
-            btnText.innerHTML = "To Darkworld";
-            btn.append(btnText);
-            document.querySelector("#root").append(btn);
-            const main = document.querySelector(".main");
-            const reG = document.querySelector(
-                ".resource-panel > div:nth-child(2)"
-            );
-            const reI = document.querySelector(".resource-pic > img");
-            const vvT = document.querySelector(".value-vip-ticket");
-            btn.addEventListener("click", () => {
-                if (main.classList.contains("world1")) {
-                    main.classList.remove("world1");
-                    main.classList.add("world3");
-                    btnText.innerHTML = "To Earthworld";
-
-                    reG.classList.remove("resource-gold");
-                    reG.classList.add("resource-dark_gold");
-                    reI.src = "rc/v2-res-dark.png";
-                    vvT.style.display = "none";
-                } else {
-                    main.classList.remove("world3");
-                    main.classList.add("world1");
-                    btnText.innerHTML = "To Darkworld";
-
-                    reG.classList.remove("resource-dark_gold");
-                    reG.classList.add("resource-gold");
-                    reI.src = "rc/v2-res-gold.png";
-                    vvT.style.display = "block";
-                }
-            });
-
             // кнопки попапа с анимацией наград
             const colB = document.querySelector(".color-btn.collect");
             const rrBo = document.querySelector(".rating-reward-box");
@@ -631,22 +599,8 @@ const MainScreen01AllPopupsComponent = () => {
         return () => {};
     }, []);
 
-    const css = `
-        .world-btn {
-            position: absolute;
-            top: 660px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: "Roboto", sans-serif;
-            width: 140px;
-        }
-    `;
-
     return (
-        <HelmetProvider>
-            <Helmet>
-                <style>{css}</style>
-            </Helmet>
+        <>
             <div className="main world1">
                 <div
                     className="main-bg"
@@ -19285,8 +19239,10 @@ const MainScreen01AllPopupsComponent = () => {
                         <div className="close-btn"></div>
                     </div>
                 </div>
+                <WorldBtnBox />
+                {/* <Mainscreen01allpopupsComponentStylesMap /> */}
             </div>
-        </HelmetProvider>
+        </>
     );
 };
 

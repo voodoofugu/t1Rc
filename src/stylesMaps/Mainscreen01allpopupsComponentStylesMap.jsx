@@ -1,3 +1,4 @@
+import React from "react";
 import AllRes from "../styleComponents/AllRes";
 import ScreenFapopolyRules from "../styleComponents/ScreenFapopolyRules";
 import ScreenUnipopSubscription from "../styleComponents/ScreenUnipopSubscription";
@@ -41,49 +42,57 @@ import PopDarkBtlpas from "../styleComponents/PopDarkBtlpas";
 import ScreenBank from "../styleComponents/ScreenBank";
 import ScreenRatingFullcoll from "../styleComponents/ScreenRatingFullcoll";
 
-const Mainscreen01allpopupsComponentStylesMap = {
-  AllRes,
-  ScreenFapopolyRules,
-  ScreenUnipopSubscription,
-  V2ScreenMainDarkWorld,
-  V2ScreenTower,
-  V2ScreenTowerRelics,
-  V2ScreenEventsBtlpass,
-  ScreenSuperhero,
-  PopupLoseboss,
-  ScreenEventMainSale,
-  ScreenChangeOpenchest,
-  ScreenChangeAll,
-  ScreenChangeGivepic,
-  ScreenChangeCollpop,
-  V2ScreenOfferBossChestPop,
-  V2ScreenError,
-  ScreenRating,
-  ScreenRatingPopstart,
-  ScreenFortunaDualPack,
-  QuestsUi,
-  ScreenFortunaWinpop,
-  PopWpckEnd,
-  PopWpckAll,
-  ScreenFortunaRoundMain16x,
-  ScreenBase,
-  ScreenChangeAddchest,
-  ShopDiamondbuy,
-  ScreenRatingReward,
-  ScreenRatingRankchange,
-  V2ScreenHero,
-  V2ScreenHeroPromotion,
-  V2ScreenXmasPop1,
-  V2ScreenXmasPop2,
-  V2ScreenXmasPop3,
-  Sh2Openchest,
-  V2ScreenOffer,
-  V2ScreenMainRelicsPop,
-  ScreenChestsShop,
-  ScreenInfoPop,
-  PopDarkBtlpas,
-  ScreenBank,
-  ScreenRatingFullcoll,
+const MainScreenComponent = ({ children }) => {
+    return <>{children}</>;
+};
+
+const Mainscreen01allpopupsComponentStylesMap = () => {
+    return (
+        <MainScreenComponent>
+            <AllRes />
+            <ScreenFapopolyRules />
+            <ScreenUnipopSubscription />
+            <V2ScreenMainDarkWorld />
+            <V2ScreenTower />
+            <V2ScreenTowerRelics />
+            <V2ScreenEventsBtlpass />
+            <ScreenSuperhero />
+            <PopupLoseboss />
+            <ScreenEventMainSale />
+            <ScreenChangeOpenchest />
+            <ScreenChangeAll />
+            <ScreenChangeGivepic />
+            <ScreenChangeCollpop />
+            <V2ScreenOfferBossChestPop />
+            <V2ScreenError />
+            <ScreenRating />
+            <ScreenRatingPopstart />
+            <ScreenFortunaDualPack />
+            <QuestsUi />
+            <ScreenFortunaWinpop />
+            <PopWpckEnd />
+            <PopWpckAll />
+            <ScreenFortunaRoundMain16x />
+            <ScreenBase />
+            <ScreenChangeAddchest />
+            <ShopDiamondbuy />
+            <ScreenRatingReward />
+            <ScreenRatingRankchange />
+            <V2ScreenHero />
+            <V2ScreenHeroPromotion />
+            <V2ScreenXmasPop1 />
+            <V2ScreenXmasPop2 />
+            <V2ScreenXmasPop3 />
+            <Sh2Openchest />
+            <V2ScreenOffer />
+            <V2ScreenMainRelicsPop />
+            <ScreenChestsShop />
+            <ScreenInfoPop />
+            <PopDarkBtlpas />
+            <ScreenBank />
+            <ScreenRatingFullcoll />
+        </MainScreenComponent>
+    );
 };
 
 export default Mainscreen01allpopupsComponentStylesMap;
