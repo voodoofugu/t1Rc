@@ -4,7 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import Mainscreen01allpopupsComponentStylesMap from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
 import WorldBtnBox from "../stylesMaps/WorldBtnBox";
-import StyledWrap from "../stylesMaps/StyledWrap";
+// import StyledWrap from "../stylesMaps/StyledWrap";
 
 const MainScreen01AllPopupsComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -19199,9 +19199,9 @@ const MainScreen01AllPopupsComponent = () => {
                     </div>
                 </div>
                 <WorldBtnBox />
-                <StyledWrap>
+                {/* <StyledWrap>
                     <div className="close-btn"></div>
-                </StyledWrap>
+                </StyledWrap> */}
             </div>
         </>
     );

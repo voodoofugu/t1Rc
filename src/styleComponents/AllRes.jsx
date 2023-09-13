@@ -1,10 +1,6 @@
-
 import styled from "styled-components";
 
 const AllRes = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
-
 .main {
     .price {
         display: inline-block;

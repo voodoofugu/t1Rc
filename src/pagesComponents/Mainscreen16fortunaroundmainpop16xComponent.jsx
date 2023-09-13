@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+// import styled, { createGlobalStyle } from "styled-components";
 import ScreenFortunaRoundMain16x from "../styleComponents/ScreenFortunaRoundMain16x.jsx";
 import ScreenFortunaRoundMain from "../styleComponents/ScreenFortunaRoundMain.jsx";
 // import StyledWrap from "../stylesMaps/StyledWrap";

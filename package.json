@@ -51,8 +51,10 @@
         "sass": "^1.62.1",
         "sass-loader": "^13.2.2",
         "semver-regex": "^4.0.5",
-        "style-loader": "^3.3.2",
-        "styled-components": "^6.0.7",
+        "style-loader": "^3.3.3",
+        "styled-components": "^6.0.8",
+        "styled-jsx": "^5.1.2",
+        "stylis": "^4.3.0",
         "terser-webpack-plugin": "^5.3.9"
     },
     "devDependencies": {
@@ -62,6 +64,7 @@
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
         "@types/react": "^18.2.20",
         "@types/react-dom": "^18.2.7",
+        "babel-plugin-styled-components": "^2.1.4",
         "chokidar": "^3.5.3",
         "clean-webpack-plugin": "^4.0.0",
         "copy-webpack-plugin": "^11.0.0",
@@ -71,6 +74,7 @@
         "html2canvas": "^1.4.1",
         "nodemon": "^3.0.1",
         "npm-run-all": "^4.1.5",
+        "postcss-scss": "^4.0.8",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-refresh-webpack-plugin": "^0.1.0",
