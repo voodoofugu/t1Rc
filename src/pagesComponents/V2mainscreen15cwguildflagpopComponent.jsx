@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenCwGuildflag from "../styles/v2-screen-cw-guildflag.scss";
+// import v2ScreenCwGuildflag from "../styles/v2-screen-cw-guildflag.scss";
 
 const V2MainScreen15CwGuildflagPopComponent = () => {
     return (

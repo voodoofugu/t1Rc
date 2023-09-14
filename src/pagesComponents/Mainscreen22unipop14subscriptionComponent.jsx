@@ -1,5 +1,5 @@
 import React from "react";
-import screenUnipopSubscription from "../styles/screen-unipop-subscription.scss";
+// import screenUnipopSubscription from "../styles/screen-unipop-subscription.scss";
 
 const MainScreen22Unipop14subscriptionComponent = () => {
     return (

@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenAlbum = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main {
     .left-side {
@@ -29,7 +28,7 @@ body .main {
                 margin: 0 2px 0 0;
                 cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before {
                     content: "";
                     width: 110px;
@@ -38,7 +37,7 @@ body .main {
                     top: 4px;
                     left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name {
@@ -104,8 +103,14 @@ body .main {
                         position: absolute;
                         top: 10px;
                         left: 399px;
-                        @include background-resourcebg;
-                        @include prefix(border-radius, 12px);
+                        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                        border-radius: 12px;
                         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                         color: #3c3737;
                         font-size: 16px;
@@ -149,7 +154,7 @@ body .main {
                                     height: 40px;
                                     position: absolute;
                                     background-color: #f0ece9;
-                                    @include prefix(border-radius, 6px);
+                                    border-radius: 6px;
                                     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.45);
                                     .search {
                                         width: 213px;
@@ -160,7 +165,7 @@ body .main {
                                         font-size: 20px;
                                         text-transform: capitalize;
                                         border: none;
-                                        @include prefix(border-radius, 6px);
+                                        border-radius: 6px;
                                         padding: 0 0 0 6px;
                                         background-color: #f0ece9;
                                         &::-webkit-input-placeholder {
@@ -199,7 +204,7 @@ body .main {
                                 position: absolute;
                                 top: 48px;
                                 background-color: #8f7a6b;
-                                @include prefix(border-radius, 6px 6px 0 0);
+                                border-radius: 6px 6px 0 0;
                                 .box-all {
                                     width: 100%;
                                     position: relative;
@@ -207,8 +212,15 @@ body .main {
                                         width: 262px;
                                         height: 34px;
                                         position: relative;
-                                        @include background-silver;
-                                        @include prefix(border-radius, 6px);
+                                        background: linear-gradient(
+		180deg,
+		#585a5c 0%,
+		#d5d8da 50%,
+		#585a5b 70%,
+		#a1a4a6 85%,
+		#585a5b 100%
+	);
+                                        border-radius: 6px;
                                         box-shadow: 0 2px 4px 0
                                             rgba(0, 0, 0, 0.45);
                                         font-size: 16px;
@@ -235,11 +247,7 @@ body .main {
                                                 rgba(0, 0, 0, 0.44);
                                             border-top: none;
                                             border-left: none;
-                                            @include prefix(
-                                                transform,
-                                                rotate(45deg)
-                                            );
-                                        }
+                                            transform: rotate(45deg);                                        }
                                     }
                                     &.opened .box-all-name {
                                         color: #fff;
@@ -247,23 +255,33 @@ body .main {
                                     }
                                     &.opened .box-all-name:before {
                                         content: "";
-                                        @include prefix(
-                                            transform,
-                                            rotate(-135deg)
-                                        );
-                                        top: 14px;
+                                        transform: rotate(-135deg);                                        top: 14px;
                                     }
                                     &.opened .tags-scroll {
                                         display: block;
                                     }
                                     &.collected-tags {
                                         .box-all-name {
-                                            @include background-bronze;
+                                            background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
                                         }
                                     }
                                     &.favorite-tags {
                                         .box-all-name {
-                                            @include background-gold;
+                                            background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
                                         }
                                     }
                                 }
@@ -330,7 +348,7 @@ body .main {
                                         .tags-check {
                                             width: 24px;
                                             height: 24px;
-                                            background-image: url(~imgPath/check-box.png);
+                                            background-image: url(../img/check-box.png);
                                             background-size: 100%;
                                             position: absolute;
                                             margin-left: 225px;
@@ -340,7 +358,7 @@ body .main {
                                         .tags-new {
                                             width: 47px;
                                             height: 24px;
-                                            background-image: url(~imgPath/new-box.png);
+                                            background-image: url(../img/new-box.png);
                                             background-size: 100%;
                                             position: absolute;
                                             margin-left: 156px;
@@ -436,13 +454,13 @@ body .main {
                                 float: left;
                                 position: relative;
                                 margin: 5px;
-                                @include prefix(border-radius, 10px);
+                                border-radius: 10px;
                                 border: solid 3px #e4cf76;
                                 box-shadow: inset 0 0 5px #c87725,
                                     0 1px 3px #000, inset 0 77px 7px #bfb6ad;
                                 cursor: pointer;
                                 &.blocked {
-                                    background-image: url(~imgPath/zagluska.jpg);
+                                    background-image: url(../img/zagluska.jpg);
                                     background-size: 223px;
                                     cursor: default;
                                     box-shadow: none;
@@ -460,13 +478,13 @@ body .main {
                                     box-shadow: inset 0 4px 0 #000,
                                         inset 0 24px 0 #5e564e;
                                     min-height: 30px;
-                                    @include prefix(border-radius, 6px);
+                                    border-radius: 6px;
                                     &:before {
                                         content: "";
                                         display: block;
                                         width: 24px;
                                         height: 24px;
-                                        background-image: url(~imgPath/ic-lamp.png);
+                                        background-image: url(../img/ic-lamp.png);
                                         background-size: 24px;
                                         position: absolute;
                                         left: 6px;
@@ -497,7 +515,7 @@ body .main {
                                     color: #453e38;
                                     font-size: 16px;
                                     text-shadow: 0 0 1px #000, 0 2px 2px #fff;
-                                    @include prefix(border-radius, 4px);
+                                    border-radius: 4px;
                                     @include prefix(
                                         border-bottom-left-radius,
                                         20px
@@ -508,7 +526,7 @@ body .main {
                                         display: block;
                                         width: 21px;
                                         height: 21px;
-                                        background-image: url(~imgPath/heartB.png);
+                                        background-image: url(../img/heartB.png);
                                         background-size: 21px;
                                         position: absolute;
                                         right: 6px;
@@ -516,7 +534,7 @@ body .main {
                                         opacity: 0.4;
                                     }
                                     &.fav:before {
-                                        background-image: url(~imgPath/heart1.png);
+                                        background-image: url(../img/heart1.png);
                                         background-size: 21px;
                                         opacity: 1;
                                     }
@@ -528,7 +546,7 @@ body .main {
                                     display: inline-block;
                                     width: 29px;
                                     height: 29px;
-                                    background-image: url(~imgPath/star1.png);
+                                    background-image: url(../img/star1.png);
                                     background-size: 29px;
                                     position: absolute;
                                     left: calc(50% - 16px);
@@ -562,7 +580,7 @@ body .main {
                                 .img {
                                     width: 100%;
                                     height: 100%;
-                                    @include prefix(border-radius, 8px);
+                                    border-radius: 8px;
                                 }
                                 .info {
                                     display: block;
@@ -592,7 +610,7 @@ body .main {
                                     bottom: 3px;
                                     right: 10px;
                                     background: none;
-                                    background-image: url(~imgPath/chahge-fullscr.png);
+                                    background-image: url(../img/chahge-fullscr.png);
                                     background-size: 100%;
                                     cursor: pointer;
                                 }
@@ -647,7 +665,7 @@ body .main {
                                         width: 28px;
                                         height: 28px;
                                         background: #097bd3;
-                                        @include prefix(border-radius, 100%);
+                                        border-radius: 100%;
                                         position: absolute;
                                         left: 6px;
                                         top: 17px;
@@ -744,16 +762,16 @@ body .main {
                                             height: 39px;
                                             position: relative;
                                             margin: 0 auto;
-                                            background-image: url(~imgPath/star1.png);
+                                            background-image: url(../img/star1.png);
                                             background-size: 100%;
                                         }
                                         .star2 {
                                             width: 71px;
-                                            background-image: url(~imgPath/star2.png);
+                                            background-image: url(../img/star2.png);
                                         }
                                         .star3 {
                                             width: 101px;
-                                            background-image: url(~imgPath/star3.png);
+                                            background-image: url(../img/star3.png);
                                         }
                                     }
                                     .tags-new {
@@ -778,7 +796,7 @@ body .main {
                                             position: absolute;
                                             top: 4px;
                                             margin-left: 5px;
-                                            background-image: url(~imgPath/heartB.png);
+                                            background-image: url(../img/heartB.png);
                                             background-size: 100%;
                                             opacity: 0.5;
                                         }
@@ -804,7 +822,7 @@ body .main {
                                             position: absolute;
                                             top: 63px;
                                             margin-left: 91px;
-                                            background-image: url(~imgPath/chahge-plus.png);
+                                            background-image: url(../img/chahge-plus.png);
                                             background-size: 100%;
                                             cursor: pointer;
                                             &:active {
@@ -817,7 +835,7 @@ body .main {
                                     }
                                     &.check {
                                         .fav-icon {
-                                            background-image: url(~imgPath/heart1.png);
+                                            background-image: url(../img/heart1.png);
                                             opacity: 1;
                                         }
                                     }
@@ -837,7 +855,7 @@ body .main {
                             #aa9383,
                             #dfceba
                         );
-                        @include prefix(border-radius, 7px);
+                        border-radius: 7px;
                         box-shadow: 0 0 7px #000;
                         cursor: pointer;
                         z-index: 999;
@@ -857,7 +875,7 @@ body .main {
                             top: 3px;
                             left: 3px;
                             background: rgba(255, 255, 255, 0.25);
-                            @include prefix(border-radius, 5px);
+                            border-radius: 5px;
                         }
                     }
                     .trophy-res-box-all {
@@ -867,15 +885,21 @@ body .main {
                         top: -42px;
                         right: 36px;
                         background-color: #9c8b7c;
-                        @include prefix(border-radius, 10px 10px 0 0);
+                        border-radius: 10px 10px 0 0;
                         .trophy-res-box {
                             width: 170px;
                             height: 36px;
                             position: absolute;
                             top: 4px;
                             left: 10px;
-                            @include background-resourcebg;
-                            @include prefix(border-radius, 18px);
+                            background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                            border-radius: 18px;
                             box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.55),
                                 0 2px 4px 0 rgba(0, 0, 0, 0.35);
                             .trophy-value {
@@ -892,7 +916,7 @@ body .main {
                                 );
                                 box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25),
                                     inset 0 14px 0 rgba(255, 255, 255, 0.15);
-                                @include prefix(border-radius, 6px);
+                                border-radius: 6px;
                                 color: #fff;
                                 font-size: 20px;
                                 font-weight: bold;
@@ -906,7 +930,7 @@ body .main {
                                 position: absolute;
                                 top: 0;
                                 right: 0;
-                                @include prefix(border-radius, 0 18px 18px 0);
+                                border-radius: 0 18px 18px 0;
                                 cursor: pointer;
                                 &:before {
                                     content: "";
@@ -935,7 +959,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(~imgPath/trophy-bonus-gems.png);
+                                    background-image: url(../img/trophy-bonus-gems.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -949,7 +973,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(~imgPath/trophy-bonus-gems.png);
+                                    background-image: url(../img/trophy-bonus-gems.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }

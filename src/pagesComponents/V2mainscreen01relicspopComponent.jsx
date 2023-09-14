@@ -1,7 +1,7 @@
 import React from "react";
-import v2ScreenTower from "../styles/v2-screen-tower.scss";
-import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
-import v2ScreenMainRelicsPop from "../styles/v2-screen-main-relics-pop.scss";
+// import v2ScreenTower from "../styles/v2-screen-tower.scss";
+// import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
+// import v2ScreenMainRelicsPop from "../styles/v2-screen-main-relics-pop.scss";
 
 const V2MainScreen01RelicsPopComponent = () => {
     return (

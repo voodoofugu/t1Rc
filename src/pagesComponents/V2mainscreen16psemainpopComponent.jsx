@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenPseMain from "../styles/v2-screen-pse-main.scss";
+// import v2ScreenPseMain from "../styles/v2-screen-pse-main.scss";
 
 const V2MainScreen16PseMainPopComponent = () => {
     return (

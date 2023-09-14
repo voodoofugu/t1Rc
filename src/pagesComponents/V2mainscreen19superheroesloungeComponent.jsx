@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import screenSuperhero from "../styles/screen-superhero.scss";
+// import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen19SuperheroesLoungeComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -77,7 +77,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/04-Town-Square-2.jpg')",
+                            "url('../img/images/back/new/04-Town-Square-2.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

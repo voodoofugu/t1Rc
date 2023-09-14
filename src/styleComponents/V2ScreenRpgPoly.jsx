@@ -1,13 +1,12 @@
-
 import styled from "styled-components";
 
 const V2ScreenRpgPoly = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .main.rpg-poly {
     .main-bg {
-        background-image: url(~imgPath/./rpg-poly/backgrounds/rpg-poly-jungle.jpg) !important;
+        background-image: url(../img/rpg-poly/backgrounds/rpg-poly-jungle.jpg) !important;
     }
 
     .quest-item {
@@ -30,7 +29,7 @@ const V2ScreenRpgPoly = styled.div`
         .quest-item-img {
             width: 56px;
             height: 56px;
-            background-image: url(~imgPath/pse-rares.png);
+            background-image: url(../img/pse-rares.png);
             background-size: cover;
             background-position: center;
         }
@@ -73,7 +72,7 @@ const V2ScreenRpgPoly = styled.div`
             top: -4px;
             right: -4px;
             position: absolute;
-            background-image: url(~imgPath/paycheck.png);
+            background-image: url(../img/paycheck.png);
             background-size: cover;
             filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 1));
         }
@@ -246,7 +245,7 @@ const V2ScreenRpgPoly = styled.div`
                     display: inline-block;
                     width: 22px;
                     height: 22px;
-                    background-image: url(~imgPath/./rpg-poly/rpg_poly-dice-white@2x.png);
+                    background-image: url(../img/rpg-poly/rpg_poly-dice-white@2x.png);
                     background-size: cover;
                     margin-left: 4px;
                 }
@@ -360,7 +359,7 @@ const V2ScreenRpgPoly = styled.div`
                     z-index: -1;
                     width: 36px;
                     height: 30px;
-                    background-image: url(~imgPath/portal-map-location-banner.png);
+                    background-image: url(../img/portal-map-location-banner.png);
                     background-size: auto 100%;
                     position: absolute;
                     top: 10px;
@@ -371,7 +370,7 @@ const V2ScreenRpgPoly = styled.div`
                     z-index: -1;
                     width: 36px;
                     height: 30px;
-                    background-image: url(~imgPath/portal-map-location-banner.png);
+                    background-image: url(../img/portal-map-location-banner.png);
                     background-size: auto 100%;
                     position: absolute;
                     top: 10px;
@@ -427,7 +426,7 @@ const V2ScreenRpgPoly = styled.div`
             .quest-item.bar_quest-item {
                 position: absolute;
                 .quest-item-img {
-                    background-image: url(~imgPath/./rpg-poly/rpg_poly-dice-white@2x.png);
+                    background-image: url(../img/rpg-poly/rpg_poly-dice-white@2x.png);
                 }
             }
         }
@@ -453,7 +452,7 @@ const V2ScreenRpgPoly = styled.div`
                     }
                     &:after {
                         content: "";
-                        background-image: url(~imgPath/./rpg-poly/rpg_poly-dice-white@2x.png);
+                        background-image: url(../img/rpg-poly/rpg_poly-dice-white@2x.png);
                     }
                 }
             }
@@ -471,7 +470,7 @@ const V2ScreenRpgPoly = styled.div`
                     }
                     &:after {
                         content: "";
-                        background-image: url(~imgPath/./rpg-poly/rpg_poly-dice-gold@2x.png);
+                        background-image: url(../img/rpg-poly/rpg_poly-dice-gold@2x.png);
                     }
                 }
             }
@@ -551,7 +550,7 @@ const V2ScreenRpgPoly = styled.div`
                 width: 82px;
                 height: 82px;
                 margin-top: 14px;
-                background-image: url(~imgPath/./rpg-poly/rpg_poly-portal_icon@2x.png);
+                background-image: url(../img/rpg-poly/rpg_poly-portal_icon@2x.png);
                 background-size: cover;
                 position: relative;
                 .level-value {
@@ -628,17 +627,17 @@ const V2ScreenRpgPoly = styled.div`
         }
     }
     .currency-parameter:after {
-        background-image: url(~imgPath/./rpg-poly/rpg_poly-token_icon@2x.png);
+        background-image: url(../img/rpg-poly/rpg_poly-token_icon@2x.png);
         left: -18px;
     }
     .strength-parameter:after {
-        background-image: url(~imgPath/./rpg-poly/rpg_poly-strength_icon@2x.png);
+        background-image: url(../img/rpg-poly/rpg_poly-strength_icon@2x.png);
     }
     .dexterity-parameter:after {
-        background-image: url(~imgPath/./rpg-poly/rpg_poly-dexterity_icon@2x.png);
+        background-image: url(../img/rpg-poly/rpg_poly-dexterity_icon@2x.png);
     }
     .intelligence-parameter:after {
-        background-image: url(~imgPath/./rpg-poly/rpg_poly-intelligence_icon@2x.png);
+        background-image: url(../img/rpg-poly/rpg_poly-intelligence_icon@2x.png);
     }
 
     .rpg_poly-button {
@@ -702,7 +701,7 @@ const V2ScreenRpgPoly = styled.div`
             left: -40px;
             width: 72px;
             height: 72px;
-            background-image: url(~imgPath/./rpg-poly/rpg_poly-backpack_icon@2x.png);
+            background-image: url(../img/rpg-poly/rpg_poly-backpack_icon@2x.png);
             background-size: cover;
         }
         &:active {
@@ -712,14 +711,14 @@ const V2ScreenRpgPoly = styled.div`
 
     .rating-button {
         &:before {
-            background-image: url(~imgPath/./rpg-poly/rpg_poly-rating_icon@2x.png);
+            background-image: url(../img/rpg-poly/rpg_poly-rating_icon@2x.png);
         }
     }
 
     .quest_info-button {
         width: 72px;
         height: 72px;
-        background-image: url(~imgPath/./rpg-poly/rpg_poly-quest_icon@2x.png);
+        background-image: url(../img/rpg-poly/rpg_poly-quest_icon@2x.png);
         background-size: cover;
         position: absolute;
         top: -6px;
@@ -757,7 +756,7 @@ const V2ScreenRpgPoly = styled.div`
             margin-left: 40px;
             padding-left: 44px;
             &:before {
-                background-image: url(~imgPath/./rpg-poly/rpg_poly-shop_icon@2x.png);
+                background-image: url(../img/rpg-poly/rpg_poly-shop_icon@2x.png);
                 width: 72px;
                 height: 72px;
             }
@@ -768,7 +767,7 @@ const V2ScreenRpgPoly = styled.div`
         top: 164px;
         .offer-button {
             &:before {
-                background-image: url(~imgPath/./rpg-poly/rp-offer-token_icon2@2x.png);
+                background-image: url(../img/rpg-poly/rp-offer-token_icon2@2x.png);
             }
         }
     }
@@ -790,7 +789,7 @@ const V2ScreenRpgPoly = styled.div`
                     .quest-character_img {
                         width: 100%;
                         height: 92px;
-                        background-image: url(~imgPath/./rpg-poly/rpg_poly-quest_character_img.jpg);
+                        background-image: url(../img/rpg-poly/rpg_poly-quest_character_img.jpg);
                         background-position: center;
                         background-size: cover;
                     }
@@ -1006,7 +1005,7 @@ const V2ScreenRpgPoly = styled.div`
                             height: 40px;
                             position: absolute;
                             top: 6px;
-                            background-image: url(~imgPath/./rpg-poly/rpg_branch_icon@2x.png);
+                            background-image: url(../img/rpg-poly/rpg_branch_icon@2x.png);
                             background-size: cover;
                             background-position: center;
                         }
@@ -1028,7 +1027,7 @@ const V2ScreenRpgPoly = styled.div`
                                 position: absolute;
                                 left: 60px;
                                 top: -2px;
-                                background-image: url(~imgPath/./rpg-poly/rpg_flare.png);
+                                background-image: url(../img/rpg-poly/rpg_flare.png);
                                 background-size: cover;
                                 background-position: center;
                                 animation: flare 3s infinite;
@@ -1040,7 +1039,7 @@ const V2ScreenRpgPoly = styled.div`
                                 position: absolute;
                                 right: 60px;
                                 bottom: 2px;
-                                background-image: url(~imgPath/./rpg-poly/rpg_flare.png);
+                                background-image: url(../img/rpg-poly/rpg_flare.png);
                                 background-size: cover;
                                 background-position: center;
                                 animation: flare 3s 1.5s infinite;
@@ -1162,7 +1161,7 @@ const V2ScreenRpgPoly = styled.div`
                     position: absolute;
                     top: -6px;
                     left: -6px;
-                    background-image: url(~imgPath/picmeh-ic-info.png);
+                    background-image: url(../img/picmeh-ic-info.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                     transform: scale(1.24);
@@ -1280,7 +1279,7 @@ const V2ScreenRpgPoly = styled.div`
                     box-shadow: none;
                     cursor: pointer;
                     .quest-item-img {
-                        background-image: url(~imgPath/n-vip-plus_green@2x.png);
+                        background-image: url(../img/n-vip-plus_green@2x.png);
                         transform: scale(0.96);
                     }
                     &:hover {
@@ -1318,7 +1317,7 @@ const V2ScreenRpgPoly = styled.div`
                     position: relative;
                     width: 474px;
                     height: 430px;
-                    background-image: url(~imgPath/./rpg-poly/rpg_poly-shop_girl.png);
+                    background-image: url(../img/rpg-poly/rpg_poly-shop_girl.png);
                     background-size: cover;
                     background-repeat: no-repeat;
                 }
@@ -1378,7 +1377,7 @@ const V2ScreenRpgPoly = styled.div`
                         height: 210px;
                         position: relative;
                         text-align: center;
-                        background-image: url(~imgPath/shop-pod.jpg);
+                        background-image: url(../img/shop-pod.jpg);
                         background-size: 100%;
                         .store-item-box {
                             font-size: 15px;
@@ -1460,13 +1459,13 @@ const V2ScreenRpgPoly = styled.div`
                                 background-position: center;
                             }
                             .rpg_poly-chest.wooden-chest {
-                                background-image: url(~imgPath/./rpg-poly/chests/wooden-chest.png);
+                                background-image: url(../img/rpg-poly/chests/wooden-chest.png);
                             }
                             .rpg_poly-chest.silver-chest {
-                                background-image: url(~imgPath/./rpg-poly/chests/silver-chest.png);
+                                background-image: url(../img/rpg-poly/chests/silver-chest.png);
                             }
                             .rpg_poly-chest.golden-chest {
-                                background-image: url(~imgPath/./rpg-poly/chests/golden-chest.png);
+                                background-image: url(../img/rpg-poly/chests/golden-chest.png);
                             }
                             .quest-item {
                                 position: absolute;
@@ -1474,7 +1473,7 @@ const V2ScreenRpgPoly = styled.div`
                                 left: 30px;
                                 .quest-item_value {
                                     text-align: center;
-                                    background-image: url(~imgPath/ic-abil-redline.png);
+                                    background-image: url(../img/ic-abil-redline.png);
                                     background-size: cover;
                                     font-size: 18px;
                                     color: #fff;
@@ -1530,7 +1529,7 @@ const V2ScreenRpgPoly = styled.div`
                                                 height: 30px;
                                                 position: relative;
                                                 display: inline-block;
-                                                background-image: url(~imgPath/./rpg-poly/rpg_poly-token_icon@2x.png);
+                                                background-image: url(../img/rpg-poly/rpg_poly-token_icon@2x.png);
                                                 background-size: cover;
                                                 margin-right: 4px;
                                                 margin-left: 4px;
@@ -1558,7 +1557,7 @@ const V2ScreenRpgPoly = styled.div`
                             position: absolute;
                             top: 190px;
                             left: 199px;
-                            background-image: url(~imgPath/polka.png);
+                            background-image: url(../img/polka.png);
                             background-size: 100%;
                             z-index: 999;
                             line-height: 32px;
@@ -1623,7 +1622,7 @@ const V2ScreenRpgPoly = styled.div`
                                     content: "";
                                     width: 26px;
                                     height: 26px;
-                                    background-image: url(~imgPath/trophy-bonus-diamond.png);
+                                    background-image: url(../img/trophy-bonus-diamond.png);
                                     background-size: 100%;
                                     position: absolute;
                                     top: 0px;
@@ -1680,7 +1679,7 @@ const V2ScreenRpgPoly = styled.div`
                             position: absolute;
                             top: 0;
                             left: 0;
-                            background-image: url(~imgPath/gild-icon-66.png);
+                            background-image: url(../img/gild-icon-66.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                         }
@@ -1898,7 +1897,7 @@ const V2ScreenRpgPoly = styled.div`
                                             content: "";
                                             width: 30px;
                                             height: 30px;
-                                            background-image: url(~imgPath/trophy-bonus-diamond.png);
+                                            background-image: url(../img/trophy-bonus-diamond.png);
                                             background-size: 100%;
                                             position: relative;
                                             display: inline-block;
@@ -1909,7 +1908,7 @@ const V2ScreenRpgPoly = styled.div`
                                             content: "";
                                             width: 30px;
                                             height: 30px;
-                                            background-image: url(~imgPath/trophy-bonus-diamond.png);
+                                            background-image: url(../img/trophy-bonus-diamond.png);
                                             background-size: 100%;
                                             position: relative;
                                             display: inline-block;
@@ -1941,7 +1940,7 @@ const V2ScreenRpgPoly = styled.div`
                 bottom: 10px;
                 border-radius: 0 0 5px 5px;
                 overflow: hidden;
-                background-image: url(~imgPath/ts_confirm_bk-1.jpg);
+                background-image: url(../img/ts_confirm_bk-1.jpg);
                 background-size: cover;
                 background-position: center;
                 &:before,
@@ -1957,11 +1956,11 @@ const V2ScreenRpgPoly = styled.div`
                     z-index: 1;
                 }
                 &:before {
-                    background-image: url(~imgPath/break-girl310.png);
+                    background-image: url(../img/break-girl310.png);
                     left: 0;
                 }
                 &:after {
-                    background-image: url(~imgPath/break-girl296.png);
+                    background-image: url(../img/break-girl296.png);
                     right: 0;
                 }
             }

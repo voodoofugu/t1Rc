@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenFwAgitpop from "../styles/v2-screen-fw-agitpop.scss";
+// import v2ScreenFwAgitpop from "../styles/v2-screen-fw-agitpop.scss";
 
 const V2MainScreen05FwAgitPopComponent = () => {
     return (

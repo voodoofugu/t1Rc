@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenBfEvent_keys from "../styles/v2-screen-bf-event__keys.scss";
+// import v2ScreenBfEvent_keys from "../styles/v2-screen-bf-event__keys.scss";
 
 const V2MainScreen10BlackfridayEventBuyKeysPopComponent = () => {
     return (

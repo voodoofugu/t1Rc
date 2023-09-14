@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import v2ScreenMineEventChest from "../styles/v2-screen-mine-event-chest.scss";
-import screenInfoPop from "../styles/screen-info-pop.scss";
+// import v2ScreenMineEventChest from "../styles/v2-screen-mine-event-chest.scss";
+// import screenInfoPop from "../styles/screen-info-pop.scss";
 
 const V2MainScreen18MineChestComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

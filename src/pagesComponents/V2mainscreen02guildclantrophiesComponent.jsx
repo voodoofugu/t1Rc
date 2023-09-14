@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-import clanTrophies from "../styles/clan-trophies.scss";
-import screenSuperhero from "../styles/screen-superhero.scss";
+// import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
+// import clanTrophies from "../styles/clan-trophies.scss";
+// import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen02GuildClanTrophiesComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -63,7 +63,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             className="titans-garage-item-inner"
                                             style={{
                                                 backgroundImage:
-                                                    "url('img/images/back/clan/bg_01.jpg')",
+                                                    "url('../img/images/back/clan/bg_01.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
@@ -98,7 +98,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             className="titans-garage-item-inner"
                                             style={{
                                                 backgroundImage:
-                                                    "url('img/images/back/clan/bg_02.jpg')",
+                                                    "url('../img/images/back/clan/bg_02.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
@@ -138,7 +138,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             className="titans-garage-item-inner"
                                             style={{
                                                 backgroundImage:
-                                                    "url('img/images/back/clan/bg_03.jpg')",
+                                                    "url('../img/images/back/clan/bg_03.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
@@ -178,7 +178,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             className="titans-garage-item-inner"
                                             style={{
                                                 backgroundImage:
-                                                    "url('img/images/back/clan/bg_04.jpg')",
+                                                    "url('../img/images/back/clan/bg_04.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
@@ -207,7 +207,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                             className="titans-garage-item-inner"
                                             style={{
                                                 backgroundImage:
-                                                    "url('img/images/back/clan/bg_07.jpg')",
+                                                    "url('../img/images/back/clan/bg_07.jpg')",
                                             }}>
                                             <div className="titans-garage-item-image">
                                                 <img
@@ -258,7 +258,7 @@ const V2MainScreen02GuildClanTrophiesComponent = () => {
                                     className="popup-trophy-image"
                                     style={{
                                         backgroundImage:
-                                            "url('img/images/back/clan/bg_03.jpg')",
+                                            "url('../img/images/back/clan/bg_03.jpg')",
                                     }}>
                                     <img
                                         src="img/trophy/trophy/004_1.png"

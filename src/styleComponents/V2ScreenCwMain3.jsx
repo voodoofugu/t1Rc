@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenCwMain3 = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main{
     .left-side{
@@ -14,11 +13,11 @@ body .main{
                 width: 118px; height: 40px; position: relative; top: 0; left: 0; display: inline-block;
                 margin: 0 2px 0 0; cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before{
                     content: ""; width: 110px; height: 36px; position: absolute; top: 4px; left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name{
@@ -53,8 +52,14 @@ body .main{
                     box-shadow: inset 0 0 7px #5f4f4e;
                     .tab-panel-box-title{
                         width: 300px; height: 24px; position: absolute; top: 10px; left: 399px;
-                        @include background-resourcebg;
-                        @include prefix(border-radius, 12px);
+                        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                        border-radius: 12px;
                         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                         color: #3c3737; font-size: 16px; font-weight: bold; text-transform: uppercase;
                         line-height: 24px; text-align: center;
@@ -67,7 +72,7 @@ body .main{
                             .fw-main-bl-name{
                                 width: 160px; height: 30px; position: absolute; top: 6px; left: 95px;
                                 background: linear-gradient(0deg, #3fbae7 0%, #007aa7 50%, #3fbae7 100%);
-                                @include prefix(border-radius, 20px);
+                                border-radius: 20px;
                                 color: #fff; font-size: 12px; font-weight: bold; text-transform: uppercase;
                                 line-height: 30px; text-align: center;
                             }
@@ -86,7 +91,7 @@ body .main{
                                     width: 344px; height: 80px; position: absolute; top: 5px; left: 3px;
                                     .cw-map-name-box{
                                         width: 344px; height: 80px; position: absolute; top: 0; left: 0;
-                                        background-image: url(~imgPath/red-lenta.png);
+                                        background-image: url(../img/red-lenta.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         text-align: center;
@@ -102,7 +107,7 @@ body .main{
                                         width: 190px; height: 36px; position: absolute; bottom: 0; left: 77px;
                                         background-color: rgba(0, 0, 0, 0.75);
                                         text-align: center;
-                                        @include prefix(border-radius, 0 0 20px 20px);
+                                        border-radius: 0 0 20px 20px;
                                         .cw-map-time1, .cw-map-time2{
                                             width: 180px; height: 10px; position: absolute; left: 5px; top: 5px;
                                             color: #ffc000; font-size: 10px; font-weight: bold; text-transform: uppercase;
@@ -131,7 +136,13 @@ body .main{
                             width: 100px; height: 190px; position: absolute; top: 5px; left: 5px;
                             .fw-simple{
                                 width: 100px; height: 70px; position: absolute; top: 0; left: 0;
-                                @include background-resourcebg;
+                                background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
                                 color: #3c3737; font-size: 14px; font-weight: bold; text-transform: uppercase;
                                 line-height: 70px;
                             }
@@ -143,7 +154,13 @@ body .main{
                             }
                             .fw-elite{
                                 width: 100px; height: 70px; position: absolute; top: 100px; left: 0;
-                                @include background-avbg;
+                                background: linear-gradient(
+		0deg, 
+		#f8b76c 0%, 
+		#f78500 18%, 
+		#f8b76c 60%, 
+		#f9981f 85%, 
+		#f8b76b 100%);
                                 color: #3c3737; font-size: 14px; font-weight: bold; text-transform: uppercase;
                                 line-height: 70px;
                             }
@@ -156,7 +173,13 @@ body .main{
                             }
                             &::-webkit-scrollbar {height: 8px;}
                             &::-webkit-scrollbar-thumb { 
-                                @include background-resourcebg;
+                                background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
                             }
                             .fw-level-simple, .fw-level-elite{
                                 width: 2000px; height: 70px; position: relative; text-align: left;
@@ -164,7 +187,7 @@ body .main{
                                 .fw-level-rew-box{
                                     width: 60px; height: 60px; position: relative; display: inline-block;
                                     background: linear-gradient(0deg, #e9c44f 0%, #f7eec7 100%);
-                                    @include prefix(border-radius, 8px);
+                                    border-radius: 8px;
                                     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); margin: 5px; text-align: center;
                                     .fw-level-rew-pic{
                                         width: 46px; height: 46px; position: absolute; top: 0; left: 7px;
@@ -176,19 +199,19 @@ body .main{
                                     }
                                     .fw-level-rew-num-check{
                                         width: 50px; height: 50px; position: absolute; top: 5px; left: 5px;
-                                        background-image: url(~imgPath/paycheck.png);
+                                        background-image: url(../img/paycheck.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         visibility: hidden;
                                     }
                                     .fw-level-rew-good{
                                         width: 64px; height: 64px; position: absolute; top: -2px; left: -2px;
-                                        background-image: url(~imgPath/fortuna-good.png); background-size: 100%;
+                                        background-image: url(../img/fortuna-good.png); background-size: 100%;
                                         visibility: hidden;
                                     }
                                     .color-btn.green{
                                         width: 54px; height: 16px; position: absolute; bottom: 3px; left: 3px;
-                                        @include prefix(border-radius, 4px); visibility: hidden;
+                                        border-radius: 4px; visibility: hidden;
                                         box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25), 0 1px 2px 0 rgba(0,0,0,0.55);
                                         .color-btn-text{
                                             font-size: 8px; top: 2px;
@@ -201,7 +224,7 @@ body .main{
                                     .fw-level-rew-num-block{
                                         width: 60px; height: 60px; position: absolute; top: 0; left: 0;
                                         background-color: rgba(0, 0, 0, 0.65);
-                                        @include prefix(border-radius, 8px);
+                                        border-radius: 8px;
                                         visibility: hidden;
                                     }
                                     &.collect{
@@ -225,7 +248,7 @@ body .main{
                                         .fw-level-rew-pic{
                                             width: 58px; height: 58px; position: absolute; top: 1px; left: 1px;
                                             img{width: 58px;} 
-                                            @include prefix(border-radius, 6px);
+                                            border-radius: 6px;
                                             overflow: hidden;
                                         }
                                         .fw-level-rew-num{visibility: hidden;}
@@ -261,7 +284,7 @@ body .main{
                     .btn-close-x{
                         width: 30px; height: 30px; position: absolute; top: -6px; right: -6px;
                         background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
-                        @include prefix(border-radius, 7px);
+                        border-radius: 7px;
                         box-shadow: 0 0 7px #000;
                         cursor: pointer;
                         z-index: 999;
@@ -272,7 +295,7 @@ body .main{
                         &:after {
                             content: ""; width: 24px; height: 7px; position: absolute; top: 3px; left: 3px;
                             background: rgba(255, 255, 255, 0.25);
-                            @include prefix(border-radius, 5px);
+                            border-radius: 5px;
                         }
                     }
                     .fw-btlpass-buy-box-all{
@@ -280,13 +303,13 @@ body .main{
                         display: none;
                         .fw-btlpass-girl{
                             width: 170px; height: 200px; position: absolute; top: 0; left: 0;
-                            background-image: url(~imgPath/v2-fw-girl.png);
+                            background-image: url(../img/v2-fw-girl.png);
                             background-repeat: no-repeat;
                             background-size: 100%;
                         }
                         .fw-btlpass-info{
                             width: 26px; height: 26px; position: absolute; top: 5px; left: 5px;
-                            background-image: url(~imgPath/i-ico.png);
+                            background-image: url(../img/i-ico.png);
                             background-repeat: no-repeat;
                             background-size: 100%;
                             cursor: pointer;

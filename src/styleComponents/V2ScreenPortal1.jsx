@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenPortal1 = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 // bronze
 .suphero-squad-wrap.bronze-bg-fg {
@@ -13,17 +12,17 @@ const V2ScreenPortal1 = styled.div`
 }
 .suphero-squad-window.bronze-bg-fg {
     &:after {
-        background-image: url(~imgPath/bronze-squad-fg.png);
+        background-image: url(../img/bronze-squad-fg.png);
     }
 }
 .hero-pic-box.bronze-card-fg {
     &:after {
-        background-image: url(~imgPath/bronze-card-fg.png);
+        background-image: url(../img/bronze-card-fg.png);
     }
 }
 .suphero-card.bronze-card-flare {
     &:after {
-        background-image: url(~imgPath/bronze-flare.png);
+        background-image: url(../img/bronze-flare.png);
     }
     &:hover {
         background: #edcea9;
@@ -73,22 +72,22 @@ const V2ScreenPortal1 = styled.div`
 // silver
 .suphero-squad-wrap.silver-bg-fg {
     &:before {
-        background-image: url(~imgPath/silver-squad-bg.png);
+        background-image: url(../img/silver-squad-bg.png);
     }
 }
 .suphero-squad-window.silver-bg-fg {
     &:after {
-        background-image: url(~imgPath/silver-squad-fg.png);
+        background-image: url(../img/silver-squad-fg.png);
     }
 }
 .hero-pic-box.silver-card-fg {
     &:after {
-        background-image: url(~imgPath/silver-card-fg.png);
+        background-image: url(../img/silver-card-fg.png);
     }
 }
 .suphero-card.silver-card-flare {
     &:after {
-        background-image: url(~imgPath/silver-flare.png);
+        background-image: url(../img/silver-flare.png);
     }
     &:hover {
         background: #e6e6e6;
@@ -138,22 +137,22 @@ const V2ScreenPortal1 = styled.div`
 // gold
 .suphero-squad-wrap.gold-bg-fg {
     &:before {
-        background-image: url(~imgPath/gold-squad-bg.png);
+        background-image: url(../img/gold-squad-bg.png);
     }
 }
 .suphero-squad-window.gold-bg-fg {
     &:after {
-        background-image: url(~imgPath/gold-squad-fg.png);
+        background-image: url(../img/gold-squad-fg.png);
     }
 }
 .hero-pic-box.gold-card-fg {
     &:after {
-        background-image: url(~imgPath/gold-card-fg.png);
+        background-image: url(../img/gold-card-fg.png);
     }
 }
 .suphero-card.gold-card-flare {
     &:after {
-        background-image: url(~imgPath/gold-flare.png);
+        background-image: url(../img/gold-flare.png);
     }
     &:hover {
         background: #f4e6be;
@@ -203,22 +202,22 @@ const V2ScreenPortal1 = styled.div`
 // platinum
 .suphero-squad-wrap.platinum-bg-fg {
     &:before {
-        background-image: url(~imgPath/platinum-squad-bg.png);
+        background-image: url(../img/platinum-squad-bg.png);
     }
 }
 .suphero-squad-window.platinum-bg-fg {
     &:after {
-        background-image: url(~imgPath/platinum-squad-fg.png);
+        background-image: url(../img/platinum-squad-fg.png);
     }
 }
 .hero-pic-box.platinum-card-fg {
     &:after {
-        background-image: url(~imgPath/platinum-card-fg.png);
+        background-image: url(../img/platinum-card-fg.png);
     }
 }
 .suphero-card.platinum-card-flare {
     &:after {
-        background-image: url(~imgPath/platinum-flare.png);
+        background-image: url(../img/platinum-flare.png);
     }
     &:hover {
         background: #e6e6e6;
@@ -268,22 +267,22 @@ const V2ScreenPortal1 = styled.div`
 // diamond
 .suphero-squad-wrap.diamond-bg-fg {
     &:before {
-        background-image: url(~imgPath/diamond-squad-bg.png);
+        background-image: url(../img/diamond-squad-bg.png);
     }
 }
 .suphero-squad-window.diamond-bg-fg {
     &:after {
-        background-image: url(~imgPath/diamond-squad-fg.png);
+        background-image: url(../img/diamond-squad-fg.png);
     }
 }
 .hero-pic-box.diamond-card-fg {
     &:after {
-        background-image: url(~imgPath/diamond-card-fg.png);
+        background-image: url(../img/diamond-card-fg.png);
     }
 }
 .suphero-card.diamond-card-flare {
     &:after {
-        background-image: url(~imgPath/diamond-flare.png);
+        background-image: url(../img/diamond-flare.png);
     }
     &:hover {
         background: #b3f2f5;
@@ -354,7 +353,7 @@ body .main {
                 margin: 0 2px 0 0;
                 cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before {
                     content: "";
                     width: 110px;
@@ -363,7 +362,7 @@ body .main {
                     top: 4px;
                     left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name {
@@ -433,8 +432,14 @@ body .main {
                         position: absolute;
                         top: 10px;
                         left: 399px;
-                        @include background-resourcebg;
-                        @include prefix(border-radius, 12px);
+                        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                        border-radius: 12px;
                         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                         color: #3c3737;
                         font-size: 16px;
@@ -459,7 +464,7 @@ body .main {
                             margin: 0;
                             font-size: 0;
                             transform: rotateY(180deg);
-                            @include prefix(border-radius, 0px);
+                            border-radius: 0px;
                             overflow: hidden;
                             overflow-y: scroll;
                             padding: 0;
@@ -581,7 +586,7 @@ body .main {
                                 cursor: pointer;
                                 z-index: 1;
                                 &:active {
-                                    @include prefix(border-radius, 6px);
+                                    border-radius: 6px;
                                     transform: scale(1.01) !important;
                                     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2),
                                         inset 0px 0px 0px 6px
@@ -614,7 +619,7 @@ body .main {
                                     position: absolute;
                                     top: 0px;
                                     left: 0px;
-                                    @include prefix(border-radius, 6px);
+                                    border-radius: 6px;
                                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
                                         0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                     .hero-pic-gacha {
@@ -657,7 +662,7 @@ body .main {
                                         position: absolute;
                                         top: 5px;
                                         left: 5px;
-                                        @include prefix(border-radius, 4px);
+                                        border-radius: 4px;
                                         overflow: hidden;
                                         &:after {
                                             content: "";
@@ -730,7 +735,7 @@ body .main {
                                         width: 22px;
                                         height: 22px;
                                         position: absolute;
-                                        background-image: url(~imgPath/ico-click.png);
+                                        background-image: url(../img/ico-click.png);
                                         background-repeat: no-repeat;
                                         background-size: 22px;
                                         top: 3px;
@@ -768,7 +773,7 @@ body .main {
                                         width: 22px;
                                         height: 22px;
                                         position: absolute;
-                                        background-image: url(~imgPath/ico-sword.png);
+                                        background-image: url(../img/ico-sword.png);
                                         background-repeat: no-repeat;
                                         background-size: 22px;
                                         top: 3px;
@@ -825,7 +830,7 @@ body .main {
                                     position: absolute;
                                     top: 6px;
                                     left: 6px;
-                                    background-image: url(~imgPath/trophy-bonus-gems.png);
+                                    background-image: url(../img/trophy-bonus-gems.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -913,7 +918,7 @@ body .main {
                                     .avatar-box {
                                         width: 52px;
                                         height: 52px;
-                                        background-image: url(~imgPath/v2-master-pic1.png);
+                                        background-image: url(../img/v2-master-pic1.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         margin-top: -4px;
@@ -967,7 +972,7 @@ body .main {
                                             width: 22px;
                                             height: 22px;
                                             position: absolute;
-                                            background-image: url(~imgPath/ico-click.png);
+                                            background-image: url(../img/ico-click.png);
                                             background-repeat: no-repeat;
                                             background-size: 22px;
                                             left: 12px;
@@ -979,7 +984,7 @@ body .main {
                                             width: 22px;
                                             height: 22px;
                                             position: absolute;
-                                            background-image: url(~imgPath/ico-sword.png);
+                                            background-image: url(../img/ico-sword.png);
                                             background-repeat: no-repeat;
                                             background-size: 22px;
                                             left: 12px;
@@ -991,7 +996,7 @@ body .main {
                                             width: 22px;
                                             height: 22px;
                                             position: absolute;
-                                            background-image: url(~imgPath/v2-fw-icon-w3.png);
+                                            background-image: url(../img/v2-fw-icon-w3.png);
                                             background-repeat: no-repeat;
                                             background-size: 22px;
                                             left: 12px;
@@ -1019,7 +1024,7 @@ body .main {
                             .special-offer-box {
                                 width: 216px;
                                 height: 100px;
-                                background-image: url(~imgPath/unipop-m-wsale227.jpg);
+                                background-image: url(../img/unipop-m-wsale227.jpg);
                                 background-size: 100%;
                                 background-repeat: no-repeat;
                                 margin-bottom: 15px;
@@ -1044,7 +1049,7 @@ body .main {
                                     content: "";
                                     width: 80px;
                                     height: 80px;
-                                    background-image: url(~imgPath/change-sun2.png);
+                                    background-image: url(../img/change-sun2.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                     position: absolute;
@@ -1124,7 +1129,7 @@ body .main {
                             #aa9383,
                             #dfceba
                         );
-                        @include prefix(border-radius, 7px);
+                        border-radius: 7px;
                         border: 4px solid #ffbe43;
                         box-shadow: 0 0 7px #000;
                         cursor: pointer;
@@ -1145,7 +1150,7 @@ body .main {
                             top: 3px;
                             left: 3px;
                             background: rgba(255, 255, 255, 0.25);
-                            @include prefix(border-radius, 5px);
+                            border-radius: 5px;
                         }
                     }
                 }
@@ -1159,7 +1164,7 @@ body .main {
     height: 40px;
     position: relative;
     display: inline-block;
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
     box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25),
         0 2px 4px 0 rgba(0, 0, 0, 0.55);
@@ -1200,12 +1205,12 @@ body .main {
     height: 26px;
     background-color: rgba(89, 68, 53, 0.5);
     position: absolute;
-    @include prefix(border-radius, 0 0 4px 4px);
+    border-radius: 0 0 4px 4px;
     .herostar {
         width: 94px;
         height: 18px;
         position: absolute;
-        background-image: url(~imgPath/hero-star05-bg.png);
+        background-image: url(../img/hero-star05-bg.png);
         background-size: 100%;
         &:before {
             content: "";
@@ -1219,7 +1224,7 @@ body .main {
                 width: 0px;
                 background-repeat: no-repeat;
                 background-size: 470%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl02 {
@@ -1228,7 +1233,7 @@ body .main {
                 width: 20px;
                 background-repeat: no-repeat;
                 background-size: 470%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl04 {
@@ -1237,7 +1242,7 @@ body .main {
                 width: 40px;
                 background-repeat: no-repeat;
                 background-size: 235%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl06 {
@@ -1246,7 +1251,7 @@ body .main {
                 width: 56px;
                 background-repeat: no-repeat;
                 background-size: 168%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl08 {
@@ -1255,7 +1260,7 @@ body .main {
                 width: 72px;
                 background-repeat: no-repeat;
                 background-size: 131%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl010 {
@@ -1264,7 +1269,7 @@ body .main {
                 width: 94px;
                 background-repeat: no-repeat;
                 background-size: 100%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.ult {
@@ -1273,7 +1278,7 @@ body .main {
                 width: 94px;
                 background-repeat: no-repeat;
                 background-size: 100%;
-                background-image: url(~imgPath/big-hero-star05-purple.png);
+                background-image: url(../img/big-hero-star05-purple.png);
             }
         }
     }
@@ -1282,7 +1287,7 @@ body .main {
 .lvlup-btn {
     width: 196px;
     height: 50px;
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     background-color: #dab443;
     margin: 0 4px 0 4px;
     box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.25);
@@ -1294,13 +1299,13 @@ body .main {
         top: 3px;
         margin-left: 3px;
         background-color: #615144;
-        @include prefix(border-radius, 4px);
+        border-radius: 4px;
         .essence-icon {
             width: 34px;
             height: 34px;
             position: relative;
             display: inline-block;
-            background-image: url(~imgPath/essence-80x80.png);
+            background-image: url(../img/essence-80x80.png);
             background-size: 100%;
             top: -5px;
         }

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import v2ScreenSexpedMain from "../styles/v2-screen-sexped-main.scss";
-import screenInfoPop from "../styles/screen-info-pop.scss";
-import v2ScreenSexpedQuestevent from "../styles/v2-screen-sexped-questevent.scss";
+// import v2ScreenSexpedMain from "../styles/v2-screen-sexped-main.scss";
+// import screenInfoPop from "../styles/screen-info-pop.scss";
+// import v2ScreenSexpedQuestevent from "../styles/v2-screen-sexped-questevent.scss";
 
 const V2MainScreen12SexpedMainComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -161,7 +161,7 @@ const V2MainScreen12SexpedMainComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/01-Forest-1.jpg')",
+                            "url('../img/images/back/new/01-Forest-1.jpg')",
                     }}></div>
                 <div className="sexped-header">
                     <div className="title-wrap">

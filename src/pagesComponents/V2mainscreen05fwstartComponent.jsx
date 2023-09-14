@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
+// import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
 
 const V2MainScreen05FwStartComponent = () => {
     return (
@@ -9,7 +9,7 @@ const V2MainScreen05FwStartComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/01-Forest-1.jpg')",
+                            "url('../img/images/back/new/01-Forest-1.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

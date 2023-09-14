@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const ScreenBank = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 @mixin item-sale-banner {
   &.sale {
@@ -42,7 +41,7 @@ const ScreenBank = styled.div`
             #ffa600 100%
           );
           display: inline-block;
-          @include prefix(border-radius, 14px);
+          border-radius: 14px;
           box-shadow: 0 2px 6px #392d26;
           color: #dc0000;
         }
@@ -61,7 +60,7 @@ const ScreenBank = styled.div`
               position: relative;
               top: 7px;
               margin-right: 3px;
-              background-image: url(~imgPath/time1.png);
+              background-image: url(../img/time1.png);
               background-size: 24px;
             }
           }
@@ -91,7 +90,7 @@ const ScreenBank = styled.div`
       background: #ffa;
       margin: 8px 8px 0 8px;
       background: linear-gradient(90deg, #b37a07, #ffb229, #fffbc7);
-      @include prefix(border-radius, 7px);
+      border-radius: 7px;
       box-shadow: 0 2px 0px #392d26, inset 0 1px 2px #fff,
         inset 0 -15px 1px rgba(0, 0, 0, 0.11);
       position: relative;
@@ -102,8 +101,8 @@ const ScreenBank = styled.div`
         right: 5px;
         top: 5px;
         bottom: 30px;
-        @include prefix(border-top-left-radius, 5px);
-        @include prefix(border-top-right-radius, 5px);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
         background: #ccc;
         // background: linear-gradient(to bottom, #c12600, #6e0303);
         box-shadow: 0 0 2px #fff, 0 0 5px #fff,
@@ -115,8 +114,8 @@ const ScreenBank = styled.div`
           &.disabled {
             filter: grayscale(100%);
           }
-          // @include prefix(border-top-left-radius, 5px);
-          // @include prefix(border-top-right-radius, 5px);
+          // border-top-left-radius: 5px;
+          // border-top-right-radius: 5px;
           // box-shadow: 0 0 2px #fff, 0 0 5px #fff, inset 0 2px 1px rgba(0, 0, 0, 0.55);
         }
         // &:after{
@@ -148,9 +147,9 @@ const ScreenBank = styled.div`
         display: inline-block;
         width: 50px;
         height: 68px;
-        @include prefix(border-radius, 80px);
-        @include prefix(border-top-left-radius, 20px);
-        @include prefix(border-top-right-radius, 20px);
+        border-radius: 80px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         position: absolute;
         left: -10px;
         top: -2px;
@@ -171,7 +170,7 @@ const ScreenBank = styled.div`
           left: 7px;
           bottom: 7px;
           background: #342b2b;
-          @include prefix(border-radius, 80px);
+          border-radius: 80px;
           box-shadow: 0 0 5px #ffc, 0 0 10px #ffa;
         }
         &:after {
@@ -179,7 +178,7 @@ const ScreenBank = styled.div`
           display: block;
           width: 34px;
           height: 34px;
-          background-image: url(~imgPath/arrow_up1.png);
+          background-image: url(../img/arrow_up1.png);
           background-size: 34px;
           position: absolute;
           left: 8px;
@@ -208,7 +207,7 @@ const ScreenBank = styled.div`
     display: inline-block;
     min-width: 130px;
     height: 42px;
-    @include prefix(border-radius, 9px);
+    border-radius: 9px;
     position: absolute;
     right: 2px;
     top: 2px;
@@ -415,9 +414,9 @@ const ScreenBank = styled.div`
     }
     // .time{
     //     width: 55px; height: 40px; position: absolute; top: 44px; left: 30px;
-    //     &.t1h{background-image: url(~imgPath/ic-abil-time1h.png);}
-    //     &.t6h{background-image: url(~imgPath/ic-abil-time6h.png);}
-    //     &.t24h{background-image: url(~imgPath/ic-abil-time24h.png);}
+    //     &.t1h{background-image: url(../img/ic-abil-time1h.png);}
+    //     &.t6h{background-image: url(../img/ic-abil-time6h.png);}
+    //     &.t24h{background-image: url(../img/ic-abil-time24h.png);}
     // }
     .rate {
       font-size: 18px;
@@ -430,13 +429,13 @@ const ScreenBank = styled.div`
       top: 50px;
       left: -6px;
       &.red {
-        background-image: url(~imgPath/ic-abil-redline.png);
+        background-image: url(../img/ic-abil-redline.png);
       }
       &.green {
-        background-image: url(~imgPath/ic-abil-greenline.png);
+        background-image: url(../img/ic-abil-greenline.png);
       }
       &.blue {
-        background-image: url(~imgPath/ic-abil-blueline.png);
+        background-image: url(../img/ic-abil-blueline.png);
       }
     }
     &.time {
@@ -477,7 +476,7 @@ const ScreenBank = styled.div`
       background: linear-gradient(60deg, #ffeb9a, #f1da7c, #cfa831, #ffeb9a);
       position: relative;
       top: -1px;
-      @include prefix(border-radius, 100%);
+      border-radius: 100%;
       box-shadow: 0 2px 0 #000, 0 1px 10px #000;
       // z-index: 2;
       margin: 0px 5px;
@@ -491,7 +490,7 @@ const ScreenBank = styled.div`
     top: 45px;
     bottom: 50px;
     background: #766459;
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     border: solid 5px #ffb432;
     box-shadow: 0 5px 10px #615048;
     text-align: center;
@@ -532,7 +531,7 @@ const ScreenBank = styled.div`
         background: linear-gradient(-10deg, #ffb652, #ffed29, #fffbc7);
         position: relative;
         margin: 20px 7px 0 7px;
-        @include prefix(border-radius, 7px);
+        border-radius: 7px;
         box-shadow: 0 2px 5px #392d26, inset 0 1px 2px #fff;
         // background: red;
         &:before {
@@ -544,7 +543,7 @@ const ScreenBank = styled.div`
           right: 4px;
           top: 4px;
           bottom: 4px;
-          @include prefix(border-radius, 5px);
+          border-radius: 5px;
           // background: linear-gradient(to right, #cf6767, #ffa029, #db5436);
         }
         .sale-off {
@@ -570,8 +569,8 @@ const ScreenBank = styled.div`
           img {
             width: 100%;
             height: 100%;
-            @include prefix(border-top-left-radius, 5px);
-            @include prefix(border-top-right-radius, 5px);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
           }
           .ban-back {
             width: 462px;
@@ -617,13 +616,13 @@ const ScreenBank = styled.div`
             top: 6px;
             margin-left: 10px;
             &.t1h {
-              background-image: url(~imgPath/ic-clock1.png);
+              background-image: url(../img/ic-clock1.png);
             }
             &.t6h {
-              background-image: url(~imgPath/ic-clock6.png);
+              background-image: url(../img/ic-clock6.png);
             }
             &.t24h {
-              background-image: url(~imgPath/ic-clock24.png);
+              background-image: url(../img/ic-clock24.png);
             }
           }
           &.clock {
@@ -640,7 +639,7 @@ const ScreenBank = styled.div`
           .reborn {
             width: 75px;
             height: 75px;
-            background-image: url(~imgPath/ic-abil-reborn.png);
+            background-image: url(../img/ic-abil-reborn.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -654,7 +653,7 @@ const ScreenBank = styled.div`
               font-size: 30px;
               color: #fff;
               line-height: 20px;
-              @include prefix(border-radius, 14px);
+              border-radius: 14px;
               &:before {
                 content: "";
                 display: inline-block;
@@ -662,7 +661,7 @@ const ScreenBank = styled.div`
                 height: 26px;
                 vertical-align: middle;
                 position: relative;
-                background-image: url(~imgPath/reb-rub.png);
+                background-image: url(../img/reb-rub.png);
                 background-size: 26px;
                 margin-right: 5px;
               }
@@ -671,7 +670,7 @@ const ScreenBank = styled.div`
           .balancer {
             width: 75px;
             height: 75px;
-            background-image: url(~imgPath/ic-abil-rubin@2x.png);
+            background-image: url(../img/ic-abil-rubin@2x.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -680,7 +679,7 @@ const ScreenBank = styled.div`
           .gold {
             width: 75px;
             height: 75px;
-            background-image: url(~imgPath/ic-abil-gold.png);
+            background-image: url(../img/ic-abil-gold.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -690,7 +689,7 @@ const ScreenBank = styled.div`
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(~imgPath/ic-abil-gold.png);
+              background-image: url(../img/ic-abil-gold.png);
               position: absolute;
               top: 4px;
               margin-left: 55px;
@@ -700,7 +699,7 @@ const ScreenBank = styled.div`
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(~imgPath/ic-abil-gold.png);
+              background-image: url(../img/ic-abil-gold.png);
               position: absolute;
               top: 5px;
               margin-left: -53px;
@@ -710,7 +709,7 @@ const ScreenBank = styled.div`
             display: none;
             width: 75px;
             height: 75px;
-            background-image: url(~imgPath/ic-ice_gold.png);
+            background-image: url(../img/ic-ice_gold.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -721,7 +720,7 @@ const ScreenBank = styled.div`
               height: 75px;
               display: block;
               background-size: contain;
-              background-image: url(~imgPath/ic-ice_gold.png);
+              background-image: url(../img/ic-ice_gold.png);
               position: absolute;
               top: 4px;
               margin-left: 55px;
@@ -732,7 +731,7 @@ const ScreenBank = styled.div`
               height: 75px;
               display: block;
               background-size: contain;
-              background-image: url(~imgPath/ic-ice_gold.png);
+              background-image: url(../img/ic-ice_gold.png);
               position: absolute;
               top: 5px;
               margin-left: -53px;
@@ -760,7 +759,7 @@ const ScreenBank = styled.div`
           .gold-shards {
             width: 75px;
             height: 75px;
-            background-image: url(~imgPath/ic-abil-gold-but.png);
+            background-image: url(../img/ic-abil-gold-but.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -769,7 +768,7 @@ const ScreenBank = styled.div`
           .gems {
             width: 75px;
             height: 75px;
-            background-image: url(~imgPath/ic-abil-rubin.png);
+            background-image: url(../img/ic-abil-rubin.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -778,7 +777,7 @@ const ScreenBank = styled.div`
           .shards {
             width: 75px;
             height: 75px;
-            background-image: url(~imgPath/ic-abil-butil.png);
+            background-image: url(../img/ic-abil-butil.png);
             background-size: 75px;
             position: absolute;
             top: 6px;
@@ -788,7 +787,7 @@ const ScreenBank = styled.div`
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(~imgPath/ic-abil-butil.png);
+              background-image: url(../img/ic-abil-butil.png);
               position: absolute;
               top: 4px;
               margin-left: 55px;
@@ -798,7 +797,7 @@ const ScreenBank = styled.div`
               width: 75px;
               height: 75px;
               display: block;
-              background-image: url(~imgPath/ic-abil-butil.png);
+              background-image: url(../img/ic-abil-butil.png);
               position: absolute;
               top: 5px;
               margin-left: -53px;
@@ -1031,7 +1030,7 @@ const ScreenBank = styled.div`
             position: absolute;
             top: 8px;
             left: 130px;
-            @include prefix(border-radius, 14px);
+            border-radius: 14px;
             font-size: 30px;
             color: #fff;
             text-shadow: 0 1px 3px #2f2f2f;
@@ -1079,7 +1078,7 @@ const ScreenBank = styled.div`
           &.old {
             .counter {
               background-color: rgba(60, 57, 52, 0.9);
-              @include prefix(border-radius, 14px);
+              border-radius: 14px;
               height: 38px;
               top: 30px;
             }
@@ -1118,14 +1117,14 @@ const ScreenBank = styled.div`
           font-size: 30px;
           color: #fff;
           line-height: 20px;
-          @include prefix(border-radius, 14px);
+          border-radius: 14px;
         }
         .sale-banner {
           // background: red;
           top: 92px;
           bottom: 4px;
-          @include prefix(border-bottom-left-radius, 5px);
-          @include prefix(border-bottom-right-radius, 5px);
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
           box-shadow: 0 1px 1px #fff;
           background: linear-gradient(to bottom, #c12600, #6e0303);
           .text {
@@ -1164,7 +1163,7 @@ const ScreenBank = styled.div`
             bottom: 10px;
             background: red;
             padding: 10px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             background: linear-gradient(to top, #c12600, #6e0303);
           }
           .btn-buy {
@@ -1213,10 +1212,10 @@ const ScreenBank = styled.div`
             display: block;
             width: 105px;
             height: 105px;
-            background-image: url(~imgPath/offer-bk2.png);
+            background-image: url(../img/offer-bk2.png);
             background-size: 105px 105px;
             background-repeat: no-repeat;
-            // @include prefix(transform, rotate(-90deg));
+            // transform: rotate(-90deg);
           }
           &:after {
             content: "";
@@ -1226,7 +1225,7 @@ const ScreenBank = styled.div`
             position: absolute;
             left: calc(50% - 22px);
             top: 2px;
-            background-image: url(~imgPath/time1.png);
+            background-image: url(../img/time1.png);
             background-size: 38px;
           }
           .time,
@@ -1253,7 +1252,7 @@ const ScreenBank = styled.div`
           }
           .time {
             background: #640706;
-            @include prefix(border-radius, 30px);
+            border-radius: 30px;
           }
         }
         &.empty {
@@ -1290,8 +1289,8 @@ const ScreenBank = styled.div`
       width: 188px;
       height: 40px;
       background: #766459;
-      @include prefix(border-bottom-left-radius, 10px);
-      @include prefix(border-bottom-right-radius, 10px);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
       box-shadow: 0 2px 2px #555, inset 0 3px 3px rgba(0, 0, 0, 0.25);
       line-height: 40px;
       font-size: 20px;
@@ -1385,17 +1384,17 @@ const ScreenBank = styled.div`
         position: absolute;
         right: 0px;
         top: 0px;
-        background-image: url(~imgPath/offer-bk-sm.png);
+        background-image: url(../img/offer-bk-sm.png);
         background-size: 40px 45px;
         .text {
           font-size: 14px;
           color: #ff9;
-          @include prefix(transform, rotate(-30deg));
+          transform: rotate(-30deg);
           text-shadow: 0 3px 0px #200, 0 2px 2px #200;
         }
 
         &.time {
-          background-image: url(~imgPath/offer-bk-sm1.png);
+          background-image: url(../img/offer-bk-sm1.png);
           background-size: 40px 45px;
           &:after {
             content: "";
@@ -1405,7 +1404,7 @@ const ScreenBank = styled.div`
             position: absolute;
             left: 3px;
             top: 5px;
-            background-image: url(~imgPath/time1.png);
+            background-image: url(../img/time1.png);
             background-size: 32px;
           }
         }
@@ -1413,7 +1412,7 @@ const ScreenBank = styled.div`
           display: block;
           width: 108px;
           height: 41px;
-          background-image: url(~imgPath/offer-bk-vip.png);
+          background-image: url(../img/offer-bk-vip.png);
           background-size: 108px 41px;
           position: absolute;
           // right:11px;
@@ -1428,8 +1427,8 @@ const ScreenBank = styled.div`
   .bank-subwin.items {
     // background:red;
     border-color: #7dc2ff;
-    @include prefix(border-top-right-radius, 10px);
-    @include prefix(border-bottom-right-radius, 10px);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     box-shadow: inset 0 5px 5px #4d433c;
 
     .bs-items-scroll {
@@ -1468,7 +1467,7 @@ const ScreenBank = styled.div`
         background: linear-gradient(-10deg, #b37a07, #ffb229, #fffbc7);
         position: relative;
         margin: 10px 7px 0 7px;
-        @include prefix(border-radius, 9px);
+        border-radius: 9px;
         box-shadow: 0 2px 5px #392d26, inset 0 1px 2px #fff;
         // background: red;
 
@@ -1481,7 +1480,7 @@ const ScreenBank = styled.div`
           right: 4px;
           top: 4px;
           bottom: 4px;
-          @include prefix(border-radius, 6px);
+          border-radius: 6px;
           background: linear-gradient(
             to right,
             #67a5cf,
@@ -1552,16 +1551,16 @@ const ScreenBank = styled.div`
         //     }
         //     .time{
         //         width: 55px; height: 40px; position: absolute; top: 44px; left: 30px;
-        //         &.t1h{background-image: url(~imgPath/ic-abil-time1h.png);}
-        //         &.t6h{background-image: url(~imgPath/ic-abil-time6h.png);}
-        //         &.t24h{background-image: url(~imgPath/ic-abil-time24h.png);}
+        //         &.t1h{background-image: url(../img/ic-abil-time1h.png);}
+        //         &.t6h{background-image: url(../img/ic-abil-time6h.png);}
+        //         &.t24h{background-image: url(../img/ic-abil-time24h.png);}
         //     }
         //     .rate{
         //         font-size: 18px; color: #fff; line-height: 18px; text-shadow: 0 1px 3px #2f2f2f;
         //         width: 87px; height: 22px; position: absolute; top: 50px; left: -6px;
-        //         &.red{background-image: url(~imgPath/ic-abil-redline.png);}
-        //         &.green{background-image: url(~imgPath/ic-abil-greenline.png);}
-        //         &.blue{background-image: url(~imgPath/ic-abil-blueline.png);}
+        //         &.red{background-image: url(../img/ic-abil-redline.png);}
+        //         &.green{background-image: url(../img/ic-abil-greenline.png);}
+        //         &.blue{background-image: url(../img/ic-abil-blueline.png);}
         //     }
         //     &.time{.rate{display: none};}
         //     &.rate{.time{display: none};}
@@ -1655,7 +1654,7 @@ const ScreenBank = styled.div`
           right: 15px;
           bottom: 15px;
           background: red;
-          @include prefix(border-radius, 7px);
+          border-radius: 7px;
           padding: 10px;
           background: linear-gradient(to bottom, #c12600, #6e0303);
           box-shadow: 0 0 5px #500, inset 0 -2px 2px #500;
@@ -1667,7 +1666,7 @@ const ScreenBank = styled.div`
             bottom: 7px;
             // background: red;
             padding: 10px;
-            @include prefix(border-radius, 7px);
+            border-radius: 7px;
             background: linear-gradient(to top, #c12600, #6e0303);
             .btn-buy {
               position: relative;
@@ -1768,8 +1767,8 @@ const ScreenBank = styled.div`
           bottom: 4px;
           box-shadow: inset 0 10px 2px rgba(255, 255, 122, 0.33), 0 0 3px #000,
             inset -3px 0px 3px #fff;
-          @include prefix(border-top-right-radius, 15px);
-          @include prefix(border-bottom-right-radius, 15px);
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
           &:before,
           &:after {
             content: "";
@@ -1779,7 +1778,7 @@ const ScreenBank = styled.div`
             top: 8px;
             bottom: 8px;
             background: #ff9;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             box-shadow: 0 0 5px #ff9;
           }
           &:after {
@@ -1799,7 +1798,7 @@ const ScreenBank = styled.div`
           position: absolute;
           left: calc(50% - 25px);
           top: -30px;
-          background-image: url(~imgPath/ico-real-big.png);
+          background-image: url(../img/ico-real-big.png);
           background-size: 50px;
         }
       }
@@ -1808,8 +1807,8 @@ const ScreenBank = styled.div`
         height: 19px;
         background: linear-gradient(to top, #f2d35e, #fff);
         border: solid #ffa 2px;
-        @include prefix(border-bottom-right-radius, 10px);
-        @include prefix(border-bottom-left-radius, 10px);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
         padding: 3px 20px;
         margin-top: 46px;
         line-height: 22px;
@@ -1846,7 +1845,7 @@ const ScreenBank = styled.div`
       position: absolute;
       left: 10px;
       top: 100px;
-      @include prefix(border-radius, 10px);
+      border-radius: 10px;
       box-shadow: 0 0 4px #600, 0 0 14px #600;
       // overflow: hidden;
       // font-size: 16px;
@@ -1920,14 +1919,14 @@ const ScreenBank = styled.div`
             left: 0px;
             top: 1px;
             // background: linear-gradient(to top, #f2d35e, #c89736, #ffffca);
-            // @include prefix(border-radius, 100%);
+            // border-radius: 100%;
             color: #400;
             line-height: 57px;
             text-shadow: 0 0 1px #000, 0 1px 1px #fff;
             font-style: normal;
             // box-shadow: inset 0 2px 0px #400;
             // background: #d56b6b;
-            background-image: url(~imgPath/vip-s1.png);
+            background-image: url(../img/vip-s1.png);
             background-size: 55px;
           }
         }
@@ -1960,13 +1959,13 @@ const ScreenBank = styled.div`
             top: -5px;
             z-index: 2;
             box-shadow: 0 2px 2px #300;
-            @include prefix(border-bottom-left-radius, 10px);
-            @include prefix(border-bottom-right-radius, 10px);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
           }
           p.h:after {
-            @include prefix(border-radius, 0);
-            @include prefix(border-top-left-radius, 10px);
-            @include prefix(border-top-right-radius, 10px);
+            border-radius: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
             top: 289px;
             box-shadow: 0 2px 2px #300, 0 -1px 2px #300;
           }
@@ -1981,46 +1980,46 @@ const ScreenBank = styled.div`
         }
       }
       .vip-row:nth-child(3) p.h .vn {
-        background-image: url(~imgPath/vip-s2.png);
+        background-image: url(../img/vip-s2.png);
         background-size: 55px;
       }
       .vip-row:nth-child(4) p.h .vn {
-        background-image: url(~imgPath/vip-s3.png);
+        background-image: url(../img/vip-s3.png);
         background-size: 55px;
         color: #444;
       }
       .vip-row:nth-child(5) p.h .vn {
-        background-image: url(~imgPath/vip-s4.png);
+        background-image: url(../img/vip-s4.png);
         background-size: 55px;
         color: #444;
       }
       .vip-row:nth-child(6) p.h .vn {
-        background-image: url(~imgPath/vip-s5.png);
+        background-image: url(../img/vip-s5.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(7) p.h .vn {
-        background-image: url(~imgPath/vip-s6.png);
+        background-image: url(../img/vip-s6.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(8) p.h .vn {
-        background-image: url(~imgPath/vip-s7.png);
+        background-image: url(../img/vip-s7.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(9) p.h .vn {
-        background-image: url(~imgPath/vip-s8.png);
+        background-image: url(../img/vip-s8.png);
         background-size: 55px;
         color: #400;
       }
       .vip-row:nth-child(10) p.h .vn {
-        background-image: url(~imgPath/vip-s9.png);
+        background-image: url(../img/vip-s9.png);
         background-size: 55px;
         color: #580349;
       }
       .vip-row:nth-child(11) p.h .vn {
-        background-image: url(~imgPath/vip-s10.png);
+        background-image: url(../img/vip-s10.png);
         background-size: 55px;
         color: #580349;
       }
@@ -2033,7 +2032,7 @@ const ScreenBank = styled.div`
       position: absolute;
       right: 10px;
       top: 100px;
-      @include prefix(border-radius, 10px);
+      border-radius: 10px;
       box-shadow: 0 0 3px #ff0, 0 0 4px #600, 0 0 14px #600, inset 0 0 10px #500,
         inset 0 0 5px #ff0;
       border: solid 2px #ffa;
@@ -2045,7 +2044,7 @@ const ScreenBank = styled.div`
         right: 5px;
         bottom: 50px;
         height: 20px;
-        @include prefix(border-radius, 100%);
+        border-radius: 100%;
         background: rgba(0, 0, 0, 0.22);
       }
       .img {
@@ -2065,7 +2064,7 @@ const ScreenBank = styled.div`
         right: 10px;
         bottom: -29px;
         background: linear-gradient(to top, #ff32ae, #df9883);
-        @include prefix(border-radius, 10px);
+        border-radius: 10px;
         box-shadow: 0 0 10px #631047, inset 0 0 7px #ffc3fc;
         .count {
           display: inline-block;
@@ -2075,7 +2074,7 @@ const ScreenBank = styled.div`
           position: relative;
           top: -16px;
           background: linear-gradient(-10deg, #600, #f00, #600);
-          @include prefix(border-radius, 20px);
+          border-radius: 20px;
           padding: 0px 10px;
           font-size: 18px;
           font-weight: bold;
@@ -2104,7 +2103,7 @@ const ScreenBank = styled.div`
       display: block;
       width: 150px;
       height: 200px;
-      background-image: url(~imgPath/offer-bk4.png);
+      background-image: url(../img/offer-bk4.png);
       background-size: 150px 200px;
       background-repeat: no-repeat;
       position: absolute;
@@ -2135,7 +2134,7 @@ const ScreenBank = styled.div`
       top: 7px;
       bottom: 38px;
       right: 200px;
-      @include prefix(border-radius, 12px);
+      border-radius: 12px;
       // background: #67564b;
       background: linear-gradient(to left, #5f553b, #dab357, #906f57);
       box-shadow: 0 3px 0px #403d38;
@@ -2151,7 +2150,7 @@ const ScreenBank = styled.div`
         color: #333;
         text-shadow: 0 1px 0 #fff;
         background: linear-gradient(-45deg, #877e64, #ad905d, #dab357, #906f57);
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
         box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
           inset 0 -3px 0px #403d38, 0 0 1px #403d38,
           inset 0 0 10px rgba(255, 255, 255, 0.33);
@@ -2228,14 +2227,14 @@ const ScreenBank = styled.div`
           padding: 0px 15px 0px 42px;
           text-shadow: 0 2px 0px #200;
           background: #600;
-          @include prefix(border-radius, 20px);
+          border-radius: 20px;
           // border: solid 2px #ffc627;
           &:before {
             content: "";
             display: inline-block;
             width: 44px;
             height: 44px;
-            background-image: url(~imgPath/time1.png);
+            background-image: url(../img/time1.png);
             background-size: 44px;
             position: absolute;
             left: -3px;
@@ -2254,7 +2253,7 @@ const ScreenBank = styled.div`
         position: relative;
         float: left;
         // background: red;
-        @include prefix(border-radius, 9px);
+        border-radius: 9px;
         margin: 10px 0 0 7px;
         background: linear-gradient(15deg, #b4a16a, #7b653e, #ddbe73, #ad8c42);
         box-shadow: 0 0 7px #4d3706, inset 0 0 4px #ebc94f;
@@ -2266,7 +2265,7 @@ const ScreenBank = styled.div`
           top: 5px;
           right: 5px;
           bottom: 5px;
-          @include prefix(border-radius, 6px);
+          border-radius: 6px;
           // background: #300;
           background: linear-gradient(
             to bottom,
@@ -2302,8 +2301,8 @@ const ScreenBank = styled.div`
           bottom: 5px;
           // background: rgba(0,0,0,0.33);
           background: #c0a85c;
-          @include prefix(border-bottom-left-radius, 3px);
-          @include prefix(border-bottom-right-radius, 3px);
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px;
           text-align: center;
           .btn-buy {
             display: inline-block;
@@ -2320,9 +2319,9 @@ const ScreenBank = styled.div`
           display: inline-block;
           width: 50px;
           height: 68px;
-          @include prefix(border-radius, 80px);
-          @include prefix(border-top-left-radius, 20px);
-          @include prefix(border-top-right-radius, 20px);
+          border-radius: 80px;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
           position: absolute;
           right: -1px;
           top: -2px;
@@ -2343,7 +2342,7 @@ const ScreenBank = styled.div`
             left: 7px;
             bottom: 7px;
             background: #342b2b;
-            @include prefix(border-radius, 80px);
+            border-radius: 80px;
             box-shadow: 0 0 5px #ffc, 0 0 10px #ffa;
           }
           &:after {
@@ -2351,7 +2350,7 @@ const ScreenBank = styled.div`
             display: block;
             width: 34px;
             height: 34px;
-            background-image: url(~imgPath/arrow_up1.png);
+            background-image: url(../img/arrow_up1.png);
             background-size: 34px;
             position: absolute;
             left: 8px;
@@ -2360,7 +2359,7 @@ const ScreenBank = styled.div`
         }
 
         &.blocked {
-          @include prefix(filter, grayscale(100%));
+          filter: grayscale(100%);
           .text {
             line-height: 18px;
             font-size: 16px;
@@ -2375,14 +2374,14 @@ const ScreenBank = styled.div`
             font-size: 0;
             &:after {
               height: 47px;
-              background-image: url(~imgPath/lock-gold.png);
+              background-image: url(../img/lock-gold.png);
               background-size: 34px;
             }
           }
         }
 
         &.ascented:before {
-          background-image: url(~imgPath/card2.jpg);
+          background-image: url(../img/card2.jpg);
           background-size: 175px;
         }
 
@@ -2393,7 +2392,7 @@ const ScreenBank = styled.div`
           position: absolute;
           bottom: 0;
           left: 0px;
-          background-image: url(~imgPath/asc-already.png);
+          background-image: url(../img/asc-already.png);
           background-size: 185px;
           font-size: 15px;
           font-weight: bold;
@@ -2415,7 +2414,7 @@ const ScreenBank = styled.div`
       right: 10px;
       top: 7px;
       // background: red;
-      @include prefix(border-radius, 12px);
+      border-radius: 12px;
       background: linear-gradient(
         to bottom,
         #d29e25,
@@ -2434,7 +2433,7 @@ const ScreenBank = styled.div`
         position: absolute;
         left: 18px;
         top: 56px;
-        background-image: url(~imgPath/3-rand-heroes.png);
+        background-image: url(../img/3-rand-heroes.png);
         background-size: 150px;
       }
       .text {
@@ -2461,7 +2460,7 @@ const ScreenBank = styled.div`
         left: 18px;
         bottom: 15px;
         background: red;
-        @include prefix(border-radius, 7px);
+        border-radius: 7px;
         padding: 10px;
         background: linear-gradient(to bottom, #c12600, #6e0303);
         box-shadow: 0 0 5px #500, inset 0 -2px 2px #500;
@@ -2474,7 +2473,7 @@ const ScreenBank = styled.div`
           right: 12px;
           bottom: 7px;
           padding: 10px;
-          @include prefix(border-radius, 7px);
+          border-radius: 7px;
           background: linear-gradient(to top, #c12600, #6e0303);
         }
         .btn-buy {
@@ -2494,7 +2493,7 @@ const ScreenBank = styled.div`
         left: 18px;
         top: 10px;
         background: #ad873b;
-        @include prefix(border-radius, 7px);
+        border-radius: 7px;
         padding: 10px;
         box-shadow: 0 1px 3px #ffa, inset 0 0 3px #795510,
           inset 0 0 10px #795510;
@@ -2506,7 +2505,7 @@ const ScreenBank = styled.div`
         //     right: 12px;
         //     bottom: 7px;
         //     padding: 10px;
-        //     @include prefix(border-radius, 7px);
+        //     border-radius: 7px;
         //     background: linear-gradient(to top, #c12600, #6e0303);
         // }
         .btn-buy {
@@ -2550,7 +2549,7 @@ const ScreenBank = styled.div`
     //     // background: linear-gradient(15deg, #ffe7a1, #d29222, #a97b0b, #ffe14c);
     //     // box-shadow: 0 0 7px #4d3706, inset 0 0 4px #ebc94f;
     //     box-shadow: 0 3px 0px #4f433c, inset 0 0 4px #ccc;
-    //     @include prefix(border-radius, 7px);
+    //     border-radius: 7px;
     //     .title{
     //         display: block;
     //         height: 33px;
@@ -2563,7 +2562,7 @@ const ScreenBank = styled.div`
     //         text-transform: uppercase;
     //         text-shadow: 0 1px 1px #000;
     //         background: linear-gradient(-45deg, #776b6f, #8a6189, #886289, #766c6b);
-    //         @include prefix(border-radius, 5px);
+    //         border-radius: 5px;
     //         box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15), inset 0 -3px 0px #403d38, 0 0 1px #403d38, inset 0 0 10px rgba(255, 255, 255, 0.33);
     //     }
 
@@ -2593,7 +2592,7 @@ const ScreenBank = styled.div`
     //                 display: block; width: 100%; height: 100%;
     //                 border: solid 2px #ffa;
     //                 position: absolute; left:-2px; top: -2px;
-    //                 @include prefix(border-radius, 5px);
+    //                 border-radius: 5px;
     //                 box-shadow: 0 0 1px #ff0, 0 0 3px #000,
     //                     inset 0 0 1px #ff0, inset 0 0 5px #000;
     //             }
@@ -2602,7 +2601,7 @@ const ScreenBank = styled.div`
     //                 display: block; width: 200px; height: 26px;
     //                 margin: 0; padding: 0;
     //                 border: solid 1px #d5abff;
-    //                 @include prefix(border-radius, 5px);
+    //                 border-radius: 5px;
     //                 font-size: 15px; font-weight: bold;
     //                 font-family: 'Roboto', sans-serif; color: #fff;
     //                 background: linear-gradient(-45deg, #776b6f, #8a6189, #886289, #766c6b);
@@ -2615,10 +2614,10 @@ const ScreenBank = styled.div`
     //                 position: absolute; right: 30px; top: 17px;
     //                 background: #333;
     //                 border: solid 1px #d5abff;
-    //                 @include prefix(border-radius, 5px);
+    //                 border-radius: 5px;
     //                 box-shadow: inset 0 0 4px #000;
     //                 &.ru{
-    //                     background-image: url(~imgPath/flag-ru.jpg);
+    //                     background-image: url(../img/flag-ru.jpg);
     //                     background-size: 38px;
     //                 }
     //             }
@@ -2649,7 +2648,7 @@ const ScreenBank = styled.div`
     top: 10px;
     // position: absolute; left:150px; right: 150px; top: 10px;
     box-shadow: 0 3px 0px #4f433c, inset 0 0 4px #ccc;
-    @include prefix(border-radius, 7px);
+    border-radius: 7px;
     .title {
       display: block;
       height: 33px;
@@ -2662,7 +2661,7 @@ const ScreenBank = styled.div`
       text-transform: uppercase;
       text-shadow: 0 1px 1px #000;
       background: linear-gradient(-45deg, #776b6f, #8a6189, #886289, #766c6b);
-      @include prefix(border-radius, 5px);
+      border-radius: 5px;
       box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
         inset 0 -3px 0px #403d38, 0 0 1px #403d38,
         inset 0 0 10px rgba(255, 255, 255, 0.33);
@@ -2683,7 +2682,7 @@ const ScreenBank = styled.div`
         height: 46px;
         // background: #4f433c;
         background: linear-gradient(-45deg, #776b6f, #8a6189, #886289, #766c6b);
-        @include prefix(border-radius, 10px);
+        border-radius: 10px;
         box-shadow: inset 0 3px 0px #664d5f,
           inset 0 23px 0px rgba(255, 255, 255, 0.12);
         position: relative;
@@ -2700,7 +2699,7 @@ const ScreenBank = styled.div`
             #cfa831,
             #fbf1d8
           );
-          @include prefix(border-radius, 9px);
+          border-radius: 9px;
           position: absolute;
           left: 2px;
           top: 2px;
@@ -2719,7 +2718,7 @@ const ScreenBank = styled.div`
             position: absolute;
             left: 5px;
             top: 3px;
-            @include prefix(border-radius, 38px);
+            border-radius: 38px;
             background: #4a3a08;
             box-shadow: inset 0 2px 1px #000, 0 0 4px #764905, 0 0 6px #764905;
           }
@@ -2731,7 +2730,7 @@ const ScreenBank = styled.div`
             position: absolute;
             left: 2px;
             top: 2px;
-            background-image: url(~imgPath/ico-real-big.png);
+            background-image: url(../img/ico-real-big.png);
             background-size: 43px;
           }
         }
@@ -2762,7 +2761,7 @@ const ScreenBank = styled.div`
             #bc60be,
             #80a9b9
           );
-          @include prefix(border-radius, 9px);
+          border-radius: 9px;
           position: absolute;
           left: 250px;
           top: 2px;
@@ -2793,21 +2792,21 @@ const ScreenBank = styled.div`
         //     position: absolute;
         //     right: 145px;
         //     top: -3px;
-        //     background-image: url(~imgPath/offer-bk-sm.png);
+        //     background-image: url(../img/offer-bk-sm.png);
         //     background-size: 40px 45px;
         //     .text {
         //         font-size: 14px; font-weight: bold; color: #ff9;
-        //         @include prefix(transform, rotate(-30deg));
+        //         transform: rotate(-30deg);
         //         text-shadow: 0 3px 0px #200, 0 2px 2px #200;
         //         position: relative; top: 11px;
         //     }
 
         //     &.hit{
-        //         background-image: url(~imgPath/offer-bk-sm2.png);
+        //         background-image: url(../img/offer-bk-sm2.png);
         //         background-size: 40px 45px;
         //     }
         //     &.time{
-        //         background-image: url(~imgPath/offer-bk-sm1.png);
+        //         background-image: url(../img/offer-bk-sm1.png);
         //         background-size: 40px 45px;
         //         &:after {
         //             content: "";
@@ -2817,7 +2816,7 @@ const ScreenBank = styled.div`
         //             position: absolute;
         //             left: 3px;
         //             top: 5px;
-        //             background-image: url(~imgPath/time1.png);
+        //             background-image: url(../img/time1.png);
         //             background-size: 32px;
         //         }
         //         .text{
@@ -2883,7 +2882,7 @@ const ScreenBank = styled.div`
     margin: 10px;
     margin-left: 0px;
     float: right;
-    @include prefix(border-radius, 7px);
+    border-radius: 7px;
     padding: 10px;
     background: linear-gradient(to bottom, #c12600, #6e0303);
     box-shadow: 0 0 5px #500, inset 0 -2px 2px #500;
@@ -2892,7 +2891,7 @@ const ScreenBank = styled.div`
       display: block;
       width: 150px;
       height: 200px;
-      background-image: url(~imgPath/offer-bk4.png);
+      background-image: url(../img/offer-bk4.png);
       background-size: 150px 200px;
       background-repeat: no-repeat;
       position: absolute;
@@ -2941,7 +2940,7 @@ const ScreenBank = styled.div`
       }
       .time {
         background: #640706;
-        @include prefix(border-radius, 30px);
+        border-radius: 30px;
         position: absolute;
         left: 0px;
         right: 0;
@@ -2956,9 +2955,9 @@ const ScreenBank = styled.div`
         left: calc(50% - 28px);
         top: -30px;
         background: #640706;
-        background-image: url(~imgPath/time1.png);
+        background-image: url(../img/time1.png);
         background-size: 46px;
-        @include prefix(border-radius, 100%);
+        border-radius: 100%;
         border: solid 5px #640706;
         box-shadow: 0 0 7px #640706;
       }
@@ -2976,7 +2975,7 @@ const ScreenBank = styled.div`
     top: 72px;
     bottom: 5px;
     background: #9e8b7d;
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     border: solid 4px #c4b6ad;
     // box-shadow: inset 0 0 7px #5F4F4E;
     // z-index:11;
@@ -2985,7 +2984,7 @@ const ScreenBank = styled.div`
       display: inline-block;
       width: 30px;
       height: 30px;
-      @include prefix(border-radius, 7px);
+      border-radius: 7px;
       position: absolute;
       right: -6px;
       top: -6px;
@@ -3006,7 +3005,7 @@ const ScreenBank = styled.div`
         width: 24px;
         height: 7px;
         background: rgba(255, 255, 255, 0.25);
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
         position: absolute;
         left: 3px;
         top: 3px;
@@ -3035,7 +3034,7 @@ const ScreenBank = styled.div`
         background: linear-gradient(60deg, #ffeb9a, #f1da7c, #cfa831, #ffeb9a);
         position: relative;
         top: -1px;
-        @include prefix(border-radius, 100%);
+        border-radius: 100%;
         box-shadow: 0 2px 0 #000, 0 1px 10px #000;
         margin: 0px 10px;
       }
@@ -3049,7 +3048,7 @@ const ScreenBank = styled.div`
       top: 45px;
       bottom: 100px;
       background: #766459;
-      @include prefix(border-radius, 7px);
+      border-radius: 7px;
       // border: solid 5px #ffb432;
       // box-shadow: 0 5px 10px #615048;
       box-shadow: inset 0 3px 0px #615048, inset 2px 0 0 #615048;
@@ -3109,7 +3108,7 @@ const ScreenBank = styled.div`
         position: relative;
         // margin: 10px 7px 0 7px;
         padding: 0px 50px;
-        @include prefix(border-radius, 9px);
+        border-radius: 9px;
         box-shadow: 0 2px 5px #392d26, inset 0 1px 2px #fff;
         &:before {
           content: "";
@@ -3120,7 +3119,7 @@ const ScreenBank = styled.div`
           right: 4px;
           top: 4px;
           bottom: 4px;
-          @include prefix(border-radius, 6px);
+          border-radius: 6px;
           background: linear-gradient(to bottom, #c12600, #6e0303);
           box-shadow: 0 0 2px #fff, 0 0 5px #fff,
             inset 0 2px 3px rgba(0, 0, 0, 0.55);
@@ -3170,7 +3169,7 @@ const ScreenBank = styled.div`
           bottom: auto;
           width: 70px;
           height: 85px;
-          background-image: url(~imgPath/offer-bk2.png);
+          background-image: url(../img/offer-bk2.png);
           background-size: 70px 85px;
           background-repeat: no-repeat;
           font-size: 22px;
@@ -3204,13 +3203,13 @@ const ScreenBank = styled.div`
     background: linear-gradient(-22deg, #fffbc7, #b37a07, #ffb229, #fffbc7);
     box-shadow: 0 1px 10px #392d26, inset 0 1px 2px #fff, 0 0 10px #000,
       0 0 15px #000;
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     // &:before{
     //     content: "";
     //     display: block;
     //     position: absolute; left: 10px; right: 10px; top: 60px; bottom: 10px;
-    //     @include prefix(border-bottom-left-radius, 5px);
-    //     @include prefix(border-bottom-right-radius, 5px);
+    //     border-bottom-left-radius: 5px;
+    //     border-bottom-right-radius: 5px;
     //     // background: linear-gradient(to bottom, #514d64, #856fab, #534a67);
     //     background: #dfc89e;
     //     box-shadow: 0 0 2px #fff, 0 0 5px #fff, inset 0 0 5px rgba(0, 0, 0, 0.55);
@@ -3280,7 +3279,7 @@ const ScreenBank = styled.div`
       left: 0px;
       right: 0px;
       top: 0px;
-      @include prefix(border-radius, 10px);
+      border-radius: 10px;
       box-shadow: 0 1px 10px #392d26, inset 0 2px 10px #fff,
         inset 0 28px 5px rgba(255, 255, 0, 0.15);
       border: solid 4px #ffb229;
@@ -3295,7 +3294,7 @@ const ScreenBank = styled.div`
       display: inline-block;
       width: 30px;
       height: 30px;
-      @include prefix(border-radius, 10px);
+      border-radius: 10px;
       position: absolute;
       right: 11px;
       top: 11px;
@@ -3319,7 +3318,7 @@ const ScreenBank = styled.div`
         width: 24px;
         height: 7px;
         background: rgba(255, 255, 255, 0.25);
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
         position: absolute;
         left: 3px;
         top: 3px;
@@ -3336,8 +3335,8 @@ const ScreenBank = styled.div`
 
       // top: 60px;
       // top: 60px; bottom: 10px;
-      @include prefix(border-bottom-left-radius, 5px);
-      @include prefix(border-bottom-right-radius, 5px);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
       // background: linear-gradient(to bottom, #514d64, #856fab, #534a67);
       background: #dfc89e;
       box-shadow: 0 0 2px #fff, 0 0 5px #fff, inset 0 0 5px rgba(0, 0, 0, 0.55);
@@ -3450,7 +3449,7 @@ const ScreenBank = styled.div`
             top: -9px;
             margin-left: 25px;
             background: linear-gradient(0deg, #889095 0%, #d9e0e4 100%);
-            @include prefix(border-radius, 6px);
+            border-radius: 6px;
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.55);
             &:before {
               content: "";
@@ -3459,7 +3458,7 @@ const ScreenBank = styled.div`
               position: absolute;
               top: 0;
               margin-left: -36px;
-              background-image: url(~imgPath/snez2017.png);
+              background-image: url(../img/snez2017.png);
               background-size: 100%;
             }
             .snplas-num {
@@ -3521,7 +3520,7 @@ const ScreenBank = styled.div`
       //     text-align: left;
       //     .img{
       //         display: inline-block; width: 77px; height: 77px;
-      //         @include prefix(border-radius, 7px);
+      //         border-radius: 7px;
       //         background: linear-gradient(15deg, #ffe7a1, #d29222, #a97b0b, #ffe14c);
       //         box-shadow: 0 0 7px #4d3706, inset 0 0 4px #ebc94f;
       //         position: relative;
@@ -3535,7 +3534,7 @@ const ScreenBank = styled.div`
       //             top: 3px;
       //             right: 3px;
       //             bottom: 3px;
-      //             @include prefix(border-radius, 5px);
+      //             border-radius: 5px;
       //             background: linear-gradient(-10deg, #48220e, #734900, #aa7c0b, #ffe14c);
       //             box-shadow: inset 0 0 5px #4d3706, 0 0 2px #ebc94f;
       //         }
@@ -3543,7 +3542,7 @@ const ScreenBank = styled.div`
       //             content: "";
       //             display: block; width: 67px; height: 60px;
       //             position: absolute; left: 5px; top: 9px;
-      //             background-image: url(~imgPath/m-ico-gold.png);
+      //             background-image: url(../img/m-ico-gold.png);
       //             background-size: 67px;
       //         }
       //     }
@@ -3560,7 +3559,7 @@ const ScreenBank = styled.div`
         background: linear-gradient(to right, #823e06, #dfcf9d, #823e06);
         position: relative;
         margin: 10px 7px 0 7px;
-        @include prefix(border-radius, 9px);
+        border-radius: 9px;
         //box-shadow: 0 2px 5px #392d26, inset 0 1px 2px #fff;
         box-shadow: inset 0 3px 6px #3c2614, 0 0 10px #ffa;
 
@@ -3596,7 +3595,7 @@ const ScreenBank = styled.div`
           right: 15px;
           bottom: 13px;
           background: red;
-          @include prefix(border-radius, 7px);
+          border-radius: 7px;
           padding: 10px;
           background: linear-gradient(to bottom, #c12600, #6e0303);
           box-shadow: 0 0 5px #500, inset 0 -2px 2px #500;
@@ -3608,7 +3607,7 @@ const ScreenBank = styled.div`
             bottom: 7px;
             // background: red;
             padding: 10px;
-            @include prefix(border-radius, 7px);
+            border-radius: 7px;
             background: linear-gradient(to top, #c12600, #6e0303);
             .btn-buy {
               position: relative;
@@ -3658,7 +3657,7 @@ const ScreenBank = styled.div`
         //     //         display: block;
         //     //         width: 70px;
         //     //         height: 70px;
-        //     //         background-image: url(~imgPath/offer-bk2.png);
+        //     //         background-image: url(../img/offer-bk2.png);
         //     //         background-size: 70px 70px;
         //     //         background-repeat: no-repeat;
         //     //         position: absolute; left:-308px; top: -20px;
@@ -3684,7 +3683,7 @@ const ScreenBank = styled.div`
         //     //             .time {
         //     //                 font-size: 12px;
         //     //                 background: #640706;
-        //     //                 @include prefix(border-radius, 30px);
+        //     //                 border-radius: 30px;
         //     //                 position: absolute; left:0px; right:0;
         //     //                 bottom:0;
         //     //             }
@@ -3696,7 +3695,7 @@ const ScreenBank = styled.div`
         //     //                 position: absolute;
         //     //                 left: calc(50% - 15px);
         //     //                 top: 2px;
-        //     //                 background-image: url(~imgPath/time1.png);
+        //     //                 background-image: url(../img/time1.png);
         //     //                 background-size: 30px;
         //     //             }
         //     //         }
@@ -3707,7 +3706,7 @@ const ScreenBank = styled.div`
       }
       // &.gems{
       //     &.disabled{
-      //         @include prefix(filter, grayscale(100%));
+      //         filter: grayscale(100%);
       //         &:before{
       //             background: linear-gradient(to bottom, #ccc, #333, #ccc);
       //             box-shadow: inset 0 0 50px #000;
@@ -3722,7 +3721,7 @@ const ScreenBank = styled.div`
       //         }
       //         .img:after{
       //             height: 67px; top: 5px;
-      //             background-image: url(~imgPath/m-ico-gems.png);
+      //             background-image: url(../img/m-ico-gems.png);
       //             background-size: 67px;
       //         }
       //     }
@@ -3738,7 +3737,7 @@ const ScreenBank = styled.div`
       //         }
       //         .img:after{
       //             height: 67px; top: 5px;
-      //             background-image: url(~imgPath/m-ico-shards.png);
+      //             background-image: url(../img/m-ico-shards.png);
       //             background-size: 67px;
       //         }
       //     }
@@ -3783,7 +3782,7 @@ const ScreenBank = styled.div`
     float: left;
     width: 150px;
     height: 150px;
-    @include prefix(border-radius, 100%);
+    border-radius: 100%;
     background: #ec2363;
     box-shadow: 0 0 20px #ec2363, 0 0 35px #ec2363;
     position: relative;
@@ -3797,7 +3796,7 @@ const ScreenBank = styled.div`
       top: 10%;
       background: #ff3e7b;
       box-shadow: 0 0 20px #ff3e7b, 0 0 35px #ff3e7b;
-      @include prefix(border-radius, 100%);
+      border-radius: 100%;
     }
     .pic {
       width: 150px;
@@ -3817,7 +3816,7 @@ const ScreenBank = styled.div`
   position: absolute;
   top: 4px;
   margin-left: 4px;
-  background-image: url(~imgPath/saleoff.png);
+  background-image: url(../img/saleoff.png);
   background-size: 114px;
   .saletext {
     width: 80px;
@@ -3848,7 +3847,7 @@ const ScreenBank = styled.div`
   position: relative;
   display: inline-block;
   top: 3px;
-  background: url(~imgPath/ico-nutaku2.png);
+  background: url(../img/ico-nutaku2.png);
   background-size: 100%;
   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.8));
 }
@@ -3939,7 +3938,7 @@ body .main.world3 .popup-layer {
               line-height: 34px;
               padding: 3px 0;
               &:before {
-                background-image: url(~imgPath/dark.png);
+                background-image: url(../img/dark.png);
                 top: -3px;
                 margin-right: 3px;
               }

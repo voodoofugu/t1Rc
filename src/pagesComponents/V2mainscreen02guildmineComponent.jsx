@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenMine from "../styles/v2-screen-mine.scss";
+// import v2ScreenMine from "../styles/v2-screen-mine.scss";
 
 const V2MainScreen02GuildMineComponent = () => {
     return (
@@ -9,7 +9,7 @@ const V2MainScreen02GuildMineComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/07-Cemetery.jpg')",
+                            "url('../img/images/back/new/07-Cemetery.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
@@ -285,7 +285,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('img/images/back/06-Cave.jpg')",
+                                                        "url('../img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "0% center",
                                                     backgroundSize: "cover",
@@ -325,7 +325,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('img/images/back/06-Cave.jpg')",
+                                                        "url('../img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "31% center",
                                                     backgroundSize: "cover",
@@ -365,7 +365,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('img/images/back/06-Cave.jpg')",
+                                                        "url('../img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "70% center",
                                                     backgroundSize: "cover",
@@ -405,7 +405,7 @@ const V2MainScreen02GuildMineComponent = () => {
                                                 className="mine-worker-pic"
                                                 style={{
                                                     backgroundImage:
-                                                        "url('img/images/back/06-Cave.jpg')",
+                                                        "url('../img/images/back/06-Cave.jpg')",
                                                     backgroundPosition:
                                                         "100% center",
                                                     backgroundSize: "cover",

@@ -92,10 +92,5 @@ module.exports = merge(webpackConfig, {
         generateHtmlPlugins(),
         // ...plugins,
     ],
-    resolve: {
-        alias: {
-            imgPath: path.resolve(__dirname, "src/img"),
-        },
-    },
     ...devServerConfig,
 });

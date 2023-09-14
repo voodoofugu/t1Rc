@@ -1,5 +1,5 @@
 import React from "react";
-import v2Unipop20PsePop from "../styles/v2-unipop-20-pse-pop.scss";
+// import v2Unipop20PsePop from "../styles/v2-unipop-20-pse-pop.scss";
 
 const V2Unipop20PsePopComponent = () => {
     return (

@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const ScreenRating = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main .left-side .left-panel .tab-panel.rating-panel {
     background: linear-gradient(0deg, #786358 0%, #584a49 100%);
@@ -16,7 +15,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     width: 60px;
     height: 60px;
     position: absolute;
-    @include prefix(border-radius, 100%);
+    border-radius: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     cursor: pointer;
     &:before {
@@ -68,7 +67,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     top: 280px;
     margin-left: 40px;
     background-color: #a83918;
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     .getpoints-name {
         width: 452px;
         height: 30px;
@@ -90,7 +89,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
             display: inline-block;
             text-align: center;
             top: 4px;
-            @include prefix(border-radius, 6px);
+            border-radius: 6px;
             background-color: #7cbc31;
             margin: 0 2px 0 2px;
             box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25),
@@ -130,7 +129,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     top: 60px;
     left: 10px;
     background-color: #8f7a6b;
-    @include prefix(border-radius, 6px 6px 0 0);
+    border-radius: 6px 6px 0 0;
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
         inset 0px 1px 1px rgba(0, 0, 0, 0.1);
     .rating-ped-box-num {
@@ -163,7 +162,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
             }
             &.var4 {
                 background: linear-gradient(180deg, #4f4339 0%, #352c25 100%);
-                @include prefix(border-radius, 0px 0px 6px 0px);
+                border-radius: 0px 0px 6px 0px;
             }
         }
     }
@@ -181,7 +180,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
         // .ped-box-portrait {
         //     width: 66px;
         //     height: 66px;
-        //     background-image: url(~imgPath/v2-master-pic1.png);
+        //     background-image: url(../img/v2-master-pic1.png);
         //     position: absolute;
         //     margin-left: 22px;
         //     bottom: 62px;
@@ -190,7 +189,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
         .ped-box-prize {
             width: 110px;
             height: 110px;
-            background-image: url(~imgPath/icon-sunduk-200-3.png);
+            background-image: url(../img/icon-sunduk-200-3.png);
             position: absolute;
             top: 4px;
             margin-left: 1px;
@@ -216,7 +215,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
                 width: 70px;
                 height: 70px;
                 margin-left: 22px;
-                background-image: url(~imgPath/icon-sunduk-200-1.png);
+                background-image: url(../img/icon-sunduk-200-1.png);
             }
         }
         &.rate3 {
@@ -226,7 +225,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
                 width: 90px;
                 height: 90px;
                 margin-left: 10px;
-                background-image: url(~imgPath/icon-sunduk-200-2.png);
+                background-image: url(../img/icon-sunduk-200-2.png);
             }
         }
         &.rate4 {
@@ -243,14 +242,14 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     top: 440px;
     cursor: pointer;
     background: linear-gradient(180deg, #fffa8b 0%, #f5e38b 47%, #ebce8b 100%);
-    @include prefix(border-radius, 100%);
+    border-radius: 100%;
     box-shadow: inset 0px -6px 0px 0px rgba(0, 0, 0, 0.25),
         0 2px 8px 0 rgba(0, 0, 0, 0.75);
     &:after {
         content: "";
         width: 20px;
         height: 28px;
-        background-image: url(~imgPath/rating-arrow.png);
+        background-image: url(../img/rating-arrow.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -285,7 +284,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     top: 280px;
     margin-left: 40px;
     background-color: #a83918;
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     .getpoints-name {
         width: 452px;
         height: 30px;
@@ -307,7 +306,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
             display: inline-block;
             text-align: center;
             top: 4px;
-            @include prefix(border-radius, 6px);
+            border-radius: 6px;
             background-color: #7cbc31;
             margin: 0 2px 0 2px;
             box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25),
@@ -357,7 +356,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     position: absolute;
     top: 6px;
     margin-left: 6px;
-    background-image: url(~imgPath/rating-girl.png);
+    background-image: url(../img/rating-girl.png);
     background-size: 100%;
 }
 .ratingballon-box {
@@ -367,7 +366,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     top: 160px;
     margin-left: 350px;
     background-color: #ddd67a;
-    @include prefix(border-radius, 20px);
+    border-radius: 20px;
     &:before {
         content: "";
         width: 400px;
@@ -376,7 +375,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
         top: 4px;
         margin-left: -155px;
         background: linear-gradient(0deg, #f9f4ac 0%, #fefdec 100%);
-        @include prefix(border-radius, 18px);
+        border-radius: 18px;
     }
     .ballon-check {
         width: 0;
@@ -420,7 +419,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     position: absolute;
     top: 130px;
     margin-left: 158px;
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     background: linear-gradient(
         0deg,
         #c1860f 0%,
@@ -547,16 +546,16 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
                 background-size: 100%;
                 pointer-events: none;
                 &.common {
-                    background-image: url(~imgPath/icon-common.png);
+                    background-image: url(../img/icon-common.png);
                 }
                 &.epic {
-                    background-image: url(~imgPath/icon-epic.png);
+                    background-image: url(../img/icon-epic.png);
                 }
                 &.rare {
-                    background-image: url(~imgPath/icon-rare.png);
+                    background-image: url(../img/icon-rare.png);
                 }
                 &.legendary {
-                    background-image: url(~imgPath/icon-legendary.png);
+                    background-image: url(../img/icon-legendary.png);
                 }
             }
             .check {
@@ -564,7 +563,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
                 height: 30px;
                 top: -10px;
                 left: 40px;
-                background-image: url(~imgPath/paycheck.png);
+                background-image: url(../img/paycheck.png);
                 background-size: 100%;
                 position: absolute;
                 pointer-events: none;
@@ -598,7 +597,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
                     height: 60px;
                     position: absolute;
                     top: 0px;
-                    background-image: url(~imgPath/paycheck.png);
+                    background-image: url(../img/paycheck.png);
                     display: block;
                     background-size: 60px;
                     width: 60px;
@@ -610,7 +609,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
                     position: absolute;
                     top: 4px;
                     left: 12px;
-                    @include prefix(border-radius, 100%);
+                    border-radius: 100%;
                     background-color: rgba(0, 0, 0, 0.7);
                     transform: scale(0.94);
                     &:before {
@@ -675,7 +674,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
                     position: absolute;
                     top: 20px;
                     left: -6px;
-                    background-image: url(~imgPath/legendary-lock.png);
+                    background-image: url(../img/legendary-lock.png);
                     background-size: 100%;
                     img {
                         display: none;
@@ -737,7 +736,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     position: absolute;
     display: inline-block;
     left: 132px;
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     box-shadow: 0 2px 0 #a79046, 0 0 10px 6px rgba(0, 0, 0, 0.35);
     background: linear-gradient(
         -39.76deg,
@@ -754,29 +753,21 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
         background: linear-gradient(180deg, #e3d9d2 0%, #b89f8f 100%);
         top: 6px;
         margin-left: 6px;
-        @include prefix(border-radius, 6px);
+        border-radius: 6px;
     }
 
-    @include prefix(
-        transition,
-        "transform 0.35s, opacity 0.35s, z-index 0.15s"
-    );
-
+    transition: "transform 0.35s, opacity 0.35s, z-index 0.15s";
     &.card-none {
         z-index: 1;
         opacity: 0.97;
-        @include prefix(transform, translate3d(0, 0, 0) scale3d(0.8, 0.8, 1));
+        transform, translate3d(0, 0: 0) scale3d(0.8, 0.8, 1);
         filter: blur(1px);
     }
 
     &.card1 {
         z-index: 3;
         opacity: 0.97;
-        @include prefix(
-            transform,
-            translate3d(-150px, -10px, 0) scale3d(0.8, 0.8, 1)
-        );
-        filter: blur(1px);
+        transform: translate3d(-150px, -10px, 0) scale3d(0.8, 0.8, 1);        filter: blur(1px);
         &.high {
             z-index: 6;
         }
@@ -785,17 +776,13 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
     &.card2 {
         z-index: 7;
         opacity: 1;
-        @include prefix(transform, translate3d(0, 0, 0) scale3d(1, 1, 1));
+        transform, translate3d(0, 0, 0) scale3d(1, 1: 1);
     }
 
     &.card3 {
         z-index: 5;
         opacity: 0.97;
-        @include prefix(
-            transform,
-            translate3d(150px, -10px, 0) scale3d(0.8, 0.8, 1)
-        );
-        filter: blur(1px);
+        transform: translate3d(150px, -10px, 0) scale3d(0.8, 0.8, 1);        filter: blur(1px);
     }
     .rating-card-girl-name {
         width: 100%;
@@ -809,7 +796,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
             #fcdc8e 78.45%
         );
         position: absolute;
-        @include prefix(border-radius, 10px 10px 0 0);
+        border-radius: 10px 10px 0 0;
         color: rgba(39, 28, 20, 0.9);
         text-shadow: 0 1px 1px rgba(255, 255, 255, 1);
         text-align: center;
@@ -826,7 +813,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
         top: 26px;
         margin-left: 6px;
         overflow: hidden;
-        @include prefix(border-radius, 0 0 5px 5px);
+        border-radius: 0 0 5px 5px;
         box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
         img {
             margin-left: -15px;
@@ -846,7 +833,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
             position: absolute;
             bottom: 0px;
             background: linear-gradient(180deg, #9b8777 0%, #493d34 100%);
-            @include prefix(border-radius, 0 0 6px 6px);
+            border-radius: 0 0 6px 6px;
         }
         .rating-str {
             width: 10px;
@@ -884,7 +871,7 @@ body .main .left-side .left-panel .tab-panel.rating-panel {
 .ped-box-portrait {
     width: 66px;
     height: 66px;
-    background-image: url(~imgPath/v2-master-pic1.png);
+    background-image: url(../img/v2-master-pic1.png);
     position: absolute;
     &.place0 {
         display: none;

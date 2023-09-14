@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenUkiMain = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main {
     .left-side {
@@ -29,7 +28,7 @@ body .main {
                 margin: 0 2px 0 0;
                 cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before {
                     content: "";
                     width: 110px;
@@ -38,7 +37,7 @@ body .main {
                     top: 4px;
                     left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name {
@@ -178,7 +177,7 @@ body .main {
                                 font-size: 18px;
                                 font-weight: bold;
                                 text-transform: uppercase;
-                                @include prefix(border-radius, 10px);
+                                border-radius: 10px;
                                 margin: 5px 0 10px 0;
                                 box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
                                     inset 0px 1px 1px rgba(0, 0, 0, 0.1);
@@ -229,7 +228,7 @@ body .main {
                                         #007aa7 50%,
                                         #3fbae7 100%
                                     );
-                                    @include prefix(border-radius, 15px);
+                                    border-radius: 15px;
                                     color: #fff;
                                     font-size: 12px;
                                     font-weight: bold;
@@ -261,7 +260,7 @@ body .main {
                                             top: 0;
                                             width: 30px;
                                             height: 30px;
-                                            background-image: url(~imgPath/v2-lock-ic-2.png);
+                                            background-image: url(../img/v2-lock-ic-2.png);
                                             background-size: 16px;
                                             background-position: center;
                                             background-repeat: no-repeat;
@@ -300,7 +299,7 @@ body .main {
                         font-size: 18px;
                         font-weight: bold;
                         text-transform: uppercase;
-                        @include prefix(border-radius, 10px);
+                        border-radius: 10px;
                         box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
                             inset 0px 1px 1px rgba(0, 0, 0, 0.1);
                         .journal-parth-progress {
@@ -315,7 +314,7 @@ body .main {
                                 #007aa7 50%,
                                 #3fbae7 100%
                             );
-                            @include prefix(border-radius, 15px);
+                            border-radius: 15px;
                             color: #fff;
                             font-size: 12px;
                             font-weight: bold;
@@ -422,7 +421,7 @@ body .main {
                             top: 10px;
                             left: 50%;
                             transform: translateX(-50%);
-                            background-image: url(~imgPath/wpck-ram1.png);
+                            background-image: url(../img/wpck-ram1.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                             color: #fff;
@@ -446,8 +445,15 @@ body .main {
                                 height: 120px;
                                 position: relative;
                                 display: inline-block;
-                                @include background-gold;
-                                @include prefix(border-radius, 10px);
+                                background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
+                                border-radius: 10px;
                                 box-shadow: inset 0 1px 4px
                                         rgba(255, 255, 255, 0.3),
                                     0 1px 2px rgba(0, 0, 0, 0.35);
@@ -488,7 +494,7 @@ body .main {
     height: 40px;
     position: relative;
     display: inline-block;
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
     box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25),
         0 2px 4px 0 rgba(0, 0, 0, 0.55);
@@ -529,7 +535,7 @@ body .main {
     right: -6px;
     display: none;
     background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
-    @include prefix(border-radius, 7px);
+    border-radius: 7px;
     box-shadow: 0 0 7px #000;
     cursor: pointer;
     z-index: 999;
@@ -549,7 +555,7 @@ body .main {
         top: 3px;
         left: 3px;
         background: rgba(255, 255, 255, 0.25);
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
     }
 }
 

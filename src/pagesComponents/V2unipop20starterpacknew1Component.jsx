@@ -1,5 +1,5 @@
 import React from "react";
-import screenUnipopSpack from "../styles/screen-unipop-spack.scss";
+// import screenUnipopSpack from "../styles/screen-unipop-spack.scss";
 
 const V2Unipop20StarterpackNew1Component = () => {
     return (

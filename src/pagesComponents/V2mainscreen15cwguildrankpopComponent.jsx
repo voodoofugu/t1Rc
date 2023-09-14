@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenCwGuildrank from "../styles/v2-screen-cw-guildrank.scss";
+// import v2ScreenCwGuildrank from "../styles/v2-screen-cw-guildrank.scss";
 
 const V2MainScreen15CwGuildrankPopComponent = () => {
     return (

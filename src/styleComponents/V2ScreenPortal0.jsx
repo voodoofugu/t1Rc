@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenPortal0 = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 // bronze
 .suphero-squad-wrap.bronze-bg-fg {
@@ -13,17 +12,17 @@ const V2ScreenPortal0 = styled.div`
 }
 .suphero-squad-window.bronze-bg-fg {
   &:after {
-    background-image: url(~imgPath/bronze-squad-fg.png);
+    background-image: url(../img/bronze-squad-fg.png);
   }
 }
 .hero-pic-box.bronze-card-fg {
   &:after {
-    background-image: url(~imgPath/bronze-card-fg.png);
+    background-image: url(../img/bronze-card-fg.png);
   }
 }
 .suphero-card.bronze-card-flare {
   &:after {
-    background-image: url(~imgPath/bronze-flare.png);
+    background-image: url(../img/bronze-flare.png);
   }
   &:hover {
       background: #EDCEA9; border-radius: 6px;
@@ -51,22 +50,22 @@ const V2ScreenPortal0 = styled.div`
 // silver
 .suphero-squad-wrap.silver-bg-fg {
   &:before {
-    background-image: url(~imgPath/silver-squad-bg.png);
+    background-image: url(../img/silver-squad-bg.png);
   }
 }
 .suphero-squad-window.silver-bg-fg {
   &:after {
-    background-image: url(~imgPath/silver-squad-fg.png);
+    background-image: url(../img/silver-squad-fg.png);
   }
 }
 .hero-pic-box.silver-card-fg {
   &:after {
-    background-image: url(~imgPath/silver-card-fg.png);
+    background-image: url(../img/silver-card-fg.png);
   }
 }
 .suphero-card.silver-card-flare {
   &:after {
-    background-image: url(~imgPath/silver-flare.png);
+    background-image: url(../img/silver-flare.png);
   }
   &:hover {
       background: #E6E6E6; border-radius: 6px;
@@ -94,22 +93,22 @@ const V2ScreenPortal0 = styled.div`
 // gold
 .suphero-squad-wrap.gold-bg-fg {
   &:before {
-    background-image: url(~imgPath/gold-squad-bg.png);
+    background-image: url(../img/gold-squad-bg.png);
   }
 }
 .suphero-squad-window.gold-bg-fg {
   &:after {
-    background-image: url(~imgPath/gold-squad-fg.png);
+    background-image: url(../img/gold-squad-fg.png);
   }
 }
 .hero-pic-box.gold-card-fg {
   &:after {
-    background-image: url(~imgPath/gold-card-fg.png);
+    background-image: url(../img/gold-card-fg.png);
   }
 }
 .suphero-card.gold-card-flare {
   &:after {
-    background-image: url(~imgPath/gold-flare.png);
+    background-image: url(../img/gold-flare.png);
   }
   &:hover {
       background: #F4E6BE; border-radius: 6px;
@@ -137,22 +136,22 @@ const V2ScreenPortal0 = styled.div`
 // platinum
 .suphero-squad-wrap.platinum-bg-fg {
   &:before {
-    background-image: url(~imgPath/platinum-squad-bg.png);
+    background-image: url(../img/platinum-squad-bg.png);
   }
 }
 .suphero-squad-window.platinum-bg-fg {
   &:after {
-    background-image: url(~imgPath/platinum-squad-fg.png);
+    background-image: url(../img/platinum-squad-fg.png);
   }
 }
 .hero-pic-box.platinum-card-fg {
   &:after {
-    background-image: url(~imgPath/platinum-card-fg.png);
+    background-image: url(../img/platinum-card-fg.png);
   }
 }
 .suphero-card.platinum-card-flare {
   &:after {
-    background-image: url(~imgPath/platinum-flare.png);
+    background-image: url(../img/platinum-flare.png);
   }
   &:hover {
       background: #E6E6E6; border-radius: 6px;
@@ -180,22 +179,22 @@ const V2ScreenPortal0 = styled.div`
 // diamond
 .suphero-squad-wrap.diamond-bg-fg {
   &:before {
-    background-image: url(~imgPath/diamond-squad-bg.png);
+    background-image: url(../img/diamond-squad-bg.png);
   }
 }
 .suphero-squad-window.diamond-bg-fg {
   &:after {
-    background-image: url(~imgPath/diamond-squad-fg.png);
+    background-image: url(../img/diamond-squad-fg.png);
   }
 }
 .hero-pic-box.diamond-card-fg {
   &:after {
-    background-image: url(~imgPath/diamond-card-fg.png);
+    background-image: url(../img/diamond-card-fg.png);
   }
 }
 .suphero-card.diamond-card-flare {
   &:after {
-    background-image: url(~imgPath/diamond-flare.png);
+    background-image: url(../img/diamond-flare.png);
   }
   &:hover {
       background: #B3F2F5; border-radius: 6px;
@@ -230,11 +229,11 @@ body .main{
                 width: 118px; height: 40px; position: relative; top: 0; left: 0; display: inline-block;
                 margin: 0 2px 0 0; cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before{
                     content: ""; width: 110px; height: 36px; position: absolute; top: 4px; left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name{
@@ -269,8 +268,14 @@ body .main{
                     box-shadow: inset 0 0 7px #5f4f4e;
                     .tab-panel-box-title{
                         width: 300px; height: 24px; position: absolute; top: 10px; left: 399px;
-                        @include background-resourcebg;
-                        @include prefix(border-radius, 12px);
+                        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                        border-radius: 12px;
                         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                         color: #3c3737; font-size: 16px; font-weight: bold; text-transform: uppercase;
                         line-height: 24px; text-align: center;
@@ -280,7 +285,7 @@ body .main{
                         background-color: #9e8b7d; border-radius: 9px;
                         .suphero-all-box{
                             width: 833px; height: 452px; position: absolute; top: 5px; margin: 0; font-size: 0; transform: rotateY(180deg);
-                            @include prefix(border-radius, 0px); overflow: hidden; overflow-y: scroll; padding: 0; left: 5px;
+                            border-radius: 0px; overflow: hidden; overflow-y: scroll; padding: 0; left: 5px;
                             &::-webkit-scrollbar-track{
                                 -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
                                 border-radius: 10px; background-color: #7c665c;
@@ -340,7 +345,7 @@ body .main{
                                 width: 100px; height: 113px; display: inline-block; position: relative;
                                 margin-right: 5px; cursor: pointer; z-index: 1;
                                 &:active {
-                                    @include prefix(border-radius, 6px);
+                                    border-radius: 6px;
                                     transform: scale(1.01) !important;
                                     box-shadow: 0px 0px 12px rgba(0,0,0,0.2), inset 0px 0px 0px 6px rgba(255, 255, 255, 0.3) !important;
                                     .hero-pic:after {
@@ -360,7 +365,7 @@ body .main{
                                 }
                                 .hero-pic-box{
                                     width: 100px; height: 113px; position: absolute; top: 0px; left: 0px;
-                                    @include prefix(border-radius, 6px); box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
+                                    border-radius: 6px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                     .hero-pic-gacha {
                                       top: 0px; right: 0px; z-index: 2;
                                       font-size: 10px; font-weight: bold;
@@ -378,7 +383,7 @@ body .main{
                                             width: 90px; height: 103px;
                                         }
                                         width: 90px; height: 103px; position: absolute; top: 5px; left: 5px;
-                                        @include prefix(border-radius, 4px); overflow: hidden;
+                                        border-radius: 4px; overflow: hidden;
                                         &:after {
                                           content: "";
                                           box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5), inset 0px 0px 0px 1px rgba(0,0,0,0.1);
@@ -416,7 +421,7 @@ body .main{
                                 box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                 &:before {
                                   content: ""; width: 22px; height: 22px; position: absolute;
-                                  background-image: url(~imgPath/ico-click.png); background-repeat: no-repeat;
+                                  background-image: url(../img/ico-click.png); background-repeat: no-repeat;
                                   background-size: 22px; top: 3px; left: 3px;
                                 }
                                 .dpc-info {
@@ -433,7 +438,7 @@ body .main{
                                 box-shadow: 0px 0px 10px rgba(0,0,0,0.5), 0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                 &:before {
                                   content: ""; width: 22px; height: 22px; position: absolute;
-                                  background-image: url(~imgPath/ico-sword.png); background-repeat: no-repeat;
+                                  background-image: url(../img/ico-sword.png); background-repeat: no-repeat;
                                   background-size: 22px; top: 3px; left: 3px;
                                 }
                                 .dps-info {
@@ -456,7 +461,7 @@ body .main{
                           box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.5), 0 2px 4px 0 rgba(0, 0, 0, 0.3); margin-bottom: 10px;
                           &:before {
                             content: ""; width: 40px; height: 40px; position: absolute;
-                            top: 6px; left: 6px; background-image: url(~imgPath/trophy-bonus-gems.png);
+                            top: 6px; left: 6px; background-image: url(../img/trophy-bonus-gems.png);
                             background-size: 100%; background-repeat: no-repeat;
                           }
                           .gacha-value {
@@ -497,7 +502,7 @@ body .main{
                             width: 90px; height: 44px;
                             position: absolute; left: 65px; margin-top: 8px;
                             .avatar-box {
-                              width: 52px; height: 52px; background-image: url(~imgPath/v2-master-pic1.png);
+                              width: 52px; height: 52px; background-image: url(../img/v2-master-pic1.png);
                               background-size: 100%; background-repeat: no-repeat; margin-top: -4px; border-radius: 6px;
                               position: absolute; margin-left: -16px;
                             }
@@ -522,19 +527,19 @@ body .main{
                             margin-top: 63px;
                             .character-information-dpc {
                               &:before {
-                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(~imgPath/ico-click.png);
+                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(../img/ico-click.png);
                                 background-repeat: no-repeat; background-size: 22px; left: 12px;
                               }
                             }
                             .character-information-dps {
                               &:before {
-                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(~imgPath/ico-sword.png);
+                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(../img/ico-sword.png);
                                 background-repeat: no-repeat; background-size: 22px; left: 12px;
                               }
                             }
                             .character-information-killing {
                               &:before {
-                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(~imgPath/v2-fw-icon-w3.png);
+                                content: ""; width: 22px; height: 22px; position: absolute; background-image: url(../img/v2-fw-icon-w3.png);
                                 background-repeat: no-repeat; background-size: 22px; left: 12px;
                               }
                             }
@@ -550,7 +555,7 @@ body .main{
                           }
                         }
                         .special-offer-box {
-                          width: 216px; height: 100px; background-image: url(~imgPath/unipop-m-wsale227.jpg); background-size: 100%;
+                          width: 216px; height: 100px; background-image: url(../img/unipop-m-wsale227.jpg); background-size: 100%;
                           background-repeat: no-repeat; margin-bottom: 15px; border-radius: 6px;
                         }
                         .togacha-box {
@@ -559,7 +564,7 @@ body .main{
                           box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.5), 0 1px 0px 1px rgba(0, 0, 0, 0.2);
                           border-radius: 6px; margin-bottom: 15px;
                           &:before {
-                            content: ""; width: 80px; height: 80px; background-image: url(~imgPath/change-sun2.png);
+                            content: ""; width: 80px; height: 80px; background-image: url(../img/change-sun2.png);
                             background-size: 100%; background-repeat: no-repeat; position: absolute;
                             margin: -10px 0 0 -35px;
                           }
@@ -601,7 +606,7 @@ body .main{
                     .btn-close-x{
                         width: 30px; height: 30px; position: absolute; top: -6px; right: -6px;
                         background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
-                        @include prefix(border-radius, 7px); border: 4px solid #ffbe43;
+                        border-radius: 7px; border: 4px solid #ffbe43;
                         box-shadow: 0 0 7px #000;
                         cursor: pointer;
                         z-index: 999;
@@ -612,7 +617,7 @@ body .main{
                         &:after {
                             content: ""; width: 24px; height: 7px; position: absolute; top: 3px; left: 3px;
                             background: rgba(255, 255, 255, 0.25);
-                            @include prefix(border-radius, 5px);
+                            border-radius: 5px;
                         }
                     }
                 }
@@ -625,7 +630,7 @@ body .main{
 
 .color-btn{
     width: 90px; height: 40px; position: relative; display: inline-block;
-    @include prefix (border-radius, 6px);
+    border-radius: 6px;
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
     box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
     cursor: pointer;
@@ -645,53 +650,53 @@ body .main{
 
 .herostar-box{
     width: 100px; height: 26px; background-color: rgba(89, 68, 53, 0.5); position: absolute;
-    @include prefix(border-radius, 0 0 4px 4px);
+    border-radius: 0 0 4px 4px;
     .herostar{
         width: 94px; height: 18px; position: absolute;
-        background-image: url(~imgPath/hero-star05-bg.png); background-size: 100%;
+        background-image: url(../img/hero-star05-bg.png); background-size: 100%;
         &:before{
             content: ""; width: 94px; height: 18px; position: absolute;
         }
         &.lvl00{
             &:before{
                 content: ""; width: 0px; background-repeat: no-repeat; background-size: 470%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl02{
             &:before{
                 content: ""; width: 20px; background-repeat: no-repeat; background-size: 470%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl04{
             &:before{
                 content: ""; width: 40px; background-repeat: no-repeat; background-size: 235%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl06{
             &:before{
                 content: ""; width: 56px; background-repeat: no-repeat; background-size: 168%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl08{
             &:before{
                 content: ""; width: 72px; background-repeat: no-repeat; background-size: 131%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.lvl010{
             &:before{
                 content: ""; width: 94px; background-repeat: no-repeat; background-size: 100%;
-                background-image: url(~imgPath/hero-star05.png);
+                background-image: url(../img/hero-star05.png);
             }
         }
         &.ult{
             &:before{
                 content: ""; width: 94px; background-repeat: no-repeat; background-size: 100%;
-                background-image: url(~imgPath/big-hero-star05-purple.png);
+                background-image: url(../img/big-hero-star05-purple.png);
             }
         }
     }
@@ -699,14 +704,14 @@ body .main{
 
 .lvlup-btn{
     width: 196px; height: 50px;
-    @include prefix(border-radius, 6px); background-color: #dab443; margin: 0 4px 0 4px;
+    border-radius: 6px; background-color: #dab443; margin: 0 4px 0 4px;
     box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.25); cursor: pointer;
     .essence-text-box{
         width: 190px; height: 24px; position: relative; top: 3px; left: 3px; background-color: #615144;
-        @include prefix(border-radius, 4px);
+        border-radius: 4px;
         .essence-icon{
             width: 34px; height: 34px; position: relative; display: inline-block;
-            background-image: url(~imgPath/essence-80x80.png); background-size: 100%; top: -5px;
+            background-image: url(../img/essence-80x80.png); background-size: 100%; top: -5px;
         }
         .essence-text{
             text-align: center; font-size: 16px; font-weight: bold; color: #fedf87; position: relative;

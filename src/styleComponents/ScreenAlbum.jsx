@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const ScreenAlbum = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .left-side .left-panel .tab-panel.album-panel {
     .album-title {
@@ -37,7 +36,7 @@ const ScreenAlbum = styled.div`
             );
             position: relative;
             top: -1px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             box-shadow: 0 2px 0 #000, 0 1px 10px #000;
             // z-index: 2;
             margin: 0px 5px;
@@ -90,9 +89,9 @@ const ScreenAlbum = styled.div`
         background: linear-gradient(45deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
         box-shadow: 0 3px 0px #c87725, 0 0 3px #3d3737;
 
-        @include prefix(border-radius, 6px);
-        // @include prefix(border-top-right-radius, 20px);
-        // @include prefix(border-bottom-right-radius, 20px);
+        border-radius: 6px;
+        // border-top-right-radius: 20px;
+        // border-bottom-right-radius: 20px;
 
         .s {
             text-transform: capitalize;
@@ -102,7 +101,7 @@ const ScreenAlbum = styled.div`
             line-height: 24px;
             background: #534a41;
             border: none;
-            @include prefix(border-radius, 5px);
+            border-radius: 5px;
             position: absolute;
             left: 10px;
             top: 6px;
@@ -138,7 +137,7 @@ const ScreenAlbum = styled.div`
             position: absolute;
             right: 38px;
             top: 9px;
-            @include prefix(border-radius, 3px);
+            border-radius: 3px;
 
             // box-shadow: 0 3px 0px #c87725, 0 0 3px #3d3737;
             box-shadow: 0 0 3px #000;
@@ -202,7 +201,7 @@ const ScreenAlbum = styled.div`
 
             .title {
                 background: linear-gradient(10deg, #095488, #007ace, #095488);
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
 
                 line-height: 40px;
                 width: 100%;
@@ -245,7 +244,7 @@ const ScreenAlbum = styled.div`
                     border: solid 2px rgba(0, 0, 0, 0.44);
                     border-top: none;
                     border-left: none;
-                    @include prefix(transform, rotate(45deg));
+                    transform: rotate(45deg);
                 }
             }
 
@@ -255,7 +254,7 @@ const ScreenAlbum = styled.div`
             }
             &.opened .title:before {
                 content: "";
-                @include prefix(transform, rotate(-135deg));
+                transform: rotate(-135deg);
                 top: 17px;
             }
 
@@ -277,7 +276,7 @@ const ScreenAlbum = styled.div`
 
                 width: 269px;
                 height: 38px;
-                @include prefix(border-radius, 7px);
+                border-radius: 7px;
                 margin-top: 2px;
 
                 border: solid 3px #900;
@@ -297,7 +296,7 @@ const ScreenAlbum = styled.div`
                 // &:after{
                 //     content: "";
                 //     display: inline-block; width: 28px; height: 28px;
-                //     background-image: url(~imgPath/heart1.png);
+                //     background-image: url(../img/heart1.png);
                 //     background-size: 28px;
                 //     // position: absolute; right: 7px; top: 2px;
                 //     vertical-align: text-bottom;
@@ -309,9 +308,9 @@ const ScreenAlbum = styled.div`
                     display: inline-block;
                     width: 42px;
                     height: 47px;
-                    @include prefix(border-radius, 80px);
-                    @include prefix(border-top-left-radius, 20px);
-                    @include prefix(border-top-right-radius, 20px);
+                    border-radius: 80px;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
                     position: absolute;
                     right: 9px;
                     top: -6px;
@@ -336,7 +335,7 @@ const ScreenAlbum = styled.div`
                         display: block;
                         width: 21px;
                         height: 21px;
-                        background-image: url(~imgPath/heart1.png);
+                        background-image: url(../img/heart1.png);
                         background-size: 21px;
                         position: absolute;
                         left: calc(50% - 10px);
@@ -399,7 +398,7 @@ const ScreenAlbum = styled.div`
                         display: block;
                         width: 21px;
                         height: 21px;
-                        background-image: url(~imgPath/heartB.png);
+                        background-image: url(../img/heartB.png);
                         background-size: 21px;
                         position: absolute;
                         right: 7px;
@@ -407,7 +406,7 @@ const ScreenAlbum = styled.div`
                         opacity: 0.4;
                     }
                     .heart.fav {
-                        background-image: url(~imgPath/heart1.png);
+                        background-image: url(../img/heart1.png);
                         background-size: 21px;
                         opacity: 1;
                     }
@@ -446,7 +445,7 @@ const ScreenAlbum = styled.div`
         font-size: 18px;
         font-weight: bold;
         color: #582b07;
-        @include prefix(border-radius, 7px);
+        border-radius: 7px;
         // background: linear-gradient(to bottom, #095488, #007ace, #095488);
         // box-shadow: inset 0 17px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0px #403d38, 0 0 1px #403d38, inset 0 0 10px rgba(255, 255, 255, 0.33),
         //     0 0 5px #746b64, 0 0 7px #746b64, 0 0 9px #746b64;
@@ -461,7 +460,7 @@ const ScreenAlbum = styled.div`
             display: inline-block;
             width: 39px;
             height: 39px;
-            background-image: url(~imgPath/m-ico-book.png);
+            background-image: url(../img/m-ico-book.png);
             background-size: 39px;
             position: relative;
             top: -2px;
@@ -541,13 +540,13 @@ const ScreenAlbum = styled.div`
             float: left;
             position: relative;
             margin: 2px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             border: solid 3px #e4cf76;
             box-shadow: inset 0 0 5px #c87725, 0 1px 3px #000,
                 inset 0 77px 7px #bfb6ad;
             cursor: pointer;
             &.blocked {
-                background-image: url(~imgPath/zagluska.jpg);
+                background-image: url(../img/zagluska.jpg);
                 background-size: 223px;
                 cursor: default;
                 box-shadow: none;
@@ -564,13 +563,13 @@ const ScreenAlbum = styled.div`
                 line-height: 12px;
                 box-shadow: inset 0 4px 0 #000, inset 0 24px 0 #5e564e;
                 min-height: 30px;
-                @include prefix(border-radius, 6px);
+                border-radius: 6px;
                 &:before {
                     content: "";
                     display: block;
                     width: 24px;
                     height: 24px;
-                    background-image: url(~imgPath/ic-lamp.png);
+                    background-image: url(../img/ic-lamp.png);
                     background-size: 24px;
                     position: absolute;
                     left: 6px;
@@ -602,15 +601,15 @@ const ScreenAlbum = styled.div`
                 color: #453e38;
                 font-size: 16px;
                 text-shadow: 0 0 1px #000, 0 2px 2px #fff;
-                @include prefix(border-radius, 4px);
-                @include prefix(border-bottom-left-radius, 20px);
+                border-radius: 4px;
+                border-bottom-left-radius: 20px;
                 cursor: pointer;
                 &:before {
                     content: "";
                     display: block;
                     width: 21px;
                     height: 21px;
-                    background-image: url(~imgPath/heartB.png);
+                    background-image: url(../img/heartB.png);
                     background-size: 21px;
                     position: absolute;
                     right: 6px;
@@ -618,7 +617,7 @@ const ScreenAlbum = styled.div`
                     opacity: 0.4;
                 }
                 &.fav:before {
-                    background-image: url(~imgPath/heart1.png);
+                    background-image: url(../img/heart1.png);
                     background-size: 21px;
                     opacity: 1;
                 }
@@ -631,7 +630,7 @@ const ScreenAlbum = styled.div`
                 display: inline-block;
                 width: 29px;
                 height: 29px;
-                background-image: url(~imgPath/star1.png);
+                background-image: url(../img/star1.png);
                 background-size: 29px;
 
                 position: absolute;
@@ -668,7 +667,7 @@ const ScreenAlbum = styled.div`
             .img {
                 width: 100%;
                 height: 100%;
-                @include prefix(border-radius, 8px);
+                border-radius: 8px;
             }
 
             .info {
@@ -682,8 +681,8 @@ const ScreenAlbum = styled.div`
                 color: #fff;
                 line-height: 17px;
                 padding: 5px 50px;
-                @include prefix(border-bottom-left-radius, 8px);
-                @include prefix(border-bottom-right-radius, 8px);
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
             }
             .btn-fs {
                 display: inline-block;
@@ -693,7 +692,7 @@ const ScreenAlbum = styled.div`
                 bottom: 3px;
                 left: 4px;
                 background: none;
-                background-image: url(~imgPath/chahge-fullscr.png);
+                background-image: url(../img/chahge-fullscr.png);
                 background-size: 100%;
                 cursor: pointer;
             }
@@ -706,7 +705,7 @@ const ScreenAlbum = styled.div`
                 left: 5%;
                 right: 5%;
                 top: 50%;
-                @include prefix(border-radius, 5px "/" 15px);
+                border-radius: 5px "/" 15px;
                 box-shadow: inset 0 2px 10px #000;
                 border: solid 2px #534a41;
                 .prg {
@@ -715,7 +714,7 @@ const ScreenAlbum = styled.div`
                     height: 18px;
                     background: #d18d0e;
                     position: absolute;
-                    @include prefix(border-radius, 3px "/" 15px);
+                    border-radius: 3px "/" 15px;
                     box-shadow: inset 0 0 1px #000, inset 0 9px 0 #d8ac55,
                         inset 0 0 5px #6b420c;
                 }
@@ -745,7 +744,7 @@ const ScreenAlbum = styled.div`
                     width: 28px;
                     height: 28px;
                     background: #097bd3;
-                    @include prefix(border-radius, 100%);
+                    border-radius: 100%;
                     position: absolute;
                     left: 6px;
                     top: 17px;
@@ -795,7 +794,7 @@ const ScreenAlbum = styled.div`
             position: absolute;
             left: 5px;
             top: 0;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             background: linear-gradient(to top, #fff, #e4cf76, #bb8a25);
             box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa, 0 3px 4px #000;
             cursor: pointer;
@@ -812,7 +811,7 @@ const ScreenAlbum = styled.div`
                 border: solid 7px #ffa;
                 border-top: none;
                 border-right: none;
-                @include prefix(transform, rotate(45deg));
+                transform: rotate(45deg);
                 position: absolute;
                 left: 13px;
                 top: 10px;
@@ -841,7 +840,7 @@ const ScreenAlbum = styled.div`
             top: 0;
             &:before,
             &:after {
-                @include prefix(transform, rotate(-135deg));
+                transform: rotate(-135deg);
                 left: 7px;
             }
         }
@@ -856,7 +855,7 @@ const ScreenAlbum = styled.div`
     top: 5%;
     bottom: 5%;
     background: linear-gradient(to bottom, #fff, #e4cf76, #ddba62);
-    @include prefix(border-radius, 15px);
+    border-radius: 15px;
     border: solid 3px #e4cf76;
     box-shadow: inset 0 0 5px #c87725, 0 1px 3px #000, 0 0 15px #000;
     // z-index:11;
@@ -870,16 +869,16 @@ const ScreenAlbum = styled.div`
         // background: green;
         .img {
             &.zoom-in {
-                cursor: url(~imgPath/cursor-plus.png), --moz-zoom-in;
-                cursor: url(~imgPath/cursor-plus.png), --webkit-zoom-in;
-                cursor: url(~imgPath/cursor-plus.png), zoom-in;
+                cursor: url(../img/cursor-plus.png), --moz-zoom-in;
+                cursor: url(../img/cursor-plus.png), --webkit-zoom-in;
+                cursor: url(../img/cursor-plus.png), zoom-in;
             }
             // width: 100%; height: 100%;
             // display: none;
             // border: solid 2px #e4cf76;
             max-height: 540px;
             max-width: 880px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             // box-shadow: 0 0 5px #e4cf76, 0 0 5px #e4cf76, 0 0 5px #e4cf76;
         }
     }
@@ -887,7 +886,7 @@ const ScreenAlbum = styled.div`
         display: inline-block;
         width: 30px;
         height: 30px;
-        @include prefix(border-radius, 7px);
+        border-radius: 7px;
         position: absolute;
         right: -6px;
         top: -6px;
@@ -908,7 +907,7 @@ const ScreenAlbum = styled.div`
             width: 24px;
             height: 7px;
             background: rgba(255, 255, 255, 0.25);
-            @include prefix(border-radius, 5px);
+            border-radius: 5px;
             position: absolute;
             left: 3px;
             top: 3px;
@@ -922,7 +921,7 @@ const ScreenAlbum = styled.div`
         bottom: 3px;
         left: 7px;
         background: none;
-        background-image: url(~imgPath/chahge-fullscr.png);
+        background-image: url(../img/chahge-fullscr.png);
         background-size: 100%;
         cursor: pointer;
     }
@@ -941,14 +940,14 @@ const ScreenAlbum = styled.div`
         padding-right: 120px;
         color: #fff;
         font-size: 16px;
-        @include prefix(border-bottom-left-radius, 12px);
-        @include prefix(border-bottom-right-radius, 12px);
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
         .fav-box {
             display: inline-block;
             width: 40px;
             height: 32px;
-            // @include prefix(border-radius, 5px '/' 15px);
+            // border-radius: 5px '/' 15px;
             position: absolute;
             left: -7px;
             top: 2px;
@@ -958,16 +957,16 @@ const ScreenAlbum = styled.div`
             color: #453e38;
             font-size: 16px;
             text-shadow: 0 0 1px #000, 0 2px 2px #fff;
-            @include prefix(border-radius, 4px);
-            @include prefix(border-bottom-right-radius, 18px);
-            @include prefix(border-top-right-radius, 18px);
+            border-radius: 4px;
+            border-bottom-right-radius: 18px;
+            border-top-right-radius: 18px;
             cursor: pointer;
             &:before {
                 content: "";
                 display: block;
                 width: 21px;
                 height: 21px;
-                background-image: url(~imgPath/heartB.png);
+                background-image: url(../img/heartB.png);
                 background-size: 21px;
                 position: absolute;
                 right: 10px;
@@ -975,7 +974,7 @@ const ScreenAlbum = styled.div`
                 opacity: 0.4;
             }
             &.fav:before {
-                background-image: url(~imgPath/heart1.png);
+                background-image: url(../img/heart1.png);
                 background-size: 21px;
                 opacity: 1;
             }
@@ -988,7 +987,7 @@ const ScreenAlbum = styled.div`
             display: inline-block;
             width: 29px;
             height: 29px;
-            background-image: url(~imgPath/star1.png);
+            background-image: url(../img/star1.png);
             background-size: 29px;
             position: absolute;
             right: 39px;
@@ -1033,7 +1032,7 @@ const ScreenAlbum = styled.div`
             display: block;
             width: 32px;
             height: 32px;
-            background-image: url(~imgPath/heart1.png);
+            background-image: url(../img/heart1.png);
             background-size: 32px;
             position: absolute;
             left: 10px;
@@ -1100,12 +1099,12 @@ const ScreenAlbum = styled.div`
             margin-bottom: 5px;
             box-shadow: 0 0 2px #400;
             background: linear-gradient(to bottom, #c12600, #6e0303);
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             .btn-box-bg {
                 display: inline-block;
                 padding: 2px 5px;
                 margin: 5px;
-                @include prefix(border-radius, 7px);
+                border-radius: 7px;
                 background: linear-gradient(to top, #c12600, #6e0303);
                 box-shadow: 0 0 5px #feff58, inset 0 0 2px #feff58;
                 border: 1px solid #feff58;
@@ -1141,17 +1140,17 @@ const ScreenAlbum = styled.div`
                     height: 22px;
                     background: #a47536;
                     border: solid 1px #a47536;
-                    background-image: url(~imgPath/ico-real.png);
+                    background-image: url(../img/ico-real.png);
                     background-size: 22px;
                     vertical-align: text-bottom;
                     margin-right: 5px;
-                    @include prefix(border-radius, 100%);
+                    border-radius: 100%;
                     position: relative;
                     top: 3px;
                 }
                 &.diamonds {
                     &:before {
-                        background-image: url(~imgPath/80-topup.png);
+                        background-image: url(../img/80-topup.png);
                         background-size: 24px;
                     }
                 }
@@ -1195,22 +1194,22 @@ const ScreenAlbum = styled.div`
     }
 
     .zoom-in {
-        cursor: url(~imgPath/cursor-plus.png), --moz-zoom-in;
-        cursor: url(~imgPath/cursor-plus.png), --webkit-zoom-in;
-        cursor: url(~imgPath/cursor-plus.png), zoom-in;
+        cursor: url(../img/cursor-plus.png), --moz-zoom-in;
+        cursor: url(../img/cursor-plus.png), --webkit-zoom-in;
+        cursor: url(../img/cursor-plus.png), zoom-in;
     }
 
     .zoom-out {
-        cursor: url(~imgPath/cursor-minus.png), --moz-zoom-out;
-        cursor: url(~imgPath/cursor-minus.png), --webkit-zoom-out;
-        cursor: url(~imgPath/cursor-minus.png), zoom-out;
+        cursor: url(../img/cursor-minus.png), --moz-zoom-out;
+        cursor: url(../img/cursor-minus.png), --webkit-zoom-out;
+        cursor: url(../img/cursor-minus.png), zoom-out;
     }
 
     .btn-close-x {
         display: block;
         width: 50px;
         height: 50px;
-        @include prefix(border-radius, 100%);
+        border-radius: 100%;
         position: absolute;
         right: 10px;
         top: 10px;
@@ -1234,7 +1233,7 @@ const ScreenAlbum = styled.div`
         left: 0;
         top: calc(50% - 25px);
         // background: #fff;
-        // @include prefix(border-radius, 100%);
+        // border-radius: 100%;
         // background: red;
         .scroll-left,
         .scroll-right {
@@ -1245,7 +1244,7 @@ const ScreenAlbum = styled.div`
             position: absolute;
             left: 10px;
             top: 0;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             cursor: pointer;
             &.disabled {
                 cursor: not-allowed;
@@ -1259,7 +1258,7 @@ const ScreenAlbum = styled.div`
                 border: solid 5px #000;
                 border-top: none;
                 border-right: none;
-                @include prefix(transform, rotate(45deg));
+                transform: rotate(45deg);
                 position: absolute;
                 left: 20px;
                 top: 16px;
@@ -1272,7 +1271,7 @@ const ScreenAlbum = styled.div`
             top: 0;
             &:before,
             &:after {
-                @include prefix(transform, rotate(-135deg));
+                transform: rotate(-135deg);
                 left: 13px;
             }
         }

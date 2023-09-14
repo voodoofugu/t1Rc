@@ -1,10 +1,9 @@
 import React from "react";
-import AaStyleComponentsMap from "../styleComponents/AaStyleComponentsMap.jsx";
-// import screenFortunaRoundMain from "../styles/screen-fortuna-round-main.scss";
+import ScreenFortunaRoundMain from "../styleComponents/ScreenFortunaRoundMain.jsx";
 
 const MainScreen16FortunaRoundMainpopComponent = () => {
     return (
-        <AaStyleComponentsMap.ScreenFortunaRoundMain>
+        <ScreenFortunaRoundMain>
             <div className="main world1">
                 <div className="main-bg"></div>
                 <div className="popup-layer" style={{ display: "block" }}>
@@ -438,7 +437,9 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                                         <div className="f2-prgbar-empty">
                                             <div
                                                 className="f2-prgbar-full"
-                                                style={{ width: "15%" }}></div>
+                                                style={{
+                                                    width: "15%",
+                                                }}></div>
                                             <div className="f2-prgbar-text">
                                                 100/1500
                                             </div>
@@ -527,7 +528,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     </div>
                 </div>
             </div>
-        </AaStyleComponentsMap.ScreenFortunaRoundMain>
+        </ScreenFortunaRoundMain>
     );
 };
 

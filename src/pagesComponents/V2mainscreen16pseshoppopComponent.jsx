@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenPseShop from "../styles/v2-screen-pse-shop.scss";
+// import v2ScreenPseShop from "../styles/v2-screen-pse-shop.scss";
 
 const V2MainScreen16PseShopPopComponent = () => {
     return (

@@ -1,125 +1,280 @@
-
 import styled from "styled-components";
 
 const V2ScreenWorldDistrict = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
-
-.popup-layer .m-popup.world-district {
-    width: 1000px;
-    height: 570px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    &:before {
-        background: linear-gradient(90deg, #444156 20%, #44415600),
-            url(~imgPath/hero_bg@2x.png), #444156;
-        background-size: cover;
-        background-position: 0, 178px center, 0;
-        background-repeat: no-repeat;
-    }
-    &:after {
-        content: "";
-        position: absolute;
-        top: 272px;
-        right: -100px;
-        width: 270px;
-        height: 333px;
-        background-image: url(~imgPath/break-girl852.png);
-        background-position: 8px top;
-        background-repeat: no-repeat;
-        background-size: 346px auto;
-        pointer-events: none;
-    }
-    .title {
-        color: #572f14;
-    }
-    .map-locs-wrap {
-        width: 366px;
-        height: 460px;
-        top: 80px;
-        left: 30px;
-        pointer-events: none;
-        z-index: 1;
-        background: rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1),
-            0 1px 1px rgba(255, 255, 255, 0.1);
-        .map-locs-title {
-            width: fit-content;
-            white-space: nowrap;
-            padding: 0 10px;
-            line-height: 32px;
-            position: absolute;
-            left: 50%;
-            top: 18px;
-            transform: translateX(-50%);
-            font-weight: bold;
-            font-size: 16px;
-            text-transform: uppercase;
-            right: 0;
-            color: #fffd9b;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6),
-                0 1px 4px rgba(0, 0, 0, 0.4);
-            text-align: center;
-            background: url(~imgPath/banner-bg1.png);
-            background-position: center 0;
-            background-size: auto 100%;
+    .popup-layer .m-popup.world-district {
+        width: 1000px;
+        height: 570px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &:before {
+            background: linear-gradient(90deg, #444156 20%, #44415600),
+                url(../img/hero_bg@2x.png), #444156;
+            background-size: cover;
+            background-position: 0, 178px center, 0;
             background-repeat: no-repeat;
-            filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 272px;
+            right: -100px;
+            width: 270px;
+            height: 333px;
+            background-image: url(../img/break-girl852.png);
+            background-position: 8px top;
+            background-repeat: no-repeat;
+            background-size: 346px auto;
+            pointer-events: none;
+        }
+        .title {
+            color: #572f14;
+        }
+        .map-locs-wrap {
+            width: 366px;
+            height: 460px;
+            top: 80px;
+            left: 30px;
+            pointer-events: none;
             z-index: 1;
-            &:before,
-            &:after {
-                content: "";
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1),
+                0 1px 1px rgba(255, 255, 255, 0.1);
+            .map-locs-title {
+                width: fit-content;
+                white-space: nowrap;
+                padding: 0 10px;
+                line-height: 32px;
                 position: absolute;
-                top: 0;
-                width: 22px;
-                height: 100%;
-                background: url(~imgPath/banner-bg1.png);
-                background-position: 0 0;
+                left: 50%;
+                top: 18px;
+                transform: translateX(-50%);
+                font-weight: bold;
+                font-size: 16px;
+                text-transform: uppercase;
+                right: 0;
+                color: #fffd9b;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6),
+                    0 1px 4px rgba(0, 0, 0, 0.4);
+                text-align: center;
+                background: url(../img/banner-bg1.png);
+                background-position: center 0;
                 background-size: auto 100%;
                 background-repeat: no-repeat;
+                filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
+                z-index: 1;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    width: 22px;
+                    height: 100%;
+                    background: url(../img/banner-bg1.png);
+                    background-position: 0 0;
+                    background-size: auto 100%;
+                    background-repeat: no-repeat;
+                }
+                &:before {
+                    left: -20px;
+                }
+                &:after {
+                    right: -20px;
+                    transform: scaleX(-1);
+                }
             }
-            &:before {
-                left: -20px;
+            .loc-box {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3))
+                    drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+                > * {
+                    top: unset;
+                    left: unset;
+                    right: unset;
+                    pointer-events: none;
+                }
+                .lock-num-box {
+                    width: 32px;
+                    height: 32px;
+                    position: absolute;
+                    bottom: 18px;
+                    z-index: 1;
+                    background: #ac4818;
+                    border-radius: 100%;
+                    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2),
+                        inset 0 0 0 3px #db8932,
+                        inset 0 2px 2px 3px rgba(0, 0, 0, 0.2),
+                        0 1px 4px rgba(0, 0, 0, 0.6);
+                    .num {
+                        font-weight: bold;
+                        font-size: 20px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        line-height: 32px;
+                        text-shadow: none;
+                        background: linear-gradient(
+                            0deg,
+                            rgb(255, 196, 0) 10%,
+                            rgb(255, 255, 255)
+                        );
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.4));
+                    }
+                }
+                .map-bg {
+                    &:before {
+                        background-position: 0 310px;
+                        animation: opa 0.25s 1;
+                    }
+                    &:after {
+                        background: rgba(255, 255, 255, 0.2);
+                        mix-blend-mode: overlay;
+                        transition: ease-in-out 0.1s 0.1s;
+                    }
+                    .station-wrap,
+                    .chest-wrap,
+                    .svg-frame {
+                        display: none;
+                    }
+                    &.map-location1 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "1";
+                            }
+                        }
+                    }
+                    &.map-location2 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "2";
+                            }
+                        }
+                    }
+                    &.map-location3 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "3";
+                            }
+                        }
+                    }
+                    &.map-location4 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "4";
+                            }
+                        }
+                    }
+                    &.map-location5 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "5";
+                            }
+                        }
+                    }
+                    &.map-location6 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "6";
+                            }
+                        }
+                    }
+                    &.map-location7 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "7";
+                            }
+                        }
+                    }
+                    &.map-location8 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "8";
+                            }
+                        }
+                    }
+                    &.map-location9 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "9";
+                            }
+                        }
+                    }
+                    &.map-location10 ~ .lock-num-box {
+                        .num {
+                            &:before {
+                                content: "10";
+                            }
+                        }
+                    }
+                }
             }
-            &:after {
-                right: -20px;
-                transform: scaleX(-1);
+            &.map-01 {
+                background: url(../img/portal-map-location-01.jpg), #483a9f;
+                background-position: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-blend-mode: multiply;
+            }
+            &.map-02 {
+                background: url(../img/portal-map-location-02.jpg), #483a9f;
+                background-position: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-blend-mode: multiply;
             }
         }
-        .loc-box {
-            width: 100%;
-            height: 100%;
+        .cw-clan-order-box-all {
+            width: 554px;
+            height: 460px;
+            position: absolute;
+            top: 80px;
+            right: 30px;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3))
-                drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
-            > * {
-                top: unset;
-                left: unset;
-                right: unset;
-                pointer-events: none;
-            }
-            .lock-num-box {
-                width: 32px;
-                height: 32px;
-                position: absolute;
-                bottom: 18px;
-                z-index: 1;
-                background: #ac4818;
-                border-radius: 100%;
-                box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2),
-                    inset 0 0 0 3px #db8932,
-                    inset 0 2px 2px 3px rgba(0, 0, 0, 0.2),
-                    0 1px 4px rgba(0, 0, 0, 0.6);
-                .num {
+            flex-direction: column;
+            justify-content: space-between;
+            .rewards-tit {
+                width: 100%;
+                height: 40px;
+                background: linear-gradient(
+                    90deg,
+                    rgba(255, 191, 0, 0),
+                    rgba(255, 191, 0, 0.4),
+                    rgba(255, 191, 0, 0)
+                );
+                filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.6));
+                position: relative;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(
+                        90deg,
+                        rgba(255, 191, 0, 0),
+                        rgba(255, 202, 44, 0.8),
+                        rgba(255, 191, 0, 0)
+                    );
+                }
+                &:before {
+                    top: 0;
+                }
+                &:after {
+                    bottom: 0;
+                }
+                .tit-text {
                     font-weight: bold;
-                    font-size: 20px;
+                    font-size: 22px;
                     text-transform: uppercase;
                     text-align: center;
-                    line-height: 32px;
+                    line-height: 40px;
                     text-shadow: none;
                     background: linear-gradient(
                         0deg,
@@ -131,368 +286,212 @@ const V2ScreenWorldDistrict = styled.div`
                     filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.4));
                 }
             }
-            .map-bg {
-                &:before {
-                    background-position: 0 310px;
-                    animation: opa 0.25s 1;
-                }
-                &:after {
-                    background: rgba(255, 255, 255, 0.2);
-                    mix-blend-mode: overlay;
-                    transition: ease-in-out 0.1s 0.1s;
-                }
-                .station-wrap,
-                .chest-wrap,
-                .svg-frame {
-                    display: none;
-                }
-                &.map-location1 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "1";
-                        }
-                    }
-                }
-                &.map-location2 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "2";
-                        }
-                    }
-                }
-                &.map-location3 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "3";
-                        }
-                    }
-                }
-                &.map-location4 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "4";
-                        }
-                    }
-                }
-                &.map-location5 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "5";
-                        }
-                    }
-                }
-                &.map-location6 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "6";
-                        }
-                    }
-                }
-                &.map-location7 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "7";
-                        }
-                    }
-                }
-                &.map-location8 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "8";
-                        }
-                    }
-                }
-                &.map-location9 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "9";
-                        }
-                    }
-                }
-                &.map-location10 ~ .lock-num-box {
-                    .num {
-                        &:before {
-                            content: "10";
-                        }
-                    }
-                }
-            }
-        }
-        &.map-01 {
-            background: url(~imgPath/portal-map-location-01.jpg), #483a9f;
-            background-position: 0;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-blend-mode: multiply;
-        }
-        &.map-02 {
-            background: url(~imgPath/portal-map-location-02.jpg), #483a9f;
-            background-position: 0;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-blend-mode: multiply;
-        }
-    }
-    .cw-clan-order-box-all {
-        width: 554px;
-        height: 460px;
-        position: absolute;
-        top: 80px;
-        right: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        .rewards-tit {
-            width: 100%;
-            height: 40px;
-            background: linear-gradient(
-                90deg,
-                rgba(255, 191, 0, 0),
-                rgba(255, 191, 0, 0.4),
-                rgba(255, 191, 0, 0)
-            );
-            filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.6));
-            position: relative;
-            &:before,
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background: linear-gradient(
-                    90deg,
-                    rgba(255, 191, 0, 0),
-                    rgba(255, 202, 44, 0.8),
-                    rgba(255, 191, 0, 0)
-                );
-            }
-            &:before {
-                top: 0;
-            }
-            &:after {
-                bottom: 0;
-            }
-            .tit-text {
-                font-weight: bold;
-                font-size: 22px;
-                text-transform: uppercase;
-                text-align: center;
-                line-height: 40px;
-                text-shadow: none;
-                background: linear-gradient(
-                    0deg,
-                    rgb(255, 196, 0) 10%,
-                    rgb(255, 255, 255)
-                );
-                -webkit-background-clip: text;
-                color: transparent;
-                filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.4));
-            }
-        }
-        .cw-clan-order-ab-box-all {
-            width: calc(100% - 108px);
-            padding: 6px 54px;
-            max-height: 332px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            .cw-clan-order-ab-box {
-                width: 100px;
-                height: 100px;
-                position: relative;
-                display: inline-block;
-                border-radius: 10px;
-                box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
-                    0 1px 4px 1px rgba(0, 0, 0, 0.4), inset 0 0 0 2px #ff9b37;
-                background: url(~imgPath/v2-trophy-bg.jpg);
-                background-size: 100%;
-                background-repeat: no-repeat;
-                overflow: hidden;
-                &:before {
-                    content: "";
-                    width: calc(100% - 4px);
-                    height: calc(100% - 4px);
-                    position: absolute;
-                    top: 2px;
-                    left: 2px;
-                    background: radial-gradient(
-                        rgba(213, 187, 133, 0.5) 50%,
-                        rgba(255, 255, 255, 0) 100%
-                    );
-                    box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.35);
-                    border-radius: 8px;
-                }
-                &.upgrade {
-                    height: 170px;
-                }
-                .cw-clan-order-ab-pic {
-                    width: calc(100% - 4px);
-                    height: calc(100% - 4px);
-                    position: absolute;
-                    top: 2px;
-                    left: 2px;
-                    img {
-                        width: 100%;
-                    }
-                }
-                .cw-clan-order-ab-prg-box {
-                    min-width: 54px;
-                    max-width: 84px;
-                    width: max-content;
-                    min-height: 18px;
-                    height: fit-content;
-                    line-height: 12px;
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    text-align: center;
-                    margin: 0 auto;
-                    color: #fff;
-                    font-size: 12px;
-                    font-weight: bold;
-                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
-                        0 1px 4px rgba(0, 0, 0, 0.6);
-                    background: linear-gradient(#805a31, #c18346);
-                    border-radius: 10px 10px 0 0;
-                    box-shadow: inset 0 1px 0 #dea569;
-                    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0));
-                    &:before,
-                    &:after {
-                        content: "";
-                        width: 9px;
-                        height: 100%;
-                        position: absolute;
-                        top: 0px;
-                        background: linear-gradient(#875c29, #d49548 94%);
-                        background: linear-gradient(#805a31, #c18346 94%);
-                        z-index: -1;
-                    }
-                    &:before {
-                        left: -3px;
-                        transform: skewX(-20deg);
-                        border-radius: 6.6px 0 0 0;
-                        box-shadow: inset 1px 1px 0 #dea569;
-                    }
-                    &:after {
-                        right: -3px;
-                        transform: skewX(20deg);
-                        border-radius: 0 6.6px 0 0;
-                        box-shadow: inset -1px 1px 0 #dea569;
-                    }
-                    .cw-clan-order-ab-prg {
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        top: 1px;
-                        border-radius: 13px 13px 0 0;
-                        &.red {
-                            background: radial-gradient(#a51717, #a5171700 80%);
-                        }
-                    }
-                    .cw-clan-order-ab-prg-text {
-                        position: relative;
-                        padding: 4px 0;
-                    }
-                }
-            }
-        }
-        .cw-clan-order-rew-box-all {
-            width: 100%;
-            .cw-clan-order-rew-box {
-                width: 100%;
-                height: 80px;
-                position: absolute;
-                top: 40px;
-                font-size: 0;
-                .cw-clan-order-rew {
-                    width: 80px;
-                    height: 80px;
+            .cw-clan-order-ab-box-all {
+                width: calc(100% - 108px);
+                padding: 6px 54px;
+                max-height: 332px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                .cw-clan-order-ab-box {
+                    width: 100px;
+                    height: 100px;
                     position: relative;
                     display: inline-block;
-                    background: linear-gradient(
-                        180deg,
-                        #c68300 0%,
-                        #f4dfb6 50%,
-                        #c68200 70%,
-                        #fad489 85%,
-                        #c78302 100%
-                    );
-                    @include prefix(border-radius, 8px);
-                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-                    margin: 0 5px;
+                    border-radius: 10px;
+                    box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
+                        0 1px 4px 1px rgba(0, 0, 0, 0.4),
+                        inset 0 0 0 2px #ff9b37;
+                    background: url(../img/v2-trophy-bg.jpg);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    overflow: hidden;
                     &:before {
                         content: "";
-                        width: 76px;
-                        height: 76px;
+                        width: calc(100% - 4px);
+                        height: calc(100% - 4px);
                         position: absolute;
                         top: 2px;
                         left: 2px;
-                        background: linear-gradient(
-                            0deg,
-                            #e9b039 0%,
-                            #fffe9a 100%
+                        background: radial-gradient(
+                            rgba(213, 187, 133, 0.5) 50%,
+                            rgba(255, 255, 255, 0) 100%
                         );
-                        @include prefix(border-radius, 6px);
+                        box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.35);
+                        border-radius: 8px;
                     }
-                    .cw-clan-order-rew-img {
-                        width: 70px;
-                        height: 70px;
+                    &.upgrade {
+                        height: 170px;
+                    }
+                    .cw-clan-order-ab-pic {
+                        width: calc(100% - 4px);
+                        height: calc(100% - 4px);
                         position: absolute;
-                        top: 5px;
-                        left: 5px;
+                        top: 2px;
+                        left: 2px;
                         img {
-                            width: 70px;
+                            width: 100%;
                         }
                     }
-                    .cw-clan-order-rew-amount {
-                        width: 50px;
-                        height: 24px;
+                    .cw-clan-order-ab-prg-box {
+                        min-width: 54px;
+                        max-width: 84px;
+                        width: max-content;
+                        min-height: 18px;
+                        height: fit-content;
+                        line-height: 12px;
                         position: absolute;
-                        top: 55px;
-                        left: 30px;
-                        background: linear-gradient(
-                            0deg,
-                            #996b1d 0%,
-                            #e5ca72 50%,
-                            #996b1d 100%
-                        );
-                        -webkit-border-radius: 10px;
-                        -moz-border-radius: 10px;
-                        -ms-border-radius: 10px;
-                        -o-border-radius: 10px;
-                        border-radius: 10px;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        text-align: center;
+                        margin: 0 auto;
                         color: #fff;
-                        font-size: 14px;
+                        font-size: 12px;
                         font-weight: bold;
-                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-                        line-height: 24px;
-                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
+                            0 1px 4px rgba(0, 0, 0, 0.6);
+                        background: linear-gradient(#805a31, #c18346);
+                        border-radius: 10px 10px 0 0;
+                        box-shadow: inset 0 1px 0 #dea569;
+                        filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0));
+                        &:before,
+                        &:after {
+                            content: "";
+                            width: 9px;
+                            height: 100%;
+                            position: absolute;
+                            top: 0px;
+                            background: linear-gradient(#875c29, #d49548 94%);
+                            background: linear-gradient(#805a31, #c18346 94%);
+                            z-index: -1;
+                        }
+                        &:before {
+                            left: -3px;
+                            transform: skewX(-20deg);
+                            border-radius: 6.6px 0 0 0;
+                            box-shadow: inset 1px 1px 0 #dea569;
+                        }
+                        &:after {
+                            right: -3px;
+                            transform: skewX(20deg);
+                            border-radius: 0 6.6px 0 0;
+                            box-shadow: inset -1px 1px 0 #dea569;
+                        }
+                        .cw-clan-order-ab-prg {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 1px;
+                            border-radius: 13px 13px 0 0;
+                            &.red {
+                                background: radial-gradient(
+                                    #a51717,
+                                    #a5171700 80%
+                                );
+                            }
+                        }
+                        .cw-clan-order-ab-prg-text {
+                            position: relative;
+                            padding: 4px 0;
+                        }
                     }
                 }
             }
-            .color-btn.working {
-                width: 180px;
-                top: initial;
-                .color-btn-text {
-                    font-size: 16px;
-                    top: 12px;
+            .cw-clan-order-rew-box-all {
+                width: 100%;
+                .cw-clan-order-rew-box {
+                    width: 100%;
+                    height: 80px;
+                    position: absolute;
+                    top: 40px;
+                    font-size: 0;
+                    .cw-clan-order-rew {
+                        width: 80px;
+                        height: 80px;
+                        position: relative;
+                        display: inline-block;
+                        background: linear-gradient(
+                            180deg,
+                            #c68300 0%,
+                            #f4dfb6 50%,
+                            #c68200 70%,
+                            #fad489 85%,
+                            #c78302 100%
+                        );
+                        border-radius: 8px;
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                        margin: 0 5px;
+                        &:before {
+                            content: "";
+                            width: 76px;
+                            height: 76px;
+                            position: absolute;
+                            top: 2px;
+                            left: 2px;
+                            background: linear-gradient(
+                                0deg,
+                                #e9b039 0%,
+                                #fffe9a 100%
+                            );
+                            border-radius: 6px;
+                        }
+                        .cw-clan-order-rew-img {
+                            width: 70px;
+                            height: 70px;
+                            position: absolute;
+                            top: 5px;
+                            left: 5px;
+                            img {
+                                width: 70px;
+                            }
+                        }
+                        .cw-clan-order-rew-amount {
+                            width: 50px;
+                            height: 24px;
+                            position: absolute;
+                            top: 55px;
+                            left: 30px;
+                            background: linear-gradient(
+                                0deg,
+                                #996b1d 0%,
+                                #e5ca72 50%,
+                                #996b1d 100%
+                            );
+                            -webkit-border-radius: 10px;
+                            -moz-border-radius: 10px;
+                            -ms-border-radius: 10px;
+                            -o-border-radius: 10px;
+                            border-radius: 10px;
+                            color: #fff;
+                            font-size: 14px;
+                            font-weight: bold;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+                            line-height: 24px;
+                            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+                        }
+                    }
                 }
-                &:active {
-                    box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
-                        inset 0 2px 2px rgba(0, 0, 0, 0.2);
+                .color-btn.working {
+                    width: 180px;
+                    top: initial;
                     .color-btn-text {
-                        top: 13px;
+                        font-size: 16px;
+                        top: 12px;
+                    }
+                    &:active {
+                        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
+                            inset 0 2px 2px rgba(0, 0, 0, 0.2);
+                        .color-btn-text {
+                            top: 13px;
+                        }
                     }
                 }
             }
         }
     }
-}
-
 `;
 
 export default V2ScreenWorldDistrict;

@@ -1,123 +1,230 @@
-
 import styled from "styled-components";
 
 const V2ScreenCwGuildmanage = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
-
-
-.popup-layer .m-popup.guildmanage{
-    width: 590px; height: 530px; left: 305px; top: 25px;
-    .title{color: #572f14;}
-    .color-box{
-        background: linear-gradient(136deg, #8e7453 0%, #e3c7a3 50%, #ae916a 85%, #8f7553 100%);
-        &:before{display: none};
-        &:after{display: none};
-    }
-    .cw-clan-manage-box-all{
-        width: 530px; height: 420px; position: absolute; top: 80px; left: 30px;
-        background-color: #cbaa81;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-        .cw-main-right-b-box-scroll{
-            width: 510px; height: 400px; position: absolute; top: 10px; left: 10px;
-            overflow: hidden;
-            overflow-y: scroll;
-            &::-webkit-scrollbar-track {
-                background-color: #524544;
+    .popup-layer .m-popup.guildmanage {
+        width: 590px;
+        height: 530px;
+        left: 305px;
+        top: 25px;
+        .title {
+            color: #572f14;
+        }
+        .color-box {
+            background: linear-gradient(
+                136deg,
+                #8e7453 0%,
+                #e3c7a3 50%,
+                #ae916a 85%,
+                #8f7553 100%
+            );
+            &:before {
+                display: none;
             }
-            &::-webkit-scrollbar {width: 8px;}
-            &::-webkit-scrollbar-thumb { 
-                @include background-resourcebg;
+            &:after {
+                display: none;
             }
-            .cw-main-right-b-av{
-                width: 380px; height: 80px; position: relative; display: inline-block; left: -60px;
-                background-color: #f3d6b0;
-                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
-                .cw-main-girl-ava{
-                    width: 70px; height: 70px; position: absolute; top: 5px; left: 5px;
-                    background: linear-gradient(0deg, #f28e26 0%, #fd644f 100%);
-                    @include prefix(border-radius, 8px);
-                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
-                    .cw-main-girl-ava-img{
-                        width: 66px; height: 66px; position: absolute; top: 2px; left: 2px;
-                        @include prefix(border-radius, 6px);
-                        overflow: hidden;
-                        img{width: 66px;}
-                    }
+        }
+        .cw-clan-manage-box-all {
+            width: 530px;
+            height: 420px;
+            position: absolute;
+            top: 80px;
+            left: 30px;
+            background-color: #cbaa81;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            .cw-main-right-b-box-scroll {
+                width: 510px;
+                height: 400px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                overflow: hidden;
+                overflow-y: scroll;
+                &::-webkit-scrollbar-track {
+                    background-color: #524544;
                 }
-                .cw-girl-num-big{
-                    width: 50px; height: 20px; position: absolute; top: 30px; left: 80px;
-                    background-color: #544746;
-                    color: #d8bb96; font-size: 12px; font-weight: bold; text-align: center; line-height: 20px;
-                    @include prefix(border-radius, 20px); 
+                &::-webkit-scrollbar {
+                    width: 8px;
                 }
-                .cw-main-right-b-name-box{
-                    width: 144px; height: 70px; position: absolute; top: 5px; left: 135px;
-                    border-left: 1px solid #cbaa81;
-                    border-right: 1px solid #cbaa81;
-                    .cw-main-right-b-name, .cw-main-right-b-rank{
-                        width: 130px; height: auto; position: absolute; top: 5px; left: 7px;
-                        color: #544746; font-size: 14px; font-weight: bold;
-                    }
-                    .cw-main-right-b-rank{
-                        font-size: 12px; font-style: italic; top: 50px;
-                    }
+                &::-webkit-scrollbar-thumb {
+                    background: linear-gradient(
+                        0deg,
+                        #ffe199 0%,
+                        #f4c657 18%,
+                        #ffe199 60%,
+                        #f4c557 85%,
+                        #ffe199 100%
+                    );
                 }
-                .cw-main-right-b-at-box{
-                    width: 90px; height: 70px; position: absolute; top: 5px; right: 5px;
-                    .cw-main-right-b-at-pic{
-                        width: 42px; height: 42px; position: absolute; left: 24px; top: 5px;
-                        background-image: url(~imgPath/v2-fw-icon-w3.png);
-                        background-size: 100%;
-                        background-repeat: no-repeat;
-                    }
-                    .cw-main-right-b-at-text{
-                        width: 100%; height: auto; position: absolute; bottom: 5px; text-align: center;
-                        color: #544746; font-size: 10px; font-weight: bold; text-transform: uppercase;
-                    }
-                }
-                .cw-main-right-btn-box {
-                    position: absolute;
-                    top: 0px;
-                    right: -110px;
-                    width: 100px;
+                .cw-main-right-b-av {
+                    width: 380px;
                     height: 80px;
+                    position: relative;
+                    display: inline-block;
+                    left: -60px;
+                    background-color: #f3d6b0;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+                    .cw-main-girl-ava {
+                        width: 70px;
+                        height: 70px;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        background: linear-gradient(
+                            0deg,
+                            #f28e26 0%,
+                            #fd644f 100%
+                        );
+                        border-radius: 8px;
+                        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+                        .cw-main-girl-ava-img {
+                            width: 66px;
+                            height: 66px;
+                            position: absolute;
+                            top: 2px;
+                            left: 2px;
+                            border-radius: 6px;
+                            overflow: hidden;
+                            img {
+                                width: 66px;
+                            }
+                        }
+                    }
+                    .cw-girl-num-big {
+                        width: 50px;
+                        height: 20px;
+                        position: absolute;
+                        top: 30px;
+                        left: 80px;
+                        background-color: #544746;
+                        color: #d8bb96;
+                        font-size: 12px;
+                        font-weight: bold;
+                        text-align: center;
+                        line-height: 20px;
+                        border-radius: 20px;
+                    }
+                    .cw-main-right-b-name-box {
+                        width: 144px;
+                        height: 70px;
+                        position: absolute;
+                        top: 5px;
+                        left: 135px;
+                        border-left: 1px solid #cbaa81;
+                        border-right: 1px solid #cbaa81;
+                        .cw-main-right-b-name,
+                        .cw-main-right-b-rank {
+                            width: 130px;
+                            height: auto;
+                            position: absolute;
+                            top: 5px;
+                            left: 7px;
+                            color: #544746;
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                        .cw-main-right-b-rank {
+                            font-size: 12px;
+                            font-style: italic;
+                            top: 50px;
+                        }
+                    }
+                    .cw-main-right-b-at-box {
+                        width: 90px;
+                        height: 70px;
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        .cw-main-right-b-at-pic {
+                            width: 42px;
+                            height: 42px;
+                            position: absolute;
+                            left: 24px;
+                            top: 5px;
+                            background-image: url(../img/v2-fw-icon-w3.png);
+                            background-size: 100%;
+                            background-repeat: no-repeat;
+                        }
+                        .cw-main-right-b-at-text {
+                            width: 100%;
+                            height: auto;
+                            position: absolute;
+                            bottom: 5px;
+                            text-align: center;
+                            color: #544746;
+                            font-size: 10px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                        }
+                    }
+                    .cw-main-right-btn-box {
+                        position: absolute;
+                        top: 0px;
+                        right: -110px;
+                        width: 100px;
+                        height: 80px;
+                    }
                 }
             }
         }
     }
-}
 
-
-
-.color-btn{
-    width: 90px; height: 50px; position: relative; display: inline-block;
-    @include prefix(border-radius, 6px);
-    background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
-    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
-    cursor: pointer;
-    .color-btn-text{
-        top: 10px; position: relative; color: #fff; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-        text-align: center; font-weight: bold; text-transform: uppercase; font-size: 14px;
+    .color-btn {
+        width: 90px;
+        height: 50px;
+        position: relative;
+        display: inline-block;
+        border-radius: 6px;
+        background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+        box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25),
+            0 2px 4px 0 rgba(0, 0, 0, 0.55);
+        cursor: pointer;
+        .color-btn-text {
+            top: 10px;
+            position: relative;
+            color: #fff;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        &:active {
+            box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
+                inset 0 2px 2px rgba(0, 0, 0, 0.2);
+            .color-btn-text {
+                top: 12px;
+            }
+        }
+        &.blue {
+            background: linear-gradient(0deg, #62a3e5 0%, #b4d7fa 100%);
+        }
+        &.green {
+            background: linear-gradient(0deg, #7cbc30 0%, #baf279 100%);
+        }
+        &.orage {
+            background: linear-gradient(0deg, #d67503 0%, #fdd2a0 100%);
+        }
+        &.diamond {
+            background: linear-gradient(0deg, #4b97bf 0%, #7ae2ff 100%);
+        }
     }
-    &:active{
-        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.20), inset 0 2px 2px rgba(0, 0, 0, 0.20);
-        .color-btn-text{top: 12px;}
-    }
-    &.blue{background: linear-gradient(0deg, #62a3e5 0%, #b4d7fa 100%);}
-    &.green{background: linear-gradient(0deg, #7cbc30 0%, #BAF279 100%);}
-    &.orage{background: linear-gradient(0deg, #d67503 0%, #fdd2a0 100%);}
-    &.diamond{background: linear-gradient(0deg, #4b97bf 0%, #7AE2FF 100%); }
-}
 
-
-.cw-clan-logo-bg, .cw-clan-logo{
-    width: 70px; height: 70px; position: absolute; top: 5px; left: 92px;
-    img{width: 70px;}
-    .cw-clan-logo{
-        top: 0; left: 0;
+    .cw-clan-logo-bg,
+    .cw-clan-logo {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 5px;
+        left: 92px;
+        img {
+            width: 70px;
+        }
+        .cw-clan-logo {
+            top: 0;
+            left: 0;
+        }
     }
-}
 `;
 
 export default V2ScreenCwGuildmanage;

@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenTitansArmy = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 
 .popup-layer .m-popup.at-army-setup{
@@ -26,7 +25,7 @@ const V2ScreenTitansArmy = styled.div`
                     color: #fff; font-size: 12px; font-weight: bold; text-transform: uppercase;
                     .ic-filter{
                         width: 18px; height: 18px; position: relative; display: inline-block;
-                        background-image: url(~imgPath/v2-ic-filter.png);
+                        background-image: url(../img/v2-ic-filter.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         margin-right: 6px;
@@ -39,7 +38,7 @@ const V2ScreenTitansArmy = styled.div`
                 font-size: 0;
                 .color-btn{
                     width: 170px; height: 26px;
-                    @include prefix(border-radius, 0);
+                    border-radius: 0;
                     background: linear-gradient(0deg, #65779c 0%, #9caac8 100%);
                     box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
                     margin: 0 5px;
@@ -58,7 +57,7 @@ const V2ScreenTitansArmy = styled.div`
             width: 260px; height: 26px; position: absolute; top: 4px; right: 10px;
             .color-btn{
                 width: 260px; height: 26px;
-                @include prefix(border-radius, 20px);
+                border-radius: 20px;
                 box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
                 .color-btn-text{
                     top: 6px; font-size: 12px;
@@ -91,18 +90,25 @@ const V2ScreenTitansArmy = styled.div`
             }
             .hero-avatar-box{
                 width: 98px; height: 111px; position: relative; display: inline-block;
-                @include prefix(border-radius, 6px);
-                @include background-bronze;
+                border-radius: 6px;
+                background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
                 margin: 7px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                 .hero-avatar{
                     width: 90px; height: 103px; position: absolute; top: 4px; left: 4px;
-                    @include prefix(border-radius, 4px);
+                    border-radius: 4px;
                     overflow: hidden;
                 }
                 .at-num{
                     width: 80px; height: 24px; position: absolute; bottom: 4px; left: 9px;
-                    @include prefix(border-radius, 20px);
+                    border-radius: 20px;
                     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
                     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                     color: #000; font-weight: bold; font-size: 14px; line-height: 24px;
@@ -110,7 +116,7 @@ const V2ScreenTitansArmy = styled.div`
                 .at-army-locked-box{
                     width: 100%; height: 100%; position: absolute; top: 0; left: 0;
                     background-color: rgba(0, 0, 0, 0.75);
-                    @include prefix(border-radius, 6px);
+                    border-radius: 6px;
                     display: none;
                     .at-army-locked{
                         width: 78px; height: 91px; position: relative; display: table-cell;
@@ -160,7 +166,7 @@ const V2ScreenTitansArmy = styled.div`
 
             .star{
                 display: inline-block;
-                background-image: url(~imgPath/./star1.png);
+                background-image: url(../img/star1.png);
                 background-size: 100%;
                 width: 24px;
                 height: 23px;
@@ -225,7 +231,7 @@ const V2ScreenTitansArmy = styled.div`
                     left: 0px;
                     width: $t_width;
                     height: 111px;
-                    @include prefix(border-radius, 6px);
+                    border-radius: 6px;
 
                     box-shadow: 0 0 4px #000;
                     background: linear-gradient(0deg, #8f7554, #e1c5a2, #8f7554);
@@ -236,7 +242,7 @@ const V2ScreenTitansArmy = styled.div`
                         left: 4px;
                         width: 90px;
                         height: 103px;
-                        @include prefix(border-radius, 4px);
+                        border-radius: 4px;
                     }
                 }
                 .stars{
@@ -244,7 +250,7 @@ const V2ScreenTitansArmy = styled.div`
                     top: initial;
                     left: 0;
                     bottom: 0;
-                    @include prefix(border-radius, 0 0 6px 6px);
+                    border-radius: 0 0 6px 6px;
                     width: $t_width;
                     background-color: rgba(0,0,0, .6);
                     padding: 4px 0px;
@@ -288,7 +294,7 @@ const V2ScreenTitansArmy = styled.div`
                             height: 13px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(~imgPath/spinner-round-diamond.png);
+                            background-image: url(../img/spinner-round-diamond.png);
                             background-size: 100%;
                             background-position: center;
                             margin: 0 2px 0 2px;
@@ -314,7 +320,7 @@ const V2ScreenTitansArmy = styled.div`
 
 .color-btn{
     width: 90px; height: 40px; position: relative; display: inline-block;
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
     box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
     cursor: pointer;

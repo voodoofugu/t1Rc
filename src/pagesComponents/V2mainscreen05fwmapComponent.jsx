@@ -1,6 +1,6 @@
 import React from "react";
-import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
-import v2ScreenFwMapWarpop from "../styles/v2-screen-fw-map-warpop.scss";
+// import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
+// import v2ScreenFwMapWarpop from "../styles/v2-screen-fw-map-warpop.scss";
 
 const V2MainScreen05FwMapComponent = () => {
     return (

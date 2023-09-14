@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenCwGuildrename from "../styles/v2-screen-cw-guildrename.scss";
+// import v2ScreenCwGuildrename from "../styles/v2-screen-cw-guildrename.scss";
 
 const V2MainScreen15CwGuildrenamePopComponent = () => {
     return (

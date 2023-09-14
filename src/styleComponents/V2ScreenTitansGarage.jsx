@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenTitansGarage = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main{ 
     .left-side{
@@ -14,11 +13,11 @@ body .main{
                 width: 118px; height: 40px; position: relative; top: 0; left: 0; display: inline-block;
                 margin: 0 2px 0 0; cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before{
                     content: ""; width: 110px; height: 36px; position: absolute; top: 4px; left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name{
@@ -59,7 +58,7 @@ body .main{
                         height: 490px;
                         top: 13px;
                         left: 9px;
-                        background-image: url(~imgPath/titans_bg.jpg);
+                        background-image: url(../img/titans_bg.jpg);
                     }
 
                     .titans-garage-scroll-box{
@@ -94,7 +93,7 @@ body .main{
                         position: relative;
                         width: 286px;
                         height: 460px;
-                        @include prefix(border-radius, 8px);
+                        border-radius: 8px;
                         background: linear-gradient(0deg, #585c5d, #d3d4d8 20%, #d3d4d8 50%, #565a5b, #a0a4a5, #5a5b5d);
 
                         &+.titans-garage-item{
@@ -107,9 +106,9 @@ body .main{
                             left: 4px;
                             width: 278px;
                             height: 452px;
-                            background-image: url(~imgPath/titans_enemy_bg.jpg);
+                            background-image: url(../img/titans_enemy_bg.jpg);
                             background-size: 100%;
-                            @include prefix(border-radius, 6px);
+                            border-radius: 6px;
                             overflow: hidden;
                         }
 
@@ -159,12 +158,12 @@ body .main{
                                     font-size: 18px;
                                     padding: 10px 11px 0 36px;
                                     &:before{
-                                        background-image: url(~imgPath/v2_at_gear.png);
+                                        background-image: url(../img/v2_at_gear.png);
                                     }
                                 }
-                                &.atk:before{background-image: url(~imgPath/v2_at_magicgun.png);}
-                                &.hp:before{background-image: url(~imgPath/v2_at_magic_plate.png);}
-                                &.pow:before{background-image: url(~imgPath/v2_at_manabomb.png);}
+                                &.atk:before{background-image: url(../img/v2_at_magicgun.png);}
+                                &.hp:before{background-image: url(../img/v2_at_magic_plate.png);}
+                                &.pow:before{background-image: url(../img/v2_at_manabomb.png);}
                             }
                         }
                         .titans-garage-item-image{
@@ -208,7 +207,14 @@ body .main{
                             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
                             .titan-progress__bar{
                                 width: 0; height: 30px; position: absolute; top: 0px; left: 0px;
-                                @include background-silver;
+                                background: linear-gradient(
+		180deg,
+		#585a5c 0%,
+		#d5d8da 50%,
+		#585a5b 70%,
+		#a1a4a6 85%,
+		#585a5b 100%
+	);
                                 transition: width .3s;
                             }
                             .titan-progress__text{
@@ -218,7 +224,14 @@ body .main{
                             }
                             &.gold{
                                 .titan-progress__bar{
-                                    @include background-gold;
+                                    background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
                                 }
                             }
                         }
@@ -271,7 +284,7 @@ body .main{
 
                         .star{
                             display: inline-block;
-                            background-image: url(~imgPath/./star1.png);
+                            background-image: url(../img/star1.png);
                             background-size: 100%;
                             width: 24px;
                             height: 23px;
@@ -301,7 +314,7 @@ body .main{
                     .btn-close-x{
                         width: 30px; height: 30px; position: absolute; top: -6px; right: -6px;
                         background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
-                        @include prefix(border-radius, 7px);
+                        border-radius: 7px;
                         box-shadow: 0 0 7px #000;
                         cursor: pointer;
                         z-index: 999;
@@ -312,29 +325,35 @@ body .main{
                         &:after {
                             content: ""; width: 24px; height: 7px; position: absolute; top: 3px; left: 3px;
                             background: rgba(255, 255, 255, 0.25);
-                            @include prefix(border-radius, 5px);
+                            border-radius: 5px;
                         }
                     }
                     .trophy-res-box-all{
                         width: 370px; height: 45px; position: absolute; top: -42px; right: 36px;
                         background-color: #9c8b7c;
-                        @include prefix(border-radius, 10px 10px 0 0);
+                        border-radius: 10px 10px 0 0;
                         .trophy-res-box{
                             width: 170px; height: 36px; position: absolute; top: 4px; left: 10px;
-                            @include background-resourcebg;
-                            @include prefix(border-radius, 18px);
+                            background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                            border-radius: 18px;
                             box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.55), 0 2px 4px 0 rgba(0, 0, 0, 0.35);
                             .trophy-value{
                                 width: 100px; height: 28px; position: absolute; top: 3px; left: 38px;
                                 background: linear-gradient(90deg, #f4bf87 0%, #d38632 50%, #92581a 100%);
                                 box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 14px 0 rgba(255, 255, 255, 0.15);
-                                @include prefix(border-radius, 6px);
+                                border-radius: 6px;
                                 color: #fff; font-size: 20px; font-weight: bold; line-height: 28px; text-align: center;
                                 text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
                             }
                             .trophy-value-btn-add{
                                 width: 32px; height: 36px; position: absolute; top: 0; right: 0;
-                                @include prefix(border-radius, 0 18px 18px 0);
+                                border-radius: 0 18px 18px 0;
                                 cursor: pointer;
                                 &:before{
                                     content: ""; width: 6px; height: 22px; position: absolute; top: 7px; left: 12px;
@@ -348,7 +367,7 @@ body .main{
                             &.gems{
                                 &:before{
                                     content: ""; width: 40px; height: 40px; position: absolute; top: -2px; left: -2px;
-                                    background-image: url(~imgPath/trophy-bonus-gems.png);
+                                    background-image: url(../img/trophy-bonus-gems.png);
                                     background-size: 100%; background-repeat: no-repeat;
                                 }
                             }
@@ -356,7 +375,7 @@ body .main{
                                 left: 190px;
                                 &:before{
                                     content: ""; width: 40px; height: 40px; position: absolute; top: -2px; left: -2px;
-                                    background-image: url(~imgPath/trophy-bonus-gems.png);
+                                    background-image: url(../img/trophy-bonus-gems.png);
                                     background-size: 100%; background-repeat: no-repeat;
                                 }
                             }
@@ -364,10 +383,10 @@ body .main{
                     }
                     .essence-hero-box{
                         width: 240px; height: 45px; position: absolute; top: -42px; right: 36px; background-color: #9c8b7c;
-                        @include prefix(border-radius, 10px 10px 0 0);
+                        border-radius: 10px 10px 0 0;
                         .essence-icon{
                             width: 40px; height: 40px; position: absolute; top: 2px; left: 10px;
-                            background-image: url(~imgPath/trophy-bonus-box.png); background-size: 100%;
+                            background-image: url(../img/trophy-bonus-box.png); background-size: 100%;
                         }
                         .essence-coll{
                             width: auto; height: auto; position: absolute; font-size: 20px; color: #fff; line-height: 42px;

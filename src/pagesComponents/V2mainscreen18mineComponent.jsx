@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import v2ScreenMineEvent from "../styles/v2-screen-mine-event.scss";
-import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
+// import v2ScreenMineEvent from "../styles/v2-screen-mine-event.scss";
+// import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
 
 const V2MainScreen18MineComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -72,7 +72,7 @@ const V2MainScreen18MineComponent = () => {
                             className="main-bg"
                             style={{
                                 backgroundImage:
-                                    "url('img/images/back/new/04-Town-Square-1.jpg')",
+                                    "url('../img/images/back/new/04-Town-Square-1.jpg')",
                             }}></div>
                         <div className="mine-event-screen">
                             <div className="mine-event-screen__head">
@@ -165,13 +165,14 @@ const V2MainScreen18MineComponent = () => {
                             <div
                                 className="mine-event-screen__wrapper"
                                 style={{
-                                    backgroundImage: "url('img/v2-mn-bg1.jpg')",
+                                    backgroundImage:
+                                        "url('../img/v2-mn-bg1.jpg')",
                                 }}>
                                 <div className="x-info-btn">?</div>
                                 <div
                                     className="mine"
                                     style={{
-                                        cursor: "url('img/cursor.png'), auto",
+                                        cursor: "url('../img/cursor.png'), auto",
                                     }}>
                                     <div className="mine__row">
                                         <div className="mine-cell">

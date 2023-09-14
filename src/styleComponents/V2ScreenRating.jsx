@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenRating = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main{
     .left-side{
@@ -14,11 +13,11 @@ body .main{
                 width: 118px; height: 40px; position: relative; top: 0; left: 0; display: inline-block;
                 margin: 0 2px 0 0; cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before{
                     content: ""; width: 110px; height: 36px; position: absolute; top: 4px; left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name{
@@ -53,7 +52,7 @@ body .main{
                         .rating-timer-box{
                             width: 150px; height: 40px; position: absolute; left: 10px; top: 20px; 
                             background: linear-gradient(0deg, #9C0000 0%, #FF0000 100%);
-                            @include prefix(border-radius, 6px);
+                            border-radius: 6px;
                             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45);
                             .btn-text1 {
                                 display: none;
@@ -117,7 +116,7 @@ body .main{
                                 .ped-box-portrait {
                                     width: 66px;
                                     height: 66px;
-                                    background-image: url(~imgPath/gild-icon-66.png);
+                                    background-image: url(../img/gild-icon-66.png);
                                     position: absolute;
                                     margin-left: 22px;
                                     bottom: 62px;
@@ -141,7 +140,7 @@ body .main{
                                     height: 84px;
                                     .ped-box-prize {
                                         width: 60px; height: 60px; left: 27px; top: 2px;
-                                        background-image: url(~imgPath/rating-sign-bronze@1x.png);
+                                        background-image: url(../img/rating-sign-bronze@1x.png);
                                     }
                                 }
                                 &.rate2 {
@@ -149,21 +148,21 @@ body .main{
                                     background-color: #67564a;
                                     .ped-box-prize {
                                         width: 70px; height: 70px; left: 22px;
-                                        background-image: url(~imgPath/icon-sunduk-200-1.png);
+                                        background-image: url(../img/icon-sunduk-200-1.png);
                                     }
                                 }
                                 &.rate3 {
                                     height: 124px; left: 244px;
                                     .ped-box-prize {
                                         width: 90px; height: 90px; left: 12px;
-                                        background-image: url(~imgPath/icon-sunduk-200-2.png);
+                                        background-image: url(../img/icon-sunduk-200-2.png);
                                     }
                                 }
                                 &.rate4 {
                                     height: 144px; left: 366px;
                                     background-color: #67564a;
                                     .ped-box-prize {
-                                        background-image: url(~imgPath/icon-sunduk-200-3.png);
+                                        background-image: url(../img/icon-sunduk-200-3.png);
                                     }
                                 }
                             }
@@ -332,7 +331,7 @@ body .main{
                                                 content: "";
                                                 width: 30px;
                                                 height: 30px;
-                                                background-image: url(~imgPath/diamond@1x.png);
+                                                background-image: url(../img/diamond@1x.png);
                                                 background-size: 100%;
                                                 position: relative;
                                                 display: inline-block;
@@ -343,7 +342,7 @@ body .main{
                                                 content: "";
                                                 width: 30px;
                                                 height: 30px;
-                                                background-image: url(~imgPath/diamond@1x.png);
+                                                background-image: url(../img/diamond@1x.png);
                                                 background-size: 100%;
                                                 position: relative;
                                                 display: inline-block;
@@ -372,7 +371,7 @@ body .main{
 
 .color-btn{
     width: 90px; height: 40px; position: relative; display: inline-block;
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
     box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
     cursor: pointer;
@@ -392,7 +391,7 @@ body .main{
 .btn-close-x{
     width: 30px; height: 30px; position: absolute; top: -6px; right: -6px; display: none;
     background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
-    @include prefix(border-radius, 7px);
+    border-radius: 7px;
     box-shadow: 0 0 7px #000;
     cursor: pointer;
     z-index: 999;
@@ -403,12 +402,12 @@ body .main{
     &:after {
         content: ""; width: 24px; height: 7px; position: absolute; top: 3px; left: 3px;
         background: rgba(255, 255, 255, 0.25);
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
     }
 }
 
 .ped-box-portrait {
-    width: 66px; height: 66px; background-image: url(~imgPath/gild-icon-66.png); position: absolute; 
+    width: 66px; height: 66px; background-image: url(../img/gild-icon-66.png); position: absolute; 
     &.place0 {
         display: none;
     }

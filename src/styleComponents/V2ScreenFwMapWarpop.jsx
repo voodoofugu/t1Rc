@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenFwMapWarpop = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main {
     .fw-warpop-box-all {
@@ -39,7 +38,7 @@ body .main {
                 #007aa7 98%,
                 #3fbae7 100%
             );
-            @include prefix(border-radius, 20px 0 0 20px);
+            border-radius: 20px 0 0 20px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.75);
             .fw-warpop-box-leader-text {
                 width: 100%;
@@ -87,7 +86,7 @@ body .main {
             top: 10px;
             left: 10px;
             overflow: hidden;
-            @include prefix(border-radius, 15px);
+            border-radius: 15px;
             .fr-warpop-building {
                 position: absolute;
                 width: 310px;
@@ -97,19 +96,19 @@ body .main {
                 background-repeat: no-repeat;
                 background-position: 50%;
                 &.type-1 {
-                    background-image: url(~imgPath/fr-sawmill2.png);
+                    background-image: url(../img/fr-sawmill2.png);
                 }
                 &.type-2 {
-                    background-image: url(~imgPath/fr-mine2.png);
+                    background-image: url(../img/fr-mine2.png);
                 }
                 &.type-3 {
-                    background-image: url(~imgPath/fr-fort2.png);
+                    background-image: url(../img/fr-fort2.png);
                 }
                 &.type-4 {
-                    background-image: url(~imgPath/fr-monsters2.png);
+                    background-image: url(../img/fr-monsters2.png);
                 }
                 &.type-5 {
-                    background-image: url(~imgPath/fr-tower2.png);
+                    background-image: url(../img/fr-tower2.png);
                 }
             }
         }
@@ -221,13 +220,13 @@ body .main {
                         height: 26px;
                         position: relative;
                         display: inline-block;
-                        background-image: url(~imgPath/ic-contrip.png);
+                        background-image: url(../img/ic-contrip.png);
                         background-repeat: no-repeat;
                         background-size: 100%;
                         margin-right: 5px;
                         top: 6px;
                         &.cw {
-                            background-image: url(~imgPath/ic-contrip-red.png);
+                            background-image: url(../img/ic-contrip-red.png);
                         }
                     }
                     .ic-warchest {
@@ -235,7 +234,7 @@ body .main {
                         height: 26px;
                         position: relative;
                         display: inline-block;
-                        background-image: url(~imgPath/icon-sunduk-200-2.png);
+                        background-image: url(../img/icon-sunduk-200-2.png);
                         background-repeat: no-repeat;
                         background-size: 100%;
                         margin-right: 5px;
@@ -382,7 +381,7 @@ body .main {
                 bottom: 5px;
                 left: 10px;
                 background-color: #836f61;
-                @include prefix(border-radius, 30px);
+                border-radius: 30px;
                 .fw-warpop-army-power-text {
                     width: 290px;
                     height: 26px;
@@ -420,7 +419,7 @@ body .main {
                     position: relative;
                     display: inline-block;
                     background-color: #836f61;
-                    @include prefix(border-radius, 30px);
+                    border-radius: 30px;
                     margin: 0 5px;
                     .fw-warpop-army-power-text {
                         width: 120px;
@@ -480,7 +479,7 @@ body .main {
                 #43a700 50%,
                 #8cdd55 100%
             );
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
             cursor: pointer;
             z-index: 999;
@@ -499,7 +498,7 @@ body .main {
                 top: 3px;
                 left: 3px;
                 background: rgba(255, 255, 255, 0.25);
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
             }
         }
     }

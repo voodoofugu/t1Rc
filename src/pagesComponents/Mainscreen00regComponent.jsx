@@ -24,9 +24,9 @@ const RegCont = styled.div`
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
         border-radius: 15px;
-        background: url(img/orange-circle-bg.png), url(img/orange-circle-bg.png),
-            url(img/orange-circle-bg.png), url(img/orange-circle-bg.png),
-            url(img/tabs-menu-bg.png),
+        background: url(../img/orange-circle-bg.png),
+            url(../img/orange-circle-bg.png), url(../img/orange-circle-bg.png),
+            url(../img/orange-circle-bg.png), url(../img/tabs-menu-bg.png),
             linear-gradient(
                 320deg,
                 rgba(255, 255, 255, 0.05) 0%,
@@ -76,7 +76,7 @@ const RegCont = styled.div`
         position: absolute;
         left: -22px;
         top: 41px;
-        background: url(img/tab-menu-icn-abil.png);
+        background: url(../img/tab-menu-icn-abil.png);
         background-position: 188px 58px;
         background-size: 40px 40px;
         background-repeat: no-repeat;
@@ -158,7 +158,7 @@ const RegCont = styled.div`
         top: 0px;
         width: 54px;
         height: 46px;
-        background-image: url(img/darkworld-angel-pop-btn-bg.png);
+        background-image: url(../img/darkworld-angel-pop-btn-bg.png);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;

@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenStoreDiamonds from "../styles/v2-screen-store-diamonds.scss";
+// import v2ScreenStoreDiamonds from "../styles/v2-screen-store-diamonds.scss";
 
 const V2MainScreen03StoreDiamondsComponent = () => {
     return (

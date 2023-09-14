@@ -1,6 +1,6 @@
 import React from "react";
-import v2ScreenTower from "../styles/v2-screen-tower.scss";
-import v2ScreenBf from "../styles/v2-screen-bf.scss";
+// import v2ScreenTower from "../styles/v2-screen-tower.scss";
+// import v2ScreenBf from "../styles/v2-screen-bf.scss";
 
 const V2MainScreen10BlackfridayComponent = () => {
     return (

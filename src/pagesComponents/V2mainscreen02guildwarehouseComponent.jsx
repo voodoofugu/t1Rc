@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenWarehouse from "../styles/v2-screen-warehouse.scss";
+// import v2ScreenWarehouse from "../styles/v2-screen-warehouse.scss";
 
 const V2MainScreen02GuildWarehouseComponent = () => {
     return (

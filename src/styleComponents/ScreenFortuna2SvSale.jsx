@@ -1,120 +1,277 @@
-
 import styled from "styled-components";
 
 const ScreenFortuna2SvSale = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
-
-.popup-layer .m-popup.fortuna-main.sv-sale {
-    width: 970px;
-    height: 600px;
-    left: 115px;
-    top: 20px;
-    background: linear-gradient(-22deg, #f4266a 0%, #a70037 50%, #f4266a 100%);
-    &:before {
-        content: "";
-        background-image: url(~imgPath/sv-sale-bg.jpg);
-        background-size: 100%;
-    }
-    .title {
+    .popup-layer .m-popup.fortuna-main.sv-sale {
+        width: 970px;
+        height: 600px;
+        left: 115px;
+        top: 20px;
         background: linear-gradient(
-            90deg,
+            -22deg,
             #f4266a 0%,
             #a70037 50%,
             #f4266a 100%
         );
-        border: solid 4px #ea0259;
-        color: #fff;
-    }
-    .btn-close-x {
-        background: linear-gradient(22deg, #ffa3c2, #ffa3c2, #f4266a, #ffa3c2);
-        border: solid 4px #ffa3c2;
-    }
-    .sv-sale-pack-box {
-        width: 460px;
-        height: 512px;
-        position: absolute;
-        top: 70px;
-        left: 18px;
-        @include prefix(border-radius, 8px);
-        background-color: rgba(168, 36, 73, 0.5);
-
-        .lhero-box {
-            top: 10px;
-            left: 10px;
+        &:before {
+            content: "";
+            background-image: url(../img/sv-sale-bg.jpg);
+            background-size: 100%;
         }
-        .sv-sale-btn-box {
-            width: 250px;
-            height: 66px;
-            position: absolute;
-            top: 438px;
-            left: 10px;
-            background-color: rgba(168, 36, 73, 0.65);
-        }
-        .store-button {
-            width: 170px;
-            height: 42px;
-            position: relative;
-            text-align: center;
-            top: 12px;
+        .title {
             background: linear-gradient(
-                45deg,
-                #e8c34e,
-                #f1da7c,
-                #cfa831,
-                #fbf1d8
+                90deg,
+                #f4266a 0%,
+                #a70037 50%,
+                #f4266a 100%
             );
-            @include prefix(border-radius, 8px);
-            box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
-                inset 0 -3px 0px #c87725, 0 0 3px #3d3737, 0 0 4px #000,
-                inset 0 0 3px #603806;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 20px;
-            font-weight: bold;
-            color: #4a3a08;
-            text-shadow: 0 0 1px #0d0a01, 0 2px 1px #fff;
-            line-height: 42px;
-            margin: auto;
-            &:active {
-                top: 13px;
+            border: solid 4px #ea0259;
+            color: #fff;
+        }
+        .btn-close-x {
+            background: linear-gradient(
+                22deg,
+                #ffa3c2,
+                #ffa3c2,
+                #f4266a,
+                #ffa3c2
+            );
+            border: solid 4px #ffa3c2;
+        }
+        .sv-sale-pack-box {
+            width: 460px;
+            height: 512px;
+            position: absolute;
+            top: 70px;
+            left: 18px;
+            border-radius: 8px;
+            background-color: rgba(168, 36, 73, 0.5);
+
+            .lhero-box {
+                top: 10px;
+                left: 10px;
             }
-            &:hover {
-                box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
-                    inset 0 -3px 0 #c87725, 0 0 12px #ff0, 0 0 5px #ffc,
-                    inset 0 0 10px #ffc, inset 0 0 3px #603806;
+            .sv-sale-btn-box {
+                width: 250px;
+                height: 66px;
+                position: absolute;
+                top: 438px;
+                left: 10px;
+                background-color: rgba(168, 36, 73, 0.65);
             }
-            .but-price {
+            .store-button {
+                width: 170px;
+                height: 42px;
                 position: relative;
-                display: inline-block;
-                margin: 0 2px 0 2px;
-                font-size: 24px;
-                &.old {
-                    color: #ef0000;
-                    text-decoration: line-through;
-                    font-size: 16px;
-                    top: -2px;
+                text-align: center;
+                top: 12px;
+                background: linear-gradient(
+                    45deg,
+                    #e8c34e,
+                    #f1da7c,
+                    #cfa831,
+                    #fbf1d8
+                );
+                border-radius: 8px;
+                box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
+                    inset 0 -3px 0px #c87725, 0 0 3px #3d3737, 0 0 4px #000,
+                    inset 0 0 3px #603806;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight: bold;
+                color: #4a3a08;
+                text-shadow: 0 0 1px #0d0a01, 0 2px 1px #fff;
+                line-height: 42px;
+                margin: auto;
+                &:active {
+                    top: 13px;
+                }
+                &:hover {
+                    box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
+                        inset 0 -3px 0 #c87725, 0 0 12px #ff0, 0 0 5px #ffc,
+                        inset 0 0 10px #ffc, inset 0 0 3px #603806;
+                }
+                .but-price {
+                    position: relative;
+                    display: inline-block;
+                    margin: 0 2px 0 2px;
+                    font-size: 24px;
+                    &.old {
+                        color: #ef0000;
+                        text-decoration: line-through;
+                        font-size: 16px;
+                        top: -2px;
+                    }
+                }
+                &.one,
+                &.two {
+                    filter: grayscale(100%);
+                    cursor: no-drop;
                 }
             }
-            &.one,
-            &.two {
-                filter: grayscale(100%);
-                cursor: no-drop;
+            .sv-reward-box-all {
+                width: 150px;
+                height: 190px;
+                position: absolute;
+                top: 316px;
+                left: 286px;
+                .sv-reward-box {
+                    width: 90px;
+                    height: 90px;
+                    position: relative;
+                    display: inline-block;
+                    background: linear-gradient(
+                        180deg,
+                        #c68300 0%,
+                        #f4dfb6 50%,
+                        #c68200 70%,
+                        #fad489 85%,
+                        #c78302 100%
+                    );
+                    border-radius: 8px;
+                    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+                    &:before {
+                        content: "";
+                        width: 86px;
+                        height: 86px;
+                        position: absolute;
+                        top: 2px;
+                        left: 2px;
+                        background: linear-gradient(
+                            0deg,
+                            #7e7f80 0%,
+                            #dee0e3 100%
+                        );
+                        box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.35);
+                        filter: sepia(100%);
+                        border-radius: 6px;
+                    }
+                    .sv-reward-pic {
+                        width: 80px;
+                        height: 80px;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        overflow: hidden;
+                        border-radius: 6px;
+                        img {
+                            width: 80px;
+                        }
+                    }
+                    .sv-reward-count {
+                        width: 40px;
+                        height: 24px;
+                        position: absolute;
+                        top: 65px;
+                        left: 49px;
+                        background: linear-gradient(
+                            0deg,
+                            #996b1d 0%,
+                            #e5ca72 50%,
+                            #996b1d 100%
+                        );
+                        border-radius: 10px;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+                        line-height: 24px;
+                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+                    }
+                }
+            }
+            &.next {
+                left: 492px;
+                .lhero-box {
+                    left: 200px;
+                }
+                .sv-sale-btn-box {
+                    left: 200px;
+                }
+                .sv-reward-box-all {
+                    width: 190px;
+                    left: 5px;
+                }
             }
         }
-        .sv-reward-box-all {
-            width: 150px;
-            height: 190px;
+        .sv-sale-heart-box-all {
+            width: 400px;
+            height: 300px;
             position: absolute;
-            top: 316px;
-            left: 286px;
+            top: 80px;
+            left: 285px;
+            .sv-heart-left {
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url(../img/sv-h-bg1.png);
+                background-size: 100%;
+                &:before {
+                    content: "";
+                    width: 200px;
+                    height: 300px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-image: url(../img/sv-h-bg1-1.png);
+                    background-size: 100%;
+                }
+            }
+            .sv-heart-right {
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 200px;
+                background-image: url(../img/sv-h-bg2.png);
+                background-size: 100%;
+                &:before {
+                    content: "";
+                    width: 200px;
+                    height: 300px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-image: url(../img/sv-h-bg2-1.png);
+                    background-size: 100%;
+                }
+            }
+            .sv-chain1 {
+                width: 400px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url(../img/sv-h-chain-1.png);
+                background-size: 100%;
+            }
+            .sv-chain2 {
+                width: 400px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image: url(../img/sv-h-chain-2.png);
+                background-size: 100%;
+            }
             .sv-reward-box {
                 width: 90px;
                 height: 90px;
                 position: relative;
-                display: inline-block;
-                @include background-gold;
-                @include prefix(border-radius, 8px);
+                float: left;
+                top: 100px;
+                left: 110px;
+                background: linear-gradient(
+                    180deg,
+                    #c68300 0%,
+                    #f4dfb6 50%,
+                    #c68200 70%,
+                    #fad489 85%,
+                    #c78302 100%
+                );
+                border-radius: 8px;
                 box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
                 &:before {
                     content: "";
@@ -126,7 +283,7 @@ const ScreenFortuna2SvSale = styled.div`
                     background: linear-gradient(0deg, #7e7f80 0%, #dee0e3 100%);
                     box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.35);
                     filter: sepia(100%);
-                    @include prefix(border-radius, 6px);
+                    border-radius: 6px;
                 }
                 .sv-reward-pic {
                     width: 80px;
@@ -135,7 +292,7 @@ const ScreenFortuna2SvSale = styled.div`
                     top: 5px;
                     left: 5px;
                     overflow: hidden;
-                    @include prefix(border-radius, 6px);
+                    border-radius: 6px;
                     img {
                         width: 80px;
                     }
@@ -152,7 +309,7 @@ const ScreenFortuna2SvSale = styled.div`
                         #e5ca72 50%,
                         #996b1d 100%
                     );
-                    @include prefix(border-radius, 10px);
+                    border-radius: 10px;
                     color: #fff;
                     font-size: 16px;
                     font-weight: bold;
@@ -160,205 +317,72 @@ const ScreenFortuna2SvSale = styled.div`
                     line-height: 24px;
                     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
                 }
+                .sv-reward-block {
+                    width: 100px;
+                    height: 43px;
+                    position: absolute;
+                    top: 30px;
+                    left: -5px;
+                    background-image: url(../img/legendary-lock.png);
+                    background-size: 100%;
+                }
             }
-        }
-        &.next {
-            left: 492px;
-            .lhero-box {
-                left: 200px;
+            &.one {
+                .sv-heart-left {
+                    background-image: url(../img/sv-h-bg1-g.png);
+                    &:before {
+                        content: "";
+                        background-image: url(../img/sv-h-bg1-1-g.png);
+                    }
+                }
+                .sv-chain1 {
+                    display: none;
+                }
             }
-            .sv-sale-btn-box {
-                left: 200px;
-            }
-            .sv-reward-box-all {
-                width: 190px;
-                left: 5px;
+            &.two {
+                .sv-heart-right {
+                    background-image: url(../img/sv-h-bg2-g.png);
+                    &:before {
+                        content: "";
+                        background-image: url(../img/sv-h-bg2-1-g.png);
+                    }
+                }
+                .sv-chain2 {
+                    display: none;
+                }
+                .sv-reward-block {
+                    display: none;
+                }
             }
         }
     }
-    .sv-sale-heart-box-all {
-        width: 400px;
-        height: 300px;
-        position: absolute;
-        top: 80px;
-        left: 285px;
-        .sv-heart-left {
-            width: 200px;
-            height: 300px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-image: url(~imgPath/sv-h-bg1.png);
-            background-size: 100%;
-            &:before {
-                content: "";
-                width: 200px;
-                height: 300px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-image: url(~imgPath/sv-h-bg1-1.png);
-                background-size: 100%;
-            }
-        }
-        .sv-heart-right {
-            width: 200px;
-            height: 300px;
-            position: absolute;
-            top: 0;
-            left: 200px;
-            background-image: url(~imgPath/sv-h-bg2.png);
-            background-size: 100%;
-            &:before {
-                content: "";
-                width: 200px;
-                height: 300px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-image: url(~imgPath/sv-h-bg2-1.png);
-                background-size: 100%;
-            }
-        }
-        .sv-chain1 {
-            width: 400px;
-            height: 300px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-image: url(~imgPath/sv-h-chain-1.png);
-            background-size: 100%;
-        }
-        .sv-chain2 {
-            width: 400px;
-            height: 300px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-image: url(~imgPath/sv-h-chain-2.png);
-            background-size: 100%;
-        }
-        .sv-reward-box {
-            width: 90px;
-            height: 90px;
-            position: relative;
-            float: left;
-            top: 100px;
-            left: 110px;
-            @include background-gold;
-            @include prefix(border-radius, 8px);
-            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
-            &:before {
-                content: "";
-                width: 86px;
-                height: 86px;
-                position: absolute;
-                top: 2px;
-                left: 2px;
-                background: linear-gradient(0deg, #7e7f80 0%, #dee0e3 100%);
-                box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.35);
-                filter: sepia(100%);
-                @include prefix(border-radius, 6px);
-            }
-            .sv-reward-pic {
-                width: 80px;
-                height: 80px;
-                position: absolute;
-                top: 5px;
-                left: 5px;
-                overflow: hidden;
-                @include prefix(border-radius, 6px);
-                img {
-                    width: 80px;
-                }
-            }
-            .sv-reward-count {
-                width: 40px;
-                height: 24px;
-                position: absolute;
-                top: 65px;
-                left: 49px;
-                background: linear-gradient(
-                    0deg,
-                    #996b1d 0%,
-                    #e5ca72 50%,
-                    #996b1d 100%
-                );
-                @include prefix(border-radius, 10px);
-                color: #fff;
-                font-size: 16px;
-                font-weight: bold;
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-                line-height: 24px;
-                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
-            }
-            .sv-reward-block {
-                width: 100px;
-                height: 43px;
-                position: absolute;
-                top: 30px;
-                left: -5px;
-                background-image: url(~imgPath/legendary-lock.png);
-                background-size: 100%;
-            }
-        }
-        &.one {
-            .sv-heart-left {
-                background-image: url(~imgPath/sv-h-bg1-g.png);
-                &:before {
-                    content: "";
-                    background-image: url(~imgPath/sv-h-bg1-1-g.png);
-                }
-            }
-            .sv-chain1 {
-                display: none;
-            }
-        }
-        &.two {
-            .sv-heart-right {
-                background-image: url(~imgPath/sv-h-bg2-g.png);
-                &:before {
-                    content: "";
-                    background-image: url(~imgPath/sv-h-bg2-1-g.png);
-                }
-            }
-            .sv-chain2 {
-                display: none;
-            }
-            .sv-reward-block {
-                display: none;
-            }
-        }
-    }
-}
 
-.wpck-timer-box {
-    width: 184px;
-    height: 84px;
-    position: absolute;
-    top: -10px;
-    margin-left: -10px;
-    background-image: url(~imgPath/timer-back.png);
-    background-size: 100%;
-    .time-left,
-    .time-sec {
-        width: 150px;
-        height: 26px;
+    .wpck-timer-box {
+        width: 184px;
+        height: 84px;
         position: absolute;
-        top: 18px;
-        margin-left: 18px;
-        color: #fff000;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
+        top: -10px;
+        margin-left: -10px;
+        background-image: url(../img/timer-back.png);
+        background-size: 100%;
+        .time-left,
+        .time-sec {
+            width: 150px;
+            height: 26px;
+            position: absolute;
+            top: 18px;
+            margin-left: 18px;
+            color: #fff000;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .time-sec {
+            top: 34px;
+            color: #fff;
+            font-size: 24px;
+        }
     }
-    .time-sec {
-        top: 34px;
-        color: #fff;
-        font-size: 24px;
-    }
-}
-
 `;
 
 export default ScreenFortuna2SvSale;

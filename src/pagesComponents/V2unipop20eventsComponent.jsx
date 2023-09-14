@@ -1,5 +1,5 @@
 import React from "react";
-import screenUnipopEvents from "../styles/screen-unipop-events.scss";
+// import screenUnipopEvents from "../styles/screen-unipop-events.scss";
 
 const V2Unipop20EventsComponent = () => {
     return (

@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenTowerTrophyPop = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .popup-layer .m-popup.tower-trophy-pop{
     width: 460px; height: 600px; left: 370px; top: 20px;
@@ -15,11 +14,11 @@ const V2ScreenTowerTrophyPop = styled.div`
     }
     .tower-trophy-bg-all{
         width: 440px; height: 530px; position: absolute; bottom: 10px; left: 10px;
-        background-image: url(~imgPath/v2-trophy-pop-bg.jpg);
+        background-image: url(../img/v2-trophy-pop-bg.jpg);
         background-size: 100%; background-repeat: no-repeat;
         &:before{
             content: ""; width: 260px; height: 260px; position: absolute; top: 125px; left: 90px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             background: radial-gradient(ellipse at center, rgba(252,255,194,1) 0%
             , rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%); 
         }
@@ -28,11 +27,11 @@ const V2ScreenTowerTrophyPop = styled.div`
         }
         .tower-trophy-prgbar-empty{
             width: 280px; height: 86px; position: absolute; bottom: 5px; left: 80px;
-            background-image: url(~imgPath/v2-trophy-pop-bg1.jpg);
+            background-image: url(../img/v2-trophy-pop-bg1.jpg);
             background-size: 100%; background-repeat: no-repeat;
             .tower-trophy-prgbar-full{
                 width: 280px; height: 86px; position: absolute; bottom: 0; left: 0;
-                background-image: url(~imgPath/v2-trophy-pop-bg2.jpg);
+                background-image: url(../img/v2-trophy-pop-bg2.jpg);
                 transition: width 0.5s ease;
                 background-position: center left;
             }
@@ -46,7 +45,7 @@ const V2ScreenTowerTrophyPop = styled.div`
 
 .color-btn{
     width: 90px; height: 40px; position: relative; display: inline-block;
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
     box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
     cursor: pointer;
@@ -67,7 +66,7 @@ const V2ScreenTowerTrophyPop = styled.div`
 .btn-close-x{
     width: 30px; height: 30px; position: absolute; top: -6px; right: -6px; display: none;
     background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
-    @include prefix(border-radius, 7px);
+    border-radius: 7px;
     box-shadow: 0 0 7px #000;
     cursor: pointer;
     z-index: 999;
@@ -78,7 +77,7 @@ const V2ScreenTowerTrophyPop = styled.div`
     &:after {
         content: ""; width: 24px; height: 7px; position: absolute; top: 3px; left: 3px;
         background: rgba(255, 255, 255, 0.25);
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
     }
 }
 

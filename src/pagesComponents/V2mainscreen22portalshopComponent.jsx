@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
+// import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
 
 const V2MainScreen22PortalShopComponent = () => {
     return (

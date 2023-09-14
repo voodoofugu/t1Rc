@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenStoreHeroes from "../styles/v2-screen-store-heroes.scss";
+// import v2ScreenStoreHeroes from "../styles/v2-screen-store-heroes.scss";
 
 const V2MainScreen03StoreHeroesComponent = () => {
     return (

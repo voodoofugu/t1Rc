@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenGuildMain from "../styles/v2-screen-guild-main.scss";
+// import v2ScreenGuildMain from "../styles/v2-screen-guild-main.scss";
 
 const V2MainScreen02GuildMainComponent = () => {
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenValentineCauldron from "../styles/v2-screen-valentine-cauldron.scss";
+// import v2ScreenValentineCauldron from "../styles/v2-screen-valentine-cauldron.scss";
 
 const V2MainScreen16ValentineCauldronPopComponent = () => {
     return (

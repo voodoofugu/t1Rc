@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenPseInfo from "../styles/v2-screen-pse-info.scss";
+// import v2ScreenPseInfo from "../styles/v2-screen-pse-info.scss";
 
 const V2MainScreen16PseInfoPopComponent = () => {
     return (

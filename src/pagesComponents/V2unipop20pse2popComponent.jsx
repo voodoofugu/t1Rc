@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import v2Unipop20Pse2Pop from "../styles/v2-unipop-20-pse2-pop.scss";
-import screenBank from "../styles/screen-bank.scss";
+// import v2Unipop20Pse2Pop from "../styles/v2-unipop-20-pse2-pop.scss";
+// import screenBank from "../styles/screen-bank.scss";
 
 const V2Unipop20Pse2PopComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

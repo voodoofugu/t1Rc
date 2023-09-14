@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import screenAchiev from "../styles/screen-achiev.scss";
-import v2ScreenPortalMap from "../styles/v2-screen-portal-map.scss";
-import screenFortunaWinpop from "../styles/screen-fortuna-winpop.scss";
-import v2ScreenWorldDistrict from "../styles/v2-screen-world-district.scss";
+// import screenAchiev from "../styles/screen-achiev.scss";
+// import v2ScreenPortalMap from "../styles/v2-screen-portal-map.scss";
+// import screenFortunaWinpop from "../styles/screen-fortuna-winpop.scss";
+// import v2ScreenWorldDistrict from "../styles/v2-screen-world-district.scss";
 
 const V2MainScreen23PortalMapComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

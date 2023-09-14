@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 const AllRes = styled.div`
-.main {
+    .main {
     .price {
         display: inline-block;
         // font-size: 120%; color: #ffa;
         // line-height: 120%;
 
         &.glow {
-            @include prefix(border-radius, 100px);
+            border-radius: 100px;
             padding: 2px 5px;
             // background: #400;
             font-size: 120%;
@@ -35,7 +35,7 @@ const AllRes = styled.div`
         &.tickets:before,
         &.ice_gold:before {
             content: "";
-            background-image: url(~imgPath/ico-gold.png);
+            background-image: url(../img/ico-gold.png);
             background-size: 22px;
             display: inline-block;
             width: 22px;
@@ -47,7 +47,7 @@ const AllRes = styled.div`
         }
         &.snowflake:before {
             content: "";
-            background-image: url(~imgPath/m-ico-gems-ny.png);
+            background-image: url(../img/m-ico-gems-ny.png);
             background-size: 22px;
             display: inline-block;
             width: 22px;
@@ -58,48 +58,48 @@ const AllRes = styled.div`
             margin-bottom: -3px;
         }
         &.gems:before {
-            background-image: url(~imgPath/m-ico-gems.png);
+            background-image: url(../img/m-ico-gems.png);
             background-size: 22px;
             top: -3px;
         }
         &.crowns:before {
-            background-image: url(~imgPath/ico-real.png);
+            background-image: url(../img/ico-real.png);
             background-size: 22px;
             top: -4px;
             margin-right: 2px;
         }
         &.diamonds:before {
-            background-image: url(~imgPath/80-topup.png);
+            background-image: url(../img/80-topup.png);
             background-size: 27px;
             top: -3px;
             margin-right: 2px;
         }
         &.tickets:before {
-            background-image: url(~imgPath/ico-ticket.png);
+            background-image: url(../img/ico-ticket.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.shards:before {
-            background-image: url(~imgPath/ico-shards.png);
+            background-image: url(../img/ico-shards.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.luck_res:before {
-            background-image: url(~imgPath/ms-stone-pink.png);
+            background-image: url(../img/ms-stone-pink.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.dpc:before {
-            background-image: url(~imgPath/ico-click.png);
+            background-image: url(../img/ico-click.png);
             background-size: 22px;
             top: -3px;
             margin-right: 2px;
         }
         &.ice_gold:before {
-            background-image: url(~imgPath/ic-ny-ledmoneta.png);
+            background-image: url(../img/ic-ny-ledmoneta.png);
             top: -3px;
             margin-right: 2px;
         }
@@ -110,7 +110,7 @@ const AllRes = styled.div`
         background: linear-gradient(0deg, #f2be11 0%, #fff87d 100%);
         z-index: 99999;
         box-shadow: inset 0 0 10px 0 #fff, 0 2px 6px 0 rgba(0, 0, 0, 0.35);
-        @include prefix(border-radius, 4px);
+        border-radius: 4px;
         .sale-hint-all-text {
             width: 115px;
             height: auto;
@@ -128,7 +128,7 @@ const AllRes = styled.div`
         display: block;
         width: 105px;
         height: 18px;
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
         position: absolute;
         right: 5px;
         bottom: 9px;
@@ -152,7 +152,7 @@ const AllRes = styled.div`
             line-height: 17px;
             height: 16px;
             background-color: #3c3934;
-            @include prefix(border-radius, 4px);
+            border-radius: 4px;
             position: absolute;
             left: 2px;
             top: 2px;
@@ -201,7 +201,7 @@ const AllRes = styled.div`
             color: #ccc;
             background: #777;
             &:before {
-                @include prefix(filter, grayscale(100%));
+                filter: grayscale(100%);
             }
         }
         &:hover {
@@ -223,7 +223,7 @@ const AllRes = styled.div`
         display: inline-block;
         min-width: 130px;
         height: 42px;
-        @include prefix(border-radius, 9px);
+        border-radius: 9px;
         position: relative;
         line-height: 42px;
         box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
@@ -271,7 +271,7 @@ const AllRes = styled.div`
         display: inline-block;
         min-width: 130px;
         height: 42px;
-        @include prefix(border-radius, 9px);
+        border-radius: 9px;
         position: relative;
         line-height: 42px;
         box-shadow: inset 0 -20px 5px rgba(77, 167, 16, 0.59),
@@ -305,7 +305,7 @@ const AllRes = styled.div`
         display: inline-block;
         min-width: 130px;
         height: 42px;
-        @include prefix(border-radius, 9px);
+        border-radius: 9px;
         position: relative;
         line-height: 42px;
         box-shadow: inset 0 -20px 5px rgba(87, 87, 87, 0.59),
@@ -360,7 +360,7 @@ const AllRes = styled.div`
         left: 150px;
         right: 150px;
         bottom: 0;
-        @include prefix(transform, translate3d(0, 200px, 0));
+        transform: translate3d(0, 200px, 0);
         pointer-events: all;
         &.hidden {
             width: 0;
@@ -368,36 +368,30 @@ const AllRes = styled.div`
         }
 
         &.open {
-            @include prefix(
-                animation,
-                slider-layer-slider-popup-open 0.2s ease 0s 1 forwards
-            );
+            animation: slider-layer-slider-popup-open 0.2s ease 0s 1 forwards;
             @keyframes slider-layer-slider-popup-open {
                 0% {
-                    @include prefix(transform, translate3d(0, 200px, 0));
+                    transform: translate3d(0, 200px, 0);
                 }
                 75% {
-                    @include prefix(transform, translate3d(0, 15px, 0));
+                    transform: translate3d(0, 15px, 0);
                 }
                 100% {
-                    @include prefix(transform, translate3d(0, 50px, 0));
+                    transform: translate3d(0, 50px, 0);
                 }
             }
         }
         &.close {
-            @include prefix(
-                animation,
-                slider-layer-slider-popup-close 0.2s ease 0s 1 forwards
-            );
+            animation: slider-layer-slider-popup-close 0.2s ease 0s 1 forwards;
             @keyframes slider-layer-slider-popup-close {
                 100% {
-                    @include prefix(transform, translate3d(0, 200px, 0));
+                    transform: translate3d(0, 200px, 0);
                 }
                 25% {
-                    @include prefix(transform, translate3d(0, 15px, 0));
+                    transform: translate3d(0, 15px, 0);
                 }
                 0% {
-                    @include prefix(transform, translate3d(0, 50px, 0));
+                    transform: translate3d(0, 50px, 0);
                 }
             }
         }
@@ -412,8 +406,8 @@ const AllRes = styled.div`
             top: 0px;
             // background: rgba(0,0,0,0.55);
             background: linear-gradient(to bottom, #f6e9b3, #d77006);
-            @include prefix(border-top-left-radius, 25px);
-            @include prefix(border-top-right-radius, 25px);
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
             // box-shadow: 0 0 15px #000;
             border: solid 2px #ffa;
             box-shadow: inset 0 0 13px #ffa;
@@ -434,7 +428,7 @@ const AllRes = styled.div`
             position: absolute;
             right: 10px;
             top: 10px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             cursor: pointer;
             &:before {
                 content: "";
@@ -446,7 +440,7 @@ const AllRes = styled.div`
                 top: 6px;
                 border-left: solid 4px #400;
                 border-bottom: solid 4px #400;
-                @include prefix(transform, rotate(-45deg));
+                transform: rotate(-45deg);
             }
         }
         .title,
@@ -474,13 +468,13 @@ const AllRes = styled.div`
             position: absolute;
             left: 25px;
             top: 22px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             background: #ffa84b;
             box-shadow: 0 0 10px #500, 0 0 20px #f6e9b3, inset 0 0 15px #ffa;
             border: solid #ffa 4px;
             .img {
                 width: 100%;
-                @include prefix(border-radius, 100%);
+                border-radius: 100%;
             }
         }
 
@@ -496,7 +490,7 @@ const AllRes = styled.div`
             font-size: 16px;
             font-weight: bold;
             color: #600;
-            @include prefix(border-radius, 20px);
+            border-radius: 20px;
             background: #f0d495;
             // background: red;
             padding: 0;
@@ -512,7 +506,7 @@ const AllRes = styled.div`
                 // position: relative;
                 // display: inline-block;
                 background: #a52b00;
-                @include prefix(border-radius, 20px);
+                border-radius: 20px;
                 color: #ffa;
                 // padding: 0px 20px;
                 text-shadow: 0 1px 4px #600;
@@ -542,7 +536,7 @@ const AllRes = styled.div`
         background: linear-gradient(-22deg, #fffbc7, #b37a07, #ffb229, #fffbc7);
         box-shadow: 0 1px 10px #392d26, inset 0 1px 2px #fff, 0 0 10px #000,
             0 0 15px #000;
-        @include prefix(border-radius, 10px);
+        border-radius: 10px;
         &:before {
             content: "";
             display: block;
@@ -551,8 +545,8 @@ const AllRes = styled.div`
             right: 10px;
             top: 60px;
             bottom: 10px;
-            @include prefix(border-bottom-left-radius, 5px);
-            @include prefix(border-bottom-right-radius, 5px);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
             background: #444156;
             box-shadow: 0 0 2px #fff, 0 0 5px #fff,
                 inset 0 0 5px rgba(0, 0, 0, 0.55);
@@ -574,7 +568,7 @@ const AllRes = styled.div`
                 width: 150%;
                 height: 40%;
                 background: #000;
-                @include prefix(border-radius, 100%);
+                border-radius: 100%;
                 position: absolute;
                 left: -25%;
                 bottom: -50px;
@@ -678,7 +672,7 @@ const AllRes = styled.div`
                 .gold {
                     width: 75px;
                     height: 75px;
-                    background-image: url(~imgPath/ic-abil-gold.png);
+                    background-image: url(../img/ic-abil-gold.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -703,7 +697,7 @@ const AllRes = styled.div`
                 .gold-shards {
                     width: 75px;
                     height: 75px;
-                    background-image: url(~imgPath/ic-abil-gold-but.png);
+                    background-image: url(../img/ic-abil-gold-but.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -743,7 +737,7 @@ const AllRes = styled.div`
                 .gems {
                     width: 75px;
                     height: 75px;
-                    background-image: url(~imgPath/ic-abil-rubin.png);
+                    background-image: url(../img/ic-abil-rubin.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -768,7 +762,7 @@ const AllRes = styled.div`
                 .shards {
                     width: 75px;
                     height: 75px;
-                    background-image: url(~imgPath/ic-abil-butil.png);
+                    background-image: url(../img/ic-abil-butil.png);
                     background-size: 75px;
                     position: absolute;
                     top: 6px;
@@ -798,13 +792,13 @@ const AllRes = styled.div`
                     top: 6px;
                     margin-left: 10px;
                     &.t1h {
-                        background-image: url(~imgPath/ic-clock1.png);
+                        background-image: url(../img/ic-clock1.png);
                     }
                     &.t6h {
-                        background-image: url(~imgPath/ic-clock6.png);
+                        background-image: url(../img/ic-clock6.png);
                     }
                     &.t24h {
-                        background-image: url(~imgPath/ic-clock24.png);
+                        background-image: url(../img/ic-clock24.png);
                     }
                 }
                 &.clock {
@@ -825,7 +819,7 @@ const AllRes = styled.div`
                     position: absolute;
                     top: 8px;
                     left: 130px;
-                    @include prefix(border-radius, 14px);
+                    border-radius: 14px;
                     font-size: 30px;
                     color: #fff;
                     text-shadow: 0 1px 3px #2f2f2f;
@@ -871,7 +865,7 @@ const AllRes = styled.div`
                     font-size: 30px;
                     color: #fff;
                     line-height: 20px;
-                    @include prefix(border-radius, 14px);
+                    border-radius: 14px;
                 }
             }
         }
@@ -898,7 +892,7 @@ const AllRes = styled.div`
                         #ffb229,
                         #fffbc7
                     );
-                    @include prefix(border-radius, 4px);
+                    border-radius: 4px;
                     padding: 4px;
                     box-shadow: 0 1px 5px #000, 0 1px 15px rgba(0, 0, 0, 0.33),
                         0 1px 25px rgba(0, 0, 0, 0.33);
@@ -979,7 +973,7 @@ const AllRes = styled.div`
                         top: 20px;
                         background: red;
                         padding: 10px;
-                        @include prefix(border-radius, 10px);
+                        border-radius: 10px;
                         background: linear-gradient(to top, #c12600, #6e0303);
                         border: 1px solid #feff58;
                         box-shadow: 0 0 5px #feff58, inset 0 0 2px #feff58;
@@ -1031,10 +1025,10 @@ const AllRes = styled.div`
                             display: block;
                             width: 105px;
                             height: 105px;
-                            background-image: url(~imgPath/offer-bk2.png);
+                            background-image: url(../img/offer-bk2.png);
                             background-size: 105px 105px;
                             background-repeat: no-repeat;
-                            // @include prefix(transform, rotate(-90deg));
+                            // transform: rotate(-90deg);
                         }
                         &:after {
                             content: "";
@@ -1044,7 +1038,7 @@ const AllRes = styled.div`
                             position: absolute;
                             left: calc(50% - 22px);
                             top: 2px;
-                            background-image: url(~imgPath/time1.png);
+                            background-image: url(../img/time1.png);
                             background-size: 38px;
                         }
                         .time,
@@ -1071,7 +1065,7 @@ const AllRes = styled.div`
                         }
                         .time {
                             background: #640706;
-                            @include prefix(border-radius, 30px);
+                            border-radius: 30px;
                         }
                     }
                 }
@@ -1104,7 +1098,7 @@ const AllRes = styled.div`
             left: 0px;
             right: 0px;
             top: 0px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             box-shadow: 0 1px 10px #392d26, inset 0 2px 10px #fff,
                 inset 0 28px 5px rgba(255, 255, 0, 0.15);
             border: solid 4px #ffb229;
@@ -1119,7 +1113,7 @@ const AllRes = styled.div`
             display: inline-block;
             width: 30px;
             height: 30px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             position: absolute;
             right: 11px;
             top: 11px;
@@ -1149,7 +1143,7 @@ const AllRes = styled.div`
                 width: 24px;
                 height: 7px;
                 background: rgba(255, 255, 255, 0.25);
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
                 position: absolute;
                 left: 3px;
                 top: 3px;
@@ -1290,23 +1284,20 @@ const AllRes = styled.div`
             }
             &.open {
                 opacity: 0;
-                @include prefix(
-                    animation,
-                    newpic-popup-open-1 0.25s ease 0s 1 forwards
-                );
+                animation: newpic-popup-open-1 0.25s ease 0s 1 forwards;
             }
             @keyframes newpic-popup-open-1 {
                 0% {
                     opacity: 0;
-                    @include prefix(transform, scale3d(0.1, 0.1, 1));
+                    transform: scale3d(0.1, 0.1, 1);
                 }
                 88% {
                     opacity: 1;
-                    @include prefix(transform, scale3d(1.1, 1.1, 1));
+                    transform: scale3d(1.1, 1.1, 1);
                 }
                 100% {
                     opacity: 1;
-                    @include prefix(transform, scale3d(1, 1, 1));
+                    transform: scale3d(1, 1.1);
                 }
             }
 
@@ -1351,19 +1342,16 @@ const AllRes = styled.div`
                         font-weight: bold;
                         color: rgba(0, 0, 0, 0.33);
                         text-align: center;
-                        @include prefix(border-radius, 20px);
-                        @include prefix(
-                            animation,
-                            loading-animation-1 1s ease 0s 999 forwards
-                        );
+                        border-radius: 20px;
+                        animation: loading-animation-1 1s ease 0s 999 forwards;
                     }
                     @keyframes loading-animation-1 {
                         0%,
                         100% {
-                            @include prefix(transform, scale3d(1, 1, 1));
+                            transform: scale3d(1, 1.1);
                         }
                         50% {
-                            @include prefix(transform, scale3d(1.1, 0.88, 1));
+                            transform: scale3d(1.1, 0.88, 1);
                         }
                     }
 
@@ -1400,9 +1388,9 @@ const AllRes = styled.div`
                         position: absolute;
                         bottom: 10px;
                         left: 10px;
-                        background-image: url(~imgPath/ico-max.png);
+                        background-image: url(../img/ico-max.png);
                         background-size: 30px;
-                        @include prefix(border-radius, 5px);
+                        border-radius: 5px;
                         cursor: pointer;
                         box-shadow: 0 2px 2px #000;
                         box-shadow: inset 0 0 3px #ffa, inset 0 0 5px #ffc;
@@ -1415,7 +1403,7 @@ const AllRes = styled.div`
                         display: inline-block;
                         width: 29px;
                         height: 29px;
-                        background-image: url(~imgPath/star1.png);
+                        background-image: url(../img/star1.png);
                         background-size: 29px;
                         position: absolute;
                         right: 36px;
@@ -1482,7 +1470,7 @@ const AllRes = styled.div`
                 line-height: 55px;
             }
             .color-box {
-                background-image: url(~imgPath/ts_confirm_bk.jpg);
+                background-image: url(../img/ts_confirm_bk.jpg);
                 &:before,
                 &:after {
                     content: none;
@@ -1523,37 +1511,29 @@ const AllRes = styled.div`
                         position: absolute;
                         left: 2px;
                         top: -28px;
-                        @include prefix(border-radius, 100%);
-                        @include prefix(transform-origin, 3px 35px);
-                        @include prefix(transform, rotate(32deg));
-
-                        @include prefix(
-                            animation,
-                            clock-arrow-anim-1 0.5s linear 0s 9999 forwards
-                        );
+                        border-radius: 100%;
+                        transform-origin: 3px 35px;
+                        transform: rotate(32deg);
+                        animation: clock-arrow-anim-1 0.5s linear 0s 9999 forwards;
                     }
                     @keyframes clock-arrow-anim-1 {
                         0% {
-                            @include prefix(transform, rotate(0deg));
+                            transform: rotate(0deg);
                         }
                         50% {
-                            @include prefix(transform, rotate(180deg));
+                            transform: rotate(180deg);
                         }
                         100% {
-                            @include prefix(transform, rotate(360deg));
+                            transform: rotate(360deg);
                         }
                     }
 
                     &:after {
                         height: 20px;
                         top: -20px;
-                        @include prefix(transform-origin, 3px 25px);
-                        @include prefix(transform, rotate(90deg));
-                        // @include prefix(transform, rotate(0));
-                        @include prefix(
-                            animation,
-                            clock-arrow-anim-1 2s linear 0s 999 forwards
-                        );
+                        transform-origin: 3px 25px;
+                        transform: rotate(90deg);
+                        animation: clock-arrow-anim-1 2s linear 0s 999 forwards;
                     }
                 }
 
@@ -1574,24 +1554,20 @@ const AllRes = styled.div`
                     .ss {
                         display: inline-block;
                         width: 33%;
-                        float: left;
                     }
-                    @include prefix(
-                        animation,
-                        clock-time-anim-1 0.5s linear 0s 3 forwards
-                    );
+                    animation: clock-time-anim-1 0.5s linear 0s 3 forwards;
                 }
                 @keyframes clock-time-anim-1 {
                     0%,
                     80%,
                     100% {
-                        @include prefix(transform, scale3d(1, 1, 1));
+                        transform: scale3d(1, 1.1);
                     }
                     95% {
-                        @include prefix(transform, scale3d(0.77, 0.77, 1));
+                        transform: scale3d(0.77, 0.77, 1);
                     }
                     90% {
-                        @include prefix(transform, scale3d(1.2, 1.2, 1));
+                        transform: scale3d(1.2, 1.2, 1);
                     }
                 }
             }
@@ -1614,27 +1590,24 @@ const AllRes = styled.div`
                     height: 199px;
                     // background: rgba(255,0,0,0.50);
                     position: relative;
-                    @include prefix(
-                        animation,
-                        clock-time-anim-1 0.5s linear 0s 3 forwards
-                    );
+                    animation: clock-time-anim-1 0.5s linear 0s 3 forwards;
                     &.gold {
-                        background-image: url(~imgPath/ic-abil-gold@2x.png);
+                        background-image: url(../img/ic-abil-gold@2x.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
                     &.shards {
-                        background-image: url(~imgPath/ic-abil-butil@2x.png);
+                        background-image: url(../img/ic-abil-butil@2x.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
                     &.ice_gold {
-                        background-image: url(~imgPath/ic-ice_gold.png);
+                        background-image: url(../img/ic-ice_gold.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
                     &.snowflake {
-                        background-image: url(~imgPath/m-ico-gems-ny.png);
+                        background-image: url(../img/m-ico-gems-ny.png);
                         background-size: 100% auto;
                         background-repeat: no-repeat;
                     }
@@ -1646,7 +1619,7 @@ const AllRes = styled.div`
                         bottom: 10px;
                         left: 10%;
                         background: #300;
-                        @include prefix(border-radius, 100%);
+                        border-radius: 100%;
                         line-height: 0;
                         box-shadow: 0 0 10px #300, 0 0 20px #300, 0 0 30px #300,
                             0 0 10px #300, 0 0 20px #300, 0 0 30px #300;
@@ -1671,7 +1644,7 @@ const AllRes = styled.div`
     top: -20px;
     width: 68px;
     height: 68px;
-    background-image: url(~imgPath/pop-sale-bg.png);
+    background-image: url(../img/pop-sale-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1714,7 +1687,7 @@ const AllRes = styled.div`
     }
     &.chest {
         &:before {
-            background-image: url(~imgPath/change-sun1.png);
+            background-image: url(../img/change-sun1.png);
         }
     }
     .res-value-btn-add {
@@ -1749,7 +1722,7 @@ const AllRes = styled.div`
     font-size: 18px;
     font-weight: bold;
     display: inline-block;
-    @include prefix(border-radius, 7px);
+    border-radius: 7px;
     background: linear-gradient(
         79.88deg,
         #eecc60 15.85%,
@@ -1770,7 +1743,7 @@ const AllRes = styled.div`
         position: absolute;
         top: 3px;
         right: 4px;
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
         background-color: #5f4c36;
         box-shadow: inset 0 11px 0px rgba(255, 255, 255, 0.08),
             inset 0 2px 1px #3d3737;
@@ -1823,7 +1796,7 @@ const AllRes = styled.div`
             position: absolute;
             left: 3px;
             top: 21px;
-            background-image: url(~imgPath/ico-sword.png);
+            background-image: url(../img/ico-sword.png);
             background-size: cover;
         }
     }
@@ -1843,7 +1816,7 @@ const AllRes = styled.div`
     text-align: center;
     padding: 0 8px 0 16px;
     line-height: 22px;
-    background: url(~imgPath/banner-bg.png);
+    background: url(../img/banner-bg.png);
     background-size: auto 66px;
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -1854,13 +1827,13 @@ const AllRes = styled.div`
     pointer-events: none;
 }
 .progress-banner-gray {
-    background: url(~imgPath/banner-bg.png);
+    background: url(../img/banner-bg.png);
     background-size: auto 66px;
     background-repeat: no-repeat;
     background-position: 0 -22px;
 }
 .progress-banner-green {
-    background: url(~imgPath/banner-bg.png);
+    background: url(../img/banner-bg.png);
     background-size: auto 66px;
     background-repeat: no-repeat;
     background-position: 0 -44px;
@@ -1868,7 +1841,7 @@ const AllRes = styled.div`
 
 body .main.world3 .popup-layer .m-popup.ts_confirm {
     .color-box {
-        background-image: url(~imgPath/ts_confirm_bk_darkworld.jpg);
+        background-image: url(../img/ts_confirm_bk_darkworld.jpg);
     }
     .timer {
         .time {
@@ -1876,7 +1849,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         }
     }
     .reward.dark_gold {
-        background-image: url(~imgPath/darkworld-dark-coins-icn.png);
+        background-image: url(../img/darkworld-dark-coins-icn.png);
         .text {
             color: #2e0088;
         }
@@ -1890,7 +1863,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 1em;
         height: 1em;
         display: inline-block;
-        background-image: url(~imgPath/ic-girls-pieces.png);
+        background-image: url(../img/ic-girls-pieces.png);
         background-position: center 0em;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1914,7 +1887,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
             width: 1em;
             height: 1em;
             display: inline-block;
-            background-image: url(~imgPath/ic-girls-pieces.png);
+            background-image: url(../img/ic-girls-pieces.png);
             background-position: center -2em;
             background-repeat: no-repeat;
             background-size: 100%;
@@ -1931,7 +1904,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 28px;
         height: 28px;
         display: inline-block;
-        background-image: url(~imgPath/ic-girls-pieces.png);
+        background-image: url(../img/ic-girls-pieces.png);
         background-position: center -28px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1947,7 +1920,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 28px;
         height: 28px;
         display: inline-block;
-        background-image: url(~imgPath/ic-girls-pieces.png);
+        background-image: url(../img/ic-girls-pieces.png);
         background-position: center 0px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1963,7 +1936,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         width: 28px;
         height: 28px;
         display: inline-block;
-        background-image: url(~imgPath/ic-girls-pieces.png);
+        background-image: url(../img/ic-girls-pieces.png);
         background-position: center -56px;
         background-repeat: no-repeat;
         background-size: 100%;
@@ -1994,7 +1967,6 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
         background: linear-gradient(to right, #fff, #f5de80, #f4b766, #b26d12);
     }
 }
-
 `;
 
 export default AllRes;

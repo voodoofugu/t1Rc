@@ -1,6 +1,6 @@
 import React from "react";
-import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
-import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
+// import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
+// import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
 
 const V2MainScreen15CwMain3Component = () => {
     return (
@@ -10,7 +10,7 @@ const V2MainScreen15CwMain3Component = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/02-Forest-2.jpg')",
+                            "url('../img/images/back/new/02-Forest-2.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

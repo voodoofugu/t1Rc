@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
-import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
-import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
-import screenSuperhero from "../styles/screen-superhero.scss";
+// import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
+// import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
+// import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
+// import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen22PortalSquadComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -97,7 +97,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/09-River.jpg')",
+                            "url('../img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
@@ -1475,7 +1475,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                         className="essence-but-box"
                                         style={{
                                             backgroundImage:
-                                                "url('img/v2-f-e1.png')",
+                                                "url('../img/v2-f-e1.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>5K</div>
@@ -1505,7 +1505,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                         className="essence-but-box"
                                         style={{
                                             backgroundImage:
-                                                "url('img/v2-f-e2.png')",
+                                                "url('../img/v2-f-e2.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
@@ -1535,7 +1535,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                         className="essence-but-box"
                                         style={{
                                             backgroundImage:
-                                                "url('img/v2-f-e3.png')",
+                                                "url('../img/v2-f-e3.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>20K</div>
@@ -1560,7 +1560,7 @@ const V2MainScreen22PortalSquadComponent = () => {
                                         className="essence-but-box"
                                         style={{
                                             backgroundImage:
-                                                "url('img/v2-f-e4.png')",
+                                                "url('../img/v2-f-e4.png')",
                                         }}></div>
                                     <div className="essence-price">
                                         <div>250K</div>

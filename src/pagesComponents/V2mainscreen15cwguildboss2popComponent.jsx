@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenCwGuildboss2 from "../styles/v2-screen-cw-guildboss2.scss";
+// import v2ScreenCwGuildboss2 from "../styles/v2-screen-cw-guildboss2.scss";
 
 const V2MainScreen15CwGuildboss2PopComponent = () => {
     return (

@@ -1,139 +1,265 @@
-
 import styled from "styled-components";
 
 const ScreenChangeDopmain = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+    body {
+        .chestbox-container {
+            position: absolute;
+            z-index: 3;
+            top: -60px;
 
-body {
-    .chestbox-container {
-        position: absolute;
-        z-index: 3;
-        top: -60px;
-
-        .change-chest-box{
-            width: 140px; position: absolute;
-            @include background-gold; @include prefix(border-radius, 10px); cursor: pointer;
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-            &:before{
-                z-index: 1;
-                content: ""; width: 100px; height: 100px; position: absolute; top: -45px; margin-left: -66px;
-                background-image: url(~imgPath/change-sun1.png); background-size: 100%;
-            }
-            height: 32px;
-            top: 39px;
-            margin-left: 751px;
-            .change-chest-count{
-                width: 113px; height: 22px; position: relative; top: 6px;
-                margin-left: 27px;
-                font-size: 26px; font-weight: bold; color: #fff; text-align: center;
-                text-shadow: 0 1px 2px rgba(0,0,0,0.5); line-height: 22px;
-            }
-            .change-timer{
-                width: 154px; height: 38px; position: absolute; top: -28px; margin-left: -7px;
-                background-image: url(~imgPath/ic-abil-greenline@2x.png); background-size: 100%;
-                .timer-counter{
-                    width: 124px; top: 4px; margin-left: 30px;
-                    height: 22px; position: relative; text-align: center;
-                    font-size: 18px; font-weight: bold; color: #fff;
-                    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            .change-chest-box {
+                width: 140px;
+                position: absolute;
+                background: linear-gradient(
+                    180deg,
+                    #c68300 0%,
+                    #f4dfb6 50%,
+                    #c68200 70%,
+                    #fad489 85%,
+                    #c78302 100%
+                );
+                border-radius: 10px;
+                cursor: pointer;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+                &:before {
+                    z-index: 1;
+                    content: "";
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    top: -45px;
+                    margin-left: -66px;
+                    background-image: url(../img/change-sun1.png);
+                    background-size: 100%;
+                }
+                height: 32px;
+                top: 39px;
+                margin-left: 751px;
+                .change-chest-count {
+                    width: 113px;
+                    height: 22px;
+                    position: relative;
+                    top: 6px;
+                    margin-left: 27px;
+                    font-size: 26px;
+                    font-weight: bold;
+                    color: #fff;
+                    text-align: center;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                    line-height: 22px;
+                }
+                .change-timer {
+                    width: 154px;
+                    height: 38px;
+                    position: absolute;
+                    top: -28px;
+                    margin-left: -7px;
+                    background-image: url(../img/ic-abil-greenline@2x.png);
+                    background-size: 100%;
+                    .timer-counter {
+                        width: 124px;
+                        top: 4px;
+                        margin-left: 30px;
+                        height: 22px;
+                        position: relative;
+                        text-align: center;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #fff;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                    }
                 }
             }
         }
     }
-}
 
+    body .header {
+        .vip-panel {
+            width: 245px;
+            height: 80px;
+            position: absolute;
+            top: 0;
+            margin-left: 428px;
+            background-image: url(../img/vip-sign2.png);
+            background-size: 100%;
+            &:after {
+                content: "+";
+                display: block;
+                width: 32px;
+                height: 60px;
+                position: absolute;
+                top: 10px;
+                margin-left: 208px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 36px;
+                color: #3d3737;
+                cursor: pointer;
+                text-shadow: 0 0 2px #615142, 0 0 2px #615142, 0 0 2px #615142,
+                    2px 2px 1px #fff, -2px -2px 1px #c87726;
+                line-height: 60px;
+                border-radius: 0 26px 26px 0;
+            }
+            .viplvl {
+                width: 56px;
+                height: 56px;
+                position: absolute;
+                top: 10px;
+                margin-left: 14px;
+                color: #1e1010;
+                font-weight: bold;
+                font-size: 16px;
+                text-align: center;
+                line-height: 60px;
+                text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+            }
+            &.lvl0 {
+                .viplvl {
+                    background-image: url(../img/2vip-s3.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl1 {
+                .viplvl {
+                    background-image: url(../img/2vip-s1.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl2 {
+                .viplvl {
+                    background-image: url(../img/2vip-s2.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl3 {
+                .viplvl {
+                    background-image: url(../img/2vip-s3.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl4 {
+                .viplvl {
+                    background-image: url(../img/2vip-s4.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl5 {
+                .viplvl {
+                    background-image: url(../img/2vip-s5.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl6 {
+                .viplvl {
+                    background-image: url(../img/2vip-s6.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl7 {
+                .viplvl {
+                    background-image: url(../img/2vip-s7.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl8 {
+                .viplvl {
+                    background-image: url(../img/2vip-s8.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl9 {
+                .viplvl {
+                    background-image: url(../img/2vip-s9.png);
+                    background-size: 100%;
+                }
+            }
+            &.lvl10 {
+                .viplvl {
+                    background-image: url(../img/2vip-s10.png);
+                    background-size: 100%;
+                }
+            }
+            .vip-diamond-text,
+            .vip-ticket-text {
+                width: 78px;
+                height: 20px;
+                position: absolute;
+                top: 16px;
+                margin-left: 128px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: bold;
+                text-shadow: 0 2px 4px #000;
+            }
+            .vip-ticket-text {
+                top: 44px;
+            }
+        }
 
-body .header
-{
-    .vip-panel{
-        width: 245px; height: 80px; position: absolute; top: 0; margin-left: 428px;
-        background-image: url(~imgPath/vip-sign2.png); background-size: 100%;
-        &:after{
-            content: "+"; display: block; width: 32px; height: 60px; position: absolute; top: 10px; margin-left: 208px;
-            text-align: center; font-weight: bold; font-size: 36px; color: #3d3737; cursor: pointer;
-            text-shadow: 0 0 2px #615142,0 0 2px #615142,0 0 2px #615142, 2px 2px 1px #fff,
-            -2px -2px 1px #c87726;
-            line-height: 60px;
-            @include prefix(border-radius, 0 26px 26px 0);
-
-        }
-        .viplvl{
-            width: 56px; height: 56px; position: absolute; top: 10px; margin-left: 14px;
-            color: #1e1010; font-weight: bold; font-size: 16px; text-align: center;
-            line-height: 60px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
-        }
-        &.lvl0{
-            .viplvl{background-image: url(~imgPath/2vip-s3.png); background-size: 100%;}
-        }
-        &.lvl1{
-            .viplvl{background-image: url(~imgPath/2vip-s1.png); background-size: 100%;}
-        }
-        &.lvl2{
-            .viplvl{background-image: url(~imgPath/2vip-s2.png); background-size: 100%;}
-        }
-        &.lvl3{
-            .viplvl{background-image: url(~imgPath/2vip-s3.png); background-size: 100%;}
-        }
-        &.lvl4{
-            .viplvl{background-image: url(~imgPath/2vip-s4.png); background-size: 100%;}
-        }
-        &.lvl5{
-            .viplvl{background-image: url(~imgPath/2vip-s5.png); background-size: 100%;}
-        }
-        &.lvl6{
-            .viplvl{background-image: url(~imgPath/2vip-s6.png); background-size: 100%;}
-        }
-        &.lvl7{
-            .viplvl{background-image: url(~imgPath/2vip-s7.png); background-size: 100%;}
-        }
-        &.lvl8{
-            .viplvl{background-image: url(~imgPath/2vip-s8.png); background-size: 100%;}
-        }
-        &.lvl9{
-            .viplvl{background-image: url(~imgPath/2vip-s9.png); background-size: 100%;}
-        }
-        &.lvl10{
-            .viplvl{background-image: url(~imgPath/2vip-s10.png); background-size: 100%;}
-        }
-        .vip-diamond-text, .vip-ticket-text{
-            width: 78px; height: 20px; position: absolute; top: 16px; margin-left: 128px;
-            color: #fff; font-size: 16px; font-weight: bold; text-shadow: 0 2px 4px #000;
-        }
-        .vip-ticket-text{top: 44px;}
-    }
-
-
-    .change-chest-box{
-        width: 140px; position: absolute;
-        @include background-gold; @include prefix(border-radius, 10px); cursor: pointer;
-        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
-        &:before{
-            z-index: 1;
-            content: ""; width: 100px; height: 100px; position: absolute; top: -45px; margin-left: -66px;
-            background-image: url(~imgPath/change-sun1.png); background-size: 100%;
-        }
-        height: 32px;
-        top: 39px;
-        margin-left: 751px;
-        .change-chest-count{
-            width: 113px; height: 22px; position: relative; top: 6px;
-            margin-left: 27px;
-            font-size: 26px; font-weight: bold; color: #fff; text-align: center;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5); line-height: 22px;
-        }
-        .change-timer{
-            width: 154px; height: 38px; position: absolute; top: -28px; margin-left: -7px;
-            background-image: url(~imgPath/ic-abil-greenline@2x.png); background-size: 100%;
-            .timer-counter{
-                width: 124px; top: 4px; margin-left: 30px;
-                height: 22px; position: relative; text-align: center;
-                font-size: 18px; font-weight: bold; color: #fff;
-                text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        .change-chest-box {
+            width: 140px;
+            position: absolute;
+            background: linear-gradient(
+                180deg,
+                #c68300 0%,
+                #f4dfb6 50%,
+                #c68200 70%,
+                #fad489 85%,
+                #c78302 100%
+            );
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            &:before {
+                z-index: 1;
+                content: "";
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: -45px;
+                margin-left: -66px;
+                background-image: url(../img/change-sun1.png);
+                background-size: 100%;
+            }
+            height: 32px;
+            top: 39px;
+            margin-left: 751px;
+            .change-chest-count {
+                width: 113px;
+                height: 22px;
+                position: relative;
+                top: 6px;
+                margin-left: 27px;
+                font-size: 26px;
+                font-weight: bold;
+                color: #fff;
+                text-align: center;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+                line-height: 22px;
+            }
+            .change-timer {
+                width: 154px;
+                height: 38px;
+                position: absolute;
+                top: -28px;
+                margin-left: -7px;
+                background-image: url(../img/ic-abil-greenline@2x.png);
+                background-size: 100%;
+                .timer-counter {
+                    width: 124px;
+                    top: 4px;
+                    margin-left: 30px;
+                    height: 22px;
+                    position: relative;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #fff;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                }
             }
         }
     }
-}
 `;
 
 export default ScreenChangeDopmain;

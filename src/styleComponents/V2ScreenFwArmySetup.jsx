@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenFwArmySetup = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .popup-layer .m-popup.army-setup {
   width: 1200px;
@@ -111,7 +110,7 @@ const V2ScreenFwArmySetup = styled.div`
             height: 18px;
             position: relative;
             display: inline-block;
-            background-image: url(~imgPath/v2-ic-filter.png);
+            background-image: url(../img/v2-ic-filter.png);
             background-size: 100%;
             background-repeat: no-repeat;
             margin-right: 6px;
@@ -129,7 +128,7 @@ const V2ScreenFwArmySetup = styled.div`
         .color-btn {
           width: 170px;
           height: 26px;
-          @include prefix(border-radius, 0);
+          border-radius: 0;
           background: linear-gradient(0deg, #65779c 0%, #9caac8 100%);
           box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
             0 2px 4px 0 rgba(0, 0, 0, 0.55);
@@ -164,7 +163,7 @@ const V2ScreenFwArmySetup = styled.div`
       .color-btn {
         width: 260px;
         height: 26px;
-        @include prefix(border-radius, 20px);
+        border-radius: 20px;
         box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
           0 2px 4px 0 rgba(0, 0, 0, 0.55);
         .color-btn-text {
@@ -224,7 +223,13 @@ const V2ScreenFwArmySetup = styled.div`
         width: 8px;
       }
       &::-webkit-scrollbar-thumb {
-        @include background-resourcebg;
+        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
       }
 
       .fw-mer-box-all {
@@ -238,8 +243,15 @@ const V2ScreenFwArmySetup = styled.div`
           height: 294px;
           position: relative;
           display: inline-block;
-          @include background-gold;
-          @include prefix(border-radius, 6px);
+          background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
+          border-radius: 6px;
           margin: 5px;
           .fw-mer-pic {
             width: 202px;
@@ -248,7 +260,7 @@ const V2ScreenFwArmySetup = styled.div`
             top: 4px;
             left: 4px;
             overflow: hidden;
-            @include prefix(border-radius, 4px);
+            border-radius: 4px;
           }
           .fw-mer-count {
             width: 60px;
@@ -262,7 +274,7 @@ const V2ScreenFwArmySetup = styled.div`
               #007aa7 50%,
               #3fbae7 100%
             );
-            @include prefix(border-radius, 2px);
+            border-radius: 2px;
             color: #fff;
             font-weight: bold;
             font-size: 18px;
@@ -276,7 +288,7 @@ const V2ScreenFwArmySetup = styled.div`
             position: absolute;
             bottom: 5px;
             left: 5px;
-            @include prefix(border-radius, 20px);
+            border-radius: 20px;
             background: linear-gradient(
               0deg,
               #e9b039 0%,
@@ -301,7 +313,7 @@ const V2ScreenFwArmySetup = styled.div`
               position: relative;
               display: inline-block;
               top: 3px;
-              background-image: url(~imgPath/star48.png);
+              background-image: url(../img/star48.png);
               background-size: 100%;
               background-repeat: no-repeat;
             }
@@ -314,8 +326,15 @@ const V2ScreenFwArmySetup = styled.div`
         height: 111px;
         position: relative;
         display: inline-block;
-        @include prefix(border-radius, 6px);
-        @include background-bronze;
+        border-radius: 6px;
+        background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
         margin: 5px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
         .hero-avatar {
@@ -324,7 +343,7 @@ const V2ScreenFwArmySetup = styled.div`
           position: absolute;
           top: 4px;
           left: 4px;
-          @include prefix(border-radius, 4px);
+          border-radius: 4px;
           overflow: hidden;
         }
         .fw-as-num {
@@ -333,7 +352,7 @@ const V2ScreenFwArmySetup = styled.div`
           position: absolute;
           bottom: 4px;
           left: 9px;
-          @include prefix(border-radius, 20px);
+          border-radius: 20px;
 
           background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
@@ -353,7 +372,7 @@ const V2ScreenFwArmySetup = styled.div`
           top: 0;
           left: 0;
           background-color: rgba(0, 0, 0, 0.75);
-          @include prefix(border-radius, 6px);
+          border-radius: 6px;
           display: none;
           .fw-army-locked {
             width: 78px;
@@ -422,8 +441,15 @@ const V2ScreenFwArmySetup = styled.div`
         height: 111px;
         position: relative;
         display: inline-block;
-        @include prefix(border-radius, 6px);
-        @include background-bronze;
+        border-radius: 6px;
+        background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
         margin: 0 5px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
         .hero-avatar {
@@ -432,7 +458,7 @@ const V2ScreenFwArmySetup = styled.div`
           position: absolute;
           top: 4px;
           left: 4px;
-          @include prefix(border-radius, 4px);
+          border-radius: 4px;
           overflow: hidden;
         }
         .fw-as-num {
@@ -441,7 +467,7 @@ const V2ScreenFwArmySetup = styled.div`
           position: absolute;
           bottom: 4px;
           left: 9px;
-          @include prefix(border-radius, 20px);
+          border-radius: 20px;
 
           background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
@@ -481,7 +507,7 @@ const V2ScreenFwArmySetup = styled.div`
     top: 75px;
     right: 20px;
     background: linear-gradient(180deg, #b9aba1 0%, #9e8b7d 100%);
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     box-shadow: 0 2px 2px 0 #5e544c;
     .store-item-box-scroll {
       width: 686px;
@@ -515,7 +541,7 @@ const V2ScreenFwArmySetup = styled.div`
         height: 210px;
         position: relative;
         text-align: center;
-        background-image: url(~imgPath/shop-pod.jpg);
+        background-image: url(../img/shop-pod.jpg);
         background-size: 100%;
         &.blured {
           filter: blur(5px);
@@ -527,7 +553,7 @@ const V2ScreenFwArmySetup = styled.div`
           top: 190px;
           left: 199px;
 
-          background-image: url(~imgPath/polka.png);
+          background-image: url(../img/polka.png);
           background-size: 100%;
           z-index: 999;
           line-height: 32px;
@@ -543,8 +569,15 @@ const V2ScreenFwArmySetup = styled.div`
           position: relative;
           display: inline-block;
           top: 14px;
-          @include prefix(border-radius, 6px);
-          @include background-bronze;
+          border-radius: 6px;
+          background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
           margin: 0 7px 26px 2px;
           box-shadow: 0 2px 6px 0 #413833;
           z-index: 1;
@@ -555,7 +588,7 @@ const V2ScreenFwArmySetup = styled.div`
             position: absolute;
             top: 3px;
             margin-left: -67px;
-            @include prefix(border-radius, 4px);
+            border-radius: 4px;
             background: linear-gradient(
               180deg,
               #b59b87 0%,
@@ -580,7 +613,7 @@ const V2ScreenFwArmySetup = styled.div`
                 height: 30px;
                 position: relative;
                 display: inline-block;
-                background-image: url(~imgPath/ic-diamond.png);
+                background-image: url(../img/ic-diamond.png);
                 background-size: 100%;
                 margin-right: 4px;
                 margin-left: 4px;
@@ -604,7 +637,7 @@ const V2ScreenFwArmySetup = styled.div`
               #949699 0%,
               #656769 100%
             );
-            @include prefix(border-radius, 8px);
+            border-radius: 8px;
             box-shadow: inset 0 0 0 2px #cfd1d3, 0 2px 4px 0 #50463f;
             img {
               width: 75px;
@@ -618,7 +651,7 @@ const V2ScreenFwArmySetup = styled.div`
               position: absolute;
               top: -2px;
               left: -4px;
-              background-image: url(~imgPath/offer-bk-sm.png);
+              background-image: url(../img/offer-bk-sm.png);
               background-size: 100%;
               .store-timer-text {
                 width: 44px;
@@ -635,7 +668,7 @@ const V2ScreenFwArmySetup = styled.div`
               }
             }
             .rate {
-              background-image: url(~imgPath/ic-abil-redline.png);
+              background-image: url(../img/ic-abil-redline.png);
               font-size: 18px;
               color: #fff;
               line-height: 18px;
@@ -646,7 +679,7 @@ const V2ScreenFwArmySetup = styled.div`
               top: 50px;
               left: -4px;
               &.shards {
-                background-image: url(~imgPath/ic-abil-greenline.png);
+                background-image: url(../img/ic-abil-greenline.png);
               }
             }
           }
@@ -657,7 +690,7 @@ const V2ScreenFwArmySetup = styled.div`
             position: absolute;
             top: 26px;
             margin-left: 111px;
-            background-image: url(~imgPath/i-ico.png);
+            background-image: url(../img/i-ico.png);
             background-size: 100%;
           }
           .store-name {
@@ -676,7 +709,7 @@ const V2ScreenFwArmySetup = styled.div`
               #8f7553 100%
             );
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.35);
-            @include prefix(border-radius, 8px 8px 0 0);
+            border-radius: 8px 8px 0 0;
             text-shadow: 0 0 4px #fff;
             text-align: center;
             text-transform: uppercase;

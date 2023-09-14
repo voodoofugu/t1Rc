@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import screenFapopolyMain from "../styles/screen-fapopoly-main.scss";
-import v2ScreenHwBtlpass from "../styles/v2-screen-hw-btlpass.scss";
-import v2ScreenTower from "../styles/v2-screen-tower.scss";
-import screenFapopolyRating from "../styles/screen-fapopoly-rating.scss";
+// import screenFapopolyMain from "../styles/screen-fapopoly-main.scss";
+// import v2ScreenHwBtlpass from "../styles/v2-screen-hw-btlpass.scss";
+// import v2ScreenTower from "../styles/v2-screen-tower.scss";
+// import screenFapopolyRating from "../styles/screen-fapopoly-rating.scss";
 
 const V2MainScreen09HwFapopolyComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -87,7 +87,7 @@ const V2MainScreen09HwFapopolyComponent = () => {
                 <div
                     className="main-bg"
                     style={{
-                        backgroundImage: "url('img/v2-fapop-hw1.jpg')",
+                        backgroundImage: "url('../img/v2-fapop-hw1.jpg')",
                     }}></div>
                 <div className="fapop-content-all">
                     <div>

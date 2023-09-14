@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenCwMapWarpop = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 
 body .main{
@@ -18,7 +17,7 @@ body .main{
         .cw-warpop-box-leader-box{
             width: 300px; height: 100px; position: absolute; left: -300px; top: 240px;
             background: linear-gradient(90deg, #3fbae7 0%, #007aa7 98%, #3fbae7 100%);
-            @include prefix(border-radius, 20px 0 0 20px);
+            border-radius: 20px 0 0 20px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.75);
             .cw-warpop-box-leader-text{
                 width: 100%; height: 26px; position: relative; top: 10px;
@@ -44,7 +43,7 @@ body .main{
         .cw-warpop-box-pic{
             width: 310px; height: 210px; position: absolute; top: 10px; left: 10px;
             overflow: hidden;
-            @include prefix(border-radius, 15px);
+            border-radius: 15px;
         }
         .cw-warpop-box-name{
             width: 250px; height: 30px; position: absolute; top: -5px; left: 40px;
@@ -100,7 +99,7 @@ body .main{
                     
                     .ic-contrip{
                         width: 26px; height: 26px; position: relative; display: inline-block;
-                        background-image: url(~imgPath/ic-contrip.png);
+                        background-image: url(../img/ic-contrip.png);
                         background-repeat: no-repeat;
                         background-size: 100%;
                         margin-right: 5px; top: 6px;
@@ -153,7 +152,7 @@ body .main{
             .cw-warpop-army-power-box{
                 width: 290px; height: 50px; position: absolute; bottom: 5px; left: 10px;
                 background-color: #836f61;
-                @include prefix(border-radius, 30px);
+                border-radius: 30px;
                 .cw-warpop-army-power-text{
                     width: 290px; height: 26px; position: absolute; top: 5px; left: 0;
                     color: #fff; font-size: 14px; font-weight: bold; text-transform: uppercase;
@@ -169,7 +168,7 @@ body .main{
                 .cw-warpop-gr-box{
                     width: 140px; height: 50px; position: relative; display: inline-block;
                     background-color: #836f61;
-                    @include prefix(border-radius, 30px);
+                    border-radius: 30px;
                     margin: 0 5px;
                     .cw-warpop-army-power-text{
                         width: 120px; height: 30px; position: absolute; top: 5px; left: 10px;
@@ -201,7 +200,7 @@ body .main{
         .cw-warpop-close{
             width: 30px; height: 30px; position: absolute; top: -5px; right: -5px;
             background: linear-gradient(180deg, #8cdd55 0%, #43a700 50%, #8cdd55 100%);
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
             cursor: pointer; z-index: 999;
             &:before {
@@ -211,7 +210,7 @@ body .main{
             &:after {
                 content: ""; width: 24px; height: 7px; position: absolute; top: 3px; left: 3px;
                 background: rgba(255, 255, 255, 0.25);
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
             }
         }
         &.left{
@@ -219,7 +218,7 @@ body .main{
             .cw-warpop-box-leader-box{
                 left: 330px;
                 background: linear-gradient(-90deg, #3fbae7 0%, #007aa7 98%, #3fbae7 100%);
-                @include prefix(border-radius, 0 20px 20px 0);
+                border-radius: 0 20px 20px 0;
             }
         }
     }

@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const ScreenBase = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .left-side .left-panel .tab-panel.achiev-panel {
     &.disable {
@@ -36,7 +35,7 @@ const ScreenBase = styled.div`
                 }
             }
             &.gilded {
-                background-image: url(~imgPath/bs-disable-gilded.jpg);
+                background-image: url(../img/bs-disable-gilded.jpg);
                 .disable-text-box {
                     width: 254px;
                     height: 136px;
@@ -45,10 +44,10 @@ const ScreenBase = styled.div`
                 }
             }
             &.bank {
-                background-image: url(~imgPath/bs-disable-shop.jpg);
+                background-image: url(../img/bs-disable-shop.jpg);
             }
             &.achiev {
-                background-image: url(~imgPath/bs-disable-achiev.jpg);
+                background-image: url(../img/bs-disable-achiev.jpg);
                 .disable-text-box {
                     width: 232px;
                     height: 138px;
@@ -75,7 +74,7 @@ const ScreenBase = styled.div`
             display: inline-block;
             top: 10px;
             left: 10px;
-            background-image: url(~imgPath/bs-disable-shop.jpg);
+            background-image: url(../img/bs-disable-shop.jpg);
             .disable-text-box {
                 width: 254px;
                 height: 164px;
@@ -92,7 +91,7 @@ const ScreenBase = styled.div`
                 }
             }
             &.gilded {
-                background-image: url(~imgPath/bs-disable-gilded.jpg);
+                background-image: url(../img/bs-disable-gilded.jpg);
                 .disable-text-box {
                     width: 254px;
                     height: 136px;
@@ -101,7 +100,7 @@ const ScreenBase = styled.div`
                 }
             }
             &.bank {
-                background-image: url(~imgPath/bs-disable-shop.jpg);
+                background-image: url(../img/bs-disable-shop.jpg);
             }
         }
     }
@@ -131,7 +130,7 @@ const ScreenBase = styled.div`
             );
             position: relative;
             top: -1px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             box-shadow: 0 2px 0 #000, 0 1px 10px #000;
             // z-index: 2;
             margin: 0px 5px;
@@ -154,7 +153,7 @@ const ScreenBase = styled.div`
             display: inline-block;
             top: 10px;
             left: 10px;
-            background-image: url(~imgPath/bs-disable-shop.jpg);
+            background-image: url(../img/bs-disable-shop.jpg);
             .disable-text-box {
                 width: 254px;
                 height: 164px;
@@ -171,7 +170,7 @@ const ScreenBase = styled.div`
                 }
             }
             &.gilded {
-                background-image: url(~imgPath/bs-disable-gilded.jpg);
+                background-image: url(../img/bs-disable-gilded.jpg);
                 .disable-text-box {
                     width: 254px;
                     height: 136px;
@@ -212,7 +211,7 @@ const ScreenBase = styled.div`
             );
             position: relative;
             top: -1px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             box-shadow: 0 2px 0 #000, 0 1px 10px #000;
             // z-index: 2;
             margin: 0px 5px;
@@ -230,7 +229,7 @@ const ScreenBase = styled.div`
         height: 35px;
         font-size: 18px;
         font-weight: bold;
-        @include prefix(border-radius, 7px);
+        border-radius: 7px;
         background: linear-gradient(45deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
         box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624, 0 0 3px #472624;
         // position: relative;
@@ -246,7 +245,7 @@ const ScreenBase = styled.div`
             display: block;
             width: 97px;
             height: 26px;
-            @include prefix(border-radius, 5px);
+            border-radius: 5px;
             background: linear-gradient(-75deg, #564a4a, #b53e3e, #564a4a);
             position: absolute;
             left: 4px;
@@ -271,7 +270,7 @@ const ScreenBase = styled.div`
                 display: block;
                 width: 40px;
                 height: 40px;
-                background-image: url(~imgPath/reb-rub.png);
+                background-image: url(../img/reb-rub.png);
                 background-size: 40px;
                 position: absolute;
                 top: -5px;
@@ -302,9 +301,9 @@ const ScreenBase = styled.div`
             left: 80%;
             top: -7px;
             // background: red;
-            background-image: url(~imgPath/reborn-btn.png);
+            background-image: url(../img/reborn-btn.png);
             background-size: 46px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             border: solid 2px #715656;
             box-shadow: 0 1px 3px #000;
             // cursor: pointer;
@@ -322,7 +321,7 @@ const ScreenBase = styled.div`
         .bonuses {
             display: block;
             height: 150px;
-            @include prefix(border-radius, 5px);
+            border-radius: 5px;
             background: #776969;
             box-shadow: 0 3px 0px #403d38;
             margin: 0px 5px;
@@ -348,7 +347,7 @@ const ScreenBase = styled.div`
                     #b6b42c,
                     #54681f
                 );
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
                 box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
                     inset 0 -3px 0px #403d38, 0 0 1px #403d38,
                     inset 0 0 10px rgba(255, 255, 255, 0.33);
@@ -366,7 +365,7 @@ const ScreenBase = styled.div`
                 height: 33px;
                 font-size: 18px;
                 font-weight: bold;
-                @include prefix(border-radius, 7px);
+                border-radius: 7px;
                 background: linear-gradient(
                     45deg,
                     #e8c34e,
@@ -384,7 +383,7 @@ const ScreenBase = styled.div`
                     display: block;
                     width: 65px;
                     height: 24px;
-                    @include prefix(border-radius, 5px);
+                    border-radius: 5px;
                     background-color: #564a4a;
                     position: absolute;
                     right: 4px;
@@ -429,22 +428,22 @@ const ScreenBase = styled.div`
                 }
 
                 &.shards:after {
-                    background-image: url(~imgPath/m-ico-shards.png);
+                    background-image: url(../img/m-ico-shards.png);
                     background-size: 46px;
                 }
                 &.dpc:after {
-                    background-image: url(~imgPath/ico-click.png);
+                    background-image: url(../img/ico-click.png);
                     background-size: 46px;
-                    @include prefix(transform, rotate(6deg));
+                    transform: rotate(6deg);
                 }
                 &.gold:after {
-                    background-image: url(~imgPath/m-ico-gold.png);
+                    background-image: url(../img/m-ico-gold.png);
                     background-size: 46px;
                     height: 37px;
                     top: -6px;
                 }
                 &.gems:after {
-                    background-image: url(~imgPath/m-ico-gems.png);
+                    background-image: url(../img/m-ico-gems.png);
                     background-size: 46px;
                 }
             }
@@ -452,7 +451,7 @@ const ScreenBase = styled.div`
                 display: block;
                 width: 216px;
                 height: 47px;
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
                 background-color: #564a4a;
                 position: absolute;
                 left: 10px;
@@ -488,7 +487,7 @@ const ScreenBase = styled.div`
             width: 100%;
             height: 308px;
             // background: red;
-            background-image: url(~imgPath/base_bk1.jpg);
+            background-image: url(../img/base_bk1.jpg);
             background-size: 495px 308px;
 
             .base-hint-box {
@@ -500,13 +499,13 @@ const ScreenBase = styled.div`
                 width: 61px;
                 height: 44px;
                 // background: red;
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
                 position: absolute;
                 left: 0;
                 top: 0;
                 border: solid 2px #1c1009;
 
-                background-image: url(~imgPath/room_locked.jpg);
+                background-image: url(../img/room_locked.jpg);
                 background-size: 78px 44px;
                 background-position: center center;
                 cursor: pointer;
@@ -517,7 +516,7 @@ const ScreenBase = styled.div`
                     display: none;
                 }
                 &.disabled {
-                    background-image: url(~imgPath/room_locked_g.jpg);
+                    background-image: url(../img/room_locked_g.jpg);
                     background-size: 78px 44px;
                     background-position: center center;
                 }
@@ -529,7 +528,7 @@ const ScreenBase = styled.div`
                         width: 78px;
                         height: 44px;
                         overflow: hidden;
-                        @include prefix(border-radius, 5px);
+                        border-radius: 5px;
                         img {
                             width: 82px;
                             height: 48px;
@@ -539,9 +538,9 @@ const ScreenBase = styled.div`
                         display: inline-block;
                         width: 25px;
                         height: 32px;
-                        @include prefix(border-radius, 20px);
-                        @include prefix(border-top-left-radius, 5px);
-                        @include prefix(border-top-right-radius, 5px);
+                        border-radius: 20px;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
                         position: absolute;
                         left: -3px;
                         top: -3px;
@@ -583,48 +582,48 @@ const ScreenBase = styled.div`
                             position: absolute;
                             bottom: -2px;
                             left: 2px;
-                            background-image: url(~imgPath/m-ico-gold.png);
+                            background-image: url(../img/m-ico-gold.png);
                             background-size: 21px;
                         }
                     }
                     // &.gold.count:after{
-                    //     background-image: url(~imgPath/m-ico-gold.png);
+                    //     background-image: url(../img/m-ico-gold.png);
                     //     background-size: 21px;
                     // }
                     // &.gems.count:after{
-                    //     background-image: url(~imgPath/m-ico-gems.png);
+                    //     background-image: url(../img/m-ico-gems.png);
                     //     background-size: 21px;
                     // }
                     // &.shards.count:after{
-                    //     background-image: url(~imgPath/m-ico-shards.png);
+                    //     background-image: url(../img/m-ico-shards.png);
                     //     background-size: 21px;
                     // }
                     // &.dpc.count:after{
-                    //     background-image: url(~imgPath/m-ico-gold.png);
+                    //     background-image: url(../img/m-ico-gold.png);
                     //     background-size: 21px;
                     // }
 
                     &.gold {
                         .count:after {
-                            background-image: url(~imgPath/m-ico-gold.png);
+                            background-image: url(../img/m-ico-gold.png);
                             background-size: 21px;
                         }
                     }
                     &.gems {
                         .count:after {
-                            background-image: url(~imgPath/m-ico-gems.png);
+                            background-image: url(../img/m-ico-gems.png);
                             background-size: 21px;
                         }
                     }
                     &.shards {
                         .count:after {
-                            background-image: url(~imgPath/m-ico-shards.png);
+                            background-image: url(../img/m-ico-shards.png);
                             background-size: 21px;
                         }
                     }
                     &.dpc {
                         .count:after {
-                            background-image: url(~imgPath/ico-click.png);
+                            background-image: url(../img/ico-click.png);
                             background-size: 21px;
                         }
                     }
@@ -750,7 +749,7 @@ const ScreenBase = styled.div`
         .room-details {
             display: block;
             height: 292px;
-            @include prefix(border-radius, 5px);
+            border-radius: 5px;
             background: #a69d94;
             box-shadow: 0 3px 0px #403d38;
 
@@ -772,7 +771,7 @@ const ScreenBase = styled.div`
                     #da7557,
                     #716362
                 );
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
                 box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
                     inset 0 -3px 0px #403d38, 0 0 1px #403d38,
                     inset 0 0 10px rgba(255, 255, 255, 0.33);
@@ -793,7 +792,7 @@ const ScreenBase = styled.div`
                 left: 15px;
                 // top: 40px;
                 top: 50px;
-                @include prefix(border-radius, 15px);
+                border-radius: 15px;
                 background: #ccc;
                 border: solid 2px #ffa;
                 box-shadow: 0 0 2px #ffc, inset 0 0 2px #99c;
@@ -801,7 +800,7 @@ const ScreenBase = styled.div`
                     display: block;
                     width: 100%;
                     height: 100%;
-                    @include prefix(border-radius, 13px);
+                    border-radius: 13px;
                 }
                 .info {
                     display: block;
@@ -814,8 +813,8 @@ const ScreenBase = styled.div`
                     color: #fff;
                     padding: 5px 125px 5px 20px;
                     min-height: 40px;
-                    @include prefix(border-bottom-left-radius, 12px);
-                    @include prefix(border-bottom-right-radius, 12px);
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
                 }
                 .count {
                     display: block;
@@ -832,16 +831,16 @@ const ScreenBase = styled.div`
                     text-align: center;
                     text-shadow: 0 2px #000;
                     line-height: 25px;
-                    @include prefix(border-radius, 20px);
+                    border-radius: 20px;
                     background: #9b3d0f;
                 }
                 .num {
                     display: inline-block;
                     width: 50px;
                     height: 68px;
-                    @include prefix(border-radius, 80px);
-                    @include prefix(border-top-left-radius, 20px);
-                    @include prefix(border-top-right-radius, 20px);
+                    border-radius: 80px;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
                     position: absolute;
                     right: 10px;
                     // top: -6px;
@@ -869,7 +868,7 @@ const ScreenBase = styled.div`
                         left: 7px;
                         bottom: 7px;
                         background: #342b2b;
-                        @include prefix(border-radius, 80px);
+                        border-radius: 80px;
                         box-shadow: 0 0 5px #ffc, 0 0 10px #ffa;
                     }
                     &:after {
@@ -877,7 +876,7 @@ const ScreenBase = styled.div`
                         display: block;
                         width: 34px;
                         height: 34px;
-                        background-image: url(~imgPath/heart1.png);
+                        background-image: url(../img/heart1.png);
                         background-size: 34px;
                         position: absolute;
                         left: 8px;
@@ -894,20 +893,20 @@ const ScreenBase = styled.div`
                 }
             }
             &.gold .img .num:after {
-                background-image: url(~imgPath/m-ico-gold.png);
+                background-image: url(../img/m-ico-gold.png);
                 background-size: 32px;
                 height: 29px;
             }
             &.gems .img .num:after {
-                background-image: url(~imgPath/m-ico-gems.png);
+                background-image: url(../img/m-ico-gems.png);
                 background-size: 32px;
             }
             &.shards .img .num:after {
-                background-image: url(~imgPath/m-ico-shards.png);
+                background-image: url(../img/m-ico-shards.png);
                 background-size: 32px;
             }
             &.dpc .img .num:after {
-                background-image: url(~imgPath/ico-click.png);
+                background-image: url(../img/ico-click.png);
                 background-size: 34px;
             }
         }
@@ -926,7 +925,7 @@ const ScreenBase = styled.div`
                 width: 45%;
                 height: 70px;
                 background: #595450;
-                @include prefix(border-radius, 12px);
+                border-radius: 12px;
                 // margin: 0px 15px ;
                 border: solid 1px #c99c12;
                 box-shadow: inset 0 3px 0 #403d38, inset 0 20px 0 #6a6663,
@@ -965,7 +964,7 @@ const ScreenBase = styled.div`
             left: 15px;
             right: 15px;
             height: 115px;
-            @include prefix(border-radius, 15px);
+            border-radius: 15px;
             background: linear-gradient(to bottom, #b32d22, #8a2221, #651820);
             box-shadow: 0 3px 0 #403d38;
             &:before {
@@ -976,7 +975,7 @@ const ScreenBase = styled.div`
                 right: 15px;
                 bottom: 15px;
                 border: solid 2px #ff6;
-                @include prefix(border-radius, 12px);
+                border-radius: 12px;
                 background: linear-gradient(to top, #b32d22, #8a2221, #651820);
                 box-shadow: inset 0 0 3px #ff0, 0 0 2px #ff3;
             }
@@ -986,7 +985,7 @@ const ScreenBase = styled.div`
                 width: 40%;
                 height: 70px;
                 // background: #595450;
-                // @include prefix(border-radius, 12px);
+                // border-radius: 12px;
                 // margin: 0px 15px ;
                 // border: solid 1px #C99C12;
                 // box-shadow:
@@ -1030,10 +1029,10 @@ const ScreenBase = styled.div`
                     width: 100px;
                     height: 100px;
                     // background: red;
-                    background-image: url(~imgPath/offer-bk2.png);
+                    background-image: url(../img/offer-bk2.png);
                     background-size: 100px 100px;
                     background-repeat: no-repeat;
-                    // @include prefix(transform, rotate(-90deg));
+                    // transform: rotate(-90deg);
                 }
                 .text {
                     display: block;
@@ -1059,7 +1058,7 @@ const ScreenBase = styled.div`
     display: block;
     width: 828px;
     height: 640px;
-    background-image: url(~imgPath/reborn-popup-bk.png);
+    background-image: url(../img/reborn-popup-bk.png);
     background-size: 828px;
     position: absolute;
     left: calc(50% - 414px);
@@ -1072,7 +1071,7 @@ const ScreenBase = styled.div`
         position: absolute;
         left: -72px;
         bottom: 0px;
-        background-image: url(~imgPath/rating-girl.png);
+        background-image: url(../img/rating-girl.png);
         background-repeat: no-repeat;
         background-position: top center;
         background-size: cover;
@@ -1141,7 +1140,7 @@ const ScreenBase = styled.div`
             background: #ffd876;
             color: #7c0022;
             padding: 7px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             margin-top: 10px;
             margin-bottom: 4px;
             box-shadow: 0 1px 5px #7c0022, 0 1px 10px #ffa;
@@ -1169,7 +1168,7 @@ const ScreenBase = styled.div`
                 box-shadow: 0 0 15px #ffd543, 0 0 5px #ffd543,
                     inset 0 0 10px #fff, inset 2px 5px 10px #fff,
                     inset 0px 15px 25px #fff;
-                @include prefix(border-radius, 44px);
+                border-radius: 44px;
 
                 &:before {
                     content: "";
@@ -1178,9 +1177,9 @@ const ScreenBase = styled.div`
                     height: 32px;
                     background: #ffd875;
                     border: solid 5px #ffd875;
-                    background-image: url(~imgPath/m-ico-gems.png);
+                    background-image: url(../img/m-ico-gems.png);
                     background-size: 32px;
-                    @include prefix(border-radius, 100%);
+                    border-radius: 100%;
                     vertical-align: middle;
                     position: relative;
                     top: -4px;
@@ -1201,7 +1200,7 @@ const ScreenBase = styled.div`
                 background: #ffd543;
                 box-shadow: 0 0 15px #ffd543, 0 0 5px #ffd543,
                     inset 0 0 5px #fff, inset 2px 5px 5px #fff;
-                @include prefix(border-radius, 44px);
+                border-radius: 44px;
             }
             .price.luck_res {
                 &:before {
@@ -1211,9 +1210,9 @@ const ScreenBase = styled.div`
                     height: 32px;
                     background: #ffd875;
                     border: solid 5px #ffd875;
-                    background-image: url(~imgPath/ms-stone-pink.png);
+                    background-image: url(../img/ms-stone-pink.png);
                     background-size: 32px;
-                    @include prefix(border-radius, 100%);
+                    border-radius: 100%;
                     vertical-align: middle;
                     position: relative;
                     top: -4px;
@@ -1274,7 +1273,7 @@ const ScreenBase = styled.div`
             color: #6a0101;
             &:before {
                 content: "";
-                background-image: url(~imgPath/ico-real.png);
+                background-image: url(../img/ico-real.png);
                 background-size: 33px;
                 display: inline-block;
                 width: 33px;
@@ -1291,7 +1290,7 @@ const ScreenBase = styled.div`
             color: #6a0101;
             &:before {
                 content: "";
-                background-image: url(~imgPath/80-topup.png);
+                background-image: url(../img/80-topup.png);
                 background-size: 33px;
                 display: inline-block;
                 width: 33px;

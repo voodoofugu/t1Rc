@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-import v2ScreenTower from "../styles/v2-screen-tower.scss";
-import v2ScreenTowerBoss from "../styles/v2-screen-tower-boss.scss";
-import v2ScreenTowerTop from "../styles/v2-screen-tower-top.scss";
-import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
-import v2ScreenTowerQuest from "../styles/v2-screen-tower-quest.scss";
-import v2ScreenTowerTrophy from "../styles/v2-screen-tower-trophy.scss";
-import v2ScreenTowerRelicsPop from "../styles/v2-screen-tower-relics-pop.scss";
-import v2ScreenTowerTrophyPop from "../styles/v2-screen-tower-trophy-pop.scss";
+// import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
+// import v2ScreenTower from "../styles/v2-screen-tower.scss";
+// import v2ScreenTowerBoss from "../styles/v2-screen-tower-boss.scss";
+// import v2ScreenTowerTop from "../styles/v2-screen-tower-top.scss";
+// import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
+// import v2ScreenTowerQuest from "../styles/v2-screen-tower-quest.scss";
+// import v2ScreenTowerTrophy from "../styles/v2-screen-tower-trophy.scss";
+// import v2ScreenTowerRelicsPop from "../styles/v2-screen-tower-relics-pop.scss";
+// import v2ScreenTowerTrophyPop from "../styles/v2-screen-tower-trophy-pop.scss";
 
 const V2MainScreen02GuildTowerComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -276,7 +276,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/02-Forest-2.jpg')",
+                            "url('../img/images/back/new/02-Forest-2.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
@@ -410,7 +410,7 @@ const V2MainScreen02GuildTowerComponent = () => {
                                                             className="hero-avatar-box"
                                                             style={{
                                                                 backgroundImage:
-                                                                    "url('img/ts_confirm_bk-1-ny.jpg')",
+                                                                    "url('../img/ts_confirm_bk-1-ny.jpg')",
                                                                 backgroundSize:
                                                                     "cover",
                                                                 backgroundPosition:

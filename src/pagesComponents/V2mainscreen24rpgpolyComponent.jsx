@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import v2ScreenRpgPoly from "../styles/v2-screen-rpg_poly.scss";
+// import v2ScreenRpgPoly from "../styles/v2-screen-rpg_poly.scss";
 
 const V2MainScreen24RpgPolyComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

@@ -1,6 +1,6 @@
 import React from "react";
-import v2ScreenCwMain from "../styles/v2-screen-cw-main.scss";
-import v2ScreenCwGuildlog from "../styles/v2-screen-cw-guildlog.scss";
+// import v2ScreenCwMain from "../styles/v2-screen-cw-main.scss";
+// import v2ScreenCwGuildlog from "../styles/v2-screen-cw-guildlog.scss";
 
 const V2MainScreen15CwMainComponent = () => {
     return (

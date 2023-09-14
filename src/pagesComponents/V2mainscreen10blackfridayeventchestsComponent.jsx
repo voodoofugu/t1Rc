@@ -1,7 +1,7 @@
 import React from "react";
-import v2ScreenTower from "../styles/v2-screen-tower.scss";
-import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
-import v2ScreenBfEventChest from "../styles/v2-screen-bf-event__chests.scss";
+// import v2ScreenTower from "../styles/v2-screen-tower.scss";
+// import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
+// import v2ScreenBfEventChest from "../styles/v2-screen-bf-event__chests.scss";
 
 const V2MainScreen10BlackfridayEventChestsComponent = () => {
     return (

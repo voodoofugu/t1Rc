@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenCwMain2 = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main {
     .left-side {
@@ -29,7 +28,7 @@ body .main {
                 margin: 0 2px 0 0;
                 cursor: pointer;
                 background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
+                border-radius: 24px 24px 0 0;
                 &:before {
                     content: "";
                     width: 110px;
@@ -38,7 +37,7 @@ body .main {
                     top: 4px;
                     left: 4px;
                     background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
+                    border-radius: 20px 20px 0 0;
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
                 .tabs-name {
@@ -108,8 +107,14 @@ body .main {
                         position: absolute;
                         top: 10px;
                         left: 399px;
-                        @include background-resourcebg;
-                        @include prefix(border-radius, 12px);
+                        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                        border-radius: 12px;
                         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                         color: #3c3737;
                         font-size: 16px;
@@ -136,7 +141,7 @@ body .main {
                                 .color-btn {
                                     width: 67px;
                                     height: 26px;
-                                    @include prefix(border-radius, 0);
+                                    border-radius: 0;
                                     //background: linear-gradient(0deg, #65779c 0%, #9caac8 100%);
                                     box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
                                         0 2px 4px 0 rgba(0, 0, 0, 0.55);
@@ -163,7 +168,7 @@ body .main {
                                     height: 26px;
                                     position: absolute;
                                     top: -2px;
-                                    background-image: url(~imgPath/cw-ic-setup.png);
+                                    background-image: url(../img/cw-ic-setup.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -200,7 +205,13 @@ body .main {
                                     width: 8px;
                                 }
                                 &::-webkit-scrollbar-thumb {
-                                    @include background-resourcebg;
+                                    background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
                                 }
                                 .cw-main-chat {
                                     width: 280px;
@@ -220,7 +231,7 @@ body .main {
                                             #fd644f,
                                             #f28e26
                                         );
-                                        @include prefix(border-radius, 8px);
+                                        border-radius: 8px;
                                         .cw-girl-ava {
                                             width: 60px;
                                             height: 60px;
@@ -228,7 +239,7 @@ body .main {
                                             top: 2px;
                                             left: 2px;
                                             overflow: hidden;
-                                            @include prefix(border-radius, 6px);
+                                            border-radius: 6px;
                                             img {
                                                 width: 60px;
                                             }
@@ -274,7 +285,7 @@ body .main {
                                         bottom: 5px;
                                         left: 80px;
                                         background-color: #fff;
-                                        @include prefix(border-radius, 10px);
+                                        border-radius: 10px;
                                         &:before {
                                             content: "";
                                             position: absolute;
@@ -348,7 +359,7 @@ body .main {
                             .color-btn {
                                 width: 93px;
                                 height: 26px;
-                                @include prefix(border-radius, 0);
+                                border-radius: 0;
                                 //background: linear-gradient(0deg, #65779c 0%, #9caac8 100%);
                                 box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
                                     0 2px 4px 0 rgba(0, 0, 0, 0.55);
@@ -414,7 +425,13 @@ body .main {
                                         width: 8px;
                                     }
                                     &::-webkit-scrollbar-thumb {
-                                        @include background-resourcebg;
+                                        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
                                     }
                                     .cw-clan-box {
                                         width: 550px;
@@ -494,7 +511,7 @@ body .main {
                                                 height: 22px;
                                                 position: absolute;
                                                 bottom: 10px;
-                                                background-image: url(~imgPath/v2-ic-people.png);
+                                                background-image: url(../img/v2-ic-people.png);
                                                 background-size: 100%;
                                                 background-repeat: no-repeat;
 
@@ -597,7 +614,7 @@ body .main {
                                         height: 30px;
                                         position: relative;
                                         display: inline-block;
-                                        background-image: url(~imgPath/ic-diamond.png);
+                                        background-image: url(../img/ic-diamond.png);
                                         background-size: 100%;
                                         margin-right: 4px;
                                         margin-left: 4px;
@@ -625,7 +642,7 @@ body .main {
                             #aa9383,
                             #dfceba
                         );
-                        @include prefix(border-radius, 7px);
+                        border-radius: 7px;
                         box-shadow: 0 0 7px #000;
                         cursor: pointer;
                         z-index: 999;
@@ -645,7 +662,7 @@ body .main {
                             top: 3px;
                             left: 3px;
                             background: rgba(255, 255, 255, 0.25);
-                            @include prefix(border-radius, 5px);
+                            border-radius: 5px;
                         }
                     }
                 }
@@ -659,7 +676,7 @@ body .main {
     height: 50px;
     position: relative;
     display: inline-block;
-    @include prefix(border-radius, 6px);
+    border-radius: 6px;
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
     box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25),
         0 2px 4px 0 rgba(0, 0, 0, 0.55);
@@ -716,7 +733,7 @@ body .main {
             width: 120px;
             height: 40px;
             top: 0;
-            @include prefix(border-radius, 0);
+            border-radius: 0;
             background: linear-gradient(0deg, #65779c 0%, #9caac8 100%);
             box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
                 0 2px 4px 0 rgba(0, 0, 0, 0.55);
@@ -774,7 +791,13 @@ body .main {
                     width: 8px;
                 }
                 &::-webkit-scrollbar-thumb {
-                    @include background-resourcebg;
+                    background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
                 }
                 .cw-clan-box {
                     width: 550px;
@@ -899,7 +922,7 @@ body .main {
                             height: 22px;
                             position: absolute;
                             bottom: 10px;
-                            background-image: url(~imgPath/v2-ic-people.png);
+                            background-image: url(../img/v2-ic-people.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
 
@@ -1002,7 +1025,7 @@ body .main {
                     height: 30px;
                     position: relative;
                     display: inline-block;
-                    background-image: url(~imgPath/ic-diamond.png);
+                    background-image: url(../img/ic-diamond.png);
                     background-size: 100%;
                     margin-right: 4px;
                     margin-left: 4px;

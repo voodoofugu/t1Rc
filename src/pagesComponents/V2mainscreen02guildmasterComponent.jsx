@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import notifications from "../styles/notifications.scss";
-import screenMasterHouse from "../styles/screen-master-house.scss";
-import screenInfoPop from "../styles/screen-info-pop.scss";
+// import notifications from "../styles/notifications.scss";
+// import screenMasterHouse from "../styles/screen-master-house.scss";
+// import screenInfoPop from "../styles/screen-info-pop.scss";
 
 const V2MainScreen02GuildMasterComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

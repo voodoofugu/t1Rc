@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
+// import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
 
 const V2MainScreen05FwStoreComponent = () => {
     return (

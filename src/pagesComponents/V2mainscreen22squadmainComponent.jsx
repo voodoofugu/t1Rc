@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
+// import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
 
 const V2MainScreen22SquadMainComponent = () => {
     return (
@@ -10,7 +10,7 @@ const V2MainScreen22SquadMainComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/09-River.jpg')",
+                            "url('../img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

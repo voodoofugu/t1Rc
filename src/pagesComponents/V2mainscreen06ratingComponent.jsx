@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import screenRatingMaintab from "../styles/screen-rating-maintab.scss";
-import screenRatingMaintabColl from "../styles/screen-rating-maintab-coll.scss";
-import screenRating from "../styles/screen-rating.scss";
+// import screenRatingMaintab from "../styles/screen-rating-maintab.scss";
+// import screenRatingMaintabColl from "../styles/screen-rating-maintab-coll.scss";
+// import screenRating from "../styles/screen-rating.scss";
 
 const V2MainScreen06RatingComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

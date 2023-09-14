@@ -1,579 +1,616 @@
-
 import styled from "styled-components";
 
 const V2ScreenMasterAb = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
-
-body .main {
-  .left-side {
-    width: 620px;
-    height: 555px;
-    position: absolute;
-    left: 5px;
-    bottom: 5px;
-    .tabs-all-box {
-      width: 500px;
-      height: 40px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 0;
-      .tabs-all {
-        width: 118px;
-        height: 40px;
-        position: relative;
-        top: 0;
-        left: 0;
-        display: inline-block;
-        margin: 0 2px 0 0;
-        cursor: pointer;
-        background-color: #9c8b7c;
-        @include prefix(border-radius, 24px 24px 0 0);
-        &:before {
-          content: "";
-          width: 110px;
-          height: 36px;
-          position: absolute;
-          top: 4px;
-          left: 4px;
-          background-color: #544746;
-          @include prefix(border-radius, 20px 20px 0 0);
-          box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
-        }
-        .tabs-name {
-          width: 60px;
-          height: 40px;
-          position: absolute;
-          right: 14px;
-          color: #fff;
-          font-weight: bold;
-          font-size: 12px;
-          line-height: 44px;
-          text-align: center;
-        }
-        .tabs-pic {
-          width: 50px;
-          height: 32px;
-          position: absolute;
-          top: 5px;
-          left: 5px;
-          img {
-            width: 50px;
-          }
-        }
-        &.selected {
-          &:before {
-            content: "";
-            background-color: #9c8b7c;
-          }
-        }
-      }
-    }
-    .left-panel {
-      width: 620px;
-      height: 515px;
-      position: absolute;
-      left: 0;
-      top: 40px;
-      &:before {
-        content: "";
-        width: 620px;
-        height: 5px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #9c8b7c;
-        z-index: 999;
-      }
-      &.wide {
-        width: 1106px;
-        &:before {
-          content: "";
-          width: 1102px;
-        }
-        .tab-panel-box.master {
-          width: 1098px;
-          height: 511px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: #b7a597;
-          border: solid 4px #9c8b7c;
-          border-top: none;
-          box-shadow: inset 0 0 7px #5f4f4e;
-          .tab-panel-box-title {
-            width: 300px;
-            height: 24px;
+    body .main {
+        .left-side {
+            width: 620px;
+            height: 555px;
             position: absolute;
-            top: 10px;
-            left: 399px;
-            @include background-resourcebg;
-            @include prefix(border-radius, 12px);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-            color: #3c3737;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-            line-height: 24px;
-            text-align: center;
-          }
-          .leftside-box-all {
-            width: 290px;
-            height: 462px;
-            position: absolute;
-            top: 39px;
-            left: 10px;
-            @include background-gold;
-            @include prefix(border-radius, 10px);
-            box-shadow: 0 0 6px #48382b;
-            .master-box {
-              width: 280px;
-              height: 410px;
-              position: absolute;
-              top: 5px;
-              left: 5px;
-              background-color: red;
-              @include prefix(border-radius, 6px);
-              overflow: hidden;
-              img {
-                width: 280px;
-              }
-            }
-            .master-name-box-all {
-              width: 290px;
-              height: 54px;
-              position: absolute;
-              bottom: 0;
-              background: linear-gradient(
-                180deg,
-                #d4b354 0%,
-                #f3d88d 85%,
-                #c3a246 86%,
-                #b9993f 100%
-              );
-              @include prefix(border-radius, 0 0 10px 10px);
-              .master-name-box {
-                width: 240px;
-                height: 34px;
-                position: absolute;
-                top: 6px;
-                left: 25px;
-                background-color: #c6a855;
-                @include prefix(border-radius, 6px);
-                box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.2);
-                .master-name {
-                  width: 195px;
-                  height: 34px;
-                  position: absolute;
-                  left: 10px;
-                  text-transform: capitalize;
-                  line-height: 34px;
-                  text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
-                  text-align: center;
-                  font-size: 18px;
-                  color: #fff;
-                }
-                .btn-edit-small,
-                .btn-enter-small {
-                  width: 34px;
-                  height: 34px;
-                  position: absolute;
-                  top: -4px;
-                  right: -39px;
-                  cursor: pointer;
-                  background-image: url(~imgPath/btn-edit-small.png);
-                  background-size: 100%;
-                  &:active {
-                    top: -3px;
-                  }
-                }
-                .btn-enter-small {
-                  background-image: url(~imgPath/btn-enter-small.png);
-                }
-                .btn-enter-small {
-                  display: none;
-                }
-                .master-name-edit {
-                  display: none;
-                }
-                &.edit {
-                  .master-name {
-                    display: none;
-                  }
-                  .btn-edit-small {
-                    display: none;
-                  }
-                  .btn-enter-small {
-                    display: block;
-                    top: 1px;
-                    left: 205px;
-                    &:active {
-                      top: 2px;
-                    }
-                  }
-                  .master-name-edit {
-                    width: 195px;
-                    height: 32px;
-                    position: absolute;
-                    left: 10px;
-                    text-transform: capitalize;
-                    border: none;
-                    background-color: rgba(255, 255, 255, 0);
-                    line-height: 34px;
-                    text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
-                    text-align: center;
-                    color: #fff;
-                    font-size: 18px;
-                  }
-                }
-              }
-            }
-          }
-          .rightside-box-all {
-            width: 770px;
-            height: 462px;
-            position: absolute;
-            top: 39px;
-            right: 10px;
-            .master-tab-box {
-              width: 770px;
-              height: 30px;
-              position: absolute;
-              top: 0;
-              left: 0;
-              &:before {
-                content: "";
-                width: 770px;
-                height: 10px;
-                position: absolute;
-                top: 30px;
-                background-color: #9c8b7c;
-              }
-              .mtab-btn {
-                width: 380px;
-                height: 30px;
-                position: absolute;
-                text-align: center;
-                @include prefix(border-radius, 10px 10px 0 0);
-                background-color: #8f7a6b;
-                box-shadow: inset 0 -4px 2px rgba(0, 0, 0, 0.1);
-                cursor: pointer;
-                a {
-                  width: 100%;
-                  height: 100%;
-                  display: block;
-                }
-                .btn-text {
-                  color: #fff;
-                  font-size: 18px;
-                  font-weight: bold;
-                  line-height: 30px;
-                  text-transform: uppercase;
-                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
-                }
-                &.active {
-                  background-color: #9c8b7c;
-                  box-shadow: none;
-                }
-                &.abil {
-                  right: 0;
-                }
-              }
-            }
-            .abils-box-all {
-              width: 770px;
-              height: 422px;
-              position: absolute;
-              top: 40px;
-              left: 0;
-              text-align: center;
-              background-color: #9c8b7c;
-              .abil-box-scroll {
-                width: 750px;
-                height: 410px;
+            left: 5px;
+            bottom: 5px;
+            .tabs-all-box {
+                width: 500px;
+                height: 40px;
                 position: absolute;
                 top: 0;
-                left: 10px;
-                background-color: #b7a597;
-                overflow: hidden;
-                overflow-y: scroll;
-                text-align: center;
-                &::-webkit-scrollbar-track {
-                  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-                  border-radius: 10px;
-                  background-color: #7c665c;
-                }
-                &::-webkit-scrollbar {
-                  width: 10px;
-                  background-color: #9e8b7d;
-                }
-                &::-webkit-scrollbar-thumb {
-                  border-radius: 10px;
-                  -webkit-box-shadow: inset 0 0 3px #796b60;
-                  background: linear-gradient(
-                    to right,
-                    #fff,
-                    #f5de80,
-                    #f4b766,
-                    #b26d12
-                  );
-                }
-                .abil-card-box {
-                  width: 710px;
-                  height: 100px;
-                  position: relative;
-                  display: inline-block;
-                  background-color: #8e796a;
-                  text-align: center;
-                  margin-top: 5px;
-                  box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
-                  .skills-pic {
-                    width: 64px;
-                    height: 64px;
-                    position: absolute;
-                    top: 18px;
-                    left: 28px;
-                    background: linear-gradient(0deg, #e9c44f 0%, #f7eec7 100%);
-                    box-shadow: inset 0 -5px 0 rgba(160, 79, 0, 0.35),
-                      0 2px 4px rgba(0, 0, 0, 0.55);
-                    @include prefix(border-radius, 10px);
-                    img {
-                      position: absolute;
-                      top: 5px;
-                      left: 6px;
+                left: 0;
+                font-size: 0;
+                .tabs-all {
+                    width: 118px;
+                    height: 40px;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    display: inline-block;
+                    margin: 0 2px 0 0;
+                    cursor: pointer;
+                    background-color: #9c8b7c;
+                    border-radius: 24px 24px 0 0;
+                    &:before {
+                        content: "";
+                        width: 110px;
+                        height: 36px;
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        background-color: #544746;
+                        border-radius: 20px 20px 0 0;
+                        box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                     }
-                    //&:active{top: 1px;}
-                  }
-                  .skills-ef {
-                    width: 140px;
-                    height: 100px;
-                    position: absolute;
-                    background-color: #766457;
-                    .ef-name-box {
-                      width: 140px;
-                      height: 40px;
-                      position: absolute;
-                      background-color: #655448;
-                      display: table;
-                      .ef-name {
-                        width: 100%;
-                        height: auto;
-                        position: relative;
-                        display: table-cell;
-                        vertical-align: middle;
-                        color: #dbc7b9;
-                        text-transform: uppercase;
-                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
-                        font-weight: bold;
-                        line-height: 18px;
-                        font-size: 14px;
-                      }
-                    }
-                    .color-btn.gems {
-                      width: 114px;
-                      position: absolute;
-                      top: 50px;
-                      right: 12px;
-                      .color-btn-text .gems {
-                        color: #222222;
-                        text-shadow: 0 0 0;
-                        font-size: 16px;
-                        top: 0px;
-                        .f-gems {
-                          &:before {
-                            content: "";
-                            width: 18px;
-                            height: 18px;
-                            position: relative;
-                            display: inline-block;
-                            background-image: url(~imgPath/trophy-bonus-gems.png);
-                            background-size: 100%;
-                            margin: 0 4px 0 4px;
-                            vertical-align: middle;
-                            top: -2px;
-                          }
-                        }
-                      }
-                      .color-btn-text {
-                        top: 0;
-                      }
-                      &:active {
-                        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
-                          inset 0 2px 2px rgba(0, 0, 0, 0.2);
-                        .color-btn-text {
-                          top: 1px;
-                        }
-                      }
-                    }
-                    .color-btn.diamonds {
-                      width: 114px;
-                      position: absolute;
-                      top: 50px;
-                      right: 12px;
-                      .color-btn-text.diamonds {
+                    .tabs-name {
+                        width: 60px;
+                        height: 40px;
+                        position: absolute;
+                        right: 14px;
                         color: #fff;
-                        font-size: 16px;
-                        top: 0px;
-                        .f-diamonds {
-                          &:before {
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 44px;
+                        text-align: center;
+                    }
+                    .tabs-pic {
+                        width: 50px;
+                        height: 32px;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        img {
+                            width: 50px;
+                        }
+                    }
+                    &.selected {
+                        &:before {
                             content: "";
-                            width: 18px;
-                            height: 18px;
-                            position: relative;
-                            display: inline-block;
-                            background-image: url(~imgPath/ic-diamond.png);
-                            background-size: 100%;
-                            margin: 0 4px 0 4px;
-                            vertical-align: middle;
-                            top: -2px;
-                          }
+                            background-color: #9c8b7c;
                         }
-                      }
-                      .color-btn-text {
+                    }
+                }
+            }
+            .left-panel {
+                width: 620px;
+                height: 515px;
+                position: absolute;
+                left: 0;
+                top: 40px;
+                &:before {
+                    content: "";
+                    width: 620px;
+                    height: 5px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #9c8b7c;
+                    z-index: 999;
+                }
+                &.wide {
+                    width: 1106px;
+                    &:before {
+                        content: "";
+                        width: 1102px;
+                    }
+                    .tab-panel-box.master {
+                        width: 1098px;
+                        height: 511px;
+                        position: absolute;
                         top: 0;
-                      }
-                      &:active {
-                        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
-                          inset 0 2px 2px rgba(0, 0, 0, 0.2);
-                        .color-btn-text {
-                          top: 1px;
+                        left: 0;
+                        background: #b7a597;
+                        border: solid 4px #9c8b7c;
+                        border-top: none;
+                        box-shadow: inset 0 0 7px #5f4f4e;
+                        .tab-panel-box-title {
+                            width: 300px;
+                            height: 24px;
+                            position: absolute;
+                            top: 10px;
+                            left: 399px;
+                            background: linear-gradient(
+                                0deg,
+                                #ffe199 0%,
+                                #f4c657 18%,
+                                #ffe199 60%,
+                                #f4c557 85%,
+                                #ffe199 100%
+                            );
+                            border-radius: 12px;
+                            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                            color: #3c3737;
+                            font-size: 16px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            line-height: 24px;
+                            text-align: center;
                         }
-                      }
+                        .leftside-box-all {
+                            width: 290px;
+                            height: 462px;
+                            position: absolute;
+                            top: 39px;
+                            left: 10px;
+                            background: linear-gradient(
+                                180deg,
+                                #c68300 0%,
+                                #f4dfb6 50%,
+                                #c68200 70%,
+                                #fad489 85%,
+                                #c78302 100%
+                            );
+                            border-radius: 10px;
+                            box-shadow: 0 0 6px #48382b;
+                            .master-box {
+                                width: 280px;
+                                height: 410px;
+                                position: absolute;
+                                top: 5px;
+                                left: 5px;
+                                background-color: red;
+                                border-radius: 6px;
+                                overflow: hidden;
+                                img {
+                                    width: 280px;
+                                }
+                            }
+                            .master-name-box-all {
+                                width: 290px;
+                                height: 54px;
+                                position: absolute;
+                                bottom: 0;
+                                background: linear-gradient(
+                                    180deg,
+                                    #d4b354 0%,
+                                    #f3d88d 85%,
+                                    #c3a246 86%,
+                                    #b9993f 100%
+                                );
+                                border-radius: 0 0 10px 10px;
+                                .master-name-box {
+                                    width: 240px;
+                                    height: 34px;
+                                    position: absolute;
+                                    top: 6px;
+                                    left: 25px;
+                                    background-color: #c6a855;
+                                    border-radius: 6px;
+                                    box-shadow: inset 0 0 12px
+                                        rgba(0, 0, 0, 0.2);
+                                    .master-name {
+                                        width: 195px;
+                                        height: 34px;
+                                        position: absolute;
+                                        left: 10px;
+                                        text-transform: capitalize;
+                                        line-height: 34px;
+                                        text-shadow: 0 0 10px
+                                            rgba(0, 0, 0, 0.75);
+                                        text-align: center;
+                                        font-size: 18px;
+                                        color: #fff;
+                                    }
+                                    .btn-edit-small,
+                                    .btn-enter-small {
+                                        width: 34px;
+                                        height: 34px;
+                                        position: absolute;
+                                        top: -4px;
+                                        right: -39px;
+                                        cursor: pointer;
+                                        background-image: url(../img/btn-edit-small.png);
+                                        background-size: 100%;
+                                        &:active {
+                                            top: -3px;
+                                        }
+                                    }
+                                    .btn-enter-small {
+                                        background-image: url(../img/btn-enter-small.png);
+                                    }
+                                    .btn-enter-small {
+                                        display: none;
+                                    }
+                                    .master-name-edit {
+                                        display: none;
+                                    }
+                                    &.edit {
+                                        .master-name {
+                                            display: none;
+                                        }
+                                        .btn-edit-small {
+                                            display: none;
+                                        }
+                                        .btn-enter-small {
+                                            display: block;
+                                            top: 1px;
+                                            left: 205px;
+                                            &:active {
+                                                top: 2px;
+                                            }
+                                        }
+                                        .master-name-edit {
+                                            width: 195px;
+                                            height: 32px;
+                                            position: absolute;
+                                            left: 10px;
+                                            text-transform: capitalize;
+                                            border: none;
+                                            background-color: rgba(
+                                                255,
+                                                255,
+                                                255,
+                                                0
+                                            );
+                                            line-height: 34px;
+                                            text-shadow: 0 0 10px
+                                                rgba(0, 0, 0, 0.75);
+                                            text-align: center;
+                                            color: #fff;
+                                            font-size: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .rightside-box-all {
+                            width: 770px;
+                            height: 462px;
+                            position: absolute;
+                            top: 39px;
+                            right: 10px;
+                            .master-tab-box {
+                                width: 770px;
+                                height: 30px;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                &:before {
+                                    content: "";
+                                    width: 770px;
+                                    height: 10px;
+                                    position: absolute;
+                                    top: 30px;
+                                    background-color: #9c8b7c;
+                                }
+                                .mtab-btn {
+                                    width: 380px;
+                                    height: 30px;
+                                    position: absolute;
+                                    text-align: center;
+                                    border-radius: 10px 10px 0 0;
+                                    background-color: #8f7a6b;
+                                    box-shadow: inset 0 -4px 2px rgba(0, 0, 0, 0.1);
+                                    cursor: pointer;
+                                    a {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: block;
+                                    }
+                                    .btn-text {
+                                        color: #fff;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        line-height: 30px;
+                                        text-transform: uppercase;
+                                        text-shadow: 0 1px 2px
+                                            rgba(0, 0, 0, 0.65);
+                                    }
+                                    &.active {
+                                        background-color: #9c8b7c;
+                                        box-shadow: none;
+                                    }
+                                    &.abil {
+                                        right: 0;
+                                    }
+                                }
+                            }
+                            .abils-box-all {
+                                width: 770px;
+                                height: 422px;
+                                position: absolute;
+                                top: 40px;
+                                left: 0;
+                                text-align: center;
+                                background-color: #9c8b7c;
+                                .abil-box-scroll {
+                                    width: 750px;
+                                    height: 410px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 10px;
+                                    background-color: #b7a597;
+                                    overflow: hidden;
+                                    overflow-y: scroll;
+                                    text-align: center;
+                                    &::-webkit-scrollbar-track {
+                                        -webkit-box-shadow: inset 0 0 6px
+                                            rgba(0, 0, 0, 0.5);
+                                        border-radius: 10px;
+                                        background-color: #7c665c;
+                                    }
+                                    &::-webkit-scrollbar {
+                                        width: 10px;
+                                        background-color: #9e8b7d;
+                                    }
+                                    &::-webkit-scrollbar-thumb {
+                                        border-radius: 10px;
+                                        -webkit-box-shadow: inset 0 0 3px
+                                            #796b60;
+                                        background: linear-gradient(
+                                            to right,
+                                            #fff,
+                                            #f5de80,
+                                            #f4b766,
+                                            #b26d12
+                                        );
+                                    }
+                                    .abil-card-box {
+                                        width: 710px;
+                                        height: 100px;
+                                        position: relative;
+                                        display: inline-block;
+                                        background-color: #8e796a;
+                                        text-align: center;
+                                        margin-top: 5px;
+                                        box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+                                        .skills-pic {
+                                            width: 64px;
+                                            height: 64px;
+                                            position: absolute;
+                                            top: 18px;
+                                            left: 28px;
+                                            background: linear-gradient(
+                                                0deg,
+                                                #e9c44f 0%,
+                                                #f7eec7 100%
+                                            );
+                                            box-shadow: inset 0 -5px 0 rgba(160, 79, 0, 0.35),
+                                                0 2px 4px rgba(0, 0, 0, 0.55);
+                                            border-radius: 10px;
+                                            img {
+                                                position: absolute;
+                                                top: 5px;
+                                                left: 6px;
+                                            }
+                                            //&:active{top: 1px;}
+                                        }
+                                        .skills-ef {
+                                            width: 140px;
+                                            height: 100px;
+                                            position: absolute;
+                                            background-color: #766457;
+                                            .ef-name-box {
+                                                width: 140px;
+                                                height: 40px;
+                                                position: absolute;
+                                                background-color: #655448;
+                                                display: table;
+                                                .ef-name {
+                                                    width: 100%;
+                                                    height: auto;
+                                                    position: relative;
+                                                    display: table-cell;
+                                                    vertical-align: middle;
+                                                    color: #dbc7b9;
+                                                    text-transform: uppercase;
+                                                    text-shadow: 0 1px 2px
+                                                        rgba(0, 0, 0, 0.65);
+                                                    font-weight: bold;
+                                                    line-height: 18px;
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                            .color-btn.gems {
+                                                width: 114px;
+                                                position: absolute;
+                                                top: 50px;
+                                                right: 12px;
+                                                .color-btn-text .gems {
+                                                    color: #222222;
+                                                    text-shadow: 0 0 0;
+                                                    font-size: 16px;
+                                                    top: 0px;
+                                                    .f-gems {
+                                                        &:before {
+                                                            content: "";
+                                                            width: 18px;
+                                                            height: 18px;
+                                                            position: relative;
+                                                            display: inline-block;
+                                                            background-image: url(../img/trophy-bonus-gems.png);
+                                                            background-size: 100%;
+                                                            margin: 0 4px 0 4px;
+                                                            vertical-align: middle;
+                                                            top: -2px;
+                                                        }
+                                                    }
+                                                }
+                                                .color-btn-text {
+                                                    top: 0;
+                                                }
+                                                &:active {
+                                                    box-shadow: inset 0 -2px 0px
+                                                            rgba(0, 0, 0, 0.2),
+                                                        inset 0 2px 2px
+                                                            rgba(0, 0, 0, 0.2);
+                                                    .color-btn-text {
+                                                        top: 1px;
+                                                    }
+                                                }
+                                            }
+                                            .color-btn.diamonds {
+                                                width: 114px;
+                                                position: absolute;
+                                                top: 50px;
+                                                right: 12px;
+                                                .color-btn-text.diamonds {
+                                                    color: #fff;
+                                                    font-size: 16px;
+                                                    top: 0px;
+                                                    .f-diamonds {
+                                                        &:before {
+                                                            content: "";
+                                                            width: 18px;
+                                                            height: 18px;
+                                                            position: relative;
+                                                            display: inline-block;
+                                                            background-image: url(../img/ic-diamond.png);
+                                                            background-size: 100%;
+                                                            margin: 0 4px 0 4px;
+                                                            vertical-align: middle;
+                                                            top: -2px;
+                                                        }
+                                                    }
+                                                }
+                                                .color-btn-text {
+                                                    top: 0;
+                                                }
+                                                &:active {
+                                                    box-shadow: inset 0 -2px 0px
+                                                            rgba(0, 0, 0, 0.2),
+                                                        inset 0 2px 2px
+                                                            rgba(0, 0, 0, 0.2);
+                                                    .color-btn-text {
+                                                        top: 1px;
+                                                    }
+                                                }
+                                            }
+                                            &.check {
+                                                .color-btn.green {
+                                                    display: none;
+                                                }
+                                                .pay-check {
+                                                    width: 56px;
+                                                    height: 56px;
+                                                    position: relative;
+                                                    top: 42px;
+                                                    margin: 0 auto;
+                                                    background-image: url(../img/paycheck.png);
+                                                    background-size: 100%;
+                                                }
+                                            }
+                                            &.cd {
+                                                left: 122px;
+                                            }
+                                            &.pwr {
+                                                left: 271px;
+                                            }
+                                            &.dur {
+                                                left: 420px;
+                                            }
+                                            &.new {
+                                                left: 570px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .guildhall-res-box-all {
+                            width: 370px;
+                            height: 45px;
+                            position: absolute;
+                            top: -42px;
+                            right: 36px;
+                            background-color: #9c8b7c;
+                            border-radius: 10px 10px 0 0;
+                            .guildhall-res-box {
+                                width: 170px;
+                                height: 36px;
+                                position: absolute;
+                                top: 4px;
+                                left: 10px;
+                                background: linear-gradient(
+                                    0deg,
+                                    #ffe199 0%,
+                                    #f4c657 18%,
+                                    #ffe199 60%,
+                                    #f4c557 85%,
+                                    #ffe199 100%
+                                );
+                                border-radius: 18px;
+                                box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.55),
+                                    0 2px 4px 0 rgba(0, 0, 0, 0.35);
+                                .guildhall-value {
+                                    width: 100px;
+                                    height: 28px;
+                                    position: absolute;
+                                    top: 3px;
+                                    left: 38px;
+                                    background: linear-gradient(
+                                        90deg,
+                                        #f4bf87 0%,
+                                        #d38632 50%,
+                                        #92581a 100%
+                                    );
+                                    box-shadow: inset 0 2px 4px
+                                            rgba(0, 0, 0, 0.25),
+                                        inset 0 14px 0 rgba(255, 255, 255, 0.15);
+                                    border-radius: 6px;
+                                    color: #fff;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    line-height: 28px;
+                                    text-align: center;
+                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+                                }
+                                .guildhall-value-btn-add {
+                                    width: 32px;
+                                    height: 36px;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    border-radius: 0 18px 18px 0;
+                                    cursor: pointer;
+                                    &:before {
+                                        content: "";
+                                        width: 6px;
+                                        height: 22px;
+                                        position: absolute;
+                                        top: 7px;
+                                        left: 12px;
+                                        background-color: #3c3737;
+                                    }
+                                    &:after {
+                                        content: "";
+                                        width: 22px;
+                                        height: 6px;
+                                        position: absolute;
+                                        top: 15px;
+                                        left: 4px;
+                                        background-color: #3c3737;
+                                    }
+                                }
+                                &.gems {
+                                    &:before {
+                                        content: "";
+                                        width: 40px;
+                                        height: 40px;
+                                        position: absolute;
+                                        top: -2px;
+                                        left: -2px;
+                                        background-image: url(../img/trophy-bonus-gems.png);
+                                        background-size: 100%;
+                                        background-repeat: no-repeat;
+                                    }
+                                }
+                                &.mithril {
+                                    left: 190px;
+                                    &:before {
+                                        content: "";
+                                        width: 40px;
+                                        height: 40px;
+                                        position: absolute;
+                                        top: -2px;
+                                        left: -2px;
+                                        background-image: url(../img/trophy-bonus-mithril.png);
+                                        background-size: 100%;
+                                        background-repeat: no-repeat;
+                                    }
+                                }
+                            }
+                        }
                     }
-                    &.check {
-                      .color-btn.green {
-                        display: none;
-                      }
-                      .pay-check {
-                        width: 56px;
-                        height: 56px;
-                        position: relative;
-                        top: 42px;
-                        margin: 0 auto;
-                        background-image: url(~imgPath/paycheck.png);
-                        background-size: 100%;
-                      }
-                    }
-                    &.cd {
-                      left: 122px;
-                    }
-                    &.pwr {
-                      left: 271px;
-                    }
-                    &.dur {
-                      left: 420px;
-                    }
-                    &.new {
-                      left: 570px;
-                    }
-                  }
                 }
-              }
             }
-          }
-          .guildhall-res-box-all {
-            width: 370px;
-            height: 45px;
-            position: absolute;
-            top: -42px;
-            right: 36px;
-            background-color: #9c8b7c;
-            @include prefix(border-radius, 10px 10px 0 0);
-            .guildhall-res-box {
-              width: 170px;
-              height: 36px;
-              position: absolute;
-              top: 4px;
-              left: 10px;
-              @include background-resourcebg;
-              @include prefix(border-radius, 18px);
-              box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.55),
-                0 2px 4px 0 rgba(0, 0, 0, 0.35);
-              .guildhall-value {
-                width: 100px;
-                height: 28px;
-                position: absolute;
-                top: 3px;
-                left: 38px;
-                background: linear-gradient(
-                  90deg,
-                  #f4bf87 0%,
-                  #d38632 50%,
-                  #92581a 100%
-                );
-                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25),
-                  inset 0 14px 0 rgba(255, 255, 255, 0.15);
-                @include prefix(border-radius, 6px);
-                color: #fff;
-                font-size: 20px;
-                font-weight: bold;
-                line-height: 28px;
-                text-align: center;
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-              }
-              .guildhall-value-btn-add {
-                width: 32px;
-                height: 36px;
-                position: absolute;
-                top: 0;
-                right: 0;
-                @include prefix(border-radius, 0 18px 18px 0);
-                cursor: pointer;
-                &:before {
-                  content: "";
-                  width: 6px;
-                  height: 22px;
-                  position: absolute;
-                  top: 7px;
-                  left: 12px;
-                  background-color: #3c3737;
-                }
-                &:after {
-                  content: "";
-                  width: 22px;
-                  height: 6px;
-                  position: absolute;
-                  top: 15px;
-                  left: 4px;
-                  background-color: #3c3737;
-                }
-              }
-              &.gems {
-                &:before {
-                  content: "";
-                  width: 40px;
-                  height: 40px;
-                  position: absolute;
-                  top: -2px;
-                  left: -2px;
-                  background-image: url(~imgPath/trophy-bonus-gems.png);
-                  background-size: 100%;
-                  background-repeat: no-repeat;
-                }
-              }
-              &.mithril {
-                left: 190px;
-                &:before {
-                  content: "";
-                  width: 40px;
-                  height: 40px;
-                  position: absolute;
-                  top: -2px;
-                  left: -2px;
-                  background-image: url(~imgPath/trophy-bonus-mithril.png);
-                  background-size: 100%;
-                  background-repeat: no-repeat;
-                }
-              }
-            }
-          }
         }
-      }
     }
-  }
-}
-
 `;
 
 export default V2ScreenMasterAb;

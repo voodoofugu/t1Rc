@@ -1,16 +1,15 @@
-
 import styled from "styled-components";
 
 const ScreenFapopolyMain = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main .main-bg {
-    //background-image: url(~imgPath/fapop-bg-main.jpg); background-size: 100%;
-    background-image: url(~imgPath/v2-fapop-bg-hw.jpg);
+    //background-image: url(../img/fapop-bg-main.jpg); background-size: 100%;
+    background-image: url(../img/v2-fapop-bg-hw.jpg);
     background-size: 100%;
     &.easter {
-        background-image: url(~imgPath/fapop-bg-main-ph.jpg);
+        background-image: url(../img/fapop-bg-main-ph.jpg);
     }
 }
 
@@ -229,7 +228,7 @@ body .main .fapop-content-all {
                     #f4c557 85%,
                     #ffe199 100%
                 );
-                @include prefix(border-radius, 10px);
+                border-radius: 10px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                 margin: 5px 0 5px 0;
                 &:before {
@@ -273,7 +272,7 @@ body .main .fapop-content-all {
                     position: absolute;
                     top: -3px;
                     left: -3px;
-                    background-image: url(~imgPath/fortuna-good.png);
+                    background-image: url(../img/fortuna-good.png);
                     background-size: 100%;
                     display: none;
                 }
@@ -284,7 +283,7 @@ body .main .fapop-content-all {
                     top: 0;
                     left: 0;
                     background-color: rgba(0, 0, 0, 0.55);
-                    @include prefix(border-radius, 10px);
+                    border-radius: 10px;
                     &:before {
                         content: "";
                         width: 60px;
@@ -292,7 +291,7 @@ body .main .fapop-content-all {
                         position: absolute;
                         top: 5px;
                         left: 5px;
-                        background-image: url(~imgPath/paycheck.png);
+                        background-image: url(../img/paycheck.png);
                         background-size: 100%;
                     }
                 }
@@ -302,7 +301,7 @@ body .main .fapop-content-all {
                         height: 66px;
                         left: 2px;
                         overflow: hidden;
-                        @include prefix(border-radius, 8px);
+                        border-radius: 8px;
                         img {
                             width: 66px;
                         }
@@ -352,7 +351,7 @@ body .main .fapop-content-all {
                 top: 20px;
                 left: 56px;
                 background: linear-gradient(0deg, #5248ad 0%, #9188e6 100%);
-                @include prefix(border-radius, 10px);
+                border-radius: 10px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                 color: #fff;
                 font-size: 12px;
@@ -369,7 +368,7 @@ body .main .fapop-content-all {
         top: 10px;
         left: 10px;
         background: linear-gradient(0deg, #483ea3 0%, #7e73d9 100%);
-        @include prefix(border-radius, 14px);
+        border-radius: 14px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
         .fapop-times-around-prgbar,
         .fapop-times-around-prgbar-full {
@@ -378,10 +377,10 @@ body .main .fapop-content-all {
             position: absolute;
             bottom: 4px;
             left: 3px;
-            background-image: url(~imgPath/fapop-prg-around-empty.png);
+            background-image: url(../img/fapop-prg-around-empty.png);
             background-size: 100% 584px;
             .fapop-times-around-prgbar-full {
-                background-image: url(~imgPath/fapop-prg-around-full.png);
+                background-image: url(../img/fapop-prg-around-full.png);
                 transition: height 0.5s ease;
                 bottom: 0;
                 left: 0;
@@ -433,7 +432,7 @@ body .main .fapop-content-all {
                 #f4c557 85%,
                 #ffe199 100%
             );
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
             .fapop-prgbar-reward-pic {
                 width: 56px;
@@ -475,10 +474,10 @@ body .main .fapop-content-all {
             position: absolute;
             bottom: -6px;
             left: 78px;
-            background-image: url(~imgPath/fapop-prg-empty.png);
+            background-image: url(../img/fapop-prg-empty.png);
             background-size: 344px 100%;
             .fapop-prgbar-full {
-                background-image: url(~imgPath/fapop-prg-full.png);
+                background-image: url(../img/fapop-prg-full.png);
                 transition: width 0.5s ease;
                 top: 0;
                 left: 0;
@@ -537,7 +536,7 @@ body .main .fapop-content-all {
             left: 0;
             display: table;
             background-color: rgba(0, 0, 0, 0.75);
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             visibility: hidden;
             .fapop-noquest-text {
                 width: 100%;
@@ -576,7 +575,7 @@ body .main .fapop-content-all {
             #bf5c22 50%,
             #e0c3b8 100%
         );
-        @include prefix(border-radius, 100%);
+        border-radius: 100%;
         cursor: pointer;
         border: 2px solid #ffdd7f;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
@@ -607,12 +606,12 @@ body .main .fapop-content-all {
             position: absolute;
             top: 0px;
             left: 14px;
-            background-image: url(~imgPath/fapop-dice1.png);
+            background-image: url(../img/fapop-dice1.png);
             background-size: 100%;
         }
         .fapop-dice-2 {
             left: 76px;
-            background-image: url(~imgPath/fapop-dice2.png);
+            background-image: url(../img/fapop-dice2.png);
         }
         .fapop-dice-end-1,
         .fapop-dice-end-2 {
@@ -634,7 +633,7 @@ body .main .fapop-content-all {
             bottom: 0;
             background-color: #f89611;
             display: none;
-            @include prefix(border-radius, 20px);
+            border-radius: 20px;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.35);
             .fapop-dice-rolled-text {
                 width: 100%;
@@ -650,68 +649,36 @@ body .main .fapop-content-all {
         }
         &.anim-dice {
             .fapop-dice-1 {
-                @include prefix(
-                    animation,
-                    anim-dice1 0.25s linear 0s infinite alternate
-                );
-            }
+                animation: anim-dice1 0.25s linear 0s infinite alternate;            }
             .fapop-dice-2 {
-                @include prefix(
-                    animation,
-                    anim-dice1 0.39s linear 0s infinite alternate
-                );
-            }
+                animation: anim-dice1 0.39s linear 0s infinite alternate;            }
         }
         @keyframes anim-dice1 {
             0% {
-                @include prefix(transform, translate(0, 0px) rotate(0deg));
+                transform, translate(0: 0px) rotate(0deg);
             }
             25% {
-                @include prefix(
-                    transform,
-                    translate(-10px, 0px) rotate(-200deg)
-                );
-            }
+                transform: translate(-10px, 0px) rotate(-200deg);            }
             50% {
-                @include prefix(
-                    transform,
-                    translate(0px, -30px) rotate(360deg)
-                );
-            }
+                transform: translate(0px, -30px) rotate(360deg);            }
             75% {
-                @include prefix(
-                    transform,
-                    translate(10px, 6px) rotate(-180deg)
-                );
-            }
+                transform: translate(10px, 6px) rotate(-180deg);            }
             100% {
-                @include prefix(transform, translate(0, 0px) rotate(0deg));
+                transform, translate(0: 0px) rotate(0deg);
             }
         }
         @keyframes anim-dice2 {
             0% {
-                @include prefix(transform, translate(0, 0px) rotate(0deg));
+                transform, translate(0: 0px) rotate(0deg);
             }
             25% {
-                @include prefix(
-                    transform,
-                    translate(-10px, 0px) rotate(-200deg)
-                );
-            }
+                transform: translate(-10px, 0px) rotate(-200deg);            }
             50% {
-                @include prefix(
-                    transform,
-                    translate(0px, -30px) rotate(360deg)
-                );
-            }
+                transform: translate(0px, -30px) rotate(360deg);            }
             75% {
-                @include prefix(
-                    transform,
-                    translate(10px, 6px) rotate(-180deg)
-                );
-            }
+                transform: translate(10px, 6px) rotate(-180deg);            }
             100% {
-                @include prefix(transform, translate(0, 0px) rotate(0deg));
+                transform, translate(0: 0px) rotate(0deg);
             }
         }
         &.end-roll {
@@ -731,7 +698,7 @@ body .main .fapop-content-all {
         .color-btn.green {
             width: 180px;
             height: 60px;
-            @include prefix(border-radius, 20px);
+            border-radius: 20px;
             position: absolute;
             bottom: 70px;
             left: 0;
@@ -754,7 +721,7 @@ body .main .fapop-content-all {
                     #f9981f 85%,
                     #f8b76c 100%
                 );
-                @include prefix(border-radius, 20px);
+                border-radius: 20px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
                 .token-count {
                     width: 100%;
@@ -773,7 +740,7 @@ body .main .fapop-content-all {
                         position: relative;
                         display: inline-block;
                         top: 5px;
-                        background-image: url(~imgPath/fapop-token-ic.png);
+                        background-image: url(../img/fapop-token-ic.png);
                         background-size: 100%;
                         margin-left: 4px;
                     }
@@ -797,7 +764,7 @@ body .main .fapop-content-all {
         height: 150px;
         position: absolute;
         //top: 446px; left: 636px;
-        background-image: url(~imgPath/fapop-ic01.png);
+        background-image: url(../img/fapop-ic01.png);
         background-size: 100%;
         .fapop-player-name {
             width: 87px;
@@ -805,7 +772,7 @@ body .main .fapop-content-all {
             position: absolute;
             top: 110px;
             left: 10px;
-            background-image: url(~imgPath/ic-abil-blueline.png);
+            background-image: url(../img/ic-abil-blueline.png);
             background-size: 100%;
             color: #fff;
             font-size: 14px;
@@ -819,7 +786,7 @@ body .main .fapop-content-all {
         position: absolute;
         top: 541px;
         right: 344px;
-        background-image: url(~imgPath/fapop-x2reward.png);
+        background-image: url(../img/fapop-x2reward.png);
         background-size: 80%;
         background-position: 13px center;
         background-repeat: no-repeat;
@@ -830,7 +797,7 @@ body .main .fapop-content-all {
             top: 66px;
             left: 0;
             background-color: #005bff;
-            @include prefix(border-radius, 20px);
+            border-radius: 20px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
             color: #fff;
             font-size: 12px;

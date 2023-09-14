@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenBfEvent_chests = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .popup-layer .m-popup.bf-event__chests-pop{
     width: 990px;
@@ -25,7 +24,7 @@ const V2ScreenBfEvent_chests = styled.div`
     }
     .color-box{
         background-color: #000;
-        background-image: url(~imgPath/v2-bf-pop-bg.jpg);
+        background-image: url(../img/v2-bf-pop-bg.jpg);
         background-position: center;
         &:before{display: none};
         &:after{display: none};
@@ -42,7 +41,7 @@ const V2ScreenBfEvent_chests = styled.div`
     }
     .wpck-timer-box{
         width: 184px; height: 84px; position: absolute; top: -10px; margin-left: -10px;
-        background-image: url(~imgPath/timer-back.png); background-size: 100%;
+        background-image: url(../img/timer-back.png); background-size: 100%;
         .time-left, .time-sec{
             width: 150px; height: 26px; position: absolute; top: 18px; margin-left: 18px;
             color: #fff000; font-size: 16px; font-weight: bold; text-transform: uppercase;
@@ -68,7 +67,7 @@ const V2ScreenBfEvent_chests = styled.div`
         height: 310px;
         margin: 0 20px;
         background: linear-gradient(0deg, #f8b669 0%, #f99820 18%, #f8b76c 60%, #f78500 85%, #f8b568 100%);
-        @include prefix(border-radius, 8px);
+        border-radius: 8px;
         overflow: hidden;
 
         &:before{
@@ -78,7 +77,7 @@ const V2ScreenBfEvent_chests = styled.div`
             left: 4px;
             width: 302px;
             height: 302px;
-            @include prefix(border-radius, 6px);
+            border-radius: 6px;
             background: linear-gradient(0deg, #fede92 0%, #f4c558 18%, #ffe098 60%, #f5c85d 85%, #fddd90 100%);
         }
 
@@ -137,7 +136,7 @@ const V2ScreenBfEvent_chests = styled.div`
         right: 9px;
         width: 26px;
         height: 26px;
-        background-image: url(~imgPath/i-ico.png);
+        background-image: url(../img/i-ico.png);
         background-size: 100%;
         cursor: pointer;
 
@@ -226,7 +225,7 @@ const V2ScreenBfEvent_chests = styled.div`
         );
         line-height: 26px;
         width: 60px;
-        @include prefix(border-radius, 5px);
+        border-radius: 5px;
         position: absolute;
         bottom: 0;
         left: -5px;
@@ -260,7 +259,7 @@ const V2ScreenBfEvent_chests = styled.div`
         bottom: 15px;
         right: 44px;
         background: #fff;
-        @include prefix(border-radius, 8px);
+        border-radius: 8px;
         background: linear-gradient(
                         to right,
                         #419ad3 0%,
@@ -297,8 +296,15 @@ const V2ScreenBfEvent_chests = styled.div`
 
     .equip-item{
         width: 80px; height: 80px; position: relative; display: inline-block;
-        @include background-gold;
-        @include prefix(border-radius, 8px);
+        background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
+        border-radius: 8px;
         background-color: #fffe9a;
         box-shadow: inset 0px -50px 50px -25px #e9b13a, 0px 1px 3px -1px rgba(0, 0, 0, .4);
         background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
@@ -306,7 +312,7 @@ const V2ScreenBfEvent_chests = styled.div`
         &:before{
             content: ""; width: 76px; height: 76px; position: absolute; top: 2px; left: 2px;
             background: linear-gradient(0deg, #fede92 0%, #f4c558 18%, #ffe098 60%, #f5c85d 85%, #fddd90 100%);
-            @include prefix(border-radius, 6px);
+            border-radius: 6px;
         }
 
         & + .equip-item{
@@ -334,7 +340,7 @@ const V2ScreenBfEvent_chests = styled.div`
         font-size: 14px;
         color: #fff;
         padding: 4px 7px;
-        @include prefix(border-radius, 10px);
+        border-radius: 10px;
         border-radius: 10px;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
         background: linear-gradient(0deg, #7dbd32 0%, #bbee7f 100%);

@@ -1,9 +1,9 @@
 import React from "react";
-import screenUnipopSubscription from "../styles/v2-screen-fortuna-buyres.scss";
+import V2ScreenFortunaBuyres from "../styleComponents/V2ScreenFortunaBuyres.jsx";
 
 const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
     return (
-        <>
+        <V2ScreenFortunaBuyres>
             <div className="main world1">
                 <div className="main-bg"></div>
 
@@ -61,7 +61,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </V2ScreenFortunaBuyres>
     );
 };
 

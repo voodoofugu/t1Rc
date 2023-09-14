@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import questsAll from "../styles/quests_all.scss";
-import questsUi from "../styles/quests-ui.scss";
-import v2ScreenUkiStoryPop from "../styles/v2-screen-uki-story-pop.scss";
+// import questsAll from "../styles/quests_all.scss";
+// import questsUi from "../styles/quests-ui.scss";
+// import v2ScreenUkiStoryPop from "../styles/v2-screen-uki-story-pop.scss";
 
 const V2MainScreen08UkiDailyComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -323,7 +323,7 @@ const V2MainScreen08UkiDailyComponent = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/09-River.jpg')",
+                            "url('../img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

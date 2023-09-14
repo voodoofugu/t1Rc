@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const ClanTrophies = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .cw-content {
     width: 1200px;
@@ -17,7 +16,7 @@ const ClanTrophies = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(~imgPath/cw-glade-bg.jpg);
+        background-image: url(../img/cw-glade-bg.jpg);
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -70,7 +69,7 @@ body .main {
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url(~imgPath/cw-glade-bg.jpg);
+            background-image: url(../img/cw-glade-bg.jpg);
             background-size: 100%;
             background-repeat: no-repeat;
         }
@@ -144,7 +143,7 @@ body .main {
             width: 286px;
             height: 460px;
             margin: 0 6px;
-            @include prefix(border-radius, 8px);
+            border-radius: 8px;
             &.active {
                 background: linear-gradient(
                     0deg,
@@ -166,7 +165,7 @@ body .main {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
-                    background-image: url(~imgPath/v2-lock-ic.png);
+                    background-image: url(../img/v2-lock-ic.png);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -182,7 +181,7 @@ body .main {
                 height: 525px;
                 background-size: cover;
                 background-position: center;
-                @include prefix(border-radius, 6px);
+                border-radius: 6px;
                 overflow: hidden;
                 box-shadow: inset 0 0 0 2px rgba(0, 255, 234, 0.8),
                     0 0 10px #000;
@@ -204,7 +203,7 @@ body .main {
                     top: -20px;
                     width: 100%;
                     height: 100%;
-                    background-image: url(~imgPath/darkworld-glow-cards.png);
+                    background-image: url(../img/darkworld-glow-cards.png);
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
@@ -276,17 +275,17 @@ body .main {
                         font-size: 18px;
                         padding: 10px 11px 0 36px;
                         &:before {
-                            background-image: url(~imgPath/v2_at_gear.png);
+                            background-image: url(../img/v2_at_gear.png);
                         }
                     }
                     &.atk:before {
-                        background-image: url(~imgPath/v2-fw-icon-sword.png);
+                        background-image: url(../img/v2-fw-icon-sword.png);
                     }
                     &.hp:before {
-                        background-image: url(~imgPath/v2-fw-icon-shield.png);
+                        background-image: url(../img/v2-fw-icon-shield.png);
                     }
                     &.pow:before {
-                        background-image: url(~imgPath/v2_at_manabomb.png);
+                        background-image: url(../img/v2_at_manabomb.png);
                     }
                 }
             }
@@ -340,7 +339,14 @@ body .main {
                     position: absolute;
                     top: 0px;
                     left: 0px;
-                    @include background-silver;
+                    background: linear-gradient(
+		180deg,
+		#585a5c 0%,
+		#d5d8da 50%,
+		#585a5b 70%,
+		#a1a4a6 85%,
+		#585a5b 100%
+	);
                     transition: width 0.3s;
                 }
                 .titan-progress__text {
@@ -357,7 +363,14 @@ body .main {
                 }
                 &.gold {
                     .titan-progress__bar {
-                        @include background-gold;
+                        background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
                     }
                 }
             }
@@ -410,7 +423,7 @@ body .main {
 
             .star {
                 display: inline-block;
-                background-image: url(~imgPath/./star1.png);
+                background-image: url(../img/star1.png);
                 background-size: 100%;
                 width: 24px;
                 height: 23px;
@@ -444,7 +457,7 @@ body .main {
             top: -6px;
             right: -6px;
             background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
-            @include prefix(border-radius, 7px);
+            border-radius: 7px;
             box-shadow: 0 0 7px #000;
             cursor: pointer;
             z-index: 999;
@@ -464,7 +477,7 @@ body .main {
                 top: 3px;
                 left: 3px;
                 background: rgba(255, 255, 255, 0.25);
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
             }
         }
     }
@@ -540,7 +553,7 @@ body .main {
 
             .star {
                 display: inline-block;
-                background-image: url(~imgPath/./star1.png);
+                background-image: url(../img/star1.png);
                 background-size: 100%;
                 width: 24px;
                 height: 23px;
@@ -568,7 +581,7 @@ body .main {
             top: 10px;
             left: 10px;
             background-color: #7e6e62;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2),
                 inset 0 -2px 0px rgba(0, 0, 0, 0.2),
                 0 1px 1px rgba(0, 0, 0, 0.4);
@@ -607,7 +620,7 @@ body .main {
                 height: 30px;
                 position: absolute;
                 background-color: #65574c;
-                @include prefix(border-radius, 10px 10px 0 0);
+                border-radius: 10px 10px 0 0;
                 text-transform: uppercase;
                 font-size: 18px;
                 color: #fffe8c;
@@ -698,7 +711,7 @@ body .main {
                                 vertical-align: middle;
                                 display: inline-block;
                                 top: -3px;
-                                background-image: url(~imgPath/ico-gold.png);
+                                background-image: url(../img/ico-gold.png);
                                 background-size: 100%;
                             }
                         }
@@ -713,7 +726,7 @@ body .main {
                 height: 64px;
                 position: absolute;
                 bottom: 0px;
-                @include prefix(border-radius, 0 0 10px 10px);
+                border-radius: 0 0 10px 10px;
                 text-align: center;
                 .all-btn-box {
                     width: 418px;
@@ -740,7 +753,7 @@ body .main {
                             .essence-icon.green {
                                 width: 25px;
                                 height: 25px;
-                                background-image: url(~imgPath/ic-green-butil.png);
+                                background-image: url(../img/ic-green-butil.png);
                             }
                             .essence-text {
                                 line-height: 22px;
@@ -783,7 +796,7 @@ body .main {
                                 #7cbc30 0%,
                                 #bbee7f 100%
                             );
-                            @include prefix(border-radius, 8px);
+                            border-radius: 8px;
                             box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15),
                                 0 2px 0 rgba(0, 0, 0, 0.25);
                             color: #fff;
@@ -877,7 +890,7 @@ body .main {
                                 vertical-align: middle;
                                 display: inline-block;
                                 top: -3px;
-                                background-image: url(~imgPath/ico-gold.png);
+                                background-image: url(../img/ico-gold.png);
                                 background-size: 100%;
                             }
                         }
@@ -921,7 +934,7 @@ body .main.world3 {
                         position: absolute;
                         top: 1px;
                         left: 3px;
-                        background-image: url(~imgPath/ic-green-butil.png);
+                        background-image: url(../img/ic-green-butil.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
@@ -935,7 +948,7 @@ body .main.world3 {
                         position: absolute;
                         top: 1px;
                         left: 3px;
-                        background-image: url(~imgPath/ic-blue-butil.png);
+                        background-image: url(../img/ic-blue-butil.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
@@ -948,7 +961,7 @@ body .main.world3 {
 body .main.world3 {
     .cw-content {
         .cw-bg {
-            background-image: url(~imgPath/images/back/clan/bg_01.jpg);
+            background-image: url(../img/images/back/clan/bg_01.jpg);
         }
     }
     .clan-trophies {

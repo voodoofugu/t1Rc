@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenCwArmySetup = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 
 .popup-layer .m-popup.cw-army-setup{
@@ -66,8 +65,15 @@ const V2ScreenCwArmySetup = styled.div`
         height: 199px;
         position: relative;
         display: inline-block;
-        @include background-bronze;
-        @include prefix(border-radius, 6px);
+        background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
+        border-radius: 6px;
         margin: 5px;
         box-shadow: 0 0 3px rgba(0,0,0,.5);
         
@@ -78,7 +84,7 @@ const V2ScreenCwArmySetup = styled.div`
             bottom: 4px;
             right: 4px;
             overflow: hidden;
-            @include prefix(border-radius, 4px);
+            border-radius: 4px;
             
             img{
                 width: 100%;
@@ -97,7 +103,7 @@ const V2ScreenCwArmySetup = styled.div`
             font-size: 14px;
             text-align: center;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-            @include prefix(border-radius, 3px);
+            border-radius: 3px;
         }
         .cw-mer-descr{
             position: absolute;
@@ -119,7 +125,7 @@ const V2ScreenCwArmySetup = styled.div`
             position: absolute;
             bottom: 28px;
             left: 35px;
-            @include prefix(border-radius, 8px);
+            border-radius: 8px;
             background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
             color: #000;
@@ -150,7 +156,7 @@ const V2ScreenCwArmySetup = styled.div`
                     display: block;
                     width: 100%;
                     height: 18px;
-                    background-image: url(~imgPath/star48.png);
+                    background-image: url(../img/star48.png);
                     background-size: 18px;
                     background-repeat: repeat-x;
                     position: absolute;
@@ -284,7 +290,13 @@ const V2ScreenCwArmySetup = styled.div`
         }
         &::-webkit-scrollbar {width: 8px;}
         &::-webkit-scrollbar-thumb {
-            @include background-resourcebg;
+            background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
         }
     }
     
@@ -314,12 +326,12 @@ const V2ScreenCwArmySetup = styled.div`
                     width: 38px;
                     height: 38px;
                     margin-left: -20px;
-                    background-image: url(~imgPath/v2-cw-pop-blue.png);
+                    background-image: url(../img/v2-cw-pop-blue.png);
                     background-size: 100%;
                 }
                 
                 &.empty:before{
-                    background-image: url(~imgPath/v2-cw-pop-orange.png);
+                    background-image: url(../img/v2-cw-pop-orange.png);
                 }
                 
                 &+.cw-mer-box{

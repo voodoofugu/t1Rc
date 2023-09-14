@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const ScreenFortuna2MainMAIN = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .popup-layer .m-popup.fortuna-main-2 {
   width: 888px;
@@ -31,7 +30,7 @@ const ScreenFortuna2MainMAIN = styled.div`
     left: 0;
     top: 0;
     background: rgba(222, 222, 222, 0.55);
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     p {
       margin: 0;
       padding: 0;
@@ -41,7 +40,7 @@ const ScreenFortuna2MainMAIN = styled.div`
       left: 20px;
       right: 20px;
       top: calc(50% - 15px);
-      @include prefix(border-radius, 10px);
+      border-radius: 10px;
       border: solid 2px #500;
       line-height: 30px;
       font-size: 18px;
@@ -49,7 +48,7 @@ const ScreenFortuna2MainMAIN = styled.div`
       color: #500;
       box-shadow: inset 0 0 10px #500, 0 0 10px #500;
       text-shadow: 0 0 5px #fff;
-      @include prefix(transform, rotate(-10deg));
+      transform: rotate(-10deg);
     }
   }
   .fortuna-main-box {
@@ -71,8 +70,15 @@ const ScreenFortuna2MainMAIN = styled.div`
         height: 80px;
         position: absolute;
         cursor: pointer;
-        @include background-silver;
-        @include prefix(border-radius, 6px);
+        background: linear-gradient(
+		180deg,
+		#585a5c 0%,
+		#d5d8da 50%,
+		#585a5b 70%,
+		#a1a4a6 85%,
+		#585a5b 100%
+	);
+        border-radius: 6px;
         box-shadow: 0 1px 2px 0 rgba(#000, 0.45);
         &:before {
           content: "";
@@ -82,7 +88,7 @@ const ScreenFortuna2MainMAIN = styled.div`
           top: 2px;
           left: 2px;
           background: linear-gradient(0deg, #7e7f80 0%, #dee0e3 100%);
-          @include prefix(border-radius, 6px);
+          border-radius: 6px;
           box-shadow: inset 0 0 6px 0 rgba(#000, 0.55);
           transition: 300ms;
         }
@@ -119,7 +125,7 @@ const ScreenFortuna2MainMAIN = styled.div`
           left: 50px;
           background: linear-gradient(0deg, #55c215 0%, #beff8f 100%);
           box-shadow: 0 2px 2px 0 rgba(#000, 0.45);
-          @include prefix(border-radius, 10px);
+          border-radius: 10px;
           color: #fff;
           font-size: 14px;
           font-weight: bold;
@@ -144,7 +150,7 @@ const ScreenFortuna2MainMAIN = styled.div`
           top: 0;
           left: 0;
           visibility: hidden;
-          @include prefix(border-radius, 6px);
+          border-radius: 6px;
           background: linear-gradient(
             0deg,
             #996b1d 0%,
@@ -295,7 +301,7 @@ const ScreenFortuna2MainMAIN = styled.div`
             top: 5px;
             left: 5px;
             overflow: hidden;
-            @include prefix(border-radius, 6px);
+            border-radius: 6px;
             .prize-pic {
               width: 70px;
               height: auto;
@@ -318,13 +324,20 @@ const ScreenFortuna2MainMAIN = styled.div`
           border: solid 2px #ffa;
           box-shadow: 0 0 5px #ff0, 0 0 15px #ff0, inset 0 0 5px #ffa,
             inset 0 0 15px #ff0;
-          // @include background-gold;
+          // background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
         }
         &.promote {
           .fortuna-promote {
             position: absolute;
             left: -5px;
-            background-image: url(~imgPath/top-arrow.png);
+            background-image: url(../img/top-arrow.png);
             background-size: 100%;
             width: 40px;
             top: 40px;
@@ -338,14 +351,14 @@ const ScreenFortuna2MainMAIN = styled.div`
             position: absolute;
             top: -5px;
             left: -5px;
-            background-image: url(~imgPath/fortuna-good.png);
+            background-image: url(../img/fortuna-good.png);
             background-size: 100%;
             transition: 300ms;
           }
         }
         &.check {
           .fortuna-good {
-            background-image: url(~imgPath/fortuna-good-gold.png);
+            background-image: url(../img/fortuna-good-gold.png);
           }
         }
         &.fortune_chance {
@@ -374,20 +387,20 @@ const ScreenFortuna2MainMAIN = styled.div`
             position: relative;
             top: 56px;
             margin: 0 auto;
-            background-image: url(~imgPath/star1.png);
+            background-image: url(../img/star1.png);
             background-size: 100%;
           }
         }
         &.pic-star2 {
           .fortuna-pic-star {
             width: 35px;
-            background-image: url(~imgPath/star2.png);
+            background-image: url(../img/star2.png);
           }
         }
         &.pic-star3 {
           .fortuna-pic-star {
             width: 50px;
-            background-image: url(~imgPath/star3.png);
+            background-image: url(../img/star3.png);
           }
         }
         &.doublespin {
@@ -405,7 +418,7 @@ const ScreenFortuna2MainMAIN = styled.div`
       top: 89px;
       margin-left: 89px;
       background-color: rgba(#786659, 0.75);
-      @include prefix(border-radius, 8px);
+      border-radius: 8px;
       box-shadow: inset 0 0 6px 0 rgba(#000, 0.35);
       .fortuna-prgbar-box {
         width: 660px;
@@ -413,7 +426,7 @@ const ScreenFortuna2MainMAIN = styled.div`
         position: absolute;
         top: 4px;
         left: 12px;
-        background-image: url(~imgPath/fortuna-prg-bg2.png);
+        background-image: url(../img/fortuna-prg-bg2.png);
         background-size: 100%;
         .f2-prgbar-empty,
         .f2-prgbar-full {
@@ -422,10 +435,10 @@ const ScreenFortuna2MainMAIN = styled.div`
           position: absolute;
           top: 42px;
           left: 14px;
-          background-image: url(~imgPath/prg-bar-f1-empty.jpg);
+          background-image: url(../img/prg-bar-f1-empty.jpg);
           background-size: 350px 100%;
           .f2-prgbar-full {
-            background-image: url(~imgPath/prg-bar-f1-full.jpg);
+            background-image: url(../img/prg-bar-f1-full.jpg);
             top: 0;
             left: 0;
             transition: width 0.5s ease;
@@ -475,8 +488,15 @@ const ScreenFortuna2MainMAIN = styled.div`
             position: absolute;
             top: 0;
             left: 0;
-            @include background-gold;
-            @include prefix(border-radius, 10px);
+            background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
+            border-radius: 10px;
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
             img {
               width: 50px;
@@ -514,7 +534,7 @@ const ScreenFortuna2MainMAIN = styled.div`
               #beff8f 100%
             );
             box-shadow: 0 2px 2px 0 rgba(#000, 0.45);
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             color: #fff;
             font-size: 14px;
             font-weight: bold;
@@ -547,7 +567,7 @@ const ScreenFortuna2MainMAIN = styled.div`
               #7cbc30 0%,
               #bbee7f 100%
             );
-            @include prefix(border-radius, 8px);
+            border-radius: 8px;
             box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15),
               0 2px 0 rgba(0, 0, 0, 0.25);
             color: #000;
@@ -561,7 +581,7 @@ const ScreenFortuna2MainMAIN = styled.div`
           }
           .fortuna-promote {
             position: absolute;
-            background-image: url(~imgPath/top-arrow.png);
+            background-image: url(../img/top-arrow.png);
             background-size: 100%;
             width: 40px;
             height: 40px;
@@ -684,7 +704,7 @@ const ScreenFortuna2MainMAIN = styled.div`
               height: 30px;
               position: relative;
               display: inline-block;
-              background-image: url(~imgPath/diamond@1x.png);
+              background-image: url(../img/diamond@1x.png);
               background-size: 100%;
               margin: 0 4px 0 4px;
               vertical-align: middle;
@@ -697,7 +717,7 @@ const ScreenFortuna2MainMAIN = styled.div`
               height: 28px;
               position: relative;
               display: inline-block;
-              background-image: url(~imgPath/heart1.png);
+              background-image: url(../img/heart1.png);
               background-size: 100%;
               margin: 0 4px 0 4px;
               vertical-align: middle;
@@ -748,16 +768,16 @@ const ScreenFortuna2MainMAIN = styled.div`
       }
     }
     .fortuna-wheel-box .fortuna-wheel.good .fortuna-good {
-      background-image: url(~imgPath/fortuna-good-ny2019.png);
+      background-image: url(../img/fortuna-good-ny2019.png);
     }
     .fortuna-main-center-box {
       background-color: rgba(61, 104, 140, 0.75);
       .fortuna-prgbar-box {
-        background-image: url(~imgPath/fortuna-prg-bg-ny2019.png);
+        background-image: url(../img/fortuna-prg-bg-ny2019.png);
         .fortuna-prgbar-empty {
-          background-image: url(~imgPath/fortuna-prgbar-empty.png);
+          background-image: url(../img/fortuna-prgbar-empty.png);
           .fortuna-prgbar-full {
-            background-image: url(~imgPath/fortuna-prg-full-ny2019.png);
+            background-image: url(../img/fortuna-prg-full-ny2019.png);
           }
         }
         .fortuna-lucky-txt {
@@ -784,7 +804,7 @@ const ScreenFortuna2MainMAIN = styled.div`
     );
     &:before {
       content: "";
-      background-image: url(~imgPath/sv-sale-bg.jpg);
+      background-image: url(../img/sv-sale-bg.jpg);
       background-size: 100%;
     }
     .title {
@@ -822,7 +842,7 @@ const ScreenFortuna2MainMAIN = styled.div`
   position: absolute;
   top: -10px;
   margin-left: -10px;
-  background-image: url(~imgPath/timer-back.png);
+  background-image: url(../img/timer-back.png);
   background-size: 100%;
   .time-left,
   .time-sec {
@@ -863,7 +883,7 @@ body .main .quests {
       width: 60px;
       height: 20px;
       background-color: rgba(106, 0, 4, 0.9);
-      @include prefix(border-radius, 10px);
+      border-radius: 10px;
       padding: 0px 5px;
     }
     .timer {

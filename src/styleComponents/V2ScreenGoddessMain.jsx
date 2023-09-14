@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenGoddessMain = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 body .main {
     .left-side {
@@ -25,8 +24,14 @@ body .main {
                         position: absolute;
                         top: 10px;
                         left: 399px;
-                        @include background-resourcebg;
-                        @include prefix(border-radius, 12px);
+                        background: linear-gradient(
+		0deg, 
+		#ffe199 0%, 
+		#f4c657 18%, 
+		#ffe199 60%, 
+		#f4c557 85%, 
+		#ffe199 100%);
+                        border-radius: 12px;
                         box-shadow: 0 1px 2p x rgba(0, 0, 0, 0.35);
                         color: #3c3737;
                         font-size: 16px;
@@ -43,7 +48,7 @@ body .main {
                         background-color: #fffe9a;
                         box-shadow: inset 0px -50px 50px -25px #e9b13a,
                             0px 1px 3px -1px rgba(0, 0, 0, 0.4);
-                        @include prefix(border-radius, 12px);
+                        border-radius: 12px;
 
                         &:before {
                             content: "";
@@ -60,7 +65,7 @@ body .main {
                                 #f5c85d 85%,
                                 #fddd90 100%
                             );
-                            @include prefix(border-radius, 10px);
+                            border-radius: 10px;
                         }
 
                         img {
@@ -69,7 +74,7 @@ body .main {
                             position: absolute;
                             left: 5px;
                             top: 5px;
-                            @include prefix(border-radius, 8px);
+                            border-radius: 8px;
                         }
 
                         .cw-trophy-skills {
@@ -82,7 +87,7 @@ body .main {
                             font-size: 14px;
                             color: #fff;
                             padding: 4px 7px;
-                            @include prefix(border-radius, 10px);
+                            border-radius: 10px;
                             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
                             background: linear-gradient(
                                 0deg,
@@ -107,7 +112,7 @@ body .main {
                                     height: 15px;
                                     position: relative;
                                     display: inline-block;
-                                    background-image: url(~imgPath/clan_points2.png);
+                                    background-image: url(../img/clan_points2.png);
                                     background-size: 100%;
                                     background-position: center;
                                     margin: 0 2px 0 2px;
@@ -124,7 +129,7 @@ body .main {
                         top: 40px;
                         left: 10px;
                         background-color: #736362;
-                        @include prefix(border-radius, 12px);
+                        border-radius: 12px;
                         .gd-left-box-scroll-box {
                             overflow-y: scroll;
                             position: absolute;
@@ -158,8 +163,15 @@ body .main {
                                 position: relative;
                                 display: inline-block;
                                 margin: 5px 0;
-                                @include prefix(border-radius, 6px);
-                                @include background-bronze;
+                                border-radius: 6px;
+                                background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
                                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                                 .hero-avatar {
                                     width: 90px;
@@ -167,7 +179,7 @@ body .main {
                                     position: absolute;
                                     top: 4px;
                                     left: 4px;
-                                    @include prefix(border-radius, 4px);
+                                    border-radius: 4px;
                                     overflow: hidden;
                                 }
                             }
@@ -189,7 +201,7 @@ body .main {
                                 #b8d2e0 100%
                             );
                             //background: linear-gradient(0deg, #58372a 0%, #42291e 50%, #9f8978 100%);;
-                            @include prefix(border-radius, 100%);
+                            border-radius: 100%;
                             cursor: pointer;
                             border: 2px solid #fff;
                             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
@@ -210,7 +222,7 @@ body .main {
                         top: 40px;
                         left: 150px;
                         background-color: red;
-                        @include prefix(border-radius, 12px);
+                        border-radius: 12px;
                         overflow: hidden;
                         .gd-box-goddess-pic {
                             width: 100%;
@@ -226,7 +238,7 @@ body .main {
                                 top: 5px;
                                 right: 5px;
                                 background: none;
-                                background-image: url(~imgPath/chahge-fullscr.png);
+                                background-image: url(../img/chahge-fullscr.png);
                                 background-size: 100%;
                                 cursor: pointer;
                             }
@@ -246,7 +258,7 @@ body .main {
                             position: absolute;
                             top: 10px;
                             left: 129px;
-                            background-image: url(~imgPath/wpck-ram1.png);
+                            background-image: url(../img/wpck-ram1.png);
                             background-size: 100%;
                             .gd-box-goddess-name {
                                 width: 200px;
@@ -322,14 +334,14 @@ body .main {
                                         #f5e38b 47%,
                                         #ebce8b 100%
                                     );
-                                    @include prefix(border-radius, 100%);
+                                    border-radius: 100%;
                                     box-shadow: inset 0px -6px 0px 0px rgba(0, 0, 0, 0.25),
                                         0 2px 8px 0 rgba(0, 0, 0, 0.75);
                                     &:after {
                                         content: "";
                                         width: 20px;
                                         height: 28px;
-                                        background-image: url(~imgPath/rating-arrow.png);
+                                        background-image: url(../img/rating-arrow.png);
                                         position: absolute;
                                         top: 4px;
                                         //margin-left: 9px;
@@ -392,14 +404,14 @@ body .main {
                                 position: absolute;
                                 top: 10px;
                                 left: 56px;
-                                background-image: url(~imgPath/gd-star-40-bg-1.png);
+                                background-image: url(../img/gd-star-40-bg-1.png);
                                 background-size: 100%;
                                 &:before {
                                     content: "";
                                     width: 400px;
                                     height: 40px;
                                     position: absolute;
-                                    background-image: url(~imgPath/gd-star-40-1.png);
+                                    background-image: url(../img/gd-star-40-1.png);
                                     background-size: 100%;
                                     left: 0;
                                 }
@@ -502,7 +514,7 @@ body .main {
                         top: 40px;
                         right: 10px;
                         background-color: #736362;
-                        @include prefix(border-radius, 12px);
+                        border-radius: 12px;
                         .gd-attr-box-all {
                             width: 400px;
                             height: 270px;
@@ -535,7 +547,7 @@ body .main {
                                 position: absolute;
                                 top: 5px;
                                 left: 74px;
-                                background-image: url(~imgPath/wpck-ram.png);
+                                background-image: url(../img/wpck-ram.png);
                                 background-size: 100%;
                                 .gd-attr-name {
                                     width: 100%;
@@ -562,7 +574,7 @@ body .main {
                                     display: inline-block;
                                     margin: 0 6px;
                                     background-color: #5d5252;
-                                    @include prefix(border-radius, 10px);
+                                    border-radius: 10px;
                                     box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.15),
                                         0 2px 4px 0px rgba(0, 0, 0, 0.55);
                                     .hero-avatar-box {
@@ -571,8 +583,15 @@ body .main {
                                         position: absolute;
                                         top: 8px;
                                         left: 11px;
-                                        @include prefix(border-radius, 6px);
-                                        @include background-bronze;
+                                        border-radius: 6px;
+                                        background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
                                         box-shadow: 0 1px 2px
                                             rgba(0, 0, 0, 0.35);
                                         .hero-avatar {
@@ -581,7 +600,7 @@ body .main {
                                             position: absolute;
                                             top: 4px;
                                             left: 4px;
-                                            @include prefix(border-radius, 4px);
+                                            border-radius: 4px;
                                             overflow: hidden;
                                         }
                                         .sh2-icon-forgirl {
@@ -703,7 +722,7 @@ body .main {
                                                         height: 18px;
                                                         position: relative;
                                                         display: inline-block;
-                                                        background-image: url(~imgPath/ic-yellow-butil.png);
+                                                        background-image: url(../img/ic-yellow-butil.png);
                                                         background-size: 100%;
                                                         margin: 0 4px 0 4px;
                                                         vertical-align: middle;
@@ -717,7 +736,7 @@ body .main {
                                                         height: 18px;
                                                         position: relative;
                                                         display: inline-block;
-                                                        background-image: url(~imgPath/ic-green-butil.png);
+                                                        background-image: url(../img/ic-green-butil.png);
                                                         background-size: 100%;
                                                         margin: 0 4px 0 4px;
                                                         vertical-align: middle;
@@ -731,7 +750,7 @@ body .main {
                                                         height: 18px;
                                                         position: relative;
                                                         display: inline-block;
-                                                        background-image: url(~imgPath/ic-blue-butil.png);
+                                                        background-image: url(../img/ic-blue-butil.png);
                                                         background-size: 100%;
                                                         margin: 0 4px 0 4px;
                                                         vertical-align: middle;
@@ -767,7 +786,7 @@ body .main {
                                 #e5ca72 50%,
                                 #996b1d 100%
                             );
-                            @include prefix(border-radius, 8px);
+                            border-radius: 8px;
                             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                             .gd-star-box {
                                 width: 200px;
@@ -775,14 +794,14 @@ body .main {
                                 position: absolute;
                                 top: 10px;
                                 left: 100px;
-                                background-image: url(~imgPath/gd-star-40-bg.png);
+                                background-image: url(../img/gd-star-40-bg.png);
                                 background-size: 100%;
                                 &:before {
                                     content: "";
                                     width: 200px;
                                     height: 40px;
                                     position: absolute;
-                                    background-image: url(~imgPath/gd-star-40.png);
+                                    background-image: url(../img/gd-star-40.png);
                                     background-size: 100%;
                                 }
                                 &.lvl00 {
@@ -876,7 +895,7 @@ body .main {
                                             height: 24px;
                                             position: relative;
                                             display: inline-block;
-                                            background-image: url(~imgPath/arrow-green.png);
+                                            background-image: url(../img/arrow-green.png);
                                             background-size: 100%;
                                             margin: 0 4px 0 4px;
                                             vertical-align: middle;
@@ -890,7 +909,7 @@ body .main {
                                     position: absolute;
                                     top: 9px;
                                     left: 184px;
-                                    background-image: url(~imgPath/unipop-gold-arrow.png);
+                                    background-image: url(../img/unipop-gold-arrow.png);
                                     background-size: 100%;
                                 }
                             }
@@ -922,8 +941,15 @@ body .main {
                                         position: relative;
                                         display: inline-block;
                                         margin: 0 3px;
-                                        @include prefix(border-radius, 6px);
-                                        @include background-bronze;
+                                        border-radius: 6px;
+                                        background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
                                         box-shadow: 0 1px 2px
                                             rgba(0, 0, 0, 0.35);
                                         .hero-avatar {
@@ -932,7 +958,7 @@ body .main {
                                             position: absolute;
                                             top: 4px;
                                             left: 4px;
-                                            @include prefix(border-radius, 4px);
+                                            border-radius: 4px;
                                             overflow: hidden;
                                         }
                                         .gd-av-bg-black {
@@ -946,14 +972,14 @@ body .main {
                                                 0,
                                                 0.55
                                             );
-                                            @include prefix(border-radius, 6px);
+                                            border-radius: 6px;
                                             .gd-av-block {
                                                 width: 30px;
                                                 height: 45px;
                                                 position: absolute;
                                                 top: 30px;
                                                 left: 30px;
-                                                background-image: url(~imgPath/tower-lock.png);
+                                                background-image: url(../img/tower-lock.png);
                                                 background-size: 100%;
                                             }
                                         }
@@ -994,7 +1020,7 @@ body .main {
                                         position: absolute;
                                         top: -6px;
                                         left: 88px;
-                                        background-image: url(~imgPath/change-line.png);
+                                        background-image: url(../img/change-line.png);
                                         background-size: 100%;
                                         .gd-girl-prg-rd-txt {
                                             width: 40px;
@@ -1035,7 +1061,7 @@ body .main {
                             #aa9383,
                             #dfceba
                         );
-                        @include prefix(border-radius, 7px);
+                        border-radius: 7px;
                         box-shadow: 0 0 7px #000;
                         cursor: pointer;
                         z-index: 999;
@@ -1055,7 +1081,7 @@ body .main {
                             top: 3px;
                             left: 3px;
                             background: rgba(255, 255, 255, 0.25);
-                            @include prefix(border-radius, 5px);
+                            border-radius: 5px;
                         }
                     }
 
@@ -1069,7 +1095,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(~imgPath/v2-mn-soul-sg-160.png);
+                                    background-image: url(../img/v2-mn-soul-sg-160.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -1083,7 +1109,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(~imgPath/ic-yellow-butil.png);
+                                    background-image: url(../img/ic-yellow-butil.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }

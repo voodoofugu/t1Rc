@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import screenBank from "../styles/screen-bank.scss";
-import screenBank1 from "../styles/screen-bank1.scss";
-import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-import angelTab from "../styles/angel-tab.scss";
-import screenSuperhero from "../styles/screen-superhero.scss";
+// import screenBank from "../styles/screen-bank.scss";
+// import screenBank1 from "../styles/screen-bank1.scss";
+// import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
+// import angelTab from "../styles/angel-tab.scss";
+// import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen01Component = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -468,7 +468,7 @@ const V2MainScreen01Component = () => {
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/09-River.jpg')",
+                            "url('../img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

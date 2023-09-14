@@ -1,6 +1,6 @@
 import React from "react";
-import v2ScreenGoddessMain from "../styles/v2-screen-goddess-main.scss";
-import v2ScreenGoddessPicture from "../styles/v2-screen-goddess-picture.scss";
+// import v2ScreenGoddessMain from "../styles/v2-screen-goddess-main.scss";
+// import v2ScreenGoddessPicture from "../styles/v2-screen-goddess-picture.scss";
 
 const V2MainScreen21GoddessMainComponent = () => {
     return (

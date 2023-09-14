@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenShrine from "../styles/v2-screen-shrine.scss";
+// import v2ScreenShrine from "../styles/v2-screen-shrine.scss";
 
 const V2MainScreen02GuildShrineComponent = () => {
     return (

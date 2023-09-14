@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import screenChangeMain from "../styles/screen-change-main.scss";
-import screenChangeBonuses from "../styles/screen-change-bonuses.scss";
-import screenChangeCollpop from "../styles/screen-change-collpop.scss";
-import screenAlbum from "../styles/screen-album.scss";
+// import screenChangeMain from "../styles/screen-change-main.scss";
+// import screenChangeBonuses from "../styles/screen-change-bonuses.scss";
+// import screenChangeCollpop from "../styles/screen-change-collpop.scss";
+// import screenAlbum from "../styles/screen-album.scss";
 
 const V2MainScreen07AlbumComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

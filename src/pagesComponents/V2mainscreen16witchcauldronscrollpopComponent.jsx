@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenWtchCauldronScroll from "../styles/v2-screen-witch-cauldron-scroll.scss";
+// import v2ScreenWtchCauldronScroll from "../styles/v2-screen-witch-cauldron-scroll.scss";
 
 const V2MainScreen16WitchCauldronScrollPopComponent = () => {
     return (

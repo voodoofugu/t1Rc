@@ -81,7 +81,7 @@ body {
         display: block;
         width: 91px;
         height: 109px;
-        background-image: url(~imgPath/loader-monster0.png);
+        background-image: url(../img/loader-monster0.png);
         background-size: 91px;
         position: absolute;
         right: 189px;
@@ -90,18 +90,14 @@ body {
             display: block;
             width: 91px;
             height: 109px;
-            background-image: url(~imgPath/loader-monster1.png);
+            background-image: url(../img/loader-monster1.png);
             background-size: 91px;
             position: absolute;
             left: 0;
             top: 0;
-            //@include prefix(transition, width 0.10s);
-            width: 0;
+            //transition: width 0.10s;            width: 0;
             &.play {
-                @include prefix(
-                    animation,
-                    new-monster-loader-prg 1.5s ease 0s 999 forwards
-                );
+                animation: new-monster-loader-prg 1.5s ease 0s 999 forwards;
                 opacity: 1;
                 @keyframes new-monster-loader-prg {
                     0% {
@@ -128,14 +124,14 @@ body {
         text-align: center;
 
         .progress-loader {
-            background-image: url(~imgPath/loader-prg0.png);
+            background-image: url(../img/loader-prg0.png);
             height: 71px;
             top: calc(50% - 35px);
             left: calc(50% - 45px);
 
             .prg {
                 height: 71px;
-                background-image: url(~imgPath/loader-prg1.png);
+                background-image: url(../img/loader-prg1.png);
             }
         }
     }
@@ -167,7 +163,7 @@ body {
             width: 55px;
             height: 55px;
             background-color: #d90f0f;
-            background-image: url(~imgPath/ob-ico-2.png);
+            background-image: url(../img/ob-ico-2.png);
             background-size: 100%;
         }
 
@@ -205,7 +201,7 @@ body {
                 display: block;
                 width: 145px;
                 height: 114px;
-                background-image: url(~imgPath/loader-prg0.png);
+                background-image: url(../img/loader-prg0.png);
                 background-size: 145px;
                 // background:red;
                 position: absolute;
@@ -215,18 +211,15 @@ body {
                     display: block;
                     width: 145px;
                     height: 114px;
-                    background-image: url(~imgPath/loader-prg1.png);
+                    background-image: url(../img/loader-prg1.png);
                     background-size: 145px;
                     position: absolute;
                     left: 0;
                     top: 0;
-                    //@include prefix(transition, width 0.10s);
-                    height: 0;
+                    //transition: width 0.10s;                    height: 0;
                     &.play {
-                        @include prefix(
-                            animation,
-                            main-loader-prg-anim 1.5s ease 0s 999 forwards
-                        );
+                        animation: main-loader-prg-anim 1.5s ease 0s 999
+                            forwards;
                         opacity: 1;
                         @keyframes main-loader-prg-anim {
                             0% {
@@ -462,7 +455,7 @@ body {
                         // opacity: 0.55;
                     }
                     &.gold:after {
-                        background-image: url(~imgPath/m-ico-gold.png);
+                        background-image: url(../img/m-ico-gold.png);
                         background-size: 77px;
                         width: 77px;
                         left: -5px;
@@ -491,11 +484,11 @@ body {
                         }
                     }
                     &.gems:after {
-                        background-image: url(~imgPath/m-ico-gems.png);
+                        background-image: url(../img/m-ico-gems.png);
                         background-size: 66px;
                     }
                     &.shards:after {
-                        background-image: url(~imgPath/m-ico-shards.png);
+                        background-image: url(../img/m-ico-shards.png);
                         background-size: 66px;
                     }
 
@@ -575,7 +568,7 @@ body {
                                 display: inline-block;
                                 width: 20px;
                                 height: 20px;
-                                background-image: url(~imgPath/clock3.png);
+                                background-image: url(../img/clock3.png);
                                 background-size: 20px;
                                 vertical-align: text-bottom;
                             }
@@ -613,15 +606,15 @@ body {
                 //     }
 
                 //     &.gold:after{
-                //         background-image: url(~imgPath/m-ico-gold.png);
+                //         background-image: url(../img/m-ico-gold.png);
                 //         background-size: 55px;
                 //     }
                 //     &.gems:after{
-                //         background-image: url(~imgPath/m-ico-gems.png);
+                //         background-image: url(../img/m-ico-gems.png);
                 //         background-size: 55px;
                 //     }
                 //     &.shards:after{
-                //         background-image: url(~imgPath/m-ico-shards.png);
+                //         background-image: url(../img/m-ico-shards.png);
                 //         background-size: 55px;
                 //     }
 
@@ -665,7 +658,7 @@ body {
                 top: 2px;
                 // right:190px;
                 right: 210px;
-                background-image: url(~imgPath/vip-p0_0.png);
+                background-image: url(../img/vip-p0_0.png);
                 background-size: 169px;
                 cursor: pointer;
                 // &:before{
@@ -700,15 +693,15 @@ body {
                         0 0 6px #333032, 0 0 6px #412727, 0 3px 1px #000;
                 }
                 &:hover {
-                    @include prefix(transform, scale3d(1.025, 1.025, 1));
+                    transform: scale3d(1.025, 1.025, 1);
                 }
                 &:active {
-                    @include prefix(transform, scale3d(1, 1, 1));
+                    transform: scale3d(1, 1, 1);
                 }
 
                 &.lvl0-0,
                 &.lvl0 {
-                    background-image: url(~imgPath/vip-p0_0.png);
+                    background-image: url(../img/vip-p0_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -716,7 +709,7 @@ body {
                     }
                 }
                 &.lvl0-1 {
-                    background-image: url(~imgPath/vip-p0_1.png);
+                    background-image: url(../img/vip-p0_1.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -726,7 +719,7 @@ body {
                     }
                 }
                 &.lvl1-0 {
-                    background-image: url(~imgPath/vip-p1_0.png);
+                    background-image: url(../img/vip-p1_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -734,7 +727,7 @@ body {
                     }
                 }
                 &.lvl1-1 {
-                    background-image: url(~imgPath/vip-p1_1.png);
+                    background-image: url(../img/vip-p1_1.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -742,7 +735,7 @@ body {
                     }
                 }
                 &.lvl2-0 {
-                    background-image: url(~imgPath/vip-p2_0.png);
+                    background-image: url(../img/vip-p2_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -750,7 +743,7 @@ body {
                     }
                 }
                 &.lvl2-1 {
-                    background-image: url(~imgPath/vip-p2_1.png);
+                    background-image: url(../img/vip-p2_1.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -758,7 +751,7 @@ body {
                     }
                 }
                 &.lvl3-0 {
-                    background-image: url(~imgPath/vip-p3_0.png);
+                    background-image: url(../img/vip-p3_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -766,7 +759,7 @@ body {
                     }
                 }
                 &.lvl3-1 {
-                    background-image: url(~imgPath/vip-p3_1.png);
+                    background-image: url(../img/vip-p3_1.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -776,7 +769,7 @@ body {
                     }
                 }
                 &.lvl4-0 {
-                    background-image: url(~imgPath/vip-p4_0.png);
+                    background-image: url(../img/vip-p4_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -784,7 +777,7 @@ body {
                     }
                 }
                 &.lvl4-1 {
-                    background-image: url(~imgPath/vip-p4_1.png);
+                    background-image: url(../img/vip-p4_1.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -794,7 +787,7 @@ body {
                     }
                 }
                 &.lvl5-0 {
-                    background-image: url(~imgPath/vip-p5_0.png);
+                    background-image: url(../img/vip-p5_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -802,12 +795,12 @@ body {
                     }
                 }
                 &.lvl5-1 {
-                    background-image: url(~imgPath/vip-p5_1.png);
+                    background-image: url(../img/vip-p5_1.png);
                     background-size: 169px;
                     top: 2px;
                 }
                 &.lvl6-0 {
-                    background-image: url(~imgPath/vip-p6_0.png);
+                    background-image: url(../img/vip-p6_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -815,12 +808,12 @@ body {
                     }
                 }
                 &.lvl6-1 {
-                    background-image: url(~imgPath/vip-p6_1.png);
+                    background-image: url(../img/vip-p6_1.png);
                     background-size: 169px;
                     top: 2px;
                 }
                 &.lvl7-0 {
-                    background-image: url(~imgPath/vip-p7_0.png);
+                    background-image: url(../img/vip-p7_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -828,12 +821,12 @@ body {
                     }
                 }
                 &.lvl7-1 {
-                    background-image: url(~imgPath/vip-p7_1.png);
+                    background-image: url(../img/vip-p7_1.png);
                     background-size: 169px;
                     top: 2px;
                 }
                 &.lvl8-0 {
-                    background-image: url(~imgPath/vip-p8_0.png);
+                    background-image: url(../img/vip-p8_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -841,12 +834,12 @@ body {
                     }
                 }
                 &.lvl8-1 {
-                    background-image: url(~imgPath/vip-p8_1.png);
+                    background-image: url(../img/vip-p8_1.png);
                     background-size: 169px;
                     top: 2px;
                 }
                 &.lvl9-0 {
-                    background-image: url(~imgPath/vip-p9_0.png);
+                    background-image: url(../img/vip-p9_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -854,7 +847,7 @@ body {
                     }
                 }
                 &.lvl9-1 {
-                    background-image: url(~imgPath/vip-p9_1.png);
+                    background-image: url(../img/vip-p9_1.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -864,7 +857,7 @@ body {
                     }
                 }
                 &.lvl10-0 {
-                    background-image: url(~imgPath/vip-p10_0.png);
+                    background-image: url(../img/vip-p10_0.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -872,7 +865,7 @@ body {
                     }
                 }
                 &.lvl10-1 {
-                    background-image: url(~imgPath/vip-p10_1.png);
+                    background-image: url(../img/vip-p10_1.png);
                     background-size: 169px;
                     top: 2px;
                     .num {
@@ -961,7 +954,7 @@ body {
                     left: 8px;
                     top: -9px;
                     // background: red;
-                    background-image: url(~imgPath/shop-ico.png);
+                    background-image: url(../img/shop-ico.png);
                     background-size: 72px;
                 }
             }
@@ -1011,43 +1004,43 @@ body {
                         top: 3px;
                     }
                     &.exit:after {
-                        background-image: url(~imgPath/ob-ico-1.png);
+                        background-image: url(../img/ob-ico-1.png);
                         background-size: 23px;
                     }
                     &.ops:after {
-                        background-image: url(~imgPath/ob-ico-2.png);
+                        background-image: url(../img/ob-ico-2.png);
                         background-size: 23px;
                     }
                     &.music:after {
-                        background-image: url(~imgPath/ob-ico-3.png);
+                        background-image: url(../img/ob-ico-3.png);
                         background-size: 23px;
                     }
                     &.sound:after {
-                        background-image: url(~imgPath/ob-ico-4.png);
+                        background-image: url(../img/ob-ico-4.png);
                         background-size: 23px;
                     }
                     &.feedback:after {
-                        background-image: url(~imgPath/ob-ico-5.png);
+                        background-image: url(../img/ob-ico-5.png);
                         background-size: 23px;
                     }
                     &.login:after {
-                        background-image: url(~imgPath/ob-ico-1.png);
+                        background-image: url(../img/ob-ico-1.png);
                         background-size: 23px;
                     }
                     &.logout:after {
-                        background-image: url(~imgPath/ob-ico-0.png);
+                        background-image: url(../img/ob-ico-0.png);
                         background-size: 23px;
                     }
                     &.statistic:after {
-                        background-image: url(~imgPath/ob-ico-6.png);
+                        background-image: url(../img/ob-ico-6.png);
                         background-size: 23px;
                     }
 
                     &:hover {
-                        @include prefix(transform, scale3d(1.05, 1.05, 1));
+                        transform: scale3d(1.05, 1.05, 1);
                     }
                     &:active {
-                        @include prefix(transform, scale3d(0.98, 0.98, 1));
+                        transform: scale3d(0.98, 0.98, 1);
                     }
                 }
             }
@@ -1094,7 +1087,7 @@ body {
                     box-shadow: 2px 0 0 rgba(0, 0, 0, 0.25),
                         inset 0 1px 0 #c87725, inset 0 3px 1px #403a3c;
                     cursor: pointer;
-                    background-image: url(~imgPath/tab-01.png);
+                    background-image: url(../img/tab-01.png);
                     background-size: 52px;
                     background-repeat: no-repeat;
                     a {
@@ -1113,7 +1106,7 @@ body {
                         @include prefix(border-top-right-radius, 35px);
                         margin-top: 10px;
                         z-index: 1;
-                        background-image: url(~imgPath/tab-01.png);
+                        background-image: url(../img/tab-01.png);
                         background-size: 66px;
                         &:before {
                             content: "";
@@ -1138,53 +1131,53 @@ body {
                     display: none;
                 }
                 .shop {
-                    background-image: url(~imgPath/tab-06.png);
+                    background-image: url(../img/tab-06.png);
                 }
                 .achiev {
-                    background-image: url(~imgPath/tab-04.png);
+                    background-image: url(../img/tab-04.png);
                 }
                 .stat {
-                    background-image: url(~imgPath/tab-02.png);
+                    background-image: url(../img/tab-02.png);
                 }
                 .guild {
-                    background-image: url(~imgPath/tab-03.png);
+                    background-image: url(../img/tab-03.png);
                 }
                 .album {
-                    background-image: url(~imgPath/tab-05.png);
+                    background-image: url(../img/tab-05.png);
                 }
                 .super-heroes {
-                    background-image: url(~imgPath/tab-07.png);
+                    background-image: url(../img/tab-07.png);
                 }
                 .master-guild {
-                    background-image: url(~imgPath/tab-08.png);
+                    background-image: url(../img/tab-08.png);
                 }
                 .rating {
-                    background-image: url(~imgPath/tab-02.png);
+                    background-image: url(../img/tab-02.png);
                 }
 
                 .shop.selected {
-                    background-image: url(~imgPath/tab-06.png);
+                    background-image: url(../img/tab-06.png);
                 }
                 .achiev.selected {
-                    background-image: url(~imgPath/tab-04.png);
+                    background-image: url(../img/tab-04.png);
                 }
                 .stat.selected {
-                    background-image: url(~imgPath/tab-02.png);
+                    background-image: url(../img/tab-02.png);
                 }
                 .guild.selected {
-                    background-image: url(~imgPath/tab-03.png);
+                    background-image: url(../img/tab-03.png);
                 }
                 .album.selected {
-                    background-image: url(~imgPath/tab-05.png);
+                    background-image: url(../img/tab-05.png);
                 }
                 .super-heroes.selected {
-                    background-image: url(~imgPath/tab-07.png);
+                    background-image: url(../img/tab-07.png);
                 }
                 .master-guild.selected {
-                    background-image: url(~imgPath/tab-08.png);
+                    background-image: url(../img/tab-08.png);
                 }
                 .rating.selected {
-                    background-image: url(~imgPath/tab-02.png);
+                    background-image: url(../img/tab-02.png);
                 }
 
                 &:after {
@@ -1293,7 +1286,7 @@ body {
                             content: "";
                             width: 100%;
                             height: 100%;
-                            background: url(~imgPath/darkworld-back-arrow.png);
+                            background: url(../img/darkworld-back-arrow.png);
                             background-size: 70%;
                             background-position: center;
                             background-repeat: no-repeat;
@@ -1619,10 +1612,9 @@ body {
                                 //         position: absolute;
                                 //         left: -2px;
                                 //         top: -8px;
-                                //         background-image: url(~imgPath/ico-sword-1.png);
+                                //         background-image: url(../img/ico-sword-1.png);
                                 //         background-size: 50px;
-                                //         // @include prefix(transform, rotate(45deg));
-                                //     }
+                                //         // transform: rotate(45deg);                                //     }
 
                                 // }
 
@@ -1680,344 +1672,327 @@ body {
                                         position: absolute;
                                         left: -2px;
                                         top: -8px;
-                                        background-image: url(~imgPath/ico-sword-1.png);
+                                        background-image: url(../img/ico-sword-1.png);
                                         background-size: 50px;
-                                        // @include prefix(transform, rotate(45deg));
+                                        // transform: rotate(45deg);                                    }
                                     }
-                                }
 
-                                &.disabled .lvl {
-                                    background: linear-gradient(
-                                        45deg,
-                                        #777,
-                                        #999,
-                                        #aaa,
-                                        #ccc
-                                    );
-                                    box-shadow: 0 3px 0px #333, 0 3px 6px #222,
-                                        inset 0 3px 1px #ccc;
-                                    .n {
-                                        color: #ccc;
-                                        background: #555;
-                                    }
-                                    &:after {
-                                        @include prefix(
-                                            filter,
-                                            grayscale(100%)
+                                    &.disabled .lvl {
+                                        background: linear-gradient(
+                                            45deg,
+                                            #777,
+                                            #999,
+                                            #aaa,
+                                            #ccc
                                         );
+                                        box-shadow: 0 3px 0px #333,
+                                            0 3px 6px #222, inset 0 3px 1px #ccc;
+                                        .n {
+                                            color: #ccc;
+                                            background: #555;
+                                        }
+                                        &:after {
+                                            filter: grayscale(100%);
+                                        }
                                     }
-                                }
 
-                                &.hit {
-                                    @include prefix(
-                                        animation,
-                                        my-hero-hero-card 1s ease 0s 9999
-                                            forwards
-                                    );
-                                }
-                                @keyframes my-hero-hero-card {
-                                    0%,
-                                    55%,
-                                    75%,
-                                    100% {
-                                        @include prefix(
-                                            transform,
-                                            scale3d(1, 1, 1)
-                                        );
-                                        background-color: #5e5252;
-                                        box-shadow: inset -2px -6px 1px #3d3737,
-                                            0 1px 10px #3d3737;
+                                    &.hit {
+                                        animation: my-hero-hero-card 1s ease 0s
+                                            9999 forwards;
                                     }
-                                    60% {
-                                        @include prefix(
-                                            transform,
-                                            scale3d(0.95, 0.95, 1)
-                                        );
-                                        background-color: #5e5252;
-                                        box-shadow: none;
+                                    @keyframes my-hero-hero-card {
+                                        0%,
+                                        55%,
+                                        75%,
+                                        100% {
+                                            transform: scale3d(1, 1, 1);
+                                            background-color: #5e5252;
+                                            box-shadow: inset -2px -6px 1px
+                                                    #3d3737,
+                                                0 1px 10px #3d3737;
+                                        }
+                                        60% {
+                                            transform: scale3d(0.95, 0.95, 1);
+                                            background-color: #5e5252;
+                                            box-shadow: none;
+                                        }
+                                        70% {
+                                            transform: scale3d(1.05, 1.05, 1);
+                                            background-color: #a00;
+                                            box-shadow: 0 0 25px #ff0,
+                                                0 0 15px #ff0, 0 0 5px #f00;
+                                        }
                                     }
-                                    70% {
-                                        @include prefix(
-                                            transform,
-                                            scale3d(1.05, 1.05, 1)
-                                        );
-                                        background-color: #a00;
-                                        box-shadow: 0 0 25px #ff0, 0 0 15px #ff0,
-                                            0 0 5px #f00;
-                                    }
-                                }
 
-                                .abil-ready {
-                                    display: block;
-                                    width: 40px;
-                                    height: 40px;
-                                    @include prefix(border-radius, 10px);
-                                    // @include prefix(border-radius, 40px);
-                                    // @include prefix(border-bottom-left-radius, 8px);
-                                    // @include prefix(border-bottom-right-radius, 8px);
-                                    background: red;
-                                    position: absolute;
-                                    left: 28px;
-                                    bottom: -4px;
-                                    // box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa, 1px 2px 1px #000, 1px 5px 3px #000;
-                                    box-shadow: 0 2px 1px #c87725,
-                                        inset 0 3px 2px #ffa, 0px 2px 5px #000;
-                                    background: linear-gradient(
-                                        45deg,
-                                        #e8c34e,
-                                        #ffa,
-                                        #cfa831,
-                                        #fbf1d8
-                                    );
-                                    cursor: pointer;
-                                    // &:before{
-                                    //     content: "";
-                                    //     display: block; width: 30px; height: 30px;
-                                    //     position: absolute; left: 6px; top: 6px;
-                                    //     background-image: url(~imgPath/icon-abil-ready.png);
-                                    //     background-size: 30px;
-                                    // }
-
-                                    &.disable {
-                                        filter: grayscale(100%);
-                                    }
-                                    .icon {
+                                    .abil-ready {
                                         display: block;
-                                        width: 100%;
-                                        height: 100%;
-                                        -webkit-border-radius: 8px;
-                                        -moz-border-radius: 8px;
-                                        -ms-border-radius: 8px;
-                                        -o-border-radius: 8px;
-                                        border-radius: 8px;
+                                        width: 40px;
+                                        height: 40px;
+                                        @include prefix(border-radius, 10px);
+                                        // @include prefix(border-radius, 40px);
+                                        // @include prefix(border-bottom-left-radius, 8px);
+                                        // @include prefix(border-bottom-right-radius, 8px);
+                                        background: red;
+                                        position: absolute;
+                                        left: 28px;
+                                        bottom: -4px;
+                                        // box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa, 1px 2px 1px #000, 1px 5px 3px #000;
+                                        box-shadow: 0 2px 1px #c87725,
+                                            inset 0 3px 2px #ffa,
+                                            0px 2px 5px #000;
+                                        background: linear-gradient(
+                                            45deg,
+                                            #e8c34e,
+                                            #ffa,
+                                            #cfa831,
+                                            #fbf1d8
+                                        );
+                                        cursor: pointer;
+                                        // &:before{
+                                        //     content: "";
+                                        //     display: block; width: 30px; height: 30px;
+                                        //     position: absolute; left: 6px; top: 6px;
+                                        //     background-image: url(../img/icon-abil-ready.png);
+                                        //     background-size: 30px;
+                                        // }
+
+                                        &.disable {
+                                            filter: grayscale(100%);
+                                        }
+                                        .icon {
+                                            display: block;
+                                            width: 100%;
+                                            height: 100%;
+                                            -webkit-border-radius: 8px;
+                                            -moz-border-radius: 8px;
+                                            -ms-border-radius: 8px;
+                                            -o-border-radius: 8px;
+                                            border-radius: 8px;
+                                        }
+                                    }
+                                    &.starterpack {
+                                        .dps {
+                                            display: none;
+                                        }
+                                        .lvl {
+                                            display: none;
+                                        }
+                                        .name {
+                                            text-transform: uppercase;
+                                        }
+                                        .st-timer {
+                                            width: 100px;
+                                            height: 46px;
+                                            position: absolute;
+                                            top: -14px;
+                                            margin-left: 120px;
+                                            background-image: url(../img/timer-back.png);
+                                            background-size: 100%;
+                                            transform: scale(-1, 1);
+                                            .st-time {
+                                                width: 90px;
+                                                height: 46px;
+                                                position: relative;
+                                                display: inline-block;
+                                                font-size: 18px;
+                                                color: #fff;
+                                                text-shadow: 0 0 8px #000;
+                                                transform: scale(-1, 1);
+                                                line-height: 44px;
+                                            }
+                                        }
                                     }
                                 }
-                                &.starterpack {
-                                    .dps {
-                                        display: none;
+                            }
+
+                            .new-heroes-title {
+                                width: 100%;
+                                height: 30px;
+                                // background: pink;
+                                line-height: 30px;
+                                text-align: center;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                color: #ecd06f;
+                                background: linear-gradient(
+                                    45deg,
+                                    #5e5252,
+                                    #613936,
+                                    #765453,
+                                    #776a57,
+                                    #5e5252
+                                );
+                                position: relative;
+                                &:before,
+                                &:after {
+                                    content: "";
+                                    display: block;
+                                    width: 29px;
+                                    height: 29px;
+                                    // background: red;
+                                    background-image: url(../img/lock-gold1.png);
+                                    background-size: 29px;
+                                    position: absolute;
+                                    left: 5px;
+                                    top: 5px;
+                                    // z-index: 1;
+                                }
+                                &:after {
+                                    left: auto;
+                                    right: 5px;
+                                }
+                            }
+
+                            .new-heroes {
+                                display: inline-block;
+                                width: 455px;
+                                // background: #0d0;
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                                text-align: left;
+                                padding-bottom: 10px;
+                                padding-left: 5px;
+                                padding-right: 5px;
+                                font-size: 0;
+
+                                .hero-card {
+                                    display: inline-block;
+                                    width: 100px;
+                                    height: 100px;
+                                    background: #050;
+                                    width: 215px;
+                                    height: 115px;
+                                    margin-top: 10px;
+                                    margin-left: 10px;
+
+                                    position: relative;
+                                    background-color: #755a49;
+                                    @include prefix(border-radius, 7px);
+                                    font-size: 15px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    cursor: not-allowed;
+
+                                    .avatar {
+                                        display: block;
+                                        width: 90px;
+                                        height: 109px;
+                                        @include prefix(border-radius, 5px);
+                                        background: #604d3f;
+                                        position: absolute;
+                                        left: 3px;
+                                        top: 1px;
+                                        .ava {
+                                            width: 90px;
+                                            height: 103px;
+                                            @include prefix(border-radius, 5px);
+                                        }
                                     }
+
+                                    .dps {
+                                        display: block;
+                                        width: 80px;
+                                        height: 20px;
+                                        @include prefix(border-radius, 5px);
+                                        background: #796658;
+                                        position: absolute;
+                                        right: 5px;
+                                        top: 8px;
+                                        color: #675446;
+                                        line-height: 20px;
+                                        text-align: left;
+                                        padding-left: 25px;
+                                        &:before {
+                                            content: "";
+                                            display: inline-block;
+                                            width: 20px;
+                                            height: 14px;
+                                            position: absolute;
+                                            left: 3px;
+                                            top: 3px;
+                                            background-image: url(../img/ico-sword.png);
+                                            background-size: 20px;
+                                            opacity: 0.33;
+                                        }
+                                    }
+                                    .name {
+                                        display: block;
+                                        width: 105px;
+                                        height: 36px;
+                                        color: #786557;
+                                        line-height: 18px;
+                                        position: absolute;
+                                        right: 5px;
+                                        top: 33px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+
                                     .lvl {
                                         display: none;
                                     }
-                                    .name {
-                                        text-transform: uppercase;
-                                    }
-                                    .st-timer {
-                                        width: 100px;
-                                        height: 46px;
-                                        position: absolute;
-                                        top: -14px;
-                                        margin-left: 120px;
-                                        background-image: url(~imgPath/timer-back.png);
-                                        background-size: 100%;
-                                        transform: scale(-1, 1);
-                                        .st-time {
-                                            width: 90px;
-                                            height: 46px;
-                                            position: relative;
-                                            display: inline-block;
-                                            font-size: 18px;
-                                            color: #fff;
-                                            text-shadow: 0 0 8px #000;
-                                            transform: scale(-1, 1);
-                                            line-height: 44px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
 
-                        .new-heroes-title {
-                            width: 100%;
-                            height: 30px;
-                            // background: pink;
-                            line-height: 30px;
-                            text-align: center;
-                            text-transform: uppercase;
-                            font-weight: bold;
-                            color: #ecd06f;
-                            background: linear-gradient(
-                                45deg,
-                                #5e5252,
-                                #613936,
-                                #765453,
-                                #776a57,
-                                #5e5252
-                            );
-                            position: relative;
-                            &:before,
-                            &:after {
-                                content: "";
-                                display: block;
-                                width: 29px;
-                                height: 29px;
-                                // background: red;
-                                background-image: url(~imgPath/lock-gold1.png);
-                                background-size: 29px;
-                                position: absolute;
-                                left: 5px;
-                                top: 5px;
-                                // z-index: 1;
-                            }
-                            &:after {
-                                left: auto;
-                                right: 5px;
-                            }
-                        }
-
-                        .new-heroes {
-                            display: inline-block;
-                            width: 455px;
-                            // background: #0d0;
-                            list-style: none;
-                            padding: 0;
-                            margin: 0;
-                            text-align: left;
-                            padding-bottom: 10px;
-                            padding-left: 5px;
-                            padding-right: 5px;
-                            font-size: 0;
-
-                            .hero-card {
-                                display: inline-block;
-                                width: 100px;
-                                height: 100px;
-                                background: #050;
-                                width: 215px;
-                                height: 115px;
-                                margin-top: 10px;
-                                margin-left: 10px;
-
-                                position: relative;
-                                background-color: #755a49;
-                                @include prefix(border-radius, 7px);
-                                font-size: 15px;
-                                font-weight: bold;
-                                text-align: center;
-                                cursor: not-allowed;
-
-                                .avatar {
-                                    display: block;
-                                    width: 90px;
-                                    height: 109px;
-                                    @include prefix(border-radius, 5px);
-                                    background: #604d3f;
-                                    position: absolute;
-                                    left: 3px;
-                                    top: 1px;
-                                    .ava {
-                                        width: 90px;
-                                        height: 103px;
-                                        @include prefix(border-radius, 5px);
-                                    }
-                                }
-
-                                .dps {
-                                    display: block;
-                                    width: 80px;
-                                    height: 20px;
-                                    @include prefix(border-radius, 5px);
-                                    background: #796658;
-                                    position: absolute;
-                                    right: 5px;
-                                    top: 8px;
-                                    color: #675446;
-                                    line-height: 20px;
-                                    text-align: left;
-                                    padding-left: 25px;
-                                    &:before {
-                                        content: "";
-                                        display: inline-block;
-                                        width: 20px;
-                                        height: 14px;
-                                        position: absolute;
-                                        left: 3px;
-                                        top: 3px;
-                                        background-image: url(~imgPath/ico-sword.png);
-                                        background-size: 20px;
-                                        opacity: 0.33;
-                                    }
-                                }
-                                .name {
-                                    display: block;
-                                    width: 105px;
-                                    height: 36px;
-                                    color: #786557;
-                                    line-height: 18px;
-                                    position: absolute;
-                                    right: 5px;
-                                    top: 33px;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-
-                                .lvl {
-                                    display: none;
-                                }
-
-                                .btn-buy {
-                                    padding: 0;
-                                    box-shadow: none;
-                                    display: block;
-                                    width: 80px;
-                                    height: 36px;
-                                    @include prefix(border-radius, 5px);
-                                    background: #624a3e;
-                                    position: absolute;
-                                    right: 5px;
-                                    bottom: 5px;
-                                    color: #765947;
-                                    line-height: 36px;
-                                    text-align: left;
-                                    padding-left: 25px;
-                                    cursor: not-allowed;
-                                    .price {
-                                        background: none;
+                                    .btn-buy {
+                                        padding: 0;
                                         box-shadow: none;
+                                        display: block;
+                                        width: 80px;
+                                        height: 36px;
+                                        @include prefix(border-radius, 5px);
+                                        background: #624a3e;
+                                        position: absolute;
+                                        right: 5px;
+                                        bottom: 5px;
+                                        color: #765947;
                                         line-height: 36px;
-                                        text-shadow: none;
-                                        // @include prefix(filter, grayscale(100%));
-                                        opacity: 0.25;
-                                    }
-                                    &:active {
-                                        // display: none;
-                                        line-height: 36px;
+                                        text-align: left;
+                                        padding-left: 25px;
+                                        cursor: not-allowed;
                                         .price {
-                                            top: 2px;
+                                            background: none;
+                                            box-shadow: none;
+                                            line-height: 36px;
+                                            text-shadow: none;
+                                            // filter: grayscale(100%);                                        opacity: 0.25;
                                         }
-                                    }
+                                        &:active {
+                                            // display: none;
+                                            line-height: 36px;
+                                            .price {
+                                                top: 2px;
+                                            }
+                                        }
 
-                                    .txt {
-                                        display: none;
-                                    }
+                                        .txt {
+                                            display: none;
+                                        }
 
-                                    // &:before{
-                                    //     content: "";
-                                    //     background-image: url(~imgPath/ico-gold.png);
-                                    //     background-size: 22px;
-                                    //     display: inline-block; width: 22px; height: 22px;
-                                    //     position: absolute; left:2px; top: 7px;
-                                    //     // @include prefix(filter, grayscale(100%));
-                                    //     opacity: 0.25;
-                                    // }
+                                        // &:before{
+                                        //     content: "";
+                                        //     background-image: url(../img/ico-gold.png);
+                                        //     background-size: 22px;
+                                        //     display: inline-block; width: 22px; height: 22px;
+                                        //     position: absolute; left:2px; top: 7px;
+                                        //     // filter: grayscale(100%);                                    //     opacity: 0.25;
+                                        // }
+                                    }
                                 }
                             }
                         }
                     }
-                }
 
-                .loc-list1 {
-                    z-index: 2;
-                    display: block;
-                    width: 93px;
-                    height: 90px;
-                    position: absolute;
-                    left: 100%;
-                    top: 0px;
-                    // background: rgba(255,0,0,0.55);
-                    overflow: hidden;
-                    // @include prefix(transition, width 0.25s);
-                    .loc-back {
+                    .loc-list1 {
+                        z-index: 2;
+                        display: block;
+                        width: 93px;
+                        height: 90px;
+                        position: absolute;
+                        left: 100%;
+                        top: 0px;
+                        // background: rgba(255,0,0,0.55);
+                        overflow: hidden;
+                        // transition: width 0.25s;                    .loc-back {
                         display: none;
                     }
                     .locs {
@@ -2029,10 +2004,7 @@ body {
                     &.opened {
                         z-index: 3;
                         // width: 435px;
-                        @include prefix(
-                            animation,
-                            "loc-list-anim-open 0.25s ease 0s 1 forwards"
-                        );
+                        animation: "loc-list-anim-open 0.25s ease 0s 1 forwards";
                         .locs {
                             right: auto;
                             left: -3px;
@@ -2153,7 +2125,7 @@ body {
                             left: 26px;
                             top: 21px;
                             // background: blue;
-                            background-image: url(~imgPath/boss-sign.png);
+                            background-image: url(../img/boss-sign.png);
                             background-size: 40px;
                         }
                         .boss-icon,
@@ -2275,8 +2247,7 @@ body {
                 //         0 0 5px rgba(0,0,0,0.33);
                 //     overflow: hidden;
                 //     cursor: pointer;
-                //     @include prefix(transition, width 0.25s);
-
+                //     transition: width 0.25s;
                 //     &:after{
                 //         content: "";
                 //         display: block; width:0; height:0;
@@ -2509,7 +2480,7 @@ body {
                                     position: absolute;
                                     left: 7px;
                                     top: 6px;
-                                    background-image: url(~imgPath/lock-gold1.png);
+                                    background-image: url(../img/lock-gold1.png);
                                     background-size: 39px;
                                 }
                             }
@@ -2587,7 +2558,7 @@ body {
             position: absolute;
             right: -9px;
             top: 47px;
-            cursor: url(~imgPath/cursor.png), auto;
+            cursor: url(../img/cursor.png), auto;
             .room {
                 display: block;
                 width: 525px;
@@ -2595,7 +2566,7 @@ body {
                 position: absolute;
                 bottom: 0;
                 left: -51px;
-                background-image: url(~imgPath/room2.png);
+                background-image: url(../img/room2.png);
                 background-size: 540px;
                 background-position: center top;
             }
@@ -2606,7 +2577,7 @@ body {
                 position: absolute;
                 bottom: 80px;
                 left: 115px;
-                background-image: url(~imgPath/monster1.png);
+                background-image: url(../img/monster1.png);
                 background-size: 100%;
                 background-position: center top;
             }
@@ -2658,7 +2629,7 @@ body {
                 // background: red;
                 margin-bottom: 10px;
                 cursor: pointer;
-                // background-image: url(~imgPath/m-ico-gold.png);
+                // background-image: url(../img/m-ico-gold.png);
                 .icon {
                     width: 100%;
                     height: 100%;
@@ -2685,11 +2656,9 @@ body {
                     line-height: 21px;
                 }
                 //&:hover {
-                //    @include prefix(transform, scale3d(1.15, 1.15, 1));
-                //}
+                //    transform: scale3d(1.15, 1.15, 1);                //}
                 //&:active {
-                //    @include prefix(transform, scale3d(0.95, 0.95, 1));
-                //}
+                //    transform: scale3d(0.95, 0.95, 1);                //}
                 // display: none;
                 // &.open {
                 //     display: inline-block;
@@ -2702,16 +2671,13 @@ body {
                 // @keyframes right-quest-open {
                 //     0% {
                 //         opacity: 0;
-                //         @include prefix(transform, scale3d(0.1, 0.1, 1));
-                //     }
+                //         transform: scale3d(0.1, 0.1, 1);                //     }
                 //     75% {
                 //         opacity: 1;
-                //         @include prefix(transform, scale3d(1.25, 1.25, 1));
-                //     }
+                //         transform: scale3d(1.25, 1.25, 1);                //     }
                 //     100% {
                 //         opacity: 1;
-                //         @include prefix(transform, scale3d(1, 1, 1));
-                //     }
+                //         transform: scale3d(1, 1, 1);                //     }
                 // }
                 &.startpack {
                     .timerbox {
@@ -2733,7 +2699,7 @@ body {
                         margin-left: 0px;
                         transition-delay: 1s;
                         transition: opacity 0.3s ease-in-out;
-                        background-image: url(~imgPath/reg-ic-01.png);
+                        background-image: url(../img/reg-ic-01.png);
                         background-size: 100%;
                     }
                 }
@@ -2758,12 +2724,12 @@ body {
                         margin-left: 0px;
                         transition-delay: 1s;
                         transition: opacity 0.3s ease-in-out;
-                        background-image: url(~imgPath/reg-ic-01.png);
+                        background-image: url(../img/reg-ic-01.png);
                         background-size: 100%;
                     }
                     .icon-reg2 {
                         opacity: 0;
-                        background-image: url(~imgPath/reg-ic-01-1.png);
+                        background-image: url(../img/reg-ic-01-1.png);
                     }
                     &.shiny {
                         .icon-reg2 {
@@ -2837,7 +2803,7 @@ body {
                 position: absolute;
                 right: -8px;
                 top: 3px;
-                @include prefix(transform, rotate(45deg));
+                transform: rotate(45deg);
                 border-right: solid 3px #403730;
                 border-top: solid 3px #403730;
             }
@@ -2911,7 +2877,7 @@ body {
                 left: calc(70px + 83px);
                 // left: calc(86px + 83px);
                 // background: red;
-                background-image: url(~imgPath/prg1-1.png);
+                background-image: url(../img/prg1-1.png);
                 background-size: 50px;
                 cursor: pointer;
             }
@@ -2919,7 +2885,7 @@ body {
                 left: calc(70px + 83px * 2);
                 width: 50px;
                 height: 50px;
-                background-image: url(~imgPath/prg1-2.png);
+                background-image: url(../img/prg1-2.png);
                 background-size: 50px;
                 // margin-top: -2px; margin-left: -2px;
             }
@@ -2927,7 +2893,7 @@ body {
                 left: calc(70px + 83px * 3);
                 width: 50px;
                 height: 50px;
-                background-image: url(~imgPath/prg1-3.png);
+                background-image: url(../img/prg1-3.png);
                 background-size: 50px;
                 // margin-top: -17px; margin-left: -23px;
             }
@@ -2944,7 +2910,7 @@ body {
             //         // @include prefix(border-radius, 4px);
             //         background: linear-gradient(to right, #e8c547, #ba8b81, #804097);
             //         // box-shadow: 2px 0 0 #201c1c;
-            //         background-image: url(~imgPath/prg1.png);
+            //         background-image: url(../img/prg1.png);
             //         background-size: 393px;
             //         // box-shadow: 2px 0 0 #201c1c;
             //     }
@@ -2959,7 +2925,7 @@ body {
             //         display: block; width: 20px; height: 20px;
             //         position: absolute; left:-7px; top: -20px;
             //         // background: red;
-            //         background-image: url(~imgPath/star1.png);
+            //         background-image: url(../img/star1.png);
             //         background-size: 20px;
             //     }
             // }
@@ -2968,7 +2934,7 @@ body {
             //     background: #DFBF54;
             //     &:after{
             //         width: 40px; left:-26px;
-            //         background-image: url(~imgPath/star2.png);
+            //         background-image: url(../img/star2.png);
             //         background-size: 40px;
             //     }
             // }
@@ -2978,7 +2944,7 @@ body {
             //     // box-shadow: none;
             //     &:after{
             //         width: 52px; left:-48px;
-            //         background-image: url(~imgPath/star3.png);
+            //         background-image: url(../img/star3.png);
             //         background-size: 52px;
             //     }
             // }
@@ -2990,7 +2956,7 @@ body {
                 position: absolute;
                 right: -73px;
                 top: -18px;
-                background-image: url(~imgPath/m-ico-book.png);
+                background-image: url(../img/m-ico-book.png);
                 background-size: 66px;
                 cursor: pointer;
             }
@@ -3014,51 +2980,45 @@ body {
             //         display: block; width: 70px; height: 70px;
             //         position: absolute; left: -2px; top: -4px;
             //         // background: red;
-            //         background-image: url(~imgPath/m-ico-book.png);
+            //         background-image: url(../img/m-ico-book.png);
             //         background-size: 70px;
             //     }
             // }
 
             &.blast {
-                @include prefix(
-                    animation,
-                    prg-prog-blast-anim 0.12s ease 0s 1 forwards
-                );
+                animation: prg-prog-blast-anim 0.12s ease 0s 1 forwards;
                 .icon {
-                    @include prefix(
-                        animation,
-                        prg-prog-blast-anim-1 0.15s ease 0s 1 forwards
-                    );
+                    animation: prg-prog-blast-anim-1 0.15s ease 0s 1 forwards;
                 }
             }
             @keyframes prg-prog-blast-anim {
                 0% {
-                    @include prefix(transform, translate3d(0, 0, 0));
+                    transform: translate3d(0, 0, 0);
                 }
                 60% {
-                    @include prefix(transform, translate3d(0, -10px, 0));
+                    transform: translate3d(0, -10px, 0);
                 }
                 80% {
-                    @include prefix(transform, translate3d(0, 3px, 0));
+                    transform: translate3d(0, 3px, 0);
                 }
                 90%,
                 100% {
-                    @include prefix(transform, translate3d(0, 0, 0));
+                    transform: translate3d(0, 0, 0);
                 }
             }
             @keyframes prg-prog-blast-anim-1 {
                 0% {
-                    @include prefix(transform, translate3d(0, 0, 0));
+                    transform: translate3d(0, 0, 0);
                 }
                 60% {
-                    @include prefix(transform, translate3d(0, -12px, 0));
+                    transform: translate3d(0, -12px, 0);
                 }
                 80% {
-                    @include prefix(transform, translate3d(0, 5px, 0));
+                    transform: translate3d(0, 5px, 0);
                 }
                 90%,
                 100% {
-                    @include prefix(transform, translate3d(0, 0, 0));
+                    transform: translate3d(0, 0, 0);
                 }
             }
         }
@@ -3218,98 +3178,96 @@ body {
                     text-shadow: 0 0 1px #3a2423, 0 0 1px #3a2423,
                         0 0 1px #3a2423, 1px 0 1px #000, 1px 0 1px #000,
                         1px 0 1px #000;
-                    // @include prefix(transform, scale3d(1,0.77,1));
-                    &:before {
-                        content: "";
-                        display: block;
-                        width: 52px;
-                        height: 33px;
-                        @include prefix(border-radius, 46px);
-                        @include prefix(border-bottom-left-radius, 0);
-                        @include prefix(border-bottom-right-radius, 0);
-                        position: absolute;
-                        left: 4px;
-                        top: 4px;
-                        line-height: 26px;
-                        color: #ffa;
-                        background: #544741;
-                        box-shadow: inset 0 2px 3px #000;
-                        text-shadow: 0 2px 1px #000;
-                    }
-                    .icon-dpc,
-                    .icon-dps {
-                        display: inline-block;
-                        width: 54px;
-                        height: 54px;
-                        position: absolute;
-                        left: 3px;
-                        top: -10px;
-                        background-image: url(~imgPath/ico-click.png);
-                        background-size: 54px;
-                    }
-                    .icon-dps {
-                        background-image: url(~imgPath/ico-sword.png);
-                        background-size: 54px;
-                    }
+                    // transform: scale3d(1,0.77,1);                    &:before {
+                    content: "";
+                    display: block;
+                    width: 52px;
+                    height: 33px;
+                    @include prefix(border-radius, 46px);
+                    @include prefix(border-bottom-left-radius, 0);
+                    @include prefix(border-bottom-right-radius, 0);
+                    position: absolute;
+                    left: 4px;
+                    top: 4px;
+                    line-height: 26px;
+                    color: #ffa;
+                    background: #544741;
+                    box-shadow: inset 0 2px 3px #000;
+                    text-shadow: 0 2px 1px #000;
+                }
+                .icon-dpc,
+                .icon-dps {
+                    display: inline-block;
+                    width: 54px;
+                    height: 54px;
+                    position: absolute;
+                    left: 3px;
+                    top: -10px;
+                    background-image: url(../img/ico-click.png);
+                    background-size: 54px;
+                }
+                .icon-dps {
+                    background-image: url(../img/ico-sword.png);
+                    background-size: 54px;
                 }
             }
-            .dps {
-                margin-left: 0px;
-                .x2-dps {
-                    position: absolute;
-                    top: 45px;
-                    left: 41px;
-                    text-shadow: 1px 1px 3px #4f261e, -1px -1px 3px #4f261e;
-                    color: #fdfcc3;
-                    font-size: 20px;
+        }
+        .dps {
+            margin-left: 0px;
+            .x2-dps {
+                position: absolute;
+                top: 45px;
+                left: 41px;
+                text-shadow: 1px 1px 3px #4f261e, -1px -1px 3px #4f261e;
+                color: #fdfcc3;
+                font-size: 20px;
+            }
+            .value {
+                top: 5px;
+                right: auto;
+                left: 5px;
+                text-align: right;
+                width: 135px;
+                padding: 0;
+                padding-right: 20px;
+            }
+            .mlt-prm {
+                top: 38px;
+                right: auto;
+                left: 5px;
+                text-align: right;
+                width: 135px;
+                padding: 0;
+                padding-right: 20px;
+            }
+            .title {
+                // opacity: 0.4;
+                left: auto;
+                right: -10px;
+                top: -3px;
+                @include prefix(border-radius, 60px);
+                @include prefix(border-top-left-radius, 20px);
+                @include prefix(border-top-right-radius, 20px);
+                padding-top: 1px;
+                height: 71px;
+                box-shadow: 0 3px 0px #c87725, 0 5px 0px #3d3737,
+                    -1px 0 0px #3d3737, inset 0 3px 1px #ffa;
+                &:before {
+                    content: "";
+                    display: block;
+                    width: 52px;
+                    height: 37px;
+                    @include prefix(border-radius, 46px);
+                    @include prefix(border-top-left-radius, 0);
+                    @include prefix(border-top-right-radius, 0);
+                    top: auto;
+                    bottom: 5px;
                 }
-                .value {
-                    top: 5px;
-                    right: auto;
-                    left: 5px;
-                    text-align: right;
-                    width: 135px;
-                    padding: 0;
-                    padding-right: 20px;
-                }
-                .mlt-prm {
-                    top: 38px;
-                    right: auto;
-                    left: 5px;
-                    text-align: right;
-                    width: 135px;
-                    padding: 0;
-                    padding-right: 20px;
-                }
-                .title {
-                    // opacity: 0.4;
-                    left: auto;
-                    right: -10px;
-                    top: -3px;
-                    @include prefix(border-radius, 60px);
-                    @include prefix(border-top-left-radius, 20px);
-                    @include prefix(border-top-right-radius, 20px);
-                    padding-top: 1px;
-                    height: 71px;
-                    box-shadow: 0 3px 0px #c87725, 0 5px 0px #3d3737,
-                        -1px 0 0px #3d3737, inset 0 3px 1px #ffa;
-                    &:before {
-                        content: "";
-                        display: block;
-                        width: 52px;
-                        height: 37px;
-                        @include prefix(border-radius, 46px);
-                        @include prefix(border-top-left-radius, 0);
-                        @include prefix(border-top-right-radius, 0);
-                        top: auto;
-                        bottom: 5px;
-                    }
-                    .icon-dps {
-                        background-image: url(~imgPath/ico-sword.png);
-                        background-size: 54px;
-                        top: 23px;
-                        left: 3px;
-                    }
+                .icon-dps {
+                    background-image: url(../img/ico-sword.png);
+                    background-size: 54px;
+                    top: 23px;
+                    left: 3px;
                 }
             }
         }
@@ -3333,7 +3291,7 @@ body .main .popup-layer .sign-in {
         width: 38px;
         height: 38px;
         // background: red;
-        background-image: url(~imgPath/login-icon-big.png);
+        background-image: url(../img/login-icon-big.png);
         background-size: 38px;
         position: absolute;
         left: 8px;
@@ -3533,7 +3491,7 @@ body .main .popup-layer .sign-up {
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.33), 0 0 2px #400,
             inset 0 0 15px #600, inset 0 0 25px #300;
         margin-top: 10px;
-        // background-image: url(~imgPath/reg-banner.jpg);
+        // background-image: url(../img/reg-banner.jpg);
         // background-size: 542px;
 
         text-align: center;
@@ -3574,11 +3532,11 @@ body .main .popup-layer .sign-up {
             }
         }
         .g1 {
-            background-image: url(~imgPath/ser-ban-3.jpg);
+            background-image: url(../img/ser-ban-3.jpg);
             background-size: 120px;
         }
         .g2 {
-            background-image: url(~imgPath/ser-ban-1.jpg);
+            background-image: url(../img/ser-ban-1.jpg);
             width: 150px;
             height: 40px;
             background-size: 150px;
@@ -3593,13 +3551,13 @@ body .main .popup-layer .sign-up {
                 line-height: 50px;
             }
             &.tickets {
-                background-image: url(~imgPath/bilets-icon156.png);
+                background-image: url(../img/bilets-icon156.png);
                 background-size: 156px;
                 background-position: center;
             }
         }
         .g3 {
-            background-image: url(~imgPath/ser-ban-2.jpg);
+            background-image: url(../img/ser-ban-2.jpg);
             background-size: 120px;
         }
     }
@@ -3733,7 +3691,7 @@ body .main .popup-layer .sign-up {
 }
 
 .body {
-    cursor: url(~imgPath/clock3.png);
+    cursor: url(../img/clock3.png);
 }
 
 .boss-back-box {
@@ -3756,7 +3714,7 @@ body .main .popup-layer .sign-up {
                 height: 30px;
                 position: relative;
                 display: inline-block;
-                background-image: url(~imgPath/boss-sign.png);
+                background-image: url(../img/boss-sign.png);
                 background-size: 30px;
                 vertical-align: middle;
                 top: -2px;
@@ -3830,7 +3788,7 @@ body .main {
         transform: translateX(-50%);
         width: calc(100% - 10px);
         height: 100%;
-        background-image: url(~imgPath/tabs-menu-bg.png);
+        background-image: url(../img/tabs-menu-bg.png);
         background-repeat: no-repeat;
         background-position: bottom center;
         background-size: 100% auto;
@@ -4015,8 +3973,8 @@ body .main {
         &.abils-btn {
             .txt {
                 &:before {
-                    background-image: url(~imgPath/tab-menu-icn-abil.png);
-                    background-image: url(~imgPath/tab-icn-all.png);
+                    background-image: url(../img/tab-menu-icn-abil.png);
+                    background-image: url(../img/tab-icn-all.png);
                     background-position: 0px center;
                     background-repeat: no-repeat;
                     background-size: auto 34px;
@@ -4026,8 +3984,8 @@ body .main {
         &.promotion-btn {
             .txt {
                 &:before {
-                    background-image: url(~imgPath/tab-menu-icn-up.png);
-                    background-image: url(~imgPath/tab-icn-all.png);
+                    background-image: url(../img/tab-menu-icn-up.png);
+                    background-image: url(../img/tab-icn-all.png);
                     background-position: -34px center;
                     background-repeat: no-repeat;
                     background-size: auto 34px;
@@ -4040,7 +3998,7 @@ body .main {
             right: 10px;
             width: 24px;
             height: 24px;
-            background-image: url(~imgPath/picmeh-ic-info.png);
+            background-image: url(../img/picmeh-ic-info.png);
             background-size: 100%;
             background-repeat: no-repeat;
             z-index: 2;
@@ -4055,7 +4013,7 @@ body .main {
     top: 44px;
     left: 30px;
     background-size: 55px;
-    background-image: url(~imgPath/ic-clock-all.png);
+    background-image: url(../img/ic-clock-all.png);
     .newclocktime {
         width: 20px;
         height: 10px;
@@ -4078,7 +4036,7 @@ body .main {
         height: 30px;
         position: relative;
         display: inline-block;
-        background-image: url(~imgPath/v2-icon-chaos.png);
+        background-image: url(../img/v2-icon-chaos.png);
         background-size: 100%;
         margin-right: 4px;
         margin-left: 4px;
@@ -4088,13 +4046,13 @@ body .main {
 .orb_res {
     &:before {
         margin: 0;
-        background-image: url(~imgPath/v2-f-e1.png);
+        background-image: url(../img/v2-f-e1.png);
     }
 }
 .ore-icon {
     &:before {
         margin: 0;
-        background-image: url(~imgPath/v2-icon-sexped-ore.png);
+        background-image: url(../img/v2-icon-sexped-ore.png);
     }
 }
 

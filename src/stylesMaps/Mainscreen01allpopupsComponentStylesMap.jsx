@@ -1,7 +1,7 @@
+import styled from "styled-components";
 import AllRes from "../styleComponents/AllRes";
 import ScreenFapopolyRules from "../styleComponents/ScreenFapopolyRules";
 import ScreenUnipopSubscription from "../styleComponents/ScreenUnipopSubscription";
-import V2ScreenMainDarkWorld from "../styleComponents/V2ScreenMainDarkWorld";
 import V2ScreenTower from "../styleComponents/V2ScreenTower";
 import V2ScreenTowerRelics from "../styleComponents/V2ScreenTowerRelics";
 import V2ScreenEventsBtlpass from "../styleComponents/V2ScreenEventsBtlpass";
@@ -9,9 +9,10 @@ import ScreenSuperhero from "../styleComponents/ScreenSuperhero";
 import PopupLoseboss from "../styleComponents/PopupLoseboss";
 import ScreenEventMainSale from "../styleComponents/ScreenEventMainSale";
 import ScreenChangeOpenchest from "../styleComponents/ScreenChangeOpenchest";
-import ScreenChangeAll from "../styleComponents/ScreenChangeAll";
 import ScreenChangeGivepic from "../styleComponents/ScreenChangeGivepic";
 import ScreenChangeCollpop from "../styleComponents/ScreenChangeCollpop";
+import ScreenChangeDopmain from "../styleComponents/ScreenChangeDopmain";
+import ScreenChangeBonuses from "../styleComponents/ScreenChangeBonuses";
 import V2ScreenOfferBossChestPop from "../styleComponents/V2ScreenOfferBossChestPop";
 import V2ScreenError from "../styleComponents/V2ScreenError";
 import ScreenRating from "../styleComponents/ScreenRating";
@@ -41,49 +42,50 @@ import PopDarkBtlpas from "../styleComponents/PopDarkBtlpas";
 import ScreenBank from "../styleComponents/ScreenBank";
 import ScreenRatingFullcoll from "../styleComponents/ScreenRatingFullcoll";
 
-const Mainscreen01allpopupsComponentStylesMap = {
-    AllRes,
-    ScreenFapopolyRules,
-    ScreenUnipopSubscription,
-    V2ScreenMainDarkWorld,
-    V2ScreenTower,
-    V2ScreenTowerRelics,
-    V2ScreenEventsBtlpass,
-    ScreenSuperhero,
-    PopupLoseboss,
-    ScreenEventMainSale,
-    ScreenChangeOpenchest,
-    ScreenChangeAll,
-    ScreenChangeGivepic,
-    ScreenChangeCollpop,
-    V2ScreenOfferBossChestPop,
-    V2ScreenError,
-    ScreenRating,
-    ScreenRatingPopstart,
-    ScreenFortunaDualPack,
-    QuestsUi,
-    ScreenFortunaWinpop,
-    PopWpckEnd,
-    PopWpckAll,
-    ScreenFortunaRoundMain16x,
-    ScreenBase,
-    ScreenChangeAddchest,
-    ShopDiamondbuy,
-    ScreenRatingReward,
-    ScreenRatingRankchange,
-    V2ScreenHero,
-    V2ScreenHeroPromotion,
-    V2ScreenXmasPop1,
-    V2ScreenXmasPop2,
-    V2ScreenXmasPop3,
-    Sh2Openchest,
-    V2ScreenOffer,
-    V2ScreenMainRelicsPop,
-    ScreenChestsShop,
-    ScreenInfoPop,
-    PopDarkBtlpas,
-    ScreenBank,
-    ScreenRatingFullcoll,
-};
+const Mainscreen01allpopupsComponentStylesMap = styled.div`
+    ${AllRes};
+    ${ScreenFapopolyRules};
+    ${ScreenUnipopSubscription};
+    ${V2ScreenTower};
+    ${V2ScreenTowerRelics};
+    ${V2ScreenEventsBtlpass};
+    ${ScreenSuperhero};
+    ${PopupLoseboss};
+    ${ScreenEventMainSale};
+    ${ScreenChangeOpenchest};
+    ${ScreenChangeGivepic};
+    ${ScreenChangeCollpop};
+    ${ScreenChangeDopmain};
+    ${ScreenChangeBonuses};
+    ${V2ScreenOfferBossChestPop};
+    ${V2ScreenError};
+    ${ScreenRating};
+    ${ScreenRatingPopstart};
+    ${ScreenFortunaDualPack};
+    ${QuestsUi};
+    ${ScreenFortunaWinpop};
+    ${PopWpckEnd};
+    ${PopWpckAll};
+    ${ScreenFortunaRoundMain16x};
+    ${ScreenBase};
+    ${ScreenChangeAddchest};
+    ${ShopDiamondbuy};
+    ${ScreenRatingReward};
+    ${ScreenRatingRankchange};
+    ${V2ScreenHero};
+    ${V2ScreenHeroPromotion};
+    ${V2ScreenXmasPop1};
+    ${V2ScreenXmasPop2};
+    ${V2ScreenXmasPop3};
+    ${Sh2Openchest};
+    ${V2ScreenOffer};
+    ${V2ScreenMainRelicsPop};
+    ${ScreenChestsShop};
+    ${ScreenInfoPop};
+    ${PopDarkBtlpas};
+    ${ScreenBank};
+    ${ScreenRatingFullcoll};
+    pointer-events: none;
+`;
 
 export default Mainscreen01allpopupsComponentStylesMap;

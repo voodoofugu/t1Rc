@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-
 import Mainscreen01allpopupsComponentStylesMap from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
 import WorldBtnBox from "../stylesMaps/WorldBtnBox";
-// import StyledWrap from "../stylesMaps/StyledWrap";
 
 const MainScreen01AllPopupsComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -559,13 +555,13 @@ const MainScreen01AllPopupsComponent = () => {
     }, []);
 
     return (
-        <>
+        <Mainscreen01allpopupsComponentStylesMap>
             <div className="main world1">
                 <div
                     className="main-bg"
                     style={{
                         backgroundImage:
-                            "url('img/images/back/new/09-River.jpg')",
+                            "url('../img/images/back/new/09-River.jpg')",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">
@@ -9142,7 +9138,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-xmas-1.png')",
+                                                "url('../img/ic-tickets-xmas-1.png')",
                                         }}></div>
                                     <div className="essence-price">305</div>
                                     <div
@@ -9170,7 +9166,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-xmas-2.png')",
+                                                "url('../img/ic-tickets-xmas-2.png')",
                                         }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
@@ -9198,7 +9194,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-xmas-3.png')",
+                                                "url('../img/ic-tickets-xmas-3.png')",
                                         }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
@@ -9231,7 +9227,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-pumpkins-150-1.png')",
+                                                "url('../img/ic-pumpkins-150-1.png')",
                                         }}></div>
                                     <div className="essence-price">305</div>
                                     <div
@@ -9259,7 +9255,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-pumpkins-150-2.png')",
+                                                "url('../img/ic-pumpkins-150-2.png')",
                                         }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
@@ -9287,7 +9283,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-pumpkins-150-3.png')",
+                                                "url('../img/ic-pumpkins-150-3.png')",
                                         }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
@@ -9320,7 +9316,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-bf-1.png')",
+                                                "url('../img/ic-tickets-bf-1.png')",
                                         }}></div>
                                     <div className="essence-price">305</div>
                                     <div
@@ -9348,7 +9344,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-bf-2.png')",
+                                                "url('../img/ic-tickets-bf-2.png')",
                                         }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
@@ -9376,7 +9372,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-bf-3.png')",
+                                                "url('../img/ic-tickets-bf-3.png')",
                                         }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
@@ -9409,7 +9405,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-vl-1.png')",
+                                                "url('../img/ic-tickets-vl-1.png')",
                                         }}></div>
                                     <div className="essence-price">305</div>
                                     <div
@@ -9437,7 +9433,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-vl-2.png')",
+                                                "url('../img/ic-tickets-vl-2.png')",
                                         }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
@@ -9465,7 +9461,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-tickets-vl-3.png')",
+                                                "url('../img/ic-tickets-vl-3.png')",
                                         }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
@@ -9498,7 +9494,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-autumn-leaf-1.png')",
+                                                "url('../img/ic-autumn-leaf-1.png')",
                                         }}></div>
                                     <div className="essence-price">305</div>
                                     <div
@@ -9526,7 +9522,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-autumn-leaf-2.png')",
+                                                "url('../img/ic-autumn-leaf-2.png')",
                                         }}></div>
                                     <div className="essence-price">1550</div>
                                     <div
@@ -9554,7 +9550,7 @@ const MainScreen01AllPopupsComponent = () => {
                                             height: "150px",
                                             marginLeft: "40px",
                                             backgroundImage:
-                                                "url('img/ic-autumn-leaf-3.png')",
+                                                "url('../img/ic-autumn-leaf-3.png')",
                                         }}></div>
                                     <div className="essence-price">6500</div>
                                     <div
@@ -10957,7 +10953,9 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="prg-keys">
                                             <div
                                                 className="prg-all"
-                                                style={{ width: "0%" }}></div>
+                                                style={{
+                                                    width: "0%",
+                                                }}></div>
                                         </div>
                                         <div className="keys-num">0/5</div>
                                         <div className="keys-pic"></div>
@@ -11124,7 +11122,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="img/images/hero-all/tithero-5010/x1/ava/tithero-5010-1-ava.jpg"
-                                                    style={{ width: "130px" }}
+                                                    style={{
+                                                        width: "130px",
+                                                    }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
@@ -11201,7 +11201,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="img/images/hero-all/tithero-155/x1/ava/tithero-155-1-ava.jpg"
-                                                    style={{ width: "130px" }}
+                                                    style={{
+                                                        width: "130px",
+                                                    }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
@@ -11259,7 +11261,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="img/images/hero-all/tithero-5005/x1/ava/tithero-5005-1-ava.jpg"
-                                                    style={{ width: "130px" }}
+                                                    style={{
+                                                        width: "130px",
+                                                    }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
@@ -11317,7 +11321,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="img/images/hero-all/tithero-156/x1/ava/tithero-156-1-ava.jpg"
-                                                    style={{ width: "130px" }}
+                                                    style={{
+                                                        width: "130px",
+                                                    }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
@@ -11375,7 +11381,9 @@ const MainScreen01AllPopupsComponent = () => {
                                                 <img
                                                     className="sh2-icon-girl"
                                                     src="img/images/hero-all/tithero-5006/x1/ava/tithero-5006-1-ava.jpg"
-                                                    style={{ width: "130px" }}
+                                                    style={{
+                                                        width: "130px",
+                                                    }}
                                                 />
                                                 <div className="hero-pieces-icon">
                                                     <img
@@ -16222,7 +16230,9 @@ const MainScreen01AllPopupsComponent = () => {
                                         <div className="xmas-prg-bar">
                                             <div
                                                 className="xmas-prg"
-                                                style={{ width: "25%" }}></div>
+                                                style={{
+                                                    width: "25%",
+                                                }}></div>
                                         </div>
                                     </div>
                                     <div className="xmas-reward-chest-box undefined undefined undefined">
@@ -19198,12 +19208,9 @@ const MainScreen01AllPopupsComponent = () => {
                         <div className="close-btn"></div>
                     </div>
                 </div>
-                <WorldBtnBox />
-                {/* <StyledWrap>
-                    <div className="close-btn"></div>
-                </StyledWrap> */}
+                {/* <WorldBtnBox /> */}
             </div>
-        </>
+        </Mainscreen01allpopupsComponentStylesMap>
     );
 };
 

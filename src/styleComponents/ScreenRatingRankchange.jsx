@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const ScreenRatingRankchange = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 // Rank change
 
@@ -13,7 +12,7 @@ const ScreenRatingRankchange = styled.div`
     left: calc(50% - 250px);
     top: 80px;
     .color-box {
-        background-image: url(~imgPath/ts_confirm_bk-1.jpg);
+        background-image: url(../img/ts_confirm_bk-1.jpg);
         background-size: 100%;
         &:before {
             display: none;
@@ -40,31 +39,31 @@ const ScreenRatingRankchange = styled.div`
         position: absolute;
         top: 62px;
         margin-left: 48px;
-        background-image: url(~imgPath/arrow-green.png);
+        background-image: url(../img/arrow-green.png);
         background-size: 100%;
     }
     .rank-arrow-down {
-        background-image: url(~imgPath/arrow-red.png);
+        background-image: url(../img/arrow-red.png);
     }
     &.up {
         .rank-arrow-down {
             display: none;
         }
         .rank-arrow-up {
-            @include prefix(animation, arrow-up 0.45s linear 0s 3);
+            animation: arrow-up 0.45s linear 0s 3;
         }
         @keyframes arrow-up {
             0% {
-                @include prefix(transform, translate(0, 0px));
+                transform, translate(0: 0px);
             }
             50% {
-                @include prefix(transform, translate(0, 6px));
+                transform, translate(0: 6px);
             }
             80% {
-                @include prefix(transform, translate(0, -6px));
+                transform, translate(0: -6px);
             }
             100% {
-                @include prefix(transform, translate(0, 0px));
+                transform, translate(0: 0px);
             }
         }
     }
@@ -73,24 +72,24 @@ const ScreenRatingRankchange = styled.div`
             display: none;
         }
         .rank-arrow-down {
-            @include prefix(animation, arrow-down 0.45s linear 0s 3);
+            animation: arrow-down 0.45s linear 0s 3;
         }
         @keyframes arrow-down {
             0% {
-                @include prefix(transform, translate(0, 0px));
+                transform, translate(0: 0px);
             }
             50% {
-                @include prefix(transform, translate(0, 6px));
+                transform, translate(0: 6px);
             }
             80% {
-                @include prefix(transform, translate(0, -6px));
+                transform, translate(0: -6px);
             }
             100% {
-                @include prefix(transform, translate(0, 0px));
+                transform, translate(0: 0px);
             }
         }
         .color-box {
-            background-image: url(~imgPath/ts_confirm_bk-2.jpg);
+            background-image: url(../img/ts_confirm_bk-2.jpg);
             background-size: 100%;
             &:before {
                 display: none;

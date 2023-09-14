@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenWitchCauldron from "../styles/v2-screen-witch-cauldron.scss";
+// import v2ScreenWitchCauldron from "../styles/v2-screen-witch-cauldron.scss";
 
 const V2MainScreen16WitchCauldronPopComponent = () => {
     return (

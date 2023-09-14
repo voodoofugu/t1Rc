@@ -1,5 +1,5 @@
 import React from "react";
-import v2ScreenFwArmySetup from "../styles/v2-screen-fw-army-setup.scss";
+// import v2ScreenFwArmySetup from "../styles/v2-screen-fw-army-setup.scss";
 
 const V2MainScreen05FwArmySetupComponent = () => {
     return (

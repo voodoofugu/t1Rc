@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import screenBank from "../styles/screen-bank.scss";
-import screenBank1 from "../styles/screen-bank1.scss";
-import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-import angelTab from "../styles/angel-tab.scss";
-import screenSuperhero from "../styles/screen-superhero.scss";
+// import screenBank from "../styles/screen-bank.scss";
+// import screenBank1 from "../styles/screen-bank1.scss";
+// import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
+// import angelTab from "../styles/angel-tab.scss";
+// import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen01DarkWorldComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -395,7 +395,8 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div
                     className="main-bg main-bg-offset"
                     style={{
-                        backgroundImage: "url(img/images/back/clan/bg_01.jpg)",
+                        backgroundImage:
+                            "url(../img/images/back/clan/bg_01.jpg)",
                     }}></div>
                 <div className="header">
                     <div className="resource-panel">

@@ -1,9 +1,8 @@
-
 import styled from "styled-components";
 
 const V2ScreenBf = styled.div`
-  @charset "utf-8";
-@import "sass_commons.scss";
+  
+
 
 .popup-layer .m-popup.bf-pop {
   width: 1006px;
@@ -63,12 +62,12 @@ const V2ScreenBf = styled.div`
     position: absolute;
     top: 80px;
     left: 20px;
-    background-image: url(~imgPath/v2-bf-sale.png);
+    background-image: url(../img/v2-bf-sale.png);
     background-size: 100%;
     background-repeat: no-repeat;
 
     &.friday_hero2 {
-      background-image: url(~imgPath/v2-bf-sale.png);
+      background-image: url(../img/v2-bf-sale.png);
     }
   }
   .bf-hero-box-all {
@@ -91,7 +90,7 @@ const V2ScreenBf = styled.div`
         #ae916a 85%,
         #8e7453 100%
       );
-      @include prefix(border-radius, 10px);
+      border-radius: 10px;
       box-shadow: 0 0 6px #48382b;
       .lhero-pic {
         width: 222px;
@@ -118,7 +117,7 @@ const V2ScreenBf = styled.div`
           #a1a4a6 86%,
           #8d9092 100%
         );
-        @include prefix(border-radius, 10px 10px 0 0);
+        border-radius: 10px 10px 0 0;
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
         .sh2-icon.left {
           width: 38px;
@@ -163,7 +162,14 @@ const V2ScreenBf = styled.div`
         position: absolute;
         top: 354px;
         left: 0;
-        @include background-bronze;
+        background: linear-gradient(
+		180deg,
+		#8e7453 0%,
+		#e3c7a3 50%,
+		#8f7553 70%,
+		#ae916a 85%,
+		#8f7553 100%
+	);
         .sh2-prgbar-all {
           width: 182px;
           height: 34px;
@@ -178,7 +184,14 @@ const V2ScreenBf = styled.div`
             position: absolute;
             top: 0px;
             left: 0px;
-            @include background-silver;
+            background: linear-gradient(
+		180deg,
+		#585a5c 0%,
+		#d5d8da 50%,
+		#585a5b 70%,
+		#a1a4a6 85%,
+		#585a5b 100%
+	);
           }
           .sh2-prgbar-text {
             width: 182px;
@@ -194,7 +207,14 @@ const V2ScreenBf = styled.div`
           }
           &.gold {
             .sh2-prgbar {
-              @include background-gold;
+              background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
             }
           }
         }
@@ -205,8 +225,15 @@ const V2ScreenBf = styled.div`
           top: -2px;
           left: 5px;
           display: block;
-          @include background-gold;
-          @include prefix(border-radius, 100%);
+          background: linear-gradient(
+		180deg,
+		#c68300 0%,
+		#f4dfb6 50%,
+		#c68200 70%,
+		#fad489 85%,
+		#c78302 100%
+	);
+          border-radius: 100%;
           box-shadow: 0 4px 2px rgba(0, 0, 0, 0.35);
           .girl-bonus-pic {
             width: 34px;
@@ -215,7 +242,7 @@ const V2ScreenBf = styled.div`
             top: 3px;
             left: 3px;
             overflow: hidden;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             img {
               width: 34px;
             }
@@ -281,7 +308,7 @@ const V2ScreenBf = styled.div`
                   vertical-align: middle;
                   display: inline-block;
                   top: -3px;
-                  background-image: url(~imgPath/ico-gold.png);
+                  background-image: url(../img/ico-gold.png);
                   background-size: 100%;
                 }
               }
@@ -309,7 +336,7 @@ const V2ScreenBf = styled.div`
       #cfa831,
       #fbf1d8
     );
-    @include prefix(border-radius, 8px);
+    border-radius: 8px;
     margin: 0 10px 0 10px;
     box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
       inset 0 -3px 0px #c87725, 0 0 3px #3d3737,
