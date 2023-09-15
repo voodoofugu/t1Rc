@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwOfferPop = styled.div`
+const V2ScreenCwOfferPopStyles = css`
     .popup-layer .m-popup.cw-offers-pop {
         width: 1000px;
         height: 472px;
@@ -139,4 +139,8 @@ const V2ScreenCwOfferPop = styled.div`
     }
 `;
 
-export default V2ScreenCwOfferPop;
+const V2ScreenCwOfferPop = styled.div`
+    ${V2ScreenCwOfferPopStyles}
+`;
+
+export { V2ScreenCwOfferPopStyles, V2ScreenCwOfferPop };

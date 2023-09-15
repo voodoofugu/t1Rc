@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwGuildlog = styled.div`
+const V2ScreenCwGuildlogStyles = css`
     .guildlog {
         width: 590px;
         height: 530px;
@@ -121,15 +121,9 @@ const V2ScreenCwGuildlog = styled.div`
 
     .m-popup.fortuna-main-round-rating.cw-clans {
         .cw-guildlog {
-            //width: 590px; height: 530px; left: 305px; top: 25px;
             .title {
                 color: #572f14;
             }
-            //.color-box{
-            //    background: linear-gradient(136deg, #8e7453 0%, #e3c7a3 50%, #ae916a 85%, #8f7553 100%);
-            //    &:before{display: none};
-            //    &:after{display: none};
-            //}
             .cw-clan-log-box-all {
                 width: 760px;
                 height: 425px;
@@ -198,4 +192,8 @@ const V2ScreenCwGuildlog = styled.div`
     }
 `;
 
-export default V2ScreenCwGuildlog;
+const V2ScreenCwGuildlog = styled.div`
+    ${V2ScreenCwGuildlogStyles}
+`;
+
+export { V2ScreenCwGuildlogStyles, V2ScreenCwGuildlog };

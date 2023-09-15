@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenPseShop = styled.div`
+const V2ScreenPseShopStyles = css`
     .popup-layer .m-popup.pseshop {
         width: 910px;
         height: 590px;
@@ -545,4 +545,8 @@ const V2ScreenPseShop = styled.div`
     }
 `;
 
-export default V2ScreenPseShop;
+const V2ScreenPseShop = styled.div`
+    ${V2ScreenPseShopStyles}
+`;
+
+export { V2ScreenPseShopStyles, V2ScreenPseShop };

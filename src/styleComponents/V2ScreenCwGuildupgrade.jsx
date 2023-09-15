@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwGuildupgrade = styled.div`
+const V2ScreenCwGuildupgradeStyles = css`
     .popup-layer .m-popup.guildupgrade {
         width: 730px;
         height: 570px;
@@ -282,4 +282,8 @@ const V2ScreenCwGuildupgrade = styled.div`
     }
 `;
 
-export default V2ScreenCwGuildupgrade;
+const V2ScreenCwGuildupgrade = styled.div`
+    ${V2ScreenCwGuildupgradeStyles}
+`;
+
+export { V2ScreenCwGuildupgradeStyles, V2ScreenCwGuildupgrade };

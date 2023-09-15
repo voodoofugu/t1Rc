@@ -1,10 +1,7 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ClanTrophies = styled.div`
-  
-
-
-.cw-content {
+const ClanTrophiesStyles = css`
+    .cw-content {
     width: 1200px;
     height: 640px;
     position: absolute;
@@ -1034,7 +1031,10 @@ body .main.world3 {
         }
     }
 }
-
 `;
 
-export default ClanTrophies;
+const ClanTrophies = styled.div`
+    ${ClanTrophiesStyles}
+`;
+
+export { ClanTrophiesStyles, ClanTrophies };

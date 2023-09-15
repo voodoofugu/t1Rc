@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenFortunaRoundMain = styled.div`
+const ScreenFortunaRoundMainStyles = css`
     .popup-layer .m-popup.fortuna-main-round {
         width: 968px;
         height: 620px;
@@ -971,4 +971,8 @@ const ScreenFortunaRoundMain = styled.div`
     }
 `;
 
-export default ScreenFortunaRoundMain;
+const ScreenFortunaRoundMain = styled.div`
+    ${ScreenFortunaRoundMainStyles}
+`;
+
+export { ScreenFortunaRoundMainStyles, ScreenFortunaRoundMain };

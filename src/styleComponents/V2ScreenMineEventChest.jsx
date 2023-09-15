@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenMineEventChest = styled.div`
+const V2ScreenMineEventChestStyles = css`
     body .main {
         .mine-event-screen-chest {
             width: 100%;
@@ -629,4 +629,8 @@ const V2ScreenMineEventChest = styled.div`
     }
 `;
 
-export default V2ScreenMineEventChest;
+const V2ScreenMineEventChest = styled.div`
+    ${V2ScreenMineEventChestStyles}
+`;
+
+export { V2ScreenMineEventChestStyles, V2ScreenMineEventChest };

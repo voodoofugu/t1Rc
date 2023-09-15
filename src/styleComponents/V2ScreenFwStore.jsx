@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenFwStore = styled.div`
+const V2ScreenFwStoreStyles = css`
     .popup-layer .m-popup.fw-store {
         width: 1000px;
         height: 550px;
@@ -543,4 +543,8 @@ const V2ScreenFwStore = styled.div`
     }
 `;
 
-export default V2ScreenFwStore;
+const V2ScreenFwStore = styled.div`
+    ${V2ScreenFwStoreStyles}
+`;
+
+export { V2ScreenFwStoreStyles, V2ScreenFwStore };

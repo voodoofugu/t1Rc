@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const GfSalePop = styled.div`
+const GfSalePopStyles = css`
     .popup-layer .m-popup.gf-sale {
         width: 970px;
         height: 530px;
@@ -467,4 +467,8 @@ const GfSalePop = styled.div`
     }
 `;
 
-export default GfSalePop;
+const GfSalePop = styled.div`
+    ${GfSalePopStyles}
+`;
+
+export { GfSalePopStyles, GfSalePop };

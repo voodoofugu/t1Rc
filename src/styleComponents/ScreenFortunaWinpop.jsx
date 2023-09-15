@@ -1,8 +1,7 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenFortunaWinpop = styled.div`
+const ScreenFortunaWinpopStyles = css`
     // winpop1
-
     .popup-layer .m-popup.fortuna-winpop1,
     .popup-layer .m-popup.fortuna-winpop2,
     .popup-layer .m-popup.fortuna-winpop3 {
@@ -303,14 +302,6 @@ const ScreenFortunaWinpop = styled.div`
                     border: solid 2px #ffa;
                     box-shadow: 0 0 5px #ff0, 0 0 15px #ff0, inset 0 0 5px #ffa,
                         inset 0 0 15px #ff0;
-                    // background: linear-gradient(
-		180deg,
-		#c68300 0%,
-		#f4dfb6 50%,
-		#c68200 70%,
-		#fad489 85%,
-		#c78302 100%
-	);
                 }
                 &.promote {
                     .fortuna-promote {
@@ -418,7 +409,6 @@ const ScreenFortunaWinpop = styled.div`
     }
 
     // winpop2
-
     .popup-layer .m-popup.fortuna-winpop2 {
         .winner-box {
             max-width: 400px;
@@ -451,7 +441,6 @@ const ScreenFortunaWinpop = styled.div`
     }
 
     // winpop3
-
     .popup-layer .m-popup.fortuna-winpop3 {
         .winner-box {
             max-width: 396px;
@@ -496,13 +485,13 @@ const ScreenFortunaWinpop = styled.div`
                 top: 4px;
                 margin-left: 10px;
                 background: linear-gradient(
-		180deg,
-		#c68300 0%,
-		#f4dfb6 50%,
-		#c68200 70%,
-		#fad489 85%,
-		#c78302 100%
-	);
+                    180deg,
+                    #c68300 0%,
+                    #f4dfb6 50%,
+                    #c68200 70%,
+                    #fad489 85%,
+                    #c78302 100%
+                );
                 border-radius: 10px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
                 .girl-prize {
@@ -731,13 +720,13 @@ const ScreenFortunaWinpop = styled.div`
                 top: 382px;
                 left: 0;
                 background: linear-gradient(
-		180deg,
-		#8e7453 0%,
-		#e3c7a3 50%,
-		#8f7553 70%,
-		#ae916a 85%,
-		#8f7553 100%
-	);
+                    180deg,
+                    #8e7453 0%,
+                    #e3c7a3 50%,
+                    #8f7553 70%,
+                    #ae916a 85%,
+                    #8f7553 100%
+                );
                 .sh2-prgbar-all {
                     width: 202px;
                     height: 34px;
@@ -753,13 +742,13 @@ const ScreenFortunaWinpop = styled.div`
                         top: 0px;
                         left: 0px;
                         background: linear-gradient(
-		180deg,
-		#585a5c 0%,
-		#d5d8da 50%,
-		#585a5b 70%,
-		#a1a4a6 85%,
-		#585a5b 100%
-	);
+                            180deg,
+                            #585a5c 0%,
+                            #d5d8da 50%,
+                            #585a5b 70%,
+                            #a1a4a6 85%,
+                            #585a5b 100%
+                        );
                     }
                     .sh2-prgbar-text {
                         width: 202px;
@@ -776,13 +765,13 @@ const ScreenFortunaWinpop = styled.div`
                     &.gold {
                         .sh2-prgbar {
                             background: linear-gradient(
-		180deg,
-		#c68300 0%,
-		#f4dfb6 50%,
-		#c68200 70%,
-		#fad489 85%,
-		#c78302 100%
-	);
+                                180deg,
+                                #c68300 0%,
+                                #f4dfb6 50%,
+                                #c68200 70%,
+                                #fad489 85%,
+                                #c78302 100%
+                            );
                         }
                     }
                 }
@@ -794,13 +783,13 @@ const ScreenFortunaWinpop = styled.div`
                     left: 5px;
                     display: block;
                     background: linear-gradient(
-		180deg,
-		#c68300 0%,
-		#f4dfb6 50%,
-		#c68200 70%,
-		#fad489 85%,
-		#c78302 100%
-	);
+                        180deg,
+                        #c68300 0%,
+                        #f4dfb6 50%,
+                        #c68200 70%,
+                        #fad489 85%,
+                        #c78302 100%
+                    );
                     border-radius: 100%;
                     box-shadow: 0 4px 2px rgba(0, 0, 0, 0.35);
                     .girl-bonus-pic {
@@ -914,4 +903,8 @@ const ScreenFortunaWinpop = styled.div`
     }
 `;
 
-export default ScreenFortunaWinpop;
+const ScreenFortunaWinpop = styled.div`
+    ${ScreenFortunaWinpopStyles}
+`;
+
+export { ScreenFortunaWinpopStyles, ScreenFortunaWinpop };

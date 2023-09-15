@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenNsaleMain = styled.div`
+const V2ScreenNsaleMainStyles = css`
     .popup-layer .mn-popup.nsale-main {
         width: 988px;
         height: 605px;
@@ -437,4 +437,8 @@ const V2ScreenNsaleMain = styled.div`
     }
 `;
 
-export default V2ScreenNsaleMain;
+const V2ScreenNsaleMain = styled.div`
+    ${V2ScreenNsaleMainStyles}
+`;
+
+export { V2ScreenNsaleMainStyles, V2ScreenNsaleMain };

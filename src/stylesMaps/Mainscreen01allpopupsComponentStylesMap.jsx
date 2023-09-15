@@ -1,90 +1,90 @@
-import styled from "styled-components";
-import AllRes from "../styleComponents/AllRes";
-import ScreenFapopolyRules from "../styleComponents/ScreenFapopolyRules";
-import ScreenUnipopSubscription from "../styleComponents/ScreenUnipopSubscription";
-import V2ScreenTower from "../styleComponents/V2ScreenTower";
-import V2ScreenTowerRelics from "../styleComponents/V2ScreenTowerRelics";
-import V2ScreenEventsBtlpass from "../styleComponents/V2ScreenEventsBtlpass";
-import ScreenSuperhero from "../styleComponents/ScreenSuperhero";
-import PopupLoseboss from "../styleComponents/PopupLoseboss";
-import ScreenEventMainSale from "../styleComponents/ScreenEventMainSale";
-import ScreenChangeOpenchest from "../styleComponents/ScreenChangeOpenchest";
-import ScreenChangeGivepic from "../styleComponents/ScreenChangeGivepic";
-import ScreenChangeCollpop from "../styleComponents/ScreenChangeCollpop";
-import ScreenChangeDopmain from "../styleComponents/ScreenChangeDopmain";
-import ScreenChangeBonuses from "../styleComponents/ScreenChangeBonuses";
-import V2ScreenOfferBossChestPop from "../styleComponents/V2ScreenOfferBossChestPop";
-import V2ScreenError from "../styleComponents/V2ScreenError";
-import ScreenRating from "../styleComponents/ScreenRating";
-import ScreenRatingPopstart from "../styleComponents/ScreenRatingPopstart";
-import ScreenFortunaDualPack from "../styleComponents/ScreenFortunaDualPack";
-import QuestsUi from "../styleComponents/QuestsUi";
-import ScreenFortunaWinpop from "../styleComponents/ScreenFortunaWinpop";
-import PopWpckEnd from "../styleComponents/PopWpckEnd";
-import PopWpckAll from "../styleComponents/PopWpckAll";
-import ScreenFortunaRoundMain16x from "../styleComponents/ScreenFortunaRoundMain16x";
-import ScreenBase from "../styleComponents/ScreenBase";
-import ScreenChangeAddchest from "../styleComponents/ScreenChangeAddchest";
-import ShopDiamondbuy from "../styleComponents/ShopDiamondbuy";
-import ScreenRatingReward from "../styleComponents/ScreenRatingReward";
-import ScreenRatingRankchange from "../styleComponents/ScreenRatingRankchange";
-import V2ScreenHero from "../styleComponents/V2ScreenHero";
-import V2ScreenHeroPromotion from "../styleComponents/V2ScreenHeroPromotion";
-import V2ScreenXmasPop1 from "../styleComponents/V2ScreenXmasPop1";
-import V2ScreenXmasPop2 from "../styleComponents/V2ScreenXmasPop2";
-import V2ScreenXmasPop3 from "../styleComponents/V2ScreenXmasPop3";
-import Sh2Openchest from "../styleComponents/Sh2Openchest";
-import V2ScreenOffer from "../styleComponents/V2ScreenOffer";
-import V2ScreenMainRelicsPop from "../styleComponents/V2ScreenMainRelicsPop";
-import ScreenChestsShop from "../styleComponents/ScreenChestsShop";
-import ScreenInfoPop from "../styleComponents/ScreenInfoPop";
-import PopDarkBtlpas from "../styleComponents/PopDarkBtlpas";
-import ScreenBank from "../styleComponents/ScreenBank";
-import ScreenRatingFullcoll from "../styleComponents/ScreenRatingFullcoll";
+import { styled } from "styled-components";
+import { AllResStyles } from "../styleComponents/AllRes";
+import { ScreenFapopolyRulesStyles } from "../styleComponents/ScreenFapopolyRules";
+import { ScreenUnipopSubscriptionStyles } from "../styleComponents/ScreenUnipopSubscription";
+import { V2ScreenTowerStyles } from "../styleComponents/V2ScreenTower";
+import { V2ScreenTowerRelicsStyles } from "../styleComponents/V2ScreenTowerRelics";
+import { V2ScreenEventsBtlpassStyles } from "../styleComponents/V2ScreenEventsBtlpass";
+import { ScreenSuperheroStyles } from "../styleComponents/ScreenSuperhero";
+import { PopupLosebossStyles } from "../styleComponents/PopupLoseboss";
+import { ScreenEventMainSaleStyles } from "../styleComponents/ScreenEventMainSale";
+import { ScreenChangeOpenchestStyles } from "../styleComponents/ScreenChangeOpenchest";
+import { ScreenChangeGivepicStyles } from "../styleComponents/ScreenChangeGivepic";
+import { ScreenChangeCollpopStyles } from "../styleComponents/ScreenChangeCollpop";
+import { ScreenChangeDopmainStyles } from "../styleComponents/ScreenChangeDopmain";
+import { ScreenChangeBonusesStyles } from "../styleComponents/ScreenChangeBonuses";
+import { V2ScreenOfferBossChestPopStyles } from "../styleComponents/V2ScreenOfferBossChestPop";
+import { V2ScreenErrorStyles } from "../styleComponents/V2ScreenError";
+import { ScreenRatingStyles } from "../styleComponents/ScreenRating";
+import { ScreenRatingPopstartStyles } from "../styleComponents/ScreenRatingPopstart";
+import { ScreenFortunaDualPackStyles } from "../styleComponents/ScreenFortunaDualPack";
+import { QuestsUiStyles } from "../styleComponents/QuestsUi";
+import { ScreenFortunaWinpopStyles } from "../styleComponents/ScreenFortunaWinpop";
+import { PopWpckEndStyles } from "../styleComponents/PopWpckEnd";
+import { PopWpckAllStyles } from "../styleComponents/PopWpckAll";
+import { ScreenFortunaRoundMain16xStyles } from "../styleComponents/ScreenFortunaRoundMain16x";
+import { ScreenBaseStyles } from "../styleComponents/ScreenBase";
+import { ScreenChangeAddchestStyles } from "../styleComponents/ScreenChangeAddchest";
+import { ShopDiamondbuyStyles } from "../styleComponents/ShopDiamondbuy";
+import { ScreenRatingRewardStyles } from "../styleComponents/ScreenRatingReward";
+import { ScreenRatingRankchangeStyles } from "../styleComponents/ScreenRatingRankchange";
+import { V2ScreenHeroStyles } from "../styleComponents/V2ScreenHero";
+import { V2ScreenHeroPromotionStyles } from "../styleComponents/V2ScreenHeroPromotion";
+import { V2ScreenXmasPop1Styles } from "../styleComponents/V2ScreenXmasPop1";
+import { V2ScreenXmasPop2Styles } from "../styleComponents/V2ScreenXmasPop2";
+import { V2ScreenXmasPop3Styles } from "../styleComponents/V2ScreenXmasPop3";
+import { Sh2OpenchestStyles } from "../styleComponents/Sh2Openchest";
+import { V2ScreenOfferStyles } from "../styleComponents/V2ScreenOffer";
+import { V2ScreenMainRelicsPopStyles } from "../styleComponents/V2ScreenMainRelicsPop";
+import { ScreenChestsShopStyles } from "../styleComponents/ScreenChestsShop";
+import { ScreenInfoPopStyles } from "../styleComponents/ScreenInfoPop";
+import { PopDarkBtlpasStyles } from "../styleComponents/PopDarkBtlpas";
+import { ScreenBankStyles } from "../styleComponents/ScreenBank";
+import { ScreenRatingFullcollStyles } from "../styleComponents/ScreenRatingFullcoll";
 
 const Mainscreen01allpopupsComponentStylesMap = styled.div`
-    ${AllRes};
-    ${ScreenFapopolyRules};
-    ${ScreenUnipopSubscription};
-    ${V2ScreenTower};
-    ${V2ScreenTowerRelics};
-    ${V2ScreenEventsBtlpass};
-    ${ScreenSuperhero};
-    ${PopupLoseboss};
-    ${ScreenEventMainSale};
-    ${ScreenChangeOpenchest};
-    ${ScreenChangeGivepic};
-    ${ScreenChangeCollpop};
-    ${ScreenChangeDopmain};
-    ${ScreenChangeBonuses};
-    ${V2ScreenOfferBossChestPop};
-    ${V2ScreenError};
-    ${ScreenRating};
-    ${ScreenRatingPopstart};
-    ${ScreenFortunaDualPack};
-    ${QuestsUi};
-    ${ScreenFortunaWinpop};
-    ${PopWpckEnd};
-    ${PopWpckAll};
-    ${ScreenFortunaRoundMain16x};
-    ${ScreenBase};
-    ${ScreenChangeAddchest};
-    ${ShopDiamondbuy};
-    ${ScreenRatingReward};
-    ${ScreenRatingRankchange};
-    ${V2ScreenHero};
-    ${V2ScreenHeroPromotion};
-    ${V2ScreenXmasPop1};
-    ${V2ScreenXmasPop2};
-    ${V2ScreenXmasPop3};
-    ${Sh2Openchest};
-    ${V2ScreenOffer};
-    ${V2ScreenMainRelicsPop};
-    ${ScreenChestsShop};
-    ${ScreenInfoPop};
-    ${PopDarkBtlpas};
-    ${ScreenBank};
-    ${ScreenRatingFullcoll};
+    ${AllResStyles}
+    ${ScreenFapopolyRulesStyles}
+    ${ScreenUnipopSubscriptionStyles}
+    ${V2ScreenTowerStyles}
+    ${V2ScreenTowerRelicsStyles}
+    ${V2ScreenEventsBtlpassStyles}
+    ${ScreenSuperheroStyles}
+    ${PopupLosebossStyles}
+    ${ScreenEventMainSaleStyles}
+    ${ScreenChangeOpenchestStyles}
+    ${ScreenChangeGivepicStyles}
+    ${ScreenChangeCollpopStyles}
+    ${ScreenChangeDopmainStyles}
+    ${ScreenChangeBonusesStyles}
+    ${V2ScreenOfferBossChestPopStyles}
+    ${V2ScreenErrorStyles}
+    ${ScreenRatingStyles}
+    ${ScreenRatingPopstartStyles}
+    ${ScreenFortunaDualPackStyles}
+    ${QuestsUiStyles}
+    ${ScreenFortunaWinpopStyles}
+    ${PopWpckEndStyles}
+    ${PopWpckAllStyles}
+    ${ScreenFortunaRoundMain16xStyles}
+    ${ScreenBaseStyles}
+    ${ScreenChangeAddchestStyles}
+    ${ShopDiamondbuyStyles}
+    ${ScreenRatingRewardStyles}
+    ${ScreenRatingRankchangeStyles}
+    ${V2ScreenHeroStyles}
+    ${V2ScreenHeroPromotionStyles}
+    ${V2ScreenXmasPop1Styles}
+    ${V2ScreenXmasPop2Styles}
+    ${V2ScreenXmasPop3Styles}
+    ${Sh2OpenchestStyles}
+    ${V2ScreenOfferStyles}
+    ${V2ScreenMainRelicsPopStyles}
+    ${ScreenChestsShopStyles}
+    ${ScreenInfoPopStyles}
+    ${PopDarkBtlpasStyles}
+    ${ScreenBankStyles}
+    ${ScreenRatingFullcollStyles}
     pointer-events: none;
 `;
 

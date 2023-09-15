@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const Sh2Openchest = styled.div`
+const Sh2OpenchestStyles = css`
     body .main {
         .popup-layer {
             .m-popup.sh2-openchest1,
@@ -464,4 +464,8 @@ const Sh2Openchest = styled.div`
     }
 `;
 
-export default Sh2Openchest;
+const Sh2Openchest = styled.div`
+    ${Sh2OpenchestStyles}
+`;
+
+export { Sh2OpenchestStyles, Sh2Openchest };

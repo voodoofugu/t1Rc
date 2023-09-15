@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const AllRes = styled.div`
-    .main {
+const AllResStyles = css`
+  .main {
     .price {
         display: inline-block;
         // font-size: 120%; color: #ffa;
@@ -1969,4 +1969,8 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
 }
 `;
 
-export default AllRes;
+const AllRes = styled.div`
+    ${AllResStyles}
+`;
+
+export { AllResStyles, AllRes };

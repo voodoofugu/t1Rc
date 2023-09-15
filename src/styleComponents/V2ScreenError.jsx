@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenError = styled.div`
+const V2ScreenErrorStyles = css`
     .popup-layer .m-popup.error-popup {
         width: 636px;
         height: auto;
@@ -79,4 +79,8 @@ const V2ScreenError = styled.div`
     }
 `;
 
-export default V2ScreenError;
+const V2ScreenError = styled.div`
+    ${V2ScreenErrorStyles}
+`;
+
+export { V2ScreenErrorStyles, V2ScreenError };

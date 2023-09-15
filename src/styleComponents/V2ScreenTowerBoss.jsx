@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenTowerBoss = styled.div`
+const V2ScreenTowerBossStyles = css`
     body .main .right-side {
         .bossbtn-box {
             width: 430px;
@@ -226,4 +226,8 @@ const V2ScreenTowerBoss = styled.div`
     }
 `;
 
-export default V2ScreenTowerBoss;
+const V2ScreenTowerBoss = styled.div`
+    ${V2ScreenTowerBossStyles}
+`;
+
+export { V2ScreenTowerBossStyles, V2ScreenTowerBoss };

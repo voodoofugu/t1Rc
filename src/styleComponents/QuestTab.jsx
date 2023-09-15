@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const QuestTab = styled.div`
+const QuestTabStyles = css`
     .journal-main {
         width: 620px;
         &:before {
@@ -314,4 +314,8 @@ const QuestTab = styled.div`
     }
 `;
 
-export default QuestTab;
+const QuestTab = styled.div`
+    ${QuestTabStyles}
+`;
+
+export { QuestTabStyles, QuestTab };

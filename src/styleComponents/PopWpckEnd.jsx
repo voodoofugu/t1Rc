@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const PopWpckEnd = styled.div`
+const PopWpckEndStyles = css`
     .popup-layer .popup.wpck-end {
         width: 890px;
         height: 600px;
@@ -294,4 +294,8 @@ const PopWpckEnd = styled.div`
     }
 `;
 
-export default PopWpckEnd;
+const PopWpckEnd = styled.div`
+    ${PopWpckEndStyles}
+`;
+
+export { PopWpckEndStyles, PopWpckEnd };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const Notifications = styled.div`
+const NotificationsStyles = css`
     .notif {
         width: 24px;
         height: 24px;
@@ -70,4 +70,8 @@ const Notifications = styled.div`
     }
 `;
 
-export default Notifications;
+const Notifications = styled.div`
+    ${NotificationsStyles}
+`;
+
+export { NotificationsStyles, Notifications };

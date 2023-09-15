@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const QuestsAll = styled.div`
+const QuestsAllStyles = css`
     body .main {
         .left-side {
             .left-panel {
@@ -2369,4 +2369,8 @@ const QuestsAll = styled.div`
     }
 `;
 
-export default QuestsAll;
+const QuestsAll = styled.div`
+    ${QuestsAllStyles}
+`;
+
+export { QuestsAllStyles, QuestsAll };

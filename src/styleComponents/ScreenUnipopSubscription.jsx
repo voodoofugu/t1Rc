@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenUnipopSubscription = styled.div`
+const ScreenUnipopSubscriptionStyles = css`
     .popup-layer .m-popup.unipop-subscription {
         display: block;
         width: 900px;
@@ -488,4 +488,8 @@ const ScreenUnipopSubscription = styled.div`
     }
 `;
 
-export default ScreenUnipopSubscription;
+const ScreenUnipopSubscription = styled.div`
+    ${ScreenUnipopSubscriptionStyles}
+`;
+
+export { ScreenUnipopSubscriptionStyles, ScreenUnipopSubscription };

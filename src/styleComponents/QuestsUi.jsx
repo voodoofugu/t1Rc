@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const QuestsUi = styled.div`
+const QuestsUiStyles = css`
     .popup-layer {
         .quest-popup {
             display: block;
@@ -108,8 +108,6 @@ const QuestsUi = styled.div`
                         color: white;
                         font-weight: bold;
                         text-shadow: 0 0 4px #02374e;
-                        float: right;
-                        // padding: 0px 15px;
                         width: 25%;
                     }
                     .prg-box {
@@ -139,7 +137,6 @@ const QuestsUi = styled.div`
                     display: block;
                     width: 100%;
                     height: 35px;
-                    // background: #fff;
                     position: absolute;
                     top: 205px;
                     left: 0;
@@ -218,4 +215,8 @@ const QuestsUi = styled.div`
     }
 `;
 
-export default QuestsUi;
+const QuestsUi = styled.div`
+    ${QuestsUiStyles}
+`;
+
+export { QuestsUiStyles, QuestsUi };

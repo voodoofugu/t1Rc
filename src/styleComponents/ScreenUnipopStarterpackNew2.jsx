@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenUnipopStarterpackNew2 = styled.div`
+const ScreenUnipopStarterpackNew2Styles = css`
     // starterpack-new2
     .popup-layer
         .m-popup.unipop-starterpack
@@ -42,4 +42,8 @@ const ScreenUnipopStarterpackNew2 = styled.div`
     }
 `;
 
-export default ScreenUnipopStarterpackNew2;
+const ScreenUnipopStarterpackNew2 = styled.div`
+    ${ScreenUnipopStarterpackNew2Styles}
+`;
+
+export { ScreenUnipopStarterpackNew2Styles, ScreenUnipopStarterpackNew2 };

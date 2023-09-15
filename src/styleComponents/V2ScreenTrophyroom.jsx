@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenTrophyroom = styled.div`
+const V2ScreenTrophyroomStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -817,4 +817,8 @@ const V2ScreenTrophyroom = styled.div`
     }
 `;
 
-export default V2ScreenTrophyroom;
+const V2ScreenTrophyroom = styled.div`
+    ${V2ScreenTrophyroomStyles}
+`;
+
+export { V2ScreenTrophyroomStyles, V2ScreenTrophyroom };

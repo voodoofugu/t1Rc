@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenMasterAb = styled.div`
+const V2ScreenMasterAbStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -613,4 +613,8 @@ const V2ScreenMasterAb = styled.div`
     }
 `;
 
-export default V2ScreenMasterAb;
+const V2ScreenMasterAb = styled.div`
+    ${V2ScreenMasterAbStyles}
+`;
+
+export { V2ScreenMasterAbStyles, V2ScreenMasterAb };

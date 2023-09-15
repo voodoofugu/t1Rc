@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenFortuna2PhSale = styled.div`
+const ScreenFortuna2PhSaleStyles = css`
     .popup-layer .m-popup.fortuna-main.ph-sale {
         width: 970px;
         height: 600px;
@@ -605,4 +605,8 @@ const ScreenFortuna2PhSale = styled.div`
     }
 `;
 
-export default ScreenFortuna2PhSale;
+const ScreenFortuna2PhSale = styled.div`
+    ${ScreenFortuna2PhSaleStyles}
+`;
+
+export { ScreenFortuna2PhSaleStyles, ScreenFortuna2PhSale };

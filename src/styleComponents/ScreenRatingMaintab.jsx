@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingMaintab = styled.div`
+const ScreenRatingMaintabStyles = css`
     .tab-panel.rating-panel {
         .rating-left-box {
             width: 472px;
@@ -344,4 +344,8 @@ const ScreenRatingMaintab = styled.div`
     }
 `;
 
-export default ScreenRatingMaintab;
+const ScreenRatingMaintab = styled.div`
+    ${ScreenRatingMaintabStyles}
+`;
+
+export { ScreenRatingMaintabStyles, ScreenRatingMaintab };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenBank5st = styled.div`
+const ScreenBank5stStyles = css`
     .left-side .left-panel .tab-panel.bank-panel {
         .bank-subwin.top-up {
             border-color: #fac022;
@@ -337,4 +337,8 @@ const ScreenBank5st = styled.div`
     }
 `;
 
-export default ScreenBank5st;
+const ScreenBank5st = styled.div`
+    ${ScreenBank5stStyles}
+`;
+
+export { ScreenBank5stStyles, ScreenBank5st };

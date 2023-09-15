@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenUkiMainNew = styled.div`
+const V2ScreenUkiMainNewStyles = css`
     body .main.world1,
     body .main.world2,
     body .main.world3 {
@@ -579,4 +579,8 @@ const V2ScreenUkiMainNew = styled.div`
     }
 `;
 
-export default V2ScreenUkiMainNew;
+const V2ScreenUkiMainNew = styled.div`
+    ${V2ScreenUkiMainNewStyles}
+`;
+
+export { V2ScreenUkiMainNewStyles, V2ScreenUkiMainNew };

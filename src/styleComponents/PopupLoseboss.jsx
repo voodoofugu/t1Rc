@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const PopupLoseboss = styled.div`
+const PopupLosebossStyles = css`
     .popup-layer .m-popup.lose-boss {
         width: 700px;
         height: 459px;
@@ -150,4 +150,8 @@ const PopupLoseboss = styled.div`
     }
 `;
 
-export default PopupLoseboss;
+const PopupLoseboss = styled.div`
+    ${PopupLosebossStyles}
+`;
+
+export { PopupLosebossStyles, PopupLoseboss };

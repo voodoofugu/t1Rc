@@ -1,8 +1,7 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingRankinf = styled.div`
+const ScreenRatingRankinfStyles = css`
     // Pop Rank Information Ranks
-
     .popup-layer .m-popup.rankinf-rank {
         width: 700px;
         height: 480px;
@@ -179,7 +178,6 @@ const ScreenRatingRankinf = styled.div`
     }
 
     // Pop Rank Information Prizes
-
     .popup-layer .m-popup.rankinf-prizes {
         width: 700px;
         height: 500px;
@@ -430,7 +428,6 @@ const ScreenRatingRankinf = styled.div`
     }
 
     // Pop Rank Information Rules
-
     .popup-layer .m-popup.rankinf-rules {
         width: 700px;
         height: 480px;
@@ -559,4 +556,8 @@ const ScreenRatingRankinf = styled.div`
     }
 `;
 
-export default ScreenRatingRankinf;
+const ScreenRatingRankinf = styled.div`
+    ${ScreenRatingRankinfStyles}
+`;
+
+export { ScreenRatingRankinfStyles, ScreenRatingRankinf };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenEventMainSale = styled.div`
+const ScreenEventMainSaleStyles = css`
     body .main.world1,
     body .main.world2,
     body .main.world3 {
@@ -590,4 +590,8 @@ const ScreenEventMainSale = styled.div`
     }
 `;
 
-export default ScreenEventMainSale;
+const ScreenEventMainSale = styled.div`
+    ${ScreenEventMainSaleStyles}
+`;
+
+export { ScreenEventMainSaleStyles, ScreenEventMainSale };

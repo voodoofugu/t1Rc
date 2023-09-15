@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenTowerQuest = styled.div`
+const V2ScreenTowerQuestStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -733,4 +733,8 @@ const V2ScreenTowerQuest = styled.div`
     }
 `;
 
-export default V2ScreenTowerQuest;
+const V2ScreenTowerQuest = styled.div`
+    ${V2ScreenTowerQuestStyles}
+`;
+
+export { V2ScreenTowerQuestStyles, V2ScreenTowerQuest };

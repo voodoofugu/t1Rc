@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenChangeAddchest = styled.div`
+const ScreenChangeAddchestStyles = css`
     .popup-layer .m-popup.change-addchest {
         height: 510px;
         width: 860px;
@@ -181,4 +181,8 @@ const ScreenChangeAddchest = styled.div`
     }
 `;
 
-export default ScreenChangeAddchest;
+const ScreenChangeAddchest = styled.div`
+    ${ScreenChangeAddchestStyles}
+`;
+
+export { ScreenChangeAddchestStyles, ScreenChangeAddchest };

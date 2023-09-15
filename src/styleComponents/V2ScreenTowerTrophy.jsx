@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenTowerTrophy = styled.div`
+const V2ScreenTowerTrophyStyles = css`
     body .main {
         .left-side {
             .left-panel {
@@ -653,4 +653,8 @@ const V2ScreenTowerTrophy = styled.div`
     }
 `;
 
-export default V2ScreenTowerTrophy;
+const V2ScreenTowerTrophy = styled.div`
+    ${V2ScreenTowerTrophyStyles}
+`;
+
+export { V2ScreenTowerTrophyStyles, V2ScreenTowerTrophy };

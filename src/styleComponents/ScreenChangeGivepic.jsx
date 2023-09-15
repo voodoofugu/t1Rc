@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenChangeGivepic = styled.div`
+const ScreenChangeGivepicStyles = css`
     .popup-layer .m-popup.change-givepic {
         width: 805px;
         height: 632px;
@@ -323,4 +323,8 @@ const ScreenChangeGivepic = styled.div`
     }
 `;
 
-export default ScreenChangeGivepic;
+const ScreenChangeGivepic = styled.div`
+    ${ScreenChangeGivepicStyles}
+`;
+
+export { ScreenChangeGivepicStyles, ScreenChangeGivepic };

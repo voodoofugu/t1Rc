@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwGuildmanageP = styled.div`
+const V2ScreenCwGuildmanagePStyles = css`
     .popup-layer .m-popup.guildmanage-p {
         width: 590px;
         height: 265px;
@@ -311,4 +311,8 @@ const V2ScreenCwGuildmanageP = styled.div`
     }
 `;
 
-export default V2ScreenCwGuildmanageP;
+const V2ScreenCwGuildmanageP = styled.div`
+    ${V2ScreenCwGuildmanagePStyles}
+`;
+
+export { V2ScreenCwGuildmanagePStyles, V2ScreenCwGuildmanageP };

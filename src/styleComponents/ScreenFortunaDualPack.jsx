@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenFortunaDualPack = styled.div`
+const ScreenFortunaDualPackStyles = css`
     body .main.world1,
     body .main.world2,
     body .main.world3 {
@@ -1264,4 +1264,8 @@ const ScreenFortunaDualPack = styled.div`
     }
 `;
 
-export default ScreenFortunaDualPack;
+const ScreenFortunaDualPack = styled.div`
+    ${ScreenFortunaDualPackStyles}
+`;
+
+export { ScreenFortunaDualPackStyles, ScreenFortunaDualPack };

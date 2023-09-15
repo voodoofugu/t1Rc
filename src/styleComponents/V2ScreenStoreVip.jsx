@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenStoreVip = styled.div`
+const V2ScreenStoreVipStyles = css`
     .popup-layer .m-popup.store-vip {
         width: 1028px;
         height: 550px;
@@ -545,4 +545,8 @@ const V2ScreenStoreVip = styled.div`
     }
 `;
 
-export default V2ScreenStoreVip;
+const V2ScreenStoreVip = styled.div`
+    ${V2ScreenStoreVipStyles}
+`;
+
+export { V2ScreenStoreVipStyles, V2ScreenStoreVip };

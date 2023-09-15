@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenTowerTop = styled.div`
+const V2ScreenTowerTopStyles = css`
     body .main.world1,
     body .main.world2,
     body .main.world3 {
@@ -1188,4 +1188,8 @@ const V2ScreenTowerTop = styled.div`
     }
 `;
 
-export default V2ScreenTowerTop;
+const V2ScreenTowerTop = styled.div`
+    ${V2ScreenTowerTopStyles}
+`;
+
+export { V2ScreenTowerTopStyles, V2ScreenTowerTop };

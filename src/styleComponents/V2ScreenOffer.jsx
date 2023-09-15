@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenOffer = styled.div`
+const V2ScreenOfferStyles = css`
     body .main .popup-layer {
         .m-popup.angel-pop,
         .m-popup.hero-pop {
@@ -1369,4 +1369,8 @@ const V2ScreenOffer = styled.div`
     }
 `;
 
-export default V2ScreenOffer;
+const V2ScreenOffer = styled.div`
+    ${V2ScreenOfferStyles}
+`;
+
+export { V2ScreenOfferStyles, V2ScreenOffer };

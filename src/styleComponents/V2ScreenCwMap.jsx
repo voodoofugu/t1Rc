@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwMap = styled.div`
+const V2ScreenCwMapStyles = css`
     body .main .main-bg {
         &.cw-map {
             background-image: url(../img/v2-fw-map-bg.jpg);
@@ -226,4 +226,8 @@ const V2ScreenCwMap = styled.div`
     }
 `;
 
-export default V2ScreenCwMap;
+const V2ScreenCwMap = styled.div`
+    ${V2ScreenCwMapStyles}
+`;
+
+export { V2ScreenCwMapStyles, V2ScreenCwMap };

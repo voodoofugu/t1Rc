@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenSuperhero = styled.div`
+const ScreenSuperheroStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -4061,4 +4061,8 @@ const ScreenSuperhero = styled.div`
     }
 `;
 
-export default ScreenSuperhero;
+const ScreenSuperhero = styled.div`
+    ${ScreenSuperheroStyles}
+`;
+
+export { ScreenSuperheroStyles, ScreenSuperhero };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingMaintabColl = styled.div`
+const ScreenRatingMaintabCollStyles = css`
     .tab-panel.rating-panel {
         .rating-right-box {
             .rating-card-list-box.collection {
@@ -461,4 +461,8 @@ const ScreenRatingMaintabColl = styled.div`
     }
 `;
 
-export default ScreenRatingMaintabColl;
+const ScreenRatingMaintabColl = styled.div`
+    ${ScreenRatingMaintabCollStyles}
+`;
+
+export { ScreenRatingMaintabCollStyles, ScreenRatingMaintabColl };

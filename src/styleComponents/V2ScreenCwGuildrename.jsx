@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwGuildrename = styled.div`
+const V2ScreenCwGuildrenameStyles = css`
     .popup-layer .m-popup.guildrename {
         width: 590px;
         height: 320px;
@@ -168,4 +168,8 @@ const V2ScreenCwGuildrename = styled.div`
     }
 `;
 
-export default V2ScreenCwGuildrename;
+const V2ScreenCwGuildrename = styled.div`
+    ${V2ScreenCwGuildrenameStyles}
+`;
+
+export { V2ScreenCwGuildrenameStyles, V2ScreenCwGuildrename };

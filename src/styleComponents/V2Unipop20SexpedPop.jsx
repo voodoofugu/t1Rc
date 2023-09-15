@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2Unipop20SexpedPop = styled.div`
+const V2Unipop20SexpedPopStyles = css`
     .popup-layer .m-popup.unipop-sexped-pop {
         display: block;
         width: 900px;
@@ -506,4 +506,8 @@ const V2Unipop20SexpedPop = styled.div`
     }
 `;
 
-export default V2Unipop20SexpedPop;
+const V2Unipop20SexpedPop = styled.div`
+    ${V2Unipop20SexpedPopStyles}
+`;
+
+export { V2Unipop20SexpedPopStyles, V2Unipop20SexpedPop };

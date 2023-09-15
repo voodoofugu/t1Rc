@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenUnipopHw2019 = styled.div`
+const ScreenUnipopHw2019Styles = css`
     .popup-layer .m-popup.unipop-hw2019 {
         display: block;
         width: 900px;
@@ -608,4 +608,8 @@ const ScreenUnipopHw2019 = styled.div`
     }
 `;
 
-export default ScreenUnipopHw2019;
+const ScreenUnipopHw2019 = styled.div`
+    ${ScreenUnipopHw2019Styles}
+`;
+
+export { ScreenUnipopHw2019Styles, ScreenUnipopHw2019 };

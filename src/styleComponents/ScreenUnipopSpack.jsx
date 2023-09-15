@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenUnipopSpack = styled.div`
+const ScreenUnipopSpackStyles = css`
     .popup-layer .m-popup.unipop-starterpack {
         display: block;
         width: 900px;
@@ -881,4 +881,8 @@ const ScreenUnipopSpack = styled.div`
     }
 `;
 
-export default ScreenUnipopSpack;
+const ScreenUnipopSpack = styled.div`
+    ${ScreenUnipopSpackStyles}
+`;
+
+export { ScreenUnipopSpackStyles, ScreenUnipopSpack };

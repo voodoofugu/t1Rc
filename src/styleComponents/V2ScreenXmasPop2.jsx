@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenXmasPop2 = styled.div`
+const V2ScreenXmasPop2Styles = css`
     body {
         .main.world1,
         .main.world2,
@@ -232,4 +232,8 @@ const V2ScreenXmasPop2 = styled.div`
     }
 `;
 
-export default V2ScreenXmasPop2;
+const V2ScreenXmasPop2 = styled.div`
+    ${V2ScreenXmasPop2Styles}
+`;
+
+export { V2ScreenXmasPop2Styles, V2ScreenXmasPop2 };

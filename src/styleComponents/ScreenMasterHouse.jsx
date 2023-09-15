@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenMasterHouse = styled.div`
+const ScreenMasterHouseStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -1615,4 +1615,8 @@ const ScreenMasterHouse = styled.div`
     }
 `;
 
-export default ScreenMasterHouse;
+const ScreenMasterHouse = styled.div`
+    ${ScreenMasterHouseStyles}
+`;
+
+export { ScreenMasterHouseStyles, ScreenMasterHouse };

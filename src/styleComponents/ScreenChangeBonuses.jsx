@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenChangeBonuses = styled.div`
+const ScreenChangeBonusesStyles = css`
     .tab-panel.change-bonuses {
         box-shadow: inset 0 4px 0 #9c8b7c;
         .tab-panel-box-title {
@@ -593,4 +593,8 @@ const ScreenChangeBonuses = styled.div`
     }
 `;
 
-export default ScreenChangeBonuses;
+const ScreenChangeBonuses = styled.div`
+    ${ScreenChangeBonusesStyles}
+`;
+
+export { ScreenChangeBonusesStyles, ScreenChangeBonuses };

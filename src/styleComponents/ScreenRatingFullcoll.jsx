@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingFullcoll = styled.div`
+const ScreenRatingFullcollStyles = css`
     .popup-layer .m-popup.fullcoll {
         width: 740px;
         height: 484px;
@@ -302,4 +302,8 @@ const ScreenRatingFullcoll = styled.div`
     }
 `;
 
-export default ScreenRatingFullcoll;
+const ScreenRatingFullcoll = styled.div`
+    ${ScreenRatingFullcollStyles}
+`;
+
+export { ScreenRatingFullcollStyles, ScreenRatingFullcoll };

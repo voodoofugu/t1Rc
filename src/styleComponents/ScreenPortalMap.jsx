@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenPortalMap = styled.div`
+const ScreenPortalMapStyles = css`
     body .main {
         .portal-map-box {
             position: absolute;
@@ -608,4 +608,8 @@ const ScreenPortalMap = styled.div`
     }
 `;
 
-export default ScreenPortalMap;
+const ScreenPortalMap = styled.div`
+    ${ScreenPortalMapStyles}
+`;
+
+export { ScreenPortalMapStyles, ScreenPortalMap };

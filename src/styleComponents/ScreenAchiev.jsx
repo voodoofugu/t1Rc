@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenAchiev = styled.div`
+const ScreenAchievStyles = css`
     .tooltip-container {
         text-align: left;
         position: absolute;
     }
-    @mixin achiev() {
+    .achiev {
         .achiev {
             display: inline-block;
             width: 60px;
@@ -41,9 +41,6 @@ const ScreenAchiev = styled.div`
                 left: -6px;
                 bottom: -6px;
                 line-height: 23px;
-                // box-shadow:
-                //     0 0 3px rgba(0,0,0, 0.66), inset 0 3px 5px rgba(255,255,0, 0.33),
-                //     inset 0 0 5px #e4d7cf;
                 box-shadow: 0 0 3px rgba(0, 0, 0, 0.66), inset 0 0 6px #e4d7cf;
                 font-family: Helvetica, sans-serif;
                 font-size: 13px;
@@ -55,11 +52,6 @@ const ScreenAchiev = styled.div`
             }
 
             &.avail {
-                // border: solid 2px #edce5f;
-                // background: linear-gradient(194deg, #e4d7cf, #d0946a, #a57351, #5f4c3a);
-                // box-shadow: inset -2px 3px 7px #ffc,
-                //     3px 3px 0 #5c4e48, -3px -3px 0 #5c4e48,
-                //     -3px 3px 0 #5c4e48, 3px -3px 0 #5c4e48;
                 cursor: pointer;
                 .icon .img {
                     filter: "none";
@@ -325,7 +317,6 @@ const ScreenAchiev = styled.div`
             position: relative;
             top: 8px;
             margin-bottom: 10px;
-            float: right;
             font-weight: bold;
             font-size: 16px;
             line-height: 20px;
@@ -477,4 +468,8 @@ const ScreenAchiev = styled.div`
     }
 `;
 
-export default ScreenAchiev;
+const ScreenAchiev = styled.div`
+    ${ScreenAchievStyles}
+`;
+
+export { ScreenAchievStyles, ScreenAchiev };

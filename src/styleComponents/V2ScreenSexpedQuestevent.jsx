@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenSexpedQuestevent = styled.div`
+const V2ScreenSexpedQuesteventStyles = css`
     .popup-layer .m-popup.sexped-questevent {
         width: 906px;
         height: 580px;
@@ -414,4 +414,8 @@ const V2ScreenSexpedQuestevent = styled.div`
     }
 `;
 
-export default V2ScreenSexpedQuestevent;
+const V2ScreenSexpedQuestevent = styled.div`
+    ${V2ScreenSexpedQuesteventStyles}
+`;
+
+export { V2ScreenSexpedQuesteventStyles, V2ScreenSexpedQuestevent };

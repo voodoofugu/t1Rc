@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenFapopolyRating = styled.div`
+const ScreenFapopolyRatingStyles = css`
     .popup-layer .m-popup.fapop-rating {
         width: 960px;
         height: 600px;
@@ -694,4 +694,8 @@ const ScreenFapopolyRating = styled.div`
     }
 `;
 
-export default ScreenFapopolyRating;
+const ScreenFapopolyRating = styled.div`
+    ${ScreenFapopolyRatingStyles}
+`;
+
+export { ScreenFapopolyRatingStyles, ScreenFapopolyRating };

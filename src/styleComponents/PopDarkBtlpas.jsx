@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const PopDarkBtlpas = styled.div`
+const PopDarkBtlpasStyles = css`
     body .main.world1,
     body .main.world2,
     body .main.world3 {
@@ -1047,4 +1047,8 @@ const PopDarkBtlpas = styled.div`
     }
 `;
 
-export default PopDarkBtlpas;
+const PopDarkBtlpas = styled.div`
+    ${PopDarkBtlpasStyles}
+`;
+
+export { PopDarkBtlpasStyles, PopDarkBtlpas };

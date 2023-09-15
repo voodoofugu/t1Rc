@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenTowerRelics = styled.div`
+const V2ScreenTowerRelicsStyles = css`
     body .main {
         .left-side {
             .left-panel {
@@ -459,4 +459,8 @@ const V2ScreenTowerRelics = styled.div`
     }
 `;
 
-export default V2ScreenTowerRelics;
+const V2ScreenTowerRelics = styled.div`
+    ${V2ScreenTowerRelicsStyles}
+`;
+
+export { V2ScreenTowerRelicsStyles, V2ScreenTowerRelics };

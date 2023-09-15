@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenFortuna2Main = styled.div`
+const ScreenFortuna2MainStyles = css`
     body .main {
         width: 1200px;
         height: 640px;
@@ -2313,4 +2313,8 @@ const ScreenFortuna2Main = styled.div`
     }
 `;
 
-export default ScreenFortuna2Main;
+const ScreenFortuna2Main = styled.div`
+    ${ScreenFortuna2MainStyles}
+`;
+
+export { ScreenFortuna2MainStyles, ScreenFortuna2Main };

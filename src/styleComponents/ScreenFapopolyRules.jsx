@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenFapopolyRules = styled.div`
+const ScreenFapopolyRulesStyles = css`
     .popup-layer .m-popup.fapop-rules {
         width: 510px;
         height: 600px;
@@ -221,4 +221,8 @@ const ScreenFapopolyRules = styled.div`
     }
 `;
 
-export default ScreenFapopolyRules;
+const ScreenFapopolyRules = styled.div`
+    ${ScreenFapopolyRulesStyles}
+`;
+
+export { ScreenFapopolyRulesStyles, ScreenFapopolyRules };

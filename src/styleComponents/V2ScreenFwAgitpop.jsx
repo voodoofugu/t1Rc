@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenFwAgitpop = styled.div`
+const V2ScreenFwAgitpopStyles = css`
     .popup-layer .m-popup.fw-agitpop {
         width: 980px;
         height: 550px;
@@ -191,4 +191,8 @@ const V2ScreenFwAgitpop = styled.div`
     }
 `;
 
-export default V2ScreenFwAgitpop;
+const V2ScreenFwAgitpop = styled.div`
+    ${V2ScreenFwAgitpopStyles}
+`;
+
+export { V2ScreenFwAgitpopStyles, V2ScreenFwAgitpop };

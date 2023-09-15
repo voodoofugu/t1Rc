@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingRemander = styled.div`
+const ScreenRatingRemanderStyles = css`
     .popup-layer .m-popup.rremander {
         width: 858px;
         height: 600px;
@@ -171,4 +171,8 @@ const ScreenRatingRemander = styled.div`
     }
 `;
 
-export default ScreenRatingRemander;
+const ScreenRatingRemander = styled.div`
+    ${ScreenRatingRemanderStyles}
+`;
+
+export { ScreenRatingRemanderStyles, ScreenRatingRemander };

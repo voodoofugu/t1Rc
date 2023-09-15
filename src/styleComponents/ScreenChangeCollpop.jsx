@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenChangeCollpop = styled.div`
+const ScreenChangeCollpopStyles = css`
     .popup-layer .m-popup.change-collpop {
         width: 876px;
         height: 548px;
@@ -424,4 +424,8 @@ const ScreenChangeCollpop = styled.div`
     }
 `;
 
-export default ScreenChangeCollpop;
+const ScreenChangeCollpop = styled.div`
+    ${ScreenChangeCollpopStyles}
+`;
+
+export { ScreenChangeCollpopStyles, ScreenChangeCollpop };

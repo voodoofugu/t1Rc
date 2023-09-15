@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenInfoPop = styled.div`
+const ScreenInfoPopStyles = css`
     body .main .popup-layer {
         .m-popup.info-pop {
             height: unset;
@@ -135,4 +135,8 @@ const ScreenInfoPop = styled.div`
     }
 `;
 
-export default ScreenInfoPop;
+const ScreenInfoPop = styled.div`
+    ${ScreenInfoPopStyles}
+`;
+
+export { ScreenInfoPopStyles, ScreenInfoPop };

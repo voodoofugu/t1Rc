@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenChangeMain = styled.div`
+const ScreenChangeMainStyles = css`
     .tab-panel.change-main {
         border-radius: 10px 18px 18px 18px;
         box-shadow: inset 0 4px 0 #9c8b7c;
@@ -1196,4 +1196,8 @@ const ScreenChangeMain = styled.div`
     }
 `;
 
-export default ScreenChangeMain;
+const ScreenChangeMain = styled.div`
+    ${ScreenChangeMainStyles}
+`;
+
+export { ScreenChangeMainStyles, ScreenChangeMain };

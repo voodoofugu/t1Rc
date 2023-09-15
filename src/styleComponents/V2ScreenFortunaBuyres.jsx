@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenFortunaBuyres = styled.div`
+const V2ScreenFortunaBuyresStyles = css`
     .popup-layer .m-popup.bf-event__buy-keys-pop {
         width: 1000px;
         height: 472px;
@@ -124,4 +124,8 @@ const V2ScreenFortunaBuyres = styled.div`
     }
 `;
 
-export default V2ScreenFortunaBuyres;
+const V2ScreenFortunaBuyres = styled.div`
+    ${V2ScreenFortunaBuyresStyles}
+`;
+
+export { V2ScreenFortunaBuyresStyles, V2ScreenFortunaBuyres };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ShopDiamondbuy = styled.div`
+const ShopDiamondbuyStyles = css`
     .popup-layer .m-popup.diamond-buy {
         width: 1000px;
         height: 470px;
@@ -189,4 +189,8 @@ const ShopDiamondbuy = styled.div`
     }
 `;
 
-export default ShopDiamondbuy;
+const ShopDiamondbuy = styled.div`
+    ${ShopDiamondbuyStyles}
+`;
+
+export { ShopDiamondbuyStyles, ShopDiamondbuy };

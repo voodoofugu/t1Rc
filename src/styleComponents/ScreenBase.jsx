@@ -1,551 +1,795 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenBase = styled.div`
-  
-
-
-.left-side .left-panel .tab-panel.achiev-panel {
-    &.disable {
-        .achiev-title {
-            width: 100%;
-            text-align: center;
-            position: relative;
-            display: inline-block;
-        }
-        .disable-box {
-            width: 446px;
-            height: 456px;
-            position: relative;
-            display: inline-block;
-            top: 10px;
-            left: 10px;
-            .disable-text-box {
-                width: 254px;
-                height: 164px;
-                position: absolute;
-                top: 104px;
-                margin-left: 108px;
-                display: table;
-                .disable-text {
-                    font-size: 22px;
-                    font-weight: bold;
-                    text-align: center;
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-            }
-            &.gilded {
-                background-image: url(../img/bs-disable-gilded.jpg);
-                .disable-text-box {
-                    width: 254px;
-                    height: 136px;
-                    top: 126px;
-                    margin-left: 640px;
-                }
-            }
-            &.bank {
-                background-image: url(../img/bs-disable-shop.jpg);
-            }
-            &.achiev {
-                background-image: url(../img/bs-disable-achiev.jpg);
-                .disable-text-box {
-                    width: 232px;
-                    height: 138px;
-                    top: 196px;
-                    margin-left: 26px;
-                }
-            }
-        }
-    }
-}
-
-.left-side .left-panel .tab-panel.bank-panel {
-    &.disable {
-        .bank-title {
-            width: 100%;
-            text-align: center;
-            position: relative;
-            display: inline-block;
-        }
-        .disable-box {
-            width: 985px;
-            height: 456px;
-            position: relative;
-            display: inline-block;
-            top: 10px;
-            left: 10px;
-            background-image: url(../img/bs-disable-shop.jpg);
-            .disable-text-box {
-                width: 254px;
-                height: 164px;
-                position: absolute;
-                top: 104px;
-                margin-left: 108px;
-                display: table;
-                .disable-text {
-                    font-size: 22px;
-                    font-weight: bold;
-                    text-align: center;
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-            }
-            &.gilded {
-                background-image: url(../img/bs-disable-gilded.jpg);
-                .disable-text-box {
-                    width: 254px;
-                    height: 136px;
-                    top: 126px;
-                    margin-left: 640px;
-                }
-            }
-            &.bank {
-                background-image: url(../img/bs-disable-shop.jpg);
-            }
-        }
-    }
-    .bank-title {
-        display: block;
-        height: 35px;
-        line-height: 35px;
-        font-size: 20px;
-        font-weight: bold;
-        color: #ffeb9a;
-        text-shadow: 0 2px 0 #000, 0 1px 10px #000;
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        &:before,
-        &:after {
-            content: "";
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: linear-gradient(
-                60deg,
-                #ffeb9a,
-                #f1da7c,
-                #cfa831,
-                #ffeb9a
-            );
-            position: relative;
-            top: -1px;
-            border-radius: 100%;
-            box-shadow: 0 2px 0 #000, 0 1px 10px #000;
-            // z-index: 2;
-            margin: 0px 5px;
-        }
-    }
-}
-
-.left-side .left-panel .tab-panel.gbase-panel {
-    &.disable {
-        .gbase-title {
-            width: 100%;
-            text-align: center;
-            position: relative;
-            display: inline-block;
-        }
-        .disable-box {
-            width: 985px;
-            height: 456px;
-            position: relative;
-            display: inline-block;
-            top: 10px;
-            left: 10px;
-            background-image: url(../img/bs-disable-shop.jpg);
-            .disable-text-box {
-                width: 254px;
-                height: 164px;
-                position: absolute;
-                top: 104px;
-                margin-left: 108px;
-                display: table;
-                .disable-text {
-                    font-size: 22px;
-                    font-weight: bold;
-                    text-align: center;
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-            }
-            &.gilded {
-                background-image: url(../img/bs-disable-gilded.jpg);
-                .disable-text-box {
-                    width: 254px;
-                    height: 136px;
-                    top: 126px;
-                    margin-left: 640px;
-                }
-            }
-            &.bank {
-            }
-        }
-    }
-    .gbase-title,
-    .bank-title {
-        display: block;
-        width: 275px;
-        height: 35px;
-        line-height: 35px;
-        text-align: left;
-        font-size: 20px;
-        font-weight: bold;
-        color: #ffeb9a;
-        text-shadow: 0 2px 0 #000, 0 1px 10px #000;
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        &:before,
-        &:after {
-            content: "";
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: linear-gradient(
-                60deg,
-                #ffeb9a,
-                #f1da7c,
-                #cfa831,
-                #ffeb9a
-            );
-            position: relative;
-            top: -1px;
-            border-radius: 100%;
-            box-shadow: 0 2px 0 #000, 0 1px 10px #000;
-            // z-index: 2;
-            margin: 0px 5px;
-        }
-    }
-    .reborn-box {
-        // display: block;
-        // width: 220px;
-        // height: 35px;
-        // background: red;
-        // position: absolute; left: 280px; top: 5px;
-
-        display: inline-block;
-        width: 214px;
-        height: 35px;
-        font-size: 18px;
-        font-weight: bold;
-        border-radius: 7px;
-        background: linear-gradient(45deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
-        box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624, 0 0 3px #472624;
-        // position: relative;
-        // margin: 0px 5px;
-        // margin-top: 15px;
-        // margin-left: 16px;
-        position: absolute;
-        left: 280px;
-        top: 5px;
-        z-index: 2;
-        cursor: pointer;
-        .num {
-            display: block;
-            width: 97px;
-            height: 26px;
-            border-radius: 5px;
-            background: linear-gradient(-75deg, #564a4a, #b53e3e, #564a4a);
-            position: absolute;
-            left: 4px;
-            top: 4px;
-            color: #fff;
-            font-size: 17px;
-            line-height: 25px;
-            text-shadow: 0 2px #000;
-            box-shadow: inset 0 11px 0px rgba(255, 255, 255, 0.08),
-                inset 0 2px 1px #3d3737;
-            text-align: right;
-            white-space: nowrap;
-            padding-right: 5px;
-            // text-align: center;
-            &:before {
-                content: "+";
+const ScreenBaseStyles = css`
+    .left-side .left-panel .tab-panel.achiev-panel {
+        &.disable {
+            .achiev-title {
+                width: 100%;
+                text-align: center;
+                position: relative;
                 display: inline-block;
-                margin-right: 3px;
             }
+            .disable-box {
+                width: 446px;
+                height: 456px;
+                position: relative;
+                display: inline-block;
+                top: 10px;
+                left: 10px;
+                .disable-text-box {
+                    width: 254px;
+                    height: 164px;
+                    position: absolute;
+                    top: 104px;
+                    margin-left: 108px;
+                    display: table;
+                    .disable-text {
+                        font-size: 22px;
+                        font-weight: bold;
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                }
+                &.gilded {
+                    background-image: url(../img/bs-disable-gilded.jpg);
+                    .disable-text-box {
+                        width: 254px;
+                        height: 136px;
+                        top: 126px;
+                        margin-left: 640px;
+                    }
+                }
+                &.bank {
+                    background-image: url(../img/bs-disable-shop.jpg);
+                }
+                &.achiev {
+                    background-image: url(../img/bs-disable-achiev.jpg);
+                    .disable-text-box {
+                        width: 232px;
+                        height: 138px;
+                        top: 196px;
+                        margin-left: 26px;
+                    }
+                }
+            }
+        }
+    }
+
+    .left-side .left-panel .tab-panel.bank-panel {
+        &.disable {
+            .bank-title {
+                width: 100%;
+                text-align: center;
+                position: relative;
+                display: inline-block;
+            }
+            .disable-box {
+                width: 985px;
+                height: 456px;
+                position: relative;
+                display: inline-block;
+                top: 10px;
+                left: 10px;
+                background-image: url(../img/bs-disable-shop.jpg);
+                .disable-text-box {
+                    width: 254px;
+                    height: 164px;
+                    position: absolute;
+                    top: 104px;
+                    margin-left: 108px;
+                    display: table;
+                    .disable-text {
+                        font-size: 22px;
+                        font-weight: bold;
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                }
+                &.gilded {
+                    background-image: url(../img/bs-disable-gilded.jpg);
+                    .disable-text-box {
+                        width: 254px;
+                        height: 136px;
+                        top: 126px;
+                        margin-left: 640px;
+                    }
+                }
+                &.bank {
+                    background-image: url(../img/bs-disable-shop.jpg);
+                }
+            }
+        }
+        .bank-title {
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffeb9a;
+            text-shadow: 0 2px 0 #000, 0 1px 10px #000;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            &:before,
             &:after {
                 content: "";
-                display: block;
-                width: 40px;
-                height: 40px;
-                background-image: url(../img/reb-rub.png);
-                background-size: 40px;
-                position: absolute;
-                top: -5px;
-                margin-left: -2px;
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background: linear-gradient(
+                    60deg,
+                    #ffeb9a,
+                    #f1da7c,
+                    #cfa831,
+                    #ffeb9a
+                );
+                position: relative;
+                top: -1px;
+                border-radius: 100%;
+                box-shadow: 0 2px 0 #000, 0 1px 10px #000;
+                margin: 0px 5px;
             }
-        }
-        .text {
-            display: block;
-            width: 50px;
-            height: 26px;
-            position: absolute;
-            right: 52px;
-            top: 4px;
-            color: #3b2a28;
-            // background: red;
-            font-size: 14px;
-            font-weight: bold;
-            text-transform: uppercase;
-            line-height: 14px;
-            text-shadow: 0 0 1px #333, 0 1px 0 #fff;
-        }
-        &:after {
-            content: "";
-            display: block;
-            width: 46px;
-            height: 46px;
-            position: absolute;
-            left: 80%;
-            top: -7px;
-            // background: red;
-            background-image: url(../img/reborn-btn.png);
-            background-size: 46px;
-            border-radius: 100%;
-            border: solid 2px #715656;
-            box-shadow: 0 1px 3px #000;
-            // cursor: pointer;
         }
     }
 
-    .left-tab-side {
-        display: block;
-        width: 495px;
-        height: 461px;
-        // background: rgba(255, 0, 0, 0.25);
-        position: absolute;
-        left: 5px;
-        top: 45px;
-        .bonuses {
-            display: block;
-            height: 150px;
-            border-radius: 5px;
-            background: #776969;
-            box-shadow: 0 3px 0px #403d38;
-            margin: 0px 5px;
-            position: absolute;
-            bottom: 3px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            .title {
-                display: block;
-                height: 33px;
-                line-height: 28px;
-                margin: 0px -5px;
-                padding: 0px 15px;
-                font-size: 18px;
-                font-weight: bold;
-                color: #fff;
-                text-shadow: 0 2px 0 #3d3737;
-                background: linear-gradient(
-                    -45deg,
-                    #335919,
-                    #baac48,
-                    #b6b42c,
-                    #54681f
-                );
-                border-radius: 5px;
-                box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
-                    inset 0 -3px 0px #403d38, 0 0 1px #403d38,
-                    inset 0 0 10px rgba(255, 255, 255, 0.33);
-                text-align: left;
+    .left-side .left-panel .tab-panel.gbase-panel {
+        &.disable {
+            .gbase-title {
+                width: 100%;
+                text-align: center;
+                position: relative;
+                display: inline-block;
             }
-            &.no-shards {
-                .bonus {
-                    margin: 0px 12px;
-                    margin-top: 15px;
+            .disable-box {
+                width: 985px;
+                height: 456px;
+                position: relative;
+                display: inline-block;
+                top: 10px;
+                left: 10px;
+                background-image: url(../img/bs-disable-shop.jpg);
+                .disable-text-box {
+                    width: 254px;
+                    height: 164px;
+                    position: absolute;
+                    top: 104px;
+                    margin-left: 108px;
+                    display: table;
+                    .disable-text {
+                        font-size: 22px;
+                        font-weight: bold;
+                        text-align: center;
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                }
+                &.gilded {
+                    background-image: url(../img/bs-disable-gilded.jpg);
+                    .disable-text-box {
+                        width: 254px;
+                        height: 136px;
+                        top: 126px;
+                        margin-left: 640px;
+                    }
+                }
+                &.bank {
                 }
             }
-            .bonus {
+        }
+        .gbase-title,
+        .bank-title {
+            display: block;
+            width: 275px;
+            height: 35px;
+            line-height: 35px;
+            text-align: left;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffeb9a;
+            text-shadow: 0 2px 0 #000, 0 1px 10px #000;
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            &:before,
+            &:after {
+                content: "";
                 display: inline-block;
-                width: 105px;
-                height: 33px;
-                font-size: 18px;
-                font-weight: bold;
-                border-radius: 7px;
+                width: 10px;
+                height: 10px;
                 background: linear-gradient(
-                    45deg,
-                    #e8c34e,
+                    60deg,
+                    #ffeb9a,
                     #f1da7c,
                     #cfa831,
-                    #fbf1d8
+                    #ffeb9a
                 );
-                box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
-                    0 0 3px #472624;
                 position: relative;
+                top: -1px;
+                border-radius: 100%;
+                box-shadow: 0 2px 0 #000, 0 1px 10px #000;
+                // z-index: 2;
                 margin: 0px 5px;
-                margin-top: 15px;
-                // margin-left: 16px;
-                .value {
-                    display: block;
-                    width: 65px;
-                    height: 24px;
-                    border-radius: 5px;
-                    background-color: #564a4a;
-                    position: absolute;
-                    right: 4px;
-                    top: 4px;
-                    color: #99e6f9;
-                    font-size: 15px;
-                    line-height: 24px;
-                    text-shadow: 0 2px #000;
-                    box-shadow: inset 0 11px 0px rgba(255, 255, 255, 0.08),
-                        inset 0 2px 1px #3d3737;
-                    text-align: left;
-                    padding-left: 10px;
-                    white-space: nowrap;
-                    &:before {
-                        content: "+";
-                        display: inline-block;
-                        margin-right: 3px;
-                    }
+            }
+        }
+        .reborn-box {
+            display: inline-block;
+            width: 214px;
+            height: 35px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 7px;
+            background: linear-gradient(45deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
+            box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624, 0 0 3px #472624;
+            position: absolute;
+            left: 280px;
+            top: 5px;
+            z-index: 2;
+            cursor: pointer;
+            .num {
+                display: block;
+                width: 97px;
+                height: 26px;
+                border-radius: 5px;
+                background: linear-gradient(-75deg, #564a4a, #b53e3e, #564a4a);
+                position: absolute;
+                left: 4px;
+                top: 4px;
+                color: #fff;
+                font-size: 17px;
+                line-height: 25px;
+                text-shadow: 0 2px #000;
+                box-shadow: inset 0 11px 0px rgba(255, 255, 255, 0.08),
+                    inset 0 2px 1px #3d3737;
+                text-align: right;
+                white-space: nowrap;
+                padding-right: 5px;
+                &:before {
+                    content: "+";
+                    display: inline-block;
+                    margin-right: 3px;
                 }
                 &:after {
                     content: "";
                     display: block;
-                    width: 46px;
-                    height: 46px;
-                    // background: red;
-                    background-size: 46px;
+                    width: 40px;
+                    height: 40px;
+                    background-image: url(../img/reb-rub.png);
+                    background-size: 40px;
                     position: absolute;
-                    left: -12px;
-                    top: -7px;
-                }
-                &.shards .value {
-                    color: #69ecb9;
-                }
-                &.dpc .value {
-                    color: #65fff9;
-                }
-                &.gold .value {
-                    color: #e1c574;
-                }
-                &.gems .value {
-                    color: #ff9593;
-                }
-
-                &.shards:after {
-                    background-image: url(../img/m-ico-shards.png);
-                    background-size: 46px;
-                }
-                &.dpc:after {
-                    background-image: url(../img/ico-click.png);
-                    background-size: 46px;
-                    transform: rotate(6deg);
-                }
-                &.gold:after {
-                    background-image: url(../img/m-ico-gold.png);
-                    background-size: 46px;
-                    height: 37px;
-                    top: -6px;
-                }
-                &.gems:after {
-                    background-image: url(../img/m-ico-gems.png);
-                    background-size: 46px;
+                    top: -5px;
+                    margin-left: -2px;
                 }
             }
-            .bonus-info {
+            .text {
                 display: block;
-                width: 216px;
-                height: 47px;
-                border-radius: 5px;
-                background-color: #564a4a;
+                width: 50px;
+                height: 26px;
                 position: absolute;
-                left: 10px;
-                bottom: 10px;
-                color: #99e6f9;
-                font-size: 15px;
-                line-height: 22px;
-                text-shadow: 0 2px #000;
-                box-shadow: inset 0 22px 0px rgba(255, 255, 255, 0.08),
-                    inset 0 2px 1px #3d3737;
-                text-align: left;
-                padding-left: 10px;
-                white-space: nowrap;
-                // padding: 10px 0px;
-                color: #fff;
-                .value {
-                    text-align: right;
-                    color: #e1c574;
-                    padding-right: 10px;
+                right: 52px;
+                top: 4px;
+                color: #3b2a28;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 14px;
+                text-shadow: 0 0 1px #333, 0 1px 0 #fff;
+            }
+            &:after {
+                content: "";
+                display: block;
+                width: 46px;
+                height: 46px;
+                position: absolute;
+                left: 80%;
+                top: -7px;
+                background-image: url(../img/reborn-btn.png);
+                background-size: 46px;
+                border-radius: 100%;
+                border: solid 2px #715656;
+                box-shadow: 0 1px 3px #000;
+            }
+        }
+
+        .left-tab-side {
+            display: block;
+            width: 495px;
+            height: 461px;
+            position: absolute;
+            left: 5px;
+            top: 45px;
+            .bonuses {
+                display: block;
+                height: 150px;
+                border-radius: 5px;
+                background: #776969;
+                box-shadow: 0 3px 0px #403d38;
+                margin: 0px 5px;
+                position: absolute;
+                bottom: 3px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                .title {
+                    display: block;
+                    height: 33px;
+                    line-height: 28px;
+                    margin: 0px -5px;
+                    padding: 0px 15px;
+                    font-size: 18px;
                     font-weight: bold;
+                    color: #fff;
+                    text-shadow: 0 2px 0 #3d3737;
+                    background: linear-gradient(
+                        -45deg,
+                        #335919,
+                        #baac48,
+                        #b6b42c,
+                        #54681f
+                    );
+                    border-radius: 5px;
+                    box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
+                        inset 0 -3px 0px #403d38, 0 0 1px #403d38,
+                        inset 0 0 10px rgba(255, 255, 255, 0.33);
+                    text-align: left;
                 }
-                &.bi1 {
+                &.no-shards {
+                    .bonus {
+                        margin: 0px 12px;
+                        margin-top: 15px;
+                    }
                 }
-                &.bi2 {
-                    left: auto;
-                    right: 10px;
+                .bonus {
+                    display: inline-block;
+                    width: 105px;
+                    height: 33px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    border-radius: 7px;
+                    background: linear-gradient(
+                        45deg,
+                        #e8c34e,
+                        #f1da7c,
+                        #cfa831,
+                        #fbf1d8
+                    );
+                    box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                        0 0 3px #472624;
+                    position: relative;
+                    margin: 0px 5px;
+                    margin-top: 15px;
+                    // margin-left: 16px;
+                    .value {
+                        display: block;
+                        width: 65px;
+                        height: 24px;
+                        border-radius: 5px;
+                        background-color: #564a4a;
+                        position: absolute;
+                        right: 4px;
+                        top: 4px;
+                        color: #99e6f9;
+                        font-size: 15px;
+                        line-height: 24px;
+                        text-shadow: 0 2px #000;
+                        box-shadow: inset 0 11px 0px rgba(255, 255, 255, 0.08),
+                            inset 0 2px 1px #3d3737;
+                        text-align: left;
+                        padding-left: 10px;
+                        white-space: nowrap;
+                        &:before {
+                            content: "+";
+                            display: inline-block;
+                            margin-right: 3px;
+                        }
+                    }
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 46px;
+                        height: 46px;
+                        background-size: 46px;
+                        position: absolute;
+                        left: -12px;
+                        top: -7px;
+                    }
+                    &.shards .value {
+                        color: #69ecb9;
+                    }
+                    &.dpc .value {
+                        color: #65fff9;
+                    }
+                    &.gold .value {
+                        color: #e1c574;
+                    }
+                    &.gems .value {
+                        color: #ff9593;
+                    }
+
+                    &.shards:after {
+                        background-image: url(../img/m-ico-shards.png);
+                        background-size: 46px;
+                    }
+                    &.dpc:after {
+                        background-image: url(../img/ico-click.png);
+                        background-size: 46px;
+                        transform: rotate(6deg);
+                    }
+                    &.gold:after {
+                        background-image: url(../img/m-ico-gold.png);
+                        background-size: 46px;
+                        height: 37px;
+                        top: -6px;
+                    }
+                    &.gems:after {
+                        background-image: url(../img/m-ico-gems.png);
+                        background-size: 46px;
+                    }
+                }
+                .bonus-info {
+                    display: block;
+                    width: 216px;
+                    height: 47px;
+                    border-radius: 5px;
+                    background-color: #564a4a;
+                    position: absolute;
+                    left: 10px;
+                    bottom: 10px;
+                    color: #99e6f9;
+                    font-size: 15px;
+                    line-height: 22px;
+                    text-shadow: 0 2px #000;
+                    box-shadow: inset 0 22px 0px rgba(255, 255, 255, 0.08),
+                        inset 0 2px 1px #3d3737;
+                    text-align: left;
+                    padding-left: 10px;
+                    white-space: nowrap;
+                    color: #fff;
+                    .value {
+                        text-align: right;
+                        color: #e1c574;
+                        padding-right: 10px;
+                        font-weight: bold;
+                    }
+                    &.bi1 {
+                    }
+                    &.bi2 {
+                        left: auto;
+                        right: 10px;
+                    }
+                }
+            }
+
+            .base-list {
+                display: block;
+                width: 100%;
+                height: 308px;
+                background-image: url(../img/base_bk1.jpg);
+                background-size: 495px 308px;
+
+                .base-hint-box {
+                    display: none;
+                }
+
+                .room {
+                    display: block;
+                    width: 61px;
+                    height: 44px;
+                    border-radius: 5px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    border: solid 2px #1c1009;
+
+                    background-image: url(../img/room_locked.jpg);
+                    background-size: 78px 44px;
+                    background-position: center center;
+                    cursor: pointer;
+                    .count {
+                        display: none;
+                    }
+                    .roomback {
+                        display: none;
+                    }
+                    &.disabled {
+                        background-image: url(../img/room_locked_g.jpg);
+                        background-size: 78px 44px;
+                        background-position: center center;
+                    }
+
+                    &.opened {
+                        box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.77);
+                        .roomback {
+                            display: block;
+                            width: 78px;
+                            height: 44px;
+                            overflow: hidden;
+                            border-radius: 5px;
+                            img {
+                                width: 82px;
+                                height: 48px;
+                            }
+                        }
+                        .count {
+                            display: inline-block;
+                            width: 25px;
+                            height: 32px;
+                            border-radius: 20px;
+                            border-top-left-radius: 5px;
+                            border-top-right-radius: 5px;
+                            position: absolute;
+                            left: -3px;
+                            top: -3px;
+                            box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa,
+                                1px 2px 1px #000, 1px 4px 2px #000;
+                            background: linear-gradient(
+                                45deg,
+                                #e8c34e,
+                                #ffa,
+                                #cfa831,
+                                #fbf1d8
+                            );
+                            line-height: 15px;
+                            color: #342b2b;
+                            font-size: 10px;
+                            text-shadow: 0 0 1px #000, 0 1px 1px #fff;
+                            text-align: center;
+                            &:after {
+                                content: "";
+                                display: block;
+                                width: 21px;
+                                height: 21px;
+                                position: absolute;
+                                bottom: -2px;
+                                left: 2px;
+                                background-image: url(../img/m-ico-gold.png);
+                                background-size: 21px;
+                            }
+                        }
+
+                        &.gold {
+                            .count:after {
+                                background-image: url(../img/m-ico-gold.png);
+                                background-size: 21px;
+                            }
+                        }
+                        &.gems {
+                            .count:after {
+                                background-image: url(../img/m-ico-gems.png);
+                                background-size: 21px;
+                            }
+                        }
+                        &.shards {
+                            .count:after {
+                                background-image: url(../img/m-ico-shards.png);
+                                background-size: 21px;
+                            }
+                        }
+                        &.dpc {
+                            .count:after {
+                                background-image: url(../img/ico-click.png);
+                                background-size: 21px;
+                            }
+                        }
+                        &.selected {
+                            border: solid 2px #ffa;
+                            box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.77),
+                                0 0 3px #fff, 0 0 10px #ff0, 0 0 15px #ff0;
+                        }
+                    }
+                    &.selected {
+                        border: solid 2px #ffa;
+                        box-shadow: 0 0 3px #fff, 0 0 10px #ff0, 0 0 15px #ff0;
+                    }
+                }
+
+                .room.n01 {
+                    left: 33px;
+                    top: 50px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n02 {
+                    left: 33px;
+                    top: 115px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n03 {
+                    left: 33px;
+                    top: 180px;
+                    width: 78px;
+                }
+                .room.n04 {
+                    left: 33px;
+                    top: 246px;
+                    width: 78px;
+                }
+                .room.n05 {
+                    left: 116px;
+                    top: 99px;
+                    width: 78px;
+                }
+                .room.n06 {
+                    left: 132px;
+                    top: 164px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n07 {
+                    left: 132px;
+                    top: 230px;
+                    width: 78px;
+                }
+
+                .room.n08 {
+                    left: 215px;
+                    top: 34px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n09 {
+                    left: 215px;
+                    top: 99px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n10 {
+                    left: 298px;
+                    top: 99px;
+                    width: 78px;
+                }
+                .room.n11 {
+                    left: 298px;
+                    top: 164px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n12 {
+                    left: 281px;
+                    top: 230px;
+                    width: 78px;
+                }
+                .room.n13 {
+                    left: 397px;
+                    top: 50px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n14 {
+                    left: 397px;
+                    top: 115px;
+                    .roomback {
+                        width: 61px;
+                    }
+                }
+                .room.n15 {
+                    left: 381px;
+                    top: 180px;
+                    width: 78px;
+                }
+                .room.n16 {
+                    left: 381px;
+                    top: 246px;
+                    width: 78px;
                 }
             }
         }
 
-        .base-list {
+        .right-tab-side {
             display: block;
-            width: 100%;
-            height: 308px;
-            // background: red;
-            background-image: url(../img/base_bk1.jpg);
-            background-size: 495px 308px;
-
-            .base-hint-box {
-                display: none;
-            }
-
-            .room {
+            width: 495px;
+            height: 501px;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            .room-details {
                 display: block;
-                width: 61px;
-                height: 44px;
-                // background: red;
+                height: 292px;
                 border-radius: 5px;
-                position: absolute;
-                left: 0;
-                top: 0;
-                border: solid 2px #1c1009;
+                background: #a69d94;
+                box-shadow: 0 3px 0px #403d38;
 
-                background-image: url(../img/room_locked.jpg);
-                background-size: 78px 44px;
-                background-position: center center;
-                cursor: pointer;
-                .count {
-                    display: none;
-                }
-                .roomback {
-                    display: none;
-                }
-                &.disabled {
-                    background-image: url(../img/room_locked_g.jpg);
-                    background-size: 78px 44px;
-                    background-position: center center;
+                margin: 0px 5px;
+                .title {
+                    display: block;
+                    height: 33px;
+                    line-height: 28px;
+                    margin: 0px -5px;
+                    padding: 0px 5px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #fff;
+                    text-shadow: 0 2px 0 #3d3737;
+                    background: linear-gradient(
+                        -45deg,
+                        #716362,
+                        #ad6e5d,
+                        #da7557,
+                        #716362
+                    );
+                    border-radius: 5px;
+                    box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
+                        inset 0 -3px 0px #403d38, 0 0 1px #403d38,
+                        inset 0 0 10px rgba(255, 255, 255, 0.33);
+                    &:before {
+                        content: "\235F";
+                        display: inline-block;
+                        margin: 0 5px;
+                        font-size: 20px;
+                        font-weight: bold;
+                    }
                 }
 
-                &.opened {
-                    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.77);
-                    .roomback {
+                .img {
+                    display: block;
+                    width: 461px;
+                    height: 220px;
+                    position: absolute;
+                    left: 15px;
+                    top: 50px;
+                    border-radius: 15px;
+                    background: #ccc;
+                    border: solid 2px #ffa;
+                    box-shadow: 0 0 2px #ffc, inset 0 0 2px #99c;
+                    .pic {
                         display: block;
-                        width: 78px;
-                        height: 44px;
-                        overflow: hidden;
-                        border-radius: 5px;
-                        img {
-                            width: 82px;
-                            height: 48px;
-                        }
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 13px;
+                    }
+                    .info {
+                        display: block;
+                        background: rgba(0, 0, 0, 0.55);
+                        position: absolute;
+                        left: 0px;
+                        right: 0px;
+                        bottom: 0;
+                        font-size: 14px;
+                        color: #fff;
+                        padding: 5px 125px 5px 20px;
+                        min-height: 40px;
+                        border-bottom-left-radius: 12px;
+                        border-bottom-right-radius: 12px;
                     }
                     .count {
-                        display: inline-block;
-                        width: 25px;
-                        height: 32px;
-                        border-radius: 20px;
-                        border-top-left-radius: 5px;
-                        border-top-right-radius: 5px;
+                        display: block;
+                        width: 115px;
+                        height: 25px;
                         position: absolute;
-                        left: -3px;
-                        top: -3px;
+                        left: auto;
+                        top: auto;
+                        right: 5px;
+                        bottom: 20px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #fddf82;
+                        text-align: center;
+                        text-shadow: 0 2px #000;
+                        line-height: 25px;
+                        border-radius: 20px;
+                        background: #9b3d0f;
+                    }
+                    .num {
+                        display: inline-block;
+                        width: 50px;
+                        height: 68px;
+                        border-radius: 80px;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        position: absolute;
+                        right: 10px;
+                        top: -13px;
                         box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa,
-                            1px 2px 1px #000, 1px 4px 2px #000;
+                            1px 2px 1px #000, 1px 5px 3px #000;
                         background: linear-gradient(
                             45deg,
                             #e8c34e,
@@ -553,757 +797,438 @@ const ScreenBase = styled.div`
                             #cfa831,
                             #fbf1d8
                         );
-                        line-height: 15px;
+                        line-height: 28px;
                         color: #342b2b;
-                        font-size: 10px;
-                        text-shadow: 0 0 1px #000, 0 1px 1px #fff;
+                        font-size: 16px;
+                        text-shadow: 0 0 1px #000, 0 2px 2px #fff;
                         text-align: center;
-                        // &:before{
-                        //     content: "";
-                        //     display: block;
-                        //     width: 15px;
-                        //     height: 15px;
-                        //     position: absolute;
-                        //     left: 3px;
-                        //     bottom: 3px;
-                        //     background: #342B2B;
-                        //     -webkit-border-radius: 80px;
-                        //     -moz-border-radius: 80px;
-                        //     -ms-border-radius: 80px;
-                        //     -o-border-radius: 80px;
-                        //     border-radius: 80px;
-                        //     box-shadow: 0 0 5px #ffc, 0 0 10px #ffa;
-                        // }
+                        &:before {
+                            content: "";
+                            display: block;
+                            width: 36px;
+                            height: 36px;
+                            position: absolute;
+                            left: 7px;
+                            bottom: 7px;
+                            background: #342b2b;
+                            border-radius: 80px;
+                            box-shadow: 0 0 5px #ffc, 0 0 10px #ffa;
+                        }
                         &:after {
                             content: "";
                             display: block;
-                            width: 21px;
-                            height: 21px;
+                            width: 34px;
+                            height: 34px;
+                            background-image: url(../img/heart1.png);
+                            background-size: 34px;
                             position: absolute;
-                            bottom: -2px;
-                            left: 2px;
-                            background-image: url(../img/m-ico-gold.png);
-                            background-size: 21px;
+                            left: 8px;
+                            bottom: 8px;
                         }
                     }
-                    // &.gold.count:after{
-                    //     background-image: url(../img/m-ico-gold.png);
-                    //     background-size: 21px;
-                    // }
-                    // &.gems.count:after{
-                    //     background-image: url(../img/m-ico-gems.png);
-                    //     background-size: 21px;
-                    // }
-                    // &.shards.count:after{
-                    //     background-image: url(../img/m-ico-shards.png);
-                    //     background-size: 21px;
-                    // }
-                    // &.dpc.count:after{
-                    //     background-image: url(../img/m-ico-gold.png);
-                    //     background-size: 21px;
-                    // }
-
-                    &.gold {
-                        .count:after {
-                            background-image: url(../img/m-ico-gold.png);
-                            background-size: 21px;
-                        }
-                    }
-                    &.gems {
-                        .count:after {
-                            background-image: url(../img/m-ico-gems.png);
-                            background-size: 21px;
-                        }
-                    }
-                    &.shards {
-                        .count:after {
-                            background-image: url(../img/m-ico-shards.png);
-                            background-size: 21px;
-                        }
-                    }
-                    &.dpc {
-                        .count:after {
-                            background-image: url(../img/ico-click.png);
-                            background-size: 21px;
-                        }
-                    }
-                    &.selected {
-                        border: solid 2px #ffa;
-                        box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.77),
-                            0 0 3px #fff, 0 0 10px #ff0, 0 0 15px #ff0;
-                    }
-                }
-                &.selected {
-                    border: solid 2px #ffa;
-                    box-shadow: 0 0 3px #fff, 0 0 10px #ff0, 0 0 15px #ff0;
-                }
-            }
-
-            .room.n01 {
-                left: 33px;
-                top: 50px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n02 {
-                left: 33px;
-                top: 115px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n03 {
-                left: 33px;
-                top: 180px;
-                width: 78px;
-            }
-            .room.n04 {
-                left: 33px;
-                top: 246px;
-                width: 78px;
-            }
-            .room.n05 {
-                left: 116px;
-                top: 99px;
-                width: 78px;
-            }
-            .room.n06 {
-                left: 132px;
-                top: 164px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n07 {
-                left: 132px;
-                top: 230px;
-                width: 78px;
-            }
-
-            .room.n08 {
-                left: 215px;
-                top: 34px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n09 {
-                left: 215px;
-                top: 99px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n10 {
-                left: 298px;
-                top: 99px;
-                width: 78px;
-            }
-            .room.n11 {
-                left: 298px;
-                top: 164px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n12 {
-                left: 281px;
-                top: 230px;
-                width: 78px;
-            }
-            .room.n13 {
-                left: 397px;
-                top: 50px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n14 {
-                left: 397px;
-                top: 115px;
-                .roomback {
-                    width: 61px;
-                }
-            }
-            .room.n15 {
-                left: 381px;
-                top: 180px;
-                width: 78px;
-            }
-            .room.n16 {
-                left: 381px;
-                top: 246px;
-                width: 78px;
-            }
-        }
-    }
-
-    .right-tab-side {
-        display: block;
-        width: 495px;
-        height: 501px;
-        position: absolute;
-        right: 5px;
-        top: 5px;
-        .room-details {
-            display: block;
-            height: 292px;
-            border-radius: 5px;
-            background: #a69d94;
-            box-shadow: 0 3px 0px #403d38;
-
-            margin: 0px 5px;
-            .title {
-                display: block;
-                height: 33px;
-                line-height: 28px;
-                margin: 0px -5px;
-                padding: 0px 5px;
-                font-size: 18px;
-                font-weight: bold;
-                color: #fff;
-                text-shadow: 0 2px 0 #3d3737;
-                background: linear-gradient(
-                    -45deg,
-                    #716362,
-                    #ad6e5d,
-                    #da7557,
-                    #716362
-                );
-                border-radius: 5px;
-                box-shadow: inset 0 15px 0 rgba(255, 255, 255, 0.15),
-                    inset 0 -3px 0px #403d38, 0 0 1px #403d38,
-                    inset 0 0 10px rgba(255, 255, 255, 0.33);
-                &:before {
-                    content: "\235F";
-                    display: inline-block;
-                    margin: 0 5px;
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-            }
-
-            .img {
-                display: block;
-                width: 461px;
-                height: 220px;
-                position: absolute;
-                left: 15px;
-                // top: 40px;
-                top: 50px;
-                border-radius: 15px;
-                background: #ccc;
-                border: solid 2px #ffa;
-                box-shadow: 0 0 2px #ffc, inset 0 0 2px #99c;
-                .pic {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 13px;
-                }
-                .info {
-                    display: block;
-                    background: rgba(0, 0, 0, 0.55);
-                    position: absolute;
-                    left: 0px;
-                    right: 0px;
-                    bottom: 0;
-                    font-size: 14px;
-                    color: #fff;
-                    padding: 5px 125px 5px 20px;
-                    min-height: 40px;
-                    border-bottom-left-radius: 12px;
-                    border-bottom-right-radius: 12px;
-                }
-                .count {
-                    display: block;
-                    width: 115px;
-                    height: 25px;
-                    position: absolute;
-                    left: auto;
-                    top: auto;
-                    right: 5px;
-                    bottom: 20px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    color: #fddf82;
-                    text-align: center;
-                    text-shadow: 0 2px #000;
-                    line-height: 25px;
-                    border-radius: 20px;
-                    background: #9b3d0f;
-                }
-                .num {
-                    display: inline-block;
-                    width: 50px;
-                    height: 68px;
-                    border-radius: 80px;
-                    border-top-left-radius: 20px;
-                    border-top-right-radius: 20px;
-                    position: absolute;
-                    right: 10px;
-                    // top: -6px;
-                    top: -13px;
-                    box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa,
-                        1px 2px 1px #000, 1px 5px 3px #000;
-                    background: linear-gradient(
-                        45deg,
-                        #e8c34e,
-                        #ffa,
-                        #cfa831,
-                        #fbf1d8
-                    );
-                    line-height: 28px;
-                    color: #342b2b;
-                    font-size: 16px;
-                    text-shadow: 0 0 1px #000, 0 2px 2px #fff;
-                    text-align: center;
-                    &:before {
-                        content: "";
-                        display: block;
-                        width: 36px;
-                        height: 36px;
+                    .btn-buy {
                         position: absolute;
-                        left: 7px;
+                        left: auto;
+                        top: auto;
+                        right: 10px;
                         bottom: 7px;
-                        background: #342b2b;
-                        border-radius: 80px;
-                        box-shadow: 0 0 5px #ffc, 0 0 10px #ffa;
-                    }
-                    &:after {
-                        content: "";
-                        display: block;
-                        width: 34px;
-                        height: 34px;
-                        background-image: url(../img/heart1.png);
-                        background-size: 34px;
-                        position: absolute;
-                        left: 8px;
-                        bottom: 8px;
                     }
                 }
-                .btn-buy {
-                    position: absolute;
-                    left: auto;
-                    top: auto;
-                    right: 10px;
-                    // bottom: -20px;
-                    bottom: 7px;
+                &.gold .img .num:after {
+                    background-image: url(../img/m-ico-gold.png);
+                    background-size: 32px;
+                    height: 29px;
                 }
-            }
-            &.gold .img .num:after {
-                background-image: url(../img/m-ico-gold.png);
-                background-size: 32px;
-                height: 29px;
-            }
-            &.gems .img .num:after {
-                background-image: url(../img/m-ico-gems.png);
-                background-size: 32px;
-            }
-            &.shards .img .num:after {
-                background-image: url(../img/m-ico-shards.png);
-                background-size: 32px;
-            }
-            &.dpc .img .num:after {
-                background-image: url(../img/ico-click.png);
-                background-size: 34px;
-            }
-        }
-
-        .fns-def {
-            display: block;
-            // height: 33px;
-            // background: blue;
-            // position: absolute;
-            margin-top: 10px;
-            text-align: center;
-            position: relative;
-            height: 70px;
-            .block {
-                display: inline-block;
-                width: 45%;
-                height: 70px;
-                background: #595450;
-                border-radius: 12px;
-                // margin: 0px 15px ;
-                border: solid 1px #c99c12;
-                box-shadow: inset 0 3px 0 #403d38, inset 0 20px 0 #6a6663,
-                    0 0 3px #ffa;
-                line-height: 25px;
-                position: absolute;
-                left: 15px;
-                &.n2 {
-                    left: auto;
-                    right: 15px;
+                &.gems .img .num:after {
+                    background-image: url(../img/m-ico-gems.png);
+                    background-size: 32px;
                 }
-                .title {
-                    font-size: 14px;
-                    font-weight: bold;
-                    color: #ffcd32;
-                    text-shadow: 0 2px 0 #000;
+                &.shards .img .num:after {
+                    background-image: url(../img/m-ico-shards.png);
+                    background-size: 32px;
                 }
-                .btn-buy {
-                    position: relative;
-                    left: auto;
-                    right: auto;
-                    top: auto;
-                    bottom: auto;
-                    display: inline-block;
-                }
-            }
-        }
-
-        .fns-prem {
-            display: block;
-            // height: 33px;
-            // position: absolute;
-            margin-top: 10px;
-            text-align: center;
-            position: absolute;
-            left: 15px;
-            right: 15px;
-            height: 115px;
-            border-radius: 15px;
-            background: linear-gradient(to bottom, #b32d22, #8a2221, #651820);
-            box-shadow: 0 3px 0 #403d38;
-            &:before {
-                content: "";
-                position: absolute;
-                left: 15px;
-                top: 15px;
-                right: 15px;
-                bottom: 15px;
-                border: solid 2px #ff6;
-                border-radius: 12px;
-                background: linear-gradient(to top, #b32d22, #8a2221, #651820);
-                box-shadow: inset 0 0 3px #ff0, 0 0 2px #ff3;
-            }
-
-            .block {
-                display: inline-block;
-                width: 40%;
-                height: 70px;
-                // background: #595450;
-                // border-radius: 12px;
-                // margin: 0px 15px ;
-                // border: solid 1px #C99C12;
-                // box-shadow:
-                //     inset 0 3px 0 #403d38,
-                //     inset 0 20px 0 #6a6663,
-                //     0 0 3px #ffa;
-                line-height: 25px;
-                position: absolute;
-                left: 10px;
-                top: 22px;
-                &.n2 {
-                    left: auto;
-                    right: 10px;
-                }
-                .title {
-                    font-size: 14px;
-                    font-weight: bold;
-                    color: #ffcd32;
-                    text-shadow: 0 2px 0 #000;
-                }
-                .btn-buy {
-                    position: relative;
-                    left: auto;
-                    right: auto;
-                    top: auto;
-                    bottom: auto;
-                    display: inline-block;
+                &.dpc .img .num:after {
+                    background-image: url(../img/ico-click.png);
+                    background-size: 34px;
                 }
             }
 
-            .offer-banner {
+            .fns-def {
                 display: block;
-                width: 100px;
-                height: 100px;
+                margin-top: 10px;
+                text-align: center;
+                position: relative;
+                height: 70px;
+                .block {
+                    display: inline-block;
+                    width: 45%;
+                    height: 70px;
+                    background: #595450;
+                    border-radius: 12px;
+                    border: solid 1px #c99c12;
+                    box-shadow: inset 0 3px 0 #403d38, inset 0 20px 0 #6a6663,
+                        0 0 3px #ffa;
+                    line-height: 25px;
+                    position: absolute;
+                    left: 15px;
+                    &.n2 {
+                        left: auto;
+                        right: 15px;
+                    }
+                    .title {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #ffcd32;
+                        text-shadow: 0 2px 0 #000;
+                    }
+                    .btn-buy {
+                        position: relative;
+                        left: auto;
+                        right: auto;
+                        top: auto;
+                        bottom: auto;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .fns-prem {
+                display: block;
+                margin-top: 10px;
+                text-align: center;
                 position: absolute;
-                left: calc(50% - 50px);
-                top: -4px;
+                left: 15px;
+                right: 15px;
+                height: 115px;
+                border-radius: 15px;
+                background: linear-gradient(to bottom, #b32d22, #8a2221, #651820);
+                box-shadow: 0 3px 0 #403d38;
                 &:before {
                     content: "";
+                    position: absolute;
+                    left: 15px;
+                    top: 15px;
+                    right: 15px;
+                    bottom: 15px;
+                    border: solid 2px #ff6;
+                    border-radius: 12px;
+                    background: linear-gradient(to top, #b32d22, #8a2221, #651820);
+                    box-shadow: inset 0 0 3px #ff0, 0 0 2px #ff3;
+                }
+
+                .block {
+                    display: inline-block;
+                    width: 40%;
+                    height: 70px;
+                    line-height: 25px;
+                    position: absolute;
+                    left: 10px;
+                    top: 22px;
+                    &.n2 {
+                        left: auto;
+                        right: 10px;
+                    }
+                    .title {
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #ffcd32;
+                        text-shadow: 0 2px 0 #000;
+                    }
+                    .btn-buy {
+                        position: relative;
+                        left: auto;
+                        right: auto;
+                        top: auto;
+                        bottom: auto;
+                        display: inline-block;
+                    }
+                }
+
+                .offer-banner {
                     display: block;
                     width: 100px;
                     height: 100px;
-                    // background: red;
-                    background-image: url(../img/offer-bk2.png);
-                    background-size: 100px 100px;
-                    background-repeat: no-repeat;
-                    // transform: rotate(-90deg);
-                }
-                .text {
-                    display: block;
-                    // width: 100%;
-                    height: 33px;
-                    // background: blue;
                     position: absolute;
-                    left: 0px;
-                    top: 15px;
-                    right: 5px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    line-height: 20px;
-                    color: #efc519;
-                    text-shadow: 0 2px 1px #300;
-                    line-height: 20px;
+                    left: calc(50% - 50px);
+                    top: -4px;
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        background-image: url(../img/offer-bk2.png);
+                        background-size: 100px 100px;
+                        background-repeat: no-repeat;
+                    }
+                    .text {
+                        display: block;
+                        height: 33px;
+                        position: absolute;
+                        left: 0px;
+                        top: 15px;
+                        right: 5px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 20px;
+                        color: #efc519;
+                        text-shadow: 0 2px 1px #300;
+                        line-height: 20px;
+                    }
                 }
             }
         }
     }
-}
-.main .popup-layer .reborn-popup {
-    display: block;
-    width: 828px;
-    height: 640px;
-    background-image: url(../img/reborn-popup-bk.png);
-    background-size: 828px;
-    position: absolute;
-    left: calc(50% - 414px);
-    top: 0;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
-    &:after {
-        content: "";
-        width: 294px;
-        height: 267px;
-        position: absolute;
-        left: -72px;
-        bottom: 0px;
-        background-image: url(../img/rating-girl.png);
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: cover;
-        pointer-events: none;
-    }
-
-    .title {
+    .main .popup-layer .reborn-popup {
         display: block;
-        width: 80%;
-        height: 55px;
-        position: relative;
-        top: 24px;
-        left: 10%;
-        line-height: 55px;
-        font-size: 28px;
-        font-weight: bold;
-        color: #800;
-        text-shadow: 0 0 1px #800, 0 1.5px 0px #fff, 0 2px 10px #fff;
-    }
-
-    .content {
-        display: block;
+        width: 828px;
+        height: 640px;
+        background-image: url(../img/reborn-popup-bk.png);
+        background-size: 828px;
         position: absolute;
-        left: 155px;
-        right: 155px;
-        top: 98px;
-        text-align: center;
-
-        .btn-close-x {
-            right: -79px;
-            top: -67px;
+        left: calc(50% - 414px);
+        top: 0;
+        filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+        &:after {
+            content: "";
+            width: 294px;
+            height: 267px;
+            position: absolute;
+            left: -72px;
+            bottom: 0px;
+            background-image: url(../img/rating-girl.png);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            pointer-events: none;
         }
 
-        p {
-            margin: 0;
-            padding: 0;
-        }
-        font-size: 18px;
-        font-weight: bold;
-        color: #300;
-        line-height: 20px;
-        ol,
-        li {
-            margin: 0;
-            padding: 0;
-        }
-        li {
-            margin-left: 25px;
-            padding-left: 0px;
-            text-align: left;
-            font-size: 15px;
-        }
-        .text-0 {
+        .title {
             display: block;
-            // background: blue;
-            padding: 0px 10px;
-            color: #ffa;
-            text-shadow: 0 1px 1px #6c0122, 0 1px 10px #6c0122,
-                0 1px 15px #6c0122;
+            width: 80%;
+            height: 55px;
+            position: relative;
+            top: 24px;
+            left: 10%;
+            line-height: 55px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #800;
+            text-shadow: 0 0 1px #800, 0 1.5px 0px #fff, 0 2px 10px #fff;
         }
-        .text-1,
-        .text-2,
-        .text-3 {
-            display: inline-block;
-            width: 243px;
-            background: #ffd876;
-            color: #7c0022;
-            padding: 7px;
-            border-radius: 10px;
-            margin-top: 10px;
-            margin-bottom: 4px;
-            box-shadow: 0 1px 5px #7c0022, 0 1px 10px #ffa;
-        }
-        .text-1 {
-            float: left;
-        }
-        .text-2 {
-            float: right;
-            .price.gems,
-            .price.luck_res,
-            .price.snowflake {
+
+        .content {
+            display: block;
+            position: absolute;
+            left: 155px;
+            right: 155px;
+            top: 98px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #300;
+            line-height: 20px;
+            .btn-close-x {
+                right: -79px;
+                top: -67px;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            ol,
+            li {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                margin-left: 25px;
+                padding-left: 0px;
+                text-align: left;
+                font-size: 15px;
+            }
+            .text-0 {
                 display: block;
-                height: 35px;
-                margin: 4px;
-                line-height: 25px;
+                // background: blue;
+                padding: 0px 10px;
+                color: #ffa;
+                text-shadow: 0 1px 1px #6c0122, 0 1px 10px #6c0122,
+                    0 1px 15px #6c0122;
+            }
+            .text-1,
+            .text-2,
+            .text-3 {
+                display: inline-block;
+                width: 243px;
+                background: #ffd876;
+                color: #7c0022;
+                padding: 7px;
+                border-radius: 10px;
+                margin-top: 10px;
+                margin-bottom: 4px;
+                box-shadow: 0 1px 5px #7c0022, 0 1px 10px #ffa;
+            }
+            .text-1 {
+                float: left;
+            }
+            .text-2 {
+                float: right;
+                .price.gems,
+                .price.luck_res,
+                .price.snowflake {
+                    display: block;
+                    height: 35px;
+                    margin: 4px;
+                    line-height: 25px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #800;
+                    text-shadow: 0 0 2px #800, 0 2px 0px #fff, 0 2px 10px #fff;
+                    position: relative;
+                    top: 0px;
+                    padding: 0px 15px;
+                    background: #ffd543;
+                    box-shadow: 0 0 15px #ffd543, 0 0 5px #ffd543,
+                        inset 0 0 10px #fff, inset 2px 5px 10px #fff,
+                        inset 0px 15px 25px #fff;
+                    border-radius: 44px;
+
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        background: #ffd875;
+                        border: solid 5px #ffd875;
+                        background-image: url(../img/m-ico-gems.png);
+                        background-size: 32px;
+                        border-radius: 100%;
+                        vertical-align: middle;
+                        position: relative;
+                        top: -4px;
+                        margin-right: 5px;
+                    }
+                }
+                .price.dpc {
+                    display: inline-block;
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: #800;
+                    text-shadow: 0 0 2px #800, 0 2px 0px #fff, 0 2px 10px #fff;
+                    position: relative;
+                    top: 0px;
+                    padding: 0px 5px;
+                    background: #ffd543;
+                    box-shadow: 0 0 15px #ffd543, 0 0 5px #ffd543,
+                        inset 0 0 5px #fff, inset 2px 5px 5px #fff;
+                    border-radius: 44px;
+                }
+                .price.luck_res {
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        background: #ffd875;
+                        border: solid 5px #ffd875;
+                        background-image: url(../img/ms-stone-pink.png);
+                        background-size: 32px;
+                        border-radius: 100%;
+                        vertical-align: middle;
+                        position: relative;
+                        top: -4px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .text-3 {
+                float: right;
+                margin-top: 0px;
+            }
+            .text-4,
+            .text-5 {
+                display: inline-block;
+                // background: yellow;
+                width: 100%;
+                padding: 3px;
+                font-size: 15px;
+                color: #ffa;
+                text-shadow: 0 1px 1px #6c0122, 0 1px 10px #6c0122,
+                    0 1px 15px #6c0122;
+                padding: 10px 0px;
+            }
+            .btn-box-1 {
+                display: block;
+                width: 100%;
+                height: 55px;
+                position: relative;
+            }
+            .btn-simple-gold.btn-ok {
+                width: auto;
+                height: 42px;
+                font-size: 15px;
+                position: relative;
+                line-height: 38px;
+                &:active {
+                    line-height: 40px;
+                }
+            }
+            .text-5 {
+                padding: 10px 0px;
+            }
+            .btn-box-2,
+            .btn-box-3 {
+                display: inline-block;
+                width: 46%;
+                height: 55px;
+                text-align: right;
+            }
+            .btn-box-3 {
+                float: right;
+                text-align: left;
+            }
+
+            .price.crowns {
                 font-size: 20px;
-                font-weight: bold;
-                color: #800;
-                text-shadow: 0 0 2px #800, 0 2px 0px #fff, 0 2px 10px #fff;
-                position: relative;
-                top: 0px;
-                padding: 0px 15px;
-                background: #ffd543;
-                box-shadow: 0 0 15px #ffd543, 0 0 5px #ffd543,
-                    inset 0 0 10px #fff, inset 2px 5px 10px #fff,
-                    inset 0px 15px 25px #fff;
-                border-radius: 44px;
-
+                color: #6a0101;
                 &:before {
                     content: "";
+                    background-image: url(../img/ico-real.png);
+                    background-size: 33px;
                     display: inline-block;
-                    width: 32px;
-                    height: 32px;
-                    background: #ffd875;
-                    border: solid 5px #ffd875;
-                    background-image: url(../img/m-ico-gems.png);
-                    background-size: 32px;
-                    border-radius: 100%;
+                    width: 33px;
+                    height: 33px;
                     vertical-align: middle;
                     position: relative;
-                    top: -4px;
-                    margin-right: 5px;
+                    top: -5px;
+                    margin-bottom: -3px;
                 }
             }
-            .price.dpc {
-                display: inline-block;
-                height: 24px;
-                line-height: 24px;
-                font-size: 17px;
-                font-weight: bold;
-                color: #800;
-                text-shadow: 0 0 2px #800, 0 2px 0px #fff, 0 2px 10px #fff;
-                position: relative;
-                top: 0px;
-                padding: 0px 5px;
-                background: #ffd543;
-                box-shadow: 0 0 15px #ffd543, 0 0 5px #ffd543,
-                    inset 0 0 5px #fff, inset 2px 5px 5px #fff;
-                border-radius: 44px;
-            }
-            .price.luck_res {
+
+            .price.diamonds {
+                font-size: 20px;
+                color: #6a0101;
                 &:before {
                     content: "";
+                    background-image: url(../img/80-topup.png);
+                    background-size: 33px;
                     display: inline-block;
-                    width: 32px;
-                    height: 32px;
-                    background: #ffd875;
-                    border: solid 5px #ffd875;
-                    background-image: url(../img/ms-stone-pink.png);
-                    background-size: 32px;
-                    border-radius: 100%;
+                    width: 33px;
+                    height: 22px;
                     vertical-align: middle;
                     position: relative;
-                    top: -4px;
-                    margin-right: 5px;
+                    top: -5px;
+                    margin-bottom: -3px;
                 }
-            }
-        }
-        .text-3 {
-            float: right;
-            margin-top: 0px;
-        }
-        .text-4,
-        .text-5 {
-            display: inline-block;
-            // background: yellow;
-            width: 100%;
-            padding: 3px;
-            font-size: 15px;
-            color: #ffa;
-            text-shadow: 0 1px 1px #6c0122, 0 1px 10px #6c0122,
-                0 1px 15px #6c0122;
-            padding: 10px 0px;
-        }
-        .btn-box-1 {
-            display: block;
-            width: 100%;
-            height: 55px;
-            position: relative;
-        }
-        .btn-simple-gold.btn-ok {
-            width: auto;
-            height: 42px;
-            font-size: 15px;
-            position: relative;
-            line-height: 38px;
-            &:active {
-                line-height: 40px;
-            }
-        }
-        .text-5 {
-            padding: 10px 0px;
-        }
-        .btn-box-2,
-        .btn-box-3 {
-            display: inline-block;
-            width: 46%;
-            height: 55px;
-            float: left;
-            text-align: right;
-        }
-        .btn-box-3 {
-            float: right;
-            text-align: left;
-        }
-
-        .price.crowns {
-            font-size: 20px;
-            color: #6a0101;
-            &:before {
-                content: "";
-                background-image: url(../img/ico-real.png);
-                background-size: 33px;
-                display: inline-block;
-                width: 33px;
-                height: 33px;
-                vertical-align: middle;
-                position: relative;
-                top: -5px;
-                margin-bottom: -3px;
-            }
-        }
-
-        .price.diamonds {
-            font-size: 20px;
-            color: #6a0101;
-            &:before {
-                content: "";
-                background-image: url(../img/80-topup.png);
-                background-size: 33px;
-                display: inline-block;
-                width: 33px;
-                height: 22px;
-                vertical-align: middle;
-                position: relative;
-                top: -5px;
-                margin-bottom: -3px;
             }
         }
     }
-}
-
 `;
 
-export default ScreenBase;
+const ScreenBase = styled.div`
+    ${ScreenBaseStyles}
+`;
+
+export { ScreenBaseStyles, ScreenBase };

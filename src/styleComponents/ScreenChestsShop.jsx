@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenChestsShop = styled.div`
+const ScreenChestsShopStyles = css`
     body .main .popup-layer .m-popup.chests-shop {
         width: 824px;
         top: 50%;
@@ -564,4 +564,8 @@ const ScreenChestsShop = styled.div`
     }
 `;
 
-export default ScreenChestsShop;
+const ScreenChestsShop = styled.div`
+    ${ScreenChestsShopStyles}
+`;
+
+export { ScreenChestsShopStyles, ScreenChestsShop };

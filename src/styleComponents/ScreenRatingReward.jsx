@@ -1,12 +1,15 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingReward = styled.div`
+const ScreenRatingRewardStyles = css`
     .popup-layer .m-popup.rating-reward {
         width: 456px;
         height: 580px;
         margin-left: 30px;
         top: 24px;
         position: absolute;
+        left: 12%;
+        right: 11%;
+        width: auto;
         &:before {
             content: "";
             background: linear-gradient(0deg, #938274 0%, #dbc2ad 100%);
@@ -55,9 +58,6 @@ const ScreenRatingReward = styled.div`
                 position: absolute;
                 top: 140px;
                 margin-left: 133px;
-                &.no-text {
-                    top: 110px;
-                }
                 background: linear-gradient(
                     180deg,
                     #c68300 0%,
@@ -68,6 +68,10 @@ const ScreenRatingReward = styled.div`
                 );
                 border-radius: 10px;
                 box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.85);
+                animation: chest-box 0.35s linear 0s;
+                &.no-text {
+                    top: 110px;
+                }
                 &:before {
                     content: "";
                     width: 196px;
@@ -103,37 +107,12 @@ const ScreenRatingReward = styled.div`
                         position: relative;
                     }
                 }
-                animation: chest-box 0.35s linear 0s;
-                @keyframes chest-box {
-                    0% {
-                        transform: scale(0.1);
-                        opacity: 0;
-                    }
-                    50% {
-                        transform: scale(1.1);
-                    }
-                    100% {
-                        transform: scale(1);
-                    }
-                }
             }
 
             &.open {
                 .reward-box {
                     display: inline-block;
                     animation: reward-box-open 0.35s linear 0s;
-                    @keyframes reward-box-open {
-                        0% {
-                            transform: scale(0.1);
-                            opacity: 0;
-                        }
-                        50% {
-                            transform: scale(1.1);
-                        }
-                        100% {
-                            transform: scale(1);
-                        }
-                    }
                     .newtime {
                         z-index: 1;
                         width: 65px;
@@ -217,6 +196,7 @@ const ScreenRatingReward = styled.div`
                         #fad489 85%,
                         #c78302 100%
                     );
+                    animation: reward-box-prize 0.4s linear 0s;
                     &:before {
                         content: "";
                         background: linear-gradient(
@@ -264,18 +244,6 @@ const ScreenRatingReward = styled.div`
                         right: 0px;
                         margin-left: 0;
                     }
-                    animation: reward-box-prize 0.4s linear 0s;
-                    @keyframes reward-box-prize {
-                        0% {
-                            transform: scale(0.1);
-                        }
-                        50% {
-                            transform: scale(1.05);
-                        }
-                        100% {
-                            transform: scalex(1);
-                        }
-                    }
                 }
             }
         }
@@ -285,9 +253,6 @@ const ScreenRatingReward = styled.div`
             top: 500px;
             left: 0;
         }
-        left: 12%;
-        right: 11%;
-        width: auto;
         .reward-place-box {
             left: 21%;
         }
@@ -323,7 +288,58 @@ const ScreenRatingReward = styled.div`
                 );
             }
         }
+        @keyframes chest-box {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes chest-box {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes reward-box-prize {
+            0% {
+                transform: scale(0.1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scalex(1);
+            }
+        }
+        @keyframes reward-box-open {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
     }
 `;
 
-export default ScreenRatingReward;
+const ScreenRatingReward = styled.div`
+    ${ScreenRatingRewardStyles}
+`;
+
+export { ScreenRatingRewardStyles, ScreenRatingReward };

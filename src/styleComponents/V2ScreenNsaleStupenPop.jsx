@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenNsaleStupenPop = styled.div`
+const V2ScreenNsaleStupenPopStyles = css`
     .popup-layer .mn-popup.nsale-stupen.pop {
         width: 988px;
         height: 605px;
@@ -367,4 +367,8 @@ const V2ScreenNsaleStupenPop = styled.div`
     }
 `;
 
-export default V2ScreenNsaleStupenPop;
+const V2ScreenNsaleStupenPop = styled.div`
+    ${V2ScreenNsaleStupenPopStyles}
+`;
+
+export { V2ScreenNsaleStupenPopStyles, V2ScreenNsaleStupenPop };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const QuestTabStory = styled.div`
+const QuestTabStoryStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -432,4 +432,8 @@ const QuestTabStory = styled.div`
     }
 `;
 
-export default QuestTabStory;
+const QuestTabStory = styled.div`
+    ${QuestTabStoryStyles}
+`;
+
+export { QuestTabStoryStyles, QuestTabStory };

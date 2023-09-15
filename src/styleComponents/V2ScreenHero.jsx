@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenHero = styled.div`
+const V2ScreenHeroStyles = css`
     .popup-layer .m-popup.hero-popup {
         width: 1000px;
         height: 620px;
@@ -960,7 +960,6 @@ const V2ScreenHero = styled.div`
                 font-size: 16px;
                 font-weight: bold;
                 color: #4e4343;
-                float: left;
                 margin-left: 18px;
                 text-align: center;
                 line-height: 28px;
@@ -1152,4 +1151,8 @@ const V2ScreenHero = styled.div`
     }
 `;
 
-export default V2ScreenHero;
+const V2ScreenHero = styled.div`
+    ${V2ScreenHeroStyles}
+`;
+
+export { V2ScreenHeroStyles, V2ScreenHero };

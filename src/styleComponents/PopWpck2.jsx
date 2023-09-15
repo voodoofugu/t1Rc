@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const PopWpck2 = styled.div`
+const PopWpck2Styles = css`
     .popup-layer .m-popup.wpck2 {
         width: 800px;
         height: 560px;
@@ -391,4 +391,8 @@ const PopWpck2 = styled.div`
     }
 `;
 
-export default PopWpck2;
+const PopWpck2 = styled.div`
+    ${PopWpck2Styles}
+`;
+
+export { PopWpck2Styles, PopWpck2 };

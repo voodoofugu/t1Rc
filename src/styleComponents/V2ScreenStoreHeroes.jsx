@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenStoreHeroes = styled.div`
+const V2ScreenStoreHeroesStyles = css`
     .popup-layer .m-popup.store-heroes {
         width: 1028px;
         height: 550px;
@@ -490,4 +490,8 @@ const V2ScreenStoreHeroes = styled.div`
     }
 `;
 
-export default V2ScreenStoreHeroes;
+const V2ScreenStoreHeroes = styled.div`
+    ${V2ScreenStoreHeroesStyles}
+`;
+
+export { V2ScreenStoreHeroesStyles, V2ScreenStoreHeroes };

@@ -1,8 +1,7 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingPopstart = styled.div`
+const ScreenRatingPopstartStyles = css`
     // Pop Start 1-2
-
     .popup-layer .ratingpop-box {
         width: 760px;
         height: 620px;
@@ -17,7 +16,6 @@ const ScreenRatingPopstart = styled.div`
     }
 
     // Pop Start 3
-
     .popup-layer .m-popup.popstart {
         width: 886px;
         height: 620px;
@@ -255,4 +253,8 @@ const ScreenRatingPopstart = styled.div`
     }
 `;
 
-export default ScreenRatingPopstart;
+const ScreenRatingPopstart = styled.div`
+    ${ScreenRatingPopstartStyles}
+`;
+
+export { ScreenRatingPopstartStyles, ScreenRatingPopstart };

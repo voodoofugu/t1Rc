@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenUnipopEvents = styled.div`
+const ScreenUnipopEventsStyles = css`
     .popup-layer .m-popup.unipop-hw2019 {
         display: block;
         width: 900px;
@@ -762,4 +762,8 @@ const ScreenUnipopEvents = styled.div`
     }
 `;
 
-export default ScreenUnipopEvents;
+const ScreenUnipopEvents = styled.div`
+    ${ScreenUnipopEventsStyles}
+`;
+
+export { ScreenUnipopEventsStyles, ScreenUnipopEvents };

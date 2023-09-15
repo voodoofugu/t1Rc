@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwGuildboss1 = styled.div`
+const V2ScreenCwGuildboss1Styles = css`
     .popup-layer .m-popup.guildboss1 {
         width: 800px;
         height: 480px;
@@ -470,4 +470,8 @@ const V2ScreenCwGuildboss1 = styled.div`
     }
 `;
 
-export default V2ScreenCwGuildboss1;
+const V2ScreenCwGuildboss1 = styled.div`
+    ${V2ScreenCwGuildboss1Styles}
+`;
+
+export { V2ScreenCwGuildboss1Styles, V2ScreenCwGuildboss1 };

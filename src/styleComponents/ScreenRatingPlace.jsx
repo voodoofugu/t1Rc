@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingPlace = styled.div`
+const ScreenRatingPlaceStyles = css`
     .slider-popup {
         .rating-place-box {
             width: 280px;
@@ -168,4 +168,8 @@ const ScreenRatingPlace = styled.div`
     }
 `;
 
-export default ScreenRatingPlace;
+const ScreenRatingPlace = styled.div`
+    ${ScreenRatingPlaceStyles}
+`;
+
+export { ScreenRatingPlaceStyles, ScreenRatingPlace };

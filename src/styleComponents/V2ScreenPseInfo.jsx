@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenPseInfo = styled.div`
+const V2ScreenPseInfoStyles = css`
     .popup-layer .m-popup.pseinfo {
         width: 910px;
         height: 590px;
@@ -327,4 +327,8 @@ const V2ScreenPseInfo = styled.div`
     }
 `;
 
-export default V2ScreenPseInfo;
+const V2ScreenPseInfo = styled.div`
+    ${V2ScreenPseInfoStyles}
+`;
+
+export { V2ScreenPseInfoStyles, V2ScreenPseInfo };

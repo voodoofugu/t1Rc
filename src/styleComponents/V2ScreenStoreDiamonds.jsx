@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenStoreDiamonds = styled.div`
+const V2ScreenStoreDiamondsStyles = css`
     .popup-layer .m-popup.store-diamonds {
         width: 1028px;
         height: 550px;
@@ -538,4 +538,8 @@ const V2ScreenStoreDiamonds = styled.div`
     }
 `;
 
-export default V2ScreenStoreDiamonds;
+const V2ScreenStoreDiamonds = styled.div`
+    ${V2ScreenStoreDiamondsStyles}
+`;
+
+export { V2ScreenStoreDiamondsStyles, V2ScreenStoreDiamonds };

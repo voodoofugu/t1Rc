@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenUnipopStarterpack = styled.div`
+const ScreenUnipopStarterpackStyles = css`
     .popup-layer .m-popup.unipop-starterpack {
         display: block;
         width: 900px;
@@ -476,12 +476,6 @@ const ScreenUnipopStarterpack = styled.div`
                                     font-size: 20px;
                                 }
                             }
-                            //.btn-box{
-                            //    width: 210px; height: 56px; position: absolute; top: 52px;
-                            //    .btn-simple-green.btn-ok{
-                            //        bottom: -4px;
-                            //    }
-                            //}
                         }
                         .card-box {
                             width: 142px;
@@ -738,4 +732,8 @@ const ScreenUnipopStarterpack = styled.div`
     }
 `;
 
-export default ScreenUnipopStarterpack;
+const ScreenUnipopStarterpack = styled.div`
+    ${ScreenUnipopStarterpackStyles}
+`;
+
+export { ScreenUnipopStarterpackStyles, ScreenUnipopStarterpack };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenGoddessPicture = styled.div`
+const V2ScreenGoddessPictureStyles = css`
     .popup-layer .m-popup.goddess-picture {
         width: 706px;
         height: 640px;
@@ -40,4 +40,8 @@ const V2ScreenGoddessPicture = styled.div`
     }
 `;
 
-export default V2ScreenGoddessPicture;
+const V2ScreenGoddessPicture = styled.div`
+    ${V2ScreenGoddessPictureStyles}
+`;
+
+export { V2ScreenGoddessPictureStyles, V2ScreenGoddessPicture };

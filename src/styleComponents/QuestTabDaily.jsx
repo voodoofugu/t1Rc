@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const QuestTabDaily = styled.div`
+const QuestTabDailyStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -604,4 +604,8 @@ const QuestTabDaily = styled.div`
     }
 `;
 
-export default QuestTabDaily;
+const QuestTabDaily = styled.div`
+    ${QuestTabDailyStyles}
+`;
+
+export { QuestTabDailyStyles, QuestTabDaily };

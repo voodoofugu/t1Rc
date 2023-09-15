@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenNsaleFountain = styled.div`
+const V2ScreenNsaleFountainStyles = css`
     .popup-layer .mn-popup.nsale-fountain {
         width: 988px;
         height: 605px;
@@ -396,4 +396,8 @@ const V2ScreenNsaleFountain = styled.div`
     }
 `;
 
-export default V2ScreenNsaleFountain;
+const V2ScreenNsaleFountain = styled.div`
+    ${V2ScreenNsaleFountainStyles}
+`;
+
+export { V2ScreenNsaleFountainStyles, V2ScreenNsaleFountain };

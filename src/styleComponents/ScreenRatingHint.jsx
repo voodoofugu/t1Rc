@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenRatingHint = styled.div`
+const ScreenRatingHintStyles = css`
     .rating-hint-box-rel,
     .rating-hint-box {
         font-size: 0;
@@ -413,4 +413,8 @@ const ScreenRatingHint = styled.div`
     }
 `;
 
-export default ScreenRatingHint;
+const ScreenRatingHint = styled.div`
+    ${ScreenRatingHintStyles}
+`;
+
+export { ScreenRatingHintStyles, ScreenRatingHint };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenChangeDopmain = styled.div`
+const ScreenChangeDopmainStyles = css`
     body {
         .chestbox-container {
             position: absolute;
@@ -262,4 +262,8 @@ const ScreenChangeDopmain = styled.div`
     }
 `;
 
-export default ScreenChangeDopmain;
+const ScreenChangeDopmain = styled.div`
+    ${ScreenChangeDopmainStyles}
+`;
+
+export { ScreenChangeDopmainStyles, ScreenChangeDopmain };

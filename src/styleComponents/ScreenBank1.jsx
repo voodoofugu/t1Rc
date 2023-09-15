@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const ScreenBank1 = styled.div`
+const ScreenBank1Styles = css`
     .left-side .left-panel .tab-panel.bank-panel {
         .bank-subwin.sale {
             .bs-pack-scroll.panels-2 {
@@ -587,4 +587,8 @@ const ScreenBank1 = styled.div`
     }
 `;
 
-export default ScreenBank1;
+const ScreenBank1 = styled.div`
+    ${ScreenBank1Styles}
+`;
+
+export { ScreenBank1Styles, ScreenBank1 };

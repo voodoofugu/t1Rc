@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenTowerRelicsPop = styled.div`
+const V2ScreenTowerRelicsPopStyles = css`
     .popup-layer .m-popup.tower-relics-pop {
         width: 660px;
         height: 505px;
@@ -316,4 +316,8 @@ const V2ScreenTowerRelicsPop = styled.div`
     }
 `;
 
-export default V2ScreenTowerRelicsPop;
+const V2ScreenTowerRelicsPop = styled.div`
+    ${V2ScreenTowerRelicsPopStyles}
+`;
+
+export { V2ScreenTowerRelicsPopStyles, V2ScreenTowerRelicsPop };

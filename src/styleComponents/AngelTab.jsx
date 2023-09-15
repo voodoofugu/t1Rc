@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const AngelTab = styled.div`
+const AngelTabStyles = css`
     body .main {
         .left-side {
             .left-panel {
@@ -2764,4 +2764,8 @@ const AngelTab = styled.div`
     }
 `;
 
-export default AngelTab;
+const AngelTab = styled.div`
+    ${AngelTabStyles}
+`;
+
+export { AngelTabStyles, AngelTab };

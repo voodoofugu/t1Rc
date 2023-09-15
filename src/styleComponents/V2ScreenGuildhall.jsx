@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenGuildhall = styled.div`
+const V2ScreenGuildhallStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -893,4 +893,8 @@ const V2ScreenGuildhall = styled.div`
     }
 `;
 
-export default V2ScreenGuildhall;
+const V2ScreenGuildhall = styled.div`
+    ${V2ScreenGuildhallStyles}
+`;
+
+export { V2ScreenGuildhallStyles, V2ScreenGuildhall };

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenWarehouse = styled.div`
+const V2ScreenWarehouseStyles = css`
     body .main {
         .left-side {
             width: 620px;
@@ -396,4 +396,8 @@ const V2ScreenWarehouse = styled.div`
     }
 `;
 
-export default V2ScreenWarehouse;
+const V2ScreenWarehouse = styled.div`
+    ${V2ScreenWarehouseStyles}
+`;
+
+export { V2ScreenWarehouseStyles, V2ScreenWarehouse };

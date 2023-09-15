@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const V2ScreenCwGuildrank = styled.div`
+const V2ScreenCwGuildrankStyles = css`
     .popup-layer .m-popup.guildrank {
         width: 590px;
         height: 580px;
@@ -215,4 +215,8 @@ const V2ScreenCwGuildrank = styled.div`
     }
 `;
 
-export default V2ScreenCwGuildrank;
+const V2ScreenCwGuildrank = styled.div`
+    ${V2ScreenCwGuildrankStyles}
+`;
+
+export { V2ScreenCwGuildrankStyles, V2ScreenCwGuildrank };

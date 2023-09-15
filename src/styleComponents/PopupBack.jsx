@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
 
-const PopupBack = styled.div`
+const PopupBackStyles = css`
     .popup-layer {
         .back-popup {
             display: block;
@@ -249,4 +249,8 @@ const PopupBack = styled.div`
     }
 `;
 
-export default PopupBack;
+const PopupBack = styled.div`
+    ${PopupBackStyles}
+`;
+
+export { PopupBackStyles, PopupBack };

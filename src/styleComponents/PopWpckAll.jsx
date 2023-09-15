@@ -1,13 +1,12 @@
-import styled from "styled-components";
+import { styled, css } from "styled-components";
+import { PopWpck1Styles } from "../styleComponents/PopWpck1";
+import { PopWpck2Styles } from "../styleComponents/PopWpck2";
+import { PopWpck3Styles } from "../styleComponents/PopWpck3";
+import { PopWpck4Styles } from "../styleComponents/PopWpck4";
+import { PopWpck5Styles } from "../styleComponents/PopWpck5";
+import { PopWpckEndStyles } from "../styleComponents/PopWpckEnd";
 
-const PopWpckAll = styled.div`
-    @import "pop-wpck1.scss";
-    @import "pop-wpck2.scss";
-    @import "pop-wpck3.scss";
-    @import "pop-wpck4.scss";
-    @import "pop-wpck5.scss";
-    @import "pop-wpck-end.scss";
-
+const PopWpckAllStyles = css`
     .sh-wheelpack {
         &.whalesale {
             .lhero-box {
@@ -312,4 +311,14 @@ const PopWpckAll = styled.div`
     }
 `;
 
-export default PopWpckAll;
+const PopWpckAll = styled.div`
+    ${PopWpck1Styles}
+    ${PopWpck2Styles}
+    ${PopWpck3Styles}
+    ${PopWpck4Styles}
+    ${PopWpck5Styles}
+    ${PopWpckEndStyles}
+    ${PopWpckAllStyles}
+`;
+
+export { PopWpckAllStyles, PopWpckAll };
