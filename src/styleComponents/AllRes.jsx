@@ -4,9 +4,6 @@ const AllResStyles = css`
   .main {
     .price {
         display: inline-block;
-        // font-size: 120%; color: #ffa;
-        // line-height: 120%;
-
         &.glow {
             border-radius: 100px;
             padding: 2px 5px;
@@ -1970,7 +1967,7 @@ body .main.world3 .popup-layer .m-popup.ts_confirm {
 `;
 
 const AllRes = styled.div`
-    ${AllResStyles}
+  ${AllResStyles}
 `;
 
 export { AllResStyles, AllRes };
