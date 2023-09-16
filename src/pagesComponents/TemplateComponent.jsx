@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import AaComponMap from "../components/AaComponMap.jsx";
+import ProjectBoxTwo from "../components/ProjectBoxTwo.jsx";
 
 const TemplateComponent = () => {
-    const [stylesLoaded, setStylesLoaded] = useState(false);
+  const [stylesLoaded, setStylesLoaded] = useState(false);
 
-    useEffect(() => {
-        if (process.env.NODE_ENV === "development") {
-            import("../styles/notExported/template.css").then(() => {
-                console.log("Styles loaded!");
-                setStylesLoaded(true); // Отметить, что стили загружены
-            });
-        }
-
-        return () => {};
-    }, []);
-
-    if (!stylesLoaded) {
-        return null; // Возвращаем null, если стили и скрипты не загружены
+  useEffect(() => {
+    if (process.env.NODE_ENV === "development") {
+      import("../styles/notExported/template.css").then(() => {
+        console.log("Styles loaded!");
+        setStylesLoaded(true); // Отметить, что стили загружены
+      });
     }
 
-    const css = `
+    return () => {};
+  }, []);
+
+  if (!stylesLoaded) {
+    return null; // Возвращаем null, если стили и скрипты не загружены
+  }
+
+  const css = `
         body {
             background: #e6e7f1 !important;
             font-family: "Montserrat", sans-serif;
@@ -30,36 +30,37 @@ const TemplateComponent = () => {
             color: #fff;
         }
     `;
-    const templateJs = `
+  const templateJs = `
         import("../scripts/notExported/template.js").then(() => {
             console.log("Script loaded!");
         });
     `;
 
-    return (
-        <HelmetProvider>
-            <Helmet>
-                <style>{css}</style>
-            </Helmet>
-            <div className="templateTit page-title">
-                HTML Template
-                <div
-                    className="toggle-btn"
-                    type="checkbox"
-                    name="toggle"
-                    id="theme-toggle">
-                    <div className="btn-ic"></div>
-                </div>
-            </div>
-            <div className="templatePage template-container">
-                {/* <AaComponMap.ProjectBox /> */}
-                <AaComponMap.ProjectBoxTwo />
-            </div>
-            <Helmet>
-                <script>{templateJs}</script>
-            </Helmet>
-        </HelmetProvider>
-    );
+  return (
+    <HelmetProvider>
+      <Helmet>
+        <style>{css}</style>
+      </Helmet>
+      <div className="templateTit page-title">
+        HTML Template
+        <div
+          className="toggle-btn"
+          type="checkbox"
+          name="toggle"
+          id="theme-toggle"
+        >
+          <div className="btn-ic"></div>
+        </div>
+      </div>
+      <div className="templatePage template-container">
+        {/* <AaComponMap.ProjectBox /> */}
+        <ProjectBoxTwo />
+      </div>
+      <Helmet>
+        <script>{templateJs}</script>
+      </Helmet>
+    </HelmetProvider>
+  );
 };
 
 export default React.memo(TemplateComponent);

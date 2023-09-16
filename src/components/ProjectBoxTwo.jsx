@@ -1,77 +1,53 @@
-import React, { useEffect, useState, Suspense } from "react";
-import AaPagesComponentMap from "../pagesComponents/AaPagesComponentMap";
-import AaComponMap from "../components/AaComponMap.jsx";
+import React, { useEffect, useState, Suspense, lazy } from "react";
+import Loading from "../components/Loading.jsx";
 
 const ProjectBoxTwo = () => {
-    const [pageList, setPageList] = useState([]);
+  const [pageList, setPageList] = useState([]);
 
-    useEffect(() => {
-        const pages = Object.keys(AaPagesComponentMap);
-        setPageList(pages);
-    }, []);
+  useEffect(() => {
+    const importPageComponents = async () => {
+      try {
+        // Получаем список файлов из папки pagesComponents
+        const context = require.context("../pagesComponents/", false, /\.jsx$/);
+        const components = context
+          .keys()
+          .filter(
+            (key) =>
+              ![
+                "./AaPagesComponentMap.jsx",
+                "./TemplateComponent.jsx",
+              ].includes(key)
+          )
+          .map((key) => key.replace("./", "").replace(".jsx", ""));
+        setPageList(components);
+      } catch (error) {
+        console.error("Error importing page components:", error);
+      }
+    };
 
-    return (
-        <>
-            {pageList.map((pageName, index) => {
-                // Показывать только первые восемь страниц
-                if (index < 8) {
-                    const PageComponent =
-                        AaPagesComponentMap[pageName] ||
-                        AaPagesComponentMap.Page404Component;
+    importPageComponents();
+  }, []);
 
-                    return (
-                        <div className="project-box" key={pageName}>
-                            <a href={pageName}>{pageName}</a>
-                            <div
-                                id={`root-${pageName}`}
-                                className="projectComponent noScripts">
-                                <Suspense fallback={<AaComponMap.Loading />}>
-                                    <PageComponent />
-                                </Suspense>
-                            </div>
-                        </div>
-                    );
-                }
-                return null; // Скрываем остальные страницы
-            })}
-        </>
-    );
+  return (
+    <>
+      {pageList.map((pageName) => {
+        const PageComponent = lazy(() =>
+          import(`../pagesComponents/${pageName}.jsx`)
+        );
+
+        return (
+          <div className="project-box" key={pageName}>
+            <a href={pageName}>{pageName}</a>
+            <div id={`root-${pageName}`} className="projectComponent noScripts">
+              <Suspense fallback={<Loading />}>
+                <PageComponent />
+              </Suspense>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
 };
 
 export default ProjectBoxTwo;
-
-// import React, { useEffect, useState, Suspense } from "react";
-// import AaPagesComponentMap from "../pagesComponents/AaPagesComponentMap";
-// import AaComponMap from "../components/AaComponMap.jsx";
-
-// const ProjectBoxTwo = () => {
-//     const [pageList, setPageList] = useState([]);
-
-//     useEffect(() => {
-//         const pages = Object.keys(AaPagesComponentMap);
-//         setPageList(pages);
-//     }, []);
-
-//     return (
-//         <>
-//             {pageList.map((pageName) => {
-//                 const PageComponent =
-//                     AaPagesComponentMap[pageName] ||
-//                     AaPagesComponentMap.Page404Component;
-
-//                 return (
-//                     <div className="project-box" key={pageName}>
-//                         <a href={pageName}>{pageName}</a>
-//                         <div id={`root-${pageName}`} className="noScripts">
-//                             <Suspense fallback={<AaComponMap.Loading />}>
-//                                 <PageComponent />
-//                             </Suspense>
-//                         </div>
-//                     </div>
-//                 );
-//             })}
-//         </>
-//     );
-// };
-
-// export default ProjectBoxTwo;
