@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import ProjectBoxTwo from "../components/ProjectBoxTwo.jsx";
+// import ProjectBoxTwo from "../components/ProjectBoxTwo.jsx";
+const ProjectBoxTwo = lazy(() => import(`../components/ProjectBoxTwo.jsx`));
+import Loading from "../components/Loading.jsx";
 
 const TemplateComponent = () => {
   const [stylesLoaded, setStylesLoaded] = useState(false);
@@ -52,10 +54,12 @@ const TemplateComponent = () => {
           <div className="btn-ic"></div>
         </div>
       </div>
-      <div className="templatePage template-container">
-        {/* <AaComponMap.ProjectBox /> */}
-        <ProjectBoxTwo />
-      </div>
+      <Suspense fallback={<Loading />}>
+        <div className="templatePage template-container">
+          {/* <AaComponMap.ProjectBox /> */}
+          <ProjectBoxTwo />
+        </div>
+      </Suspense>
       <Helmet>
         <script>{templateJs}</script>
       </Helmet>

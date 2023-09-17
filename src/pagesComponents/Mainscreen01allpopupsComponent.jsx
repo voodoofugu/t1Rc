@@ -3,6 +3,16 @@ import Loading from "../components/Loading.jsx";
 // import Mainscreen01allpopupsComponentStylesMap from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
 import WorldBtnBox from "../stylesMaps/WorldBtnBox";
 
+import styled from "styled-components";
+const StyledWorldBtnBox = styled(WorldBtnBox)`
+  position: absolute;
+  top: 660px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Roboto", sans-serif;
+  width: 140px;
+`;
+
 import dynamic from "next/dynamic";
 const ScreenFapopolyRulesStyles = dynamic(
   () => import("../stylesMaps/Mainscreen01allpopupsComponentStylesMap"),
@@ -14869,7 +14879,7 @@ const MainScreen01AllPopupsComponent = () => {
           <div className="close-btn"></div>
         </div>
       </div>
-      {/* <WorldBtnBox /> */}
+      <StyledWorldBtnBox />
     </div>
     // </ScreenFapopolyRulesStyles>
   );

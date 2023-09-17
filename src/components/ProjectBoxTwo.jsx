@@ -7,17 +7,10 @@ const ProjectBoxTwo = () => {
   useEffect(() => {
     const importPageComponents = async () => {
       try {
-        // Получаем список файлов из папки pagesComponents
         const context = require.context("../pagesComponents/", false, /\.jsx$/);
         const components = context
           .keys()
-          .filter(
-            (key) =>
-              ![
-                "./AaPagesComponentMap.jsx",
-                "./TemplateComponent.jsx",
-              ].includes(key)
-          )
+          .filter((key) => !["./TemplateComponent.jsx"].includes(key))
           .map((key) => key.replace("./", "").replace(".jsx", ""));
         setPageList(components);
       } catch (error) {
@@ -32,17 +25,22 @@ const ProjectBoxTwo = () => {
     <>
       {pageList.map((pageName) => {
         const PageComponent = lazy(() =>
-          import(`../pagesComponents/${pageName}.jsx`)
+          import(
+            /* webpackPrefetch: true */ `../pagesComponents/${pageName}.jsx`
+          )
         );
 
         return (
           <div className="project-box" key={pageName}>
-            <a href={pageName}>{pageName}</a>
-            <div id={`root-${pageName}`} className="projectComponent noScripts">
-              <Suspense fallback={<Loading />}>
+            <Suspense key={pageName} fallback={<Loading />}>
+              <a href={pageName}>{pageName}</a>
+              <div
+                id={`root-${pageName}`}
+                className="projectComponent noScripts"
+              >
                 <PageComponent />
-              </Suspense>
-            </div>
+              </div>
+            </Suspense>
           </div>
         );
       })}

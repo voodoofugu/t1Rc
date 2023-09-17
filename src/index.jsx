@@ -1,8 +1,12 @@
 import "./stylesMap";
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import TemplateComponent from "./pagesComponents/TemplateComponent";
+// import TemplateComponent from "./pagesComponents/TemplateComponent";
+const TemplateComponentLazy = lazy(() =>
+  import(`./pagesComponents/TemplateComponent.jsx`)
+);
+
 import Loading from "./components/Loading.jsx";
 
 const Root = document.getElementById("root");
@@ -15,7 +19,7 @@ if (Root) {
   window.__REACT_ROOT__.render(
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <TemplateComponent />
+        <TemplateComponentLazy />
       </Suspense>
     </BrowserRouter>
   );
