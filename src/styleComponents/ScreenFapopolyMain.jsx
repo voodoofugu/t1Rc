@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const ScreenFapopolyMainStyles = css`
-    body .main .main-bg {
+    .main .main-bg {
         background-image: url(../img/v2-fapop-bg-hw.jpg);
         background-size: 100%;
         &.easter {
@@ -10,7 +10,7 @@ const ScreenFapopolyMainStyles = css`
         }
     }
 
-    body .main .fapop-content-all {
+    .main .fapop-content-all {
         width: 1200px;
         height: 640px;
         position: absolute;

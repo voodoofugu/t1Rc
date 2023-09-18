@@ -1,9 +1,9 @@
 import React from "react";
-// import screenFapopolyMain from "../styles/screen-fapopoly-main.scss";
+import { ScreenFapopolyMain } from "../styleComponents/ScreenFapopolyMain.jsx";
 
 const MainScreen23FapopolyMainComponent = () => {
     return (
-        <>
+        <ScreenFapopolyMain>
             <div className="main world1">
                 <div className="main-bg easter"></div>
                 <div className="fapop-content-all">
@@ -155,7 +155,7 @@ const MainScreen23FapopolyMainComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </ScreenFapopolyMain>
     );
 };
 

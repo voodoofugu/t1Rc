@@ -1,9 +1,9 @@
 import React from "react";
-// import screenUnipopSubscription from "../styles/screen-unipop-subscription.scss";
+import { ScreenUnipopSubscription } from "../styleComponents/ScreenUnipopSubscription.jsx";
 
 const MainScreen22Unipop14subscriptionComponent = () => {
     return (
-        <>
+        <ScreenUnipopSubscription>
             <div className="main world1">
                 <div className="main-bg"></div>
 
@@ -530,7 +530,7 @@ const MainScreen22Unipop14subscriptionComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </ScreenUnipopSubscription>
     );
 };
 

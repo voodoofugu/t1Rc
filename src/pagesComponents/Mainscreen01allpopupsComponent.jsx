@@ -1,17 +1,8 @@
 import React, { useEffect } from "react";
 import styled from "@emotion/styled";
-import Loading from "../components/Loading.jsx";
+// import Loading from "../components/Loading.jsx";
 import Mainscreen01allpopupsComponentStylesMap from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
 import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
-
-const StyledWorldBtnBox = styled(WorldBtnBox)`
-    position: absolute;
-    top: 660px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: "Roboto", sans-serif;
-    width: 140px;
-`;
 
 // import dynamic from "next/dynamic";
 // const ScreenFapopolyRulesStyles = dynamic(
@@ -19225,7 +19216,7 @@ const MainScreen01AllPopupsComponent = () => {
                         <div className="close-btn"></div>
                     </div>
                 </div>
-                <StyledWorldBtnBox />
+                <WorldBtnBox />
             </div>
         </Mainscreen01allpopupsComponentStylesMap>
     );

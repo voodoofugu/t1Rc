@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
-// import styled from "@emotion/styled";
+import styled from "@emotion/styled";
 
-// const WorldBtnBox = styled.div`
-//     .world-btn {
-//         position: absolute;
-//         top: 660px;
-//         left: 50%;
-//         transform: translateX(-50%);
-//         font-family: "Roboto", sans-serif;
-//         width: 140px;
-//     }
-// `;
+const StyledWorldBtnBox = styled.div`
+    position: absolute;
+    top: 660px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Roboto", sans-serif;
+    width: 140px;
+`;
 
-const WorldBtnBox = ({ className }) => {
+const WorldBtnBox = () => {
     const [isDarkWorld, setIsDarkWorld] = useState(false);
 
     const btnClickHandler = () => {
@@ -63,16 +61,11 @@ const WorldBtnBox = ({ className }) => {
     }, [isDarkWorld]);
 
     return (
-        // <WorldBtnBox>
-        //     <div className={`color-btn green world-btn`}>
-        //         <div className="color-btn-text"></div>
-        //     </div>
-        // </WorldBtnBox>
-        <div className={className}>
+        <StyledWorldBtnBox>
             <div className="color-btn green world-btn">
                 <div className="color-btn-text"></div>
             </div>
-        </div>
+        </StyledWorldBtnBox>
     );
 };
 

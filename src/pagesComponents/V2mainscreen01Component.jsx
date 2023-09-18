@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-// import screenBank from "../styles/screen-bank.scss";
-// import screenBank1 from "../styles/screen-bank1.scss";
-// import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-// import angelTab from "../styles/angel-tab.scss";
-// import screenSuperhero from "../styles/screen-superhero.scss";
+import React, { useEffect } from "react";
+import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
+import { V2MainScreen01ComponentStylesMap } from "../stylesMaps/V2MainScreen01ComponentStylesMap.jsx";
 
 const V2MainScreen01Component = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -15,42 +11,6 @@ const V2MainScreen01Component = () => {
 
     useEffect(() => {
         if (pageContainer && !pageContainer.classList.contains("noScripts")) {
-            // кнопка перехода в тёмный мир
-            let btn = document.createElement("div");
-            let btnText = document.createElement("div");
-            btn.className = "color-btn green world-btn";
-            btnText.className = "color-btn-text";
-            btnText.innerHTML = "To Darkworld";
-            btn.append(btnText);
-            document.querySelector("#root").append(btn);
-            const main = document.querySelector(".main");
-            const reG = document.querySelector(
-                ".resource-panel > div:nth-of-type(2)"
-            );
-            const reI = document.querySelector(".resource-pic > img");
-            const vvT = document.querySelector(".value-vip-ticket");
-            btn.addEventListener("click", () => {
-                if (main.classList.contains("world1")) {
-                    main.classList.remove("world1");
-                    main.classList.add("world3");
-                    btnText.innerHTML = "To Earthworld";
-
-                    reG.classList.remove("resource-gold");
-                    reG.classList.add("resource-dark_gold");
-                    reI.src = "img/v2-res-dark.png";
-                    vvT.style.display = "none";
-                } else {
-                    main.classList.remove("world3");
-                    main.classList.add("world1");
-                    btnText.innerHTML = "To Darkworld";
-
-                    reG.classList.remove("resource-dark_gold");
-                    reG.classList.add("resource-gold");
-                    reI.src = "rc/v2-res-gold.png";
-                    vvT.style.display = "block";
-                }
-            });
-
             // все попапы
             [...document.querySelectorAll(".m-popup")].map((i) => {
                 i.style.display = "none";
@@ -448,21 +408,8 @@ const V2MainScreen01Component = () => {
         }
         return () => {};
     }, []);
-    const css = `
-        .world-btn {
-            position: absolute;
-            top: 660px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: "Roboto", sans-serif;
-            width: 140px;
-        }
-    `;
     return (
-        <HelmetProvider>
-            <Helmet>
-                <style>{css}</style>
-            </Helmet>
+        <V2MainScreen01ComponentStylesMap>
             <div className="main world1">
                 <div
                     className="main-bg"
@@ -4143,8 +4090,9 @@ const V2MainScreen01Component = () => {
                         </div>
                     </div>
                 </div>
+                <WorldBtnBox />
             </div>
-        </HelmetProvider>
+        </V2MainScreen01ComponentStylesMap>
     );
 };
 

@@ -40,6 +40,7 @@
         "html-webpack-plugin": "^5.5.1",
         "http-cache-semantics": "^4.1.1",
         "image-webpack-loader": "^8.1.0",
+        "last": "^1.1.0",
         "mini-css-extract-plugin": "^2.7.5",
         "node-sass": "^9.0.0",
         "normalize.css": "^8.0.1",
