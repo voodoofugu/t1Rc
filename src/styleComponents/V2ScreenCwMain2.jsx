@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenCwMain2Styles = css`
     body .main {
@@ -105,12 +106,13 @@ const V2ScreenCwMain2Styles = css`
                             top: 10px;
                             left: 399px;
                             background: linear-gradient(
-                            0deg, 
-                            #ffe199 0%, 
-                            #f4c657 18%, 
-                            #ffe199 60%, 
-                            #f4c557 85%, 
-                            #ffe199 100%);
+                                0deg,
+                                #ffe199 0%,
+                                #f4c657 18%,
+                                #ffe199 60%,
+                                #f4c557 85%,
+                                #ffe199 100%
+                            );
                             border-radius: 12px;
                             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                             color: #3c3737;
@@ -149,7 +151,8 @@ const V2ScreenCwMain2Styles = css`
                                         }
                                         &:active {
                                             box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
-                                                inset 0 2px 2px rgba(0, 0, 0, 0.2);
+                                                inset 0 2px 2px
+                                                    rgba(0, 0, 0, 0.2);
                                             .color-btn-text {
                                                 top: 7px;
                                             }
@@ -203,12 +206,13 @@ const V2ScreenCwMain2Styles = css`
                                     }
                                     &::-webkit-scrollbar-thumb {
                                         background: linear-gradient(
-                                        0deg, 
-                                        #ffe199 0%, 
-                                        #f4c657 18%, 
-                                        #ffe199 60%, 
-                                        #f4c557 85%, 
-                                        #ffe199 100%);
+                                            0deg,
+                                            #ffe199 0%,
+                                            #f4c657 18%,
+                                            #ffe199 60%,
+                                            #f4c557 85%,
+                                            #ffe199 100%
+                                        );
                                     }
                                     .cw-main-chat {
                                         width: 280px;
@@ -290,7 +294,8 @@ const V2ScreenCwMain2Styles = css`
                                                 left: -8px;
                                                 width: 0;
                                                 height: 0;
-                                                border-top: 10px solid transparent;
+                                                border-top: 10px solid
+                                                    transparent;
                                                 border-right: 8px solid #fff;
                                                 border-bottom: 10px solid
                                                     transparent;
@@ -422,12 +427,13 @@ const V2ScreenCwMain2Styles = css`
                                         }
                                         &::-webkit-scrollbar-thumb {
                                             background: linear-gradient(
-                                                0deg, 
-                                                #ffe199 0%, 
-                                                #f4c657 18%, 
-                                                #ffe199 60%, 
-                                                #f4c557 85%, 
-                                                #ffe199 100%);
+                                                0deg,
+                                                #ffe199 0%,
+                                                #f4c657 18%,
+                                                #ffe199 60%,
+                                                #f4c557 85%,
+                                                #ffe199 100%
+                                            );
                                         }
                                         .cw-clan-box {
                                             width: 550px;
@@ -788,12 +794,13 @@ const V2ScreenCwMain2Styles = css`
                     }
                     &::-webkit-scrollbar-thumb {
                         background: linear-gradient(
-                        0deg, 
-                        #ffe199 0%, 
-                        #f4c657 18%, 
-                        #ffe199 60%, 
-                        #f4c557 85%, 
-                        #ffe199 100%);
+                            0deg,
+                            #ffe199 0%,
+                            #f4c657 18%,
+                            #ffe199 60%,
+                            #f4c557 85%,
+                            #ffe199 100%
+                        );
                     }
                     .cw-clan-box {
                         width: 550px;
@@ -1039,7 +1046,7 @@ const V2ScreenCwMain2Styles = css`
 `;
 
 const V2ScreenCwMain2 = styled.div`
-  ${V2ScreenCwMain2Styles}
+    ${V2ScreenCwMain2Styles}
 `;
 
 export { V2ScreenCwMain2Styles, V2ScreenCwMain2 };

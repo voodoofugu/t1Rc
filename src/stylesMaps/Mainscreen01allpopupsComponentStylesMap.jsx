@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "@emotion/styled";
 import { AllResStyles } from "../styleComponents/AllRes";
 import { ScreenFapopolyRulesStyles } from "../styleComponents/ScreenFapopolyRules";
 import { ScreenUnipopSubscriptionStyles } from "../styleComponents/ScreenUnipopSubscription";

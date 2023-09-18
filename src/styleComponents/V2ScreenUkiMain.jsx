@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenUkiMainStyles = css`
     body .main {
@@ -139,7 +140,8 @@ const V2ScreenUkiMainStyles = css`
                             overflow-y: scroll;
                             font-size: 0;
                             &::-webkit-scrollbar-track {
-                                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                                -webkit-box-shadow: inset 0 0 6px
+                                    rgba(0, 0, 0, 0.5);
                                 border-radius: 10px;
                                 background-color: #7c665c;
                             }
@@ -176,7 +178,8 @@ const V2ScreenUkiMainStyles = css`
                                     text-transform: uppercase;
                                     border-radius: 10px;
                                     margin: 5px 0 10px 0;
-                                    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
+                                    box-shadow: 0 1px 1px
+                                            rgba(255, 255, 255, 0.1),
                                         inset 0px 1px 1px rgba(0, 0, 0, 0.1);
                                 }
                                 .journal-parth {
@@ -443,13 +446,13 @@ const V2ScreenUkiMainStyles = css`
                                     position: relative;
                                     display: inline-block;
                                     background: linear-gradient(
-            180deg,
-            #c68300 0%,
-            #f4dfb6 50%,
-            #c68200 70%,
-            #fad489 85%,
-            #c78302 100%
-        );
+                                        180deg,
+                                        #c68300 0%,
+                                        #f4dfb6 50%,
+                                        #c68200 70%,
+                                        #fad489 85%,
+                                        #c78302 100%
+                                    );
                                     border-radius: 10px;
                                     box-shadow: inset 0 1px 4px
                                             rgba(255, 255, 255, 0.3),
@@ -475,7 +478,8 @@ const V2ScreenUkiMainStyles = css`
                                         color: #fff;
                                         font-size: 16px;
                                         font-weight: bold;
-                                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                                        text-shadow: 0 1px 2px
+                                            rgba(0, 0, 0, 0.35);
                                     }
                                 }
                             }
@@ -558,7 +562,7 @@ const V2ScreenUkiMainStyles = css`
 `;
 
 const V2ScreenUkiMain = styled.div`
-  ${V2ScreenUkiMainStyles}
+    ${V2ScreenUkiMainStyles}
 `;
 
 export { V2ScreenUkiMainStyles, V2ScreenUkiMain };

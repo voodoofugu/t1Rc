@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenNsaleMainStyles = css`
     .popup-layer .mn-popup.nsale-main {

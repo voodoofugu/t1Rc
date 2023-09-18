@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const ScreenBaseStyles = css`
     .left-side .left-panel .tab-panel.achiev-panel {
@@ -220,8 +221,15 @@ const ScreenBaseStyles = css`
             font-size: 18px;
             font-weight: bold;
             border-radius: 7px;
-            background: linear-gradient(45deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
-            box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624, 0 0 3px #472624;
+            background: linear-gradient(
+                45deg,
+                #e8c34e,
+                #f1da7c,
+                #cfa831,
+                #fbf1d8
+            );
+            box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                0 0 3px #472624;
             position: absolute;
             left: 280px;
             top: 5px;
@@ -901,7 +909,12 @@ const ScreenBaseStyles = css`
                 right: 15px;
                 height: 115px;
                 border-radius: 15px;
-                background: linear-gradient(to bottom, #b32d22, #8a2221, #651820);
+                background: linear-gradient(
+                    to bottom,
+                    #b32d22,
+                    #8a2221,
+                    #651820
+                );
                 box-shadow: 0 3px 0 #403d38;
                 &:before {
                     content: "";
@@ -912,7 +925,12 @@ const ScreenBaseStyles = css`
                     bottom: 15px;
                     border: solid 2px #ff6;
                     border-radius: 12px;
-                    background: linear-gradient(to top, #b32d22, #8a2221, #651820);
+                    background: linear-gradient(
+                        to top,
+                        #b32d22,
+                        #8a2221,
+                        #651820
+                    );
                     box-shadow: inset 0 0 3px #ff0, 0 0 2px #ff3;
                 }
 

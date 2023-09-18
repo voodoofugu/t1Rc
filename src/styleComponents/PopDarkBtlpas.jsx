@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const PopDarkBtlpasStyles = css`
     body .main.world1,
@@ -150,7 +151,7 @@ const PopDarkBtlpasStyles = css`
                             height: 178px;
                             display: inline-block;
                             margin: 0 6px;
-                            &:first-child:after,
+                            &:first-of-type:after,
                             &:last-child:after {
                                 content: "";
                                 position: absolute;
@@ -167,7 +168,7 @@ const PopDarkBtlpasStyles = css`
                                     brightness(1.3) hue-rotate(18deg);
                                 pointer-events: none;
                             }
-                            &:first-child:after {
+                            &:first-of-type:after {
                                 left: 136px;
                                 transform: translateY(-50%);
                             }

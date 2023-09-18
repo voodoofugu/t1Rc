@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenPseShopStyles = css`
     .popup-layer .m-popup.pseshop {

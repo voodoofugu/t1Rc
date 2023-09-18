@@ -2250,7 +2250,7 @@ body .main.world3 {
                             );
                             border-radius: 7px;
                         }
-                        &:first-child,
+                        &:first-of-type,
                         &:last-child {
                             &:after {
                                 content: "";
@@ -2270,7 +2270,7 @@ body .main.world3 {
                                 pointer-events: none;
                             }
                         }
-                        &:first-child {
+                        &:first-of-type {
                             &:after {
                                 left: -80px;
                                 transform: translateY(-50%);

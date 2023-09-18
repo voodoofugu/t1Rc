@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenFwMapWarpopStyles = css`
     body .main {
@@ -503,7 +504,7 @@ const V2ScreenFwMapWarpopStyles = css`
 `;
 
 const V2ScreenFwMapWarpop = styled.div`
-  ${V2ScreenFwMapWarpopStyles}
+    ${V2ScreenFwMapWarpopStyles}
 `;
 
 export { V2ScreenFwMapWarpopStyles, V2ScreenFwMapWarpop };

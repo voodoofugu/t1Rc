@@ -31,7 +31,7 @@ html {
     height: 100%;
     margin: 0;
 
-    @include prefix(user-select, none);
+    user-select: none;
 }
 
 body {
@@ -298,9 +298,9 @@ body {
                 position: absolute;
                 right: 3px;
                 top: 0;
-                @include prefix(border-radius, 7px);
-                @include prefix(border-top-right-radius, 40px);
-                @include prefix(border-bottom-right-radius, 40px);
+                border-radius: 7px;
+                border-top-right-radius: 40px;
+                border-bottom-right-radius: 40px;
                 line-height: 50px;
                 font-size: 36px;
                 color: #3d3737;
@@ -471,9 +471,9 @@ body {
                             position: absolute;
                             right: 15px;
                             top: 0;
-                            @include prefix(border-radius, 7px);
-                            @include prefix(border-top-right-radius, 40px);
-                            @include prefix(border-bottom-right-radius, 40px);
+                            border-radius: 7px;
+                            border-top-right-radius: 40px;
+                            border-bottom-right-radius: 40px;
                             line-height: 50px;
                             font-size: 36px;
                             color: #3d3737;
@@ -520,7 +520,7 @@ body {
                         border: solid 2px #ffa;
                         padding: 0;
                         padding: 0px 10px;
-                        @include prefix(border-radius, 22px);
+                        border-radius: 22px;
                         display: none;
                         &:before {
                             content: "";
@@ -558,7 +558,7 @@ body {
                             height: 24px;
                             background: #700;
                             margin-top: 1px;
-                            @include prefix(border-radius, 22px);
+                            border-radius: 22px;
                             padding: 0px 5px;
                             font-size: 14px;
                             color: #fff;
@@ -593,7 +593,7 @@ body {
                 //     //     position: absolute; left: 0px; top: 0px;
                 //     //     // background: #3D3737;
                 //     //     background: linear-gradient(45deg, #5e5252, #613936, #765453, #776a57, #5e5252);
-                //     //     @include prefix(border-radius, 58px);
+                //     //     border-radius: 58px;
                 //     //     z-index: 1;
                 //     //     box-shadow: 0 0 5px #3D3737, 0 0 10px #3D3737;
                 //     // }
@@ -892,8 +892,8 @@ body {
                     #cfa831,
                     #fbf1d8
                 );
-                @include prefix(border-top-left-radius, 57px);
-                @include prefix(border-bottom-left-radius, 57px);
+                border-top-left-radius: 57px;
+                border-bottom-left-radius: 57px;
                 // position: absolute; left: -10px; top: -3px;
                 // box-shadow:
                 // inset 0 -3px 0px #c87725,
@@ -906,8 +906,8 @@ body {
                     display: block;
                     width: 85px;
                     height: 44px;
-                    @include prefix(border-top-left-radius, 57px);
-                    @include prefix(border-bottom-left-radius, 57px);
+                    border-top-left-radius: 57px;
+                    border-bottom-left-radius: 57px;
                     position: absolute;
                     left: 4px;
                     top: 4px;
@@ -923,9 +923,9 @@ body {
                 }
                 // .btn-add{
                 //     display: block; width: 40px; height: 58px;
-                //     @include prefix(border-radius, 5px);
-                //     @include prefix(border-top-right-radius, 40px);
-                //     @include prefix(border-bottom-right-radius, 40px);
+                //     border-radius: 5px;
+                //     border-top-right-radius: 40px;
+                //     border-bottom-right-radius: 40px;
                 //     background: linear-gradient(to top, #e9c44f, #efd368, #f7eec7);
                 //     position: absolute; left:100%; top:0;
                 //     box-shadow:
@@ -973,7 +973,7 @@ body {
                     display: inline-block;
                     width: 28px;
                     height: 28px;
-                    @include prefix(border-radius, 7px);
+                    border-radius: 7px;
                     position: relative;
                     margin: 2px;
                     background: linear-gradient(
@@ -992,7 +992,7 @@ body {
                     //     display: block; width: 22px; height: 22px;
                     //     position: absolute; left: 3px; top: 3px;
                     //     background: linear-gradient(180deg, #3d302a, #9a817c, #e2dcdc);
-                    //     @include prefix(border-radius, 6px);
+                    //     border-radius: 6px;
                     // }
                     &:after {
                         content: "";
@@ -1078,8 +1078,8 @@ body {
                     width: 52px;
                     height: 33px;
                     position: relative;
-                    @include prefix(border-top-left-radius, 30px);
-                    @include prefix(border-top-right-radius, 30px);
+                    border-top-left-radius: 30px;
+                    border-top-right-radius: 30px;
                     background: #554b4a;
                     margin-top: 19px;
                     border: solid 4px #9d8b81;
@@ -1102,8 +1102,8 @@ body {
                         background: #9e8b7d;
                         border: solid 4px #c4b6ad;
                         border-bottom: none;
-                        @include prefix(border-top-left-radius, 35px);
-                        @include prefix(border-top-right-radius, 35px);
+                        border-top-left-radius: 35px;
+                        border-top-right-radius: 35px;
                         margin-top: 10px;
                         z-index: 1;
                         background-image: url(../img/tab-01.png);
@@ -1203,7 +1203,7 @@ body {
                 .btn-close-x {
                     width: 30px;
                     height: 30px;
-                    @include prefix(border-radius, 7px);
+                    border-radius: 7px;
                     position: absolute;
                     right: -3px;
                     top: -8px;
@@ -1233,7 +1233,7 @@ body {
                         width: 24px;
                         height: 7px;
                         background: rgba(255, 255, 255, 0.25);
-                        @include prefix(border-radius, 5px);
+                        border-radius: 5px;
                         position: absolute;
                         left: 3px;
                         top: 3px;
@@ -1476,7 +1476,7 @@ body {
 
                                 position: relative;
                                 background-color: #5e5252;
-                                @include prefix(border-radius, 7px);
+                                border-radius: 7px;
                                 font-size: 15px;
                                 font-weight: bold;
                                 text-align: center;
@@ -1496,7 +1496,7 @@ body {
                                     display: block;
                                     width: 90px;
                                     height: 106px;
-                                    @include prefix(border-radius, 5px);
+                                    border-radius: 5px;
                                     background: #c4b6ad;
                                     position: absolute;
                                     left: 3px;
@@ -1517,7 +1517,7 @@ body {
                                     .ava {
                                         width: 90px;
                                         height: 103px;
-                                        @include prefix(border-radius, 5px);
+                                        border-radius: 5px;
                                     }
                                 }
 
@@ -1525,7 +1525,7 @@ body {
                                     display: block;
                                     width: 85px;
                                     height: 22px;
-                                    @include prefix(border-radius, 5px);
+                                    border-radius: 5px;
                                     background: linear-gradient(
                                         to right,
                                         #73524d,
@@ -1579,7 +1579,7 @@ body {
 
                                 // .lvl{
                                 //     display: block; width: 46px; height: 25px;
-                                //     @include prefix(border-radius, 46px);
+                                //     border-radius: 46px;
                                 //     position: absolute; left: 79px; top: -6px;
                                 //     // background: red;
                                 //     // border: solid #ff8 2px;
@@ -1593,9 +1593,9 @@ body {
                                 //     .n{
                                 //         display: block; width: 42px; height: 28px;
                                 //         // background: red;
-                                //         @include prefix(border-radius, 46px);
-                                //         @include prefix(border-top-left-radius, 0);
-                                //         @include prefix(border-top-right-radius, 0);
+                                //         border-radius: 46px;
+                                //         border-top-left-radius: 0;
+                                //         border-top-right-radius: 0;
                                 //         position: absolute; left: 2px; bottom:2px;
                                 //         line-height: 26px;
                                 //         color: #ffa;
@@ -1622,7 +1622,7 @@ body {
                                     display: block;
                                     width: 46px;
                                     height: 25px;
-                                    @include prefix(border-radius, 46px);
+                                    border-radius: 46px;
                                     position: absolute;
                                     left: 79px;
                                     top: -6px;
@@ -1645,15 +1645,9 @@ body {
                                         width: 42px;
                                         height: 28px;
                                         // background: red;
-                                        @include prefix(border-radius, 46px);
-                                        @include prefix(
-                                            border-top-left-radius,
-                                            0
-                                        );
-                                        @include prefix(
-                                            border-top-right-radius,
-                                            0
-                                        );
+                                        border-radius: 46px;
+                                        border-top-left-radius: 0;
+                                        border-top-right-radius: 0;
                                         position: absolute;
                                         left: 2px;
                                         bottom: 2px;
@@ -1728,10 +1722,10 @@ body {
                                         display: block;
                                         width: 40px;
                                         height: 40px;
-                                        @include prefix(border-radius, 10px);
-                                        // @include prefix(border-radius, 40px);
-                                        // @include prefix(border-bottom-left-radius, 8px);
-                                        // @include prefix(border-bottom-right-radius, 8px);
+                                        border-radius: 10px;
+                                        // border-radius: 40px;
+                                        // border-bottom-left-radius: 8px;
+                                        // border-bottom-right-radius: 8px;
                                         background: red;
                                         position: absolute;
                                         left: 28px;
@@ -1868,7 +1862,7 @@ body {
 
                                     position: relative;
                                     background-color: #755a49;
-                                    @include prefix(border-radius, 7px);
+                                    border-radius: 7px;
                                     font-size: 15px;
                                     font-weight: bold;
                                     text-align: center;
@@ -1878,7 +1872,7 @@ body {
                                         display: block;
                                         width: 90px;
                                         height: 109px;
-                                        @include prefix(border-radius, 5px);
+                                        border-radius: 5px;
                                         background: #604d3f;
                                         position: absolute;
                                         left: 3px;
@@ -1886,7 +1880,7 @@ body {
                                         .ava {
                                             width: 90px;
                                             height: 103px;
-                                            @include prefix(border-radius, 5px);
+                                            border-radius: 5px;
                                         }
                                     }
 
@@ -1894,7 +1888,7 @@ body {
                                         display: block;
                                         width: 80px;
                                         height: 20px;
-                                        @include prefix(border-radius, 5px);
+                                        border-radius: 5px;
                                         background: #796658;
                                         position: absolute;
                                         right: 5px;
@@ -1939,7 +1933,7 @@ body {
                                         display: block;
                                         width: 80px;
                                         height: 36px;
-                                        @include prefix(border-radius, 5px);
+                                        border-radius: 5px;
                                         background: #624a3e;
                                         position: absolute;
                                         right: 5px;
@@ -2056,8 +2050,8 @@ body {
                         );
                         box-shadow: 0 1px 0px #c87726,
                             1px 0px 0px rgba(0, 0, 0, 0.33);
-                        @include prefix(border-top-right-radius, 12px);
-                        @include prefix(border-bottom-right-radius, 12px);
+                        border-top-right-radius: 12px;
+                        border-bottom-right-radius: 12px;
                         cursor: pointer;
 
                         .icon {
@@ -2102,7 +2096,7 @@ body {
                             );
                             box-shadow: 0 2px 0px #c87726,
                                 2px 0px 0px rgba(0, 0, 0, 0.33), 0 0 3px #c87726;
-                            @include prefix(border-radius, 7px);
+                            border-radius: 7px;
                         }
                         .text-boss {
                             background: linear-gradient(
@@ -2161,8 +2155,8 @@ body {
                         list-style: none;
                         margin: 0;
                         padding: 0;
-                        @include prefix(border-top-right-radius, 12px);
-                        @include prefix(border-bottom-right-radius, 12px);
+                        border-top-right-radius: 12px;
+                        border-bottom-right-radius: 12px;
                         white-space: nowrap;
                         font-size: 0;
                         padding-right: 25px;
@@ -2201,7 +2195,7 @@ body {
                             );
                             cursor: pointer;
                             // margin-right: 7px;
-                            @include prefix(border-radius, 12px);
+                            border-radius: 12px;
                             border: solid 2px #765853;
                             box-shadow: inset 0 -3px 0px #2a703c,
                                 inset 0 0 4px #cdf7d2, inset 0 0 6px #ddf7cd;
@@ -2240,8 +2234,8 @@ body {
                 //     background: linear-gradient(to bottom, #9E8B7D, #CCAE98, #6D6055);
                 //     position: absolute;
                 //     left:100%; top: 0px;
-                //     @include prefix(border-top-right-radius, 12px);
-                //     @include prefix(border-bottom-right-radius, 12px);
+                //     border-top-right-radius: 12px;
+                //     border-bottom-right-radius: 12px;
                 //     box-shadow:
                 //         2px 0px 0px rgba(0,0,0,0.33),
                 //         0 0 5px rgba(0,0,0,0.33);
@@ -2333,7 +2327,7 @@ body {
                 //             background: linear-gradient(to top, #97FD9A, #258B2F, #7BEC79);
                 //             cursor: pointer;
                 //             margin-right: 7px;
-                //             @include prefix(border-radius, 12px);
+                //             border-radius: 12px;
                 //             border: solid 2px #765853;
                 //             box-shadow:
                 //                 inset 0 -3px 0px #2A703C,
@@ -2373,8 +2367,8 @@ body {
                     position: absolute;
                     left: 100%;
                     top: 90px;
-                    @include prefix(border-top-right-radius, 12px);
-                    @include prefix(border-bottom-right-radius, 12px);
+                    border-top-right-radius: 12px;
+                    border-bottom-right-radius: 12px;
                     box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.25);
                     .skill-list {
                         display: block;
@@ -2387,7 +2381,7 @@ body {
                         margin-left: 7px;
                         margin-top: 8px;
                         font-size: 0;
-                        @include prefix(border-radius, 12px);
+                        border-radius: 12px;
                         overflow: hidden;
                         .skill {
                             display: inline-block;
@@ -2403,7 +2397,7 @@ body {
                             // background: #e9c652;
                             cursor: pointer;
                             margin-bottom: 3px;
-                            @include prefix(border-radius, 12px);
+                            border-radius: 12px;
                             border: solid 2px #414141;
                             box-shadow: inset 0 -3px 0px #c87726,
                                 inset 0 0 4px #f7f1cd, inset 0 0 6px #f7f1cd;
@@ -2453,7 +2447,7 @@ body {
                                     height: 20px;
                                     line-height: 20px;
                                     background: rgba(44, 0, 0, 0.33);
-                                    @include prefix(border-radius, 11px);
+                                    border-radius: 11px;
                                     position: absolute;
                                     bottom: 0px;
                                     left: 0px;
@@ -2644,7 +2638,7 @@ body {
                     width: 60px;
                     height: 20px;
                     background-color: rgba(106, 0, 4, 0.9);
-                    @include prefix(border-radius, 10px);
+                    border-radius: 10px;
                     padding: 0px 5px;
                     &.corona {
                         top: 38px;
@@ -2655,30 +2649,6 @@ body {
                     font-size: 14px;
                     line-height: 21px;
                 }
-                //&:hover {
-                //    transform: scale3d(1.15, 1.15, 1);                //}
-                //&:active {
-                //    transform: scale3d(0.95, 0.95, 1);                //}
-                // display: none;
-                // &.open {
-                //     display: inline-block;
-                //     @include prefix(
-                //         animation,
-                //         right-quest-open 0.15s ease 0s 1 forwards
-                //     );
-                //     opacity: 0;
-                // }
-                // @keyframes right-quest-open {
-                //     0% {
-                //         opacity: 0;
-                //         transform: scale3d(0.1, 0.1, 1);                //     }
-                //     75% {
-                //         opacity: 1;
-                //         transform: scale3d(1.25, 1.25, 1);                //     }
-                //     100% {
-                //         opacity: 1;
-                //         transform: scale3d(1, 1, 1);                //     }
-                // }
                 &.startpack {
                     .timerbox {
                         top: 38px;
@@ -2744,7 +2714,7 @@ body {
             display: block;
             width: 240px;
             height: 60px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             background: linear-gradient(
                 to bottom,
                 #600,
@@ -2775,7 +2745,7 @@ body {
             position: absolute;
             left: 25px;
             top: 28px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             background: linear-gradient(
                 30deg,
                 #fada75,
@@ -2799,7 +2769,7 @@ body {
                 width: 22px;
                 height: 22px;
                 background: #f5c33e;
-                @include prefix(border-radius, 5px);
+                border-radius: 5px;
                 position: absolute;
                 right: -8px;
                 top: 3px;
@@ -2810,7 +2780,7 @@ body {
             // box-shadow: inset 0 -3px 0px #c87725, 0 0 3px #3d3737;
             // &:before{
             //     content: "";
-            //     @include prefix(border-radius, 5px);
+            //     border-radius: 5px;
             //     display: block; width: 393px; height: 16px;
             //     position: absolute; left:3px; top: 4px;
             //     background: #564a4a;
@@ -2835,7 +2805,7 @@ body {
             }
             // .num{
             //     display: block; width: 100px; height: 20px; line-height: 20px;
-            //     @include prefix(border-radius, 10px);
+            //     border-radius: 10px;
             //     margin: auto;
             //     background: #564a4a;
             //     position: relative; top: 20px;
@@ -2852,7 +2822,7 @@ body {
                 bottom: 5px;
                 background: #5a4a4a;
                 border: solid 2px #403730;
-                @include prefix(border-radius, 20px);
+                border-radius: 20px;
                 box-shadow: 0 0 4px #934300;
 
                 .prg {
@@ -2861,7 +2831,7 @@ body {
                     height: 100%;
                     min-width: 15px;
                     background: red;
-                    @include prefix(border-radius, 20px);
+                    border-radius: 20px;
                     background: linear-gradient(to bottom, #006293, #00e4cd);
                     box-shadow: 2px 0 2px #403730, inset 0 0 1px #403730;
                 }
@@ -2907,7 +2877,7 @@ body {
             //         // background: red;
             //         position: absolute; left:0px; top: 0px;
             //         // margin:4px 3px;
-            //         // @include prefix(border-radius, 4px);
+            //         // border-radius: 4px;
             //         background: linear-gradient(to right, #e8c547, #ba8b81, #804097);
             //         // box-shadow: 2px 0 0 #201c1c;
             //         background-image: url(../img/prg1.png);
@@ -2966,7 +2936,7 @@ body {
             //     display: block; width: 64px; height: 64px;
             //     position: absolute; right:-50px; top: -18px;
             //     // background: #3D3737;
-            //     @include prefix(border-radius, 58px);
+            //     border-radius: 58px;
             //     // z-index: 1;
 
             //     // background: linear-gradient(45deg, #5e5252, #613936, #765453, #776a57, #5e5252);
@@ -3068,7 +3038,7 @@ body {
                     position: absolute;
                     left: -4px;
                     top: -6px;
-                    @include prefix(border-radius, 100%);
+                    border-radius: 100%;
                     box-shadow: 0 1px 2px #000, inset 0 0 5px #ffa;
                     z-index: 2;
                 }
@@ -3089,7 +3059,7 @@ body {
                 display: inline-block;
                 width: 200px;
                 height: 66px;
-                @include prefix(border-radius, 7px);
+                border-radius: 7px;
                 background: linear-gradient(
                     45deg,
                     #e8c34e,
@@ -3107,7 +3077,7 @@ body {
                     display: block;
                     width: 135px;
                     height: 22px;
-                    @include prefix(border-radius, 5px);
+                    border-radius: 5px;
                     background: linear-gradient(
                         to right,
                         #73524d,
@@ -3137,7 +3107,7 @@ body {
                     display: block;
                     width: 135px;
                     height: 30px;
-                    @include prefix(border-radius, 5px);
+                    border-radius: 5px;
                     background-color: #564a4a;
                     position: absolute;
                     right: 5px;
@@ -3156,9 +3126,9 @@ body {
                     display: block;
                     width: 60px;
                     height: 30px;
-                    @include prefix(border-radius, 60px);
-                    @include prefix(border-bottom-left-radius, 20px);
-                    @include prefix(border-bottom-right-radius, 20px);
+                    border-radius: 60px;
+                    border-bottom-left-radius: 20px;
+                    border-bottom-right-radius: 20px;
                     position: absolute;
                     left: -10px;
                     top: -3px;
@@ -3183,9 +3153,9 @@ body {
                     display: block;
                     width: 52px;
                     height: 33px;
-                    @include prefix(border-radius, 46px);
-                    @include prefix(border-bottom-left-radius, 0);
-                    @include prefix(border-bottom-right-radius, 0);
+                    border-radius: 46px;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
                     position: absolute;
                     left: 4px;
                     top: 4px;
@@ -3245,9 +3215,9 @@ body {
                 left: auto;
                 right: -10px;
                 top: -3px;
-                @include prefix(border-radius, 60px);
-                @include prefix(border-top-left-radius, 20px);
-                @include prefix(border-top-right-radius, 20px);
+                border-radius: 60px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
                 padding-top: 1px;
                 height: 71px;
                 box-shadow: 0 3px 0px #c87725, 0 5px 0px #3d3737,
@@ -3257,9 +3227,9 @@ body {
                     display: block;
                     width: 52px;
                     height: 37px;
-                    @include prefix(border-radius, 46px);
-                    @include prefix(border-top-left-radius, 0);
-                    @include prefix(border-top-right-radius, 0);
+                    border-radius: 46px;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
                     top: auto;
                     bottom: 5px;
                 }
@@ -3331,7 +3301,7 @@ body .main .popup-layer .sign-in {
             .block-a {
                 display: block;
                 background: #f6e0d5;
-                @include prefix(border-radius, 10px);
+                border-radius: 10px;
                 padding: 10px 20px 10px 20px;
                 line-height: 22px;
                 .tfield {
@@ -3351,7 +3321,7 @@ body .main .popup-layer .sign-in {
                             #c3afa7
                         );
                         border: none;
-                        @include prefix(border-radius, 7px);
+                        border-radius: 7px;
                         font-family: "Roboto", sans-serif;
                         font-size: 16px;
                         font-weight: bold;
@@ -3402,7 +3372,7 @@ body .main .popup-layer .sign-in {
                 display: inline-block;
                 padding: 3px 10px;
                 background: #f6e0d5;
-                @include prefix(border-radius, 20px);
+                border-radius: 20px;
                 cursor: pointer;
             }
         }
@@ -3485,7 +3455,7 @@ body .main .popup-layer .sign-up {
         background: linear-gradient(to right, #400, #ff4c00, #c00, #400);
         margin-left: -65px;
         margin-right: -65px;
-        @include prefix(border-radius, 20px);
+        border-radius: 20px;
         border-top: solid 7px #ff7;
         border-bottom: solid 7px #ff7;
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.33), 0 0 2px #400,
@@ -3501,7 +3471,7 @@ body .main .popup-layer .sign-up {
             display: inline-block;
             width: 120px;
             height: 40px;
-            @include prefix(border-radius, 100%);
+            border-radius: 100%;
             position: relative;
             background-color: #400;
             // background: linear-gradient(to bottom, #ffa, #400);
@@ -3573,7 +3543,7 @@ body .main .popup-layer .sign-up {
             position: relative;
             margin-left: 25px;
             margin-right: 25px;
-            @include prefix(border-radius, 10px);
+            border-radius: 10px;
             box-shadow: 0 0 15px #400;
             background: #efe0a1;
             padding: 10px 20px 10px 20px;
@@ -3611,7 +3581,7 @@ body .main .popup-layer .sign-up {
                     height: 30px;
                     background: linear-gradient(to bottom, #6a5952, #c3afa7);
                     border: none;
-                    @include prefix(border-radius, 7px);
+                    border-radius: 7px;
                     font-family: "Roboto", sans-serif;
                     font-size: 16px;
                     font-weight: bold;
@@ -3638,7 +3608,7 @@ body .main .popup-layer .sign-up {
                         display: inline-block;
                         padding: 3px 10px;
                         background: #cfb150;
-                        @include prefix(border-radius, 20px);
+                        border-radius: 20px;
                     }
                     &.error a {
                         background: #900;
@@ -3685,7 +3655,7 @@ body .main .popup-layer .sign-up {
                 0 0px 20px #f00;
             padding: 7px 20px;
             font-size: 25px;
-            @include prefix(border-radius, 15px);
+            border-radius: 15px;
         }
     }
 }
@@ -3702,7 +3672,7 @@ body .main .popup-layer .sign-up {
     position: relative;
     top: 380px;
     background: linear-gradient(0deg, #2a6ab8 0%, #8ec1ff 54%, #5d96dc 100%);
-    @include prefix(border-radius, 10px);
+    border-radius: 10px;
     .btn-simple-gold {
         top: 6px;
         min-width: 176px;

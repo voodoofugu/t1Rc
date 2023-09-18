@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenRpgPolyStyles = css`
     .main.rpg-poly {
@@ -2153,7 +2154,7 @@ const V2ScreenRpgPolyStyles = css`
 `;
 
 const V2ScreenRpgPoly = styled.div`
-  ${V2ScreenRpgPolyStyles}
+    ${V2ScreenRpgPolyStyles}
 `;
 
 export { V2ScreenRpgPolyStyles, V2ScreenRpgPoly };

@@ -1,262 +1,269 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenWitchCauldronScrollStyles = css`
-  .popup-layer .m-popup.witch-cauldron-scroll {
-    width: 816px;
-    height: 604px;
-    left: 192px;
-    top: 18px;
-    background: linear-gradient(0deg, #483ea3 0%, #7e73d9 100%);
+    .popup-layer .m-popup.witch-cauldron-scroll {
+        width: 816px;
+        height: 604px;
+        left: 192px;
+        top: 18px;
+        background: linear-gradient(0deg, #483ea3 0%, #7e73d9 100%);
 
-    .btn-close-x {
-      background: linear-gradient(22deg, #d6c7ff, #c4abff, #7065c3, #e4c7ff);
-      border: solid 4px #796dd0;
-      cursor: pointer;
-      box-shadow: 0 0 7px #000;
-    }
-
-    .title {
-      color: #fff;
-      border: solid 4px #7e73d9;
-      background: linear-gradient(to right, #7e73d9, #2b2656, #7e73d9);
-      box-shadow: 0 1px 10px #2b2656, inset 0 2px 10px #fff;
-      text-shadow: 0 0 1px #3b3753, 0 1px 1px #000, 0 1px 10px #e7ccff;
-    }
-    .color-box {
-      background: linear-gradient(
-        #1b2833 0%,
-        #456885 50%,
-        #243645 85%,
-        #1d2c38 100%
-      );
-      &:before {
-        display: none;
-      }
-      &:after {
-        display: none;
-      }
-    }
-    .witch-cauldron-scroll-item {
-      width: 80px;
-      height: 80px;
-      position: relative;
-      display: inline-block;
-      background: linear-gradient(
-        180deg,
-        #c68300 0%,
-        #f4dfb6 50%,
-        #c68200 70%,
-        #fad489 85%,
-        #c78302 100%
-      );
-      border-radius: 8px;
-      margin: 5px;
-      background-color: #fffe9a;
-      box-shadow: inset 0px -50px 50px -25px #e9b13a,
-        0px 1px 3px -1px rgba(0, 0, 0, 0.4);
-      background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
-
-      &:before {
-        content: "";
-        width: 76px;
-        height: 76px;
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        background: linear-gradient(
-          0deg,
-          #fede92 0%,
-          #f4c558 18%,
-          #ffe098 60%,
-          #f5c85d 85%,
-          #fddd90 100%
-        );
-        border-radius: 6px;
-      }
-      .witch-cauldron-scroll-res-pic {
-        width: 70px;
-        height: 70px;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-
-        img {
-          width: 70px;
-          height: 70px;
-        }
-      }
-      .witch-cauldron-scroll-res-count {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 14px;
-        color: #fff;
-        padding: 4px 7px;
-        border-radius: 10px;
-        border-radius: 10px;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-        background: linear-gradient(0deg, #7dbd32 0%, #bbee7f 100%);
-        box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
-      }
-    }
-    .witch-cauldron-scroll-boiler-all {
-      width: 220px;
-      height: 80px;
-      position: absolute;
-      top: 258px;
-      left: 14px;
-
-      &:before {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        left: 50%;
-        top: 20px;
-        margin-left: -20px;
-        background-image: url(../img/v2-nsale-plus.png);
-        background-size: 100%;
-      }
-
-      .witch-cauldron-scroll-item {
-        margin: 0;
-        position: absolute;
-        top: 0;
-
-        &.first-item {
-          left: 0;
-        }
-        &.second-item {
-          right: 0;
-        }
-      }
-    }
-    .witch-cauldron-scroll-all {
-      position: absolute;
-      left: 20px;
-      top: 72px;
-      background: linear-gradient(#121e27, #233b4e, #121e27);
-      width: 776px;
-      height: 440px;
-      box-sizing: border-box;
-      padding: 8px;
-      border-radius: 10px;
-
-      .witch-cauldron-scroll-scroll {
-        overflow-x: scroll;
-        overflow-y: hidden;
-        font-size: 0;
-        text-align: left;
-        white-space: nowrap;
-        height: 100%;
-
-        &::-webkit-scrollbar-track {
-          -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-          background-color: #473c3c;
-        }
-        &::-webkit-scrollbar {
-          height: 5px;
-          background-color: #9e8b7d;
-        }
-        &::-webkit-scrollbar-thumb {
-          background: linear-gradient(
-            90deg,
-            #ffe199,
-            #f4c657,
-            #f4c657,
-            #ffe199
-          );
+        .btn-close-x {
+            background: linear-gradient(
+                22deg,
+                #d6c7ff,
+                #c4abff,
+                #7065c3,
+                #e4c7ff
+            );
+            border: solid 4px #796dd0;
+            cursor: pointer;
+            box-shadow: 0 0 7px #000;
         }
 
-        .witch-cauldron-scroll-card {
-          display: inline-block;
-          position: relative;
-          margin: 10px;
-          width: 246px;
-          height: 390px;
-          background: linear-gradient(
-            0deg,
-            #fede92 0%,
-            #f4c558 18%,
-            #ffe098 60%,
-            #f5c85d 85%,
-            #fddd90 100%
-          );
-          border-radius: 10px;
-          box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.25),
-            0px 2px 2px rgba(0, 0, 0, 0.7);
-
-          .witch-cauldron-scroll-card-img {
-            position: absolute;
-            background-color: #000;
-            width: 238px;
-            height: 378px;
-            left: 4px;
-            top: 4px;
-            overflow: hidden;
-            border-radius: 8px;
-
-            img {
-              width: 100%;
-              border-radius: 6px;
-            }
-          }
-          .witch-cauldron-scroll-card-label {
-            position: absolute;
-            bottom: 6px;
-            left: 0;
-            width: 100%;
-            height: 42px;
-            background: linear-gradient(#d4b253, #f3d88d);
+        .title {
             color: #fff;
+            border: solid 4px #7e73d9;
+            background: linear-gradient(to right, #7e73d9, #2b2656, #7e73d9);
+            box-shadow: 0 1px 10px #2b2656, inset 0 2px 10px #fff;
+            text-shadow: 0 0 1px #3b3753, 0 1px 1px #000, 0 1px 10px #e7ccff;
+        }
+        .color-box {
+            background: linear-gradient(
+                #1b2833 0%,
+                #456885 50%,
+                #243645 85%,
+                #1d2c38 100%
+            );
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
+        }
+        .witch-cauldron-scroll-item {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(
+                180deg,
+                #c68300 0%,
+                #f4dfb6 50%,
+                #c68200 70%,
+                #fad489 85%,
+                #c78302 100%
+            );
+            border-radius: 8px;
+            margin: 5px;
+            background-color: #fffe9a;
+            box-shadow: inset 0px -50px 50px -25px #e9b13a,
+                0px 1px 3px -1px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+
+            &:before {
+                content: "";
+                width: 76px;
+                height: 76px;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                background: linear-gradient(
+                    0deg,
+                    #fede92 0%,
+                    #f4c558 18%,
+                    #ffe098 60%,
+                    #f5c85d 85%,
+                    #fddd90 100%
+                );
+                border-radius: 6px;
+            }
+            .witch-cauldron-scroll-res-pic {
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+            .witch-cauldron-scroll-res-count {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 14px;
+                color: #fff;
+                padding: 4px 7px;
+                border-radius: 10px;
+                border-radius: 10px;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+                background: linear-gradient(0deg, #7dbd32 0%, #bbee7f 100%);
+                box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
+            }
+        }
+        .witch-cauldron-scroll-boiler-all {
+            width: 220px;
+            height: 80px;
+            position: absolute;
+            top: 258px;
+            left: 14px;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                left: 50%;
+                top: 20px;
+                margin-left: -20px;
+                background-image: url(../img/v2-nsale-plus.png);
+                background-size: 100%;
+            }
+
+            .witch-cauldron-scroll-item {
+                margin: 0;
+                position: absolute;
+                top: 0;
+
+                &.first-item {
+                    left: 0;
+                }
+                &.second-item {
+                    right: 0;
+                }
+            }
+        }
+        .witch-cauldron-scroll-all {
+            position: absolute;
+            left: 20px;
+            top: 72px;
+            background: linear-gradient(#121e27, #233b4e, #121e27);
+            width: 776px;
+            height: 440px;
+            box-sizing: border-box;
+            padding: 8px;
+            border-radius: 10px;
+
+            .witch-cauldron-scroll-scroll {
+                overflow-x: scroll;
+                overflow-y: hidden;
+                font-size: 0;
+                text-align: left;
+                white-space: nowrap;
+                height: 100%;
+
+                &::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+                    background-color: #473c3c;
+                }
+                &::-webkit-scrollbar {
+                    height: 5px;
+                    background-color: #9e8b7d;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: linear-gradient(
+                        90deg,
+                        #ffe199,
+                        #f4c657,
+                        #f4c657,
+                        #ffe199
+                    );
+                }
+
+                .witch-cauldron-scroll-card {
+                    display: inline-block;
+                    position: relative;
+                    margin: 10px;
+                    width: 246px;
+                    height: 390px;
+                    background: linear-gradient(
+                        0deg,
+                        #fede92 0%,
+                        #f4c558 18%,
+                        #ffe098 60%,
+                        #f5c85d 85%,
+                        #fddd90 100%
+                    );
+                    border-radius: 10px;
+                    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.25),
+                        0px 2px 2px rgba(0, 0, 0, 0.7);
+
+                    .witch-cauldron-scroll-card-img {
+                        position: absolute;
+                        background-color: #000;
+                        width: 238px;
+                        height: 378px;
+                        left: 4px;
+                        top: 4px;
+                        overflow: hidden;
+                        border-radius: 8px;
+
+                        img {
+                            width: 100%;
+                            border-radius: 6px;
+                        }
+                    }
+                    .witch-cauldron-scroll-card-label {
+                        position: absolute;
+                        bottom: 6px;
+                        left: 0;
+                        width: 100%;
+                        height: 42px;
+                        background: linear-gradient(#d4b253, #f3d88d);
+                        color: #fff;
+                        text-align: center;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+                        font-size: 18px;
+                        line-height: 40px;
+                        border-radius: 0px 0px 2px 2px;
+                    }
+                }
+            }
+        }
+        .witch-cauldron-scroll-buttons-box-all {
+            width: 770px;
+            height: 52px;
+            position: absolute;
+            top: 526px;
+            left: 20px;
             text-align: center;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-            font-size: 18px;
-            line-height: 40px;
-            border-radius: 0px 0px 2px 2px;
-          }
+
+            .color-btn {
+                width: 180px;
+                height: 50px;
+
+                & + .color-btn {
+                    margin-left: 5px;
+                }
+
+                .color-btn-text {
+                    top: 12px;
+                    font-size: 18px;
+                }
+
+                &:active {
+                    .color-btn-text {
+                        top: 13px;
+                    }
+                }
+            }
         }
-      }
     }
-    .witch-cauldron-scroll-buttons-box-all {
-      width: 770px;
-      height: 52px;
-      position: absolute;
-      top: 526px;
-      left: 20px;
-      text-align: center;
-
-      .color-btn {
-        width: 180px;
-        height: 50px;
-
-        & + .color-btn {
-          margin-left: 5px;
-        }
-
-        .color-btn-text {
-          top: 12px;
-          font-size: 18px;
-        }
-
-        &:active {
-          .color-btn-text {
-            top: 13px;
-          }
-        }
-      }
-    }
-  }
 `;
 
 const V2ScreenWitchCauldronScroll = styled.div`
-  ${V2ScreenWitchCauldronScrollStyles}
+    ${V2ScreenWitchCauldronScrollStyles}
 `;
 
 export { V2ScreenWitchCauldronScrollStyles, V2ScreenWitchCauldronScroll };

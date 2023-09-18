@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenFwAgitpopStyles = css`
     .popup-layer .m-popup.fw-agitpop {

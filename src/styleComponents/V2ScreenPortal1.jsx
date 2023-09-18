@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenPortal1Styles = css`
     // bronze
@@ -430,12 +431,13 @@ const V2ScreenPortal1Styles = css`
                             top: 10px;
                             left: 399px;
                             background: linear-gradient(
-            0deg, 
-            #ffe199 0%, 
-            #f4c657 18%, 
-            #ffe199 60%, 
-            #f4c557 85%, 
-            #ffe199 100%);
+                                0deg,
+                                #ffe199 0%,
+                                #f4c657 18%,
+                                #ffe199 60%,
+                                #f4c557 85%,
+                                #ffe199 100%
+                            );
                             border-radius: 12px;
                             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                             color: #3c3737;
@@ -585,7 +587,8 @@ const V2ScreenPortal1Styles = css`
                                     &:active {
                                         border-radius: 6px;
                                         transform: scale(1.01) !important;
-                                        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2),
+                                        box-shadow: 0px 0px 12px
+                                                rgba(0, 0, 0, 0.2),
                                             inset 0px 0px 0px 6px
                                                 rgba(255, 255, 255, 0.3) !important;
                                         .hero-pic:after {
@@ -598,7 +601,8 @@ const V2ScreenPortal1Styles = css`
                                     &:hover {
                                         z-index: +1;
                                         transform: scale(1.02);
-                                        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+                                        box-shadow: 0px 0px 15px
+                                            rgba(0, 0, 0, 0.2);
                                     }
                                     &:after {
                                         content: "";
@@ -617,7 +621,8 @@ const V2ScreenPortal1Styles = css`
                                         top: 0px;
                                         left: 0px;
                                         border-radius: 6px;
-                                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+                                        box-shadow: 0px 0px 10px
+                                                rgba(0, 0, 0, 0.5),
                                             0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                         .hero-pic-gacha {
                                             top: 0px;
@@ -632,7 +637,8 @@ const V2ScreenPortal1Styles = css`
                                             position: absolute;
                                             box-shadow: -2px 2px 2px
                                                     rgba(0, 0, 0, 0.5),
-                                                0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
+                                                0px 0px 0px 1.5px
+                                                    rgba(0, 0, 0, 0.1);
                                             border-radius: 6px;
                                             width: 65px;
                                             height: 26px;
@@ -700,7 +706,8 @@ const V2ScreenPortal1Styles = css`
                                         border-radius: 6px;
                                         position: absolute;
                                         top: 0px;
-                                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+                                        box-shadow: 0px 0px 10px
+                                                rgba(0, 0, 0, 0.5),
                                             0px 0px 0px 1.5px rgba(0, 0, 0, 0.1),
                                             inset 0px -4px 0px rgba(0, 0, 0, 0.25);
                                         font-size: 16px;
@@ -714,7 +721,8 @@ const V2ScreenPortal1Styles = css`
                                         &:active {
                                             box-shadow: 0px 0px 10px
                                                     rgba(0, 0, 0, 0.5),
-                                                0px 0px 0px 1.5px rgba(0, 0, 0, 0.1),
+                                                0px 0px 0px 1.5px
+                                                    rgba(0, 0, 0, 0.1),
                                                 inset 0px -1px 0px rgba(0, 0, 0, 0.4);
                                             line-height: 27px;
                                         }
@@ -725,7 +733,8 @@ const V2ScreenPortal1Styles = css`
                                         border-radius: 6px;
                                         position: absolute;
                                         bottom: calc(50% - 14px);
-                                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+                                        box-shadow: 0px 0px 10px
+                                                rgba(0, 0, 0, 0.5),
                                             0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                         &:before {
                                             content: "";
@@ -763,7 +772,8 @@ const V2ScreenPortal1Styles = css`
                                         border-radius: 6px;
                                         position: absolute;
                                         bottom: 0px;
-                                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+                                        box-shadow: 0px 0px 10px
+                                                rgba(0, 0, 0, 0.5),
                                             0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
                                         &:before {
                                             content: "";
@@ -853,7 +863,8 @@ const V2ScreenPortal1Styles = css`
                                         font-weight: 700;
                                         line-height: 28px;
                                         text-align: right;
-                                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+                                        text-shadow: 0 1px 2px
+                                            rgba(0, 0, 0, 0.7);
                                         padding: 5px 10px 5px 5px;
                                     }
                                     .gacha-btn-add {
@@ -1011,7 +1022,8 @@ const V2ScreenPortal1Styles = css`
                                             float: right;
                                             margin-right: 8px;
                                             margin-bottom: 5px;
-                                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+                                            box-shadow: 0 2px 4px
+                                                rgba(0, 0, 0, 0.5);
                                             background: #b7a597;
                                             color: #4c3a25;
                                             text-shadow: 0px 1px 2px #fff;
@@ -1287,7 +1299,8 @@ const V2ScreenPortal1Styles = css`
         border-radius: 6px;
         background-color: #dab443;
         margin: 0 4px 0 4px;
-        box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25),
+            0 0 6px rgba(0, 0, 0, 0.25);
         cursor: pointer;
         .essence-text-box {
             width: 190px;
@@ -1350,7 +1363,7 @@ const V2ScreenPortal1Styles = css`
 `;
 
 const V2ScreenPortal1 = styled.div`
-  ${V2ScreenPortal1Styles}
+    ${V2ScreenPortal1Styles}
 `;
 
 export { V2ScreenPortal1Styles, V2ScreenPortal1 };

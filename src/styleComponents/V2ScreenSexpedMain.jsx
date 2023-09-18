@@ -1,1587 +1,2262 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenSexpedMainStyles = css`
-  body .main.world1,
-  body .main.world2,
-  body .main.world3 {
-    .sexped-mission-screen {
-      .right-side {
-        top: 10px;
-        right: 10px;
-        visibility: hidden;
-      }
+    body .main.world1,
+    body .main.world2,
+    body .main.world3 {
+        .sexped-mission-screen {
+            .right-side {
+                top: 10px;
+                right: 10px;
+                visibility: hidden;
+            }
+        }
+        .sexped-fight-screen {
+            .right-side {
+                top: 10px;
+                right: 10px;
+                visibility: visible;
+            }
+        }
     }
-    .sexped-fight-screen {
-      .right-side {
-        top: 10px;
-        right: 10px;
-        visibility: visible;
-      }
-    }
-  }
 
-  body .main {
-    .sexped-header {
-      width: 1200px;
-      height: 80px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.2);
-      z-index: 999;
-      box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.1),
-        0 1px 2px rgba(255, 255, 255, 0.1);
-      .title-wrap {
-        width: 226px;
-        height: 28px;
-        padding: 0 14px;
-        position: absolute;
-        left: 50%;
-        top: 35px;
-        transform: translateX(-50%);
-        transition: ease-in-out 0.1s;
-        filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
-        .header-title {
-          background: linear-gradient(#fffe9a, #e9b039);
-          border-radius: 0 0 10px 10px;
-          line-height: 26px;
-          height: 100%;
-          font-size: 16px;
-          color: rgba(0, 0, 0, 0.8);
-          text-shadow: 0 1px 0.5px rgba(255, 255, 255, 0.4),
-            0 1px 2px rgba(255, 255, 255, 0.6),
-            0 1px 4px rgba(255, 255, 255, 0.2);
-          text-transform: uppercase;
-          font-weight: 700;
-          box-shadow: inset 0 -4px 0 #ce9e37;
-          display: flex;
-          justify-content: center;
-          position: relative;
-          &:after {
-            content: "";
+    body .main {
+        .sexped-header {
             width: 1200px;
-            height: 34px;
-            position: absolute;
-            left: 50%;
-            top: -3px;
-            transform: translateX(-50%);
-            background-image: url(../img/suphero-squad-frame-all@x2.png);
-            background-position: 0px -563px;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            z-index: 1;
-            pointer-events: none;
-          }
-        }
-        &:before,
-        &:after {
-          content: "";
-          width: 14px;
-          height: 100%;
-          position: absolute;
-          top: 0px;
-          background: linear-gradient(#fffe9a, #e9b039 94%);
-          z-index: -1;
-        }
-        &:before {
-          left: 10px;
-          transform: skewX(20deg);
-          border-radius: 0 0 0 6.6px;
-          box-shadow: inset 2px -4px 0 #ce9e37;
-        }
-        &:after {
-          right: 10px;
-          transform: skewX(-20deg);
-          border-radius: 0 0 6.6px 0;
-          box-shadow: inset -2px -4px 0 #ce9e37;
-        }
-      }
-      .btn-close-x {
-        position: absolute;
-        display: inline-block;
-        width: 36px;
-        height: 24px;
-        top: 28px;
-        left: 28px;
-        right: unset;
-        background: linear-gradient(
-          0deg,
-          #ffe199 0%,
-          #ecaa0a 18%,
-          #ffe199 60%,
-          #f4c557 85%,
-          #ffe199 100%
-        );
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2),
-          0px 1px 3px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.05);
-        border: none;
-        cursor: pointer;
-        border-radius: 7px;
-        &:before {
-          content: "";
-          width: 100%;
-          height: 100%;
-          background: url(../img/darkworld-back-arrow.png);
-          background-size: 70%;
-          background-position: center;
-          background-repeat: no-repeat;
-          display: block;
-          filter: invert(1) opacity(0.66) drop-shadow(0px 0px 2px #fff);
-        }
-        &:after {
-          content: "";
-          border-radius: 5px;
-          position: absolute;
-          display: block;
-          background: rgba(255, 255, 255, 0.4);
-          height: 8px;
-          width: 25px;
-          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-          left: 5px;
-          top: 3px;
-        }
-      }
-      .color-btn-info {
-        width: 26px;
-        height: 26px;
-        position: absolute;
-        top: 28px;
-        right: 28px;
-        background: linear-gradient(
-          0deg,
-          #ffe199 0%,
-          #ecaa0a 18%,
-          #ffe199 60%,
-          #f4c557 85%,
-          #ffe199 100%
-        );
-        border-radius: 100%;
-        cursor: pointer;
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2),
-          0px 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.1);
-        font-size: 26px;
-        line-height: 24px;
-        font-weight: 700;
-        font-family: "Times New Roman", Times, serif;
-        text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #544c3c;
-        z-index: 3;
-        &:before {
-          content: "i";
-        }
-        &:after {
-          content: "";
-          display: block;
-          border-radius: 100%;
-          position: absolute;
-          background: linear-gradient(
-            rgba(255, 255, 255, 0.4),
-            rgba(255, 255, 255, 0)
-          );
-          height: 12px;
-          width: 16px;
-          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-          left: 5px;
-          top: 3px;
-        }
-        &:hover {
-          filter: brightness(1.1);
-        }
-        &:active {
-          transform: scale(0.96);
-        }
-      }
-      .res-shop-btn {
-        width: 130px;
-        height: 50px;
-        position: absolute;
-        top: 15px;
-        left: 94px;
-        cursor: pointer;
-        background: linear-gradient(
-          0deg,
-          #49d2eb 0%,
-          #2aacd3 30%,
-          #5dd2ff 80%,
-          #60e8ff 90%,
-          #85fff9 100%
-        );
-        box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35),
-          0 2px 4px rgba(0, 0, 0, 0.55);
-        border-radius: 6px;
-        &:active {
-          top: 15px;
-          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.35),
-            0 2px 4px rgba(0, 0, 0, 0.55);
-          .res-shop-btn-text {
-            top: 15px;
-          }
-          &:before {
-            top: -13px;
-          }
-        }
-        &:hover {
-          filter: brightness(1.1);
-        }
-        .res-shop-btn-text {
-          width: 80px;
-          height: auto;
-          position: absolute;
-          top: 13px;
-          right: 5px;
-          color: #fff;
-          font-weight: bold;
-          font-size: 18px;
-          text-align: center;
-          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.55);
-          text-transform: uppercase;
-        }
-        &:before {
-          content: "";
-          width: 80px;
-          height: 80px;
-          position: absolute;
-          top: -15px;
-          left: -22px;
-          background-image: url(../img/v2-shop-icon.png);
-          background-size: 100%;
-          background-repeat: no-repeat;
-        }
-      }
-      .sexped-chaos-btn {
-        width: 130px;
-        height: 50px;
-        position: absolute;
-        top: 15px;
-        left: 242px;
-        background: linear-gradient(
-          0deg,
-          #ffe199,
-          #f4c657 18%,
-          #ffe199 60%,
-          #f4c557 85%,
-          #ffe199
-        );
-        border-radius: 6px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-        .sexped-chaos-icon {
-          width: 50px;
-          height: 50px;
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          background-image: url(../img/v2-icon-sexped-ore.png);
-          background-size: 100%;
-          background-repeat: no-repeat;
-        }
-        .sexped-chaos-count {
-          width: 76px;
-          height: 26px;
-          position: absolute;
-          top: 12px;
-          right: 5px;
-          color: #3c3737;
-          font-size: 20px;
-          font-weight: bold;
-          line-height: 26px;
-        }
-      }
-      .sexped-energy-prgbar-box-all {
-        width: 400px;
-        height: 32px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background: linear-gradient(
-          0deg,
-          #ffe199,
-          #f4c657 18%,
-          #ffe199 60%,
-          #f4c557 85%,
-          #ffe199
-        );
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 25px 25px;
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          left: -18px;
-          top: 0px;
-          width: calc(50% + 18px);
-          height: 42px;
-          pointer-events: none;
-          background-image: url(../img/suphero-squad-frame-all@x2.png);
-          background-position: left -907px;
-          background-repeat: no-repeat;
-          background-size: 1322px auto;
-        }
-        &:after {
-          left: unset;
-          right: -18px;
-          background-position: right -907px;
-        }
-        .sexped-energy-pic {
-          width: 30px;
-          height: 30px;
-          position: absolute;
-          top: 0;
-          left: 9px;
-          background-image: url(../img/v2-icon-energy.png);
-          background-size: 100%;
-          background-repeat: no-repeat;
-        }
-        .sexped-prgbar-bg {
-          width: calc(100% - 76px);
-          height: calc(100% - 8px);
-          position: absolute;
-          top: 4px;
-          left: 38px;
-          background: linear-gradient(0deg, #584a49, #3b302f);
-          border-radius: 25px;
-          z-index: 1;
-          .sexped-prgbar-100 {
-            width: calc(100% - 2px);
-            height: calc(100% - 2px);
-            position: absolute;
-            top: 1px;
-            left: 1px;
-            border-radius: 25px;
-            overflow: hidden;
-            .sexped-prgbar {
-              width: 100%;
-              height: 100%;
-              position: absolute;
-              top: 0;
-              left: 0;
-              background: linear-gradient(90deg, #2e7dbf, #70e2ff);
-              box-shadow: inset 0 11px 0 hsla(0, 0%, 100%, 0.15);
-              transition: width 0.3s;
-            }
-          }
-          .sexped-prgbar-text {
-            height: 100%;
-            position: relative;
-            margin: 0 auto;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            line-height: 24px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
-          }
-        }
-        .sexped-prgbar-btn-add {
-          width: 28px;
-          height: 28px;
-          position: absolute;
-          top: 0;
-          right: 8px;
-          border-radius: 0 25px 25px 0;
-          cursor: pointer;
-          filter: drop-shadow(0 1px 0.5px rgba(255, 255, 255, 0.795));
-          &:before,
-          &:after {
-            content: "";
-            width: 6px;
-            height: 22px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            background-color: #4e4848;
-            border-radius: 2px;
-            transform: translate(-50%, -50%);
-          }
-          &:after {
-            transform: translate(-50%, -50%) rotate(90deg);
-          }
-          &:hover {
-            &:before,
-            &:after {
-              background-color: #3c3737;
-            }
-          }
-          &:active {
-            &:before,
-            &:after {
-              width: 4px;
-              height: 20px;
-            }
-          }
-        }
-      }
-      .sexped-top-btn-box {
-        .color-btn {
-          width: 70px;
-          height: 50px;
-          position: absolute;
-          top: 15px;
-          overflow: hidden;
-          .sexped-btn-pic {
-            width: 70px;
-            height: 70px;
-            position: absolute;
-            background-size: 100%;
-            background-repeat: no-repeat;
-          }
-          &.quest,
-          &.rating,
-          &.dual-pack {
-            .sexped-btn-pic {
-              top: -5px;
-              left: 50%;
-              transform: translateX(-50%);
-              width: 58px;
-              img {
-                width: 100%;
-              }
-            }
-          }
-          &.quest {
-            left: 860px;
-          }
-          &.rating {
-            left: 950px;
-          }
-          &.dual-pack {
-            left: 1038px;
-          }
-          &:active {
-            .sexped-btn-pic {
-              top: -4px;
-            }
-          }
-        }
-      }
-    }
-    .main-bg-scroll-box {
-      width: 640px;
-      height: 1200px;
-      position: absolute;
-      top: -280px;
-      left: 280px;
-      overflow: hidden;
-      overflow-y: scroll;
-      transform: rotate(-90deg) scaleX(-1);
-      scrollbar-width: thin;
-      scrollbar-color: #5f7312 #293a16;
-      &::-webkit-scrollbar-track {
-        border-radius: 10px;
-      }
-      &::-webkit-scrollbar {
-        width: 8px;
-        background: #293a16;
-      }
-      &::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background: #5f7312;
-        box-shadow: inset 1px 0 1px rgba(255, 255, 255, 0.2),
-          0 0 1px 1px rgba(0, 0, 0, 0.2);
-      }
-      .sexped-bg-map-scroll-box {
-        position: absolute;
-        transform: rotate(90deg) translate(1480px, 1480px) scaleY(-1);
-        .sexped-bg-map {
-          width: 3600px;
-          height: 640px;
-          position: relative;
-          background-image: url(../img/v2-sexped-bg2.jpg);
-          background-size: 100%;
-          background-repeat: no-repeat;
-        }
-        .sexped-nods-box {
-          width: 120px;
-          height: 120px;
-          position: absolute;
-          .sexped-nods-pic {
-            width: 120px;
-            height: 104px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-image: url(../img/v2-sexped-nods-sprite-120-1.png);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            &.done {
-              background-position: -120px 0;
-              &:after {
-                content: "";
-                width: 50px;
-                height: 50px;
-                position: absolute;
-                top: 4px;
-                left: 34px;
-                background-image: url(../img/paycheck.png);
-                background-size: 84%;
-                background-position: center;
-                background-repeat: no-repeat;
-              }
-            }
-
-            &.active {
-              cursor: pointer;
-              background-position: -240px 0;
-              &:hover {
-                background-position: -120px 0;
-              }
-            }
-            color: white;
-          }
-          &.lastDone {
-            &:after {
-              content: url(../img/fapop-ic01.png);
-              width: 100px;
-              height: 150px;
-              position: absolute;
-              top: -35px;
-              left: 7px;
-              transition: all 0.1s ease-out;
-              transform: scale(-1, 1);
-              cursor: pointer;
-            }
-            &:hover {
-              &:after {
-                filter: brightness(1.2);
-              }
-            }
-          }
-          &.sexped-nods-box--1 {
-            left: 206px;
-            top: 190px;
-          }
-          &.sexped-nods-box--2 {
-            left: 340px;
-            top: 110px;
-          }
-          &.sexped-nods-box--3 {
-            left: 530px;
-            top: 190px;
-          }
-          &.sexped-nods-box--4 {
-            left: 648px;
-            top: 270px;
-          }
-          &.sexped-nods-box--5 {
-            left: 530px;
-            top: 350px;
-          }
-          &.sexped-nods-box--6 {
-            left: 648px;
-            top: 430px;
-          }
-          &.sexped-nods-box--7 {
-            left: 842px;
-            top: 430px;
-          }
-          &.sexped-nods-box--8 {
-            left: 980px;
-            top: 350px;
-          }
-          &.sexped-nods-box--9 {
-            left: 842px;
-            top: 270px;
-          }
-          &.sexped-nods-box--10 {
-            left: 980px;
-            top: 182px;
-          }
-          &.sexped-nods-box--11 {
-            left: 1162px;
-            top: 182px;
-          }
-          &.sexped-nods-box--12 {
-            left: 1250px;
-            top: 312px;
-          }
-          &.sexped-nods-box--13 {
-            left: 1406px;
-            top: 390px;
-          }
-          &.sexped-nods-box--14 {
-            left: 1560px;
-            top: 310px;
-          }
-          &.sexped-nods-box--15 {
-            left: 1732px;
-            top: 390px;
-          }
-          &.sexped-nods-box--16 {
-            left: 1860px;
-            top: 310px;
-          }
-          &.sexped-nods-box--17 {
-            left: 2026px;
-            top: 230px;
-          }
-          &.sexped-nods-box--18 {
-            left: 2216px;
-            top: 310px;
-          }
-          &.sexped-nods-box--19 {
-            left: 2262px;
-            top: 430px;
-          }
-          &.sexped-nods-box--20 {
-            left: 2426px;
-            top: 430px;
-          }
-          &.sexped-nods-box--21 {
-            left: 2554px;
-            top: 350px;
-          }
-          &.sexped-nods-box--22 {
-            left: 2354px;
-            top: 230px;
-          }
-          &.sexped-nods-box--23 {
-            left: 2500px;
-            top: 150px;
-          }
-          &.sexped-nods-box--24 {
-            left: 2650px;
-            top: 142px;
-          }
-          &.sexped-nods-box--25 {
-            left: 2676px;
-            top: 238px;
-          }
-          &.sexped-nods-box--26 {
-            left: 2802px;
-            top: 298px;
-          }
-          &.sexped-nods-box--27 {
-            left: 2990px;
-            top: 238px;
-          }
-          &.sexped-nods-box--28 {
-            left: 3124px;
-            top: 302px;
-          }
-          &.sexped-nods-box--29 {
-            left: 3232px;
-            top: 432px;
-          }
-          &.sexped-nods-box--30 {
-            width: 210px;
-            height: 160px;
-            position: absolute;
-            bottom: 134px;
-            left: 3326px;
-            &.lastDone {
-              &:after {
-                content: url(../img/fapop-ic01.png);
-                width: 100px;
-                height: 150px;
-                position: absolute;
-                top: -35px;
-                left: 53px;
-                transition: all 1s ease-out;
-                transform: scale(-1, 1);
-                cursor: pointer;
-              }
-            }
-
-            .sexped-nods-pic {
-              width: 210px;
-              height: 180px;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-image: url(../img/v2-sexped-nods-sprite.png);
-
-              &:hover {
-                background-position: -417px 0;
-              }
-              &.done {
-                background-position: -211px 0;
-              }
-
-              &.active {
-                background-position: -417px 0;
-
-                &:hover {
-                  background-position: -211px 0;
-                }
-              }
-            }
-          }
-          &.sexped-nods-box--101 {
-            left: 334px;
-            top: 270px;
-          }
-          &.sexped-nods-box--102 {
-            left: 185px;
-            top: 350px;
-          }
-          &.sexped-nods-box--103 {
-            left: 334px;
-            top: 430px;
-          }
-          &.sexped-nods-box--301 {
-            left: 648px;
-            top: 110px;
-          }
-          &.sexped-nods-box--302 {
-            left: 842px;
-            top: 110px;
-          }
-          &.sexped-nods-box--1101 {
-            left: 1310px;
-            top: 110px;
-          }
-          &.sexped-nods-box--1102 {
-            left: 1460px;
-            top: 190px;
-          }
-          &.sexped-nods-box--1103 {
-            left: 1624px;
-            top: 110px;
-          }
-          &.sexped-nods-box--1401 {
-            left: 1732px;
-            top: 208px;
-          }
-          &.sexped-nods-box--1402 {
-            left: 1900px;
-            top: 110px;
-          }
-          &.sexped-nods-box--1501 {
-            left: 1862px;
-            top: 450px;
-          }
-          &.sexped-nods-box--1502 {
-            left: 2026px;
-            top: 450px;
-          }
-          &.sexped-nods-box--2401 {
-            left: 2890px;
-            top: 110px;
-          }
-          &.sexped-nods-box--2402 {
-            left: 3062px;
-            top: 110px;
-          }
-          &.sexped-nods-box--2403 {
-            left: 3232px;
-            top: 110px;
-          }
-          &.sexped-nods-box--2404 {
-            left: 3386px;
-            top: 190px;
-          }
-          &.sexped-nods-box--2601 {
-            left: 2898px;
-            top: 338px;
-          }
-          &.sexped-nods-box--2602 {
-            left: 2820px;
-            top: 480px;
-          }
-        }
-      }
-    }
-    .sexped-mission-screen {
-      width: 1190px;
-      height: 550px;
-      position: absolute;
-      bottom: 5px;
-      left: 5px;
-      background: linear-gradient(#584a49, #483d3c);
-      box-shadow: inset 0 0 0 5px #9c8b7c, inset 0 0 4px 5px rgba(0, 0, 0, 0.4),
-        0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 2px rgba(0, 0, 0, 0.2);
-      border-radius: 18px;
-      z-index: 1;
-      .sexped-mission-left-side {
-        width: 360px;
-        height: 464px;
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        .hero-menu-box {
-          top: -4px;
-          width: 100%;
-          right: 0;
-          .tabs-menu-btn {
-            width: 140px;
-            .txt {
-              font-size: 13px;
-              &:before {
-                margin-top: 3px;
-                width: 30px;
-                height: 30px;
-                background: url(../img/ic-girls-pieces.png);
-                background-position: 0 0;
-                background-repeat: no-repeat;
-                background-size: 30px auto;
-              }
-            }
-            &.hero {
-              .txt {
-                &:before {
-                  background-position: 0 -30px;
-                }
-              }
-            }
-            &.active {
-              .txt {
-                font-size: 14px;
-                &:before {
-                  margin-top: 5px;
-                }
-              }
-            }
-          }
-        }
-        .sexped-mission-scroll-all-box {
-          width: 360px;
-          height: 423px;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          background: linear-gradient(#9c8b7c, #837568);
-          background: linear-gradient(#5d5252, #756767);
-          border-radius: 10px;
-          box-shadow: 0 0 0 2px #dd9542, 0 2px 4px 1px rgba(0, 0, 0, 0.4),
-            inset 0 0 4px rgba(0, 0, 0, 0.2);
-          overflow: hidden;
-          &:before {
-            content: "";
-            width: 20px;
-            height: 20px;
-            background: #dd9542;
-            position: absolute;
-            top: -11px;
-            left: -11px;
-            box-shadow: 0px 424px 0 #dd9542, 362px 424px 0 #dd9542,
-              362px 0 0 #dd9542;
-            border-radius: 14px;
-            z-index: 1;
-            pointer-events: none;
-            filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
-          }
-          .sexped-mission-filter-box {
-            width: 100%;
-            height: 38px;
+            height: 80px;
             position: absolute;
             top: 0;
             left: 0;
-            background-color: #3a3333;
-            box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.1),
-              inset 0 -2px 6px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            .fw-as-filter {
-              width: 90px;
-              height: 30px;
-              position: absolute;
-              top: 4px;
-              left: 8px;
-              filter: brightness(0.8) sepia(0.4) hue-rotate(358deg)
-                drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
-              .fw-as-filter-name {
-                width: 100%;
-                height: auto;
-                position: relative;
-                display: inline-block;
-                line-height: 30px;
-                color: #fff;
-                font-size: 12px;
-                font-weight: bold;
-                text-transform: uppercase;
-                .ic-filter {
-                  width: 18px;
-                  height: 18px;
-                  position: relative;
-                  display: inline-block;
-                  background-image: url(../img/v2-ic-filter.png);
-                  background-size: 100%;
-                  background-repeat: no-repeat;
-                  margin-right: 6px;
-                  top: 5px;
-                }
-              }
-            }
-            .sexped-filter {
-              width: 250px;
-              height: 30px;
-              position: absolute;
-              top: 6px;
-              right: 2px;
-              font-size: 0;
-              .sexped-fl {
-                width: 30px;
-                height: 32px;
-                position: relative;
-                display: inline-block;
-                vertical-align: middle;
-                border-radius: 4px 4px 0 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.1),
+                0 1px 2px rgba(255, 255, 255, 0.1);
+            .title-wrap {
+                width: 226px;
+                height: 28px;
+                padding: 0 14px;
+                position: absolute;
+                left: 50%;
+                top: 35px;
+                transform: translateX(-50%);
                 transition: ease-in-out 0.1s;
-                img {
-                  width: 20px;
-                  position: absolute;
-                  top: 3px;
-                  left: 5px;
-                  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+                filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+                .header-title {
+                    background: linear-gradient(#fffe9a, #e9b039);
+                    border-radius: 0 0 10px 10px;
+                    line-height: 26px;
+                    height: 100%;
+                    font-size: 16px;
+                    color: rgba(0, 0, 0, 0.8);
+                    text-shadow: 0 1px 0.5px rgba(255, 255, 255, 0.4),
+                        0 1px 2px rgba(255, 255, 255, 0.6),
+                        0 1px 4px rgba(255, 255, 255, 0.2);
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    box-shadow: inset 0 -4px 0 #ce9e37;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+                    &:after {
+                        content: "";
+                        width: 1200px;
+                        height: 34px;
+                        position: absolute;
+                        left: 50%;
+                        top: -3px;
+                        transform: translateX(-50%);
+                        background-image: url(../img/suphero-squad-frame-all@x2.png);
+                        background-position: 0px -563px;
+                        background-repeat: no-repeat;
+                        background-size: 100% auto;
+                        z-index: 1;
+                        pointer-events: none;
+                    }
                 }
-                cursor: pointer;
-                &:active {
-                  img {
-                    top: 4px;
-                  }
+                &:before,
+                &:after {
+                    content: "";
+                    width: 14px;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    background: linear-gradient(#fffe9a, #e9b039 94%);
+                    z-index: -1;
                 }
-                &.select {
-                  background: linear-gradient(#84756f, #5d5252);
-                  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
-                    inset 0 1px 1px rgba(255, 255, 255, 0.2);
-                }
-              }
-            }
-          }
-          .sexped-mission-scroll-all {
-            width: 360px;
-            height: 385px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            .sexped-mission-scroll {
-              width: 322px;
-              height: 355px;
-              position: absolute;
-              bottom: 10px;
-              left: 8px;
-              overflow: hidden;
-              overflow-y: scroll;
-              font-size: 0;
-              display: flex;
-              gap: 10px;
-              flex-wrap: wrap;
-              justify-content: flex-start;
-              padding: 5px 10px 5px 10px;
-              scrollbar-width: thin;
-              scrollbar-color: #f5de80 #493e3d;
-              &::-webkit-scrollbar-track {
-                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-                border-radius: 8px;
-                background-color: #665953;
-              }
-              &::-webkit-scrollbar {
-                width: 8px;
-                border-radius: 8px;
-              }
-              &::-webkit-scrollbar-thumb {
-                border-radius: 8px;
-                -webkit-box-shadow: inset 0 0 3px #796b60;
-                background: linear-gradient(
-                  to right,
-                  #fff,
-                  #f5de80,
-                  #f4b766,
-                  #b26d12
-                );
-              }
-              .hero-avatar-box {
-                width: 98px;
-                height: 111px;
-                position: relative;
-                display: inline-block;
-                border-radius: 6px;
-                background: linear-gradient(
-                  180deg,
-                  #8e7453 0%,
-                  #e3c7a3 50%,
-                  #8f7553 70%,
-                  #ae916a 85%,
-                  #8f7553 100%
-                );
-                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35),
-                  inset 0 1px 1px rgba(255, 255, 255, 0.2);
-                cursor: grab;
-                &.selected {
-                  background: linear-gradient(0deg, #7cbc30, #baf279);
-                  box-shadow: inset 0 1px 1px hsla(0, 0%, 100%, 0.8),
-                    0 2px 0 #299d29, 0 2px 6px 1px rgba(46, 255, 18, 0.780392),
-                    0 1px 6px 1px hsla(0, 0%, 100%, 0.8),
-                    0 2px 0 1px hsla(0, 0%, 100%, 0.8);
-                }
-                &:active {
-                  cursor: grabbing;
-                  transform: scale(0.9796);
-                }
-                &:hover {
-                  filter: brightness(1.1);
-                }
-                .hero-avatar {
-                  width: 90px;
-                  height: 103px;
-                  position: absolute;
-                  top: 4px;
-                  left: 4px;
-                  border-radius: 4px;
-                  overflow: hidden;
-                  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+                &:before {
+                    left: 10px;
+                    transform: skewX(20deg);
+                    border-radius: 0 0 0 6.6px;
+                    box-shadow: inset 2px -4px 0 #ce9e37;
                 }
                 &:after {
-                  content: "";
-                  position: absolute;
-                  top: 4px;
-                  left: 4px;
-                  width: 90px;
-                  height: 103px;
-                  border-radius: 4px;
-                  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+                    right: 10px;
+                    transform: skewX(-20deg);
+                    border-radius: 0 0 6.6px 0;
+                    box-shadow: inset -2px -4px 0 #ce9e37;
                 }
-                .sh3-icon-forgirl {
-                  width: 25px;
-                  height: 32px;
-                  position: absolute;
-                  top: 0px;
-                  left: 2px;
-                  z-index: 1;
-                  img {
-                    width: 25px;
-                  }
-                }
-                .sh3-icon {
-                  width: 25px;
-                  height: 32px;
-                  position: absolute;
-                  top: 0;
-                  right: 2px;
-                  z-index: 1;
-                  img {
-                    width: 25px;
-                  }
-                  display: none;
-                }
-                .fw-as-num {
-                  width: 80px;
-                  height: 24px;
-                  position: absolute;
-                  bottom: 4px;
-                  left: 9px;
-                  border-radius: 20px;
-                  background: linear-gradient(0deg, #1c91bd 0%, #a4e7ff 100%);
-                  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2),
-                    0 1px 3px rgba(0, 0, 0, 0.4);
-                  color: #000;
-                  font-weight: bold;
-                  font-size: 14px;
-                  line-height: 24px;
-                  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
-                }
-                &.superheroines {
-                  .sh3-icon {
-                    display: block;
-                    z-index: 1;
-                  }
-                  .fw-as-num {
-                    background: linear-gradient(0deg, #c621db 0%, #fda4ff 100%);
-                  }
-                }
-                .hero-block-box {
-                  width: 100%;
-                  height: 100%;
-                  position: absolute;
-                  background-color: rgba(0, 0, 0, 0.55);
-                  border-radius: 6px;
-                  .hero-block-text {
-                    width: 90px;
-                    height: auto;
-                    position: absolute;
-                    top: 5px;
-                    left: 3px;
-                    color: #fff;
-                    font-size: 14px;
-                    font-weight: bold;
-                  }
-                  .color-btn {
-                    width: 90px;
-                    height: 30px;
-                    position: absolute;
-                    bottom: 2px;
-                    left: 4px;
-                    .color-btn-text {
-                      top: 0;
-                      font-size: 12px;
-                      .f-diamonds {
-                        &:before {
-                          content: "";
-                          width: 26px;
-                          height: 26px;
-                          position: relative;
-                          display: inline-block;
-                          background-image: url(../img/ic-diamond.png);
-                          background-size: 100%;
-                          margin: 0 2px;
-                          vertical-align: middle;
-                        }
-                      }
-                    }
-                    &:active {
-                      .color-btn-text {
-                        top: 1px;
-                      }
-                    }
-                  }
-                }
-              }
             }
-          }
-        }
-        .sexped-mission-description {
-          width: 360px;
-          height: 40px;
-          position: absolute;
-          bottom: -53px;
-          left: 0;
-          color: #735a3a;
-          .color-btn {
-            width: 130px;
-            left: 0;
-            position: absolute;
-          }
-          > .text {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            color: #efc857;
-            font-size: 18px;
-            font-weight: 700;
-            text-shadow: 01px 2px rgba(0, 0, 0, 0.4);
-            text-transform: uppercase;
-          }
-          .text-hint-wrap {
-            width: 130px;
-            height: 40px;
-            border-radius: 7px;
-            background: linear-gradient(
-              79.88deg,
-              #eecc60 15.85%,
-              #ffeea7 31.54%,
-              #cfa831 58.47%,
-              #fbf1d8 75.55%,
-              #eecc60 90.72%
-            );
-            box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
-              0 0 3px #472624;
-            position: absolute;
-            right: 0;
-            &:before {
-              content: "";
-              position: absolute;
-              width: calc(100% - 2px);
-              height: calc(100% - 3px);
-              left: 1px;
-              top: 1px;
-              background: #5f4b36;
-              box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.08),
-                inset 0px 2px 1px #412e28;
-              border-radius: 6px;
-            }
-            &:after {
-              content: "";
-              border: 8px solid transparent;
-              border-right: 8px solid #eecc60;
-              border-radius: 2px;
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              left: -15px;
-            }
-            .text {
-              width: 114px;
-              margin: auto;
-              margin-top: 3px;
-              font-size: 14px;
-              font-weight: bold;
-              color: #fff;
-              position: relative;
-              text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
-              font-weight: 100;
-            }
-          }
-        }
-      }
-      .sexped-mission-right-side {
-        width: 790px;
-        height: 465px;
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        .sexped-mission-team-box {
-          width: 790px;
-          height: 100px;
-          position: absolute;
-          top: 34px;
-          left: 0;
-          .sexped-mission-team-n {
-            width: 82px;
-            height: 100px;
-            position: absolute;
-            top: 0;
-            left: 8px;
-            background: rgba(0, 0, 0, 0.4);
-            color: #382b2e;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-            line-height: 100px;
-            border-radius: 10px;
-            filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.2));
-            &:before {
-              content: "";
-              border: 10px solid transparent;
-              border-left: 8px solid rgba(0, 0, 0, 0.4);
-              border-radius: 2px;
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              right: -18px;
-              pointer-events: none;
-            }
-          }
-          .sexped-mission-team-card-box {
-            width: 688px;
-            height: 100px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 0;
-            display: flex;
-            gap: 8px;
-          }
-          &.dpsteam {
-            top: 142px;
-          }
-          &.dpcteam {
-            top: 250px;
-          }
-          &.over {
-            background-color: #ecdac4;
-            .sexped-mission-team-n {
-              background: linear-gradient(
-                0deg,
-                #fff7c7 0%,
-                #f7e362 50%,
-                #fff7c7 100%
-              );
-            }
-          }
-        }
-        .sexped-mission-team-rewards-box {
-          width: 790px;
-          height: 70px;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          font-size: 0;
-          vertical-align: bottom;
-          .sexped-mission-rewards-box {
-            width: 100px;
-            height: 70px;
-            position: relative;
-            display: inline-block;
-            margin: 0 5px;
-            border-radius: 10px;
-            box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
-              0 1px 4px 1px rgba(0, 0, 0, 0.4), inset 0 0 0 2px #ff9b37;
-            background: url(../img/v2-trophy-bg.jpg),
-              linear-gradient(0deg, #584b48, #7d6463);
-            background-size: 100%;
-            background-repeat: no-repeat;
-            overflow: hidden;
-            .sexped-mission-rewards-text {
-              width: calc(100% - 4px);
-              height: auto;
-              position: absolute;
-              top: 2px;
-              left: 2px;
-              color: #ffffff;
-              background: rgba(0, 0, 0, 0.4);
-              box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2),
-                0 1px 1px rgba(255, 255, 255, 0.2);
-              font-size: 12px;
-              font-weight: bold;
-              text-transform: uppercase;
-              visibility: hidden;
-              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-              border-radius: 8px 8px 0 0;
-            }
-            .sexped-mission-rewards-pic {
-              width: 50px;
-              height: 50px;
-              position: absolute;
-              top: 0;
-              left: 25px;
-              img {
-                width: 50px;
-              }
-            }
-            .sexped-mission-rewards-num {
-              width: 54px;
-              line-height: 16px;
-              position: absolute;
-              top: 55px;
-              left: 50%;
-              transform: translateX(-50%);
-              text-align: center;
-              color: #fff;
-              font-size: 12px;
-              font-weight: bold;
-              text-shadow: 0 1px 2px rgb(0, 0, 0), 0 1px 4px rgba(0, 0, 0, 0.6);
-              background: linear-gradient(#805a31, #c18346);
-              border-radius: 10px 10px 0 0;
-              box-shadow: inset 0 1px 0 #dea569;
-              z-index: 1;
-              filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
-              &:before,
-              &:after {
-                content: "";
-                width: 8px;
-                height: 100%;
+            .btn-close-x {
                 position: absolute;
-                top: 0px;
-                background: linear-gradient(#805a31, #c18346 94%);
-                z-index: -1;
-              }
-              &:before {
-                left: -2px;
-                transform: skewX(-20deg);
-                border-radius: 6.6px 0 0 0;
-                box-shadow: inset 1px 1px 0 #dea569;
-              }
-              &:after {
-                right: -2px;
-                transform: skewX(20deg);
-                border-radius: 0 6.6px 0 0;
-                box-shadow: inset -1px 1px 0 #dea569;
-              }
+                display: inline-block;
+                width: 36px;
+                height: 24px;
+                top: 28px;
+                left: 28px;
+                right: unset;
+                background: linear-gradient(
+                    0deg,
+                    #ffe199 0%,
+                    #ecaa0a 18%,
+                    #ffe199 60%,
+                    #f4c557 85%,
+                    #ffe199 100%
+                );
+                box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2),
+                    0px 1px 3px rgba(0, 0, 0, 0.55),
+                    0 0 0 1px rgba(0, 0, 0, 0.05);
+                border: none;
+                cursor: pointer;
+                border-radius: 7px;
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: url(../img/darkworld-back-arrow.png);
+                    background-size: 70%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    display: block;
+                    filter: invert(1) opacity(0.66)
+                        drop-shadow(0px 0px 2px #fff);
+                }
+                &:after {
+                    content: "";
+                    border-radius: 5px;
+                    position: absolute;
+                    display: block;
+                    background: rgba(255, 255, 255, 0.4);
+                    height: 8px;
+                    width: 25px;
+                    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+                    left: 5px;
+                    top: 3px;
+                }
             }
-            .sexped-mission-rewards-check {
-              width: 100px;
-              height: 70px;
-              position: absolute;
-              top: 0;
-              left: 0;
-              display: none;
-              background-color: rgba(0, 0, 0, 0.55);
-              border-radius: 8px;
-              z-index: 1;
-              &:before {
-                content: "";
-                width: 50px;
+            .color-btn-info {
+                width: 26px;
+                height: 26px;
+                position: absolute;
+                top: 28px;
+                right: 28px;
+                background: linear-gradient(
+                    0deg,
+                    #ffe199 0%,
+                    #ecaa0a 18%,
+                    #ffe199 60%,
+                    #f4c557 85%,
+                    #ffe199 100%
+                );
+                border-radius: 100%;
+                cursor: pointer;
+                box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2),
+                    0px 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.1);
+                font-size: 26px;
+                line-height: 24px;
+                font-weight: 700;
+                font-family: "Times New Roman", Times, serif;
+                text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #544c3c;
+                z-index: 3;
+                &:before {
+                    content: "i";
+                }
+                &:after {
+                    content: "";
+                    display: block;
+                    border-radius: 100%;
+                    position: absolute;
+                    background: linear-gradient(
+                        rgba(255, 255, 255, 0.4),
+                        rgba(255, 255, 255, 0)
+                    );
+                    height: 12px;
+                    width: 16px;
+                    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+                    left: 5px;
+                    top: 3px;
+                }
+                &:hover {
+                    filter: brightness(1.1);
+                }
+                &:active {
+                    transform: scale(0.96);
+                }
+            }
+            .res-shop-btn {
+                width: 130px;
                 height: 50px;
                 position: absolute;
-                top: 10px;
-                left: 25px;
-                background-image: url(../img/paycheck.png);
-                background-size: 100%;
-                background-repeat: no-repeat;
-              }
+                top: 15px;
+                left: 94px;
+                cursor: pointer;
+                background: linear-gradient(
+                    0deg,
+                    #49d2eb 0%,
+                    #2aacd3 30%,
+                    #5dd2ff 80%,
+                    #60e8ff 90%,
+                    #85fff9 100%
+                );
+                box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.35),
+                    0 2px 4px rgba(0, 0, 0, 0.55);
+                border-radius: 6px;
+                &:active {
+                    top: 15px;
+                    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.35),
+                        0 2px 4px rgba(0, 0, 0, 0.55);
+                    .res-shop-btn-text {
+                        top: 15px;
+                    }
+                    &:before {
+                        top: -13px;
+                    }
+                }
+                &:hover {
+                    filter: brightness(1.1);
+                }
+                .res-shop-btn-text {
+                    width: 80px;
+                    height: auto;
+                    position: absolute;
+                    top: 13px;
+                    right: 5px;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-align: center;
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.55);
+                    text-transform: uppercase;
+                }
+                &:before {
+                    content: "";
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    top: -15px;
+                    left: -22px;
+                    background-image: url(../img/v2-shop-icon.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
             }
-            &.firstclear {
-              .sexped-mission-rewards-text {
-                visibility: visible;
-              }
-              .sexped-mission-rewards-pic {
-                width: 40px;
+            .sexped-chaos-btn {
+                width: 130px;
+                height: 50px;
+                position: absolute;
+                top: 15px;
+                left: 242px;
+                background: linear-gradient(
+                    0deg,
+                    #ffe199,
+                    #f4c657 18%,
+                    #ffe199 60%,
+                    #f4c557 85%,
+                    #ffe199
+                );
+                border-radius: 6px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                .sexped-chaos-icon {
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background-image: url(../img/v2-icon-sexped-ore.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+                .sexped-chaos-count {
+                    width: 76px;
+                    height: 26px;
+                    position: absolute;
+                    top: 12px;
+                    right: 5px;
+                    color: #3c3737;
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 26px;
+                }
+            }
+            .sexped-energy-prgbar-box-all {
+                width: 400px;
+                height: 32px;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(
+                    0deg,
+                    #ffe199,
+                    #f4c657 18%,
+                    #ffe199 60%,
+                    #f4c557 85%,
+                    #ffe199
+                );
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35),
+                    0 0 0 1px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 25px 25px;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: -18px;
+                    top: 0px;
+                    width: calc(50% + 18px);
+                    height: 42px;
+                    pointer-events: none;
+                    background-image: url(../img/suphero-squad-frame-all@x2.png);
+                    background-position: left -907px;
+                    background-repeat: no-repeat;
+                    background-size: 1322px auto;
+                }
+                &:after {
+                    left: unset;
+                    right: -18px;
+                    background-position: right -907px;
+                }
+                .sexped-energy-pic {
+                    width: 30px;
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    left: 9px;
+                    background-image: url(../img/v2-icon-energy.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+                .sexped-prgbar-bg {
+                    width: calc(100% - 76px);
+                    height: calc(100% - 8px);
+                    position: absolute;
+                    top: 4px;
+                    left: 38px;
+                    background: linear-gradient(0deg, #584a49, #3b302f);
+                    border-radius: 25px;
+                    z-index: 1;
+                    .sexped-prgbar-100 {
+                        width: calc(100% - 2px);
+                        height: calc(100% - 2px);
+                        position: absolute;
+                        top: 1px;
+                        left: 1px;
+                        border-radius: 25px;
+                        overflow: hidden;
+                        .sexped-prgbar {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: linear-gradient(
+                                90deg,
+                                #2e7dbf,
+                                #70e2ff
+                            );
+                            box-shadow: inset 0 11px 0 hsla(0, 0%, 100%, 0.15);
+                            transition: width 0.3s;
+                        }
+                    }
+                    .sexped-prgbar-text {
+                        height: 100%;
+                        position: relative;
+                        margin: 0 auto;
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        line-height: 24px;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55);
+                    }
+                }
+                .sexped-prgbar-btn-add {
+                    width: 28px;
+                    height: 28px;
+                    position: absolute;
+                    top: 0;
+                    right: 8px;
+                    border-radius: 0 25px 25px 0;
+                    cursor: pointer;
+                    filter: drop-shadow(0 1px 0.5px rgba(255, 255, 255, 0.795));
+                    &:before,
+                    &:after {
+                        content: "";
+                        width: 6px;
+                        height: 22px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        background-color: #4e4848;
+                        border-radius: 2px;
+                        transform: translate(-50%, -50%);
+                    }
+                    &:after {
+                        transform: translate(-50%, -50%) rotate(90deg);
+                    }
+                    &:hover {
+                        &:before,
+                        &:after {
+                            background-color: #3c3737;
+                        }
+                    }
+                    &:active {
+                        &:before,
+                        &:after {
+                            width: 4px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            .sexped-top-btn-box {
+                .color-btn {
+                    width: 70px;
+                    height: 50px;
+                    position: absolute;
+                    top: 15px;
+                    overflow: hidden;
+                    .sexped-btn-pic {
+                        width: 70px;
+                        height: 70px;
+                        position: absolute;
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+                    &.quest,
+                    &.rating,
+                    &.dual-pack {
+                        .sexped-btn-pic {
+                            top: -5px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 58px;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &.quest {
+                        left: 860px;
+                    }
+                    &.rating {
+                        left: 950px;
+                    }
+                    &.dual-pack {
+                        left: 1038px;
+                    }
+                    &:active {
+                        .sexped-btn-pic {
+                            top: -4px;
+                        }
+                    }
+                }
+            }
+        }
+        .main-bg-scroll-box {
+            width: 640px;
+            height: 1200px;
+            position: absolute;
+            top: -280px;
+            left: 280px;
+            overflow: hidden;
+            overflow-y: scroll;
+            transform: rotate(-90deg) scaleX(-1);
+            scrollbar-width: thin;
+            scrollbar-color: #5f7312 #293a16;
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar {
+                width: 8px;
+                background: #293a16;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background: #5f7312;
+                box-shadow: inset 1px 0 1px rgba(255, 255, 255, 0.2),
+                    0 0 1px 1px rgba(0, 0, 0, 0.2);
+            }
+            .sexped-bg-map-scroll-box {
+                position: absolute;
+                transform: rotate(90deg) translate(1480px, 1480px) scaleY(-1);
+                .sexped-bg-map {
+                    width: 3600px;
+                    height: 640px;
+                    position: relative;
+                    background-image: url(../img/v2-sexped-bg2.jpg);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+                .sexped-nods-box {
+                    width: 120px;
+                    height: 120px;
+                    position: absolute;
+                    .sexped-nods-pic {
+                        width: 120px;
+                        height: 104px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background-image: url(../img/v2-sexped-nods-sprite-120-1.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: 0 0;
+                        &.done {
+                            background-position: -120px 0;
+                            &:after {
+                                content: "";
+                                width: 50px;
+                                height: 50px;
+                                position: absolute;
+                                top: 4px;
+                                left: 34px;
+                                background-image: url(../img/paycheck.png);
+                                background-size: 84%;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                            }
+                        }
+
+                        &.active {
+                            cursor: pointer;
+                            background-position: -240px 0;
+                            &:hover {
+                                background-position: -120px 0;
+                            }
+                        }
+                        color: white;
+                    }
+                    &.lastDone {
+                        &:after {
+                            content: url(../img/fapop-ic01.png);
+                            width: 100px;
+                            height: 150px;
+                            position: absolute;
+                            top: -35px;
+                            left: 7px;
+                            transition: all 0.1s ease-out;
+                            transform: scale(-1, 1);
+                            cursor: pointer;
+                        }
+                        &:hover {
+                            &:after {
+                                filter: brightness(1.2);
+                            }
+                        }
+                    }
+                    &.sexped-nods-box--1 {
+                        left: 206px;
+                        top: 190px;
+                    }
+                    &.sexped-nods-box--2 {
+                        left: 340px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--3 {
+                        left: 530px;
+                        top: 190px;
+                    }
+                    &.sexped-nods-box--4 {
+                        left: 648px;
+                        top: 270px;
+                    }
+                    &.sexped-nods-box--5 {
+                        left: 530px;
+                        top: 350px;
+                    }
+                    &.sexped-nods-box--6 {
+                        left: 648px;
+                        top: 430px;
+                    }
+                    &.sexped-nods-box--7 {
+                        left: 842px;
+                        top: 430px;
+                    }
+                    &.sexped-nods-box--8 {
+                        left: 980px;
+                        top: 350px;
+                    }
+                    &.sexped-nods-box--9 {
+                        left: 842px;
+                        top: 270px;
+                    }
+                    &.sexped-nods-box--10 {
+                        left: 980px;
+                        top: 182px;
+                    }
+                    &.sexped-nods-box--11 {
+                        left: 1162px;
+                        top: 182px;
+                    }
+                    &.sexped-nods-box--12 {
+                        left: 1250px;
+                        top: 312px;
+                    }
+                    &.sexped-nods-box--13 {
+                        left: 1406px;
+                        top: 390px;
+                    }
+                    &.sexped-nods-box--14 {
+                        left: 1560px;
+                        top: 310px;
+                    }
+                    &.sexped-nods-box--15 {
+                        left: 1732px;
+                        top: 390px;
+                    }
+                    &.sexped-nods-box--16 {
+                        left: 1860px;
+                        top: 310px;
+                    }
+                    &.sexped-nods-box--17 {
+                        left: 2026px;
+                        top: 230px;
+                    }
+                    &.sexped-nods-box--18 {
+                        left: 2216px;
+                        top: 310px;
+                    }
+                    &.sexped-nods-box--19 {
+                        left: 2262px;
+                        top: 430px;
+                    }
+                    &.sexped-nods-box--20 {
+                        left: 2426px;
+                        top: 430px;
+                    }
+                    &.sexped-nods-box--21 {
+                        left: 2554px;
+                        top: 350px;
+                    }
+                    &.sexped-nods-box--22 {
+                        left: 2354px;
+                        top: 230px;
+                    }
+                    &.sexped-nods-box--23 {
+                        left: 2500px;
+                        top: 150px;
+                    }
+                    &.sexped-nods-box--24 {
+                        left: 2650px;
+                        top: 142px;
+                    }
+                    &.sexped-nods-box--25 {
+                        left: 2676px;
+                        top: 238px;
+                    }
+                    &.sexped-nods-box--26 {
+                        left: 2802px;
+                        top: 298px;
+                    }
+                    &.sexped-nods-box--27 {
+                        left: 2990px;
+                        top: 238px;
+                    }
+                    &.sexped-nods-box--28 {
+                        left: 3124px;
+                        top: 302px;
+                    }
+                    &.sexped-nods-box--29 {
+                        left: 3232px;
+                        top: 432px;
+                    }
+                    &.sexped-nods-box--30 {
+                        width: 210px;
+                        height: 160px;
+                        position: absolute;
+                        bottom: 134px;
+                        left: 3326px;
+                        &.lastDone {
+                            &:after {
+                                content: url(../img/fapop-ic01.png);
+                                width: 100px;
+                                height: 150px;
+                                position: absolute;
+                                top: -35px;
+                                left: 53px;
+                                transition: all 1s ease-out;
+                                transform: scale(-1, 1);
+                                cursor: pointer;
+                            }
+                        }
+
+                        .sexped-nods-pic {
+                            width: 210px;
+                            height: 180px;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-image: url(../img/v2-sexped-nods-sprite.png);
+
+                            &:hover {
+                                background-position: -417px 0;
+                            }
+                            &.done {
+                                background-position: -211px 0;
+                            }
+
+                            &.active {
+                                background-position: -417px 0;
+
+                                &:hover {
+                                    background-position: -211px 0;
+                                }
+                            }
+                        }
+                    }
+                    &.sexped-nods-box--101 {
+                        left: 334px;
+                        top: 270px;
+                    }
+                    &.sexped-nods-box--102 {
+                        left: 185px;
+                        top: 350px;
+                    }
+                    &.sexped-nods-box--103 {
+                        left: 334px;
+                        top: 430px;
+                    }
+                    &.sexped-nods-box--301 {
+                        left: 648px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--302 {
+                        left: 842px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--1101 {
+                        left: 1310px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--1102 {
+                        left: 1460px;
+                        top: 190px;
+                    }
+                    &.sexped-nods-box--1103 {
+                        left: 1624px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--1401 {
+                        left: 1732px;
+                        top: 208px;
+                    }
+                    &.sexped-nods-box--1402 {
+                        left: 1900px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--1501 {
+                        left: 1862px;
+                        top: 450px;
+                    }
+                    &.sexped-nods-box--1502 {
+                        left: 2026px;
+                        top: 450px;
+                    }
+                    &.sexped-nods-box--2401 {
+                        left: 2890px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--2402 {
+                        left: 3062px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--2403 {
+                        left: 3232px;
+                        top: 110px;
+                    }
+                    &.sexped-nods-box--2404 {
+                        left: 3386px;
+                        top: 190px;
+                    }
+                    &.sexped-nods-box--2601 {
+                        left: 2898px;
+                        top: 338px;
+                    }
+                    &.sexped-nods-box--2602 {
+                        left: 2820px;
+                        top: 480px;
+                    }
+                }
+            }
+        }
+        .sexped-mission-screen {
+            width: 1190px;
+            height: 550px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            background: linear-gradient(#584a49, #483d3c);
+            box-shadow: inset 0 0 0 5px #9c8b7c,
+                inset 0 0 4px 5px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 2px rgba(0, 0, 0, 0.2);
+            border-radius: 18px;
+            z-index: 1;
+            .sexped-mission-left-side {
+                width: 360px;
+                height: 464px;
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                .hero-menu-box {
+                    top: -4px;
+                    width: 100%;
+                    right: 0;
+                    .tabs-menu-btn {
+                        width: 140px;
+                        .txt {
+                            font-size: 13px;
+                            &:before {
+                                margin-top: 3px;
+                                width: 30px;
+                                height: 30px;
+                                background: url(../img/ic-girls-pieces.png);
+                                background-position: 0 0;
+                                background-repeat: no-repeat;
+                                background-size: 30px auto;
+                            }
+                        }
+                        &.hero {
+                            .txt {
+                                &:before {
+                                    background-position: 0 -30px;
+                                }
+                            }
+                        }
+                        &.active {
+                            .txt {
+                                font-size: 14px;
+                                &:before {
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sexped-mission-scroll-all-box {
+                    width: 360px;
+                    height: 423px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(#9c8b7c, #837568);
+                    background: linear-gradient(#5d5252, #756767);
+                    border-radius: 10px;
+                    box-shadow: 0 0 0 2px #dd9542,
+                        0 2px 4px 1px rgba(0, 0, 0, 0.4),
+                        inset 0 0 4px rgba(0, 0, 0, 0.2);
+                    overflow: hidden;
+                    &:before {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background: #dd9542;
+                        position: absolute;
+                        top: -11px;
+                        left: -11px;
+                        box-shadow: 0px 424px 0 #dd9542, 362px 424px 0 #dd9542,
+                            362px 0 0 #dd9542;
+                        border-radius: 14px;
+                        z-index: 1;
+                        pointer-events: none;
+                        filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+                    }
+                    .sexped-mission-filter-box {
+                        width: 100%;
+                        height: 38px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: #3a3333;
+                        box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.1),
+                            inset 0 -2px 6px rgba(0, 0, 0, 0.2);
+                        overflow: hidden;
+                        .fw-as-filter {
+                            width: 90px;
+                            height: 30px;
+                            position: absolute;
+                            top: 4px;
+                            left: 8px;
+                            filter: brightness(0.8) sepia(0.4)
+                                hue-rotate(358deg)
+                                drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+                            .fw-as-filter-name {
+                                width: 100%;
+                                height: auto;
+                                position: relative;
+                                display: inline-block;
+                                line-height: 30px;
+                                color: #fff;
+                                font-size: 12px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                .ic-filter {
+                                    width: 18px;
+                                    height: 18px;
+                                    position: relative;
+                                    display: inline-block;
+                                    background-image: url(../img/v2-ic-filter.png);
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    margin-right: 6px;
+                                    top: 5px;
+                                }
+                            }
+                        }
+                        .sexped-filter {
+                            width: 250px;
+                            height: 30px;
+                            position: absolute;
+                            top: 6px;
+                            right: 2px;
+                            font-size: 0;
+                            .sexped-fl {
+                                width: 30px;
+                                height: 32px;
+                                position: relative;
+                                display: inline-block;
+                                vertical-align: middle;
+                                border-radius: 4px 4px 0 0;
+                                transition: ease-in-out 0.1s;
+                                img {
+                                    width: 20px;
+                                    position: absolute;
+                                    top: 3px;
+                                    left: 5px;
+                                    filter: drop-shadow(
+                                        0 1px 2px rgba(0, 0, 0, 0.6)
+                                    );
+                                }
+                                cursor: pointer;
+                                &:active {
+                                    img {
+                                        top: 4px;
+                                    }
+                                }
+                                &.select {
+                                    background: linear-gradient(
+                                        #84756f,
+                                        #5d5252
+                                    );
+                                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4),
+                                        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+                                }
+                            }
+                        }
+                    }
+                    .sexped-mission-scroll-all {
+                        width: 360px;
+                        height: 385px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        .sexped-mission-scroll {
+                            width: 322px;
+                            height: 355px;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 8px;
+                            overflow: hidden;
+                            overflow-y: scroll;
+                            font-size: 0;
+                            display: flex;
+                            gap: 10px;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            padding: 5px 10px 5px 10px;
+                            scrollbar-width: thin;
+                            scrollbar-color: #f5de80 #493e3d;
+                            &::-webkit-scrollbar-track {
+                                -webkit-box-shadow: inset 0 0 6px
+                                    rgba(0, 0, 0, 0.5);
+                                border-radius: 8px;
+                                background-color: #665953;
+                            }
+                            &::-webkit-scrollbar {
+                                width: 8px;
+                                border-radius: 8px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                border-radius: 8px;
+                                -webkit-box-shadow: inset 0 0 3px #796b60;
+                                background: linear-gradient(
+                                    to right,
+                                    #fff,
+                                    #f5de80,
+                                    #f4b766,
+                                    #b26d12
+                                );
+                            }
+                            .hero-avatar-box {
+                                width: 98px;
+                                height: 111px;
+                                position: relative;
+                                display: inline-block;
+                                border-radius: 6px;
+                                background: linear-gradient(
+                                    180deg,
+                                    #8e7453 0%,
+                                    #e3c7a3 50%,
+                                    #8f7553 70%,
+                                    #ae916a 85%,
+                                    #8f7553 100%
+                                );
+                                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35),
+                                    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+                                cursor: grab;
+                                &.selected {
+                                    background: linear-gradient(
+                                        0deg,
+                                        #7cbc30,
+                                        #baf279
+                                    );
+                                    box-shadow: inset 0 1px 1px
+                                            hsla(0, 0%, 100%, 0.8),
+                                        0 2px 0 #299d29,
+                                        0 2px 6px 1px
+                                            rgba(46, 255, 18, 0.780392),
+                                        0 1px 6px 1px hsla(0, 0%, 100%, 0.8),
+                                        0 2px 0 1px hsla(0, 0%, 100%, 0.8);
+                                }
+                                &:active {
+                                    cursor: grabbing;
+                                    transform: scale(0.9796);
+                                }
+                                &:hover {
+                                    filter: brightness(1.1);
+                                }
+                                .hero-avatar {
+                                    width: 90px;
+                                    height: 103px;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 4px;
+                                    border-radius: 4px;
+                                    overflow: hidden;
+                                    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+                                }
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 4px;
+                                    width: 90px;
+                                    height: 103px;
+                                    border-radius: 4px;
+                                    box-shadow: inset 0 1px 1px
+                                        rgba(255, 255, 255, 0.2);
+                                }
+                                .sh3-icon-forgirl {
+                                    width: 25px;
+                                    height: 32px;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 2px;
+                                    z-index: 1;
+                                    img {
+                                        width: 25px;
+                                    }
+                                }
+                                .sh3-icon {
+                                    width: 25px;
+                                    height: 32px;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 2px;
+                                    z-index: 1;
+                                    img {
+                                        width: 25px;
+                                    }
+                                    display: none;
+                                }
+                                .fw-as-num {
+                                    width: 80px;
+                                    height: 24px;
+                                    position: absolute;
+                                    bottom: 4px;
+                                    left: 9px;
+                                    border-radius: 20px;
+                                    background: linear-gradient(
+                                        0deg,
+                                        #1c91bd 0%,
+                                        #a4e7ff 100%
+                                    );
+                                    box-shadow: inset 0 1px 1px
+                                            rgba(255, 255, 255, 0.2),
+                                        0 1px 3px rgba(0, 0, 0, 0.4);
+                                    color: #000;
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    text-shadow: 0 1px 1px
+                                        rgba(255, 255, 255, 0.6);
+                                }
+                                &.superheroines {
+                                    .sh3-icon {
+                                        display: block;
+                                        z-index: 1;
+                                    }
+                                    .fw-as-num {
+                                        background: linear-gradient(
+                                            0deg,
+                                            #c621db 0%,
+                                            #fda4ff 100%
+                                        );
+                                    }
+                                }
+                                .hero-block-box {
+                                    width: 100%;
+                                    height: 100%;
+                                    position: absolute;
+                                    background-color: rgba(0, 0, 0, 0.55);
+                                    border-radius: 6px;
+                                    .hero-block-text {
+                                        width: 90px;
+                                        height: auto;
+                                        position: absolute;
+                                        top: 5px;
+                                        left: 3px;
+                                        color: #fff;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                    .color-btn {
+                                        width: 90px;
+                                        height: 30px;
+                                        position: absolute;
+                                        bottom: 2px;
+                                        left: 4px;
+                                        .color-btn-text {
+                                            top: 0;
+                                            font-size: 12px;
+                                            .f-diamonds {
+                                                &:before {
+                                                    content: "";
+                                                    width: 26px;
+                                                    height: 26px;
+                                                    position: relative;
+                                                    display: inline-block;
+                                                    background-image: url(../img/ic-diamond.png);
+                                                    background-size: 100%;
+                                                    margin: 0 2px;
+                                                    vertical-align: middle;
+                                                }
+                                            }
+                                        }
+                                        &:active {
+                                            .color-btn-text {
+                                                top: 1px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .sexped-mission-description {
+                    width: 360px;
+                    height: 40px;
+                    position: absolute;
+                    bottom: -53px;
+                    left: 0;
+                    color: #735a3a;
+                    .color-btn {
+                        width: 130px;
+                        left: 0;
+                        position: absolute;
+                    }
+                    > .text {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        color: #efc857;
+                        font-size: 18px;
+                        font-weight: 700;
+                        text-shadow: 01px 2px rgba(0, 0, 0, 0.4);
+                        text-transform: uppercase;
+                    }
+                    .text-hint-wrap {
+                        width: 130px;
+                        height: 40px;
+                        border-radius: 7px;
+                        background: linear-gradient(
+                            79.88deg,
+                            #eecc60 15.85%,
+                            #ffeea7 31.54%,
+                            #cfa831 58.47%,
+                            #fbf1d8 75.55%,
+                            #eecc60 90.72%
+                        );
+                        box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                            0 0 3px #472624;
+                        position: absolute;
+                        right: 0;
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: calc(100% - 2px);
+                            height: calc(100% - 3px);
+                            left: 1px;
+                            top: 1px;
+                            background: #5f4b36;
+                            box-shadow: inset 0px 7px 0px
+                                    rgba(255, 255, 255, 0.08),
+                                inset 0px 2px 1px #412e28;
+                            border-radius: 6px;
+                        }
+                        &:after {
+                            content: "";
+                            border: 8px solid transparent;
+                            border-right: 8px solid #eecc60;
+                            border-radius: 2px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: -15px;
+                        }
+                        .text {
+                            width: 114px;
+                            margin: auto;
+                            margin-top: 3px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            color: #fff;
+                            position: relative;
+                            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+                            font-weight: 100;
+                        }
+                    }
+                }
+            }
+            .sexped-mission-right-side {
+                width: 790px;
+                height: 465px;
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                .sexped-mission-team-box {
+                    width: 790px;
+                    height: 100px;
+                    position: absolute;
+                    top: 34px;
+                    left: 0;
+                    .sexped-mission-team-n {
+                        width: 82px;
+                        height: 100px;
+                        position: absolute;
+                        top: 0;
+                        left: 8px;
+                        background: rgba(0, 0, 0, 0.4);
+                        color: #382b2e;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        line-height: 100px;
+                        border-radius: 10px;
+                        filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.2));
+                        &:before {
+                            content: "";
+                            border: 10px solid transparent;
+                            border-left: 8px solid rgba(0, 0, 0, 0.4);
+                            border-radius: 2px;
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: -18px;
+                            pointer-events: none;
+                        }
+                    }
+                    .sexped-mission-team-card-box {
+                        width: 688px;
+                        height: 100px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 0;
+                        display: flex;
+                        gap: 8px;
+                    }
+                    &.dpsteam {
+                        top: 142px;
+                    }
+                    &.dpcteam {
+                        top: 250px;
+                    }
+                    &.over {
+                        background-color: #ecdac4;
+                        .sexped-mission-team-n {
+                            background: linear-gradient(
+                                0deg,
+                                #fff7c7 0%,
+                                #f7e362 50%,
+                                #fff7c7 100%
+                            );
+                        }
+                    }
+                }
+                .sexped-mission-team-rewards-box {
+                    width: 790px;
+                    height: 70px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: 0;
+                    vertical-align: bottom;
+                    .sexped-mission-rewards-box {
+                        width: 100px;
+                        height: 70px;
+                        position: relative;
+                        display: inline-block;
+                        margin: 0 5px;
+                        border-radius: 10px;
+                        box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
+                            0 1px 4px 1px rgba(0, 0, 0, 0.4),
+                            inset 0 0 0 2px #ff9b37;
+                        background: url(../img/v2-trophy-bg.jpg),
+                            linear-gradient(0deg, #584b48, #7d6463);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        overflow: hidden;
+                        .sexped-mission-rewards-text {
+                            width: calc(100% - 4px);
+                            height: auto;
+                            position: absolute;
+                            top: 2px;
+                            left: 2px;
+                            color: #ffffff;
+                            background: rgba(0, 0, 0, 0.4);
+                            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2),
+                                0 1px 1px rgba(255, 255, 255, 0.2);
+                            font-size: 12px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            visibility: hidden;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+                            border-radius: 8px 8px 0 0;
+                        }
+                        .sexped-mission-rewards-pic {
+                            width: 50px;
+                            height: 50px;
+                            position: absolute;
+                            top: 0;
+                            left: 25px;
+                            img {
+                                width: 50px;
+                            }
+                        }
+                        .sexped-mission-rewards-num {
+                            width: 54px;
+                            line-height: 16px;
+                            position: absolute;
+                            top: 55px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            text-align: center;
+                            color: #fff;
+                            font-size: 12px;
+                            font-weight: bold;
+                            text-shadow: 0 1px 2px rgb(0, 0, 0),
+                                0 1px 4px rgba(0, 0, 0, 0.6);
+                            background: linear-gradient(#805a31, #c18346);
+                            border-radius: 10px 10px 0 0;
+                            box-shadow: inset 0 1px 0 #dea569;
+                            z-index: 1;
+                            filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
+                            &:before,
+                            &:after {
+                                content: "";
+                                width: 8px;
+                                height: 100%;
+                                position: absolute;
+                                top: 0px;
+                                background: linear-gradient(
+                                    #805a31,
+                                    #c18346 94%
+                                );
+                                z-index: -1;
+                            }
+                            &:before {
+                                left: -2px;
+                                transform: skewX(-20deg);
+                                border-radius: 6.6px 0 0 0;
+                                box-shadow: inset 1px 1px 0 #dea569;
+                            }
+                            &:after {
+                                right: -2px;
+                                transform: skewX(20deg);
+                                border-radius: 0 6.6px 0 0;
+                                box-shadow: inset -1px 1px 0 #dea569;
+                            }
+                        }
+                        .sexped-mission-rewards-check {
+                            width: 100px;
+                            height: 70px;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            display: none;
+                            background-color: rgba(0, 0, 0, 0.55);
+                            border-radius: 8px;
+                            z-index: 1;
+                            &:before {
+                                content: "";
+                                width: 50px;
+                                height: 50px;
+                                position: absolute;
+                                top: 10px;
+                                left: 25px;
+                                background-image: url(../img/paycheck.png);
+                                background-size: 100%;
+                                background-repeat: no-repeat;
+                            }
+                        }
+                        &.firstclear {
+                            .sexped-mission-rewards-text {
+                                visibility: visible;
+                            }
+                            .sexped-mission-rewards-pic {
+                                width: 40px;
+                                height: 40px;
+                                position: absolute;
+                                top: 14px;
+                                left: 30px;
+                                img {
+                                    width: 40px;
+                                }
+                            }
+                        }
+                        &.check {
+                            .sexped-mission-rewards-check {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .sexped-mission-btn-box {
+                width: 400px;
+                height: auto;
+                position: absolute;
+                bottom: -54px;
+                left: 195px;
+                font-size: 0;
+
+                .color-btn {
+                    width: 180px;
+                    height: 44px;
+                    margin: 0 10px;
+                    vertical-align: bottom;
+
+                    .color-btn-text {
+                        font-size: 16px;
+                    }
+                }
+                .color-btn.green {
+                    .color-btn-text-energy {
+                        width: 80px;
+                        height: auto;
+                        top: 0;
+                        position: relative;
+                        color: #2a5916;
+                        margin: 0 auto;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        .f-energy {
+                            &:before {
+                                content: "";
+                                width: 20px;
+                                height: 20px;
+                                position: relative;
+                                display: inline-block;
+                                background-image: url(../img/v2-icon-energy.png);
+                                background-size: 100%;
+                                background-repeat: no-repeat;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                    &:active {
+                        .color-btn-text {
+                            top: 1px;
+                        }
+                        .color-btn-text-energy {
+                            top: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .sexped-fight-screen {
+            width: 1190px;
+            height: 550px;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            z-index: 1;
+            .sexped-mission-left-side {
+                width: 690px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(#584a49, #483d3c);
+                box-shadow: inset 0 0 0 5px #9c8b7c,
+                    inset 0 0 4px 5px rgba(0, 0, 0, 0.4),
+                    0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 2px rgba(0, 0, 0, 0.2);
+                border-radius: 18px;
+                .dps-dpc-panel-box {
+                    width: 460px;
+                    height: 95px;
+                    position: absolute;
+                    top: 5px;
+                    left: 115px;
+                    .dpc,
+                    .dps {
+                        width: 200px;
+                        height: 66px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        display: inline-block;
+                        border-radius: 7px;
+                        background: linear-gradient(
+                            45deg,
+                            #e8c34e,
+                            #f1da7c,
+                            #cfa831,
+                            #fbf1d8
+                        );
+                        box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
+                            0 0 3px #472624;
+                        margin: 12px;
+                        position: relative;
+                        margin-left: 16px;
+                        .mlt-prm {
+                            width: 135px;
+                            height: 22px;
+                            display: block;
+                            border-radius: 5px;
+                            background: linear-gradient(
+                                to right,
+                                #73524d,
+                                #db4d29,
+                                #db4d29,
+                                #db4d29,
+                                #73524d
+                            );
+                            position: absolute;
+                            right: 5px;
+                            top: 5px;
+                            color: #fdfcc3;
+                            line-height: 22px;
+                            box-shadow: inset 0 11px 0px rgba(255, 255, 0, 0.11),
+                                inset 0 2px 1px #3d3737;
+                            text-align: left;
+                            padding-left: 20px;
+                            text-shadow: 0 2px #4f261e;
+                            &:before {
+                                width: 10px;
+                                height: 20px;
+                                margin-right: 3px;
+                                display: inline-block;
+                            }
+                        }
+                        .value {
+                            width: 135px;
+                            height: 30px;
+                            display: block;
+                            position: absolute;
+                            top: 30px;
+                            right: 5px;
+                            border-radius: 5px;
+                            background-color: #564a4a;
+                            color: #99e6f9;
+                            font-size: 26px;
+                            line-height: 30px;
+                            text-shadow: 0 2px #000;
+                            box-shadow: inset 0 11px 0px
+                                    rgba(255, 255, 255, 0.08),
+                                inset 0 2px 1px #3d3737;
+                            text-align: left;
+                            padding-left: 20px;
+                        }
+                        .title {
+                            width: 60px;
+                            height: 30px;
+                            display: block;
+                            position: absolute;
+                            left: -10px;
+                            top: -3px;
+                            border-radius: 60px;
+                            border-bottom-left-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            box-shadow: 0 3px 0px #c87725, inset 0 3px 1px #ffa,
+                                0 5px 0px #3d3737, 2px 0 0px #3d3737;
+                            background: linear-gradient(
+                                45deg,
+                                #e8c34e,
+                                #ffa,
+                                #cfa831,
+                                #fbf1d8
+                            );
+                            padding-top: 37px;
+                            text-align: center;
+                            color: #3a2423;
+                            font-size: 25px;
+                            font-weight: 900;
+                            text-shadow: 0 0 1px #3a2423, 0 0 1px #3a2423,
+                                0 0 1px #3a2423, 1px 0 1px #000, 1px 0 1px #000,
+                                1px 0 1px #000;
+                            &:before {
+                                content: "";
+                                width: 52px;
+                                height: 33px;
+                                display: block;
+                                position: absolute;
+                                top: 4px;
+                                left: 4px;
+                                border-radius: 46px;
+                                border-bottom-left-radius: 0;
+                                border-bottom-right-radius: 0;
+                                line-height: 26px;
+                                color: #ffa;
+                                background: #544741;
+                                box-shadow: inset 0 2px 3px #000;
+                                text-shadow: 0 2px 1px #000;
+                            }
+                            .icon-dpc,
+                            .icon-dps {
+                                width: 54px;
+                                height: 54px;
+                                display: inline-block;
+                                position: absolute;
+                                left: 3px;
+                                top: -10px;
+                                background-image: url(../img/ico-click.png);
+                                background-size: 54px;
+                            }
+                            .icon-dps {
+                                background-image: url(../img/ico-sword.png);
+                                background-size: 54px;
+                            }
+                        }
+                    }
+                    .dps {
+                        .x2-dps {
+                            position: absolute;
+                            top: 45px;
+                            left: 41px;
+                            text-shadow: 1px 1px 3px #4f261e,
+                                -1px -1px 3px #4f261e;
+                            color: #fdfcc3;
+                        }
+                        .value {
+                            top: 5px;
+                            right: auto;
+                            left: 5px;
+                            text-align: right;
+                            width: 135px;
+                            padding: 0;
+                            padding-right: 20px;
+                        }
+                        .mlt-prm {
+                            top: 38px;
+                            left: 5px;
+                            right: auto;
+                            width: 135px;
+                            text-align: right;
+                            padding: 0;
+                            padding-right: 20px;
+                        }
+                        .title {
+                            height: 71px;
+                            left: auto;
+                            right: -10px;
+                            top: -3px;
+                            border-radius: 60px;
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                            padding-top: 1px;
+                            text-align: center;
+                            box-shadow: 0 3px 0px #c87725, 0 5px 0px #3d3737,
+                                -1px 0 0px #3d3737, inset 0 3px 1px #ffa;
+                            &:before {
+                                content: "";
+                                display: block;
+                                width: 52px;
+                                height: 37px;
+                                border-radius: 46px;
+                                border-top-left-radius: 0;
+                                border-top-right-radius: 0;
+                                top: auto;
+                                bottom: 5px;
+                            }
+                            .icon-dps {
+                                background-image: url(../img/ico-sword.png);
+                                background-size: 54px;
+                                top: 23px;
+                                left: 3px;
+                            }
+                        }
+                    }
+                }
+                .sexped-mission-team-box {
+                    width: 680px;
+                    height: 128px;
+                    position: absolute;
+                    top: 94px;
+                    left: 5px;
+                    .sexped-mission-team-n {
+                        height: 24px;
+                        line-height: 24px;
+                    }
+                    .sexped-mission-team-card-box {
+                        width: 681px;
+                        height: 100px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        font-size: 0;
+                        display: flex;
+                        justify-content: space-evenly;
+                        .sexped-mission-team-card {
+                            cursor: default;
+                            .hero-avatar-box {
+                                cursor: help;
+                            }
+                            .remove-view {
+                                display: none;
+                            }
+                            &.selected {
+                                &:hover {
+                                    .remove-view {
+                                        height: 0;
+                                    }
+                                }
+                                &:active {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+                    &.dpsteam {
+                        top: 226px;
+                    }
+                    &.dpcteam {
+                        top: 358px;
+                    }
+                }
+                .sexped-mission-btn-box {
+                    bottom: 5px;
+                }
+            }
+            .sexped-mission-right-side {
+                width: 474px;
+                height: 530px;
+                position: absolute;
+                bottom: 15px;
+                right: 18px;
+            }
+            .sexped-mission-btn-box {
+                width: 690px;
+                height: 50px;
+                position: absolute;
+                bottom: 16px;
+                left: 0;
+                font-size: 0;
+                .color-btn {
+                    width: 180px;
+                    margin: 0 10px;
+                    vertical-align: bottom;
+                }
+            }
+        }
+        .sexped-mission-screen,
+        .sexped-fight-screen .sexped-mission-left-side {
+            &:before,
+            &:after {
+                content: "";
+                width: 100%;
                 height: 40px;
                 position: absolute;
-                top: 14px;
-                left: 30px;
-                img {
-                  width: 40px;
-                }
-              }
-            }
-            &.check {
-              .sexped-mission-rewards-check {
-                display: block;
-              }
-            }
-          }
-        }
-      }
-      .sexped-mission-btn-box {
-        width: 400px;
-        height: auto;
-        position: absolute;
-        bottom: -54px;
-        left: 195px;
-        font-size: 0;
-
-        .color-btn {
-          width: 180px;
-          height: 44px;
-          margin: 0 10px;
-          vertical-align: bottom;
-
-          .color-btn-text {
-            font-size: 16px;
-          }
-        }
-        .color-btn.green {
-          .color-btn-text-energy {
-            width: 80px;
-            height: auto;
-            top: 0;
-            position: relative;
-            color: #2a5916;
-            margin: 0 auto;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 12px;
-            .f-energy {
-              &:before {
-                content: "";
-                width: 20px;
-                height: 20px;
-                position: relative;
-                display: inline-block;
-                background-image: url(../img/v2-icon-energy.png);
-                background-size: 100%;
+                left: 0;
+                bottom: 0;
+                pointer-events: none;
+                background-image: url(../img/suphero-squad-frame-all@x2.png),
+                    url(../img/suphero-squad-frame-all@x2.png);
+                background-position: -718px -88px, 709px -88px;
                 background-repeat: no-repeat;
-                vertical-align: middle;
-              }
+                background-size: 1200px auto;
+                border-radius: 0 0 18px 18px;
+                filter: brightness(0.8) sepia(0.4);
             }
-          }
-          &:active {
-            .color-btn-text {
-              top: 1px;
+            &:after {
+                top: 0;
+                bottom: unset;
+                transform: scaleY(-1);
             }
-            .color-btn-text-energy {
-              top: 1px;
-            }
-          }
         }
-      }
-    }
-    .sexped-fight-screen {
-      width: 1190px;
-      height: 550px;
-      position: absolute;
-      bottom: 5px;
-      left: 5px;
-      z-index: 1;
-      .sexped-mission-left-side {
-        width: 690px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: linear-gradient(#584a49, #483d3c);
-        box-shadow: inset 0 0 0 5px #9c8b7c,
-          inset 0 0 4px 5px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.4),
-          0 0 2px rgba(0, 0, 0, 0.2);
-        border-radius: 18px;
-        .dps-dpc-panel-box {
-          width: 460px;
-          height: 95px;
-          position: absolute;
-          top: 5px;
-          left: 115px;
-          .dpc,
-          .dps {
-            width: 200px;
-            height: 66px;
-            font-size: 18px;
+        .sexped-fight-screen .sexped-mission-left-side {
+            &:before,
+            &:after {
+                background-position: -718px -88px, 209px -88px;
+            }
+        }
+        .sexped-mission-team-name,
+        .sexped-fight-screen .sexped-mission-team-n {
+            width: calc(100% - 86px);
+            height: 26px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            line-height: 26px;
+            border-radius: 14px;
+            color: #ffffff;
             font-weight: bold;
-            display: inline-block;
-            border-radius: 7px;
-            background: linear-gradient(
-              45deg,
-              #e8c34e,
-              #f1da7c,
-              #cfa831,
-              #fbf1d8
-            );
-            box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624,
-              0 0 3px #472624;
-            margin: 12px;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6),
+                0 1px 0 rgba(0, 0, 0, 0.4);
+            background: linear-gradient(0deg, #584b48, #7d6463);
+            background-position: 0;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                inset 0 0 0 2px #ff9b37, inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
+                inset 0 44px 24px rgba(255, 212, 110, 0.28),
+                0 1px 4px rgba(0, 0, 0, 0.6);
+            &.rewards {
+                top: 360px;
+            }
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0px;
+                width: 30px;
+                height: 26px;
+                background-image: url(../img/darkworld-angel-pop-btn-bg.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: auto 94%;
+                pointer-events: none;
+                filter: brightness(1.5)
+                    drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4))
+                    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2)) hue-rotate(26deg);
+            }
+            &:before {
+                left: -36px;
+            }
+            &:after {
+                transform: scaleX(-1);
+                right: -36px;
+            }
+        }
+        .sexped-mission-team-card {
+            width: 166px;
+            height: 100px;
             position: relative;
-            margin-left: 16px;
-            .mlt-prm {
-              width: 135px;
-              height: 22px;
-              display: block;
-              border-radius: 5px;
-              background: linear-gradient(
-                to right,
-                #73524d,
-                #db4d29,
-                #db4d29,
-                #db4d29,
-                #73524d
-              );
-              position: absolute;
-              right: 5px;
-              top: 5px;
-              color: #fdfcc3;
-              line-height: 22px;
-              box-shadow: inset 0 11px 0px rgba(255, 255, 0, 0.11),
-                inset 0 2px 1px #3d3737;
-              text-align: left;
-              padding-left: 20px;
-              text-shadow: 0 2px #4f261e;
-              &:before {
-                width: 10px;
-                height: 20px;
-                margin-right: 3px;
-                display: inline-block;
-              }
+            display: inline-block;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #584b48, #7d6463);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                inset 0 0 0 2px #ab6825, inset 0 0 6px 2px rgba(0, 0, 0, 0.2),
+                0 1px 4px rgba(0, 0, 0, 0.6);
+            .hero-avatar-box {
+                width: 80px;
+                height: 90px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                border-radius: 6px;
+                background: linear-gradient(
+                    180deg,
+                    #8e7453 0%,
+                    #e3c7a3 50%,
+                    #8f7553 70%,
+                    #ae916a 85%,
+                    #8f7553 100%
+                );
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35),
+                    0 0 4px rgba(0, 0, 0, 0.6),
+                    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+                z-index: 1;
+                .hero-avatar {
+                    width: 74px;
+                    height: 84px;
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    border-radius: 4px;
+                    overflow: hidden;
+                }
+                .sh3-icon-forgirl {
+                    width: 25px;
+                    height: 32px;
+                    position: absolute;
+                    top: 0px;
+                    left: 1px;
+                    img {
+                        width: 25px;
+                    }
+                }
+                .sh3-icon {
+                    width: 25px;
+                    height: 32px;
+                    position: absolute;
+                    top: 0;
+                    right: 1px;
+                    img {
+                        width: 25px;
+                    }
+                    display: none;
+                }
+                .fw-as-num {
+                    width: 70px;
+                    height: 20px;
+                    position: absolute;
+                    bottom: 4px;
+                    left: 5px;
+                    border-radius: 20px;
+                    background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                    color: #000;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                &.superheroines {
+                    .sh3-icon {
+                        display: block;
+                    }
+                    .fw-as-num {
+                        background: linear-gradient(
+                            0deg,
+                            #1c91bd 0%,
+                            #a4e7ff 100%
+                        );
+                    }
+                }
             }
-            .value {
-              width: 135px;
-              height: 30px;
-              display: block;
-              position: absolute;
-              top: 30px;
-              right: 5px;
-              border-radius: 5px;
-              background-color: #564a4a;
-              color: #99e6f9;
-              font-size: 26px;
-              line-height: 30px;
-              text-shadow: 0 2px #000;
-              box-shadow: inset 0 11px 0px rgba(255, 255, 255, 0.08),
-                inset 0 2px 1px #3d3737;
-              text-align: left;
-              padding-left: 20px;
+            .sexped-mission-team-card-effect-box {
+                width: 74px;
+                height: 92px;
+                position: absolute;
+                top: 5px;
+                right: 4px;
+                .sexped-mission-team-card-effect-name {
+                    width: 60px;
+                    height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 6px;
+                    background: linear-gradient(
+                        90deg,
+                        #f9c37e,
+                        #ffdcaf,
+                        #f9c37e
+                    );
+                    color: #493d3c;
+                    font-size: 12px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    line-height: 20px;
+                    text-shadow: 0 1px 2px rgba(255, 255, 255, 1);
+                    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+                    &:before,
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        display: block;
+                        height: 100%;
+                        width: 10px;
+                        background-image: url(../img/darkworld-angels-title-bg-br.png);
+                        background-repeat: no-repeat;
+                        filter: brightness(0.58) saturate(1.9);
+                        background-size: auto 32px;
+                        filter: brightness(1.5) hue-rotate(4deg);
+                    }
+                    &:before {
+                        left: -9px;
+                        background-position: left;
+                    }
+                    &:after {
+                        right: -9px;
+                        background-position: right;
+                    }
+                }
+                .sexped-mission-team-card-effect-text-box {
+                    width: 70px;
+                    height: 68px;
+                    position: absolute;
+                    bottom: 2px;
+                    left: 2px;
+                    display: table;
+                    .sexped-mission-team-card-effect-text {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        display: table-cell;
+                        vertical-align: middle;
+                        color: #ffd8b1;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                }
             }
-            .title {
-              width: 60px;
-              height: 30px;
-              display: block;
-              position: absolute;
-              left: -10px;
-              top: -3px;
-              border-radius: 60px;
-              border-bottom-left-radius: 20px;
-              border-bottom-right-radius: 20px;
-              box-shadow: 0 3px 0px #c87725, inset 0 3px 1px #ffa,
+            .hero-avatar-box-add {
+                width: 80px;
+                height: 90px;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 6px;
+                display: block;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4),
+                    0 1px 1px rgba(255, 255, 255, 0.2);
+                .hero-avatar-box-add-plus {
+                    width: 50px;
+                    height: 10px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #312a28;
+                    border-radius: 2px;
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+                    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.2));
+                    &:before {
+                        content: "";
+                        width: 10px;
+                        height: 50px;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: #312a28;
+                        border-radius: 2px;
+                        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
+            &.add {
+                .hero-avatar-box {
+                    visibility: hidden;
+                }
+                .hero-avatar-box-add {
+                    display: block;
+                }
+            }
+            .sexped-mission-team-card-block {
+                width: 166px;
+                height: 100px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.55);
+                &:before {
+                    content: "";
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    top: 25px;
+                    left: 58px;
+                    background-image: url(../img/v2-lock-ic.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                }
+            }
+            &.avail {
+                background: linear-gradient(135deg, #9f6b37, #bf7832);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                    inset 0 0 0 2px #ff9b37,
+                    inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
+                    inset 0 44px 24px rgba(255, 212, 110, 0.28),
+                    0 1px 4px rgba(0, 0, 0, 0.6);
+                cursor: pointer;
+                .sexped-mission-team-n {
+                    background: linear-gradient(
+                        0deg,
+                        #fff7c7 0%,
+                        #f7e362 50%,
+                        #fff7c7 100%
+                    );
+                }
+                .hero-avatar-box-add {
+                    .hero-avatar-box-add-plus {
+                        background-color: #ffb368;
+                        filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
+                        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
+                        &:before {
+                            background-color: #ffb368;
+                            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
+                        }
+                    }
+                }
+                &:hover {
+                    background: linear-gradient(135deg, #b87c40, #d9893a);
+                }
+                &:active {
+                    transform: scale(0.98);
+                }
+            }
+            &.selected {
+                background: linear-gradient(135deg, #9f6b37, #bf7832);
+                background: linear-gradient(135deg, #71615d, #917473);
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                    inset 0 0 0 2px #ff9b37,
+                    inset 0 0 6px 2px rgba(0, 0, 0, 0.2),
+                    inset 0 44px 24px rgba(255, 212, 110, 0.28),
+                    0 1px 4px rgba(0, 0, 0, 0.6);
+                cursor: pointer;
+                .hero-avatar-box-add {
+                    display: none;
+                }
+                .remove-view {
+                    width: calc(100% - 4px);
+                    height: 0px;
+                    background: rgba(64, 0, 0, 0.5);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(6px);
+                    position: absolute;
+                    left: 2px;
+                    bottom: 2px;
+                    border-radius: 0 0 8px 8px;
+                    z-index: 3;
+                    color: #ffffff;
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-shadow: 0 1px 2px rgb(0, 0, 0), 0 0 4px rgb(0, 0, 0);
+                    line-height: 30px;
+                    overflow: hidden;
+                    transition: ease-in-out 0.08s;
+                    &:before {
+                        content: "✖";
+                        margin-right: 4px;
+                        color: #ff8181;
+                        font-size: 14px;
+                    }
+                }
+                &:hover {
+                    // background: linear-gradient(
+                    //     135deg,
+                    //     #73625d,
+                    //     #967776
+                    // );
+                    .remove-view {
+                        height: 30px;
+                    }
+                }
+                &:active {
+                    transform: scale(0.98);
+                }
+            }
+            &.over {
+                .hero-avatar-box-add {
+                    background-color: #aa8c66;
+                    .hero-avatar-box-add-plus {
+                        background-color: #fedf87;
+                        &:before {
+                            content: "";
+                            background-color: #fedf87;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .chaos_res {
+        &:before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            position: relative;
+            display: inline-block;
+            background-image: url(../img/v2-icon-sexped-ore.png);
+            background-size: 100%;
+            margin-right: 4px;
+            margin-left: 4px;
+            vertical-align: middle;
+        }
+    }
+
+    .fw-mission-num {
+        width: 80px;
+        height: 24px;
+        position: absolute;
+        bottom: -20px;
+        left: 20px;
+        border-radius: 20px;
+        background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        color: #000;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .sexped-nods-box--30 {
+        .fw-mission-num {
+            left: 65px;
+        }
+    }
+
+    .dpc-dps-sp {
+        .title {
+            width: 60px;
+            height: 30px;
+            display: block;
+            position: absolute;
+            left: 11px;
+            top: 15px;
+            border-radius: 60px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 3px 0px #c87725, inset 0 3px 1px #ffa,
                 0 5px 0px #3d3737, 2px 0 0px #3d3737;
-              background: linear-gradient(
-                45deg,
-                #e8c34e,
-                #ffa,
-                #cfa831,
-                #fbf1d8
-              );
-              padding-top: 37px;
-              text-align: center;
-              color: #3a2423;
-              font-size: 25px;
-              font-weight: 900;
-              text-shadow: 0 0 1px #3a2423, 0 0 1px #3a2423, 0 0 1px #3a2423,
+            background: linear-gradient(45deg, #e8c34e, #ffa, #cfa831, #fbf1d8);
+            padding-top: 37px;
+            text-align: center;
+            color: #3a2423;
+            font-size: 25px;
+            font-weight: 900;
+            text-shadow: 0 0 1px #3a2423, 0 0 1px #3a2423, 0 0 1px #3a2423,
                 1px 0 1px #000, 1px 0 1px #000, 1px 0 1px #000;
-              &:before {
+
+            .text {
+                position: absolute;
+                left: 7px;
+                bottom: -35px;
+                &.buff {
+                    font-size: 21px;
+                }
+            }
+
+            &:before {
                 content: "";
                 width: 52px;
                 height: 33px;
@@ -1597,9 +2272,11 @@ const V2ScreenSexpedMainStyles = css`
                 background: #544741;
                 box-shadow: inset 0 2px 3px #000;
                 text-shadow: 0 2px 1px #000;
-              }
-              .icon-dpc,
-              .icon-dps {
+            }
+
+            .icon-dpc,
+            .icon-buff,
+            .icon-dps {
                 width: 54px;
                 height: 54px;
                 display: inline-block;
@@ -1608,682 +2285,63 @@ const V2ScreenSexpedMainStyles = css`
                 top: -10px;
                 background-image: url(../img/ico-click.png);
                 background-size: 54px;
-              }
-              .icon-dps {
+            }
+
+            .icon-dps {
                 background-image: url(../img/ico-sword.png);
                 background-size: 54px;
-              }
             }
-          }
-          .dps {
-            .x2-dps {
-              position: absolute;
-              top: 45px;
-              left: 41px;
-              text-shadow: 1px 1px 3px #4f261e, -1px -1px 3px #4f261e;
-              color: #fdfcc3;
+            .icon-buff {
+                background-image: url(../img/tab-07@2x.png);
+                background-size: 75px;
+                background-position: -10px;
+                background-repeat: no-repeat;
             }
-            .value {
-              top: 5px;
-              right: auto;
-              left: 5px;
-              text-align: right;
-              width: 135px;
-              padding: 0;
-              padding-right: 20px;
-            }
-            .mlt-prm {
-              top: 38px;
-              left: 5px;
-              right: auto;
-              width: 135px;
-              text-align: right;
-              padding: 0;
-              padding-right: 20px;
-            }
-            .title {
-              height: 71px;
-              left: auto;
-              right: -10px;
-              top: -3px;
-              border-radius: 60px;
-              border-top-left-radius: 20px;
-              border-top-right-radius: 20px;
-              padding-top: 1px;
-              text-align: center;
-              box-shadow: 0 3px 0px #c87725, 0 5px 0px #3d3737,
-                -1px 0 0px #3d3737, inset 0 3px 1px #ffa;
-              &:before {
-                content: "";
-                display: block;
-                width: 52px;
-                height: 37px;
-                border-radius: 46px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                top: auto;
-                bottom: 5px;
-              }
-              .icon-dps {
-                background-image: url(../img/ico-sword.png);
-                background-size: 54px;
-                top: 23px;
-                left: 3px;
-              }
-            }
-          }
         }
-        .sexped-mission-team-box {
-          width: 680px;
-          height: 128px;
-          position: absolute;
-          top: 94px;
-          left: 5px;
-          .sexped-mission-team-n {
-            height: 24px;
-            line-height: 24px;
-          }
-          .sexped-mission-team-card-box {
-            width: 681px;
-            height: 100px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: 0;
-            display: flex;
-            justify-content: space-evenly;
-            .sexped-mission-team-card {
-              cursor: default;
-              .hero-avatar-box {
-                cursor: help;
-              }
-              .remove-view {
-                display: none;
-              }
-              &.selected {
-                &:hover {
-                  .remove-view {
-                    height: 0;
-                  }
-                }
-                &:active {
-                  transform: scale(1);
-                }
-              }
-            }
-          }
-          &.dpsteam {
-            top: 226px;
-          }
-          &.dpcteam {
-            top: 358px;
-          }
-        }
-        .sexped-mission-btn-box {
-          bottom: 5px;
-        }
-      }
-      .sexped-mission-right-side {
-        width: 474px;
-        height: 530px;
-        position: absolute;
-        bottom: 15px;
-        right: 18px;
-      }
-      .sexped-mission-btn-box {
-        width: 690px;
+    }
+
+    .sexped-chaos-btn-shop {
+        width: 140px;
         height: 50px;
         position: absolute;
-        bottom: 16px;
-        left: 0;
-        font-size: 0;
-        .color-btn {
-          width: 180px;
-          margin: 0 10px;
-          vertical-align: bottom;
-        }
-      }
-    }
-    .sexped-mission-screen,
-    .sexped-fight-screen .sexped-mission-left-side {
-      &:before,
-      &:after {
-        content: "";
-        width: 100%;
-        height: 40px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        pointer-events: none;
-        background-image: url(../img/suphero-squad-frame-all@x2.png),
-          url(../img/suphero-squad-frame-all@x2.png);
-        background-position: -718px -88px, 709px -88px;
-        background-repeat: no-repeat;
-        background-size: 1200px auto;
-        border-radius: 0 0 18px 18px;
-        filter: brightness(0.8) sepia(0.4);
-      }
-      &:after {
-        top: 0;
-        bottom: unset;
-        transform: scaleY(-1);
-      }
-    }
-    .sexped-fight-screen .sexped-mission-left-side {
-      &:before,
-      &:after {
-        background-position: -718px -88px, 209px -88px;
-      }
-    }
-    .sexped-mission-team-name,
-    .sexped-fight-screen .sexped-mission-team-n {
-      width: calc(100% - 86px);
-      height: 26px;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      line-height: 26px;
-      border-radius: 14px;
-      color: #ffffff;
-      font-weight: bold;
-      font-size: 16px;
-      text-transform: uppercase;
-      text-align: center;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(0, 0, 0, 0.4);
-      background: linear-gradient(0deg, #584b48, #7d6463);
-      background-position: 0;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-        inset 0 0 0 2px #ff9b37, inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-        inset 0 44px 24px rgba(255, 212, 110, 0.28),
-        0 1px 4px rgba(0, 0, 0, 0.6);
-      &.rewards {
-        top: 360px;
-      }
-      &:before,
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0px;
-        width: 30px;
-        height: 26px;
-        background-image: url(../img/darkworld-angel-pop-btn-bg.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: auto 94%;
-        pointer-events: none;
-        filter: brightness(1.5) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4))
-          drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2)) hue-rotate(26deg);
-      }
-      &:before {
-        left: -36px;
-      }
-      &:after {
-        transform: scaleX(-1);
-        right: -36px;
-      }
-    }
-    .sexped-mission-team-card {
-      width: 166px;
-      height: 100px;
-      position: relative;
-      display: inline-block;
-      border-radius: 10px;
-      background: linear-gradient(135deg, #584b48, #7d6463);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-        inset 0 0 0 2px #ab6825, inset 0 0 6px 2px rgba(0, 0, 0, 0.2),
-        0 1px 4px rgba(0, 0, 0, 0.6);
-      .hero-avatar-box {
-        width: 80px;
-        height: 90px;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        border-radius: 6px;
+        top: 75px;
+        left: 80px;
         background: linear-gradient(
-          180deg,
-          #8e7453 0%,
-          #e3c7a3 50%,
-          #8f7553 70%,
-          #ae916a 85%,
-          #8f7553 100%
-        );
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 0 4px rgba(0, 0, 0, 0.6),
-          inset 0 1px 1px rgba(255, 255, 255, 0.2);
-        z-index: 1;
-        .hero-avatar {
-          width: 74px;
-          height: 84px;
-          position: absolute;
-          top: 3px;
-          left: 3px;
-          border-radius: 4px;
-          overflow: hidden;
-        }
-        .sh3-icon-forgirl {
-          width: 25px;
-          height: 32px;
-          position: absolute;
-          top: 0px;
-          left: 1px;
-          img {
-            width: 25px;
-          }
-        }
-        .sh3-icon {
-          width: 25px;
-          height: 32px;
-          position: absolute;
-          top: 0;
-          right: 1px;
-          img {
-            width: 25px;
-          }
-          display: none;
-        }
-        .fw-as-num {
-          width: 70px;
-          height: 20px;
-          position: absolute;
-          bottom: 4px;
-          left: 5px;
-          border-radius: 20px;
-          background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-          color: #000;
-          font-weight: bold;
-          font-size: 12px;
-          line-height: 20px;
-        }
-        &.superheroines {
-          .sh3-icon {
-            display: block;
-          }
-          .fw-as-num {
-            background: linear-gradient(0deg, #1c91bd 0%, #a4e7ff 100%);
-          }
-        }
-      }
-      .sexped-mission-team-card-effect-box {
-        width: 74px;
-        height: 92px;
-        position: absolute;
-        top: 5px;
-        right: 4px;
-        .sexped-mission-team-card-effect-name {
-          width: 60px;
-          height: 20px;
-          position: absolute;
-          top: 0;
-          left: 6px;
-          background: linear-gradient(90deg, #f9c37e, #ffdcaf, #f9c37e);
-          color: #493d3c;
-          font-size: 12px;
-          font-weight: bold;
-          text-transform: uppercase;
-          line-height: 20px;
-          text-shadow: 0 1px 2px rgba(255, 255, 255, 1);
-          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
-          &:before,
-          &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            display: block;
-            height: 100%;
-            width: 10px;
-            background-image: url(../img/darkworld-angels-title-bg-br.png);
-            background-repeat: no-repeat;
-            filter: brightness(0.58) saturate(1.9);
-            background-size: auto 32px;
-            filter: brightness(1.5) hue-rotate(4deg);
-          }
-          &:before {
-            left: -9px;
-            background-position: left;
-          }
-          &:after {
-            right: -9px;
-            background-position: right;
-          }
-        }
-        .sexped-mission-team-card-effect-text-box {
-          width: 70px;
-          height: 68px;
-          position: absolute;
-          bottom: 2px;
-          left: 2px;
-          display: table;
-          .sexped-mission-team-card-effect-text {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            display: table-cell;
-            vertical-align: middle;
-            color: #ffd8b1;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            font-size: 12px;
-            font-weight: bold;
-          }
-        }
-      }
-      .hero-avatar-box-add {
-        width: 80px;
-        height: 90px;
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 6px;
-        display: block;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4),
-          0 1px 1px rgba(255, 255, 255, 0.2);
-        .hero-avatar-box-add-plus {
-          width: 50px;
-          height: 10px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          background: #312a28;
-          border-radius: 2px;
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-          filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.2));
-          &:before {
-            content: "";
-            width: 10px;
-            height: 50px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: #312a28;
-            border-radius: 2px;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
-          }
-        }
-      }
-      &.add {
-        .hero-avatar-box {
-          visibility: hidden;
-        }
-        .hero-avatar-box-add {
-          display: block;
-        }
-      }
-      .sexped-mission-team-card-block {
-        width: 166px;
-        height: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.55);
-        &:before {
-          content: "";
-          width: 50px;
-          height: 50px;
-          position: absolute;
-          top: 25px;
-          left: 58px;
-          background-image: url(../img/v2-lock-ic.png);
-          background-size: 100%;
-          background-repeat: no-repeat;
-        }
-      }
-      &.avail {
-        background: linear-gradient(135deg, #9f6b37, #bf7832);
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-          inset 0 0 0 2px #ff9b37, inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-          inset 0 44px 24px rgba(255, 212, 110, 0.28),
-          0 1px 4px rgba(0, 0, 0, 0.6);
-        cursor: pointer;
-        .sexped-mission-team-n {
-          background: linear-gradient(
             0deg,
-            #fff7c7 0%,
-            #f7e362 50%,
-            #fff7c7 100%
-          );
+            #ffe199,
+            #f4c657 18%,
+            #ffe199 60%,
+            #f4c557 85%,
+            #ffe199
+        );
+        border-radius: 6px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        .sexped-chaos-icon {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: -12px;
+            left: -14px;
+            background-image: url(../img/v2-icon-sexped-ore.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
-        .hero-avatar-box-add {
-          .hero-avatar-box-add-plus {
-            background-color: #ffb368;
-            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6));
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
-            &:before {
-              background-color: #ffb368;
-              box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
-            }
-          }
+        .sexped-chaos-count {
+            width: 84px;
+            height: 26px;
+            position: absolute;
+            top: 12px;
+            right: 5px;
+            color: #3c3737;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 26px;
         }
-        &:hover {
-          background: linear-gradient(135deg, #b87c40, #d9893a);
-        }
-        &:active {
-          transform: scale(0.98);
-        }
-      }
-      &.selected {
-        background: linear-gradient(135deg, #9f6b37, #bf7832);
-        background: linear-gradient(135deg, #71615d, #917473);
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-          inset 0 0 0 2px #ff9b37, inset 0 0 6px 2px rgba(0, 0, 0, 0.2),
-          inset 0 44px 24px rgba(255, 212, 110, 0.28),
-          0 1px 4px rgba(0, 0, 0, 0.6);
-        cursor: pointer;
-        .hero-avatar-box-add {
-          display: none;
-        }
-        .remove-view {
-          width: calc(100% - 4px);
-          height: 0px;
-          background: rgba(64, 0, 0, 0.5);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(6px);
-          position: absolute;
-          left: 2px;
-          bottom: 2px;
-          border-radius: 0 0 8px 8px;
-          z-index: 3;
-          color: #ffffff;
-          font-size: 13px;
-          font-weight: 700;
-          text-transform: uppercase;
-          text-shadow: 0 1px 2px rgb(0, 0, 0), 0 0 4px rgb(0, 0, 0);
-          line-height: 30px;
-          overflow: hidden;
-          transition: ease-in-out 0.08s;
-          &:before {
-            content: "✖";
-            margin-right: 4px;
-            color: #ff8181;
-            font-size: 14px;
-          }
-        }
-        &:hover {
-          // background: linear-gradient(
-          //     135deg,
-          //     #73625d,
-          //     #967776
-          // );
-          .remove-view {
-            height: 30px;
-          }
-        }
-        &:active {
-          transform: scale(0.98);
-        }
-      }
-      &.over {
-        .hero-avatar-box-add {
-          background-color: #aa8c66;
-          .hero-avatar-box-add-plus {
-            background-color: #fedf87;
-            &:before {
-              content: "";
-              background-color: #fedf87;
-            }
-          }
-        }
-      }
     }
-  }
-
-  .chaos_res {
-    &:before {
-      content: "";
-      width: 30px;
-      height: 30px;
-      position: relative;
-      display: inline-block;
-      background-image: url(../img/v2-icon-sexped-ore.png);
-      background-size: 100%;
-      margin-right: 4px;
-      margin-left: 4px;
-      vertical-align: middle;
-    }
-  }
-
-  .fw-mission-num {
-    width: 80px;
-    height: 24px;
-    position: absolute;
-    bottom: -20px;
-    left: 20px;
-    border-radius: 20px;
-    background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-    color: #000;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .sexped-nods-box--30 {
-    .fw-mission-num {
-      left: 65px;
-    }
-  }
-
-  .dpc-dps-sp {
-    .title {
-      width: 60px;
-      height: 30px;
-      display: block;
-      position: absolute;
-      left: 11px;
-      top: 15px;
-      border-radius: 60px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-      box-shadow: 0 3px 0px #c87725, inset 0 3px 1px #ffa, 0 5px 0px #3d3737,
-        2px 0 0px #3d3737;
-      background: linear-gradient(45deg, #e8c34e, #ffa, #cfa831, #fbf1d8);
-      padding-top: 37px;
-      text-align: center;
-      color: #3a2423;
-      font-size: 25px;
-      font-weight: 900;
-      text-shadow: 0 0 1px #3a2423, 0 0 1px #3a2423, 0 0 1px #3a2423,
-        1px 0 1px #000, 1px 0 1px #000, 1px 0 1px #000;
-
-      .text {
-        position: absolute;
-        left: 7px;
-        bottom: -35px;
-        &.buff {
-          font-size: 21px;
-        }
-      }
-
-      &:before {
-        content: "";
-        width: 52px;
-        height: 33px;
-        display: block;
-        position: absolute;
-        top: 4px;
-        left: 4px;
-        border-radius: 46px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        line-height: 26px;
-        color: #ffa;
-        background: #544741;
-        box-shadow: inset 0 2px 3px #000;
-        text-shadow: 0 2px 1px #000;
-      }
-
-      .icon-dpc,
-      .icon-buff,
-      .icon-dps {
-        width: 54px;
-        height: 54px;
-        display: inline-block;
-        position: absolute;
-        left: 3px;
-        top: -10px;
-        background-image: url(../img/ico-click.png);
-        background-size: 54px;
-      }
-
-      .icon-dps {
-        background-image: url(../img/ico-sword.png);
-        background-size: 54px;
-      }
-      .icon-buff {
-        background-image: url(../img/tab-07@2x.png);
-        background-size: 75px;
-        background-position: -10px;
-        background-repeat: no-repeat;
-      }
-    }
-  }
-
-  .sexped-chaos-btn-shop {
-    width: 140px;
-    height: 50px;
-    position: absolute;
-    top: 75px;
-    left: 80px;
-    background: linear-gradient(
-      0deg,
-      #ffe199,
-      #f4c657 18%,
-      #ffe199 60%,
-      #f4c557 85%,
-      #ffe199
-    );
-    border-radius: 6px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-    .sexped-chaos-icon {
-      width: 70px;
-      height: 70px;
-      position: absolute;
-      top: -12px;
-      left: -14px;
-      background-image: url(../img/v2-icon-sexped-ore.png);
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
-    .sexped-chaos-count {
-      width: 84px;
-      height: 26px;
-      position: absolute;
-      top: 12px;
-      right: 5px;
-      color: #3c3737;
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 26px;
-    }
-  }
 `;
 
 const V2ScreenSexpedMain = styled.div`
-  ${V2ScreenSexpedMainStyles}
+    ${V2ScreenSexpedMainStyles}
 `;
 
 export { V2ScreenSexpedMainStyles, V2ScreenSexpedMain };

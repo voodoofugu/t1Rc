@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const ScreenAlbumStyles = css`
     .left-side .left-panel .tab-panel.album-panel {
@@ -83,7 +84,13 @@ const ScreenAlbumStyles = css`
             // background: #efd368;
             // background: linear-gradient(to top, #e9c44f, #efd368, #f7eec7);
             // box-shadow: inset 0 5px 5px #f7eec7, 0 3px 0px #3d3737, inset 0 0 3px #c87726;
-            background: linear-gradient(45deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
+            background: linear-gradient(
+                45deg,
+                #e8c34e,
+                #f1da7c,
+                #cfa831,
+                #fbf1d8
+            );
             box-shadow: 0 3px 0px #c87725, 0 0 3px #3d3737;
 
             border-radius: 6px;
@@ -197,7 +204,12 @@ const ScreenAlbumStyles = css`
                 font-weight: bold;
 
                 .title {
-                    background: linear-gradient(10deg, #095488, #007ace, #095488);
+                    background: linear-gradient(
+                        10deg,
+                        #095488,
+                        #007ace,
+                        #095488
+                    );
                     border-radius: 5px;
 
                     line-height: 40px;
@@ -256,13 +268,28 @@ const ScreenAlbumStyles = css`
                 }
 
                 &.tags .title {
-                    background: linear-gradient(10deg, #503e1c, #d19501, #503e1c);
+                    background: linear-gradient(
+                        10deg,
+                        #503e1c,
+                        #d19501,
+                        #503e1c
+                    );
                 }
                 &.artists .title {
-                    background: linear-gradient(10deg, #c6573d, #de4d24, #c6573d);
+                    background: linear-gradient(
+                        10deg,
+                        #c6573d,
+                        #de4d24,
+                        #c6573d
+                    );
                 }
                 &.anime .title {
-                    background: linear-gradient(10deg, #585825, #4a9200, #585825);
+                    background: linear-gradient(
+                        10deg,
+                        #585825,
+                        #4a9200,
+                        #585825
+                    );
                 }
                 &.fav-tags .title {
                     // background: linear-gradient(10deg, #0f5b67, #1fa2a7, #0f5b67);
@@ -280,8 +307,8 @@ const ScreenAlbumStyles = css`
                     box-shadow: inset 0 20px 0 rgba(255, 255, 255, 0.15),
                         inset 0 0 5px #dd7600, inset 0 0 5px #dd7600,
                         inset 0 0 5px #dd7600, inset 0 0 7px #dd7600,
-                        inset 0 0 7px #dd7600, inset 0 0 7px #dd7600, 0 0 10px #200,
-                        0 3px 0px #403d38;
+                        inset 0 0 7px #dd7600, inset 0 0 7px #dd7600,
+                        0 0 10px #200, 0 3px 0px #403d38;
                     color: #ecd06f;
                     // box-shadow:
                     //     inset 0 0 4px #600, inset 0 0 4px #600, inset 0 0 4px #600,
@@ -422,7 +449,7 @@ const ScreenAlbumStyles = css`
                     display: block;
                 }
 
-                // &:first-child .list{
+                // &:first-of-type .list{
                 //     display: block;
                 // }
             }
@@ -446,7 +473,13 @@ const ScreenAlbumStyles = css`
             // background: linear-gradient(to bottom, #095488, #007ace, #095488);
             // box-shadow: inset 0 17px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0px #403d38, 0 0 1px #403d38, inset 0 0 10px rgba(255, 255, 255, 0.33),
             //     0 0 5px #746b64, 0 0 7px #746b64, 0 0 9px #746b64;
-            background: linear-gradient(-15deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
+            background: linear-gradient(
+                -15deg,
+                #e8c34e,
+                #f1da7c,
+                #cfa831,
+                #fbf1d8
+            );
             box-shadow: 0 1px 0px #c87725, 0 0 3px #3d3737, 0 0 9px #746b64,
                 0 0 9px #746b64, 0 0 4px #746b64, 0 0 4px #746b64;
             text-shadow: 0 1px 1px #ffa, 0 0 4px #ffa;
@@ -793,7 +826,8 @@ const ScreenAlbumStyles = css`
                 top: 0;
                 border-radius: 100%;
                 background: linear-gradient(to top, #fff, #e4cf76, #bb8a25);
-                box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa, 0 3px 4px #000;
+                box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa,
+                    0 3px 4px #000;
                 cursor: pointer;
                 &.disabled {
                     cursor: not-allowed;
@@ -948,8 +982,15 @@ const ScreenAlbumStyles = css`
                 position: absolute;
                 left: -7px;
                 top: 2px;
-                box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa, 0 3px 4px #000;
-                background: linear-gradient(45deg, #e8c34e, #ffa, #cfa831, #fbf1d8);
+                box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa,
+                    0 3px 4px #000;
+                background: linear-gradient(
+                    45deg,
+                    #e8c34e,
+                    #ffa,
+                    #cfa831,
+                    #fbf1d8
+                );
                 line-height: 28px;
                 color: #453e38;
                 font-size: 16px;

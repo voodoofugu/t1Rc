@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const ScreenUnipopStarterpackStyles = css`
     .popup-layer .m-popup.unipop-starterpack {
@@ -493,7 +494,7 @@ const ScreenUnipopStarterpackStyles = css`
                                 #e3ae20 83%,
                                 #775b11 100%
                             );
-                            &:first-child {
+                            &:first-of-type {
                                 z-index: 1;
                             }
                             .card {

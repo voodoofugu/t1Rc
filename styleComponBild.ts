@@ -7,18 +7,18 @@ const mapFilePath = `${styleComponentsDir}AaStyleComponentsMap.jsx`; // Путь
 const styleComponentMap: Record<string, string> = {}; // Объект для хранения импортов и экспорта
 
 scssFiles.forEach((scssFile) => {
-  const fileName = scssFile.split("/").pop() || ""; // Извлечь имя файла без пути
-  const componentName = fileName
-    .replace(".scss", "")
-    .replace(/^[0-9]{1,2}/, "")
-    .replace(/[-_](\w)/g, (_, letter) => letter.toUpperCase())
-    .replace(/^\w/, (c) => c.toUpperCase());
+    const fileName = scssFile.split("/").pop() || ""; // Извлечь имя файла без пути
+    const componentName = fileName
+        .replace(".scss", "")
+        .replace(/^[0-9]{1,2}/, "")
+        .replace(/[-_](\w)/g, (_, letter) => letter.toUpperCase())
+        .replace(/^\w/, (c) => c.toUpperCase());
 
-  const scssContent = fs.readFileSync(scssFile, "utf8");
+    const scssContent = fs.readFileSync(scssFile, "utf8");
 
-  // Создать содержимое для компонента
-  const componentContent = `
-import styled from "styled-components";
+    // Создать содержимое для компонента
+    const componentContent = `
+import styled from "@emotion/styled";
 
 const ${componentName} = styled.div\`
   ${scssContent}
@@ -27,20 +27,20 @@ const ${componentName} = styled.div\`
 export default ${componentName};
 `;
 
-  // Записать компонент в файл
-  fs.writeFileSync(
-    `${styleComponentsDir}${componentName}.jsx`,
-    componentContent
-  );
+    // Записать компонент в файл
+    fs.writeFileSync(
+        `${styleComponentsDir}${componentName}.jsx`,
+        componentContent
+    );
 
-  // Добавить компонент в объект
-  styleComponentMap[componentName] = componentName;
+    // Добавить компонент в объект
+    styleComponentMap[componentName] = componentName;
 });
 
 // Создать содержимое для AaStyleComponentsMap.jsx
 const mapContent = `${Object.keys(styleComponentMap)
-  .map((component) => `import ${component} from "./${component}";`)
-  .join("\n")}
+    .map((component) => `import ${component} from "./${component}";`)
+    .join("\n")}
 
 const AaStyleComponentsMap = {
   ${Object.keys(styleComponentMap).join(",\n  ")}

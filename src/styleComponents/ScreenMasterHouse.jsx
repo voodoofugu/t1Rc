@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const ScreenMasterHouseStyles = css`
     body .main {
@@ -958,7 +959,7 @@ const ScreenMasterHouseStyles = css`
                                         padding: 10px;
                                         text-align: left;
                                         display: flex;
-                                        &:first-child {
+                                        &:first-of-type {
                                             margin: 0;
                                         }
                                         .abil-box {

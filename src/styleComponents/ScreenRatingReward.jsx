@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const ScreenRatingRewardStyles = css`
     .popup-layer .m-popup.rating-reward {

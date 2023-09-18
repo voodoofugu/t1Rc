@@ -1,54 +1,83 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenBfEventChestStyles = css`
-    .popup-layer .m-popup.bf-event__chest-pop{
+    .popup-layer .m-popup.bf-event__chest-pop {
         width: 990px;
         height: 600px;
         left: 105px;
         top: 20px;
         background: linear-gradient(-22deg, #595959, #303030, #595959, #7a7a7a);
-        box-shadow: 0 1px 10px #392d26, inset 0 1px 2px #505050, 0 0 10px #000, 0 0 15px #000;
-        &:before{
+        box-shadow: 0 1px 10px #392d26, inset 0 1px 2px #505050, 0 0 10px #000,
+            0 0 15px #000;
+        &:before {
             content: "";
             box-shadow: 0 0 2px #fff, inset 0 0 5px rgba(0, 0, 0, 0.55);
         }
-        .title{
+        .title {
             background: linear-gradient(to right, #595959, #303030, #595959);
             border: solid 4px #3e3e3e;
-            box-shadow: 0 1px 10px #303030, inset 0 2px 10px rgba(189, 189, 189, 0.15), inset 0 28px 5px rgba(189, 189, 189, 0.15);
+            box-shadow: 0 1px 10px #303030,
+                inset 0 2px 10px rgba(189, 189, 189, 0.15),
+                inset 0 28px 5px rgba(189, 189, 189, 0.15);
             color: #fff;
             text-shadow: 0 0 1px #413753, 0 1px 1px #fff, 0 1px 10px #ffffff;
         }
-        .color-box{
+        .color-box {
             background-color: #000;
             background-image: url(../img/v2-bf-pop-bg.jpg);
             background-position: center;
-            &:before{display: none};
-            &:after{display: none};
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: none;
+            }
         }
-        .btn-close-x{
-            background: linear-gradient(22deg, #7a7a7a, #949494, #595959, #7a7a7a);
+        .btn-close-x {
+            background: linear-gradient(
+                22deg,
+                #7a7a7a,
+                #949494,
+                #595959,
+                #7a7a7a
+            );
             border: solid 4px #3e3e3e;
-            &:before{
+            &:before {
                 content: "\2716";
                 color: #000;
-                text-shadow: 0 0 2px #808080, 0 0 2px #808080, 0 0 2px #808080, 0 0 2px #808080,
-                0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+                text-shadow: 0 0 2px #808080, 0 0 2px #808080, 0 0 2px #808080,
+                    0 0 2px #808080, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
             }
         }
-        .wpck-timer-box{
-            width: 184px; height: 84px; position: absolute; top: -10px; margin-left: -10px;
-            background-image: url(../img/timer-back.png); background-size: 100%;
-            .time-left, .time-sec{
-                width: 150px; height: 26px; position: absolute; top: 18px; margin-left: 18px;
-                color: #fff000; font-size: 16px; font-weight: bold; text-transform: uppercase;
+        .wpck-timer-box {
+            width: 184px;
+            height: 84px;
+            position: absolute;
+            top: -10px;
+            margin-left: -10px;
+            background-image: url(../img/timer-back.png);
+            background-size: 100%;
+            .time-left,
+            .time-sec {
+                width: 150px;
+                height: 26px;
+                position: absolute;
+                top: 18px;
+                margin-left: 18px;
+                color: #fff000;
+                font-size: 16px;
+                font-weight: bold;
+                text-transform: uppercase;
             }
-            .time-sec{
-                top: 34px; color: #fff; font-size: 24px;
+            .time-sec {
+                top: 34px;
+                color: #fff;
+                font-size: 24px;
             }
         }
 
-        .bf-chests-all{
+        .bf-chests-all {
             font-size: 0;
             width: 700px;
             height: 310px;
@@ -57,17 +86,24 @@ const V2ScreenBfEventChestStyles = css`
             left: 28px;
         }
 
-        .chest{
+        .chest {
             display: inline-block;
             position: relative;
             width: 310px;
             height: 310px;
             margin: 0 20px;
-            background: linear-gradient(0deg, #f8b669 0%, #f99820 18%, #f8b76c 60%, #f78500 85%, #f8b568 100%);
+            background: linear-gradient(
+                0deg,
+                #f8b669 0%,
+                #f99820 18%,
+                #f8b76c 60%,
+                #f78500 85%,
+                #f8b568 100%
+            );
             border-radius: 8px;
             overflow: hidden;
 
-            &:before{
+            &:before {
                 content: "";
                 position: absolute;
                 top: 4px;
@@ -75,23 +111,30 @@ const V2ScreenBfEventChestStyles = css`
                 width: 302px;
                 height: 302px;
                 border-radius: 6px;
-                background: linear-gradient(0deg, #fede92 0%, #f4c558 18%, #ffe098 60%, #f5c85d 85%, #fddd90 100%);
+                background: linear-gradient(
+                    0deg,
+                    #fede92 0%,
+                    #f4c558 18%,
+                    #ffe098 60%,
+                    #f5c85d 85%,
+                    #fddd90 100%
+                );
             }
         }
 
-        .chest__image{
+        .chest__image {
             position: absolute;
             top: 69px;
             left: 51px;
             width: 200px;
             height: 200px;
 
-            img{
+            img {
                 width: 100%;
             }
         }
 
-        .chest__label{
+        .chest__label {
             position: absolute;
             top: 0;
             left: 0;
@@ -103,18 +146,23 @@ const V2ScreenBfEventChestStyles = css`
             text-transform: uppercase;
             font-size: 16px;
             line-height: 40px;
-            background: rgba(110, 59, 0, .5);
+            background: rgba(110, 59, 0, 0.5);
         }
 
         .chest__count,
-        .key__count{
+        .key__count {
             position: absolute;
             top: 46px;
             left: 11px;
             width: 50px;
             height: 50px;
             color: #fff;
-            background: linear-gradient(0deg, #585858 0%, #303030 50%, #585858 100%);
+            background: linear-gradient(
+                0deg,
+                #585858 0%,
+                #303030 50%,
+                #585858 100%
+            );
             border-radius: 100%;
             font-size: 24px;
             font-weight: bold;
@@ -122,7 +170,7 @@ const V2ScreenBfEventChestStyles = css`
             text-align: center;
         }
 
-        .chest-info{
+        .chest-info {
             font-size: 14px;
             display: inline-block;
             position: relative;
@@ -131,7 +179,7 @@ const V2ScreenBfEventChestStyles = css`
             margin: 0;
         }
 
-        .chest-info__name{
+        .chest-info__name {
             position: absolute;
             bottom: 151px;
             left: -3px;
@@ -143,7 +191,7 @@ const V2ScreenBfEventChestStyles = css`
             padding-right: 10px;
             color: #f5c85f;
         }
-        .chest-info__description{
+        .chest-info__description {
             position: absolute;
             top: 173px;
             text-align: left;
@@ -151,7 +199,7 @@ const V2ScreenBfEventChestStyles = css`
             line-height: 17px;
         }
 
-        .chest-contents{
+        .chest-contents {
             width: 700px;
             height: 80px;
             position: absolute;
@@ -160,19 +208,19 @@ const V2ScreenBfEventChestStyles = css`
             text-align: left;
             font-size: 0;
 
-            .equip-item + .equip-item{
+            .equip-item + .equip-item {
                 margin: 0 0 0 7px;
             }
         }
 
-        .chest-contents__plus{
+        .chest-contents__plus {
             display: inline-block;
             width: 100px;
             height: 80px;
             position: relative;
 
             &:before,
-            &:after{
+            &:after {
                 content: "";
                 width: 7px;
                 height: 40px;
@@ -182,31 +230,31 @@ const V2ScreenBfEventChestStyles = css`
                 transform: translate(-50%, -50%);
                 background-color: #f5c85f;
             }
-            &:after{
+            &:after {
                 transform: translate(-50%, -50%) rotate(90deg);
             }
         }
 
-        .bf-progress{
+        .bf-progress {
             position: absolute;
             bottom: 15px;
             right: 174px;
             width: 50px;
             height: 438px;
             background: linear-gradient(
-                            to right,
-                            #595959 10%,
-                            #303030 45%,
-                            #303030 55%,
-                            #595959 90%
+                to right,
+                #595959 10%,
+                #303030 45%,
+                #303030 55%,
+                #595959 90%
             );
         }
-        .bf-progress__step{
+        .bf-progress__step {
             background: linear-gradient(
-                            to top,
-                            #fff091 0%,
-                            #ffbe27 50%,
-                            #fff091 100%
+                to top,
+                #fff091 0%,
+                #ffbe27 50%,
+                #fff091 100%
             );
             line-height: 26px;
             width: 60px;
@@ -216,28 +264,36 @@ const V2ScreenBfEventChestStyles = css`
             left: -5px;
             font-weight: bold;
 
-            &.step25{bottom: 31%;}
-            &.step50{bottom: 52%;}
-            &.step75{bottom: 74%;}
-            &.step100{bottom: 96%;}
+            &.step25 {
+                bottom: 31%;
+            }
+            &.step50 {
+                bottom: 52%;
+            }
+            &.step75 {
+                bottom: 74%;
+            }
+            &.step100 {
+                bottom: 96%;
+            }
         }
-        .bf-progress__bar{
+        .bf-progress__bar {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 50px;
             background: linear-gradient(
-                            to right,
-                            #41d355 0%,
-                            #039117 17%,
-                            #41d355 60%,
-                            #0ca621 85%,
-                            #41d355 100%
+                to right,
+                #41d355 0%,
+                #039117 17%,
+                #41d355 60%,
+                #0ca621 85%,
+                #41d355 100%
             );
-            transition: height .3s;
+            transition: height 0.3s;
         }
 
-        .bf-rewards{
+        .bf-rewards {
             width: 120px;
             height: 520px;
             position: absolute;
@@ -246,16 +302,16 @@ const V2ScreenBfEventChestStyles = css`
             background: #fff;
             border-radius: 8px;
             background: linear-gradient(
-                            to right,
-                            #419ad3 0%,
-                            #2c739f 17%,
-                            #419ad3 60%,
-                            #2c739f 85%,
-                            #419ad3 100%
+                to right,
+                #419ad3 0%,
+                #2c739f 17%,
+                #419ad3 60%,
+                #2c739f 85%,
+                #419ad3 100%
             );
         }
 
-        .bf-rewards__label{
+        .bf-rewards__label {
             line-height: 30px;
             font-weight: bold;
             text-transform: uppercase;
@@ -264,73 +320,89 @@ const V2ScreenBfEventChestStyles = css`
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
         }
 
-        .bf-rewards__items{
+        .bf-rewards__items {
             height: 398px;
             background: linear-gradient(
-                            to right,
-                            #d3d3d3 0%,
-                            #979797 17%,
-                            #d3d3d3 60%,
-                            #979797 85%,
-                            #d3d3d2 100%
+                to right,
+                #d3d3d3 0%,
+                #979797 17%,
+                #d3d3d3 60%,
+                #979797 85%,
+                #d3d3d2 100%
             );
             font-size: 0;
             padding-top: 16px;
             box-sizing: border-box;
         }
 
-        .equip-item{
-            width: 80px; height: 80px; position: relative; display: inline-block;
+        .equip-item {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: inline-block;
             background: linear-gradient(
-            180deg,
-            #c68300 0%,
-            #f4dfb6 50%,
-            #c68200 70%,
-            #fad489 85%,
-            #c78302 100%
-        );
+                180deg,
+                #c68300 0%,
+                #f4dfb6 50%,
+                #c68200 70%,
+                #fad489 85%,
+                #c78302 100%
+            );
             border-radius: 8px;
             background-color: #fffe9a;
-            box-shadow: inset 0px -50px 50px -25px #e9b13a, 0px 1px 3px -1px rgba(0, 0, 0, .4);
+            box-shadow: inset 0px -50px 50px -25px #e9b13a,
+                0px 1px 3px -1px rgba(0, 0, 0, 0.4);
             background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
 
-            &:before{
-                content: ""; width: 76px; height: 76px; position: absolute; top: 2px; left: 2px;
-                background: linear-gradient(0deg, #fede92 0%, #f4c558 18%, #ffe098 60%, #f5c85d 85%, #fddd90 100%);
+            &:before {
+                content: "";
+                width: 76px;
+                height: 76px;
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                background: linear-gradient(
+                    0deg,
+                    #fede92 0%,
+                    #f4c558 18%,
+                    #ffe098 60%,
+                    #f5c85d 85%,
+                    #fddd90 100%
+                );
                 border-radius: 6px;
             }
 
-            &.blue{
-                &:before{
+            &.blue {
+                &:before {
                     display: none;
                 }
                 background: linear-gradient(
-                                to top,
-                                #419ad3 0%,
-                                #2c739f 17%,
-                                #419ad3 60%,
-                                #2c739f 85%,
-                                #419ad3 100%
+                    to top,
+                    #419ad3 0%,
+                    #2c739f 17%,
+                    #419ad3 60%,
+                    #2c739f 85%,
+                    #419ad3 100%
                 );
                 box-shadow: none;
             }
 
-            & + .equip-item{
+            & + .equip-item {
                 margin-top: 15px;
             }
         }
-        .equip-item__picture{
+        .equip-item__picture {
             width: 70px;
             height: 70px;
             position: absolute;
             top: 5px;
             left: 5px;
 
-            img{
+            img {
                 width: 100%;
             }
         }
-        .equip-item__count{
+        .equip-item__count {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -347,7 +419,7 @@ const V2ScreenBfEventChestStyles = css`
             box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
         }
 
-        .equip-item__percent{
+        .equip-item__percent {
             position: absolute;
             top: 100%;
             width: 100%;
@@ -357,36 +429,36 @@ const V2ScreenBfEventChestStyles = css`
             line-height: 28px;
         }
 
-        .bf-rewards__collected{
+        .bf-rewards__collected {
             text-transform: uppercase;
             color: #fff;
         }
-        .collected__img{
+        .collected__img {
             width: 52px;
             height: 52px;
             margin: 0 auto;
 
-            img{
+            img {
                 width: 100%;
             }
         }
-        .collected__label{
+        .collected__label {
             font-size: 10px;
             margin-top: 5px;
         }
-        .collected__count{
+        .collected__count {
             font-size: 18px;
             line-height: 18px;
         }
 
-        .color-btn.back{
+        .color-btn.back {
             position: absolute;
             bottom: 33px;
             left: 401px;
             width: 180px;
             height: 50px;
 
-            .color-btn-text{
+            .color-btn-text {
                 font-size: 16px;
                 line-height: 28px;
             }
@@ -395,7 +467,7 @@ const V2ScreenBfEventChestStyles = css`
 `;
 
 const V2ScreenBfEventChest = styled.div`
-  ${V2ScreenBfEventChestStyles}
+    ${V2ScreenBfEventChestStyles}
 `;
 
 export { V2ScreenBfEventChestStyles, V2ScreenBfEventChest };

@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenGoddessMainStyles = css`
     body .main {
@@ -22,12 +23,13 @@ const V2ScreenGoddessMainStyles = css`
                             top: 10px;
                             left: 399px;
                             background: linear-gradient(
-                            0deg, 
-                            #ffe199 0%, 
-                            #f4c657 18%, 
-                            #ffe199 60%, 
-                            #f4c557 85%, 
-                            #ffe199 100%);
+                                0deg,
+                                #ffe199 0%,
+                                #f4c657 18%,
+                                #ffe199 60%,
+                                #f4c557 85%,
+                                #ffe199 100%
+                            );
                             border-radius: 12px;
                             box-shadow: 0 1px 2p x rgba(0, 0, 0, 0.35);
                             color: #3c3737;
@@ -162,13 +164,13 @@ const V2ScreenGoddessMainStyles = css`
                                     margin: 5px 0;
                                     border-radius: 6px;
                                     background: linear-gradient(
-            180deg,
-            #8e7453 0%,
-            #e3c7a3 50%,
-            #8f7553 70%,
-            #ae916a 85%,
-            #8f7553 100%
-        );
+                                        180deg,
+                                        #8e7453 0%,
+                                        #e3c7a3 50%,
+                                        #8f7553 70%,
+                                        #ae916a 85%,
+                                        #8f7553 100%
+                                    );
                                     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                                     .hero-avatar {
                                         width: 90px;
@@ -392,7 +394,8 @@ const V2ScreenGoddessMainStyles = css`
                                         color: #fff;
                                         font-size: 14px;
                                         font-weight: bold;
-                                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+                                        text-shadow: 0 1px 2px
+                                            rgba(0, 0, 0, 0.65);
                                     }
                                 }
                                 .gd-star-box {
@@ -582,13 +585,13 @@ const V2ScreenGoddessMainStyles = css`
                                             left: 11px;
                                             border-radius: 6px;
                                             background: linear-gradient(
-            180deg,
-            #8e7453 0%,
-            #e3c7a3 50%,
-            #8f7553 70%,
-            #ae916a 85%,
-            #8f7553 100%
-        );
+                                                180deg,
+                                                #8e7453 0%,
+                                                #e3c7a3 50%,
+                                                #8f7553 70%,
+                                                #ae916a 85%,
+                                                #8f7553 100%
+                                            );
                                             box-shadow: 0 1px 2px
                                                 rgba(0, 0, 0, 0.35);
                                             .hero-avatar {
@@ -653,7 +656,8 @@ const V2ScreenGoddessMainStyles = css`
                                                 );
                                                 box-shadow: inset 0 10px 0
                                                         rgba(255, 255, 255, 0.1),
-                                                    0 1px 1px rgba(0, 0, 0, 0.25);
+                                                    0 1px 1px
+                                                        rgba(0, 0, 0, 0.25);
                                                 color: #fff;
                                                 font-size: 12px;
                                                 font-weight: bold;
@@ -940,13 +944,13 @@ const V2ScreenGoddessMainStyles = css`
                                             margin: 0 3px;
                                             border-radius: 6px;
                                             background: linear-gradient(
-            180deg,
-            #8e7453 0%,
-            #e3c7a3 50%,
-            #8f7553 70%,
-            #ae916a 85%,
-            #8f7553 100%
-        );
+                                                180deg,
+                                                #8e7453 0%,
+                                                #e3c7a3 50%,
+                                                #8f7553 70%,
+                                                #ae916a 85%,
+                                                #8f7553 100%
+                                            );
                                             box-shadow: 0 1px 2px
                                                 rgba(0, 0, 0, 0.35);
                                             .hero-avatar {
@@ -1121,7 +1125,7 @@ const V2ScreenGoddessMainStyles = css`
 `;
 
 const V2ScreenGoddessMain = styled.div`
-  ${V2ScreenGoddessMainStyles}
+    ${V2ScreenGoddessMainStyles}
 `;
 
 export { V2ScreenGoddessMainStyles, V2ScreenGoddessMain };

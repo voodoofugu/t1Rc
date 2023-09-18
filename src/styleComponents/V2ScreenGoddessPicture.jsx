@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenGoddessPictureStyles = css`
     .popup-layer .m-popup.goddess-picture {

@@ -1,4 +1,5 @@
-import { styled, css } from "styled-components";
+import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 const V2ScreenAlbumStyles = css`
     body .main {
@@ -101,12 +102,13 @@ const V2ScreenAlbumStyles = css`
                             top: 10px;
                             left: 399px;
                             background: linear-gradient(
-            0deg, 
-            #ffe199 0%, 
-            #f4c657 18%, 
-            #ffe199 60%, 
-            #f4c557 85%, 
-            #ffe199 100%);
+                                0deg,
+                                #ffe199 0%,
+                                #f4c657 18%,
+                                #ffe199 60%,
+                                #f4c557 85%,
+                                #ffe199 100%
+                            );
                             border-radius: 12px;
                             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                             color: #3c3737;
@@ -152,7 +154,8 @@ const V2ScreenAlbumStyles = css`
                                         position: absolute;
                                         background-color: #f0ece9;
                                         border-radius: 6px;
-                                        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.45);
+                                        box-shadow: 0 1px 1px 0
+                                            rgba(0, 0, 0, 0.45);
                                         .search {
                                             width: 213px;
                                             height: 32px;
@@ -210,13 +213,13 @@ const V2ScreenAlbumStyles = css`
                                             height: 34px;
                                             position: relative;
                                             background: linear-gradient(
-            180deg,
-            #585a5c 0%,
-            #d5d8da 50%,
-            #585a5b 70%,
-            #a1a4a6 85%,
-            #585a5b 100%
-        );
+                                                180deg,
+                                                #585a5c 0%,
+                                                #d5d8da 50%,
+                                                #585a5b 70%,
+                                                #a1a4a6 85%,
+                                                #585a5b 100%
+                                            );
                                             border-radius: 6px;
                                             box-shadow: 0 2px 4px 0
                                                 rgba(0, 0, 0, 0.45);
@@ -244,7 +247,8 @@ const V2ScreenAlbumStyles = css`
                                                     rgba(0, 0, 0, 0.44);
                                                 border-top: none;
                                                 border-left: none;
-                                                transform: rotate(45deg);                                        }
+                                                transform: rotate(45deg);
+                                            }
                                         }
                                         &.opened .box-all-name {
                                             color: #fff;
@@ -252,7 +256,8 @@ const V2ScreenAlbumStyles = css`
                                         }
                                         &.opened .box-all-name:before {
                                             content: "";
-                                            transform: rotate(-135deg);                                        top: 14px;
+                                            transform: rotate(-135deg);
+                                            top: 14px;
                                         }
                                         &.opened .tags-scroll {
                                             display: block;
@@ -260,25 +265,25 @@ const V2ScreenAlbumStyles = css`
                                         &.collected-tags {
                                             .box-all-name {
                                                 background: linear-gradient(
-            180deg,
-            #8e7453 0%,
-            #e3c7a3 50%,
-            #8f7553 70%,
-            #ae916a 85%,
-            #8f7553 100%
-        );
+                                                    180deg,
+                                                    #8e7453 0%,
+                                                    #e3c7a3 50%,
+                                                    #8f7553 70%,
+                                                    #ae916a 85%,
+                                                    #8f7553 100%
+                                                );
                                             }
                                         }
                                         &.favorite-tags {
                                             .box-all-name {
                                                 background: linear-gradient(
-            180deg,
-            #c68300 0%,
-            #f4dfb6 50%,
-            #c68200 70%,
-            #fad489 85%,
-            #c78302 100%
-        );
+                                                    180deg,
+                                                    #c68300 0%,
+                                                    #f4dfb6 50%,
+                                                    #c68200 70%,
+                                                    #fad489 85%,
+                                                    #c78302 100%
+                                                );
                                             }
                                         }
                                     }
@@ -510,7 +515,8 @@ const V2ScreenAlbumStyles = css`
                                         line-height: 28px;
                                         color: #453e38;
                                         font-size: 16px;
-                                        text-shadow: 0 0 1px #000, 0 2px 2px #fff;
+                                        text-shadow: 0 0 1px #000,
+                                            0 2px 2px #fff;
                                         border-radius: 4px;
                                         @include prefix(
                                             border-bottom-left-radius,
@@ -671,7 +677,8 @@ const V2ScreenAlbumStyles = css`
                                             font-family: serif;
                                             text-align: center;
                                             line-height: 28px;
-                                            text-shadow: 0 0 1px #fff, 0 0 1px #fff;
+                                            text-shadow: 0 0 1px #fff,
+                                                0 0 1px #fff;
                                             box-shadow: inset 0 0 5px #fff,
                                                 0 2px 1px #000;
                                         }
@@ -710,7 +717,8 @@ const V2ScreenAlbumStyles = css`
                                     }
                                     &::-webkit-scrollbar-thumb {
                                         border-radius: 10px;
-                                        -webkit-box-shadow: inset 0 0 3px #796b60;
+                                        -webkit-box-shadow: inset 0 0 3px
+                                            #796b60;
                                         background: linear-gradient(
                                             to right,
                                             #fff,
@@ -889,12 +897,13 @@ const V2ScreenAlbumStyles = css`
                                 top: 4px;
                                 left: 10px;
                                 background: linear-gradient(
-            0deg, 
-            #ffe199 0%, 
-            #f4c657 18%, 
-            #ffe199 60%, 
-            #f4c557 85%, 
-            #ffe199 100%);
+                                    0deg,
+                                    #ffe199 0%,
+                                    #f4c657 18%,
+                                    #ffe199 60%,
+                                    #f4c557 85%,
+                                    #ffe199 100%
+                                );
                                 border-radius: 18px;
                                 box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.55),
                                     0 2px 4px 0 rgba(0, 0, 0, 0.35);
@@ -910,7 +919,8 @@ const V2ScreenAlbumStyles = css`
                                         #d38632 50%,
                                         #92581a 100%
                                     );
-                                    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25),
+                                    box-shadow: inset 0 2px 4px
+                                            rgba(0, 0, 0, 0.25),
                                         inset 0 14px 0 rgba(255, 255, 255, 0.15);
                                     border-radius: 6px;
                                     color: #fff;
