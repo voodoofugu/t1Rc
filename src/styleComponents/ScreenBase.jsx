@@ -729,7 +729,7 @@ const ScreenBaseStyles = css`
                         inset 0 -3px 0px #403d38, 0 0 1px #403d38,
                         inset 0 0 10px rgba(255, 255, 255, 0.33);
                     &:before {
-                        content: "\235F";
+                        content: "🈵";
                         display: inline-block;
                         margin: 0 5px;
                         font-size: 20px;

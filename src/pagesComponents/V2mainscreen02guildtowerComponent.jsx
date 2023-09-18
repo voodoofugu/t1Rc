@@ -29,7 +29,7 @@ const V2MainScreen02GuildTowerComponent = () => {
             document.querySelector("#root").append(btn);
             const main = document.querySelector(".main");
             const reG = document.querySelector(
-                ".resource-panel > div:nth-child(2)"
+                ".resource-panel > div:nth-of-type(2)"
             );
             const reI = document.querySelector(".resource-pic > img");
             const vvT = document.querySelector(".value-vip-ticket");
@@ -41,7 +41,7 @@ const V2MainScreen02GuildTowerComponent = () => {
 
                     reG.classList.remove("resource-gold");
                     reG.classList.add("resource-dark_gold");
-                    reI.src = "rc/v2-res-dark.png";
+                    reI.src = "img/v2-res-dark.png";
                     vvT.style.display = "none";
                 } else {
                     main.classList.remove("world3");
@@ -120,22 +120,22 @@ const V2MainScreen02GuildTowerComponent = () => {
             // переключалки контента
             const lP = document.querySelector(".left-panel");
             const lpD = document.querySelector(
-                ".left-panel > div:nth-child(1)"
+                ".left-panel > div:nth-of-type(1)"
             );
             const tB1 = document.querySelector(
-                ".tower-btn-box-all > a:nth-child(1)"
+                ".tower-btn-box-all > a:nth-of-type(1)"
             );
             const tB2 = document.querySelector(
-                ".tower-btn-box-all > a:nth-child(2)"
+                ".tower-btn-box-all > a:nth-of-type(2)"
             );
             const tB3 = document.querySelector(
-                ".tower-btn-box-all > a:nth-child(3)"
+                ".tower-btn-box-all > a:nth-of-type(3)"
             );
             const tB4 = document.querySelector(
-                ".tower-btn-box-all > a:nth-child(4)"
+                ".tower-btn-box-all > a:nth-of-type(4)"
             );
             const tB5 = document.querySelector(
-                ".tower-btn-box-all > a:nth-child(5)"
+                ".tower-btn-box-all > a:nth-of-type(5)"
             );
             const tB = document.querySelectorAll(".tower-btn-box-all > a");
             const twF = document.querySelector(".tower-wall.a1 > .color-btn");

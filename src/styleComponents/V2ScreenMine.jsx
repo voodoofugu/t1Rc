@@ -630,10 +630,10 @@ const V2ScreenMineStyles = css`
                                             display: block;
                                         }
                                     }
-                                    &:nth-child(1),
-                                    &:nth-child(2),
-                                    &:nth-child(3),
-                                    &:nth-child(4) {
+                                    &:nth-of-type(1),
+                                    &:nth-of-type(2),
+                                    &:nth-of-type(3),
+                                    &:nth-of-type(4) {
                                         &.buy {
                                             &:before {
                                                 content: "";
@@ -658,7 +658,7 @@ const V2ScreenMineStyles = css`
                                             }
                                         }
                                     }
-                                    &:nth-child(2) {
+                                    &:nth-of-type(2) {
                                         &.buy {
                                             &:before {
                                                 background-position: center 0px,
@@ -666,7 +666,7 @@ const V2ScreenMineStyles = css`
                                             }
                                         }
                                     }
-                                    &:nth-child(3) {
+                                    &:nth-of-type(3) {
                                         &.buy {
                                             &:before {
                                                 background-position: center 0px,
@@ -674,7 +674,7 @@ const V2ScreenMineStyles = css`
                                             }
                                         }
                                     }
-                                    &:nth-child(4) {
+                                    &:nth-of-type(4) {
                                         &.buy {
                                             &:before {
                                                 background-position: center 0px,
@@ -683,10 +683,10 @@ const V2ScreenMineStyles = css`
                                         }
                                     }
                                     &:hover {
-                                        &:nth-child(1),
-                                        &:nth-child(2),
-                                        &:nth-child(3),
-                                        &:nth-child(4) {
+                                        &:nth-of-type(1),
+                                        &:nth-of-type(2),
+                                        &:nth-of-type(3),
+                                        &:nth-of-type(4) {
                                             &.buy {
                                                 &:before {
                                                     background-position: center -20px,
@@ -701,7 +701,7 @@ const V2ScreenMineStyles = css`
                                                 }
                                             }
                                         }
-                                        &:nth-child(2) {
+                                        &:nth-of-type(2) {
                                             &.buy {
                                                 &:before {
                                                     background-position: center -20px,
@@ -709,7 +709,7 @@ const V2ScreenMineStyles = css`
                                                 }
                                             }
                                         }
-                                        &:nth-child(3) {
+                                        &:nth-of-type(3) {
                                             &.buy {
                                                 &:before {
                                                     background-position: center -20px,
@@ -717,7 +717,7 @@ const V2ScreenMineStyles = css`
                                                 }
                                             }
                                         }
-                                        &:nth-child(4) {
+                                        &:nth-of-type(4) {
                                             &.buy {
                                                 &:before {
                                                     background-position: center -20px,

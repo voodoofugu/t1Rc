@@ -326,7 +326,7 @@ const V2ScreenAlbumStyles = css`
                                             display: inline-block;
                                             background-color: #826e5f;
                                             cursor: pointer;
-                                            &:nth-child(2n) {
+                                            &:nth-of-type(2n) {
                                                 background-color: #8f7a6b;
                                             }
                                             .tags-name,
@@ -864,7 +864,7 @@ const V2ScreenAlbumStyles = css`
                             cursor: pointer;
                             z-index: 999;
                             &:before {
-                                content: "\2716";
+                                content: "✖";
                                 font-size: 28px;
                                 font-weight: bold;
                                 color: #600;

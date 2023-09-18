@@ -418,7 +418,7 @@ const V2ScreenCwMapWarpopStyles = css`
                 cursor: pointer;
                 z-index: 999;
                 &:before {
-                    content: "\2716";
+                    content: "✖";
                     font-size: 26px;
                     color: #fff;
                     line-height: 30px;

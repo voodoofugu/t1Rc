@@ -78,11 +78,11 @@ const V2MainScreen07AlbumComponent = () => {
             });
 
             const cM = document.querySelector(
-                ".left-panel > div > div:nth-child(1)"
+                ".left-panel > div > div:nth-of-type(1)"
             );
             const cMb = document.querySelector(".color-btn.pictures");
             const cB = document.querySelector(
-                ".left-panel > div > div:nth-child(2)"
+                ".left-panel > div > div:nth-of-type(2)"
             );
             const cBb = document.querySelector(".color-btn.bonuses");
             cB.style.display = "none";

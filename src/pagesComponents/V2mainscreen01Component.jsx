@@ -25,7 +25,7 @@ const V2MainScreen01Component = () => {
             document.querySelector("#root").append(btn);
             const main = document.querySelector(".main");
             const reG = document.querySelector(
-                ".resource-panel > div:nth-child(2)"
+                ".resource-panel > div:nth-of-type(2)"
             );
             const reI = document.querySelector(".resource-pic > img");
             const vvT = document.querySelector(".value-vip-ticket");
@@ -37,7 +37,7 @@ const V2MainScreen01Component = () => {
 
                     reG.classList.remove("resource-gold");
                     reG.classList.add("resource-dark_gold");
-                    reI.src = "rc/v2-res-dark.png";
+                    reI.src = "img/v2-res-dark.png";
                     vvT.style.display = "none";
                 } else {
                     main.classList.remove("world3");
@@ -93,7 +93,7 @@ const V2MainScreen01Component = () => {
             });
             [
                 ...document.querySelectorAll(
-                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-of-type(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
                 ),
             ].map((i) => {
                 i.addEventListener("click", () => {

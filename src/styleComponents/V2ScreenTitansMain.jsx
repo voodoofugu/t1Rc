@@ -516,11 +516,11 @@ const V2ScreenTitansMainStyles = css`
                                     border: none;
                                 }
 
-                                &:nth-child(3n) {
+                                &:nth-of-type(3n) {
                                     margin-right: 0;
                                 }
 
-                                &:nth-child(n + 4) {
+                                &:nth-of-type(n + 4) {
                                     margin-top: 30px;
                                 }
 
@@ -629,7 +629,7 @@ const V2ScreenTitansMainStyles = css`
                             cursor: pointer;
                             z-index: 999;
                             &:before {
-                                content: "\2716";
+                                content: "✖";
                                 font-size: 28px;
                                 font-weight: bold;
                                 color: #600;

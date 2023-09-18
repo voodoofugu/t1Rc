@@ -86,7 +86,7 @@ const V2ScreenMainStyles = css`
             border-radius: 10px 10px 0 0;
             box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4),
                 0 2px 0 #9c8b7c, 0 0 0 1px rgba(0, 0, 0, 0.4);
-            > div:nth-child(2) {
+            > div:nth-of-type(2) {
                 left: 190px;
             }
             .trophy-res-box,

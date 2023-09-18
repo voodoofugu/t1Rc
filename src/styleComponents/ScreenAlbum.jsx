@@ -154,23 +154,7 @@ const ScreenAlbumStyles = css`
                 color: #453e38;
                 margin: 0;
                 padding: 0;
-                // &:before{
-                //     content: "";
-                //     width: 0;
-                //     height: 0;
-                //     border-top: 8px solid transparent;
-                //     // border-right: 8px solid #f1da7c;
-                //     border-right: 8px solid red;
-                //     border-bottom: 8px solid transparent;
-                //     position: absolute; right: 100%; top: 0;
-                // }
-
-                // background: none;
             }
-            // &:before{
-            //     content: "\01F50D";
-            //     font-size: 20px;
-            // }
         }
         .imgs-all {
             display: block;
@@ -191,15 +175,7 @@ const ScreenAlbumStyles = css`
 
                 display: block;
                 width: 100%;
-                // height: 40px;
-                // box-shadow:
-                //     inset 0 20px 0 rgba(255,255,255,0.15),
-                //     0 2px 1px #000,
-                //     inset 0 0 2px #000,
-                //     inset 0 0 10px rgba(255,255,255,0.33),
-                //     ;
                 position: relative;
-                // background: #625252;
                 font-size: 16px;
                 font-weight: bold;
 
@@ -434,7 +410,7 @@ const ScreenAlbumStyles = css`
                             background-size: 21px;
                             opacity: 1;
                         }
-                        &:nth-child(even) {
+                        &:nth-of-type(even) {
                             background: #6d5d5e;
                         }
 
@@ -925,7 +901,7 @@ const ScreenAlbumStyles = css`
             box-shadow: 0 0 7px #000;
             cursor: pointer;
             &:before {
-                content: "\2716";
+                content: "✖";
                 font-size: 28px;
                 font-weight: bold;
                 color: #600;
@@ -1255,7 +1231,7 @@ const ScreenAlbumStyles = css`
             text-align: center;
             cursor: pointer;
             &:before {
-                content: "\2716";
+                content: "✖";
                 font-size: 32px;
                 font-weight: bold;
                 color: #000;

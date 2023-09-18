@@ -188,7 +188,7 @@ const V2ScreenRpgPolyStyles = css`
                     border: solid 4px #ffbe43;
                     cursor: pointer;
                     &:before {
-                        content: "\2716";
+                        content: "✖";
                         font-size: 22px;
                         font-weight: bold;
                         color: #757;
@@ -319,7 +319,7 @@ const V2ScreenRpgPolyStyles = css`
                             }
                             .btn-close-x {
                                 &:before {
-                                    content: "\2193";
+                                    content: "↓";
                                     color: #413753;
                                 }
                             }
@@ -667,7 +667,7 @@ const V2ScreenRpgPolyStyles = css`
             a {
                 .color-btn-text {
                     &:after {
-                        content: "\279C";
+                        content: "➜";
                         margin-left: 4px;
                     }
                 }
@@ -1148,7 +1148,7 @@ const V2ScreenRpgPolyStyles = css`
 
                     .btn-close-x.btn-open {
                         &:before {
-                            content: "\2922";
+                            content: "⤢";
                             color: #413753;
                         }
                     }
@@ -1190,7 +1190,7 @@ const V2ScreenRpgPolyStyles = css`
                     }
                     .btn-close-x {
                         &:before {
-                            content: "\2199";
+                            content: "↙";
                         }
                     }
                 }
@@ -1993,7 +1993,7 @@ const V2ScreenRpgPolyStyles = css`
                     }
                 }
                 .quest-item {
-                    &:nth-child(1n) {
+                    &:nth-of-type(1n) {
                         margin: 6px;
                     }
                 }

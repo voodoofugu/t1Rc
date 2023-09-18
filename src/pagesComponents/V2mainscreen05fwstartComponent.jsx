@@ -109,7 +109,7 @@ const V2MainScreen05FwStartComponent = () => {
                                 style={{ animationDelay: "450ms" }}>
                                 <img
                                     className="icon"
-                                    src="rating-sign-gold@1x.png"
+                                    src="img/rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">47:13:52</div>

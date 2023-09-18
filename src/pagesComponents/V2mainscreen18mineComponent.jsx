@@ -37,7 +37,7 @@ const V2MainScreen18MineComponent = () => {
             });
             [
                 ...document.querySelectorAll(
-                    ".btn-close-x, div.uki-story-nav-box.btn2 > div:nth-child(1)"
+                    ".btn-close-x, div.uki-story-nav-box.btn2 > div:nth-of-type(1)"
                 ),
             ].map((i) => {
                 i.addEventListener("click", () => {

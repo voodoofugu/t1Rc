@@ -22,7 +22,7 @@ const WorldBtnBox = ({ className }) => {
     useEffect(() => {
         const main = document.querySelector(".main");
         const reG = document.querySelector(
-            ".resource-panel > div:nth-child(2)"
+            ".resource-panel > div:nth-of-type(2)"
         );
         const reI = document.querySelector(".resource-pic > img");
         const vvT = document.querySelector(".value-vip-ticket");
@@ -40,7 +40,7 @@ const WorldBtnBox = ({ className }) => {
                 main.classList.add("world3");
                 reG.classList.remove("resource-gold");
                 reG.classList.add("resource-dark_gold");
-                reI.src = "rc/v2-res-dark.png";
+                reI.src = "img/v2-res-dark.png";
                 vvT.style.display = "none";
             }
         };

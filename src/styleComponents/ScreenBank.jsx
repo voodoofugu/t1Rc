@@ -1541,10 +1541,10 @@ const ScreenBankStyles = css`
                         box-shadow: 0 0 2px #fff, 0 0 5px #fff,
                             inset 0 2px 3px rgba(0, 0, 0, 0.55);
                     }
-                    // &:nth-child(n):before{
+                    // &:nth-of-type(n):before{
                     //     background: linear-gradient(to right, #67a5cf, #377795, #244977, #1e3450);
                     // }
-                    &:nth-child(4n-2):before {
+                    &:nth-of-type(4n-2):before {
                         background: linear-gradient(
                             to right,
                             #cc67cf,
@@ -1553,7 +1553,7 @@ const ScreenBankStyles = css`
                             #451e50
                         );
                     }
-                    &:nth-child(4n-1):before {
+                    &:nth-of-type(4n-1):before {
                         background: linear-gradient(
                             to right,
                             #cf9167,
@@ -1562,7 +1562,7 @@ const ScreenBankStyles = css`
                             #50281e
                         );
                     }
-                    &:nth-child(4n):before {
+                    &:nth-of-type(4n):before {
                         background: linear-gradient(
                             to right,
                             #6fcf67,
@@ -1946,7 +1946,7 @@ const ScreenBankStyles = css`
                     p {
                         padding: 0px 25px;
                     }
-                    p:nth-child(even) {
+                    p:nth-of-type(even) {
                         background: #a90000;
                     }
                     p.h {
@@ -1964,10 +1964,10 @@ const ScreenBankStyles = css`
                     font-size: 16px;
                     color: #fff;
                     position: relative;
-                    p:nth-child(even) {
+                    p:nth-of-type(even) {
                         background: #a90000;
                     }
-                    p:nth-child(odd) {
+                    p:nth-of-type(odd) {
                         // background: #bd3c3c;
                     }
                     p.h {
@@ -2045,54 +2045,54 @@ const ScreenBankStyles = css`
                         }
                     }
                 }
-                .vip-row:nth-child(even) {
-                    p:nth-child(odd) {
+                .vip-row:nth-of-type(even) {
+                    p:nth-of-type(odd) {
                         background: #d04545;
                     }
-                    p:nth-child(even) {
+                    p:nth-of-type(even) {
                         background: #bd3c3c;
                     }
                 }
-                .vip-row:nth-child(3) p.h .vn {
+                .vip-row:nth-of-type(3) p.h .vn {
                     background-image: url(../img/vip-s2.png);
                     background-size: 55px;
                 }
-                .vip-row:nth-child(4) p.h .vn {
+                .vip-row:nth-of-type(4) p.h .vn {
                     background-image: url(../img/vip-s3.png);
                     background-size: 55px;
                     color: #444;
                 }
-                .vip-row:nth-child(5) p.h .vn {
+                .vip-row:nth-of-type(5) p.h .vn {
                     background-image: url(../img/vip-s4.png);
                     background-size: 55px;
                     color: #444;
                 }
-                .vip-row:nth-child(6) p.h .vn {
+                .vip-row:nth-of-type(6) p.h .vn {
                     background-image: url(../img/vip-s5.png);
                     background-size: 55px;
                     color: #400;
                 }
-                .vip-row:nth-child(7) p.h .vn {
+                .vip-row:nth-of-type(7) p.h .vn {
                     background-image: url(../img/vip-s6.png);
                     background-size: 55px;
                     color: #400;
                 }
-                .vip-row:nth-child(8) p.h .vn {
+                .vip-row:nth-of-type(8) p.h .vn {
                     background-image: url(../img/vip-s7.png);
                     background-size: 55px;
                     color: #400;
                 }
-                .vip-row:nth-child(9) p.h .vn {
+                .vip-row:nth-of-type(9) p.h .vn {
                     background-image: url(../img/vip-s8.png);
                     background-size: 55px;
                     color: #400;
                 }
-                .vip-row:nth-child(10) p.h .vn {
+                .vip-row:nth-of-type(10) p.h .vn {
                     background-image: url(../img/vip-s9.png);
                     background-size: 55px;
                     color: #580349;
                 }
-                .vip-row:nth-child(11) p.h .vn {
+                .vip-row:nth-of-type(11) p.h .vn {
                     background-image: url(../img/vip-s10.png);
                     background-size: 55px;
                     color: #580349;
@@ -2938,42 +2938,42 @@ const ScreenBankStyles = css`
 
                     @include btn-buy-real();
                 }
-                .pack-line:nth-child(1) {
+                .pack-line:nth-of-type(1) {
                     .cr-pack,
                     .cr-pack-free,
                     .cr-pack-vip {
                         font-size: 12px;
                     }
                 }
-                .pack-line:nth-child(2) {
+                .pack-line:nth-of-type(2) {
                     .cr-pack,
                     .cr-pack-free,
                     .cr-pack-vip {
                         font-size: 14px;
                     }
                 }
-                .pack-line:nth-child(3) {
+                .pack-line:nth-of-type(3) {
                     .cr-pack,
                     .cr-pack-free,
                     .cr-pack-vip {
                         font-size: 16px;
                     }
                 }
-                .pack-line:nth-child(4) {
+                .pack-line:nth-of-type(4) {
                     .cr-pack,
                     .cr-pack-free,
                     .cr-pack-vip {
                         font-size: 18px;
                     }
                 }
-                .pack-line:nth-child(5) {
+                .pack-line:nth-of-type(5) {
                     .cr-pack,
                     .cr-pack-free,
                     .cr-pack-vip {
                         font-size: 20px;
                     }
                 }
-                .pack-line:nth-child(6) {
+                .pack-line:nth-of-type(6) {
                     .cr-pack,
                     .cr-pack-free,
                     .cr-pack-vip {
@@ -3102,7 +3102,7 @@ const ScreenBankStyles = css`
                 box-shadow: 0 0 7px #000;
                 cursor: pointer;
                 &:before {
-                    content: "\2716";
+                    content: "✖";
                     font-size: 28px;
                     font-weight: bold;
                     color: #600;
@@ -3446,7 +3446,7 @@ const ScreenBankStyles = css`
                 border: solid 4px #ffbe43;
                 cursor: pointer;
                 &:before {
-                    content: "\2716";
+                    content: "✖";
                     font-size: 22px;
                     font-weight: bold;
                     color: #413753;

@@ -44,7 +44,7 @@ const V2ScreenBfEventChestStyles = css`
             );
             border: solid 4px #3e3e3e;
             &:before {
-                content: "\2716";
+                content: "✖";
                 color: #000;
                 text-shadow: 0 0 2px #808080, 0 0 2px #808080, 0 0 2px #808080,
                     0 0 2px #808080, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;

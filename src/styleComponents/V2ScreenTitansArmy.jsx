@@ -309,7 +309,7 @@ const V2ScreenTitansArmyStyles = css`
                     }
 
                     &:before {
-                        content: "\002B";
+                        content: "+";
                         width: 100%;
                         height: 100%;
                         position: absolute;

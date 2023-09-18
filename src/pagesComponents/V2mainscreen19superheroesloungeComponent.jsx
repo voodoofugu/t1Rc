@@ -175,7 +175,7 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
                                 style={{ animationDelay: "300ms" }}>
                                 <img
                                     className="icon"
-                                    src="rating-sign-gold@1x.png"
+                                    src="img/rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">68:49:25</div>

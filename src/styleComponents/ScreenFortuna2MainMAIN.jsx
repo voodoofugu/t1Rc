@@ -758,7 +758,7 @@ const ScreenFortuna2MainMAINStyles = css`
                 );
                 border: solid 4px #408ce2;
                 &:before {
-                    content: "\2716";
+                    content: "✖";
                     color: #10498a;
                     text-shadow: 0 0 2px #56a2f8, 0 0 2px #56a2f8,
                         0 0 2px #56a2f8, 0 0 2px #56a2f8, 0 0 7px #fff,

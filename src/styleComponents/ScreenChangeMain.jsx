@@ -310,7 +310,7 @@ const ScreenChangeMainStyles = css`
                                     transition: ease-in-out 0.04s;
                                 }
                             }
-                            &:nth-child(2n) {
+                            &:nth-of-type(2n) {
                                 background-color: #8f7a6b;
                             }
                             .tags-name,

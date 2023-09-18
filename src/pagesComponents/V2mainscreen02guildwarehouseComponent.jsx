@@ -106,7 +106,7 @@ const V2MainScreen02GuildWarehouseComponent = () => {
                                 style={{ animationDelay: "450ms" }}>
                                 <img
                                     className="icon"
-                                    src="rating-sign-gold@1x.png"
+                                    src="img/rating-sign-gold@1x.png"
                                 />
                                 <div className="timerbox">
                                     <div className="timer">40:33:52</div>

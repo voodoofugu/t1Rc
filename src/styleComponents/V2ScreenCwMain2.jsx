@@ -649,7 +649,7 @@ const V2ScreenCwMain2Styles = css`
                             cursor: pointer;
                             z-index: 999;
                             &:before {
-                                content: "\2716";
+                                content: "✖";
                                 font-size: 28px;
                                 font-weight: bold;
                                 color: #600;

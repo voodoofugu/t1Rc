@@ -40,7 +40,7 @@ const V2MainScreen08UkiDailyComponent = () => {
             );
             [
                 ...document.querySelectorAll(
-                    ".btn-close-x, .btn-close, div.uki-story-nav-box.btn2 > div:nth-child(1)"
+                    ".btn-close-x, .btn-close, div.uki-story-nav-box.btn2 > div:nth-of-type(1)"
                 ),
             ].map((i) => {
                 i.addEventListener("click", () => {

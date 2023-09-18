@@ -1173,7 +1173,7 @@ const AllResStyles = css`
                 border: solid 4px #ffbe43;
                 cursor: pointer;
                 &:before {
-                    content: "\2716";
+                    content: "✖";
                     font-size: 22px;
                     font-weight: bold;
                     color: #757;

@@ -32,7 +32,7 @@ const MainScreen01AllPopupsComponent = () => {
             const colB = document.querySelector(".color-btn.collect");
             const rrBo = document.querySelector(".rating-reward-box");
             const ch1 = document.querySelector(
-                ".rating-reward-box > div:nth-child(1)"
+                ".rating-reward-box > div:nth-of-type(1)"
             );
             colB.addEventListener("click", () => {
                 if (rrBo.classList.contains("open")) {
@@ -187,7 +187,7 @@ const MainScreen01AllPopupsComponent = () => {
             // Привязка действий к кнопкам закрытия
             [
                 ...document.querySelectorAll(
-                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-of-type(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
                 ),
             ].forEach((button) => {
                 bindCloseAction(
@@ -390,7 +390,7 @@ const MainScreen01AllPopupsComponent = () => {
                 },
                 {
                     trigger: document.querySelector(
-                        ".item-box > div:nth-child(1) > .color-btn"
+                        ".item-box > div:nth-of-type(1) > .color-btn"
                     ),
                     closePopup: scP,
                     openPopup: caP,
@@ -428,35 +428,35 @@ const MainScreen01AllPopupsComponent = () => {
                 },
                 {
                     trigger: document.querySelector(
-                        ".m-popup.events-btlpass-pop.xmas > .btlpass-btn-box > div:nth-child(2)"
+                        ".m-popup.events-btlpass-pop.xmas > .btlpass-btn-box > div:nth-of-type(2)"
                     ),
                     closePopup: closePopups,
                     openPopup: eByx,
                 },
                 {
                     trigger: document.querySelector(
-                        ".m-popup.events-btlpass-pop.hw > .btlpass-btn-box > div:nth-child(2)"
+                        ".m-popup.events-btlpass-pop.hw > .btlpass-btn-box > div:nth-of-type(2)"
                     ),
                     closePopup: closePopups,
                     openPopup: eByh,
                 },
                 {
                     trigger: document.querySelector(
-                        ".m-popup.events-btlpass-pop.bf > .btlpass-btn-box > div:nth-child(2)"
+                        ".m-popup.events-btlpass-pop.bf > .btlpass-btn-box > div:nth-of-type(2)"
                     ),
                     closePopup: closePopups,
                     openPopup: eByb,
                 },
                 {
                     trigger: document.querySelector(
-                        ".m-popup.events-btlpass-pop.vl > .btlpass-btn-box > div:nth-child(2)"
+                        ".m-popup.events-btlpass-pop.vl > .btlpass-btn-box > div:nth-of-type(2)"
                     ),
                     closePopup: closePopups,
                     openPopup: eByv,
                 },
                 {
                     trigger: document.querySelector(
-                        ".m-popup.events-btlpass-pop.autumn > .btlpass-btn-box > div:nth-child(2)"
+                        ".m-popup.events-btlpass-pop.autumn > .btlpass-btn-box > div:nth-of-type(2)"
                     ),
                     closePopup: closePopups,
                     openPopup: eBya,
@@ -515,7 +515,7 @@ const MainScreen01AllPopupsComponent = () => {
                 });
             });
             const hrW = document.querySelector(
-                ".m-popup.hero-popup > div:nth-child(5)"
+                ".m-popup.hero-popup > div:nth-of-type(5)"
             );
             const hrB = document.querySelector(
                 ".m-popup.hero-popup .abils-btn"
