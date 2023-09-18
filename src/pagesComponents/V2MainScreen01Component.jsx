@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
-import { V2MainScreen01ComponentStylesMap } from "../stylesMaps/V2MainScreen01ComponentStylesMap.jsx";
+import V2MainScreen01ComponentStylesMap from "../stylesMaps/V2MainScreen01ComponentStylesMap.jsx";
 
 const V2MainScreen01Component = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему

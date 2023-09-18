@@ -1,11 +1,9 @@
 import React from "react";
-// import v2ScreenTower from "../styles/v2-screen-tower.scss";
-// import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
-// import v2ScreenMainRelicsPop from "../styles/v2-screen-main-relics-pop.scss";
+import V2MainScreen01ComponentStylesMap from "../stylesMaps/V2MainScreen01ComponentStylesMap.jsx";
 
 const V2MainScreen01RelicsPopComponent = () => {
     return (
-        <>
+        <V2MainScreen01ComponentStylesMap>
             <div className="main world1">
                 <div className="popup-layer" style={{ display: "block" }}>
                     <div
@@ -203,7 +201,7 @@ const V2MainScreen01RelicsPopComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </V2MainScreen01ComponentStylesMap>
     );
 };
 

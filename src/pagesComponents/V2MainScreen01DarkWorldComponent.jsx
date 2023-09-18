@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from "react";
-// import screenBank from "../styles/screen-bank.scss";
-// import screenBank1 from "../styles/screen-bank1.scss";
-// import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-// import angelTab from "../styles/angel-tab.scss";
-// import screenSuperhero from "../styles/screen-superhero.scss";
+import React, { useEffect } from "react";
+import V2MainScreen01ComponentStylesMap from "../stylesMaps/V2MainScreen01ComponentStylesMap.jsx";
 
 const V2MainScreen01DarkWorldComponent = () => {
     // создаём такой же айди как у родителя здесь и так попадаем к нему
@@ -390,7 +386,7 @@ const V2MainScreen01DarkWorldComponent = () => {
         return () => {};
     }, []);
     return (
-        <>
+        <V2MainScreen01ComponentStylesMap>
             <div className="main world3">
                 <div
                     className="main-bg main-bg-offset"
@@ -3879,7 +3875,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </V2MainScreen01ComponentStylesMap>
     );
 };
 
