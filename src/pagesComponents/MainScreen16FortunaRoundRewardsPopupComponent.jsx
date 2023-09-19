@@ -21,7 +21,7 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
                   <div className="fortuna-reward-box claim-btn">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -38,14 +38,14 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
                   <div className="fortuna-reward-box claim-btn">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -62,14 +62,14 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
                   <div className="fortuna-reward-box claim-btn">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -86,21 +86,21 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
                   <div className="fortuna-reward-box claim-btn">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -117,28 +117,28 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
                   <div className="fortuna-reward-box claim-btn">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
@@ -155,35 +155,35 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
                   <div className="fortuna-reward-box claim-btn">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>
                   <div className="fortuna-reward-box">
                     <div className="fortuna-reward-bg">
                       <div className="fortuna-reward">
-                        <img src="img/ms-stone-pink.png" />
+                        <img src="img/ms-stone-pink.png" loading="lazy" />
                       </div>
                     </div>
                   </div>

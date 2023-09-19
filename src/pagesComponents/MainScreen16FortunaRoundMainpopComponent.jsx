@@ -35,6 +35,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                       <div className="fortuna-check-num res-amount">10</div>
                       <div className="fortuna-check-num">
@@ -45,7 +46,11 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                   </div>
                   <div className="fortuna-wheel b2 winner selected cheked">
                     <div className="fortuna-prize">
-                      <img className="prize-pic" src="img/ms-stone-pink.png" />
+                      <img
+                        className="prize-pic"
+                        src="img/ms-stone-pink.png"
+                        loading="lazy"
+                      />
                       <div className="fortuna-check-num res-amount">5.77M</div>
                     </div>
                   </div>
@@ -54,6 +59,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -62,6 +68,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -70,6 +77,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -78,6 +86,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -86,6 +95,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -94,6 +104,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -102,6 +113,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -110,6 +122,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -118,6 +131,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -126,6 +140,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -134,6 +149,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -142,6 +158,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -150,6 +167,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -158,6 +176,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -166,6 +185,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -174,6 +194,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -182,6 +203,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -190,6 +212,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -198,6 +221,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -206,6 +230,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -214,6 +239,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -222,6 +248,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -230,6 +257,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                       <img
                         className="prize-pic"
                         src="img/icons/ic-abil-185.jpg"
+                        loading="lazy"
                       />
                     </div>
                   </div>
@@ -260,7 +288,10 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box claim-btn">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/images/superhero/suphero-240/x1/avatar/240sh-ava-1.jpg" />
+                          <img
+                            src="img/images/superhero/suphero-240/x1/avatar/240sh-ava-1.jpg"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -268,7 +299,10 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/images/superhero/suphero-241/x1/avatar/241sh-ava-1.jpg" />
+                          <img
+                            src="img/images/superhero/suphero-241/x1/avatar/241sh-ava-1.jpg"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -276,7 +310,10 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg" />
+                          <img
+                            src="img/images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -284,7 +321,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/change-ic-gold.png" />
+                          <img src="img/change-ic-gold.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -292,7 +329,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/change-ic-gold.png" />
+                          <img src="img/change-ic-gold.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -300,7 +337,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -308,7 +345,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -318,7 +355,10 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box claim-btn">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/images/superhero/suphero-240/x1/avatar/240sh-ava-1.jpg" />
+                          <img
+                            src="img/images/superhero/suphero-240/x1/avatar/240sh-ava-1.jpg"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -326,7 +366,10 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/images/superhero/suphero-241/x1/avatar/241sh-ava-1.jpg" />
+                          <img
+                            src="img/images/superhero/suphero-241/x1/avatar/241sh-ava-1.jpg"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -334,7 +377,10 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg" />
+                          <img
+                            src="img/images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -342,7 +388,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/change-ic-gold.png" />
+                          <img src="img/change-ic-gold.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -350,7 +396,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/change-ic-gold.png" />
+                          <img src="img/change-ic-gold.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -358,7 +404,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -366,7 +412,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">6969k</div>
@@ -404,7 +450,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box claim-btn">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">med x 4</div>
@@ -412,7 +458,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">10K%</div>
@@ -420,7 +466,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">35</div>
@@ -428,7 +474,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                       <div className="fortuna-reward-claim-btn">15</div>
@@ -436,7 +482,7 @@ const MainScreen16FortunaRoundMainpopComponent = () => {
                     <div className="fortuna-reward-box">
                       <div className="fortuna-reward-bg">
                         <div className="fortuna-reward">
-                          <img src="img/ms-stone-pink.png" />
+                          <img src="img/ms-stone-pink.png" loading="lazy" />
                         </div>
                       </div>
                     </div>

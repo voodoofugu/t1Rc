@@ -21,43 +21,43 @@ const MainScreen22Unipop04wavepack10Component = () => {
                 <div className="unipop-scroll-box">
                   <div className="unipop-box select">
                     <div className="unipop-box-pic">
-                      <img src="img/unipop-m-wom-pack.jpg" />
+                      <img src="img/unipop-m-wom-pack.jpg" loading="lazy" />
                     </div>
                     <div className="unipop-gold-arrow"></div>
                   </div>
                   <div className="unipop-box select">
                     <div className="unipop-box-pic">
-                      <img src="img/unipop-m-sed-pack.jpg" />
+                      <img src="img/unipop-m-sed-pack.jpg" loading="lazy" />
                     </div>
                     <div className="unipop-gold-arrow"></div>
                   </div>
                   <div className="unipop-box select">
                     <div className="unipop-box-pic">
-                      <img src="img/unipop-m-lov-pack.jpg" />
+                      <img src="img/unipop-m-lov-pack.jpg" loading="lazy" />
                     </div>
                     <div className="unipop-gold-arrow"></div>
                   </div>
                   <div className="unipop-box select">
                     <div className="unipop-box-pic">
-                      <img src="img/unipop-m-don-pack.jpg" />
+                      <img src="img/unipop-m-don-pack.jpg" loading="lazy" />
                     </div>
                     <div className="unipop-gold-arrow"></div>
                   </div>
                   <div className="unipop-box select">
                     <div className="unipop-box-pic">
-                      <img src="img/unipop-m-plb-pack.jpg" />
+                      <img src="img/unipop-m-plb-pack.jpg" loading="lazy" />
                     </div>
                     <div className="unipop-gold-arrow"></div>
                   </div>
                   <div className="unipop-box select">
                     <div className="unipop-box-pic">
-                      <img src="img/unipop-m-cas-pack.jpg" />
+                      <img src="img/unipop-m-cas-pack.jpg" loading="lazy" />
                     </div>
                     <div className="unipop-gold-arrow"></div>
                   </div>
                   <div className="unipop-box">
                     <div className="unipop-box-pic">
-                      <img src="img/unipop-m-fortuna.jpg" />
+                      <img src="img/unipop-m-fortuna.jpg" loading="lazy" />
                     </div>
                     <div className="unipop-gold-arrow"></div>
                   </div>
@@ -73,11 +73,11 @@ const MainScreen22Unipop04wavepack10Component = () => {
                   <div className="rew-box-all">
                     <div className="rew-box">
                       <div className="item-box">
-                        <img src="img/change-ic-gold.png" />
+                        <img src="img/change-ic-gold.png" loading="lazy" />
                         <div className="item-count">6969</div>
                       </div>
                       <div className="item-box">
-                        <img src="img/change-ic-gold.png" />
+                        <img src="img/change-ic-gold.png" loading="lazy" />
                         <div className="item-count">6969</div>
                       </div>
                     </div>

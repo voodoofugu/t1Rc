@@ -17,7 +17,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
             <div className="title">Buy energy</div>
             <div className="keys-card-box">
               <div className="keys-but-box">
-                <img src="img/v2-f-e1.png" alt="" />
+                <img src="img/v2-f-e1.png" alt="" loading="lazy" />
               </div>
               <div className="keys-price">5</div>
               {/* <div className="keys-bonus">+5 free</div> */}
@@ -27,7 +27,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
             </div>
             <div className="keys-card-box">
               <div className="keys-but-box">
-                <img src="img/v2-f-e2.png" alt="" />
+                <img src="img/v2-f-e2.png" alt="" loading="lazy" />
               </div>
               <div className="keys-price">30</div>
               {/*                <div className="keys-bonus">+20 free</div>*/}
@@ -37,7 +37,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
             </div>
             <div className="keys-card-box">
               <div className="keys-but-box">
-                <img src="img/v2-f-e3.png" alt="" />
+                <img src="img/v2-f-e3.png" alt="" loading="lazy" />
               </div>
               <div className="keys-price">160</div>
               {/*                <div className="keys-bonus">+200 free</div>*/}
@@ -47,7 +47,7 @@ const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
             </div>
             <div className="keys-card-box">
               <div className="keys-but-box">
-                <img src="img/v2-f-e4.png" alt="" />
+                <img src="img/v2-f-e4.png" alt="" loading="lazy" />
               </div>
               <div className="keys-price">450</div>
               {/*                <div className="keys-bonus">+2000 free</div>*/}
