@@ -169,20 +169,22 @@ const LoadCss = css`
     }
 `;
 
-const LoadDiv = styled.div`
-    ${LoadCss}
-`;
+// const LoadDiv = styled.div`
+//     ${LoadCss}
+// `;
 
 const Loading = () => {
     return (
-        <LoadDiv>
+        // <LoadDiv>
+        <>
             <div className="blurBg"></div>
             <div className="loader">
                 <div className="inner one"></div>
                 <div className="inner two"></div>
                 <div className="inner three"></div>
             </div>
-        </LoadDiv>
+        </>
+        // </LoadDiv>
     );
 };
 
