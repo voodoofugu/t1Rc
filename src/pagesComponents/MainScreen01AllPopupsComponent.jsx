@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import styled from "@emotion/styled";
-// import Loading from "../components/Loading.jsx";
 // import Mainscreen01allpopupsComponentStylesMap from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
 // import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
 

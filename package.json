@@ -58,6 +58,7 @@
         "sass-loader": "^13.2.2",
         "semver-regex": "^4.0.5",
         "style-loader": "^3.3.3",
+        "styled-components": "^6.0.8",
         "styled-jsx": "^5.1.2",
         "stylis": "^4.3.0",
         "terser-webpack-plugin": "^5.3.9"

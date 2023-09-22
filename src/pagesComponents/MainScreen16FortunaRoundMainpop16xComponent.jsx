@@ -1,9 +1,9 @@
 import React from "react";
 // import { ScreenFortunaRoundMain16x } from "../styleComponents/ScreenFortunaRoundMain16x.jsx";
-import {
-    dynamicClassName,
-    V2ScreenFortunaBuyres,
-} from "../styleComponents/V2ScreenFortunaBuyres.jsx";
+// import {
+//     dynamicClassName,
+//     V2ScreenFortunaBuyres,
+// } from "../styleComponents/V2ScreenFortunaBuyres.jsx";
 
 const MainScreen16FortunaRoundMainpop16xComponent = () => {
     return (
