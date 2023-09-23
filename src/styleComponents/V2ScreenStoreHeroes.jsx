@@ -1,498 +1,491 @@
-import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const V2ScreenStoreHeroesStyles = css`
-    .popup-layer .m-popup.store-heroes {
-        width: 1028px;
-        height: 550px;
-        left: 86px;
-        top: 45px;
-        .title {
-            color: #572f14;
-        }
-        .color-box {
-            background: linear-gradient(0deg, #645143 0%, #8e8177 100%);
-            &:before {
-                display: none;
-            }
-            &:after {
-                display: none;
-            }
-        }
-        .store-menu-box {
-            width: 118px;
-            height: 450px;
-            position: absolute;
-            top: 75px;
-            left: 20px;
-            .menu-box-all {
-                width: 118px;
-                height: 90px;
-                position: relative;
-                background-image: url(../img/shop-menu1.png);
-                background-size: 100%;
-                cursor: pointer;
-                &:active {
-                    top: 1px;
-                }
-                &.select {
-                    background-image: url(../img/shop-menu2.png);
-                }
-                .menu-pic {
-                    width: 80px;
-                    height: 60px;
-                    position: absolute;
-                    left: 19px;
-                }
-                .menu-text {
-                    width: 104px;
-                    height: 18px;
-                    position: absolute;
-                    top: 60px;
-                    left: 8px;
-                    text-align: center;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    line-height: 20px;
-                    color: #30261f;
-                    text-shadow: 0 0 6px #fff;
-                }
-            }
-        }
-        .store-content-right-box {
-            width: 865px;
-            height: 450px;
-            position: absolute;
-            top: 75px;
-            left: 145px;
-            background: linear-gradient(180deg, #b8a598 0%, #9e8b7d 100%);
-            .spin-all-box {
-                width: 600px;
-                height: 406px;
-                position: absolute;
-                top: 20px;
-                left: 0;
-                .spotspin-text-box {
-                    width: 560px;
-                    height: 50px;
-                    position: absolute;
-                    top: 10px;
-                    left: 20px;
-                    background-color: #706258;
-                    border-radius: 10px;
-                    text-align: center;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-size: 16px;
-                    font-weight: bold;
-                    line-height: 50px;
-                }
-                .spin-box {
-                    width: 580px;
-                    height: 260px;
-                    position: absolute;
-                    top: 70px;
-                    left: 10px;
-                    .spin-box-container {
-                        width: 180px;
-                        position: absolute;
-                        top: 0;
-                        left: 10px;
-                        .spin-girl-box {
-                            width: 180px;
-                            height: 240px;
-                            position: relative;
-                            display: inline-block;
-                            border-radius: 10px;
-                            top: 10px;
-                            box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
-                            background: linear-gradient(
-                                180deg,
-                                #585a5c 0%,
-                                #d5d8da 50%,
-                                #585a5b 70%,
-                                #a1a4a6 85%,
-                                #585a5b 100%
-                            );
-                            &:before {
-                                content: "";
-                                width: 168px;
-                                height: 228px;
-                                position: absolute;
-                                top: 6px;
-                                left: 6px;
-                                background: linear-gradient(
-                                    180deg,
-                                    #959595 0%,
-                                    #ffffff 50%,
-                                    #989898 83%,
-                                    #b5b5b5 100%
-                                );
-                                border-radius: 6px;
-                                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-                            }
-                            .spinpic-center {
-                                width: 100px;
-                                height: 114px;
-                                position: absolute;
-                                top: 60px;
-                                left: 40px;
-                                background: linear-gradient(
-                                    180deg,
-                                    #b1a054 0%,
-                                    #d3c773 15%,
-                                    #f4ea8b 50%,
-                                    #d3c773 75%,
-                                    #b1a054 100%
-                                );
-                                &:before {
-                                    content: "";
-                                    width: 33px;
-                                    height: 90px;
-                                    position: absolute;
-                                    top: 12px;
-                                    left: -33px;
-                                    background: linear-gradient(
-                                        0deg,
-                                        #baa115 0%,
-                                        #f9e17f 25%,
-                                        #baa115 50%,
-                                        #f9e17f 75%,
-                                        #baa115 100%
-                                    );
-                                }
-                                &:after {
-                                    content: "";
-                                    width: 33px;
-                                    height: 90px;
-                                    position: absolute;
-                                    top: 12px;
-                                    left: 100px;
-                                    background: linear-gradient(
-                                        0deg,
-                                        #baa115 0%,
-                                        #f9e17f 25%,
-                                        #baa115 50%,
-                                        #f9e17f 75%,
-                                        #baa115 100%
-                                    );
-                                }
-                            }
-                            .spinroll-box {
-                                width: 100px;
-                                height: 220px;
-                                position: absolute;
-                                top: 10px;
-                                left: 40px;
-                                overflow: hidden;
-                                .spinroll-girl {
-                                    width: 90px;
-                                    height: 103px;
-                                    position: relative;
-                                    display: inline-block;
-                                    top: -422px;
-                                    margin-top: 10px;
-                                    box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.25);
-                                    img {
-                                        width: 90px;
-                                        height: 103px;
-                                    }
-                                }
-                            }
-                            &.anim-start {
-                                .spinroll-box .spinroll-girl {
-                                    animation: spin-anim-start 0.75s ease-in
-                                        10ms;
-                                }
-                            }
-                            &.anim-spin {
-                                .spinroll-box .spinroll-girl {
-                                    animation: spin-anim-spin 0.35s linear 0s
-                                        infinite;
-                                }
-                            }
-                            &.anim-end {
-                                .spinroll-box .spinroll-girl {
-                                    animation: spin-anim-end 0.75s ease-out 0s;
-                                }
-                            }
-                            @keyframes spin-anim-start {
-                                0% {
-                                    transform: translate(0, 0px);
-                                }
-                                50% {
-                                    transform: translate(0, 10px);
-                                }
-                                100% {
-                                    transform: translate(0, -464px);
-                                }
-                            }
-                            @keyframes spin-anim-spin {
-                                0% {
-                                    transform: translate(0, -464px);
-                                }
-                                50% {
-                                    transform: translate(0, 0px);
-                                }
-                                100% {
-                                    transform: translate(0, 464px);
-                                }
-                            }
-                            @keyframes spin-anim-end {
-                                0% {
-                                    transform: translate(0, 464px);
-                                }
-                                50% {
-                                    transform: translate(0, -10px);
-                                }
-                                100% {
-                                    transform: translate(0, 0px);
-                                }
-                            }
-                        }
-                        &.s2 {
-                            left: 200px;
-                        }
-                        &.s3 {
-                            left: 390px;
-                        }
-                    }
-                    .color-btn.blue {
-                        width: 160px;
-                        height: 50px;
-                        top: 24px;
-                        .color-btn-text {
-                            top: 15px;
-                        }
-                        &:active {
-                            .color-btn-text {
-                                top: 16px;
-                            }
-                        }
-                    }
-                    .color-btn.diamond {
-                        width: 160px;
-                        height: 50px;
-                        top: 24px;
-                        .color-btn-text {
-                            font-size: 14px;
-                            top: 10px;
-                        }
-                        .f-diamond {
-                            &:before {
-                                content: "";
-                                width: 30px;
-                                height: 30px;
-                                position: relative;
-                                display: inline-block;
-                                background-image: url(../img/ic-diamond.png);
-                                background-size: 100%;
-                                margin-right: 4px;
-                                margin-left: 4px;
-                                vertical-align: middle;
-                            }
-                        }
-                        &:active {
-                            .color-btn-text {
-                                top: 11px;
-                            }
-                        }
-                    }
-                    .filter-blur {
-                        width: 160px;
-                        height: 30px;
-                        position: absolute;
-                        top: 10px;
-                        left: 10px;
-                        filter: blur(1px);
-                        background-color: #fff;
-                        opacity: 0.55;
-                        &:before {
-                            content: "";
-                            width: 160px;
-                            height: 40px;
-                            position: absolute;
-                            top: 180px;
-                            background-color: #000;
-                            opacity: 0.25;
-                            filter: blur(5px);
-                        }
-                    }
-                }
-            }
-            .rules-box-all {
-                width: 250px;
-                height: 448px;
-                position: absolute;
-                left: 600px;
-                .rules-box {
-                    width: 250px;
-                    height: 240px;
-                    position: absolute;
-                    top: 100px;
-                    background-color: #55483f;
-                    border-radius: 10px;
-                    .rules-name {
-                        width: 100%;
-                        height: 50px;
-                        position: relative;
-                        text-align: center;
-                        color: #fff;
-                        font-size: 16px;
-                        font-weight: bold;
-                        line-height: 50px;
-                        text-transform: uppercase;
-                    }
-                    .rules-text {
-                        width: 220px;
-                        position: relative;
-                        top: 13px;
-                        color: #b8a597;
-                        text-align: left;
-                        font-size: 21px;
-                        font-weight: bold;
-                        padding: 15px;
-                        line-height: 27px;
-                    }
-                }
-                .color-btn {
-                    width: 220px;
-                    height: 50px;
-                    top: 358px;
-                    .color-btn-text {
-                        top: 15px;
-                    }
-                    &:active {
-                        .color-btn-text {
-                            top: 16px;
-                        }
-                    }
-                }
-            }
-        }
+  .popup-layer .m-popup.store-heroes {
+    width: 1028px;
+    height: 550px;
+    left: 86px;
+    top: 45px;
+    .title {
+      color: #572f14;
     }
-
-    .color-btn {
-        width: 90px;
-        height: 40px;
+    .color-box {
+      background: linear-gradient(0deg, #645143 0%, #8e8177 100%);
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: none;
+      }
+    }
+    .store-menu-box {
+      width: 118px;
+      height: 450px;
+      position: absolute;
+      top: 75px;
+      left: 20px;
+      .menu-box-all {
+        width: 118px;
+        height: 90px;
         position: relative;
-        display: inline-block;
-        border-radius: 6px;
-        background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
-        box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25),
-            0 2px 4px 0 rgba(0, 0, 0, 0.55);
+        background-image: url(../img/shop-menu1.png);
+        background-size: 100%;
         cursor: pointer;
-        .color-btn-text {
-            top: 10px;
-            position: relative;
-            color: #fff;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-            text-align: center;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
         &:active {
-            box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
-                inset 0 2px 2px rgba(0, 0, 0, 0.2);
-            .color-btn-text {
-                top: 12px;
-            }
+          top: 1px;
         }
-        &.blue {
-            background: linear-gradient(0deg, #62a3e5 0%, #b4d7fa 100%);
+        &.select {
+          background-image: url(../img/shop-menu2.png);
         }
-        &.green {
-            background: linear-gradient(0deg, #7cbc30 0%, #baf279 100%);
+        .menu-pic {
+          width: 80px;
+          height: 60px;
+          position: absolute;
+          left: 19px;
         }
-        &.orage {
-            background: linear-gradient(0deg, #d67503 0%, #fdd2a0 100%);
+        .menu-text {
+          width: 104px;
+          height: 18px;
+          position: absolute;
+          top: 60px;
+          left: 8px;
+          text-align: center;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: bold;
+          line-height: 20px;
+          color: #30261f;
+          text-shadow: 0 0 6px #fff;
         }
-        &.diamond {
-            background: linear-gradient(0deg, #4b97bf 0%, #7ae2ff 100%);
-        }
+      }
     }
-
-    .spin-btn {
-        width: 160px;
-        height: 50px;
-        position: relative;
-        top: 338px;
-        text-align: center;
-        display: block;
-        margin: auto;
-        border-radius: 6px;
-        background-color: #7cbc31;
-        box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25),
-            0 1px 8px rgba(0, 0, 0, 0.55);
-        cursor: pointer;
-        .crow-text-box {
-            width: 154px;
-            height: 24px;
+    .store-content-right-box {
+      width: 865px;
+      height: 450px;
+      position: absolute;
+      top: 75px;
+      left: 145px;
+      background: linear-gradient(180deg, #b8a598 0%, #9e8b7d 100%);
+      .spin-all-box {
+        width: 600px;
+        height: 406px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        .spotspin-text-box {
+          width: 560px;
+          height: 50px;
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          background-color: #706258;
+          border-radius: 10px;
+          text-align: center;
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 50px;
+        }
+        .spin-box {
+          width: 580px;
+          height: 260px;
+          position: absolute;
+          top: 70px;
+          left: 10px;
+          .spin-box-container {
+            width: 180px;
             position: absolute;
-            top: 3px;
-            margin-left: 3px;
-            background-color: #5b8a24;
-            border-radius: 4px;
-            .crow-icon {
-                width: 34px;
-                height: 34px;
-                position: relative;
-                display: inline-block;
-                background-image: url(../img/ico-real.png);
-                background-size: 100%;
-                top: -5px;
-                &.diamond {
-                    background-image: url(../img/80-topup.png);
-                    height: 30px;
-                    margin-top: 3px;
+            top: 0;
+            left: 10px;
+            .spin-girl-box {
+              width: 180px;
+              height: 240px;
+              position: relative;
+              display: inline-block;
+              border-radius: 10px;
+              top: 10px;
+              box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
+              background: linear-gradient(
+                180deg,
+                #585a5c 0%,
+                #d5d8da 50%,
+                #585a5b 70%,
+                #a1a4a6 85%,
+                #585a5b 100%
+              );
+              &:before {
+                content: "";
+                width: 168px;
+                height: 228px;
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                background: linear-gradient(
+                  180deg,
+                  #959595 0%,
+                  #ffffff 50%,
+                  #989898 83%,
+                  #b5b5b5 100%
+                );
+                border-radius: 6px;
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+              }
+              .spinpic-center {
+                width: 100px;
+                height: 114px;
+                position: absolute;
+                top: 60px;
+                left: 40px;
+                background: linear-gradient(
+                  180deg,
+                  #b1a054 0%,
+                  #d3c773 15%,
+                  #f4ea8b 50%,
+                  #d3c773 75%,
+                  #b1a054 100%
+                );
+                &:before {
+                  content: "";
+                  width: 33px;
+                  height: 90px;
+                  position: absolute;
+                  top: 12px;
+                  left: -33px;
+                  background: linear-gradient(
+                    0deg,
+                    #baa115 0%,
+                    #f9e17f 25%,
+                    #baa115 50%,
+                    #f9e17f 75%,
+                    #baa115 100%
+                  );
                 }
+                &:after {
+                  content: "";
+                  width: 33px;
+                  height: 90px;
+                  position: absolute;
+                  top: 12px;
+                  left: 100px;
+                  background: linear-gradient(
+                    0deg,
+                    #baa115 0%,
+                    #f9e17f 25%,
+                    #baa115 50%,
+                    #f9e17f 75%,
+                    #baa115 100%
+                  );
+                }
+              }
+              .spinroll-box {
+                width: 100px;
+                height: 220px;
+                position: absolute;
+                top: 10px;
+                left: 40px;
+                overflow: hidden;
+                .spinroll-girl {
+                  width: 90px;
+                  height: 103px;
+                  position: relative;
+                  display: inline-block;
+                  top: -422px;
+                  margin-top: 10px;
+                  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.25);
+                  img {
+                    width: 90px;
+                    height: 103px;
+                  }
+                }
+              }
+              &.anim-start {
+                .spinroll-box .spinroll-girl {
+                  animation: spin-anim-start 0.75s ease-in 10ms;
+                }
+              }
+              &.anim-spin {
+                .spinroll-box .spinroll-girl {
+                  animation: spin-anim-spin 0.35s linear 0s infinite;
+                }
+              }
+              &.anim-end {
+                .spinroll-box .spinroll-girl {
+                  animation: spin-anim-end 0.75s ease-out 0s;
+                }
+              }
+              @keyframes spin-anim-start {
+                0% {
+                  transform: translate(0, 0px);
+                }
+                50% {
+                  transform: translate(0, 10px);
+                }
+                100% {
+                  transform: translate(0, -464px);
+                }
+              }
+              @keyframes spin-anim-spin {
+                0% {
+                  transform: translate(0, -464px);
+                }
+                50% {
+                  transform: translate(0, 0px);
+                }
+                100% {
+                  transform: translate(0, 464px);
+                }
+              }
+              @keyframes spin-anim-end {
+                0% {
+                  transform: translate(0, 464px);
+                }
+                50% {
+                  transform: translate(0, -10px);
+                }
+                100% {
+                  transform: translate(0, 0px);
+                }
+              }
             }
-            .crow-text {
-                font-size: 16px;
-                font-weight: bold;
-                color: #d2f2ad;
+            &.s2 {
+              left: 200px;
+            }
+            &.s3 {
+              left: 390px;
+            }
+          }
+          .color-btn.blue {
+            width: 160px;
+            height: 50px;
+            top: 24px;
+            .color-btn-text {
+              top: 15px;
+            }
+            &:active {
+              .color-btn-text {
+                top: 16px;
+              }
+            }
+          }
+          .color-btn.diamond {
+            width: 160px;
+            height: 50px;
+            top: 24px;
+            .color-btn-text {
+              font-size: 14px;
+              top: 10px;
+            }
+            .f-diamond {
+              &:before {
+                content: "";
+                width: 30px;
+                height: 30px;
                 position: relative;
-                text-transform: uppercase;
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
                 display: inline-block;
-                top: -16px;
+                background-image: url(../img/ic-diamond.png);
+                background-size: 100%;
+                margin-right: 4px;
+                margin-left: 4px;
+                vertical-align: middle;
+              }
             }
+            &:active {
+              .color-btn-text {
+                top: 11px;
+              }
+            }
+          }
+          .filter-blur {
+            width: 160px;
+            height: 30px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            filter: blur(1px);
+            background-color: #fff;
+            opacity: 0.55;
+            &:before {
+              content: "";
+              width: 160px;
+              height: 40px;
+              position: absolute;
+              top: 180px;
+              background-color: #000;
+              opacity: 0.25;
+              filter: blur(5px);
+            }
+          }
         }
-        &.disable {
-            filter: grayscale(100%);
-            cursor: not-allowed;
-        }
-        &:not(.disable):hover {
-            box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25), 0 0 5px #c9ef9c,
-                0 0 9px #c9ef9c, 0 0 11px #c9ef9c;
-        }
-        .btn-text {
+      }
+      .rules-box-all {
+        width: 250px;
+        height: 448px;
+        position: absolute;
+        left: 600px;
+        .rules-box {
+          width: 250px;
+          height: 240px;
+          position: absolute;
+          top: 100px;
+          background-color: #55483f;
+          border-radius: 10px;
+          .rules-name {
+            width: 100%;
+            height: 50px;
+            position: relative;
+            text-align: center;
+            color: #fff;
             font-size: 16px;
             font-weight: bold;
-            color: #fff;
-            position: relative;
-            top: 27px;
+            line-height: 50px;
             text-transform: uppercase;
-            display: inline-block;
+          }
+          .rules-text {
+            width: 220px;
+            position: relative;
+            top: 13px;
+            color: #b8a597;
+            text-align: left;
+            font-size: 21px;
+            font-weight: bold;
+            padding: 15px;
+            line-height: 27px;
+          }
         }
-        &:not(.disable):active {
-            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25),
-                inset 0 -2px 0 rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.25),
-                0 0 5px #c9ef9c, 0 0 9px #c9ef9c, 0 0 11px #c9ef9c;
-            .crow-text-box {
-                top: 4px;
+        .color-btn {
+          width: 220px;
+          height: 50px;
+          top: 358px;
+          .color-btn-text {
+            top: 15px;
+          }
+          &:active {
+            .color-btn-text {
+              top: 16px;
             }
-            .btn-text {
-                top: 28px;
-            }
+          }
         }
+      }
     }
+  }
+
+  .color-btn {
+    width: 90px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    border-radius: 6px;
+    background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25),
+      0 2px 4px 0 rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    .color-btn-text {
+      top: 10px;
+      position: relative;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    &:active {
+      box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
+        inset 0 2px 2px rgba(0, 0, 0, 0.2);
+      .color-btn-text {
+        top: 12px;
+      }
+    }
+    &.blue {
+      background: linear-gradient(0deg, #62a3e5 0%, #b4d7fa 100%);
+    }
+    &.green {
+      background: linear-gradient(0deg, #7cbc30 0%, #baf279 100%);
+    }
+    &.orage {
+      background: linear-gradient(0deg, #d67503 0%, #fdd2a0 100%);
+    }
+    &.diamond {
+      background: linear-gradient(0deg, #4b97bf 0%, #7ae2ff 100%);
+    }
+  }
+
+  .spin-btn {
+    width: 160px;
+    height: 50px;
+    position: relative;
+    top: 338px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    border-radius: 6px;
+    background-color: #7cbc31;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25),
+      0 1px 8px rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    .crow-text-box {
+      width: 154px;
+      height: 24px;
+      position: absolute;
+      top: 3px;
+      margin-left: 3px;
+      background-color: #5b8a24;
+      border-radius: 4px;
+      .crow-icon {
+        width: 34px;
+        height: 34px;
+        position: relative;
+        display: inline-block;
+        background-image: url(../img/ico-real.png);
+        background-size: 100%;
+        top: -5px;
+        &.diamond {
+          background-image: url(../img/80-topup.png);
+          height: 30px;
+          margin-top: 3px;
+        }
+      }
+      .crow-text {
+        font-size: 16px;
+        font-weight: bold;
+        color: #d2f2ad;
+        position: relative;
+        text-transform: uppercase;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        top: -16px;
+      }
+    }
+    &.disable {
+      filter: grayscale(100%);
+      cursor: not-allowed;
+    }
+    &:not(.disable):hover {
+      box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.25), 0 0 5px #c9ef9c,
+        0 0 9px #c9ef9c, 0 0 11px #c9ef9c;
+    }
+    .btn-text {
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      position: relative;
+      top: 27px;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+    &:not(.disable):active {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.25),
+        0 0 5px #c9ef9c, 0 0 9px #c9ef9c, 0 0 11px #c9ef9c;
+      .crow-text-box {
+        top: 4px;
+      }
+      .btn-text {
+        top: 28px;
+      }
+    }
+  }
 `;
 
-const V2ScreenStoreHeroes = styled.div`
-    ${V2ScreenStoreHeroesStyles}
-`;
-
-export { V2ScreenStoreHeroesStyles, V2ScreenStoreHeroes };
+export default V2ScreenStoreHeroesStyles;

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName(".jsx");
 
-const ScreenFortunaRoundMainStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.fortuna-main-round {
     width: 968px;
     height: 620px;
@@ -921,4 +923,4 @@ const ScreenFortunaRoundMainStyles = css`
   }
 `;
 
-export default ScreenFortunaRoundMainStyles;
+export { stylesFileName, pageStyles };

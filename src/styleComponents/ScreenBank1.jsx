@@ -1,595 +1,590 @@
-import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const ScreenBank1Styles = css`
-    .left-side .left-panel .tab-panel.bank-panel {
-        .bank-subwin.sale {
-            .bs-pack-scroll.panels-2 {
-                overflow-y: scroll;
-                .sale-offer {
-                    .sale-off {
-                        display: block;
-                    }
-                    height: 356px;
-                    &:before {
-                        content: "";
-                        display: block;
-                        background: #ccc;
-                        position: absolute;
-                        left: 4px;
-                        right: 4px;
-                        top: 4px;
-                        bottom: 4px;
-                        border-radius: 5px;
-                        // background: linear-gradient(to right, #cf6767, #ffa029, #db5436);
-                    }
-                    .banner,
-                    .sale-banner {
-                        display: block;
-                        position: absolute;
-                        left: 4px;
-                        right: 4px;
-                        top: 4px;
-                        bottom: 78px;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            border-top-left-radius: 5px;
-                            border-top-right-radius: 5px;
-                        }
-                        .ban-back {
-                            height: 256px;
-                        }
-                        .clock {
-                            top: 16px;
-                            margin-left: 174px;
-                        }
-                        &.clock {
-                            .rate {
-                                display: none;
-                            }
-                            .rate-text {
-                                display: none;
-                            }
-                            .gold-shards {
-                                display: none;
-                            }
-                        }
-                        .reborn {
-                            width: 140px;
-                            height: 140px;
-                            background-image: url(../img/ic-abil-reborn@2x.png);
-                            background-size: 140spx;
-                            position: absolute;
-                            top: 112px;
-                            margin-left: 24px;
-                            .instant {
-                                background-color: rgba(60, 57, 52, 0.9);
-                                position: relative;
-                                top: 140px;
-                                padding: 8px;
-                                left: 0;
-                                font-size: 30px;
-                                color: #fff;
-                                line-height: 20px;
-                                border-radius: 14px;
-                                &:before {
-                                    content: "";
-                                    display: inline-block;
-                                    width: 26px;
-                                    height: 26px;
-                                    vertical-align: middle;
-                                    position: relative;
-                                    background-image: url(../img/reb-rub.png);
-                                    background-size: 26px;
-                                    margin-right: 5px;
-                                }
-                            }
-                        }
-                        .balancer {
-                            width: 140px;
-                            height: 140px;
-                            background-image: url(../img/ic-abil-rubin@2x.png);
-                            background-size: 140px;
-                            position: absolute;
-                            top: 112px;
-                            margin-left: 24px;
-                        }
-                        .gold {
-                            width: 75px;
-                            height: 75px;
-                            background-image: url(../img/ic-abil-gold.png);
-                            background-size: 75px;
-                            position: absolute;
-                            top: 112px;
-                            margin-left: 188px;
-                            &:before {
-                                content: "";
-                                width: 75px;
-                                height: 75px;
-                                display: block;
-                                background-image: url(../img/ic-abil-gold.png);
-                                position: absolute;
-                                top: 4px;
-                                margin-left: 55px;
-                            }
-                            &:after {
-                                content: "";
-                                width: 75px;
-                                height: 75px;
-                                display: block;
-                                background-image: url(../img/ic-abil-gold.png);
-                                position: absolute;
-                                top: 5px;
-                                margin-left: -53px;
-                            }
-                        }
-                        .gold-shards {
-                            width: 75px;
-                            height: 75px;
-                            background-image: url(../img/ic-abil-gold-but.png);
-                            background-size: 75px;
-                            position: absolute;
-                            top: 112px;
-                            margin-left: 188px;
-                        }
-                        .gems {
-                            width: 75px;
-                            height: 75px;
-                            background-image: url(../img/ic-abil-rubin.png);
-                            background-size: 75px;
-                            position: absolute;
-                            top: 112px;
-                            margin-left: 188px;
-                        }
-                        .shards {
-                            top: 112px;
-                        }
-                        &.gold {
-                            .gold-shards {
-                                display: none;
-                            }
-                            .shards {
-                                display: none;
-                            }
-                            .gems {
-                                display: none;
-                            }
-                            .reborn {
-                                display: none;
-                            }
-                            .balancer {
-                                display: none;
-                            }
-                        }
-                        &.gold-shards.rate {
-                            .gold {
-                                display: none;
-                            }
-                            .shards {
-                                display: none;
-                            }
-                            .gems {
-                                display: none;
-                            }
-                            .reborn {
-                                display: none;
-                            }
-                            .balancer {
-                                display: none;
-                            }
-                        }
-                        &.gold-shards.clock {
-                            .count1,
-                            .count2 {
-                                display: none;
-                            }
-                            .gold-shards {
-                                display: none;
-                            }
-                            .gems {
-                                display: none;
-                            }
-                            .reborn {
-                                display: none;
-                            }
-                            .balancer {
-                                display: none;
-                            }
-                            .gold,
-                            .shards {
-                                &:before {
-                                    display: block;
-                                }
-                                &:after {
-                                    display: block;
-                                }
-                                margin-left: 80px;
-                                .g-count,
-                                .s-count {
-                                    top: 91px;
-                                    width: 150px;
-                                    position: absolute;
-                                    margin-left: -40px;
-                                }
-                            }
-                            .shards {
-                                margin-left: 298px;
-                            }
-                            &.old {
-                                .counter {
-                                    display: none;
-                                }
-                                .g-count {
-                                    display: inline-block;
-                                    text-decoration: none;
-                                }
-                                .g-count.oldprice,
-                                .s-count.oldprice {
-                                    text-decoration: line-through;
-                                    color: red;
-                                    font-size: 16px;
-                                    position: relative;
-                                }
-                                .newprice {
-                                    display: inline-block;
-                                    text-decoration: none;
-                                    color: #fff;
-                                    font-size: 24px;
-                                    margin: 0 4px 0 4px;
-                                }
-                            }
-                        }
-                        &.shards.clock {
-                            .g-count {
-                                display: none;
-                            }
-                            .s-count {
-                                display: none;
-                            }
-                        }
-                        &.gold.clock {
-                            .g-count {
-                                display: none;
-                            }
-                            .s-count {
-                                display: none;
-                            }
-                        }
-                        &.shards {
-                            .gold {
-                                display: none;
-                            }
-                            .gold-shards {
-                                display: none;
-                            }
-                            .gems {
-                                display: none;
-                            }
-                            .reborn {
-                                display: none;
-                            }
-                            .balancer {
-                                display: none;
-                            }
-                        }
-                        &.gems {
-                            .gold {
-                                display: none;
-                            }
-                            .gold-shards {
-                                display: none;
-                            }
-                            .shards {
-                                display: none;
-                            }
-                            .reborn {
-                                display: none;
-                            }
-                            .balancer {
-                                display: none;
-                            }
-                        }
-                        &.reborn {
-                            .gold {
-                                display: none;
-                            }
-                            .gold-shards {
-                                display: none;
-                            }
-                            .shards {
-                                display: none;
-                            }
-                            .gems {
-                                display: none;
-                            }
-                            .clock {
-                                display: none;
-                            }
-                            .counter {
-                                display: none;
-                            }
-                            .rate {
-                                display: none;
-                            }
-                            .balancer {
-                                display: none;
-                            }
-                        }
-                        &.balancer {
-                            .gold {
-                                display: none;
-                            }
-                            .gold-shards {
-                                display: none;
-                            }
-                            .shards {
-                                display: none;
-                            }
-                            .gems {
-                                display: none;
-                            }
-                            .clock {
-                                display: none;
-                            }
-                            .counter {
-                                display: none;
-                            }
-                            .rate {
-                                display: none;
-                            }
-                            .reborn {
-                                display: none;
-                            }
-                        }
-                        .rate {
-                            width: 200px;
-                            height: 34px;
-                            background-color: #b9171d;
-                            position: absolute;
-                            top: 148px;
-                            left: 130px;
-                            border-radius: 14px;
-                            font-size: 30px;
-                            color: #fff;
-                            text-shadow: 0 1px 3px #2f2f2f;
-                            line-height: 34px;
-                        }
-                        &.rate {
-                            .gold,
-                            .gold-shards,
-                            .shards,
-                            .gems,
-                            .reborn,
-                            .balancer {
-                                width: 140px;
-                                height: 140px;
-                                background-size: 140px;
-                                position: absolute;
-                                top: 6px;
-                                margin-left: 160px;
-                                &:before {
-                                    display: none;
-                                }
-                                &:after {
-                                    display: none;
-                                }
-                            }
-                            .gold {
-                                background-image: url(../img/ic-abil-gold@2x.png);
-                            }
-                            .shards {
-                                background-image: url(../img/ic-abil-butil@2x.png);
-                            }
-                            .gems {
-                                background-image: url(../img/ic-abil-rubin@2x.png);
-                            }
-                            .gold-shards {
-                                background-image: url(../img/ic-abil-gold-but@2x.png);
-                            }
-                            .clock {
-                                display: none;
-                            }
-                            .counter {
-                                display: none;
-                            }
-                            .g-count {
-                                display: none;
-                            }
-                            .s-count {
-                                display: none;
-                            }
-                        }
-                        .rate-text {
-                            width: 400px;
-                            height: 40px;
-                            position: absolute;
-                            top: 204px;
-                            left: 32px;
-                            font-size: 22px;
-                            color: #0b2d70;
-                            text-shadow: 0 2px 1px #fff;
-                        }
-                        &.old {
-                            .counter {
-                                background-color: rgba(60, 57, 52, 0.9);
-                                border-radius: 14px;
-                                height: 38px;
-                                top: 204px;
-                            }
-                            .count1 {
-                                display: inline-block;
-                                text-decoration: none;
-                                background-color: rgba(0, 0, 0, 0);
-                                font-size: 24px;
-                                top: 0px;
-                            }
-                            .count1.oldprice {
-                                text-decoration: line-through;
-                                color: red;
-                                font-size: 16px;
-                                background-color: rgba(0, 0, 0, 0);
-                                padding: 0px;
-                                top: 0px;
-                            }
-                        }
-                    }
-                    .counter {
-                        top: 190px;
-                        width: 200px;
-                        height: 60px;
-                        position: absolute;
-                        margin-left: 130px;
-                    }
-                    .count1,
-                    .count2,
-                    .g-count,
-                    .s-count {
-                        background-color: rgba(60, 57, 52, 0.9);
-                        position: relative;
-                        top: 12px;
-                        padding: 8px;
-                        font-size: 30px;
-                        color: #fff;
-                        line-height: 20px;
-                        border-radius: 14px;
-                    }
-                    .sale-banner {
-                        // background: red;
-                        top: 260px;
-                        bottom: 4px;
-                        .text {
-                            display: block;
-                            // background: red;
-                            position: absolute;
-                            left: 15px;
-                            top: 25px;
-                            right: 150px;
-                            font-size: 16px;
-                            color: #ffdf7f;
-                            font-weight: bold;
-                            line-height: 20px;
-                            .title,
-                            .txt {
-                                margin: 0;
-                                padding: 0;
-                            }
-                            .title {
-                                font-size: 20px;
-                                text-transform: uppercase;
-                                text-shadow: 0 2px 0 #400;
-                            }
-                            .txt {
-                                white-space: nowrap;
-                                text-overflow: ellipsis;
-                                overflow: hidden;
-                                margin-top: 6px;
-                            }
-                        }
-                        .btn-box {
-                            bottom: 18px;
-                        }
-                        .btn-buy {
-                            position: relative;
-                            left: auto;
-                            right: auto;
-                            top: auto;
-                            bottom: auto;
-                            .txt {
-                                display: inline-block;
-                                // position: absolute; left: 10px;
-                            }
-                            .price-old {
-                                display: inline-block;
-                                font-size: 13px;
-                                text-shadow: none;
-                                color: #333;
-                                margin-left: 10px;
-                                height: 17px;
-                                line-height: 17px;
-                                // position: absolute; left: calc(50% + 10px);
-                                &:after {
-                                    content: "";
-                                    display: block;
-                                    width: calc(100% + 20px);
-                                    height: 2px;
-                                    background: rgba(255, 0, 0, 0.55);
-                                    // background: rgba(0,0,0,0.33);
-                                    position: relative;
-                                    left: -10px;
-                                    top: -10px;
-                                }
-                            }
-                        }
-                    }
-                    .timer {
-                        right: 12px;
-                    }
-                    &.empty {
-                        background: #615048;
-                        box-shadow: 0 0 10px #9e8b7d;
-                        &:before {
-                            background: #766459;
-                        }
-                        .banner {
-                            display: none;
-                        }
-                        .sale-banner {
-                            display: none;
-                        }
-                        .timer {
-                            display: none;
-                        }
-                    }
-                }
+  .left-side .left-panel .tab-panel.bank-panel {
+    .bank-subwin.sale {
+      .bs-pack-scroll.panels-2 {
+        overflow-y: scroll;
+        .sale-offer {
+          .sale-off {
+            display: block;
+          }
+          height: 356px;
+          &:before {
+            content: "";
+            display: block;
+            background: #ccc;
+            position: absolute;
+            left: 4px;
+            right: 4px;
+            top: 4px;
+            bottom: 4px;
+            border-radius: 5px;
+            // background: linear-gradient(to right, #cf6767, #ffa029, #db5436);
+          }
+          .banner,
+          .sale-banner {
+            display: block;
+            position: absolute;
+            left: 4px;
+            right: 4px;
+            top: 4px;
+            bottom: 78px;
+            img {
+              width: 100%;
+              height: 100%;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
             }
-        }
-    }
-    .sale-off {
-        width: 114px;
-        height: 107px;
-        position: absolute;
-        top: 4px;
-        margin-left: 4px;
-        background-image: url(../img/saleoff.png);
-        background-size: 114px;
-        .saletext {
-            width: 80px;
+            .ban-back {
+              height: 256px;
+            }
+            .clock {
+              top: 16px;
+              margin-left: 174px;
+            }
+            &.clock {
+              .rate {
+                display: none;
+              }
+              .rate-text {
+                display: none;
+              }
+              .gold-shards {
+                display: none;
+              }
+            }
+            .reborn {
+              width: 140px;
+              height: 140px;
+              background-image: url(../img/ic-abil-reborn@2x.png);
+              background-size: 140spx;
+              position: absolute;
+              top: 112px;
+              margin-left: 24px;
+              .instant {
+                background-color: rgba(60, 57, 52, 0.9);
+                position: relative;
+                top: 140px;
+                padding: 8px;
+                left: 0;
+                font-size: 30px;
+                color: #fff;
+                line-height: 20px;
+                border-radius: 14px;
+                &:before {
+                  content: "";
+                  display: inline-block;
+                  width: 26px;
+                  height: 26px;
+                  vertical-align: middle;
+                  position: relative;
+                  background-image: url(../img/reb-rub.png);
+                  background-size: 26px;
+                  margin-right: 5px;
+                }
+              }
+            }
+            .balancer {
+              width: 140px;
+              height: 140px;
+              background-image: url(../img/ic-abil-rubin@2x.png);
+              background-size: 140px;
+              position: absolute;
+              top: 112px;
+              margin-left: 24px;
+            }
+            .gold {
+              width: 75px;
+              height: 75px;
+              background-image: url(../img/ic-abil-gold.png);
+              background-size: 75px;
+              position: absolute;
+              top: 112px;
+              margin-left: 188px;
+              &:before {
+                content: "";
+                width: 75px;
+                height: 75px;
+                display: block;
+                background-image: url(../img/ic-abil-gold.png);
+                position: absolute;
+                top: 4px;
+                margin-left: 55px;
+              }
+              &:after {
+                content: "";
+                width: 75px;
+                height: 75px;
+                display: block;
+                background-image: url(../img/ic-abil-gold.png);
+                position: absolute;
+                top: 5px;
+                margin-left: -53px;
+              }
+            }
+            .gold-shards {
+              width: 75px;
+              height: 75px;
+              background-image: url(../img/ic-abil-gold-but.png);
+              background-size: 75px;
+              position: absolute;
+              top: 112px;
+              margin-left: 188px;
+            }
+            .gems {
+              width: 75px;
+              height: 75px;
+              background-image: url(../img/ic-abil-rubin.png);
+              background-size: 75px;
+              position: absolute;
+              top: 112px;
+              margin-left: 188px;
+            }
+            .shards {
+              top: 112px;
+            }
+            &.gold {
+              .gold-shards {
+                display: none;
+              }
+              .shards {
+                display: none;
+              }
+              .gems {
+                display: none;
+              }
+              .reborn {
+                display: none;
+              }
+              .balancer {
+                display: none;
+              }
+            }
+            &.gold-shards.rate {
+              .gold {
+                display: none;
+              }
+              .shards {
+                display: none;
+              }
+              .gems {
+                display: none;
+              }
+              .reborn {
+                display: none;
+              }
+              .balancer {
+                display: none;
+              }
+            }
+            &.gold-shards.clock {
+              .count1,
+              .count2 {
+                display: none;
+              }
+              .gold-shards {
+                display: none;
+              }
+              .gems {
+                display: none;
+              }
+              .reborn {
+                display: none;
+              }
+              .balancer {
+                display: none;
+              }
+              .gold,
+              .shards {
+                &:before {
+                  display: block;
+                }
+                &:after {
+                  display: block;
+                }
+                margin-left: 80px;
+                .g-count,
+                .s-count {
+                  top: 91px;
+                  width: 150px;
+                  position: absolute;
+                  margin-left: -40px;
+                }
+              }
+              .shards {
+                margin-left: 298px;
+              }
+              &.old {
+                .counter {
+                  display: none;
+                }
+                .g-count {
+                  display: inline-block;
+                  text-decoration: none;
+                }
+                .g-count.oldprice,
+                .s-count.oldprice {
+                  text-decoration: line-through;
+                  color: red;
+                  font-size: 16px;
+                  position: relative;
+                }
+                .newprice {
+                  display: inline-block;
+                  text-decoration: none;
+                  color: #fff;
+                  font-size: 24px;
+                  margin: 0 4px 0 4px;
+                }
+              }
+            }
+            &.shards.clock {
+              .g-count {
+                display: none;
+              }
+              .s-count {
+                display: none;
+              }
+            }
+            &.gold.clock {
+              .g-count {
+                display: none;
+              }
+              .s-count {
+                display: none;
+              }
+            }
+            &.shards {
+              .gold {
+                display: none;
+              }
+              .gold-shards {
+                display: none;
+              }
+              .gems {
+                display: none;
+              }
+              .reborn {
+                display: none;
+              }
+              .balancer {
+                display: none;
+              }
+            }
+            &.gems {
+              .gold {
+                display: none;
+              }
+              .gold-shards {
+                display: none;
+              }
+              .shards {
+                display: none;
+              }
+              .reborn {
+                display: none;
+              }
+              .balancer {
+                display: none;
+              }
+            }
+            &.reborn {
+              .gold {
+                display: none;
+              }
+              .gold-shards {
+                display: none;
+              }
+              .shards {
+                display: none;
+              }
+              .gems {
+                display: none;
+              }
+              .clock {
+                display: none;
+              }
+              .counter {
+                display: none;
+              }
+              .rate {
+                display: none;
+              }
+              .balancer {
+                display: none;
+              }
+            }
+            &.balancer {
+              .gold {
+                display: none;
+              }
+              .gold-shards {
+                display: none;
+              }
+              .shards {
+                display: none;
+              }
+              .gems {
+                display: none;
+              }
+              .clock {
+                display: none;
+              }
+              .counter {
+                display: none;
+              }
+              .rate {
+                display: none;
+              }
+              .reborn {
+                display: none;
+              }
+            }
+            .rate {
+              width: 200px;
+              height: 34px;
+              background-color: #b9171d;
+              position: absolute;
+              top: 148px;
+              left: 130px;
+              border-radius: 14px;
+              font-size: 30px;
+              color: #fff;
+              text-shadow: 0 1px 3px #2f2f2f;
+              line-height: 34px;
+            }
+            &.rate {
+              .gold,
+              .gold-shards,
+              .shards,
+              .gems,
+              .reborn,
+              .balancer {
+                width: 140px;
+                height: 140px;
+                background-size: 140px;
+                position: absolute;
+                top: 6px;
+                margin-left: 160px;
+                &:before {
+                  display: none;
+                }
+                &:after {
+                  display: none;
+                }
+              }
+              .gold {
+                background-image: url(../img/ic-abil-gold@2x.png);
+              }
+              .shards {
+                background-image: url(../img/ic-abil-butil@2x.png);
+              }
+              .gems {
+                background-image: url(../img/ic-abil-rubin@2x.png);
+              }
+              .gold-shards {
+                background-image: url(../img/ic-abil-gold-but@2x.png);
+              }
+              .clock {
+                display: none;
+              }
+              .counter {
+                display: none;
+              }
+              .g-count {
+                display: none;
+              }
+              .s-count {
+                display: none;
+              }
+            }
+            .rate-text {
+              width: 400px;
+              height: 40px;
+              position: absolute;
+              top: 204px;
+              left: 32px;
+              font-size: 22px;
+              color: #0b2d70;
+              text-shadow: 0 2px 1px #fff;
+            }
+            &.old {
+              .counter {
+                background-color: rgba(60, 57, 52, 0.9);
+                border-radius: 14px;
+                height: 38px;
+                top: 204px;
+              }
+              .count1 {
+                display: inline-block;
+                text-decoration: none;
+                background-color: rgba(0, 0, 0, 0);
+                font-size: 24px;
+                top: 0px;
+              }
+              .count1.oldprice {
+                text-decoration: line-through;
+                color: red;
+                font-size: 16px;
+                background-color: rgba(0, 0, 0, 0);
+                padding: 0px;
+                top: 0px;
+              }
+            }
+          }
+          .counter {
+            top: 190px;
+            width: 200px;
             height: 60px;
-            font-size: 28px;
-            color: #ffdf7f;
-            font-weight: bold;
-            line-height: 30px;
             position: absolute;
-            top: 10px;
-            margin-left: 8px;
-            text-shadow: 0 2px 0 #400;
-        }
-    }
-    .newtime {
-        width: 55px;
-        height: 40px;
-        position: absolute;
-        top: 44px;
-        left: 30px;
-        background-size: 55px;
-        background-image: url(../img/ic-clock-all.png);
-        .newclocktime {
-            width: 20px;
-            height: 10px;
+            margin-left: 130px;
+          }
+          .count1,
+          .count2,
+          .g-count,
+          .s-count {
+            background-color: rgba(60, 57, 52, 0.9);
+            position: relative;
+            top: 12px;
+            padding: 8px;
+            font-size: 30px;
             color: #fff;
-            position: absolute;
-            top: 26px;
-            margin-left: 18px;
-            font-size: 10px;
-            line-height: 10px;
-            font-weight: bold;
+            line-height: 20px;
+            border-radius: 14px;
+          }
+          .sale-banner {
+            // background: red;
+            top: 260px;
+            bottom: 4px;
+            .text {
+              display: block;
+              // background: red;
+              position: absolute;
+              left: 15px;
+              top: 25px;
+              right: 150px;
+              font-size: 16px;
+              color: #ffdf7f;
+              font-weight: bold;
+              line-height: 20px;
+              .title,
+              .txt {
+                margin: 0;
+                padding: 0;
+              }
+              .title {
+                font-size: 20px;
+                text-transform: uppercase;
+                text-shadow: 0 2px 0 #400;
+              }
+              .txt {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-top: 6px;
+              }
+            }
+            .btn-box {
+              bottom: 18px;
+            }
+            .btn-buy {
+              position: relative;
+              left: auto;
+              right: auto;
+              top: auto;
+              bottom: auto;
+              .txt {
+                display: inline-block;
+                // position: absolute; left: 10px;
+              }
+              .price-old {
+                display: inline-block;
+                font-size: 13px;
+                text-shadow: none;
+                color: #333;
+                margin-left: 10px;
+                height: 17px;
+                line-height: 17px;
+                // position: absolute; left: calc(50% + 10px);
+                &:after {
+                  content: "";
+                  display: block;
+                  width: calc(100% + 20px);
+                  height: 2px;
+                  background: rgba(255, 0, 0, 0.55);
+                  // background: rgba(0,0,0,0.33);
+                  position: relative;
+                  left: -10px;
+                  top: -10px;
+                }
+              }
+            }
+          }
+          .timer {
+            right: 12px;
+          }
+          &.empty {
+            background: #615048;
+            box-shadow: 0 0 10px #9e8b7d;
+            &:before {
+              background: #766459;
+            }
+            .banner {
+              display: none;
+            }
+            .sale-banner {
+              display: none;
+            }
+            .timer {
+              display: none;
+            }
+          }
         }
+      }
     }
+  }
+  .sale-off {
+    width: 114px;
+    height: 107px;
+    position: absolute;
+    top: 4px;
+    margin-left: 4px;
+    background-image: url(../img/saleoff.png);
+    background-size: 114px;
+    .saletext {
+      width: 80px;
+      height: 60px;
+      font-size: 28px;
+      color: #ffdf7f;
+      font-weight: bold;
+      line-height: 30px;
+      position: absolute;
+      top: 10px;
+      margin-left: 8px;
+      text-shadow: 0 2px 0 #400;
+    }
+  }
+  .newtime {
+    width: 55px;
+    height: 40px;
+    position: absolute;
+    top: 44px;
+    left: 30px;
+    background-size: 55px;
+    background-image: url(../img/ic-clock-all.png);
+    .newclocktime {
+      width: 20px;
+      height: 10px;
+      color: #fff;
+      position: absolute;
+      top: 26px;
+      margin-left: 18px;
+      font-size: 10px;
+      line-height: 10px;
+      font-weight: bold;
+    }
+  }
 `;
 
-const ScreenBank1 = styled.div`
-    ${ScreenBank1Styles}
-`;
-
-export { ScreenBank1Styles, ScreenBank1 };
+export default ScreenBank1Styles;

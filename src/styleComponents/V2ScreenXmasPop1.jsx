@@ -1,669 +1,637 @@
-import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const V2ScreenXmasPop1Styles = css`
-    body {
-        .main.world1,
-        .main.world2,
-        .main.world3 {
-            .popup-layer {
-                .m-popup.xmas-pop1,
-                .m-popup.xmas-pop2,
-                .m-popup.xmas-pop3 {
-                    width: 906px;
-                    height: 536px;
-                    left: 147px;
-                    top: 52px;
-                    background: linear-gradient(
-                        -22deg,
-                        #8faae4,
-                        #385dac,
-                        #577ac7,
-                        #8faae4
-                    );
-                    box-shadow: 0 1px 10px #392d26, inset 0 1px 2px #fff,
-                        0 0 10px #000, 0 0 15px #000;
-                    &:before {
-                        box-shadow: 0 0 2px #fff, 0 0 5px #fff,
-                            inset 0 0 5px rgba(0, 0, 0, 0.55);
-                    }
-                    .title {
-                        display: inline-block;
-                        width: auto;
-                        height: 52px;
-                        background: linear-gradient(
-                            to right,
-                            #8faae4,
-                            #577ac7,
-                            #8faae4
-                        );
-                        box-shadow: 0 1px 10px #392d26, inset 0 2px 10px #fff,
-                            inset 0 28px 5px rgba(0, 174, 255, 0.15);
-                        border: solid 4px #577ac7;
-                        color: #12364d;
-                        text-shadow: 0 0 1px #413753, 0 1px 1px #fff,
-                            0 1px 10px #ffc;
-                        border-radius: 10px;
-                        position: absolute;
-                        left: 0px;
-                        right: 0px;
-                        top: 0px;
-                        line-height: 58px;
-                        font-size: 22px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        transform: none;
-                        filter: none;
-                        &:before,
-                        &:after {
-                            content: none;
-                        }
-                    }
-                    .color-box {
-                        background-image: url(../img/pop-bg-xmas.jpg);
-                        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-                        background-size: 100%;
-                        background-repeat: no-repeat;
-                        &:before {
-                            content: "";
-                            display: block;
-                            width: 354px;
-                            height: 160px;
-                            position: absolute;
-                            top: 350px;
-                            left: -60px;
-                            background: url(../img/girl-stand@2x.png);
-                            background-size: 100%;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                        }
-                        &:after {
-                            display: none;
-                        }
-                    }
-                    .btn-close-x {
-                        background: linear-gradient(
-                            -22deg,
-                            #8faae4,
-                            #385dac,
-                            #577ac7,
-                            #8faae4
-                        );
-                        border: solid 4px #577ac7;
-                        box-shadow: 0 1px 3px rgba(255, 255, 255, 0.4);
-                        &:before {
-                            color: #3a3156;
-                            text-shadow: 0 0 2px #3a3156, 0 0 2px #3a3156,
-                                0 0 2px #3a3156, 0 0 2px #3a3156, 0 0 7px #fff,
-                                0 0 7px #fff, 0 0 7px #fff;
-                        }
-                    }
-                    .xmas-girl {
-                        width: 350px;
-                        height: 500px;
-                        position: absolute;
-                        bottom: 30px;
-                        left: -44px;
-                        pointer-events: none;
-                        img {
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
-                    .xmas-box-all {
-                        width: 650px;
-                        height: 362px;
-                        position: absolute;
-                        top: 70px;
-                        right: 20px;
-                        .xmas-collect-box-all {
-                            width: 650px;
-                            height: 225px;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            border-radius: 20px;
-                            background-color: rgba(40, 140, 190, 0.8);
-                            box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
-                            .xmas-collect-box {
-                                width: 100%;
-                                height: 40px;
-                                line-height: 40px;
-                                position: absolute;
-                                top: 0px;
-                                left: 0px;
-                                border-radius: 20px 20px 0 0;
-                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-                                background-color: #11597a;
-                                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2),
-                                    0 1px 2px rgba(255, 255, 255, 0.2);
-                                .xmas-collect-box-text {
-                                    width: 100%;
-                                    height: 100%;
-                                    color: #3ce2ff;
-                                    font-size: 28px;
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                }
-                            }
-
-                            .xmas-squad-holder {
-                                position: absolute;
-                                display: table;
-                                top: 50px;
-                                left: 25px;
-                                width: 600px;
-                                display: flex;
-                                justify-content: center;
-                                .hero-box {
-                                    width: 98px;
-                                    height: 111px;
-                                    display: inline-block;
-                                    margin: 0 6px;
-                                    &:hover {
-                                        filter: brightness(1.1);
-                                    }
-                                    .hero-avatar-box {
-                                        width: 98px;
-                                        height: 111px;
-                                        display: inline-block;
-                                        position: relative;
-                                        border-radius: 6px;
-                                        background: linear-gradient(
-                                            180deg,
-                                            #8e7453 0%,
-                                            #e3c7a3 50%,
-                                            #8f7553 70%,
-                                            #ae916a 85%,
-                                            #8f7553 100%
-                                        );
-                                        box-shadow: 0 2px 0 #5e4d36,
-                                            0 2px 4px rgba(0, 0, 0, 0.6),
-                                            inset 0 1px 1px
-                                                rgba(255, 255, 255, 0.2);
-                                        .hero-avatar {
-                                            width: 90px;
-                                            height: 103px;
-                                            position: absolute;
-                                            top: 4px;
-                                            left: 4px;
-                                            border-radius: 4px;
-                                            overflow: hidden;
-                                            box-shadow: 0 0 0 1px
-                                                rgba(0, 0, 0, 0.2);
-                                        }
-
-                                        .sh2-icon-forgirl {
-                                            width: 25px;
-                                            height: 32px;
-                                            position: absolute;
-                                            top: 0px;
-                                            left: 2px;
-
-                                            img {
-                                                width: 25px;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .prgball-box {
-                                width: 620px;
-                                height: 38px;
-                                position: absolute;
-                                bottom: 15px;
-                                left: 15px;
-                                background-color: #11597a;
-                                border-radius: 10px;
-                                box-shadow: 0 0 0 3px #0d445d,
-                                    0 1px 3px 2px rgba(255, 255, 255, 0.2);
-                                overflow: hidden;
-                                .prgall-prom {
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    .prg-all-bar {
-                                        width: 40%;
-                                        height: 100%;
-                                        position: relative;
-                                        background: linear-gradient(
-                                            0deg,
-                                            #5ef265 0%,
-                                            #47b548 12%,
-                                            #6bff66 60%,
-                                            #9bff91 70%,
-                                            #59db56 100%
-                                        );
-                                        transition: width 0.3s;
-                                    }
-                                }
-                                .prg-all-text {
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    text-align: center;
-                                    top: -5px;
-                                    left: 0;
-                                    color: #fff;
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-                                    .ic-dildo {
-                                        &:before {
-                                            content: "";
-                                            width: 30px;
-                                            height: 30px;
-                                            position: relative;
-                                            display: inline-block;
-                                            margin: 0 5px 0 5px;
-                                            top: 8px;
-                                            background-image: url(../img/ic-dildo.png);
-                                            background-size: 100%;
-                                        }
-                                    }
-                                }
-                            }
-                            .xmas-info-btn {
-                                width: 28px;
-                                height: 28px;
-                                position: absolute;
-                                top: 4px;
-                                right: 4px;
-                                background: linear-gradient(
-                                    0deg,
-                                    #53ceff 0%,
-                                    #2293bf 50%,
-                                    #b8d7e0 100%
-                                );
-                                border: 2px solid #7fe5ff;
-                                border-radius: 100%;
-                                cursor: pointer;
-                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
-                                color: #fff;
-                                font-size: 24px;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-                                line-height: 30px;
-                                z-index: 1;
-                                &:before {
-                                    content: "?";
-                                }
-                                &:hover {
-                                    filter: brightness(1.1);
-                                }
-                                &:active {
-                                    top: 5px;
-                                }
-                            }
-                        }
-                        .xmas-level-box-all {
-                            width: 650px;
-                            height: 127px;
-                            position: absolute;
-                            bottom: 0px;
-                            left: 0;
-                            border-radius: 10px;
-                            background-color: rgba(40, 140, 190, 0.8);
-                            box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
-                            .xmas-sim-el-box {
-                                width: 100px;
-                                height: 114px;
-                                position: absolute;
-                                top: 9px;
-                                left: 5px;
-                                .xmas-level {
-                                    width: 100px;
-                                    height: 20px;
-                                    position: absolute;
-                                    top: 5px;
-                                    left: 0;
-                                    background-color: #11597a;
-                                    color: #fff;
-                                    font-size: 14px;
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    line-height: 20px;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-                                }
-                                .xmas-reward {
-                                    width: 100px;
-                                    height: 70px;
-                                    position: absolute;
-                                    top: 30px;
-                                    left: 0;
-                                    background: linear-gradient(
-                                        0deg,
-                                        #3fbae7 0%,
-                                        #007aa7 50%,
-                                        #3fbae7 100%
-                                    );
-                                    color: #fff;
-                                    font-size: 16px;
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    line-height: 70px;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-                                }
-                            }
-                            .xmas-level-simple-box-scroll {
-                                width: 535px;
-                                height: 113px;
-                                position: absolute;
-                                top: 9px;
-                                right: 5px;
-                                overflow: hidden;
-                                overflow-x: scroll;
-                                font-size: 0;
-                                &::-webkit-scrollbar-track {
-                                    background-color: #11597a;
-                                    border-radius: 10px;
-                                }
-                                &::-webkit-scrollbar {
-                                    height: 8px;
-                                    border-radius: 10px;
-                                }
-                                &::-webkit-scrollbar-thumb {
-                                    background: linear-gradient(
-                                        0deg,
-                                        #ffe199 0%,
-                                        #f4c657 18%,
-                                        #ffe199 60%,
-                                        #f4c557 85%,
-                                        #ffe199 100%
-                                    );
-                                    border-radius: 10px;
-                                }
-                                .xmas-level-reward {
-                                    width: 3500px;
-                                    height: 70px;
-                                    position: relative;
-                                    text-align: left;
-                                    top: 10px;
-                                    background-color: #11597a;
-                                    .xmas-level-rew-box {
-                                        width: 60px;
-                                        height: 60px;
-                                        position: relative;
-                                        display: inline-block;
-                                        background: linear-gradient(
-                                            0deg,
-                                            #e9c44f 0%,
-                                            #f7eec7 100%
-                                        );
-                                        border-radius: 8px;
-                                        box-shadow: 0 1px 2px
-                                            rgba(0, 0, 0, 0.35);
-                                        margin: 5px;
-                                        text-align: center;
-                                        .xmas-level-rew-pic {
-                                            width: 46px;
-                                            height: 46px;
-                                            position: absolute;
-                                            top: 0;
-                                            left: 7px;
-                                            img {
-                                                width: 46px;
-                                            }
-                                        }
-                                        .xmas-level-rew-num {
-                                            width: 60px;
-                                            height: 12px;
-                                            position: absolute;
-                                            bottom: 5px;
-                                            color: #3c3737;
-                                            font-size: 12px;
-                                            font-weight: bold;
-                                        }
-                                        .xmas-level-rew-num-check {
-                                            width: 50px;
-                                            height: 50px;
-                                            position: absolute;
-                                            top: 5px;
-                                            left: 5px;
-                                            background-image: url(../img/paycheck.png);
-                                            background-size: 100%;
-                                            background-repeat: no-repeat;
-                                            visibility: hidden;
-                                        }
-                                        .xmas-level-rew-good {
-                                            width: 64px;
-                                            height: 64px;
-                                            position: absolute;
-                                            top: -2px;
-                                            left: -2px;
-                                            background-image: url(../img/fortuna-good.png);
-                                            background-size: 100%;
-                                            visibility: hidden;
-                                        }
-                                        .color-btn.green {
-                                            width: 54px;
-                                            height: 16px;
-                                            position: absolute;
-                                            bottom: 3px;
-                                            left: 3px;
-                                            border-radius: 4px;
-                                            visibility: hidden;
-                                            box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
-                                                0 1px 2px 0 rgba(0, 0, 0, 0.55);
-                                            .color-btn-text {
-                                                font-size: 8px;
-                                                top: 2px;
-                                            }
-                                            &:active {
-                                                box-shadow: inset 0 -1px 0px rgba(0, 0, 0, 0.2),
-                                                    inset 0 2px 2px
-                                                        rgba(0, 0, 0, 0.2);
-                                                .color-btn-text {
-                                                    top: 3px;
-                                                }
-                                            }
-                                        }
-                                        .xmas-level-rew-num-block {
-                                            width: 60px;
-                                            height: 60px;
-                                            position: absolute;
-                                            top: 0;
-                                            left: 0;
-                                            background-color: rgba(
-                                                0,
-                                                0,
-                                                0,
-                                                0.65
-                                            );
-                                            border-radius: 8px;
-                                            visibility: hidden;
-                                        }
-                                        &.collect {
-                                            .xmas-level-rew-num {
-                                                visibility: hidden;
-                                            }
-                                            .color-btn.green {
-                                                visibility: visible;
-                                            }
-                                        }
-                                        &.check {
-                                            .xmas-level-rew-num-check {
-                                                visibility: visible;
-                                            }
-                                        }
-                                        &.block {
-                                            .xmas-level-rew-num-block {
-                                                visibility: visible;
-                                            }
-                                        }
-                                        &.empty {
-                                            background: #0f1920;
-                                            box-shadow: 0 0 0
-                                                rgba(0, 0, 0, 0.35);
-                                            .xmas-level-rew-num {
-                                                visibility: hidden;
-                                            }
-                                            .color-btn.green {
-                                                visibility: hidden;
-                                            }
-                                            .xmas-level-rew-num-check {
-                                                visibility: hidden;
-                                            }
-                                            .xmas-level-rew-pic {
-                                                visibility: hidden;
-                                            }
-                                        }
-                                        &.girl {
-                                            .xmas-level-rew-pic {
-                                                width: 58px;
-                                                height: 58px;
-                                                position: absolute;
-                                                top: 1px;
-                                                left: 1px;
-                                                img {
-                                                    width: 58px;
-                                                }
-                                                border-radius: 6px;
-                                                overflow: hidden;
-                                            }
-                                            .xmas-level-rew-num {
-                                                visibility: hidden;
-                                            }
-                                            .xmas-level-rew-good {
-                                                visibility: visible;
-                                            }
-                                        }
-                                    }
-                                }
-                                .xmas-level-level {
-                                    width: 3500px;
-                                    height: 20px;
-                                    position: relative;
-                                    top: 5px;
-                                    background-color: #11597a;
-                                    .xmas-level-level-prg {
-                                        width: 10%;
-                                        height: 100%;
-                                        position: relative;
-                                        background: linear-gradient(
-                                            0deg,
-                                            #8cdd55 0%,
-                                            #43a700 50%,
-                                            #8cdd55 100%
-                                        );
-                                        transition: width 0.3s;
-                                        text-align: left;
-                                        font-size: 0;
-                                    }
-                                    .xmas-level-level-num-box {
-                                        width: 100%;
-                                        height: 20px;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        text-align: left;
-                                        .xmas-level-level-num {
-                                            width: 70px;
-                                            height: 20px;
-                                            position: relative;
-                                            display: inline-block;
-                                            text-align: center;
-                                            color: #fff;
-                                            font-size: 16px;
-                                            font-weight: bold;
-                                            text-shadow: 0 1px 2px
-                                                rgba(0, 0, 0, 0.35);
-                                            &:before {
-                                                content: "";
-                                                width: 2px;
-                                                height: 20px;
-                                                position: absolute;
-                                                right: 0;
-                                                top: 0;
-                                                background-color: #164d66;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .xmas-btn-box {
-                        width: 650px;
-                        height: 75px;
-                        position: absolute;
-                        bottom: 10px;
-                        right: 20px;
-                        font-size: 0;
-                        display: flex;
-                        justify-content: center;
-                        .color-btn {
-                            width: 180px;
-                            height: 50px;
-                            margin: 0 8px;
-                            .color-btn-text {
-                                top: 12px;
-                                position: relative;
-                                color: #fff;
-                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-                                text-align: center;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                font-size: 16px;
-                            }
-                            &:active {
-                                .color-btn-text {
-                                    top: 13px;
-                                }
-                            }
-                            &.quest {
-                                .color-btn-text {
-                                    flex-direction: row;
-                                    &:before {
-                                        content: "";
-                                        width: 20px;
-                                        height: 20px;
-                                        background: url(../img/darkworld-back-arrow.png);
-                                        background-size: 100%;
-                                        background-position: center;
-                                        background-repeat: no-repeat;
-                                        margin-left: 10px;
-                                        transform: translateX(-10px);
-                                        filter: drop-shadow(
-                                            0 2px 2px rgba(0, 0, 0, 0.2)
-                                        );
-                                    }
-                                }
-                            }
-                            &.shop {
-                                .color-btn-text {
-                                    flex-direction: row;
-                                    &:after {
-                                        content: "";
-                                        width: 20px;
-                                        height: 20px;
-                                        background: url(../img/darkworld-back-arrow.png);
-                                        background-size: 100%;
-                                        background-position: center;
-                                        background-repeat: no-repeat;
-                                        margin-right: 10px;
-                                        transform: scaleX(-1) translateX(-10px);
-                                        filter: drop-shadow(
-                                            0 2px 2px rgba(0, 0, 0, 0.2)
-                                        );
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+  body {
+    .main.world1,
+    .main.world2,
+    .main.world3 {
+      .popup-layer {
+        .m-popup.xmas-pop1,
+        .m-popup.xmas-pop2,
+        .m-popup.xmas-pop3 {
+          width: 906px;
+          height: 536px;
+          left: 147px;
+          top: 52px;
+          background: linear-gradient(
+            -22deg,
+            #8faae4,
+            #385dac,
+            #577ac7,
+            #8faae4
+          );
+          box-shadow: 0 1px 10px #392d26, inset 0 1px 2px #fff, 0 0 10px #000,
+            0 0 15px #000;
+          &:before {
+            box-shadow: 0 0 2px #fff, 0 0 5px #fff,
+              inset 0 0 5px rgba(0, 0, 0, 0.55);
+          }
+          .title {
+            display: inline-block;
+            width: auto;
+            height: 52px;
+            background: linear-gradient(to right, #8faae4, #577ac7, #8faae4);
+            box-shadow: 0 1px 10px #392d26, inset 0 2px 10px #fff,
+              inset 0 28px 5px rgba(0, 174, 255, 0.15);
+            border: solid 4px #577ac7;
+            color: #12364d;
+            text-shadow: 0 0 1px #413753, 0 1px 1px #fff, 0 1px 10px #ffc;
+            border-radius: 10px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            line-height: 58px;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transform: none;
+            filter: none;
+            &:before,
+            &:after {
+              content: none;
             }
+          }
+          .color-box {
+            background-image: url(../img/pop-bg-xmas.jpg);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            &:before {
+              content: "";
+              display: block;
+              width: 354px;
+              height: 160px;
+              position: absolute;
+              top: 350px;
+              left: -60px;
+              background: url(../img/girl-stand@2x.png);
+              background-size: 100%;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+            &:after {
+              display: none;
+            }
+          }
+          .btn-close-x {
+            background: linear-gradient(
+              -22deg,
+              #8faae4,
+              #385dac,
+              #577ac7,
+              #8faae4
+            );
+            border: solid 4px #577ac7;
+            box-shadow: 0 1px 3px rgba(255, 255, 255, 0.4);
+            &:before {
+              color: #3a3156;
+              text-shadow: 0 0 2px #3a3156, 0 0 2px #3a3156, 0 0 2px #3a3156,
+                0 0 2px #3a3156, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+            }
+          }
+          .xmas-girl {
+            width: 350px;
+            height: 500px;
+            position: absolute;
+            bottom: 30px;
+            left: -44px;
+            pointer-events: none;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          .xmas-box-all {
+            width: 650px;
+            height: 362px;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            .xmas-collect-box-all {
+              width: 650px;
+              height: 225px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 20px;
+              background-color: rgba(40, 140, 190, 0.8);
+              box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+              .xmas-collect-box {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                border-radius: 20px 20px 0 0;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+                background-color: #11597a;
+                box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2),
+                  0 1px 2px rgba(255, 255, 255, 0.2);
+                .xmas-collect-box-text {
+                  width: 100%;
+                  height: 100%;
+                  color: #3ce2ff;
+                  font-size: 28px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                }
+              }
+
+              .xmas-squad-holder {
+                position: absolute;
+                display: table;
+                top: 50px;
+                left: 25px;
+                width: 600px;
+                display: flex;
+                justify-content: center;
+                .hero-box {
+                  width: 98px;
+                  height: 111px;
+                  display: inline-block;
+                  margin: 0 6px;
+                  &:hover {
+                    filter: brightness(1.1);
+                  }
+                  .hero-avatar-box {
+                    width: 98px;
+                    height: 111px;
+                    display: inline-block;
+                    position: relative;
+                    border-radius: 6px;
+                    background: linear-gradient(
+                      180deg,
+                      #8e7453 0%,
+                      #e3c7a3 50%,
+                      #8f7553 70%,
+                      #ae916a 85%,
+                      #8f7553 100%
+                    );
+                    box-shadow: 0 2px 0 #5e4d36, 0 2px 4px rgba(0, 0, 0, 0.6),
+                      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+                    .hero-avatar {
+                      width: 90px;
+                      height: 103px;
+                      position: absolute;
+                      top: 4px;
+                      left: 4px;
+                      border-radius: 4px;
+                      overflow: hidden;
+                      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .sh2-icon-forgirl {
+                      width: 25px;
+                      height: 32px;
+                      position: absolute;
+                      top: 0px;
+                      left: 2px;
+
+                      img {
+                        width: 25px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .prgball-box {
+                width: 620px;
+                height: 38px;
+                position: absolute;
+                bottom: 15px;
+                left: 15px;
+                background-color: #11597a;
+                border-radius: 10px;
+                box-shadow: 0 0 0 3px #0d445d,
+                  0 1px 3px 2px rgba(255, 255, 255, 0.2);
+                overflow: hidden;
+                .prgall-prom {
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  .prg-all-bar {
+                    width: 40%;
+                    height: 100%;
+                    position: relative;
+                    background: linear-gradient(
+                      0deg,
+                      #5ef265 0%,
+                      #47b548 12%,
+                      #6bff66 60%,
+                      #9bff91 70%,
+                      #59db56 100%
+                    );
+                    transition: width 0.3s;
+                  }
+                }
+                .prg-all-text {
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  text-align: center;
+                  top: -5px;
+                  left: 0;
+                  color: #fff;
+                  font-size: 16px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+                  .ic-dildo {
+                    &:before {
+                      content: "";
+                      width: 30px;
+                      height: 30px;
+                      position: relative;
+                      display: inline-block;
+                      margin: 0 5px 0 5px;
+                      top: 8px;
+                      background-image: url(../img/ic-dildo.png);
+                      background-size: 100%;
+                    }
+                  }
+                }
+              }
+              .xmas-info-btn {
+                width: 28px;
+                height: 28px;
+                position: absolute;
+                top: 4px;
+                right: 4px;
+                background: linear-gradient(
+                  0deg,
+                  #53ceff 0%,
+                  #2293bf 50%,
+                  #b8d7e0 100%
+                );
+                border: 2px solid #7fe5ff;
+                border-radius: 100%;
+                cursor: pointer;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+                color: #fff;
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+                line-height: 30px;
+                z-index: 1;
+                &:before {
+                  content: "?";
+                }
+                &:hover {
+                  filter: brightness(1.1);
+                }
+                &:active {
+                  top: 5px;
+                }
+              }
+            }
+            .xmas-level-box-all {
+              width: 650px;
+              height: 127px;
+              position: absolute;
+              bottom: 0px;
+              left: 0;
+              border-radius: 10px;
+              background-color: rgba(40, 140, 190, 0.8);
+              box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+              .xmas-sim-el-box {
+                width: 100px;
+                height: 114px;
+                position: absolute;
+                top: 9px;
+                left: 5px;
+                .xmas-level {
+                  width: 100px;
+                  height: 20px;
+                  position: absolute;
+                  top: 5px;
+                  left: 0;
+                  background-color: #11597a;
+                  color: #fff;
+                  font-size: 14px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  line-height: 20px;
+                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+                }
+                .xmas-reward {
+                  width: 100px;
+                  height: 70px;
+                  position: absolute;
+                  top: 30px;
+                  left: 0;
+                  background: linear-gradient(
+                    0deg,
+                    #3fbae7 0%,
+                    #007aa7 50%,
+                    #3fbae7 100%
+                  );
+                  color: #fff;
+                  font-size: 16px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  line-height: 70px;
+                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+                }
+              }
+              .xmas-level-simple-box-scroll {
+                width: 535px;
+                height: 113px;
+                position: absolute;
+                top: 9px;
+                right: 5px;
+                overflow: hidden;
+                overflow-x: scroll;
+                font-size: 0;
+                &::-webkit-scrollbar-track {
+                  background-color: #11597a;
+                  border-radius: 10px;
+                }
+                &::-webkit-scrollbar {
+                  height: 8px;
+                  border-radius: 10px;
+                }
+                &::-webkit-scrollbar-thumb {
+                  background: linear-gradient(
+                    0deg,
+                    #ffe199 0%,
+                    #f4c657 18%,
+                    #ffe199 60%,
+                    #f4c557 85%,
+                    #ffe199 100%
+                  );
+                  border-radius: 10px;
+                }
+                .xmas-level-reward {
+                  width: 3500px;
+                  height: 70px;
+                  position: relative;
+                  text-align: left;
+                  top: 10px;
+                  background-color: #11597a;
+                  .xmas-level-rew-box {
+                    width: 60px;
+                    height: 60px;
+                    position: relative;
+                    display: inline-block;
+                    background: linear-gradient(0deg, #e9c44f 0%, #f7eec7 100%);
+                    border-radius: 8px;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                    margin: 5px;
+                    text-align: center;
+                    .xmas-level-rew-pic {
+                      width: 46px;
+                      height: 46px;
+                      position: absolute;
+                      top: 0;
+                      left: 7px;
+                      img {
+                        width: 46px;
+                      }
+                    }
+                    .xmas-level-rew-num {
+                      width: 60px;
+                      height: 12px;
+                      position: absolute;
+                      bottom: 5px;
+                      color: #3c3737;
+                      font-size: 12px;
+                      font-weight: bold;
+                    }
+                    .xmas-level-rew-num-check {
+                      width: 50px;
+                      height: 50px;
+                      position: absolute;
+                      top: 5px;
+                      left: 5px;
+                      background-image: url(../img/paycheck.png);
+                      background-size: 100%;
+                      background-repeat: no-repeat;
+                      visibility: hidden;
+                    }
+                    .xmas-level-rew-good {
+                      width: 64px;
+                      height: 64px;
+                      position: absolute;
+                      top: -2px;
+                      left: -2px;
+                      background-image: url(../img/fortuna-good.png);
+                      background-size: 100%;
+                      visibility: hidden;
+                    }
+                    .color-btn.green {
+                      width: 54px;
+                      height: 16px;
+                      position: absolute;
+                      bottom: 3px;
+                      left: 3px;
+                      border-radius: 4px;
+                      visibility: hidden;
+                      box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
+                        0 1px 2px 0 rgba(0, 0, 0, 0.55);
+                      .color-btn-text {
+                        font-size: 8px;
+                        top: 2px;
+                      }
+                      &:active {
+                        box-shadow: inset 0 -1px 0px rgba(0, 0, 0, 0.2),
+                          inset 0 2px 2px rgba(0, 0, 0, 0.2);
+                        .color-btn-text {
+                          top: 3px;
+                        }
+                      }
+                    }
+                    .xmas-level-rew-num-block {
+                      width: 60px;
+                      height: 60px;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      background-color: rgba(0, 0, 0, 0.65);
+                      border-radius: 8px;
+                      visibility: hidden;
+                    }
+                    &.collect {
+                      .xmas-level-rew-num {
+                        visibility: hidden;
+                      }
+                      .color-btn.green {
+                        visibility: visible;
+                      }
+                    }
+                    &.check {
+                      .xmas-level-rew-num-check {
+                        visibility: visible;
+                      }
+                    }
+                    &.block {
+                      .xmas-level-rew-num-block {
+                        visibility: visible;
+                      }
+                    }
+                    &.empty {
+                      background: #0f1920;
+                      box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
+                      .xmas-level-rew-num {
+                        visibility: hidden;
+                      }
+                      .color-btn.green {
+                        visibility: hidden;
+                      }
+                      .xmas-level-rew-num-check {
+                        visibility: hidden;
+                      }
+                      .xmas-level-rew-pic {
+                        visibility: hidden;
+                      }
+                    }
+                    &.girl {
+                      .xmas-level-rew-pic {
+                        width: 58px;
+                        height: 58px;
+                        position: absolute;
+                        top: 1px;
+                        left: 1px;
+                        img {
+                          width: 58px;
+                        }
+                        border-radius: 6px;
+                        overflow: hidden;
+                      }
+                      .xmas-level-rew-num {
+                        visibility: hidden;
+                      }
+                      .xmas-level-rew-good {
+                        visibility: visible;
+                      }
+                    }
+                  }
+                }
+                .xmas-level-level {
+                  width: 3500px;
+                  height: 20px;
+                  position: relative;
+                  top: 5px;
+                  background-color: #11597a;
+                  .xmas-level-level-prg {
+                    width: 10%;
+                    height: 100%;
+                    position: relative;
+                    background: linear-gradient(
+                      0deg,
+                      #8cdd55 0%,
+                      #43a700 50%,
+                      #8cdd55 100%
+                    );
+                    transition: width 0.3s;
+                    text-align: left;
+                    font-size: 0;
+                  }
+                  .xmas-level-level-num-box {
+                    width: 100%;
+                    height: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    text-align: left;
+                    .xmas-level-level-num {
+                      width: 70px;
+                      height: 20px;
+                      position: relative;
+                      display: inline-block;
+                      text-align: center;
+                      color: #fff;
+                      font-size: 16px;
+                      font-weight: bold;
+                      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                      &:before {
+                        content: "";
+                        width: 2px;
+                        height: 20px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background-color: #164d66;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .xmas-btn-box {
+            width: 650px;
+            height: 75px;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 0;
+            display: flex;
+            justify-content: center;
+            .color-btn {
+              width: 180px;
+              height: 50px;
+              margin: 0 8px;
+              .color-btn-text {
+                top: 12px;
+                position: relative;
+                color: #fff;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+                text-align: center;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 16px;
+              }
+              &:active {
+                .color-btn-text {
+                  top: 13px;
+                }
+              }
+              &.quest {
+                .color-btn-text {
+                  flex-direction: row;
+                  &:before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/darkworld-back-arrow.png);
+                    background-size: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    margin-left: 10px;
+                    transform: translateX(-10px);
+                    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+                  }
+                }
+              }
+              &.shop {
+                .color-btn-text {
+                  flex-direction: row;
+                  &:after {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/darkworld-back-arrow.png);
+                    background-size: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    margin-right: 10px;
+                    transform: scaleX(-1) translateX(-10px);
+                    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+                  }
+                }
+              }
+            }
+          }
         }
+      }
     }
+  }
 `;
 
-const V2ScreenXmasPop1 = styled.div`
-    ${V2ScreenXmasPop1Styles}
-`;
-
-export { V2ScreenXmasPop1Styles, V2ScreenXmasPop1 };
+export default V2ScreenXmasPop1Styles;

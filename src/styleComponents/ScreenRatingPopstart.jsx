@@ -1,261 +1,256 @@
-import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 
 const ScreenRatingPopstartStyles = css`
-    // Pop Start 1-2
-    .popup-layer .ratingpop-box {
-        width: 760px;
-        height: 620px;
-        margin-left: 136px;
-        top: 10px;
+  // Pop Start 1-2
+  .popup-layer .ratingpop-box {
+    width: 760px;
+    height: 620px;
+    margin-left: 136px;
+    top: 10px;
+    position: absolute;
+    .color-btn {
+      background-color: #ad2c2c;
+      top: 240px;
+      margin-left: 122px;
+    }
+  }
+
+  // Pop Start 3
+  .popup-layer .m-popup.popstart {
+    width: 886px;
+    height: 620px;
+    left: calc(50% - 440px);
+    top: 10px;
+    &:before {
+      content: "";
+      background: linear-gradient(0deg, #938274 0%, #dbc2ad 100%);
+    }
+    .color-box {
+      display: none;
+    }
+    .rating-girl {
+      margin-left: -10px;
+    }
+    .popstart-right-box {
+      width: 542px;
+      height: 540px;
+      position: absolute;
+      top: 66px;
+      margin-left: 322px;
+      .popstart-toptext-box {
+        width: 518px;
+        height: 48px;
         position: absolute;
-        .color-btn {
-            background-color: #ad2c2c;
-            top: 240px;
-            margin-left: 122px;
-        }
-    }
-
-    // Pop Start 3
-    .popup-layer .m-popup.popstart {
-        width: 886px;
-        height: 620px;
-        left: calc(50% - 440px);
         top: 10px;
-        &:before {
-            content: "";
-            background: linear-gradient(0deg, #938274 0%, #dbc2ad 100%);
+        margin-left: 10px;
+        color: #453930;
+        font-size: 18px;
+        text-shadow: 0 0 6px #ffffff, 0 0 8px #ffffff, 0 0 16px #ffffff;
+      }
+      .prize-container {
+        width: 170px;
+        height: 300px;
+        position: relative;
+        display: inline-block;
+        background-color: #806c5c;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+        margin: 0 4px 0 4px;
+        top: 66px;
+
+        &.silver {
+          .cont-name-box {
+            background: linear-gradient(
+              180deg,
+              #585a5c 0%,
+              #d5d8da 50%,
+              #585a5b 70%,
+              #a1a4a6 85%,
+              #585a5b 100%
+            );
+          }
+          .cont-sign {
+            background-image: url(../img/rating-sign-silver@1x.png);
+            background-size: 100%;
+          }
+          .cont-prize {
+            background-image: url(../img/icon-sunduk-200-1.png);
+            background-size: 100%;
+          }
         }
-        .color-box {
-            display: none;
-        }
-        .rating-girl {
-            margin-left: -10px;
-        }
-        .popstart-right-box {
-            width: 542px;
-            height: 540px;
+        &.gold {
+          .cont-name-box {
+            background: linear-gradient(
+              180deg,
+              #c68300 0%,
+              #f4dfb6 50%,
+              #c68200 70%,
+              #fad489 85%,
+              #c78302 100%
+            );
+          }
+          .cont-sign {
+            width: 116px;
+            height: 116px;
             position: absolute;
-            top: 66px;
-            margin-left: 322px;
-            .popstart-toptext-box {
-                width: 518px;
-                height: 48px;
-                position: absolute;
-                top: 10px;
-                margin-left: 10px;
-                color: #453930;
-                font-size: 18px;
-                text-shadow: 0 0 6px #ffffff, 0 0 8px #ffffff, 0 0 16px #ffffff;
-            }
-            .prize-container {
-                width: 170px;
-                height: 300px;
-                position: relative;
-                display: inline-block;
-                background-color: #806c5c;
-                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
-                margin: 0 4px 0 4px;
-                top: 66px;
-
-                &.silver {
-                    .cont-name-box {
-                        background: linear-gradient(
-                            180deg,
-                            #585a5c 0%,
-                            #d5d8da 50%,
-                            #585a5b 70%,
-                            #a1a4a6 85%,
-                            #585a5b 100%
-                        );
-                    }
-                    .cont-sign {
-                        background-image: url(../img/rating-sign-silver@1x.png);
-                        background-size: 100%;
-                    }
-                    .cont-prize {
-                        background-image: url(../img/icon-sunduk-200-1.png);
-                        background-size: 100%;
-                    }
-                }
-                &.gold {
-                    .cont-name-box {
-                        background: linear-gradient(
-                            180deg,
-                            #c68300 0%,
-                            #f4dfb6 50%,
-                            #c68200 70%,
-                            #fad489 85%,
-                            #c78302 100%
-                        );
-                    }
-                    .cont-sign {
-                        width: 116px;
-                        height: 116px;
-                        position: absolute;
-                        top: 36px;
-                        margin-left: 27px;
-                        background-image: url(../img/rating-sign-gold@1x.png);
-                        background-size: 100%;
-                    }
-                    .cont-prize {
-                        width: 110px;
-                        height: 110px;
-                        position: absolute;
-                        top: 160px;
-                        margin-left: 30px;
-                        background-image: url(../img/icon-sunduk-200-2.png);
-                        background-size: 100%;
-                    }
-                }
-                &.top {
-                    .cont-name-box {
-                        @include background-top;
-                    }
-                    .cont-sign {
-                        width: 126px;
-                        height: 126px;
-                        position: absolute;
-                        top: 30px;
-                        margin-left: 22px;
-                        background-image: url(../img/rating-sign-top@1x.png);
-                        background-size: 100%;
-                    }
-                    .cont-prize {
-                        width: 120px;
-                        height: 120px;
-                        position: absolute;
-                        top: 156px;
-                        margin-left: 25px;
-                        background-image: url(../img/icon-sunduk-200-3.png);
-                        background-size: 100%;
-                    }
-                }
-            }
-            .possible-rew-box {
-                width: 533px;
-                height: 106px;
-                position: absolute;
-                top: 370px;
-                margin-left: 4px;
-                background-color: #806c5c;
-                border-radius: 6px;
-                .possible-rew-text {
-                    width: 533px;
-                    height: 20px;
-                    position: absolute;
-                    top: 8px;
-                    text-align: center;
-                    font-size: 16px;
-                    text-transform: uppercase;
-                    color: #fbe920;
-                    font-weight: bold;
-                    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-                }
-                .rating-price-box {
-                    width: 60px;
-                    height: 60px;
-                    position: relative;
-                    display: inline-block;
-                    top: 36px;
-                    margin: 0 1px 0 1px;
-                    border-radius: 6px;
-                    .rating-price {
-                        width: 56px;
-                        height: 56px;
-                        top: 2px;
-                        margin-left: -28px;
-                    }
-                }
-            }
-            .popstart-btn-box {
-                width: 529px;
-                height: 56px;
-                position: absolute;
-                top: 482px;
-                margin-left: 6px;
-                .color-btn.rules,
-                .color-btn.okay {
-                    width: 206px;
-                    position: relative;
-                    display: inline-block;
-                    background-color: #a4682d;
-                    margin: 0 6px 0 6px;
-                }
-                .color-btn.okay {
-                    background-color: #e3be4f;
-                }
-            }
-            .popstart-rules-box {
-                display: none;
-            }
-            &.rules {
-                .prize-container {
-                    display: none;
-                }
-                .possible-rew-box {
-                    display: none;
-                }
-                .popstart-rules-box {
-                    width: 533px;
-                    height: 406px;
-                    position: absolute;
-                    top: 66px;
-                    margin-left: 4px;
-                    background-color: #ece0d6;
-                    border-radius: 10px;
-                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
-                    display: block;
-                    .rules-name-text {
-                        width: 533px;
-                        height: 20px;
-                        position: relative;
-                        top: 40px;
-                        text-align: center;
-                        font-size: 18px;
-                        text-transform: uppercase;
-                        color: #806c5c;
-                        font-weight: bold;
-                    }
-                    .rules-all-text-box {
-                        width: 500px;
-                        height: 330px;
-                        position: absolute;
-                        top: 60px;
-                        margin-left: 20px;
-                        display: table;
-                        .rules-all-text {
-                            width: 500px;
-                            height: 330px;
-                            line-height: 24px;
-                            text-align: left;
-                            display: table-cell;
-                            vertical-align: middle;
-                            font-size: 16px;
-                            color: #806c5c;
-                        }
-                    }
-                    .rating-rules-close-btn {
-                        width: 30px;
-                        height: 30px;
-                        position: absolute;
-                        top: 10px;
-                        margin-left: 492px;
-                        background-image: url(../img/rating-rules-close-btn@1x.png);
-                        background-size: 100%;
-                        cursor: pointer;
-                        &:active {
-                            top: 12px;
-                        }
-                    }
-                }
-            }
+            top: 36px;
+            margin-left: 27px;
+            background-image: url(../img/rating-sign-gold@1x.png);
+            background-size: 100%;
+          }
+          .cont-prize {
+            width: 110px;
+            height: 110px;
+            position: absolute;
+            top: 160px;
+            margin-left: 30px;
+            background-image: url(../img/icon-sunduk-200-2.png);
+            background-size: 100%;
+          }
         }
+        &.top {
+          .cont-name-box {
+            @include background-top;
+          }
+          .cont-sign {
+            width: 126px;
+            height: 126px;
+            position: absolute;
+            top: 30px;
+            margin-left: 22px;
+            background-image: url(../img/rating-sign-top@1x.png);
+            background-size: 100%;
+          }
+          .cont-prize {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: 156px;
+            margin-left: 25px;
+            background-image: url(../img/icon-sunduk-200-3.png);
+            background-size: 100%;
+          }
+        }
+      }
+      .possible-rew-box {
+        width: 533px;
+        height: 106px;
+        position: absolute;
+        top: 370px;
+        margin-left: 4px;
+        background-color: #806c5c;
+        border-radius: 6px;
+        .possible-rew-text {
+          width: 533px;
+          height: 20px;
+          position: absolute;
+          top: 8px;
+          text-align: center;
+          font-size: 16px;
+          text-transform: uppercase;
+          color: #fbe920;
+          font-weight: bold;
+          text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .rating-price-box {
+          width: 60px;
+          height: 60px;
+          position: relative;
+          display: inline-block;
+          top: 36px;
+          margin: 0 1px 0 1px;
+          border-radius: 6px;
+          .rating-price {
+            width: 56px;
+            height: 56px;
+            top: 2px;
+            margin-left: -28px;
+          }
+        }
+      }
+      .popstart-btn-box {
+        width: 529px;
+        height: 56px;
+        position: absolute;
+        top: 482px;
+        margin-left: 6px;
+        .color-btn.rules,
+        .color-btn.okay {
+          width: 206px;
+          position: relative;
+          display: inline-block;
+          background-color: #a4682d;
+          margin: 0 6px 0 6px;
+        }
+        .color-btn.okay {
+          background-color: #e3be4f;
+        }
+      }
+      .popstart-rules-box {
+        display: none;
+      }
+      &.rules {
+        .prize-container {
+          display: none;
+        }
+        .possible-rew-box {
+          display: none;
+        }
+        .popstart-rules-box {
+          width: 533px;
+          height: 406px;
+          position: absolute;
+          top: 66px;
+          margin-left: 4px;
+          background-color: #ece0d6;
+          border-radius: 10px;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.35);
+          display: block;
+          .rules-name-text {
+            width: 533px;
+            height: 20px;
+            position: relative;
+            top: 40px;
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #806c5c;
+            font-weight: bold;
+          }
+          .rules-all-text-box {
+            width: 500px;
+            height: 330px;
+            position: absolute;
+            top: 60px;
+            margin-left: 20px;
+            display: table;
+            .rules-all-text {
+              width: 500px;
+              height: 330px;
+              line-height: 24px;
+              text-align: left;
+              display: table-cell;
+              vertical-align: middle;
+              font-size: 16px;
+              color: #806c5c;
+            }
+          }
+          .rating-rules-close-btn {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 10px;
+            margin-left: 492px;
+            background-image: url(../img/rating-rules-close-btn@1x.png);
+            background-size: 100%;
+            cursor: pointer;
+            &:active {
+              top: 12px;
+            }
+          }
+        }
+      }
     }
+  }
 `;
 
-const ScreenRatingPopstart = styled.div`
-    ${ScreenRatingPopstartStyles}
-`;
-
-export { ScreenRatingPopstartStyles, ScreenRatingPopstart };
+export default ScreenRatingPopstartStyles;

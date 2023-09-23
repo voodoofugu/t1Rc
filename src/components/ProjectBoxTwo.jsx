@@ -40,7 +40,7 @@ const ProjectBoxTwo = () => {
                   id={`root-${pageName}`}
                   className="projectComponent noScripts"
                 >
-                  <PageComponent pageName={pageName} />
+                  <PageComponent />
                 </div>
               </Suspense>
             </LazyLoad>

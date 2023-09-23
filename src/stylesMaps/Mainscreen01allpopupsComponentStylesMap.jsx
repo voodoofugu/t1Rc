@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { AllResStyles } from "../styleComponents/AllRes";
 import { ScreenFapopolyRulesStyles } from "../styleComponents/ScreenFapopolyRules";
 import { ScreenUnipopSubscriptionStyles } from "../styleComponents/ScreenUnipopSubscription";
@@ -43,8 +42,8 @@ import { ScreenBankStyles } from "../styleComponents/ScreenBank";
 import { ScreenRatingFullcollStyles } from "../styleComponents/ScreenRatingFullcoll";
 
 const Mainscreen01allpopupsComponentStylesMap = styled.div`
-    ${AllResStyles}
-    ${ScreenFapopolyRulesStyles}
+  ${AllResStyles}
+  ${ScreenFapopolyRulesStyles}
     ${ScreenUnipopSubscriptionStyles}
     ${V2ScreenTowerStyles}
     ${V2ScreenTowerRelicsStyles}
