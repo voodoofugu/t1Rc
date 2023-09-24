@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFortuna2SvSaleStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.fortuna-main.sv-sale {
     width: 970px;
     height: 600px;
@@ -359,4 +361,4 @@ const ScreenFortuna2SvSaleStyles = css`
   }
 `;
 
-export default ScreenFortuna2SvSaleStyles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingMaintabCollStyles = css`
+const pageStyles = css`
   .tab-panel.rating-panel {
     .rating-right-box {
       .rating-card-list-box.collection {
@@ -455,4 +457,4 @@ const ScreenRatingMaintabCollStyles = css`
   }
 `;
 
-export default ScreenRatingMaintabCollStyles;
+export { stylesFileName, pageStyles };

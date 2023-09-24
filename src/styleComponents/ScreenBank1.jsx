@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenBank1Styles = css`
+const pageStyles = css`
   .left-side .left-panel .tab-panel.bank-panel {
     .bank-subwin.sale {
       .bs-pack-scroll.panels-2 {
@@ -587,4 +589,4 @@ const ScreenBank1Styles = css`
   }
 `;
 
-export default ScreenBank1Styles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFortunaRoundMain16xStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.fortuna-main-round {
     width: 560px;
     height: 620px;
@@ -8,7 +10,6 @@ const ScreenFortunaRoundMain16xStyles = css`
     top: 10px;
     &:before {
       content: "";
-      // background: linear-gradient(136deg, #8e7453 0%, #e3c7a3 50%, #ae916a 85%, #8f7553 100%);
       background-color: #bb0148;
       background-image: url(../img/spinner-round-bg.jpg);
       background-size: 100%;
@@ -44,7 +45,6 @@ const ScreenFortunaRoundMain16xStyles = css`
         width: 124px;
         height: 48px;
         right: 430px;
-        //left: 10px;
         top: 10px;
         background: #ffcb39;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
@@ -98,7 +98,6 @@ const ScreenFortunaRoundMain16xStyles = css`
         position: absolute;
         top: 10px;
         left: 157px;
-        //background: linear-gradient(0deg, #a00000 0%, #ff0000 100%);
         background: linear-gradient(0deg, #ffe199, #f4c557, #ffe199);
         text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
         font-size: 14px;
@@ -144,8 +143,6 @@ const ScreenFortunaRoundMain16xStyles = css`
           width: 52px;
           transform: rotate(0deg);
           transform-origin: 0% 100%;
-          // background: rgba(0,0,0,.1);
-
           &:before {
             content: "";
             border-top: 200px solid rgba(0, 0, 0, 0.15);
@@ -154,11 +151,9 @@ const ScreenFortunaRoundMain16xStyles = css`
             height: 0;
             width: 10px;
             position: absolute;
-            //transform: rotate(7.2deg); //25
             transform: rotate(11.25deg); //16
             left: -20px;
             top: 0;
-
             transition: all 0.3s;
           }
 
@@ -166,7 +161,6 @@ const ScreenFortunaRoundMain16xStyles = css`
             border-top: 200px solid rgba(255, 255, 255, 0.4);
           }
 
-          //colors
           &.b1:before,
           &.b3:before,
           &.b5:before,
@@ -398,13 +392,11 @@ const ScreenFortunaRoundMain16xStyles = css`
               }
             }
             .fortuna-good {
-              // filter: sepia(100%);
               transition: 300ms;
             }
           }
           &.cheked {
             .fortuna-prize {
-              // border: solid 2px #ffa;
               box-shadow: 0 0 5px #ff0, 0 0 15px #ff0, inset 0 0 5px #ffa,
                 inset 0 0 15px #ff0;
               background: linear-gradient(
@@ -554,10 +546,7 @@ const ScreenFortunaRoundMain16xStyles = css`
           .color-btn {
             width: 185px;
             height: 55px;
-            //background-image: url(../img/spinner-round-button-up.png); background-size: 100%;
-            //border-radius: 0;
             line-height: 35px;
-            //box-shadow: none;
 
             .color-btn-text {
               font-size: 16px;
@@ -566,7 +555,6 @@ const ScreenFortunaRoundMain16xStyles = css`
             }
             &.x10 {
               margin-top: 15px;
-              //background-image: url(../img/spinner-round-button-down.png);
             }
             &.tokens {
               display: inline-block;
@@ -611,7 +599,6 @@ const ScreenFortunaRoundMain16xStyles = css`
           position: absolute;
           top: 0;
           left: 0;
-          //background-color: #7e627c;
           border-radius: 8px;
           box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.4),
             inset 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
@@ -635,7 +622,6 @@ const ScreenFortunaRoundMain16xStyles = css`
           position: absolute;
           top: 8px;
           left: 8px;
-          //background-color: #695167;
           background-color: rgba(0, 0, 0, 0.28);
           border-radius: 6px;
           .daily-mission-name {
@@ -657,7 +643,6 @@ const ScreenFortunaRoundMain16xStyles = css`
             position: absolute;
             top: 38px;
             left: 8px;
-            //background: linear-gradient(180deg, #3b302f 0%, #584a49 100%);
             background: linear-gradient(180deg, #332732 0%, #584457 100%);
             overflow: hidden;
             border-radius: 8px;
@@ -736,7 +721,6 @@ const ScreenFortunaRoundMain16xStyles = css`
           position: absolute;
           top: 0px;
           left: 0px;
-          //background-color: #7e627c;
           box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.4),
             inset 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
           border-radius: 10px;
@@ -744,7 +728,6 @@ const ScreenFortunaRoundMain16xStyles = css`
             width: 400px;
             height: 34px;
             position: absolute;
-            //background-color: #ffcb39;
             border-radius: 10px 10px 0 0;
             text-transform: uppercase;
             font-size: 20px;
@@ -817,7 +800,6 @@ const ScreenFortunaRoundMain16xStyles = css`
             width: 380px;
             top: 46px;
             left: 10px;
-
             &.second {
               top: 106px;
               .wf-jp-2-cloaker {
@@ -833,7 +815,6 @@ const ScreenFortunaRoundMain16xStyles = css`
                 text-transform: uppercase;
                 line-height: 30px;
                 border-radius: 6px;
-
                 .color-btn {
                   height: 30px;
                   width: 100px;
@@ -841,7 +822,6 @@ const ScreenFortunaRoundMain16xStyles = css`
                   top: 28px;
                   left: 145px;
                   line-height: 6px;
-
                   .color-btn-text {
                     font-size: 12px;
                   }
@@ -875,7 +855,6 @@ const ScreenFortunaRoundMain16xStyles = css`
               top: 0;
               position: absolute;
               display: block;
-
               .rjackpot-box-collected-label-text {
                 left: 120px;
                 top: 75px;
@@ -893,7 +872,6 @@ const ScreenFortunaRoundMain16xStyles = css`
                 line-height: 50px;
                 border-radius: 10px;
               }
-
               &:before {
                 content: "";
                 position: absolute;
@@ -910,7 +888,6 @@ const ScreenFortunaRoundMain16xStyles = css`
         .rrevard-box {
           top: 188px;
           height: 145px;
-
           .fortuna-prgbar-box {
             .f2-prgbar-empty,
             .f2-prgbar-full {
@@ -966,7 +943,6 @@ const ScreenFortunaRoundMain16xStyles = css`
             font-weight: bold;
             text-transform: uppercase;
             font-size: 16px;
-
             &:active {
               line-height: 27px;
             }
@@ -978,8 +954,6 @@ const ScreenFortunaRoundMain16xStyles = css`
           top: 355px;
           left: 0px;
           position: absolute;
-          //background-image: url(../img/fortuna-prg-bg2.png);
-          //background-position: 50% 50%;
           border-radius: 10px;
           box-shadow: inset 0px 0px 30px 0px rgba(0, 0, 0, 0.4),
             inset 0px 0px 3px 0px rgba(0, 0, 0, 0.6);
@@ -1014,4 +988,4 @@ const ScreenFortunaRoundMain16xStyles = css`
   }
 `;
 
-export default ScreenFortunaRoundMain16xStyles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenPortalShopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.bf-event__buy-keys-pop {
     width: 1000px;
     height: auto;
@@ -455,4 +457,4 @@ const V2ScreenPortalShopStyles = css`
   }
 `;
 
-export default V2ScreenPortalShopStyles;
+export { stylesFileName, pageStyles };

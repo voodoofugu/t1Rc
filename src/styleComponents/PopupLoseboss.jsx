@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const PopupLosebossStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.lose-boss {
     width: 700px;
     height: 459px;
@@ -148,4 +150,4 @@ const PopupLosebossStyles = css`
   }
 `;
 
-export default PopupLosebossStyles;
+export { stylesFileName, pageStyles };

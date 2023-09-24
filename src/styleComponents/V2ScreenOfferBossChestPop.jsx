@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenOfferBossChestPopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.cw-offers-pop {
     width: 500px;
     height: auto;
@@ -356,4 +358,4 @@ const V2ScreenOfferBossChestPopStyles = css`
   }
 `;
 
-export default V2ScreenOfferBossChestPopStyles;
+export { stylesFileName, pageStyles };

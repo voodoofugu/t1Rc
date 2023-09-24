@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenWitchCauldronScrollStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.witch-cauldron-scroll {
     width: 816px;
     height: 604px;
@@ -255,4 +257,4 @@ const V2ScreenWitchCauldronScrollStyles = css`
   }
 `;
 
-export default V2ScreenWitchCauldronScrollStyles;
+export { stylesFileName, pageStyles };

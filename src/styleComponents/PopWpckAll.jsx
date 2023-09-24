@@ -1,4 +1,7 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
+
 import { PopWpck1Styles } from "../styleComponents/PopWpck1";
 import { PopWpck2Styles } from "../styleComponents/PopWpck2";
 import { PopWpck3Styles } from "../styleComponents/PopWpck3";
@@ -6,7 +9,7 @@ import { PopWpck4Styles } from "../styleComponents/PopWpck4";
 import { PopWpck5Styles } from "../styleComponents/PopWpck5";
 import { PopWpckEndStyles } from "../styleComponents/PopWpckEnd";
 
-const PopWpckAllStyles = css`
+const pageStyles = css`
   .sh-wheelpack {
     &.whalesale {
       .lhero-box {
@@ -311,14 +314,4 @@ const PopWpckAllStyles = css`
   }
 `;
 
-const PopWpckAll = styled.div`
-  ${PopWpck1Styles}
-  ${PopWpck2Styles}
-    ${PopWpck3Styles}
-    ${PopWpck4Styles}
-    ${PopWpck5Styles}
-    ${PopWpckEndStyles}
-    ${PopWpckAllStyles}
-`;
-
-export default PopWpckAllStyles;
+export { stylesFileName, pageStyles };

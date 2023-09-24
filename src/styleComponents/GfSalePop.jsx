@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const GfSalePopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.gf-sale {
     width: 970px;
     height: 530px;
@@ -445,4 +447,4 @@ const GfSalePopStyles = css`
   }
 `;
 
-export default GfSalePopStyles;
+export { stylesFileName, pageStyles };

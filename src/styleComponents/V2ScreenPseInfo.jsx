@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenPseInfoStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.pseinfo {
     width: 910px;
     height: 590px;
@@ -307,4 +309,4 @@ const V2ScreenPseInfoStyles = css`
   }
 `;
 
-export default V2ScreenPseInfoStyles;
+export { stylesFileName, pageStyles };

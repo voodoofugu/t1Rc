@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenTowerRelicsPopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.tower-relics-pop {
     width: 660px;
     height: 505px;
@@ -311,4 +313,4 @@ const V2ScreenTowerRelicsPopStyles = css`
   }
 `;
 
-export default V2ScreenTowerRelicsPopStyles;
+export { stylesFileName, pageStyles };

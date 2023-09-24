@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenUnipopSubscriptionStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.unipop-subscription {
     display: block;
     width: 900px;
@@ -478,4 +480,4 @@ const ScreenUnipopSubscriptionStyles = css`
   }
 `;
 
-export default ScreenUnipopSubscriptionStyles;
+export { stylesFileName, pageStyles };

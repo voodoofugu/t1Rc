@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenMainStyles = css`
+const pageStyles = css`
   .color-btn,
   .btn-close-x {
     &:hover {
@@ -4901,4 +4903,4 @@ const V2ScreenMainStyles = css`
   }
 `;
 
-export default V2ScreenMainStyles;
+export { stylesFileName, pageStyles };

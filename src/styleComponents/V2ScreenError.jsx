@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenErrorStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.error-popup {
     width: 636px;
     height: auto;
@@ -79,4 +81,4 @@ const V2ScreenErrorStyles = css`
   }
 `;
 
-export default V2ScreenErrorStyles;
+export { stylesFileName, pageStyles };

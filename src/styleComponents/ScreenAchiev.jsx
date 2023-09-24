@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenAchievStyles = css`
+const pageStyles = css`
   .tooltip-container {
     text-align: left;
     position: absolute;
@@ -386,4 +388,4 @@ const ScreenAchievStyles = css`
   }
 `;
 
-export default ScreenAchievStyles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenWorldDistrictStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.world-district {
     width: 1000px;
     height: 570px;
@@ -482,4 +484,4 @@ const V2ScreenWorldDistrictStyles = css`
   }
 `;
 
-export default V2ScreenWorldDistrictStyles;
+export { stylesFileName, pageStyles };

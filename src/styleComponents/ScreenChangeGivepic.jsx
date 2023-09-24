@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenChangeGivepicStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.change-givepic {
     width: 805px;
     height: 632px;
@@ -309,4 +311,4 @@ const ScreenChangeGivepicStyles = css`
   }
 `;
 
-export default ScreenChangeGivepicStyles;
+export { stylesFileName, pageStyles };

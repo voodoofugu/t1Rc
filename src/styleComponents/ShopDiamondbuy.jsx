@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ShopDiamondbuyStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.diamond-buy {
     width: 1000px;
     height: 470px;
@@ -183,4 +185,4 @@ const ShopDiamondbuyStyles = css`
   }
 `;
 
-export default ShopDiamondbuyStyles;
+export { stylesFileName, pageStyles };

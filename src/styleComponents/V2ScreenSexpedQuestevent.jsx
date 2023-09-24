@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenSexpedQuesteventStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.sexped-questevent {
     width: 906px;
     height: 580px;
@@ -410,4 +412,4 @@ const V2ScreenSexpedQuesteventStyles = css`
   }
 `;
 
-export default V2ScreenSexpedQuesteventStyles;
+export { stylesFileName, pageStyles };

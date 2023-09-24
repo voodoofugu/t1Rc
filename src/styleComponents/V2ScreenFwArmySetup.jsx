@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenFwArmySetupStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.army-setup {
     width: 1200px;
     height: 640px;
@@ -745,4 +747,4 @@ const V2ScreenFwArmySetupStyles = css`
   }
 `;
 
-export default V2ScreenFwArmySetupStyles;
+export { stylesFileName, pageStyles };

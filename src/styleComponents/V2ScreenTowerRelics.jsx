@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenTowerRelicsStyles = css`
+const pageStyles = css`
   body .main {
     .left-side {
       .left-panel {
@@ -425,4 +427,4 @@ const V2ScreenTowerRelicsStyles = css`
   }
 `;
 
-export default V2ScreenTowerRelicsStyles;
+export { stylesFileName, pageStyles };

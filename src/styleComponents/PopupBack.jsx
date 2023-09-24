@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const PopupBackStyles = css`
+const pageStyles = css`
   .popup-layer {
     .back-popup {
       display: block;
@@ -248,4 +250,4 @@ const PopupBackStyles = css`
   }
 `;
 
-export default PopupBackStyles;
+export { stylesFileName, pageStyles };

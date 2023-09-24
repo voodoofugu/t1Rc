@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenTowerTrophyPopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.tower-trophy-pop {
     width: 460px;
     height: 600px;
@@ -146,4 +148,4 @@ const V2ScreenTowerTrophyPopStyles = css`
   }
 `;
 
-export default V2ScreenTowerTrophyPopStyles;
+export { stylesFileName, pageStyles };

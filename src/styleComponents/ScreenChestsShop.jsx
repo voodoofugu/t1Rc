@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenChestsShopStyles = css`
+const pageStyles = css`
   body .main .popup-layer .m-popup.chests-shop {
     width: 824px;
     top: 50%;
@@ -541,4 +543,4 @@ const ScreenChestsShopStyles = css`
   }
 `;
 
-export default ScreenChestsShopStyles;
+export { stylesFileName, pageStyles };

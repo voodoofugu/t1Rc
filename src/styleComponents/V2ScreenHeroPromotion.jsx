@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenHeroPromotionStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.hero-popup {
     .hero-right-side.promotion {
       .color-btn {
@@ -629,4 +631,4 @@ const V2ScreenHeroPromotionStyles = css`
   }
 `;
 
-export default V2ScreenHeroPromotionStyles;
+export { stylesFileName, pageStyles };

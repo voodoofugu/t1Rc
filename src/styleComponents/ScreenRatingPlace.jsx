@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingPlaceStyles = css`
+const pageStyles = css`
   .slider-popup {
     .rating-place-box {
       width: 280px;
@@ -163,4 +165,4 @@ const ScreenRatingPlaceStyles = css`
   }
 `;
 
-export default ScreenRatingPlaceStyles;
+export { stylesFileName, pageStyles };

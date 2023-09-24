@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFortuna2MainStyles = css`
+const pageStyles = css`
   body .main {
     width: 1200px;
     height: 640px;
@@ -2229,4 +2231,4 @@ const ScreenFortuna2MainStyles = css`
   }
 `;
 
-export default ScreenFortuna2MainStyles;
+export { stylesFileName, pageStyles };

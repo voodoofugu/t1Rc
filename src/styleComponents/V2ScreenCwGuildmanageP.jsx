@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenCwGuildmanagePStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.guildmanage-p {
     width: 590px;
     height: 265px;
@@ -303,4 +305,4 @@ const V2ScreenCwGuildmanagePStyles = css`
   }
 `;
 
-export default V2ScreenCwGuildmanagePStyles;
+export { stylesFileName, pageStyles };

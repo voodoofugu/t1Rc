@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenShopMainStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.shop-main {
     .store-menu-box {
       width: 118px;
@@ -540,4 +542,4 @@ const V2ScreenShopMainStyles = css`
   }
 `;
 
-export default V2ScreenShopMainStyles;
+export { stylesFileName, pageStyles };

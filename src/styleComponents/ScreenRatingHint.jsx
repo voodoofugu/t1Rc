@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingHintStyles = css`
+const pageStyles = css`
   .rating-hint-box-rel,
   .rating-hint-box {
     font-size: 0;
@@ -408,4 +410,4 @@ const ScreenRatingHintStyles = css`
   }
 `;
 
-export default ScreenRatingHintStyles;
+export { stylesFileName, pageStyles };

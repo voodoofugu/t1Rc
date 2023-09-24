@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenGoddessPictureStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.goddess-picture {
     width: 706px;
     height: 640px;
@@ -40,4 +42,4 @@ const V2ScreenGoddessPictureStyles = css`
   }
 `;
 
-export default V2ScreenGoddessPictureStyles;
+export { stylesFileName, pageStyles };

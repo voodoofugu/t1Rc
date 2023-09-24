@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingRankinfStyles = css`
+const pageStyles = css`
   // Pop Rank Information Ranks
   .popup-layer .m-popup.rankinf-rank {
     width: 700px;
@@ -548,4 +550,4 @@ const ScreenRatingRankinfStyles = css`
   }
 `;
 
-export default ScreenRatingRankinfStyles;
+export { stylesFileName, pageStyles };

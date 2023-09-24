@@ -1,73 +1,69 @@
 import React from "react";
-import Loading from "../components/Loading.jsx";
-// import {
-//     dynamicClassName,
-//     V2ScreenFortunaBuyres,
-// } from "../styleComponents/V2ScreenFortunaBuyres.jsx";
+import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
+import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
+const stylePairs = generateStylePairs(["V2ScreenFortunaBuyres"]);
 
 const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
-    return (
-        // <V2ScreenFortunaBuyres className={dynamicClassName}>
-        <div className="main world1">
-            <div className="main-bg"></div>
+  return (
+    <HelmetStyleTagWhitWrap stylePairs={stylePairs}>
+      <div className="main world1">
+        <div className="main-bg"></div>
 
-            <div className="popup-layer" style={{ display: "block" }}>
-                <div
-                    className="screen-blend-55"
-                    style={{ display: "block" }}></div>
+        <div className="popup-layer" style={{ display: "block" }}>
+          <div className="screen-blend-55" style={{ display: "block" }}></div>
 
-                <div
-                    className="m-popup bonus-25 bf-event__buy-keys-pop"
-                    style={{ display: "block" }}>
-                    <div className="title">Buy energy</div>
-                    <div className="keys-card-box">
-                        <div className="keys-but-box">
-                            <img src="img/v2-f-e1.png" alt="" loading="lazy" />
-                        </div>
-                        <div className="keys-price">5</div>
-                        {/* <div className="keys-bonus">+5 free</div> */}
-                        <div className="keybtn-box">
-                            <div className="keybtn">$2.00</div>
-                        </div>
-                    </div>
-                    <div className="keys-card-box">
-                        <div className="keys-but-box">
-                            <img src="img/v2-f-e2.png" alt="" loading="lazy" />
-                        </div>
-                        <div className="keys-price">30</div>
-                        {/*                <div className="keys-bonus">+20 free</div>*/}
-                        <div className="keybtn-box">
-                            <div className="keybtn">$10.00</div>
-                        </div>
-                    </div>
-                    <div className="keys-card-box">
-                        <div className="keys-but-box">
-                            <img src="img/v2-f-e3.png" alt="" loading="lazy" />
-                        </div>
-                        <div className="keys-price">160</div>
-                        {/*                <div className="keys-bonus">+200 free</div>*/}
-                        <div className="keybtn-box">
-                            <div className="keybtn">$49.00</div>
-                        </div>
-                    </div>
-                    <div className="keys-card-box">
-                        <div className="keys-but-box">
-                            <img src="img/v2-f-e4.png" alt="" loading="lazy" />
-                        </div>
-                        <div className="keys-price">450</div>
-                        {/*                <div className="keys-bonus">+2000 free</div>*/}
-                        <div className="keybtn-box">
-                            <div className="keybtn">$99.00</div>
-                        </div>
-                    </div>
-
-                    <div className="btn-close-x"></div>
-                </div>
+          <div
+            className="m-popup bonus-25 bf-event__buy-keys-pop"
+            style={{ display: "block" }}
+          >
+            <div className="title">Buy energy</div>
+            <div className="keys-card-box">
+              <div className="keys-but-box">
+                <img src="img/v2-f-e1.png" alt="" loading="lazy" />
+              </div>
+              <div className="keys-price">5</div>
+              {/* <div className="keys-bonus">+5 free</div> */}
+              <div className="keybtn-box">
+                <div className="keybtn">$2.00</div>
+              </div>
             </div>
-            {/* <Loading /> */}
+            <div className="keys-card-box">
+              <div className="keys-but-box">
+                <img src="img/v2-f-e2.png" alt="" loading="lazy" />
+              </div>
+              <div className="keys-price">30</div>
+              {/*                <div className="keys-bonus">+20 free</div>*/}
+              <div className="keybtn-box">
+                <div className="keybtn">$10.00</div>
+              </div>
+            </div>
+            <div className="keys-card-box">
+              <div className="keys-but-box">
+                <img src="img/v2-f-e3.png" alt="" loading="lazy" />
+              </div>
+              <div className="keys-price">160</div>
+              {/*                <div className="keys-bonus">+200 free</div>*/}
+              <div className="keybtn-box">
+                <div className="keybtn">$49.00</div>
+              </div>
+            </div>
+            <div className="keys-card-box">
+              <div className="keys-but-box">
+                <img src="img/v2-f-e4.png" alt="" loading="lazy" />
+              </div>
+              <div className="keys-price">450</div>
+              {/*                <div className="keys-bonus">+2000 free</div>*/}
+              <div className="keybtn-box">
+                <div className="keybtn">$99.00</div>
+              </div>
+            </div>
+
+            <div className="btn-close-x"></div>
+          </div>
         </div>
-        // </V2ScreenFortunaBuyres>
-    );
+      </div>
+    </HelmetStyleTagWhitWrap>
+  );
 };
 
 export default React.memo(MainScreen16FortunaRoundMainpop16xBuyresComponent);

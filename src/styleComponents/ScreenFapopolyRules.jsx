@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFapopolyRulesStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.fapop-rules {
     width: 510px;
     height: 600px;
@@ -221,4 +223,4 @@ const ScreenFapopolyRulesStyles = css`
   }
 `;
 
-export default ScreenFapopolyRulesStyles;
+export { stylesFileName, pageStyles };

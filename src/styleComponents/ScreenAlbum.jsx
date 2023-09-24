@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenAlbumStyles = css`
+const pageStyles = css`
   .left-side .left-panel .tab-panel.album-panel {
     .album-title {
       display: block;
@@ -1233,4 +1235,4 @@ const ScreenAlbumStyles = css`
   }
 `;
 
-export default ScreenAlbumStyles;
+export { stylesFileName, pageStyles };

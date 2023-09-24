@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenEventsBtlpassStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.events-btlpass-pop {
     width: 906px;
     height: 536px;
@@ -1550,4 +1552,4 @@ const V2ScreenEventsBtlpassStyles = css`
   }
 `;
 
-export default V2ScreenEventsBtlpassStyles;
+export { stylesFileName, pageStyles };

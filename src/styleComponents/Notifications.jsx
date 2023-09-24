@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const NotificationsStyles = css`
+const pageStyles = css`
   .notif {
     width: 24px;
     height: 24px;
@@ -70,4 +72,4 @@ const NotificationsStyles = css`
   }
 `;
 
-export default NotificationsStyles;
+export { stylesFileName, pageStyles };

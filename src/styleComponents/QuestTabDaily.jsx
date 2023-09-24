@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const QuestTabDailyStyles = css`
+const pageStyles = css`
   body .main {
     .left-side {
       width: 620px;
@@ -586,4 +588,4 @@ const QuestTabDailyStyles = css`
   }
 `;
 
-export default QuestTabDailyStyles;
+export { stylesFileName, pageStyles };

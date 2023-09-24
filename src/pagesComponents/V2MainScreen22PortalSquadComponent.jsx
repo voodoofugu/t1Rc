@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 // import screenSuperhero from "../styles/screen-superhero.scss";
 
 const V2MainScreen22PortalSquadComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему
+  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
   const pageContainerId = `root-${fileNameWithoutExtension}`;

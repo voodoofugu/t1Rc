@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenNsaleShopStyles = css`
+const pageStyles = css`
   .popup-layer .mn-popup.nsale-shop {
     width: 988px;
     height: 605px;
@@ -355,4 +357,4 @@ const V2ScreenNsaleShopStyles = css`
   }
 `;
 
-export default V2ScreenNsaleShopStyles;
+export { stylesFileName, pageStyles };

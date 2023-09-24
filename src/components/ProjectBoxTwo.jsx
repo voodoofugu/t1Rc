@@ -38,6 +38,8 @@ const ProjectBoxTwo = () => {
                 <a href={pageName}>{pageName}</a>
                 <div
                   id={`root-${pageName}`}
+                  height={"1200"}
+                  width={"640"}
                   className="projectComponent noScripts"
                 >
                   <PageComponent />

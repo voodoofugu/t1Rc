@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenPortal0Styles = css`
+const pageStyles = css`
   // bronze
   .suphero-squad-wrap.bronze-bg-fg {
     &:before {
@@ -1310,4 +1312,4 @@ const V2ScreenPortal0Styles = css`
   }
 `;
 
-export default V2ScreenPortal0Styles;
+export { stylesFileName, pageStyles };

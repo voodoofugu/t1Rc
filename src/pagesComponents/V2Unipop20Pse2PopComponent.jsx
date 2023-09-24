@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // import screenBank from "../styles/screen-bank.scss";
 
 const V2Unipop20Pse2PopComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему
+  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
   const pageContainerId = `root-${fileNameWithoutExtension}`;

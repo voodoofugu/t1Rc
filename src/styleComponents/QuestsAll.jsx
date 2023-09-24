@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const QuestsAllStyles = css`
+const pageStyles = css`
   body .main {
     .left-side {
       .left-panel {
@@ -1959,4 +1961,4 @@ const QuestsAllStyles = css`
   }
 `;
 
-export default QuestsAllStyles;
+export { stylesFileName, pageStyles };

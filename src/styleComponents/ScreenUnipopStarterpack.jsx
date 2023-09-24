@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenUnipopStarterpackStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.unipop-starterpack {
     display: block;
     width: 900px;
@@ -721,4 +723,4 @@ const ScreenUnipopStarterpackStyles = css`
   }
 `;
 
-export default ScreenUnipopStarterpackStyles;
+export { stylesFileName, pageStyles };

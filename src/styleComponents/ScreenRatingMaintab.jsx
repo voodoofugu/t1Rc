@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingMaintabStyles = css`
+const pageStyles = css`
   .tab-panel.rating-panel {
     .rating-left-box {
       width: 472px;
@@ -339,4 +341,4 @@ const ScreenRatingMaintabStyles = css`
   }
 `;
 
-export default ScreenRatingMaintabStyles;
+export { stylesFileName, pageStyles };

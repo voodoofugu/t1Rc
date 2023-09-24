@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenSexpedMainStyles = css`
+const pageStyles = css`
   body .main.world1,
   body .main.world2,
   body .main.world3 {
@@ -2282,4 +2284,4 @@ const V2ScreenSexpedMainStyles = css`
   }
 `;
 
-export default V2ScreenSexpedMainStyles;
+export { stylesFileName, pageStyles };

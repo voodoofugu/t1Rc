@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenUnipopHw2019Styles = css`
+const pageStyles = css`
   .popup-layer .m-popup.unipop-hw2019 {
     display: block;
     width: 900px;
@@ -585,4 +587,4 @@ const ScreenUnipopHw2019Styles = css`
   }
 `;
 
-export default ScreenUnipopHw2019Styles;
+export { stylesFileName, pageStyles };

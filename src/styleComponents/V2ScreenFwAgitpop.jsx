@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenFwAgitpopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.fw-agitpop {
     width: 980px;
     height: 550px;
@@ -183,4 +185,4 @@ const V2ScreenFwAgitpopStyles = css`
   }
 `;
 
-export default V2ScreenFwAgitpopStyles;
+export { stylesFileName, pageStyles };

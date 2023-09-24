@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const VipBtnStyles = css`
+const pageStyles = css`
   .vip-box {
     width: 169px;
     height: 80px;
@@ -451,4 +453,4 @@ const VipBtnStyles = css`
   }
 `;
 
-export default VipBtnStyles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenRpgPolyStyles = css`
+const pageStyles = css`
     .main.rpg-poly {
         .main-bg {
             background-image: url(../img/rpg-poly/backgrounds/rpg-poly-jungle.jpg) !important;
@@ -2152,4 +2154,4 @@ const V2ScreenRpgPolyStyles = css`
     }
 `;
 
-export default V2ScreenRpgPolyStyles;
+export { stylesFileName, pageStyles };

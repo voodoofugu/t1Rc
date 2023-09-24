@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingRankgoStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.rating-rankgo {
     width: 548px;
     height: 550px;
@@ -198,4 +200,4 @@ const ScreenRatingRankgoStyles = css`
   }
 `;
 
-export default ScreenRatingRankgoStyles;
+export { stylesFileName, pageStyles };

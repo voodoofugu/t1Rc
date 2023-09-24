@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2Unipop20PsePopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.unipop-pse-pop {
     display: block;
     width: 900px;
@@ -487,4 +489,4 @@ const V2Unipop20PsePopStyles = css`
   }
 `;
 
-export default V2Unipop20PsePopStyles;
+export { stylesFileName, pageStyles };

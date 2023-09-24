@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenCwGuildlogStyles = css`
+const pageStyles = css`
   .guildlog {
     width: 590px;
     height: 530px;
@@ -192,4 +194,4 @@ const V2ScreenCwGuildlogStyles = css`
   }
 `;
 
-export default V2ScreenCwGuildlogStyles;
+export { stylesFileName, pageStyles };

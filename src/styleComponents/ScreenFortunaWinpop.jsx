@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFortunaWinpopStyles = css`
+const pageStyles = css`
   // winpop1
   .popup-layer .m-popup.fortuna-winpop1,
   .popup-layer .m-popup.fortuna-winpop2,
@@ -885,4 +887,4 @@ const ScreenFortunaWinpopStyles = css`
   }
 `;
 
-export default ScreenFortunaWinpopStyles;
+export { stylesFileName, pageStyles };

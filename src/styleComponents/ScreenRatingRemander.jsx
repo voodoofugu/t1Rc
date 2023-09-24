@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingRemanderStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.rremander {
     width: 858px;
     height: 600px;
@@ -171,4 +173,4 @@ const ScreenRatingRemanderStyles = css`
   }
 `;
 
-export default ScreenRatingRemanderStyles;
+export { stylesFileName, pageStyles };

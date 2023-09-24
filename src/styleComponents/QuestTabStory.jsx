@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const QuestTabStoryStyles = css`
+const pageStyles = css`
   body .main {
     .left-side {
       width: 620px;
@@ -423,4 +425,4 @@ const QuestTabStoryStyles = css`
   }
 `;
 
-export default QuestTabStoryStyles;
+export { stylesFileName, pageStyles };

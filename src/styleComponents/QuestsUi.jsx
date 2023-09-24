@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const QuestsUiStyles = css`
+const pageStyles = css`
   .popup-layer {
     .quest-popup {
       display: block;
@@ -204,4 +206,4 @@ const QuestsUiStyles = css`
   }
 `;
 
-export default QuestsUiStyles;
+export { stylesFileName, pageStyles };

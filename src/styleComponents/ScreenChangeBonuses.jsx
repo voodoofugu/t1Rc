@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenChangeBonusesStyles = css`
+const pageStyles = css`
   .tab-panel.change-bonuses {
     box-shadow: inset 0 4px 0 #9c8b7c;
     .tab-panel-box-title {
@@ -581,4 +583,4 @@ const ScreenChangeBonusesStyles = css`
   }
 `;
 
-export default ScreenChangeBonusesStyles;
+export { stylesFileName, pageStyles };

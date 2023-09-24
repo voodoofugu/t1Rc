@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingStyles = css`
+const pageStyles = css`
   body .main .left-side .left-panel .tab-panel.rating-panel {
     background: linear-gradient(0deg, #786358 0%, #584a49 100%);
     box-shadow: inset 0 4px 0 #9c8b7c, inset 0 0 6px rgba(0, 0, 0, 0.25);
@@ -916,4 +918,4 @@ const ScreenRatingStyles = css`
   }
 `;
 
-export default ScreenRatingStyles;
+export { stylesFileName, pageStyles };

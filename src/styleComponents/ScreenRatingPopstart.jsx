@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingPopstartStyles = css`
+const pageStyles = css`
   // Pop Start 1-2
   .popup-layer .ratingpop-box {
     width: 760px;
@@ -253,4 +255,4 @@ const ScreenRatingPopstartStyles = css`
   }
 `;
 
-export default ScreenRatingPopstartStyles;
+export { stylesFileName, pageStyles };

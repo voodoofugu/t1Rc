@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenPortalMapStyles = css`
+const pageStyles = css`
   body .main {
     background-image: url(../img/images/back/new/12-Undersea-world.jpg);
     .portal-map-box {
@@ -1985,4 +1987,4 @@ const V2ScreenPortalMapStyles = css`
   }
 `;
 
-export default V2ScreenPortalMapStyles;
+export { stylesFileName, pageStyles };

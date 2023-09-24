@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenCwGuildrankStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.guildrank {
     width: 590px;
     height: 580px;
@@ -215,4 +217,4 @@ const V2ScreenCwGuildrankStyles = css`
   }
 `;
 
-export default V2ScreenCwGuildrankStyles;
+export { stylesFileName, pageStyles };

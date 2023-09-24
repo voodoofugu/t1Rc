@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenChangeAddchestStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.change-addchest {
     height: 510px;
     width: 860px;
@@ -181,4 +183,4 @@ const ScreenChangeAddchestStyles = css`
   }
 `;
 
-export default ScreenChangeAddchestStyles;
+export { stylesFileName, pageStyles };

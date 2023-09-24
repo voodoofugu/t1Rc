@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenValentineCauldronStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.valentine-cauldron {
     width: 816px;
     height: 604px;
@@ -260,4 +262,4 @@ const V2ScreenValentineCauldronStyles = css`
   }
 `;
 
-export default V2ScreenValentineCauldronStyles;
+export { stylesFileName, pageStyles };

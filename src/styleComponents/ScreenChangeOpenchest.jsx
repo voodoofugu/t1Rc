@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenChangeOpenchestStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.openchest {
     width: 880px;
     height: 490px;
@@ -639,4 +641,4 @@ const ScreenChangeOpenchestStyles = css`
   }
 `;
 
-export default ScreenChangeOpenchestStyles;
+export { stylesFileName, pageStyles };

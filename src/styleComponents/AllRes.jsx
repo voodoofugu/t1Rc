@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const AllResStyles = css`
+const pageStyles = css`
   .main {
     .price {
       display: inline-block;
@@ -1949,4 +1951,4 @@ const AllResStyles = css`
   }
 `;
 
-export default AllResStyles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenInfoPopStyles = css`
+const pageStyles = css`
   body .main .popup-layer {
     .m-popup.info-pop {
       height: unset;
@@ -135,4 +137,4 @@ const ScreenInfoPopStyles = css`
   }
 `;
 
-export default ScreenInfoPopStyles;
+export { stylesFileName, pageStyles };

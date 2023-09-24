@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenMineEventChestStyles = css`
+const pageStyles = css`
   body .main {
     .mine-event-screen-chest {
       width: 100%;
@@ -613,4 +615,4 @@ const V2ScreenMineEventChestStyles = css`
   }
 `;
 
-export default V2ScreenMineEventChestStyles;
+export { stylesFileName, pageStyles };

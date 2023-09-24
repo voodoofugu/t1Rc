@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenChangeMainStyles = css`
+const pageStyles = css`
   .tab-panel.change-main {
     border-radius: 10px 18px 18px 18px;
     box-shadow: inset 0 4px 0 #9c8b7c;
@@ -1176,4 +1178,4 @@ const ScreenChangeMainStyles = css`
   }
 `;
 
-export default ScreenChangeMainStyles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenOfferStyles = css`
+const pageStyles = css`
   body .main .popup-layer {
     .m-popup.angel-pop,
     .m-popup.hero-pop {
@@ -1285,4 +1287,4 @@ const V2ScreenOfferStyles = css`
   }
 `;
 
-export default V2ScreenOfferStyles;
+export { stylesFileName, pageStyles };

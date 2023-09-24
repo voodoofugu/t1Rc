@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenUkiMainNewStyles = css`
+const pageStyles = css`
   body .main.world1,
   body .main.world2,
   body .main.world3 {
@@ -530,4 +532,4 @@ const V2ScreenUkiMainNewStyles = css`
   }
 `;
 
-export default V2ScreenUkiMainNewStyles;
+export { stylesFileName, pageStyles };

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenMineEventStyles = css`
+const pageStyles = css`
   .rush-explosion-1 {
     width: 70px;
     height: 70px;
@@ -798,4 +800,4 @@ const V2ScreenMineEventStyles = css`
   }
 `;
 
-export default V2ScreenMineEventStyles;
+export { stylesFileName, pageStyles };

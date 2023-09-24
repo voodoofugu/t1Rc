@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenUkiStoryPopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.uki-story-popup {
     width: 705px;
     height: 620px;
@@ -374,4 +376,4 @@ const V2ScreenUkiStoryPopStyles = css`
   }
 `;
 
-export default V2ScreenUkiStoryPopStyles;
+export { stylesFileName, pageStyles };

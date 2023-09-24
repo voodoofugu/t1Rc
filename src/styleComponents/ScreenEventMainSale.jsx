@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenEventMainSaleStyles = css`
+const pageStyles = css`
   body .main.world1,
   body .main.world2,
   body .main.world3 {
@@ -550,4 +552,4 @@ const ScreenEventMainSaleStyles = css`
   }
 `;
 
-export default ScreenEventMainSaleStyles;
+export { stylesFileName, pageStyles };

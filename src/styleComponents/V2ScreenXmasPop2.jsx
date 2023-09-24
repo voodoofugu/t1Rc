@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenXmasPop2Styles = css`
+const pageStyles = css`
   body {
     .main.world1,
     .main.world2,
@@ -220,4 +222,4 @@ const V2ScreenXmasPop2Styles = css`
   }
 `;
 
-export default V2ScreenXmasPop2Styles;
+export { stylesFileName, pageStyles };

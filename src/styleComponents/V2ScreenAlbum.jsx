@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenAlbumStyles = css`
+const pageStyles = css`
   body .main {
     .left-side {
       width: 620px;
@@ -949,4 +951,4 @@ const V2ScreenAlbumStyles = css`
   }
 `;
 
-export default V2ScreenAlbumStyles;
+export { stylesFileName, pageStyles };

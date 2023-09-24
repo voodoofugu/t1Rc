@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenBaseStyles = css`
+const pageStyles = css`
   .left-side .left-panel .tab-panel.achiev-panel {
     &.disable {
       .achiev-title {
@@ -1205,4 +1207,4 @@ const ScreenBaseStyles = css`
   }
 `;
 
-export default ScreenBaseStyles;
+export { stylesFileName, pageStyles };

@@ -1,3 +1,4 @@
+// эта функция при вызыве выдаёт названия того файла в котором она вызвана
 function foundFileName() {
   const stackTrace = new Error().stack;
   const callerLine = stackTrace.split("\n")[2];

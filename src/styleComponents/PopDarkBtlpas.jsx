@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const PopDarkBtlpasStyles = css`
+const pageStyles = css`
   body .main.world1,
   body .main.world2,
   body .main.world3 {
@@ -1019,4 +1021,4 @@ const PopDarkBtlpasStyles = css`
   }
 `;
 
-export default PopDarkBtlpasStyles;
+export { stylesFileName, pageStyles };

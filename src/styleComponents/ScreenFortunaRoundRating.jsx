@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFortunaRoundRatingStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.fortuna-main-round-rating {
     width: 750px;
     height: 530px;
@@ -390,4 +392,4 @@ const ScreenFortunaRoundRatingStyles = css`
   }
 `;
 
-export default ScreenFortunaRoundRatingStyles;
+export { stylesFileName, pageStyles };

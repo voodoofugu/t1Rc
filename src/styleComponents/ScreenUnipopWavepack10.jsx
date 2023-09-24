@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenUnipopWavepack10Styles = css`
+const pageStyles = css`
   .popup-layer .m-popup.unipop-wavepack10 {
     display: block;
     width: 900px;
@@ -428,4 +430,4 @@ const ScreenUnipopWavepack10Styles = css`
   }
 `;
 
-export default ScreenUnipopWavepack10Styles;
+export { stylesFileName, pageStyles };

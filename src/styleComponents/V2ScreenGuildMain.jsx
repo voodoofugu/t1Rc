@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenGuildMainStyles = css`
+const pageStyles = css`
   .v2-guildmap-name {
     transform: scale(0.88);
   }
@@ -1551,4 +1553,4 @@ const V2ScreenGuildMainStyles = css`
   }
 `;
 
-export default V2ScreenGuildMainStyles;
+export { stylesFileName, pageStyles };

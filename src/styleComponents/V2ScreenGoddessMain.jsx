@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenGoddessMainStyles = css`
+const pageStyles = css`
   body .main {
     .left-side {
       .left-panel {
@@ -1083,4 +1085,4 @@ const V2ScreenGoddessMainStyles = css`
   }
 `;
 
-export default V2ScreenGoddessMainStyles;
+export { stylesFileName, pageStyles };

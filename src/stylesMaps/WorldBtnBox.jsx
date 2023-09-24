@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from "@emotion/styled";
 
 const StyledWorldBtnBox = styled.div`
   position: absolute;
@@ -23,28 +24,16 @@ const WorldBtnBox = () => {
     const vvT = document.querySelector(".value-vip-ticket");
 
     const updateUI = () => {
-      if (isDarkWorld) {
-        main.classList.remove("world3");
-        main.classList.add("world1");
-        reG.classList.remove("resource-dark_gold");
-        reG.classList.add("resource-gold");
-        reI.src = "rc/v2-res-gold.png";
-        vvT.style.display = "block";
-      } else {
-        main.classList.remove("world1");
-        main.classList.add("world3");
-        reG.classList.remove("resource-gold");
-        reG.classList.add("resource-dark_gold");
-        reI.src = "img/v2-res-dark.png";
-        vvT.style.display = "none";
-      }
+      main.classList.toggle("world1", !isDarkWorld);
+      main.classList.toggle("world3", isDarkWorld);
+      reG.classList.toggle("resource-gold", !isDarkWorld);
+      reG.classList.toggle("resource-dark_gold", isDarkWorld);
+      reI.src = isDarkWorld ? "rc/v2-res-gold.png" : "img/v2-res-dark.png";
+      vvT.style.display = isDarkWorld ? "block" : "none";
     };
 
-    document
-      .querySelector(".color-btn.green.world-btn")
-      .addEventListener("click", () => {
-        btnClickHandler();
-      });
+    const worldBtn = document.querySelector(".color-btn.green.world-btn");
+    worldBtn.addEventListener("click", btnClickHandler);
 
     // Обновление UI при изменении isDarkWorld
     updateUI();

@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenBankStyles = css`
+const pageStyles = css`
   .item-sale-banner {
     &.sale {
       .btn-panel {
@@ -4034,4 +4036,4 @@ const ScreenBankStyles = css`
   }
 `;
 
-export default ScreenBankStyles;
+export { stylesFileName, pageStyles };

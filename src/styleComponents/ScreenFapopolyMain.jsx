@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFapopolyMainStyles = css`
+const pageStyles = css`
   .main .main-bg {
     background-image: url(../img/v2-fapop-bg-hw.jpg);
     background-size: 100%;
@@ -802,4 +804,4 @@ const ScreenFapopolyMainStyles = css`
   }
 `;
 
-export default ScreenFapopolyMainStyles;
+export { stylesFileName, pageStyles };

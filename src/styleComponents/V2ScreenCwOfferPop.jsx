@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenCwOfferPopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.cw-offers-pop {
     width: 1000px;
     height: 472px;
@@ -138,4 +140,4 @@ const V2ScreenCwOfferPopStyles = css`
   }
 `;
 
-export default V2ScreenCwOfferPopStyles;
+export { stylesFileName, pageStyles };

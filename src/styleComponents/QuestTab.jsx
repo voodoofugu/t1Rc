@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const QuestTabStyles = css`
+const pageStyles = css`
   .journal-main {
     width: 620px;
     &:before {
@@ -309,4 +311,4 @@ const QuestTabStyles = css`
   }
 `;
 
-export default QuestTabStyles;
+export { stylesFileName, pageStyles };

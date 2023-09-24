@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenBfStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.bf-pop {
     width: 1006px;
     height: 580px;
@@ -354,4 +356,4 @@ const V2ScreenBfStyles = css`
   }
 `;
 
-export default V2ScreenBfStyles;
+export { stylesFileName, pageStyles };

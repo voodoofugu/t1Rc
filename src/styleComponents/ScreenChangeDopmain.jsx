@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenChangeDopmainStyles = css`
+const pageStyles = css`
   body {
     .chestbox-container {
       position: absolute;
@@ -262,4 +264,4 @@ const ScreenChangeDopmainStyles = css`
   }
 `;
 
-export default ScreenChangeDopmainStyles;
+export { stylesFileName, pageStyles };

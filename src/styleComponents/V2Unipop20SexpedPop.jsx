@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2Unipop20SexpedPopStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.unipop-sexped-pop {
     display: block;
     width: 900px;
@@ -480,4 +482,4 @@ const V2Unipop20SexpedPopStyles = css`
   }
 `;
 
-export default V2Unipop20SexpedPopStyles;
+export { stylesFileName, pageStyles };

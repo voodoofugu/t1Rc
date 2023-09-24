@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenFapopolyRatingStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.fapop-rating {
     width: 960px;
     height: 600px;
@@ -669,4 +671,4 @@ const ScreenFapopolyRatingStyles = css`
   }
 `;
 
-export default ScreenFapopolyRatingStyles;
+export { stylesFileName, pageStyles };

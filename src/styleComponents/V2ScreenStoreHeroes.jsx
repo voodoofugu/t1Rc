@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenStoreHeroesStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.store-heroes {
     width: 1028px;
     height: 550px;
@@ -488,4 +490,4 @@ const V2ScreenStoreHeroesStyles = css`
   }
 `;
 
-export default V2ScreenStoreHeroesStyles;
+export { stylesFileName, pageStyles };

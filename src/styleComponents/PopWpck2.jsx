@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const PopWpck2Styles = css`
+const pageStyles = css`
   .popup-layer .m-popup.wpck2 {
     width: 800px;
     height: 560px;
@@ -387,4 +389,4 @@ const PopWpck2Styles = css`
   }
 `;
 
-export default PopWpck2Styles;
+export { stylesFileName, pageStyles };

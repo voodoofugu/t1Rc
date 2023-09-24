@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenFwMapStyles = css`
+const pageStyles = css`
   body .main .main-bg {
     &.fw-map {
       background-image: url(../img/v2-fw-map-bg.jpg);
@@ -961,4 +963,4 @@ const V2ScreenFwMapStyles = css`
   }
 `;
 
-export default V2ScreenFwMapStyles;
+export { stylesFileName, pageStyles };

@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 // import v2ScreenSexpedQuestevent from "../styles/v2-screen-sexped-questevent.scss";
 
 const V2MainScreen12SexpedMainComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему
+  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
   const pageContainerId = `root-${fileNameWithoutExtension}`;

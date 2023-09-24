@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 // import screenInfoPop from "../styles/screen-info-pop.scss";
 
 const V2MainScreen02GuildMasterComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему
+  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
   const pageContainerId = `root-${fileNameWithoutExtension}`;

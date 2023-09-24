@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenNsaleFountainStyles = css`
+const pageStyles = css`
   .popup-layer .mn-popup.nsale-fountain {
     width: 988px;
     height: 605px;
@@ -396,4 +398,4 @@ const V2ScreenNsaleFountainStyles = css`
   }
 `;
 
-export default V2ScreenNsaleFountainStyles;
+export { stylesFileName, pageStyles };

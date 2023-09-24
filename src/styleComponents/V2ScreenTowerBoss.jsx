@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenTowerBossStyles = css`
+const pageStyles = css`
   body .main .right-side {
     .bossbtn-box {
       width: 430px;
@@ -222,4 +224,4 @@ const V2ScreenTowerBossStyles = css`
   }
 `;
 
-export default V2ScreenTowerBossStyles;
+export { stylesFileName, pageStyles };

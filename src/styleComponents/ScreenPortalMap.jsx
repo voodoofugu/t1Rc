@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenPortalMapStyles = css`
+const pageStyles = css`
   body .main {
     .portal-map-box {
       position: absolute;
@@ -593,4 +595,4 @@ const ScreenPortalMapStyles = css`
   }
 `;
 
-export default ScreenPortalMapStyles;
+export { stylesFileName, pageStyles };

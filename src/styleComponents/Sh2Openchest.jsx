@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const Sh2OpenchestStyles = css`
+const pageStyles = css`
   body .main {
     .popup-layer {
       .m-popup.sh2-openchest1,
@@ -460,4 +462,4 @@ const Sh2OpenchestStyles = css`
   }
 `;
 
-export default Sh2OpenchestStyles;
+export { stylesFileName, pageStyles };

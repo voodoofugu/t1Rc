@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenTowerTopStyles = css`
+const pageStyles = css`
   body .main.world1,
   body .main.world2,
   body .main.world3 {
@@ -1050,4 +1052,4 @@ const V2ScreenTowerTopStyles = css`
   }
 `;
 
-export default V2ScreenTowerTopStyles;
+export { stylesFileName, pageStyles };

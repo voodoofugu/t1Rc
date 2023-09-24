@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ClanTrophiesStyles = css`
+const pageStyles = css`
   .cw-content {
     width: 1200px;
     height: 640px;
@@ -1019,4 +1021,4 @@ const ClanTrophiesStyles = css`
   }
 `;
 
-export default ClanTrophiesStyles;
+export { stylesFileName, pageStyles };

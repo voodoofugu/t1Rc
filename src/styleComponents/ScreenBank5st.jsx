@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenBank5stStyles = css`
+const pageStyles = css`
   .left-side .left-panel .tab-panel.bank-panel {
     .bank-subwin.top-up {
       border-color: #fac022;
@@ -337,4 +339,4 @@ const ScreenBank5stStyles = css`
   }
 `;
 
-export default ScreenBank5stStyles;
+export { stylesFileName, pageStyles };

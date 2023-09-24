@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const ScreenRatingRewardStyles = css`
+const pageStyles = css`
   .popup-layer .m-popup.rating-reward {
     width: 456px;
     height: 580px;
@@ -320,4 +322,4 @@ const ScreenRatingRewardStyles = css`
   }
 `;
 
-export default ScreenRatingRewardStyles;
+export { stylesFileName, pageStyles };

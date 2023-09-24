@@ -1,6 +1,8 @@
 import { css } from "@emotion/react";
+import foundFileName from "../scripts/forBild/foundFileName.js";
+const stylesFileName = foundFileName();
 
-const V2ScreenFwMapWarpopStyles = css`
+const pageStyles = css`
   body .main {
     .fw-warpop-box-all {
       width: 330px;
@@ -486,4 +488,4 @@ const V2ScreenFwMapWarpopStyles = css`
   }
 `;
 
-export default V2ScreenFwMapWarpopStyles;
+export { stylesFileName, pageStyles };
