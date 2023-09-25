@@ -442,7 +442,7 @@ const pageStyles = css`
                 top: 44px;
                 left: 0;
 
-                img {
+                > img {
                     width: 350px;
                     height: 350px;
                     margin: 0 auto;
@@ -702,7 +702,7 @@ const pageStyles = css`
                                 display: inline-block;
                                 vertical-align: middle;
                                 margin-left: 6px;
-                                img {
+                                > img {
                                     width: 25px;
                                 }
                                 &.gold {
@@ -716,7 +716,7 @@ const pageStyles = css`
                                     background-size: 100%;
                                 }
                             }
-                            img {
+                            > img {
                                 width: 25px;
                             }
                         }
@@ -881,7 +881,7 @@ const pageStyles = css`
                                 display: inline-block;
                                 vertical-align: middle;
                                 margin-left: 6px;
-                                img {
+                                > img {
                                     width: 25px;
                                 }
                                 &.gold {
@@ -895,7 +895,7 @@ const pageStyles = css`
                                     background-size: 100%;
                                 }
                             }
-                            img {
+                            > img {
                                 width: 25px;
                             }
                         }

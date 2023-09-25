@@ -3,568 +3,574 @@ import foundFileName from "../scripts/forBild/foundFileName.js";
 const stylesFileName = foundFileName();
 
 const pageStyles = css`
-  body .main {
-    .left-side {
-      width: 620px;
-      height: 555px;
-      position: absolute;
-      left: 5px;
-      bottom: 5px;
-      .tabs-all-box {
-        width: 500px;
-        height: 40px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 0;
-        .tabs-all {
-          width: 118px;
-          height: 40px;
-          position: relative;
-          top: 0;
-          left: 0;
-          display: inline-block;
-          margin: 0 2px 0 0;
-          cursor: pointer;
-          background-color: #9c8b7c;
-          border-radius: 24px 24px 0 0;
-          &:before {
-            content: "";
-            width: 110px;
-            height: 36px;
+    .main {
+        .left-side {
+            width: 620px;
+            height: 555px;
             position: absolute;
-            top: 4px;
-            left: 4px;
-            background-color: #544746;
-            border-radius: 20px 20px 0 0;
-            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
-          }
-          .tabs-name {
-            width: 60px;
-            height: 40px;
-            position: absolute;
-            right: 14px;
-            color: #fff;
-            font-weight: bold;
-            font-size: 12px;
-            line-height: 44px;
-            text-align: center;
-          }
-          .tabs-pic {
-            width: 50px;
-            height: 32px;
-            position: absolute;
-            top: 5px;
             left: 5px;
-            img {
-              width: 50px;
-            }
-          }
-          &.selected {
-            &:before {
-              content: "";
-              background-color: #9c8b7c;
-            }
-          }
-        }
-      }
-      .left-panel {
-        width: 620px;
-        height: 515px;
-        position: absolute;
-        left: 0;
-        top: 40px;
-        &:before {
-          content: "";
-          width: 620px;
-          height: 5px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background-color: #9c8b7c;
-          z-index: 999;
-        }
-        &.wide {
-          width: 1106px;
-          &:before {
-            content: "";
-            width: 1102px;
-          }
-          .tab-panel-box.cw-trophy-room {
-            width: 1098px;
-            height: 511px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #b7a597;
-            border: solid 4px #9c8b7c;
-            border-top: none;
-            box-shadow: inset 0 0 7px #5f4f4e;
-            .tab-panel-box-title {
-              width: 300px;
-              height: 24px;
-              position: absolute;
-              top: 10px;
-              left: 399px;
-              background: linear-gradient(
-                0deg,
-                #ffe199 0%,
-                #f4c657 18%,
-                #ffe199 60%,
-                #f4c557 85%,
-                #ffe199 100%
-              );
-              border-radius: 12px;
-              box-shadow: 0 1px 2p x rgba(0, 0, 0, 0.35);
-              color: #3c3737;
-              font-size: 16px;
-              font-weight: bold;
-              text-transform: uppercase;
-              line-height: 24px;
-              text-align: center;
-            }
-
-            .cw-trophy-skill-icon {
-              width: 100px;
-              height: 100px;
-              position: relative;
-              background-color: #fffe9a;
-              box-shadow: inset 0px -50px 50px -25px #e9b13a,
-                0px 1px 3px -1px rgba(0, 0, 0, 0.4);
-              border-radius: 12px;
-
-              &:before {
-                content: "";
-                width: 96px;
-                height: 96px;
-                position: absolute;
-                left: 2px;
-                top: 2px;
-                background: linear-gradient(
-                  0deg,
-                  #fede92 0%,
-                  #f4c558 18%,
-                  #ffe098 60%,
-                  #f5c85d 85%,
-                  #fddd90 100%
-                );
-                border-radius: 10px;
-              }
-
-              img {
-                width: 90px;
-                height: 90px;
-                position: absolute;
-                left: 5px;
-                top: 5px;
-                border-radius: 8px;
-              }
-
-              .cw-trophy-skills {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                text-align: center;
-                font-weight: bold;
-                text-transform: uppercase;
-                font-size: 14px;
-                color: #fff;
-                padding: 4px 7px;
-                border-radius: 10px;
-                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-                background: linear-gradient(0deg, #7dbd32 0%, #bbee7f 100%);
-                box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
-              }
-
-              .cw-trophy-learn {
-                position: absolute;
-                top: 105px;
-                left: 0;
-                height: 30px;
-                width: 100px;
-                .color-btn-text {
-                  top: 5px;
-                  font-size: 12px;
-                  .ff-but {
-                    content: "";
-                    width: 15px;
-                    height: 15px;
-                    position: relative;
-                    display: inline-block;
-                    background-image: url(../img/clan_points2.png);
-                    background-size: 100%;
-                    background-position: center;
-                    margin: 0 2px 0 2px;
-                    vertical-align: middle;
-                  }
-                }
-              }
-            }
-
-            .cw-trophy-left-box-all {
-              width: 310px;
-              height: 460px;
-              position: absolute;
-              top: 40px;
-              left: 10px;
-              .cw-trophy-skills-label {
-                width: 310px;
-                height: 36px;
-                position: absolute;
-                color: #fff;
-                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-                text-align: center;
-                font-weight: bold;
-                text-transform: uppercase;
-                font-size: 16px;
-                line-height: 36px;
-                background-color: #897165;
-                box-shadow: inset 0 -36px 18px -18px #594b49;
-              }
-              .cw-trophy-skills-desc {
-                width: 310px;
-                height: 425px;
-                position: absolute;
-                bottom: 0;
-                background-color: #9d8878;
-                //box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-
-                .cw-trophy-skills-scroll-box {
-                  overflow-y: scroll;
-                  position: absolute;
-                  top: 8px;
-                  left: 8px;
-                  width: 294px;
-                  height: 405px;
-
-                  &::-webkit-scrollbar-track {
-                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-                    background-color: #473c3c;
-                  }
-                  &::-webkit-scrollbar {
-                    width: 5px;
-                    background-color: #9e8b7d;
-                  }
-                  &::-webkit-scrollbar-thumb {
-                    background: linear-gradient(
-                      180deg,
-                      #ffe199,
-                      #f4c657,
-                      #f4c657,
-                      #ffe199
-                    );
-                  }
-
-                  .cw-trophy-skills-content {
-                    width: 279px;
-                    margin-top: 10px;
-                  }
-                }
-              }
-              .cw-trophy-skill {
-                position: relative;
-
-                .cw-trophy-skill-label {
-                  color: #fff;
-                  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-                  text-align: center;
-                  font-weight: bold;
-                  text-transform: uppercase;
-                  font-size: 16px;
-                  line-height: 20px;
-                  position: absolute;
-                  top: 4px;
-                  left: 110px;
-                  width: 169px;
-                  height: 40px;
-                }
-                .cw-trophy-skill-price {
-                  position: absolute;
-                  top: 50px;
-                  left: 110px;
-                  width: 169px;
-                  height: 50px;
-                  background-color: #8a7565;
-                  color: #473c3c;
-                  text-align: center;
-                  font-weight: bold;
-                  line-height: 30px;
-
-                  div {
-                    color: #e2cab8;
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    line-height: 10px;
-                  }
-                }
-              }
-              .cw-trophy-skill-levels {
-                margin-top: 15px;
-              }
-              .cw-trophy-skill-lvl {
-                font-weight: bold;
-                text-align: center;
-                background-color: #b29d8c;
-                color: #473c3c;
-
-                & + .cw-trophy-skill-lvl {
-                  margin-top: 10px;
-                }
-                .cw-trophy-skill-lvl-title {
-                  height: 20px;
-                  width: 279px;
-                  line-height: 20px;
-                  color: #fff;
-                  text-transform: uppercase;
-                  background-color: #bbee7f;
-                  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
-                  box-shadow: inset 0 -20px 10px -10px #7ebd32,
-                    0px 1px 2px -1px #000;
-                }
-                .cw-trophy-skill-lvl-descr {
-                  width: 279px;
-                  padding: 10px 6px;
-                  box-sizing: border-box;
-                  line-height: 16px;
-                }
-              }
-            }
-            .cw-trophy-right-box-all {
-              width: 760px;
-              height: 460px;
-              position: absolute;
-              top: 40px;
-              right: 10px;
-              background-image: url(../img/v2-dirtyoldpaper-bg.jpg);
-              background-size: 100%;
-              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-
-              .cw-trophy-tree-scroll-box {
-                overflow-x: scroll;
-                overflow-y: hidden;
-                position: absolute;
-                width: 748px;
-                height: 388px;
-                top: 65px;
-                left: 6px;
-
-                &::-webkit-scrollbar-track {
-                  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-                  background-color: #473c3c;
-                }
-                &::-webkit-scrollbar {
-                  height: 5px;
-                  background-color: #9e8b7d;
-                }
-                &::-webkit-scrollbar-thumb {
-                  background: linear-gradient(
-                    90deg,
-                    #ffe199,
-                    #f4c657,
-                    #f4c657,
-                    #ffe199
-                  );
-                }
-              }
-              .cw-trophy-tree-box {
-                .cw-trophy-tree-row {
-                  white-space: nowrap;
-                  margin-left: 3px;
-                  font-size: 0;
-
-                  & + .cw-trophy-tree-row {
-                    margin-top: 70px;
-                  }
-
-                  .cw-trophy-tree-item {
-                    display: inline-block;
-                    position: relative;
-                    width: 100px;
-                    height: 100px;
-
-                    & + .cw-trophy-tree-item {
-                      width: 134px;
-                      .cw-trophy-skill-icon {
-                        margin-left: 34px;
-                      }
-                    }
-
-                    &:last-child {
-                      margin-right: 3px;
-                    }
-
-                    .cw-trophy-skill-icon {
-                      z-index: 10;
-                    }
-
-                    &:before,
-                    &:after {
-                      z-index: 1;
-                    }
-
-                    &.line {
-                      &:before {
-                        content: "";
-                        width: 34px;
-                        height: 5px;
-                        left: 0;
-                        top: 48px;
-                        position: absolute;
-                        background: #473c3c;
-                      }
-
-                      &.double {
-                        &:before {
-                          left: -134px;
-                          width: 168px;
-                        }
-                      }
-
-                      &.up,
-                      &.down {
-                        &:before {
-                          width: 84px;
-                          left: -50px;
-                        }
-                        &:after {
-                          content: "";
-                          width: 5px;
-                          height: 118px;
-                          left: -50px;
-                          top: -70px;
-                          position: absolute;
-                          background: #473c3c;
-                        }
-                      }
-
-                      &.down {
-                        &:after {
-                          top: 53px;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-              .cw-trophy-top-controls {
-                position: absolute;
-                left: 378px;
-                top: 8px;
-                width: 373px;
+            bottom: 5px;
+            .tabs-all-box {
+                width: 500px;
                 height: 40px;
-
-                .reset-btn {
-                  width: 200px;
-                  height: 40px;
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  .color-btn-text {
-                    font-size: 12px;
-                  }
-                  .ff-but {
-                    content: "";
-                    width: 21px;
-                    height: 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 0;
+                .tabs-all {
+                    width: 118px;
+                    height: 40px;
                     position: relative;
+                    top: 0;
+                    left: 0;
                     display: inline-block;
-                    background-image: url(../img/spinner-round-diamond.png);
-                    background-size: 100%;
-                    margin: 0 4px 0 4px;
-                    vertical-align: middle;
-                  }
+                    margin: 0 2px 0 0;
+                    cursor: pointer;
+                    background-color: #9c8b7c;
+                    border-radius: 24px 24px 0 0;
+                    &:before {
+                        content: "";
+                        width: 110px;
+                        height: 36px;
+                        position: absolute;
+                        top: 4px;
+                        left: 4px;
+                        background-color: #544746;
+                        border-radius: 20px 20px 0 0;
+                        box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
+                    }
+                    .tabs-name {
+                        width: 60px;
+                        height: 40px;
+                        position: absolute;
+                        right: 14px;
+                        color: #fff;
+                        font-weight: bold;
+                        font-size: 12px;
+                        line-height: 44px;
+                        text-align: center;
+                    }
+                    .tabs-pic {
+                        width: 50px;
+                        height: 32px;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        > img {
+                            width: 50px;
+                        }
+                    }
+                    &.selected {
+                        &:before {
+                            content: "";
+                            background-color: #9c8b7c;
+                        }
+                    }
                 }
-                .resources {
-                  position: absolute;
-                  width: 160px;
-                  height: 40px;
-                  top: 0;
-                  right: 0;
-                  background: linear-gradient(
-                    0deg,
-                    #fede92 0%,
-                    #f4c558 18%,
-                    #ffe098 60%,
-                    #f5c85d 85%,
-                    #fddd90 100%
-                  );
-                  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
-                  border-radius: 8px;
-
-                  &:before {
+            }
+            .left-panel {
+                width: 620px;
+                height: 515px;
+                position: absolute;
+                left: 0;
+                top: 40px;
+                &:before {
                     content: "";
+                    width: 620px;
+                    height: 5px;
                     position: absolute;
                     top: 0;
-                    left: 2px;
-                    width: 40px;
-                    height: 40px;
-                    background-image: url(../img/clan_points2.png);
-                    background-size: contain;
-                  }
-
-                  div {
-                    position: absolute;
-                    top: 4px;
-                    right: 4px;
-                    background-color: #7f695e;
-                    color: #fff;
-                    text-align: center;
-                    font-weight: bold;
-                    width: 110px;
-                    height: 32px;
-                    line-height: 32px;
-                    font-size: 18px;
-                    box-shadow: inset 0px 7px 15px -8px #000;
-                    border-radius: 6px;
-                  }
+                    left: 0;
+                    background-color: #9c8b7c;
+                    z-index: 999;
                 }
-              }
-              .cw-trophy-bottom-controls {
-                position: absolute;
-                left: 210px;
-                bottom: 20px;
-                width: 340px;
-                height: 50px;
-                background-color: rgba(0, 0, 0, 0.48);
-                border-radius: 10px;
+                &.wide {
+                    width: 1106px;
+                    &:before {
+                        content: "";
+                        width: 1102px;
+                    }
+                    .tab-panel-box.cw-trophy-room {
+                        width: 1098px;
+                        height: 511px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: #b7a597;
+                        border: solid 4px #9c8b7c;
+                        border-top: none;
+                        box-shadow: inset 0 0 7px #5f4f4e;
+                        .tab-panel-box-title {
+                            width: 300px;
+                            height: 24px;
+                            position: absolute;
+                            top: 10px;
+                            left: 399px;
+                            background: linear-gradient(
+                                0deg,
+                                #ffe199 0%,
+                                #f4c657 18%,
+                                #ffe199 60%,
+                                #f4c557 85%,
+                                #ffe199 100%
+                            );
+                            border-radius: 12px;
+                            box-shadow: 0 1px 2p x rgba(0, 0, 0, 0.35);
+                            color: #3c3737;
+                            font-size: 16px;
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            line-height: 24px;
+                            text-align: center;
+                        }
 
-                .info {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 169px;
-                  height: 50px;
-                  color: #b29d8c;
-                  text-align: center;
-                  font-weight: bold;
-                  line-height: 30px;
-                  text-transform: uppercase;
-                  font-size: 12px;
+                        .cw-trophy-skill-icon {
+                            width: 100px;
+                            height: 100px;
+                            position: relative;
+                            background-color: #fffe9a;
+                            box-shadow: inset 0px -50px 50px -25px #e9b13a,
+                                0px 1px 3px -1px rgba(0, 0, 0, 0.4);
+                            border-radius: 12px;
 
-                  div {
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-size: 18px;
-                    line-height: 6px;
-                  }
+                            &:before {
+                                content: "";
+                                width: 96px;
+                                height: 96px;
+                                position: absolute;
+                                left: 2px;
+                                top: 2px;
+                                background: linear-gradient(
+                                    0deg,
+                                    #fede92 0%,
+                                    #f4c558 18%,
+                                    #ffe098 60%,
+                                    #f5c85d 85%,
+                                    #fddd90 100%
+                                );
+                                border-radius: 10px;
+                            }
+
+                            > img {
+                                width: 90px;
+                                height: 90px;
+                                position: absolute;
+                                left: 5px;
+                                top: 5px;
+                                border-radius: 8px;
+                            }
+
+                            .cw-trophy-skills {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                text-align: center;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                font-size: 14px;
+                                color: #fff;
+                                padding: 4px 7px;
+                                border-radius: 10px;
+                                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+                                background: linear-gradient(
+                                    0deg,
+                                    #7dbd32 0%,
+                                    #bbee7f 100%
+                                );
+                                box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
+                            }
+
+                            .cw-trophy-learn {
+                                position: absolute;
+                                top: 105px;
+                                left: 0;
+                                height: 30px;
+                                width: 100px;
+                                .color-btn-text {
+                                    top: 5px;
+                                    font-size: 12px;
+                                    .ff-but {
+                                        content: "";
+                                        width: 15px;
+                                        height: 15px;
+                                        position: relative;
+                                        display: inline-block;
+                                        background-image: url(../img/clan_points2.png);
+                                        background-size: 100%;
+                                        background-position: center;
+                                        margin: 0 2px 0 2px;
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+
+                        .cw-trophy-left-box-all {
+                            width: 310px;
+                            height: 460px;
+                            position: absolute;
+                            top: 40px;
+                            left: 10px;
+                            .cw-trophy-skills-label {
+                                width: 310px;
+                                height: 36px;
+                                position: absolute;
+                                color: #fff;
+                                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+                                text-align: center;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                line-height: 36px;
+                                background-color: #897165;
+                                box-shadow: inset 0 -36px 18px -18px #594b49;
+                            }
+                            .cw-trophy-skills-desc {
+                                width: 310px;
+                                height: 425px;
+                                position: absolute;
+                                bottom: 0;
+                                background-color: #9d8878;
+                                //box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+
+                                .cw-trophy-skills-scroll-box {
+                                    overflow-y: scroll;
+                                    position: absolute;
+                                    top: 8px;
+                                    left: 8px;
+                                    width: 294px;
+                                    height: 405px;
+
+                                    &::-webkit-scrollbar-track {
+                                        -webkit-box-shadow: inset 0 0 6px
+                                            rgba(0, 0, 0, 0.5);
+                                        background-color: #473c3c;
+                                    }
+                                    &::-webkit-scrollbar {
+                                        width: 5px;
+                                        background-color: #9e8b7d;
+                                    }
+                                    &::-webkit-scrollbar-thumb {
+                                        background: linear-gradient(
+                                            180deg,
+                                            #ffe199,
+                                            #f4c657,
+                                            #f4c657,
+                                            #ffe199
+                                        );
+                                    }
+
+                                    .cw-trophy-skills-content {
+                                        width: 279px;
+                                        margin-top: 10px;
+                                    }
+                                }
+                            }
+                            .cw-trophy-skill {
+                                position: relative;
+
+                                .cw-trophy-skill-label {
+                                    color: #fff;
+                                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+                                    text-align: center;
+                                    font-weight: bold;
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                    line-height: 20px;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 110px;
+                                    width: 169px;
+                                    height: 40px;
+                                }
+                                .cw-trophy-skill-price {
+                                    position: absolute;
+                                    top: 50px;
+                                    left: 110px;
+                                    width: 169px;
+                                    height: 50px;
+                                    background-color: #8a7565;
+                                    color: #473c3c;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    line-height: 30px;
+
+                                    div {
+                                        color: #e2cab8;
+                                        text-transform: uppercase;
+                                        font-size: 14px;
+                                        line-height: 10px;
+                                    }
+                                }
+                            }
+                            .cw-trophy-skill-levels {
+                                margin-top: 15px;
+                            }
+                            .cw-trophy-skill-lvl {
+                                font-weight: bold;
+                                text-align: center;
+                                background-color: #b29d8c;
+                                color: #473c3c;
+
+                                & + .cw-trophy-skill-lvl {
+                                    margin-top: 10px;
+                                }
+                                .cw-trophy-skill-lvl-title {
+                                    height: 20px;
+                                    width: 279px;
+                                    line-height: 20px;
+                                    color: #fff;
+                                    text-transform: uppercase;
+                                    background-color: #bbee7f;
+                                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75);
+                                    box-shadow: inset 0 -20px 10px -10px #7ebd32,
+                                        0px 1px 2px -1px #000;
+                                }
+                                .cw-trophy-skill-lvl-descr {
+                                    width: 279px;
+                                    padding: 10px 6px;
+                                    box-sizing: border-box;
+                                    line-height: 16px;
+                                }
+                            }
+                        }
+                        .cw-trophy-right-box-all {
+                            width: 760px;
+                            height: 460px;
+                            position: absolute;
+                            top: 40px;
+                            right: 10px;
+                            background-image: url(../img/v2-dirtyoldpaper-bg.jpg);
+                            background-size: 100%;
+                            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+
+                            .cw-trophy-tree-scroll-box {
+                                overflow-x: scroll;
+                                overflow-y: hidden;
+                                position: absolute;
+                                width: 748px;
+                                height: 388px;
+                                top: 65px;
+                                left: 6px;
+
+                                &::-webkit-scrollbar-track {
+                                    -webkit-box-shadow: inset 0 0 6px
+                                        rgba(0, 0, 0, 0.5);
+                                    background-color: #473c3c;
+                                }
+                                &::-webkit-scrollbar {
+                                    height: 5px;
+                                    background-color: #9e8b7d;
+                                }
+                                &::-webkit-scrollbar-thumb {
+                                    background: linear-gradient(
+                                        90deg,
+                                        #ffe199,
+                                        #f4c657,
+                                        #f4c657,
+                                        #ffe199
+                                    );
+                                }
+                            }
+                            .cw-trophy-tree-box {
+                                .cw-trophy-tree-row {
+                                    white-space: nowrap;
+                                    margin-left: 3px;
+                                    font-size: 0;
+
+                                    & + .cw-trophy-tree-row {
+                                        margin-top: 70px;
+                                    }
+
+                                    .cw-trophy-tree-item {
+                                        display: inline-block;
+                                        position: relative;
+                                        width: 100px;
+                                        height: 100px;
+
+                                        & + .cw-trophy-tree-item {
+                                            width: 134px;
+                                            .cw-trophy-skill-icon {
+                                                margin-left: 34px;
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            margin-right: 3px;
+                                        }
+
+                                        .cw-trophy-skill-icon {
+                                            z-index: 10;
+                                        }
+
+                                        &:before,
+                                        &:after {
+                                            z-index: 1;
+                                        }
+
+                                        &.line {
+                                            &:before {
+                                                content: "";
+                                                width: 34px;
+                                                height: 5px;
+                                                left: 0;
+                                                top: 48px;
+                                                position: absolute;
+                                                background: #473c3c;
+                                            }
+
+                                            &.double {
+                                                &:before {
+                                                    left: -134px;
+                                                    width: 168px;
+                                                }
+                                            }
+
+                                            &.up,
+                                            &.down {
+                                                &:before {
+                                                    width: 84px;
+                                                    left: -50px;
+                                                }
+                                                &:after {
+                                                    content: "";
+                                                    width: 5px;
+                                                    height: 118px;
+                                                    left: -50px;
+                                                    top: -70px;
+                                                    position: absolute;
+                                                    background: #473c3c;
+                                                }
+                                            }
+
+                                            &.down {
+                                                &:after {
+                                                    top: 53px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .cw-trophy-top-controls {
+                                position: absolute;
+                                left: 378px;
+                                top: 8px;
+                                width: 373px;
+                                height: 40px;
+
+                                .reset-btn {
+                                    width: 200px;
+                                    height: 40px;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    .color-btn-text {
+                                        font-size: 12px;
+                                    }
+                                    .ff-but {
+                                        content: "";
+                                        width: 21px;
+                                        height: 15px;
+                                        position: relative;
+                                        display: inline-block;
+                                        background-image: url(../img/spinner-round-diamond.png);
+                                        background-size: 100%;
+                                        margin: 0 4px 0 4px;
+                                        vertical-align: middle;
+                                    }
+                                }
+                                .resources {
+                                    position: absolute;
+                                    width: 160px;
+                                    height: 40px;
+                                    top: 0;
+                                    right: 0;
+                                    background: linear-gradient(
+                                        0deg,
+                                        #fede92 0%,
+                                        #f4c558 18%,
+                                        #ffe098 60%,
+                                        #f5c85d 85%,
+                                        #fddd90 100%
+                                    );
+                                    box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.4);
+                                    border-radius: 8px;
+
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        left: 2px;
+                                        width: 40px;
+                                        height: 40px;
+                                        background-image: url(../img/clan_points2.png);
+                                        background-size: contain;
+                                    }
+
+                                    div {
+                                        position: absolute;
+                                        top: 4px;
+                                        right: 4px;
+                                        background-color: #7f695e;
+                                        color: #fff;
+                                        text-align: center;
+                                        font-weight: bold;
+                                        width: 110px;
+                                        height: 32px;
+                                        line-height: 32px;
+                                        font-size: 18px;
+                                        box-shadow: inset 0px 7px 15px -8px #000;
+                                        border-radius: 6px;
+                                    }
+                                }
+                            }
+                            .cw-trophy-bottom-controls {
+                                position: absolute;
+                                left: 210px;
+                                bottom: 20px;
+                                width: 340px;
+                                height: 50px;
+                                background-color: rgba(0, 0, 0, 0.48);
+                                border-radius: 10px;
+
+                                .info {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 169px;
+                                    height: 50px;
+                                    color: #b29d8c;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    line-height: 30px;
+                                    text-transform: uppercase;
+                                    font-size: 12px;
+
+                                    div {
+                                        color: #fff;
+                                        text-transform: uppercase;
+                                        font-size: 18px;
+                                        line-height: 6px;
+                                    }
+                                }
+                                .buy-btn {
+                                    width: 160px;
+                                    height: 40px;
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                    .color-btn-text {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                .buy-btn {
-                  width: 160px;
-                  height: 40px;
-                  position: absolute;
-                  top: 5px;
-                  right: 5px;
-                  .color-btn-text {
-                    font-size: 14px;
-                  }
-                }
-              }
             }
-          }
         }
-      }
     }
-  }
 `;
 
 export { stylesFileName, pageStyles };

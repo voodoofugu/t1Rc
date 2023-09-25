@@ -1,9 +1,11 @@
 import React from "react";
-// import v2ScreenGuildhall from "../styles/v2-screen-guildhall.scss";
+import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
+import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
+const stylePairs = generateStylePairs(["V2ScreenGuildhall"]);
 
 const V2MainScreen02GuildGuildhallComponent = () => {
   return (
-    <>
+    <HelmetStyleTagWhitWrap stylePairs={stylePairs}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="header">
@@ -384,7 +386,7 @@ const V2MainScreen02GuildGuildhallComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </ HelmetStyleTagWhitWrap>
   );
 };
 

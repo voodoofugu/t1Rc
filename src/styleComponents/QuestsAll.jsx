@@ -3,1962 +3,2371 @@ import foundFileName from "../scripts/forBild/foundFileName.js";
 const stylesFileName = foundFileName();
 
 const pageStyles = css`
-  body .main {
-    .left-side {
-      .left-panel {
-        .quests-list-all-box {
-          width: 620px;
-          height: 515px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: linear-gradient(0deg, #786358, #584a49);
-          box-shadow: inset 0 0 0 4px #9c8b7c, inset 0 0 6px rgba(0, 0, 0, 0.25) !important;
-          border-radius: 10px 18px 18px 18px;
-          .hero-menu-box {
-            top: 11px;
-            width: 506px;
-            right: unset;
-            left: 12px;
-            .tabs-menu-btn {
-              width: 128px;
-              &.quest-daily {
-                .txt {
-                  &:before {
-                    background-image: url(../img/tab-icn-all.png);
-                    background-position: -68px center;
-                    background-repeat: no-repeat;
-                    background-size: auto 34px;
-                  }
-                }
-              }
-              &.quest-main {
-                .txt {
-                  &:before {
-                    background-image: url(../img/tab-icn-all.png);
-                    background-position: -102px center;
-                    background-repeat: no-repeat;
-                    background-size: auto 34px;
-                  }
-                }
-              }
-              &.quest-story {
-                .txt {
-                  &:before {
-                    background-image: url(../img/tab-icn-all.png);
-                    background-position: -136px center;
-                    background-repeat: no-repeat;
-                    background-size: auto 34px;
-                  }
-                }
-              }
-            }
-          }
-          .journal-menu-box {
-            width: 500px;
-            height: 40px;
-            position: absolute;
-            top: 10px;
-            left: 12px;
-            font-size: 0;
-            text-align: center;
-            display: flex;
-            .color-btn {
-              width: 160px;
-              margin: 0 3px 0 3px;
-            }
-          }
-          .journal-parth-box-all {
-            width: 502px;
-            height: 445px;
-            position: absolute;
-            top: 56px;
-            left: 14px;
-            background: #9c8b7c;
-            border-radius: 10px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 0 0 2px #dd9542, 0 2px 4px 1px rgba(0, 0, 0, 0.4),
-              inset 0 0 4px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            &:before {
-              content: "";
-              width: 20px;
-              height: 20px;
-              background: #dd9542;
-              position: absolute;
-              top: -11px;
-              left: -11px;
-              box-shadow: 0px 447px 0 #dd9542, 504px 447px 0 #dd9542,
-                504px 0 0 #dd9542;
-              border-radius: 14px;
-              z-index: 1;
-              pointer-events: none;
-              filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
-            }
-            .content-disable {
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              background: none;
-            }
-
-            .daily-mission-box {
-              width: 100%;
-              height: 90px;
-              position: absolute;
-              top: 0px;
-              left: 0px;
-              border-radius: 8px 8px 0 0;
-              .daily-mission-name,
-              .journal-header-main-info {
-                width: 400px;
-                height: auto;
-                position: absolute;
-                top: 4px;
-                left: 10px;
-                font-weight: bold;
-                text-transform: uppercase;
-                font-size: 18px;
-                text-align: center;
-                padding: 6px 0;
-                color: rgba(242, 255, 126, 1);
-                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-              }
-              .daily-prgbar-all {
-                width: 398px;
-                height: 36px;
-                position: absolute;
-                bottom: 11px;
-                left: 11px;
-                background: linear-gradient(180deg, #3b302f 0%, #584a49 100%);
-                border-radius: 8px;
-                overflow: hidden;
-                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3),
-                  0 2px 6px rgba(0, 0, 0, 0.4);
-                &:before,
-                &:after {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  width: 50%;
-                  height: 100%;
-                  background-image: url(../img/suphero-squad-frame-all@x2.png);
-                  background-position: 0 -547px;
-                  background-repeat: no-repeat;
-                  background-size: 818px auto;
-                  z-index: 1;
-                }
-                &:before {
-                  left: 0;
-                  background-position: left -547px;
-                }
-                &:after {
-                  right: 0;
-                  background-position: right -547px;
-                }
-                .daily-prgbar {
-                  width: 10%;
-                  height: 100%;
-                  position: absolute;
-                  top: 0px;
-                  left: 0px;
-                  background: linear-gradient(
-                    0deg,
-                    #8cdd55 0%,
-                    #43a700 50%,
-                    #8cdd55 100%
-                  );
-                }
-                .daily-prgbar-text {
-                  width: 100%;
-                  position: relative;
-                  text-align: center;
-                  color: #ffd33c;
-                  font-weight: bold;
-                  font-size: 22px;
-                  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
-                  line-height: 36px;
-                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
-                  text-transform: uppercase;
-                  box-shadow: inset 0 -1px 0 #a04549, inset 0 -2px 0 #febf1d,
-                    inset 1px 0 0 #febf1d, inset -1px 0 0 #febf1d,
-                    inset 0 1px 0 #febf1d, inset 2px 0 0 #a04549,
-                    inset -2px 0 0 #a04549, inset 0 2px 0 #a04549,
-                    inset 0 0 4px 2px rgba(0, 0, 0, 0.8);
-                  border-radius: 8px;
-                }
-              }
-            }
-
-            // daily
-            .daily-mission-box {
-              .daily-reward {
-                width: 70px;
-                height: 70px;
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                border-radius: 10px;
-                box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
-                  0 1px 4px 1px rgba(0, 0, 0, 0.4), inset 0 0 0 2px #ff9b37;
-                background: url(../img/v2-trophy-bg.jpg);
-                background-size: 100%;
-                background-repeat: no-repeat;
-                overflow: hidden;
-                .daily-reward-pic {
-                  width: 50px;
-                  height: 50px;
-                  position: absolute;
-                  top: 4px;
-                  left: 10px;
-                  background: radial-gradient(
-                    #ffffff 10%,
-                    rgba(255, 255, 255, 0) 70%
-                  );
-                  z-index: 1;
-                  img {
-                    width: 50px;
+    .main {
+        .left-side {
+            .left-panel {
+                .quests-list-all-box {
+                    width: 620px;
+                    height: 515px;
                     position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translateY(-50%);
-                  }
-                }
-                .daily-reward-count {
-                  width: 54px;
-                  line-height: 16px;
-                  position: relative;
-                  top: 54px;
-                  text-align: center;
-                  margin: 0 auto;
-                  color: #fff;
-                  font-size: 12px;
-                  font-weight: bold;
-                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0),
-                    0 1px 4px rgba(0, 0, 0, 0.6);
-                  background: linear-gradient(#805a31, #c18346);
-                  border-radius: 10px 10px 0 0;
-                  box-shadow: inset 0 1px 0 #dea569;
-                  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0));
-                  &:before,
-                  &:after {
-                    content: "";
-                    width: 8px;
-                    height: 100%;
-                    position: absolute;
-                    top: 0px;
-                    background: linear-gradient(#875c29, #d49548 94%);
-                    background: linear-gradient(#805a31, #c18346 94%);
-                    z-index: -1;
-                  }
-                  &:before {
-                    left: -2px;
-                    transform: skewX(-20deg);
-                    border-radius: 6.6px 0 0 0;
-                    box-shadow: inset 1px 1px 0 #dea569;
-                  }
-                  &:after {
-                    right: -2px;
-                    transform: skewX(20deg);
-                    border-radius: 0 6.6px 0 0;
-                    box-shadow: inset -1px 1px 0 #dea569;
-                  }
-                }
-                &.active {
-                  cursor: pointer;
-                  &:hover {
-                    background: linear-gradient(
-                      180deg,
-                      #e19600 0%,
-                      #f6e4c1 50%,
-                      #dc8f00 70%,
-                      #fbd995 85%,
-                      #dc9003 100%
-                    );
-                  }
-                  &:active {
-                    transform: scale(0.98);
-                  }
-                  &:before {
-                    content: "";
-                    position: absolute;
-                    background-image: url(../img/map-station-lockflare.png);
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    background-position: center;
-                    transition: ease-in-out 0.1s;
-                    animation: 8s linear 0s normal none infinite running
-                      lockflare;
-                    width: 90px;
-                    height: 90px;
-                    left: -10px;
-                    top: -10px;
-                    pointer-events: none;
-                  }
-                }
-                .color-btn {
-                  width: 62px;
-                  height: 22px;
-                  position: absolute;
-                  left: 4px;
-                  top: 44px;
-                  box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.25),
-                    0 2px 4px 0 rgba(0, 0, 0, 0.55);
-                  z-index: 1;
-                  &:active {
-                    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25),
-                      0 2px 4px 0 rgba(0, 0, 0, 0.55);
-                  }
-                }
-              }
-              &.available {
-                .daily-reward {
-                  &:before {
-                    content: "";
-                    position: absolute;
-                    background-image: url(../img/map-station-lockflare.png);
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    background-position: center;
-                    transition: ease-in-out 0.1s;
-                    animation: 8s linear 0s normal none infinite running
-                      lockflare;
-                    width: 90px;
-                    height: 90px;
-                    left: -10px;
-                    top: -16px;
-                  }
-                  &:after {
-                    content: "";
-                    position: absolute;
-                    top: -1px;
-                    right: -1px;
-                    width: 24px;
-                    height: 24px;
-                    background-image: url(../img/picmeh-ic-info.png);
-                    background-size: 100%;
-                    background-repeat: no-repeat;
-                    z-index: 1;
-                  }
-                }
-              }
-              &.completed {
-                background: url(../img/congratulation-bg.png);
-                background-repeat: no-repeat;
-                background-position: center -122px, 0;
-                background-size: auto 232px, auto;
-                .daily-mission-name {
-                  top: 56px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  background: radial-gradient(
-                      rgba(75, 60, 0, 0.5),
-                      rgba(0, 0, 0, 0),
-                      rgba(0, 0, 0, 0)
-                    ),
-                    linear-gradient(
-                      90deg,
-                      rgba(255, 255, 255, 0),
-                      rgba(255, 191, 0, 0.2),
-                      rgba(255, 255, 255, 0)
-                    );
-                  color: rgba(242, 255, 126, 1);
-                  background-position: center 5px, center;
-                  background-size: 88% 100%, 100%;
-                  background-repeat: no-repeat;
-                  &:before,
-                  &:after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background: linear-gradient(
-                      90deg,
-                      rgba(255, 255, 255, 0) 10%,
-                      rgba(229, 255, 0, 1),
-                      rgba(255, 255, 255, 0) 90%
-                    );
-                  }
-                  &:before {
                     top: 0;
-                  }
-                  &:after {
-                    bottom: 0;
-                  }
-                }
-                .daily-prgbar-all {
-                  display: none;
-                }
-                .daily-reward {
-                  &:after {
-                    content: "";
-                    width: 30px;
-                    height: 31px;
-                    position: absolute;
-                    top: -4px;
-                    right: 0px;
-                    background: url(../img/paycheck-arrow.png);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    filter: drop-shadow(0px 0px 1px white);
-                    pointer-events: none;
-                  }
-                }
-              }
-            }
-            .daily-mission-box-scroll {
-              width: 489px;
-              height: 296px;
-              position: absolute;
-              top: 90px;
-              left: 10px;
-              overflow: hidden;
-              overflow-y: scroll;
-              font-size: 0;
-              scrollbar-width: thin;
-              scrollbar-color: rgba(0, 0, 0, 0.4) #796b60;
-              &::-webkit-scrollbar-track {
-                border-radius: 10px;
-              }
-              &::-webkit-scrollbar {
-                width: 8px;
-              }
-              &::-webkit-scrollbar-thumb {
-                border-radius: 10px;
-                background: linear-gradient(
-                  to right,
-                  #fff,
-                  #f5de80,
-                  #f4b766,
-                  #b26d12
-                );
-                // -webkit-box-shadow: inset -1px 0 0 2px #796b60,
-                //     inset -1px 1px 0 2px #796b60,
-                //     inset -1px -1px 0 2px #796b60;
-                // background: linear-gradient(
-                //         128deg,
-                //         #796b60 3px,
-                //         rgba(0, 0, 0, 0) 3px
-                //     ),
-                //     linear-gradient(
-                //         -128deg,
-                //         #796b60 3px,
-                //         rgba(0, 0, 0, 0) 3px
-                //     ),
-                //     linear-gradient(
-                //         308deg,
-                //         #796b60 3px,
-                //         rgba(0, 0, 0, 0) 3px
-                //     ),
-                //     linear-gradient(
-                //         -308deg,
-                //         #796b60 3px,
-                //         rgba(0, 0, 0, 0) 3px
-                //     ),
-                //     linear-gradient(
-                //         #796b60 2px,
-                //         rgba(0, 0, 0, 0) 2px
-                //     ),
-                //     linear-gradient(
-                //         -360deg,
-                //         #796b60 2px,
-                //         rgba(0, 0, 0, 0) 2px
-                //     ),
-                //     linear-gradient(
-                //         to right,
-                //         #fff,
-                //         #f5de80,
-                //         #f4b766,
-                //         #b26d12 75%
-                //     );
-                background: linear-gradient(
-                  to right,
-                  #fff,
-                  #f5de80,
-                  #f4b766,
-                  #b26d12
-                );
-              }
-              .journal-parth-box {
-                position: relative;
-                display: flex;
-                flex-direction: column-reverse;
-                width: 473px;
-                left: 4px;
-                .journal-parth-block {
-                  padding: 12px;
-                  background: #847669;
-                  border-radius: 10px;
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: center;
-                  .daily-parth-box {
-                    width: 458px;
-                    height: 90px;
-                    position: relative;
-                    display: inline-block;
-                    margin-bottom: 13px;
-                    overflow: hidden;
-                    border-radius: 8px;
-                    background-blend-mode: normal;
-                    background: url(../img/completed-banner.png),
-                      url(../img/smoke-bg.png),
-                      linear-gradient(135deg, #584b48, #7d6463);
-                    background-position: right -8px, 0px -50px, 0;
-                    background-repeat: no-repeat;
-                    background-size: auto 98px, 258px 140px, 100%;
-                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-                      inset 0 0 0 2px #ff9b37,
-                      inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                      inset 0 44px 24px rgba(255, 212, 110, 0.28),
-                      0 1px 4px rgba(0, 0, 0, 0.6);
-                    &:last-child {
-                      margin-bottom: 0;
+                    left: 0;
+                    background: linear-gradient(0deg, #786358, #584a49);
+                    box-shadow: inset 0 0 0 4px #9c8b7c,
+                        inset 0 0 6px rgba(0, 0, 0, 0.25) !important;
+                    border-radius: 10px 18px 18px 18px;
+                    .hero-menu-box {
+                        top: 11px;
+                        width: 506px;
+                        right: unset;
+                        left: 12px;
+                        .tabs-menu-btn {
+                            width: 128px;
+                            &.quest-daily {
+                                .txt {
+                                    &:before {
+                                        background-image: url(../img/tab-icn-all.png);
+                                        background-position: -68px center;
+                                        background-repeat: no-repeat;
+                                        background-size: auto 34px;
+                                    }
+                                }
+                            }
+                            &.quest-main {
+                                .txt {
+                                    &:before {
+                                        background-image: url(../img/tab-icn-all.png);
+                                        background-position: -102px center;
+                                        background-repeat: no-repeat;
+                                        background-size: auto 34px;
+                                    }
+                                }
+                            }
+                            &.quest-story {
+                                .txt {
+                                    &:before {
+                                        background-image: url(../img/tab-icn-all.png);
+                                        background-position: -136px center;
+                                        background-repeat: no-repeat;
+                                        background-size: auto 34px;
+                                    }
+                                }
+                            }
+                        }
                     }
-                    .daily-parth-text {
-                      width: 220px;
-                      height: 34px;
-                      position: absolute;
-                      top: 14px;
-                      left: 94px;
-                      color: #ffffff;
-                      font-weight: bold;
-                      text-transform: uppercase;
-                      font-size: 14px;
-                      text-align: center;
-                      display: flex;
-                      justify-content: center;
-                      align-items: center;
-                      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8),
-                        0 1px 6px rgba(0, 0, 0, 0.4);
-                    }
-                    .daily-prgbar-all {
-                      width: 220px;
-                      height: 20px;
-                      position: absolute;
-                      bottom: 11px;
-                      left: 94px;
-                      border-radius: 4px;
-                      overflow: hidden;
-                      box-shadow: 0 0 0 1px #3c3130,
-                        0 1px 4px 1px rgba(255, 185, 124, 0.3);
-                      background: linear-gradient(
-                        180deg,
-                        #3b302f 0%,
-                        #584a49 100%
-                      );
-                      .daily-prgbar {
-                        width: 80%;
-                        height: 20px;
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                        background: linear-gradient(
-                          90deg,
-                          #89da38 0%,
-                          #00ca51 100%
-                        );
-                        box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.2);
-                      }
-                      .daily-prgbar-text {
-                        width: 220px;
-                        height: 20px;
-                        position: relative;
-                        text-align: center;
-                        color: #fff;
-                        font-weight: bold;
-                        font-size: 14px;
-                        line-height: 20px;
-                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45),
-                          0 1px 4px rgba(0, 0, 0, 0.6);
-                        text-transform: uppercase;
-                      }
-                    }
-                    .daily-parth-claim-box {
-                      width: 90px;
-                      height: 90px;
-                      position: absolute;
-                      top: 0;
-                      left: 0;
-                      .daily-reward {
-                        width: 70px;
-                        height: 70px;
+                    .journal-menu-box {
+                        width: 500px;
+                        height: 40px;
                         position: absolute;
                         top: 10px;
-                        left: 10px;
-                        background: linear-gradient(
-                          180deg,
-                          #c68300 0%,
-                          #f4dfb6 50%,
-                          #c68200 70%,
-                          #fad489 85%,
-                          #c78302 100%
-                        );
-                        border-radius: 10px;
-                        box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
-                          0 1px 4px 1px rgba(0, 0, 0, 0.4),
-                          inset 0 0 0 2px #ff9b37;
-                        background: url(../img/v2-trophy-bg.jpg);
-                        background-size: 100%;
-                        background-repeat: no-repeat;
-                        overflow: hidden;
-                        .daily-reward-pic {
-                          width: 50px;
-                          height: 50px;
-                          position: absolute;
-                          top: 4px;
-                          left: 10px;
-                          background: radial-gradient(
-                            #ffffff 10%,
-                            rgba(255, 255, 255, 0) 70%
-                          );
-                          z-index: 1;
-                          img {
-                            width: 50px;
-                          }
-                        }
-                        .daily-reward-count {
-                          width: 54px;
-                          line-height: 16px;
-                          position: relative;
-                          top: 54px;
-                          text-align: center;
-                          margin: 0 auto;
-                          color: #fff;
-                          font-size: 12px;
-                          font-weight: bold;
-                          text-shadow: 0 1px 2px rgba(0, 0, 0, 1),
-                            0 1px 4px rgba(0, 0, 0, 0.6);
-                          background: linear-gradient(#805a31, #c18346);
-                          border-radius: 10px 10px 0 0;
-                          box-shadow: inset 0 1px 0 #dea569;
-                          filter: drop-shadow(0 0 4px rgba(0, 0, 0, 1));
-                          &:before,
-                          &:after {
-                            content: "";
-                            width: 8px;
-                            height: 100%;
-                            position: absolute;
-                            top: 0px;
-                            background: linear-gradient(#875c29, #d49548 94%);
-                            background: linear-gradient(#805a31, #c18346 94%);
-                            z-index: -1;
-                          }
-                          &:before {
-                            left: -2px;
-                            transform: skewX(-20deg);
-                            border-radius: 6.6px 0 0 0;
-                            box-shadow: inset 1px 1px 0 #dea569;
-                          }
-                          &:after {
-                            right: -2px;
-                            transform: skewX(20deg);
-                            border-radius: 0 6.6px 0 0;
-                            box-shadow: inset -1px 1px 0 #dea569;
-                          }
-                        }
-                        &.disabled {
-                          filter: brightness(0.9) grayscale(0.6);
-                        }
-                      }
-                      .color-btn {
-                        width: 62px;
-                        height: 22px;
-                        position: absolute;
-                        left: 14px;
-                        top: 54px;
-                        box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.25),
-                          0 2px 4px 0 rgba(0, 0, 0, 0.55);
-                        z-index: 1;
-                        display: none;
-                        &:active {
-                          box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25),
-                            0 2px 4px 0 rgba(0, 0, 0, 0.55);
-                        }
-                      }
-                    }
-                    .progress-banner-red,
-                    .progress-banner-gray,
-                    .progress-banner-green {
-                      top: 58px;
-                    }
-                    &.available {
-                      background: url(../img/completed-banner.png),
-                        url(../img/smoke-bg.png),
-                        linear-gradient(135deg, #9f6b37, #bf7832);
-                      background-position: right -8px, 0px -50px, 0;
-                      background-repeat: no-repeat;
-                      background-size: auto 98px, 258px 140px, 100%;
-                      background-blend-mode: screen;
-                      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-                        inset 0 0 0 2px #ff9b37,
-                        inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                        inset 0 44px 24px rgba(255, 212, 110, 0.28),
-                        0 1px 4px rgba(0, 0, 0, 0.6);
-                      .daily-parth-claim-box {
-                        .color-btn {
-                          display: block;
-                        }
-                      }
-                      &:after {
-                        content: "";
-                        position: absolute;
-                        top: -1px;
-                        right: -1px;
-                        width: 24px;
-                        height: 24px;
-                        background-image: url(../img/picmeh-ic-info.png);
-                        background-size: 100%;
-                        background-repeat: no-repeat;
-                        pointer-events: none;
-                      }
-                      &:hover {
-                        background: url(../img/completed-banner.png),
-                          url(../img/smoke-bg.png),
-                          linear-gradient(135deg, #ae753d, #ce8236);
-                        background-position: right -8px, 0px -50px, 0;
-                        background-repeat: no-repeat;
-                        background-size: auto 98px, 258px 140px, 100%;
-                      }
-                    }
-                    &:hover {
-                      background: url(../img/completed-banner.png),
-                        url(../img/smoke-bg.png),
-                        linear-gradient(135deg, #695a56, #876c6b);
-                      background-position: right -8px, 0px -50px, 0;
-                      background-repeat: no-repeat;
-                      background-size: auto 98px, 258px 140px, 100%;
-                    }
-                    &.completed {
-                      background: url(../img/completed-banner.png),
-                        url(../img/smoke-bg.png),
-                        linear-gradient(135deg, #5a5351, #7f7272);
-                      background-position: right -8px, 0px -50px, 0;
-                      background-repeat: no-repeat;
-                      background-size: auto 98px, 258px 140px, 100%;
-                      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
-                        inset 0 0 0 2px #c49f7b,
-                        inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                        inset 0 44px 24px rgba(226, 204, 152, 0.28),
-                        0 1px 4px rgba(0, 0, 0, 0.6);
-                      background-blend-mode: luminosity;
-                      .daily-parth-text,
-                      .daily-prgbar-all,
-                      .daily-parth-claim-box {
-                        filter: grayscale(0.6) brightness(0.8);
-                      }
-                      &:after {
-                        content: "";
-                        width: 40px;
-                        height: 39px;
-                        position: absolute;
-                        top: -4px;
-                        right: -2px;
-                        background: url(../img/paycheck-arrow.png);
-                        background-repeat: no-repeat;
-                        background-size: cover;
-                        pointer-events: none;
-                      }
-                      &:hover {
-                        background: url(../img/completed-banner.png),
-                          url(../img/smoke-bg.png),
-                          linear-gradient(135deg, #635b59, #8d7f7f);
-                        background-position: right -8px, 0px -50px, 0;
-                        background-repeat: no-repeat;
-                        background-size: auto 98px, 258px 140px, 100%;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-
-            // main
-            .journal-parth-header {
-              width: 100%;
-              height: 68px;
-              position: absolute;
-              top: 0px;
-              left: 0px;
-              .quest-switch-section {
-                width: calc(100% - 134px);
-                height: 46px;
-                position: absolute;
-                top: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-                background-position: 0px -40px, 0;
-                background-repeat: no-repeat;
-                background-size: auto 202px, 100%;
-                border-radius: 8px;
-                .section-name {
-                  position: absolute;
-                  left: 50%;
-                  top: 4px;
-                  transform: translateX(-50%) scale(1);
-                  transition: ease-in-out 0.2s;
-                  opacity: 1;
-                  padding: 0 16px;
-                  display: flex;
-                  align-items: center;
-                  background: url(../img/banner-bg1.png);
-                  background-position: center 0;
-                  background-size: auto 100%;
-                  background-repeat: no-repeat;
-                  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8));
-                  &:before,
-                  &:after {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    width: 25px;
-                    height: 100%;
-                    background: url(../img/banner-bg1.png);
-                    background-position: 0 0;
-                    background-size: auto 100%;
-                    background-repeat: no-repeat;
-                  }
-                  &:before {
-                    left: -24px;
-                  }
-                  &:after {
-                    transform: scaleX(-1);
-                    right: -24px;
-                  }
-                  .nameText {
-                    font-weight: bold;
-                    font-size: 22px;
-                    text-transform: uppercase;
-                    text-align: center;
-                    line-height: 40px;
-                    text-shadow: none;
-                    background: linear-gradient(
-                      0deg,
-                      rgb(255, 196, 0) 10%,
-                      rgb(255, 255, 255)
-                    );
-                    color: transparent;
-                    filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.6));
-                  }
-                  &.tutor {
-                    background: url(../img/banner-bg2.png);
-                    background-position: center 0;
-                    background-size: auto 100%;
-                    background-repeat: no-repeat;
-                    &:before,
-                    &:after {
-                      background: url(../img/banner-bg2.png);
-                      background-position: 0 0;
-                      background-size: auto 100%;
-                      background-repeat: no-repeat;
-                    }
-                  }
-                  &.darkWorld {
-                    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.8))
-                      hue-rotate(222deg) grayscale(0.4);
-                  }
-                  &.disabLeft {
-                    opacity: 0;
-                    pointer-events: none;
-                    transform: translateX(calc(-50% - 180px)) scale(0.8);
-                  }
-                  &.disabRight {
-                    opacity: 0;
-                    pointer-events: none;
-                    transform: translateX(calc(-50% + 180px)) scale(0.8);
-                  }
-                }
-              }
-              .arrow {
-                width: 40px;
-                height: 40px;
-                position: absolute;
-                top: 13px;
-                border-radius: 10px;
-                cursor: pointer;
-                z-index: 1;
-                background: linear-gradient(0deg, #9f6b37, #bf7832);
-                background-position: 0;
-                background-repeat: no-repeat;
-                background-size: 100%;
-                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-                  inset 0 0 0 2px #ff9b37, inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                  inset 0 44px 24px rgba(255, 212, 110, 0.28),
-                  0 1px 4px rgba(0, 0, 0, 0.6);
-                &:before {
-                  content: "";
-                  width: 20px;
-                  height: 28px;
-                  position: absolute;
-                  top: 6px;
-                  left: 10px;
-                  background-image: url(../img/rating-arrow.png);
-                  background-size: 100%;
-                  background-repeat: no-repeat;
-                  filter: brightness(0.8)
-                    drop-shadow(0 1px 1px rgba(255, 255, 255, 0.8));
-                }
-                &.left {
-                  left: 13px;
-                }
-                &.right {
-                  right: 13px;
-                  &:before {
-                    transform: rotate(180deg);
-                    filter: brightness(0.8)
-                      drop-shadow(0 -1px 1px rgba(255, 255, 255, 0.8));
-                  }
-                }
-                &:active {
-                  transform: scale(0.92);
-                }
-                &:hover {
-                  filter: brightness(1.1);
-                }
-                &.unactive {
-                  cursor: not-allowed;
-                  filter: brightness(1.1) grayscale(0.8);
-                }
-              }
-            }
-            .journal-parth-box-scroll {
-              width: 489px;
-              height: 362px;
-              position: absolute;
-              top: 68px;
-              left: 10px;
-              overflow: hidden;
-              overflow-y: scroll;
-              font-size: 0;
-              scrollbar-width: thin;
-              scrollbar-color: rgba(0, 0, 0, 0.4) #796b60;
-              transition: ease-in-out 0.2s;
-              opacity: 1;
-              transform: scale(1);
-              &::-webkit-scrollbar-track {
-                border-radius: 10px;
-              }
-              &::-webkit-scrollbar {
-                width: 8px;
-              }
-              &::-webkit-scrollbar-thumb {
-                border-radius: 10px;
-                background: linear-gradient(
-                  to right,
-                  #fff,
-                  #f5de80,
-                  #f4b766,
-                  #b26d12
-                );
-              }
-              .journal-parth-box {
-                position: relative;
-                display: flex;
-                flex-direction: column-reverse;
-                width: 473px;
-                left: 4px;
-                .journal-parth-name {
-                  position: relative;
-                  display: inline-block;
-                  bottom: unset;
-                }
-                .journal-parth-block {
-                  margin-bottom: 16px;
-                  padding: 12px;
-                  background: #847669;
-                  border-radius: 10px;
-                  display: flex;
-                  flex-wrap: wrap;
-                  justify-content: center;
-                  .journal-parth {
-                    width: 458px;
-                    height: 102px;
-                    position: relative;
-                    display: inline-block;
-                    background-color: #b7a597;
-                    margin-top: 13px;
-                    overflow: hidden;
-                    opacity: 1;
-                    transition: ease-in-out 0.1s;
-                    overflow: hidden;
-                    border-radius: 8px;
-                    background: url(../img/smoke-bg.png),
-                      linear-gradient(135deg, #584b48, #7d6463);
-                    background-position: 0px -40px, 0;
-                    background-repeat: no-repeat;
-                    background-size: auto 202px, 100%;
-                    box-shadow: inset 0 0 0 2px #ff9b37,
-                      inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                      0 1px 4px rgba(0, 0, 0, 0.4);
-                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-                      inset 0 0 0 2px #ff9b37,
-                      inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                      inset 0 44px 24px rgba(255, 212, 110, 0.28),
-                      0 1px 4px rgba(0, 0, 0, 0.6);
-                    &:before {
-                      content: "";
-                      width: 202px;
-                      height: 98px;
-                      background-blend-mode: normal;
-                      background: url(../img/completed-banner.png);
-                      background-repeat: no-repeat;
-                      background-size: 116px;
-                      position: absolute;
-                      transform: scaleY(-1);
-                      border-radius: 0 12px 12px 0;
-                      pointer-events: none;
-                      background-position: 88px 32px;
-                      background-size: 116px;
-                      top: 2px;
-                      right: 2px;
-                    }
-                    &:last-child {
-                      margin-bottom: 0;
-                    }
-                    .journal-parth-wrap {
-                      cursor: pointer;
-                      height: 100%;
-                      .journal-parth-text-box {
-                        position: absolute;
-                        display: inline-block;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        .journal-parth-title {
-                          color: rgba(0, 0, 0, 0.7);
-                          line-height: 24px;
-                          text-align: center;
-                          width: 220px;
-                          position: relative;
-                          left: 0px;
-                          top: 0px;
-                          background: #dd9542;
-                          box-shadow: inset 0px 7px 2px rgba(255, 255, 255, 0.3),
-                            inset 0 1px 1px rgba(255, 255, 255, 0.4),
-                            inset 0 -1px 0 #bd7f39;
-                          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
-                          border-radius: 0 0 6px 6px;
-                          p {
-                            margin: 0;
-                            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
-                            font-weight: 700;
-                            text-transform: uppercase;
-                            font-size: 16px;
-                            position: relative;
-                            z-index: 1;
-                            &:after {
-                              content: "";
-                              width: 8px;
-                              height: 8px;
-                              position: absolute;
-                              right: 1px;
-                              top: 4px;
-                              font-size: 22px;
-                              border: 2px solid rgba(0, 0, 0, 0.5);
-                              border-top: none;
-                              border-left: none;
-                              transform: rotate(45deg) scaleX(1);
-                              filter: drop-shadow(1px 1px 0.5px #fff);
-                              transition: ease-in-out 0.1s;
-                              pointer-events: none;
-                            }
-                          }
-                          &:before,
-                          &:after {
-                            content: "";
-                            width: 14px;
-                            height: 100%;
-                            position: absolute;
-                            top: 0px;
-                            background: #dd9542;
-                          }
-                          &:before {
-                            left: -9px;
-                            transform: skewX(20deg);
-                            border-radius: 0 0 0 6.6px;
-                            box-shadow: inset 1px -1px 0 #bd7f39,
-                              inset 1px 1px 1px rgba(255, 255, 255, 0.4),
-                              inset 2px 7px 2px rgba(255, 255, 255, 0.3);
-                          }
-                          &:after {
-                            right: -9px;
-                            transform: skewX(-20deg);
-                            border-radius: 0 0 6.6px 0;
-                            box-shadow: inset -1px -1px 0 #bd7f39,
-                              inset -1px 1px 1px rgba(255, 255, 255, 0.4),
-                              inset -2px 7px 2px rgba(255, 255, 255, 0.3);
-                          }
-                        }
-                        .journal-parth-text {
-                          height: 44px;
-                          color: #ffffff;
-                          font-size: 15px;
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          text-align: center;
-                          padding: 2px 0 2px 0;
-                          background-size: 100% 70%;
-                          background-position: 0 28px;
-                          background-repeat: no-repeat;
-                          text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4),
-                            0 1px 4px rgba(0, 0, 0, 0.8);
-                        }
-                      }
-                      .daily-prgbar-all {
-                        width: 220px;
-                        height: 20px;
-                        position: absolute;
-                        top: 70px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        border-radius: 4px;
-                        overflow: hidden;
-                        box-shadow: 0 0 0 1px #3c3130,
-                          0 1px 4px 1px rgba(255, 185, 124, 0.3);
-                        background: linear-gradient(
-                          180deg,
-                          #3b302f 0%,
-                          #584a49 100%
-                        );
-                        .daily-prgbar {
-                          width: 80%;
-                          height: 20px;
-                          position: absolute;
-                          top: 0px;
-                          left: 0px;
-                          background: linear-gradient(
-                            90deg,
-                            #89da38 0%,
-                            #00ca51 100%
-                          );
-                          box-shadow: inset 0px 7px 0px rgba(255, 255, 255, 0.2);
-                        }
-                        .daily-prgbar-text {
-                          width: 100%;
-                          height: 100%;
-                          position: relative;
-                          text-align: center;
-                          color: #fff;
-                          font-weight: bold;
-                          font-size: 14px;
-                          line-height: 20px;
-                          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45),
-                            0 1px 4px rgba(0, 0, 0, 0.6);
-                          text-transform: uppercase;
-                        }
-                      }
-                      .text {
-                        height: 52px;
-                        width: calc(100% - 20px);
-                        color: #f5da6d;
-                        font-size: 14px;
+                        left: 12px;
+                        font-size: 0;
                         text-align: center;
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: absolute;
-                        top: 103px;
-                        padding: 2px 8px 2px 8px;
-                        margin: 0 2px;
-                        box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.2),
-                          0 -2px 0px rgba(0, 0, 0, 0.1),
-                          inset 0 3px 2px rgba(0, 0, 0, 0.1);
-                        transition: ease-in-out 0.1s;
-                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4),
-                          0 1px 4px rgba(0, 0, 0, 0.8);
-                        background: rgba(0, 0, 0, 0.3);
-                        border-radius: 0 0 6px 6px;
-                        font-style: italic;
-                      }
+                        .color-btn {
+                            width: 160px;
+                            margin: 0 3px 0 3px;
+                        }
                     }
-                    .journal-reward {
-                      width: 86px;
-                      height: 86px;
-                      position: absolute;
-                      left: 8px;
-                      top: 8px;
-                      display: inline-block;
-                      background: linear-gradient(
-                        180deg,
-                        #c68300 0%,
-                        #f4dfb6 50%,
-                        #c68200 70%,
-                        #fad489 85%,
-                        #c78302 100%
-                      );
-                      border-radius: 10px;
-                      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5),
-                        0 1px 2px 1px rgba(0, 0, 0, 0.4);
-
-                      border-radius: 10px;
-                      box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
-                        0 1px 4px 1px rgba(0, 0, 0, 0.4),
-                        inset 0 0 0 2px #ff9b37;
-                      background: url(../img/v2-trophy-bg.jpg);
-                      background-size: 100%;
-                      background-repeat: no-repeat;
-                      .journal-reward-pic-wrap {
-                        width: 100px;
-                        display: flex;
-                        justify-content: center;
+                    .journal-parth-box-all {
+                        width: 502px;
+                        height: 445px;
                         position: absolute;
-                        top: 20px;
-                        left: 50%;
-                        transform: translateX(-50%) scale(0.96);
-                        transition: ease-in-out 0.1s;
-                        .journal-reward-pic {
-                          width: 44px;
-                          height: 44px;
-                          margin: 0 2px;
-                          border-radius: 6px;
-                          position: relative;
-                          background: linear-gradient(#ffbc70, #dd9542);
-                          margin: 0 -8px;
-                          transition: ease-in-out 0.1s;
-                          overflow: hidden;
-                          &:first-of-type {
-                            transform: rotate(-15deg);
-                            box-shadow: 0 0 0 2px #ffffaa,
-                              -1px 1px 0 3px #815629,
-                              -2px 2px 1px 3px rgba(255, 255, 255, 0.4),
-                              0 0 2px 2px rgba(0, 0, 0, 0.6);
-                          }
-                          &:last-child {
-                            transform: rotate(15deg);
-                            box-shadow: 0 0 0 2px #ffffaa, 1px 1px 0 3px #815629,
-                              2px 2px 1px 3px rgba(255, 255, 255, 0.4),
-                              0 0 2px 2px rgba(0, 0, 0, 0.6);
-                          }
-                          img {
-                            width: 100%;
-                            border-radius: 6px;
-                            position: relative;
-                          }
-                          &:after {
+                        top: 56px;
+                        left: 14px;
+                        background: #9c8b7c;
+                        border-radius: 10px;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+                        box-shadow: 0 0 0 2px #dd9542,
+                            0 2px 4px 1px rgba(0, 0, 0, 0.4),
+                            inset 0 0 4px rgba(0, 0, 0, 0.2);
+                        overflow: hidden;
+                        &:before {
                             content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: #dd9542;
                             position: absolute;
-                            left: 0;
-                            right: 0;
-                            width: 44px;
-                            height: 44px;
-                            border-radius: 6px;
-                            box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.2);
-                            background: linear-gradient(
-                              rgba(255, 255, 255, 0) 0%,
-                              rgba(255, 255, 255, 0.4) 10%,
-                              rgba(255, 255, 255, 0) 20%
-                            );
-                          }
-                          .journal-reward-value {
-                            width: 32px;
-                            line-height: 14px;
+                            top: -11px;
+                            left: -11px;
+                            box-shadow: 0px 447px 0 #dd9542,
+                                504px 447px 0 #dd9542, 504px 0 0 #dd9542;
+                            border-radius: 14px;
+                            z-index: 1;
+                            pointer-events: none;
+                            filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
+                        }
+                        .content-disable {
                             position: absolute;
-                            top: 32px;
-                            text-align: center;
                             left: 50%;
-                            transform: translateX(-50%);
-                            color: #503a2d;
-                            font-size: 12px;
-                            font-weight: bold;
-                            text-shadow: 0 1px 1px rgba(255, 255, 255, 1),
-                              0 1px 1px rgba(255, 255, 255, 0.6);
-                            background: #ffffaa;
-                            border-radius: 10px 10px 0 0;
-                            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
-                            &:before,
-                            &:after {
-                              content: "";
-                              width: 8px;
-                              height: 100%;
-                              position: absolute;
-                              top: 0px;
-                              background: #ffffaa;
-                              z-index: -1;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            background: none;
+                        }
+
+                        .daily-mission-box {
+                            width: 100%;
+                            height: 90px;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            border-radius: 8px 8px 0 0;
+                            .daily-mission-name,
+                            .journal-header-main-info {
+                                width: 400px;
+                                height: auto;
+                                position: absolute;
+                                top: 4px;
+                                left: 10px;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                font-size: 18px;
+                                text-align: center;
+                                padding: 6px 0;
+                                color: rgba(242, 255, 126, 1);
+                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+                            }
+                            .daily-prgbar-all {
+                                width: 398px;
+                                height: 36px;
+                                position: absolute;
+                                bottom: 11px;
+                                left: 11px;
+                                background: linear-gradient(
+                                    180deg,
+                                    #3b302f 0%,
+                                    #584a49 100%
+                                );
+                                border-radius: 8px;
+                                overflow: hidden;
+                                box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3),
+                                    0 2px 6px rgba(0, 0, 0, 0.4);
+                                &:before,
+                                &:after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    width: 50%;
+                                    height: 100%;
+                                    background-image: url(../img/suphero-squad-frame-all@x2.png);
+                                    background-position: 0 -547px;
+                                    background-repeat: no-repeat;
+                                    background-size: 818px auto;
+                                    z-index: 1;
+                                }
+                                &:before {
+                                    left: 0;
+                                    background-position: left -547px;
+                                }
+                                &:after {
+                                    right: 0;
+                                    background-position: right -547px;
+                                }
+                                .daily-prgbar {
+                                    width: 10%;
+                                    height: 100%;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                    background: linear-gradient(
+                                        0deg,
+                                        #8cdd55 0%,
+                                        #43a700 50%,
+                                        #8cdd55 100%
+                                    );
+                                }
+                                .daily-prgbar-text {
+                                    width: 100%;
+                                    position: relative;
+                                    text-align: center;
+                                    color: #ffd33c;
+                                    font-weight: bold;
+                                    font-size: 22px;
+                                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+                                    line-height: 36px;
+                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+                                    text-transform: uppercase;
+                                    box-shadow: inset 0 -1px 0 #a04549,
+                                        inset 0 -2px 0 #febf1d,
+                                        inset 1px 0 0 #febf1d,
+                                        inset -1px 0 0 #febf1d,
+                                        inset 0 1px 0 #febf1d,
+                                        inset 2px 0 0 #a04549,
+                                        inset -2px 0 0 #a04549,
+                                        inset 0 2px 0 #a04549,
+                                        inset 0 0 4px 2px rgba(0, 0, 0, 0.8);
+                                    border-radius: 8px;
+                                }
+                            }
+                        }
+
+                        // daily
+                        .daily-mission-box {
+                            .daily-reward {
+                                width: 70px;
+                                height: 70px;
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                border-radius: 10px;
+                                box-shadow: inset 0 1px rgba(255, 255, 255, 0.6),
+                                    0 1px 4px 1px rgba(0, 0, 0, 0.4),
+                                    inset 0 0 0 2px #ff9b37;
+                                background: url(../img/v2-trophy-bg.jpg);
+                                background-size: 100%;
+                                background-repeat: no-repeat;
+                                overflow: hidden;
+                                .daily-reward-pic {
+                                    width: 50px;
+                                    height: 50px;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 10px;
+                                    background: radial-gradient(
+                                        #ffffff 10%,
+                                        rgba(255, 255, 255, 0) 70%
+                                    );
+                                    z-index: 1;
+                                    > img {
+                                        width: 50px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 0;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                                .daily-reward-count {
+                                    width: 54px;
+                                    line-height: 16px;
+                                    position: relative;
+                                    top: 54px;
+                                    text-align: center;
+                                    margin: 0 auto;
+                                    color: #fff;
+                                    font-size: 12px;
+                                    font-weight: bold;
+                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0),
+                                        0 1px 4px rgba(0, 0, 0, 0.6);
+                                    background: linear-gradient(
+                                        #805a31,
+                                        #c18346
+                                    );
+                                    border-radius: 10px 10px 0 0;
+                                    box-shadow: inset 0 1px 0 #dea569;
+                                    filter: drop-shadow(
+                                        0 0 4px rgba(0, 0, 0, 0)
+                                    );
+                                    &:before,
+                                    &:after {
+                                        content: "";
+                                        width: 8px;
+                                        height: 100%;
+                                        position: absolute;
+                                        top: 0px;
+                                        background: linear-gradient(
+                                            #875c29,
+                                            #d49548 94%
+                                        );
+                                        background: linear-gradient(
+                                            #805a31,
+                                            #c18346 94%
+                                        );
+                                        z-index: -1;
+                                    }
+                                    &:before {
+                                        left: -2px;
+                                        transform: skewX(-20deg);
+                                        border-radius: 6.6px 0 0 0;
+                                        box-shadow: inset 1px 1px 0 #dea569;
+                                    }
+                                    &:after {
+                                        right: -2px;
+                                        transform: skewX(20deg);
+                                        border-radius: 0 6.6px 0 0;
+                                        box-shadow: inset -1px 1px 0 #dea569;
+                                    }
+                                }
+                                &.active {
+                                    cursor: pointer;
+                                    &:hover {
+                                        background: linear-gradient(
+                                            180deg,
+                                            #e19600 0%,
+                                            #f6e4c1 50%,
+                                            #dc8f00 70%,
+                                            #fbd995 85%,
+                                            #dc9003 100%
+                                        );
+                                    }
+                                    &:active {
+                                        transform: scale(0.98);
+                                    }
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        background-image: url(../img/map-station-lockflare.png);
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        background-position: center;
+                                        transition: ease-in-out 0.1s;
+                                        animation: 8s linear 0s normal none
+                                            infinite running lockflare;
+                                        width: 90px;
+                                        height: 90px;
+                                        left: -10px;
+                                        top: -10px;
+                                        pointer-events: none;
+                                    }
+                                }
+                                .color-btn {
+                                    width: 62px;
+                                    height: 22px;
+                                    position: absolute;
+                                    left: 4px;
+                                    top: 44px;
+                                    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.25),
+                                        0 2px 4px 0 rgba(0, 0, 0, 0.55);
+                                    z-index: 1;
+                                    &:active {
+                                        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25),
+                                            0 2px 4px 0 rgba(0, 0, 0, 0.55);
+                                    }
+                                }
+                            }
+                            &.available {
+                                .daily-reward {
+                                    &:before {
+                                        content: "";
+                                        position: absolute;
+                                        background-image: url(../img/map-station-lockflare.png);
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        background-position: center;
+                                        transition: ease-in-out 0.1s;
+                                        animation: 8s linear 0s normal none
+                                            infinite running lockflare;
+                                        width: 90px;
+                                        height: 90px;
+                                        left: -10px;
+                                        top: -16px;
+                                    }
+                                    &:after {
+                                        content: "";
+                                        position: absolute;
+                                        top: -1px;
+                                        right: -1px;
+                                        width: 24px;
+                                        height: 24px;
+                                        background-image: url(../img/picmeh-ic-info.png);
+                                        background-size: 100%;
+                                        background-repeat: no-repeat;
+                                        z-index: 1;
+                                    }
+                                }
+                            }
+                            &.completed {
+                                background: url(../img/congratulation-bg.png);
+                                background-repeat: no-repeat;
+                                background-position: center -122px, 0;
+                                background-size: auto 232px, auto;
+                                .daily-mission-name {
+                                    top: 56px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                    background: radial-gradient(
+                                            rgba(75, 60, 0, 0.5),
+                                            rgba(0, 0, 0, 0),
+                                            rgba(0, 0, 0, 0)
+                                        ),
+                                        linear-gradient(
+                                            90deg,
+                                            rgba(255, 255, 255, 0),
+                                            rgba(255, 191, 0, 0.2),
+                                            rgba(255, 255, 255, 0)
+                                        );
+                                    color: rgba(242, 255, 126, 1);
+                                    background-position: center 5px, center;
+                                    background-size: 88% 100%, 100%;
+                                    background-repeat: no-repeat;
+                                    &:before,
+                                    &:after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 2px;
+                                        background: linear-gradient(
+                                            90deg,
+                                            rgba(255, 255, 255, 0) 10%,
+                                            rgba(229, 255, 0, 1),
+                                            rgba(255, 255, 255, 0) 90%
+                                        );
+                                    }
+                                    &:before {
+                                        top: 0;
+                                    }
+                                    &:after {
+                                        bottom: 0;
+                                    }
+                                }
+                                .daily-prgbar-all {
+                                    display: none;
+                                }
+                                .daily-reward {
+                                    &:after {
+                                        content: "";
+                                        width: 30px;
+                                        height: 31px;
+                                        position: absolute;
+                                        top: -4px;
+                                        right: 0px;
+                                        background: url(../img/paycheck-arrow.png);
+                                        background-repeat: no-repeat;
+                                        background-size: cover;
+                                        filter: drop-shadow(0px 0px 1px white);
+                                        pointer-events: none;
+                                    }
+                                }
+                            }
+                        }
+                        .daily-mission-box-scroll {
+                            width: 489px;
+                            height: 296px;
+                            position: absolute;
+                            top: 90px;
+                            left: 10px;
+                            overflow: hidden;
+                            overflow-y: scroll;
+                            font-size: 0;
+                            scrollbar-width: thin;
+                            scrollbar-color: rgba(0, 0, 0, 0.4) #796b60;
+                            &::-webkit-scrollbar-track {
+                                border-radius: 10px;
+                            }
+                            &::-webkit-scrollbar {
+                                width: 8px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                border-radius: 10px;
+                                background: linear-gradient(
+                                    to right,
+                                    #fff,
+                                    #f5de80,
+                                    #f4b766,
+                                    #b26d12
+                                );
+                                // -webkit-box-shadow: inset -1px 0 0 2px #796b60,
+                                //     inset -1px 1px 0 2px #796b60,
+                                //     inset -1px -1px 0 2px #796b60;
+                                // background: linear-gradient(
+                                //         128deg,
+                                //         #796b60 3px,
+                                //         rgba(0, 0, 0, 0) 3px
+                                //     ),
+                                //     linear-gradient(
+                                //         -128deg,
+                                //         #796b60 3px,
+                                //         rgba(0, 0, 0, 0) 3px
+                                //     ),
+                                //     linear-gradient(
+                                //         308deg,
+                                //         #796b60 3px,
+                                //         rgba(0, 0, 0, 0) 3px
+                                //     ),
+                                //     linear-gradient(
+                                //         -308deg,
+                                //         #796b60 3px,
+                                //         rgba(0, 0, 0, 0) 3px
+                                //     ),
+                                //     linear-gradient(
+                                //         #796b60 2px,
+                                //         rgba(0, 0, 0, 0) 2px
+                                //     ),
+                                //     linear-gradient(
+                                //         -360deg,
+                                //         #796b60 2px,
+                                //         rgba(0, 0, 0, 0) 2px
+                                //     ),
+                                //     linear-gradient(
+                                //         to right,
+                                //         #fff,
+                                //         #f5de80,
+                                //         #f4b766,
+                                //         #b26d12 75%
+                                //     );
+                                background: linear-gradient(
+                                    to right,
+                                    #fff,
+                                    #f5de80,
+                                    #f4b766,
+                                    #b26d12
+                                );
+                            }
+                            .journal-parth-box {
+                                position: relative;
+                                display: flex;
+                                flex-direction: column-reverse;
+                                width: 473px;
+                                left: 4px;
+                                .journal-parth-block {
+                                    padding: 12px;
+                                    background: #847669;
+                                    border-radius: 10px;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    .daily-parth-box {
+                                        width: 458px;
+                                        height: 90px;
+                                        position: relative;
+                                        display: inline-block;
+                                        margin-bottom: 13px;
+                                        overflow: hidden;
+                                        border-radius: 8px;
+                                        background-blend-mode: normal;
+                                        background: url(../img/completed-banner.png),
+                                            url(../img/smoke-bg.png),
+                                            linear-gradient(
+                                                135deg,
+                                                #584b48,
+                                                #7d6463
+                                            );
+                                        background-position: right -8px,
+                                            0px -50px, 0;
+                                        background-repeat: no-repeat;
+                                        background-size: auto 98px, 258px 140px,
+                                            100%;
+                                        box-shadow: inset 0 1px 0
+                                                rgba(255, 255, 255, 0.6),
+                                            inset 0 0 0 2px #ff9b37,
+                                            inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
+                                            inset 0 44px 24px
+                                                rgba(255, 212, 110, 0.28),
+                                            0 1px 4px rgba(0, 0, 0, 0.6);
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+                                        .daily-parth-text {
+                                            width: 220px;
+                                            height: 34px;
+                                            position: absolute;
+                                            top: 14px;
+                                            left: 94px;
+                                            color: #ffffff;
+                                            font-weight: bold;
+                                            text-transform: uppercase;
+                                            font-size: 14px;
+                                            text-align: center;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            text-shadow: 0 1px 2px
+                                                    rgba(0, 0, 0, 0.8),
+                                                0 1px 6px rgba(0, 0, 0, 0.4);
+                                        }
+                                        .daily-prgbar-all {
+                                            width: 220px;
+                                            height: 20px;
+                                            position: absolute;
+                                            bottom: 11px;
+                                            left: 94px;
+                                            border-radius: 4px;
+                                            overflow: hidden;
+                                            box-shadow: 0 0 0 1px #3c3130,
+                                                0 1px 4px 1px
+                                                    rgba(255, 185, 124, 0.3);
+                                            background: linear-gradient(
+                                                180deg,
+                                                #3b302f 0%,
+                                                #584a49 100%
+                                            );
+                                            .daily-prgbar {
+                                                width: 80%;
+                                                height: 20px;
+                                                position: absolute;
+                                                top: 0px;
+                                                left: 0px;
+                                                background: linear-gradient(
+                                                    90deg,
+                                                    #89da38 0%,
+                                                    #00ca51 100%
+                                                );
+                                                box-shadow: inset 0px 7px 0px
+                                                    rgba(255, 255, 255, 0.2);
+                                            }
+                                            .daily-prgbar-text {
+                                                width: 220px;
+                                                height: 20px;
+                                                position: relative;
+                                                text-align: center;
+                                                color: #fff;
+                                                font-weight: bold;
+                                                font-size: 14px;
+                                                line-height: 20px;
+                                                text-shadow: 0 1px 2px
+                                                        rgba(0, 0, 0, 0.45),
+                                                    0 1px 4px rgba(0, 0, 0, 0.6);
+                                                text-transform: uppercase;
+                                            }
+                                        }
+                                        .daily-parth-claim-box {
+                                            width: 90px;
+                                            height: 90px;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            .daily-reward {
+                                                width: 70px;
+                                                height: 70px;
+                                                position: absolute;
+                                                top: 10px;
+                                                left: 10px;
+                                                background: linear-gradient(
+                                                    180deg,
+                                                    #c68300 0%,
+                                                    #f4dfb6 50%,
+                                                    #c68200 70%,
+                                                    #fad489 85%,
+                                                    #c78302 100%
+                                                );
+                                                border-radius: 10px;
+                                                box-shadow: inset 0 1px
+                                                        rgba(255, 255, 255, 0.6),
+                                                    0 1px 4px 1px
+                                                        rgba(0, 0, 0, 0.4),
+                                                    inset 0 0 0 2px #ff9b37;
+                                                background: url(../img/v2-trophy-bg.jpg);
+                                                background-size: 100%;
+                                                background-repeat: no-repeat;
+                                                overflow: hidden;
+                                                .daily-reward-pic {
+                                                    width: 50px;
+                                                    height: 50px;
+                                                    position: absolute;
+                                                    top: 4px;
+                                                    left: 10px;
+                                                    background: radial-gradient(
+                                                        #ffffff 10%,
+                                                        rgba(255, 255, 255, 0)
+                                                            70%
+                                                    );
+                                                    z-index: 1;
+                                                    > img {
+                                                        width: 50px;
+                                                    }
+                                                }
+                                                .daily-reward-count {
+                                                    width: 54px;
+                                                    line-height: 16px;
+                                                    position: relative;
+                                                    top: 54px;
+                                                    text-align: center;
+                                                    margin: 0 auto;
+                                                    color: #fff;
+                                                    font-size: 12px;
+                                                    font-weight: bold;
+                                                    text-shadow: 0 1px 2px
+                                                            rgba(0, 0, 0, 1),
+                                                        0 1px 4px
+                                                            rgba(0, 0, 0, 0.6);
+                                                    background: linear-gradient(
+                                                        #805a31,
+                                                        #c18346
+                                                    );
+                                                    border-radius: 10px 10px 0 0;
+                                                    box-shadow: inset 0 1px 0
+                                                        #dea569;
+                                                    filter: drop-shadow(
+                                                        0 0 4px rgba(0, 0, 0, 1)
+                                                    );
+                                                    &:before,
+                                                    &:after {
+                                                        content: "";
+                                                        width: 8px;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        top: 0px;
+                                                        background: linear-gradient(
+                                                            #875c29,
+                                                            #d49548 94%
+                                                        );
+                                                        background: linear-gradient(
+                                                            #805a31,
+                                                            #c18346 94%
+                                                        );
+                                                        z-index: -1;
+                                                    }
+                                                    &:before {
+                                                        left: -2px;
+                                                        transform: skewX(
+                                                            -20deg
+                                                        );
+                                                        border-radius: 6.6px 0 0
+                                                            0;
+                                                        box-shadow: inset 1px
+                                                            1px 0 #dea569;
+                                                    }
+                                                    &:after {
+                                                        right: -2px;
+                                                        transform: skewX(20deg);
+                                                        border-radius: 0 6.6px 0
+                                                            0;
+                                                        box-shadow: inset -1px 1px
+                                                            0 #dea569;
+                                                    }
+                                                }
+                                                &.disabled {
+                                                    filter: brightness(0.9)
+                                                        grayscale(0.6);
+                                                }
+                                            }
+                                            .color-btn {
+                                                width: 62px;
+                                                height: 22px;
+                                                position: absolute;
+                                                left: 14px;
+                                                top: 54px;
+                                                box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.25),
+                                                    0 2px 4px 0
+                                                        rgba(0, 0, 0, 0.55);
+                                                z-index: 1;
+                                                display: none;
+                                                &:active {
+                                                    box-shadow: inset 0 -1px 0 0
+                                                            rgba(0, 0, 0, 0.25),
+                                                        0 2px 4px 0
+                                                            rgba(0, 0, 0, 0.55);
+                                                }
+                                            }
+                                        }
+                                        .progress-banner-red,
+                                        .progress-banner-gray,
+                                        .progress-banner-green {
+                                            top: 58px;
+                                        }
+                                        &.available {
+                                            background: url(../img/completed-banner.png),
+                                                url(../img/smoke-bg.png),
+                                                linear-gradient(
+                                                    135deg,
+                                                    #9f6b37,
+                                                    #bf7832
+                                                );
+                                            background-position: right -8px,
+                                                0px -50px, 0;
+                                            background-repeat: no-repeat;
+                                            background-size: auto 98px,
+                                                258px 140px, 100%;
+                                            background-blend-mode: screen;
+                                            box-shadow: inset 0 1px 0
+                                                    rgba(255, 255, 255, 0.6),
+                                                inset 0 0 0 2px #ff9b37,
+                                                inset 0 0 2px 2px
+                                                    rgba(0, 0, 0, 0.2),
+                                                inset 0 44px 24px
+                                                    rgba(255, 212, 110, 0.28),
+                                                0 1px 4px rgba(0, 0, 0, 0.6);
+                                            .daily-parth-claim-box {
+                                                .color-btn {
+                                                    display: block;
+                                                }
+                                            }
+                                            &:after {
+                                                content: "";
+                                                position: absolute;
+                                                top: -1px;
+                                                right: -1px;
+                                                width: 24px;
+                                                height: 24px;
+                                                background-image: url(../img/picmeh-ic-info.png);
+                                                background-size: 100%;
+                                                background-repeat: no-repeat;
+                                                pointer-events: none;
+                                            }
+                                            &:hover {
+                                                background: url(../img/completed-banner.png),
+                                                    url(../img/smoke-bg.png),
+                                                    linear-gradient(
+                                                        135deg,
+                                                        #ae753d,
+                                                        #ce8236
+                                                    );
+                                                background-position: right -8px,
+                                                    0px -50px, 0;
+                                                background-repeat: no-repeat;
+                                                background-size: auto 98px,
+                                                    258px 140px, 100%;
+                                            }
+                                        }
+                                        &:hover {
+                                            background: url(../img/completed-banner.png),
+                                                url(../img/smoke-bg.png),
+                                                linear-gradient(
+                                                    135deg,
+                                                    #695a56,
+                                                    #876c6b
+                                                );
+                                            background-position: right -8px,
+                                                0px -50px, 0;
+                                            background-repeat: no-repeat;
+                                            background-size: auto 98px,
+                                                258px 140px, 100%;
+                                        }
+                                        &.completed {
+                                            background: url(../img/completed-banner.png),
+                                                url(../img/smoke-bg.png),
+                                                linear-gradient(
+                                                    135deg,
+                                                    #5a5351,
+                                                    #7f7272
+                                                );
+                                            background-position: right -8px,
+                                                0px -50px, 0;
+                                            background-repeat: no-repeat;
+                                            background-size: auto 98px,
+                                                258px 140px, 100%;
+                                            box-shadow: inset 0 1px 0
+                                                    rgba(255, 255, 255, 0.4),
+                                                inset 0 0 0 2px #c49f7b,
+                                                inset 0 0 2px 2px
+                                                    rgba(0, 0, 0, 0.2),
+                                                inset 0 44px 24px
+                                                    rgba(226, 204, 152, 0.28),
+                                                0 1px 4px rgba(0, 0, 0, 0.6);
+                                            background-blend-mode: luminosity;
+                                            .daily-parth-text,
+                                            .daily-prgbar-all,
+                                            .daily-parth-claim-box {
+                                                filter: grayscale(0.6)
+                                                    brightness(0.8);
+                                            }
+                                            &:after {
+                                                content: "";
+                                                width: 40px;
+                                                height: 39px;
+                                                position: absolute;
+                                                top: -4px;
+                                                right: -2px;
+                                                background: url(../img/paycheck-arrow.png);
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                pointer-events: none;
+                                            }
+                                            &:hover {
+                                                background: url(../img/completed-banner.png),
+                                                    url(../img/smoke-bg.png),
+                                                    linear-gradient(
+                                                        135deg,
+                                                        #635b59,
+                                                        #8d7f7f
+                                                    );
+                                                background-position: right -8px,
+                                                    0px -50px, 0;
+                                                background-repeat: no-repeat;
+                                                background-size: auto 98px,
+                                                    258px 140px, 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // main
+                        .journal-parth-header {
+                            width: 100%;
+                            height: 68px;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            .quest-switch-section {
+                                width: calc(100% - 134px);
+                                height: 46px;
+                                position: absolute;
+                                top: 10px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background-position: 0px -40px, 0;
+                                background-repeat: no-repeat;
+                                background-size: auto 202px, 100%;
+                                border-radius: 8px;
+                                .section-name {
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 4px;
+                                    transform: translateX(-50%) scale(1);
+                                    transition: ease-in-out 0.2s;
+                                    opacity: 1;
+                                    padding: 0 16px;
+                                    display: flex;
+                                    align-items: center;
+                                    background: url(../img/banner-bg1.png);
+                                    background-position: center 0;
+                                    background-size: auto 100%;
+                                    background-repeat: no-repeat;
+                                    filter: drop-shadow(
+                                        0 1px 4px rgba(0, 0, 0, 0.8)
+                                    );
+                                    &:before,
+                                    &:after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 0;
+                                        width: 25px;
+                                        height: 100%;
+                                        background: url(../img/banner-bg1.png);
+                                        background-position: 0 0;
+                                        background-size: auto 100%;
+                                        background-repeat: no-repeat;
+                                    }
+                                    &:before {
+                                        left: -24px;
+                                    }
+                                    &:after {
+                                        transform: scaleX(-1);
+                                        right: -24px;
+                                    }
+                                    .nameText {
+                                        font-weight: bold;
+                                        font-size: 22px;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                        line-height: 40px;
+                                        text-shadow: none;
+                                        background: linear-gradient(
+                                            0deg,
+                                            rgb(255, 196, 0) 10%,
+                                            rgb(255, 255, 255)
+                                        );
+                                        color: transparent;
+                                        filter: drop-shadow(
+                                            0 2px 1px rgba(0, 0, 0, 0.6)
+                                        );
+                                    }
+                                    &.tutor {
+                                        background: url(../img/banner-bg2.png);
+                                        background-position: center 0;
+                                        background-size: auto 100%;
+                                        background-repeat: no-repeat;
+                                        &:before,
+                                        &:after {
+                                            background: url(../img/banner-bg2.png);
+                                            background-position: 0 0;
+                                            background-size: auto 100%;
+                                            background-repeat: no-repeat;
+                                        }
+                                    }
+                                    &.darkWorld {
+                                        filter: drop-shadow(
+                                                0 1px 4px rgba(0, 0, 0, 0.8)
+                                            )
+                                            hue-rotate(222deg) grayscale(0.4);
+                                    }
+                                    &.disabLeft {
+                                        opacity: 0;
+                                        pointer-events: none;
+                                        transform: translateX(
+                                                calc(-50% - 180px)
+                                            )
+                                            scale(0.8);
+                                    }
+                                    &.disabRight {
+                                        opacity: 0;
+                                        pointer-events: none;
+                                        transform: translateX(
+                                                calc(-50% + 180px)
+                                            )
+                                            scale(0.8);
+                                    }
+                                }
+                            }
+                            .arrow {
+                                width: 40px;
+                                height: 40px;
+                                position: absolute;
+                                top: 13px;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                z-index: 1;
+                                background: linear-gradient(
+                                    0deg,
+                                    #9f6b37,
+                                    #bf7832
+                                );
+                                background-position: 0;
+                                background-repeat: no-repeat;
+                                background-size: 100%;
+                                box-shadow: inset 0 1px 0
+                                        rgba(255, 255, 255, 0.6),
+                                    inset 0 0 0 2px #ff9b37,
+                                    inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
+                                    inset 0 44px 24px rgba(255, 212, 110, 0.28),
+                                    0 1px 4px rgba(0, 0, 0, 0.6);
+                                &:before {
+                                    content: "";
+                                    width: 20px;
+                                    height: 28px;
+                                    position: absolute;
+                                    top: 6px;
+                                    left: 10px;
+                                    background-image: url(../img/rating-arrow.png);
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    filter: brightness(0.8)
+                                        drop-shadow(
+                                            0 1px 1px rgba(255, 255, 255, 0.8)
+                                        );
+                                }
+                                &.left {
+                                    left: 13px;
+                                }
+                                &.right {
+                                    right: 13px;
+                                    &:before {
+                                        transform: rotate(180deg);
+                                        filter: brightness(0.8)
+                                            drop-shadow(
+                                                0 -1px 1px rgba(255, 255, 255, 0.8)
+                                            );
+                                    }
+                                }
+                                &:active {
+                                    transform: scale(0.92);
+                                }
+                                &:hover {
+                                    filter: brightness(1.1);
+                                }
+                                &.unactive {
+                                    cursor: not-allowed;
+                                    filter: brightness(1.1) grayscale(0.8);
+                                }
+                            }
+                        }
+                        .journal-parth-box-scroll {
+                            width: 489px;
+                            height: 362px;
+                            position: absolute;
+                            top: 68px;
+                            left: 10px;
+                            overflow: hidden;
+                            overflow-y: scroll;
+                            font-size: 0;
+                            scrollbar-width: thin;
+                            scrollbar-color: rgba(0, 0, 0, 0.4) #796b60;
+                            transition: ease-in-out 0.2s;
+                            opacity: 1;
+                            transform: scale(1);
+                            &::-webkit-scrollbar-track {
+                                border-radius: 10px;
+                            }
+                            &::-webkit-scrollbar {
+                                width: 8px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                border-radius: 10px;
+                                background: linear-gradient(
+                                    to right,
+                                    #fff,
+                                    #f5de80,
+                                    #f4b766,
+                                    #b26d12
+                                );
+                            }
+                            .journal-parth-box {
+                                position: relative;
+                                display: flex;
+                                flex-direction: column-reverse;
+                                width: 473px;
+                                left: 4px;
+                                .journal-parth-name {
+                                    position: relative;
+                                    display: inline-block;
+                                    bottom: unset;
+                                }
+                                .journal-parth-block {
+                                    margin-bottom: 16px;
+                                    padding: 12px;
+                                    background: #847669;
+                                    border-radius: 10px;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    .journal-parth {
+                                        width: 458px;
+                                        height: 102px;
+                                        position: relative;
+                                        display: inline-block;
+                                        background-color: #b7a597;
+                                        margin-top: 13px;
+                                        overflow: hidden;
+                                        opacity: 1;
+                                        transition: ease-in-out 0.1s;
+                                        overflow: hidden;
+                                        border-radius: 8px;
+                                        background: url(../img/smoke-bg.png),
+                                            linear-gradient(
+                                                135deg,
+                                                #584b48,
+                                                #7d6463
+                                            );
+                                        background-position: 0px -40px, 0;
+                                        background-repeat: no-repeat;
+                                        background-size: auto 202px, 100%;
+                                        box-shadow: inset 0 0 0 2px #ff9b37,
+                                            inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
+                                            0 1px 4px rgba(0, 0, 0, 0.4);
+                                        box-shadow: inset 0 1px 0
+                                                rgba(255, 255, 255, 0.6),
+                                            inset 0 0 0 2px #ff9b37,
+                                            inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
+                                            inset 0 44px 24px
+                                                rgba(255, 212, 110, 0.28),
+                                            0 1px 4px rgba(0, 0, 0, 0.6);
+                                        &:before {
+                                            content: "";
+                                            width: 202px;
+                                            height: 98px;
+                                            background-blend-mode: normal;
+                                            background: url(../img/completed-banner.png);
+                                            background-repeat: no-repeat;
+                                            background-size: 116px;
+                                            position: absolute;
+                                            transform: scaleY(-1);
+                                            border-radius: 0 12px 12px 0;
+                                            pointer-events: none;
+                                            background-position: 88px 32px;
+                                            background-size: 116px;
+                                            top: 2px;
+                                            right: 2px;
+                                        }
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+                                        .journal-parth-wrap {
+                                            cursor: pointer;
+                                            height: 100%;
+                                            .journal-parth-text-box {
+                                                position: absolute;
+                                                display: inline-block;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                                .journal-parth-title {
+                                                    color: rgba(0, 0, 0, 0.7);
+                                                    line-height: 24px;
+                                                    text-align: center;
+                                                    width: 220px;
+                                                    position: relative;
+                                                    left: 0px;
+                                                    top: 0px;
+                                                    background: #dd9542;
+                                                    box-shadow: inset 0px 7px
+                                                            2px
+                                                            rgba(
+                                                                255,
+                                                                255,
+                                                                255,
+                                                                0.3
+                                                            ),
+                                                        inset 0 1px 1px
+                                                            rgba(
+                                                                255,
+                                                                255,
+                                                                255,
+                                                                0.4
+                                                            ),
+                                                        inset 0 -1px 0 #bd7f39;
+                                                    filter: drop-shadow(
+                                                        0 1px 1px
+                                                            rgba(0, 0, 0, 0.4)
+                                                    );
+                                                    border-radius: 0 0 6px 6px;
+                                                    p {
+                                                        margin: 0;
+                                                        text-shadow: 0 1px 1px
+                                                            rgba(
+                                                                255,
+                                                                255,
+                                                                255,
+                                                                0.6
+                                                            );
+                                                        font-weight: 700;
+                                                        text-transform: uppercase;
+                                                        font-size: 16px;
+                                                        position: relative;
+                                                        z-index: 1;
+                                                        &:after {
+                                                            content: "";
+                                                            width: 8px;
+                                                            height: 8px;
+                                                            position: absolute;
+                                                            right: 1px;
+                                                            top: 4px;
+                                                            font-size: 22px;
+                                                            border: 2px solid
+                                                                rgba(
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0.5
+                                                                );
+                                                            border-top: none;
+                                                            border-left: none;
+                                                            transform: rotate(
+                                                                    45deg
+                                                                )
+                                                                scaleX(1);
+                                                            filter: drop-shadow(
+                                                                1px 1px 0.5px
+                                                                    #fff
+                                                            );
+                                                            transition: ease-in-out
+                                                                0.1s;
+                                                            pointer-events: none;
+                                                        }
+                                                    }
+                                                    &:before,
+                                                    &:after {
+                                                        content: "";
+                                                        width: 14px;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        top: 0px;
+                                                        background: #dd9542;
+                                                    }
+                                                    &:before {
+                                                        left: -9px;
+                                                        transform: skewX(20deg);
+                                                        border-radius: 0 0 0
+                                                            6.6px;
+                                                        box-shadow: inset 1px -1px
+                                                                0 #bd7f39,
+                                                            inset 1px 1px 1px
+                                                                rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    0.4
+                                                                ),
+                                                            inset 2px 7px 2px
+                                                                rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    0.3
+                                                                );
+                                                    }
+                                                    &:after {
+                                                        right: -9px;
+                                                        transform: skewX(
+                                                            -20deg
+                                                        );
+                                                        border-radius: 0 0 6.6px
+                                                            0;
+                                                        box-shadow: inset -1px -1px
+                                                                0 #bd7f39,
+                                                            inset -1px 1px 1px rgba(255, 255, 255, 0.4),
+                                                            inset -2px 7px 2px rgba(255, 255, 255, 0.3);
+                                                    }
+                                                }
+                                                .journal-parth-text {
+                                                    height: 44px;
+                                                    color: #ffffff;
+                                                    font-size: 15px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    text-align: center;
+                                                    padding: 2px 0 2px 0;
+                                                    background-size: 100% 70%;
+                                                    background-position: 0 28px;
+                                                    background-repeat: no-repeat;
+                                                    text-shadow: 0 1px 1px
+                                                            rgba(0, 0, 0, 0.4),
+                                                        0 1px 4px
+                                                            rgba(0, 0, 0, 0.8);
+                                                }
+                                            }
+                                            .daily-prgbar-all {
+                                                width: 220px;
+                                                height: 20px;
+                                                position: absolute;
+                                                top: 70px;
+                                                left: 50%;
+                                                transform: translateX(-50%);
+                                                border-radius: 4px;
+                                                overflow: hidden;
+                                                box-shadow: 0 0 0 1px #3c3130,
+                                                    0 1px 4px 1px
+                                                        rgba(255, 185, 124, 0.3);
+                                                background: linear-gradient(
+                                                    180deg,
+                                                    #3b302f 0%,
+                                                    #584a49 100%
+                                                );
+                                                .daily-prgbar {
+                                                    width: 80%;
+                                                    height: 20px;
+                                                    position: absolute;
+                                                    top: 0px;
+                                                    left: 0px;
+                                                    background: linear-gradient(
+                                                        90deg,
+                                                        #89da38 0%,
+                                                        #00ca51 100%
+                                                    );
+                                                    box-shadow: inset 0px 7px
+                                                        0px
+                                                        rgba(255, 255, 255, 0.2);
+                                                }
+                                                .daily-prgbar-text {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    position: relative;
+                                                    text-align: center;
+                                                    color: #fff;
+                                                    font-weight: bold;
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                    text-shadow: 0 1px 2px
+                                                            rgba(0, 0, 0, 0.45),
+                                                        0 1px 4px
+                                                            rgba(0, 0, 0, 0.6);
+                                                    text-transform: uppercase;
+                                                }
+                                            }
+                                            .text {
+                                                height: 52px;
+                                                width: calc(100% - 20px);
+                                                color: #f5da6d;
+                                                font-size: 14px;
+                                                text-align: center;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                position: absolute;
+                                                top: 103px;
+                                                padding: 2px 8px 2px 8px;
+                                                margin: 0 2px;
+                                                box-shadow: inset 0 1px 0
+                                                        rgba(0, 0, 0, 0.2),
+                                                    0 -2px 0px rgba(0, 0, 0, 0.1),
+                                                    inset 0 3px 2px
+                                                        rgba(0, 0, 0, 0.1);
+                                                transition: ease-in-out 0.1s;
+                                                text-shadow: 0 1px 1px
+                                                        rgba(0, 0, 0, 0.4),
+                                                    0 1px 4px rgba(0, 0, 0, 0.8);
+                                                background: rgba(0, 0, 0, 0.3);
+                                                border-radius: 0 0 6px 6px;
+                                                font-style: italic;
+                                            }
+                                        }
+                                        .journal-reward {
+                                            width: 86px;
+                                            height: 86px;
+                                            position: absolute;
+                                            left: 8px;
+                                            top: 8px;
+                                            display: inline-block;
+                                            background: linear-gradient(
+                                                180deg,
+                                                #c68300 0%,
+                                                #f4dfb6 50%,
+                                                #c68200 70%,
+                                                #fad489 85%,
+                                                #c78302 100%
+                                            );
+                                            border-radius: 10px;
+                                            box-shadow: inset 0 1px 1px
+                                                    rgba(255, 255, 255, 0.5),
+                                                0 1px 2px 1px rgba(0, 0, 0, 0.4);
+
+                                            border-radius: 10px;
+                                            box-shadow: inset 0 1px
+                                                    rgba(255, 255, 255, 0.6),
+                                                0 1px 4px 1px rgba(0, 0, 0, 0.4),
+                                                inset 0 0 0 2px #ff9b37;
+                                            background: url(../img/v2-trophy-bg.jpg);
+                                            background-size: 100%;
+                                            background-repeat: no-repeat;
+                                            .journal-reward-pic-wrap {
+                                                width: 100px;
+                                                display: flex;
+                                                justify-content: center;
+                                                position: absolute;
+                                                top: 20px;
+                                                left: 50%;
+                                                transform: translateX(-50%)
+                                                    scale(0.96);
+                                                transition: ease-in-out 0.1s;
+                                                .journal-reward-pic {
+                                                    width: 44px;
+                                                    height: 44px;
+                                                    margin: 0 2px;
+                                                    border-radius: 6px;
+                                                    position: relative;
+                                                    background: linear-gradient(
+                                                        #ffbc70,
+                                                        #dd9542
+                                                    );
+                                                    margin: 0 -8px;
+                                                    transition: ease-in-out 0.1s;
+                                                    overflow: hidden;
+                                                    &:first-of-type {
+                                                        transform: rotate(
+                                                            -15deg
+                                                        );
+                                                        box-shadow: 0 0 0 2px
+                                                                #ffffaa,
+                                                            -1px 1px 0 3px #815629,
+                                                            -2px 2px 1px 3px rgba(255, 255, 255, 0.4),
+                                                            0 0 2px 2px
+                                                                rgba(
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0.6
+                                                                );
+                                                    }
+                                                    &:last-child {
+                                                        transform: rotate(
+                                                            15deg
+                                                        );
+                                                        box-shadow: 0 0 0 2px
+                                                                #ffffaa,
+                                                            1px 1px 0 3px
+                                                                #815629,
+                                                            2px 2px 1px 3px
+                                                                rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    0.4
+                                                                ),
+                                                            0 0 2px 2px
+                                                                rgba(
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0.6
+                                                                );
+                                                    }
+                                                    > img {
+                                                        width: 100%;
+                                                        border-radius: 6px;
+                                                        position: relative;
+                                                    }
+                                                    &:after {
+                                                        content: "";
+                                                        position: absolute;
+                                                        left: 0;
+                                                        right: 0;
+                                                        width: 44px;
+                                                        height: 44px;
+                                                        border-radius: 6px;
+                                                        box-shadow: inset 0 0
+                                                            2px 2px
+                                                            rgba(0, 0, 0, 0.2);
+                                                        background: linear-gradient(
+                                                            rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    0
+                                                                )
+                                                                0%,
+                                                            rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    0.4
+                                                                )
+                                                                10%,
+                                                            rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    0
+                                                                )
+                                                                20%
+                                                        );
+                                                    }
+                                                    .journal-reward-value {
+                                                        width: 32px;
+                                                        line-height: 14px;
+                                                        position: absolute;
+                                                        top: 32px;
+                                                        text-align: center;
+                                                        left: 50%;
+                                                        transform: translateX(
+                                                            -50%
+                                                        );
+                                                        color: #503a2d;
+                                                        font-size: 12px;
+                                                        font-weight: bold;
+                                                        text-shadow: 0 1px 1px
+                                                                rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    1
+                                                                ),
+                                                            0 1px 1px
+                                                                rgba(
+                                                                    255,
+                                                                    255,
+                                                                    255,
+                                                                    0.6
+                                                                );
+                                                        background: #ffffaa;
+                                                        border-radius: 10px 10px
+                                                            0 0;
+                                                        filter: drop-shadow(
+                                                            0 0 3px
+                                                                rgba(
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0.8
+                                                                )
+                                                        );
+                                                        &:before,
+                                                        &:after {
+                                                            content: "";
+                                                            width: 8px;
+                                                            height: 100%;
+                                                            position: absolute;
+                                                            top: 0px;
+                                                            background: #ffffaa;
+                                                            z-index: -1;
+                                                        }
+                                                        &:before {
+                                                            left: -1px;
+                                                            transform: skewX(
+                                                                -20deg
+                                                            );
+                                                            border-radius: 6.6px
+                                                                0 0 0;
+                                                        }
+                                                        &:after {
+                                                            right: -1px;
+                                                            transform: skewX(
+                                                                20deg
+                                                            );
+                                                            border-radius: 0
+                                                                6.6px 0 0;
+                                                        }
+                                                    }
+                                                }
+                                                .story-icn {
+                                                    box-shadow: 0 0 0 1px
+                                                        rgba(0, 0, 0, 0.2);
+                                                }
+                                            }
+                                            .color-btn {
+                                                width: 76px;
+                                                height: 24px;
+                                                position: absolute;
+                                                left: 5px;
+                                                bottom: 5px;
+                                                box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.25),
+                                                    0 2px 4px 0
+                                                        rgba(0, 0, 0, 0.55);
+                                                .color-btn-text {
+                                                    top: 3px;
+                                                }
+                                                &:active {
+                                                    box-shadow: inset 0 -1px 0 0
+                                                            rgba(0, 0, 0, 0.25),
+                                                        0 2px 4px 0
+                                                            rgba(0, 0, 0, 0.55);
+                                                    .color-btn-text {
+                                                        top: 5px;
+                                                    }
+                                                }
+                                            }
+                                            &.disabled {
+                                                filter: brightness(0.9)
+                                                    grayscale(0.6);
+                                                pointer-events: none;
+                                                .color-btn {
+                                                    cursor: unset;
+                                                }
+                                            }
+                                        }
+                                        .progress-banner-red,
+                                        .progress-banner-gray,
+                                        .progress-banner-green {
+                                            top: 68px;
+                                            pointer-events: none;
+                                        }
+                                        &.available {
+                                            background: url(../img/smoke-bg.png),
+                                                linear-gradient(
+                                                    135deg,
+                                                    #9f6b37,
+                                                    #bf7832
+                                                );
+                                            background-position: 0px -40px, 0;
+                                            background-repeat: no-repeat;
+                                            background-size: auto 202px, 100%;
+                                            box-shadow: inset 0 1px 0
+                                                    rgba(255, 255, 255, 0.6),
+                                                inset 0 0 0 2px #ff9b37,
+                                                inset 0 0 2px 2px
+                                                    rgba(0, 0, 0, 0.2),
+                                                inset 0 44px 24px
+                                                    rgba(255, 212, 110, 0.28),
+                                                0 1px 4px rgba(0, 0, 0, 0.6);
+                                            background-blend-mode: screen;
+                                            &:before {
+                                                mix-blend-mode: screen;
+                                            }
+                                            .journal-reward {
+                                                filter: none;
+                                                .journal-reward-pic-wrap {
+                                                    top: 6px;
+                                                }
+                                            }
+                                            &:after {
+                                                content: "";
+                                                position: absolute;
+                                                top: -1px;
+                                                right: -1px;
+                                                width: 24px;
+                                                height: 24px;
+                                                background-image: url(../img/picmeh-ic-info.png);
+                                                background-size: 100%;
+                                                background-repeat: no-repeat;
+                                                pointer-events: none;
+                                            }
+                                            &:hover {
+                                                background: url(../img/smoke-bg.png),
+                                                    linear-gradient(
+                                                        135deg,
+                                                        #ae753d,
+                                                        #ce8236
+                                                    );
+                                                background-position: 0px -40px,
+                                                    0;
+                                                background-repeat: no-repeat;
+                                                background-size: auto 202px,
+                                                    100%;
+                                                .journal-reward {
+                                                    .journal-reward-pic-wrap {
+                                                        top: 6px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            background: url(../img/smoke-bg.png),
+                                                linear-gradient(
+                                                    135deg,
+                                                    #625450,
+                                                    #856a69
+                                                );
+                                            background-position: 0px -40px, 0;
+                                            background-repeat: no-repeat;
+                                            background-size: auto 202px, 100%;
+                                            .journal-parth-wrap {
+                                                .journal-parth-text-box {
+                                                    .journal-parth-title {
+                                                        filter: brightness(1.1)
+                                                            drop-shadow(
+                                                                0 1px 1px
+                                                                    rgba(
+                                                                        0,
+                                                                        0,
+                                                                        0,
+                                                                        0.4
+                                                                    )
+                                                            );
+                                                    }
+                                                }
+                                            }
+                                            .journal-reward {
+                                                .journal-reward-pic-wrap {
+                                                    top: 18px;
+                                                    transform: translateX(-50%)
+                                                        scale(1);
+                                                    transition: ease-in-out 0.1s;
+                                                    filter: brightness(1.1);
+                                                    .journal-reward-pic {
+                                                        transition: ease-in-out
+                                                            0.1s;
+                                                        margin: 0 -4px;
+                                                        &:first-of-type {
+                                                            transform: rotate(
+                                                                -25deg
+                                                            );
+                                                        }
+                                                        &:last-child {
+                                                            transform: rotate(
+                                                                25deg
+                                                            );
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.completed {
+                                            background: url(../img/smoke-bg.png),
+                                                linear-gradient(
+                                                    135deg,
+                                                    #5a5351,
+                                                    #7f7272
+                                                );
+                                            background-position: 0px -40px, 0;
+                                            background-repeat: no-repeat;
+                                            background-size: auto 202px, 100%;
+                                            box-shadow: inset 0 4px 10px
+                                                    rgba(0, 0, 0, 0.2),
+                                                0 1px 4px
+                                                    rgba(255, 255, 255, 0.4);
+                                            box-shadow: inset 0 1px 0
+                                                    rgba(255, 255, 255, 0.4),
+                                                inset 0 0 0 2px #c49f7b,
+                                                inset 0 0 2px 2px
+                                                    rgba(0, 0, 0, 0.2),
+                                                inset 0 44px 24px
+                                                    rgba(226, 204, 152, 0.28),
+                                                0 1px 4px rgba(0, 0, 0, 0.6);
+                                            background-blend-mode: exclusion;
+                                            &:before {
+                                                mix-blend-mode: soft-light;
+                                                filter: grayscale(1);
+                                            }
+                                            .journal-parth-wrap {
+                                                .journal-parth-title {
+                                                    filter: drop-shadow(
+                                                            0 1px 1px
+                                                                rgba(
+                                                                    0,
+                                                                    0,
+                                                                    0,
+                                                                    0.4
+                                                                )
+                                                        )
+                                                        grayscale(0.6);
+                                                }
+                                                .journal-parth-text,
+                                                .daily-prgbar-all,
+                                                .text {
+                                                    filter: grayscale(0.6)
+                                                        brightness(0.8);
+                                                }
+                                            }
+                                            .journal-reward {
+                                                filter: grayscale(0.6)
+                                                    brightness(0.8);
+                                            }
+                                            .journal-reward {
+                                                pointer-events: none;
+                                                .journal-reward-pic-wrap {
+                                                    top: 20px;
+                                                    transform: translateX(-50%)
+                                                        scale(1);
+                                                    .journal-reward-pic {
+                                                        transition: ease-in-out
+                                                            0.2s;
+                                                        margin: 0 -4px;
+                                                        &:first-of-type {
+                                                            transform: rotate(
+                                                                -25deg
+                                                            );
+                                                        }
+                                                        &:last-child {
+                                                            transform: rotate(
+                                                                25deg
+                                                            );
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &:after {
+                                                content: "";
+                                                width: 40px;
+                                                height: 39px;
+                                                position: absolute;
+                                                top: -4px;
+                                                right: -2px;
+                                                background: url(../img/paycheck-arrow.png);
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                pointer-events: none;
+                                            }
+                                            &:hover {
+                                                background: url(../img/smoke-bg.png),
+                                                    linear-gradient(
+                                                        135deg,
+                                                        #635b59,
+                                                        #8d7f7f
+                                                    );
+                                                background-position: 0px -40px,
+                                                    0;
+                                                background-repeat: no-repeat;
+                                                background-size: auto 202px,
+                                                    100%;
+                                                .journal-parth-wrap {
+                                                    .journal-parth-title {
+                                                        filter: drop-shadow(
+                                                                0 1px 1px
+                                                                    rgba(
+                                                                        0,
+                                                                        0,
+                                                                        0,
+                                                                        0.4
+                                                                    )
+                                                            )
+                                                            grayscale(0.6)
+                                                            brightness(1.1);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .journal-parth.view {
+                                        height: 161px;
+                                        transition: ease-in-out 0.1s;
+                                        &:hover {
+                                            .journal-parth-wrap {
+                                                .journal-parth-text-box {
+                                                    .journal-parth-title {
+                                                        p {
+                                                            &:after {
+                                                                filter: drop-shadow(
+                                                                        -1px -1px
+                                                                            0.5px
+                                                                            #fff
+                                                                    )
+                                                                    drop-shadow(
+                                                                        0 0 4px
+                                                                            #fff
+                                                                    );
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .journal-parth-wrap {
+                                            .journal-parth-text-box {
+                                                .journal-parth-title {
+                                                    p {
+                                                        &:after {
+                                                            transform: rotate(
+                                                                    135deg
+                                                                )
+                                                                scaleX(-1);
+                                                            filter: drop-shadow(
+                                                                -1px -1px 0.5px
+                                                                    #fff
+                                                            );
+                                                            transition: ease-in-out
+                                                                0.1s;
+                                                            top: 9px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &:first-of-type {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                            &.disabLeft {
+                                opacity: 0;
+                                pointer-events: none;
+                                transform: scale(0.8) translateX(-180px);
+                            }
+                            &.disabRight {
+                                opacity: 0;
+                                pointer-events: none;
+                                transform: scale(0.8) translateX(180px);
+                            }
+                        }
+
+                        // story
+                        .journal-parth-box-scroll {
+                            &.story {
+                                top: 15px;
+                                height: 418px;
+                                .journal-parth-box {
+                                    display: block;
+                                    .journal-parth-block {
+                                        .journal-parth-name {
+                                            left: unset;
+                                            transform: none;
+                                        }
+                                        .journal-comics-box {
+                                            width: 105px;
+                                            height: 105px;
+                                            position: relative;
+                                            display: inline-block;
+                                            background-color: #b7a597;
+                                            border-radius: 13px;
+                                            font-size: 0;
+                                            cursor: pointer;
+                                            margin: 12px 6px 0 6px;
+                                            box-shadow: 0 0 0 1px
+                                                    rgba(0, 0, 0, 0.05),
+                                                0 1px 2px 1px
+                                                    rgba(0, 0, 0, 0.35);
+                                            transition: ease-in-out 0.05s;
+                                            transition: box-shadow ease-in-out
+                                                0.12s;
+                                            filter: brightness(0.9);
+                                            .journal-prw-comics-pic {
+                                                width: 105px;
+                                                height: 105px;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                overflow: hidden;
+                                                border-radius: 13px;
+                                                &:after {
+                                                    content: "";
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    top: 0;
+                                                    border-radius: 13px;
+                                                    box-shadow: inset 0 0 0 1px
+                                                        rgba(255, 255, 255, 0);
+                                                    transition: ease-in-out 0.1s;
+                                                }
+                                                > img {
+                                                    height: 105px;
+                                                    transition: ease-in-out 0.1s;
+                                                }
+                                            }
+                                            .journal-prw-comics-lock {
+                                                width: 105px;
+                                                height: 105px;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                background-color: rgba(
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    0.55
+                                                );
+                                                border-radius: 13px;
+                                                display: none;
+                                                &:before {
+                                                    content: "";
+                                                    width: 40px;
+                                                    height: 60px;
+                                                    position: absolute;
+                                                    top: 10px;
+                                                    left: 32px;
+                                                    background-image: url(../img/tower-lock.png);
+                                                    background-size: 100%;
+                                                    background-repeat: no-repeat;
+                                                }
+                                            }
+                                            .journal-prw-comics-text-box {
+                                                width: 105px;
+                                                height: 30px;
+                                                position: absolute;
+                                                top: 70px;
+                                                left: 0;
+                                                display: none;
+                                                .journal-prw-comics-text {
+                                                    width: 105px;
+                                                    height: 30px;
+                                                    position: relative;
+                                                    display: table-cell;
+                                                    vertical-align: middle;
+                                                    text-align: center;
+                                                    color: #fff;
+                                                    font-size: 10px;
+                                                    font-weight: bold;
+                                                    text-transform: uppercase;
+                                                    text-shadow: 0 1px 4px
+                                                            rgba(0, 0, 0, 0.6),
+                                                        0 1px 6px
+                                                            rgba(0, 0, 0, 0.6);
+                                                }
+                                            }
+                                            &:before {
+                                                content: "";
+                                                width: 100%;
+                                                height: 100%;
+                                                position: absolute;
+                                                left: 0;
+                                                top: 0;
+                                                border-radius: 13px;
+                                                background: linear-gradient(
+                                                    325deg,
+                                                    rgba(255, 255, 255, 0) 0%,
+                                                    rgba(255, 255, 255, 0) 26%,
+                                                    rgba(255, 255, 255, 1) 26%,
+                                                    rgba(255, 255, 255, 1) 48%,
+                                                    rgba(255, 255, 255, 0) 48%,
+                                                    rgba(255, 255, 255, 0) 60%,
+                                                    rgba(255, 255, 255, 1) 60%,
+                                                    rgba(255, 255, 255, 1) 70%,
+                                                    rgba(255, 255, 255, 0) 70%,
+                                                    rgba(255, 255, 255, 0) 100%
+                                                );
+                                                background-position: center 0;
+                                                background-repeat: no-repeat;
+                                                background-size: 100%;
+                                                z-index: 1;
+                                                opacity: 0.3;
+                                                box-shadow: inset 0 0 0 1px
+                                                    rgba(255, 255, 255, 0);
+                                                transition: ease-in-out 0.1s;
+                                            }
+                                            &:after {
+                                                content: "";
+                                                width: calc(100% + 6px);
+                                                height: calc(100% + 6px);
+                                                position: absolute;
+                                                left: -3px;
+                                                top: -3px;
+                                                border-radius: 13px;
+                                                background-image: url(../img/corner-02.png),
+                                                    url(../img/corner-02.png),
+                                                    url(../img/corner-02.png),
+                                                    url(../img/corner-02.png);
+                                                background-position: -28px -27px,
+                                                    89px -27px, -28px 88px,
+                                                    89px 88px;
+                                                background-repeat: no-repeat;
+                                                background-size: 50px auto;
+                                                pointer-events: none;
+                                                filter: drop-shadow(
+                                                        0 0 2px
+                                                            rgba(0, 0, 0, 0.4)
+                                                    )
+                                                    drop-shadow(
+                                                        0 0 1px
+                                                            rgba(0, 0, 0, 0.6)
+                                                    )
+                                                    brightness(1.2);
+                                                transform: scale(1.2);
+                                                opacity: 0;
+                                                pointer-events: none;
+                                                transition: ease-in-out 0.1s;
+                                            }
+                                            &.lock {
+                                                pointer-events: none;
+                                                filter: none;
+                                                &:before {
+                                                    opacity: 0.1;
+                                                }
+                                                .journal-prw-comics-pic {
+                                                    &:after {
+                                                        content: "";
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        position: absolute;
+                                                        left: 0;
+                                                        top: 0;
+                                                        border-radius: 13px;
+                                                        box-shadow: inset 0 0
+                                                            1px 2px
+                                                            rgba(
+                                                                255,
+                                                                255,
+                                                                255,
+                                                                1
+                                                            );
+                                                        transition: ease-in-out
+                                                            0.1s;
+                                                    }
+                                                }
+                                                .journal-prw-comics-lock {
+                                                    display: block;
+                                                }
+                                                .journal-prw-comics-text-box {
+                                                    display: table;
+                                                }
+                                            }
+                                            &:hover {
+                                                filter: none;
+                                                .journal-prw-comics-pic {
+                                                    &:after {
+                                                        box-shadow: inset 0 0 0
+                                                            1px
+                                                            rgba(
+                                                                255,
+                                                                255,
+                                                                255,
+                                                                1
+                                                            );
+                                                    }
+                                                }
+                                                &:before {
+                                                    background-size: 130%;
+                                                    opacity: 0.1;
+                                                }
+                                            }
+                                            &:active {
+                                                transform: scale(0.9619);
+                                                filter: brightness(0.8);
+                                            }
+                                            &.active {
+                                                filter: none;
+                                                box-shadow: 0 0 0 1px #da811c,
+                                                    0 0 0 3px #ff971f,
+                                                    0 1px 2px 3px
+                                                        rgba(0, 0, 0, 0.35);
+                                                pointer-events: none;
+                                                .journal-prw-comics-pic {
+                                                    box-shadow: 0 1px 2px
+                                                        rgba(0, 0, 0, 0.4);
+                                                }
+                                                &:before {
+                                                    background-size: 130%;
+                                                    opacity: 0;
+                                                }
+                                                &:after {
+                                                    transform: scale(1);
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+                                        &:first-of-type {
+                                            margin-bottom: 16px;
+                                        }
+                                        &:last-child {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .journal-rightside-box-all {
+                    width: 578px;
+                    height: 507px;
+                    position: absolute;
+                    top: 4px;
+                    right: 4px;
+                    background: linear-gradient(
+                        90deg,
+                        rgba(0, 0, 0, 0),
+                        rgba(0, 0, 0, 0.1)
+                    );
+                    border-radius: 0 14px 14px 0;
+                    .journal-parth-name {
+                        top: 14px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    .journal-comics-view-box {
+                        width: 556px;
+                        height: 430px;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 12px;
+                        .journal-comics-view {
+                            width: 520px;
+                            height: 360px;
+                            position: absolute;
+                            top: 10px;
+                            left: 18px;
+                            .journal-comics {
+                                width: 520px;
+                                height: 360px;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                display: block;
+                                > img {
+                                    width: 520px;
+                                    &:hover {
+                                        cursor: pointer;
+                                        filter: drop-shadow(
+                                            0 1px 6px rgba(0, 0, 0, 0.6)
+                                        );
+                                        ~ .trophy-bonus-pic-lup {
+                                            filter: brightness(1);
+                                            transform: scale(1);
+                                        }
+                                    }
+                                    &:active {
+                                        ~ .trophy-bonus-pic-lup {
+                                            transform: scale(0.9333);
+                                        }
+                                    }
+                                }
+                                .trophy-bonus-pic-lup {
+                                    width: 30px;
+                                    height: 30px;
+                                    position: absolute;
+                                    right: 5px;
+                                    top: 5px;
+                                    background-image: url(../img/cursor-plus.png);
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                    pointer-events: none;
+                                    filter: brightness(0.9);
+                                    transform: scale(0.9333);
+                                }
+                                .journal-comics-ballon-box {
+                                    width: 100px;
+                                    height: 90px;
+                                    position: absolute;
+                                    background-color: #fff;
+                                    border: 2px solid #000;
+                                    display: table;
+                                    .journal-comics-ballon-text {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: table-cell;
+                                        vertical-align: middle;
+                                        color: #000;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                        text-align: center;
+                                        font-style: italic;
+                                        line-height: 16px;
+                                        padding: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .journal-comics-view-nav-box {
+                        width: 300px;
+                        height: 40px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        .journal-comics-view-nav {
+                            width: 40px;
+                            height: 40px;
+                            position: absolute;
+                            top: 0;
+                            left: 70px;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            z-index: 1;
+                            background: linear-gradient(0deg, #9f6b37, #bf7832);
+                            background-position: 0;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                                inset 0 0 0 2px #ff9b37,
+                                inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
+                                inset 0 44px 24px rgba(255, 212, 110, 0.28),
+                                0 1px 4px rgba(0, 0, 0, 0.6);
+                            &:hover {
+                                filter: brightness(1.1);
                             }
                             &:before {
-                              left: -1px;
-                              transform: skewX(-20deg);
-                              border-radius: 6.6px 0 0 0;
+                                content: "";
+                                width: 20px;
+                                height: 28px;
+                                position: absolute;
+                                top: 6px;
+                                left: 10px;
+                                background-image: url(../img/rating-arrow.png);
+                                background-size: 100%;
+                                background-repeat: no-repeat;
+                                filter: brightness(0.8)
+                                    drop-shadow(
+                                        0 1px 1px rgba(255, 255, 255, 0.8)
+                                    );
                             }
-                            &:after {
-                              right: -1px;
-                              transform: skewX(20deg);
-                              border-radius: 0 6.6px 0 0;
+                            &:active {
+                                transform: scale(0.95);
                             }
-                          }
+                            &.right {
+                                left: auto;
+                                right: 70px;
+                                &:before {
+                                    content: "";
+                                    transform: rotate(180deg);
+                                    filter: brightness(0.8)
+                                        drop-shadow(
+                                            0 -1px 1px rgba(255, 255, 255, 0.8)
+                                        );
+                                }
+                            }
                         }
-                        .story-icn {
-                          box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+                        .journal-comics-view-nav-count {
+                            width: 100px;
+                            height: 40px;
+                            position: relative;
+                            text-align: center;
+                            margin: 0 auto;
+                            line-height: 40px;
+                            color: #fff;
+                            font-size: 18px;
+                            font-weight: bold;
+                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                         }
-                      }
-                      .color-btn {
-                        width: 76px;
-                        height: 24px;
-                        position: absolute;
-                        left: 5px;
-                        bottom: 5px;
-                        box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.25),
-                          0 2px 4px 0 rgba(0, 0, 0, 0.55);
-                        .color-btn-text {
-                          top: 3px;
-                        }
-                        &:active {
-                          box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.25),
-                            0 2px 4px 0 rgba(0, 0, 0, 0.55);
-                          .color-btn-text {
-                            top: 5px;
-                          }
-                        }
-                      }
-                      &.disabled {
-                        filter: brightness(0.9) grayscale(0.6);
-                        pointer-events: none;
-                        .color-btn {
-                          cursor: unset;
-                        }
-                      }
                     }
-                    .progress-banner-red,
-                    .progress-banner-gray,
-                    .progress-banner-green {
-                      top: 68px;
-                      pointer-events: none;
-                    }
-                    &.available {
-                      background: url(../img/smoke-bg.png),
-                        linear-gradient(135deg, #9f6b37, #bf7832);
-                      background-position: 0px -40px, 0;
-                      background-repeat: no-repeat;
-                      background-size: auto 202px, 100%;
-                      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
+                }
+                .daily-mission-reset,
+                .journal-parth-name {
+                    width: calc(100% - 110px);
+                    line-height: 38px;
+                    height: fit-content;
+                    position: absolute;
+                    bottom: 10px;
+                    border-radius: 8px;
+                    color: #ffffff;
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6),
+                        0 1px 0 rgba(0, 0, 0, 0.4);
+                    background: linear-gradient(0deg, #584b48, #7d6463);
+                    background-position: 0;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
                         inset 0 0 0 2px #ff9b37,
                         inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
                         inset 0 44px 24px rgba(255, 212, 110, 0.28),
                         0 1px 4px rgba(0, 0, 0, 0.6);
-                      background-blend-mode: screen;
-                      &:before {
-                        mix-blend-mode: screen;
-                      }
-                      .journal-reward {
-                        filter: none;
-                        .journal-reward-pic-wrap {
-                          top: 6px;
-                        }
-                      }
-                      &:after {
+                    &:before,
+                    &:after {
                         content: "";
                         position: absolute;
-                        top: -1px;
-                        right: -1px;
-                        width: 24px;
-                        height: 24px;
-                        background-image: url(../img/picmeh-ic-info.png);
-                        background-size: 100%;
+                        top: 3px;
+                        width: 38px;
+                        height: 32px;
+                        background-image: url(../img/darkworld-angel-pop-btn-bg.png);
                         background-repeat: no-repeat;
-                        pointer-events: none;
-                      }
-                      &:hover {
-                        background: url(../img/smoke-bg.png),
-                          linear-gradient(135deg, #ae753d, #ce8236);
-                        background-position: 0px -40px, 0;
-                        background-repeat: no-repeat;
-                        background-size: auto 202px, 100%;
-                        .journal-reward {
-                          .journal-reward-pic-wrap {
-                            top: 6px;
-                          }
-                        }
-                      }
-                    }
-                    &:hover {
-                      background: url(../img/smoke-bg.png),
-                        linear-gradient(135deg, #625450, #856a69);
-                      background-position: 0px -40px, 0;
-                      background-repeat: no-repeat;
-                      background-size: auto 202px, 100%;
-                      .journal-parth-wrap {
-                        .journal-parth-text-box {
-                          .journal-parth-title {
-                            filter: brightness(1.1)
-                              drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
-                          }
-                        }
-                      }
-                      .journal-reward {
-                        .journal-reward-pic-wrap {
-                          top: 18px;
-                          transform: translateX(-50%) scale(1);
-                          transition: ease-in-out 0.1s;
-                          filter: brightness(1.1);
-                          .journal-reward-pic {
-                            transition: ease-in-out 0.1s;
-                            margin: 0 -4px;
-                            &:first-of-type {
-                              transform: rotate(-25deg);
-                            }
-                            &:last-child {
-                              transform: rotate(25deg);
-                            }
-                          }
-                        }
-                      }
-                    }
-                    &.completed {
-                      background: url(../img/smoke-bg.png),
-                        linear-gradient(135deg, #5a5351, #7f7272);
-                      background-position: 0px -40px, 0;
-                      background-repeat: no-repeat;
-                      background-size: auto 202px, 100%;
-                      box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2),
-                        0 1px 4px rgba(255, 255, 255, 0.4);
-                      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
-                        inset 0 0 0 2px #c49f7b,
-                        inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                        inset 0 44px 24px rgba(226, 204, 152, 0.28),
-                        0 1px 4px rgba(0, 0, 0, 0.6);
-                      background-blend-mode: exclusion;
-                      &:before {
-                        mix-blend-mode: soft-light;
-                        filter: grayscale(1);
-                      }
-                      .journal-parth-wrap {
-                        .journal-parth-title {
-                          filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4))
-                            grayscale(0.6);
-                        }
-                        .journal-parth-text,
-                        .daily-prgbar-all,
-                        .text {
-                          filter: grayscale(0.6) brightness(0.8);
-                        }
-                      }
-                      .journal-reward {
-                        filter: grayscale(0.6) brightness(0.8);
-                      }
-                      .journal-reward {
-                        pointer-events: none;
-                        .journal-reward-pic-wrap {
-                          top: 20px;
-                          transform: translateX(-50%) scale(1);
-                          .journal-reward-pic {
-                            transition: ease-in-out 0.2s;
-                            margin: 0 -4px;
-                            &:first-of-type {
-                              transform: rotate(-25deg);
-                            }
-                            &:last-child {
-                              transform: rotate(25deg);
-                            }
-                          }
-                        }
-                      }
-                      &:after {
-                        content: "";
-                        width: 40px;
-                        height: 39px;
-                        position: absolute;
-                        top: -4px;
-                        right: -2px;
-                        background: url(../img/paycheck-arrow.png);
-                        background-repeat: no-repeat;
+                        background-position: center;
                         background-size: cover;
                         pointer-events: none;
-                      }
-                      &:hover {
-                        background: url(../img/smoke-bg.png),
-                          linear-gradient(135deg, #635b59, #8d7f7f);
-                        background-position: 0px -40px, 0;
-                        background-repeat: no-repeat;
-                        background-size: auto 202px, 100%;
-                        .journal-parth-wrap {
-                          .journal-parth-title {
-                            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4))
-                              grayscale(0.6) brightness(1.1);
-                          }
-                        }
-                      }
+                        filter: brightness(1.5)
+                            drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4))
+                            drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2))
+                            hue-rotate(26deg);
                     }
-                  }
-                  .journal-parth.view {
-                    height: 161px;
-                    transition: ease-in-out 0.1s;
-                    &:hover {
-                      .journal-parth-wrap {
-                        .journal-parth-text-box {
-                          .journal-parth-title {
-                            p {
-                              &:after {
-                                filter: drop-shadow(-1px -1px 0.5px #fff)
-                                  drop-shadow(0 0 4px #fff);
-                              }
-                            }
-                          }
-                        }
-                      }
+                    &:before {
+                        left: -44px;
                     }
-                    .journal-parth-wrap {
-                      .journal-parth-text-box {
-                        .journal-parth-title {
-                          p {
-                            &:after {
-                              transform: rotate(135deg) scaleX(-1);
-                              filter: drop-shadow(-1px -1px 0.5px #fff);
-                              transition: ease-in-out 0.1s;
-                              top: 9px;
-                            }
-                          }
-                        }
-                      }
+                    &:after {
+                        transform: scaleX(-1);
+                        right: -44px;
                     }
-                  }
-                  &:first-of-type {
-                    margin-bottom: 0;
-                  }
                 }
-              }
-              &.disabLeft {
-                opacity: 0;
-                pointer-events: none;
-                transform: scale(0.8) translateX(-180px);
-              }
-              &.disabRight {
-                opacity: 0;
-                pointer-events: none;
-                transform: scale(0.8) translateX(180px);
-              }
-            }
-
-            // story
-            .journal-parth-box-scroll {
-              &.story {
-                top: 15px;
-                height: 418px;
-                .journal-parth-box {
-                  display: block;
-                  .journal-parth-block {
-                    .journal-parth-name {
-                      left: unset;
-                      transform: none;
-                    }
-                    .journal-comics-box {
-                      width: 105px;
-                      height: 105px;
-                      position: relative;
-                      display: inline-block;
-                      background-color: #b7a597;
-                      border-radius: 13px;
-                      font-size: 0;
-                      cursor: pointer;
-                      margin: 12px 6px 0 6px;
-                      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05),
-                        0 1px 2px 1px rgba(0, 0, 0, 0.35);
-                      transition: ease-in-out 0.05s;
-                      transition: box-shadow ease-in-out 0.12s;
-                      filter: brightness(0.9);
-                      .journal-prw-comics-pic {
-                        width: 105px;
-                        height: 105px;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        overflow: hidden;
-                        border-radius: 13px;
-                        &:after {
-                          content: "";
-                          width: 100%;
-                          height: 100%;
-                          position: absolute;
-                          left: 0;
-                          top: 0;
-                          border-radius: 13px;
-                          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
-                          transition: ease-in-out 0.1s;
-                        }
-                        img {
-                          height: 105px;
-                          transition: ease-in-out 0.1s;
-                        }
-                      }
-                      .journal-prw-comics-lock {
-                        width: 105px;
-                        height: 105px;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background-color: rgba(0, 0, 0, 0.55);
-                        border-radius: 13px;
-                        display: none;
-                        &:before {
-                          content: "";
-                          width: 40px;
-                          height: 60px;
-                          position: absolute;
-                          top: 10px;
-                          left: 32px;
-                          background-image: url(../img/tower-lock.png);
-                          background-size: 100%;
-                          background-repeat: no-repeat;
-                        }
-                      }
-                      .journal-prw-comics-text-box {
-                        width: 105px;
-                        height: 30px;
-                        position: absolute;
-                        top: 70px;
-                        left: 0;
-                        display: none;
-                        .journal-prw-comics-text {
-                          width: 105px;
-                          height: 30px;
-                          position: relative;
-                          display: table-cell;
-                          vertical-align: middle;
-                          text-align: center;
-                          color: #fff;
-                          font-size: 10px;
-                          font-weight: bold;
-                          text-transform: uppercase;
-                          text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6),
-                            0 1px 6px rgba(0, 0, 0, 0.6);
-                        }
-                      }
-                      &:before {
-                        content: "";
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        border-radius: 13px;
-                        background: linear-gradient(
-                          325deg,
-                          rgba(255, 255, 255, 0) 0%,
-                          rgba(255, 255, 255, 0) 26%,
-                          rgba(255, 255, 255, 1) 26%,
-                          rgba(255, 255, 255, 1) 48%,
-                          rgba(255, 255, 255, 0) 48%,
-                          rgba(255, 255, 255, 0) 60%,
-                          rgba(255, 255, 255, 1) 60%,
-                          rgba(255, 255, 255, 1) 70%,
-                          rgba(255, 255, 255, 0) 70%,
-                          rgba(255, 255, 255, 0) 100%
-                        );
-                        background-position: center 0;
-                        background-repeat: no-repeat;
-                        background-size: 100%;
-                        z-index: 1;
-                        opacity: 0.3;
-                        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0);
-                        transition: ease-in-out 0.1s;
-                      }
-                      &:after {
-                        content: "";
-                        width: calc(100% + 6px);
-                        height: calc(100% + 6px);
-                        position: absolute;
-                        left: -3px;
-                        top: -3px;
-                        border-radius: 13px;
-                        background-image: url(../img/corner-02.png),
-                          url(../img/corner-02.png), url(../img/corner-02.png),
-                          url(../img/corner-02.png);
-                        background-position: -28px -27px, 89px -27px, -28px 88px,
-                          89px 88px;
-                        background-repeat: no-repeat;
-                        background-size: 50px auto;
-                        pointer-events: none;
-                        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.4))
-                          drop-shadow(0 0 1px rgba(0, 0, 0, 0.6))
-                          brightness(1.2);
-                        transform: scale(1.2);
-                        opacity: 0;
-                        pointer-events: none;
-                        transition: ease-in-out 0.1s;
-                      }
-                      &.lock {
-                        pointer-events: none;
-                        filter: none;
-                        &:before {
-                          opacity: 0.1;
-                        }
-                        .journal-prw-comics-pic {
-                          &:after {
-                            content: "";
-                            width: 100%;
-                            height: 100%;
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            border-radius: 13px;
-                            box-shadow: inset 0 0 1px 2px rgba(255, 255, 255, 1);
-                            transition: ease-in-out 0.1s;
-                          }
-                        }
-                        .journal-prw-comics-lock {
-                          display: block;
-                        }
-                        .journal-prw-comics-text-box {
-                          display: table;
-                        }
-                      }
-                      &:hover {
-                        filter: none;
-                        .journal-prw-comics-pic {
-                          &:after {
-                            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 1);
-                          }
-                        }
-                        &:before {
-                          background-size: 130%;
-                          opacity: 0.1;
-                        }
-                      }
-                      &:active {
-                        transform: scale(0.9619);
-                        filter: brightness(0.8);
-                      }
-                      &.active {
-                        filter: none;
-                        box-shadow: 0 0 0 1px #da811c, 0 0 0 3px #ff971f,
-                          0 1px 2px 3px rgba(0, 0, 0, 0.35);
-                        pointer-events: none;
-                        .journal-prw-comics-pic {
-                          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-                        }
-                        &:before {
-                          background-size: 130%;
-                          opacity: 0;
-                        }
-                        &:after {
-                          transform: scale(1);
-                          opacity: 1;
-                        }
-                      }
-                    }
-                    &:first-of-type {
-                      margin-bottom: 16px;
-                    }
-                    &:last-child {
-                      margin-bottom: 0;
-                    }
-                  }
+                .daily-mission-reset {
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
-              }
             }
-          }
         }
-        .journal-rightside-box-all {
-          width: 578px;
-          height: 507px;
-          position: absolute;
-          top: 4px;
-          right: 4px;
-          background: linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0),
-            rgba(0, 0, 0, 0.1)
-          );
-          border-radius: 0 14px 14px 0;
-          .journal-parth-name {
-            top: 14px;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-          .journal-comics-view-box {
-            width: 556px;
-            height: 430px;
-            position: absolute;
-            bottom: 10px;
-            left: 12px;
-            .journal-comics-view {
-              width: 520px;
-              height: 360px;
-              position: absolute;
-              top: 10px;
-              left: 18px;
-              .journal-comics {
-                width: 520px;
-                height: 360px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                display: block;
-                img {
-                  width: 520px;
-                  &:hover {
-                    cursor: pointer;
-                    filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.6));
-                    ~ .trophy-bonus-pic-lup {
-                      filter: brightness(1);
-                      transform: scale(1);
-                    }
-                  }
-                  &:active {
-                    ~ .trophy-bonus-pic-lup {
-                      transform: scale(0.9333);
-                    }
-                  }
-                }
-                .trophy-bonus-pic-lup {
-                  width: 30px;
-                  height: 30px;
-                  position: absolute;
-                  right: 5px;
-                  top: 5px;
-                  background-image: url(../img/cursor-plus.png);
-                  background-size: 100%;
-                  background-repeat: no-repeat;
-                  pointer-events: none;
-                  filter: brightness(0.9);
-                  transform: scale(0.9333);
-                }
-                .journal-comics-ballon-box {
-                  width: 100px;
-                  height: 90px;
-                  position: absolute;
-                  background-color: #fff;
-                  border: 2px solid #000;
-                  display: table;
-                  .journal-comics-ballon-text {
-                    width: 100%;
-                    height: 100%;
-                    display: table-cell;
-                    vertical-align: middle;
-                    color: #000;
-                    font-size: 14px;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    text-align: center;
-                    font-style: italic;
-                    line-height: 16px;
-                    padding: 10px;
-                  }
-                }
-              }
-            }
-          }
-          .journal-comics-view-nav-box {
-            width: 300px;
-            height: 40px;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            .journal-comics-view-nav {
-              width: 40px;
-              height: 40px;
-              position: absolute;
-              top: 0;
-              left: 70px;
-              border-radius: 10px;
-              cursor: pointer;
-              z-index: 1;
-              background: linear-gradient(0deg, #9f6b37, #bf7832);
-              background-position: 0;
-              background-repeat: no-repeat;
-              background-size: 100%;
-              box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-                inset 0 0 0 2px #ff9b37, inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-                inset 0 44px 24px rgba(255, 212, 110, 0.28),
-                0 1px 4px rgba(0, 0, 0, 0.6);
-              &:hover {
-                filter: brightness(1.1);
-              }
-              &:before {
-                content: "";
-                width: 20px;
-                height: 28px;
-                position: absolute;
-                top: 6px;
-                left: 10px;
-                background-image: url(../img/rating-arrow.png);
-                background-size: 100%;
-                background-repeat: no-repeat;
-                filter: brightness(0.8)
-                  drop-shadow(0 1px 1px rgba(255, 255, 255, 0.8));
-              }
-              &:active {
-                transform: scale(0.95);
-              }
-              &.right {
-                left: auto;
-                right: 70px;
-                &:before {
-                  content: "";
-                  transform: rotate(180deg);
-                  filter: brightness(0.8)
-                    drop-shadow(0 -1px 1px rgba(255, 255, 255, 0.8));
-                }
-              }
-            }
-            .journal-comics-view-nav-count {
-              width: 100px;
-              height: 40px;
-              position: relative;
-              text-align: center;
-              margin: 0 auto;
-              line-height: 40px;
-              color: #fff;
-              font-size: 18px;
-              font-weight: bold;
-              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-            }
-          }
-        }
-        .daily-mission-reset,
-        .journal-parth-name {
-          width: calc(100% - 110px);
-          line-height: 38px;
-          height: fit-content;
-          position: absolute;
-          bottom: 10px;
-          border-radius: 8px;
-          color: #ffffff;
-          font-weight: bold;
-          font-size: 18px;
-          text-transform: uppercase;
-          text-align: center;
-          text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(0, 0, 0, 0.4);
-          background: linear-gradient(0deg, #584b48, #7d6463);
-          background-position: 0;
-          background-repeat: no-repeat;
-          background-size: 100%;
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6),
-            inset 0 0 0 2px #ff9b37, inset 0 0 2px 2px rgba(0, 0, 0, 0.2),
-            inset 0 44px 24px rgba(255, 212, 110, 0.28),
-            0 1px 4px rgba(0, 0, 0, 0.6);
-          &:before,
-          &:after {
-            content: "";
-            position: absolute;
-            top: 3px;
-            width: 38px;
-            height: 32px;
-            background-image: url(../img/darkworld-angel-pop-btn-bg.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            pointer-events: none;
-            filter: brightness(1.5) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4))
-              drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2)) hue-rotate(26deg);
-          }
-          &:before {
-            left: -44px;
-          }
-          &:after {
-            transform: scaleX(-1);
-            right: -44px;
-          }
-        }
-        .daily-mission-reset {
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
     }
-  }
 `;
 
 export { stylesFileName, pageStyles };
