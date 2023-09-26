@@ -291,8 +291,8 @@
     position: absolute;
     top: 26px;
     border-radius: 40px;
-    /* width: 1200px;
-    height: 640px; */
+    width: 1200px;
+    height: 640px;
     box-shadow: 0 0 0 10px #e6e7f1, 20px 20px 40px rgba(0, 1, 60, 0.06),
         -20px -20px 40px rgba(255, 255, 255, 0.6);
     overflow: hidden;
