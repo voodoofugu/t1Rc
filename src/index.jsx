@@ -1,4 +1,8 @@
-import "./stylesMap";
+import "../node_modules/normalize.css/normalize.css";
+// import "./styles/css/01-all.css";
+import "./styles/css/v2-screen-main.css";
+import "./styles/css/v2-screen-main-dark-world.css";
+
 import React, { Suspense, lazy } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";

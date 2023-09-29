@@ -1,4 +1,4 @@
 import "../node_modules/normalize.css/normalize.css";
-import "./styles/01-all.scss";
-import "./styles/v2-screen-main.scss";
-import "./styles/v2-screen-main-dark-world.scss";
+import "./styles/scss/01-all.scss";
+import "./styles/scss/v2-screen-main.scss";
+import "./styles/scss/v2-screen-main-dark-world.scss";
