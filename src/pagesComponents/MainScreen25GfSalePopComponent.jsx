@@ -1,11 +1,12 @@
 import React from "react";
 import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
-import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
-const stylePairs = generateStylePairs(["GfSalePop"]);
+// import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
+// const stylePairs = generateStylePairs(["GfSalePop"]);
+import pageStyles from "../styleComponents/GfSalePop";
 
-const MainScreen25GfSalePopComponent = () => {
+const MainScreen25GfSalePopComponent = ({ idForStyle }) => {
   return (
-    <HelmetStyleTagWhitWrap stylePairs={stylePairs}>
+    <HelmetStyleTagWhitWrap idForStyle={idForStyle} pageStyles={pageStyles}>
       <div className="main world1">
         <div className="main-bg"></div>
 

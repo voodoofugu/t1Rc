@@ -1,11 +1,12 @@
 import React from "react";
 import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
-import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
-const stylePairs = generateStylePairs(["ScreenFortunaRoundMain"]);
+// import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
+// const stylePairs = generateStylePairs(["ScreenFortunaRoundMain"]);
+import pageStyles from "../styleComponents/ScreenFortunaRoundMain";
 
-const MainScreen16FortunaRoundMainpopComponent = () => {
+const MainScreen16FortunaRoundMainpopComponent = ({ idForStyle }) => {
   return (
-    <HelmetStyleTagWhitWrap stylePairs={stylePairs}>
+    <HelmetStyleTagWhitWrap idForStyle={idForStyle} pageStyles={pageStyles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="popup-layer" style={{ display: "block" }}>

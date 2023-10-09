@@ -138,7 +138,7 @@
                             position: absolute;
                             top: 94px;
                             margin-left: 30px;
-                            background-image: url(../../img/paycheck.png);
+                            background-image: url(paycheck.png);
                             background-size: 100%;
                             display: block;
                         }
@@ -288,16 +288,16 @@
             background-size: 100%;
 
             &.common {
-                background-image: url(../../img/icon-common.png);
+                background-image: url(icon-common.png);
             }
             &.epic {
-                background-image: url(../../img/icon-epic.png);
+                background-image: url(icon-epic.png);
             }
             &.rare {
-                background-image: url(../../img/icon-rare.png);
+                background-image: url(icon-rare.png);
             }
             &.legendary {
-                background-image: url(../../img/icon-legendary.png);
+                background-image: url(icon-legendary.png);
             }
         }
         .rating-video {
@@ -381,7 +381,7 @@
                 position: absolute;
                 top: 20px;
                 left: -6px;
-                background-image: url(../../img/legendary-lock.png);
+                background-image: url(legendary-lock.png);
                 background-size: 100%;
                 img {
                     display: none;

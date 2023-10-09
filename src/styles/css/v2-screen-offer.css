@@ -1,1 +1,1156 @@
-body .main .popup-layer .m-popup.angel-pop,body .main .popup-layer .m-popup.hero-pop{background:linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%);box-shadow:0px 4px 0px #9c5b07,0 5px 10px #392d26,inset 0 1px 2px #fff,0 2px 10px #000,0 2px 15px #000;border-radius:22px;left:50%;top:50%;transform:translate(-50%, -50%);width:494px;height:584px}body .main .popup-layer .m-popup.angel-pop:before,body .main .popup-layer .m-popup.hero-pop:before{top:24px;left:20px;right:20px;bottom:20px;border-radius:5px;background:linear-gradient(139.67deg, #b46f63 0%, #b27f75 14.32%, #9b645a 27.34%, #bf8273 53.38%, #b8756b 66.85%, #ad7f6b 82.02%, #d08e72 99.43%, #ffe5d7 103.78%, #af7560 111.18%, #af8270 124.99%);box-shadow:0px 0px 2px 2px rgba(0,0,0,.25),0px 0px 0px 3px #f2ce4d,0px 0px 4px 5px rgba(0,0,0,.25),0px 0px 0px 7px #d5a72e,0px 0px 1px 8px rgba(0,0,0,.15),0px 0px 0px 10px #ffd749,inset -1px 0px 2px rgba(0,0,0,.25),inset 1px 0px 2px rgba(0,0,0,.25),inset 0px 3px 0px rgba(80,43,0,.8),inset 0px -3px 0px #ffe9cf}body .main .popup-layer .m-popup.angel-pop .content,body .main .popup-layer .m-popup.hero-pop .content{margin:42px 34px 34px 34px;height:calc(100% - 76px);display:flex;flex-wrap:wrap;justify-content:space-between}body .main .popup-layer .m-popup.angel-pop .content .angle-top,body .main .popup-layer .m-popup.angel-pop .content .angle-bottom,body .main .popup-layer .m-popup.angel-pop .content .hero-top,body .main .popup-layer .m-popup.angel-pop .content .hero-bottom,body .main .popup-layer .m-popup.hero-pop .content .angle-top,body .main .popup-layer .m-popup.hero-pop .content .angle-bottom,body .main .popup-layer .m-popup.hero-pop .content .hero-top,body .main .popup-layer .m-popup.hero-pop .content .hero-bottom{position:absolute;width:100%}body .main .popup-layer .m-popup.angel-pop .content .angle-top:before,body .main .popup-layer .m-popup.angel-pop .content .angle-top:after,body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:before,body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:after,body .main .popup-layer .m-popup.angel-pop .content .hero-top:before,body .main .popup-layer .m-popup.angel-pop .content .hero-top:after,body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:before,body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:after,body .main .popup-layer .m-popup.hero-pop .content .angle-top:before,body .main .popup-layer .m-popup.hero-pop .content .angle-top:after,body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:before,body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:after,body .main .popup-layer .m-popup.hero-pop .content .hero-top:before,body .main .popup-layer .m-popup.hero-pop .content .hero-top:after,body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:before,body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:after{content:"";position:absolute;width:60px;height:60px;background-image:url(../../img/darkworld-angel-pop-angle.png);background-position:center;background-repeat:no-repeat;background-size:cover}body .main .popup-layer .m-popup.angel-pop .content .angle-top,body .main .popup-layer .m-popup.angel-pop .content .hero-top,body .main .popup-layer .m-popup.hero-pop .content .angle-top,body .main .popup-layer .m-popup.hero-pop .content .hero-top{top:-52px}body .main .popup-layer .m-popup.angel-pop .content .angle-bottom,body .main .popup-layer .m-popup.angel-pop .content .hero-bottom,body .main .popup-layer .m-popup.hero-pop .content .angle-bottom,body .main .popup-layer .m-popup.hero-pop .content .hero-bottom{transform:scaleY(-1);bottom:-48px}body .main .popup-layer .m-popup.angel-pop .content .angle-top:before,body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:before,body .main .popup-layer .m-popup.angel-pop .content .hero-top:before,body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:before,body .main .popup-layer .m-popup.hero-pop .content .angle-top:before,body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:before,body .main .popup-layer .m-popup.hero-pop .content .hero-top:before,body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:before{left:-46px}body .main .popup-layer .m-popup.angel-pop .content .angle-top:after,body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:after,body .main .popup-layer .m-popup.angel-pop .content .hero-top:after,body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:after,body .main .popup-layer .m-popup.hero-pop .content .angle-top:after,body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:after,body .main .popup-layer .m-popup.hero-pop .content .hero-top:after,body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:after{transform:scaleX(-1);right:-46px}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box{width:310px;height:408px;background:linear-gradient(159.21deg, #9f7c47 1.39%, #e9be88 35.56%, #946f3f 70.08%, #dfb47e 84.6%, #b38952 98.01%);border:2px solid #ffdd62;box-shadow:0px 2px 0px #673d06,0px 3px 4px rgba(0,0,0,.4);border-radius:10px;position:relative}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .img-wrap,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .img-wrap,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .img-wrap,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .img-wrap{width:300px;height:398px;position:absolute;left:5px;top:5px;border-radius:5px;box-shadow:0 0 0 1px #734407,0px 0px 3px rgba(0,0,0,.4);overflow:hidden;display:flex;justify-content:center}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .img-wrap img,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .img-wrap img,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .img-wrap img,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .img-wrap img{width:auto;height:118%}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .angel-name-box,body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .hero-name-box,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .angel-name-box,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .hero-name-box,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .angel-name-box,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .hero-name-box,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .angel-name-box,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box{width:280px;height:40px;position:absolute;top:14px;left:16px;background-image:url(../../img/darkworld-angels-title-bg-lilac.png);background-size:100%;background-position:center;background-repeat:no-repeat}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .angel-name-box .angel-name,body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .angel-name-box .hero-name,body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .hero-name-box .angel-name,body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .hero-name-box .hero-name,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .angel-name-box .angel-name,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .angel-name-box .hero-name,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .hero-name-box .angel-name,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .hero-name-box .hero-name,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .angel-name-box .angel-name,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .angel-name-box .hero-name,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .hero-name-box .angel-name,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .hero-name-box .hero-name,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .angel-name-box .angel-name,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .angel-name-box .hero-name,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box .angel-name,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box .hero-name{text-align:center;color:#fff;line-height:38px;text-shadow:0 1px 2px rgba(0,0,0,.8);font-size:17px;font-weight:700}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box{width:300px;height:81px;margin:auto;position:relative;top:322px;background:rgba(0,0,0,.4);border-radius:0 0 5px 5px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.8)}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box .stars-box,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box .stars-box,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box .stars-box,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .stars-box{width:100%;height:36px;background:rgba(255,255,255,.4);display:flex;justify-content:center}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box .stars-box .star,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box .stars-box .star,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box .stars-box .star,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .stars-box .star{margin-top:1px;width:30px;height:30px;background-image:url(../../img/star-inactive-bg.png);background-repeat:no-repeat;background-position:center;background-size:cover}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box .stars-box .star.active,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box .stars-box .star.active,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box .stars-box .star.active,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .stars-box .star.active{background-image:url(../../img/star-active-bg.png)}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box{position:absolute;left:50%;transform:translateX(-50%);top:361px;padding:7px 1px 7px 32px}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap{width:189px;height:26px;background:linear-gradient(180deg, #31302c 0%, #5d5b55 63.91%, #3d3b35 100%);border-radius:5px;color:#fff;text-shadow:0 1px 2px #000;position:relative}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress{position:absolute;width:187px;height:24px;left:1px;top:1px;border-radius:4px;overflow:hidden}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled{height:100%;background:linear-gradient(90deg, #86ea21 0%, #0dbf34 100%);border-radius:4px;box-shadow:inset 0 2px 4px rgba(0,0,0,.25),inset 0 10px 0 rgba(255,255,255,.3)}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value{position:absolute;display:flex;left:50%;top:50%;transform:translate(-50%, -50%);text-shadow:0px 1px 4px rgba(0,0,0,.75);line-height:20px;white-space:nowrap}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from{margin-left:4px}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before{content:"/"}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus{color:#ffe000;margin-left:10px;padding:0 4px 0 3px;background:#ff63ec;border-radius:4px;font-weight:700;position:relative;filter:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6))}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before{content:"";border:8px solid rgba(0,0,0,0);border-right:8px solid #ff63ec;border-radius:2px;position:absolute;top:2px;left:-15px}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box{width:40px;height:40px;position:absolute;top:0px;left:0px;display:block;background:linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);border-radius:100%;box-shadow:0 4px 2px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.4)}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic{width:34px;height:34px;position:absolute;top:3px;left:3px;overflow:hidden;border-radius:100%}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after{content:"";width:100%;height:100%;position:absolute;left:0;top:0;border-radius:100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img{width:34px}body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-banner-red,body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-banner-red,body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-banner-red,body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-banner-red{top:310px;right:-2px}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box{height:412px;display:flex;flex-direction:column;justify-content:space-between}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box{position:relative;width:92px;height:92px;background:rgba(8,7,74,.5);border:2px solid #ffdb5a;box-shadow:0px 2px 0px #673d06,0px 3px 4px rgba(0,0,0,.4);border-radius:8px;display:flex;justify-content:center}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box:before,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box:before{content:"";position:absolute;width:100%;height:100%;background-image:url(../../img/darkworld-reward-bg.png);background-repeat:no-repeat;background-position:center 5px;background-size:96%}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box img,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box img{position:absolute;top:10px;width:auto;height:46px}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box .reward-value,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box .reward-value{position:absolute;color:#ffebc6;text-shadow:0 1px 1px rgba(0,0,0,.6);top:60px;background:#7a4e14;width:66px;line-height:18px;font-size:14px;margin-left:-1px}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .sale-banner,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .sale-banner{top:394px;left:70px}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box.x2-sale,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box.x2-sale{border-radius:6px;background:#dd338e;position:relative;box-shadow:0 0 0 6px #dd338e,0 0 0 8px #ffdb5a,0 1px 3px 8px rgba(0,0,0,.4)}body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box.x2-sale .sale-banner,body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box.x2-sale .sale-banner{display:flex;justify-content:center;align-items:center;position:absolute;bottom:-28px;right:-28px;width:52px;height:52px;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.6);font-size:28px;font-weight:700;line-height:34px;z-index:1;background:#dd338e;box-shadow:inset 0 0 0 2px #ffdb5a,0px 2px 2px rgba(0,0,0,.4);border-radius:100%;transform:rotate(18deg)}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap{position:relative;display:flex;justify-content:center;align-items:center;width:100%;height:68px;margin-top:10px}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:before,body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:after,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:before,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:after{content:"";position:absolute;width:80px;height:68px;background-image:url(../../img/darkworld-angel-pop-btn-bg.png);background-repeat:no-repeat;background-position:center;background-size:cover}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:before,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:before{left:30px}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:after,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:after{transform:scaleX(-1);right:30px}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .color-btn,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .color-btn{width:180px;height:58px;z-index:1;display:flex;align-items:center}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .color-btn .color-btn-text,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .color-btn .color-btn-text{font-size:22px;font-size:22px;display:inline-block;height:-moz-fit-content;height:fit-content;margin-top:-4px}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .color-btn .color-btn-text .old-price,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .color-btn .color-btn-text .old-price{font-size:18px;color:rgba(41,106,12,.8);text-decoration:line-through;text-shadow:none}body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .sale-banner,body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .sale-banner{left:262px}body .main .popup-layer .m-popup.angel-pop .btn-close-x,body .main .popup-layer .m-popup.hero-pop .btn-close-x{top:-8px;right:-8px}body .main .popup-layer .m-popup.hero-pop{background:linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%);box-shadow:0px 4px 0px #9c5b07,0 5px 10px #392d26,inset 0 1px 2px #fff,0 2px 10px #000,0 2px 15px #000;border-radius:22px;left:50%;top:50%;transform:translate(-50%, -50%);width:494px;height:584px}body .main .popup-layer .m-popup.hero-pop:before{top:24px;left:20px;right:20px;bottom:20px;border-radius:5px;background:linear-gradient(139.67deg, #b46f63 0%, #b27f75 14.32%, #9b645a 27.34%, #bf8273 53.38%, #b8756b 66.85%, #ad7f6b 82.02%, #d08e72 99.43%, #ffe5d7 103.78%, #af7560 111.18%, #af8270 124.99%);box-shadow:0px 0px 2px 2px rgba(0,0,0,.25),0px 0px 0px 3px #f2ce4d,0px 0px 4px 5px rgba(0,0,0,.25),0px 0px 0px 7px #d5a72e,0px 0px 1px 8px rgba(0,0,0,.15),0px 0px 0px 10px #ffd749,inset -1px 0px 2px rgba(0,0,0,.25),inset 1px 0px 2px rgba(0,0,0,.25),inset 0px 3px 0px rgba(80,43,0,.8),inset 0px -3px 0px #ffe9cf}body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit{top:-8px;background:none;box-shadow:none;border:none;left:-6px;transform:unset;background:linear-gradient(90deg, #aa5f21 0%, #d67d3e 50%, #aa5221 100%);border-radius:unset;line-height:36px;font-size:20px;width:-moz-fit-content;width:fit-content;height:auto;padding:0 40px;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.6);filter:drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.6));white-space:nowrap;text-transform:inherit;text-transform:uppercase;border-radius:0 6px 6px 0}body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:before,body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:after{content:"";position:absolute;top:0;display:block;height:100%;width:17px;background-image:url(../../img/darkworld-angels-title-bg-br.png);background-repeat:no-repeat;filter:brightness(0.77) saturate(1.9);background-size:55px;background-size:auto 52px}body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:before{left:-16px;background-position:left}body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:after{right:-16px;background-position:right;filter:brightness(0.71) saturate(1.9);visibility:hidden}body .main .popup-layer .m-popup.hero-pop .content{margin:42px 34px 34px 34px;height:calc(100% - 76px);display:flex;flex-wrap:wrap;justify-content:space-between}body .main .popup-layer .m-popup.hero-pop .content .hero-top,body .main .popup-layer .m-popup.hero-pop .content .hero-bottom{display:none}body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box{width:280px;height:42px;position:absolute;top:14px;left:16px;background-image:url(../../img/darkworld-angels-title-bg-br.png);background-size:82%;background-position:center 3px;background-repeat:no-repeat}body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .dps-extra{left:34px;top:22px}body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .prize-promote-box{width:42px;height:56px;top:14px;left:unset;right:34px;margin-left:0}body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .prize-promote-box .prize-promote-text{top:2px;font-size:16px;left:-8px}body .main .popup-layer .m-popup.angel-pop-x3{width:-moz-fit-content;width:fit-content;height:auto;top:50%;left:50%;transform:translate(-50%, -50%)}body .main .popup-layer .m-popup.angel-pop-x3 .content{margin:10px;margin-top:60px;width:1010px;height:510px;background:url(../../img/rhomb-bg.png)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box{border-radius:10px;height:470px;position:relative;display:inline-block;margin:20px 10px 0 10px;transition:ease-in-out .06s;transform:scale(0.99);box-shadow:0 4px 0 #32302d,0px 2px 2px rgba(0,0,0,.35),0px -1px 1px rgba(0,0,0,.4),0px 2px 2px 1px rgba(0,0,0,.6),inset 0px 4px 6px 1px rgba(255,255,255,.35)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover{transition:ease-in-out .06s;transform:scale(1);top:-2px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.novice-pack,body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.king-pack,body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.angel-pack{box-shadow:0 4px 0 #32302d,0 0 0 1px rgba(0,0,0,.4),0 0 10px rgba(0,0,0,.6),inset 0px 1px 10px 10px rgba(255,255,255,.4)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.novice-pack .card-content,body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.king-pack .card-content,body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.angel-pack .card-content{box-shadow:inset 0 1px 4px 1px rgba(0,0,0,.2),inset 0 0 0 1px rgba(0,0,0,.2),inset 0px 1px 20px 20px rgba(255,255,255,.2)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content{position:absolute;left:8px;top:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:5px;box-shadow:inset 0 1px 4px 1px rgba(0,0,0,.2),inset 0 0 0 1px rgba(0,0,0,.1)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .card-title{top:-20px;left:50%;transform:translateX(-50%);position:absolute;width:244px;height:36px;line-height:30px;background-repeat:no-repeat;background-size:cover;background-position:center;text-align:center;color:#fff;font-weight:700;font-size:18px;text-shadow:0 1px 2px rgba(0,0,0,.8);z-index:2}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box{width:100%;margin-top:24px;display:flex;justify-content:space-evenly}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box{width:118px;height:232px;border-radius:10px;position:relative}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box .hero-image-wrap{position:absolute;top:6px;left:6px;width:calc(100% - 12px);height:calc(100% - 12px);border-radius:6px;position:relative;overflow:hidden}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box .hero-image-wrap .hero{height:100%;position:absolute;left:50%;transform:translateX(-50%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box .hero-name{position:absolute;left:0;bottom:0;width:100%;border-radius:4px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3),0px 3px 3px rgba(0,0,0,.3);color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.tithero{background:linear-gradient(155.68deg, #4675d0 6.11%, #b0c6ff 53.31%, #2457da 65.64%, #a3bcff 81.23%, #4675d0 97.65%);box-shadow:inset 0 1px 1px rgba(255,255,255,.3),0px 2px 0px #294a9d,0px 4px 4px 1px rgba(0,0,0,.35)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.tithero .hero-image-wrap{box-shadow:0 0 0 1px #1b0a87,0px 0px 6px rgba(0,0,0,.4)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.tithero .hero-name{background:linear-gradient(270deg, #4c48c3 0%, #4543a4 20.31%, #5755c7 51.04%, #4543a4 82.81%, #4c48c3 100%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.suphero{background:linear-gradient(155.68deg, #d976ff 6.11%, #e097ff 45.23%, #b446e5 64.21%, #df9aff 81.23%, #8a22bb 97.65%);box-shadow:inset 0 1px 1px rgba(255,255,255,.3),0px 2px 0px #690896,0px 4px 4px 1px rgba(0,0,0,.35)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.suphero .hero-image-wrap{box-shadow:0 0 0 1px #690896,0px 0px 6px rgba(0,0,0,.4)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.suphero .hero-name{background:linear-gradient(270deg, #763dbf 0%, #7635a9 20.31%, #8051bb 51.04%, #6b35a1 82.81%, #7639c4 100%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box{width:100%;display:flex;justify-content:space-evenly;padding:10px 0;margin-top:18px;position:relative;background:radial-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 90%),linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));background-size:100% 44%,100% 100%;background-position:0 45px,0 0px;background-repeat:no-repeat}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:before,body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:after{content:"";position:absolute;width:100%;height:1px;background:linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 90%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:before{top:0}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:after{bottom:0}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece{width:54px;height:54px;border-radius:100%;background:linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%);box-shadow:0px 2px 4px rgba(0,0,0,.35);position:relative;top:-4px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece:before{content:"";position:absolute;left:2px;top:2px;width:calc(100% - 4px);height:calc(100% - 4px);background:linear-gradient(-45deg, #450da2 0%, #360aa5 26%, #3c0dab 26%, #360bad 48%, #240f9a 48%, #41139d 60%, #550fa7 60%, #3908a8 70%, #2c0c93 70%, #530bab 100%);border-radius:100%;box-shadow:inset 0 0 1px 1px rgba(0,0,0,.3)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece .reward-img{position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);height:36px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece .reward-value{position:absolute;left:0;bottom:-5px;width:100%;background:linear-gradient(270deg, #592279 0%, #6b3989 20.31%, #8648aa 51.04%, #6b3989 82.81%, #592279 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3),0px 1px 1px rgba(0,0,0,.35);border-radius:4px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);line-height:18px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap{width:100%;margin-top:20px;position:relative}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap .color-btn{width:180px;height:58px;z-index:1;display:flex;align-items:center;margin:auto}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap .color-btn .color-btn-text{font-size:22px;display:inline-block;height:-moz-fit-content;height:fit-content;margin-top:-4px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap .color-btn .color-btn-text .old-price{font-size:18px;color:rgba(41,106,12,.8);text-decoration:line-through;text-shadow:none}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .block-layer{display:none}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack{width:280px;background:linear-gradient(159.21deg, #8c7a68 1.39%, #e4cbb4 22.24%, #7b6653 62.95%, #ead2bc 79.29%, #9d8874 98.01%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content{background:linear-gradient(180deg, rgba(43, 39, 215, 0.6) 0%, rgba(140, 138, 255, 0.6) 100%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content .card-title{background-image:url(../../img/darkworld-angels-title-bg-blue.png);background-size:88%}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content .reward-card-box .hero-image-box .hero-name{height:24px;line-height:24px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content .btn-bay-wrap .sale-banner{left:174px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack{width:320px;background:linear-gradient(159.21deg, #898989 1.39%, #d7d7d7 22.24%, #848484 62.95%, #dadada 79.29%, #a2a2a2 98.01%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content{background:linear-gradient(180deg, rgba(123, 41, 115, 0.6) 0%, rgba(212, 79, 159, 0.6) 100%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .card-title{background-image:url(../../img/darkworld-angels-title-bg-blue.png);background-size:88%;filter:hue-rotate(45deg)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .reward-card-box .hero-image-box .hero-name{height:36px;line-height:10px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .reward-card-box .hero-image-box .hero-name .unique-title{font-size:12px;line-height:20px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .btn-bay-wrap .sale-banner{left:194px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack{width:320px;background:linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content{background:linear-gradient(180deg, rgba(158, 0, 255, 0.3) 0%, rgba(117, 0, 234, 0.3) 100%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .card-title{background-image:url(../../img/darkworld-angels-title-bg-brown.png);line-height:32px;filter:drop-shadow(0 1px 4px rgba(0, 0, 0, 0.6))}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box{width:266px;height:324px;background:linear-gradient(159.21deg, #9f7c47 1.39%, #e9be88 35.56%, #946f3f 70.08%, #dfb47e 84.6%, #b38952 98.01%);box-shadow:inset 0 0 0 2px #ffdd62,0px 1px 0px #673d06,0px 6px 8px rgba(0,0,0,.4);border-radius:10px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap{position:absolute;top:8px;left:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:6px;position:relative;overflow:hidden;box-shadow:0 0 0 1px #734407,0px 0px 6px rgba(0,0,0,.4)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .angel{height:100%;position:absolute;left:50%;transform:translateX(-50%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box{width:100%;height:60px;margin:auto;position:absolute;bottom:0;background:rgba(0,0,0,.4);border-radius:0 0 5px 5px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.8)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box{position:absolute;left:50%;transform:translateX(-50%);bottom:10px;padding:7px 1px 7px 32px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap{width:189px;height:26px;background:linear-gradient(180deg, #31302c 0%, #5d5b55 63.91%, #3d3b35 100%);border-radius:5px;color:#fff;text-shadow:0 1px 2px #000;position:relative}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress{position:absolute;width:187px;height:24px;left:1px;top:1px;border-radius:4px;overflow:hidden}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled{height:100%;background:linear-gradient(90deg, #86ea21 0%, #0dbf34 100%);border-radius:4px;box-shadow:inset 0 2px 4px rgba(0,0,0,.25),inset 0 10px 0 rgba(255,255,255,.3)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value{position:absolute;display:flex;left:50%;top:50%;transform:translate(-50%, -50%);text-shadow:0px 1px 4px rgba(0,0,0,.75);line-height:20px;white-space:nowrap}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from{margin-left:4px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before{content:"/"}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus{color:#ffe000;margin-left:10px;padding:0 4px 0 3px;background:#ff63ec;border-radius:4px;font-weight:700;position:relative;filter:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6))}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before{content:"";border:8px solid rgba(0,0,0,0);border-right:8px solid #ff63ec;border-radius:2px;position:absolute;top:2px;left:-15px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box{width:40px;height:40px;position:absolute;top:0px;left:0px;display:block;background:linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);border-radius:100%;box-shadow:0 4px 2px rgba(0,0,0,.35),0 0 0 1px rgba(0,0,0,.4)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic{width:34px;height:34px;position:absolute;top:3px;left:3px;overflow:hidden;border-radius:100%}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after{content:"";width:100%;height:100%;position:absolute;left:0;top:0;border-radius:100%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.3)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img{width:34px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .btn-bay-wrap{margin-top:20px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .btn-bay-wrap .sale-banner{left:194px}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .reward-card-box,body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .reward-box{filter:grayscale(0.8)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer{display:block;width:100%;height:100%;position:absolute;left:0;top:0;border-radius:5px;background:rgba(0,0,0,.3);z-index:1}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer:before{content:"";border:28px solid rgba(0,0,0,0);border-right:24px solid #b15cfd;border-radius:2px;position:absolute;left:-52px;top:50%;transform:translateY(-50%);filter:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8))}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text{position:absolute;left:0;top:50%;transform:translateY(-50%);padding:10px;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.6);background:rgba(32,0,66,.8)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:before,body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:after{content:"";position:absolute;left:0;width:100%;height:1px;background:linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 90%)}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:before{top:0}body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:after{bottom:0}body .main .popup-layer .m-popup.angel-pop-x3 .wpck-timer-box{width:159px;height:72px;position:absolute;top:-5px;margin-left:-10px;background-image:url(../../img/timer-back.png);background-size:100%;text-shadow:0 1px 2px rgba(0,0,0,.6)}body .main .popup-layer .m-popup.angel-pop-x3 .wpck-timer-box .time-left{width:124px;height:26px;position:absolute;top:15px;left:18px;color:#fff000;font-size:16px;font-weight:bold;text-transform:uppercase}body .main .popup-layer .m-popup.angel-pop-x3 .wpck-timer-box .time-sec{width:124px;height:26px;position:absolute;top:31px;left:18px;color:#fff;font-size:22px}.quest.hero-pop{background-image:url(../../img/picmeh-ic-angel-pop.png);background-position:center;background-repeat:no-repeat;background-size:cover}body .main.world3 .popup-layer .m-popup.angel-pop,body .main.world3 .popup-layer .m-popup.hero-pop{box-shadow:0px 4px 0px #4f447d,0 5px 10px #392d26,inset 0 1px 2px #fff,0 2px 10px #000,0 2px 15px #000;background:radial-gradient(79.66% 48.53% at 50% 51.47%, #b9eeff 0%, #836fff 100%)}body .main.world3 .popup-layer .m-popup.angel-pop:before,body .main.world3 .popup-layer .m-popup.hero-pop:before{background:linear-gradient(180deg, #43297b 0%, #6a4fd4 100%);box-shadow:0px 0px 2px 2px rgba(0,0,0,.25),0px 0px 0px 3px #6b4df2,0px 0px 4px 5px rgba(0,0,0,.25),0px 0px 0px 7px #582ed5,0px 0px 1px 8px rgba(0,0,0,.15),0px 0px 0px 10px #6d49ff,inset -1px 0px 2px rgba(0,0,0,.25),inset 1px 0px 2px rgba(0,0,0,.25),inset 0px 3px 0px rgba(12,0,80,.8),inset 0px -3px 0px #d9cfff}body .main.world3 .popup-layer .m-popup.angel-pop .title.dark-pack-tit,body .main.world3 .popup-layer .m-popup.hero-pop .title.dark-pack-tit{background:linear-gradient(90deg, #2156aa 0%, #3a89ff 50%, #2151aa 100%)}body .main.world3 .popup-layer .m-popup.angel-pop .title.dark-pack-tit:before,body .main.world3 .popup-layer .m-popup.angel-pop .title.dark-pack-tit:after,body .main.world3 .popup-layer .m-popup.hero-pop .title.dark-pack-tit:before,body .main.world3 .popup-layer .m-popup.hero-pop .title.dark-pack-tit:after{background-image:url(../../img/darkworld-angels-title-bg-blue.png);filter:brightness(0.74) saturate(1.2)}body .main.world3 .popup-layer .m-popup.angel-pop .content .angle-top,body .main.world3 .popup-layer .m-popup.angel-pop .content .angle-bottom,body .main.world3 .popup-layer .m-popup.angel-pop .content .hero-top,body .main.world3 .popup-layer .m-popup.angel-pop .content .hero-bottom,body .main.world3 .popup-layer .m-popup.hero-pop .content .angle-top,body .main.world3 .popup-layer .m-popup.hero-pop .content .angle-bottom,body .main.world3 .popup-layer .m-popup.hero-pop .content .hero-top,body .main.world3 .popup-layer .m-popup.hero-pop .content .hero-bottom{filter:hue-rotate(210deg)}body .main.world3 .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:before,body .main.world3 .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:after,body .main.world3 .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:before,body .main.world3 .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:after{filter:brightness(0.2) hue-rotate(236deg) opacity(0.5) drop-shadow(0 1px 1px rgba(255, 255, 255, 0.4))}body .main.world3 .popup-layer .m-popup.angel-pop .btn-close-x,body .main.world3 .popup-layer .m-popup.hero-pop .btn-close-x{box-shadow:0 0 7px #000}/*# sourceMappingURL=v2-screen-offer.css.map */
+body .main .popup-layer .m-popup.angel-pop,
+body .main .popup-layer .m-popup.hero-pop {
+  background: linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%);
+  box-shadow: 0px 4px 0px #9c5b07, 0 5px 10px #392d26, inset 0 1px 2px #fff, 0 2px 10px #000, 0 2px 15px #000;
+  border-radius: 22px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 494px;
+  height: 584px;
+}
+body .main .popup-layer .m-popup.angel-pop:before,
+body .main .popup-layer .m-popup.hero-pop:before {
+  top: 24px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 5px;
+  background: linear-gradient(139.67deg, #b46f63 0%, #b27f75 14.32%, #9b645a 27.34%, #bf8273 53.38%, #b8756b 66.85%, #ad7f6b 82.02%, #d08e72 99.43%, #ffe5d7 103.78%, #af7560 111.18%, #af8270 124.99%);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 3px #f2ce4d, 0px 0px 4px 5px rgba(0, 0, 0, 0.25), 0px 0px 0px 7px #d5a72e, 0px 0px 1px 8px rgba(0, 0, 0, 0.15), 0px 0px 0px 10px #ffd749, inset -1px 0px 2px rgba(0, 0, 0, 0.25), inset 1px 0px 2px rgba(0, 0, 0, 0.25), inset 0px 3px 0px rgba(80, 43, 0, 0.8), inset 0px -3px 0px #ffe9cf;
+}
+body .main .popup-layer .m-popup.angel-pop .content,
+body .main .popup-layer .m-popup.hero-pop .content {
+  margin: 42px 34px 34px 34px;
+  height: calc(100% - 76px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angle-top,
+body .main .popup-layer .m-popup.angel-pop .content .angle-bottom,
+body .main .popup-layer .m-popup.angel-pop .content .hero-top,
+body .main .popup-layer .m-popup.angel-pop .content .hero-bottom,
+body .main .popup-layer .m-popup.hero-pop .content .angle-top,
+body .main .popup-layer .m-popup.hero-pop .content .angle-bottom,
+body .main .popup-layer .m-popup.hero-pop .content .hero-top,
+body .main .popup-layer .m-popup.hero-pop .content .hero-bottom {
+  position: absolute;
+  width: 100%;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angle-top:before, body .main .popup-layer .m-popup.angel-pop .content .angle-top:after,
+body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:before,
+body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:after,
+body .main .popup-layer .m-popup.angel-pop .content .hero-top:before,
+body .main .popup-layer .m-popup.angel-pop .content .hero-top:after,
+body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:before,
+body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:after,
+body .main .popup-layer .m-popup.hero-pop .content .angle-top:before,
+body .main .popup-layer .m-popup.hero-pop .content .angle-top:after,
+body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:before,
+body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:after,
+body .main .popup-layer .m-popup.hero-pop .content .hero-top:before,
+body .main .popup-layer .m-popup.hero-pop .content .hero-top:after,
+body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:before,
+body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url(../../img/darkworld-angel-pop-angle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angle-top,
+body .main .popup-layer .m-popup.angel-pop .content .hero-top,
+body .main .popup-layer .m-popup.hero-pop .content .angle-top,
+body .main .popup-layer .m-popup.hero-pop .content .hero-top {
+  top: -52px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angle-bottom,
+body .main .popup-layer .m-popup.angel-pop .content .hero-bottom,
+body .main .popup-layer .m-popup.hero-pop .content .angle-bottom,
+body .main .popup-layer .m-popup.hero-pop .content .hero-bottom {
+  transform: scaleY(-1);
+  bottom: -48px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angle-top:before,
+body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:before,
+body .main .popup-layer .m-popup.angel-pop .content .hero-top:before,
+body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:before,
+body .main .popup-layer .m-popup.hero-pop .content .angle-top:before,
+body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:before,
+body .main .popup-layer .m-popup.hero-pop .content .hero-top:before,
+body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:before {
+  left: -46px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angle-top:after,
+body .main .popup-layer .m-popup.angel-pop .content .angle-bottom:after,
+body .main .popup-layer .m-popup.angel-pop .content .hero-top:after,
+body .main .popup-layer .m-popup.angel-pop .content .hero-bottom:after,
+body .main .popup-layer .m-popup.hero-pop .content .angle-top:after,
+body .main .popup-layer .m-popup.hero-pop .content .angle-bottom:after,
+body .main .popup-layer .m-popup.hero-pop .content .hero-top:after,
+body .main .popup-layer .m-popup.hero-pop .content .hero-bottom:after {
+  transform: scaleX(-1);
+  right: -46px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box {
+  width: 310px;
+  height: 408px;
+  background: linear-gradient(159.21deg, #9f7c47 1.39%, #e9be88 35.56%, #946f3f 70.08%, #dfb47e 84.6%, #b38952 98.01%);
+  border: 2px solid #ffdd62;
+  box-shadow: 0px 2px 0px #673d06, 0px 3px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  position: relative;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .img-wrap,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .img-wrap,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .img-wrap,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .img-wrap {
+  width: 300px;
+  height: 398px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px #734407, 0px 0px 3px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .img-wrap img,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .img-wrap img,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .img-wrap img,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .img-wrap img {
+  width: auto;
+  height: 118%;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .angel-name-box,
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .hero-name-box,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .angel-name-box,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .hero-name-box,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .angel-name-box,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .hero-name-box,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .angel-name-box,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box {
+  width: 280px;
+  height: 40px;
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  background-image: url(../../img/darkworld-angels-title-bg-lilac.png);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .angel-name-box .angel-name,
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .angel-name-box .hero-name,
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .hero-name-box .angel-name,
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .hero-name-box .hero-name,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .angel-name-box .angel-name,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .angel-name-box .hero-name,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .hero-name-box .angel-name,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .hero-name-box .hero-name,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .angel-name-box .angel-name,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .angel-name-box .hero-name,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .hero-name-box .angel-name,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .hero-name-box .hero-name,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .angel-name-box .angel-name,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .angel-name-box .hero-name,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box .angel-name,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box .hero-name {
+  text-align: center;
+  color: #fff;
+  line-height: 38px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  font-size: 17px;
+  font-weight: 700;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box {
+  width: 300px;
+  height: 81px;
+  margin: auto;
+  position: relative;
+  top: 322px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box .stars-box,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box .stars-box,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box .stars-box,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .stars-box {
+  width: 100%;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box .stars-box .star,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box .stars-box .star,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box .stars-box .star,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .stars-box .star {
+  margin-top: 1px;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../img/star-inactive-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .info-box .stars-box .star.active,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .info-box .stars-box .star.active,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .info-box .stars-box .star.active,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .stars-box .star.active {
+  background-image: url(../../img/star-active-bg.png);
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 361px;
+  padding: 7px 1px 7px 32px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap {
+  width: 189px;
+  height: 26px;
+  background: linear-gradient(180deg, #31302c 0%, #5d5b55 63.91%, #3d3b35 100%);
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgb(0, 0, 0);
+  position: relative;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress {
+  position: absolute;
+  width: 187px;
+  height: 24px;
+  left: 1px;
+  top: 1px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled {
+  height: 100%;
+  background: linear-gradient(90deg, #86ea21 0%, #0dbf34 100%);
+  border-radius: 4px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 10px 0 rgba(255, 255, 255, 0.3);
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);
+  line-height: 20px;
+  white-space: nowrap;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from {
+  margin-left: 4px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before {
+  content: "/";
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus {
+  color: #ffe000;
+  margin-left: 10px;
+  padding: 0 4px 0 3px;
+  background: #ff63ec;
+  border-radius: 4px;
+  font-weight: 700;
+  position: relative;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before {
+  content: "";
+  border: 8px solid transparent;
+  border-right: 8px solid #ff63ec;
+  border-radius: 2px;
+  position: absolute;
+  top: 2px;
+  left: -15px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  overflow: hidden;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img {
+  width: 34px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .angel-card-box .progress-banner-red,
+body .main .popup-layer .m-popup.angel-pop .content .hero-card-box .progress-banner-red,
+body .main .popup-layer .m-popup.hero-pop .content .angel-card-box .progress-banner-red,
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .progress-banner-red {
+  top: 310px;
+  right: -2px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box {
+  height: 412px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  background: rgba(8, 7, 74, 0.5);
+  border: 2px solid #ffdb5a;
+  box-shadow: 0px 2px 0px #673d06, 0px 3px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box:before,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/darkworld-reward-bg.png);
+  background-repeat: no-repeat;
+  background-position: center 5px;
+  background-size: 96%;
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box img,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box img {
+  position: absolute;
+  top: 10px;
+  width: auto;
+  height: 46px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .reward-box .reward-value,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .reward-box .reward-value {
+  position: absolute;
+  color: #ffebc6;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  top: 60px;
+  background: #7a4e14;
+  width: 66px;
+  line-height: 18px;
+  font-size: 14px;
+  margin-left: -1px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box .sale-banner,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box .sale-banner {
+  top: 394px;
+  left: 70px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box.x2-sale,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box.x2-sale {
+  border-radius: 6px;
+  background: #dd338e;
+  position: relative;
+  box-shadow: 0 0 0 6px #dd338e, 0 0 0 8px #ffdb5a, 0 1px 3px 8px rgba(0, 0, 0, 0.4);
+}
+body .main .popup-layer .m-popup.angel-pop .content .right-side-reward-box.x2-sale .sale-banner,
+body .main .popup-layer .m-popup.hero-pop .content .right-side-reward-box.x2-sale .sale-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -28px;
+  right: -28px;
+  width: 52px;
+  height: 52px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 34px;
+  z-index: 1;
+  background: #dd338e;
+  box-shadow: inset 0 0 0 2px #ffdb5a, 0px 2px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  transform: rotate(18deg);
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  margin-top: 10px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:before, body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:after,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:before,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 68px;
+  background-image: url(../../img/darkworld-angel-pop-btn-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:before,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:before {
+  left: 30px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:after,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:after {
+  transform: scaleX(-1);
+  right: 30px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .color-btn,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .color-btn {
+  width: 180px;
+  height: 58px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .color-btn .color-btn-text,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .color-btn .color-btn-text {
+  font-size: 22px;
+  font-size: 22px;
+  display: inline-block;
+  height: fit-content;
+  margin-top: -4px;
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .color-btn .color-btn-text .old-price,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .color-btn .color-btn-text .old-price {
+  font-size: 18px;
+  color: rgba(41, 106, 12, 0.8);
+  text-decoration: line-through;
+  text-shadow: none;
+}
+body .main .popup-layer .m-popup.angel-pop .content .btn-bay-wrap .sale-banner,
+body .main .popup-layer .m-popup.hero-pop .content .btn-bay-wrap .sale-banner {
+  left: 262px;
+}
+body .main .popup-layer .m-popup.angel-pop .btn-close-x,
+body .main .popup-layer .m-popup.hero-pop .btn-close-x {
+  top: -8px;
+  right: -8px;
+}
+body .main .popup-layer .m-popup.hero-pop {
+  background: linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%);
+  box-shadow: 0px 4px 0px #9c5b07, 0 5px 10px #392d26, inset 0 1px 2px #fff, 0 2px 10px #000, 0 2px 15px #000;
+  border-radius: 22px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 494px;
+  height: 584px;
+}
+body .main .popup-layer .m-popup.hero-pop:before {
+  top: 24px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 5px;
+  background: linear-gradient(139.67deg, #b46f63 0%, #b27f75 14.32%, #9b645a 27.34%, #bf8273 53.38%, #b8756b 66.85%, #ad7f6b 82.02%, #d08e72 99.43%, #ffe5d7 103.78%, #af7560 111.18%, #af8270 124.99%);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 3px #f2ce4d, 0px 0px 4px 5px rgba(0, 0, 0, 0.25), 0px 0px 0px 7px #d5a72e, 0px 0px 1px 8px rgba(0, 0, 0, 0.15), 0px 0px 0px 10px #ffd749, inset -1px 0px 2px rgba(0, 0, 0, 0.25), inset 1px 0px 2px rgba(0, 0, 0, 0.25), inset 0px 3px 0px rgba(80, 43, 0, 0.8), inset 0px -3px 0px #ffe9cf;
+}
+body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit {
+  top: -8px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  left: -6px;
+  transform: unset;
+  background: linear-gradient(90deg, #aa5f21 0%, #d67d3e 50%, #aa5221 100%);
+  border-radius: unset;
+  line-height: 36px;
+  font-size: 20px;
+  width: fit-content;
+  height: auto;
+  padding: 0 40px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.6));
+  white-space: nowrap;
+  text-transform: inherit;
+  text-transform: uppercase;
+  border-radius: 0 6px 6px 0;
+}
+body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:before, body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 17px;
+  background-image: url(../../img/darkworld-angels-title-bg-br.png);
+  background-repeat: no-repeat;
+  filter: brightness(0.77) saturate(1.9);
+  background-size: 55px;
+  background-size: auto 52px;
+}
+body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:before {
+  left: -16px;
+  background-position: left;
+}
+body .main .popup-layer .m-popup.hero-pop .title.dark-pack-tit:after {
+  right: -16px;
+  background-position: right;
+  filter: brightness(0.71) saturate(1.9);
+  visibility: hidden;
+}
+body .main .popup-layer .m-popup.hero-pop .content {
+  margin: 42px 34px 34px 34px;
+  height: calc(100% - 76px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body .main .popup-layer .m-popup.hero-pop .content .hero-top,
+body .main .popup-layer .m-popup.hero-pop .content .hero-bottom {
+  display: none;
+}
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .hero-name-box {
+  width: 280px;
+  height: 42px;
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  background-image: url(../../img/darkworld-angels-title-bg-br.png);
+  background-size: 82%;
+  background-position: center 3px;
+  background-repeat: no-repeat;
+}
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .dps-extra {
+  left: 34px;
+  top: 22px;
+}
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .prize-promote-box {
+  width: 42px;
+  height: 56px;
+  top: 14px;
+  left: unset;
+  right: 34px;
+  margin-left: 0;
+}
+body .main .popup-layer .m-popup.hero-pop .content .hero-card-box .info-box .prize-promote-box .prize-promote-text {
+  top: 2px;
+  font-size: 16px;
+  left: -8px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 {
+  width: fit-content;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content {
+  margin: 10px;
+  margin-top: 60px;
+  width: 1010px;
+  height: 510px;
+  background: url(../../img/rhomb-bg.png);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box {
+  border-radius: 10px;
+  height: 470px;
+  position: relative;
+  display: inline-block;
+  margin: 20px 10px 0 10px;
+  transition: ease-in-out 0.06s;
+  transform: scale(0.99);
+  box-shadow: 0 4px 0 #32302d, 0px 2px 2px rgba(0, 0, 0, 0.35), 0px -1px 1px rgba(0, 0, 0, 0.4), 0px 2px 2px 1px rgba(0, 0, 0, 0.6), inset 0px 4px 6px 1px rgba(255, 255, 255, 0.35);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover {
+  transition: ease-in-out 0.06s;
+  transform: scale(1);
+  top: -2px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.novice-pack, body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.king-pack, body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.angel-pack {
+  box-shadow: 0 4px 0 #32302d, 0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 10px rgba(0, 0, 0, 0.6), inset 0px 1px 10px 10px rgba(255, 255, 255, 0.4);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.novice-pack .card-content, body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.king-pack .card-content, body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box:hover.angel-pack .card-content {
+  box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0px 1px 20px 20px rgba(255, 255, 255, 0.2);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: 5px;
+  box-shadow: inset 0 1px 4px 1px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .card-title {
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 244px;
+  height: 36px;
+  line-height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box {
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-evenly;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box {
+  width: 118px;
+  height: 232px;
+  border-radius: 10px;
+  position: relative;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box .hero-image-wrap {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box .hero-image-wrap .hero {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box .hero-name {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0px 3px 3px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.tithero {
+  background: linear-gradient(155.68deg, #4675d0 6.11%, #b0c6ff 53.31%, #2457da 65.64%, #a3bcff 81.23%, #4675d0 97.65%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0px 2px 0px #294a9d, 0px 4px 4px 1px rgba(0, 0, 0, 0.35);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.tithero .hero-image-wrap {
+  box-shadow: 0 0 0 1px #1b0a87, 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.tithero .hero-name {
+  background: linear-gradient(270deg, #4c48c3 0%, #4543a4 20.31%, #5755c7 51.04%, #4543a4 82.81%, #4c48c3 100%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.suphero {
+  background: linear-gradient(155.68deg, #d976ff 6.11%, #e097ff 45.23%, #b446e5 64.21%, #df9aff 81.23%, #8a22bb 97.65%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0px 2px 0px #690896, 0px 4px 4px 1px rgba(0, 0, 0, 0.35);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.suphero .hero-image-wrap {
+  box-shadow: 0 0 0 1px #690896, 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-card-box .hero-image-box.suphero .hero-name {
+  background: linear-gradient(270deg, #763dbf 0%, #7635a9 20.31%, #8051bb 51.04%, #6b35a1 82.81%, #7639c4 100%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  margin-top: 18px;
+  position: relative;
+  background: radial-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 90%), linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  background-size: 100% 44%, 100% 100%;
+  background-position: 0 45px, 0 0px;
+  background-repeat: no-repeat;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:before, body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 90%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:before {
+  top: 0;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box:after {
+  bottom: 0;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece {
+  width: 54px;
+  height: 54px;
+  border-radius: 100%;
+  background: linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.35);
+  position: relative;
+  top: -4px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background: linear-gradient(-45deg, #450da2 0%, #360aa5 26%, #3c0dab 26%, #360bad 48%, #240f9a 48%, #41139d 60%, #550fa7 60%, #3908a8 70%, #2c0c93 70%, #530bab 100%);
+  border-radius: 100%;
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece .reward-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 36px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .reward-box .reward-piece .reward-value {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  background: linear-gradient(270deg, #592279 0%, #6b3989 20.31%, #8648aa 51.04%, #6b3989 82.81%, #592279 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  line-height: 18px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap {
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap .color-btn {
+  width: 180px;
+  height: 58px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap .color-btn .color-btn-text {
+  font-size: 22px;
+  display: inline-block;
+  height: fit-content;
+  margin-top: -4px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .btn-bay-wrap .color-btn .color-btn-text .old-price {
+  font-size: 18px;
+  color: rgba(41, 106, 12, 0.8);
+  text-decoration: line-through;
+  text-shadow: none;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box .card-content .block-layer {
+  display: none;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack {
+  width: 280px;
+  background: linear-gradient(159.21deg, #8c7a68 1.39%, #e4cbb4 22.24%, #7b6653 62.95%, #ead2bc 79.29%, #9d8874 98.01%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content {
+  background: linear-gradient(180deg, rgba(43, 39, 215, 0.6) 0%, rgba(140, 138, 255, 0.6) 100%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content .card-title {
+  background-image: url(../../img/darkworld-angels-title-bg-blue.png);
+  background-size: 88%;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content .reward-card-box .hero-image-box .hero-name {
+  height: 24px;
+  line-height: 24px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.novice-pack .card-content .btn-bay-wrap .sale-banner {
+  left: 174px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack {
+  width: 320px;
+  background: linear-gradient(159.21deg, #898989 1.39%, #d7d7d7 22.24%, #848484 62.95%, #dadada 79.29%, #a2a2a2 98.01%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content {
+  background: linear-gradient(180deg, rgba(123, 41, 115, 0.6) 0%, rgba(212, 79, 159, 0.6) 100%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .card-title {
+  background-image: url(../../img/darkworld-angels-title-bg-blue.png);
+  background-size: 88%;
+  filter: hue-rotate(45deg);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .reward-card-box .hero-image-box .hero-name {
+  height: 36px;
+  line-height: 10px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .reward-card-box .hero-image-box .hero-name .unique-title {
+  font-size: 12px;
+  line-height: 20px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.king-pack .card-content .btn-bay-wrap .sale-banner {
+  left: 194px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack {
+  width: 320px;
+  background: linear-gradient(138.45deg, #ae8430 5.67%, #ffee96 24.29%, #f0cf4e 35.56%, #dfb03c 68.89%, #ffe261 82.61%, #dcba4c 87.51%, #ae8430 99.76%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content {
+  background: linear-gradient(180deg, rgba(158, 0, 255, 0.3) 0%, rgba(117, 0, 234, 0.3) 100%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .card-title {
+  background-image: url(../../img/darkworld-angels-title-bg-brown.png);
+  line-height: 32px;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.6));
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box {
+  width: 266px;
+  height: 324px;
+  background: linear-gradient(159.21deg, #9f7c47 1.39%, #e9be88 35.56%, #946f3f 70.08%, #dfb47e 84.6%, #b38952 98.01%);
+  box-shadow: inset 0 0 0 2px #ffdd62, 0px 1px 0px #673d06, 0px 6px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #734407, 0px 0px 6px rgba(0, 0, 0, 0.4);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .angel {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box {
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 5px 5px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  padding: 7px 1px 7px 32px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap {
+  width: 189px;
+  height: 26px;
+  background: linear-gradient(180deg, #31302c 0%, #5d5b55 63.91%, #3d3b35 100%);
+  border-radius: 5px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgb(0, 0, 0);
+  position: relative;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress {
+  position: absolute;
+  width: 187px;
+  height: 24px;
+  left: 1px;
+  top: 1px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .progress .fulfilled {
+  height: 100%;
+  background: linear-gradient(90deg, #86ea21 0%, #0dbf34 100%);
+  border-radius: 4px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 10px 0 rgba(255, 255, 255, 0.3);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);
+  line-height: 20px;
+  white-space: nowrap;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .from {
+  margin-left: 4px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .to:before {
+  content: "/";
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus {
+  color: #ffe000;
+  margin-left: 10px;
+  padding: 0 4px 0 3px;
+  background: #ff63ec;
+  border-radius: 4px;
+  font-weight: 700;
+  position: relative;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .angel-card-progress-bar-wrap .value .bonus:before {
+  content: "";
+  border: 8px solid transparent;
+  border-right: 8px solid #ff63ec;
+  border-radius: 2px;
+  position: absolute;
+  top: 2px;
+  left: -15px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  box-shadow: 0 4px 2px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  overflow: hidden;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .reward-card-box .angel-image-box .angel-image-wrap .info-box .progress-bar-wrap-box .girl-bonus-box .girl-bonus-pic img {
+  width: 34px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .btn-bay-wrap {
+  margin-top: 20px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.angel-pack .card-content .btn-bay-wrap .sale-banner {
+  left: 194px;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .reward-card-box,
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .reward-box {
+  filter: grayscale(0.8);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer:before {
+  content: "";
+  border: 28px solid transparent;
+  border-right: 24px solid #b15cfd;
+  border-radius: 2px;
+  position: absolute;
+  left: -52px;
+  top: 50%;
+  transform: translateY(-50%);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.8));
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background: rgba(32, 0, 66, 0.8);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:before, body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 90%);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:before {
+  top: 0;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .content .offer-card-box.block .card-content .block-layer .block-layer-text:after {
+  bottom: 0;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .wpck-timer-box {
+  width: 159px;
+  height: 72px;
+  position: absolute;
+  top: -5px;
+  margin-left: -10px;
+  background-image: url(../../img/timer-back.png);
+  background-size: 100%;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .wpck-timer-box .time-left {
+  width: 124px;
+  height: 26px;
+  position: absolute;
+  top: 15px;
+  left: 18px;
+  color: #fff000;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body .main .popup-layer .m-popup.angel-pop-x3 .wpck-timer-box .time-sec {
+  width: 124px;
+  height: 26px;
+  position: absolute;
+  top: 31px;
+  left: 18px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.quest.hero-pop {
+  background-image: url(../../img/picmeh-ic-angel-pop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .main.world3 .popup-layer .m-popup.angel-pop,
+body .main.world3 .popup-layer .m-popup.hero-pop {
+  box-shadow: 0px 4px 0px #4f447d, 0 5px 10px #392d26, inset 0 1px 2px #fff, 0 2px 10px #000, 0 2px 15px #000;
+  background: radial-gradient(79.66% 48.53% at 50% 51.47%, #b9eeff 0%, #836fff 100%);
+}
+body .main.world3 .popup-layer .m-popup.angel-pop:before,
+body .main.world3 .popup-layer .m-popup.hero-pop:before {
+  background: linear-gradient(180deg, #43297b 0%, #6a4fd4 100%);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.25), 0px 0px 0px 3px #6b4df2, 0px 0px 4px 5px rgba(0, 0, 0, 0.25), 0px 0px 0px 7px #582ed5, 0px 0px 1px 8px rgba(0, 0, 0, 0.15), 0px 0px 0px 10px #6d49ff, inset -1px 0px 2px rgba(0, 0, 0, 0.25), inset 1px 0px 2px rgba(0, 0, 0, 0.25), inset 0px 3px 0px rgba(12, 0, 80, 0.8), inset 0px -3px 0px #d9cfff;
+}
+body .main.world3 .popup-layer .m-popup.angel-pop .title.dark-pack-tit,
+body .main.world3 .popup-layer .m-popup.hero-pop .title.dark-pack-tit {
+  background: linear-gradient(90deg, #2156aa 0%, #3a89ff 50%, #2151aa 100%);
+}
+body .main.world3 .popup-layer .m-popup.angel-pop .title.dark-pack-tit:before, body .main.world3 .popup-layer .m-popup.angel-pop .title.dark-pack-tit:after,
+body .main.world3 .popup-layer .m-popup.hero-pop .title.dark-pack-tit:before,
+body .main.world3 .popup-layer .m-popup.hero-pop .title.dark-pack-tit:after {
+  background-image: url(../../img/darkworld-angels-title-bg-blue.png);
+  filter: brightness(0.74) saturate(1.2);
+}
+body .main.world3 .popup-layer .m-popup.angel-pop .content .angle-top,
+body .main.world3 .popup-layer .m-popup.angel-pop .content .angle-bottom,
+body .main.world3 .popup-layer .m-popup.angel-pop .content .hero-top,
+body .main.world3 .popup-layer .m-popup.angel-pop .content .hero-bottom,
+body .main.world3 .popup-layer .m-popup.hero-pop .content .angle-top,
+body .main.world3 .popup-layer .m-popup.hero-pop .content .angle-bottom,
+body .main.world3 .popup-layer .m-popup.hero-pop .content .hero-top,
+body .main.world3 .popup-layer .m-popup.hero-pop .content .hero-bottom {
+  filter: hue-rotate(210deg);
+}
+body .main.world3 .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:before, body .main.world3 .popup-layer .m-popup.angel-pop .content .btn-bay-wrap:after,
+body .main.world3 .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:before,
+body .main.world3 .popup-layer .m-popup.hero-pop .content .btn-bay-wrap:after {
+  filter: brightness(0.2) hue-rotate(236deg) opacity(0.5) drop-shadow(0 1px 1px rgba(255, 255, 255, 0.4));
+}
+body .main.world3 .popup-layer .m-popup.angel-pop .btn-close-x,
+body .main.world3 .popup-layer .m-popup.hero-pop .btn-close-x {
+  box-shadow: 0 0 7px #000;
+}

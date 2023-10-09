@@ -5,7 +5,7 @@ body .main {
     .mine-event-screen-chest {
         width: 100%;
         height: 100%;
-        background-image: url(../../img/"./v2-mn-bg-chest.jpg");
+        background-image: url("./v2-mn-bg-chest.jpg");
         background-size: 100%;
         position: absolute;
         top: 0;
@@ -77,7 +77,7 @@ body .main {
                         position: absolute;
                         top: -16px;
                         left: -10px;
-                        background-image: url(../../img/earthworld-chest-points-chip-icon.png);
+                        background-image: url(earthworld-chest-points-chip-icon.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -128,7 +128,7 @@ body .main {
                         position: absolute;
                         top: 5px;
                         left: 10px;
-                        background-image: url(../../img/v2-mn-soul-sg-160.png);
+                        background-image: url(v2-mn-soul-sg-160.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
@@ -227,7 +227,7 @@ body .main {
                             content: "";
                             width: 10px;
                             height: 14px;
-                            background: url(../../img/darkworld-back-arrow.png);
+                            background: url(darkworld-back-arrow.png);
                             filter: drop-shadow(0 1px 2px black) invert(1);
                             opacity: 0.7;
                             background-size: cover;
@@ -255,7 +255,7 @@ body .main {
                     position: absolute;
                     top: 12px;
                     right: 190px;
-                    background-image: url(../../img/i-ico.png);
+                    background-image: url(i-ico.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                     cursor: pointer;
@@ -324,7 +324,7 @@ body .main {
                                 height: 18px;
                                 position: relative;
                                 display: inline-block;
-                                background-image: url(../../img/v2-mn-soul-sg-160.png);
+                                background-image: url(v2-mn-soul-sg-160.png);
                                 background-size: 100%;
                                 margin: 0 4px 0 4px;
                                 vertical-align: middle;
@@ -362,32 +362,32 @@ body .main {
             &.chest-silver {
                 top: 105px;
                 left: 55px;
-                background-image: url(../../img/v2-mn-chest-silver.png);
+                background-image: url(v2-mn-chest-silver.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
             }
             &.chest-gold {
                 top: 85px;
                 left: 448px;
-                background-image: url(../../img/v2-mn-chest-gold.png);
+                background-image: url(v2-mn-chest-gold.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
             }
             &.chest-bronze {
                 top: 105px;
                 right: 65px;
-                background-image: url(../../img/v2-mn-chest-bronze.png);
+                background-image: url(v2-mn-chest-bronze.png);
                 background-size: 100%;
                 background-repeat: no-repeat;
             }
             &.silver-open {
-                background-image: url(../../img/v2-mn-chest-silver-open.png);
+                background-image: url(v2-mn-chest-silver-open.png);
             }
             &.gold-open {
-                background-image: url(../../img/v2-mn-chest-gold-open.png);
+                background-image: url(v2-mn-chest-gold-open.png);
             }
             &.bronze-open {
-                background-image: url(../../img/v2-mn-chest-bronze-open.png);
+                background-image: url(v2-mn-chest-bronze-open.png);
             }
 
             .hero-avatar-box {
@@ -415,7 +415,7 @@ body .main {
                     position: absolute;
                     top: 160px;
                     left: -32px;
-                    background-image: url(../../img/wpck-ram1.png);
+                    background-image: url(wpck-ram1.png);
                     background-size: 100%;
                     .gd-box-goddess-name {
                         width: 200px;
@@ -451,7 +451,7 @@ body .main {
     }
 
     .pretty-holder {
-        background-image: url(../../img/facia-1.png);
+        background-image: url(facia-1.png);
         width: 400px;
         height: 96px;
         position: absolute;
@@ -590,7 +590,7 @@ body .main {
 
 body .main.world3 {
     .mine-event-screen-chest {
-        background-image: url(../../img/"v2-mn-bg-darkworld-chest.jpg");
+        background-image: url("v2-mn-bg-darkworld-chest.jpg");
         .mine-event-screen-head-box {
             .mine-event-screen-head {
                 .x-info-btn {
@@ -603,7 +603,7 @@ body .main.world3 {
                 }
                 .color-btn.goddess {
                     .color-btn-icon {
-                        background-image: url(../../img/darkworld-chest-points-chip-icon.png);
+                        background-image: url(darkworld-chest-points-chip-icon.png);
                     }
                 }
             }

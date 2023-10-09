@@ -13,7 +13,7 @@
         color: #fff;
     }
     .color-box {
-        background-image: url(../../img/ts_confirm_bk-1.jpg);
+        background-image: url(ts_confirm_bk-1.jpg);
         background-size: 100%;
         &:before {
             display: none;
@@ -28,7 +28,7 @@
         position: absolute;
         top: -10px;
         left: -46px;
-        background-image: url(../../img/unipop-bg1.png);
+        background-image: url(unipop-bg1.png);
         background-size: 100%;
         &:before {
             content: "";
@@ -37,7 +37,7 @@
             position: absolute;
             top: 540px;
             left: 190px;
-            background-image: url(../../img/unipop-bg2.png);
+            background-image: url(unipop-bg2.png);
             background-size: 100%;
         }
         &:after {
@@ -47,7 +47,7 @@
             position: absolute;
             top: 90px;
             left: 800px;
-            background-image: url(../../img/unipop-bg3.png);
+            background-image: url(unipop-bg3.png);
             background-size: 100%;
         }
     }
@@ -136,7 +136,7 @@
                         position: absolute;
                         top: 9px;
                         left: 148px;
-                        background-image: url(../../img/unipop-gold-arrow.png);
+                        background-image: url(unipop-gold-arrow.png);
                         background-size: 100%;
                         visibility: hidden;
                     }
@@ -184,7 +184,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-image: url(../../img/pop-bg-hw.jpg);
+                background-image: url(pop-bg-hw.jpg);
                 background-size: 128%;
                 background-position-y: bottom;
                 background-repeat: no-repeat;
@@ -210,7 +210,7 @@
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background-image: url(../../img/timer-back-50.png);
+                    background-image: url(timer-back-50.png);
                     background-size: 100%;
                     .time-text,
                     .time {
@@ -235,7 +235,7 @@
                     position: absolute;
                     bottom: 5px;
                     left: 5px;
-                    background-image: url(../../img/break-girl15-hw.png);
+                    background-image: url(break-girl15-hw.png);
                     background-size: 100%;
                 }
                 .color-btn.red.orgy {
@@ -358,7 +358,7 @@
                             width: 192px;
                             height: 28px;
                             line-height: 24px;
-                            background-image: url(../../img/darkworld-angels-title-bg-brown.png);
+                            background-image: url(darkworld-angels-title-bg-brown.png);
                             background-repeat: no-repeat;
                             background-size: cover;
                             background-position: center;
@@ -511,7 +511,7 @@
                             content: "";
                             width: 20px;
                             height: 20px;
-                            background: url(../../img/darkworld-back-arrow.png);
+                            background: url(darkworld-back-arrow.png);
                             background-size: 100%;
                             background-position: center;
                             background-repeat: no-repeat;
@@ -533,7 +533,7 @@
                             content: "";
                             width: 20px;
                             height: 20px;
-                            background: url(../../img/darkworld-back-arrow.png);
+                            background: url(darkworld-back-arrow.png);
                             background-size: 100%;
                             background-position: center;
                             background-repeat: no-repeat;
@@ -558,7 +558,7 @@
                     position: absolute;
                     top: 158px;
                     left: 108px;
-                    background-image: url(../../img/unipop-buble.png);
+                    background-image: url(unipop-buble.png);
                     background-size: 100%;
                     .girl-buble-text-box {
                         width: 170px;
@@ -630,14 +630,14 @@
                 }
             }
             .right-box-f.hw {
-                background-image: url(../../img/pop-bg-hw.jpg);
+                background-image: url(pop-bg-hw.jpg);
                 .event-btlpass-collect-box-all,
                 .event-btlpass-collect-box-angel {
                     box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
                 }
             }
             .right-box-f.bf {
-                background-image: url(../../img/v2-bf-pop-bg.jpg);
+                background-image: url(v2-bf-pop-bg.jpg);
                 .event-btlpass-collect-box-all,
                 .event-btlpass-collect-box-angel {
                     background-color: rgba(76, 65, 56, 0.9);
@@ -646,7 +646,7 @@
                 }
             }
             .right-box-f.ny {
-                background-image: url(../../img/pop-bg-xmas.jpg);
+                background-image: url(pop-bg-xmas.jpg);
                 .event-btlpass-collect-box-all,
                 .event-btlpass-collect-box-angel {
                     background-color: rgba(40, 140, 190, 0.6);
@@ -669,7 +669,7 @@
                     }
                     &:before {
                         left: 0;
-                        background-image: url(../../img/unipop-xmas-bg.png);
+                        background-image: url(unipop-xmas-bg.png);
                         background-position: left;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -677,7 +677,7 @@
                     }
                     &:after {
                         right: 0;
-                        background-image: url(../../img/unipop-xmas-bg.png);
+                        background-image: url(unipop-xmas-bg.png);
                         background-position: right;
                         background-repeat: no-repeat;
                         background-size: cover;
@@ -686,7 +686,7 @@
                 }
             }
             .right-box-f.sv {
-                background-image: url(../../img/sv-sale-bg.jpg);
+                background-image: url(sv-sale-bg.jpg);
                 .event-btlpass-collect-box-all {
                     background-color: rgba(190, 52, 52, 0.88);
                     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);

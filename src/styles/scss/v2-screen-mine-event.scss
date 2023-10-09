@@ -40,7 +40,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url(../../img/"./explosion/expl_01_70.png");
+    background-image: url("./explosion/expl_01_70.png");
     animation: expl_playX 0.25s steps(4) 4, expl_playY 1s steps(4) 1;
     z-index: 123;
 }
@@ -50,7 +50,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-image: url(../../img/"./explosion/splash_70.png");
+    background-image: url("./explosion/splash_70.png");
     animation: expl_playX 0.25s steps(4) 4, expl_playY 1s steps(2) 1;
     z-index: 123;
 }
@@ -58,7 +58,7 @@
 .mine-event-screen {
     width: 100%;
     height: 100%;
-    background-image: url(../../img/"./v2-mn-bg.jpg?01");
+    background-image: url("./v2-mn-bg.jpg?01");
     background-size: 100%;
     position: absolute;
     top: 0;
@@ -163,7 +163,7 @@
             left: 9px;
             top: 50%;
             margin-top: -20px;
-            background-image: url(../../img/"./v2-mn-key.png");
+            background-image: url("./v2-mn-key.png");
         }
     }
 
@@ -192,7 +192,7 @@
             left: 9px;
             top: 50%;
             margin-top: -20px;
-            background-image: url(../../img/"./v2-ic-rating.png");
+            background-image: url("./v2-ic-rating.png");
             background-size: contain;
         }
 
@@ -208,7 +208,7 @@
             }
             &:before {
                 background: rgba(0, 0, 0, 0.3);
-                background-image: url(../../img/"./crow-70.png");
+                background-image: url("./crow-70.png");
                 border-radius: 6px;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -230,7 +230,7 @@
         &.spirit-count {
             right: 225px;
             &:before {
-                background-image: url(../../img/"./v2-mn-soul-sg-160.png");
+                background-image: url("./v2-mn-soul-sg-160.png");
             }
         }
 
@@ -241,7 +241,7 @@
                 height: 60px;
                 left: 0px;
                 margin-top: -40px;
-                background-image: url(../../img/"./v2-mn-chest-gold-open.png");
+                background-image: url("./v2-mn-chest-gold-open.png");
             }
         }
         &.silver-count {
@@ -251,7 +251,7 @@
                 height: 60px;
                 left: 0px;
                 margin-top: -40px;
-                background-image: url(../../img/"./v2-mn-chest-silver-open.png");
+                background-image: url("./v2-mn-chest-silver-open.png");
             }
         }
         &.bronze-count {
@@ -261,14 +261,14 @@
                 height: 60px;
                 left: 0px;
                 margin-top: -40px;
-                background-image: url(../../img/"./v2-mn-chest-bronze-open.png");
+                background-image: url("./v2-mn-chest-bronze-open.png");
             }
         }
 
         &.floor-count {
             right: 400px;
             &:before {
-                background-image: url(../../img/"./v2-mn-ic-rating.png");
+                background-image: url("./v2-mn-ic-rating.png");
             }
         }
     }
@@ -299,13 +299,13 @@
             left: 9px;
             top: 50%;
             margin-top: -20px;
-            background-image: url(../../img/"./v2-mn-pr-100-in.png");
+            background-image: url("./v2-mn-pr-100-in.png");
             background-size: contain;
         }
     }
 
     .x2-timer {
-        background-image: url(../../img/"./wpck-ram1.png");
+        background-image: url("./wpck-ram1.png");
         background-size: 100%;
         background-repeat: no-repeat;
         width: 250px;
@@ -326,7 +326,7 @@
             content: "";
             width: 100px;
             height: 56px;
-            background-image: url(../../img/"./v2-mn-timer-x2-pic.png");
+            background-image: url("./v2-mn-timer-x2-pic.png");
             position: absolute;
             left: 20px;
             top: -5px;
@@ -426,7 +426,7 @@
         position: absolute;
         left: 155px;
         bottom: 20px;
-        background-image: url(../../img/"./v2-mn-bg1.jpg?01");
+        background-image: url("./v2-mn-bg1.jpg?01");
         background-repeat: repeat-x;
         padding-left: 165px;
         box-sizing: border-box;
@@ -492,7 +492,7 @@
             content: "";
             height: 510px;
             width: 170px;
-            background-image: url(../../img/"./v2-mn-ent.png");
+            background-image: url("./v2-mn-ent.png");
             position: absolute;
             top: 0;
             left: 0;
@@ -502,7 +502,7 @@
             content: "";
             height: 510px;
             width: 170px;
-            background-image: url(../../img/"./v2-mn-ent.png");
+            background-image: url("./v2-mn-ent.png");
             position: absolute;
             transform: scale(-1, 1);
             top: 0;
@@ -562,21 +562,21 @@
 
         //type
         &.gr {
-            background-image: url(../../img/"./v2-mn-fr1.png");
+            background-image: url("./v2-mn-fr1.png");
             cursor: pointer;
             &:active {
                 transform: scale(0.96);
             }
         }
         &.st {
-            background-image: url(../../img/"./v2-mn-fr2.png");
+            background-image: url("./v2-mn-fr2.png");
             cursor: pointer;
 
             &.cracked {
-                background-image: url(../../img/"./v2-mn-fr3.png");
+                background-image: url("./v2-mn-fr3.png");
             }
             &.solid {
-                background-image: url(../../img/"./v2-mn-fr4.png");
+                background-image: url("./v2-mn-fr4.png");
             }
             &:active {
                 transform: scale(0.96);
@@ -616,62 +616,62 @@
             top: 0;
 
             &.chest {
-                background-image: url(../../img/"./v2-mn-pr-100-in.png");
+                background-image: url("./v2-mn-pr-100-in.png");
             }
 
             &.chest_closed {
-                background-image: url(../../img/"./sh-icon-chest-128-cl.png");
+                background-image: url("./sh-icon-chest-128-cl.png");
             }
 
             &.boom {
-                background-image: url(../../img/"./v2-mn-fr1-boom-nobg.png");
+                background-image: url("./v2-mn-fr1-boom-nobg.png");
             }
 
             &.meteor {
-                background-image: url(../../img/"./v2-mn-ruf-meteor.png");
+                background-image: url("./v2-mn-ruf-meteor.png");
 
                 &.big {
-                    background-image: url(../../img/"./v2-mn-ruf-meteor-big.png");
+                    background-image: url("./v2-mn-ruf-meteor-big.png");
                 }
             }
 
             &.gold {
-                background-image: url(../../img/"./v2-mn-ruf-gold.png");
+                background-image: url("./v2-mn-ruf-gold.png");
 
                 &.big {
-                    background-image: url(../../img/"./v2-mn-ruf-gold-big.png");
+                    background-image: url("./v2-mn-ruf-gold-big.png");
                 }
             }
 
             &.silver {
-                background-image: url(../../img/"./v2-mn-rud-silver.png");
+                background-image: url("./v2-mn-rud-silver.png");
 
                 &.big {
-                    background-image: url(../../img/"./v2-mn-rud-silver-big.png");
+                    background-image: url("./v2-mn-rud-silver-big.png");
                 }
             }
 
             &.platina {
-                background-image: url(../../img/"./v2-mn-rud-platina.png");
+                background-image: url("./v2-mn-rud-platina.png");
 
                 &.big {
-                    background-image: url(../../img/"./v2-mn-rud-platina-big.png");
+                    background-image: url("./v2-mn-rud-platina-big.png");
                 }
             }
 
             &.iron {
-                background-image: url(../../img/"./v2-mn-rud-iron.png");
+                background-image: url("./v2-mn-rud-iron.png");
 
                 &.big {
-                    background-image: url(../../img/"./v2-mn-rud-iron-big.png");
+                    background-image: url("./v2-mn-rud-iron-big.png");
                 }
             }
 
             &.copper {
-                background-image: url(../../img/"./v2-mn-rud-copper.png");
+                background-image: url("./v2-mn-rud-copper.png");
 
                 &.big {
-                    background-image: url(../../img/"./v2-mn-rud-copper-big.png");
+                    background-image: url("./v2-mn-rud-copper-big.png");
                 }
             }
         }

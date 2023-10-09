@@ -14,7 +14,7 @@
         text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     }
     .color-box {
-        background-image: url(../../img/ts_confirm_bk-1.jpg);
+        background-image: url(ts_confirm_bk-1.jpg);
         background-size: 100%;
         border-radius: 0 0 5px 5px;
         box-shadow: inset 0 0 4px 2px rgba(0, 0, 0, 0.4);
@@ -31,7 +31,7 @@
         position: absolute;
         top: -10px;
         left: -46px;
-        background-image: url(../../img/unipop-bg1.png);
+        background-image: url(unipop-bg1.png);
         background-size: 100%;
         &:before {
             content: "";
@@ -40,7 +40,7 @@
             position: absolute;
             top: 540px;
             left: 190px;
-            background-image: url(../../img/unipop-bg2.png);
+            background-image: url(unipop-bg2.png);
             background-size: 100%;
         }
         &:after {
@@ -50,7 +50,7 @@
             position: absolute;
             top: 90px;
             left: 800px;
-            background-image: url(../../img/unipop-bg3.png);
+            background-image: url(unipop-bg3.png);
             background-size: 100%;
         }
     }
@@ -143,7 +143,7 @@
                         position: absolute;
                         top: 9px;
                         left: 148px;
-                        background-image: url(../../img/unipop-gold-arrow.png);
+                        background-image: url(unipop-gold-arrow.png);
                         background-size: 100%;
                         visibility: hidden;
                     }
@@ -229,7 +229,7 @@
                     position: absolute;
                     top: -2px;
                     left: -6px;
-                    background-image: url(../../img/timer-back-50.png);
+                    background-image: url(timer-back-50.png);
                     background-size: 100%;
                     .time-text,
                     .time {
@@ -301,7 +301,7 @@
                     .cardnameback {
                         height: 50px;
                         min-width: 102px;
-                        background-image: url(../../img/noobpackback-line.png);
+                        background-image: url(noobpackback-line.png);
                         max-width: 200px;
                         position: relative;
                         top: -11px;
@@ -315,7 +315,7 @@
                             position: absolute;
                             right: -38px;
                             display: block;
-                            background-image: url(../../img/noobpackback-l.png);
+                            background-image: url(noobpackback-l.png);
                             transform: scale(-1, 1);
                             top: 0px;
                         }
@@ -326,7 +326,7 @@
                             position: absolute;
                             left: -38px;
                             display: block;
-                            background-image: url(../../img/noobpackback-l.png);
+                            background-image: url(noobpackback-l.png);
                             top: 0px;
                         }
                         .card-text {
@@ -761,7 +761,7 @@
                     position: absolute;
                     top: -31px;
                     right: -32px;
-                    background-image: url(../../img/zvezda.png);
+                    background-image: url(zvezda.png);
                     background-size: 100%;
                     display: table;
                     transform: scale(0.78) rotate(16deg);
@@ -820,12 +820,12 @@
 }
 .moredps-box {
     &:before {
-        background-image: url(../../img/ic-abil-dps2.png);
+        background-image: url(ic-abil-dps2.png);
     }
 }
 .morediamond-box {
     &:before {
-        background-image: url(../../img/diamond5.png);
+        background-image: url(diamond5.png);
         background-size: 120%;
     }
 }

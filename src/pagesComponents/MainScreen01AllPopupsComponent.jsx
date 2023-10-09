@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
-import { stylePairs } from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
+// import { stylePairs } from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
+// import pageStyles from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
+import pageStyles from "../styleComponents/GfSalePop";
 
-const MainScreen01AllPopupsComponent = () => {
+const MainScreen01AllPopupsComponent = ({ idForStyle }) => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
@@ -520,7 +522,7 @@ const MainScreen01AllPopupsComponent = () => {
   }, []);
 
   return (
-    <HelmetStyleTagWhitWrap stylePairs={stylePairs}>
+    <HelmetStyleTagWhitWrap idForStyle={idForStyle} pageStyles={pageStyles}>
       <div className="main world1">
         <div
           className="main-bg"

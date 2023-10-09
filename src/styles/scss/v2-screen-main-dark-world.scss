@@ -61,7 +61,7 @@ body .main.world3 {
                         height: 18px;
                         position: relative;
                         display: inline-block;
-                        background-image: url(../../img/ico-dark.png);
+                        background-image: url(ico-dark.png);
                         background-size: 100%;
                         margin: 0 4px;
                         vertical-align: middle;
@@ -306,7 +306,7 @@ body .main.world3 {
                     position: absolute;
                     top: -10px;
                     left: -25px;
-                    background-image: url(../../img/./rpg-poly/rpg_poly-shop_icon@2x.png);
+                    background-image: url(./rpg-poly/rpg_poly-shop_icon@2x.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
@@ -333,18 +333,18 @@ body .main.world3 {
                 left: 3px;
                 transition-delay: 1s;
                 transition: opacity 0.3s ease-in-out;
-                background-image: url(../../img/reg-ic-01.png);
+                background-image: url(reg-ic-01.png);
                 background-size: 100%;
             }
         }
         .signinout-btn.in {
             .icon-reg {
-                background-image: url(../../img/reg-ic-02.png);
+                background-image: url(reg-ic-02.png);
             }
         }
         .signinout-btn.out {
             .icon-reg {
-                background-image: url(../../img/reg-ic-03.png);
+                background-image: url(reg-ic-03.png);
             }
         }
     }
@@ -727,11 +727,11 @@ body .main.world3 {
                                 position: absolute;
                                 left: 3px;
                                 top: -10px;
-                                background-image: url(../../img/ico-click.png);
+                                background-image: url(ico-click.png);
                                 background-size: 54px;
                             }
                             .icon-dps {
-                                background-image: url(../../img/ico-sword.png);
+                                background-image: url(ico-sword.png);
                                 background-size: 54px;
                             }
                         }
@@ -798,7 +798,7 @@ body .main.world3 {
                                 bottom: 5px;
                             }
                             .icon-dps {
-                                background-image: url(../../img/ico-sword.png);
+                                background-image: url(ico-sword.png);
                                 background-size: 54px;
                                 top: 23px;
                                 left: 3px;
@@ -1008,7 +1008,7 @@ body .main.world3 {
                                 position: absolute;
                                 top: 8px;
                                 left: 12px;
-                                background-image: url(../../img/lock-gold1.png);
+                                background-image: url(lock-gold1.png);
                                 background-size: 100%;
                                 background-repeat: no-repeat;
                             }
@@ -1121,7 +1121,7 @@ body .main.world3 {
                     position: absolute;
                     left: 2px;
                     top: 2px;
-                    background: url(../../img/paycheck-arrow.png);
+                    background: url(paycheck-arrow.png);
                     background-size: 90%;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -1152,7 +1152,7 @@ body .main.world3 {
             }
             .buster-btn.buster-time {
                 .buster-icn {
-                    background: url(../../img/darkworld-watch-icn.png);
+                    background: url(darkworld-watch-icn.png);
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -1160,7 +1160,7 @@ body .main.world3 {
             }
             .buster-btn.buster-dark {
                 .buster-icn {
-                    background: url(../../img/darkworld-dark-coins-icn.png);
+                    background: url(darkworld-dark-coins-icn.png);
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -1168,7 +1168,7 @@ body .main.world3 {
             }
             .buster-btn.buster-dps {
                 .buster-icn {
-                    background: url(../../img/darkworld-dps-icn.png);
+                    background: url(darkworld-dps-icn.png);
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -1251,7 +1251,7 @@ body .main.world3 {
                     position: absolute;
                     right: -5px;
                     bottom: 5px;
-                    background-image: url(../../img/scul.png);
+                    background-image: url(scul.png);
                     background-size: 50px;
                     filter: hue-rotate(218deg);
                 }
@@ -1340,7 +1340,7 @@ body .main.world3 {
                         position: absolute;
                         right: -25px;
                         top: -4px;
-                        background-image: url(../../img/heart1.png);
+                        background-image: url(heart1.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
@@ -1436,7 +1436,7 @@ body .main.world3 {
                         position: absolute;
                         right: -14px;
                         top: -1px;
-                        background-image: url(../../img/clock2.png);
+                        background-image: url(clock2.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
@@ -1709,7 +1709,7 @@ body .main.world3 {
                     position: absolute;
                     top: 5px;
                     left: 5px;
-                    background-image: url(../../img/cor-1.png);
+                    background-image: url(cor-1.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
@@ -1720,7 +1720,7 @@ body .main.world3 {
                     position: absolute;
                     top: 5px;
                     right: 5px;
-                    background-image: url(../../img/cor-1.png);
+                    background-image: url(cor-1.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }
@@ -1782,7 +1782,7 @@ body .main.world3 {
                     display: block;
                     height: 100%;
                     width: 17px;
-                    background-image: url(../../img/darkworld-angels-title-bg-blue.png);
+                    background-image: url(darkworld-angels-title-bg-blue.png);
                     background-repeat: no-repeat;
                     filter: brightness(0.58) saturate(1.9);
                     background-size: 55px;
@@ -1900,7 +1900,7 @@ body .main.world3 {
                         position: absolute;
                         width: 168px;
                         height: 176px;
-                        background-image: url(../../img/darkworld-currency-stand.png);
+                        background-image: url(darkworld-currency-stand.png);
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -1999,7 +1999,7 @@ body .main.world3 {
                                 height: 26px;
                                 margin-right: 4px;
                                 display: inline-block;
-                                background-image: url(../../img/v2-res-diamond.png);
+                                background-image: url(v2-res-diamond.png);
                                 background-size: cover;
                                 vertical-align: middle;
                             }
@@ -2013,7 +2013,7 @@ body .main.world3 {
             .content {
                 .buster-imgs-box {
                     .buster-icn {
-                        background-image: url(../../img/darkworld-watch-icn.png);
+                        background-image: url(darkworld-watch-icn.png);
                     }
                 }
             }
@@ -2022,7 +2022,7 @@ body .main.world3 {
             .content {
                 .buster-imgs-box {
                     .buster-icn {
-                        background-image: url(../../img/darkworld-dark-coins-icn.png);
+                        background-image: url(darkworld-dark-coins-icn.png);
                     }
                 }
             }
@@ -2031,7 +2031,7 @@ body .main.world3 {
             .content {
                 .buster-imgs-box {
                     .buster-icn {
-                        background-image: url(../../img/darkworld-dps-icn.png);
+                        background-image: url(darkworld-dps-icn.png);
                     }
                 }
             }
@@ -2087,7 +2087,7 @@ body .main.world3 {
                         }
                     }
                     .chest-points-icn {
-                        background-image: url(../../img/darkworld-chest-points-chip-icon.png);
+                        background-image: url(darkworld-chest-points-chip-icon.png);
                     }
                     .chest-points-value {
                         background: #383167;
@@ -2112,7 +2112,7 @@ body .main.world3 {
                 position: absolute;
                 left: -138px;
                 bottom: -52px;
-                background-image: url(../../img/break-girl730.png);
+                background-image: url(break-girl730.png);
                 background-repeat: no-repeat;
                 background-position: top center;
                 background-size: 100%;
@@ -2124,7 +2124,7 @@ body .main.world3 {
                 bottom: -52px;
                 width: 1200px;
                 height: 640px;
-                background-image: url(../../img/darkworld-re-pop-bg.png);
+                background-image: url(darkworld-re-pop-bg.png);
                 background-repeat: no-repeat;
                 background-position: bottom center;
                 background-size: 100%;
@@ -2261,7 +2261,7 @@ body .main.world3 {
                                 top: 50%;
                                 width: 66px;
                                 height: 56px;
-                                background-image: url(../../img/darkworld-angel-pop-btn-bg.png);
+                                background-image: url(darkworld-angel-pop-btn-bg.png);
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 background-size: cover;

@@ -123,21 +123,21 @@ body .main .popup-layer .m-popup.chests-shop {
                 }
                 &.diamonds {
                     &:before {
-                        background-image: url(../../img/v2-res-diamond.png);
+                        background-image: url(v2-res-diamond.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
                 }
                 &.oil {
                     &:before {
-                        background-image: url(../../img/ic-black-butil-40.png);
+                        background-image: url(ic-black-butil-40.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
                 }
                 &.spirit {
                     &:before {
-                        background-image: url(../../img/v2-mn-soul-sg-160.png);
+                        background-image: url(v2-mn-soul-sg-160.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                     }
@@ -310,7 +310,7 @@ body .main .popup-layer .m-popup.chests-shop {
                     height: 30px;
                     right: 7px;
                     top: 27px;
-                    background-image: url(../../img/v2-res-diamond.png);
+                    background-image: url(v2-res-diamond.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
@@ -360,7 +360,7 @@ body .main .popup-layer .m-popup.chests-shop {
                     );
                 }
                 .chest-currency {
-                    background-image: url(../../img/ic-black-butil-40.png);
+                    background-image: url(ic-black-butil-40.png);
                 }
             }
             .store-item-box.gold {
@@ -388,7 +388,7 @@ body .main .popup-layer .m-popup.chests-shop {
                     }
                 }
                 .chest-currency {
-                    background-image: url(../../img/v2-mn-soul-sg-160.png);
+                    background-image: url(v2-mn-soul-sg-160.png);
                 }
             }
         }

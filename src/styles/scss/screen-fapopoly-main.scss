@@ -2,11 +2,11 @@
 @import "sass_commons.scss";
 
 body .main .main-bg {
-    //background-image: url(../../img/fapop-bg-main.jpg); background-size: 100%;
-    background-image: url(../../img/v2-fapop-bg-hw.jpg);
+    //background-image: url(fapop-bg-main.jpg); background-size: 100%;
+    background-image: url(v2-fapop-bg-hw.jpg);
     background-size: 100%;
     &.easter {
-        background-image: url(../../img/fapop-bg-main-ph.jpg);
+        background-image: url(fapop-bg-main-ph.jpg);
     }
 }
 
@@ -269,7 +269,7 @@ body .main .fapop-content-all {
                     position: absolute;
                     top: -3px;
                     left: -3px;
-                    background-image: url(../../img/fortuna-good.png);
+                    background-image: url(fortuna-good.png);
                     background-size: 100%;
                     display: none;
                 }
@@ -288,7 +288,7 @@ body .main .fapop-content-all {
                         position: absolute;
                         top: 5px;
                         left: 5px;
-                        background-image: url(../../img/paycheck.png);
+                        background-image: url(paycheck.png);
                         background-size: 100%;
                     }
                 }
@@ -374,10 +374,10 @@ body .main .fapop-content-all {
             position: absolute;
             bottom: 4px;
             left: 3px;
-            background-image: url(../../img/fapop-prg-around-empty.png);
+            background-image: url(fapop-prg-around-empty.png);
             background-size: 100% 584px;
             .fapop-times-around-prgbar-full {
-                background-image: url(../../img/fapop-prg-around-full.png);
+                background-image: url(fapop-prg-around-full.png);
                 transition: height 0.5s ease;
                 bottom: 0;
                 left: 0;
@@ -471,10 +471,10 @@ body .main .fapop-content-all {
             position: absolute;
             bottom: -6px;
             left: 78px;
-            background-image: url(../../img/fapop-prg-empty.png);
+            background-image: url(fapop-prg-empty.png);
             background-size: 344px 100%;
             .fapop-prgbar-full {
-                background-image: url(../../img/fapop-prg-full.png);
+                background-image: url(fapop-prg-full.png);
                 transition: width 0.5s ease;
                 top: 0;
                 left: 0;
@@ -603,12 +603,12 @@ body .main .fapop-content-all {
             position: absolute;
             top: 0px;
             left: 14px;
-            background-image: url(../../img/fapop-dice1.png);
+            background-image: url(fapop-dice1.png);
             background-size: 100%;
         }
         .fapop-dice-2 {
             left: 76px;
-            background-image: url(../../img/fapop-dice2.png);
+            background-image: url(fapop-dice2.png);
         }
         .fapop-dice-end-1,
         .fapop-dice-end-2 {
@@ -769,7 +769,7 @@ body .main .fapop-content-all {
                         position: relative;
                         display: inline-block;
                         top: 5px;
-                        background-image: url(../../img/fapop-token-ic.png);
+                        background-image: url(fapop-token-ic.png);
                         background-size: 100%;
                         margin-left: 4px;
                     }
@@ -793,7 +793,7 @@ body .main .fapop-content-all {
         height: 150px;
         position: absolute;
         //top: 446px; left: 636px;
-        background-image: url(../../img/fapop-ic01.png);
+        background-image: url(fapop-ic01.png);
         background-size: 100%;
         .fapop-player-name {
             width: 87px;
@@ -801,7 +801,7 @@ body .main .fapop-content-all {
             position: absolute;
             top: 110px;
             left: 10px;
-            background-image: url(../../img/ic-abil-blueline.png);
+            background-image: url(ic-abil-blueline.png);
             background-size: 100%;
             color: #fff;
             font-size: 14px;
@@ -815,7 +815,7 @@ body .main .fapop-content-all {
         position: absolute;
         top: 541px;
         right: 344px;
-        background-image: url(../../img/fapop-x2reward.png);
+        background-image: url(fapop-x2reward.png);
         background-size: 80%;
         background-position: 13px center;
         background-repeat: no-repeat;

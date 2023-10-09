@@ -1,11 +1,12 @@
 import React from "react";
 import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
-import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
-const stylePairs = generateStylePairs(["ScreenUnipopWavepack10"]);
+// import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
+// const stylePairs = generateStylePairs(["ScreenUnipopWavepack10"]);
+import pageStyles from "../styleComponents/ScreenUnipopWavepack10";
 
-const MainScreen22Unipop04wavepack10Component = () => {
+const MainScreen22Unipop04wavepack10Component = ({ idForStyle }) => {
   return (
-    <HelmetStyleTagWhitWrap stylePairs={stylePairs}>
+    <HelmetStyleTagWhitWrap idForStyle={idForStyle} pageStyles={pageStyles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="popup-layer" style={{ display: "block" }}>

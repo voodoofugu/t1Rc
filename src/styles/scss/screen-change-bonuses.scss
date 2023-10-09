@@ -47,7 +47,7 @@
                     content: "";
                     width: 20px;
                     height: 20px;
-                    background: url(../../img/darkworld-back-arrow.png);
+                    background: url(darkworld-back-arrow.png);
                     background-size: 100%;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -133,7 +133,7 @@
                     position: absolute;
                     top: 8px;
                     margin-left: 8px;
-                    background-image: url(../../img/paycheck.png);
+                    background-image: url(paycheck.png);
                     background-size: 100%;
                     display: none;
                 }
@@ -219,7 +219,7 @@
                 position: absolute;
                 top: 2px;
                 right: -126px;
-                background-image: url(../../img/noobpackback.png);
+                background-image: url(noobpackback.png);
                 background-size: 100%;
             }
             .change-reward-count,
@@ -312,7 +312,7 @@
                         position: absolute;
                         top: 17px;
                         margin-left: 2449px;
-                        background-image: url(../../img/change-prgbar-ff1.png);
+                        background-image: url(change-prgbar-ff1.png);
                         background-size: 100%;
                         &:before {
                             content: "";
@@ -321,7 +321,7 @@
                             position: absolute;
                             margin-left: -2429px;
                             transform: scaleX(-1);
-                            background-image: url(../../img/change-prgbar-ff1.png);
+                            background-image: url(change-prgbar-ff1.png);
                             background-size: 100%;
                         }
                     }
@@ -432,7 +432,7 @@
                             position: absolute;
                             top: 8px;
                             margin-left: 8px;
-                            background-image: url(../../img/paycheck.png);
+                            background-image: url(paycheck.png);
                             background-size: 100%;
                             display: none;
                         }
@@ -472,7 +472,7 @@
                         position: absolute;
                         top: 150px;
                         margin-left: 56px;
-                        background-image: url(../../img/change-line.png);
+                        background-image: url(change-line.png);
                         background-size: 100%;
                     }
                     .openchest-in-num {

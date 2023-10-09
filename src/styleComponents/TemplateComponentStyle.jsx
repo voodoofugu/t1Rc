@@ -1,0 +1,550 @@
+import { css } from "@emotion/react";
+
+const TemplateComponentStyle = css`
+    > main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #e6e7f1;
+        font-family: "Montserrat", sans-serif;
+    }
+    > main.dark-theme {
+        background: #2a3451 !important;
+        color: #fff;
+    }
+    .templateTit.page-title {
+        color: #6a95c9;
+        text-shadow: 1px 1px 2px #fff;
+        font-size: 24px;
+        font-weight: 700;
+        max-width: 1160px;
+        margin: 20px;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(calc(-50% - 20px));
+        transform: translateX(calc(-50% - 20px));
+        text-align: center;
+        padding: 10px;
+        line-height: 32px;
+        border-radius: 18px;
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(0, 3, 181, 0.02);
+        box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
+            1px 1px 2px rgba(255, 255, 255, 0.6),
+            inset 1px 1px 2px rgba(60, 99, 255, 0.06),
+            -1px -1px 2px rgba(60, 99, 255, 0.1),
+            inset 4px 4px 8px rgba(0, 1, 60, 0.06),
+            inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+    }
+    .templateTit.page-title .toggle-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 61px;
+        height: 32px;
+        border-radius: 30px;
+        cursor: pointer;
+        -webkit-appearance: none;
+        appearance: none;
+        transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(0, 3, 181, 0.1);
+        box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
+            1px 1px 2px rgba(255, 255, 255, 0.6),
+            inset 1px 1px 2px rgba(60, 99, 255, 0.06),
+            -1px -1px 2px rgba(60, 99, 255, 0.1),
+            inset 4px 4px 8px rgba(0, 1, 60, 0.06),
+            inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+    }
+    .templateTit.page-title .toggle-btn:before {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.6);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.4),
+            1px 1px 2px rgba(60, 99, 255, 0.06),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.2),
+            2px 2px 4px rgba(0, 1, 60, 0.1),
+            -2px -2px 4px rgba(255, 255, 255, 0.2);
+    }
+    .templateTit.page-title .toggle-btn .btn-ic {
+        box-sizing: border-box;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        display: block;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        width: 24px;
+        height: 24px;
+        background: linear-gradient(to bottom, #c2c3e4 4px, transparent 0)
+                no-repeat 5px -6px/2px 6px,
+            linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 5px
+                14px/2px 6px,
+            linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat -8px
+                5px/6px 2px,
+            linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat
+                14px 5px/6px 2px;
+        border-radius: 100px;
+        box-shadow: inset 0 0 0 2px #c2c3e4;
+        border: 6px solid transparent;
+        transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+        -webkit-filter: drop-shadow(1px 1px 0.5px rgba(255, 255, 255, 0.1));
+        filter: drop-shadow(1px 1px 0.5px rgba(255, 255, 255, 0.1));
+    }
+    .templateTit.page-title .toggle-btn .btn-ic:before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        border-right: 4px solid #c2c3e4;
+        border-left: 4px solid #c2c3e4;
+        left: -6px;
+        top: 5px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .templateTit.page-title .toggle-btn .btn-ic:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        border-right: 4px solid #c2c3e4;
+        border-left: 4px solid #c2c3e4;
+        left: -6px;
+        top: 5px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .templateTit.page-title .toggle-btn.on {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            #6400ff;
+        box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(255, 255, 255, 0.2),
+            inset 1px 1px 2px rgba(60, 99, 255, 0.1),
+            -1px -1px 2px rgba(60, 99, 255, 0.4),
+            inset 2px 2px 4px rgba(0, 1, 60, 0.4),
+            inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+    }
+    .templateTit.page-title .toggle-btn.on:before {
+        -webkit-transform: translateX(calc(100% + 2px));
+        transform: translateX(calc(100% + 2px));
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.1)
+            ),
+            rgba(42, 52, 81, 0.9294117647);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(60, 99, 255, 0.06),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.4),
+            2px 2px 2px rgba(0, 1, 60, 0.3),
+            -2px -2px 2px rgba(255, 255, 255, 0.2);
+    }
+    .templateTit.page-title .toggle-btn.on .btn-ic {
+        -webkit-transform: translateX(calc(100% + 4px));
+        transform: translateX(calc(100% + 4px));
+        background: transparent;
+        border: 4px solid transparent;
+        box-shadow: inset -4px -4px 0 0px #f5f200;
+        -webkit-filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.4));
+        filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.4));
+    }
+    .templateTit.page-title .toggle-btn.on .btn-ic:before {
+        display: none;
+    }
+    .templateTit.page-title .toggle-btn.on .btn-ic:after {
+        display: none;
+    }
+
+    .templatePage.template-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 40px;
+        padding: 20px 0 20px 0;
+        height: calc(100vh - 152px);
+        margin: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-width: 1160px;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(calc(-50% - 20px));
+        transform: translateX(calc(-50% - 20px));
+    }
+    .templatePage.template-container::-webkit-scrollbar-track {
+        border-radius: 6px;
+        z-index: 999;
+    }
+    .templatePage.template-container::-webkit-scrollbar {
+        border-radius: 6px;
+        width: 24px;
+    }
+    .templatePage.template-container::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.04),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.5);
+        box-shadow: inset 0 0 4px 4px #e6e7f1,
+            inset 3px 3px 2px 2px rgb(255, 255, 255),
+            inset 2px 2px 1px 2px rgba(255, 255, 255, 0.6),
+            inset -3px -3px 2px 2px rgba(60, 99, 255, 0.1),
+            inset -2px -2px 1px 2px rgba(60, 99, 255, 0.2);
+    }
+    .templatePage .project-box {
+        border-radius: 18px;
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.2);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(60, 99, 255, 0.06),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.1),
+            4px 4px 8px rgba(0, 1, 60, 0.1),
+            -4px -4px 8px rgba(255, 255, 255, 0.5);
+        width: 238px;
+        height: 150px;
+        position: relative;
+        transition: ease-in-out 0.1s;
+        -webkit-transform: scale(0.99);
+        transform: scale(0.99);
+        overflow: hidden;
+    }
+    .templatePage .project-box:hover {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.4);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(60, 99, 255, 0.06),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.1),
+            6px 6px 12px rgba(0, 1, 60, 0.14),
+            -6px -6px 12px rgba(255, 255, 255, 0.8);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        z-index: 1;
+    }
+    .templatePage .project-box:active {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(60, 99, 255, 0.06),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.1),
+            4px 4px 8px rgba(0, 1, 60, 0.1),
+            -4px -4px 8px rgba(255, 255, 255, 0.4);
+        -webkit-transform: scale(0.99);
+        transform: scale(0.99);
+    }
+    .templatePage .project-box a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        color: #519fff;
+        font-weight: 700;
+        text-shadow: 1px 1px 2px #fff;
+        font-size: 14px;
+        line-height: 34px;
+        text-align: center;
+        -webkit-text-decoration: none;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .templatePage .project-box .projectComponent {
+        -webkit-transform: scale(0.180134);
+        transform: scale(0.180134);
+        margin: -260px 0px 0px -480px;
+        pointer-events: none;
+        border: none;
+        position: absolute;
+        top: 26px;
+        border-radius: 40px;
+        width: 1200px;
+        height: 640px;
+        box-shadow: 0 0 0 10px #e6e7f1, 20px 20px 40px rgba(0, 1, 60, 0.06),
+            -20px -20px 40px rgba(255, 255, 255, 0.6);
+        overflow: hidden;
+        background: #fff;
+    }
+    .templatePage .project-box .screenshot-container {
+        pointer-events: none;
+        border: none;
+        position: absolute;
+        top: 35px;
+        left: 12px;
+        border-radius: 8px;
+        width: 214px;
+        height: 102px;
+        box-shadow: 0 0 0 2px #e6e7f1, 4px 4px 8px rgba(0, 1, 60, 0.06),
+            -4px -4px 8px rgba(255, 255, 255, 0.6);
+        overflow: hidden;
+    }
+    .templatePage .project-box .screenshot-container img {
+        /* -webkit-transform: scale(0.5);
+    transform: scale(0.4) translateX(-812px) translateY(-394px); */
+        width: 100%;
+    }
+    .templatePage .project-box .fileInfoIc {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 32px;
+        height: 32px;
+        cursor: help;
+        z-index: 1;
+    }
+    .templatePage .project-box .fileInfoIc:before {
+        content: "i";
+        position: absolute;
+        top: 7px;
+        right: 7px;
+        width: 18px;
+        height: 18px;
+        background: #dbdcfa;
+        border-radius: 100%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.4),
+            1px 1px 1px rgba(0, 1, 49, 0.1);
+        box-shadow: inset 1px 1px 1px rgba(0, 1, 49, 0.05),
+            1px 1px 1px rgba(255, 255, 255, 0.4);
+        transition: ease-in-out 0.1s;
+    }
+    .templatePage .project-box .fileInfoIc:hover:before {
+        background: #aceecd;
+    }
+    .templatePage .project-box .fileInfoIc:hover .fileInfo {
+        right: 40px;
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1);
+    }
+    .templatePage .project-box .fileInfoIc .fileInfo {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        -webkit-transform: translateY(-50%) scale(0.96);
+        transform: translateY(-50%) scale(0.96);
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        white-space: nowrap;
+        z-index: 1;
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 12px 18px;
+        font-size: 14px;
+        line-height: 18px;
+        color: #36404d;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+        transition: ease-in-out 0.3s;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        box-shadow: 0 1px 6px rgba(0, 1, 60, 0.1),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.6),
+            1px 1px 2px rgba(60, 99, 255, 0.2),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.1);
+    }
+    .templatePage .project-box .fileInfoIc .fileInfo:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: -17.5px;
+        border: 10px solid transparent;
+        border-left: 8px solid rgba(255, 255, 255, 0.5);
+        -webkit-filter: drop-shadow(-1px 0px 0.5px #ebedfb)
+            drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.2))
+            drop-shadow(3px 0 2px rgba(0, 1, 60, 0.1));
+        filter: drop-shadow(-1px 0px 0.5px #ebedfb)
+            drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.2))
+            drop-shadow(3px 0 2px rgba(0, 1, 60, 0.1));
+    }
+    > main.dark-theme .page-title {
+        color: #6a95c9;
+        text-shadow: 1px 1px 2px #000000;
+        background: rgba(17, 0, 128, 0.02);
+        box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(255, 255, 255, 0.02),
+            inset 1px 1px 2px rgba(60, 99, 255, 0.1),
+            -1px -1px 2px rgba(60, 99, 255, 0.1),
+            inset 4px 4px 8px rgba(8, 0, 60, 0.6),
+            inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+    }
+    > main.dark-theme .template-container::-webkit-scrollbar-thumb {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.04);
+        box-shadow: inset 0 0 0 1px #2a3451, inset 0 0 4px 4px #2a3451,
+            inset 3px 3px 2px 2px rgba(255, 255, 255, 0.1),
+            inset 2px 2px 1px 2px rgba(255, 255, 255, 0.2),
+            inset -3px -3px 2px 2px rgba(60, 99, 255, 0.2),
+            inset -2px -2px 1px 2px rgba(60, 99, 255, 0.4);
+    }
+    > main.dark-theme .template-container .project-box {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.02);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.04),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(60, 99, 255, 0.1),
+            inset -1px -1px 2px rgba(0, 0, 0, 0.2),
+            4px 4px 8px rgba(0, 1, 60, 0.4),
+            -4px -4px 8px rgba(255, 255, 255, 0.1);
+    }
+    > main.dark-theme .template-container .project-box:hover {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0.06);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.06),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(60, 99, 255, 0.06),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.1),
+            6px 6px 12px rgba(0, 1, 60, 0.5),
+            -6px -6px 12px rgba(255, 255, 255, 0.12);
+    }
+    > main.dark-theme .template-container .project-box:active {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(255, 255, 255, 0);
+        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+            1px 1px 2px rgba(60, 99, 255, 0.06),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.1),
+            4px 4px 8px rgba(0, 1, 60, 0.4),
+            -4px -4px 8px rgba(255, 255, 255, 0.04);
+    }
+    > main.dark-theme .template-container .project-box a {
+        text-shadow: 1px 1px 2px rgba(0, 1, 60, 0.6);
+    }
+    > main.dark-theme .template-container .project-box .projectComponent {
+        box-shadow: 0 0 0 10px #2a3451, 20px 20px 40px rgb(0, 1, 60),
+            -20px -20px 40px rgba(255, 255, 255, 0.24);
+    }
+    > main.dark-theme .template-container .project-box .screenshot-container {
+        box-shadow: 0 0 0 2px #2a3451, 4px 4px 8px rgb(0, 1, 60),
+            -4px -4px 8px rgba(255, 255, 255, 0.24);
+    }
+    > main.dark-theme .template-container .project-box .fileInfoIc:before {
+        background: #29324e;
+        color: #468ee4;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+        box-shadow: inset 1px 1px 1px rgba(0, 1, 49, 0.1),
+            1px 1px 1px rgba(255, 255, 255, 0.06);
+    }
+    > main.dark-theme
+        .template-container
+        .project-box
+        .fileInfoIc:hover:before {
+        background: #4a7e67;
+        color: #e2e9ff;
+        box-shadow: 1px 1px 1px rgba(0, 1, 49, 0.1),
+            inset 1px 1px 1px rgba(255, 255, 255, 0.06);
+    }
+    > main.dark-theme .template-container .project-box .fileInfoIc .fileInfo {
+        background: linear-gradient(
+                135deg,
+                rgba(0, 3, 181, 0.02),
+                rgba(255, 255, 255, 0.05)
+            ),
+            rgba(42, 52, 81, 0.6392156863);
+        color: #ffffff;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 1px 6px rgba(0, 1, 60, 0.6),
+            inset 1px 1px 2px rgba(255, 255, 255, 0.2),
+            1px 1px 2px rgba(60, 99, 255, 0.4),
+            inset -1px -1px 2px rgba(60, 99, 255, 0.1);
+    }
+    > main.dark-theme
+        .template-container
+        .project-box
+        .fileInfoIc
+        .fileInfo:before {
+        border-left: 8px solid rgba(77, 77, 77, 0.5294117647);
+        -webkit-filter: drop-shadow(-1px 0px 0.5px #374f62)
+            drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.4))
+            drop-shadow(3px 0 2px rgba(0, 1, 60, 0.6));
+        filter: drop-shadow(-1px 0px 0.5px #374f62)
+            drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.4))
+            drop-shadow(3px 0 2px rgba(0, 1, 60, 0.6));
+    }
+`;
+
+export default TemplateComponentStyle;

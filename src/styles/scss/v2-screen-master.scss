@@ -178,14 +178,14 @@ body .main {
                                     top: -4px;
                                     right: -39px;
                                     cursor: pointer;
-                                    background-image: url(../../img/btn-edit-small.png);
+                                    background-image: url(btn-edit-small.png);
                                     background-size: 100%;
                                     &:active {
                                         top: -3px;
                                     }
                                 }
                                 .btn-enter-small {
-                                    background-image: url(../../img/btn-enter-small.png);
+                                    background-image: url(btn-enter-small.png);
                                 }
                                 .btn-enter-small {
                                     display: none;
@@ -309,17 +309,17 @@ body .main {
                                         height: 30px;
                                         position: relative;
                                         display: inline-block;
-                                        background-image: url(../../img/ms-hand.png);
+                                        background-image: url(ms-hand.png);
                                         background-size: 100%;
                                         top: 3px;
                                         &.char {
-                                            background-image: url(../../img/ms-lips.png);
+                                            background-image: url(ms-lips.png);
                                         }
                                         &.int {
-                                            background-image: url(../../img/ms-lamp.png);
+                                            background-image: url(ms-lamp.png);
                                         }
                                         &.lck {
-                                            background-image: url(../../img/ms-podk.png);
+                                            background-image: url(ms-podk.png);
                                         }
                                     }
                                     .st-text {
@@ -349,18 +349,18 @@ body .main {
                                         position: absolute;
                                         top: 6px;
                                         left: 10px;
-                                        background-image: url(../../img/ms-stone-orange.png);
+                                        background-image: url(ms-stone-orange.png);
                                         &.char {
-                                            background-image: url(../../img/ms-stone-blue.png);
+                                            background-image: url(ms-stone-blue.png);
                                         }
                                         &.int {
-                                            background-image: url(../../img/ms-stone-green.png);
+                                            background-image: url(ms-stone-green.png);
                                         }
                                         &.lck {
-                                            background-image: url(../../img/ms-stone-pink.png);
+                                            background-image: url(ms-stone-pink.png);
                                         }
                                         &.all {
-                                            background-image: url(../../img/ms-stone-all.png);
+                                            background-image: url(ms-stone-all.png);
                                         }
                                     }
 
@@ -370,7 +370,7 @@ body .main {
                                         position: absolute;
                                         top: 6px;
                                         left: 10px;
-                                        background-image: url(../../img/v2-icon-energy.png);
+                                        background-image: url(v2-icon-energy.png);
                                     }
                                     .stone-stat {
                                         width: 100%;
@@ -695,7 +695,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(../../img/trophy-bonus-gems.png);
+                                    background-image: url(trophy-bonus-gems.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -709,7 +709,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(../../img/trophy-bonus-mithril.png);
+                                    background-image: url(trophy-bonus-mithril.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }

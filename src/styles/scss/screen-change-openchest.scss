@@ -116,16 +116,16 @@
                             height: 39px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(../../img/star1.png);
+                            background-image: url(star1.png);
                             background-size: 100%;
                         }
                         .star2 {
                             width: 71px;
-                            background-image: url(../../img/star2.png);
+                            background-image: url(star2.png);
                         }
                         .star3 {
                             width: 101px;
-                            background-image: url(../../img/star3.png);
+                            background-image: url(star3.png);
                         }
                     }
                     .openchest-bonus-count {
@@ -177,7 +177,7 @@
                                 width: 150px;
                                 height: 150px;
                                 position: absolute;
-                                background-image: url(../../img/change-sun1.png);
+                                background-image: url(change-sun1.png);
                                 background-size: 100%;
                             }
                         }
@@ -188,7 +188,7 @@
                                 animation,
                                 anim-change-chest 0.35s linear 10ms forwards
                             );
-                            background-image: url(../../img/change-sun1.png);
+                            background-image: url(change-sun1.png);
                             background-size: 100%;
                         }
                     }
@@ -198,19 +198,19 @@
                                 animation,
                                 anim-close-chest 0.45s linear 1s forwards
                             );
-                            background-image: url(../../img/change-sun3.png);
+                            background-image: url(change-sun3.png);
                             background-size: 100%;
                         }
                     }
                     @keyframes anim-change-chest {
                         0% {
-                            background-image: url(../../img/change-sun1.png);
+                            background-image: url(change-sun1.png);
                         }
                         50% {
-                            background-image: url(../../img/change-sun2.png);
+                            background-image: url(change-sun2.png);
                         }
                         100% {
-                            background-image: url(../../img/change-sun3.png);
+                            background-image: url(change-sun3.png);
                         }
                     }
                     @keyframes anim-close-chest {
@@ -285,11 +285,11 @@
                             margin: 0 0 0 2px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(../../img/ico-ticket.png);
+                            background-image: url(ico-ticket.png);
                             background-size: 100%;
                         }
                         .ic-diamond {
-                            background-image: url(../../img/v2-res-diamond.png);
+                            background-image: url(v2-res-diamond.png);
                         }
                     }
                     &.diamond {
@@ -357,7 +357,7 @@
             position: absolute;
             top: 210px;
             margin-left: -13px;
-            background-image: url(../../img/wpck-ram.png);
+            background-image: url(wpck-ram.png);
             background-size: 100%;
             .openchest-name {
                 width: 240px;
@@ -373,7 +373,7 @@
             }
             &.big {
                 height: 56px;
-                background-image: url(../../img/wpck-ram1.png);
+                background-image: url(wpck-ram1.png);
                 top: 10px;
                 .openchest-name {
                     line-height: 16px;
@@ -440,7 +440,7 @@
                     width: 70px;
                     height: 70px;
                     position: absolute;
-                    background-image: url(../../img/paycheck.png);
+                    background-image: url(paycheck.png);
                     background-size: 100%;
                     display: none;
                 }
@@ -483,7 +483,7 @@
             margin-left: 72px;
             cursor: pointer;
             display: none;
-            background-image: url(../../img/info-btn-left.png);
+            background-image: url(info-btn-left.png);
             background-size: 100%;
             &:hover {
                 filter: brightness(1.1);
@@ -530,7 +530,7 @@
         position: absolute;
         top: 15px;
         left: 0;
-        background-image: url(../../img/back-btn.png);
+        background-image: url(back-btn.png);
         background-size: 100%;
         cursor: pointer;
         &:hover {
@@ -567,11 +567,11 @@
         top: 16px;
     }
     &.right {
-        background-image: url(../../img/info-btn-right.png);
+        background-image: url(info-btn-right.png);
         background-size: 100%;
     }
     &.left {
-        background-image: url(../../img/info-btn-left.png);
+        background-image: url(info-btn-left.png);
         background-size: 100%;
     }
 }
@@ -607,7 +607,7 @@
         width: 70px;
         height: 70px;
         position: absolute;
-        background-image: url(../../img/paycheck.png);
+        background-image: url(paycheck.png);
         background-size: 100%;
         display: none;
     }

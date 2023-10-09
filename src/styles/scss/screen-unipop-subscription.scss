@@ -13,7 +13,7 @@
         color: #fff;
     }
     .color-box {
-        background-image: url(../../img/ts_confirm_bk-1.jpg);
+        background-image: url(ts_confirm_bk-1.jpg);
         background-size: 100%;
         &:before {
             display: none;
@@ -28,7 +28,7 @@
         position: absolute;
         top: -10px;
         left: -46px;
-        background-image: url(../../img/unipop-bg1.png);
+        background-image: url(unipop-bg1.png);
         background-size: 100%;
         &:before {
             content: "";
@@ -37,7 +37,7 @@
             position: absolute;
             top: 540px;
             left: 190px;
-            background-image: url(../../img/unipop-bg2.png);
+            background-image: url(unipop-bg2.png);
             background-size: 100%;
         }
         &:after {
@@ -47,7 +47,7 @@
             position: absolute;
             top: 90px;
             left: 800px;
-            background-image: url(../../img/unipop-bg3.png);
+            background-image: url(unipop-bg3.png);
             background-size: 100%;
         }
     }
@@ -136,7 +136,7 @@
                         position: absolute;
                         top: 9px;
                         left: 148px;
-                        background-image: url(../../img/unipop-gold-arrow.png);
+                        background-image: url(unipop-gold-arrow.png);
                         background-size: 100%;
                         visibility: hidden;
                     }
@@ -184,7 +184,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-image: url(../../img/ts_confirm_bk-1.jpg);
+                background-image: url(ts_confirm_bk-1.jpg);
                 background-size: 100%;
                 background-position-y: bottom;
                 @include prefix(border-radius, 10px);
@@ -214,11 +214,11 @@
                         height: 426px;
                         position: relative;
                         display: inline-block;
-                        background-image: url(../../img/sub-bg-silver.png);
+                        background-image: url(sub-bg-silver.png);
                         background-size: 100%;
                         background-repeat: no-repeat;
                         &.gold {
-                            background-image: url(../../img/sub-bg-gold.png);
+                            background-image: url(sub-bg-gold.png);
                             background-size: 100%;
                             background-repeat: no-repeat;
                         }
@@ -281,7 +281,7 @@
                                     position: absolute;
                                     top: 0;
                                     left: 5px;
-                                    background-image: url(../../img/trophy-bonus-diamond.png);
+                                    background-image: url(trophy-bonus-diamond.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -298,7 +298,7 @@
                                 &.chest {
                                     top: 48px;
                                     .sub-purhase-pic {
-                                        background-image: url(../../img/change-sun1.png);
+                                        background-image: url(change-sun1.png);
                                     }
                                 }
                             }
@@ -346,7 +346,7 @@
                     position: absolute;
                     bottom: 0;
                     left: -30px;
-                    background-image: url(../../img/sub-bg-girl.png);
+                    background-image: url(sub-bg-girl.png);
                     background-size: 100%;
                     background-repeat: no-repeat;
                 }

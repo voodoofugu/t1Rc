@@ -1,30 +1,15 @@
 @charset "utf-8";
 @import "sass_commons.scss";
 
-.slider-popup {
-    .rating-place-box {
-        width: 280px;
-        height: 90px;
-        position: absolute;
-        top: -141px;
-        margin-left: -127px;
-        .rating-points-box,
-        .rating-place-in-box {
-            width: 100px;
-            height: 80px;
-            position: absolute;
-            top: 10px;
-            margin-left: 4px;
-            background: linear-gradient(
-                0deg,
-                #c6ae69 0%,
-                #c6ae69 10%,
-                #fedf88 11%,
-                #ffefc4 100%
-            );
+.slider-popup{
+    .rating-place-box{
+        width: 280px; height: 90px; position: absolute; top: -141px; margin-left: -127px;
+        .rating-points-box, .rating-place-in-box{
+            width: 100px; height: 80px; position: absolute; top: 10px; margin-left: 4px;
+            background: linear-gradient(0deg, #c6ae69 0%, #c6ae69 10%, #fedf88 11%, #ffefc4 100%);
             @include prefix(border-radius, 10px 10px 0 0);
             box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.5);
-            input.sx {
+            input.sx{
                 z-index: 1;
                 display: block;
                 width: 18px;
@@ -44,127 +29,76 @@
                 cursor: pointer;
                 font-size: 16px;
                 font-weight: bold;
-                color: #453e38;
+                color: #453E38;
                 margin: 0;
                 padding: 0;
             }
-            .box-name {
-                width: 100%;
-                height: 20px;
-                position: absolute;
-                top: 6px;
-                color: #4e4239;
-                font-size: 16px;
-                text-transform: uppercase;
-                text-align: center;
-                line-height: 20px;
-                font-weight: bold;
-                text-shadow: 0 0 6px #fff;
+            .box-name{
+                width: 100%; height: 20px; position: absolute; top: 6px;
+                color: #4e4239; font-size: 16px; text-transform: uppercase; text-align: center;
+                line-height: 20px; font-weight: bold; text-shadow: 0 0 6px #fff;
             }
-            .points-box {
-                width: 90px;
-                height: 30px;
-                position: absolute;
-                top: 32px;
-                margin-left: 5px;
-                background-color: #c6ae69;
+            .points-box{
+                width: 90px; height: 30px; position: absolute; top: 32px; margin-left: 5px; background-color: #c6ae69;
                 @include prefix(border-radius, 6px);
-                color: #fff;
-                font-size: 16px;
-                text-transform: uppercase;
-                text-align: center;
-                line-height: 30px;
-                font-weight: bold;
-                text-shadow: 0 2px 6px #000;
+                color: #fff; font-size: 16px; text-transform: uppercase; text-align: center;
+                line-height: 30px; font-weight: bold; text-shadow: 0 2px 6px #000;
             }
         }
-        .rating-place-in-box {
-            width: 160px;
-            margin-left: 110px;
-            .place-in-box {
-                width: 104px;
-                height: 44px;
-                position: absolute;
-                top: 26px;
-                margin-left: 10px;
-                .place-num {
-                    width: 28px;
-                    height: 38px;
-                    position: relative;
-                    display: inline-block;
+        .rating-place-in-box{
+            width: 160px; margin-left: 110px;
+            .place-in-box{
+                width: 104px; height: 44px; position: absolute; top: 26px; margin-left: 10px;
+                .place-num{
+                    width: 28px; height: 38px; position: relative; display: inline-block;
                     background: linear-gradient(0deg, #383029 0%, #5f5349 100%);
                     @include prefix(border-radius, 10px);
-                    border: solid 2px #362e27;
-                    box-shadow: inset 0 -4px 0 0 #615a55;
+                    border: solid 2px #362e27; box-shadow: inset 0 -4px 0 0 #615a55;
                     overflow: hidden;
-                    .num-roll-box {
-                        width: 28px;
-                        height: 38px;
-                        position: absolute;
-                        .number-all {
-                            width: 28px;
-                            height: 38px;
-                            position: relative;
-                            display: inline-block;
-                            top: -188px;
-                            color: #fff;
-                            font-size: 28px;
-                            font-weight: bold;
-                            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+                    .num-roll-box{
+                        width: 28px; height: 38px; position: absolute;
+                        .number-all{
+                            width: 28px; height: 38px; position: relative; display: inline-block; top: -188px;
+                            color: #fff; font-size: 28px; font-weight: bold; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
                         }
-                        &.num-spin {
-                            @include prefix(
-                                animation,
-                                spin-number-spin 0.25s ease-out 0s infinite
-                            );
+                        &.num-spin{
+                            @include prefix(animation, spin-number-spin 0.25s ease-out 0s infinite);
                         }
-                        &.num-stop {
-                            @include prefix(
-                                animation,
-                                spin-number-stop 0.75s ease-out 0s
-                            );
+                        &.num-stop{
+                            @include prefix(animation, spin-number-stop 0.75s ease-out 0s);
                         }
-                        @keyframes spin-number-spin {
-                            0% {
-                                @include prefix(
-                                    transform,
-                                    translate(0, -188px)
-                                );
+                        @keyframes spin-number-spin{
+                            0%  { 
+                                @include prefix(transform, translate(0,-188px));
                             }
-                            50% {
-                                @include prefix(transform, translate(0, 0px));
+                            50%  { 
+                                @include prefix(transform, translate(0,0px));
                             }
-                            100% {
-                                @include prefix(transform, translate(0, 188px));
+                            100%  { 
+                                @include prefix(transform, translate(0,188px));
                             }
                         }
-                        @keyframes spin-number-stop {
-                            0% {
-                                @include prefix(transform, translate(0, 188px));
+                        @keyframes spin-number-stop{
+                            0%  { 
+                                @include prefix(transform, translate(0,188px));
                             }
-                            50% {
-                                @include prefix(transform, translate(0, -6px));
+                            50%  { 
+                                @include prefix(transform, translate(0,-6px));
                             }
-                            100% {
-                                @include prefix(transform, translate(0, 0px));
+                            100%  { 
+                                @include prefix(transform, translate(0,0px));
                             }
                         }
                     }
                 }
             }
-            .rank-arrow {
-                width: 34px;
-                height: 45px;
-                position: absolute;
-                top: 22px;
-                margin-left: 118px;
-                &.up {
-                    background-image: url(../../img/arrow-green.png);
-                    background-size: 100%;
+            .rank-arrow{
+                width: 34px; height: 45px; position: absolute; top: 22px; margin-left: 118px;
+                &.up{
+                    background-image: url(arrow-green.png); background-size: 100%;
                 }
-                &.down {
-                    background-image: url(../../img/arrow-red.png);
-                    background-size: 100%;
+                &.down{
+                    background-image: url(arrow-red.png); background-size: 100%;
                 }
             }
         }

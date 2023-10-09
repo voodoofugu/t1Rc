@@ -2,844 +2,828 @@
 @import "sass_commons.scss";
 
 body .main {
-    .left-side {
-        width: 620px;
-        height: 555px;
-        position: absolute;
-        left: 5px;
-        bottom: 5px;
-        .tabs-all-box {
-            width: 500px;
-            height: 40px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 0;
-            .tabs-all {
-                width: 118px;
-                height: 40px;
-                position: relative;
-                top: 0;
-                left: 0;
-                display: inline-block;
-                margin: 0 2px 0 0;
-                cursor: pointer;
-                background-color: #9c8b7c;
-                @include prefix(border-radius, 24px 24px 0 0);
-                &:before {
-                    content: "";
-                    width: 110px;
-                    height: 36px;
-                    position: absolute;
-                    top: 4px;
-                    left: 4px;
-                    background-color: #544746;
-                    @include prefix(border-radius, 20px 20px 0 0);
-                    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
-                }
-                .tabs-name {
-                    width: 60px;
-                    height: 40px;
-                    position: absolute;
-                    right: 14px;
-                    color: #fff;
-                    font-weight: bold;
-                    font-size: 12px;
-                    line-height: 44px;
-                    text-align: center;
-                }
-                .tabs-pic {
-                    width: 50px;
-                    height: 32px;
-                    position: absolute;
-                    top: 5px;
-                    left: 5px;
-                    img {
-                        width: 50px;
-                    }
-                }
-                &.selected {
-                    &:before {
-                        content: "";
-                        background-color: #9c8b7c;
-                    }
-                }
-            }
+  .left-side {
+    width: 620px;
+    height: 555px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    .tabs-all-box {
+      width: 500px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 0;
+      .tabs-all {
+        width: 118px;
+        height: 40px;
+        position: relative;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin: 0 2px 0 0;
+        cursor: pointer;
+        background-color: #9c8b7c;
+        @include prefix(border-radius, 24px 24px 0 0);
+        &:before {
+          content: "";
+          width: 110px;
+          height: 36px;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          background-color: #544746;
+          @include prefix(border-radius, 20px 20px 0 0);
+          box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
         }
-        .left-panel {
-            width: 620px;
-            height: 515px;
+        .tabs-name {
+          width: 60px;
+          height: 40px;
+          position: absolute;
+          right: 14px;
+          color: #fff;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 44px;
+          text-align: center;
+        }
+        .tabs-pic {
+          width: 50px;
+          height: 32px;
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          img {
+            width: 50px;
+          }
+        }
+        &.selected {
+          &:before {
+            content: "";
+            background-color: #9c8b7c;
+          }
+        }
+      }
+    }
+    .left-panel {
+      width: 620px;
+      height: 515px;
+      position: absolute;
+      left: 0;
+      top: 40px;
+      &:before {
+        content: "";
+        width: 620px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #9c8b7c;
+        z-index: 999;
+      }
+      &.wide {
+        width: 1106px;
+        &:before {
+          content: "";
+          width: 1102px;
+        }
+        .tab-panel-box.fw-main {
+          width: 1098px;
+          height: 511px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #b7a597;
+          border: solid 4px #9c8b7c;
+          border-top: none;
+          box-shadow: inset 0 0 7px #5f4f4e;
+          .tab-panel-box-title {
+            width: 300px;
+            height: 24px;
             position: absolute;
-            left: 0;
-            top: 40px;
-            &:before {
-                content: "";
-                width: 620px;
-                height: 5px;
+            top: 10px;
+            left: 399px;
+            @include background-resourcebg;
+            @include prefix(border-radius, 12px);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            color: #3c3737;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 24px;
+            text-align: center;
+          }
+          .fw-main-bl-box {
+            width: 1078px;
+            height: 250px;
+            position: absolute;
+            top: 42px;
+            left: 10px;
+            .fw-main-bl {
+              width: 350px;
+              height: 250px;
+              position: absolute;
+              background-color: #9c8b7c;
+              .fw-main-bl-name {
+                width: 160px;
+                height: 30px;
+                position: absolute;
+                top: 6px;
+                left: 95px;
+                background: linear-gradient(
+                  0deg,
+                  #3fbae7 0%,
+                  #007aa7 50%,
+                  #3fbae7 100%
+                );
+                @include prefix(border-radius, 20px);
+                color: #fff;
+                font-size: 12px;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 30px;
+                text-align: center;
+              }
+              .fw-main-bl-pic {
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                top: 40px;
+                left: 100px;
+                img {
+                  width: 150px;
+                }
+
+                &.rush {
+                  img {
+                    width: 200px;
+                  }
+                  top: 15px;
+                  left: 75px;
+                  width: 200px;
+                  height: 200px;
+                }
+              }
+              .color-btn {
+                width: 160px;
+                height: 40px;
+                position: absolute;
+                bottom: 10px;
+                left: 95px;
+              }
+              &.fraction {
+                right: 0;
+              }
+              &.shop {
+                left: 364px;
+              }
+            }
+          }
+          .fw-level-box-all {
+            width: 1078px;
+            height: 200px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: #8f7c6e;
+            text-align: center;
+            .fw-sim-el-box {
+              width: 100px;
+              height: 190px;
+              position: absolute;
+              top: 5px;
+              left: 5px;
+              .fw-simple {
+                width: 100px;
+                height: 70px;
                 position: absolute;
                 top: 0;
                 left: 0;
-                background-color: #9c8b7c;
-                z-index: 999;
+                @include background-resourcebg;
+                color: #3c3737;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 70px;
+              }
+              .fw-level {
+                width: 100px;
+                height: 20px;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                background-color: #b7a597;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 20px;
+              }
+              .fw-elite {
+                width: 100px;
+                height: 70px;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                @include background-avbg;
+                color: #3c3737;
+                font-size: 14px;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 70px;
+              }
             }
-            &.wide {
-                width: 1106px;
-                &:before {
-                    content: "";
-                    width: 1102px;
+            .fw-level-simple-box-scroll {
+              width: 963px;
+              height: 186px;
+              position: absolute;
+              top: 5px;
+              right: 5px;
+              overflow: hidden;
+              overflow-x: scroll;
+              &::-webkit-scrollbar-track {
+                background-color: #524544;
+              }
+              &::-webkit-scrollbar {
+                height: 8px;
+              }
+              &::-webkit-scrollbar-thumb {
+                @include background-resourcebg;
+              }
+              .fw-level-simple,
+              .fw-level-elite {
+                width: 3500px;
+                &.cw {
+                  width: 5250px;
                 }
-                .tab-panel-box.fw-main {
-                    width: 1098px;
-                    height: 511px;
+                height: 70px;
+                position: relative;
+                text-align: left;
+                background-color: #766457;
+                .fw-level-rew-box {
+                  width: 60px;
+                  height: 60px;
+                  position: relative;
+                  display: inline-block;
+                  background: linear-gradient(0deg, #e9c44f 0%, #f7eec7 100%);
+                  @include prefix(border-radius, 8px);
+                  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                  margin: 5px;
+                  text-align: center;
+                  .fw-level-rew-pic {
+                    width: 46px;
+                    height: 46px;
+                    position: absolute;
+                    top: 0;
+                    left: 7px;
+                    img {
+                      width: 46px;
+                    }
+                  }
+                  .fw-level-rew-num {
+                    width: 60px;
+                    height: 12px;
+                    position: absolute;
+                    bottom: 5px;
+                    color: #3c3737;
+                    font-size: 12px;
+                    font-weight: bold;
+                  }
+                  .fw-level-rew-num-check {
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    background-image: url(paycheck.png);
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    visibility: hidden;
+                  }
+                  .fw-level-rew-good {
+                    width: 64px;
+                    height: 64px;
+                    position: absolute;
+                    top: -2px;
+                    left: -2px;
+                    background-image: url(fortuna-good.png);
+                    background-size: 100%;
+                    visibility: hidden;
+                  }
+                  .color-btn.green {
+                    width: 54px;
+                    height: 16px;
+                    position: absolute;
+                    bottom: 3px;
+                    left: 3px;
+                    @include prefix(border-radius, 4px);
+                    visibility: hidden;
+                    box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
+                      0 1px 2px 0 rgba(0, 0, 0, 0.55);
+                    .color-btn-text {
+                      font-size: 8px;
+                      top: 2px;
+                    }
+                    &:active {
+                      box-shadow: inset 0 -1px 0px rgba(0, 0, 0, 0.2),
+                        inset 0 2px 2px rgba(0, 0, 0, 0.2);
+                      .color-btn-text {
+                        top: 3px;
+                      }
+                    }
+                  }
+                  .fw-level-rew-num-block {
+                    width: 60px;
+                    height: 60px;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    background: #b7a597;
-                    border: solid 4px #9c8b7c;
-                    border-top: none;
-                    box-shadow: inset 0 0 7px #5f4f4e;
-                    .tab-panel-box-title {
-                        width: 300px;
-                        height: 24px;
-                        position: absolute;
-                        top: 10px;
-                        left: 399px;
-                        @include background-resourcebg;
-                        @include prefix(border-radius, 12px);
-                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-                        color: #3c3737;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                        line-height: 24px;
-                        text-align: center;
+                    background-color: rgba(0, 0, 0, 0.65);
+                    @include prefix(border-radius, 8px);
+                    visibility: hidden;
+                  }
+                  &.collect {
+                    .fw-level-rew-num {
+                      visibility: hidden;
                     }
-                    .fw-main-bl-box {
-                        width: 1078px;
-                        height: 250px;
-                        position: absolute;
-                        top: 42px;
-                        left: 10px;
-                        .fw-main-bl {
-                            width: 350px;
-                            height: 250px;
-                            position: absolute;
-                            background-color: #9c8b7c;
-                            .fw-main-bl-name {
-                                width: 160px;
-                                height: 30px;
-                                position: absolute;
-                                top: 6px;
-                                left: 95px;
-                                background: linear-gradient(
-                                    0deg,
-                                    #3fbae7 0%,
-                                    #007aa7 50%,
-                                    #3fbae7 100%
-                                );
-                                @include prefix(border-radius, 20px);
-                                color: #fff;
-                                font-size: 12px;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                line-height: 30px;
-                                text-align: center;
-                            }
-                            .fw-main-bl-pic {
-                                width: 150px;
-                                height: 150px;
-                                position: absolute;
-                                top: 40px;
-                                left: 100px;
-                                img {
-                                    width: 150px;
-                                }
-
-                                &.rush {
-                                    img {
-                                        width: 200px;
-                                    }
-                                    top: 15px;
-                                    left: 75px;
-                                    width: 200px;
-                                    height: 200px;
-                                }
-                            }
-                            .color-btn {
-                                width: 160px;
-                                height: 40px;
-                                position: absolute;
-                                bottom: 10px;
-                                left: 95px;
-                            }
-                            &.fraction {
-                                right: 0;
-                            }
-                            &.shop {
-                                left: 364px;
-                            }
-                        }
+                    .color-btn.green {
+                      visibility: visible;
                     }
-                    .fw-level-box-all {
-                        width: 1078px;
-                        height: 200px;
-                        position: absolute;
-                        bottom: 10px;
-                        right: 10px;
-                        background-color: #8f7c6e;
-                        text-align: center;
-                        .fw-sim-el-box {
-                            width: 100px;
-                            height: 190px;
-                            position: absolute;
-                            top: 5px;
-                            left: 5px;
-                            .fw-simple {
-                                width: 100px;
-                                height: 70px;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                @include background-resourcebg;
-                                color: #3c3737;
-                                font-size: 14px;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                line-height: 70px;
-                            }
-                            .fw-level {
-                                width: 100px;
-                                height: 20px;
-                                position: absolute;
-                                top: 75px;
-                                left: 0;
-                                background-color: #b7a597;
-                                color: #fff;
-                                font-size: 14px;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                line-height: 20px;
-                            }
-                            .fw-elite {
-                                width: 100px;
-                                height: 70px;
-                                position: absolute;
-                                top: 100px;
-                                left: 0;
-                                @include background-avbg;
-                                color: #3c3737;
-                                font-size: 14px;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                line-height: 70px;
-                            }
-                        }
-                        .fw-level-simple-box-scroll {
-                            width: 963px;
-                            height: 186px;
-                            position: absolute;
-                            top: 5px;
-                            right: 5px;
-                            overflow: hidden;
-                            overflow-x: scroll;
-                            &::-webkit-scrollbar-track {
-                                background-color: #524544;
-                            }
-                            &::-webkit-scrollbar {
-                                height: 8px;
-                            }
-                            &::-webkit-scrollbar-thumb {
-                                @include background-resourcebg;
-                            }
-                            .fw-level-simple,
-                            .fw-level-elite {
-                                width: 3500px;
-                                &.cw {
-                                    width: 5250px;
-                                }
-                                height: 70px;
-                                position: relative;
-                                text-align: left;
-                                background-color: #766457;
-                                .fw-level-rew-box {
-                                    width: 60px;
-                                    height: 60px;
-                                    position: relative;
-                                    display: inline-block;
-                                    background: linear-gradient(
-                                        0deg,
-                                        #e9c44f 0%,
-                                        #f7eec7 100%
-                                    );
-                                    @include prefix(border-radius, 8px);
-                                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-                                    margin: 5px;
-                                    text-align: center;
-                                    .fw-level-rew-pic {
-                                        width: 46px;
-                                        height: 46px;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 7px;
-                                        img {
-                                            width: 46px;
-                                        }
-                                    }
-                                    .fw-level-rew-num {
-                                        width: 60px;
-                                        height: 12px;
-                                        position: absolute;
-                                        bottom: 5px;
-                                        color: #3c3737;
-                                        font-size: 12px;
-                                        font-weight: bold;
-                                    }
-                                    .fw-level-rew-num-check {
-                                        width: 50px;
-                                        height: 50px;
-                                        position: absolute;
-                                        top: 5px;
-                                        left: 5px;
-                                        background-image: url(../../img/paycheck.png);
-                                        background-size: 100%;
-                                        background-repeat: no-repeat;
-                                        visibility: hidden;
-                                    }
-                                    .fw-level-rew-good {
-                                        width: 64px;
-                                        height: 64px;
-                                        position: absolute;
-                                        top: -2px;
-                                        left: -2px;
-                                        background-image: url(../../img/fortuna-good.png);
-                                        background-size: 100%;
-                                        visibility: hidden;
-                                    }
-                                    .color-btn.green {
-                                        width: 54px;
-                                        height: 16px;
-                                        position: absolute;
-                                        bottom: 3px;
-                                        left: 3px;
-                                        @include prefix(border-radius, 4px);
-                                        visibility: hidden;
-                                        box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.25),
-                                            0 1px 2px 0 rgba(0, 0, 0, 0.55);
-                                        .color-btn-text {
-                                            font-size: 8px;
-                                            top: 2px;
-                                        }
-                                        &:active {
-                                            box-shadow: inset 0 -1px 0px rgba(0, 0, 0, 0.2),
-                                                inset 0 2px 2px
-                                                    rgba(0, 0, 0, 0.2);
-                                            .color-btn-text {
-                                                top: 3px;
-                                            }
-                                        }
-                                    }
-                                    .fw-level-rew-num-block {
-                                        width: 60px;
-                                        height: 60px;
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        background-color: rgba(0, 0, 0, 0.65);
-                                        @include prefix(border-radius, 8px);
-                                        visibility: hidden;
-                                    }
-                                    &.collect {
-                                        .fw-level-rew-num {
-                                            visibility: hidden;
-                                        }
-                                        .color-btn.green {
-                                            visibility: visible;
-                                        }
-                                    }
-                                    &.check {
-                                        .fw-level-rew-num-check {
-                                            visibility: visible;
-                                        }
-                                    }
-                                    &.block {
-                                        .fw-level-rew-num-block {
-                                            visibility: visible;
-                                        }
-                                    }
-                                    &.empty {
-                                        background: #3d342d;
-                                        box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
-                                        .fw-level-rew-num {
-                                            visibility: hidden;
-                                        }
-                                        .color-btn.green {
-                                            visibility: hidden;
-                                        }
-                                        .fw-level-rew-num-check {
-                                            visibility: hidden;
-                                        }
-                                        .fw-level-rew-pic {
-                                            visibility: hidden;
-                                        }
-                                    }
-                                    &.girl {
-                                        .fw-level-rew-pic {
-                                            width: 58px;
-                                            height: 58px;
-                                            position: absolute;
-                                            top: 1px;
-                                            left: 1px;
-                                            img {
-                                                width: 58px;
-                                            }
-                                            @include prefix(border-radius, 6px);
-                                            overflow: hidden;
-                                        }
-                                        .fw-level-rew-num {
-                                            visibility: hidden;
-                                        }
-                                        .fw-level-rew-good {
-                                            visibility: visible;
-                                        }
-                                    }
-                                }
-                            }
-                            .fw-level-level {
-                                width: 3500px;
-                                &.cw {
-                                    width: 5250px;
-                                }
-                                height: 20px;
-                                position: relative;
-                                top: 5px;
-                                background: linear-gradient(
-                                    0deg,
-                                    #584a49 0%,
-                                    #3b302f 100%
-                                );
-                                .fw-level-level-prg {
-                                    width: 10%;
-                                    height: 100%;
-                                    position: relative;
-                                    background: linear-gradient(
-                                        0deg,
-                                        #8cdd55 0%,
-                                        #43a700 50%,
-                                        #8cdd55 100%
-                                    );
-                                    transition: width 0.3s;
-                                    text-align: left;
-                                    font-size: 0;
-                                }
-                                .fw-level-level-num-box {
-                                    width: 100%;
-                                    height: 20px;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    text-align: left;
-                                    .fw-level-level-num {
-                                        width: 70px;
-                                        height: 20px;
-                                        position: relative;
-                                        display: inline-block;
-                                        text-align: center;
-                                        color: #fff;
-                                        font-size: 16px;
-                                        font-weight: bold;
-                                        text-shadow: 0 1px 2px
-                                            rgba(0, 0, 0, 0.35);
-                                        &:before {
-                                            content: "";
-                                            width: 2px;
-                                            height: 20px;
-                                            position: absolute;
-                                            right: 0;
-                                            top: 0;
-                                            background-color: #8f7c6e;
-                                        }
-                                    }
-                                }
-                            }
-                            .fw-level-elite {
-                                top: 10px;
-                            }
-                        }
+                  }
+                  &.check {
+                    .fw-level-rew-num-check {
+                      visibility: visible;
                     }
-                    .fw-info {
-                        width: 24px;
-                        height: 24px;
-                        position: absolute;
-                        top: 9px;
-                        left: 725px;
-                        background: linear-gradient(
-                            0deg,
-                            #53c0ff 0%,
-                            #2277bf 50%,
-                            #b8d2e0 100%
-                        );
-                        border-radius: 100%;
-                        cursor: pointer;
-                        box-shadow: 0 2px 0 #645ba9,
-                            0 2px 4px rgba(0, 0, 0, 0.4);
-                        color: #fff;
-                        font-size: 22px;
-                        line-height: 24px;
-                        font-weight: 700;
-                        font-style: italic;
-                        font-family: "Times New Roman", Times, serif;
-                        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-                        border: 1px solid #fff;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        &:before {
-                            content: "i";
-                        }
-                        &:hover {
-                            filter: brightness(1.1);
-                        }
-                        &:active {
-                            top: 10px;
-                            box-shadow: 0 0px 0 #645ba9,
-                                0 1px 4px rgba(0, 0, 0, 0.6);
-                        }
+                  }
+                  &.block {
+                    .fw-level-rew-num-block {
+                      visibility: visible;
                     }
-                    .fw-btlpass-buy-box-all {
-                        width: 170px;
-                        height: 200px;
-                        position: absolute;
-                        bottom: 10px;
-                        left: 10px;
-                        display: none;
-                        .fw-btlpass-girl {
-                            width: 170px;
-                            height: 200px;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            background-image: url(../../img/v2-fw-girl-val.png);
-                            &.cw {
-                                background-image: url(../../img/v2-fw-girl.png);
-                            }
-                            background-repeat: no-repeat;
-                            background-size: 100%;
-                        }
-                        .fw-btlpass-info {
-                            width: 24px;
-                            height: 24px;
-                            position: absolute;
-                            top: 0px;
-                            left: 5px;
-                            background: linear-gradient(
-                                0deg,
-                                #53c0ff 0%,
-                                #2277bf 50%,
-                                #b8d2e0 100%
-                            );
-                            border-radius: 100%;
-                            cursor: pointer;
-                            box-shadow: 0 2px 0 #645ba9,
-                                0 2px 4px rgba(0, 0, 0, 0.4);
-                            color: #fff;
-                            font-size: 22px;
-                            line-height: 24px;
-                            font-weight: 700;
-                            font-style: italic;
-                            font-family: "Times New Roman", Times, serif;
-                            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-                            border: 1px solid #fff;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            &:before {
-                                content: "i";
-                            }
-                            &:hover {
-                                filter: brightness(1.1);
-                            }
-                            &:active {
-                                top: 1px;
-                                box-shadow: 0 0px 0 #645ba9,
-                                    0 1px 4px rgba(0, 0, 0, 0.6);
-                            }
-                        }
-                        .store-button {
-                            width: 170px;
-                            height: 50px;
-                            position: absolute;
-                            bottom: 60px;
-                            &.double {
-                                bottom: 120px;
-                                .cw-bp-double-img {
-                                    float: left;
-                                    width: 27px;
-                                }
-                                .cw-bp-double-txt {
-                                    float: left;
-                                }
-                            }
-                            &.both {
-                                bottom: 0px;
-                            }
-                            left: 0;
-                            top: initial;
-                            line-height: initial;
-                            background: linear-gradient(
-                                45deg,
-                                #e8c34e,
-                                #f1da7c,
-                                #cfa831,
-                                #fbf1d8
-                            );
-                            @include prefix(border-radius, 8px);
-                            box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
-                                inset 0 -3px 0px #c87725, 0 0 3px #3d3737,
-                                0 2px 4px rgba(0, 0, 0, 0.35),
-                                inset 0 0 3px #603806;
-                            cursor: pointer;
-                            text-transform: uppercase;
-                            font-size: 20px;
-                            font-weight: bold;
-                            color: #4a3a08;
-                            text-shadow: 0 0 1px #0d0a01, 0 2px 1px #fff;
-                            text-align: center;
-                            &:hover {
-                                box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
-                                    inset 0 -3px 0 #c87725, 0 0 12px #ff0,
-                                    0 0 5px #ffc, inset 0 0 10px #ffc,
-                                    inset 0 0 3px #603806;
-                            }
-                            .but-price {
-                                position: relative;
-                                display: inline-block;
-                                font-size: 20px;
-                                top: 2px;
-                            }
-                            .but-price-text {
-                                width: 170px;
-                                font-size: 16px;
-                                position: relative;
-                                top: 2px;
-                            }
-                        }
+                  }
+                  &.empty {
+                    background: #3d342d;
+                    box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
+                    .fw-level-rew-num {
+                      visibility: hidden;
                     }
-                    .fw-btlpass-buy-box-all {
-                        display: block;
+                    .color-btn.green {
+                      visibility: hidden;
                     }
-                    .fw-level-box-all {
-                        width: 900px;
-                        .fw-level-simple-box-scroll {
-                            width: 785px;
-                        }
+                    .fw-level-rew-num-check {
+                      visibility: hidden;
                     }
-
-                    .fw-info-box {
-                        width: 278px;
-                        position: absolute;
-                        right: 10px;
-                        height: 460px;
-                        top: 40px;
-                        background-color: #8f7c68;
-                        color: white;
-                        font-size: 12px;
-                        font-weight: bold;
-                        border-radius: 0 10px 10px 0;
-                        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2),
-                            inset 0px 1px 1px rgba(0, 0, 0, 0.1),
-                            inset 1px 0 2px rgba(0, 0, 0, 0.2);
-                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-                        .fw-fraction-name {
-                            background-image: url(../../img/wpck-ram1.png);
-                            background-size: 100%;
-                            background-repeat: no-repeat;
-                            position: relative;
-                            top: 10px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            width: 200px;
-                            height: 40px;
-                            line-height: 40px;
-                            text-align: center;
-                            font-size: 14px;
-                        }
-
-                        .fw-fraction-description {
-                            position: relative;
-                            width: 250px;
-                            left: 10px;
-                            top: 20px;
-                            text-align: center;
-                        }
-
-                        .fw-fraction-rules-title {
-                            background-image: url(../../img/wpck-ram1.png);
-                            background-size: 100%;
-                            background-repeat: no-repeat;
-                            position: relative;
-                            top: 40px;
-                            left: 35px;
-                            width: 200px;
-                            height: 40px;
-                            line-height: 40px;
-                            text-align: center;
-                            font-size: 14px;
-                        }
-
-                        .fw-fraction-rules-text {
-                            position: relative;
-                            width: 224px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            top: 64px;
-                            text-align: left;
-                        }
+                    .fw-level-rew-pic {
+                      visibility: hidden;
                     }
-                    .fw-right-side-content-box {
-                        width: 800px;
-                        height: 460px;
-                        position: absolute;
-                        top: 40px;
-                        left: 10px;
-                        background-color: #8f7c68;
-                        font-size: 0;
-                        text-align: center;
-                        background-image: url(../../img/v2-fw-map-bg.jpg);
-                        background-size: cover;
-                        overflow: hidden;
-                        border-radius: 10px 0 0 10px;
-                        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
-                        .fw-flag-box {
-                            width: 190px;
-                            height: 360px;
-                            position: relative;
-                            display: inline-block;
-                            top: 20px;
-                            margin: 0 20px;
-                            background-image: url(../../img/v2-fw-flag-bg.png);
-
-                            &.fr1 {
-                                background-image: url(../../img/fr_bg1.png);
-                            }
-                            &.fr2 {
-                                background-image: url(../../img/fr_bg2.png);
-                            }
-                            &.fr3 {
-                                background-image: url(../../img/fr_bg3.png);
-                            }
-
-                            background-size: 100%;
-                            background-repeat: no-repeat;
-                            .fw-flag {
-                                width: 160px;
-                                height: 160px;
-                                position: absolute;
-                                top: 88px;
-                                left: 15px;
-                            }
-                            .color-btn {
-                                width: 160px;
-                                top: 345px;
-                            }
-                            .fw-flag-win {
-                                width: 60px;
-                                height: 60px;
-                                position: absolute;
-                                top: -10px;
-                                left: 65px;
-                                @include background-gold;
-                                @include prefix(border-radius, 100%);
-                                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
-                                &:before {
-                                    content: "";
-                                    width: 54px;
-                                    height: 54px;
-                                    position: absolute;
-                                    top: 3px;
-                                    left: 3px;
-                                    background: linear-gradient(
-                                        0deg,
-                                        #fff091 0%,
-                                        #ffbe27 50%,
-                                        #fff091 100%
-                                    );
-                                    @include prefix(border-radius, 100%);
-                                }
-                                .fw-flag-win-num {
-                                    width: 100%;
-                                    height: 100%;
-                                    position: relative;
-                                    line-height: 60px;
-                                    color: #fff;
-                                    font-size: 30px;
-                                    font-weight: bold;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-                                }
-                            }
-                            &.win2 {
-                                .fw-flag-win {
-                                    @include background-silver;
-                                    &:before {
-                                        content: "";
-                                        background: linear-gradient(
-                                            0deg,
-                                            #d3d3d3 0%,
-                                            #979797 50%,
-                                            #d3d3d3 100%
-                                        );
-                                    }
-                                }
-                                top: 30px;
-                            }
-                            &.win3 {
-                                .fw-flag-win {
-                                    @include background-bronze;
-                                    &:before {
-                                        content: "";
-                                        background: linear-gradient(
-                                            0deg,
-                                            #dfc3a0 0%,
-                                            #9b815f 50%,
-                                            #dfc3a0 100%
-                                        );
-                                    }
-                                }
-                                top: 40px;
-                            }
-                        }
+                  }
+                  &.girl {
+                    .fw-level-rew-pic {
+                      width: 58px;
+                      height: 58px;
+                      position: absolute;
+                      top: 1px;
+                      left: 1px;
+                      img {
+                        width: 58px;
+                      }
+                      @include prefix(border-radius, 6px);
+                      overflow: hidden;
                     }
-
-                    .trophy-res-box-all {
-                        width: 190px;
-                        .trophy-res-box {
-                            &.ctb {
-                                left: 10px;
-                                &:before {
-                                    content: "";
-                                    width: 40px;
-                                    height: 40px;
-                                    position: absolute;
-                                    top: -2px;
-                                    left: -2px;
-                                    background-image: url(../../img/ic-contrip.png);
-                                    background-size: 100%;
-                                    background-repeat: no-repeat;
-                                }
-                                &.cw {
-                                    &:before {
-                                        background-image: url(../../img/ic-contrip-red.png);
-                                    }
-                                }
-                                &.rating {
-                                    &:before {
-                                        background-image: url(../../img/v2-ic-rating.png);
-                                    }
-                                }
-                            }
-                        }
+                    .fw-level-rew-num {
+                      visibility: hidden;
                     }
+                    .fw-level-rew-good {
+                      visibility: visible;
+                    }
+                  }
                 }
+              }
+              .fw-level-level {
+                width: 3500px;
+                &.cw {
+                  width: 5250px;
+                }
+                height: 20px;
+                position: relative;
+                top: 5px;
+                background: linear-gradient(0deg, #584a49 0%, #3b302f 100%);
+                .fw-level-level-prg {
+                  width: 10%;
+                  height: 100%;
+                  position: relative;
+                  background: linear-gradient(
+                    0deg,
+                    #8cdd55 0%,
+                    #43a700 50%,
+                    #8cdd55 100%
+                  );
+                  transition: width 0.3s;
+                  text-align: left;
+                  font-size: 0;
+                }
+                .fw-level-level-num-box {
+                  width: 100%;
+                  height: 20px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  text-align: left;
+                  .fw-level-level-num {
+                    width: 70px;
+                    height: 20px;
+                    position: relative;
+                    display: inline-block;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                    &:before {
+                      content: "";
+                      width: 2px;
+                      height: 20px;
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                      background-color: #8f7c6e;
+                    }
+                  }
+                }
+              }
+              .fw-level-elite {
+                top: 10px;
+              }
             }
+          }
+          .fw-info {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            top: 9px;
+            left: 725px;
+            background: linear-gradient(
+              0deg,
+              #53c0ff 0%,
+              #2277bf 50%,
+              #b8d2e0 100%
+            );
+            border-radius: 100%;
+            cursor: pointer;
+            box-shadow: 0 2px 0 #645ba9, 0 2px 4px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            font-size: 22px;
+            line-height: 24px;
+            font-weight: 700;
+            font-style: italic;
+            font-family: "Times New Roman", Times, serif;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:before {
+              content: "i";
+            }
+            &:hover {
+              filter: brightness(1.1);
+            }
+            &:active {
+              top: 10px;
+              box-shadow: 0 0px 0 #645ba9, 0 1px 4px rgba(0, 0, 0, 0.6);
+            }
+          }
+          .fw-btlpass-buy-box-all {
+            width: 170px;
+            height: 200px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            display: none;
+            .fw-btlpass-girl {
+              width: 170px;
+              height: 200px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-image: url(v2-fw-girl-val.png);
+              &.cw {
+                background-image: url(v2-fw-girl.png);
+              }
+              background-repeat: no-repeat;
+              background-size: 100%;
+            }
+            .fw-btlpass-info {
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              top: 0px;
+              left: 5px;
+              background: linear-gradient(
+                0deg,
+                #53c0ff 0%,
+                #2277bf 50%,
+                #b8d2e0 100%
+              );
+              border-radius: 100%;
+              cursor: pointer;
+              box-shadow: 0 2px 0 #645ba9, 0 2px 4px rgba(0, 0, 0, 0.4);
+              color: #fff;
+              font-size: 22px;
+              line-height: 24px;
+              font-weight: 700;
+              font-style: italic;
+              font-family: "Times New Roman", Times, serif;
+              text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+              border: 1px solid #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              &:before {
+                content: "i";
+              }
+              &:hover {
+                filter: brightness(1.1);
+              }
+              &:active {
+                top: 1px;
+                box-shadow: 0 0px 0 #645ba9, 0 1px 4px rgba(0, 0, 0, 0.6);
+              }
+            }
+            .store-button {
+              width: 170px;
+              height: 50px;
+              position: absolute;
+              bottom: 60px;
+              &.double {
+                bottom: 120px;
+                .cw-bp-double-img {
+                  float: left;
+                  width: 27px;
+                }
+                .cw-bp-double-txt {
+                  float: left;
+                }
+              }
+              &.both {
+                bottom: 0px;
+              }
+              left: 0;
+              top: initial;
+              line-height: initial;
+              background: linear-gradient(
+                45deg,
+                #e8c34e,
+                #f1da7c,
+                #cfa831,
+                #fbf1d8
+              );
+              @include prefix(border-radius, 8px);
+              box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
+                inset 0 -3px 0px #c87725, 0 0 3px #3d3737,
+                0 2px 4px rgba(0, 0, 0, 0.35), inset 0 0 3px #603806;
+              cursor: pointer;
+              text-transform: uppercase;
+              font-size: 20px;
+              font-weight: bold;
+              color: #4a3a08;
+              text-shadow: 0 0 1px #0d0a01, 0 2px 1px #fff;
+              text-align: center;
+              &:hover {
+                box-shadow: inset 0 -20px 5px rgba(200, 119, 37, 0.59),
+                  inset 0 -3px 0 #c87725, 0 0 12px #ff0, 0 0 5px #ffc,
+                  inset 0 0 10px #ffc, inset 0 0 3px #603806;
+              }
+              .but-price {
+                position: relative;
+                display: inline-block;
+                font-size: 20px;
+                top: 2px;
+              }
+              .but-price-text {
+                width: 170px;
+                font-size: 16px;
+                position: relative;
+                top: 2px;
+              }
+            }
+          }
+          .fw-btlpass-buy-box-all {
+            display: block;
+          }
+          .fw-level-box-all {
+            width: 900px;
+            .fw-level-simple-box-scroll {
+              width: 785px;
+            }
+          }
+
+          .fw-info-box {
+            width: 278px;
+            position: absolute;
+            right: 10px;
+            height: 460px;
+            top: 40px;
+            background-color: #8f7c68;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2),
+              inset 0px 1px 1px rgba(0, 0, 0, 0.1),
+              inset 1px 0 2px rgba(0, 0, 0, 0.2);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+            .fw-fraction-name {
+              background-image: url(wpck-ram1.png);
+              background-size: 100%;
+              background-repeat: no-repeat;
+              position: relative;
+              top: 10px;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 200px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              font-size: 14px;
+            }
+
+            .fw-fraction-description {
+              position: relative;
+              width: 250px;
+              left: 10px;
+              top: 20px;
+              text-align: center;
+            }
+
+            .fw-fraction-rules-title {
+              background-image: url(wpck-ram1.png);
+              background-size: 100%;
+              background-repeat: no-repeat;
+              position: relative;
+              top: 40px;
+              left: 35px;
+              width: 200px;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              font-size: 14px;
+            }
+
+            .fw-fraction-rules-text {
+              position: relative;
+              width: 224px;
+              left: 50%;
+              transform: translateX(-50%);
+              top: 64px;
+              text-align: left;
+            }
+          }
+          .fw-right-side-content-box {
+            width: 800px;
+            height: 460px;
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            background-color: #8f7c68;
+            font-size: 0;
+            text-align: center;
+            background-image: url(v2-fw-map-bg.jpg);
+            background-size: cover;
+            overflow: hidden;
+            border-radius: 10px 0 0 10px;
+            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+            .fw-flag-box {
+              width: 190px;
+              height: 360px;
+              position: relative;
+              display: inline-block;
+              top: 20px;
+              margin: 0 20px;
+              background-image: url(v2-fw-flag-bg.png);
+
+              &.fr1 {
+                background-image: url(fr_bg1.png);
+              }
+              &.fr2 {
+                background-image: url(fr_bg2.png);
+              }
+              &.fr3 {
+                background-image: url(fr_bg3.png);
+              }
+
+              background-size: 100%;
+              background-repeat: no-repeat;
+              .fw-flag {
+                width: 160px;
+                height: 160px;
+                position: absolute;
+                top: 88px;
+                left: 15px;
+              }
+              .color-btn {
+                width: 160px;
+                top: 345px;
+              }
+              .fw-flag-win {
+                width: 60px;
+                height: 60px;
+                position: absolute;
+                top: -10px;
+                left: 65px;
+                @include background-gold;
+                @include prefix(border-radius, 100%);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+                &:before {
+                  content: "";
+                  width: 54px;
+                  height: 54px;
+                  position: absolute;
+                  top: 3px;
+                  left: 3px;
+                  background: linear-gradient(
+                    0deg,
+                    #fff091 0%,
+                    #ffbe27 50%,
+                    #fff091 100%
+                  );
+                  @include prefix(border-radius, 100%);
+                }
+                .fw-flag-win-num {
+                  width: 100%;
+                  height: 100%;
+                  position: relative;
+                  line-height: 60px;
+                  color: #fff;
+                  font-size: 30px;
+                  font-weight: bold;
+                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                }
+              }
+              &.win2 {
+                .fw-flag-win {
+                  @include background-silver;
+                  &:before {
+                    content: "";
+                    background: linear-gradient(
+                      0deg,
+                      #d3d3d3 0%,
+                      #979797 50%,
+                      #d3d3d3 100%
+                    );
+                  }
+                }
+                top: 30px;
+              }
+              &.win3 {
+                .fw-flag-win {
+                  @include background-bronze;
+                  &:before {
+                    content: "";
+                    background: linear-gradient(
+                      0deg,
+                      #dfc3a0 0%,
+                      #9b815f 50%,
+                      #dfc3a0 100%
+                    );
+                  }
+                }
+                top: 40px;
+              }
+            }
+          }
+
+          .trophy-res-box-all {
+            width: 190px;
+            .trophy-res-box {
+              &.ctb {
+                left: 10px;
+                &:before {
+                  content: "";
+                  width: 40px;
+                  height: 40px;
+                  position: absolute;
+                  top: -2px;
+                  left: -2px;
+                  background-image: url(ic-contrip.png);
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                }
+                &.cw {
+                  &:before {
+                    background-image: url(ic-contrip-red.png);
+                  }
+                }
+                &.rating {
+                  &:before {
+                    background-image: url(v2-ic-rating.png);
+                  }
+                }
+              }
+            }
+          }
         }
+      }
     }
+  }
 }

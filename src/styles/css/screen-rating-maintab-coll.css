@@ -1,1 +1,389 @@
-.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection{width:604px;height:455px;position:absolute;top:44px;left:11px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection:before{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection:after{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box{position:absolute;left:0px;top:0px;bottom:0px;right:0px;overflow-y:scroll;padding:0 10px 10px 20px;display:flex;flex-wrap:wrap;justify-content:center}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.5);border-radius:10px;background-color:#443630}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box::-webkit-scrollbar{width:10px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 3px #796b60;background:linear-gradient(to right, #fff, #f5de80, #f4b766, #b26d12)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box{width:245px;height:250px;position:relative;display:inline-block;background-color:#786659;border-radius:10px;margin:18px;background:linear-gradient(180deg, #585a5c 0%, #d5d8da 50%, #585a5b 70%, #a1a4a6 85%, #585a5b 100%);box-shadow:inset 0 1px 1px rgba(255,255,255,.2),inset 0 -3px 0 rgba(0,0,0,.3),0 1px 6px rgba(0,0,0,.6);transform:translateY(-6px);text-shadow:0 1px 2px rgba(0,0,0,.6)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box:before{content:"";width:241px;height:222px;position:absolute;top:2px;margin-left:2px;background-color:#786659;border-radius:10px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty{background-color:#574b40;background:linear-gradient(180deg, #8e7453 0%, #e3c7a3 50%, #8f7553 70%, #ae916a 85%, #8f7553 100%)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty:before{content:"";height:246px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .top-name-card-box{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .girl-card-box{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .girl-bonus-fullset{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .girl-bonus-fullset-all{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .rating-slot-box{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold{background:linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold:before{content:"";background:linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot-box{background:linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .girl-bonus-fullset-all{background:linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot{display:none}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot.legendary{display:block;top:4px;left:14px;width:120px;height:94px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot.legendary:before{content:"";width:116px;height:90px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-video{width:110px;height:80px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-video img{width:110px;height:80px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-video .rating-video-play{top:26px;left:40px}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-paychek{width:84px;height:84px;position:absolute;top:94px;margin-left:30px;background-image:url(../../img/paycheck.png);background-size:100%;display:block}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .top-name-card-box{width:100px;height:26px;position:absolute;background-color:#4a3e35;top:2px;left:2px;border-radius:8px 0 0 0}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .top-name-card-box .top-name-card{width:100%;height:26px;color:#fff;font-size:13px;font-weight:700;text-align:center;line-height:26px;box-shadow:inset 0 -1.5px .5px rgba(0,0,0,.1)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .top-name-card-box .top-name-card.scenes{width:141px;left:100px;background-color:#4a3e35;position:absolute;top:0px;text-transform:uppercase;border-radius:0 8px 0 0}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-card-box{width:100px;height:170px;position:absolute;top:28px;margin-left:2px;overflow:hidden}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-card-box .girl-card{width:266px;top:-42px;left:-83px;position:absolute}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-bonus-fullset{width:241px;height:16px;background-color:#4a3e35;position:absolute;top:204px;margin-left:2px;text-align:center;color:#fff;font-size:12px;line-height:16px;text-transform:uppercase;box-shadow:inset 0 1px 1px rgba(0,0,0,.2)}.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-bonus-fullset-all{width:241px;height:26px;position:absolute;top:220px;margin-left:2px;background:linear-gradient(180deg, #585a5c 0%, #d5d8da 50%, #585a5b 70%, #a1a4a6 85%, #585a5b 100%);text-align:center;line-height:26px;color:rgba(0,0,0,.8);border-radius:0 0 6px 6px;text-shadow:0 1px 1px rgba(255,255,255,.6);font-size:18px;font-weight:700;box-shadow:inset 0 1px 2px rgba(255,255,255,.2)}.rating-slot-box{width:141px;height:176px;position:absolute;top:28px;left:102px;background:linear-gradient(0deg, #6d5e52 0%, #493d34 51%, #6b5c50 100%)}.rating-slot-box .rating-slot{width:64px;height:48px;position:absolute;background:linear-gradient(180deg, #c68300 0%, #f4dfb6 40%, #c68200 75%, #fad489 90%, #c78302 100%);border-radius:8px;box-shadow:0 2px 8px 0 rgba(0,0,0,.55);left:5px;top:2px;box-shadow:inset 0 1px 1px rgba(255,255,255,.4),0 2px 8px 0 rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.2)}.rating-slot-box .rating-slot:before{content:"";width:60px;height:44px;position:absolute;border-radius:6px;background:linear-gradient(180deg, #95877d 0%, #665c56 100%);top:2px;left:2px;box-shadow:inset 0 0 2px 1px rgba(0,0,0,.2)}.rating-slot-box .rating-slot.top-right{left:72px}.rating-slot-box .rating-slot.bottom-left{top:52px}.rating-slot-box .rating-slot.bottom-right{top:52px;left:72px}.rating-slot-box .rating-slot.bottom{top:102px;left:24px;width:94px;height:72px}.rating-slot-box .rating-slot.bottom:before{content:"";width:90px;height:68px}.rating-slot-box .rating-slot .raritet{width:24px;height:30px;position:absolute;top:0px;left:-4px;background-size:100%}.rating-slot-box .rating-slot .raritet.common{background-image:url(../../img/icon-common.png)}.rating-slot-box .rating-slot .raritet.epic{background-image:url(../../img/icon-epic.png)}.rating-slot-box .rating-slot .raritet.rare{background-image:url(../../img/icon-rare.png)}.rating-slot-box .rating-slot .raritet.legendary{background-image:url(../../img/icon-legendary.png)}.rating-slot-box .rating-slot .rating-video{width:54px;height:38px;position:absolute;top:5px;left:5px;cursor:pointer}.rating-slot-box .rating-slot .rating-video:hover{filter:brightness(1.1)}.rating-slot-box .rating-slot .rating-video:hover .rating-video-play{transform:scale(1)}.rating-slot-box .rating-slot .rating-video:active{filter:brightness(0.9)}.rating-slot-box .rating-slot .rating-video:active .rating-video-play{transform:scale(0.92)}.rating-slot-box .rating-slot .rating-video img{width:54px;height:38px;border-radius:4px;box-shadow:0 1px 2px rgba(0,0,0,.4)}.rating-slot-box .rating-slot .rating-video .rating-video-play{width:30px;height:30px;position:absolute;top:4px;left:12px;border-radius:100%;background-color:rgba(0,0,0,.7);transform:scale(0.94)}.rating-slot-box .rating-slot .rating-video .rating-video-play:before{content:"";width:0;height:0;border-top:6px solid rgba(0,0,0,0);border-left:12px solid rgba(255,255,255,.55);border-bottom:6px solid rgba(0,0,0,0);position:absolute;top:9px;left:10px}.rating-slot-box .rating-slot .rating-lock{width:54px;height:38px;position:absolute;top:5px;left:5px;display:block;text-align:center}.rating-slot-box .rating-slot .rating-lock img{width:38px}.rating-slot-box .rating-slot .rating-lock.locked{display:none;filter:grayscale(100%)}.rating-slot-box .rating-slot.lock .rating-lock{display:none}.rating-slot-box .rating-slot.lock .rating-lock.locked{display:block}.rating-slot-box .rating-slot.lock .rating-video{display:none}.rating-slot-box .rating-slot.legendary .rating-lock{width:106px;height:46px;position:absolute;top:20px;left:-6px;background-image:url(../../img/legendary-lock.png);background-size:100%}.rating-slot-box .rating-slot.legendary .rating-lock img{display:none}.rating-slot-box .rating-slot.legendary .rating-video{width:82px;height:58px;top:6px;left:6px;display:block}.rating-slot-box .rating-slot.legendary .rating-video img{width:82px;height:58px}.rating-slot-box .rating-slot.legendary .rating-video .rating-video-play{top:15px;left:25px}/*# sourceMappingURL=screen-rating-maintab-coll.css.map */
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection {
+  width: 604px;
+  height: 455px;
+  position: absolute;
+  top: 44px;
+  left: 11px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection:before {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection:after {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  overflow-y: scroll;
+  padding: 0 10px 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #443630;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box::-webkit-scrollbar {
+  width: 10px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #796b60;
+  background: linear-gradient(to right, #fff, #f5de80, #f4b766, #b26d12);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box {
+  width: 245px;
+  height: 250px;
+  position: relative;
+  display: inline-block;
+  background-color: #786659;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  margin: 18px;
+  background: linear-gradient(180deg, #585a5c 0%, #d5d8da 50%, #585a5b 70%, #a1a4a6 85%, #585a5b 100%);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.3), 0 1px 6px rgba(0, 0, 0, 0.6);
+  transform: translateY(-6px);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box:before {
+  content: "";
+  width: 241px;
+  height: 222px;
+  position: absolute;
+  top: 2px;
+  margin-left: 2px;
+  background-color: #786659;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty {
+  background-color: #574b40;
+  background: linear-gradient(180deg, #8e7453 0%, #e3c7a3 50%, #8f7553 70%, #ae916a 85%, #8f7553 100%);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty:before {
+  content: "";
+  height: 246px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .top-name-card-box {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .girl-card-box {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .girl-bonus-fullset {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .girl-bonus-fullset-all {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.empty .rating-slot-box {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold {
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold:before {
+  content: "";
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot-box {
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .girl-bonus-fullset-all {
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot {
+  display: none;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot.legendary {
+  display: block;
+  top: 4px;
+  left: 14px;
+  width: 120px;
+  height: 94px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-slot.legendary:before {
+  content: "";
+  width: 116px;
+  height: 90px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-video {
+  width: 110px;
+  height: 80px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-video img {
+  width: 110px;
+  height: 80px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-video .rating-video-play {
+  top: 26px;
+  left: 40px;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box.gold .rating-paychek {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 94px;
+  margin-left: 30px;
+  background-image: url(../../img/paycheck.png);
+  background-size: 100%;
+  display: block;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .top-name-card-box {
+  width: 100px;
+  height: 26px;
+  position: absolute;
+  background-color: #4a3e35;
+  top: 2px;
+  left: 2px;
+  border-radius: 8px 0 0 0;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .top-name-card-box .top-name-card {
+  width: 100%;
+  height: 26px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 26px;
+  box-shadow: inset 0 -1.5px 0.5px rgba(0, 0, 0, 0.1);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .top-name-card-box .top-name-card.scenes {
+  width: 141px;
+  left: 100px;
+  background-color: #4a3e35;
+  position: absolute;
+  top: 0px;
+  text-transform: uppercase;
+  border-radius: 0 8px 0 0;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-card-box {
+  width: 100px;
+  height: 170px;
+  position: absolute;
+  top: 28px;
+  margin-left: 2px;
+  overflow: hidden;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-card-box .girl-card {
+  width: 266px;
+  top: -42px;
+  left: -83px;
+  position: absolute;
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-bonus-fullset {
+  width: 241px;
+  height: 16px;
+  background-color: #4a3e35;
+  position: absolute;
+  top: 204px;
+  margin-left: 2px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.tab-panel.rating-panel .rating-right-box .rating-card-list-box.collection .rating-card-scroll-list-box .scroll-card-box .girl-bonus-fullset-all {
+  width: 241px;
+  height: 26px;
+  position: absolute;
+  top: 220px;
+  margin-left: 2px;
+  background: linear-gradient(180deg, #585a5c 0%, #d5d8da 50%, #585a5b 70%, #a1a4a6 85%, #585a5b 100%);
+  text-align: center;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0 0 6px 6px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.rating-slot-box {
+  width: 141px;
+  height: 176px;
+  position: absolute;
+  top: 28px;
+  left: 102px;
+  background: linear-gradient(0deg, #6d5e52 0%, #493d34 51%, #6b5c50 100%);
+}
+.rating-slot-box .rating-slot {
+  width: 64px;
+  height: 48px;
+  position: absolute;
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 40%, #c68200 75%, #fad489 90%, #c78302 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.55);
+  left: 5px;
+  top: 2px;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 2px 8px 0 rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.rating-slot-box .rating-slot:before {
+  content: "";
+  width: 60px;
+  height: 44px;
+  position: absolute;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #95877d 0%, #665c56 100%);
+  top: 2px;
+  left: 2px;
+  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.rating-slot-box .rating-slot.top-right {
+  left: 72px;
+}
+.rating-slot-box .rating-slot.bottom-left {
+  top: 52px;
+}
+.rating-slot-box .rating-slot.bottom-right {
+  top: 52px;
+  left: 72px;
+}
+.rating-slot-box .rating-slot.bottom {
+  top: 102px;
+  left: 24px;
+  width: 94px;
+  height: 72px;
+}
+.rating-slot-box .rating-slot.bottom:before {
+  content: "";
+  width: 90px;
+  height: 68px;
+}
+.rating-slot-box .rating-slot .raritet {
+  width: 24px;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: -4px;
+  background-size: 100%;
+}
+.rating-slot-box .rating-slot .raritet.common {
+  background-image: url(../../img/icon-common.png);
+}
+.rating-slot-box .rating-slot .raritet.epic {
+  background-image: url(../../img/icon-epic.png);
+}
+.rating-slot-box .rating-slot .raritet.rare {
+  background-image: url(../../img/icon-rare.png);
+}
+.rating-slot-box .rating-slot .raritet.legendary {
+  background-image: url(../../img/icon-legendary.png);
+}
+.rating-slot-box .rating-slot .rating-video {
+  width: 54px;
+  height: 38px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+.rating-slot-box .rating-slot .rating-video:hover {
+  filter: brightness(1.1);
+}
+.rating-slot-box .rating-slot .rating-video:hover .rating-video-play {
+  transform: scale(1);
+}
+.rating-slot-box .rating-slot .rating-video:active {
+  filter: brightness(0.9);
+}
+.rating-slot-box .rating-slot .rating-video:active .rating-video-play {
+  transform: scale(0.92);
+}
+.rating-slot-box .rating-slot .rating-video img {
+  width: 54px;
+  height: 38px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.rating-slot-box .rating-slot .rating-video .rating-video-play {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 4px;
+  left: 12px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(0.94);
+}
+.rating-slot-box .rating-slot .rating-video .rating-video-play:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-left: 12px solid rgba(255, 255, 255, 0.55);
+  border-bottom: 6px solid transparent;
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+.rating-slot-box .rating-slot .rating-lock {
+  width: 54px;
+  height: 38px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: block;
+  text-align: center;
+}
+.rating-slot-box .rating-slot .rating-lock img {
+  width: 38px;
+}
+.rating-slot-box .rating-slot .rating-lock.locked {
+  display: none;
+  filter: grayscale(100%);
+}
+.rating-slot-box .rating-slot.lock .rating-lock {
+  display: none;
+}
+.rating-slot-box .rating-slot.lock .rating-lock.locked {
+  display: block;
+}
+.rating-slot-box .rating-slot.lock .rating-video {
+  display: none;
+}
+.rating-slot-box .rating-slot.legendary .rating-lock {
+  width: 106px;
+  height: 46px;
+  position: absolute;
+  top: 20px;
+  left: -6px;
+  background-image: url(../../img/legendary-lock.png);
+  background-size: 100%;
+}
+.rating-slot-box .rating-slot.legendary .rating-lock img {
+  display: none;
+}
+.rating-slot-box .rating-slot.legendary .rating-video {
+  width: 82px;
+  height: 58px;
+  top: 6px;
+  left: 6px;
+  display: block;
+}
+.rating-slot-box .rating-slot.legendary .rating-video img {
+  width: 82px;
+  height: 58px;
+}
+.rating-slot-box .rating-slot.legendary .rating-video .rating-video-play {
+  top: 15px;
+  left: 25px;
+}

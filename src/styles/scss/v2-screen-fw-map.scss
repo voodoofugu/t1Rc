@@ -3,7 +3,7 @@
 
 body .main .main-bg {
     &.fw-map {
-        background-image: url(../../img/v2-fw-map-bg.jpg);
+        background-image: url(v2-fw-map-bg.jpg);
         background-size: 100%;
         background-repeat: no-repeat;
     }
@@ -25,7 +25,7 @@ body .main {
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url(../../img/red-lenta.png);
+            background-image: url(red-lenta.png);
             background-size: 100%;
             background-repeat: no-repeat;
             text-align: center;
@@ -107,16 +107,16 @@ body .main {
                 background-repeat: no-repeat;
 
                 &.red {
-                    background-image: url(../../img/v2-fw-ic-arrow-red.png);
+                    background-image: url(v2-fw-ic-arrow-red.png);
                     transform: rotate(180deg);
                     left: 101px;
                 }
                 &.green {
-                    background-image: url(../../img/v2-fw-ic-arrow-green.png);
+                    background-image: url(v2-fw-ic-arrow-green.png);
                     transform: rotate(180deg);
                 }
                 &.blue {
-                    background-image: url(../../img/v2-fw-ic-arrow-blue.png);
+                    background-image: url(v2-fw-ic-arrow-blue.png);
                     transform: rotate(-90deg);
                     top: -21px;
                     left: 45px;
@@ -127,19 +127,19 @@ body .main {
             background-position: 50%;
 
             &.type-1 {
-                background-image: url(../../img/fr-sawmill.png);
+                background-image: url(fr-sawmill.png);
             }
             &.type-2 {
-                background-image: url(../../img/fr-mine.png);
+                background-image: url(fr-mine.png);
             }
             &.type-3 {
-                background-image: url(../../img/fr-fort.png);
+                background-image: url(fr-fort.png);
             }
             &.type-4 {
-                background-image: url(../../img/fr-monsters.png);
+                background-image: url(fr-monsters.png);
             }
             &.type-5 {
-                background-image: url(../../img/fr-tower.png);
+                background-image: url(fr-tower.png);
             }
 
             &.fr1,
@@ -642,7 +642,7 @@ body .main {
                                         position: absolute;
                                         top: 5px;
                                         left: 5px;
-                                        background-image: url(../../img/paycheck.png);
+                                        background-image: url(paycheck.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         visibility: hidden;
@@ -653,7 +653,7 @@ body .main {
                                         position: absolute;
                                         top: -2px;
                                         left: -2px;
-                                        background-image: url(../../img/fortuna-good.png);
+                                        background-image: url(fortuna-good.png);
                                         background-size: 100%;
                                         visibility: hidden;
                                     }

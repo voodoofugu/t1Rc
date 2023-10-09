@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
-import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
-import { stylePairs } from "../stylesMaps/V2MainScreen01ComponentStylesMap";
+// import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
+// import { stylePairs } from "../stylesMaps/V2MainScreen01ComponentStylesMap";
+import pageStyles from "../styleComponents/GfSalePop";
 
-const V2MainScreen01Component = () => {
+const V2MainScreen01Component = ({ idForStyle }) => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
@@ -400,7 +401,7 @@ const V2MainScreen01Component = () => {
     return () => {};
   }, []);
   return (
-    <HelmetStyleTagWhitWrap stylePairs={stylePairs}>
+    <HelmetStyleTagWhitWrap idForStyle={idForStyle} pageStyles={pageStyles}>
       <div className="main world1">
         <div
           className="main-bg"

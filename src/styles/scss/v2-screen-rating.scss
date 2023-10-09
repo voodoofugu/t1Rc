@@ -1,112 +1,54 @@
 @charset "utf-8";
 @import "sass_commons.scss";
 
-body .main {
-    .left-side {
-        width: 620px;
-        height: 555px;
-        position: absolute;
-        left: 5px;
-        bottom: 5px;
-        .tabs-all-box {
-            width: 500px;
-            height: 40px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 0;
-            .tabs-all {
-                width: 118px;
-                height: 40px;
-                position: relative;
-                top: 0;
-                left: 0;
-                display: inline-block;
-                margin: 0 2px 0 0;
-                cursor: pointer;
+body .main{
+    .left-side{
+        width: 620px; height: 555px; position: absolute; left: 5px; bottom: 5px;
+        .tabs-all-box{
+            width: 500px; height: 40px; position: absolute; top: 0; left: 0; font-size: 0;
+            .tabs-all{
+                width: 118px; height: 40px; position: relative; top: 0; left: 0; display: inline-block;
+                margin: 0 2px 0 0; cursor: pointer;
                 background-color: #9c8b7c;
                 @include prefix(border-radius, 24px 24px 0 0);
-                &:before {
-                    content: "";
-                    width: 110px;
-                    height: 36px;
-                    position: absolute;
-                    top: 4px;
-                    left: 4px;
+                &:before{
+                    content: ""; width: 110px; height: 36px; position: absolute; top: 4px; left: 4px;
                     background-color: #544746;
                     @include prefix(border-radius, 20px 20px 0 0);
                     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
                 }
-                .tabs-name {
-                    width: 60px;
-                    height: 40px;
-                    position: absolute;
-                    right: 14px;
-                    color: #fff;
-                    font-weight: bold;
-                    font-size: 12px;
-                    line-height: 44px;
+                .tabs-name{
+                    width: 60px; height: 40px; position: absolute; right: 14px;
+                    color: #fff; font-weight: bold; font-size: 12px; line-height: 44px;
                     text-align: center;
                 }
-                .tabs-pic {
-                    width: 50px;
-                    height: 32px;
-                    position: absolute;
-                    top: 5px;
-                    left: 5px;
-                    img {
-                        width: 50px;
-                    }
+                .tabs-pic{
+                    width: 50px; height: 32px; position: absolute; top: 5px; left: 5px;
+                    img{width: 50px;}
                 }
-                &.selected {
-                    &:before {
-                        content: "";
-                        background-color: #9c8b7c;
+                &.selected{
+                    &:before{
+                        content: ""; background-color: #9c8b7c;
                     }
                 }
             }
         }
-        .left-panel {
-            width: 620px;
-            height: 515px;
-            position: absolute;
-            left: 0;
-            top: 40px;
-            &:before {
-                content: "";
-                width: 620px;
-                height: 5px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: #9c8b7c;
-                z-index: 999;
+        .left-panel{
+            width: 620px; height: 515px; position: absolute; left: 0; top: 40px;
+            &:before{
+                content: ""; width: 620px; height: 5px; position: absolute; top: 0; left: 0;
+                background-color: #9c8b7c; z-index: 999;
             }
-            &.wide.rating {
+            &.wide.rating{
                 width: 1106px;
-                &:before {
-                    content: "";
-                    width: 1102px;
-                }
-                .heroes-list-all-box {
+                &:before{content: ""; width: 1102px;}
+                .heroes-list-all-box{
                     width: 522px;
-                    .rating-topbtn-box {
-                        width: 500px;
-                        height: 80px;
-                        position: absolute;
-                        top: 10px;
-                        left: 10px;
-                        .rating-timer-box {
-                            width: 150px;
-                            height: 40px;
-                            position: absolute;
-                            left: 10px;
-                            top: 20px;
-                            background: linear-gradient(
-                                0deg,
-                                #9c0000 0%,
-                                #ff0000 100%
-                            );
+                    .rating-topbtn-box{
+                        width: 500px; height: 80px; position: absolute; top: 10px; left: 10px;
+                        .rating-timer-box{
+                            width: 150px; height: 40px; position: absolute; left: 10px; top: 20px; 
+                            background: linear-gradient(0deg, #9C0000 0%, #FF0000 100%);
                             @include prefix(border-radius, 6px);
                             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45);
                             .btn-text1 {
@@ -121,95 +63,47 @@ body .main {
                                 text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
                                 top: 8px;
                             }
-                            .rating-timer,
-                            .rating-timer-text {
-                                width: 100%;
-                                height: 16px;
-                                position: absolute;
-                                top: 6px;
-                                text-align: center;
-                                font-size: 16px;
-                                text-transform: uppercase;
-                                color: #fff000;
-                                top: 4px;
-                                font-weight: bold;
-                                line-height: 16px;
-                                text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+                            .rating-timer, .rating-timer-text{
+                                width: 100%; height: 16px; position: absolute; top: 6px;
+                                text-align: center; font-size: 16px; text-transform: uppercase; color: #fff000; top: 4px;
+                                font-weight: bold; line-height: 16px; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
                             }
-                            .rating-timer-text {
-                                height: 16px;
-                                top: 22px;
-                                font-size: 12px;
-                                text-transform: uppercase;
-                                color: #fff;
+                            .rating-timer-text{
+                                height: 16px; top: 22px;
+                                font-size: 12px; text-transform: uppercase; color: #fff;
                                 line-height: 16px;
                             }
-                            &.time-up {
+                            &.time-up{
                                 cursor: pointer;
-                                .btn-text1 {
-                                    display: block;
-                                }
-                                .rating-timer,
-                                .rating-timer-text {
-                                    display: none;
-                                }
+                                .btn-text1 {display: block;}
+                                .rating-timer, .rating-timer-text{ display: none; }
                             }
                         }
                     }
-                    .color-btn {
-                        width: 150px;
-                        position: absolute;
-                        top: 20px;
-                        right: 10px;
+                    .color-btn{
+                        width: 150px; position: absolute; top: 20px; right: 10px;
                     }
                 }
-                .all-heroes-box {
+                .all-heroes-box{
                     height: 396px;
-                    .container-top {
-                        width: 480px;
-                        height: 375px;
-                        position: absolute;
-                        top: 10px;
-                        left: 10px;
+                    .container-top{
+                        width: 480px; height: 375px; position: absolute; top: 10px; left: 10px;
                         .rating-ped-box {
-                            width: 480px;
-                            height: 144px;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
+                            width: 480px; height: 144px; position: absolute; top: 0; left: 0;
                             .rating-ped-box-num {
-                                width: 114px;
-                                height: 24px;
-                                position: absolute;
-                                bottom: 0px;
-                                background: linear-gradient(
-                                    180deg,
-                                    #6d5e52 0%,
-                                    #493d34 100%
-                                );
+                                width: 114px; height: 24px; position: absolute; bottom: 0px;
+                                background: linear-gradient(180deg, #6d5e52 0%, #493d34 100%);
                                 .ped-box-num-text {
-                                    width: 100%;
-                                    height: 24px;
-                                    color: #fff;
-                                    line-height: 24px;
-                                    font-size: 14px;
-                                    text-align: center;
-                                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
-                                    &.var2,
-                                    &.var4 {
-                                        background: linear-gradient(
-                                            180deg,
-                                            #4f4339 0%,
-                                            #352c25 100%
-                                        );
+                                    width: 100%; height: 24px;
+                                    color: #fff; line-height: 24px; font-size: 14px;
+                                    text-align: center; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+                                    &.var2, &.var4{
+                                        background: linear-gradient(180deg, #4f4339 0%, #352c25 100%);
                                     }
                                 }
                             }
                             .ped-box {
-                                width: 114px;
-                                height: 144px;
-                                position: absolute;
-                                bottom: 0px;
+                                width: 114px; height: 144px; position: absolute; bottom: 0px;
                                 background-color: #786659;
                                 &.active {
                                     .ped-box-portrait {
@@ -219,99 +113,66 @@ body .main {
                                 .ped-box-portrait {
                                     width: 66px;
                                     height: 66px;
-                                    background-image: url(../../img/gild-icon-66.png);
+                                    background-image: url(gild-icon-66.png);
                                     position: absolute;
                                     margin-left: 22px;
                                     bottom: 62px;
                                     display: none;
                                 }
                                 .ped-box-prize {
-                                    width: 100px;
-                                    height: 100px;
-                                    position: absolute;
-                                    top: 8px;
-                                    left: 7px;
+                                    width: 100px; height: 100px; position: absolute; top: 8px; left: 7px;
                                     background-size: 100%;
-                                    &.noreward {
-                                        width: 100%;
-                                        height: 100%;
+                                    &.noreward{
+                                        width: 100%; height: 100%; 
                                         background-color: red;
-                                        color: #fff;
-                                        font-size: 18px;
+                                        color: #fff; font-size: 18px;
                                     }
                                 }
-                                .ped-box-noreward {
-                                    width: 114px;
-                                    height: 60px;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    color: #fff;
-                                    font-size: 12px;
-                                    font-weight: bold;
-                                    text-align: center;
-                                    text-transform: uppercase;
-                                    line-height: 60px;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+                                .ped-box-noreward{
+                                    width: 114px; height: 60px; position: absolute; top: 0; left: 0;
+                                    color: #fff; font-size: 12px;  font-weight: bold; text-align: center;
+                                    text-transform: uppercase; line-height: 60px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
                                 }
                                 &.rate1 {
                                     height: 84px;
                                     .ped-box-prize {
-                                        width: 60px;
-                                        height: 60px;
-                                        left: 27px;
-                                        top: 2px;
-                                        background-image: url(../../img/rating-sign-bronze@1x.png);
+                                        width: 60px; height: 60px; left: 27px; top: 2px;
+                                        background-image: url(rating-sign-bronze@1x.png);
                                     }
                                 }
                                 &.rate2 {
-                                    height: 104px;
-                                    left: 122px;
+                                    height: 104px; left: 122px;
                                     background-color: #67564a;
                                     .ped-box-prize {
-                                        width: 70px;
-                                        height: 70px;
-                                        left: 22px;
-                                        background-image: url(../../img/icon-sunduk-200-1.png);
+                                        width: 70px; height: 70px; left: 22px;
+                                        background-image: url(icon-sunduk-200-1.png);
                                     }
                                 }
                                 &.rate3 {
-                                    height: 124px;
-                                    left: 244px;
+                                    height: 124px; left: 244px;
                                     .ped-box-prize {
-                                        width: 90px;
-                                        height: 90px;
-                                        left: 12px;
-                                        background-image: url(../../img/icon-sunduk-200-2.png);
+                                        width: 90px; height: 90px; left: 12px;
+                                        background-image: url(icon-sunduk-200-2.png);
                                     }
                                 }
                                 &.rate4 {
-                                    height: 144px;
-                                    left: 366px;
+                                    height: 144px; left: 366px;
                                     background-color: #67564a;
                                     .ped-box-prize {
-                                        background-image: url(../../img/icon-sunduk-200-3.png);
+                                        background-image: url(icon-sunduk-200-3.png);
                                     }
                                 }
                             }
                         }
                         .rating-scroll-name-box {
-                            width: 470px;
-                            height: 24px;
-                            position: absolute;
-                            top: 152px;
-                            left: 0;
+                            width: 470px; height: 24px; position: absolute; top: 152px; left: 0;
                             color: #eed9cb;
                             font-weight: bold;
                             line-height: 24px;
                             font-size: 14px;
                             text-align: center;
                             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
-                            background: linear-gradient(
-                                180deg,
-                                #6d5e52 0%,
-                                #493d34 100%
-                            );
+                            background: linear-gradient(180deg, #6d5e52 0%, #493d34 100%);
                             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
                             .rating-scroll-name {
                                 width: 100px;
@@ -324,11 +185,7 @@ body .main {
                                 &.var2 {
                                     width: 220px;
                                     left: 100px;
-                                    background: linear-gradient(
-                                        180deg,
-                                        #4f4339 0%,
-                                        #352c25 100%
-                                    );
+                                    background: linear-gradient(180deg, #4f4339 0%, #352c25 100%);
                                 }
                                 &.var3 {
                                     width: 150px;
@@ -353,8 +210,7 @@ body .main {
                                 padding-top: 5px;
                                 padding-bottom: 10px;
                                 &::-webkit-scrollbar-track {
-                                    -webkit-box-shadow: inset 0 0 6px
-                                        rgba(0, 0, 0, 0.5);
+                                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
                                     border-radius: 10px;
                                     background-color: #7c665c;
                                 }
@@ -421,8 +277,7 @@ body .main {
                                     text-align: center;
                                     text-transform: uppercase;
                                     line-height: 30px;
-                                    text-shadow: 0 2px 6px
-                                        rgba(255, 255, 255, 0.75);
+                                    text-shadow: 0 2px 6px rgba(255, 255, 255, 0.75);
                                     &.bronze {
                                         background: linear-gradient(
                                             180deg,
@@ -473,7 +328,7 @@ body .main {
                                                 content: "";
                                                 width: 30px;
                                                 height: 30px;
-                                                background-image: url(../../img/diamond@1x.png);
+                                                background-image: url(diamond@1x.png);
                                                 background-size: 100%;
                                                 position: relative;
                                                 display: inline-block;
@@ -484,7 +339,7 @@ body .main {
                                                 content: "";
                                                 width: 30px;
                                                 height: 30px;
-                                                background-image: url(../../img/diamond@1x.png);
+                                                background-image: url(diamond@1x.png);
                                                 background-size: 100%;
                                                 position: relative;
                                                 display: inline-block;
@@ -498,15 +353,9 @@ body .main {
                         }
                     }
                 }
-                .btn-close-x {
-                    display: block;
-                }
-                .rating-right-box {
-                    width: 575px;
-                    height: 505px;
-                    position: absolute;
-                    top: 5px;
-                    right: 9px;
+                .btn-close-x{display: block;}
+                .rating-right-box{
+                    width: 575px; height: 505px; position: absolute; top: 5px; right: 9px;
                     background-color: #b7a597;
                     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
                 }
@@ -515,90 +364,52 @@ body .main {
     }
 }
 
-.color-btn {
-    width: 90px;
-    height: 40px;
-    position: relative;
-    display: inline-block;
+
+
+.color-btn{
+    width: 90px; height: 40px; position: relative; display: inline-block;
     @include prefix(border-radius, 6px);
     background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
-    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25),
-        0 2px 4px 0 rgba(0, 0, 0, 0.55);
+    box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.25), 0 2px 4px 0 rgba(0,0,0,0.55);
     cursor: pointer;
-    .color-btn-text {
-        top: 10px;
-        position: relative;
-        color: #fff;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 14px;
+    .color-btn-text{
+        top: 10px; position: relative; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+        text-align: center; font-weight: bold; text-transform: uppercase; font-size: 14px;
     }
-    &:active {
-        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
-            inset 0 2px 2px rgba(0, 0, 0, 0.2);
-        .color-btn-text {
-            top: 12px;
-        }
+    &:active{
+        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.20), inset 0 2px 2px rgba(0, 0, 0, 0.20);
+        .color-btn-text{top: 12px;}
     }
-    &.blue {
-        background: linear-gradient(0deg, #62a3e5 0%, #b4d7fa 100%);
-    }
-    &.green {
-        background: linear-gradient(0deg, #7cbc30 0%, #baf279 100%);
-    }
-    &.orage {
-        background: linear-gradient(0deg, #d67503 0%, #fdd2a0 100%);
-    }
+    &.blue{background: linear-gradient(0deg, #62a3e5 0%, #b4d7fa 100%);}
+    &.green{background: linear-gradient(0deg, #7cbc30 0%, #BAF279 100%);}
+    &.orage{background: linear-gradient(0deg, #d67503 0%, #fdd2a0 100%);}
 }
 
-.btn-close-x {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    display: none;
+.btn-close-x{
+    width: 30px; height: 30px; position: absolute; top: -6px; right: -6px; display: none;
     background: linear-gradient(30deg, #876b56, #aa9383, #dfceba);
     @include prefix(border-radius, 7px);
     box-shadow: 0 0 7px #000;
     cursor: pointer;
     z-index: 999;
     &:before {
-        content: "\2716";
-        font-size: 28px;
-        font-weight: bold;
-        color: #600;
-        line-height: 30px;
-        text-shadow: 0 0 2px #fff;
+        content: "\2716"; font-size: 28px; font-weight: bold; color: #600;
+        line-height: 30px; text-shadow: 0 0 2px #fff;
     }
     &:after {
-        content: "";
-        width: 24px;
-        height: 7px;
-        position: absolute;
-        top: 3px;
-        left: 3px;
+        content: ""; width: 24px; height: 7px; position: absolute; top: 3px; left: 3px;
         background: rgba(255, 255, 255, 0.25);
         @include prefix(border-radius, 5px);
     }
 }
 
 .ped-box-portrait {
-    width: 66px;
-    height: 66px;
-    background-image: url(../../img/gild-icon-66.png);
-    position: absolute;
+    width: 66px; height: 66px; background-image: url(gild-icon-66.png); position: absolute; 
     &.place0 {
         display: none;
     }
-    &.place1,
-    &.place2,
-    &.place3,
-    &.place4 {
-        bottom: 86px;
-        left: 24px;
+    &.place1, &.place2, &.place3, &.place4 {
+        bottom: 86px; left: 24px;
         transition-duration: 1s;
         transition-delay: 0.5s;
     }
@@ -611,7 +422,7 @@ body .main {
     &.place4 {
         left: 392px;
     }
-    .you-box {
+    .you-box{
         color: white;
         text-align: center;
         top: 50px;
@@ -624,6 +435,9 @@ body .main {
         text-transform: uppercase;
         border-radius: 30px;
         background-color: #857b65;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.65);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.65);
     }
 }
+
+
+

@@ -120,7 +120,7 @@ body .main {
                         position: absolute;
                         top: 39px;
                         left: 0;
-                        background: url(../../img/hero_bg@2x.png), #725858;
+                        background: url(hero_bg@2x.png), #725858;
                         background-size: cover;
                         background-position: -138px center;
                         border-radius: 0 0 14px 14px;
@@ -176,7 +176,7 @@ body .main {
                                     top: 0px;
                                     width: 44px;
                                     height: 38px;
-                                    background-image: url(../../img/darkworld-angel-pop-btn-bg.png);
+                                    background-image: url(darkworld-angel-pop-btn-bg.png);
                                     background-repeat: no-repeat;
                                     background-position: center;
                                     background-size: cover;
@@ -255,7 +255,7 @@ body .main {
                                     height: 20px;
                                     left: -5px;
                                     top: 34px;
-                                    background-image: url(../../img/squad-corners.png);
+                                    background-image: url(squad-corners.png);
                                     background-size: 20px auto;
                                     background-repeat: no-repeat;
                                     z-index: 2;
@@ -316,7 +316,7 @@ body .main {
                                             background-size: cover;
                                             margin-top: 3px;
                                             transform: translateX(-6px);
-                                            background-image: url(../../img/ic-ore-squad.png);
+                                            background-image: url(ic-ore-squad.png);
                                             background-position: 0 0;
                                             background-repeat: no-repeat;
                                             background-size: 32px auto;
@@ -329,7 +329,7 @@ body .main {
                                             left: 50%;
                                             top: -12px;
                                             transform: translateX(-50%);
-                                            background-image: url(../../img/suphero-squad-frame-all@x2.png);
+                                            background-image: url(suphero-squad-frame-all@x2.png);
                                             background-position: 0 0;
                                             background-repeat: no-repeat;
                                             background-size: 100% auto;
@@ -466,7 +466,7 @@ body .main {
                                             position: absolute;
                                             left: -8px;
                                             top: 73px;
-                                            background-image: url(../../img/specialization-elems-bg.png);
+                                            background-image: url(specialization-elems-bg.png);
                                             background-position: -10px 0px;
                                             background-repeat: no-repeat;
                                             background-size: 59px auto;
@@ -711,7 +711,7 @@ body .main {
                                                 background: #ad8367;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/2vip-s1.png);
+                                                background-image: url(2vip-s1.png);
                                                 background-size: 100%;
                                                 filter: brightness(0.9)
                                                     grayscale(0.5);
@@ -725,14 +725,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 0;
                                             }
                                             .hero-pic-box {
                                                 background: #ff9b37;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/2vip-s1.png);
+                                                background-image: url(2vip-s1.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "I";
@@ -744,14 +744,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 0px;
                                             }
                                             .hero-pic-box {
                                                 background: #ff9b37;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/2vip-s2.png);
+                                                background-image: url(2vip-s2.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "II";
@@ -763,14 +763,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -16px;
                                             }
                                             .hero-pic-box {
                                                 background: #b0b0b0;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/2vip-s3.png);
+                                                background-image: url(2vip-s3.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "III";
@@ -782,14 +782,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -16px;
                                             }
                                             .hero-pic-box {
                                                 background: #b0b0b0;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/2vip-s4.png);
+                                                background-image: url(2vip-s4.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "IV";
@@ -801,14 +801,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -32px;
                                             }
                                             .hero-pic-box {
                                                 background: #ffe437;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/2vip-s5.png);
+                                                background-image: url(2vip-s5.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "V";
@@ -820,14 +820,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -32px;
                                             }
                                             .hero-pic-box {
                                                 background: #ffe437;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/2vip-s6.png);
+                                                background-image: url(2vip-s6.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "VI";
@@ -839,14 +839,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -48px;
                                             }
                                             .hero-pic-box {
                                                 background: #bdbdae;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/3vip-s7.png);
+                                                background-image: url(3vip-s7.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "VII";
@@ -858,14 +858,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -48px;
                                             }
                                             .hero-pic-box {
                                                 background: #bdbdae;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/3vip-s8.png);
+                                                background-image: url(3vip-s8.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "VIII";
@@ -877,14 +877,14 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -64px;
                                             }
                                             .hero-pic-box {
                                                 background: #78a9c5;
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/3vip-s9.png);
+                                                background-image: url(3vip-s9.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "IX";
@@ -896,7 +896,7 @@ body .main {
                                             &:after,
                                             .hero-pic-box:before,
                                             .hero-pic-box:after {
-                                                background-image: url(../../img/squad-corners.png);
+                                                background-image: url(squad-corners.png);
                                                 background-position: 0 -64px;
                                             }
                                             .hero-pic-box {
@@ -913,7 +913,7 @@ body .main {
                                                         position: absolute;
                                                         width: 20px;
                                                         height: 18px;
-                                                        background: url(../../img/paycheck-arrow.png);
+                                                        background: url(paycheck-arrow.png);
                                                         background-position: center;
                                                         background-repeat: no-repeat;
                                                         background-size: cover;
@@ -922,7 +922,7 @@ body .main {
                                                 }
                                             }
                                             .viplvl {
-                                                background-image: url(../../img/3vip-s10.png);
+                                                background-image: url(3vip-s10.png);
                                                 background-size: 100%;
                                                 &:before {
                                                     content: "X";
@@ -994,7 +994,7 @@ body .main {
                                                 width: 22px;
                                                 height: 22px;
                                                 position: absolute;
-                                                background-image: url(../../img/ico-click.png);
+                                                background-image: url(ico-click.png);
                                                 background-repeat: no-repeat;
                                                 background-size: 22px;
                                                 top: 2px;
@@ -1017,7 +1017,7 @@ body .main {
                                         .suphero-buttons-dps {
                                             top: 46px;
                                             &:before {
-                                                background-image: url(../../img/ico-sword.png);
+                                                background-image: url(ico-sword.png);
                                             }
                                         }
                                     }
@@ -1099,7 +1099,7 @@ body .main {
                                         }
                                         .suphero-specialization {
                                             &:before {
-                                                background-image: url(../../img/specialization-elems-bg.png);
+                                                background-image: url(specialization-elems-bg.png);
                                                 background-position: -10px 0px;
                                             }
                                         }
@@ -1181,7 +1181,7 @@ body .main {
                                         }
                                         .suphero-specialization {
                                             &:before {
-                                                background-image: url(../../img/specialization-elems-bg.png);
+                                                background-image: url(specialization-elems-bg.png);
                                                 background-position: -10px -59px;
                                             }
                                         }
@@ -1263,7 +1263,7 @@ body .main {
                                         }
                                         .suphero-specialization {
                                             &:before {
-                                                background-image: url(../../img/specialization-elems-bg.png);
+                                                background-image: url(specialization-elems-bg.png);
                                                 background-position: -10px -118px;
                                             }
                                         }
@@ -1345,7 +1345,7 @@ body .main {
                                         }
                                         .suphero-specialization {
                                             &:before {
-                                                background-image: url(../../img/specialization-elems-bg.png);
+                                                background-image: url(specialization-elems-bg.png);
                                                 background-position: -10px -177px;
                                             }
                                         }
@@ -1427,7 +1427,7 @@ body .main {
                                         }
                                         .suphero-specialization {
                                             &:before {
-                                                background-image: url(../../img/specialization-elems-bg.png);
+                                                background-image: url(specialization-elems-bg.png);
                                                 background-position: -10px -236px;
                                             }
                                         }
@@ -1514,7 +1514,7 @@ body .main {
                                     .avatar-box {
                                         width: 52px;
                                         height: 52px;
-                                        background-image: url(../../img/v2-master-pic1.png);
+                                        background-image: url(v2-master-pic1.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         position: absolute;
@@ -1581,17 +1581,17 @@ body .main {
                                         }
                                         &.character-information-dpc {
                                             &:before {
-                                                background-image: url(../../img/ico-click.png);
+                                                background-image: url(ico-click.png);
                                             }
                                         }
                                         &.character-information-dps {
                                             &:before {
-                                                background-image: url(../../img/ico-sword.png);
+                                                background-image: url(ico-sword.png);
                                             }
                                         }
                                         &.character-information-killing {
                                             &:before {
-                                                background-image: url(../../img/v2-fw-icon-w3.png);
+                                                background-image: url(v2-fw-icon-w3.png);
                                             }
                                         }
                                     }
@@ -1615,7 +1615,7 @@ body .main {
                                         content: "";
                                         width: 80px;
                                         height: 56px;
-                                        background-image: url(../../img/change-sun2.png);
+                                        background-image: url(change-sun2.png);
                                         background-size: 100%;
                                         background-repeat: no-repeat;
                                         background-position: center 2px;
@@ -1662,13 +1662,13 @@ body .main {
                                     }
                                     &.promote {
                                         &:before {
-                                            background-image: url(../../img/change-sun2.png);
+                                            background-image: url(change-sun2.png);
                                             background-size: 96%;
                                         }
                                     }
                                     &.under-shop {
                                         &:before {
-                                            background-image: url(../../img/v2-xmas-chest-purple.png);
+                                            background-image: url(v2-xmas-chest-purple.png);
                                             background-size: 88%;
                                             background-position: center 0px;
                                         }
@@ -1780,7 +1780,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(../../img/v2-f-e1.png);
+                                    background-image: url(v2-f-e1.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -1794,7 +1794,7 @@ body .main {
                                     position: absolute;
                                     top: -2px;
                                     left: -2px;
-                                    background-image: url(../../img/v2-icon-chaos.png);
+                                    background-image: url(v2-icon-chaos.png);
                                     background-size: 100%;
                                     background-repeat: no-repeat;
                                 }
@@ -1820,7 +1820,7 @@ body .main {
         width: 94px;
         height: 18px;
         position: absolute;
-        background-image: url(../../img/hero-star05-bg.png);
+        background-image: url(hero-star05-bg.png);
         background-size: 100%;
         &:before {
             content: "";
@@ -1834,7 +1834,7 @@ body .main {
                 width: 0px;
                 background-repeat: no-repeat;
                 background-size: 470%;
-                background-image: url(../../img/hero-star05.png);
+                background-image: url(hero-star05.png);
             }
         }
         &.lvl02 {
@@ -1843,7 +1843,7 @@ body .main {
                 width: 20px;
                 background-repeat: no-repeat;
                 background-size: 470%;
-                background-image: url(../../img/hero-star05.png);
+                background-image: url(hero-star05.png);
             }
         }
         &.lvl04 {
@@ -1852,7 +1852,7 @@ body .main {
                 width: 40px;
                 background-repeat: no-repeat;
                 background-size: 235%;
-                background-image: url(../../img/hero-star05.png);
+                background-image: url(hero-star05.png);
             }
         }
         &.lvl06 {
@@ -1861,7 +1861,7 @@ body .main {
                 width: 56px;
                 background-repeat: no-repeat;
                 background-size: 168%;
-                background-image: url(../../img/hero-star05.png);
+                background-image: url(hero-star05.png);
             }
         }
         &.lvl08 {
@@ -1870,7 +1870,7 @@ body .main {
                 width: 72px;
                 background-repeat: no-repeat;
                 background-size: 131%;
-                background-image: url(../../img/hero-star05.png);
+                background-image: url(hero-star05.png);
             }
         }
         &.lvl010 {
@@ -1879,7 +1879,7 @@ body .main {
                 width: 94px;
                 background-repeat: no-repeat;
                 background-size: 100%;
-                background-image: url(../../img/hero-star05.png);
+                background-image: url(hero-star05.png);
             }
         }
         &.ult {
@@ -1888,7 +1888,7 @@ body .main {
                 width: 94px;
                 background-repeat: no-repeat;
                 background-size: 100%;
-                background-image: url(../../img/big-hero-star05-purple.png);
+                background-image: url(big-hero-star05-purple.png);
             }
         }
     }
@@ -2016,7 +2016,7 @@ body
                         text-align: center;
                         color: #fff;
                         text-shadow: 0px 1px 2px #000000;
-                        background: url(../../img/banner-squad-bg.png);
+                        background: url(banner-squad-bg.png);
                         background-size: auto 140px;
                         background-repeat: no-repeat;
                         background-position: right 0;
@@ -2056,7 +2056,7 @@ body
                             width: 22px;
                             height: 22px;
                             position: absolute;
-                            background-image: url(../../img/ico-click.png);
+                            background-image: url(ico-click.png);
                             background-repeat: no-repeat;
                             background-size: 22px;
                             top: 3px;
@@ -2097,7 +2097,7 @@ body
                             width: 22px;
                             height: 22px;
                             position: absolute;
-                            background-image: url(../../img/ico-sword.png);
+                            background-image: url(ico-sword.png);
                             background-repeat: no-repeat;
                             background-size: 22px;
                             top: 3px;
@@ -2185,7 +2185,7 @@ body
                         position: absolute;
                         right: 0;
                         top: 0;
-                        background-image: url(../../img/specialization-elems-bg.png);
+                        background-image: url(specialization-elems-bg.png);
                         background-position: -10px 0px;
                         background-repeat: no-repeat;
                         background-size: 59px auto;
@@ -2236,7 +2236,7 @@ body
                             left: calc(50% + 2px);
                             top: 50%;
                             transform: translate(-50%, -50%);
-                            background: url(../../img/2vip-s2@2x.png);
+                            background: url(2vip-s2@2x.png);
                             background-size: 100%;
                             background-position: center;
                             filter: drop-shadow(
@@ -2259,58 +2259,58 @@ body
                         }
                         &.lvl0 {
                             &:before {
-                                background-image: url(../../img/2vip-s1@2x.png);
+                                background-image: url(2vip-s1@2x.png);
                                 filter: brightness(0.9) grayscale(0.5);
                             }
                         }
                         &.lvl1 {
                             &:before {
-                                background-image: url(../../img/2vip-s1@2x.png);
+                                background-image: url(2vip-s1@2x.png);
                             }
                         }
                         &.lvl2 {
                             &:before {
-                                background-image: url(../../img/2vip-s2@2x.png);
+                                background-image: url(2vip-s2@2x.png);
                             }
                         }
                         &.lvl3 {
                             &:before {
-                                background-image: url(../../img/2vip-s3@2x.png);
+                                background-image: url(2vip-s3@2x.png);
                             }
                         }
                         &.lvl4 {
                             &:before {
-                                background-image: url(../../img/2vip-s4@2x.png);
+                                background-image: url(2vip-s4@2x.png);
                             }
                         }
                         &.lvl5 {
                             &:before {
-                                background-image: url(../../img/2vip-s5@2x.png);
+                                background-image: url(2vip-s5@2x.png);
                             }
                         }
                         &.lvl6 {
                             &:before {
-                                background-image: url(../../img/2vip-s6@2x.png);
+                                background-image: url(2vip-s6@2x.png);
                             }
                         }
                         &.lvl7 {
                             &:before {
-                                background-image: url(../../img/3vip-s7@2x.png);
+                                background-image: url(3vip-s7@2x.png);
                             }
                         }
                         &.lvl8 {
                             &:before {
-                                background-image: url(../../img/3vip-s8@2x.png);
+                                background-image: url(3vip-s8@2x.png);
                             }
                         }
                         &.lvl9 {
                             &:before {
-                                background-image: url(../../img/3vip-s9@2x.png);
+                                background-image: url(3vip-s9@2x.png);
                             }
                         }
                         &.lvl10 {
                             &:before {
-                                background-image: url(../../img/3vip-s10@2x.png);
+                                background-image: url(3vip-s10@2x.png);
                             }
                         }
                     }
@@ -2321,7 +2321,7 @@ body
                 &:after,
                 .hero-card:before,
                 .hero-card:after {
-                    background-image: url(../../img/squad-corners.png);
+                    background-image: url(squad-corners.png);
                     background-position: 0 0;
                 }
                 .hero-card {
@@ -2334,7 +2334,7 @@ body
                         .suphero-buttons-info {
                             background-position: right 0;
                             &:before {
-                                background-image: url(../../img/ic-ore-squad.png);
+                                background-image: url(ic-ore-squad.png);
                                 background-position: 0 0;
                             }
                         }
@@ -2364,7 +2364,7 @@ body
                 &:after,
                 .hero-card:before,
                 .hero-card:after {
-                    background-image: url(../../img/squad-corners.png);
+                    background-image: url(squad-corners.png);
                     background-position: 0 -20px;
                 }
                 .hero-card {
@@ -2377,7 +2377,7 @@ body
                         .suphero-buttons-info {
                             background-position: right -28px;
                             &:before {
-                                background-image: url(../../img/ic-ore-squad.png);
+                                background-image: url(ic-ore-squad.png);
                                 background-position: 0 -32px;
                             }
                         }
@@ -2415,7 +2415,7 @@ body
                 &:after,
                 .hero-card:before,
                 .hero-card:after {
-                    background-image: url(../../img/squad-corners.png);
+                    background-image: url(squad-corners.png);
                     background-position: 0 -40px;
                 }
                 .hero-card {
@@ -2428,7 +2428,7 @@ body
                         .suphero-buttons-info {
                             background-position: right -56px;
                             &:before {
-                                background-image: url(../../img/ic-ore-squad.png);
+                                background-image: url(ic-ore-squad.png);
                                 background-position: 0 -64px;
                             }
                         }
@@ -2466,7 +2466,7 @@ body
                 &:after,
                 .hero-card:before,
                 .hero-card:after {
-                    background-image: url(../../img/squad-corners.png);
+                    background-image: url(squad-corners.png);
                     background-position: 0 -60px;
                 }
                 .hero-card {
@@ -2479,7 +2479,7 @@ body
                         .suphero-buttons-info {
                             background-position: right -84px;
                             &:before {
-                                background-image: url(../../img/ic-ore-squad.png);
+                                background-image: url(ic-ore-squad.png);
                                 background-position: 0 -96px;
                             }
                         }
@@ -2517,7 +2517,7 @@ body
                 &:after,
                 .hero-card:before,
                 .hero-card:after {
-                    background-image: url(../../img/squad-corners.png);
+                    background-image: url(squad-corners.png);
                     background-position: 0 -80px;
                 }
                 .hero-card {
@@ -2530,7 +2530,7 @@ body
                         .suphero-buttons-info {
                             background-position: right -112px;
                             &:before {
-                                background-image: url(../../img/ic-ore-squad.png);
+                                background-image: url(ic-ore-squad.png);
                                 background-position: 0 -128px;
                             }
                         }

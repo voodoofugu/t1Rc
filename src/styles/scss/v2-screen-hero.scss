@@ -13,8 +13,8 @@
         color: #572f14;
     }
     .color-box {
-        background: url(../../img/tabs-menu-bg.png),
-            url(../../img/tabs-menu-bg.png), url(../../img/tabs-menu-bg.png);
+        background: url(tabs-menu-bg.png), url(tabs-menu-bg.png),
+            url(tabs-menu-bg.png);
         background-repeat: no-repeat;
         background-position: -102px 496px, 833px 473px, -17px 510px;
         background-size: 95% 58px, 100% 88px, 46% 40px;
@@ -45,7 +45,7 @@
             position: absolute;
             top: -10px;
             left: 85px;
-            background-image: url(../../img/wpck-ram1.png);
+            background-image: url(wpck-ram1.png);
             background-size: 100%;
             background-repeat: no-repeat;
             color: #fff;
@@ -104,67 +104,67 @@
             }
             &.lvl0 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s3.png);
+                    background-image: url(2vip-s3.png);
                     background-size: 100%;
                 }
             }
             &.lvl1 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s1.png);
+                    background-image: url(2vip-s1.png);
                     background-size: 100%;
                 }
             }
             &.lvl2 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s2.png);
+                    background-image: url(2vip-s2.png);
                     background-size: 100%;
                 }
             }
             &.lvl3 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s3.png);
+                    background-image: url(2vip-s3.png);
                     background-size: 100%;
                 }
             }
             &.lvl4 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s4.png);
+                    background-image: url(2vip-s4.png);
                     background-size: 100%;
                 }
             }
             &.lvl5 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s5.png);
+                    background-image: url(2vip-s5.png);
                     background-size: 100%;
                 }
             }
             &.lvl6 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s6.png);
+                    background-image: url(2vip-s6.png);
                     background-size: 100%;
                 }
             }
             &.lvl7 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s7.png);
+                    background-image: url(2vip-s7.png);
                     background-size: 100%;
                 }
             }
             &.lvl8 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s8.png);
+                    background-image: url(2vip-s8.png);
                     background-size: 100%;
                 }
             }
             &.lvl9 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s9.png);
+                    background-image: url(2vip-s9.png);
                     background-size: 100%;
                 }
             }
             &.lvl10 {
                 .viplvl {
-                    background-image: url(../../img/2vip-s10.png);
+                    background-image: url(2vip-s10.png);
                     background-size: 100%;
                 }
             }
@@ -286,7 +286,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url(../../img/icon-t-shirt.png);
+            background-image: url(icon-t-shirt.png);
             background-size: 100%;
         }
         .sh2-icon-forgirl.right {
@@ -375,7 +375,7 @@
                 margin: 0;
                 padding: 0;
                 position: relative;
-                background: url(../../img/smoke-bg.png),
+                background: url(smoke-bg.png),
                     linear-gradient(135deg, #8f5626, #ab7a1d);
                 background-position: left 0px;
                 background-repeat: no-repeat;
@@ -396,7 +396,7 @@
                     right: 2px;
                     width: 24px;
                     height: 24px;
-                    background: url(../../img/paycheck-arrow.png);
+                    background: url(paycheck-arrow.png);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -454,7 +454,7 @@
                     }
                 }
                 &.locked {
-                    background: url(../../img/smoke-bg.png),
+                    background: url(smoke-bg.png),
                         linear-gradient(135deg, #4a3e3c, #655150);
                     background-position: left 0px;
                     background-repeat: no-repeat;
@@ -475,7 +475,7 @@
                         position: absolute;
                         left: 18px;
                         top: 18px;
-                        background-image: url(../../img/v2-lock-ic.png);
+                        background-image: url(v2-lock-ic.png);
                         background-size: cover;
                         background-repeat: no-repeat;
                         filter: none;
@@ -508,7 +508,7 @@
                 top: 0px;
                 width: 54px;
                 height: 46px;
-                background-image: url(../../img/darkworld-angel-pop-btn-bg.png);
+                background-image: url(darkworld-angel-pop-btn-bg.png);
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -546,7 +546,7 @@
                             height: 18px;
                             position: relative;
                             display: inline-block;
-                            background-image: url(../../img/ico-gold.png);
+                            background-image: url(ico-gold.png);
                             background-size: 100%;
                             margin: 0 4px 0 4px;
                             vertical-align: middle;
@@ -643,7 +643,7 @@
                                 height: 18px;
                                 position: relative;
                                 display: inline-block;
-                                background-image: url(../../img/ico-gold.png);
+                                background-image: url(ico-gold.png);
                                 background-size: 100%;
                                 margin: 0 4px 0 4px;
                                 vertical-align: middle;
@@ -652,7 +652,7 @@
                         }
                         .f-pieces {
                             &:before {
-                                background-image: url(../../img/ic-girls-pieces.png);
+                                background-image: url(ic-girls-pieces.png);
                                 background-position: center -18px;
                                 background-repeat: no-repeat;
                                 background-size: 100%;
@@ -800,11 +800,11 @@
                         position: absolute;
                         left: 3px;
                         top: -10px;
-                        background-image: url(../../img/ico-click.png);
+                        background-image: url(ico-click.png);
                         background-size: 54px;
                     }
                     .icon-dps {
-                        background-image: url(../../img/ico-sword.png);
+                        background-image: url(ico-sword.png);
                         background-size: 54px;
                     }
                 }
@@ -859,7 +859,7 @@
                         bottom: 5px;
                     }
                     .icon-dps {
-                        background-image: url(../../img/ico-sword.png);
+                        background-image: url(ico-sword.png);
                         background-size: 54px;
                         top: 23px;
                         left: 3px;
@@ -902,7 +902,7 @@
                 display: block;
                 width: 34px;
                 height: 34px;
-                background-image: url(../../img/arrow_up1.png);
+                background-image: url(arrow_up1.png);
                 background-size: 34px;
                 position: absolute;
                 left: 8px;
