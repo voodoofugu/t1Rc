@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
 import { Helmet } from "react-helmet-async";
 const ProjectBoxTwo = lazy(() => import(`../components/ProjectBoxTwo.jsx`));
-import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
+import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 import pageStyles from "../styleComponents/TemplateComponentStyle.jsx";
 import Loading from "../components/Loading.jsx";
 
@@ -20,7 +20,7 @@ const TemplateComponent = ({ idForStyle }) => {
   }, []);
 
   return (
-    <HelmetStyleTagWhitWrap idForStyle={idForStyle} pageStyles={pageStyles}>
+    <HelmetStyleWrap idForStyle={idForStyle} pageStyles={pageStyles}>
       <main>
         <div className="templateTit page-title">
           {scriptLoaded}
@@ -40,7 +40,7 @@ const TemplateComponent = ({ idForStyle }) => {
           </div>
         </Suspense>
       </main>
-    </HelmetStyleTagWhitWrap>
+    </HelmetStyleWrap>
   );
 };
 

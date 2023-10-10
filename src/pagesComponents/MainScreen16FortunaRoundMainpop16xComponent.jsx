@@ -1,12 +1,12 @@
 import React from "react";
-import HelmetStyleTagWhitWrap from "../components/HelmetStyleTagWhitWrap.jsx";
-// import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
-// const stylePairs = generateStylePairs(["ScreenFortunaRoundMain16x"]);
-import pageStyles from "../styleComponents/ScreenFortunaRoundMain16x";
+// import pageStyles from "../styleComponents/ScreenFortunaRoundMain16x";
 
-const MainScreen16FortunaRoundMainpop16xComponent = ({ idForStyle }) => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = ["screen-fortuna-round-main_16x"];
+
+const MainScreen16FortunaRoundMainpop16xComponent = () => {
   return (
-    <HelmetStyleTagWhitWrap idForStyle={idForStyle} pageStyles={pageStyles}>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div
@@ -263,7 +263,7 @@ const MainScreen16FortunaRoundMainpop16xComponent = ({ idForStyle }) => {
           </div>
         </div>
       </div>
-    </HelmetStyleTagWhitWrap>
+    </HelmetForCss>
   );
 };
 

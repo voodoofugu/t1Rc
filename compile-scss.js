@@ -1,5 +1,6 @@
 // тут мы собираем все scss файлы в css файлы
 // и изменяем пути к картинкам
+// а так же минимизируем файл с помощью регулярных выражений
 const sass = require("sass");
 const fs = require("fs");
 const path = require("path");
@@ -32,10 +33,18 @@ function compileSCSS(sourceFile) {
   // Выполните замену всех URL-адресов
   cssContent = cssContent.replace(/url\(/g, "url(../../img/");
 
-  // Сохраните обновленное содержимое в выходной файл
+  // Минимизация CSS с помощью регулярных выражений
+  cssContent = cssContent.replace(/\s+/g, " "); // Удалить лишние пробелы
+  cssContent = cssContent.replace(/\n/g, ""); // Удалить переносы строк
+  cssContent = cssContent.replace(/\r/g, ""); // Удалить возвраты каретки
+  cssContent = cssContent.replace(/\t/g, ""); // Удалить табуляции
+
+  // Сохраните обновленное и минимизированное содержимое в выходной файл
   fs.writeFileSync(outputFilePath, cssContent);
 
-  console.log(`File "${outputFilePath}" compiled and URLs updated.`);
+  console.log(
+    `File "${outputFilePath}" compiled, URLs updated, and minimized.`
+  );
 }
 
 // Создайте слушателя изменений SCSS файлов с использованием chokidar

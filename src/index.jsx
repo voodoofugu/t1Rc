@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Loading from "./components/Loading.jsx";
 const TemplateComponentLazy = lazy(() =>
   import(`./pagesComponents/TemplateComponent.jsx`)
@@ -15,9 +16,11 @@ if (Root) {
 
   window.__REACT_ROOT__.render(
     <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <TemplateComponentLazy idForStyle="root" />
-      </Suspense>
+      <HelmetProvider>
+        <Suspense fallback={<Loading />}>
+          <TemplateComponentLazy idForStyle="root" />
+        </Suspense>
+      </HelmetProvider>
     </BrowserRouter>
   );
 } else {

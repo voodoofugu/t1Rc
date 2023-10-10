@@ -37,7 +37,7 @@ const ProjectBoxTwo = () => {
               <Suspense key={pageName} fallback={<Loading />}>
                 <a href={pageName}>{pageName}</a>
                 <div id={`${pageName}`} className="projectComponent noScripts">
-                  <PageComponent idForStyle={pageName} />
+                  <PageComponent />
                 </div>
               </Suspense>
             </LazyLoad>
