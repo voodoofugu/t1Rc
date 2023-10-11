@@ -1,12 +1,7 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const fs = require("fs");
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.jsx"),
-  plugins: [new NodePolyfillPlugin()],
   resolve: {
     extensions: [".ts", ".js", ".jsx", ".scss"],
     fallback: {
@@ -16,59 +11,29 @@ module.exports = {
   },
   module: {
     rules: [
-      // Правила для обработки файлов, оставляем общие правила для разработки и продакшна
       {
         test: /\.html$/,
-        use: [
-          {
-            loader: "html-loader",
-            options: {
-              sources: false, // Отключаем обработку атрибутов src и href
-            },
+        use: {
+          loader: "html-loader",
+          options: {
+            sources: false,
           },
-        ],
+        },
       },
       {
         test: /\.(c|sa|sc)ss$/i,
         exclude: /node_modules\/(?!normalize\.css)/,
-        use: [
-          "css-loader", // Обработка CSS-файлов
-          "sass-loader", // Преобразование SCSS в CSS
-        ],
+        use: ["css-loader"],
       },
       {
-        test: /\.woff2?$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "fonts/[name][ext]",
-        },
-      },
-      {
-        test: /\.(jpe?g|png|webp|gif|svg)$/i,
-        use: [
-          {
-            loader: "image-webpack-loader",
-            options: {
-              mozjpeg: {
-                progressive: true,
-              },
-              optipng: {
-                enabled: false,
-              },
-              pngquant: {
-                quality: [0.65, 0.9],
-                speed: 4,
-              },
-              gifsicle: {
-                interlaced: false,
-              },
-              webp: {
-                quality: 75,
-              },
-            },
+        test: /\.(woff2?|jpe?g|png|webp|gif|svg)$/i,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name][ext]",
+            outputPath: "assets", // Вы можете настроить директорию для разных видов файлов
           },
-        ],
-        type: "asset/resource",
+        },
       },
       {
         test: /\.jsx?$/,

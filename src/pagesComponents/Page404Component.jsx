@@ -1,20 +1,22 @@
 import React from "react";
-import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
-// import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
-// const stylePairs = generateStylePairs(["Page404"]);
-import pageStyles from "../styleComponents/Page404";
 
-const Page404Component = ({ idForStyle }) => {
+const inlineStyles = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  textAlign: "center",
+};
+
+const Page404Component = () => {
   return (
-    // <HelmetStyleWrap idForStyle={idForStyle}>
-    <h1 className="error404">
+    <h1 className="error404" style={inlineStyles}>
       -____-
       <br />
       NOT FOUND
       <br />
       404
     </h1>
-    // </HelmetStyleWrap>
   );
 };
 

@@ -1,12 +1,6 @@
 {
-    "presets": [
-        ["@babel/preset-env", { "targets": "defaults" }],
-        "@babel/preset-react"
-    ],
-    "plugins": [
-        "@emotion/babel-plugin",
-        "react-hot-loader/babel",
-        "@babel/plugin-syntax-dynamic-import",
-        "@babel/plugin-transform-runtime"
-    ]
+  "presets": [
+    ["@babel/preset-env", { "targets": "defaults" }],
+    "@babel/preset-react"
+  ]
 }

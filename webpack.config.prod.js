@@ -1,10 +1,7 @@
 const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HTMLMinimizerPlugin = require("html-minimizer-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpackConfig = require("./webpack.config.js");
-const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const fs = require("fs");
@@ -46,7 +43,7 @@ module.exports = merge(webpackConfig, {
       chunks: "all",
     },
     minimize: true,
-    minimizer: [new HTMLMinimizerPlugin(), new TerserPlugin()],
+    minimizer: [new TerserPlugin()],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -59,13 +56,6 @@ module.exports = merge(webpackConfig, {
   // devtool: "source-map",
   plugins: [
     new CleanWebpackPlugin(),
-    // new MiniCssExtractPlugin({
-    //   filename: "styles/[name].[contenthash].css",
-    //   chunkFilename: "styles/[id].[contenthash].css",
-    // }),
-    new webpack.IgnorePlugin({
-      resourceRegExp: /themeToggle\.(js|scss)|template\.html$/,
-    }),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -80,9 +70,4 @@ module.exports = merge(webpackConfig, {
     }),
     ...plugins,
   ],
-  // resolve: {
-  //   alias: {
-  //     imgPath: path.resolve(__dirname, "src/rc"),
-  //   },
-  // },
 });

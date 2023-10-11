@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const webpackConfig = require("./webpack.config.js");
 const path = require("path");
-const fs = require("fs");
 
 function generateHtmlPlugins() {
   return new HtmlWebpackPlugin({
@@ -12,34 +11,6 @@ function generateHtmlPlugins() {
     title: "Template",
   });
 }
-// // Функция для динамической генерации HtmlWebpackPlugin
-// function generateHtmlPlugins() {
-//   const pageFiles = fs.readdirSync("./src/pages");
-
-//   return pageFiles.map((file) => {
-//     const pageName = path.parse(file).name;
-
-//     if (file === "template.html") {
-//       return new HtmlWebpackPlugin({
-//         template: path.resolve(__dirname, "src", "htmlContent.ejs"),
-//         filename: "index.html", // этой строчкой мы и определяем какой файл будет открываться по адресу сервера
-//         title: "Template",
-//         pageName: pageName,
-//       });
-//     } else {
-//       return new HtmlWebpackPlugin({
-//         template: path.resolve(__dirname, "src", "htmlContent.ejs"),
-//         filename: file.replace(".html", ".html"),
-//         minify: true,
-//         inject: true,
-//         excludeChunks: ["template"],
-//         title: pageName,
-//         pageName: pageName,
-//       });
-//     }
-//   });
-// }
-// const plugins = [...generateHtmlPlugins()];
 
 const devServerConfig = {
   devServer: {
@@ -65,11 +36,6 @@ const devServerConfig = {
         publicPath: "/img/",
       },
       {
-        directory: path.join(__dirname, "src", "pages"),
-        publicPath: "/pages/",
-        watch: true,
-      },
-      {
         directory: path.join(__dirname, "src", "scripts"),
         publicPath: "/scripts/",
       },
@@ -90,7 +56,6 @@ module.exports = merge(webpackConfig, {
     // Добавляем плагин для горячей перезагрузки
     new ReactRefreshWebpackPlugin(),
     generateHtmlPlugins(),
-    // ...plugins,
   ],
   ...devServerConfig,
 });

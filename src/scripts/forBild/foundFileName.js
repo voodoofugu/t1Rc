@@ -12,3 +12,7 @@ function foundFileName() {
 }
 
 export default foundFileName;
+
+// ещё проще способ сделать это, но с библиотекой
+// import path from "path-browserify";
+// const аileName = path.basename(import.meta.url).replace(".jsx", "");

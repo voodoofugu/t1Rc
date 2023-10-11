@@ -1,6 +1,4 @@
-import { css } from "@emotion/react";
-
-const TemplateComponentStyle = css`
+const TemplateComponentStyle = `
     > main {
         position: absolute;
         top: 0;

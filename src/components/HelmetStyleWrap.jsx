@@ -5,7 +5,7 @@ const HelmetStyleWrap = ({ idForStyle, pageStyles, children }) => {
   return (
     <HelmetProvider>
       <Helmet>
-        <style>{`#${idForStyle} { ${pageStyles.styles} }`}</style>
+        <style>{`#${idForStyle} { ${pageStyles} }`}</style>
       </Helmet>
       {children}
     </HelmetProvider>
