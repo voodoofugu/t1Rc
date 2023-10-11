@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { stylePairs } from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
 // import pageStyles from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
-import pageStyles from "../styleComponents/GfSalePop";
+// import pageStyles from "../styleComponents/GfSalePop";
 
 const MainScreen01AllPopupsComponent = ({ idForStyle }) => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts

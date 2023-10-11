@@ -73,10 +73,6 @@ const devServerConfig = {
         directory: path.join(__dirname, "src", "scripts"),
         publicPath: "/scripts/",
       },
-      {
-        directory: path.join(__dirname, "src", "styles", "css"),
-        publicPath: "/css/",
-      },
     ],
   },
 };

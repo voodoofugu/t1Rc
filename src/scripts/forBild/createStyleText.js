@@ -5,13 +5,14 @@ async function createStyleText(cssFiles) {
   try {
     const cssTextArray = await Promise.all(
       cssFiles.map(async (cssFile) => {
-        const response = await fetch(`css/${cssFile}.css`);
+        // Динамический импорт стиля
+        const importedStyle = await import(`../../styles/css/${cssFile}.css`);
 
-        if (!response.ok) {
-          throw new Error(`Ошибка загрузки файла ${cssFile}`);
+        if (importedStyle.default) {
+          return importedStyle.default;
         }
 
-        return await response.text();
+        throw new Error(`Ошибка загрузки файла ${cssFile}`);
       })
     );
 

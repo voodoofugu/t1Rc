@@ -30,8 +30,21 @@ function compileSCSS(sourceFile) {
   // Получите скомпилированный CSS как строку
   let cssContent = result.css.toString();
 
-  // Выполните замену всех URL-адресов
-  cssContent = cssContent.replace(/url\(/g, "url(../../img/");
+  // Выполните замену всех URL-адресов, тут я учитываю три варианта:
+  // `url(`
+  // `url("`
+  // `url(#` игнор для svg
+  // `url(http` игнор для ссылок
+  cssContent = cssContent.replace(
+    /url\((?:"|')?([^"')]+)(?:"|')?\)/g,
+    (match, url) => {
+      if (url.startsWith("#") || url.startsWith("http")) {
+        return `url(${url})`;
+      } else {
+        return `url("../../img/${url}")`;
+      }
+    }
+  );
 
   // Минимизация CSS с помощью регулярных выражений
   cssContent = cssContent.replace(/\s+/g, " "); // Удалить лишние пробелы

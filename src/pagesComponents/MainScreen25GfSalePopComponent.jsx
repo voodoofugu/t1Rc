@@ -2,7 +2,7 @@ import React from "react";
 import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["GfSalePop"]);
-import pageStyles from "../styleComponents/GfSalePop";
+// import pageStyles from "../styleComponents/GfSalePop";
 
 const MainScreen25GfSalePopComponent = ({ idForStyle }) => {
   return (

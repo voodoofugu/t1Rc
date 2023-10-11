@@ -2,7 +2,7 @@ import React from "react";
 import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["ScreenFortunaRoundMain"]);
-import pageStyles from "../styleComponents/ScreenFortunaRoundMain";
+// import pageStyles from "../styleComponents/ScreenFortunaRoundMain";
 
 const MainScreen16FortunaRoundMainpopComponent = ({ idForStyle }) => {
   return (

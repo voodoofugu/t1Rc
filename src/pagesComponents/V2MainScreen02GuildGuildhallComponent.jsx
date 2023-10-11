@@ -2,7 +2,7 @@ import React from "react";
 import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["V2ScreenGuildhall"]);
-import pageStyles from "../styleComponents/V2ScreenGuildhall";
+// import pageStyles from "../styleComponents/V2ScreenGuildhall";
 
 const V2MainScreen02GuildGuildhallComponent = ({ idForStyle }) => {
   return (

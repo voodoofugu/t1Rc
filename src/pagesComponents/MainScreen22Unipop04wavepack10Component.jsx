@@ -2,7 +2,7 @@ import React from "react";
 import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["ScreenUnipopWavepack10"]);
-import pageStyles from "../styleComponents/ScreenUnipopWavepack10";
+// import pageStyles from "../styleComponents/ScreenUnipopWavepack10";
 
 const MainScreen22Unipop04wavepack10Component = ({ idForStyle }) => {
   return (

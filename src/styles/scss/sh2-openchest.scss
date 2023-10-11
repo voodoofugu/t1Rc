@@ -2,445 +2,439 @@
 @import "sass_commons.scss";
 
 body .main {
-    .popup-layer {
-        .m-popup.sh2-openchest1,
-        .m-popup.sh2-openchest2,
-        .m-popup.sh2-openchest3 {
-            width: 778px;
-            height: 450px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            &:before {
-                background-image: url(ts_confirm_bk-1.jpg);
-                background-size: 100%;
-            }
-            .title {
-                color: #572f14;
-            }
-            .sh2-openchest-cont-box {
-                width: 608px;
-                height: 370px;
-                position: absolute;
-                top: 66px;
-                margin-left: 156px;
-                background-color: rgba(136, 60, 0, 0.3);
-                border-radius: 10px;
-                .sh2-uhave-box {
-                    width: 300px;
-                    height: 32px;
-                    position: absolute;
-                    top: 14px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background-color: rgba(161, 55, 0, 0.65);
-                    border-radius: 10px;
-                    display: flex;
-                    justify-content: center;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font-weight: 700;
-                    line-height: 32px;
-                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
-                    .sh2-uhave-text {
-                        width: fit-content;
-                        padding-right: 28px;
-                        margin-left: 16px;
-                        .f-sh2-chest,
-                        .f-sh2d-chest,
-                        .f-black-butil,
-                        .f-diamond {
-                            width: 28px;
-                            height: 28px;
-                            position: absolute;
-                            margin-left: 4px;
-                            top: 2px;
-                            background-image: url(https://cdn.faptitans.com/s1/rc/sh2-chest-ic-28.png);
-                            background-size: 100%;
-                        }
-                        .f-sh2d-chest {
-                            background-image: url(sh-icon-chest-dark-28.png);
-                        }
-                        .f-black-butil {
-                            background-image: url(ic-black-butil-40.png);
-                        }
-                        .f-diamond {
-                            background-image: url(v2-res-diamond.png);
-                        }
-                    }
-                }
-                .color-btn {
-                    width: 156px;
-                    height: 50px;
-                    top: 304px;
-                    .color-btn-text {
-                        font-size: 14px;
-                    }
-                }
-            }
-            .winner-girl {
-                width: 303px;
-                height: 460px;
-                position: absolute;
-                top: -10px;
-                margin-left: -90px;
-                background-image: url(break-girl.png);
-                background-size: 100%;
-            }
-        }
-    }
-}
-
-body .main {
-    .popup-layer {
-        .m-popup.sh2-openchest1,
-        .m-popup.sh2-openchest2 {
-            .sh2-openchest-cont-box {
-                .sh2-chest-box-all {
-                    width: 512px;
-                    height: 230px;
-                    position: absolute;
-                    top: 60px;
-                    left: 50px;
-                    .sh2-chest-box {
-                        width: 160px;
-                        height: 230px;
-                        position: relative;
-                        display: inline-block;
-                        margin: 0 4px;
-                        background-color: rgba(161, 55, 0, 0.65);
-                        border-radius: 10px;
-                        transition: ease-in-out 0.05s;
-                        &:hover {
-                            background-color: rgba(161, 55, 0, 0.5);
-                            transition: ease-in-out 0.05s;
-                        }
-                        .sh2-chest-box-name {
-                            width: 100%;
-                            height: 18px;
-                            position: absolute;
-                            top: 5px;
-                            color: #fff;
-                            font-size: 16px;
-                            font-weight: 700;
-                            line-height: 18px;
-                            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
-                            text-transform: uppercase;
-                        }
-                        .sh2-chest-box-prize {
-                            width: 140px;
-                            height: 140px;
-                            position: absolute;
-                            top: 26px;
-                            left: 10px;
-                            background: linear-gradient(
-                                180deg,
-                                #c68300,
-                                #f4dfb6 50%,
-                                #c68200 70%,
-                                #fad489 85%,
-                                #c78302
-                            );
-                            border-radius: 10px;
-                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-                            .winner-prize {
-                                width: 128px;
-                                height: 128px;
-                                position: absolute;
-                                top: 6px;
-                                left: 6px;
-                            }
-                        }
-                        .color-btn {
-                            width: 140px;
-                            height: 46px;
-                            position: absolute;
-                            top: 174px;
-                            left: 10px;
-                            .color-btn-text {
-                                font-size: 14px;
-                                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75),
-                                    0 1px 4px rgba(0, 0, 0, 0.4);
-                                .ff-diamond {
-                                    margin-right: 2px;
-                                    &:before {
-                                        content: "";
-                                        width: 30px;
-                                        height: 30px;
-                                        position: relative;
-                                        display: inline-block;
-                                        background-image: url(v2-res-diamond.png);
-                                        background-size: 100%;
-                                        margin-left: 2px;
-                                        vertical-align: middle;
-                                    }
-                                }
-                                .ff-oil {
-                                    &:before {
-                                        content: "";
-                                        width: 30px;
-                                        height: 30px;
-                                        position: relative;
-                                        display: inline-block;
-                                        background-size: 100%;
-                                        margin-left: 2px;
-                                        vertical-align: middle;
-                                        background-image: url(ic-black-butil-40.png);
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-body .main .popup-layer .m-popup.sh2-openchest3 {
-    width: 640px;
-    height: 514px;
-    .sh2-openchest-cont-box {
-        margin-left: 16px;
-        height: 432px;
-        .sh2-uhave-box {
-            top: 14px;
-        }
-        .sh2-chest-box-all-girl {
-            margin: 0 auto;
-            width: 588px;
-            height: 300px;
-            position: relative;
-            top: 54px;
-            left: 0;
-            overflow: hidden;
-            overflow-y: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            scrollbar-width: thin;
-            scrollbar-color: #f4b766 rgba(161, 55, 0, 0.65);
-            &::-webkit-scrollbar-track {
-                border-radius: 10px;
-                background-color: rgba(161, 55, 0, 0.65);
-            }
-            &::-webkit-scrollbar {
-                width: 10px;
-            }
-            &::-webkit-scrollbar-thumb {
-                border-radius: 10px;
-                -webkit-box-shadow: inset 0 0 3px #796b60;
-                background: linear-gradient(
-                    to right,
-                    #fff,
-                    #f5de80,
-                    #f4b766,
-                    #b26d12
-                );
-            }
-            .sh2-chest-box-all {
-                width: 140px;
-                height: 140px;
-                position: relative;
-                display: inline-block;
-                top: 2px;
-                margin: 4px;
-                @include prefix(border-radius, 10px);
-                @include background-gold;
-                box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.45);
-                .sh2-chest-box-girl {
-                    width: 130px;
-                    height: 130px;
-                    position: absolute;
-                    top: 2px;
-                    left: 2px;
-                    @include prefix(border-radius, 10px);
-                    overflow: hidden;
-                    border: solid 3px rgb(255, 201, 100);
-                    .sh2-icon-girl {
-                        width: 130px;
-                        @include prefix(border-radius, 6px);
-                        overflow: hidden;
-                    }
-                }
-                .sh2-icon {
-                    width: 25px;
-                    height: 32px;
-                    position: absolute;
-                    top: -2px;
-                    left: 4px;
-                    img {
-                        width: 25px;
-                    }
-                }
-                .sh2-icon-forgirl {
-                    width: 25px;
-                    height: 32px;
-                    position: absolute;
-                    top: -2px;
-                    left: 112px;
-                    img {
-                        width: 25px;
-                    }
-                }
-                .sh2-prgbar-all {
-                    width: 118px;
-                    height: 18px;
-                    position: absolute;
-                    top: 112px;
-                    left: 10px;
-                    background: linear-gradient(0deg, #735657 0%, #453434 100%);
-                    box-shadow: 0 0 0 1px #453434;
-                    border-radius: 4px;
-                    overflow: hidden;
-                    .sh2-prgbar {
-                        width: 95%;
-                        height: 18px;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background: linear-gradient(
-                            0deg,
-                            #5eb0f2 0%,
-                            #4783b5 12%,
-                            #66c4ff 60%,
-                            #91d5ff 70%,
-                            #569fdb 100%
-                        );
-                    }
-                    .sh2-prgbar-text {
-                        width: calc(100% - 1em);
-                        padding-left: 1em;
-                        position: relative;
-                        color: #fff;
-                        font-weight: bold;
-                        font-size: 16px;
-                        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45),
-                            0 0px 4px rgba(0, 0, 0, 0.8);
-                        height: 18px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        &:after {
-                            top: 1px;
-                        }
-                    }
-                }
-                .sh2-5 {
-                    width: 24px;
-                    height: 24px;
-                    position: absolute;
-                    top: 86px;
-                    left: 114px;
-                    @include background-bronze;
-                    @include prefix(border-radius, 100%);
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
-                    color: #fff;
-                    font-size: 20px;
-                    font-weight: bold;
-                    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
-                }
-                &.heroGirl {
-                    .sh2-prgbar-all {
-                        .sh2-prgbar-text {
-                            &:after {
-                                background-image: url(ic-girls-pieces.png);
-                                background-position: center -1em;
-                                background-repeat: no-repeat;
-                                background-size: 100%;
-                            }
-                        }
-                    }
-                }
-                &.heroAngel {
-                    .sh2-prgbar-all {
-                        .sh2-prgbar-text {
-                            &:after {
-                                background-image: url(ic-girls-pieces.png);
-                                background-position: center -2em;
-                                background-repeat: no-repeat;
-                                background-size: 100%;
-                            }
-                        }
-                    }
-                }
-            }
-            &.one {
-                height: 150px;
-                top: 80px;
-            }
-        }
-    }
-    .sh2-bnt-box-all {
-        width: 578px;
-        height: 50px;
-        position: relative;
-        top: 434px;
-        display: inline-block;
-        .color-btn {
-            width: 156px;
-            height: 50px;
-            top: 0px;
-            left: 288px;
-            margin: 0 6px 0 6px;
-            position: absolute;
-            .color-btn-text {
-                font-size: 14px;
-                top: 16px;
-            }
-            &.five {
-                position: absolute;
-                left: 120px;
-                .color-btn-text {
-                    top: 15px;
-                }
-                &:active {
-                    .color-btn-text {
-                        top: 16px;
-                    }
-                }
-            }
-            &:active {
-                box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
-                    inset 0 2px 2px rgba(0, 0, 0, 0.2);
-                .color-btn-text {
-                    top: 17px;
-                }
-            }
-        }
-    }
-}
-
-body .main.world3 .popup-layer {
+  .popup-layer {
     .m-popup.sh2-openchest1,
     .m-popup.sh2-openchest2,
     .m-popup.sh2-openchest3 {
-        .title {
-            color: #ffffff;
-        }
-        &:before {
-            background-image: url(ts_confirm_bk-1.jpg);
-            background-size: 100%;
-            filter: hue-rotate(200deg);
-        }
-        .sh2-openchest-cont-box {
-            background: rgba(77, 37, 144, 0.3);
-            .sh2-uhave-box {
-                background: rgba(77, 37, 144, 0.6);
+      width: 778px;
+      height: 450px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &:before {
+        background-image: url(ts_confirm_bk-1.jpg);
+        background-size: 100%;
+      }
+      .title {
+        color: #572f14;
+      }
+      .sh2-openchest-cont-box {
+        width: 608px;
+        height: 370px;
+        position: absolute;
+        top: 66px;
+        margin-left: 156px;
+        background-color: rgba(136, 60, 0, 0.3);
+        border-radius: 10px;
+        .sh2-uhave-box {
+          width: 300px;
+          height: 32px;
+          position: absolute;
+          top: 14px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: rgba(161, 55, 0, 0.65);
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 700;
+          line-height: 32px;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+          .sh2-uhave-text {
+            width: fit-content;
+            padding-right: 28px;
+            margin-left: 16px;
+            .f-sh2-chest,
+            .f-sh2d-chest,
+            .f-black-butil,
+            .f-diamond {
+              width: 28px;
+              height: 28px;
+              position: absolute;
+              margin-left: 4px;
+              top: 2px;
+              background-image: url(sh2-chest-ic-28.png);
+              background-size: 100%;
             }
-            .sh2-chest-box-all {
-                .sh2-chest-box {
-                    background: rgba(77, 37, 144, 0.6);
-                    &:hover {
-                        background: rgba(77, 37, 144, 0.5);
-                    }
-                }
+            .f-sh2d-chest {
+              background-image: url(sh-icon-chest-dark-28.png);
             }
+            .f-black-butil {
+              background-image: url(ic-black-butil-40.png);
+            }
+            .f-diamond {
+              background-image: url(v2-res-diamond.png);
+            }
+          }
         }
-        .winner-girl {
-            background-image: url(break-girl2.png);
-            transform: scaleX(-1);
+        .color-btn {
+          width: 156px;
+          height: 50px;
+          top: 304px;
+          .color-btn-text {
+            font-size: 14px;
+          }
         }
+      }
+      .winner-girl {
+        width: 303px;
+        height: 460px;
+        position: absolute;
+        top: -10px;
+        margin-left: -90px;
+        background-image: url(break-girl.png);
+        background-size: 100%;
+      }
     }
+  }
+}
+
+body .main {
+  .popup-layer {
+    .m-popup.sh2-openchest1,
+    .m-popup.sh2-openchest2 {
+      .sh2-openchest-cont-box {
+        .sh2-chest-box-all {
+          width: 512px;
+          height: 230px;
+          position: absolute;
+          top: 60px;
+          left: 50px;
+          .sh2-chest-box {
+            width: 160px;
+            height: 230px;
+            position: relative;
+            display: inline-block;
+            margin: 0 4px;
+            background-color: rgba(161, 55, 0, 0.65);
+            border-radius: 10px;
+            transition: ease-in-out 0.05s;
+            &:hover {
+              background-color: rgba(161, 55, 0, 0.5);
+              transition: ease-in-out 0.05s;
+            }
+            .sh2-chest-box-name {
+              width: 100%;
+              height: 18px;
+              position: absolute;
+              top: 5px;
+              color: #fff;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 18px;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+              text-transform: uppercase;
+            }
+            .sh2-chest-box-prize {
+              width: 140px;
+              height: 140px;
+              position: absolute;
+              top: 26px;
+              left: 10px;
+              background: linear-gradient(
+                180deg,
+                #c68300,
+                #f4dfb6 50%,
+                #c68200 70%,
+                #fad489 85%,
+                #c78302
+              );
+              border-radius: 10px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+              .winner-prize {
+                width: 128px;
+                height: 128px;
+                position: absolute;
+                top: 6px;
+                left: 6px;
+              }
+            }
+            .color-btn {
+              width: 140px;
+              height: 46px;
+              position: absolute;
+              top: 174px;
+              left: 10px;
+              .color-btn-text {
+                font-size: 14px;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75),
+                  0 1px 4px rgba(0, 0, 0, 0.4);
+                .ff-diamond {
+                  margin-right: 2px;
+                  &:before {
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    display: inline-block;
+                    background-image: url(v2-res-diamond.png);
+                    background-size: 100%;
+                    margin-left: 2px;
+                    vertical-align: middle;
+                  }
+                }
+                .ff-oil {
+                  &:before {
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    display: inline-block;
+                    background-size: 100%;
+                    margin-left: 2px;
+                    vertical-align: middle;
+                    background-image: url(ic-black-butil-40.png);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body .main .popup-layer .m-popup.sh2-openchest3 {
+  width: 640px;
+  height: 514px;
+  .sh2-openchest-cont-box {
+    margin-left: 16px;
+    height: 432px;
+    .sh2-uhave-box {
+      top: 14px;
+    }
+    .sh2-chest-box-all-girl {
+      margin: 0 auto;
+      width: 588px;
+      height: 300px;
+      position: relative;
+      top: 54px;
+      left: 0;
+      overflow: hidden;
+      overflow-y: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      scrollbar-width: thin;
+      scrollbar-color: #f4b766 rgba(161, 55, 0, 0.65);
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: rgba(161, 55, 0, 0.65);
+      }
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 3px #796b60;
+        background: linear-gradient(to right, #fff, #f5de80, #f4b766, #b26d12);
+      }
+      .sh2-chest-box-all {
+        width: 140px;
+        height: 140px;
+        position: relative;
+        display: inline-block;
+        top: 2px;
+        margin: 4px;
+        @include prefix(border-radius, 10px);
+        @include background-gold;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.45);
+        .sh2-chest-box-girl {
+          width: 130px;
+          height: 130px;
+          position: absolute;
+          top: 2px;
+          left: 2px;
+          @include prefix(border-radius, 10px);
+          overflow: hidden;
+          border: solid 3px rgb(255, 201, 100);
+          .sh2-icon-girl {
+            width: 130px;
+            @include prefix(border-radius, 6px);
+            overflow: hidden;
+          }
+        }
+        .sh2-icon {
+          width: 25px;
+          height: 32px;
+          position: absolute;
+          top: -2px;
+          left: 4px;
+          img {
+            width: 25px;
+          }
+        }
+        .sh2-icon-forgirl {
+          width: 25px;
+          height: 32px;
+          position: absolute;
+          top: -2px;
+          left: 112px;
+          img {
+            width: 25px;
+          }
+        }
+        .sh2-prgbar-all {
+          width: 118px;
+          height: 18px;
+          position: absolute;
+          top: 112px;
+          left: 10px;
+          background: linear-gradient(0deg, #735657 0%, #453434 100%);
+          box-shadow: 0 0 0 1px #453434;
+          border-radius: 4px;
+          overflow: hidden;
+          .sh2-prgbar {
+            width: 95%;
+            height: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(
+              0deg,
+              #5eb0f2 0%,
+              #4783b5 12%,
+              #66c4ff 60%,
+              #91d5ff 70%,
+              #569fdb 100%
+            );
+          }
+          .sh2-prgbar-text {
+            width: calc(100% - 1em);
+            padding-left: 1em;
+            position: relative;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45),
+              0 0px 4px rgba(0, 0, 0, 0.8);
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:after {
+              top: 1px;
+            }
+          }
+        }
+        .sh2-5 {
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          top: 86px;
+          left: 114px;
+          @include background-bronze;
+          @include prefix(border-radius, 100%);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+          color: #fff;
+          font-size: 20px;
+          font-weight: bold;
+          text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+        }
+        &.heroGirl {
+          .sh2-prgbar-all {
+            .sh2-prgbar-text {
+              &:after {
+                background-image: url(ic-girls-pieces.png);
+                background-position: center -1em;
+                background-repeat: no-repeat;
+                background-size: 100%;
+              }
+            }
+          }
+        }
+        &.heroAngel {
+          .sh2-prgbar-all {
+            .sh2-prgbar-text {
+              &:after {
+                background-image: url(ic-girls-pieces.png);
+                background-position: center -2em;
+                background-repeat: no-repeat;
+                background-size: 100%;
+              }
+            }
+          }
+        }
+      }
+      &.one {
+        height: 150px;
+        top: 80px;
+      }
+    }
+  }
+  .sh2-bnt-box-all {
+    width: 578px;
+    height: 50px;
+    position: relative;
+    top: 434px;
+    display: inline-block;
+    .color-btn {
+      width: 156px;
+      height: 50px;
+      top: 0px;
+      left: 288px;
+      margin: 0 6px 0 6px;
+      position: absolute;
+      .color-btn-text {
+        font-size: 14px;
+        top: 16px;
+      }
+      &.five {
+        position: absolute;
+        left: 120px;
+        .color-btn-text {
+          top: 15px;
+        }
+        &:active {
+          .color-btn-text {
+            top: 16px;
+          }
+        }
+      }
+      &:active {
+        box-shadow: inset 0 -2px 0px rgba(0, 0, 0, 0.2),
+          inset 0 2px 2px rgba(0, 0, 0, 0.2);
+        .color-btn-text {
+          top: 17px;
+        }
+      }
+    }
+  }
+}
+
+body .main.world3 .popup-layer {
+  .m-popup.sh2-openchest1,
+  .m-popup.sh2-openchest2,
+  .m-popup.sh2-openchest3 {
+    .title {
+      color: #ffffff;
+    }
+    &:before {
+      background-image: url(ts_confirm_bk-1.jpg);
+      background-size: 100%;
+      filter: hue-rotate(200deg);
+    }
+    .sh2-openchest-cont-box {
+      background: rgba(77, 37, 144, 0.3);
+      .sh2-uhave-box {
+        background: rgba(77, 37, 144, 0.6);
+      }
+      .sh2-chest-box-all {
+        .sh2-chest-box {
+          background: rgba(77, 37, 144, 0.6);
+          &:hover {
+            background: rgba(77, 37, 144, 0.5);
+          }
+        }
+      }
+    }
+    .winner-girl {
+      background-image: url(break-girl2.png);
+      transform: scaleX(-1);
+    }
+  }
 }

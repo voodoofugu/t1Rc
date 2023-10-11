@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["ClanTrophies", "ScreenSuperhero"]);
-import pageStyles from "../styleComponents/GfSalePop";
+// import pageStyles from "../styleComponents/GfSalePop";
 
 const V2MainScreen02GuildClanTrophiesComponent = ({ idForStyle }) => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts

@@ -2,7 +2,7 @@ import React from "react";
 import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["ScreenFapopolyMain"]);
-import pageStyles from "../styleComponents/ScreenFapopolyMain";
+// import pageStyles from "../styleComponents/ScreenFapopolyMain";
 
 const MainScreen23FapopolyMainComponent = ({ idForStyle }) => {
   return (

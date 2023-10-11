@@ -6,7 +6,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 //   "ScreenMasterHouse",
 //   "ScreenInfoPop",
 // ]);
-import pageStyles from "../styleComponents/V2ScreenGuildMain";
+// import pageStyles from "../styleComponents/V2ScreenGuildMain";
 
 const V2MainScreen02GuildMasterComponent = ({ idForStyle }) => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
