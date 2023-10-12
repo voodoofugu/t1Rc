@@ -1,8 +1,13 @@
 import React from "react";
-// import pageStyles from "../styleComponents/ScreenFortunaRoundMain16x";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
-const cssFiles = ["screen-fortuna-round-main_16x"];
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+  "screen-fortuna-round-main_16x",
+];
 
 const MainScreen16FortunaRoundMainpop16xComponent = () => {
   return (

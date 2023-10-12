@@ -10,8 +10,7 @@
   "scripts": {
     "start": "npx webpack serve --config webpack.config.dev.js --open",
     "update-dev": "nodemon --exec \"npm start\"",
-    "compileScssAll": "node compileScssAll.js",
-    "compileScssAWatch": "node compileScssAWatch.js",
+    "compileScss": "node compileScss.js",
     "build-prod": "webpack --config webpack.config.prod.js"
   },
   "keywords": [],

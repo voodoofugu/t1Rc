@@ -1,5 +1,3 @@
-// createStyleText.js
-
 // Функция для создания текста стилей из CSS файлов
 async function createStyleText(cssFiles) {
   try {

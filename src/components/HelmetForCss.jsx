@@ -1,4 +1,3 @@
-// HelmetForCss.jsx
 import React, { useEffect, useState } from "react";
 import HelmetComponent from "./HelmetComponent.jsx";
 import createStyleText from "../scripts/forBild/createStyleText.js";
@@ -26,7 +25,9 @@ const HelmetForCss = ({ cssFiles, children }) => {
           </style>
         ))}
       </HelmetComponent>
-      <div className={cssFiles.join(" ")}>{children}</div>
+      <div className={cssFiles.join(" ")}>
+        <body>{children}</body>
+      </div>
     </>
   );
 };

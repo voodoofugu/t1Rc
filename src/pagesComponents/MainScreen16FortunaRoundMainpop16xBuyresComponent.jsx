@@ -1,7 +1,14 @@
 import React from "react";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
-const cssFiles = ["v2-screen-fortuna-buyres", "screen-fortuna-round-main_16x"];
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+  "v2-screen-fortuna-buyres",
+  "screen-fortuna-round-main_16x",
+];
 
 const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
   return (

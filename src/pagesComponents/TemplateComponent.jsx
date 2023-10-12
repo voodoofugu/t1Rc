@@ -3,6 +3,8 @@ import React, { useState, useEffect, Suspense, lazy } from "react";
 import HelmetComponent from "../components/HelmetComponent.jsx";
 const ProjectBoxTwo = lazy(() => import(`../components/ProjectBoxTwo.jsx`));
 import Loading from "../components/Loading.jsx";
+// import HelmetForCss from "../components/HelmetForCss.jsx";
+// const cssFiles = [];
 
 const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
@@ -34,9 +36,11 @@ const TemplateComponent = () => {
           </div>
         </div>
         <Suspense fallback={<Loading />}>
+          {/* <HelmetForCss cssFiles={cssFiles}> */}
           <div className="templatePage template-container">
             <ProjectBoxTwo />
           </div>
+          {/* </HelmetForCss> */}
         </Suspense>
       </main>
     </>
