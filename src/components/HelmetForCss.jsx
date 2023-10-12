@@ -1,6 +1,6 @@
 // HelmetForCss.jsx
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import HelmetComponent from "./HelmetComponent.jsx";
 import createStyleText from "../scripts/forBild/createStyleText.js";
 
 const HelmetForCss = ({ cssFiles, children }) => {
@@ -19,13 +19,13 @@ const HelmetForCss = ({ cssFiles, children }) => {
 
   return (
     <>
-      <Helmet>
+      <HelmetComponent>
         {cssFiles.map((cssFile, index) => (
           <style key={index} type="text/css">
             {`.${cssFile} { ${styles[index]} }`}
           </style>
         ))}
-      </Helmet>
+      </HelmetComponent>
       <div className={cssFiles.join(" ")}>{children}</div>
     </>
   );

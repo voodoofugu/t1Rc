@@ -4,7 +4,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // const stylePairs = generateStylePairs(["V2ScreenGuildMain"]);
 // import pageStyles from "../styleComponents/V2ScreenGuildMain";
 
-const V2MainScreen02GuildMainComponent = ({ idForStyle }) => {
+const V2MainScreen02GuildMainComponent = () => {
   return (
     // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">

@@ -4,7 +4,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // const stylePairs = generateStylePairs(["GfSalePop"]);
 // import pageStyles from "../styleComponents/GfSalePop";
 
-const MainScreen25GfSalePopComponent = ({ idForStyle }) => {
+const MainScreen25GfSalePopComponent = () => {
   return (
     // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">

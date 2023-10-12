@@ -4,7 +4,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // const stylePairs = generateStylePairs(["ScreenFapopolyMain"]);
 // import pageStyles from "../styleComponents/ScreenFapopolyMain";
 
-const MainScreen23FapopolyMainComponent = ({ idForStyle }) => {
+const MainScreen23FapopolyMainComponent = () => {
   return (
     // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">

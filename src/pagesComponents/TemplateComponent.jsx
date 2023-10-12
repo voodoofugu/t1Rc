@@ -1,26 +1,25 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
-import { Helmet } from "react-helmet-async";
+
+import HelmetComponent from "../components/HelmetComponent.jsx";
 const ProjectBoxTwo = lazy(() => import(`../components/ProjectBoxTwo.jsx`));
-import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
-import pageStyles from "../styleComponents/TemplateComponentStyle.jsx";
 import Loading from "../components/Loading.jsx";
 
 const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
     `;
 
-const TemplateComponent = ({ idForStyle }) => {
+const TemplateComponent = () => {
   const [scriptLoaded, setScriptLoaded] = useState(false);
   useEffect(() => {
     eval(templateJs);
-    <Helmet>
+    <HelmetComponent>
       <script>{templateJs}</script>
-    </Helmet>;
+    </HelmetComponent>;
     setScriptLoaded(true);
   }, []);
 
   return (
-    <HelmetStyleWrap idForStyle={idForStyle} pageStyles={pageStyles}>
+    <>
       <main>
         <div className="templateTit page-title">
           {scriptLoaded}
@@ -40,7 +39,7 @@ const TemplateComponent = ({ idForStyle }) => {
           </div>
         </Suspense>
       </main>
-    </HelmetStyleWrap>
+    </>
   );
 };
 

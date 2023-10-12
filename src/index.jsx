@@ -1,7 +1,10 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+
+import HelmetComponent from "./components/HelmetComponent.jsx";
+import templateCss from "./styleComponents/TemplateComponentStyle.jsx";
 import Loading from "./components/Loading.jsx";
 const TemplateComponentLazy = lazy(() =>
   import(`./pagesComponents/TemplateComponent.jsx`)
@@ -15,13 +18,18 @@ if (Root) {
   }
 
   window.__REACT_ROOT__.render(
-    <BrowserRouter>
-      <HelmetProvider>
-        <Suspense fallback={<Loading />}>
-          <TemplateComponentLazy idForStyle="root" />
-        </Suspense>
-      </HelmetProvider>
-    </BrowserRouter>
+    <StrictMode>
+      <BrowserRouter>
+        <HelmetProvider>
+          <Suspense fallback={<Loading />}>
+            <HelmetComponent>
+              <style>{templateCss}</style>
+            </HelmetComponent>
+            <TemplateComponentLazy idForStyle="root" />
+          </Suspense>
+        </HelmetProvider>
+      </BrowserRouter>
+    </StrictMode>
   );
 } else {
   console.warn("Element with id 'root' not found.");

@@ -4,7 +4,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // const stylePairs = generateStylePairs(["ScreenUnipopWavepack10"]);
 // import pageStyles from "../styleComponents/ScreenUnipopWavepack10";
 
-const MainScreen22Unipop04wavepack10Component = ({ idForStyle }) => {
+const MainScreen22Unipop04wavepack10Component = () => {
   return (
     // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">

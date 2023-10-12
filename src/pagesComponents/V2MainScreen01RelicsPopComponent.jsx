@@ -3,7 +3,7 @@ import React from "react";
 // import { stylePairs } from "../stylesMaps/V2MainScreen01ComponentStylesMap";
 // import pageStyles from "../styleComponents/GfSalePop";
 
-const V2MainScreen01RelicsPopComponent = ({ idForStyle }) => {
+const V2MainScreen01RelicsPopComponent = () => {
   return (
     // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">

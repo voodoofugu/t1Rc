@@ -1,5 +1,5 @@
 const TemplateComponentStyle = `
-    > main {
+    main {
         position: absolute;
         top: 0;
         left: 0;
@@ -8,7 +8,7 @@ const TemplateComponentStyle = `
         background: #e6e7f1;
         font-family: "Montserrat", sans-serif;
     }
-    > main.dark-theme {
+    main.dark-theme {
         background: #2a3451 !important;
         color: #fff;
     }
@@ -423,7 +423,7 @@ const TemplateComponentStyle = `
             drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.2))
             drop-shadow(3px 0 2px rgba(0, 1, 60, 0.1));
     }
-    > main.dark-theme .page-title {
+    main.dark-theme .page-title {
         color: #6a95c9;
         text-shadow: 1px 1px 2px #000000;
         background: rgba(17, 0, 128, 0.02);
@@ -434,7 +434,7 @@ const TemplateComponentStyle = `
             inset 4px 4px 8px rgba(8, 0, 60, 0.6),
             inset -4px -4px 8px rgba(255, 255, 255, 0.1);
     }
-    > main.dark-theme .template-container::-webkit-scrollbar-thumb {
+    main.dark-theme .template-container::-webkit-scrollbar-thumb {
         background: linear-gradient(
                 135deg,
                 rgba(0, 3, 181, 0.02),
@@ -447,7 +447,7 @@ const TemplateComponentStyle = `
             inset -3px -3px 2px 2px rgba(60, 99, 255, 0.2),
             inset -2px -2px 1px 2px rgba(60, 99, 255, 0.4);
     }
-    > main.dark-theme .template-container .project-box {
+    main.dark-theme .template-container .project-box {
         background: linear-gradient(
                 135deg,
                 rgba(0, 3, 181, 0.02),
@@ -461,7 +461,7 @@ const TemplateComponentStyle = `
             4px 4px 8px rgba(0, 1, 60, 0.4),
             -4px -4px 8px rgba(255, 255, 255, 0.1);
     }
-    > main.dark-theme .template-container .project-box:hover {
+    main.dark-theme .template-container .project-box:hover {
         background: linear-gradient(
                 135deg,
                 rgba(0, 3, 181, 0.02),
@@ -475,7 +475,7 @@ const TemplateComponentStyle = `
             6px 6px 12px rgba(0, 1, 60, 0.5),
             -6px -6px 12px rgba(255, 255, 255, 0.12);
     }
-    > main.dark-theme .template-container .project-box:active {
+    main.dark-theme .template-container .project-box:active {
         background: linear-gradient(
                 135deg,
                 rgba(0, 3, 181, 0.02),
@@ -489,25 +489,25 @@ const TemplateComponentStyle = `
             4px 4px 8px rgba(0, 1, 60, 0.4),
             -4px -4px 8px rgba(255, 255, 255, 0.04);
     }
-    > main.dark-theme .template-container .project-box a {
+    main.dark-theme .template-container .project-box a {
         text-shadow: 1px 1px 2px rgba(0, 1, 60, 0.6);
     }
-    > main.dark-theme .template-container .project-box .projectComponent {
+    main.dark-theme .template-container .project-box .projectComponent {
         box-shadow: 0 0 0 10px #2a3451, 20px 20px 40px rgb(0, 1, 60),
             -20px -20px 40px rgba(255, 255, 255, 0.24);
     }
-    > main.dark-theme .template-container .project-box .screenshot-container {
+    main.dark-theme .template-container .project-box .screenshot-container {
         box-shadow: 0 0 0 2px #2a3451, 4px 4px 8px rgb(0, 1, 60),
             -4px -4px 8px rgba(255, 255, 255, 0.24);
     }
-    > main.dark-theme .template-container .project-box .fileInfoIc:before {
+    main.dark-theme .template-container .project-box .fileInfoIc:before {
         background: #29324e;
         color: #468ee4;
         text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
         box-shadow: inset 1px 1px 1px rgba(0, 1, 49, 0.1),
             1px 1px 1px rgba(255, 255, 255, 0.06);
     }
-    > main.dark-theme
+    main.dark-theme
         .template-container
         .project-box
         .fileInfoIc:hover:before {
@@ -516,7 +516,7 @@ const TemplateComponentStyle = `
         box-shadow: 1px 1px 1px rgba(0, 1, 49, 0.1),
             inset 1px 1px 1px rgba(255, 255, 255, 0.06);
     }
-    > main.dark-theme .template-container .project-box .fileInfoIc .fileInfo {
+    main.dark-theme .template-container .project-box .fileInfoIc .fileInfo {
         background: linear-gradient(
                 135deg,
                 rgba(0, 3, 181, 0.02),
@@ -530,7 +530,7 @@ const TemplateComponentStyle = `
             1px 1px 2px rgba(60, 99, 255, 0.4),
             inset -1px -1px 2px rgba(60, 99, 255, 0.1);
     }
-    > main.dark-theme
+    main.dark-theme
         .template-container
         .project-box
         .fileInfoIc

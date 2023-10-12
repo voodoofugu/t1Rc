@@ -1,8 +1,6 @@
 const { merge } = require("webpack-merge");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpackConfig = require("./webpack.config.js");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const fs = require("fs");
 const path = require("path");
@@ -54,20 +52,5 @@ module.exports = merge(webpackConfig, {
     publicPath: "../",
   },
   // devtool: "source-map",
-  plugins: [
-    new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "src/img",
-          to: "img",
-        },
-        {
-          from: "src/styles",
-          to: "styles",
-        },
-      ],
-    }),
-    ...plugins,
-  ],
+  plugins: [...plugins],
 });

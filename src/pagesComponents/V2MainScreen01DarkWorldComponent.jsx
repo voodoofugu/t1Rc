@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // import { stylePairs } from "../stylesMaps/V2MainScreen01ComponentStylesMap";
 // import pageStyles from "../styleComponents/GfSalePop";
 
-const V2MainScreen01DarkWorldComponent = ({ idForStyle }) => {
+const V2MainScreen01DarkWorldComponent = () => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];

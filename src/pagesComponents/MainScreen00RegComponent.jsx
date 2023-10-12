@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import HelmetComponent from "../components/HelmetComponent.jsx";
 import Loading from "../components/Loading.jsx";
 
 const wrapStyles = "wrapStyles";
@@ -208,9 +208,9 @@ const MainScreen00RegComponent = () => {
         className={wrapStyles}
         style={{ width: "1200px", height: "640px", background: "#9f8978" }}
       >
-        <Helmet>
+        <HelmetComponent>
           <style>{`.${wrapStyles} {${cssText}}`}</style>
-        </Helmet>
+        </HelmetComponent>
         <div className="main">
           {/* <div className="pers">
                     <img 

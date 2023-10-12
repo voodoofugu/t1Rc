@@ -1,4 +1,5 @@
 const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src", "index.jsx"),
@@ -11,15 +12,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.html$/,
-        use: {
-          loader: "html-loader",
-          options: {
-            sources: false,
-          },
-        },
-      },
       {
         test: /\.(c|sa|sc)ss$/i,
         exclude: /node_modules\/(?!normalize\.css)/,
@@ -51,5 +43,12 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
 };

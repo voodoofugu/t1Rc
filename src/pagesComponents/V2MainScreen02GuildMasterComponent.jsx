@@ -8,7 +8,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // ]);
 // import pageStyles from "../styleComponents/V2ScreenGuildMain";
 
-const V2MainScreen02GuildMasterComponent = ({ idForStyle }) => {
+const V2MainScreen02GuildMasterComponent = () => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];

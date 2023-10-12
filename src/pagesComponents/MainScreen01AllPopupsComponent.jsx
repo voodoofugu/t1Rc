@@ -4,7 +4,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import pageStyles from "../stylesMaps/Mainscreen01allpopupsComponentStylesMap";
 // import pageStyles from "../styleComponents/GfSalePop";
 
-const MainScreen01AllPopupsComponent = ({ idForStyle }) => {
+const MainScreen01AllPopupsComponent = () => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];

@@ -4,7 +4,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // const stylePairs = generateStylePairs(["ClanTrophies", "ScreenSuperhero"]);
 // import pageStyles from "../styleComponents/GfSalePop";
 
-const V2MainScreen02GuildClanTrophiesComponent = ({ idForStyle }) => {
+const V2MainScreen02GuildClanTrophiesComponent = () => {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];

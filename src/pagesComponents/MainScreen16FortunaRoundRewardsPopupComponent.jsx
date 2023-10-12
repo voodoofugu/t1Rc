@@ -4,7 +4,7 @@ import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // const stylePairs = generateStylePairs(["ScreenFortunaRoundRewards"]);
 // import pageStyles from "../styleComponents/ScreenFortunaRoundRewards";
 
-const MainScreen16FortunaRoundRewardsPopupComponent = ({ idForStyle }) => {
+const MainScreen16FortunaRoundRewardsPopupComponent = () => {
   return (
     // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">

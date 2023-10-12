@@ -1,6 +1,8 @@
 import React from "react";
+
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = ["v2-screen-fortuna-buyres", "screen-fortuna-round-main_16x"];
+
 const MainScreen16FortunaRoundMainpop16xBuyresComponent = () => {
   return (
     <HelmetForCss cssFiles={cssFiles}>

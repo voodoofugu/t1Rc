@@ -1,14 +1,14 @@
 import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import HelmetComponent from "./HelmetComponent.jsx";
 
 const HelmetStyleWrap = ({ idForStyle, pageStyles, children }) => {
   return (
-    <HelmetProvider>
-      <Helmet>
+    <>
+      <HelmetComponent>
         <style>{`#${idForStyle} { ${pageStyles} }`}</style>
-      </Helmet>
+      </HelmetComponent>
       {children}
-    </HelmetProvider>
+    </>
   );
 };
 
