@@ -25,9 +25,7 @@ const HelmetForCss = ({ cssFiles, children }) => {
           </style>
         ))}
       </HelmetComponent>
-      <div className={cssFiles.join(" ")}>
-        <body>{children}</body>
-      </div>
+      <div className={`${cssFiles.join(" ")} likeBody`}>{children}</div>
     </>
   );
 };

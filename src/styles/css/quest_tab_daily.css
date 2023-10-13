@@ -1,1 +1,519 @@
-body .main .left-side { width: 620px; height: 555px; position: absolute; left: 5px; bottom: 5px; } body .main .left-side .tabs-all-box { width: 600px; height: 40px; position: absolute; top: 0; left: 0; font-size: 0; } body .main .left-side .tabs-all-box .tabs-all { width: 118px; height: 40px; position: relative; top: 0; left: 0; display: inline-block; margin: 0 2px 0 0; cursor: pointer; background-color: #9c8b7c; -webkit-border-radius: 24px 24px 0 0; -moz-border-radius: 24px 24px 0 0; -ms-border-radius: 24px 24px 0 0; -o-border-radius: 24px 24px 0 0; border-radius: 24px 24px 0 0; } body .main .left-side .tabs-all-box .tabs-all:before { content: ""; width: 110px; height: 36px; position: absolute; top: 4px; left: 4px; background-color: #544746; -webkit-border-radius: 20px 20px 0 0; -moz-border-radius: 20px 20px 0 0; -ms-border-radius: 20px 20px 0 0; -o-border-radius: 20px 20px 0 0; border-radius: 20px 20px 0 0; box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15); } body .main .left-side .tabs-all-box .tabs-all .tabs-name { width: 60px; height: 40px; position: absolute; right: 14px; color: #fff; font-weight: bold; font-size: 12px; line-height: 44px; text-align: center; } body .main .left-side .tabs-all-box .tabs-all .tabs-pic { width: 50px; height: 32px; position: absolute; top: 5px; left: 5px; } body .main .left-side .tabs-all-box .tabs-all .tabs-pic img { width: 50px; } body .main .left-side .tabs-all-box .tabs-all.selected:before { content: ""; background-color: #9c8b7c; } body .main .left-side .left-panel { width: 620px; height: 515px; position: absolute; left: 0; top: 40px; } body .main .left-side .left-panel:before { content: ""; width: 620px; height: 5px; position: absolute; top: 0; left: 0; background-color: #9c8b7c; z-index: 999; } body .main .left-side .left-panel .quests-list-all-box { width: 620px; height: 515px; position: absolute; top: 0; left: 0; background: linear-gradient(0deg, #786358, #584a49); box-shadow: inset 0 0 0 4px #9c8b7c, inset 0 0 6px rgba(0, 0, 0, 0.25) !important; border-radius: 10px 18px 18px 18px; } body .main .left-side .left-panel .quests-list-all-box .journal-menu-box { width: 500px; height: 40px; position: absolute; top: 10px; left: 12px; font-size: 0; text-align: center; display: flex; } body .main .left-side .left-panel .quests-list-all-box .journal-menu-box .color-btn { width: 160px; margin: 0 3px 0 3px; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all { width: 500px; height: 445px; position: absolute; top: 58px; left: 12px; background-color: #9c8b7c; border-radius: 10px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -2px 0px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.2); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .content-disable { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: none; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box { width: 480px; height: 90px; position: absolute; top: 10px; left: 10px; background-color: #705d4e; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), inset 0px 1px 1px rgba(0, 0, 0, 0.1); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-mission-name { width: 200px; height: auto; position: absolute; top: 10px; left: 95px; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 18px; text-align: center; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-prgbar-all { width: 380px; height: 40px; position: absolute; bottom: 10px; left: 10px; background: linear-gradient(180deg, #3b302f 0%, #584a49 100%); border-radius: 6px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-prgbar-all .daily-prgbar { width: 10%; height: 40px; position: absolute; top: 0px; left: 0px; background: linear-gradient(0deg, #8cdd55 0%, #43a700 50%, #8cdd55 100%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-prgbar-all .daily-prgbar-text { width: 380px; height: 40px; position: relative; text-align: center; color: #ffd33c; font-weight: bold; font-size: 24px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45); line-height: 40px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); text-transform: uppercase; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward { width: 70px; height: 70px; position: absolute; top: 10px; right: 10px; background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%); -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .daily-reward-pic { width: 50px; height: 50px; position: absolute; top: 4px; left: 10px; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .daily-reward-pic img { width: 50px; position: absolute; top: 50%; left: 0; transform: translateY(-50%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .daily-reward-count { width: 60px; height: auto; position: relative; top: 52px; text-align: center; margin: 0 auto; color: #fff; font-size: 14px; font-weight: bold; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active { cursor: pointer; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active:hover { background: linear-gradient(180deg, #e19600 0%, #f6e4c1 50%, #dc8f00 70%, #fbd995 85%, #dc9003 100%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active:active { transform: scale(0.98); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active:before { content: ""; position: absolute; background-image: url("../../img/map-station-lockflare.png"); background-repeat: no-repeat; background-size: 100%; background-position: center; transition: ease-in-out 0.1s; animation: 8s linear 0s normal none infinite running lockflare; width: 90px; height: 90px; left: -10px; top: -10px; pointer-events: none; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner:before { content: ""; width: 50px; height: 50px; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); background-image: url("../../img/paycheck.png"); background-size: cover; background-position: center; background-repeat: no-repeat; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt { color: #ffec62; font-size: 12px; font-weight: 700; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.4); position: absolute; left: 50%; top: 38px; transform: translate(-50%, -50%); background: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(83, 51, 10, 0.7), rgba(83, 51, 10, 0.7), rgba(0, 0, 0, 0) 90%); padding: 2px 6px 3px 6px; line-height: 20px; z-index: 1; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:before, body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:after { content: ""; position: absolute; width: 100%; height: 2px; left: 0; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #afe48d, rgba(255, 255, 255, 0) 90%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:before { top: 0; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:after { bottom: 0; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll { width: 480px; height: 276px; position: absolute; top: 110px; left: 10px; overflow: hidden; overflow-y: scroll; font-size: 0; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); border-radius: 10px; background-color: #7c665c; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll::-webkit-scrollbar { width: 10px; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 3px #796b60; background: linear-gradient(to right, #fff, #f5de80, #f4b766, #b26d12); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box { width: 460px; height: 90px; position: relative; display: inline-block; background-color: #817264; margin-bottom: 8px; overflow: hidden; border-radius: 4px; box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), inset 0px 1px 1px rgba(0, 0, 0, 0.1); transition: ease-in-out 0.06s; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box:hover { background-color: #796a5d; transition: ease-in-out 0.06s; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box:hover .daily-parth-claim-box { background-color: #665547; transition: ease-in-out 0.06s; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-text { width: 220px; height: auto; position: absolute; top: 10px; left: 10px; color: #f5da6d; font-weight: bold; text-transform: uppercase; font-size: 14px; text-align: center; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-prgbar-all { width: 220px; height: 20px; position: absolute; bottom: 10px; left: 10px; border-radius: 4px; overflow: hidden; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4); background: linear-gradient(180deg, #3b302f 0%, #584a49 100%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-prgbar-all .daily-prgbar { width: 80%; height: 20px; position: absolute; top: 0px; left: 0px; background: linear-gradient(0deg, #3fbae7 0%, #007aa7 50%, #3fbae7 100%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-prgbar-all .daily-prgbar-text { width: 220px; height: 20px; position: relative; text-align: center; color: #fff; font-weight: bold; font-size: 14px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45); line-height: 20px; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); text-transform: uppercase; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box { width: 220px; height: 90px; position: absolute; top: 0; right: 0; background-color: #705d4e; box-shadow: inset 0px 0 4px 1px rgba(0, 0, 0, 0.2); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward { width: 70px; height: 70px; position: absolute; top: 10px; left: 10px; background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%); -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward .daily-reward-pic { width: 50px; height: 50px; position: absolute; top: 4px; left: 10px; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward .daily-reward-pic img { width: 50px; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward .daily-reward-count { width: 60px; height: auto; position: relative; top: 52px; text-align: center; margin: 0 auto; color: #fff; font-size: 14px; font-weight: bold; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .color-btn { width: 120px; position: absolute; top: 25px; right: 10px; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .color-btn .color-btn-text { color: #3e342d; text-shadow: 0 0 0; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner { width: 90px; height: 90px; position: absolute; left: 50%; top: 0; transform: translateX(-50%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner:before { content: ""; width: 90px; height: 90px; background: radial-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); background-size: 150% 65%; background-position: center 42px; background-repeat: no-repeat; z-index: 1; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner:after { content: ""; width: 90px; height: 90px; position: absolute; top: 0; left: 0; background-image: url("../../img/paycheck.png"); background-size: 84px; background-position: center; background-repeat: no-repeat; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt { color: #ffec62; font-size: 16px; font-weight: 700; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.4); position: absolute; left: 50%; top: 52px; transform: translate(-50%, -50%); background: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, #264220, rgba(0, 0, 0, 0) 90%); padding: 4px 20px; line-height: 20px; z-index: 1; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:before, body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:after { content: ""; position: absolute; width: 100%; height: 2px; left: 0; background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #afe48d, rgba(255, 255, 255, 0) 90%); } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:before { top: 0; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:after { bottom: 0; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box.finished .daily-parth-claim-box .end-banner { display: block; } body .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-reset { width: 480px; height: 40px; position: absolute; bottom: 10px; left: 10px; background-color: #705d4e; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; color: #fff; font-weight: bold; font-size: 18px; text-transform: uppercase; text-align: center; line-height: 40px; box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), inset 0px 1px 1px rgba(0, 0, 0, 0.1); }
+
+.likeBody .main .left-side {
+  width: 620px;
+  height: 555px;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+.likeBody .main .left-side .tabs-all-box {
+  width: 600px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+}
+.likeBody .main .left-side .tabs-all-box .tabs-all {
+  width: 118px;
+  height: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  margin: 0 2px 0 0;
+  cursor: pointer;
+  background-color: #9c8b7c;
+  -webkit-border-radius: 24px 24px 0 0;
+  -moz-border-radius: 24px 24px 0 0;
+  -ms-border-radius: 24px 24px 0 0;
+  -o-border-radius: 24px 24px 0 0;
+  border-radius: 24px 24px 0 0;
+}
+.likeBody .main .left-side .tabs-all-box .tabs-all:before {
+  content: "";
+  width: 110px;
+  height: 36px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #544746;
+  -webkit-border-radius: 20px 20px 0 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -ms-border-radius: 20px 20px 0 0;
+  -o-border-radius: 20px 20px 0 0;
+  border-radius: 20px 20px 0 0;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+.likeBody .main .left-side .tabs-all-box .tabs-all .tabs-name {
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  right: 14px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 44px;
+  text-align: center;
+}
+.likeBody .main .left-side .tabs-all-box .tabs-all .tabs-pic {
+  width: 50px;
+  height: 32px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.likeBody .main .left-side .tabs-all-box .tabs-all .tabs-pic img {
+  width: 50px;
+}
+.likeBody .main .left-side .tabs-all-box .tabs-all.selected:before {
+  content: "";
+  background-color: #9c8b7c;
+}
+.likeBody .main .left-side .left-panel {
+  width: 620px;
+  height: 515px;
+  position: absolute;
+  left: 0;
+  top: 40px;
+}
+.likeBody .main .left-side .left-panel:before {
+  content: "";
+  width: 620px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #9c8b7c;
+  z-index: 999;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box {
+  width: 620px;
+  height: 515px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, #786358, #584a49);
+  box-shadow: inset 0 0 0 4px #9c8b7c, inset 0 0 6px rgba(0, 0, 0, 0.25) !important;
+  border-radius: 10px 18px 18px 18px;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-menu-box {
+  width: 500px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 0;
+  text-align: center;
+  display: flex;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-menu-box .color-btn {
+  width: 160px;
+  margin: 0 3px 0 3px;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all {
+  width: 500px;
+  height: 445px;
+  position: absolute;
+  top: 58px;
+  left: 12px;
+  background-color: #9c8b7c;
+  border-radius: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -2px 0px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .content-disable {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box {
+  width: 480px;
+  height: 90px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #705d4e;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-mission-name {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 95px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-prgbar-all {
+  width: 380px;
+  height: 40px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: linear-gradient(180deg, #3b302f 0%, #584a49 100%);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-prgbar-all .daily-prgbar {
+  width: 10%;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(0deg, #8cdd55 0%, #43a700 50%, #8cdd55 100%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-prgbar-all .daily-prgbar-text {
+  width: 380px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  color: #ffd33c;
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  line-height: 40px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .daily-reward-pic {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .daily-reward-pic img {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .daily-reward-count {
+  width: 60px;
+  height: auto;
+  position: relative;
+  top: 52px;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active {
+  cursor: pointer;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active:hover {
+  background: linear-gradient(180deg, #e19600 0%, #f6e4c1 50%, #dc8f00 70%, #fbd995 85%, #dc9003 100%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active:active {
+  transform: scale(0.98);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward.active:before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/map-station-lockflare.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  transition: ease-in-out 0.1s;
+  animation: 8s linear 0s normal none infinite running lockflare;
+  width: 90px;
+  height: 90px;
+  left: -10px;
+  top: -10px;
+  pointer-events: none;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("../../img/paycheck.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt {
+  color: #ffec62;
+  font-size: 12px;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 50%;
+  top: 38px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, rgba(83, 51, 10, 0.7), rgba(83, 51, 10, 0.7), rgba(0, 0, 0, 0) 90%);
+  padding: 2px 6px 3px 6px;
+  line-height: 20px;
+  z-index: 1;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:before,
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #afe48d, rgba(255, 255, 255, 0) 90%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:before {
+  top: 0;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box .daily-reward .end-banner .txt:after {
+  bottom: 0;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll {
+  width: 480px;
+  height: 276px;
+  position: absolute;
+  top: 110px;
+  left: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+  font-size: 0;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #7c665c;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #796b60;
+  background: linear-gradient(to right, #fff, #f5de80, #f4b766, #b26d12);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box {
+  width: 460px;
+  height: 90px;
+  position: relative;
+  display: inline-block;
+  background-color: #817264;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+  transition: ease-in-out 0.06s;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box:hover {
+  background-color: #796a5d;
+  transition: ease-in-out 0.06s;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box:hover .daily-parth-claim-box {
+  background-color: #665547;
+  transition: ease-in-out 0.06s;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-text {
+  width: 220px;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #f5da6d;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-prgbar-all {
+  width: 220px;
+  height: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, #3b302f 0%, #584a49 100%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-prgbar-all .daily-prgbar {
+  width: 80%;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(0deg, #3fbae7 0%, #007aa7 50%, #3fbae7 100%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-prgbar-all .daily-prgbar-text {
+  width: 220px;
+  height: 20px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  line-height: 20px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  text-transform: uppercase;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box {
+  width: 220px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #705d4e;
+  box-shadow: inset 0px 0 4px 1px rgba(0, 0, 0, 0.2);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward .daily-reward-pic {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward .daily-reward-pic img {
+  width: 50px;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .daily-reward .daily-reward-count {
+  width: 60px;
+  height: auto;
+  position: relative;
+  top: 52px;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .color-btn {
+  width: 120px;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .color-btn .color-btn-text {
+  color: #3e342d;
+  text-shadow: 0 0 0;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner:before {
+  content: "";
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+  background-size: 150% 65%;
+  background-position: center 42px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner:after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../img/paycheck.png");
+  background-size: 84px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt {
+  color: #ffec62;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 4px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 50%;
+  top: 52px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 10%, #264220, rgba(0, 0, 0, 0) 90%);
+  padding: 4px 20px;
+  line-height: 20px;
+  z-index: 1;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:before,
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, #afe48d, rgba(255, 255, 255, 0) 90%);
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:before {
+  top: 0;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box .daily-parth-claim-box .end-banner .txt:after {
+  bottom: 0;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-box-scroll .daily-parth-box.finished .daily-parth-claim-box .end-banner {
+  display: block;
+}
+.likeBody .main .left-side .left-panel .quests-list-all-box .journal-parth-box-all .daily-mission-reset {
+  width: 480px;
+  height: 40px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #705d4e;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1), inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+}

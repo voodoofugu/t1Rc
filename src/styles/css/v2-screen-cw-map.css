@@ -1,1 +1,208 @@
-body .main .main-bg.cw-map { background-image: url("../../img/v2-fw-map-bg.jpg"); background-size: 100%; background-repeat: no-repeat; } body .main .cw-map-name-box-all { width: 344px; height: 80px; position: absolute; top: 5px; left: 428px; } body .main .cw-map-name-box-all .cw-map-name-box { width: 344px; height: 80px; position: absolute; top: 0; left: 0; background-image: url("../../img/red-lenta.png"); background-size: 100%; background-repeat: no-repeat; text-align: center; } body .main .cw-map-name-box-all .cw-map-name-box .cw-map-name, body .main .cw-map-name-box-all .cw-map-name-box .cw-map-date { width: 250px; height: auto; position: relative; top: 5px; display: inline-block; color: #ffc000; font-size: 14px; font-weight: bold; text-transform: uppercase; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75); } body .main .cw-map-name-box-all .cw-map-name-box .cw-map-date { color: #fff; font-size: 16px; } body .main .cw-map-name-box-all .cw-map-time-box { width: 190px; height: 36px; position: absolute; bottom: 0; left: 77px; background-color: rgba(0, 0, 0, 0.75); -webkit-border-radius: 0 0 20px 20px; -moz-border-radius: 0 0 20px 20px; -ms-border-radius: 0 0 20px 20px; -o-border-radius: 0 0 20px 20px; border-radius: 0 0 20px 20px; } body .main .cw-map-name-box-all .cw-map-time-box .cw-map-time1, body .main .cw-map-name-box-all .cw-map-time-box .cw-map-time2 { width: 180px; height: 10px; position: absolute; left: 5px; top: 5px; color: #ffc000; font-size: 10px; font-weight: bold; text-transform: uppercase; } body .main .cw-map-name-box-all .cw-map-time-box .cw-map-time2 { top: 18px; } body .main .cw-map-claim-box-all { width: 1000px; height: auto; position: absolute; top: 94px; left: 98px; font-size: 0px; } body .main .cw-map-claim-box-all .cw-map-claim-box { width: 124px; height: 96px; position: relative; display: inline-block; background-color: rgba(255, 255, 255, 0.25); margin-left: 3px; margin-top: 3px; } body .main .cw-map-claim-box-all .cw-map-mercs { font-size: 0; position: absolute; left: 6px; bottom: 6px; } body .main .cw-map-claim-box-all .cw-map-mercs .cw-map-merc { display: inline-block; width: 14px; height: 22px; background-size: 22px; background-position: 50%; background-repeat: no-repeat; background-image: url("../../img/v2-cw-pop-orange.png"); } body .main .cw-map-claim-box-all .cw-map-mercs .cw-map-merc.occupied { background-image: url("../../img/v2-cw-pop-blue.png"); } body .main .cw-round-box-all { width: 1200px; height: 40px; position: absolute; bottom: 0; left: 0; background-color: #000; font-size: 0; } body .main .cw-round-box-all .cw-round-box-name { width: 108px; height: 36px; position: absolute; top: 2px; left: 2px; background: linear-gradient(0deg, #3fbae7 0%, #007aa7 50%, #3fbae7 100%); color: #fff; font-size: 16px; font-weight: bold; text-transform: uppercase; line-height: 36px; } body .main .cw-round-box-all .cw-round-box { width: 1088px; height: 36px; position: absolute; left: 111px; top: 2px; } body .main .cw-round-box-all .cw-round-box .cw-round-num { width: 66px; height: 36px; position: relative; display: inline-block; background: #555; margin: 0 1px; color: #000; font-size: 16px; font-weight: bold; line-height: 36px; } body .main .cw-round-box-all .cw-round-box .cw-round-num.check { background: linear-gradient(0deg, #f8b76c 0%, #f78500 18%, #f8b76c 60%, #f9981f 85%, #f8b76b 100%); } body .main .cw-round-box-all .cw-round-box .cw-round-num.active { background: linear-gradient(0deg, #41d355 0%, #039117 18%, #41d355 60%, #0ca621 85%, #41d355 100%); } body .main .cw-myfraction-box { width: 130px; height: 210px; position: absolute; top: 6px; left: 6px; } body .main .cw-myfraction-box .cw-myfraction-pic { width: 130px; height: 210px; position: absolute; top: 0; left: 0; } body .main .cw-myfraction-box .cw-myfraction-pic img { width: 130px; } body .main .cw-myfraction-box .cw-myfraction-text { width: 100px; height: 20px; position: absolute; top: 38px; left: 15px; background: linear-gradient(0deg, #e9c44f 0%, #f7eec7 100%); -webkit-border-radius: 20px; -moz-border-radius: 20px; -ms-border-radius: 20px; -o-border-radius: 20px; border-radius: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35); color: #382020; font-size: 12px; font-weight: bold; text-transform: uppercase; line-height: 20px; } body .main .cw-myfraction-box .cw-myfraction-name-box { width: 100px; height: 30px; position: absolute; bottom: 16px; left: 15px; display: table; } body .main .cw-myfraction-box .cw-myfraction-name-box .cw-myfraction-name { width: 100%; height: 100%; position: relative; display: table-cell; vertical-align: middle; color: #fff; font-size: 12px; font-weight: bold; text-transform: uppercase; text-shadow: 0 1px 2px #000; }
+
+.likeBody .main .main-bg.cw-map {
+  background-image: url("../../img/v2-fw-map-bg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.likeBody .main .cw-map-name-box-all {
+  width: 344px;
+  height: 80px;
+  position: absolute;
+  top: 5px;
+  left: 428px;
+}
+.likeBody .main .cw-map-name-box-all .cw-map-name-box {
+  width: 344px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../img/red-lenta.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.likeBody .main .cw-map-name-box-all .cw-map-name-box .cw-map-name,
+.likeBody .main .cw-map-name-box-all .cw-map-name-box .cw-map-date {
+  width: 250px;
+  height: auto;
+  position: relative;
+  top: 5px;
+  display: inline-block;
+  color: #ffc000;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+.likeBody .main .cw-map-name-box-all .cw-map-name-box .cw-map-date {
+  color: #fff;
+  font-size: 16px;
+}
+.likeBody .main .cw-map-name-box-all .cw-map-time-box {
+  width: 190px;
+  height: 36px;
+  position: absolute;
+  bottom: 0;
+  left: 77px;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  -ms-border-radius: 0 0 20px 20px;
+  -o-border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
+}
+.likeBody .main .cw-map-name-box-all .cw-map-time-box .cw-map-time1,
+.likeBody .main .cw-map-name-box-all .cw-map-time-box .cw-map-time2 {
+  width: 180px;
+  height: 10px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  color: #ffc000;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.likeBody .main .cw-map-name-box-all .cw-map-time-box .cw-map-time2 {
+  top: 18px;
+}
+.likeBody .main .cw-map-claim-box-all {
+  width: 1000px;
+  height: auto;
+  position: absolute;
+  top: 94px;
+  left: 98px;
+  font-size: 0px;
+}
+.likeBody .main .cw-map-claim-box-all .cw-map-claim-box {
+  width: 124px;
+  height: 96px;
+  position: relative;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-left: 3px;
+  margin-top: 3px;
+}
+.likeBody .main .cw-map-claim-box-all .cw-map-mercs {
+  font-size: 0;
+  position: absolute;
+  left: 6px;
+  bottom: 6px;
+}
+.likeBody .main .cw-map-claim-box-all .cw-map-mercs .cw-map-merc {
+  display: inline-block;
+  width: 14px;
+  height: 22px;
+  background-size: 22px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-image: url("../../img/v2-cw-pop-orange.png");
+}
+.likeBody .main .cw-map-claim-box-all .cw-map-mercs .cw-map-merc.occupied {
+  background-image: url("../../img/v2-cw-pop-blue.png");
+}
+.likeBody .main .cw-round-box-all {
+  width: 1200px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  font-size: 0;
+}
+.likeBody .main .cw-round-box-all .cw-round-box-name {
+  width: 108px;
+  height: 36px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: linear-gradient(0deg, #3fbae7 0%, #007aa7 50%, #3fbae7 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 36px;
+}
+.likeBody .main .cw-round-box-all .cw-round-box {
+  width: 1088px;
+  height: 36px;
+  position: absolute;
+  left: 111px;
+  top: 2px;
+}
+.likeBody .main .cw-round-box-all .cw-round-box .cw-round-num {
+  width: 66px;
+  height: 36px;
+  position: relative;
+  display: inline-block;
+  background: #555;
+  margin: 0 1px;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 36px;
+}
+.likeBody .main .cw-round-box-all .cw-round-box .cw-round-num.check {
+  background: linear-gradient(0deg, #f8b76c 0%, #f78500 18%, #f8b76c 60%, #f9981f 85%, #f8b76b 100%);
+}
+.likeBody .main .cw-round-box-all .cw-round-box .cw-round-num.active {
+  background: linear-gradient(0deg, #41d355 0%, #039117 18%, #41d355 60%, #0ca621 85%, #41d355 100%);
+}
+.likeBody .main .cw-myfraction-box {
+  width: 130px;
+  height: 210px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+.likeBody .main .cw-myfraction-box .cw-myfraction-pic {
+  width: 130px;
+  height: 210px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.likeBody .main .cw-myfraction-box .cw-myfraction-pic img {
+  width: 130px;
+}
+.likeBody .main .cw-myfraction-box .cw-myfraction-text {
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 38px;
+  left: 15px;
+  background: linear-gradient(0deg, #e9c44f 0%, #f7eec7 100%);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  color: #382020;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+.likeBody .main .cw-myfraction-box .cw-myfraction-name-box {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  bottom: 16px;
+  left: 15px;
+  display: table;
+}
+.likeBody .main .cw-myfraction-box .cw-myfraction-name-box .cw-myfraction-name {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px #000;
+}

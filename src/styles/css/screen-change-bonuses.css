@@ -1,1 +1,553 @@
-.tab-panel.change-bonuses { box-shadow: inset 0 4px 0 #9c8b7c; } .tab-panel.change-bonuses .tab-panel-box-title { width: 300px; height: 24px; position: absolute; top: 10px; left: 399px; background: linear-gradient(0deg, #ffe199 0%, #f4c657 18%, #ffe199 60%, #f4c557 85%, #ffe199 100%); border-radius: 12px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); color: #3c3737; font-size: 16px; font-weight: bold; text-transform: uppercase; line-height: 24px; text-align: center; } .tab-panel.change-bonuses .change-top-menu { width: 264px; height: 34px; position: absolute; font-size: 0px; z-index: 1000; top: 9px; left: 4px; } .tab-panel.change-bonuses .change-top-menu .color-btn { width: 100%; height: 100%; line-height: 17px; } .tab-panel.change-bonuses .change-top-menu .color-btn .color-btn-text { font-size: 16px; top: 8px; display: flex; flex-direction: row; } .tab-panel.change-bonuses .change-top-menu .color-btn .color-btn-text:before { content: ""; width: 20px; height: 20px; background: url("../../img/darkworld-back-arrow.png"); background-size: 100%; background-position: center; background-repeat: no-repeat; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4)); margin: 1px 6px 0 0; } .tab-panel.change-bonuses .change-top-menu .color-btn:active .color-btn-text { top: 9px; } .tab-panel.change-bonuses .change-bonuses-box-all { width: 120px; height: 494px; position: absolute; top: 8px; margin-left: 10px; z-index: 999; background-color: #8f7a6b; -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; } .tab-panel.change-bonuses .change-bonuses-box-all .bonuses-box-name { width: 120px; height: 34px; position: absolute; background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%); -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45); text-align: center; font-size: 16px; font-weight: bold; color: #fff; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45); line-height: 34px; text-transform: uppercase; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box { width: 100%; height: 100%; position: absolute; top: 42px; font-size: 0px; text-align: center; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in { width: 100px; height: 100px; position: relative; display: inline-block; background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%); margin: 6px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4); } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .inchest-pic { width: 80px; height: 80px; position: absolute; top: 0px; margin-left: -40px; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .inchest-pic.hero-pic { height: auto; width: 69px; margin-left: 14px; top: 2px; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-in-count { width: 100%; height: 26px; position: absolute; top: 72px; text-align: center; color: #572f14; font-size: 18px; font-weight: bold; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8); } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-in-check { width: 84px; height: 84px; position: absolute; top: 8px; margin-left: 8px; background-image: url("../../img/paycheck.png"); background-size: 100%; display: none; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-bonus-pic { width: 90px; height: 90px; margin-left: 5px; overflow: hidden; top: 5px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; position: absolute; display: none; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-pic { height: 90px; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.check .openchest-in-check { display: block; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.picture .inchest-pic { display: none; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.picture .openchest-in-count { display: none; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.picture .openchest-bonus-pic { display: block; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty { background: #7d6b5d; box-shadow: inset 0 0 50px 0 rgba(0, 0, 0, 0.15); } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty .inchest-pic { display: none; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty .openchest-in-count { display: none; } .tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty .openchest-bonus-pic { display: none; } .tab-panel.change-bonuses .change-main-right-side { width: 1098px; height: 507px; position: absolute; left: 0; top: 4px; border-radius: 6px 14px 14px 14px; background-color: #706054; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2); } .tab-panel.change-bonuses .change-main-right-side .change-reward-box { background: linear-gradient(0deg, #bdee6e 0%, #7fa740 23%, #bdee6d 50%, #d3f699 100%); -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; font-size: 0px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45), -1px 1px 0 1px #483e36, 80px 1px 0 1px #483e36, 131px 1px 0 1px #483e36, -1px -1px 0 1px #342d27, 80px -1px 0 1px #342d27, 131px -1px 0 1px #342d27; filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.4)); width: 90px; height: 34px; position: absolute; top: 5px; left: 439px; z-index: 999; } .tab-panel.change-bonuses .change-main-right-side .change-reward-box:before { content: ""; width: 120px; height: 32px; position: absolute; top: 2px; right: -126px; background-image: url("../../img/noobpackback.png"); background-size: 100%; } .tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-count, .tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-name { width: 90px; height: 20px; position: relative; text-align: center; color: #fff; font-size: 16px; font-weight: bold; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); } .tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-count { top: -15px; right: -111px; } .tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-name { top: 3px; color: #26430a; font-size: 12px; text-transform: uppercase; text-shadow: 0 1px 2px #fff; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box { width: 1088px; height: 422px; position: absolute; top: 44px; left: 5px; border-radius: 11px; background: linear-gradient(136deg, #8e7453 0%, #e3c7a3 50%, #ae916a 85%, #8f7553 100%); box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll { position: absolute; overflow-x: scroll; font-size: 0px; overflow-y: auto; overflow-x: hidden; transform: rotate(90deg) scaleY(-1); top: -308px; left: 324px; width: 440px; height: 1072px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); border-radius: 10px; background-color: #5c473d; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll::-webkit-scrollbar { width: 10px; background-color: #9e8b7d; border-radius: 10px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 3px #796b60; background: linear-gradient(to bottom, #fff, #f5de80, #f4b766, #b26d12); border-radius: 10px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .change-bonus-rewads-wrap { white-space: nowrap; transform: rotate(-90deg) translateX(-216px) translateY(-202px) scaleX(-1); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all { width: 2502px; height: 74px; position: absolute; top: 152px; background: linear-gradient(180deg, #8e7453 0%, #e3c7a3 50%, #8f7553 70%, #ae916a 85%, #8f7553 100%); -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.45); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box-ff { width: 20px; height: 40px; position: absolute; top: 17px; margin-left: 2449px; background-image: url("../../img/change-prgbar-ff1.png"); background-size: 100%; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box-ff:before { content: ""; width: 20px; height: 40px; position: absolute; margin-left: -2429px; transform: scaleX(-1); background-image: url("../../img/change-prgbar-ff1.png"); background-size: 100%; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box { width: 2410px; height: 44px; position: absolute; top: 15px; margin-left: 40px; background: linear-gradient(180deg, #8e7453 0%, #e3c7a3 50%, #8f7553 70%, #ae916a 85%, #8f7553 100%); -webkit-border-radius: 6px; -moz-border-radius: 6px; -ms-border-radius: 6px; -o-border-radius: 6px; border-radius: 6px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box:before { content: ""; width: 2400px; height: 36px; position: absolute; top: 4px; margin-left: 4px; background: linear-gradient(0deg, #543f38 0%, #412d26 100%); -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box .prg-box { width: 2395px; height: 32px; position: absolute; top: 6px; margin-left: 6px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box .prgbar { width: 100%; height: 32px; position: relative; background: linear-gradient(0deg, #307ac7 0%, #82b4e8 100%); -webkit-border-radius: 2px; -moz-border-radius: 2px; -ms-border-radius: 2px; -o-border-radius: 2px; border-radius: 2px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll { width: 120px; position: absolute; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in { width: 100px; height: 100px; position: absolute; top: 10px; margin-left: 12px; background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%); -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in:before { content: ""; width: 3px; height: 42px; position: absolute; top: 100px; margin-left: 50px; background: linear-gradient(0deg, #fefa95 0%, #fffdd0 50%, #fefa95 100%); box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.45); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .inchest-pic { width: 80px; height: 80px; position: absolute; top: 0px; margin-left: 10px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .inchest-pic.hero-pic { height: auto; width: 65px; left: 8px; top: 3px; border-radius: 4px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-in-count { width: 100%; height: 20px; position: absolute; top: 76px; text-align: center; color: #572f14; font-size: 18px; font-weight: bold; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-in-check { width: 84px; height: 84px; position: absolute; top: 8px; margin-left: 8px; background-image: url("../../img/paycheck.png"); background-size: 100%; display: none; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-bonus-pic { width: 90px; height: 90px; margin-left: 5px; overflow: hidden; top: 5px; -webkit-border-radius: 8px; -moz-border-radius: 8px; -ms-border-radius: 8px; -o-border-radius: 8px; border-radius: 8px; position: absolute; display: none; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-pic { height: 90px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.check .openchest-in-check { display: block; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.picture .inchest-pic { display: none; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.picture .openchest-in-count { display: none; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.picture .openchest-bonus-pic { display: block; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .change-line { width: 15px; height: 60px; position: absolute; top: 150px; margin-left: 56px; background-image: url("../../img/change-line.png"); background-size: 100%; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in-num { width: 60px; height: 20px; position: absolute; top: 126px; margin-left: -4px; color: #fff; font-size: 20px; font-weight: bold; text-align: right; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s1 { margin-left: 100px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s2 { margin-left: 220px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s3 { margin-left: 340px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s4 { margin-left: 460px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s5 { margin-left: 580px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s6 { margin-left: 700px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s7 { margin-left: 820px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s8 { margin-left: 940px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s9 { margin-left: 1060px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s10 { margin-left: 1180px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s11 { margin-left: 1300px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s12 { margin-left: 1420px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s13 { margin-left: 1540px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s14 { margin-left: 1660px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s15 { margin-left: 1780px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s16 { margin-left: 1900px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s17 { margin-left: 2020px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s18 { margin-left: 2140px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s19 { margin-left: 2260px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s20 { margin-left: 2380px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s21 { margin-left: 2380px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot { top: 260px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot .openchest-in:before { content: ""; top: -42px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot .change-line { top: -92px; } .tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot .openchest-in-num { top: -32px; }
+.tab-panel.change-bonuses {
+  box-shadow: inset 0 4px 0 #9c8b7c;
+}
+.tab-panel.change-bonuses .tab-panel-box-title {
+  width: 300px;
+  height: 24px;
+  position: absolute;
+  top: 10px;
+  left: 399px;
+  background: linear-gradient(0deg, #ffe199 0%, #f4c657 18%, #ffe199 60%, #f4c557 85%, #ffe199 100%);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  color: #3c3737;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+  text-align: center;
+}
+.tab-panel.change-bonuses .change-top-menu {
+  width: 264px;
+  height: 34px;
+  position: absolute;
+  font-size: 0px;
+  z-index: 1000;
+  top: 9px;
+  left: 4px;
+}
+.tab-panel.change-bonuses .change-top-menu .color-btn {
+  width: 100%;
+  height: 100%;
+  line-height: 17px;
+}
+.tab-panel.change-bonuses .change-top-menu .color-btn .color-btn-text {
+  font-size: 16px;
+  top: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.tab-panel.change-bonuses .change-top-menu .color-btn .color-btn-text:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("../../img/darkworld-back-arrow.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  margin: 1px 6px 0 0;
+}
+.tab-panel.change-bonuses .change-top-menu .color-btn:active .color-btn-text {
+  top: 9px;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all {
+  width: 120px;
+  height: 494px;
+  position: absolute;
+  top: 8px;
+  margin-left: 10px;
+  z-index: 999;
+  background-color: #8f7a6b;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .bonuses-box-name {
+  width: 120px;
+  height: 34px;
+  position: absolute;
+  background: linear-gradient(180deg, #c68300 0%, #f4dfb6 50%, #c68200 70%, #fad489 85%, #c78302 100%);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+  line-height: 34px;
+  text-transform: uppercase;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 42px;
+  font-size: 0px;
+  text-align: center;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+  margin: 6px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .inchest-pic {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0px;
+  margin-left: -40px;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .inchest-pic.hero-pic {
+  height: auto;
+  width: 69px;
+  margin-left: 14px;
+  top: 2px;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-in-count {
+  width: 100%;
+  height: 26px;
+  position: absolute;
+  top: 72px;
+  text-align: center;
+  color: #572f14;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-in-check {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 8px;
+  margin-left: 8px;
+  background-image: url("../../img/paycheck.png");
+  background-size: 100%;
+  display: none;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-bonus-pic {
+  width: 90px;
+  height: 90px;
+  margin-left: 5px;
+  overflow: hidden;
+  top: 5px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  position: absolute;
+  display: none;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in .openchest-pic {
+  height: 90px;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.check .openchest-in-check {
+  display: block;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.picture .inchest-pic {
+  display: none;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.picture .openchest-in-count {
+  display: none;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.picture .openchest-bonus-pic {
+  display: block;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty {
+  background: #7d6b5d;
+  box-shadow: inset 0 0 50px 0 rgba(0, 0, 0, 0.15);
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty .inchest-pic {
+  display: none;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty .openchest-in-count {
+  display: none;
+}
+.tab-panel.change-bonuses .change-bonuses-box-all .openchest-in-box .openchest-in.empty .openchest-bonus-pic {
+  display: none;
+}
+.tab-panel.change-bonuses .change-main-right-side {
+  width: 1098px;
+  height: 507px;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  border-radius: 6px 14px 14px 14px;
+  background-color: #706054;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-reward-box {
+  background: linear-gradient(0deg, #bdee6e 0%, #7fa740 23%, #bdee6d 50%, #d3f699 100%);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  font-size: 0px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45), -1px 1px 0 1px #483e36, 80px 1px 0 1px #483e36, 131px 1px 0 1px #483e36, -1px -1px 0 1px #342d27, 80px -1px 0 1px #342d27, 131px -1px 0 1px #342d27;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.4));
+  width: 90px;
+  height: 34px;
+  position: absolute;
+  top: 5px;
+  left: 439px;
+  z-index: 999;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-reward-box:before {
+  content: "";
+  width: 120px;
+  height: 32px;
+  position: absolute;
+  top: 2px;
+  right: -126px;
+  background-image: url("../../img/noobpackback.png");
+  background-size: 100%;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-count,
+.tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-name {
+  width: 90px;
+  height: 20px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-count {
+  top: -15px;
+  right: -111px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-reward-box .change-reward-name {
+  top: 3px;
+  color: #26430a;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 2px #fff;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box {
+  width: 1088px;
+  height: 422px;
+  position: absolute;
+  top: 44px;
+  left: 5px;
+  border-radius: 11px;
+  background: linear-gradient(136deg, #8e7453 0%, #e3c7a3 50%, #ae916a 85%, #8f7553 100%);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll {
+  position: absolute;
+  overflow-x: scroll;
+  font-size: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(90deg) scaleY(-1);
+  top: -308px;
+  left: 324px;
+  width: 440px;
+  height: 1072px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #5c473d;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll::-webkit-scrollbar {
+  width: 10px;
+  background-color: #9e8b7d;
+  border-radius: 10px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #796b60;
+  background: linear-gradient(to bottom, #fff, #f5de80, #f4b766, #b26d12);
+  border-radius: 10px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .change-bonus-rewads-wrap {
+  white-space: nowrap;
+  transform: rotate(-90deg) translateX(-216px) translateY(-202px) scaleX(-1);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all {
+  width: 2502px;
+  height: 74px;
+  position: absolute;
+  top: 152px;
+  background: linear-gradient(180deg, #8e7453 0%, #e3c7a3 50%, #8f7553 70%, #ae916a 85%, #8f7553 100%);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.45);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box-ff {
+  width: 20px;
+  height: 40px;
+  position: absolute;
+  top: 17px;
+  margin-left: 2449px;
+  background-image: url("../../img/change-prgbar-ff1.png");
+  background-size: 100%;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box-ff:before {
+  content: "";
+  width: 20px;
+  height: 40px;
+  position: absolute;
+  margin-left: -2429px;
+  transform: scaleX(-1);
+  background-image: url("../../img/change-prgbar-ff1.png");
+  background-size: 100%;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box {
+  width: 2410px;
+  height: 44px;
+  position: absolute;
+  top: 15px;
+  margin-left: 40px;
+  background: linear-gradient(180deg, #8e7453 0%, #e3c7a3 50%, #8f7553 70%, #ae916a 85%, #8f7553 100%);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.45);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box:before {
+  content: "";
+  width: 2400px;
+  height: 36px;
+  position: absolute;
+  top: 4px;
+  margin-left: 4px;
+  background: linear-gradient(0deg, #543f38 0%, #412d26 100%);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box .prg-box {
+  width: 2395px;
+  height: 32px;
+  position: absolute;
+  top: 6px;
+  margin-left: 6px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .coll-prg-box-all .col-prg-box .prgbar {
+  width: 100%;
+  height: 32px;
+  position: relative;
+  background: linear-gradient(0deg, #307ac7 0%, #82b4e8 100%);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll {
+  width: 120px;
+  position: absolute;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  margin-left: 12px;
+  background: linear-gradient(0deg, #e9b039 0%, #fffe9a 100%);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in:before {
+  content: "";
+  width: 3px;
+  height: 42px;
+  position: absolute;
+  top: 100px;
+  margin-left: 50px;
+  background: linear-gradient(0deg, #fefa95 0%, #fffdd0 50%, #fefa95 100%);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.45);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .inchest-pic {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0px;
+  margin-left: 10px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .inchest-pic.hero-pic {
+  height: auto;
+  width: 65px;
+  left: 8px;
+  top: 3px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-in-count {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  top: 76px;
+  text-align: center;
+  color: #572f14;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-in-check {
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 8px;
+  margin-left: 8px;
+  background-image: url("../../img/paycheck.png");
+  background-size: 100%;
+  display: none;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-bonus-pic {
+  width: 90px;
+  height: 90px;
+  margin-left: 5px;
+  overflow: hidden;
+  top: 5px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  position: absolute;
+  display: none;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in .openchest-pic {
+  height: 90px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.check .openchest-in-check {
+  display: block;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.picture .inchest-pic {
+  display: none;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.picture .openchest-in-count {
+  display: none;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in.picture .openchest-bonus-pic {
+  display: block;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .change-line {
+  width: 15px;
+  height: 60px;
+  position: absolute;
+  top: 150px;
+  margin-left: 56px;
+  background-image: url("../../img/change-line.png");
+  background-size: 100%;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll .openchest-in-num {
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  top: 126px;
+  margin-left: -4px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s1 {
+  margin-left: 100px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s2 {
+  margin-left: 220px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s3 {
+  margin-left: 340px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s4 {
+  margin-left: 460px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s5 {
+  margin-left: 580px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s6 {
+  margin-left: 700px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s7 {
+  margin-left: 820px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s8 {
+  margin-left: 940px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s9 {
+  margin-left: 1060px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s10 {
+  margin-left: 1180px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s11 {
+  margin-left: 1300px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s12 {
+  margin-left: 1420px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s13 {
+  margin-left: 1540px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s14 {
+  margin-left: 1660px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s15 {
+  margin-left: 1780px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s16 {
+  margin-left: 1900px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s17 {
+  margin-left: 2020px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s18 {
+  margin-left: 2140px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s19 {
+  margin-left: 2260px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s20 {
+  margin-left: 2380px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.s21 {
+  margin-left: 2380px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot {
+  top: 260px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot .openchest-in:before {
+  content: "";
+  top: -42px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot .change-line {
+  top: -92px;
+}
+.tab-panel.change-bonuses .change-main-right-side .change-bonus-main-box .change-bonus-main-scroll .box-coll.bot .openchest-in-num {
+  top: -32px;
+}

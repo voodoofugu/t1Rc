@@ -29,10 +29,33 @@ function compileSCSSFile(sourceFile) {
     }
   );
 
-  cssContent = cssContent.replace(/\s+/g, " ");
-  cssContent = cssContent.replace(/\n/g, "");
-  cssContent = cssContent.replace(/\r/g, "");
-  cssContent = cssContent.replace(/\t/g, "");
+  // cssContent = cssContent.replace(
+  //   /(^|\s)\b([a-z]+)\b(?=[^{}]*\{)/g,
+  //   (match, before, tag) => {
+  //     return before + "> " + tag;
+  //   }
+  // );
+  // cssContent = cssContent.replace(
+  //   /(@([a-z\-]+))\s(>)/g,
+  //   (match, word, space) => {
+  //     return word + " ";
+  //   }
+  // );
+  cssContent = cssContent.replace(/(^|\s)(body)/g, (match, body) => {
+    return "\n.likeBody";
+  });
+
+  // cssContent = cssContent.replace(
+  //   /(^|,\s|\}|,)([.#][\w-]+|[a-z]+)(?=[^{]*\{)/g,
+  //   (match, inset, selector) => {
+  //     return ".changesClass " + inset + selector;
+  //   }
+  // );
+
+  // cssContent = cssContent.replace(/\s+/g, " ");
+  // cssContent = cssContent.replace(/\n/g, "");
+  // cssContent = cssContent.replace(/\r/g, "");
+  // cssContent = cssContent.replace(/\t/g, "");
 
   fs.writeFileSync(outputFilePath, cssContent);
   console.log(
