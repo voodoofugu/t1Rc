@@ -1,12 +1,10 @@
 import React from "react";
-import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["ScreenUnipopWavepack10"]);
 // import pageStyles from "../styleComponents/ScreenUnipopWavepack10";
 
 const MainScreen22Unipop04wavepack10Component = () => {
   return (
-    // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">
       <div className="main-bg"></div>
       <div className="popup-layer" style={{ display: "block" }}>
@@ -108,7 +106,6 @@ const MainScreen22Unipop04wavepack10Component = () => {
         </div>
       </div>
     </div>
-    // </HelmetStyleWrap>
   );
 };
 

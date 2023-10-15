@@ -8,17 +8,25 @@ const outputDir = "./src/styles/css";
 
 // механика
 
-function compileSCSSFile(sourceFile) {
+async function compileSCSSFile(sourceFile) {
   const sourceFilePath = path.join(sourceDir, sourceFile);
   const outputFilePath = path.join(
     outputDir,
     sourceFile.replace(".scss", ".css")
   );
 
-  const result = sass.renderSync({ file: sourceFilePath });
-  let cssContent = result.css.toString();
+  const fileDescriptor = fs.openSync(sourceFilePath, "r");
+  const scssContent = fs.readFileSync(fileDescriptor, "utf8");
+  const wrappedSCSSContent = `.changesClass {\n${scssContent}\n}`;
+  // fs.closeSync(fileDescriptor);
 
-  cssContent = cssContent.replace(
+  const result = await sass.compileAsync(wrappedSCSSContent, {
+    // style: "compressed",
+    // sourceMap: true,
+  });
+  const cssContent = result.css.toString();
+
+  let modifiedContent = cssContent.replace(
     /url\((?:"|')?([^"')]+)(?:"|')?\)/g,
     (match, url) => {
       if (url.startsWith("#") || url.startsWith("http")) {
@@ -29,37 +37,25 @@ function compileSCSSFile(sourceFile) {
     }
   );
 
-  // cssContent = cssContent.replace(
-  //   /(^|\s)\b([a-z]+)\b(?=[^{}]*\{)/g,
-  //   (match, before, tag) => {
-  //     return before + "> " + tag;
-  //   }
-  // );
-  // cssContent = cssContent.replace(
-  //   /(@([a-z\-]+))\s(>)/g,
-  //   (match, word, space) => {
-  //     return word + " ";
-  //   }
-  // );
-  cssContent = cssContent.replace(/(^|\s)(body)/g, (match, body) => {
+  modifiedContent = modifiedContent.replace(/(^|\s)(body)/g, (match, body) => {
     return "\n.likeBody";
   });
 
-  // cssContent = cssContent.replace(
-  //   /(^|,\s|\}|,)([.#][\w-]+|[a-z]+)(?=[^{]*\{)/g,
-  //   (match, inset, selector) => {
-  //     return ".changesClass " + inset + selector;
+  // modifiedContent = modifiedContent.replace(
+  //   /(^)([.|#|\w])/g,
+  //   (match, before, selector) => {
+  //     return ".changesClass " + selector;
   //   }
   // );
 
-  // cssContent = cssContent.replace(/\s+/g, " ");
-  // cssContent = cssContent.replace(/\n/g, "");
-  // cssContent = cssContent.replace(/\r/g, "");
-  // cssContent = cssContent.replace(/\t/g, "");
+  // modifiedContent = modifiedContent.replace(/\s+/g, " ");
+  // modifiedContent = modifiedContent.replace(/\n/g, "");
+  // modifiedContent = modifiedContent.replace(/\r/g, "");
+  // modifiedContent = modifiedContent.replace(/\t/g, "");
 
-  fs.writeFileSync(outputFilePath, cssContent);
+  fs.writeFileSync(outputFilePath, modifiedContent);
   console.log(
-    `File "${outputFilePath}" compiled, URLs updated, and minimized.`
+    `Файл "${outputFilePath}" скомпилирован, обновлены ссылки и сжат.`
   );
 }
 
