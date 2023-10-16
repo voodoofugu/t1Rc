@@ -8,14 +8,10 @@ const outputDir = "./src/styles/css";
 
 // механика
 
-// Функция для обертки SCSS-файла и сохранения его в outputDir
 async function wrapSCSSFile(sourceFile) {
   const sourceFilePath = path.join(sourceDir, sourceFile);
   const outputFilePath = path.join(outputDir, sourceFile);
-
-  // Читаем исходный файл SCSS
   const sourceContent = fs.readFileSync(sourceFilePath, "utf-8");
-
   // Разделяем контент на строки
   const lines = sourceContent.split("\n");
 
@@ -35,11 +31,9 @@ async function wrapSCSSFile(sourceFile) {
 
   // Оборачиваем SCSS-контент в .changesClass {}
   const wrappedContent = `.changesClass {\n${filteredLines.join("\n")}\n}`;
-
   // Добавляем строки @charset и @import перед обернутым контентом
   const finalContent = charsetImports.join("\n") + "\n" + wrappedContent;
 
-  // Сохраняем обернутый SCSS в outputDir
   fs.writeFileSync(outputFilePath, finalContent);
   console.log(`Файл "${outputFilePath}" обернут в .changesClass и сохранен.`);
 }
