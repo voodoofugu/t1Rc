@@ -8,22 +8,56 @@ const outputDir = "./src/styles/css";
 
 // механика
 
-async function compileSCSSFile(sourceFile) {
+// Функция для обертки SCSS-файла и сохранения его в outputDir
+async function wrapSCSSFile(sourceFile) {
   const sourceFilePath = path.join(sourceDir, sourceFile);
+  const outputFilePath = path.join(outputDir, sourceFile);
+
+  // Читаем исходный файл SCSS
+  const sourceContent = fs.readFileSync(sourceFilePath, "utf-8");
+
+  // Разделяем контент на строки
+  const lines = sourceContent.split("\n");
+
+  // Отфильтровываем строки, учитывая @charset и @import
+  const charsetImports = [];
+  const filteredLines = lines.filter((line) => {
+    if (
+      line.trim().startsWith("@charset") ||
+      line.trim().startsWith("@import")
+    ) {
+      // Сохраняем строки @charset и @import
+      charsetImports.push(line);
+      return false;
+    }
+    return true;
+  });
+
+  // Оборачиваем SCSS-контент в .changesClass {}
+  const wrappedContent = `.changesClass {\n${filteredLines.join("\n")}\n}`;
+
+  // Добавляем строки @charset и @import перед обернутым контентом
+  const finalContent = charsetImports.join("\n") + "\n" + wrappedContent;
+
+  // Сохраняем обернутый SCSS в outputDir
+  fs.writeFileSync(outputFilePath, finalContent);
+  console.log(`Файл "${outputFilePath}" обернут в .changesClass и сохранен.`);
+}
+
+async function compileSCSSFile(sourceFile) {
+  const sourceFilePath = path.join(outputDir, sourceFile);
   const outputFilePath = path.join(
     outputDir,
     sourceFile.replace(".scss", ".css")
   );
 
-  const fileDescriptor = fs.openSync(sourceFilePath, "r");
-  const scssContent = fs.readFileSync(fileDescriptor, "utf8");
-  const wrappedSCSSContent = `.changesClass {\n${scssContent}\n}`;
-  // fs.closeSync(fileDescriptor);
-
-  const result = await sass.compileAsync(wrappedSCSSContent, {
-    // style: "compressed",
-    // sourceMap: true,
-  });
+  const result = await sass
+    .compileAsync(sourceFilePath, {
+      // style: "compressed",
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   const cssContent = result.css.toString();
 
   let modifiedContent = cssContent.replace(
@@ -41,13 +75,6 @@ async function compileSCSSFile(sourceFile) {
     return "\n.likeBody";
   });
 
-  // modifiedContent = modifiedContent.replace(
-  //   /(^)([.|#|\w])/g,
-  //   (match, before, selector) => {
-  //     return ".changesClass " + selector;
-  //   }
-  // );
-
   // modifiedContent = modifiedContent.replace(/\s+/g, " ");
   // modifiedContent = modifiedContent.replace(/\n/g, "");
   // modifiedContent = modifiedContent.replace(/\r/g, "");
@@ -61,6 +88,7 @@ async function compileSCSSFile(sourceFile) {
 
 function compileSCSSIfFileEndsWithSCSS(fileName) {
   if (fileName.endsWith(".scss")) {
+    wrapSCSSFile(fileName);
     compileSCSSFile(fileName);
   }
 }
