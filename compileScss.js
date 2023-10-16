@@ -11,6 +11,12 @@ const outputDir = "./src/styles/css";
 async function wrapSCSSFile(sourceFile) {
   const sourceFilePath = path.join(sourceDir, sourceFile);
   const outputFilePath = path.join(outputDir, sourceFile);
+
+  // Игнорируем
+  if (sourceFile === "sass_commons.scss") {
+    return sourceFile;
+  }
+
   const sourceContent = fs.readFileSync(sourceFilePath, "utf-8");
   // Разделяем контент на строки
   const lines = sourceContent.split("\n");
@@ -20,9 +26,10 @@ async function wrapSCSSFile(sourceFile) {
   const filteredLines = lines.filter((line) => {
     if (
       line.trim().startsWith("@charset") ||
-      line.trim().startsWith("@import")
+      line.trim().startsWith("@import") ||
+      line.includes("sass_commons.scss") // Игнорируем строки, содержащие "sass_commons.scss"
     ) {
-      // Сохраняем строки @charset и @import
+      // Сохраняем строки @charset, @import и "sass_commons.scss"
       charsetImports.push(line);
       return false;
     }
@@ -30,7 +37,10 @@ async function wrapSCSSFile(sourceFile) {
   });
 
   // Оборачиваем SCSS-контент в .changesClass {}
-  const wrappedContent = `.changesClass {\n${filteredLines.join("\n")}\n}`;
+  const indent = " "; // 1 пробел для отступа
+  const wrappedContent = `.changesClass {\n${filteredLines
+    .map((line) => indent + line)
+    .join("\n")}\n}`;
   // Добавляем строки @charset и @import перед обернутым контентом
   const finalContent = charsetImports.join("\n") + "\n" + wrappedContent;
 
