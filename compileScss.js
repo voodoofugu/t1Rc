@@ -1,22 +1,26 @@
-const sass = require("sass");
-const fs = require("fs");
-const path = require("path");
-const chokidar = require("chokidar");
+import * as sass from "sass";
+import * as fs from "fs";
+import * as path from "path";
+import * as chokidar from "chokidar";
+import transformCssFileNames from "./src/scripts/forBild/transformCssFileNames.js";
 
 const sourceDir = "./src/styles/scss";
 const outputDir = "./src/styles/css";
 
-// механика
-
+// добавление .changesClass
 async function wrapSCSSFile(sourceFile) {
   const sourceFilePath = path.join(sourceDir, sourceFile);
-  const outputFilePath = path.join(outputDir, sourceFile);
 
-  // Игнорируем
+  // Если это файл sass_commons.scss, вернем его содержимое
   if (sourceFile === "sass_commons.scss") {
-    return sourceFile;
+    const sourceContent = fs.readFileSync(sourceFilePath, "utf-8");
+    const newFilePath = path.join(outputDir, sourceFile);
+    fs.writeFileSync(newFilePath, sourceContent);
+    console.log(`Файл "${newFilePath}" создан.`);
+    return;
   }
 
+  const outputFilePath = path.join(outputDir, sourceFile);
   const sourceContent = fs.readFileSync(sourceFilePath, "utf-8");
   // Разделяем контент на строки
   const lines = sourceContent.split("\n");
@@ -26,10 +30,9 @@ async function wrapSCSSFile(sourceFile) {
   const filteredLines = lines.filter((line) => {
     if (
       line.trim().startsWith("@charset") ||
-      line.trim().startsWith("@import") ||
-      line.includes("sass_commons.scss") // Игнорируем строки, содержащие "sass_commons.scss"
+      line.trim().startsWith("@import")
     ) {
-      // Сохраняем строки @charset, @import и "sass_commons.scss"
+      // Сохраняем строки @charset и @import
       charsetImports.push(line);
       return false;
     }
@@ -45,25 +48,27 @@ async function wrapSCSSFile(sourceFile) {
   const finalContent = charsetImports.join("\n") + "\n" + wrappedContent;
 
   fs.writeFileSync(outputFilePath, finalContent);
-  console.log(`Файл "${outputFilePath}" обернут в .changesClass и сохранен.`);
+  console.log(
+    `"${outputFilePath}" - обернут в .changesClass 🤗 и сохранен 🐱‍👤`
+  );
 }
-
+// компиляция
 async function compileSCSSFile(sourceFile) {
   const sourceFilePath = path.join(outputDir, sourceFile);
   const outputFilePath = path.join(
     outputDir,
     sourceFile.replace(".scss", ".css")
   );
-
+  // компиляция и сжатие
   const result = await sass
     .compileAsync(sourceFilePath, {
-      // style: "compressed",
+      style: "compressed",
     })
     .catch((error) => {
       console.error(error);
     });
   const cssContent = result.css.toString();
-
+  // заменяем url всех img
   let modifiedContent = cssContent.replace(
     /url\((?:"|')?([^"')]+)(?:"|')?\)/g,
     (match, url) => {
@@ -74,22 +79,22 @@ async function compileSCSSFile(sourceFile) {
       }
     }
   );
-
+  // заменяем тег body на класс .likeBody
   modifiedContent = modifiedContent.replace(/(^|\s)(body)/g, (match, body) => {
-    return "\n.likeBody";
+    return ".likeBody";
   });
-
-  // modifiedContent = modifiedContent.replace(/\s+/g, " ");
-  // modifiedContent = modifiedContent.replace(/\n/g, "");
-  // modifiedContent = modifiedContent.replace(/\r/g, "");
-  // modifiedContent = modifiedContent.replace(/\t/g, "");
+  // заменяем все классы .changesClass на имя файла
+  modifiedContent = modifiedContent.replace(
+    /\changesClass/g,
+    transformCssFileNames([sourceFile.replace(".scss", "")])[0]
+  );
 
   fs.writeFileSync(outputFilePath, modifiedContent);
   console.log(
-    `Файл "${outputFilePath}" скомпилирован, обновлены ссылки и сжат.`
+    `"${outputFilePath}" скомпилирован 🔥, сжат 💪, а ссылки обновлены 😎`
   );
 }
-
+// преобразование
 function compileSCSSIfFileEndsWithSCSS(fileName) {
   if (fileName.endsWith(".scss")) {
     wrapSCSSFile(fileName);
@@ -98,7 +103,6 @@ function compileSCSSIfFileEndsWithSCSS(fileName) {
 }
 
 // функционал
-
 function compileAllSCSSFiles() {
   fs.readdirSync(sourceDir).forEach((fileName) => {
     compileSCSSIfFileEndsWithSCSS(fileName);
@@ -111,7 +115,7 @@ function watchSCSSChanges() {
   watcher.on("change", (filePath) => {
     const fileName = path.basename(filePath);
     compileSCSSIfFileEndsWithSCSS(fileName);
-    console.log(`File "${filePath}" changed. Recompiling...`);
+    console.log(`"${filePath}" изменен ✨. Пересобираем...🤔`);
   });
 }
 

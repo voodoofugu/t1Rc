@@ -2,6 +2,7 @@ import React from "react";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = [
+  "01-all",
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
