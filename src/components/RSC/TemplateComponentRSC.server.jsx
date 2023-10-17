@@ -6,7 +6,12 @@ const TemplateComponentLazy = lazy(() =>
   import(`../../pagesComponents/TemplateComponent.jsx`)
 );
 
-export default async function TemplateComponentRSC() {
+// async function fetchData() {
+//   const response = await axios.get('/api/items');
+//   return response.data;
+// }
+
+export default function TemplateComponentRSC() {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
