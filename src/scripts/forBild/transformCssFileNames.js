@@ -8,4 +8,4 @@ function transformCssFileNames(str) {
   });
 }
 
-export default transformCssFileNames;
+module.exports = transformCssFileNames;

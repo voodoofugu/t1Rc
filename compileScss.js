@@ -1,8 +1,8 @@
-import * as sass from "sass";
-import * as fs from "fs";
-import * as path from "path";
-import * as chokidar from "chokidar";
-import transformCssFileNames from "./src/scripts/forBild/transformCssFileNames.js";
+const fs = require("fs");
+const path = require("path");
+const sass = require("sass");
+const chokidar = require("chokidar");
+const transformCssFileNames = require("./src/scripts/forBild/transformCssFileNames.js");
 
 const sourceDir = "./src/styles/scss";
 const outputDir = "./src/styles/css";
@@ -16,7 +16,7 @@ async function wrapSCSSFile(sourceFile) {
     const sourceContent = fs.readFileSync(sourceFilePath, "utf-8");
     const newFilePath = path.join(outputDir, sourceFile);
     fs.writeFileSync(newFilePath, sourceContent);
-    console.log(`Файл "${newFilePath}" создан.`);
+    console.log(`Файл "${newFilePath}" создан, но не обёрнут 😐`);
     return;
   }
 
@@ -48,52 +48,66 @@ async function wrapSCSSFile(sourceFile) {
   const finalContent = charsetImports.join("\n") + "\n" + wrappedContent;
 
   fs.writeFileSync(outputFilePath, finalContent);
-  console.log(
-    `"${outputFilePath}" - обернут в .changesClass 🤗 и сохранен 🐱‍👤`
-  );
+  console.log(`"${outputFilePath}" - создан и обернут в .changesClass 🤗`);
 }
 // компиляция
 async function compileSCSSFile(sourceFile) {
-  const sourceFilePath = path.join(outputDir, sourceFile);
-  const outputFilePath = path.join(
-    outputDir,
-    sourceFile.replace(".scss", ".css")
-  );
-  // компиляция и сжатие
-  const result = await sass
-    .compileAsync(sourceFilePath, {
-      style: "compressed",
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  const cssContent = result.css.toString();
-  // заменяем url всех img
-  let modifiedContent = cssContent.replace(
-    /url\((?:"|')?([^"')]+)(?:"|')?\)/g,
-    (match, url) => {
-      if (url.startsWith("#") || url.startsWith("http")) {
-        return `url(${url})`;
-      } else {
-        return `url("../../img/${url}")`;
-      }
-    }
-  );
-  // заменяем тег body на класс .likeBody
-  modifiedContent = modifiedContent.replace(/(^|\s)(body)/g, (match, body) => {
-    return ".likeBody";
-  });
-  // заменяем все классы .changesClass на имя файла
-  modifiedContent = modifiedContent.replace(
-    /\changesClass/g,
-    transformCssFileNames([sourceFile.replace(".scss", "")])[0]
-  );
+  try {
+    const sourceFilePath = path.join(outputDir, sourceFile);
+    const outputFilePath = path.join(
+      outputDir,
+      sourceFile.replace(".scss", ".css")
+    );
 
-  fs.writeFileSync(outputFilePath, modifiedContent);
-  console.log(
-    `"${outputFilePath}" скомпилирован 🔥, сжат 💪, а ссылки обновлены 😎`
-  );
+    // компиляция и сжатие
+    const result = await sass.compileAsync(sourceFilePath, {
+      style: "compressed",
+    });
+
+    if (result && result.css) {
+      const cssContent = result.css.toString();
+      // заменяем url всех img
+      let modifiedContent = cssContent.replace(
+        /url\((?:"|')?([^"')]+)(?:"|')?\)/g,
+        (match, url) => {
+          if (url.startsWith("#") || url.startsWith("http")) {
+            return `url(${url})`;
+          } else {
+            return `url("../../img/${url}")`;
+          }
+        }
+      );
+      // заменяем тег body на класс .likeBody
+      modifiedContent = modifiedContent.replace(
+        /(^|\s)(body)/g,
+        (match, body) => {
+          return ".likeBody";
+        }
+      );
+      // заменяем все классы .changesClass на имя файла
+      modifiedContent = modifiedContent.replace(
+        /changesClass/g,
+        transformCssFileNames([sourceFile.replace(".scss", "")])[0]
+      );
+
+      fs.writeFileSync(outputFilePath, modifiedContent);
+      console.log(
+        `"${outputFilePath}" скомпилирован, сжат, img ссылки обновлены 💪`
+      );
+
+      // Удаление .scss файла кроме sass_commons
+      if (sourceFile !== "sass_commons.scss") {
+        fs.unlinkSync(sourceFilePath);
+      }
+    } else {
+      console.error(`Ошибка компиляции SCSS, не удалось получить CSS 🧐
+      Файл "${sourceFile}" может быть пуст`);
+    }
+  } catch (error) {
+    console.error(`Ошибка компиляции в "${sourceFile}" 🔥 `, error);
+  }
 }
+
 // преобразование
 function compileSCSSIfFileEndsWithSCSS(fileName) {
   if (fileName.endsWith(".scss")) {
@@ -115,7 +129,7 @@ function watchSCSSChanges() {
   watcher.on("change", (filePath) => {
     const fileName = path.basename(filePath);
     compileSCSSIfFileEndsWithSCSS(fileName);
-    console.log(`"${filePath}" изменен ✨. Пересобираем...🤔`);
+    console.log(`"${filePath}" изменен ✨\n Пересобираем...🤔`);
   });
 }
 
