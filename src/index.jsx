@@ -38,33 +38,3 @@ if (Root) {
 if (module.hot) {
   module.hot.accept();
 }
-
-// import React, { StrictMode } from "react";
-// import { createRoot } from "react-dom/client";
-// import { HelmetProvider } from "react-helmet-async";
-
-// import HelmetComponentRSC from "./components/RSC/HelmetComponentRSC.server";
-// import TemplateComponentRSC from "./components/RSC/TemplateComponentRSC.server";
-
-// const Root = document.getElementById("root");
-
-// if (Root) {
-//   if (!window.__REACT_ROOT__) {
-//     window.__REACT_ROOT__ = createRoot(Root);
-//   }
-
-//   window.__REACT_ROOT__.render(
-//     <StrictMode>
-//       <HelmetProvider>
-//         <HelmetComponentRSC />
-//         <TemplateComponentRSC />
-//       </HelmetProvider>
-//     </StrictMode>
-//   );
-// } else {
-//   console.warn("Element with id 'root' not found.");
-// }
-
-// if (module.hot) {
-//   module.hot.accept();
-// }

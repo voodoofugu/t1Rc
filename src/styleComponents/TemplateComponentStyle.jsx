@@ -545,4 +545,4 @@ const TemplateComponentStyle = `
     }
 `;
 
-export default TemplateComponentStyle;
+module.exports = TemplateComponentStyle;
