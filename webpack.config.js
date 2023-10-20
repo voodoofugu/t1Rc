@@ -28,19 +28,14 @@ module.exports = {
         },
       },
       {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
+        test: /\.(ts|tsx|js|jsx)$/,
+        exclude: /(node_modules|scripts)/,
         use: {
-          loader: "babel-loader",
+          loader: "swc-loader",
           options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
+            // Add your SWC options
           },
         },
-      },
-      {
-        test: /\.ts$/,
-        use: "ts-loader",
-        exclude: /node_modules/,
       },
     ],
   },

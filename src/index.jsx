@@ -10,6 +10,8 @@ const TemplateComponentLazy = lazy(() =>
   import(`./pagesComponents/TemplateComponent.jsx`)
 );
 
+import Message from "./components/RSC/Message.server.jsx";
+
 const Root = document.getElementById("root");
 
 if (Root) {
@@ -29,6 +31,7 @@ if (Root) {
           </Suspense>
         </HelmetProvider>
       </BrowserRouter>
+      <Message id={1} />
     </StrictMode>
   );
 } else {
