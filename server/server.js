@@ -11,19 +11,20 @@ import MainScreen16FortunaHtml from "../src/components/RSC/MainScreen16FortunaHt
 const app = express();
 const port = 4000;
 
-app.get("/MainScreen16FortunaHtml", async (req, res) => {
+app.get("/*", async (req, res) => {
   const MyComponent = React.createElement(MainScreen16FortunaHtml, {
     prop: "value",
   });
   const jsxString = ReactDOMServer.renderToString(MyComponent);
   const template = fs.readFileSync(htmlContent, "utf-8");
 
-  const page = template.replace("<!-- CONTENT -->", jsxString);
+  const additionalDiv = "<div>My App</div>";
 
-  // Сохранение HTML в файл index.html
-  fs.writeFileSync(htmlOutput, page);
+  const page = template.replace("<!-- CONTENT -->", jsxString + additionalDiv);
 
   res.send(page);
+
+  fs.writeFileSync(htmlOutput, page);
 });
 
 app.listen(port, () => {
