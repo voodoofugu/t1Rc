@@ -1,13 +1,22 @@
 import React from "react";
-import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
-// import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
-// const stylePairs = generateStylePairs(["ScreenFortunaRoundRewards"]);
 // import pageStyles from "../styleComponents/ScreenFortunaRoundRewards";
+// import { db } from "../server/db.server";
+// import { Helmet } from "react-helmet-async";
 
 const MainScreen16FortunaRoundRewardsPopupComponent = () => {
+  // const message = db.messages[1]; // Получаем сообщение по id
+  // if (!message) {
+  //   return <div>Сообщение не найдено.</div>;
+  // }
   return (
-    // <HelmetStyleWrap idForStyle={idForStyle}>
     <div className="main world1">
+      {/* <Helmet>
+        <style>`werwer`</style>
+      </Helmet>
+      <div className="messageQwe">
+        <h1>{message.title}</h1>
+        <p>{message.body}</p>
+      </div> */}
       <div className="main-bg"></div>
       <div className="popup-layer" style={{ display: "block" }}>
         <div className="screen-blend-55" style={{ display: "block" }}></div>
@@ -205,7 +214,6 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
         </div>
       </div>
     </div>
-    // </HelmetStyleWrap>
   );
 };
 

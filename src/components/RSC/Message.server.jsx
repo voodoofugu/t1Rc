@@ -1,5 +1,5 @@
 import React from "react";
-import { db } from "../../server/db.server";
+import { db } from "../../../server/db.server";
 
 function Message({ id }) {
   const message = db.messages[id]; // Получаем сообщение по id

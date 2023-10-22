@@ -6,7 +6,7 @@ const path = require("path");
 
 function generateHtmlPlugins() {
   return new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, "src", "htmlContent.ejs"),
+    template: path.resolve(__dirname, "src", "index.html"),
     filename: "index.html", // этой строчкой мы и определяем какой файл будет открываться по адресу сервера
     title: "Template",
   });

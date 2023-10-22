@@ -1,5 +1,7 @@
 import React, { Suspense, lazy, StrictMode } from "react";
+import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
+import { hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -10,16 +12,11 @@ const TemplateComponentLazy = lazy(() =>
   import(`./pagesComponents/TemplateComponent.jsx`)
 );
 
+import MainScreen16FortunaHtml from "./components/RSC/MainScreen16FortunaHtml.jsx";
 import Message from "./components/RSC/Message.server.jsx";
 
-const Root = document.getElementById("root");
-
-if (Root) {
-  if (!window.__REACT_ROOT__) {
-    window.__REACT_ROOT__ = createRoot(Root);
-  }
-
-  window.__REACT_ROOT__.render(
+function App() {
+  return (
     <StrictMode>
       <BrowserRouter>
         <HelmetProvider>
@@ -31,13 +28,14 @@ if (Root) {
           </Suspense>
         </HelmetProvider>
       </BrowserRouter>
-      <Message id={1} />
     </StrictMode>
   );
-} else {
-  console.warn("Element with id 'root' not found.");
 }
 
-if (module.hot) {
-  module.hot.accept();
-}
+const root = document.getElementById("root");
+const reactRoot = createRoot(root);
+reactRoot.render(<App />);
+
+const container = document.getElementById("MainScreen16FortunaHtml");
+const reactRootMainScreen16 = createRoot(container);
+reactRootMainScreen16.render(<Message id={1} />);
