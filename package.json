@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "css-loader": "^6.7.3",
+    "ejs": "^3.1.9",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.1",
     "react-fetch": "^0.0.2",

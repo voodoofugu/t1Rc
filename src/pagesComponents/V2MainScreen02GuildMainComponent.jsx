@@ -1,5 +1,5 @@
 import React from "react";
-import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
+// import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["V2ScreenGuildMain"]);
 // import pageStyles from "../styleComponents/V2ScreenGuildMain";

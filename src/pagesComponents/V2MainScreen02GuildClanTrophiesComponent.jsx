@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
+// import HelmetStyleWrap from "../components/HelmetStyleWrap.jsx";
 // import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
 // const stylePairs = generateStylePairs(["ClanTrophies", "ScreenSuperhero"]);
 // import pageStyles from "../styleComponents/GfSalePop";

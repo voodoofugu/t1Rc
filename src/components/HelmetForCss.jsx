@@ -7,8 +7,8 @@ const HelmetForCss = ({ cssFiles, children }) => {
   const [styles, setStyles] = useState([]);
 
   useEffect(() => {
-    // Создаем текст стилей с помощью функции createStyleText
-    createStyleText(cssFiles)
+    // Загружаем стили асинхронно
+    importStyles(cssFiles)
       .then((cssTextArray) => {
         setStyles(cssTextArray);
       })
@@ -33,6 +33,15 @@ const HelmetForCss = ({ cssFiles, children }) => {
       </div>
     </>
   );
+};
+
+const importStyles = async (cssFiles) => {
+  try {
+    const cssTextArray = await createStyleText(cssFiles);
+    return cssTextArray;
+  } catch (error) {
+    throw error;
+  }
 };
 
 export default HelmetForCss;
