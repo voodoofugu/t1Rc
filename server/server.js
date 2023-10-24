@@ -1,31 +1,30 @@
-import express from "express";
-import React from "react";
-import ReactDOMServer from "react-dom/server";
-import fs from "fs";
-import path from "path";
-
-const htmlContent = path.join(__dirname, "..", "src", "htmlContent.ejs");
-const htmlOutput = path.join(__dirname, "..", "src", "index.html");
-import MainScreen16FortunaHtml from "../src/components/RSC/MainScreen16FortunaHtml";
-// import { V2MainScreen02GuildClanTrophiesComponent } from "../src/pagesComponents/V2MainScreen02GuildClanTrophiesComponent";
+const express = require("express");
+const fs = require("fs");
+const path = require("path");
+const React = require("react");
+const ReactDOMServer = require("react-dom/server");
 
 const app = express();
 const port = 4000;
 
-app.get("/", async (req, res) => {
-  const MyComponent = React.createElement(MainScreen16FortunaHtml, {
-    prop: "value",
-  });
-  const jsxString = ReactDOMServer.renderToString(MyComponent);
-  // const template = fs.readFileSync(htmlContent, "utf-8");
+const App = require("../src/components/App").default;
 
-  // const additionalDiv = "<div>My App</div>";
+app.use("*", (req, res) => {
+  let indexHTML = fs.readFileSync(
+    path.resolve(__dirname, "../src/htmlContent.ejs"),
+    { encoding: "utf8" }
+  );
 
-  // const page = template.replace("<!-- CONTENT -->", jsxString + additionalDiv);
+  let rootHTML = ReactDOMServer.renderToString(<App />);
+  indexHTML = indexHTML.replace(
+    '<div id="root"></div>',
+    `<div id="root">${rootHTML}</div>`
+  );
 
-  res.send(jsxString);
+  res.contentType("text/html");
+  res.status(200);
 
-  // fs.writeFileSync(htmlOutput, page);
+  return res.send(indexHTML);
 });
 
 app.listen(port, () => {

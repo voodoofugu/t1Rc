@@ -1,9 +1,6 @@
 {
-  "watch": ["SSRComponent.jsx"],
-  "ext": "jsx",
-  "execMap": {
-    "jsx": "node --experimental-modules --loader ts-node/esm"
-  },
+  "watch": ["./server/server.js"],
+  "ext": "js",
   "delay": 1000,
   "legacy-watch": true
 }

@@ -1,0 +1,5 @@
+import path from "path";
+require( '@babel/register')( {
+    configFile: path.resolve( __dirname, '../babel.config.js' ),
+} );
+require("./server.js");
