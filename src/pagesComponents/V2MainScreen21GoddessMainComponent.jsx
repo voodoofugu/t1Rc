@@ -113,42 +113,42 @@ const V2MainScreen21GoddessMainComponent = () => {
                   <div className="hero-avatar-box cursor-pointer">
                     <img
                       className="hero-avatar"
-                      src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                      src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                       loading="lazy"
                     />
                   </div>
                   <div className="hero-avatar-box cursor-pointer">
                     <img
                       className="hero-avatar"
-                      src="img/images/goddess/goddess-2/x2/ava/goddess-2-1-ava.jpg"
+                      src="img/images/goddess/goddess-2/x2/ava/goddess-ava-1.jpg "
                       loading="lazy"
                     />
                   </div>
                   <div className="hero-avatar-box cursor-pointer">
                     <img
                       className="hero-avatar"
-                      src="img/images/goddess/goddess-3/x2/ava/goddess-3-1-ava.jpg"
+                      src="img/images/goddess/goddess-3/x2/ava/goddess-ava-1.jpg "
                       loading="lazy"
                     />
                   </div>
                   <div className="hero-avatar-box cursor-pointer">
                     <img
                       className="hero-avatar"
-                      src="img/images/goddess/goddess-4/x2/ava/goddess-4-1-ava.jpg"
+                      src="img/images/goddess/goddess-4/x2/ava/goddess-ava-1.jpg "
                       loading="lazy"
                     />
                   </div>
                   <div className="hero-avatar-box cursor-pointer">
                     <img
                       className="hero-avatar"
-                      src="img/images/goddess/goddess-5/x2/ava/goddess-5-1-ava.jpg"
+                      src="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg "
                       loading="lazy"
                     />
                   </div>
                   <div className="hero-avatar-box cursor-pointer">
                     <img
                       className="hero-avatar"
-                      src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                      src="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg "
                       loading="lazy"
                     />
                   </div>
@@ -174,7 +174,7 @@ const V2MainScreen21GoddessMainComponent = () => {
                 <div className="gd-box-goddess-pic" style={{}}>
                   <div className="b-fs"></div>
                   <img
-                    src="img/images/goddess/goddess-4/x2/goddess-4-1.jpg"
+                    src="img/images/goddess/goddess-4/x2/goddess-1.jpg"
                     loading="lazy"
                   />
                 </div>
@@ -661,7 +661,7 @@ const V2MainScreen21GoddessMainComponent = () => {
               <div className="btn-close-x"></div>
               <img
                 className="img-goddess-picture"
-                src="img/images/goddess/goddess-4/x2/goddess-4-1.jpg"
+                src="img/images/goddess/goddess-4/x2/goddess-1.jpg"
                 loading="lazy"
               />
             </div>

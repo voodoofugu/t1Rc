@@ -175,7 +175,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -199,7 +199,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -223,7 +223,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -247,7 +247,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -271,7 +271,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -295,7 +295,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -319,7 +319,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -343,7 +343,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>
@@ -367,7 +367,7 @@ const V2MainScreen18MineChestComponent = () => {
                         <div className="angel-avatar-wrap">
                           <img
                             className="angel-avatar"
-                            src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                            src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                             loading="lazy"
                           />
                         </div>

@@ -264,7 +264,7 @@ const V2MainScreen01DarkWorldComponent = () => {
       });
       bl.addEventListener("click", () => {
         ai.src =
-          "https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-2-1.jpg";
+          "https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/goddess-1.jpg";
         ai.closest(
           ".selected-angel-box .angel-card-box .img-wrap"
         ).classList.remove("lock");
@@ -875,7 +875,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-1/x2/goddess-1-1.jpg"
+                      src="img/images/goddess/goddess-1/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -926,7 +926,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg"
+                      src="img/images/goddess/goddess-2/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -977,7 +977,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box lock">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-3/x2/goddess-3-1.jpg"
+                      src="img/images/goddess/goddess-3/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -1028,7 +1028,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box lock">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-4/x2/goddess-4-1.jpg"
+                      src="img/images/goddess/goddess-4/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -1079,7 +1079,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box lock">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-5/x2/goddess-5-1.jpg"
+                      src="img/images/goddess/goddess-5/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -1130,7 +1130,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box lock">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-6/x2/goddess-6-1.jpg"
+                      src="img/images/goddess/goddess-6/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -1181,7 +1181,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box lock">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg"
+                      src="img/images/goddess/goddess-2/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -1232,7 +1232,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box lock">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg"
+                      src="img/images/goddess/goddess-2/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                   </div>
@@ -1315,7 +1315,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg"
+                        src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1324,7 +1324,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-2/x2/ava/goddess-2-1-ava.jpg"
+                        src="img/images/goddess/goddess-2/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1333,7 +1333,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-3/x2/ava/goddess-3-1-ava.jpg"
+                        src="img/images/goddess/goddess-3/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1342,7 +1342,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-4/x2/ava/goddess-4-1-ava.jpg"
+                        src="img/images/goddess/goddess-4/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1351,7 +1351,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-5/x2/ava/goddess-5-1-ava.jpg"
+                        src="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1360,7 +1360,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                        src="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1369,7 +1369,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                        src="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1378,7 +1378,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                     <div className="angel-avatar-wrap">
                       <img
                         className="angel-avatar"
-                        src="img/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg"
+                        src="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg "
                         loading="lazy"
                       />
                     </div>
@@ -1392,7 +1392,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                 <div className="angel-card-box">
                   <div className="img-wrap">
                     <img
-                      src="img/images/goddess/goddess-2/x2/goddess-2-1.jpg"
+                      src="img/images/goddess/goddess-2/x2/goddess-1.jpg"
                       loading="lazy"
                     />
                     <div className="b-fs"></div>
@@ -1462,7 +1462,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                       <div className="angel-avatar-wrap">
                         <img
                           className="angel-avatar"
-                          src="img/images/goddess/goddess-2/comics/ava/goddess-2-1-com-ava.jpg"
+                          src="img/images/goddess/goddess-2/comics/ava/goddess-com-ava-1.jpg "
                           loading="lazy"
                         />
                       </div>
@@ -1471,7 +1471,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                       <div className="angel-avatar-wrap">
                         <img
                           className="angel-avatar"
-                          src="img/images/goddess/goddess-2/comics/ava/goddess-2-2-com-ava.jpg"
+                          src="img/images/goddess/goddess-2/comics/ava/goddess-com-ava-2.jpg "
                           loading="lazy"
                         />
                       </div>
@@ -1480,7 +1480,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                       <div className="angel-avatar-wrap">
                         <img
                           className="angel-avatar"
-                          src="img/images/goddess/goddess-2/comics/ava/goddess-2-3-com-ava.jpg"
+                          src="img/images/goddess/goddess-2/comics/ava/goddess-com-ava-3.jpg "
                           loading="lazy"
                         />
                       </div>
@@ -1489,7 +1489,7 @@ const V2MainScreen01DarkWorldComponent = () => {
                       <div className="angel-avatar-wrap">
                         <img
                           className="angel-avatar"
-                          src="img/images/goddess/goddess-2/comics/ava/goddess-2-4-com-ava.jpg"
+                          src="img/images/goddess/goddess-2/comics/ava/goddess-com-ava-4.jpg "
                           loading="lazy"
                         />
                       </div>

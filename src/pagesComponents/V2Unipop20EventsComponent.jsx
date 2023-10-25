@@ -238,7 +238,7 @@ const V2Unipop20EventsComponent = () => {
                     <div className="angel-avatar-box">
                       <div className="img-wrap">
                         <img
-                          src="img/images/goddess/goddess-1/x2/goddess-1-1.jpg"
+                          src="img/images/goddess/goddess-1/x2/goddess-1.jpg"
                           loading="lazy"
                         />
                       </div>

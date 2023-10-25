@@ -1,16 +1,12 @@
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import React, { useState, useEffect } from "react";
 
 import HelmetComponent from "../components/HelmetComponent.jsx";
-const ProjectBoxTwo = lazy(() => import(`../components/ProjectBoxTwo.jsx`));
-import Loading from "../components/Loading.jsx";
-// import HelmetForCss from "../components/HelmetForCss.jsx";
-// const cssFiles = [];
 
 const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
     `;
 
-const TemplateComponent = () => {
+const TemplateComponent = ({ children }) => {
   const [scriptLoaded, setScriptLoaded] = useState(false);
   useEffect(() => {
     eval(templateJs);
@@ -24,7 +20,6 @@ const TemplateComponent = () => {
     <>
       <main>
         <div className="templateTit page-title">
-          {scriptLoaded}
           Template
           <div
             className="toggle-btn"
@@ -34,14 +29,9 @@ const TemplateComponent = () => {
           >
             <div className="btn-ic"></div>
           </div>
+          {scriptLoaded}
         </div>
-        <Suspense fallback={<Loading />}>
-          {/* <HelmetForCss cssFiles={cssFiles}> */}
-          <div className="templatePage template-container">
-            <ProjectBoxTwo />
-          </div>
-          {/* </HelmetForCss> */}
-        </Suspense>
+        <div className="templatePage template-container">{children}</div>
       </main>
     </>
   );

@@ -5,12 +5,14 @@ import transformCssFileNames from "../scripts/forBild/transformCssFileNames.js";
 
 const HelmetForCss = ({ cssFiles, children }) => {
   const [styles, setStyles] = useState([]);
+  const [stylesLoaded, setStylesLoaded] = useState(false);
 
   useEffect(() => {
     // Загружаем стили асинхронно
     importStyles(cssFiles)
       .then((cssTextArray) => {
         setStyles(cssTextArray);
+        setStylesLoaded(true);
       })
       .catch((error) => {
         console.error(error);
@@ -23,7 +25,7 @@ const HelmetForCss = ({ cssFiles, children }) => {
     <>
       <HelmetComponent>
         {modifiedCssFileNames.map((cssFile, index) => (
-          <style key={index} type="text/css">
+          <style key={index} type="text/css" stylesLoaded={stylesLoaded}>
             {` ${styles[index]} `}
           </style>
         ))}
