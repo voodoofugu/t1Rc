@@ -1,8 +1,8 @@
-const fs = require("fs");
-const path = require("path");
-const sass = require("sass");
-const chokidar = require("chokidar");
-const transformCssFileNames = require("./src/scripts/forBild/transformCssFileNames.js");
+import fs from "fs";
+import path from "path";
+import sass from "sass";
+import chokidar from "chokidar";
+import transformCssFileNames from "./src/scripts/forBild/transformCssFileNames.js";
 
 const sourceDir = "./src/styles/scss";
 const outputDir = "./src/styles/css";

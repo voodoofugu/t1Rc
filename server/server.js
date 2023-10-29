@@ -1,13 +1,14 @@
-const express = require("express");
-const fs = require("fs");
-const path = require("path");
-const React = require("react");
-const ReactDOMServer = require("react-dom/server");
+import express from "express";
+import fs from "fs";
+import path from "path";
+import React from "react";
+import ReactDOMServer from "react-dom/server";
 
 const app = express();
 const port = 4000;
 
-const App = require("../src/components/App").default;
+// import App from "../src/components/App";
+import App from "../src/components/RSC/MainScreen16FortunaHtml";
 
 app.use("*", (req, res) => {
   let indexHTML = fs.readFileSync(

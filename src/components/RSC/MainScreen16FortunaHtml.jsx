@@ -1,6 +1,7 @@
-import React from "react";
+// import React from "react";
+const React = require("react");
 
-const MainScreen16FortunaHtml = () => {
+module.exports = function MainScreen16FortunaHtml() {
   return (
     <div className="main world1">
       <div className="main-bg"></div>
@@ -61,4 +62,5 @@ const MainScreen16FortunaHtml = () => {
   );
 };
 
-export default MainScreen16FortunaHtml;
+// export default MainScreen16FortunaHtml;
+// module.exports = MainScreen16FortunaHtml;
