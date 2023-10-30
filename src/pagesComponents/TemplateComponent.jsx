@@ -6,7 +6,7 @@ const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
     `;
 
-const TemplateComponent = ({ children }) => {
+export default function TemplateComponent({ children }) {
   const [scriptLoaded, setScriptLoaded] = useState(false);
   useEffect(() => {
     eval(templateJs);
@@ -35,6 +35,4 @@ const TemplateComponent = ({ children }) => {
       </main>
     </>
   );
-};
-
-export default React.memo(TemplateComponent);
+}

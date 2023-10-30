@@ -30,21 +30,21 @@
 
 // < --!!! гидрация элемента App с новым hydrateRoot !!!-- >
 
-import React from "react";
-import { hydrateRoot } from "react-dom/client";
-// import App from "./components/App";
-import MainScreen16FortunaHtml from "./components/RSC/MainScreen16FortunaHtml";
+// import React from "react";
+// import { hydrateRoot } from "react-dom/client";
+// // import App from "./components/App";
+// import MainScreen16FortunaHtml from "./components/RSC/MainScreen16FortunaHtml";
 
-hydrateRoot(document.getElementById("root"), <MainScreen16FortunaHtml />);
+// hydrateRoot(document.getElementById("root"), <MainScreen16FortunaHtml />);
 
 // < --!!! рендер элемента App !!!-- >
 
-// import React, { Suspense } from "react";
-// import { createRoot } from "react-dom/client";
+import React, { Suspense } from "react";
+import { createRoot } from "react-dom/client";
 
-// import Loading from "./components/Loading.jsx";
-// import App from "./components/App";
+import Loading from "./components/Loading.jsx";
+import App from "./components/App";
 
-// const root = document.getElementById("root");
-// const reactRoot = createRoot(root);
-// reactRoot.render(<App />);
+const root = document.getElementById("root");
+const reactRoot = createRoot(root);
+reactRoot.render(<App />);

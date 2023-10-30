@@ -6,12 +6,12 @@ import Loading from "./Loading.jsx";
 const TemplateComponentLazy = lazy(() =>
   import(`../pagesComponents/TemplateComponent.jsx`)
 );
-const ProjectBoxTwo = lazy(() => import(`../components/ProjectBoxTwo.jsx`));
+const PageBox = lazy(() => import(`./PageBox.jsx`));
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = ["TemplateComponentStyles"];
 
-function App() {
+export default function App() {
   return (
     // <StrictMode>
     <BrowserRouter>
@@ -19,7 +19,7 @@ function App() {
         <HelmetForCss cssFiles={cssFiles}>
           <Suspense fallback={<Loading />}>
             <TemplateComponentLazy idForStyle="root">
-              <ProjectBoxTwo />
+              <PageBox />
             </TemplateComponentLazy>
           </Suspense>
         </HelmetForCss>
@@ -28,5 +28,3 @@ function App() {
     // </StrictMode>
   );
 }
-
-export default App;

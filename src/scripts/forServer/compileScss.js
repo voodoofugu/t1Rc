@@ -1,11 +1,11 @@
-import fs from "fs";
-import path from "path";
-import sass from "sass";
-import chokidar from "chokidar";
-import transformCssFileNames from "./src/scripts/forBild/transformCssFileNames.js";
+const fs = require("fs");
+const path = require("path");
+const sass = require("sass");
+const chokidar = require("chokidar");
+const transformCssFileNames = require("../forBild/transformCssFileNames.js");
 
-const sourceDir = "./src/styles/scss";
-const outputDir = "./src/styles/css";
+const sourceDir = path.join(__dirname, "../../styles/scss");
+const outputDir = path.join(__dirname, "../../styles/css");
 
 // добавление .changesClass
 async function wrapSCSSFile(sourceFile) {
