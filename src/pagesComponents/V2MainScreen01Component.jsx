@@ -3822,7 +3822,7 @@ const V2MainScreen01Component = () => {
           </div>
         </div>
       </div>
-      <WorldBtnBox />
+      {/* <WorldBtnBox /> */}
     </div>
     // </HelmetStyleWrap>
   );

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-
 import HelmetComponent from "../components/HelmetComponent.jsx";
 
 const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
     `;
 
-export default function TemplateComponent({ children }) {
+export default function TemplateComponent({ prop = "", children }) {
   const [scriptLoaded, setScriptLoaded] = useState(false);
   useEffect(() => {
     eval(templateJs);
@@ -31,7 +30,7 @@ export default function TemplateComponent({ children }) {
           </div>
           {scriptLoaded}
         </div>
-        <div className="templatePage template-container">{children}</div>
+        <div className={`template-container ${prop}`}>{children}</div>
       </main>
     </>
   );

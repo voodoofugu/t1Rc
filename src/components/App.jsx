@@ -1,12 +1,9 @@
-import React, { Suspense, lazy, StrictMode } from "react";
+import React, { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import RoutesApp from "../routes/RoutesApp";
 
 import Loading from "./Loading.jsx";
-const TemplateComponentLazy = lazy(() =>
-  import(`../pagesComponents/TemplateComponent.jsx`)
-);
-const PageBox = lazy(() => import(`./PageBox.jsx`));
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = ["TemplateComponentStyles"];
@@ -18,9 +15,7 @@ export default function App() {
       <HelmetProvider>
         <HelmetForCss cssFiles={cssFiles}>
           <Suspense fallback={<Loading />}>
-            <TemplateComponentLazy idForStyle="root">
-              <PageBox />
-            </TemplateComponentLazy>
+            <RoutesApp />
           </Suspense>
         </HelmetForCss>
       </HelmetProvider>

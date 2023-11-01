@@ -1,7 +1,7 @@
 // Серверный код
 import { renderToNodeStream } from "react-dom/server";
 import { HelmetProvider } from "react-helmet-async";
-import StylesRSC from "./styles-rsc";
+// import StylesRSC from "./styles-rsc";
 
 function renderWithStyles(cssFiles) {
   const helmetContext = {};
@@ -9,9 +9,7 @@ function renderWithStyles(cssFiles) {
   const appStream = renderToNodeStream(
     <HelmetProvider context={helmetContext}>
       <html>
-        <head>
-          <StylesRSC cssFiles={cssFiles} />
-        </head>
+        <head>{/* <StylesRSC cssFiles={cssFiles} /> */}</head>
         <body>
           <div id="root">{/* Вставьте ваш основной компонент здесь */}</div>
         </body>
