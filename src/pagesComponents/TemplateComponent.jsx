@@ -5,7 +5,11 @@ const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
     `;
 
-export default function TemplateComponent({ prop = "", children }) {
+export default function TemplateComponent({
+  propClass = "",
+  propClassDiasable = "",
+  children,
+}) {
   const [scriptLoaded, setScriptLoaded] = useState(false);
   useEffect(() => {
     eval(templateJs);
@@ -18,7 +22,7 @@ export default function TemplateComponent({ prop = "", children }) {
   return (
     <>
       <main>
-        <div className="templateTit page-title">
+        <div className={`templateTit ${propClassDiasable}`}>
           Template
           <div
             className="toggle-btn"
@@ -30,7 +34,7 @@ export default function TemplateComponent({ prop = "", children }) {
           </div>
           {scriptLoaded}
         </div>
-        <div className={`template-container ${prop}`}>{children}</div>
+        <div className={`template-container ${propClass}`}>{children}</div>
       </main>
     </>
   );

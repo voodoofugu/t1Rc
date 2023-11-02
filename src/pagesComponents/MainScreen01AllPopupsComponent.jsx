@@ -49,15 +49,11 @@ const cssFiles = [
   "screen-rating-fullcoll",
 ];
 
-const MainScreen01AllPopupsComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+function MainScreen01AllPopupsComponent({ pageName = "", stylesLoaded }) {
+  console.log(stylesLoaded);
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (stylesLoaded === true) {
       // кнопки попапа с анимацией наград
       const colB = document.querySelector(".color-btn.collect");
       const rrBo = document.querySelector(".rating-reward-box");
@@ -563,6 +559,7 @@ const MainScreen01AllPopupsComponent = () => {
       });
       return;
     }
+
     return () => {};
   }, []);
 
@@ -16187,6 +16184,6 @@ const MainScreen01AllPopupsComponent = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen01AllPopupsComponent);

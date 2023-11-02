@@ -1,5 +1,5 @@
 import React, { useEffect, useState, Suspense } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Loading from "../components/Loading.jsx";
 
 export default function PageComponent() {
@@ -30,9 +30,8 @@ export default function PageComponent() {
   if (DynamicComponent) {
     return (
       <div className="pageBox" key={pageName}>
-        <Link to={pageName}>{pageName}</Link>
         <div id={`${pageName}`} className="projectComponent">
-          <DynamicComponent />
+          <DynamicComponent pageName={pageName} />
         </div>
       </div>
     );

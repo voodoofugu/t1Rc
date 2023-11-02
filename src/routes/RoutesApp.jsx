@@ -20,7 +20,10 @@ export default function RoutesApp() {
       <Route
         path="/:pageName"
         element={
-          <TemplateComponentLazy prop="onePage">
+          <TemplateComponentLazy
+            propClass="onePage"
+            propClassDiasable="onePageDiasable"
+          >
             <PageComponent />
           </TemplateComponentLazy>
         }

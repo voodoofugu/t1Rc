@@ -4,7 +4,7 @@ import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
 // import { stylePairs } from "../stylesMaps/V2MainScreen01ComponentStylesMap";
 // import pageStyles from "../styleComponents/GfSalePop";
 
-const V2MainScreen01Component = () => {
+function V2MainScreen01Component() {
   // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
   const currentUrl = window.location.href;
   const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
@@ -3826,6 +3826,6 @@ const V2MainScreen01Component = () => {
     </div>
     // </HelmetStyleWrap>
   );
-};
+}
 
 export default React.memo(V2MainScreen01Component);

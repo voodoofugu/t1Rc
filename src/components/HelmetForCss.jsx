@@ -40,8 +40,7 @@ function HelmetForCss({ cssFiles, children }) {
         ))}
       </HelmetComponent>
       <div className={`likeBody ${modifiedCssFileNames.join(" ")}`}>
-        {!stylesLoaded && <Loading />}
-        {stylesLoaded && children}
+        {!stylesLoaded ? <Loading /> : children}
       </div>
     </>
   );
