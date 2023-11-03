@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 const cssFiles = [
   "01-all",
   "01-all-res",
@@ -49,11 +50,12 @@ const cssFiles = [
   "screen-rating-fullcoll",
 ];
 
-function MainScreen01AllPopupsComponent({ pageName = "", stylesLoaded }) {
-  console.log(stylesLoaded);
+function MainScreen01AllPopupsComponent({ pageName = "" }) {
+  const currentUrl = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (stylesLoaded === true) {
+    if (pageName === currentUrl && stylesLoaded) {
       // кнопки попапа с анимацией наград
       const colB = document.querySelector(".color-btn.collect");
       const rrBo = document.querySelector(".rating-reward-box");
@@ -557,11 +559,8 @@ function MainScreen01AllPopupsComponent({ pageName = "", stylesLoaded }) {
           }
         });
       });
-      return;
     }
-
-    return () => {};
-  }, []);
+  }, [stylesLoaded]);
 
   return (
     <HelmetForCss cssFiles={cssFiles}>

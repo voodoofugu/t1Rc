@@ -35,7 +35,7 @@ export default function PageBox() {
               <Suspense key={pageName} fallback={<Loading />} timer={1000}>
                 <Link to={pageName}>{pageName}</Link>
                 <div id={`${pageName}`} className="projectComponent noScripts">
-                  <DynamicComponent />
+                  <DynamicComponent pageName={pageName} />
                 </div>
               </Suspense>
             </LazyLoad>
