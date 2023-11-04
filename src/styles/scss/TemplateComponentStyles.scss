@@ -401,6 +401,62 @@ main {
         }
       }
     }
+    // &.onePage {
+    //   height: 100%;
+    //   width: 100%;
+    //   max-width: none;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   transform: none;
+    //   padding: 0;
+    //   margin: 0;
+    //   background-color: #9f8978;
+    //   .pageBox {
+    //     width: 100%;
+    //     height: 100%;
+    //     border-radius: 0;
+    //     background: none;
+    //     box-shadow: none;
+    //     transform: none;
+    //     pointer-events: none;
+    //     &:hover {
+    //       background: none;
+    //       box-shadow: none;
+    //       z-index: unset;
+    //     }
+    //     &:active {
+    //       background: none;
+    //       box-shadow: none;
+    //       transform: none;
+    //     }
+    //     .projectComponent {
+    //       top: 0;
+    //       left: 50%;
+    //       transform: translateX(-50%) scale(1);
+    //       border-radius: 0;
+    //       margin: 0;
+    //       box-shadow: 0 0 2px #000, 0 0 10px #4d4538, 0 0 10px #4d4538,
+    //         0 0 10px #4d4538, 0 0 25px #4d4538;
+    //       pointer-events: all;
+    //       position: absolute;
+    //     }
+    //     #MainScreen00RegComponent {
+    //       background: none;
+    //       box-shadow: none;
+    //       width: 100%;
+    //       height: 100%;
+    //       .screenReg {
+    //         width: 100%;
+    //         height: 100%;
+    //         .wrapStyles {
+    //           width: 100% !important;
+    //           height: 100% !important;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
     &.onePage {
       height: 100%;
       width: 100%;
@@ -409,13 +465,14 @@ main {
       top: 0;
       left: 0;
       transform: none;
+      background-color: #9f8978;
       padding: 0;
       margin: 0;
       .pageBox {
         width: 100%;
         height: 100%;
         border-radius: 0;
-        background-color: #9f8978;
+        background: none;
         box-shadow: none;
         transform: none;
         pointer-events: none;
@@ -447,7 +504,7 @@ main {
     }
   }
   &.dark-theme {
-    background: #2a3451 !important;
+    background: #2a3451;
     color: #fff;
     .templateTit {
       color: #6a95c9;
@@ -560,6 +617,16 @@ main {
             filter: drop-shadow(-1px 0px 0.5px #374f62)
               drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.4))
               drop-shadow(3px 0 2px rgba(0, 1, 60, 0.6));
+          }
+        }
+      }
+      &.onePage {
+        .pageBox {
+          background: none;
+          box-shadow: none;
+          .projectComponent {
+            box-shadow: 0 0 2px #000, 0 0 10px #4d4538, 0 0 10px #4d4538,
+              0 0 10px #4d4538, 0 0 25px #4d4538;
           }
         }
       }

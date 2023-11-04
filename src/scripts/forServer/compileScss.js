@@ -73,7 +73,7 @@ async function compileSCSSFile(sourceFile) {
           if (url.startsWith("#") || url.startsWith("http")) {
             return `url(${url})`;
           } else {
-            return `url("../../img/${url}")`;
+            return `url("http://localhost:3000/img/${url}")`;
           }
         }
       );

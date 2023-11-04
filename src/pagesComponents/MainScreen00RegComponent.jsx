@@ -3,7 +3,7 @@ import HelmetForCss from "../components/HelmetForCss.jsx";
 
 const cssFiles = ["screen-reg"];
 
-const MainScreen00RegComponent = () => {
+function MainScreen00RegComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div
@@ -51,6 +51,6 @@ const MainScreen00RegComponent = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen00RegComponent);

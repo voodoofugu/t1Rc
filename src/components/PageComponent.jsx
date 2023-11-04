@@ -1,6 +1,6 @@
-import React, { useEffect, useState, Suspense } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Loading from "../components/Loading.jsx";
+import { StylesLoadedProvider } from "./StylesLoadedProvider";
 
 export default function PageComponent() {
   const [DynamicComponent, setDynamicComponent] = useState(null);
@@ -31,7 +31,9 @@ export default function PageComponent() {
     return (
       <div className="pageBox" key={pageName}>
         <div id={`${pageName}`} className="projectComponent">
-          <DynamicComponent pageName={pageName} />
+          <StylesLoadedProvider>
+            <DynamicComponent pageName={pageName} />
+          </StylesLoadedProvider>
         </div>
       </div>
     );

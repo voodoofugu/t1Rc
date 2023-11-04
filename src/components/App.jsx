@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import { StylesLoadedProvider } from "./StylesLoadedProvider";
 import RoutesApp from "../routes/RoutesApp";
 
 import Loading from "./Loading.jsx";
@@ -14,13 +13,11 @@ export default function App() {
     // <StrictMode>
     <BrowserRouter>
       <HelmetProvider>
-        <StylesLoadedProvider>
-          <HelmetForCss cssFiles={cssFiles}>
-            <Suspense fallback={<Loading />}>
-              <RoutesApp />
-            </Suspense>
-          </HelmetForCss>
-        </StylesLoadedProvider>
+        <HelmetForCss cssFiles={cssFiles}>
+          <Suspense fallback={<Loading />}>
+            <RoutesApp />
+          </Suspense>
+        </HelmetForCss>
       </HelmetProvider>
     </BrowserRouter>
     // </StrictMode>

@@ -18,27 +18,20 @@ const importStyles = async (cssFiles) => {
 function HelmetForCss({ cssFiles, children }) {
   const [styles, setStyles] = useState(null);
   const [loadedStyleCount, setLoadedStyleCount] = useState(0);
-  const { stylesLoaded, setStylesLoaded } = useStylesLoaded();
+  const { stylesLoaded, setStylesLoaded } = useStylesLoaded(false);
   const modifiedCssFileNames = transformCssFileNames(cssFiles);
-
-  function setStylesLoadedTrue() {
-    setStylesLoaded(true);
-  }
 
   useEffect(() => {
     importStyles(cssFiles)
       .then((cssTextArray) => {
         setStyles(cssTextArray);
         setLoadedStyleCount((prevCount) => prevCount + 1);
-
-        // if (loadedStyleCount === cssFiles.length - 1) {
-        //   setStylesLoaded(true); // Установите stylesLoaded в true после загрузки всех стилей
-        // }
+        setStylesLoaded(true);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [cssFiles, setStylesLoaded]);
+  }, [cssFiles]);
 
   return (
     <>
@@ -50,11 +43,7 @@ function HelmetForCss({ cssFiles, children }) {
         ))}
       </HelmetComponent>
       <div className={`likeBody ${modifiedCssFileNames.join(" ")}`}>
-        {!stylesLoaded && loadedStyleCount < cssFiles.length ? (
-          <Loading />
-        ) : (
-          (setStylesLoadedTrue(), children)
-        )}
+        {!stylesLoaded && loadedStyleCount < 1 ? <Loading /> : children}
       </div>
     </>
   );

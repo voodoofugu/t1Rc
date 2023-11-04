@@ -1,7 +1,9 @@
 import React, { lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import PageBox from "../components/PageBox";
 import PageComponent from "../components/PageComponent";
+import HelmetComponent from "../components/HelmetComponent";
+
 const TemplateComponentLazy = lazy(() =>
   import(`../pagesComponents/TemplateComponent.jsx`)
 );
@@ -24,10 +26,21 @@ export default function RoutesApp() {
             propClass="onePage"
             propClassDiasable="onePageDiasable"
           >
+            <TitlePage />
             <PageComponent />
           </TemplateComponentLazy>
         }
       />
     </Routes>
+  );
+}
+
+function TitlePage() {
+  const { pageName } = useParams();
+
+  return (
+    <HelmetComponent>
+      <title>{pageName}</title>
+    </HelmetComponent>
   );
 }

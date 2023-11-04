@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-
 import HelmetForCss from "../components/HelmetForCss.jsx";
 import { useStylesLoaded } from "../components/StylesLoadedProvider";
+
 const cssFiles = [
   "01-all",
   "01-all-res",
@@ -53,6 +53,7 @@ const cssFiles = [
 function MainScreen01AllPopupsComponent({ pageName = "" }) {
   const currentUrl = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
+  // console.log(stylesLoaded);
 
   useEffect(() => {
     if (pageName === currentUrl && stylesLoaded) {

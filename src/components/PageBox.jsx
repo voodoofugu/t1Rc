@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Suspense, lazy } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
+import { StylesLoadedProvider } from "./StylesLoadedProvider";
 import Loading from "../components/Loading.jsx";
 
 export default function PageBox() {
@@ -35,7 +36,9 @@ export default function PageBox() {
               <Suspense key={pageName} fallback={<Loading />} timer={1000}>
                 <Link to={pageName}>{pageName}</Link>
                 <div id={`${pageName}`} className="projectComponent noScripts">
-                  <DynamicComponent pageName={pageName} />
+                  <StylesLoadedProvider>
+                    <DynamicComponent pageName={pageName} />
+                  </StylesLoadedProvider>
                 </div>
               </Suspense>
             </LazyLoad>
