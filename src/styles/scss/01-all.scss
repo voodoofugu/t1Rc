@@ -3977,9 +3977,9 @@ body .main {
   left: 0;
   top: 0;
   pointer-events: none;
-  & > * {
-    pointer-events: all;
-  }
+  // & > * {
+  //   pointer-events: all;
+  // }
 }
 
 @keyframes appearance {

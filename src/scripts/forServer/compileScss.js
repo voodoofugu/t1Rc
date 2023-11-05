@@ -20,7 +20,11 @@ async function wrapSCSSFile(sourceFile) {
     return;
   }
 
-  const outputFilePath = path.join(outputDir, sourceFile);
+  // const outputFilePath = path.join(outputDir, sourceFile);
+  const outputFilePath = path.join(
+    sourceDir,
+    sourceFile.replace(".scss", ".common.scss")
+  );
   const sourceContent = fs.readFileSync(sourceFilePath, "utf-8");
   // Разделяем контент на строки
   const lines = sourceContent.split("\n");
@@ -50,13 +54,14 @@ async function wrapSCSSFile(sourceFile) {
   fs.writeFileSync(outputFilePath, finalContent);
   console.log(`"${outputFilePath}" - создан и обернут в .changesClass 🤗`);
 }
+
 // компиляция
 async function compileSCSSFile(sourceFile) {
   try {
-    const sourceFilePath = path.join(outputDir, sourceFile);
+    const sourceFilePath = path.join(sourceDir, sourceFile);
     const outputFilePath = path.join(
       outputDir,
-      sourceFile.replace(".scss", ".css")
+      sourceFile.replace(".common.scss", ".css")
     );
 
     // компиляция и сжатие
@@ -96,9 +101,10 @@ async function compileSCSSFile(sourceFile) {
       );
 
       // Удаление .scss файла кроме sass_commons
-      if (sourceFile !== "sass_commons.scss") {
-        fs.unlinkSync(sourceFilePath);
-      }
+      // if (sourceFile !== "sass_commons.scss") {
+      //   fs.unlinkSync(sourceFilePath);
+      // }
+      fs.unlinkSync(sourceFilePath);
     } else {
       console.error(`Ошибка компиляции SCSS, не удалось получить CSS 🧐
       Файл "${sourceFile}" может быть пуст`);
