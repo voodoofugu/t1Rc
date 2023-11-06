@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import HelmetComponent from "../components/HelmetComponent.jsx";
+import HelmetComponent from "../components/HelmetComponent";
 
+import SearchButton from "../components/SearchButton";
 const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
     `;
@@ -23,7 +24,8 @@ export default function TemplateComponent({
     <>
       <main>
         <div className={`templateTit ${propClassDiasable}`}>
-          Template
+          <SearchButton />
+          <div className="title">Template</div>
           <div
             className="toggle-btn"
             type="checkbox"

@@ -1,40 +1,207 @@
+// COLORS light
+$mainColor: #e6e7f1;
+
+$bgColor6: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(0, 3, 181, 0.1);
+$bgColor7: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.6);
+$bgColor8: linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 5px -6px/2px
+    6px,
+  linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 5px 14px/2px
+    6px,
+  linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat -8px 5px/6px 2px,
+  linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 14px 5px/6px
+    2px;
+
+$shadowColor7: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
+  1px 1px 2px rgba(255, 255, 255, 0.6),
+  inset 1px 1px 2px rgba(60, 99, 255, 0.06),
+  -1px -1px 2px rgba(60, 99, 255, 0.1), inset 4px 4px 8px rgba(0, 1, 60, 0.06),
+  inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+$shadowColor8: -1px -1px 2px rgba(255, 255, 255, 0.2),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.4),
+  1px 1px 2px rgba(60, 99, 255, 0.06),
+  inset -1px -1px 2px rgba(60, 99, 255, 0.2), 2px 2px 4px rgba(0, 1, 60, 0.1),
+  -2px -2px 4px rgba(255, 255, 255, 0.2);
+
+// templateTit
+$bgColor5: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(0, 3, 181, 0.02);
+$shadowColor6: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
+  1px 1px 2px rgba(255, 255, 255, 0.6),
+  inset 1px 1px 2px rgba(60, 99, 255, 0.06),
+  -1px -1px 2px rgba(60, 99, 255, 0.1), inset 4px 4px 8px rgba(0, 1, 60, 0.06),
+  inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+// scrollbar
+$bgColor1: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.04),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.5);
+$shadowColor1: inset 0 0 4px 4px $mainColor,
+  inset 3px 3px 2px 2px rgb(255, 255, 255),
+  inset 2px 2px 1px 2px rgba(255, 255, 255, 0.6),
+  inset -3px -3px 2px 2px rgba(60, 99, 255, 0.1),
+  inset -2px -2px 1px 2px rgba(60, 99, 255, 0.2);
+// pageBox
+$bgColor2: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.2);
+$shadowColor2: -1px -1px 2px rgba(255, 255, 255, 0.2),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+  1px 1px 2px rgba(60, 99, 255, 0.06),
+  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 4px 4px 8px rgba(0, 1, 60, 0.1),
+  -4px -4px 8px rgba(255, 255, 255, 0.5);
+// pageBox hover
+$bgColor3: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.4);
+$shadowColor3: -1px -1px 2px rgba(255, 255, 255, 0.2),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+  1px 1px 2px rgba(60, 99, 255, 0.06),
+  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 6px 6px 12px rgba(0, 1, 60, 0.14),
+  -6px -6px 12px rgba(255, 255, 255, 0.8);
+// pageBox active
+$bgColor4: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0);
+$shadowColor4: -1px -1px 2px rgba(255, 255, 255, 0.2),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+  1px 1px 2px rgba(60, 99, 255, 0.06),
+  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 4px 4px 8px rgba(0, 1, 60, 0.1),
+  -4px -4px 8px rgba(255, 255, 255, 0.4);
+// projectComponent
+$shadowColor5: 0 0 0 10px $mainColor, 20px 20px 40px rgba(0, 1, 60, 0.06),
+  -20px -20px 40px rgba(255, 255, 255, 0.6);
+
+// COLORS dark
+$mainColorDark: #2a3451;
+
+// templateTit
+$bgColorDark1: rgba(17, 0, 128, 0.02);
+$shadowColorDark1: inset -1px -1px 2px rgba(255, 255, 255, 0.1),
+  1px 1px 2px rgba(255, 255, 255, 0.02),
+  inset 1px 1px 2px rgba(60, 99, 255, 0.1), -1px -1px 2px rgba(60, 99, 255, 0.1),
+  inset 4px 4px 8px rgba(8, 0, 60, 0.6),
+  inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+// scrollbar
+$bgColorDark2: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.04);
+$shadowColorDark2: inset 0 0 0 1px $mainColorDark,
+  inset 0 0 4px 4px $mainColorDark,
+  inset 3px 3px 2px 2px rgba(255, 255, 255, 0.1),
+  inset 2px 2px 1px 2px rgba(255, 255, 255, 0.2),
+  inset -3px -3px 2px 2px rgba(60, 99, 255, 0.2),
+  inset -2px -2px 1px 2px rgba(60, 99, 255, 0.4);
+// pageBox
+$bgColorDark3: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.02);
+$shadowColorDark3: -1px -1px 2px rgba(255, 255, 255, 0.04),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.1), 1px 1px 2px rgba(60, 99, 255, 0.1),
+  inset -1px -1px 2px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 1, 60, 0.4),
+  -4px -4px 8px rgba(255, 255, 255, 0.1);
+// pageBox hover
+$bgColorDark4: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0.06);
+$shadowColorDark4: -1px -1px 2px rgba(255, 255, 255, 0.06),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+  1px 1px 2px rgba(60, 99, 255, 0.06),
+  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 6px 6px 12px rgba(0, 1, 60, 0.5),
+  -6px -6px 12px rgba(255, 255, 255, 0.12);
+// pageBox active
+$bgColorDark5: linear-gradient(
+    135deg,
+    rgba(0, 3, 181, 0.02),
+    rgba(255, 255, 255, 0.05)
+  ),
+  rgba(255, 255, 255, 0);
+$shadowColorDark5: -1px -1px 2px rgba(255, 255, 255, 0.2),
+  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
+  1px 1px 2px rgba(60, 99, 255, 0.06),
+  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 4px 4px 8px rgba(0, 1, 60, 0.4),
+  -4px -4px 8px rgba(255, 255, 255, 0.04);
+// projectComponent
+$shadowColorDark6: 0 0 0 10px $mainColorDark, 20px 20px 40px rgb(0, 1, 60),
+  -20px -20px 40px rgba(255, 255, 255, 0.24);
+
 main {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #e6e7f1;
+  background: $mainColor;
   font-family: "Montserrat", sans-serif;
   .templateTit {
-    color: #6a95c9;
-    text-shadow: 1px 1px 2px #fff;
-    font-size: 24px;
-    font-weight: 700;
     max-width: 1160px;
     margin: 20px;
     position: relative;
     left: 50%;
     -webkit-transform: translateX(calc(-50% - 20px));
     transform: translateX(calc(-50% - 20px));
-    text-align: center;
     padding: 10px;
-    line-height: 32px;
     border-radius: 18px;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 3, 181, 0.02),
-        rgba(255, 255, 255, 0.05)
-      ),
-      rgba(0, 3, 181, 0.02);
-    box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
-      1px 1px 2px rgba(255, 255, 255, 0.6),
-      inset 1px 1px 2px rgba(60, 99, 255, 0.06),
-      -1px -1px 2px rgba(60, 99, 255, 0.1),
-      inset 4px 4px 8px rgba(0, 1, 60, 0.06),
-      inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+    background: $bgColor5;
+    box-shadow: $shadowColor6;
     &.onePageDiasable {
       display: none;
+    }
+    .searchWrap {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      #searchInput {
+        height: 32px;
+        border-radius: 30px;
+      }
+      button {
+        width: 26px;
+        height: 26px;
+        border-radius: 30px;
+      }
+    }
+    .title {
+      color: #6a95c9;
+      text-shadow: 1px 1px 2px #fff;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      line-height: 32px;
     }
     .toggle-btn {
       position: absolute;
@@ -49,18 +216,8 @@ main {
       -webkit-appearance: none;
       appearance: none;
       transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-      background: linear-gradient(
-          135deg,
-          rgba(0, 3, 181, 0.02),
-          rgba(255, 255, 255, 0.05)
-        ),
-        rgba(0, 3, 181, 0.1);
-      box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
-        1px 1px 2px rgba(255, 255, 255, 0.6),
-        inset 1px 1px 2px rgba(60, 99, 255, 0.06),
-        -1px -1px 2px rgba(60, 99, 255, 0.1),
-        inset 4px 4px 8px rgba(0, 1, 60, 0.06),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+      background: $bgColor6;
+      box-shadow: $shadowColor7;
       &:before {
         content: "";
         position: absolute;
@@ -72,18 +229,8 @@ main {
         -webkit-transform: translateX(0);
         transform: translateX(0);
         transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-        background: linear-gradient(
-            135deg,
-            rgba(0, 3, 181, 0.02),
-            rgba(255, 255, 255, 0.05)
-          ),
-          rgba(255, 255, 255, 0.6);
-        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
-          inset 1px 1px 2px rgba(255, 255, 255, 0.4),
-          1px 1px 2px rgba(60, 99, 255, 0.06),
-          inset -1px -1px 2px rgba(60, 99, 255, 0.2),
-          2px 2px 4px rgba(0, 1, 60, 0.1),
-          -2px -2px 4px rgba(255, 255, 255, 0.2);
+        background: $bgColor7;
+        box-shadow: $shadowColor8;
       }
       .btn-ic {
         box-sizing: border-box;
@@ -95,14 +242,7 @@ main {
         transform: scale(0.9);
         width: 24px;
         height: 24px;
-        background: linear-gradient(to bottom, #c2c3e4 4px, transparent 0)
-            no-repeat 5px -6px/2px 6px,
-          linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 5px
-            14px/2px 6px,
-          linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat -8px 5px/6px
-            2px,
-          linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 14px
-            5px/6px 2px;
+        background: $bgColor8;
         border-radius: 100px;
         box-shadow: inset 0 0 0 2px #c2c3e4;
         border: 6px solid transparent;
@@ -188,9 +328,8 @@ main {
   .template-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    align-content: flex-start;
-    gap: 40px;
     padding: 20px 0 20px 0;
     height: calc(100vh - 152px);
     margin: 20px;
@@ -211,87 +350,56 @@ main {
     }
     &::-webkit-scrollbar-thumb {
       border-radius: 8px;
-      background: linear-gradient(
-          135deg,
-          rgba(0, 3, 181, 0.04),
-          rgba(255, 255, 255, 0.05)
-        ),
-        rgba(255, 255, 255, 0.5);
-      box-shadow: inset 0 0 4px 4px #e6e7f1,
-        inset 3px 3px 2px 2px rgb(255, 255, 255),
-        inset 2px 2px 1px 2px rgba(255, 255, 255, 0.6),
-        inset -3px -3px 2px 2px rgba(60, 99, 255, 0.1),
-        inset -2px -2px 1px 2px rgba(60, 99, 255, 0.2);
+      background: $bgColor1;
+      box-shadow: $shadowColor1;
     }
     .pageBox {
       border-radius: 18px;
-      background: linear-gradient(
-          135deg,
-          rgba(0, 3, 181, 0.02),
-          rgba(255, 255, 255, 0.05)
-        ),
-        rgba(255, 255, 255, 0.2);
-      box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
-        inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-        1px 1px 2px rgba(60, 99, 255, 0.06),
-        inset -1px -1px 2px rgba(60, 99, 255, 0.1),
-        4px 4px 8px rgba(0, 1, 60, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+      background: $bgColor2;
+      box-shadow: $shadowColor2;
       width: 238px;
       height: 150px;
       position: relative;
       transition: ease-in-out 0.1s;
-      -webkit-transform: scale(0.99);
-      transform: scale(0.99);
       overflow: hidden;
+      margin: 20px;
+      &.disabled {
+        visibility: hidden;
+        pointer-events: none;
+        width: 0;
+        margin: 0;
+      }
       &:hover {
-        background: linear-gradient(
-            135deg,
-            rgba(0, 3, 181, 0.02),
-            rgba(255, 255, 255, 0.05)
-          ),
-          rgba(255, 255, 255, 0.4);
-        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
-          inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-          1px 1px 2px rgba(60, 99, 255, 0.06),
-          inset -1px -1px 2px rgba(60, 99, 255, 0.1),
-          6px 6px 12px rgba(0, 1, 60, 0.14),
-          -6px -6px 12px rgba(255, 255, 255, 0.8);
-        -webkit-transform: scale(1);
+        background: $bgColor3;
+        box-shadow: $shadowColor3;
         transform: scale(1);
         z-index: 1;
       }
       &:active {
-        background: linear-gradient(
-            135deg,
-            rgba(0, 3, 181, 0.02),
-            rgba(255, 255, 255, 0.05)
-          ),
-          rgba(255, 255, 255, 0);
-        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
-          inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-          1px 1px 2px rgba(60, 99, 255, 0.06),
-          inset -1px -1px 2px rgba(60, 99, 255, 0.1),
-          4px 4px 8px rgba(0, 1, 60, 0.1),
-          -4px -4px 8px rgba(255, 255, 255, 0.4);
-        -webkit-transform: scale(0.99);
+        background: $bgColor4;
+        box-shadow: $shadowColor4;
         transform: scale(0.99);
       }
       a {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
+        width: 68%;
         height: 100%;
+        padding: 0px 16%;
         display: block;
         color: #519fff;
         font-weight: 700;
         text-shadow: 1px 1px 2px #fff;
         font-size: 14px;
-        line-height: 34px;
+        line-height: 30px;
         text-align: center;
         -webkit-text-decoration: none;
         text-decoration: none;
         text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .projectComponent {
         -webkit-transform: scale(0.180134);
@@ -304,159 +412,11 @@ main {
         border-radius: 40px;
         width: 1200px;
         height: 640px;
-        box-shadow: 0 0 0 10px #e6e7f1, 20px 20px 40px rgba(0, 1, 60, 0.06),
-          -20px -20px 40px rgba(255, 255, 255, 0.6);
+        box-shadow: $shadowColor5;
         overflow: hidden;
         background: #fff;
       }
-      .fileInfoIc {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        width: 32px;
-        height: 32px;
-        cursor: help;
-        z-index: 1;
-        &:before {
-          content: "i";
-          position: absolute;
-          top: 7px;
-          right: 7px;
-          width: 18px;
-          height: 18px;
-          background: #dbdcfa;
-          border-radius: 100%;
-          color: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 15px;
-          text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.4),
-            1px 1px 1px rgba(0, 1, 49, 0.1);
-          box-shadow: inset 1px 1px 1px rgba(0, 1, 49, 0.05),
-            1px 1px 1px rgba(255, 255, 255, 0.4);
-          transition: ease-in-out 0.1s;
-        }
-        &:hover {
-          &:before {
-            background: #aceecd;
-          }
-          .fileInfo {
-            right: 40px;
-            opacity: 1;
-            visibility: visible;
-            -webkit-transform: translateY(-50%) scale(1);
-            transform: translateY(-50%) scale(1);
-          }
-        }
-        .fileInfo {
-          position: absolute;
-          right: 30px;
-          top: 50%;
-          -webkit-transform: translateY(-50%) scale(0.96);
-          transform: translateY(-50%) scale(0.96);
-          width: -webkit-fit-content;
-          width: -moz-fit-content;
-          width: fit-content;
-          white-space: nowrap;
-          z-index: 1;
-          background: linear-gradient(
-              135deg,
-              rgba(0, 3, 181, 0.02),
-              rgba(255, 255, 255, 0.05)
-            ),
-            rgba(255, 255, 255, 0.1);
-          border-radius: 10px;
-          -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-          padding: 12px 18px;
-          font-size: 14px;
-          line-height: 18px;
-          color: #36404d;
-          text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
-          transition: ease-in-out 0.3s;
-          opacity: 0;
-          visibility: hidden;
-          pointer-events: none;
-          box-shadow: 0 1px 6px rgba(0, 1, 60, 0.1),
-            inset 1px 1px 2px rgba(255, 255, 255, 0.6),
-            1px 1px 2px rgba(60, 99, 255, 0.2),
-            inset -1px -1px 2px rgba(60, 99, 255, 0.1);
-          &:before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            right: -17.5px;
-            border: 10px solid transparent;
-            border-left: 8px solid rgba(255, 255, 255, 0.5);
-            -webkit-filter: drop-shadow(-1px 0px 0.5px #ebedfb)
-              drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.2))
-              drop-shadow(3px 0 2px rgba(0, 1, 60, 0.1));
-            filter: drop-shadow(-1px 0px 0.5px #ebedfb)
-              drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.2))
-              drop-shadow(3px 0 2px rgba(0, 1, 60, 0.1));
-          }
-        }
-      }
     }
-    // &.onePage {
-    //   height: 100%;
-    //   width: 100%;
-    //   max-width: none;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   transform: none;
-    //   padding: 0;
-    //   margin: 0;
-    //   background-color: #9f8978;
-    //   .pageBox {
-    //     width: 100%;
-    //     height: 100%;
-    //     border-radius: 0;
-    //     background: none;
-    //     box-shadow: none;
-    //     transform: none;
-    //     pointer-events: none;
-    //     &:hover {
-    //       background: none;
-    //       box-shadow: none;
-    //       z-index: unset;
-    //     }
-    //     &:active {
-    //       background: none;
-    //       box-shadow: none;
-    //       transform: none;
-    //     }
-    //     .projectComponent {
-    //       top: 0;
-    //       left: 50%;
-    //       transform: translateX(-50%) scale(1);
-    //       border-radius: 0;
-    //       margin: 0;
-    //       box-shadow: 0 0 2px #000, 0 0 10px #4d4538, 0 0 10px #4d4538,
-    //         0 0 10px #4d4538, 0 0 25px #4d4538;
-    //       pointer-events: all;
-    //       position: absolute;
-    //     }
-    //     #MainScreen00RegComponent {
-    //       background: none;
-    //       box-shadow: none;
-    //       width: 100%;
-    //       height: 100%;
-    //       .screenReg {
-    //         width: 100%;
-    //         height: 100%;
-    //         .wrapStyles {
-    //           width: 100% !important;
-    //           height: 100% !important;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
     &.onePage {
       height: 100%;
       width: 100%;
@@ -476,6 +436,7 @@ main {
         box-shadow: none;
         transform: none;
         pointer-events: none;
+        margin: 0;
         .projectComponent {
           top: 0;
           left: 50%;
@@ -504,120 +465,37 @@ main {
     }
   }
   &.dark-theme {
-    background: #2a3451;
+    background: $mainColorDark;
     color: #fff;
     .templateTit {
-      color: #6a95c9;
-      text-shadow: 1px 1px 2px #000000;
-      background: rgba(17, 0, 128, 0.02);
-      box-shadow: inset -1px -1px 2px rgba(255, 255, 255, 0.1),
-        1px 1px 2px rgba(255, 255, 255, 0.02),
-        inset 1px 1px 2px rgba(60, 99, 255, 0.1),
-        -1px -1px 2px rgba(60, 99, 255, 0.1),
-        inset 4px 4px 8px rgba(8, 0, 60, 0.6),
-        inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+      background: $bgColorDark1;
+      box-shadow: $shadowColorDark1;
+      .title {
+        color: #6a95c9;
+        text-shadow: 1px 1px 2px #000000;
+      }
     }
     .template-container {
       &::-webkit-scrollbar-thumb {
-        background: linear-gradient(
-            135deg,
-            rgba(0, 3, 181, 0.02),
-            rgba(255, 255, 255, 0.05)
-          ),
-          rgba(255, 255, 255, 0.04);
-        box-shadow: inset 0 0 0 1px #2a3451, inset 0 0 4px 4px #2a3451,
-          inset 3px 3px 2px 2px rgba(255, 255, 255, 0.1),
-          inset 2px 2px 1px 2px rgba(255, 255, 255, 0.2),
-          inset -3px -3px 2px 2px rgba(60, 99, 255, 0.2),
-          inset -2px -2px 1px 2px rgba(60, 99, 255, 0.4);
+        background: $bgColorDark2;
+        box-shadow: $shadowColorDark2;
       }
       .pageBox {
-        background: linear-gradient(
-            135deg,
-            rgba(0, 3, 181, 0.02),
-            rgba(255, 255, 255, 0.05)
-          ),
-          rgba(255, 255, 255, 0.02);
-        box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.04),
-          inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-          1px 1px 2px rgba(60, 99, 255, 0.1),
-          inset -1px -1px 2px rgba(0, 0, 0, 0.2),
-          4px 4px 8px rgba(0, 1, 60, 0.4),
-          -4px -4px 8px rgba(255, 255, 255, 0.1);
+        background: $bgColorDark3;
+        box-shadow: $shadowColorDark3;
         &:hover {
-          background: linear-gradient(
-              135deg,
-              rgba(0, 3, 181, 0.02),
-              rgba(255, 255, 255, 0.05)
-            ),
-            rgba(255, 255, 255, 0.06);
-          box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.06),
-            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-            1px 1px 2px rgba(60, 99, 255, 0.06),
-            inset -1px -1px 2px rgba(60, 99, 255, 0.1),
-            6px 6px 12px rgba(0, 1, 60, 0.5),
-            -6px -6px 12px rgba(255, 255, 255, 0.12);
+          background: $bgColorDark4;
+          box-shadow: $shadowColorDark4;
         }
         &:active {
-          background: linear-gradient(
-              135deg,
-              rgba(0, 3, 181, 0.02),
-              rgba(255, 255, 255, 0.05)
-            ),
-            rgba(255, 255, 255, 0);
-          box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
-            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-            1px 1px 2px rgba(60, 99, 255, 0.06),
-            inset -1px -1px 2px rgba(60, 99, 255, 0.1),
-            4px 4px 8px rgba(0, 1, 60, 0.4),
-            -4px -4px 8px rgba(255, 255, 255, 0.04);
+          background: $bgColorDark5;
+          box-shadow: $shadowColorDark5;
         }
         a {
           text-shadow: 1px 1px 2px rgba(0, 1, 60, 0.6);
         }
         .projectComponent {
-          box-shadow: 0 0 0 10px #2a3451, 20px 20px 40px rgb(0, 1, 60),
-            -20px -20px 40px rgba(255, 255, 255, 0.24);
-        }
-        .fileInfoIc {
-          &:before {
-            background: #29324e;
-            color: #468ee4;
-            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
-            box-shadow: inset 1px 1px 1px rgba(0, 1, 49, 0.1),
-              1px 1px 1px rgba(255, 255, 255, 0.06);
-          }
-          &:hover {
-            &:before {
-              background: #4a7e67;
-              color: #e2e9ff;
-              box-shadow: 1px 1px 1px rgba(0, 1, 49, 0.1),
-                inset 1px 1px 1px rgba(255, 255, 255, 0.06);
-            }
-          }
-        }
-        .fileInfo {
-          background: linear-gradient(
-              135deg,
-              rgba(0, 3, 181, 0.02),
-              rgba(255, 255, 255, 0.05)
-            ),
-            rgba(42, 52, 81, 0.6392156863);
-          color: #ffffff;
-          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 1px 6px rgba(0, 1, 60, 0.6),
-            inset 1px 1px 2px rgba(255, 255, 255, 0.2),
-            1px 1px 2px rgba(60, 99, 255, 0.4),
-            inset -1px -1px 2px rgba(60, 99, 255, 0.1);
-          &:before {
-            border-left: 8px solid rgba(77, 77, 77, 0.5294117647);
-            -webkit-filter: drop-shadow(-1px 0px 0.5px #374f62)
-              drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.4))
-              drop-shadow(3px 0 2px rgba(0, 1, 60, 0.6));
-            filter: drop-shadow(-1px 0px 0.5px #374f62)
-              drop-shadow(2px 1px 1px rgba(60, 99, 255, 0.4))
-              drop-shadow(3px 0 2px rgba(0, 1, 60, 0.6));
-          }
+          box-shadow: $shadowColorDark6;
         }
       }
       &.onePage {

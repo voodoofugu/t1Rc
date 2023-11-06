@@ -96,7 +96,11 @@ async function compileSCSSFile(sourceFile) {
       );
 
       // Удаление .scss файла кроме sass_commons
-      if (sourceFile !== "sass_commons.scss") {
+      if (
+        sourceFile !== "sass_commons.scss" &&
+        sourceFile !== "01-all-res.scss" &&
+        sourceFile !== "vip-btn.scss"
+      ) {
         fs.unlinkSync(sourceFilePath);
       }
     } else {
