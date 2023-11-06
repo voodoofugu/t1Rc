@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from "react";
 
 export default function SearchButton() {
   const [searchText, setSearchText] = useState("");
+  const [focus, setFocus] = useState(false);
 
   const handleSearch = useCallback((text) => {
     const searchInput = text.toLowerCase();
@@ -20,8 +21,17 @@ export default function SearchButton() {
     });
   }, []);
 
+  const handleFocus = () => {
+    setFocus(true);
+  };
+
+  const handleBlur = () => {
+    setFocus(false);
+  };
+
   useEffect(() => {
     const searchInput = document.getElementById("searchInput");
+
     searchInput.value = searchText;
     handleSearch(searchText);
   }, [searchText, handleSearch]);
@@ -35,15 +45,22 @@ export default function SearchButton() {
   };
 
   return (
-    <div className="searchWrap">
+    <div
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      className={`searchWrap ${focus ? "focus" : ""}`}
+    >
       <input
         type="text"
         id="searchInput"
+        className={focus ? "active" : ""}
         placeholder="Search"
         value={searchText}
         onChange={handleInputChange}
       />
-      <button onClick={handleClear}>X</button>
+      <button id="clearBtn" onClick={handleClear}>
+        X
+      </button>
     </div>
   );
 }
