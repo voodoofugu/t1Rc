@@ -58,9 +58,11 @@ export default function SearchButton() {
         value={searchText}
         onChange={handleInputChange}
       />
-      <button id="clearBtn" onClick={handleClear}>
-        X
-      </button>
+      <button
+        id="clearBtn"
+        className={focus ? "active" : ""}
+        onClick={handleClear}
+      ></button>
     </div>
   );
 }

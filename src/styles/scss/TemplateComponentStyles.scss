@@ -1,100 +1,49 @@
 // COLORS light
-$mainColor: #e6e7f1;
+$mainColor: #dfe0ef;
 
-$bgColor6: linear-gradient(
-    135deg,
-    rgba(0, 3, 181, 0.02),
-    rgba(255, 255, 255, 0.05)
-  ),
-  rgba(0, 3, 181, 0.1);
-$bgColor7: linear-gradient(
-    135deg,
-    rgba(0, 3, 181, 0.02),
-    rgba(255, 255, 255, 0.05)
-  ),
-  rgba(255, 255, 255, 0.6);
-$bgColor8: linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 5px -6px/2px
-    6px,
-  linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 5px 14px/2px
-    6px,
-  linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat -8px 5px/6px 2px,
-  linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 14px 5px/6px
-    2px;
+$mainColorDark3: darken($mainColor, 3%);
+$mainColorDark5: darken($mainColor, 5%);
+$mainColorDark10: darken($mainColor, 10%);
+$mainColorDark15: darken($mainColor, 15%);
+$mainColorDark20: darken($mainColor, 20%);
+$mainColorDark25: darken($mainColor, 25%);
 
-$shadowColor7: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
-  1px 1px 2px rgba(255, 255, 255, 0.6),
-  inset 1px 1px 2px rgba(60, 99, 255, 0.06),
-  -1px -1px 2px rgba(60, 99, 255, 0.1), inset 4px 4px 8px rgba(0, 1, 60, 0.06),
-  inset -4px -4px 8px rgba(255, 255, 255, 0.4);
-$shadowColor8: -1px -1px 2px rgba(255, 255, 255, 0.2),
-  inset 1px 1px 2px rgba(255, 255, 255, 0.4),
-  1px 1px 2px rgba(60, 99, 255, 0.06),
-  inset -1px -1px 2px rgba(60, 99, 255, 0.2), 2px 2px 4px rgba(0, 1, 60, 0.1),
-  -2px -2px 4px rgba(255, 255, 255, 0.2);
+$mainColorLight2: lighten($mainColor, 2%);
+$mainColorLight4: lighten($mainColor, 4%);
+$mainColorLight5: lighten($mainColor, 5%);
+$mainColorLight10: lighten($mainColor, 10%);
+$mainColorLight15: lighten($mainColor, 15%);
 
 // templateTit
-$bgColor5: linear-gradient(
-    135deg,
-    rgba(0, 3, 181, 0.02),
-    rgba(255, 255, 255, 0.05)
-  ),
-  rgba(0, 3, 181, 0.02);
-$shadowColor6: inset -1px -1px 2px rgba(255, 255, 255, 0.2),
-  1px 1px 2px rgba(255, 255, 255, 0.6),
-  inset 1px 1px 2px rgba(60, 99, 255, 0.06),
-  -1px -1px 2px rgba(60, 99, 255, 0.1), inset 4px 4px 8px rgba(0, 1, 60, 0.06),
-  inset -4px -4px 8px rgba(255, 255, 255, 0.4);
+$shadowColor6: inset -1px -1px 3px $mainColorLight5,
+  1px 1px 3px $mainColorLight10, inset 1px 1px 3px $mainColorDark10,
+  -1px -1px 3px $mainColorDark10;
 // scrollbar
-$bgColor1: linear-gradient(
-    135deg,
-    rgba(0, 3, 181, 0.04),
-    rgba(255, 255, 255, 0.05)
-  ),
-  rgba(255, 255, 255, 0.5);
-$shadowColor1: inset 0 0 4px 4px $mainColor,
-  inset 3px 3px 2px 2px rgb(255, 255, 255),
-  inset 2px 2px 1px 2px rgba(255, 255, 255, 0.6),
-  inset -3px -3px 2px 2px rgba(60, 99, 255, 0.1),
-  inset -2px -2px 1px 2px rgba(60, 99, 255, 0.2);
+$shadowColor1: inset 0 0 3px 3px $mainColor,
+  inset 4px 4px 2px 2px $mainColorLight10,
+  inset -4px -4px 2px 2px $mainColorDark5;
 // pageBox
-$bgColor2: linear-gradient(
-    135deg,
-    rgba(0, 3, 181, 0.02),
-    rgba(255, 255, 255, 0.05)
-  ),
-  rgba(255, 255, 255, 0.2);
-$shadowColor2: -1px -1px 2px rgba(255, 255, 255, 0.2),
-  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-  1px 1px 2px rgba(60, 99, 255, 0.06),
-  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 4px 4px 8px rgba(0, 1, 60, 0.1),
-  -4px -4px 8px rgba(255, 255, 255, 0.5);
+$shadowColor2: -4px -4px 8px $mainColorLight10,
+  inset 1px 1px 2px $mainColorLight10, inset -1px -1px 2px $mainColorDark10,
+  4px 4px 8px $mainColorDark10;
 // pageBox hover
-$bgColor3: linear-gradient(
-    135deg,
-    rgba(0, 3, 181, 0.02),
-    rgba(255, 255, 255, 0.05)
-  ),
-  rgba(255, 255, 255, 0.4);
-$shadowColor3: -1px -1px 2px rgba(255, 255, 255, 0.2),
-  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-  1px 1px 2px rgba(60, 99, 255, 0.06),
-  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 6px 6px 12px rgba(0, 1, 60, 0.14),
-  -6px -6px 12px rgba(255, 255, 255, 0.8);
+$shadowColor3: 0 0 2px 1px #c6b8ff, -5px -5px 10px $mainColorLight15,
+  inset 1px 1px 2px $mainColorLight10, inset -1px -1px 2px $mainColorDark10,
+  5px 5px 10px $mainColorDark15;
 // pageBox active
-$bgColor4: linear-gradient(
-    135deg,
-    rgba(0, 3, 181, 0.02),
-    rgba(255, 255, 255, 0.05)
-  ),
-  rgba(255, 255, 255, 0);
-$shadowColor4: -1px -1px 2px rgba(255, 255, 255, 0.2),
-  inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-  1px 1px 2px rgba(60, 99, 255, 0.06),
-  inset -1px -1px 2px rgba(60, 99, 255, 0.1), 4px 4px 8px rgba(0, 1, 60, 0.1),
-  -4px -4px 8px rgba(255, 255, 255, 0.4);
+$shadowColor4: 0 0 2px 1px #c6b8ff, -2px -2px 4px $mainColorLight10,
+  inset 1px 1px 2px $mainColorLight10, inset -1px -1px 2px $mainColorDark10,
+  2px 2px 4px $mainColorDark10;
 // projectComponent
-$shadowColor5: 0 0 0 10px $mainColor, 20px 20px 40px rgba(0, 1, 60, 0.06),
-  -20px -20px 40px rgba(255, 255, 255, 0.6);
+$shadowColor5: 0 0 0 10px $mainColorDark5, 20px 20px 40px $mainColorDark15,
+  -20px -20px 40px $mainColorLight15;
+// toggle-btn
+$shadowColor7: inset -1px -1px 3px $mainColor, 1px 1px 3px $mainColorLight5,
+  inset 1px 1px 3px $mainColorDark15, -1px -1px 3px $mainColorDark20;
+// toggle-btn before
+$shadowColor8: -1px -1px 2px $mainColorLight10,
+  inset 1px 1px 2px $mainColorLight5, 1px 1px 2px $mainColorDark10,
+  inset -1px -1px 2px $mainColorDark5;
 
 // COLORS dark
 $mainColorDark: #2a3451;
@@ -175,7 +124,7 @@ main {
     transform: translateX(calc(-50% - 20px));
     padding: 10px;
     border-radius: 18px;
-    background: $bgColor5;
+    background: $mainColorDark3;
     box-shadow: $shadowColor6;
     &.onePageDiasable {
       display: none;
@@ -191,23 +140,58 @@ main {
         height: 0;
         width: 0;
         border-radius: 30px;
-        border: none;
         padding: 16px;
         transition: 0.1s ease-in-out;
         pointer-events: none;
+        background: $mainColorDark10;
+        box-shadow: $shadowColor7;
+        outline: none;
         &.active {
           width: 200px;
           pointer-events: all;
+        }
+        &:focus-visible {
+          border: none;
         }
       }
       #clearBtn {
         width: 26px;
         height: 26px;
         border-radius: 30px;
+        border: none;
         position: absolute;
         right: 3px;
         top: 3px;
         cursor: pointer;
+        background: $mainColorDark3;
+        box-shadow: $shadowColor8;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 3px;
+          top: 3px;
+          width: 9px;
+          height: 9px;
+          border-radius: 30px;
+          border: 2px solid $mainColorDark10;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 16px;
+          top: 13px;
+          width: 2px;
+          height: 8px;
+          border-radius: 30px;
+          background: $mainColorDark10;
+          rotate: -45deg;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+        &:hover {
+          background: $mainColor;
+        }
       }
     }
     .title {
@@ -231,8 +215,13 @@ main {
       -webkit-appearance: none;
       appearance: none;
       transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-      background: $bgColor6;
+      background: $mainColorDark10;
       box-shadow: $shadowColor7;
+      &:hover {
+        &:before {
+          background: $mainColor;
+        }
+      }
       &:before {
         content: "";
         position: absolute;
@@ -244,7 +233,7 @@ main {
         -webkit-transform: translateX(0);
         transform: translateX(0);
         transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-        background: $bgColor7;
+        background: $mainColorDark3;
         box-shadow: $shadowColor8;
       }
       .btn-ic {
@@ -257,7 +246,14 @@ main {
         transform: scale(0.9);
         width: 24px;
         height: 24px;
-        background: $bgColor8;
+        background: linear-gradient(to bottom, #c2c3e4 4px, transparent 0)
+            no-repeat 5px -6px/2px 6px,
+          linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 5px
+            14px/2px 6px,
+          linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat -8px 5px/6px
+            2px,
+          linear-gradient(to bottom, #c2c3e4 4px, transparent 0) no-repeat 14px
+            5px/6px 2px;
         border-radius: 100px;
         box-shadow: inset 0 0 0 2px #c2c3e4;
         border: 6px solid transparent;
@@ -365,17 +361,18 @@ main {
     }
     &::-webkit-scrollbar-thumb {
       border-radius: 8px;
-      background: $bgColor1;
+      background: $mainColorLight2;
       box-shadow: $shadowColor1;
     }
     .pageBox {
       border-radius: 18px;
-      background: $bgColor2;
+      background: $mainColorLight2;
       box-shadow: $shadowColor2;
       width: 238px;
-      height: 150px;
+      height: 154px;
       position: relative;
       transition: ease-in-out 0.1s;
+      transition: transform ease-in-out 0.05s;
       overflow: hidden;
       margin: 20px;
       &.disabled {
@@ -385,13 +382,15 @@ main {
         margin: 0;
       }
       &:hover {
-        background: $bgColor3;
+        background: $mainColorLight4;
         box-shadow: $shadowColor3;
-        transform: scale(1);
         z-index: 1;
+        a {
+          color: #3d94ff;
+        }
       }
       &:active {
-        background: $bgColor4;
+        background: $mainColor;
         box-shadow: $shadowColor4;
         transform: scale(0.99);
       }
@@ -403,7 +402,7 @@ main {
         height: 100%;
         padding: 0px 16%;
         display: block;
-        color: #519fff;
+        color: $mainColorDark25;
         font-weight: 700;
         text-shadow: 1px 1px 2px #fff;
         font-size: 14px;
