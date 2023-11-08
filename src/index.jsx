@@ -39,7 +39,7 @@
 
 // < --!!! рендер элемента App !!!-- >
 
-import React, { Suspense } from "react";
+import React, { Profiler, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 
 import Loading from "./components/Loading.jsx";
@@ -47,4 +47,8 @@ import App from "./components/App";
 
 const root = document.getElementById("root");
 const reactRoot = createRoot(root);
-reactRoot.render(<App />);
+reactRoot.render(
+  //   <Profiler id="App">
+  <App />
+  //   </Profiler>
+);

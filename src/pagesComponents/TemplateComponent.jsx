@@ -32,7 +32,7 @@ export default function TemplateComponent({
             name="toggle"
             id="theme-toggle"
           >
-            <div className="btn-ic"></div>
+            <div className="btnIcn"></div>
           </div>
           {scriptLoaded}
         </div>

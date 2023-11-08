@@ -1,8 +1,9 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 
 export default function SearchButton() {
   const [searchText, setSearchText] = useState("");
   const [focus, setFocus] = useState(false);
+  const searchInputRef = useRef(null);
 
   const handleSearch = useCallback((text) => {
     const searchInput = text.toLowerCase();
@@ -21,48 +22,57 @@ export default function SearchButton() {
     });
   }, []);
 
-  const handleFocus = () => {
+  function handleFocus() {
     setFocus(true);
-  };
+  }
 
-  const handleBlur = () => {
+  function handleBlur() {
     setFocus(false);
-  };
+  }
 
   useEffect(() => {
     const searchInput = document.getElementById("searchInput");
-
     searchInput.value = searchText;
     handleSearch(searchText);
   }, [searchText, handleSearch]);
 
-  const handleInputChange = (event) => {
+  function handleInputChange(event) {
     setSearchText(event.target.value);
-  };
+  }
 
-  const handleClear = () => {
+  function inputFocus() {
+    searchInputRef.current.focus();
+  }
+
+  function handleClear() {
     setSearchText("");
-  };
+    inputFocus();
+  }
 
   return (
     <div
       onFocus={handleFocus}
       onBlur={handleBlur}
+      onClick={inputFocus}
       className={`searchWrap ${focus ? "focus" : ""}`}
     >
       <input
         type="text"
         id="searchInput"
+        ref={searchInputRef}
         className={focus ? "active" : ""}
         placeholder="Search"
         value={searchText}
         onChange={handleInputChange}
+        autoComplete="off"
       />
       <button
         id="clearBtn"
         className={focus ? "active" : ""}
         onClick={handleClear}
-      ></button>
+      >
+        <div className={`btnIcn ${searchText !== "" ? "defined" : ""}`}></div>
+      </button>
     </div>
   );
 }
