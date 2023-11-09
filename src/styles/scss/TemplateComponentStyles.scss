@@ -1,5 +1,5 @@
 // COLORS light
-$mainColor: #dfe0ef;
+$mainColor: #d5d8f6;
 
 $mainColorDark3: darken($mainColor, 3%);
 $mainColorDark5: darken($mainColor, 5%);
@@ -18,8 +18,8 @@ $mainColorLight15: lighten($mainColor, 15%);
 
 // templateTit
 $shadowColor6: inset -1px -1px 3px $mainColorLight5,
-  1px 1px 3px $mainColorLight10, inset 1px 1px 3px $mainColorDark10,
-  -1px -1px 3px $mainColorDark10;
+  1px 1px 3px $mainColorLight15, inset 1px 1px 3px $mainColorDark10,
+  -1px -1px 3px $mainColorDark15;
 // scrollbar
 $shadowColor1: inset 0 0 3px 3px $mainColor,
   inset 4px 4px 2px 2px $mainColorLight10,
@@ -29,26 +29,26 @@ $shadowColor2: -4px -4px 8px $mainColorLight10,
   inset 1px 1px 2px $mainColorLight10, inset -1px -1px 2px $mainColorDark10,
   4px 4px 8px $mainColorDark10;
 // pageBox hover
-$shadowColor3: 0 0 2px 1px #c6b8ff, -5px -5px 10px $mainColorLight15,
+$shadowColor3: 0 0 2px 1px $mainColorDark15, -5px -5px 10px $mainColorLight15,
   inset 1px 1px 2px $mainColorLight10, inset -1px -1px 2px $mainColorDark10,
   5px 5px 10px $mainColorDark15;
 // pageBox active
-$shadowColor4: 0 0 2px 1px #c6b8ff, -2px -2px 4px $mainColorLight10,
+$shadowColor4: 0 0 2px 1px $mainColorDark15, -2px -2px 4px $mainColorLight10,
   inset 1px 1px 2px $mainColorLight10, inset -1px -1px 2px $mainColorDark10,
   2px 2px 4px $mainColorDark10;
 // projectComponent
 $shadowColor5: 0 0 0 10px $mainColorDark5, 20px 20px 40px $mainColorDark15,
   -20px -20px 40px $mainColorLight15;
 // toggle-btn & searchInput
-$shadowColor7: inset -1px -1px 3px $mainColorDark3, 1px 1px 3px $mainColorLight5,
-  inset 1px 1px 3px $mainColorDark15, -1px -1px 3px $mainColorDark25;
+$shadowColor7: inset -1px -1px 3px $mainColorDark5, 1px 1px 3px $mainColorLight5,
+  inset 1px 1px 3px $mainColorDark20, -1px -1px 3px $mainColorDark30;
 // toggle-btn before & clearBtn
-$shadowColor8: -1px -1px 1px $mainColorLight10,
-  inset 1px 1px 1px $mainColorLight2, 1px 1px 1px $mainColorDark15,
-  inset -1px -1px 1px $mainColorDark10;
+$shadowColor8: -1px -1px 2px $mainColorLight10,
+  inset 1px 1px 2px $mainColorLight2, 1px 1px 2px $mainColorDark20,
+  inset -1px -1px 2px $mainColorDark10;
 
 // COLORS dark
-$darkMainColor: #2a3451;
+$darkMainColor: #25325c;
 
 $darkMainColorDark3: darken($darkMainColor, 3%);
 $darkMainColorDark5: darken($darkMainColor, 5%);
@@ -64,30 +64,39 @@ $darkMainColorLight4: lighten($darkMainColor, 4%);
 $darkMainColorLight5: lighten($darkMainColor, 5%);
 $darkMainColorLight10: lighten($darkMainColor, 10%);
 $darkMainColorLight15: lighten($darkMainColor, 15%);
+$darkMainColorLight20: lighten($darkMainColor, 30%);
 
 // templateTit
 $shadowColorDark1: inset -1px -1px 3px $darkMainColorLight5,
-  1px 1px 3px $darkMainColorLight10, inset 1px 1px 3px $darkMainColorDark10,
-  -1px -1px 3px $darkMainColorDark10;
+  1px 1px 3px $darkMainColorLight15, inset 1px 1px 3px $darkMainColorDark10,
+  -1px -1px 3px $darkMainColorDark15;
 // scrollbar
 $shadowColorDark2: inset 0 0 3px 3px $darkMainColor,
   inset 4px 4px 2px 2px $darkMainColorLight10,
   inset -4px -4px 2px 2px $darkMainColorDark5;
 // pageBox
-$shadowColorDark3: -4px -4px 8px $darkMainColorLight10,
+$shadowColorDark3: -4px -4px 8px $darkMainColorLight15,
   inset 1px 1px 2px $darkMainColorLight10,
   inset -1px -1px 2px $darkMainColorDark10, 4px 4px 8px $darkMainColorDark10;
 // pageBox hover
-$shadowColorDark4: 0 0 2px 1px #c6b8ff, -5px -5px 10px $darkMainColorLight15,
-  inset 1px 1px 2px $darkMainColorLight10,
+$shadowColorDark4: 0 0 2px 1px $mainColorDark20,
+  -5px -5px 10px $darkMainColorLight15, inset 1px 1px 2px $darkMainColorLight10,
   inset -1px -1px 2px $darkMainColorDark10, 5px 5px 10px $darkMainColorDark15;
 // pageBox active
-$shadowColorDark5: 0 0 2px 1px #c6b8ff, -2px -2px 4px $darkMainColorLight10,
-  inset 1px 1px 2px $darkMainColorLight10,
+$shadowColorDark5: 0 0 2px 1px $mainColorDark20,
+  -2px -2px 4px $darkMainColorLight10, inset 1px 1px 2px $darkMainColorLight10,
   inset -1px -1px 2px $darkMainColorDark10, 2px 2px 4px $darkMainColorDark10;
 // projectComponent
 $shadowColorDark6: 0 0 0 10px $darkMainColorDark5,
   20px 20px 40px $darkMainColorDark15, -20px -20px 40px $darkMainColorLight15;
+// toggle-btn & searchInput
+$shadowColorDark7: inset -1px -1px 3px $mainColorDark10,
+  1px 1px 3px $darkMainColorLight15, inset 1px 1px 3px $darkMainColor,
+  -1px -1px 3px $darkMainColorDark15;
+// toggle-btn before & clearBtn
+$shadowColorDark8: -1px -1px 2px $mainColorDark15,
+  inset 1px 1px 2px $darkMainColorLight10, 1px 1px 2px $darkMainColorDark10,
+  inset -1px -1px 2px $darkMainColorDark5;
 
 main {
   position: absolute;
@@ -97,13 +106,14 @@ main {
   height: 100%;
   background: $mainColor;
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .templateTit {
     max-width: 1160px;
+    width: -webkit-fill-available;
     margin: 20px;
     position: relative;
-    left: 50%;
-    -webkit-transform: translateX(calc(-50% - 20px));
-    transform: translateX(calc(-50% - 20px));
     padding: 10px;
     border-radius: 18px;
     background: $mainColorDark3;
@@ -130,8 +140,12 @@ main {
         outline: none;
         border: none;
         color: $mainColorDark50;
+        text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.2);
+        font-size: 14px;
         &.active {
-          width: 200px;
+          width: 184px;
+          padding-right: 40px;
+          padding-left: 12px;
           pointer-events: all;
         }
         &:focus-visible {
@@ -164,27 +178,28 @@ main {
           &:after {
             content: "";
             position: absolute;
-            height: 9px;
             transition: all 0.3s 0.1s cubic-bezier(0.2, 0.85, 0.32, 1.2);
           }
           &:before {
-            left: 3px;
-            top: 3px;
+            left: 4px;
+            top: 4px;
             width: 9px;
+            height: 9px;
             border-radius: 30px;
             border: 2px solid $mainColorDark15;
           }
           &:after {
-            left: 15px;
-            top: 12px;
-            width: 2px;
+            left: 16px;
+            top: 13px;
+            width: 3px;
+            height: 8px;
             border-radius: 2px;
             background: $mainColorDark15;
             transform: rotate(-45deg);
           }
         }
         &:active {
-          transform: scale(0.95);
+          transform: scale(0.9);
         }
         &:hover {
           background: $mainColor;
@@ -193,10 +208,10 @@ main {
           .btnIcn {
             &:before,
             &:after {
-              left: 11px;
+              left: 11.4px;
               top: 5px;
-              width: 2px;
-              height: 14px;
+              width: 3px;
+              height: 15px;
               background: $mainColorDark15;
             }
             &:before {
@@ -207,7 +222,7 @@ main {
             &.defined {
               &:before,
               &:after {
-                background: rgb(255, 68, 68) !important;
+                background: rgb(255, 100, 100) !important;
               }
             }
           }
@@ -215,7 +230,7 @@ main {
       }
     }
     .title {
-      color: $mainColorDark25;
+      color: $mainColorDark20;
       text-shadow: 1px 1px 2px #fff;
       font-size: 24px;
       font-weight: 700;
@@ -245,6 +260,12 @@ main {
       &:active {
         &:before {
           background: $mainColor;
+          transform: scale(0.9);
+        }
+        &:active {
+          .btnIcn {
+            transform: scale(0.9);
+          }
         }
       }
       &:before {
@@ -267,7 +288,6 @@ main {
         left: 4px;
         top: 4px;
         display: block;
-        -webkit-transform: scale(0.9);
         transform: scale(0.9);
         width: 24px;
         height: 24px;
@@ -318,42 +338,24 @@ main {
         }
       }
       &.on {
-        background: linear-gradient(
-            135deg,
-            rgba(0, 3, 181, 0.02),
-            rgba(255, 255, 255, 0.05)
-          ),
-          #6400ff;
-        box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.1),
-          1px 1px 2px rgba(255, 255, 255, 0.2),
-          inset 1px 1px 2px rgba(60, 99, 255, 0.1),
-          -1px -1px 2px rgba(60, 99, 255, 0.4),
-          inset 2px 2px 4px rgba(0, 1, 60, 0.4),
-          inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+        background: saturate($mainColorDark20, 50%);
+        box-shadow: $shadowColorDark7;
         &:before {
-          -webkit-transform: translateX(calc(100% + 2px));
           transform: translateX(calc(100% + 2px));
-          background: linear-gradient(
-              135deg,
-              rgba(0, 3, 181, 0.02),
-              rgba(255, 255, 255, 0.1)
-            ),
-            rgba(42, 52, 81, 0.9294117647);
-          box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.2),
-            inset 1px 1px 2px rgba(255, 255, 255, 0.1),
-            1px 1px 2px rgba(60, 99, 255, 0.06),
-            inset -1px -1px 2px rgba(60, 99, 255, 0.4),
-            2px 2px 2px rgba(0, 1, 60, 0.3),
-            -2px -2px 2px rgba(255, 255, 255, 0.2);
+          background: $darkMainColorLight2;
+          box-shadow: $shadowColorDark8;
+        }
+        &:hover {
+          &:before {
+            background: $darkMainColorLight5;
+          }
         }
         .btnIcn {
-          -webkit-transform: translateX(calc(100% + 4px));
-          transform: translateX(calc(100% + 4px));
+          // transform: translateX(calc(100% + 4px));
           background: transparent;
           border: 4px solid transparent;
           box-shadow: inset -4px -4px 0 0px #f5f200;
-          -webkit-filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.4));
-          filter: drop-shadow(1px 1px 0.5px rgba(0, 0, 0, 0.4));
+          filter: drop-shadow(0.2px 1px 0.4px $darkMainColorDark20);
           &:before {
             display: none;
           }
@@ -369,16 +371,12 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 0 20px 0;
-    height: calc(100vh - 152px);
-    margin: 20px;
+    height: calc(100vh - 92px);
+    margin: 0 20px;
     overflow-y: auto;
     overflow-x: hidden;
     max-width: 1160px;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(calc(-50% - 20px));
-    transform: translateX(calc(-50% - 20px));
+    padding-bottom: 10px;
     &::-webkit-scrollbar-track {
       border-radius: 6px;
       z-index: 999;
@@ -414,7 +412,7 @@ main {
         box-shadow: $shadowColor3;
         z-index: 1;
         a {
-          color: #3d94ff;
+          color: $mainColorDark25;
         }
       }
       &:active {
@@ -430,11 +428,11 @@ main {
         height: 100%;
         padding: 0px 16%;
         display: block;
-        color: $mainColorDark25;
+        color: $mainColorDark20;
         font-weight: 700;
         text-shadow: 1px 1px 2px #fff;
         font-size: 14px;
-        line-height: 30px;
+        line-height: 28px;
         text-align: center;
         -webkit-text-decoration: none;
         text-decoration: none;
@@ -514,17 +512,18 @@ main {
       box-shadow: $shadowColorDark1;
       .searchWrap {
         #searchInput {
-          background: $darkMainColorDark10;
-          box-shadow: $shadowColorDark1;
+          background: saturate($mainColorDark20, 50%);
+          box-shadow: $shadowColorDark7;
+          color: $darkMainColorDark20;
           &::placeholder {
-            color: $darkMainColorDark30;
+            color: $darkMainColorLight5;
           }
         }
         #clearBtn {
-          background: $mainColorDark3;
-          box-shadow: $shadowColor8;
+          background: $darkMainColorLight2;
+          box-shadow: $shadowColorDark8;
           .btnIcn {
-            filter: drop-shadow(0.2px 1px 0.4px rgba(255, 255, 255, 0.6));
+            filter: drop-shadow(0.2px 1px 0.4px $darkMainColorDark20);
             &:before {
               border: 2px solid $mainColorDark15;
             }
@@ -533,7 +532,7 @@ main {
             }
           }
           &:hover {
-            background: $mainColor;
+            background: $darkMainColorLight5;
           }
           &.active {
             .btnIcn {
@@ -556,11 +555,14 @@ main {
         box-shadow: $shadowColorDark2;
       }
       .pageBox {
-        background: $darkMainColorLight2;
+        background: $darkMainColorLight4;
         box-shadow: $shadowColorDark3;
         &:hover {
-          background: $darkMainColorLight4;
+          background: $darkMainColorLight5;
           box-shadow: $shadowColorDark4;
+          a {
+            color: $mainColorDark10;
+          }
         }
         &:active {
           background: $darkMainColor;
