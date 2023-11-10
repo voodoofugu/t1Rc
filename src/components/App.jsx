@@ -2,6 +2,7 @@ import React, { Suspense, StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import RoutesApp from "../routes/RoutesApp";
+import { TooltipProvider } from "./TooltipProvider";
 
 import Loading from "./Loading.jsx";
 
@@ -15,7 +16,9 @@ export default function App() {
         <HelmetProvider>
           <HelmetForCss cssFiles={cssFiles}>
             <Suspense fallback={<Loading />}>
-              <RoutesApp />
+              <TooltipProvider>
+                <RoutesApp />
+              </TooltipProvider>
             </Suspense>
           </HelmetForCss>
         </HelmetProvider>

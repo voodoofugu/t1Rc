@@ -6,28 +6,11 @@ import LazyLoad from "react-lazy-load";
 import { StylesLoadedProvider } from "./StylesLoadedProvider";
 import Loading from "./Loading";
 import TooltipTemplate from "./TooltipTemplate";
+import { useTooltip } from "./TooltipProvider";
 
 export default function PageBox() {
   const [pageList, setPageList] = useState([null]);
-  // const [tooltipData, setTooltipData] = useState({
-  //   visible: false,
-  //   x: 0,
-  //   y: 0,
-  //   text: "",
-  // });
-
-  // const handleMouseEnter = (e, pageName) => {
-  //   setTooltipData({
-  //     visible: true,
-  //     x: e.clientX,
-  //     y: e.clientY,
-  //     text: pageName,
-  //   });
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setTooltipData({ visible: false, x: 0, y: 0, text: "" });
-  // };
+  const { tooltipData, setTooltip } = useTooltip();
 
   useEffect(() => {
     async function importDynamicComponents() {
@@ -59,8 +42,23 @@ export default function PageBox() {
                 <Link to={pageName}>{pageName}</Link>
                 <div
                   className="infoPageBox"
-                  // onMouseEnter={(e) => handleMouseEnter(e, pageName)}
-                  // onMouseLeave={handleMouseLeave}
+                  onMouseEnter={() =>
+                    setTooltip({
+                      visible: true,
+                      x: 100,
+                      y: 100,
+                      text: pageName,
+                      console: console.log(tooltipData),
+                    })
+                  }
+                  onMouseLeave={() =>
+                    setTooltip({
+                      visible: false,
+                      x: 0,
+                      y: 0,
+                      text: "",
+                    })
+                  }
                 >
                   i
                 </div>
@@ -74,16 +72,14 @@ export default function PageBox() {
           </div>
         );
       })}
-      {createPortal(<TooltipTemplate text="test" x={0} y={0} />, document.body)}
-      {/* {tooltipData.visible &&
-        createPortal(
-          <TooltipTemplate
-            text={tooltipData.text}
-            x={tooltipData.x}
-            y={tooltipData.y}
-          />,
-          document.body
-        )} */}
+      {createPortal(
+        <TooltipTemplate
+          text={tooltipData.text}
+          x={tooltipData.x}
+          y={tooltipData.y}
+        />,
+        document.body
+      )}
     </>
   );
 }
