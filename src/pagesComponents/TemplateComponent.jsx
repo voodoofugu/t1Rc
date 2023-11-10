@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HelmetComponent from "../components/HelmetComponent";
-
 import SearchButton from "../components/SearchButton";
+
 const templateJs = `
         import("../scripts/forBild/template.js").then(() => {});
     `;
@@ -12,6 +12,7 @@ export default function TemplateComponent({
   children,
 }) {
   const [scriptLoaded, setScriptLoaded] = useState(false);
+
   useEffect(() => {
     eval(templateJs);
     <HelmetComponent>

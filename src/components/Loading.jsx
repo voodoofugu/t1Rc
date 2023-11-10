@@ -167,7 +167,7 @@ const LoadCss = `
   }
 `;
 
-const Loading = () => {
+export default function Loading() {
   return (
     <div>
       <Helmet>
@@ -181,6 +181,4 @@ const Loading = () => {
       </div>
     </div>
   );
-};
-
-export default Loading;
+}

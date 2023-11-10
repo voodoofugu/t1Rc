@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import RoutesApp from "../routes/RoutesApp";
@@ -10,16 +10,16 @@ const cssFiles = ["TemplateComponentStyles"];
 
 export default function App() {
   return (
-    // <StrictMode>
-    <BrowserRouter>
-      <HelmetProvider>
-        <HelmetForCss cssFiles={cssFiles}>
-          <Suspense fallback={<Loading />}>
-            <RoutesApp />
-          </Suspense>
-        </HelmetForCss>
-      </HelmetProvider>
-    </BrowserRouter>
-    // </StrictMode>
+    <StrictMode>
+      <BrowserRouter>
+        <HelmetProvider>
+          <HelmetForCss cssFiles={cssFiles}>
+            <Suspense fallback={<Loading />}>
+              <RoutesApp />
+            </Suspense>
+          </HelmetForCss>
+        </HelmetProvider>
+      </BrowserRouter>
+    </StrictMode>
   );
 }
