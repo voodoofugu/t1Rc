@@ -1,30 +1,107 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 
-const TooltipContext = createContext();
-
-export function TooltipProvider({ children }) {
+export default function TooltipProvider({ children, text }) {
+  const refSetTimeout = useRef(null);
+  const tooltipRef = useRef(null);
+  const [visibleClass, setVisibleClass] = useState("");
+  const [showToolTip, setShowToolTip] = useState(false);
   const [tooltipData, setTooltipData] = useState({
-    visible: false,
-    x: 0,
-    y: 0,
-    text: "",
+    left: 0,
+    top: 0,
+    tooltipWidth: 0,
+    tooltipHeight: 0,
   });
 
-  const setTooltip = (data) => {
-    setTooltipData(data);
-  };
+  useEffect(() => {
+    if (showToolTip) {
+      updateTooltipData();
+    }
+    return () => {
+      if (refSetTimeout.current) {
+        clearTimeout(refSetTimeout.current);
+      }
+    };
+  }, [showToolTip, tooltipRef.current]);
+
+  async function updateTooltipData() {
+    if (tooltipRef.current) {
+      const tooltipWidth = tooltipRef.current.offsetWidth;
+      const tooltipHeight = tooltipRef.current.offsetHeight;
+
+      // Обновляем данные
+      setTooltipData((prevData) => ({
+        ...prevData,
+        tooltipWidth,
+        tooltipHeight,
+      }));
+
+      // Ждем рендера после обновления данных
+      await new Promise((resolve) => setTimeout(resolve, 0));
+
+      setVisibleClass("visible");
+    }
+  }
+
+  function calculateTooltipPosition({ left, top, height, width }) {
+    const { innerHeight } = window;
+    const halfHeight = innerHeight / 2;
+
+    let newTooltipData = { left: 0, top: 0 };
+
+    if (top < halfHeight) {
+      newTooltipData.top = top + height + 16;
+    } else {
+      newTooltipData.top = top - tooltipData.tooltipHeight - 16;
+    }
+
+    newTooltipData.left = left - tooltipData.tooltipWidth / 2 + width / 2;
+
+    return newTooltipData;
+  }
+
+  function onMouseEnterHandler(event) {
+    const boundingRect = event.target.getBoundingClientRect();
+
+    if (refSetTimeout.current) {
+      clearTimeout(refSetTimeout.current);
+    }
+
+    refSetTimeout.current = setTimeout(() => {
+      // Сначала обновляем данные тултипа
+      setTooltipData(calculateTooltipPosition(boundingRect));
+
+      // Затем устанавливаем видимость
+      setShowToolTip(true);
+    }, 300);
+  }
+
+  function onMouseLeaveHandler() {
+    if (refSetTimeout.current) {
+      clearTimeout(refSetTimeout.current);
+    }
+
+    setVisibleClass("");
+
+    refSetTimeout.current = setTimeout(() => {
+      setShowToolTip(false);
+    }, 200);
+  }
 
   return (
-    <TooltipContext.Provider value={{ tooltipData, setTooltip }}>
+    <div onMouseEnter={onMouseEnterHandler} onMouseLeave={onMouseLeaveHandler}>
       {children}
-    </TooltipContext.Provider>
+      {showToolTip &&
+        createPortal(
+          <div
+            className={`tooltipTemplate ${visibleClass}`}
+            style={tooltipData}
+            ref={tooltipRef}
+          >
+            {text}
+          </div>,
+          document.querySelector("#root > div > main")
+        )}
+    </div>
   );
-}
-
-export function useTooltip() {
-  const context = useContext(TooltipContext);
-  if (!context) {
-    throw new Error("useTooltip must be used within a TooltipProvider");
-  }
-  return context;
 }
