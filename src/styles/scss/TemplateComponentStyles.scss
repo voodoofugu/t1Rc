@@ -8,6 +8,7 @@ $mainColorDark15: darken($mainColor, 15%);
 $mainColorDark20: darken($mainColor, 20%);
 $mainColorDark25: darken($mainColor, 25%);
 $mainColorDark30: darken($mainColor, 30%);
+$mainColorDark40: darken($mainColor, 40%);
 $mainColorDark50: darken($mainColor, 50%);
 
 $mainColorLight2: lighten($mainColor, 2%);
@@ -46,6 +47,9 @@ $shadowColor7: inset -1px -1px 3px $mainColorDark5, 1px 1px 3px $mainColorLight5
 $shadowColor8: -1px -1px 2px $mainColorLight10,
   inset 1px 1px 2px $mainColorLight2, 1px 1px 2px $mainColorDark20,
   inset -1px -1px 2px $mainColorDark10;
+// tooltip
+$shadowColor9: inset 1px 1px 2px $mainColorLight15,
+  inset -1px -1px 2px $mainColorDark15;
 
 // COLORS dark
 $darkMainColor: #25325c;
@@ -64,7 +68,8 @@ $darkMainColorLight4: lighten($darkMainColor, 4%);
 $darkMainColorLight5: lighten($darkMainColor, 5%);
 $darkMainColorLight10: lighten($darkMainColor, 10%);
 $darkMainColorLight15: lighten($darkMainColor, 15%);
-$darkMainColorLight20: lighten($darkMainColor, 30%);
+$darkMainColorLight30: lighten($darkMainColor, 30%);
+$darkMainColorLight40: lighten($darkMainColor, 40%);
 
 // templateTit
 $shadowColorDark1: inset -1px -1px 3px $darkMainColorLight5,
@@ -381,7 +386,7 @@ main {
     margin: 0 20px;
     overflow-y: auto;
     overflow-x: hidden;
-    max-width: 1160px;
+    max-width: 1186px;
     padding-bottom: 10px;
     &::-webkit-scrollbar-track {
       border-radius: 6px;
@@ -403,11 +408,11 @@ main {
       width: 238px;
       height: 154px;
       position: relative;
-      transition: opacity ease-in-out 0.1s width ease-in-out 0.3s;
+      transition: width ease-in-out 0.2s 0s, opacity ease-in-out 0.1s 0.2s;
       overflow: hidden;
       margin: 20px;
       &.disabled {
-        transition: all ease-in-out 0.1s;
+        transition: opacity ease-in-out 0.1s, width ease-in-out 0.3s;
         pointer-events: none;
         opacity: 0;
         width: 0;
@@ -419,6 +424,7 @@ main {
         z-index: 1;
         a {
           color: $mainColorDark25;
+          filter: saturate(2);
         }
       }
       &:active {
@@ -458,11 +464,16 @@ main {
         border-radius: 50%;
         color: $mainColorDark25;
         text-align: center;
-        line-height: 18px;
-        font-size: 15px;
+        line-height: 19px;
+        font-size: 16px;
         font-weight: 700;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 0.5px 0.5px 1px #fff;
         cursor: help;
+        transition: all ease-in-out 0.1s;
+        &:hover {
+          color: $mainColorDark40;
+          filter: hue-rotate(290deg) saturate(2);
+        }
       }
       .projectComponent {
         -webkit-transform: scale(0.180134);
@@ -529,21 +540,67 @@ main {
   }
   .tooltipTemplate {
     position: absolute;
-    padding: 10px;
+    padding: 10px 14px;
     border-radius: 10px;
-    background: $mainColorDark5;
-    box-shadow: $shadowColor8;
-    color: $darkMainColor;
+    background: $mainColor;
+    box-shadow: $shadowColor9;
+    color: $mainColorDark50;
     text-shadow: 1px 1px 2px $mainColorLight5;
     transition: all 0.2s cubic-bezier(0.2, 0.85, 0.32, 1.2);
     opacity: 0;
     transform: scale(0.6);
-    font-size: 14px;
+    font-size: 13px;
     z-index: 100;
     pointer-events: none;
+    filter: drop-shadow(0 1px 3px rgba(4, 3, 52, 0.6));
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+    }
     &.visible {
       opacity: 1;
       transform: scale(1);
+    }
+    &.top {
+      &:after {
+        top: -7px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid $mainColorLight5;
+      }
+    }
+    &.bottom {
+      &:after {
+        bottom: -7px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid $mainColorDark5;
+      }
+    }
+    &.left {
+      &:after {
+        left: 19px;
+        transform: none;
+      }
+    }
+    &.right {
+      &:after {
+        left: unset;
+        right: 19px;
+        transform: none;
+      }
+    }
+    .icn {
+      display: inline-block;
+      vertical-align: middle;
+      width: 14px;
+      margin-right: 6px;
+      fill: $mainColorDark30;
     }
   }
   &.dark-theme {
@@ -612,6 +669,12 @@ main {
         }
         a {
           text-shadow: 1px 1px 2px rgba(0, 1, 60, 0.6);
+        }
+        .infoPageBox {
+          background: saturate($mainColorDark20, 50%);
+          box-shadow: $shadowColorDark7;
+          text-shadow: 0.5px 0.5px 1px $darkMainColorLight40;
+          color: $darkMainColor;
         }
         .projectComponent {
           box-shadow: $shadowColorDark6;
