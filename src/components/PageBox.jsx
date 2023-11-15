@@ -35,15 +35,15 @@ export default function PageBox() {
           <div className="pageBox" key={pageName}>
             <LazyLoad height={"inherit"} width={"inherit"} offset={100}>
               <Suspense key={pageName} fallback={<Loading />} timer={1000}>
-                <Link to={pageName}>{pageName}</Link>
-                <TooltipProvider text={pageName}>
-                  <div className="infoPageBox">i</div>
-                </TooltipProvider>
                 <div id={`${pageName}`} className="projectComponent noScripts">
                   <StylesLoadedProvider>
                     <DynamicComponent pageName={pageName} />
                   </StylesLoadedProvider>
                 </div>
+                <Link to={pageName}>{pageName}</Link>
+                <TooltipProvider text={pageName}>
+                  <div className="infoPageBox">i</div>
+                </TooltipProvider>
               </Suspense>
             </LazyLoad>
           </div>

@@ -53,7 +53,6 @@ const cssFiles = [
 function MainScreen01AllPopupsComponent({ pageName = "" }) {
   const currentUrl = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
-  // console.log(stylesLoaded);
 
   useEffect(() => {
     if (pageName === currentUrl && stylesLoaded) {

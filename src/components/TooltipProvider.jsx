@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { createPortal } from "react-dom";
-import Stylus from "../img/template/svg/Stylus";
+import FileIcn from "../img/template/svg/FileIcn";
 
 export default function TooltipProvider({ children, text }) {
   const refSetTimeout = useRef(null);
@@ -39,10 +39,10 @@ export default function TooltipProvider({ children, text }) {
       let newTooltipData = { ...prevData };
 
       if (infoPageBoxCenterY < halfHeight) {
-        newTooltipData.top = top + height + 16;
+        newTooltipData.top = top + height;
         setPositionClassY("top");
       } else {
-        newTooltipData.top = top - prevData.tooltipHeight - 16;
+        newTooltipData.top = top - prevData.tooltipHeight;
         setPositionClassY("bottom");
       }
 
@@ -76,8 +76,8 @@ export default function TooltipProvider({ children, text }) {
       }, 100);
       refSetTimeout.current = setTimeout(() => {
         setVisibleClass("visible");
-      }, 350);
-    }, 200);
+      }, 250);
+    }, 100);
   }
 
   function onMouseLeaveHandler() {
@@ -85,6 +85,7 @@ export default function TooltipProvider({ children, text }) {
       clearTimeout(refSetTimeout.current);
     }
 
+    setPositionClassY("");
     setVisibleClass("");
 
     refSetTimeout.current = setTimeout(() => {
@@ -102,9 +103,7 @@ export default function TooltipProvider({ children, text }) {
             style={tooltipData}
             ref={tooltipRef}
           >
-            <div className="icn">
-              <Stylus />
-            </div>
+            <FileIcn />
             {text}
           </div>,
           document.querySelector("#root > div > main")
