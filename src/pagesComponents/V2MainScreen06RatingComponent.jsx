@@ -1,17 +1,23 @@
 import React, { useEffect } from "react";
-// import screenRatingMaintab from "../styles/screen-rating-maintab.scss";
-// import screenRatingMaintabColl from "../styles/screen-rating-maintab-coll.scss";
-// import screenRating from "../styles/screen-rating.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen06RatingComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+  "screen-rating-maintab",
+  "screen-rating-maintab-coll",
+  "screen-rating",
+];
+
+const V2MainScreen06RatingComponent = ({ pageName = "" }) => {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       const jB = document.querySelector(".color-btn.jewerly");
       const cB = document.querySelector(".color-btn.collection");
       const jW = document.querySelector(".animations");
@@ -33,9 +39,9 @@ const V2MainScreen06RatingComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="header">
@@ -1356,7 +1362,7 @@ const V2MainScreen06RatingComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
 };
 

@@ -1,18 +1,25 @@
 import React, { useEffect } from "react";
-// import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
-// import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
-// import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
-// import screenSuperhero from "../styles/screen-superhero.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen22PortalSquadComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-portal-squad",
+  "v2-screen-fw-store",
+  "v2-screen-portal-shop",
+  "screen-superhero",
+];
+
+function V2MainScreen22PortalSquadComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       // все попапы
       const po = document.getElementById("popupAll");
       const re = document.querySelector(".popup-layer");
@@ -86,9 +93,10 @@ const V2MainScreen22PortalSquadComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world1">
         <div className="btn-admin"></div>
         <div
@@ -1483,8 +1491,8 @@ const V2MainScreen22PortalSquadComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen22PortalSquadComponent);

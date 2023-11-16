@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
-import HelmetForCss from "../components/HelmetForCss.jsx";
+import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
 import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
+import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = [
   "01-all",
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "screen-fapopoly-rules",
   "screen-unipop-subscription",
   "v2-screen-tower",
@@ -51,11 +53,11 @@ const cssFiles = [
 ];
 
 function MainScreen01AllPopupsComponent({ pageName = "" }) {
-  const currentUrl = window.location.href.split("/").pop().split(".")[0];
+  const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageName === currentUrl && stylesLoaded) {
+    if (pageName === currentPath && stylesLoaded) {
       // кнопки попапа с анимацией наград
       const colB = document.querySelector(".color-btn.collect");
       const rrBo = document.querySelector(".rating-reward-box");
@@ -560,7 +562,7 @@ function MainScreen01AllPopupsComponent({ pageName = "" }) {
         });
       });
     }
-  }, [stylesLoaded]);
+  }, [pageName, currentPath, stylesLoaded]);
 
   return (
     <HelmetForCss cssFiles={cssFiles}>
@@ -16179,7 +16181,7 @@ function MainScreen01AllPopupsComponent({ pageName = "" }) {
             <div className="close-btn"></div>
           </div>
         </div>
-        {/* <WorldBtnBox /> */}
+        <WorldBtnBox />
       </div>
     </HelmetForCss>
   );

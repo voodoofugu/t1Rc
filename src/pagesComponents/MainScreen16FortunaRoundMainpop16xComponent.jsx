@@ -6,10 +6,11 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "screen-fortuna-round-main_16x",
 ];
 
-const MainScreen16FortunaRoundMainpop16xComponent = () => {
+function MainScreen16FortunaRoundMainpop16xComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -270,6 +271,6 @@ const MainScreen16FortunaRoundMainpop16xComponent = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen16FortunaRoundMainpop16xComponent);

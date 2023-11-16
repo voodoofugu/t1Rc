@@ -1,17 +1,24 @@
 import React, { useEffect } from "react";
-// import v2ScreenSexpedMain from "../styles/v2-screen-sexped-main.scss";
-// import screenInfoPop from "../styles/screen-info-pop.scss";
-// import v2ScreenSexpedQuestevent from "../styles/v2-screen-sexped-questevent.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen12SexpedMainComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-sexped-main",
+  "screen-info-pop",
+  "v2-screen-sexped-questevent",
+];
+
+function V2MainScreen12SexpedMainComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       // все попапы
       const po = document.getElementById("popupAll");
       const re = document.querySelector(".popup-layer");
@@ -151,9 +158,10 @@ const V2MainScreen12SexpedMainComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world1">
         <div
           className="main-bg"
@@ -1599,8 +1607,8 @@ const V2MainScreen12SexpedMainComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen12SexpedMainComponent);

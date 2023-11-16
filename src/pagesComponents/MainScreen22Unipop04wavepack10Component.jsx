@@ -6,10 +6,11 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "screen-unipop-wavepack10",
 ];
 
-const MainScreen22Unipop04wavepack10Component = () => {
+function MainScreen22Unipop04wavepack10Component() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -118,6 +119,6 @@ const MainScreen22Unipop04wavepack10Component = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen22Unipop04wavepack10Component);

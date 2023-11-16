@@ -1,16 +1,23 @@
 import React, { useEffect } from "react";
-// import v2ScreenMineEvent from "../styles/v2-screen-mine-event.scss";
-// import v2ScreenFwStore from "../styles/v2-screen-fw-store.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen18MineComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-mine-event",
+  "v2-screen-fw-store",
+];
+
+function V2MainScreen18MineComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       // все попапы
       [...document.querySelectorAll(".m-popup")].map((i) => {
         i.style.display = "none";
@@ -62,9 +69,10 @@ const V2MainScreen18MineComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div id="root" style={{ display: "block" }}>
         <div>
           <div className="main lang-ru world1">
@@ -1053,8 +1061,8 @@ const V2MainScreen18MineComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen18MineComponent);

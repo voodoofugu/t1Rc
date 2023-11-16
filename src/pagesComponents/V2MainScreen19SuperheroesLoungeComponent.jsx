@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
-// import screenSuperhero from "../styles/screen-superhero.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen19SuperheroesLoungeComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "screen-superhero",
+];
+
+function V2MainScreen19SuperheroesLoungeComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       const sA = document.querySelectorAll(".btn-stars-wrap .color-btn");
       sA.forEach((item) => {
         item.addEventListener("click", (e) => {
@@ -61,9 +68,10 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world1">
         <div
           className="main-bg"
@@ -878,8 +886,8 @@ const V2MainScreen19SuperheroesLoungeComponent = () => {
         <div className="slider-layer"></div>
         <div className="tooltip-layer"></div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen19SuperheroesLoungeComponent);

@@ -1,18 +1,25 @@
 import React, { useEffect } from "react";
-// import screenFapopolyMain from "../styles/screen-fapopoly-main.scss";
-// import v2ScreenHwBtlpass from "../styles/v2-screen-hw-btlpass.scss";
-// import v2ScreenTower from "../styles/v2-screen-tower.scss";
-// import screenFapopolyRating from "../styles/screen-fapopoly-rating.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen09HwFapopolyComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "screen-fapopoly-main",
+  "v2-screen-hw-btlpass",
+  "v2-screen-tower",
+  "screen-fapopoly-rating",
+];
+
+function V2MainScreen09HwFapopolyComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       [...document.querySelectorAll(".popup-layer, .m-popup")].map((i) => {
         i.style.display = "none";
       });
@@ -78,9 +85,9 @@ const V2MainScreen09HwFapopolyComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div
           className="main-bg"
@@ -2225,8 +2232,8 @@ const V2MainScreen09HwFapopolyComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen09HwFapopolyComponent);

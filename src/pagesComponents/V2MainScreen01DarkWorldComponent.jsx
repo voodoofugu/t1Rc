@@ -10,12 +10,12 @@ const cssFiles = [
   "gf-sale-pop",
 ];
 
-const V2MainScreen01DarkWorldComponent = ({ pageName = "" }) => {
-  const currentUrl = window.location.href.split("/").pop().split(".")[0];
+function V2MainScreen01DarkWorldComponent({ pageName = "" }) {
+  const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageName === currentUrl && stylesLoaded) {
+    if (pageName === currentPath && stylesLoaded) {
       [...document.querySelectorAll(".m-popup")].map((i) => {
         i.style.display = "none";
       });
@@ -384,7 +384,8 @@ const V2MainScreen01DarkWorldComponent = ({ pageName = "" }) => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world3">
@@ -3676,6 +3677,6 @@ const V2MainScreen01DarkWorldComponent = ({ pageName = "" }) => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen01DarkWorldComponent);

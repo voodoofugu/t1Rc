@@ -6,10 +6,11 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "screen-fortuna-round-rewards",
 ];
 
-const MainScreen16FortunaRoundRewardsPopupComponent = () => {
+function MainScreen16FortunaRoundRewardsPopupComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -212,6 +213,6 @@ const MainScreen16FortunaRoundRewardsPopupComponent = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen16FortunaRoundRewardsPopupComponent);

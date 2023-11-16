@@ -6,10 +6,11 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "gf-sale-pop",
 ];
 
-const MainScreen25GfSalePopComponent = () => {
+function MainScreen25GfSalePopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -149,6 +150,6 @@ const MainScreen25GfSalePopComponent = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen25GfSalePopComponent);

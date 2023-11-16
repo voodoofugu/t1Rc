@@ -1,6 +1,6 @@
 import React from "react";
-import HelmetForCss from "../components/HelmetForCss.jsx";
 
+import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = ["screen-reg"];
 
 function MainScreen00RegComponent() {

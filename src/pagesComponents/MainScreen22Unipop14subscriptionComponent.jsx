@@ -6,10 +6,11 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "screen-unipop-subscription",
 ];
 
-const MainScreen22Unipop14subscriptionComponent = () => {
+function MainScreen22Unipop14subscriptionComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -155,6 +156,6 @@ const MainScreen22Unipop14subscriptionComponent = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen22Unipop14subscriptionComponent);

@@ -8,15 +8,16 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "gf-sale-pop",
 ];
 
 function V2MainScreen01Component({ pageName = "" }) {
-  const currentUrl = window.location.href.split("/").pop().split(".")[0];
+  const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageName === currentUrl && stylesLoaded) {
+    if (pageName === currentPath && stylesLoaded) {
       // все попапы
       [...document.querySelectorAll(".m-popup")].map((i) => {
         i.style.display = "none";
@@ -403,7 +404,7 @@ function V2MainScreen01Component({ pageName = "" }) {
       return;
     }
     return () => {};
-  }, [stylesLoaded]);
+  }, [pageName, currentPath, stylesLoaded]);
 
   return (
     <HelmetForCss cssFiles={cssFiles}>

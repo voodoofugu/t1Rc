@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
-// import v2ScreenRpgPoly from "../styles/v2-screen-rpg_poly.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen24RpgPolyComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-rpg_poly",
+];
+
+function V2MainScreen24RpgPolyComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       const ba = document.querySelector(".backpack-button");
       const sh = document.querySelector(".shop-button");
       const ra = document.querySelector(".rating-button");
@@ -149,9 +156,10 @@ const V2MainScreen24RpgPolyComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main rpg-poly world1">
         <div className="main-bg"></div>
 
@@ -1037,8 +1045,8 @@ const V2MainScreen24RpgPolyComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen24RpgPolyComponent);

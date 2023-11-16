@@ -40,7 +40,9 @@ export default function PageBox() {
                     <DynamicComponent pageName={pageName} />
                   </StylesLoadedProvider>
                 </div>
-                <Link to={pageName}>{pageName}</Link>
+                <Link className="pageBoxLink" to={pageName}>
+                  {pageName}
+                </Link>
                 <TooltipProvider text={pageName}>
                   <div className="infoPageBox">i</div>
                 </TooltipProvider>

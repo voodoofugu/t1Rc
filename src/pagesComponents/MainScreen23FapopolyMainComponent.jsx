@@ -6,10 +6,11 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "screen-fapopoly-main",
 ];
 
-const MainScreen23FapopolyMainComponent = () => {
+function MainScreen23FapopolyMainComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -154,6 +155,6 @@ const MainScreen23FapopolyMainComponent = () => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(MainScreen23FapopolyMainComponent);

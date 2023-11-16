@@ -439,7 +439,7 @@ main {
         background: $mainColorLight4;
         box-shadow: $shadowColor3;
         z-index: 1;
-        a {
+        .pageBoxLink {
           color: $mainColorDark25;
           filter: saturate(2);
         }
@@ -449,7 +449,7 @@ main {
         box-shadow: $shadowColor4;
         transform: scale(0.99);
       }
-      a {
+      .pageBoxLink {
         position: absolute;
         left: 0;
         top: 0;
@@ -537,6 +537,7 @@ main {
           box-shadow: none;
           pointer-events: all;
           overflow: unset;
+          background: none;
         }
         #MainScreen00RegComponent {
           background: none;
@@ -684,7 +685,7 @@ main {
         &:hover {
           background: $darkMainColorLight5;
           box-shadow: $shadowColorDark4;
-          a {
+          .pageBoxLink {
             color: $mainColorDark10;
           }
         }
@@ -692,7 +693,7 @@ main {
           background: $darkMainColor;
           box-shadow: $shadowColorDark5;
         }
-        a {
+        .pageBoxLink {
           text-shadow: 1px 1px 2px rgba(0, 1, 60, 0.6);
         }
         .infoPageBox {

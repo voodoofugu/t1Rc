@@ -9,7 +9,7 @@ const inlineStyles = {
   width: "140px",
 };
 
-const WorldBtnBox = () => {
+export default function WorldBtnBox() {
   const [isDarkWorld, setIsDarkWorld] = useState(false);
 
   const btnClickHandler = () => {
@@ -48,10 +48,10 @@ const WorldBtnBox = () => {
   return (
     <div style={inlineStyles}>
       <div className="color-btn green world-btn">
-        <div className="color-btn-text"></div>
+        <div className="color-btn-text">
+          {isDarkWorld ? "To Light" : "To Dark"}
+        </div>
       </div>
     </div>
   );
-};
-
-export default WorldBtnBox;
+}

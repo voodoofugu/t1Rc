@@ -1,18 +1,25 @@
 import React, { useEffect } from "react";
-// import screenChangeMain from "../styles/screen-change-main.scss";
-// import screenChangeBonuses from "../styles/screen-change-bonuses.scss";
-// import screenChangeCollpop from "../styles/screen-change-collpop.scss";
-// import screenAlbum from "../styles/screen-album.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen07AlbumComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "screen-change-main",
+  "screen-change-bonuses",
+  "screen-change-collpop",
+  "screen-album",
+];
+
+const V2MainScreen07AlbumComponent = ({ pageName = "" }) => {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       [...document.querySelectorAll(".m-popup")].map((i) => {
         i.style.display = "none";
       });
@@ -97,9 +104,9 @@ const V2MainScreen07AlbumComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div id="root" style={{ display: "block" }}>
         <div>
           <div className="main lang-ru world1">
@@ -1913,7 +1920,7 @@ const V2MainScreen07AlbumComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
 };
 

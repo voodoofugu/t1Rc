@@ -1,24 +1,28 @@
 import React, { useEffect } from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-// import v2ScreenMainDarkWorld from "../styles/v2-screen-main-dark-world.scss";
-// import v2ScreenTower from "../styles/v2-screen-tower.scss";
-// import v2ScreenTowerBoss from "../styles/v2-screen-tower-boss.scss";
-// import v2ScreenTowerTop from "../styles/v2-screen-tower-top.scss";
-// import v2ScreenTowerRelics from "../styles/v2-screen-tower-relics.scss";
-// import v2ScreenTowerQuest from "../styles/v2-screen-tower-quest.scss";
-// import v2ScreenTowerTrophy from "../styles/v2-screen-tower-trophy.scss";
-// import v2ScreenTowerRelicsPop from "../styles/v2-screen-tower-relics-pop.scss";
-// import v2ScreenTowerTrophyPop from "../styles/v2-screen-tower-trophy-pop.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen02GuildTowerComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+  "v2-screen-tower",
+  "v2-screen-tower-boss",
+  "v2-screen-tower-top",
+  "v2-screen-tower-relics",
+  "v2-screen-tower-quest",
+  "v2-screen-tower-trophy",
+  "v2-screen-tower-relics-pop",
+  "v2-screen-tower-trophy-pop",
+];
+
+const V2MainScreen02GuildTowerComponent = ({ pageName = "" }) => {
+  const currentPath = window.location.pathname.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       // кнопка перехода в тёмный мир
       let btn = document.createElement("div");
       let btnText = document.createElement("div");
@@ -249,22 +253,10 @@ const V2MainScreen02GuildTowerComponent = () => {
       return;
     }
     return () => {};
-  }, []);
-  const css = `
-        .world-btn {
-            position: absolute;
-            top: 660px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: "Roboto", sans-serif;
-            width: 140px;
-        }
-    `;
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
-    <HelmetProvider>
-      <Helmet>
-        <style>{css}</style>
-      </Helmet>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div
           className="main-bg"
@@ -3025,7 +3017,7 @@ const V2MainScreen02GuildTowerComponent = () => {
           </div>
         </div>
       </div>
-    </HelmetProvider>
+    </HelmetForCss>
   );
 };
 

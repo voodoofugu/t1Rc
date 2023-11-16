@@ -1,17 +1,24 @@
 import React, { useEffect } from "react";
-// import questsAll from "../styles/quests_all.scss";
-// import questsUi from "../styles/quests-ui.scss";
-// import v2ScreenUkiStoryPop from "../styles/v2-screen-uki-story-pop.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen08UkiDailyComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "quests_all",
+  "quests-ui",
+  "v2-screen-uki-story-pop",
+];
+
+function V2MainScreen08UkiDailyComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       // все попапы
       [...document.querySelectorAll(".m-popup")].map((i) => {
         i.style.display = "none";
@@ -299,9 +306,9 @@ const V2MainScreen08UkiDailyComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div
           className="main-bg"
@@ -1863,8 +1870,8 @@ const V2MainScreen08UkiDailyComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen08UkiDailyComponent);

@@ -1,18 +1,25 @@
 import React, { useEffect } from "react";
-// import screenAchiev from "../styles/screen-achiev.scss";
-// import v2ScreenPortalMap from "../styles/v2-screen-portal-map.scss";
-// import screenFortunaWinpop from "../styles/screen-fortuna-winpop.scss";
-// import v2ScreenWorldDistrict from "../styles/v2-screen-world-district.scss";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-const V2MainScreen23PortalMapComponent = () => {
-  // создаём такой же айди как у родителя здесь и так попадаем к нему для проверки наличия класса noScripts
-  const currentUrl = window.location.href;
-  const fileNameWithoutExtension = currentUrl.split("/").pop().split(".")[0];
-  const pageContainerId = `root-${fileNameWithoutExtension}`;
-  const pageContainer = document.getElementById(pageContainerId);
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "screen-achiev",
+  "v2-screen-portal-map",
+  "screen-fortuna-winpop",
+  "v2-screen-world-district",
+];
+
+function V2MainScreen23PortalMapComponent({ pageName = "" }) {
+  const currentPath = window.location.href.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageContainer && !pageContainer.classList.contains("noScripts")) {
+    if (pageName === currentPath && stylesLoaded) {
       // все попапы
       const po = document.getElementById("popupAll");
       const re = document.querySelector(".popup-layer");
@@ -263,9 +270,10 @@ const V2MainScreen23PortalMapComponent = () => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world2">
         <div className="main-bg"></div>
         <div className="portal-map-box">
@@ -791,8 +799,8 @@ const V2MainScreen23PortalMapComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen23PortalMapComponent);

@@ -7,16 +7,17 @@ const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+
   "clan-trophies",
   "screen-superhero",
 ];
 
-const V2MainScreen02GuildClanTrophiesComponent = ({ pageName = "" }) => {
-  const currentUrl = window.location.href.split("/").pop().split(".")[0];
+function V2MainScreen02GuildClanTrophiesComponent({ pageName = "" }) {
+  const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
   useEffect(() => {
-    if (pageName === currentUrl && stylesLoaded) {
+    if (pageName === currentPath && stylesLoaded) {
       [...document.querySelectorAll(".m-popup")].map((i) => {
         i.style.display = "none";
       });
@@ -48,7 +49,8 @@ const V2MainScreen02GuildClanTrophiesComponent = ({ pageName = "" }) => {
       return;
     }
     return () => {};
-  }, []);
+  }, [pageName, currentPath, stylesLoaded]);
+
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -350,6 +352,6 @@ const V2MainScreen02GuildClanTrophiesComponent = ({ pageName = "" }) => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen02GuildClanTrophiesComponent);
