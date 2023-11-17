@@ -35,7 +35,7 @@ export default function PageBox() {
           <div className="pageBox" key={pageName}>
             <LazyLoad height={"inherit"} width={"inherit"} offset={100}>
               <Suspense key={pageName} fallback={<Loading />} timer={1000}>
-                <div id={`${pageName}`} className="projectComponent noScripts">
+                <div id={`${pageName}`} className="projectComponent">
                   <StylesLoadedProvider>
                     <DynamicComponent pageName={pageName} />
                   </StylesLoadedProvider>

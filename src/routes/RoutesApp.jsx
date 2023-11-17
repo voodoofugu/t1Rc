@@ -4,6 +4,9 @@ import PageBox from "../components/PageBox";
 import PageComponent from "../components/PageComponent";
 import HelmetComponent from "../components/HelmetComponent";
 
+import SearchButton from "../components/SearchButton";
+import ToggleButton from "../components/ToggleButton";
+
 const TemplateComponentLazy = lazy(() =>
   import(`../pagesComponents/TemplateComponent.jsx`)
 );
@@ -14,7 +17,10 @@ export default function RoutesApp() {
       <Route
         path="/"
         element={
-          <TemplateComponentLazy>
+          <TemplateComponentLazy
+            searchButtonComponent={<SearchButton />}
+            toggleButtonComponent={<ToggleButton />}
+          >
             <PageBox />
           </TemplateComponentLazy>
         }

@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenValentineCauldron from "../styles/v2-screen-valentine-cauldron.scss";
 
-const V2MainScreen16ValentineCauldronPopComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-valentine-cauldron",
+];
+
+function V2MainScreen16ValentineCauldronPopComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="popup-layer" style={{ display: "block" }}>
@@ -100,8 +109,8 @@ const V2MainScreen16ValentineCauldronPopComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen16ValentineCauldronPopComponent);

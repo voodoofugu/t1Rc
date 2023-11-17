@@ -1,10 +1,19 @@
 import React from "react";
-// import v2ScreenFwMain from "../styles/v2-screen-fw-main.scss";
-// import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
 
-const V2MainScreen15CwMain3Component = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-fw-main",
+  "v2-screen-fw-map",
+];
+
+function V2MainScreen15CwMain3Component() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world1">
         <div
           className="main-bg"
@@ -55,8 +64,8 @@ const V2MainScreen15CwMain3Component = () => {
             </div>
             <div>
               <div className="res-chest-btn">
-                <div className="res-chest-btn-text">Открыть</div>
-                <div className="res-chest-btn-count">15</div>
+                <div className="res-chest-btn-text">Chests</div>
+
                 <div className="v2-bosschest-notif notif"></div>
               </div>
             </div>
@@ -1790,8 +1799,8 @@ const V2MainScreen15CwMain3Component = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen15CwMain3Component);

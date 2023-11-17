@@ -17,7 +17,7 @@ const cssFiles = [
   "v2-screen-tower-trophy-pop",
 ];
 
-const V2MainScreen02GuildTowerComponent = ({ pageName = "" }) => {
+function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -294,8 +294,7 @@ const V2MainScreen02GuildTowerComponent = ({ pageName = "" }) => {
               <div className="res-shop-btn-text">магазин</div>
             </div>
             <div className="res-chest-btn">
-              <div className="res-chest-btn-text">открыть</div>
-              <div className="res-chest-btn-count">6969K</div>
+              <div className="res-chest-btn-text">Chests</div>
             </div>
           </div>
           <div className="singinout-btn out">
@@ -3019,6 +3018,6 @@ const V2MainScreen02GuildTowerComponent = ({ pageName = "" }) => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen02GuildTowerComponent);

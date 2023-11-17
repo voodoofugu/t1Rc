@@ -1,12 +1,26 @@
 import React from "react";
-// import v2ScreenGoddessMain from "../styles/v2-screen-goddess-main.scss";
-// import v2ScreenGoddessPicture from "../styles/v2-screen-goddess-picture.scss";
 
-const V2MainScreen21GoddessMainComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-goddess-main",
+  "v2-screen-goddess-picture",
+];
+
+function V2MainScreen21GoddessMainComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
-        <div className="main-bg"></div>
+        <div
+          className="main-bg"
+          style={{
+            backgroundImage: "url('../img/images/back/new/09-River.jpg')",
+          }}
+        ></div>
         <div className="header">
           <div className="resource-panel">
             <div className="avatar-box-all">
@@ -37,8 +51,7 @@ const V2MainScreen21GoddessMainComponent = () => {
               <div className="res-shop-btn-text">магазин</div>
             </div>
             <div className="res-chest-btn">
-              <div className="res-chest-btn-text">открыть</div>
-              <div className="res-chest-btn-count">6969K</div>
+              <div className="res-chest-btn-text">Chests</div>
             </div>
           </div>
           <div className="singinout-btn out">
@@ -46,7 +59,6 @@ const V2MainScreen21GoddessMainComponent = () => {
           </div>
         </div>
         <div className="quest-box-all">
-          <div className="quest-box-all-text">квесты</div>
           <div className="quest-box">
             <div className="quest">
               <img
@@ -668,8 +680,8 @@ const V2MainScreen21GoddessMainComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen21GoddessMainComponent);

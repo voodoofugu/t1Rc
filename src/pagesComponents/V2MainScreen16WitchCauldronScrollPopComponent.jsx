@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenWtchCauldronScroll from "../styles/v2-screen-witch-cauldron-scroll.scss";
 
-const V2MainScreen16WitchCauldronScrollPopComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-witch-cauldron-scroll",
+];
+
+function V2MainScreen16WitchCauldronScrollPopComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="popup-layer" style={{ display: "block" }}>
@@ -138,8 +147,8 @@ const V2MainScreen16WitchCauldronScrollPopComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen16WitchCauldronScrollPopComponent);

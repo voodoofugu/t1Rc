@@ -189,8 +189,8 @@ const V2MainScreen02GuildMasterComponent = ({ pageName = "" }) => {
             </div>
             <div>
               <div className="res-chest-btn">
-                <div className="res-chest-btn-text">Открыть</div>
-                <div className="res-chest-btn-count">15</div>
+                <div className="res-chest-btn-text">Chests</div>
+
                 <div className="v2-bosschest-notif notif"></div>
               </div>
             </div>

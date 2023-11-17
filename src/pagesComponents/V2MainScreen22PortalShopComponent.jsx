@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenPortalShop from "../styles/v2-screen-portal-shop.scss";
 
-const V2MainScreen22PortalShopComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-portal-shop",
+];
+
+function V2MainScreen22PortalShopComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
 
@@ -148,8 +157,8 @@ const V2MainScreen22PortalShopComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen22PortalShopComponent);

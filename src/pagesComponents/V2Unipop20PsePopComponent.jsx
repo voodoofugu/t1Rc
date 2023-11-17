@@ -1,9 +1,18 @@
 import React from "react";
-// import v2Unipop20PsePop from "../styles/v2-unipop-20-pse-pop.scss";
 
-const V2Unipop20PsePopComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-unipop-20-pse-pop",
+];
+
+function V2Unipop20PsePopComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="popup-layer" style={{ display: "block" }}>
@@ -122,8 +131,8 @@ const V2Unipop20PsePopComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2Unipop20PsePopComponent);

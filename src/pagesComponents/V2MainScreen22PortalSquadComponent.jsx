@@ -149,7 +149,6 @@ function V2MainScreen22PortalSquadComponent({ pageName = "" }) {
             <div>
               <div className="res-chest-btn">
                 <div className="res-chest-btn-text">Купить</div>
-                <div className="res-chest-btn-count">0</div>
               </div>
               <div className="picmeh-ex-box">
                 <div className="color-btn green">

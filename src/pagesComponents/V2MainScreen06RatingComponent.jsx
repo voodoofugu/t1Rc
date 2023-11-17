@@ -12,7 +12,7 @@ const cssFiles = [
   "screen-rating",
 ];
 
-const V2MainScreen06RatingComponent = ({ pageName = "" }) => {
+function V2MainScreen06RatingComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -43,7 +43,12 @@ const V2MainScreen06RatingComponent = ({ pageName = "" }) => {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
-        <div className="main-bg"></div>
+        <div
+          className="main-bg"
+          style={{
+            backgroundImage: "url('../img/images/back/new/09-River.jpg')",
+          }}
+        ></div>
         <div className="header">
           <div className="resource-panel">
             <div className="avatar-box-all">
@@ -74,8 +79,7 @@ const V2MainScreen06RatingComponent = ({ pageName = "" }) => {
               <div className="res-shop-btn-text">магазин</div>
             </div>
             <div className="res-chest-btn">
-              <div className="res-chest-btn-text">открыть</div>
-              <div className="res-chest-btn-count">6969K</div>
+              <div className="res-chest-btn-text">Chests</div>
             </div>
           </div>
           <div className="singinout-btn out">
@@ -83,7 +87,6 @@ const V2MainScreen06RatingComponent = ({ pageName = "" }) => {
           </div>
         </div>
         <div className="quest-box-all">
-          <div className="quest-box-all-text">квесты</div>
           <div className="quest-box">
             <div className="quest">
               <img
@@ -1364,6 +1367,6 @@ const V2MainScreen06RatingComponent = ({ pageName = "" }) => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen06RatingComponent);

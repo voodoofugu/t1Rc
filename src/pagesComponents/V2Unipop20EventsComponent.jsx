@@ -1,9 +1,18 @@
 import React from "react";
-// import screenUnipopEvents from "../styles/screen-unipop-events.scss";
 
-const V2Unipop20EventsComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "screen-unipop-events",
+];
+
+function V2Unipop20EventsComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
 
@@ -265,8 +274,8 @@ const V2Unipop20EventsComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2Unipop20EventsComponent);

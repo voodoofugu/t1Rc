@@ -14,7 +14,7 @@ const cssFiles = [
   "screen-album",
 ];
 
-const V2MainScreen07AlbumComponent = ({ pageName = "" }) => {
+function V2MainScreen07AlbumComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -112,7 +112,9 @@ const V2MainScreen07AlbumComponent = ({ pageName = "" }) => {
           <div className="main lang-ru world1">
             <div
               className="main-bg"
-              style={{ backgroundImage: "url('https" }}
+              style={{
+                backgroundImage: "url('../img/images/back/new/09-River.jpg')",
+              }}
             ></div>
             <div className="header">
               <div className="resource-panel">
@@ -165,8 +167,8 @@ const V2MainScreen07AlbumComponent = ({ pageName = "" }) => {
                 </div>
                 <div>
                   <div className="res-chest-btn">
-                    <div className="res-chest-btn-text">Открыть</div>
-                    <div className="res-chest-btn-count">1</div>
+                    <div className="res-chest-btn-text">Chests</div>
+
                     <div className="v2-bosschest-notif notif"></div>
                   </div>
                 </div>
@@ -1922,6 +1924,6 @@ const V2MainScreen07AlbumComponent = ({ pageName = "" }) => {
       </div>
     </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen07AlbumComponent);

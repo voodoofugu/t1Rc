@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenCwGuildsettings from "../styles/v2-screen-cw-guildsettings.scss";
 
-const V2MainScreen15CwGuildsettingsPopComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-cw-guildsettings",
+];
+
+function V2MainScreen15CwGuildsettingsPopComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="popup-layer" style={{ display: "block" }}>
           <div className="m-popup guildsettings" style={{ display: "block" }}>
@@ -42,8 +51,8 @@ const V2MainScreen15CwGuildsettingsPopComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen15CwGuildsettingsPopComponent);

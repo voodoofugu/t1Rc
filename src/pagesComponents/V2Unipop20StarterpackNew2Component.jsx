@@ -1,10 +1,19 @@
 import React from "react";
-// import screenUnipopSpack from "../styles/screen-unipop-spack.scss";
-// import screenUnipopStarterpackNew2 from "../styles/screen-unipop-starterpack-new2.scss";
 
-const V2Unipop20StarterpackNew2Component = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "screen-unipop-spack",
+  "screen-unipop-starterpack-new2",
+];
+
+function V2Unipop20StarterpackNew2Component() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
 
@@ -193,8 +202,8 @@ const V2Unipop20StarterpackNew2Component = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2Unipop20StarterpackNew2Component);

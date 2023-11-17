@@ -124,7 +124,6 @@ function V2MainScreen19SuperheroesLoungeComponent({ pageName = "" }) {
             <div>
               <div className="res-chest-btn">
                 <div className="res-chest-btn-text">Купить</div>
-                <div className="res-chest-btn-count">0</div>
               </div>
             </div>
           </div>

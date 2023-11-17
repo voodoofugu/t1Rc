@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenPseMain from "../styles/v2-screen-pse-main.scss";
 
-const V2MainScreen16PseMainPopComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-pse-main",
+];
+
+function V2MainScreen16PseMainPopComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg"></div>
         <div className="popup-layer" style={{ display: "block" }}>
@@ -294,8 +303,8 @@ const V2MainScreen16PseMainPopComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen16PseMainPopComponent);

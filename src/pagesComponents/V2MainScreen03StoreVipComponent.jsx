@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenStoreVip from "../styles/v2-screen-store-vip.scss";
 
-const V2MainScreen03StoreVipComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-store-vip",
+];
+
+function V2MainScreen03StoreVipComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="popup-layer" style={{ display: "block" }}>
           <div className="m-popup store-vip" style={{ display: "block" }}>
@@ -151,8 +160,8 @@ const V2MainScreen03StoreVipComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen03StoreVipComponent);

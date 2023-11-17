@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenStoreDiamonds from "../styles/v2-screen-store-diamonds.scss";
 
-const V2MainScreen03StoreDiamondsComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-store-diamonds",
+];
+
+function V2MainScreen03StoreDiamondsComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="popup-layer" style={{ display: "block" }}>
           <div className="m-popup store-diamonds" style={{ display: "block" }}>
@@ -207,8 +216,8 @@ const V2MainScreen03StoreDiamondsComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen03StoreDiamondsComponent);

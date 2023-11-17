@@ -433,8 +433,7 @@ function V2MainScreen01DarkWorldComponent({ pageName = "" }) {
               <div className="res-shop-btn-text">магазин</div>
             </div>
             <div className="res-chest-btn">
-              <div className="res-chest-btn-text">открыть</div>
-              <div className="res-chest-btn-count">6969K</div>
+              <div className="res-chest-btn-text">Chests</div>
             </div>
           </div>
           <div className="signinout-btn">

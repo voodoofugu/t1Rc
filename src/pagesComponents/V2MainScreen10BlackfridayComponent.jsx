@@ -1,10 +1,19 @@
 import React from "react";
-// import v2ScreenTower from "../styles/v2-screen-tower.scss";
-// import v2ScreenBf from "../styles/v2-screen-bf.scss";
 
-const V2MainScreen10BlackfridayComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-tower",
+  "v2-screen-bf",
+];
+
+function V2MainScreen10BlackfridayComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="popup-layer" style={{ display: "block" }}>
           <div className="m-popup bf-pop" style={{ display: "block" }}>
@@ -175,8 +184,8 @@ const V2MainScreen10BlackfridayComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen10BlackfridayComponent);

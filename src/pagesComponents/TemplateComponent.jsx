@@ -1,41 +1,19 @@
-import React, { useState, useEffect } from "react";
-import HelmetComponent from "../components/HelmetComponent";
-import SearchButton from "../components/SearchButton";
-
-const templateJs = `
-        import("../scripts/forBild/template.js").then(() => {});
-    `;
+import React from "react";
 
 export default function TemplateComponent({
   propClass = "",
   propClassDiasable = "",
   children,
+  searchButtonComponent,
+  toggleButtonComponent,
 }) {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
-  useEffect(() => {
-    eval(templateJs);
-    <HelmetComponent>
-      <script>{templateJs}</script>
-    </HelmetComponent>;
-    setScriptLoaded(true);
-  }, []);
-
   return (
     <>
       <main>
         <div className={`templateTit ${propClassDiasable}`}>
-          <SearchButton />
+          {searchButtonComponent}
           <div className="title">Template</div>
-          <div
-            className="toggle-btn"
-            type="checkbox"
-            name="toggle"
-            id="theme-toggle"
-          >
-            <div className="btnIcn"></div>
-          </div>
-          {scriptLoaded}
+          {toggleButtonComponent}
         </div>
         <div className={`template-container ${propClass}`}>{children}</div>
       </main>

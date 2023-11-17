@@ -1,10 +1,19 @@
 import React from "react";
-// import v2ScreenFwMap from "../styles/v2-screen-fw-map.scss";
-// import v2ScreenFwMapWarpop from "../styles/v2-screen-fw-map-warpop.scss";
 
-const V2MainScreen05FwMapWarpopComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-fw-map",
+  "v2-screen-fw-map-warpop",
+];
+
+function V2MainScreen05FwMapWarpopComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
         <div className="main-bg fw-map"></div>
         <div className="fw-map-name-box-all">
@@ -209,8 +218,8 @@ const V2MainScreen05FwMapWarpopComponent = () => {
           <div className="fw-warpop-close"></div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen05FwMapWarpopComponent);

@@ -1,9 +1,18 @@
 import React from "react";
-// import v2ScreenPortalSquad from "../styles/v2-screen-portal-squad.scss";
 
-const V2MainScreen22SquadMainComponent = () => {
+import HelmetForCss from "../components/HelmetForCss.jsx";
+const cssFiles = [
+  "01-all",
+  "01-all-res",
+  "v2-screen-main",
+  "v2-screen-main-dark-world",
+
+  "v2-screen-portal-squad",
+];
+
+function V2MainScreen22SquadMainComponent() {
   return (
-    <>
+    <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world2">
         <div className="btn-admin"></div>
         <div
@@ -56,7 +65,6 @@ const V2MainScreen22SquadMainComponent = () => {
             <div>
               <div className="res-chest-btn">
                 <div className="res-chest-btn-text">Купить</div>
-                <div className="res-chest-btn-count">0</div>
               </div>
               <div className="picmeh-ex-box">
                 <div className="color-btn green">
@@ -876,8 +884,8 @@ const V2MainScreen22SquadMainComponent = () => {
           </div>
         </div>
       </div>
-    </>
+    </HelmetForCss>
   );
-};
+}
 
 export default React.memo(V2MainScreen22SquadMainComponent);

@@ -631,7 +631,6 @@ main {
   }
   &.dark-theme {
     background: $darkMainColor;
-    color: #fff;
     .templateTit {
       background: $darkMainColorDark3;
       box-shadow: $shadowColorDark1;
@@ -650,10 +649,10 @@ main {
           .btnIcn {
             filter: drop-shadow(0.2px 1px 0.4px $darkMainColorDark20);
             &:before {
-              border: 2px solid $mainColorDark15;
+              border: 2px solid saturate($mainColorDark10, 50%);
             }
             &:after {
-              background: $mainColorDark15;
+              background: saturate($mainColorDark10, 50%);
             }
           }
           &:hover {
@@ -664,7 +663,7 @@ main {
               &:before,
               &:after {
                 border: none;
-                background: $mainColorDark15;
+                background: saturate($mainColorDark10, 50%);
               }
             }
           }
