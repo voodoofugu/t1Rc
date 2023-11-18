@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-guildmanage",
 ];
 
-function V2MainScreen15CwGuildmanagePopComponent() {
+export default function V2MainScreen15CwGuildmanagePopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -249,5 +249,3 @@ function V2MainScreen15CwGuildmanagePopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwGuildmanagePopComponent);

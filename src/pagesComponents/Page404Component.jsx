@@ -6,9 +6,10 @@ const inlineStyles = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   textAlign: "center",
+  fontSize: "calc( (100vw - 480px)/(1280 - 480) * (42 - 16) + 16px)",
 };
 
-const Page404Component = () => {
+export default function Page404Component() {
   return (
     <h1 className="error404" style={inlineStyles}>
       -____-
@@ -19,5 +20,3 @@ const Page404Component = () => {
     </h1>
   );
 };
-
-export default React.memo(Page404Component);

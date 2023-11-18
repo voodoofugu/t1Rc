@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-army-setup",
 ];
 
-function V2MainScreen15CwArmySetupComponent() {
+export default function V2MainScreen15CwArmySetupComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -522,5 +522,3 @@ function V2MainScreen15CwArmySetupComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwArmySetupComponent);

@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-unipop-20-sexped-pop",
 ];
 
-function V2Unipop20SexpedPopComponent() {
+export default function V2Unipop20SexpedPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -139,5 +139,3 @@ function V2Unipop20SexpedPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2Unipop20SexpedPopComponent);

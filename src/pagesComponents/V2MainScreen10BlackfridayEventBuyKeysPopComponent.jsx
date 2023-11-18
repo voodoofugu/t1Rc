@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-bf-event__keys",
 ];
 
-function V2MainScreen10BlackfridayEventBuyKeysPopComponent() {
+export default function V2MainScreen10BlackfridayEventBuyKeysPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -84,5 +84,3 @@ function V2MainScreen10BlackfridayEventBuyKeysPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen10BlackfridayEventBuyKeysPopComponent);

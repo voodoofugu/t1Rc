@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-witch-cauldron-scroll",
 ];
 
-function V2MainScreen16WitchCauldronScrollPopComponent() {
+export default function V2MainScreen16WitchCauldronScrollPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -150,5 +150,3 @@ function V2MainScreen16WitchCauldronScrollPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen16WitchCauldronScrollPopComponent);

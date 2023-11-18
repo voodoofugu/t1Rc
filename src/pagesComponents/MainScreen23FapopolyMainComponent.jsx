@@ -10,7 +10,7 @@ const cssFiles = [
   "screen-fapopoly-main",
 ];
 
-function MainScreen23FapopolyMainComponent() {
+export default function MainScreen23FapopolyMainComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -156,5 +156,3 @@ function MainScreen23FapopolyMainComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(MainScreen23FapopolyMainComponent);

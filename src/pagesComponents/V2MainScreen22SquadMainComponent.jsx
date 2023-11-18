@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-portal-squad",
 ];
 
-function V2MainScreen22SquadMainComponent() {
+export default function V2MainScreen22SquadMainComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world2">
@@ -887,5 +887,3 @@ function V2MainScreen22SquadMainComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen22SquadMainComponent);

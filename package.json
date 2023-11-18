@@ -13,7 +13,7 @@
     "buildHTMLforSSR": "node src/scripts/forServer/buildHTMLforSSR",
     "buildCommonJS": "babel src/components/RSC --out-dir src/pagesComponents/CommonJS",
     "start-server": "nodemon -r @babel/register ./server/server.js",
-    "start-server2": "nodemon --experimental-loader ./src/scripts/forBild/node-jsx-loader.js ./server/server2.js"
+    "start-server2": "nodemon --experimental-loader ./src/scripts/forClient/node-jsx-loader.js ./server/server2.js"
   },
   "keywords": [],
   "author": "",

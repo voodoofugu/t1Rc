@@ -12,7 +12,7 @@ const cssFiles = [
   "v2-screen-fw-store",
 ];
 
-function V2MainScreen18MineComponent({ pageName = "" }) {
+export default function V2MainScreen18MineComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1064,5 +1064,3 @@ function V2MainScreen18MineComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen18MineComponent);

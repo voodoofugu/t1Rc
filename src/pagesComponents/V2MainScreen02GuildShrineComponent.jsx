@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-shrine",
 ];
 
-function V2MainScreen02GuildShrineComponent() {
+export default function V2MainScreen02GuildShrineComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -550,5 +550,3 @@ function V2MainScreen02GuildShrineComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildShrineComponent);

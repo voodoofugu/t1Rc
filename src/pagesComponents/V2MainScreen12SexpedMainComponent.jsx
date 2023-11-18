@@ -13,7 +13,7 @@ const cssFiles = [
   "v2-screen-sexped-questevent",
 ];
 
-function V2MainScreen12SexpedMainComponent({ pageName = "" }) {
+export default function V2MainScreen12SexpedMainComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1610,5 +1610,3 @@ function V2MainScreen12SexpedMainComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen12SexpedMainComponent);

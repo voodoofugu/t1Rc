@@ -17,7 +17,7 @@ const cssFiles = [
   "v2-screen-tower-trophy-pop",
 ];
 
-function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
+export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -3019,5 +3019,3 @@ function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildTowerComponent);

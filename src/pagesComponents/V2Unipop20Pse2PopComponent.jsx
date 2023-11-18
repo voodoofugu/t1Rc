@@ -12,7 +12,7 @@ const cssFiles = [
   "screen-bank",
 ];
 
-function V2Unipop20Pse2PopComponent({ pageName = "" }) {
+export default function V2Unipop20Pse2PopComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -410,5 +410,3 @@ function V2Unipop20Pse2PopComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2Unipop20Pse2PopComponent);

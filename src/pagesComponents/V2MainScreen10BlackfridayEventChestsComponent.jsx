@@ -12,7 +12,7 @@ const cssFiles = [
   "v2-screen-bf-event__chests",
 ];
 
-function V2MainScreen10BlackfridayEventChestsComponent() {
+export default function V2MainScreen10BlackfridayEventChestsComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -123,5 +123,3 @@ function V2MainScreen10BlackfridayEventChestsComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen10BlackfridayEventChestsComponent);

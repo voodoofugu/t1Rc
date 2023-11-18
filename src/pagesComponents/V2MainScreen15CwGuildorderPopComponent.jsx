@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-guildorder",
 ];
 
-function V2MainScreen15CwGuildorderPopComponent() {
+export default function V2MainScreen15CwGuildorderPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -95,5 +95,3 @@ function V2MainScreen15CwGuildorderPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwGuildorderPopComponent);

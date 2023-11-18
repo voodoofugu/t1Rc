@@ -14,7 +14,7 @@ const cssFiles = [
   "screen-fapopoly-rating",
 ];
 
-function V2MainScreen09HwFapopolyComponent({ pageName = "" }) {
+export default function V2MainScreen09HwFapopolyComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -2235,5 +2235,3 @@ function V2MainScreen09HwFapopolyComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen09HwFapopolyComponent);

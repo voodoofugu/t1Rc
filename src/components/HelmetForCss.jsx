@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HelmetComponent from "./HelmetComponent.jsx";
-import createStyleText from "../scripts/forBild/createStyleText.js";
-import transformCssFileNames from "../scripts/forBild/transformCssFileNames.js";
+import createStyleText from "../scripts/forClient/createStyleText.js";
+import transformCssFileNames from "../scripts/forClient/transformCssFileNames.js";
 import { useStylesLoaded } from "./StylesLoadedProvider";
 import Loading from "./Loading.jsx";
 

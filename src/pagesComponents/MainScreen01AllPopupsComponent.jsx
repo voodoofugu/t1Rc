@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
+import WorldBtnBox from "../components/WorldBtnBox";
 import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
@@ -52,7 +52,7 @@ const cssFiles = [
   "screen-rating-fullcoll",
 ];
 
-function MainScreen01AllPopupsComponent({ pageName = "" }) {
+export default function MainScreen01AllPopupsComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -16181,10 +16181,8 @@ function MainScreen01AllPopupsComponent({ pageName = "" }) {
             <div className="close-btn"></div>
           </div>
         </div>
-        <WorldBtnBox />
+        { pageName === currentPath && <WorldBtnBox pageName={pageName} />}
       </div>
     </HelmetForCss>
   );
 }
-
-export default React.memo(MainScreen01AllPopupsComponent);

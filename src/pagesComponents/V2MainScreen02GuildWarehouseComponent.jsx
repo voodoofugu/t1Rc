@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-warehouse",
 ];
 
-function V2MainScreen02GuildWarehouseComponent() {
+export default function V2MainScreen02GuildWarehouseComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world1">
@@ -310,5 +310,3 @@ function V2MainScreen02GuildWarehouseComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildWarehouseComponent);

@@ -10,7 +10,7 @@ const cssFiles = [
   "screen-fortuna-round-main",
 ];
 
-function MainScreen16FortunaRoundMainpopComponent() {
+export default function MainScreen16FortunaRoundMainpopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -527,5 +527,3 @@ function MainScreen16FortunaRoundMainpopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(MainScreen16FortunaRoundMainpopComponent);

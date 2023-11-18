@@ -11,7 +11,7 @@ const cssFiles = [
   "v2-screen-rpg_poly",
 ];
 
-function V2MainScreen24RpgPolyComponent({ pageName = "" }) {
+export default function V2MainScreen24RpgPolyComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1048,5 +1048,3 @@ function V2MainScreen24RpgPolyComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen24RpgPolyComponent);

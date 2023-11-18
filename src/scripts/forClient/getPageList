@@ -1,0 +1,13 @@
+
+      
+      async function importDynamicComponents(path, [ignore], ext) {
+        try {
+          const context = require.context(path, false, /\.jsx$/);
+          const components = context
+            .keys()
+            .filter((key) => ![ignore].includes(key))
+            .map((key) => key.replace("./", "").replace(ext, ""));
+        } catch (error) {
+          console.error("Error file :", error);
+        }
+      }

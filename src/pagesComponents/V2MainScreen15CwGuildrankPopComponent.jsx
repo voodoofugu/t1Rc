@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-guildrank",
 ];
 
-function V2MainScreen15CwGuildrankPopComponent() {
+export default function V2MainScreen15CwGuildrankPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -170,5 +170,3 @@ function V2MainScreen15CwGuildrankPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwGuildrankPopComponent);

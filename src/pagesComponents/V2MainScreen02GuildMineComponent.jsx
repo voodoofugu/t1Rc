@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-mine",
 ];
 
-function V2MainScreen02GuildMineComponent() {
+export default function V2MainScreen02GuildMineComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world1">
@@ -484,5 +484,3 @@ function V2MainScreen02GuildMineComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildMineComponent);

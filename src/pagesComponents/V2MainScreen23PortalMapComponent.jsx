@@ -14,7 +14,7 @@ const cssFiles = [
   "v2-screen-world-district",
 ];
 
-function V2MainScreen23PortalMapComponent({ pageName = "" }) {
+export default function V2MainScreen23PortalMapComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -802,5 +802,3 @@ function V2MainScreen23PortalMapComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen23PortalMapComponent);

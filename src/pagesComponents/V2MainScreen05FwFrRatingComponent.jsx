@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-fw-fr-rating",
 ];
 
-function V2MainScreen05FwFrRatingComponent() {
+export default function V2MainScreen05FwFrRatingComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -249,5 +249,3 @@ function V2MainScreen05FwFrRatingComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen05FwFrRatingComponent);

@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-guildboss2",
 ];
 
-function V2MainScreen15CwGuildboss2PopComponent() {
+export default function V2MainScreen15CwGuildboss2PopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -290,5 +290,3 @@ function V2MainScreen15CwGuildboss2PopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwGuildboss2PopComponent);

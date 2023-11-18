@@ -11,7 +11,7 @@ const cssFiles = [
   "v2-screen-fw-map",
 ];
 
-function V2MainScreen05FwMainComponent() {
+export default function V2MainScreen05FwMainComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -406,5 +406,3 @@ function V2MainScreen05FwMainComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen05FwMainComponent);

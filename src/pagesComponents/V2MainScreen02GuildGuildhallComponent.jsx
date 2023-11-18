@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-guildhall",
 ];
 
-function V2MainScreen02GuildGuildhallComponent() {
+export default function V2MainScreen02GuildGuildhallComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -399,5 +399,3 @@ function V2MainScreen02GuildGuildhallComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildGuildhallComponent);

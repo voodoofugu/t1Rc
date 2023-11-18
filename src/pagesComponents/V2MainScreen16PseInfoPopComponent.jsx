@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-pse-info",
 ];
 
-function V2MainScreen16PseInfoPopComponent() {
+export default function V2MainScreen16PseInfoPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -72,5 +72,3 @@ function V2MainScreen16PseInfoPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen16PseInfoPopComponent);

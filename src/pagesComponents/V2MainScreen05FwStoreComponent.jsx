@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-fw-store",
 ];
 
-function V2MainScreen05FwStoreComponent() {
+export default function V2MainScreen05FwStoreComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -201,5 +201,3 @@ function V2MainScreen05FwStoreComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen05FwStoreComponent);

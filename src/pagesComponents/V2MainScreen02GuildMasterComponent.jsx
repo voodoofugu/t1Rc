@@ -13,7 +13,7 @@ const cssFiles = [
   "screen-info-pop",
 ];
 
-const V2MainScreen02GuildMasterComponent = ({ pageName = "" }) => {
+export default function V2MainScreen02GuildMasterComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1395,5 +1395,3 @@ const V2MainScreen02GuildMasterComponent = ({ pageName = "" }) => {
     </HelmetForCss>
   );
 };
-
-export default React.memo(V2MainScreen02GuildMasterComponent);

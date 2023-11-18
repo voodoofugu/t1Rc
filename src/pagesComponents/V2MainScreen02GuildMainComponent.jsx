@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-guild-main",
 ];
 
-function V2MainScreen02GuildMainComponent() {
+export default function V2MainScreen02GuildMainComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -332,5 +332,3 @@ function V2MainScreen02GuildMainComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildMainComponent);

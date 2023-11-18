@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-guildflag",
 ];
 
-function V2MainScreen15CwGuildflagPopComponent() {
+export default function V2MainScreen15CwGuildflagPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -387,5 +387,3 @@ function V2MainScreen15CwGuildflagPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwGuildflagPopComponent);

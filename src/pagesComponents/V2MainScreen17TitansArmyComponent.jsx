@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-titans-army",
 ];
 
-function V2MainScreen17TitansArmyComponent() {
+export default function V2MainScreen17TitansArmyComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -322,5 +322,3 @@ function V2MainScreen17TitansArmyComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen17TitansArmyComponent);

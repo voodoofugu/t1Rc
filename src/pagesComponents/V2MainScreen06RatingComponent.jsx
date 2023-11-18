@@ -12,7 +12,7 @@ const cssFiles = [
   "screen-rating",
 ];
 
-function V2MainScreen06RatingComponent({ pageName = "" }) {
+export default function V2MainScreen06RatingComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1368,5 +1368,3 @@ function V2MainScreen06RatingComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen06RatingComponent);

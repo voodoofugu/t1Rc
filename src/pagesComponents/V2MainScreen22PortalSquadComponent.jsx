@@ -14,7 +14,7 @@ const cssFiles = [
   "screen-superhero",
 ];
 
-function V2MainScreen22PortalSquadComponent({ pageName = "" }) {
+export default function V2MainScreen22PortalSquadComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1493,5 +1493,3 @@ function V2MainScreen22PortalSquadComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen22PortalSquadComponent);

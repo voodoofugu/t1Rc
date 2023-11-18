@@ -10,7 +10,7 @@ const cssFiles = [
   "gf-sale-pop",
 ];
 
-function V2MainScreen01DarkWorldComponent({ pageName = "" }) {
+export default function V2MainScreen01DarkWorldComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -3677,5 +3677,3 @@ function V2MainScreen01DarkWorldComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen01DarkWorldComponent);

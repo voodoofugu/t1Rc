@@ -11,7 +11,7 @@ const cssFiles = [
   "screen-superhero",
 ];
 
-function V2MainScreen19SuperheroesLoungeComponent({ pageName = "" }) {
+export default function V2MainScreen19SuperheroesLoungeComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -888,5 +888,3 @@ function V2MainScreen19SuperheroesLoungeComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen19SuperheroesLoungeComponent);

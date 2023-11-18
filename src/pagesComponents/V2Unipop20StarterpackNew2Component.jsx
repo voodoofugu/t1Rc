@@ -11,7 +11,7 @@ const cssFiles = [
   "screen-unipop-starterpack-new2",
 ];
 
-function V2Unipop20StarterpackNew2Component() {
+export default function V2Unipop20StarterpackNew2Component() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -205,5 +205,3 @@ function V2Unipop20StarterpackNew2Component() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2Unipop20StarterpackNew2Component);

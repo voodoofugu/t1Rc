@@ -11,7 +11,7 @@ const cssFiles = [
   "v2-screen-cw-guildlog",
 ];
 
-function V2MainScreen15CwMainComponent() {
+export default function V2MainScreen15CwMainComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -2215,5 +2215,3 @@ function V2MainScreen15CwMainComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwMainComponent);

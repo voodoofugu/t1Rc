@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-trophyroom",
 ];
 
-function V2MainScreen15CwTrophyroomComponent() {
+export default function V2MainScreen15CwTrophyroomComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -490,5 +490,3 @@ function V2MainScreen15CwTrophyroomComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwTrophyroomComponent);

@@ -10,7 +10,7 @@ const cssFiles = [
   "screen-unipop-events",
 ];
 
-function V2Unipop20EventsComponent() {
+export default function V2Unipop20EventsComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -277,5 +277,3 @@ function V2Unipop20EventsComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2Unipop20EventsComponent);

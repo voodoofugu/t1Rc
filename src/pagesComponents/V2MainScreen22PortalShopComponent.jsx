@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-portal-shop",
 ];
 
-function V2MainScreen22PortalShopComponent() {
+export default function V2MainScreen22PortalShopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -160,5 +160,3 @@ function V2MainScreen22PortalShopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen22PortalShopComponent);

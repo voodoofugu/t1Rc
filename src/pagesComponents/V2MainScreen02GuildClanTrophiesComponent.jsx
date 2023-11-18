@@ -12,7 +12,7 @@ const cssFiles = [
   "screen-superhero",
 ];
 
-function V2MainScreen02GuildClanTrophiesComponent({ pageName = "" }) {
+export default function V2MainScreen02GuildClanTrophiesComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -353,5 +353,3 @@ function V2MainScreen02GuildClanTrophiesComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildClanTrophiesComponent);

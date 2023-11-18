@@ -14,7 +14,7 @@ const cssFiles = [
   "screen-album",
 ];
 
-function V2MainScreen07AlbumComponent({ pageName = "" }) {
+export default function V2MainScreen07AlbumComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1925,5 +1925,3 @@ function V2MainScreen07AlbumComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen07AlbumComponent);

@@ -10,7 +10,7 @@ const cssFiles = [
   "gf-sale-pop",
 ];
 
-function MainScreen25GfSalePopComponent() {
+export default function MainScreen25GfSalePopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -151,5 +151,3 @@ function MainScreen25GfSalePopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(MainScreen25GfSalePopComponent);

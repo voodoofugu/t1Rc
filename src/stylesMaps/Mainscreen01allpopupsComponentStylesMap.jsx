@@ -1,4 +1,4 @@
-import { generateStylePairs } from "../scripts/forBild/stylePairsHelper.js";
+import { generateStylePairs } from "../scripts/forClient/stylePairsHelper.js";
 export const stylePairs = generateStylePairs([
   "AllRes",
   "ScreenFapopolyRules",

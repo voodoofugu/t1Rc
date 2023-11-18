@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const sass = require("sass");
 const chokidar = require("chokidar");
-const transformCssFileNames = require("../forBild/transformCssFileNames.js");
+const transformCssFileNames = require("../forClient/transformCssFileNames.js");
 
 const sourceDir = path.join(__dirname, "../../styles/scss");
 const outputDir = path.join(__dirname, "../../styles/css");

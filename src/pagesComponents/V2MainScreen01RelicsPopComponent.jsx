@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-main-relics-pop",
 ];
 
-function V2MainScreen01RelicsPopComponent() {
+export default function V2MainScreen01RelicsPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -173,5 +173,3 @@ function V2MainScreen01RelicsPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen01RelicsPopComponent);

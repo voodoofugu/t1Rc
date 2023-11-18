@@ -10,7 +10,7 @@ const cssFiles = [
   "screen-fortuna-round-rating",
 ];
 
-function MainScreen16FortunaRoundRatingPopupComponent() {
+export default function MainScreen16FortunaRoundRatingPopupComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -296,5 +296,3 @@ function MainScreen16FortunaRoundRatingPopupComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(MainScreen16FortunaRoundRatingPopupComponent);

@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-titans-upgrade",
 ];
 
-function V2MainScreen17TitansUpgradeComponent() {
+export default function V2MainScreen17TitansUpgradeComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -252,5 +252,3 @@ function V2MainScreen17TitansUpgradeComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen17TitansUpgradeComponent);

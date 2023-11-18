@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-trophyroom",
 ];
 
-function V2MainScreen02GuildTrophyroomComponent() {
+export default function V2MainScreen02GuildTrophyroomComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main lang-ru world1">
@@ -356,5 +356,3 @@ function V2MainScreen02GuildTrophyroomComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen02GuildTrophyroomComponent);

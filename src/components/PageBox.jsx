@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Suspense, lazy } from "react";
+import React, { useEffect, useState, Suspense, lazy, useTransition } from "react";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 import { StylesLoadedProvider } from "./StylesLoadedProvider";
@@ -6,6 +6,7 @@ import Loading from "./Loading";
 import TooltipProvider from "./TooltipProvider";
 
 export default function PageBox() {
+  const [isPending, startTransition] = useTransition();
   const [pageList, setPageList] = useState([null]);
 
   useEffect(() => {
@@ -16,7 +17,9 @@ export default function PageBox() {
           .keys()
           .filter((key) => !["./TemplateComponent.jsx"].includes(key))
           .map((key) => key.replace("./", "").replace(".jsx", ""));
-        setPageList(components);
+          startTransition(() => {
+            setPageList(components);
+          });
       } catch (error) {
         console.error("Error importing page components:", error);
       }
@@ -27,8 +30,8 @@ export default function PageBox() {
   return (
     <>
       {pageList.map((pageName) => {
-        const DynamicComponent = lazy(() =>
-          import(`../pagesComponents/${pageName}.jsx`)
+        const DynamicComponent = React.memo(
+          lazy(() => import(`../pagesComponents/${pageName}.jsx`))
         );
 
         return (

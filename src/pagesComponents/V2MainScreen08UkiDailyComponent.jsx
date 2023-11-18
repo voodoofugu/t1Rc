@@ -13,7 +13,7 @@ const cssFiles = [
   "v2-screen-uki-story-pop",
 ];
 
-function V2MainScreen08UkiDailyComponent({ pageName = "" }) {
+export default function V2MainScreen08UkiDailyComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -1872,5 +1872,3 @@ function V2MainScreen08UkiDailyComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen08UkiDailyComponent);

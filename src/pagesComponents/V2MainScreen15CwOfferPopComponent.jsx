@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-offer-pop",
 ];
 
-function V2MainScreen15CwOfferPopComponent() {
+export default function V2MainScreen15CwOfferPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -99,5 +99,3 @@ function V2MainScreen15CwOfferPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwOfferPopComponent);

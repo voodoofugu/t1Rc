@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import WorldBtnBox from "../stylesMaps/WorldBtnBox.jsx";
+import WorldBtnBox from "../components/WorldBtnBox";
 import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
@@ -12,7 +12,7 @@ const cssFiles = [
   "gf-sale-pop",
 ];
 
-function V2MainScreen01Component({ pageName = "" }) {
+export default function V2MainScreen01Component({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -3862,10 +3862,8 @@ function V2MainScreen01Component({ pageName = "" }) {
             </div>
           </div>
         </div>
-        <WorldBtnBox />
+        { pageName === currentPath && <WorldBtnBox pageName={pageName} />}
       </div>
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen01Component);

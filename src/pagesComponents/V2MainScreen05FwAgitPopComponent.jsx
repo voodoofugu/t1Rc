@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-fw-agitpop",
 ];
 
-function V2MainScreen05FwAgitPopComponent() {
+export default function V2MainScreen05FwAgitPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -92,5 +92,3 @@ function V2MainScreen05FwAgitPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen05FwAgitPopComponent);

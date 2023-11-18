@@ -10,7 +10,7 @@ const cssFiles = [
   "screen-unipop-subscription",
 ];
 
-function MainScreen22Unipop14subscriptionComponent() {
+export default function MainScreen22Unipop14subscriptionComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -157,5 +157,3 @@ function MainScreen22Unipop14subscriptionComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(MainScreen22Unipop14subscriptionComponent);

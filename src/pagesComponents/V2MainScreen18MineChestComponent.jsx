@@ -12,7 +12,7 @@ const cssFiles = [
   "screen-info-pop",
 ];
 
-function V2MainScreen18MineChestComponent({ pageName = "" }) {
+export default function V2MainScreen18MineChestComponent({ pageName = "" }) {
   const currentPath = window.location.href.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
 
@@ -502,5 +502,3 @@ function V2MainScreen18MineChestComponent({ pageName = "" }) {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen18MineChestComponent);

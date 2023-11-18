@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { StylesLoadedProvider } from "./StylesLoadedProvider";
 
 export default function PageComponent() {
-  const [DynamicComponent, setDynamicComponent] = useState(null);
+  const [DynamicComponent, setDynamicComponent] = useState(undefined);
   const { pageName } = useParams();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function PageComponent() {
       try {
         const module = await import(`../pagesComponents/${pageNameToLoad}`);
         if (module.default) {
-          setDynamicComponent(module.default);
+          setDynamicComponent(() => module.default);
         } else {
           console.error("Dynamic component is not defined in", pageNameToLoad);
         }

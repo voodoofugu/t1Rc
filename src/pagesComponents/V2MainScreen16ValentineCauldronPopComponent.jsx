@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-valentine-cauldron",
 ];
 
-function V2MainScreen16ValentineCauldronPopComponent() {
+export default function V2MainScreen16ValentineCauldronPopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -112,5 +112,3 @@ function V2MainScreen16ValentineCauldronPopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen16ValentineCauldronPopComponent);

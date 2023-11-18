@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-store-vip",
 ];
 
-function V2MainScreen03StoreVipComponent() {
+export default function V2MainScreen03StoreVipComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -163,5 +163,3 @@ function V2MainScreen03StoreVipComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen03StoreVipComponent);

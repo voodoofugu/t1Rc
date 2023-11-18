@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-guildrename",
 ];
 
-function V2MainScreen15CwGuildrenamePopComponent() {
+export default function V2MainScreen15CwGuildrenamePopComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -38,5 +38,3 @@ function V2MainScreen15CwGuildrenamePopComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwGuildrenamePopComponent);

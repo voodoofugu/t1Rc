@@ -10,7 +10,7 @@ const cssFiles = [
   "v2-screen-cw-glade",
 ];
 
-function V2MainScreen15CwGladeComponent() {
+export default function V2MainScreen15CwGladeComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -62,5 +62,3 @@ function V2MainScreen15CwGladeComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen15CwGladeComponent);

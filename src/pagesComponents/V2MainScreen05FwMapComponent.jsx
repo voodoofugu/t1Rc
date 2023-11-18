@@ -11,7 +11,7 @@ const cssFiles = [
   "v2-screen-fw-map-warpop",
 ];
 
-function V2MainScreen05FwMapComponent() {
+export default function V2MainScreen05FwMapComponent() {
   return (
     <HelmetForCss cssFiles={cssFiles}>
       <div className="main world1">
@@ -147,5 +147,3 @@ function V2MainScreen05FwMapComponent() {
     </HelmetForCss>
   );
 }
-
-export default React.memo(V2MainScreen05FwMapComponent);

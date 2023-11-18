@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+import React, { useEffect, useState, useCallback, useRef, useTransition } from "react";
 
 export default function SearchButton() {
+  const [isPending, startTransition] = useTransition();
   const [searchText, setSearchText] = useState("");
   const [focus, setFocus] = useState(false);
   const searchInputRef = useRef(null);
@@ -37,7 +38,9 @@ export default function SearchButton() {
   }, [searchText, handleSearch]);
 
   function handleInputChange(event) {
-    setSearchText(event.target.value);
+    startTransition(() => {
+      setSearchText(event.target.value);
+    });
   }
 
   function inputFocus() {
