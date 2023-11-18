@@ -449,6 +449,18 @@ main {
         box-shadow: $shadowColor4;
         transform: scale(0.99);
       }
+      .LazyLoadWrapp {
+        transition: all 0.02s ease-in-out;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        overflow: hidden;
+        position: relative;
+        &.hidden {
+          width: 0%;
+          opacity: 0;
+        }
+      }
       .pageBoxLink {
         position: absolute;
         left: 0;

@@ -5,23 +5,30 @@ export default function SearchButton() {
   const [searchText, setSearchText] = useState("");
   const [focus, setFocus] = useState(false);
   const searchInputRef = useRef(null);
+  const refSetTimeout = useRef(null);
 
   const handleSearch = useCallback((text) => {
     const searchInput = text.toLowerCase();
     const pageBoxes = document.querySelectorAll(".pageBox");
-
+  
     pageBoxes.forEach((pageBox) => {
-      const link = pageBox.querySelector("a");
-      if (link) {
-        const href = link.getAttribute("href");
-        if (href && href.toLowerCase().includes(searchInput)) {
-          pageBox.classList.remove("disabled");
-        } else {
-          pageBox.classList.add("disabled");
-        }
+      const pageBoxId = pageBox.getAttribute("id");
+      if (searchInput === "" || (pageBoxId && pageBoxId.toLowerCase().includes(searchInput))) {
+        pageBox.classList.remove("disabled");
+        refSetTimeout.current = setTimeout(() => {
+          pageBox.firstChild.style.display = "block";
+          refSetTimeout.current = setTimeout(() => {
+            pageBox.firstChild.classList.remove("hidden");
+          }, 10);
+        }, 500);
+      } else {
+        pageBox.classList.add("disabled");
+        pageBox.firstChild.style.display = "none";
+        pageBox.firstChild.classList.add("hidden");
       }
     });
   }, []);
+  
 
   function handleFocus() {
     setFocus(true);
@@ -40,6 +47,7 @@ export default function SearchButton() {
   function handleInputChange(event) {
     startTransition(() => {
       setSearchText(event.target.value);
+      handleSearch(event.target.value);
     });
   }
 

@@ -35,7 +35,8 @@ export default function PageBox() {
         );
 
         return (
-          <div className="pageBox" key={pageName}>
+          <div className="pageBox" key={pageName} id={pageName}>
+            <div className="LazyLoadWrapp">
             <LazyLoad height={"inherit"} width={"inherit"} offset={100}>
               <Suspense key={pageName} fallback={<Loading />} timer={1000}>
                 <div id={`${pageName}`} className="projectComponent">
@@ -51,6 +52,7 @@ export default function PageBox() {
                 </TooltipProvider>
               </Suspense>
             </LazyLoad>
+            </div>
           </div>
         );
       })}
