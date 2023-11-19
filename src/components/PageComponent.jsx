@@ -34,16 +34,16 @@ export default function PageComponent() {
   if (DynamicComponent) {
     return (
       <div className="pageBox" key={pageName} id={pageName}>
-            <LazyLoad height={"inherit"} width={"inherit"} offset={100}>
-              <Suspense key={pageName} fallback={<Loading />} timer={1000}>
-                <div id={`${pageName}`} className="projectComponent">
-                  <StylesLoadedProvider>
-                    <DynamicComponent pageName={pageName} />
-                  </StylesLoadedProvider>
-                </div>
-              </Suspense>
-            </LazyLoad>
-          </div>
+        <LazyLoad height={"inherit"} width={"inherit"} offset={100}>
+          <Suspense key={pageName} fallback={<Loading />} timer={1000}>
+            <div id={`${pageName}`} className="projectComponent">
+              <StylesLoadedProvider>
+                <DynamicComponent pageName={pageName} />
+              </StylesLoadedProvider>
+            </div>
+          </Suspense>
+        </LazyLoad>
+      </div>
     );
   }
 

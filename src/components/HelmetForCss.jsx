@@ -15,7 +15,7 @@ const importStyles = async (cssFiles) => {
   }
 };
 
-function HelmetForCss({ cssFiles, children }) {
+export default function HelmetForCss({ cssFiles, children }) {
   const [styles, setStyles] = useState(null);
   const [loadedStyleCount, setLoadedStyleCount] = useState(0);
   const { stylesLoaded, setStylesLoaded } = useStylesLoaded(false);
@@ -48,5 +48,3 @@ function HelmetForCss({ cssFiles, children }) {
     </>
   );
 }
-
-export default React.memo(HelmetForCss);

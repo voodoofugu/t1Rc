@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  background-color: #9f8978;
+  // background-color: #9f8978;
 
   a,
   a:visited,
@@ -143,8 +143,12 @@ body {
     color: #555;
     position: relative;
     background: #4d4538;
-    box-shadow: 0 0 2px #000, 0 0 10px #4d4538, 0 0 10px #4d4538,
-      0 0 10px #4d4538, 0 0 25px #4d4538;
+    box-shadow:
+      0 0 2px #000,
+      0 0 10px #4d4538,
+      0 0 10px #4d4538,
+      0 0 10px #4d4538,
+      0 0 25px #4d4538;
 
     .main-bg {
       height: 100%;
@@ -178,7 +182,9 @@ body {
         border-bottom-left-radius: 10px;
         border: solid 4px #9c8b7c;
         border-top: none;
-        box-shadow: inset 0 4px 0 #9c8b7c, inset 0 0 7px #5f4f4e;
+        box-shadow:
+          inset 0 4px 0 #9c8b7c,
+          inset 0 0 7px #5f4f4e;
         border-radius: 10px 18px 18px 18px;
       }
     }
@@ -305,7 +311,9 @@ body {
         color: #3d3737;
         // background: linear-gradient(to top, #e9c44f, #efd368, #f7eec7);
         background: #efd368;
-        box-shadow: inset 0 5px 5px #f7eec7, 0 3px 0px #3d3737,
+        box-shadow:
+          inset 0 5px 5px #f7eec7,
+          0 3px 0px #3d3737,
           inset 0 0 3px #c87726;
         // inset 0 0 2px #000, inset 0 0 6px #c87726;
         // 0 2px 6px #000;
@@ -326,17 +334,29 @@ body {
           text-align: center;
           // line-height: 58px;
           font-weight: bold;
-          text-shadow: 0 0 2px #615142, 0 0 2px #615142, 0 0 2px #615142,
-            2px 2px 1px #fff, -2px -2px 1px #c87726;
+          text-shadow:
+            0 0 2px #615142,
+            0 0 2px #615142,
+            0 0 2px #615142,
+            2px 2px 1px #fff,
+            -2px -2px 1px #c87726;
         }
         &:hover {
-          box-shadow: inset 0 5px 5px #f7eec7, 0 3px 0px #3d3737,
-            inset 0 0 3px #c87726, 0 2px 7px #c87725, 0 2px 11px #c87725,
+          box-shadow:
+            inset 0 5px 5px #f7eec7,
+            0 3px 0px #3d3737,
+            inset 0 0 3px #c87726,
+            0 2px 7px #c87725,
+            0 2px 11px #c87725,
             0 2px 13px #c87725;
         }
         &:active {
-          box-shadow: inset 0 1px 3px #3d3737, inset 0 2px 2px #3d3737,
-            inset 0 -7px 10px #f7eec7, 0 2px 7px #c87725, 0 2px 11px #c87725,
+          box-shadow:
+            inset 0 1px 3px #3d3737,
+            inset 0 2px 2px #3d3737,
+            inset 0 -7px 10px #f7eec7,
+            0 2px 7px #c87725,
+            0 2px 11px #c87725,
             0 2px 13px #c87725;
           top: 0px;
           height: 55px;
@@ -405,7 +425,8 @@ body {
               #c88a13,
               #5d4c35
             );
-            box-shadow: inset 0 11px 0px rgba(255, 255, 0, 0.11),
+            box-shadow:
+              inset 0 11px 0px rgba(255, 255, 0, 0.11),
               0 2px 0 #3d3737;
             padding-left: 22px;
           }
@@ -431,7 +452,8 @@ body {
               #59575c,
               #5d5457
             );
-            box-shadow: inset 0 11px 0px rgba(255, 255, 0, 0.11),
+            box-shadow:
+              inset 0 11px 0px rgba(255, 255, 0, 0.11),
               0 3px 0px #3d3737;
             padding-left: 22px;
             &:before {
@@ -478,7 +500,9 @@ body {
               color: #3d3737;
               // background: linear-gradient(to top, #e9c44f, #efd368, #f7eec7);
               background: #efd368;
-              box-shadow: inset 0 5px 5px #f7eec7, 0 3px 0px #3d3737,
+              box-shadow:
+                inset 0 5px 5px #f7eec7,
+                0 3px 0px #3d3737,
                 inset 0 0 3px #c87726;
             }
           }
@@ -687,9 +711,16 @@ body {
           left: 10px;
           right: 10px;
           top: 16px;
-          text-shadow: 0 -1px 0 #fff, 0 2px 0 #554949, 0 0 3px #f90,
-            0 0 3px #f90, 0 0 3px #f90, 0 0 6px #303030, 0 0 6px #333032,
-            0 0 6px #412727, 0 3px 1px #000;
+          text-shadow:
+            0 -1px 0 #fff,
+            0 2px 0 #554949,
+            0 0 3px #f90,
+            0 0 3px #f90,
+            0 0 3px #f90,
+            0 0 6px #303030,
+            0 0 6px #333032,
+            0 0 6px #412727,
+            0 3px 1px #000;
         }
         &:hover {
           @include prefix(transform, scale3d(1.025, 1.025, 1));
@@ -713,7 +744,10 @@ body {
           top: 2px;
           .num {
             color: #ccc;
-            text-shadow: 0 -1px 0 #fff, 0 0px 2px #ccc, 0 3px 1px #000;
+            text-shadow:
+              0 -1px 0 #fff,
+              0 0px 2px #ccc,
+              0 3px 1px #000;
           }
         }
         &.lvl1-0 {
@@ -762,7 +796,10 @@ body {
           top: 2px;
           .num {
             color: #ccc;
-            text-shadow: 0 -1px 0 #fff, 0 0px 2px #ccc, 0 3px 1px #000;
+            text-shadow:
+              0 -1px 0 #fff,
+              0 0px 2px #ccc,
+              0 3px 1px #000;
           }
         }
         &.lvl4-0 {
@@ -779,7 +816,10 @@ body {
           top: 2px;
           .num {
             color: #ccc;
-            text-shadow: 0 -1px 0 #fff, 0 0px 2px #ccc, 0 3px 1px #000;
+            text-shadow:
+              0 -1px 0 #fff,
+              0 0px 2px #ccc,
+              0 3px 1px #000;
           }
         }
         &.lvl5-0 {
@@ -848,7 +888,10 @@ body {
           top: 2px;
           .num {
             color: #cce;
-            text-shadow: 0 -1px 0 #fff, 0 0px 2px #ccc, 0 3px 1px #000;
+            text-shadow:
+              0 -1px 0 #fff,
+              0 0px 2px #ccc,
+              0 3px 1px #000;
           }
         }
         &.lvl10-0 {
@@ -865,7 +908,10 @@ body {
           top: 2px;
           .num {
             color: #cce;
-            text-shadow: 0 -1px 0 #fff, 0 0px 2px #ccc, 0 3px 1px #000;
+            text-shadow:
+              0 -1px 0 #fff,
+              0 0px 2px #ccc,
+              0 3px 1px #000;
           }
         }
       }
@@ -887,7 +933,9 @@ body {
         // inset 0 -3px 0px #c87725,
         // 0 0 2px #3d3737,
         // inset 0 3px 1px #ffa;
-        box-shadow: inset 0 11px 0px rgba(255, 255, 0, 0.11), 0 3px 0px #3d3737;
+        box-shadow:
+          inset 0 11px 0px rgba(255, 255, 0, 0.11),
+          0 3px 0px #3d3737;
         &:before {
           content: "";
           display: block;
@@ -965,7 +1013,9 @@ body {
           margin: 2px;
           background: linear-gradient(30deg, #3d302a, #9a817c, #e2dcdc);
           // box-shadow: 0 0 2px #000;
-          box-shadow: inset 0 0 5px #000, inset 0 0 7px #9a817c,
+          box-shadow:
+            inset 0 0 5px #000,
+            inset 0 0 7px #9a817c,
             0 1px 3px rgba(0, 0, 0, 0.55);
           cursor: pointer;
 
@@ -1066,7 +1116,9 @@ body {
           margin-top: 19px;
           border: solid 4px #9d8b81;
           margin-right: -7px;
-          box-shadow: 2px 0 0 rgba(0, 0, 0, 0.25), inset 0 1px 0 #c87725,
+          box-shadow:
+            2px 0 0 rgba(0, 0, 0, 0.25),
+            inset 0 1px 0 #c87725,
             inset 0 3px 1px #403a3c;
           cursor: pointer;
           background-image: url(tab-01.png);
@@ -1255,8 +1307,10 @@ body {
               #f4c557 85%,
               #ffe199 100%
             );
-            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2),
-              0px 1px 3px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(0, 0, 0, 0.05);
+            box-shadow:
+              inset 0 0 3px rgba(0, 0, 0, 0.2),
+              0px 1px 3px rgba(0, 0, 0, 0.55),
+              0 0 0 1px rgba(0, 0, 0, 0.05);
             border: none;
             &:before {
               content: "";
@@ -1294,8 +1348,10 @@ body {
             );
             border-radius: 100%;
             cursor: pointer;
-            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2),
-              0px 1px 3px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 0, 0, 0.1);
+            box-shadow:
+              inset 0 0 3px rgba(0, 0, 0, 0.2),
+              0px 1px 3px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(0, 0, 0, 0.1);
             font-size: 26px;
             line-height: 24px;
             font-weight: 700;
@@ -1454,13 +1510,18 @@ body {
                 font-size: 15px;
                 font-weight: bold;
                 text-align: center;
-                box-shadow: inset -2px -6px 1px #3d3737, 0 1px 10px #3d3737;
+                box-shadow:
+                  inset -2px -6px 1px #3d3737,
+                  0 1px 10px #3d3737;
 
                 &.highlight {
                   border: solid 2px #c87725;
                   width: 211px;
                   height: 111px;
-                  box-shadow: 0 0 5px #ffa, 0 0 15px #ffa, inset 0 0 5px #c87725,
+                  box-shadow:
+                    0 0 5px #ffa,
+                    0 0 15px #ffa,
+                    inset 0 0 5px #c87725,
                     inset 0 0 15px #ffa;
                 }
 
@@ -1475,7 +1536,9 @@ body {
                   top: 0px;
                   // box-shadow: 0 3px 0px #c87725, 0 4px 2px #3d3737,
                   //     inset 0 0 4px #ccc;
-                  box-shadow: inset 0 -3px 0px #c87725, 0 0 3px #3d3737;
+                  box-shadow:
+                    inset 0 -3px 0px #c87725,
+                    0 0 3px #3d3737;
                   &.special {
                     background: linear-gradient(0deg, #6e0303, #e3a430);
                     padding: 3px;
@@ -1507,7 +1570,8 @@ body {
                   top: 0px;
                   color: #fdfcc3;
                   line-height: 22px;
-                  box-shadow: inset 0 11px 0px rgba(255, 255, 0, 0.11),
+                  box-shadow:
+                    inset 0 11px 0px rgba(255, 255, 0, 0.11),
                     0 2px 1px #3d3737;
                   text-align: left;
                   padding-left: 20px;
@@ -1589,7 +1653,9 @@ body {
                   top: -6px;
                   // background: red;
                   // border: solid #ff8 2px;
-                  box-shadow: 0 3px 0px #c87725, 0 6px 3px #3d3737,
+                  box-shadow:
+                    0 3px 0px #c87725,
+                    0 6px 3px #3d3737,
                     inset 0 3px 1px #ffa;
                   background: linear-gradient(
                     45deg,
@@ -1635,7 +1701,9 @@ body {
 
                 &.disabled .lvl {
                   background: linear-gradient(45deg, #777, #999, #aaa, #ccc);
-                  box-shadow: 0 3px 0px #333, 0 3px 6px #222,
+                  box-shadow:
+                    0 3px 0px #333,
+                    0 3px 6px #222,
                     inset 0 3px 1px #ccc;
                   .n {
                     color: #ccc;
@@ -1659,7 +1727,9 @@ body {
                   100% {
                     @include prefix(transform, scale3d(1, 1, 1));
                     background-color: #5e5252;
-                    box-shadow: inset -2px -6px 1px #3d3737, 0 1px 10px #3d3737;
+                    box-shadow:
+                      inset -2px -6px 1px #3d3737,
+                      0 1px 10px #3d3737;
                   }
                   60% {
                     @include prefix(transform, scale3d(0.95, 0.95, 1));
@@ -1669,7 +1739,10 @@ body {
                   70% {
                     @include prefix(transform, scale3d(1.05, 1.05, 1));
                     background-color: #a00;
-                    box-shadow: 0 0 25px #ff0, 0 0 15px #ff0, 0 0 5px #f00;
+                    box-shadow:
+                      0 0 25px #ff0,
+                      0 0 15px #ff0,
+                      0 0 5px #f00;
                   }
                 }
 
@@ -1686,7 +1759,9 @@ body {
                   left: 28px;
                   bottom: -4px;
                   // box-shadow: 0 3px 0px #c87725, inset 0 3px 2px #ffa, 1px 2px 1px #000, 1px 5px 3px #000;
-                  box-shadow: 0 2px 1px #c87725, inset 0 3px 2px #ffa,
+                  box-shadow:
+                    0 2px 1px #c87725,
+                    inset 0 3px 2px #ffa,
                     0px 2px 5px #000;
                   background: linear-gradient(
                     45deg,
@@ -2008,7 +2083,9 @@ body {
               #f7eec7,
               #ffa
             );
-            box-shadow: 0 1px 0px #c87726, 1px 0px 0px rgba(0, 0, 0, 0.33);
+            box-shadow:
+              0 1px 0px #c87726,
+              1px 0px 0px rgba(0, 0, 0, 0.33);
             @include prefix(border-top-right-radius, 12px);
             @include prefix(border-bottom-right-radius, 12px);
             cursor: pointer;
@@ -2032,7 +2109,9 @@ body {
               font-weight: bold;
               color: #3c2d22;
               line-height: 16px;
-              text-shadow: 0 0 2px #fff, 0 0 4px #ffa;
+              text-shadow:
+                0 0 2px #fff,
+                0 0 4px #ffa;
             }
             .text1,
             .text-boss {
@@ -2053,16 +2132,22 @@ body {
                 #f7eec7,
                 #ffa
               );
-              box-shadow: 0 2px 0px #c87726, 2px 0px 0px rgba(0, 0, 0, 0.33),
+              box-shadow:
+                0 2px 0px #c87726,
+                2px 0px 0px rgba(0, 0, 0, 0.33),
                 0 0 3px #c87726;
               @include prefix(border-radius, 7px);
             }
             .text-boss {
               background: linear-gradient(to bottom, #ffdc61, #ff3800, #b50000);
-              box-shadow: 0 2px 0px #841313, 0px 2px 3px rgba(115, 12, 12, 0.91),
+              box-shadow:
+                0 2px 0px #841313,
+                0px 2px 3px rgba(115, 12, 12, 0.91),
                 0 0 3px #500000;
               color: #ffa;
-              text-shadow: 0 0 2px #400, 0 0 7px #500;
+              text-shadow:
+                0 0 2px #400,
+                0 0 7px #500;
             }
             .boss-icon {
               display: block;
@@ -2098,7 +2183,8 @@ body {
             // min-width: 90px;
             height: 90px;
             background: linear-gradient(to bottom, #9e8b7d, #ccae98, #6d6055);
-            box-shadow: 2px 0px 0px rgba(0, 0, 0, 0.33),
+            box-shadow:
+              2px 0px 0px rgba(0, 0, 0, 0.33),
               0 0 5px rgba(0, 0, 0, 0.33);
             list-style: none;
             margin: 0;
@@ -2140,7 +2226,9 @@ body {
               // margin-right: 7px;
               @include prefix(border-radius, 12px);
               border: solid 2px #765853;
-              box-shadow: inset 0 -3px 0px #2a703c, inset 0 0 4px #cdf7d2,
+              box-shadow:
+                inset 0 -3px 0px #2a703c,
+                inset 0 0 4px #cdf7d2,
                 inset 0 0 6px #ddf7cd;
               .icon {
                 width: 100%;
@@ -2159,12 +2247,18 @@ body {
                 font-weight: bold;
                 color: #000;
                 line-height: 18px;
-                text-shadow: 0 0 2px #fff, 0 0 4px #ffa;
+                text-shadow:
+                  0 0 2px #fff,
+                  0 0 4px #ffa;
               }
               &.current {
                 border: solid 2px #ff9600;
-                box-shadow: inset 0 -3px 0px #2a703c, inset 0 0 4px #cdf7d2,
-                  inset 0 0 6px #ddf7cd, 0 0 5px #ff9600, 0 0 10px #ff9600;
+                box-shadow:
+                  inset 0 -3px 0px #2a703c,
+                  inset 0 0 4px #cdf7d2,
+                  inset 0 0 6px #ddf7cd,
+                  0 0 5px #ff9600,
+                  0 0 10px #ff9600;
               }
             }
           }
@@ -2337,7 +2431,9 @@ body {
               margin-bottom: 3px;
               @include prefix(border-radius, 12px);
               border: solid 2px #414141;
-              box-shadow: inset 0 -3px 0px #c87726, inset 0 0 4px #f7f1cd,
+              box-shadow:
+                inset 0 -3px 0px #c87726,
+                inset 0 0 4px #f7f1cd,
                 inset 0 0 6px #f7f1cd;
               .icon {
                 width: 100%;
@@ -2345,7 +2441,9 @@ body {
               }
 
               &.idle {
-                box-shadow: inset 0 3px 0px #222, inset 0 0 6px #333;
+                box-shadow:
+                  inset 0 3px 0px #222,
+                  inset 0 0 6px #333;
                 background: linear-gradient(to top, #ccc, #777, #333);
                 border: solid 2px #f0d571;
 
@@ -2365,7 +2463,9 @@ body {
                 }
               }
               &.in-progress {
-                box-shadow: inset 0 3px 0px #541414, inset 0 0 6px #2c0a0a;
+                box-shadow:
+                  inset 0 3px 0px #541414,
+                  inset 0 0 6px #2c0a0a;
                 background: linear-gradient(to top, #a12929, #c86151, #6b1f1f);
                 border: solid 2px #555;
                 .timer {
@@ -2444,13 +2544,17 @@ body {
               &.in-progress:active {
                 width: 52px;
                 height: 52px;
-                box-shadow: inset 0 3px 0px #222, inset 0 0 6px #333;
+                box-shadow:
+                  inset 0 3px 0px #222,
+                  inset 0 0 6px #333;
                 border: solid 2px #f0d571;
               }
               &.in-progress:hover,
               &.in-progress:active {
                 border: solid 2px #555;
-                box-shadow: inset 0 3px 0px #541414, inset 0 0 6px #2c0a0a;
+                box-shadow:
+                  inset 0 3px 0px #541414,
+                  inset 0 0 6px #2c0a0a;
               }
             }
           }
@@ -2694,7 +2798,9 @@ body {
         #f7cb50,
         #f5c33e
       );
-      box-shadow: inset 0 0 1px #000, inset 0 0 2px #f0b310,
+      box-shadow:
+        inset 0 0 1px #000,
+        inset 0 0 2px #f0b310,
         inset 0 0 7px #f8c22e;
       border: solid 3px #403730;
       border-right: none;
@@ -2741,7 +2847,10 @@ body {
         color: #403730;
         // border: solid 2px #ffa;
         // box-shadow: 0 2px 0px #201c1c;
-        text-shadow: 0 0 2px #fff, 0 0 5px #ffa, 0 0 7px #ffa;
+        text-shadow:
+          0 0 2px #fff,
+          0 0 5px #ffa,
+          0 0 7px #ffa;
       }
       // .num{
       //     display: block; width: 100px; height: 20px; line-height: 20px;
@@ -2773,7 +2882,9 @@ body {
           background: red;
           @include prefix(border-radius, 20px);
           background: linear-gradient(to bottom, #006293, #00e4cd);
-          box-shadow: 2px 0 2px #403730, inset 0 0 1px #403730;
+          box-shadow:
+            2px 0 2px #403730,
+            inset 0 0 1px #403730;
         }
       }
       .lvl1,
@@ -2985,7 +3096,9 @@ body {
           left: -4px;
           top: -6px;
           @include prefix(border-radius, 100%);
-          box-shadow: 0 1px 2px #000, inset 0 0 5px #ffa;
+          box-shadow:
+            0 1px 2px #000,
+            inset 0 0 5px #ffa;
           z-index: 2;
         }
         &:after {
@@ -3008,7 +3121,10 @@ body {
         @include prefix(border-radius, 7px);
         background: linear-gradient(45deg, #e8c34e, #f1da7c, #cfa831, #fbf1d8);
         // background: red;
-        box-shadow: inset 0 -1px 2px #452b05, 0 0 2px #472624, 0 0 3px #472624;
+        box-shadow:
+          inset 0 -1px 2px #452b05,
+          0 0 2px #472624,
+          0 0 3px #472624;
         margin: 12px;
         position: relative;
         margin-left: 16px;
@@ -3030,7 +3146,8 @@ body {
           top: 5px;
           color: #fdfcc3;
           line-height: 22px;
-          box-shadow: inset 0 11px 0px rgba(255, 255, 0, 0.11),
+          box-shadow:
+            inset 0 11px 0px rgba(255, 255, 0, 0.11),
             inset 0 2px 1px #3d3737;
           text-align: left;
           padding-left: 20px;
@@ -3055,7 +3172,8 @@ body {
           font-size: 26px;
           line-height: 30px;
           text-shadow: 0 2px #000;
-          box-shadow: inset 0 11px 0px rgba(255, 255, 255, 0.08),
+          box-shadow:
+            inset 0 11px 0px rgba(255, 255, 255, 0.08),
             inset 0 2px 1px #3d3737;
           text-align: left;
           padding-left: 20px;
@@ -3071,15 +3189,23 @@ body {
           position: absolute;
           left: -10px;
           top: -3px;
-          box-shadow: 0 3px 0px #c87725, inset 0 3px 1px #ffa, 0 5px 0px #3d3737,
+          box-shadow:
+            0 3px 0px #c87725,
+            inset 0 3px 1px #ffa,
+            0 5px 0px #3d3737,
             2px 0 0px #3d3737;
           background: linear-gradient(45deg, #e8c34e, #ffa, #cfa831, #fbf1d8);
           padding-top: 37px;
           color: #3a2423;
           font-size: 25px;
           font-weight: 900;
-          text-shadow: 0 0 1px #3a2423, 0 0 1px #3a2423, 0 0 1px #3a2423,
-            1px 0 1px #000, 1px 0 1px #000, 1px 0 1px #000;
+          text-shadow:
+            0 0 1px #3a2423,
+            0 0 1px #3a2423,
+            0 0 1px #3a2423,
+            1px 0 1px #000,
+            1px 0 1px #000,
+            1px 0 1px #000;
           // @include prefix(transform, scale3d(1,0.77,1));
           &:before {
             content: "";
@@ -3121,7 +3247,9 @@ body {
           position: absolute;
           top: 45px;
           left: 41px;
-          text-shadow: 1px 1px 3px #4f261e, -1px -1px 3px #4f261e;
+          text-shadow:
+            1px 1px 3px #4f261e,
+            -1px -1px 3px #4f261e;
           color: #fdfcc3;
           font-size: 20px;
         }
@@ -3153,7 +3281,10 @@ body {
           @include prefix(border-top-right-radius, 20px);
           padding-top: 1px;
           height: 71px;
-          box-shadow: 0 3px 0px #c87725, 0 5px 0px #3d3737, -1px 0 0px #3d3737,
+          box-shadow:
+            0 3px 0px #c87725,
+            0 5px 0px #3d3737,
+            -1px 0 0px #3d3737,
             inset 0 3px 1px #ffa;
           &:before {
             content: "";
@@ -3257,7 +3388,8 @@ body .main .popup-layer .sign-in {
             font-weight: bold;
             color: #413530;
             padding: 3px 10px;
-            box-shadow: inset 0 2px 0px #413530,
+            box-shadow:
+              inset 0 2px 0px #413530,
               inset 0 19px 0px rgba(246, 224, 213, 0.14);
           }
 
@@ -3276,7 +3408,9 @@ body .main .popup-layer .sign-in {
           }
           &.error {
             .itext {
-              box-shadow: inset 0 0 5px #900, inset 0 0 5px #900,
+              box-shadow:
+                inset 0 0 5px #900,
+                inset 0 0 5px #900,
                 inset 0 2px 0px #413530,
                 inset 0 19px 0px rgba(246, 224, 213, 0.14);
             }
@@ -3365,19 +3499,31 @@ body .main .popup-layer .sign-up {
 
   .title {
     color: #921b00;
-    text-shadow: 0 0 1px #370603, 0 1px 1px #fff, 0 1px 10px #ffc;
+    text-shadow:
+      0 0 1px #370603,
+      0 1px 1px #fff,
+      0 1px 10px #ffc;
   }
   .btn-close-x:before {
     color: #921b00;
-    text-shadow: 0 0 2px #921b00, 0 0 2px #921b00, 0 0 2px #921b00,
-      0 0 2px #921b00, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+    text-shadow:
+      0 0 2px #921b00,
+      0 0 2px #921b00,
+      0 0 2px #921b00,
+      0 0 2px #921b00,
+      0 0 7px #fff,
+      0 0 7px #fff,
+      0 0 7px #fff;
   }
   .text-1 {
     font-size: 20px;
     font-weight: bold;
     color: #ffc;
     line-height: 22px;
-    text-shadow: 0 1px 2px #300, 0 1px 15px #300, 0 1px 20px #300;
+    text-shadow:
+      0 1px 2px #300,
+      0 1px 15px #300,
+      0 1px 20px #300;
   }
   .megapack-banner {
     display: block;
@@ -3388,7 +3534,10 @@ body .main .popup-layer .sign-up {
     @include prefix(border-radius, 20px);
     border-top: solid 7px #ff7;
     border-bottom: solid 7px #ff7;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.33), 0 0 2px #400, inset 0 0 15px #600,
+    box-shadow:
+      0 5px 5px rgba(0, 0, 0, 0.33),
+      0 0 2px #400,
+      inset 0 0 15px #600,
       inset 0 0 25px #300;
     margin-top: 10px;
     // background-image: url(reg-banner.jpg);
@@ -3412,10 +3561,16 @@ body .main .popup-layer .sign-up {
       white-space: nowrap;
       line-height: 35px;
       padding-top: 80px;
-      text-shadow: 0 0 5px #500, 0 0 5px #500, 0 0 5px #500, 0 0 5px #500,
+      text-shadow:
+        0 0 5px #500,
+        0 0 5px #500,
+        0 0 5px #500,
+        0 0 5px #500,
         0 0 3px #ff0;
       border: solid 3px #d30;
-      box-shadow: 0 0 15px #300, 0 0 25px #900;
+      box-shadow:
+        0 0 15px #300,
+        0 0 25px #900;
       .num {
         display: block;
         width: 100%;
@@ -3517,12 +3672,16 @@ body .main .popup-layer .sign-up {
           font-weight: bold;
           color: #413530;
           padding: 3px 10px;
-          box-shadow: inset 0 2px 0px #413530,
+          box-shadow:
+            inset 0 2px 0px #413530,
             inset 0 19px 0px rgba(246, 224, 213, 0.14);
         }
         &.error .itext {
-          box-shadow: inset 0 0 5px #900, inset 0 0 5px #900,
-            inset 0 2px 0px #413530, inset 0 19px 0px rgba(246, 224, 213, 0.14);
+          box-shadow:
+            inset 0 0 5px #900,
+            inset 0 0 5px #900,
+            inset 0 2px 0px #413530,
+            inset 0 19px 0px rgba(246, 224, 213, 0.14);
         }
         &.check {
           text-align: center;
@@ -3580,7 +3739,10 @@ body .main .popup-layer .sign-up {
       margin-top: 20px;
       margin-bottom: 10px;
       color: #700;
-      text-shadow: 0 0 1px #800, 0 2px 1px #fff, 0 0px 10px #ff0,
+      text-shadow:
+        0 0 1px #800,
+        0 2px 1px #fff,
+        0 0px 10px #ff0,
         0 0px 20px #f00;
       padding: 7px 20px;
       font-size: 25px;
@@ -3731,7 +3893,9 @@ body .main {
       line-height: 38px;
       font-size: 14px;
       color: rgba(255, 255, 255, 0.8);
-      text-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4),
+      text-shadow:
+        0 1px 0.5px rgba(0, 0, 0, 0.2),
+        0 1px 2px rgba(0, 0, 0, 0.4),
         0 1px 4px rgba(0, 0, 0, 0);
       text-transform: uppercase;
       font-weight: 100;
@@ -3807,8 +3971,10 @@ body .main {
         font-size: 15px;
         font-weight: 700;
         color: #fff;
-        text-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.4),
-          0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.2),
+        text-shadow:
+          0 1px 0.5px rgba(0, 0, 0, 0.4),
+          0 1px 2px rgba(0, 0, 0, 0.6),
+          0 1px 4px rgba(0, 0, 0, 0.2),
           0 0 6px rgba(0, 0, 0, 0.4);
         &:before {
           transform: translateX(-6px) scale(1);
@@ -3845,8 +4011,10 @@ body .main {
       z-index: 1;
       .txt {
         color: rgba(255, 255, 255, 1);
-        text-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.4),
-          0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.2);
+        text-shadow:
+          0 1px 0.5px rgba(0, 0, 0, 0.4),
+          0 1px 2px rgba(0, 0, 0, 0.6),
+          0 1px 4px rgba(0, 0, 0, 0.2);
         transition: ease-in-out 0.1s;
         &:before {
           opacity: 1;

@@ -1,4 +1,10 @@
-import React, { useEffect, useState, Suspense, lazy, useTransition } from "react";
+import React, {
+  useEffect,
+  useState,
+  Suspense,
+  lazy,
+  useTransition,
+} from "react";
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazy-load";
 import { StylesLoadedProvider } from "./StylesLoadedProvider";
@@ -17,9 +23,9 @@ export default function PageBox() {
           .keys()
           .filter((key) => !["./TemplateComponent.jsx"].includes(key))
           .map((key) => key.replace("./", "").replace(".jsx", ""));
-          startTransition(() => {
-            setPageList(components);
-          });
+        startTransition(() => {
+          setPageList(components);
+        });
       } catch (error) {
         console.error("Error importing page components:", error);
       }
@@ -37,21 +43,21 @@ export default function PageBox() {
         return (
           <div className="pageBox" key={pageName} id={pageName}>
             <div className="LazyLoadWrapp">
-            <LazyLoad height={"inherit"} width={"inherit"} offset={100}>
-              <Suspense key={pageName} fallback={<Loading />} timer={1000}>
-                <div id={`${pageName}`} className="projectComponent">
-                  <StylesLoadedProvider>
-                    <DynamicComponent pageName={pageName} />
-                  </StylesLoadedProvider>
-                </div>
-                <Link className="pageBoxLink" to={pageName}>
-                  {pageName}
-                </Link>
-                <TooltipProvider text={pageName}>
-                  <div className="infoPageBox">i</div>
-                </TooltipProvider>
-              </Suspense>
-            </LazyLoad>
+              <LazyLoad height={"inherit"} width={"inherit"} offset={100}>
+                <Suspense key={pageName} fallback={<Loading />} timer={1000}>
+                  <div id={`${pageName}`} className="projectComponent">
+                    <StylesLoadedProvider>
+                      <DynamicComponent pageName={pageName} />
+                    </StylesLoadedProvider>
+                  </div>
+                  <Link className="pageBoxLink" to={pageName}>
+                    {pageName}
+                  </Link>
+                  <TooltipProvider text={pageName}>
+                    <div className="infoPageBox">i</div>
+                  </TooltipProvider>
+                </Suspense>
+              </LazyLoad>
             </div>
           </div>
         );
