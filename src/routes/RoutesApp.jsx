@@ -7,8 +7,8 @@ import HelmetComponent from "../components/HelmetComponent";
 import SearchButton from "../components/SearchButton";
 import ToggleButton from "../components/ToggleButton";
 
-const TemplateComponentLazy = lazy(() =>
-  import(`../pagesComponents/TemplateComponent.jsx`)
+const TemplateLazy = lazy(() =>
+  import(`../pagesComponents/Template.jsx`)
 );
 
 export default function RoutesApp() {
@@ -17,24 +17,24 @@ export default function RoutesApp() {
       <Route
         path="/"
         element={
-          <TemplateComponentLazy
+          <TemplateLazy
             searchButtonComponent={<SearchButton />}
             toggleButtonComponent={<ToggleButton />}
           >
             <PageBox />
-          </TemplateComponentLazy>
+          </TemplateLazy>
         }
       />
       <Route
         path="/:pageName"
         element={
-          <TemplateComponentLazy
+          <TemplateLazy
             propClass="onePage"
             propClassDiasable="onePageDiasable"
           >
             <TitlePage />
             <PageComponent />
-          </TemplateComponentLazy>
+          </TemplateLazy>
         }
       />
     </Routes>

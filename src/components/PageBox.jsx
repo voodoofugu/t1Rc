@@ -21,7 +21,7 @@ export default function PageBox() {
         const context = require.context("../pagesComponents/", false, /\.jsx$/);
         const components = context
           .keys()
-          .filter((key) => !["./TemplateComponent.jsx"].includes(key))
+          .filter((key) => !["./Template.jsx"].includes(key))
           .map((key) => key.replace("./", "").replace(".jsx", ""));
         startTransition(() => {
           setPageList(components);

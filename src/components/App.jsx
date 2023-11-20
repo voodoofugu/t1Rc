@@ -6,7 +6,7 @@ import RoutesApp from "../routes/RoutesApp";
 import Loading from "./Loading.jsx";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
-const cssFiles = ["TemplateComponentStyles"];
+const cssFiles = ["TemplateStyles"];
 
 export default function App() {
   return (

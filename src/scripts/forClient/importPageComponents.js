@@ -4,7 +4,7 @@ export async function importPageComponents() {
     const context = require.context(pagesComponentsPath, false, /\.jsx$/);
     const componentsData = context
       .keys()
-      .filter((key) => !["./TemplateComponent.jsx"].includes(key))
+      .filter((key) => !["./Template.jsx"].includes(key))
       .map((key) => {
         const pageName = key.replace("./", "").replace(".jsx", "");
         const PageComponent = lazy(() =>
