@@ -15,7 +15,7 @@ const importStyles = async (cssFiles) => {
   }
 };
 
-export default function HelmetForCss({ cssFiles, children }) {
+export default function HelmetForCss({ cssFiles, children, scriptsProp }) {
   const [styles, setStyles] = useState(null);
   const [loadedStyleCount, setLoadedStyleCount] = useState(0);
   const { stylesLoaded, setStylesLoaded } = useStylesLoaded(false);
@@ -41,6 +41,7 @@ export default function HelmetForCss({ cssFiles, children }) {
             {` ${styles ? styles[index] : ""} `}
           </style>
         ))}
+        {[scriptsProp]}
       </HelmetComponent>
       <div className={`likeBody ${modifiedCssFileNames.join(" ")}`}>
         {!stylesLoaded && loadedStyleCount < 1 ? <Loading /> : children}

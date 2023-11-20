@@ -1,8 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const HelmetComponent = ({ children }) => {
+export default function HelmetComponent({ children }) {
   return <Helmet>{children}</Helmet>;
-};
-
-export default HelmetComponent;
+}

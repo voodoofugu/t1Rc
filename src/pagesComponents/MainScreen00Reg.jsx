@@ -1,11 +1,26 @@
 import React from "react";
+import * as PIXI from "../scripts/pixi-animate/pixi.js";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = ["screen-reg"];
 
-export default function MainScreen00RegComponent() {
+export default function MainScreen00RegComponent({ pageName = "" }) {
+  const currentPath = window.location.pathname.split("/").pop().split(".")[0];
+
   return (
-    <HelmetForCss cssFiles={cssFiles}>
+    <HelmetForCss
+      cssFiles={cssFiles}
+      scriptsProp={
+        pageName === currentPath
+          ? [
+              // <script src="scripts/pixi-animate/pixi.js"></script>,
+              <script src="scripts/pixi-animate/pixi-spine.js"></script>,
+              <script src="scripts/pixi-animate/pixi-spine-debug.js"></script>,
+              <script src="spine/tutor-girl/tutor-girl-anim.js"></script>,
+            ]
+          : []
+      }
+    >
       <div
         className="wrapStyles"
         style={{ width: "1200px", height: "640px", background: "#9f8978" }}

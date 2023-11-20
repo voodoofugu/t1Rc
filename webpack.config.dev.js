@@ -36,8 +36,12 @@ const devServerConfig = {
         publicPath: "/img/",
       },
       {
-        directory: path.join(__dirname, "src", "scripts", "forClient"),
-        publicPath: "/scripts/forClient/",
+        directory: path.join(__dirname, "src", "scripts"),
+        publicPath: "/scripts/",
+      },
+      {
+        directory: path.join(__dirname, "src", "spine"),
+        publicPath: "/spine/",
       },
     ],
   },
