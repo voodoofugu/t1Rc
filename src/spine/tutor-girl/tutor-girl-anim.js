@@ -204,3 +204,5 @@ loader.load((loader, res) => {
   rezz = res;
   addTutorGirl();
 });
+
+globalThis.__PIXI_APP__ = app;

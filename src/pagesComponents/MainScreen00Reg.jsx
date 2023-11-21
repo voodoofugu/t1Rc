@@ -1,11 +1,26 @@
-import React from "react";
-import * as PIXI from "../scripts/pixi-animate/pixi.js";
+import React, { useEffect } from "react";
+import { useStylesLoaded } from "../components/StylesLoadedProvider";
+
+import * as PIXI from "../scripts/pixi-animate/pixi";
+import { Spine } from "../scripts/pixi-animate/pixi-spine";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = ["screen-reg"];
 
 export default function MainScreen00RegComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
+  const { stylesLoaded } = useStylesLoaded();
+
+  useEffect(() => {
+    if (pageName === currentPath && stylesLoaded) {
+      const projectComponent = document.querySelector(".projectComponent");
+      projectComponent.style.position = "absolute";
+      projectComponent.style.left = "50%";
+      projectComponent.style.top = "50%";
+      projectComponent.style.transform = "translate(-50%, -50%)";
+      console.log(projectComponent);
+    }
+  }, [pageName, stylesLoaded]);
 
   return (
     <HelmetForCss
@@ -13,9 +28,7 @@ export default function MainScreen00RegComponent({ pageName = "" }) {
       scriptsProp={
         pageName === currentPath
           ? [
-              // <script src="scripts/pixi-animate/pixi.js"></script>,
-              <script src="scripts/pixi-animate/pixi-spine.js"></script>,
-              <script src="scripts/pixi-animate/pixi-spine-debug.js"></script>,
+              // <script src="scripts/pixi-animate/pixi-spine-debug.js"></script>,
               <script src="spine/tutor-girl/tutor-girl-anim.js"></script>,
             ]
           : []

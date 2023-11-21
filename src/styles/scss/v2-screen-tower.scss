@@ -4,775 +4,751 @@
 body .main.world1,
 body .main.world2,
 body .main.world3 {
-    .left-side {
-        .left-panel {
-            &.tower {
-                &.fight {
-                    box-shadow: none;
-                    .tab-loading-wrapper {
-                        display: none;
-                    }
-                    .heroes-list-all-box {
-                        width: 620px;
-                        box-shadow: inset 0 0 0 4px #9c8b7c,
-                            inset 0 0 6px rgba(0, 0, 0, 0.25),
-                            0 0 0 1px rgba(0, 0, 0, 0.4),
-                            0 0 2px rgba(0, 0, 0, 0.2);
-                    }
-                }
-                .tab-loading-wrapper {
-                    height: 511px;
-                }
-                .tower-rightside-box-all {
-                    width: 580px;
-                    height: 507px;
-                    position: absolute;
-                    top: 4px;
-                    right: 4px;
-                    .right-side {
-                        top: -25px;
-                        right: -9px;
-                        .skills-wrap {
-                            left: -17px;
-                            top: 21px;
-                            position: absolute;
-                        }
-                        .monster {
-                            top: 1px;
-                            right: 0;
-                        }
-                    }
-                    .tower-right-wrap {
-                        position: absolute;
-                        z-index: 2;
-                        width: 580px;
-                        height: 507px;
-                        background-color: rgb(183, 165, 151);
-                        border-radius: 0px 14px 14px 0;
-                        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2),
-                            inset 2px 0 0 rgba(0, 0, 0, 0.2),
-                            0 0 4px rgba(0, 0, 0, 0.2), 4px 0 0 #9c8b7c,
-                            0 4px 0 #9c8b7c, 4px 4px 0 #9c8b7c, 0 -4px 0#9c8b7c,
-                            4px -4px 0 #9c8b7c;
-                        .tab-panel-box-title {
-                            width: 300px;
-                            height: 24px;
-                            position: absolute;
-                            top: 10px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            @include background-resourcebg;
-                            @include prefix(border-radius, 12px);
-                            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-                            color: #3c3737;
-                            font-size: 16px;
-                            font-weight: bold;
-                            text-transform: uppercase;
-                            line-height: 24px;
-                            text-align: center;
-                        }
-                        .tower-prg-box-all {
-                            width: 562px;
-                            height: 50px;
-                            position: absolute;
-                            top: 44px;
-                            left: 10px;
-                            background-color: #8f7c6e;
-                            border-radius: 10px;
-                            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
-                                inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-                            .buy-relics {
-                                position: absolute;
-                                left: 310px;
-                                top: -5px;
-                                cursor: pointer;
-                            }
-                            .tower-prgbar-all {
-                                width: 300px;
-                                height: 40px;
-                                position: absolute;
-                                top: 5px;
-                                left: 5px;
-                                background: linear-gradient(
-                                    180deg,
-                                    #3b302f 0%,
-                                    #584a49 100%
-                                );
-                                .tower-prgbar {
-                                    width: 85%;
-                                    height: 40px;
-                                    position: absolute;
-                                    top: 0px;
-                                    left: 0px;
-                                    background: linear-gradient(
-                                        0deg,
-                                        #8cdd55 0%,
-                                        #43a700 50%,
-                                        #8cdd55 100%
-                                    );
-                                }
-                                .tower-prgbar-text {
-                                    width: 300px;
-                                    height: 40px;
-                                    position: relative;
-                                    text-align: center;
-                                    color: #ffd33c;
-                                    font-weight: bold;
-                                    font-size: 16px;
-                                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
-                                    line-height: 40px;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
-                                    text-transform: uppercase;
-                                    span {
-                                        color: #fff;
-                                        margin-left: 10px;
-                                        font-size: 18px;
-                                    }
-                                }
-                            }
-                            .cards-res-box {
-                                width: 170px;
-                                height: 36px;
-                                position: absolute;
-                                top: 7px;
-                                left: 206px;
-                                @include background-resourcebg;
-                                @include prefix(border-radius, 18px);
-                                box-shadow: inset 0 -2px 0 0 rgba(160, 79, 0, 0.55),
-                                    0 2px 4px 0 rgba(0, 0, 0, 0.35);
-                                &:before {
-                                    content: "";
-                                    width: 40px;
-                                    height: 40px;
-                                    position: absolute;
-                                    top: -2px;
-                                    left: -2px;
-                                    background-image: url(gold-ticket.png);
-                                    background-size: 100%;
-                                    background-repeat: no-repeat;
-                                }
-                                .cards-value {
-                                    width: 100px;
-                                    height: 28px;
-                                    position: absolute;
-                                    top: 3px;
-                                    left: 38px;
-                                    background: linear-gradient(
-                                        90deg,
-                                        #f4bf87 0%,
-                                        #d38632 50%,
-                                        #92581a 100%
-                                    );
-                                    box-shadow: inset 0 2px 4px
-                                            rgba(0, 0, 0, 0.25),
-                                        inset 0 14px 0 rgba(255, 255, 255, 0.15);
-                                    @include prefix(border-radius, 6px);
-                                    color: #fff;
-                                    font-size: 20px;
-                                    font-weight: bold;
-                                    line-height: 28px;
-                                    text-align: center;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
-                                }
-                                .cards-value-btn-add {
-                                    width: 32px;
-                                    height: 36px;
-                                    position: absolute;
-                                    top: 0;
-                                    right: 0;
-                                    @include prefix(
-                                        border-radius,
-                                        0 18px 18px 0
-                                    );
-                                    cursor: pointer;
-                                    filter: drop-shadow(
-                                        0 1px 0.5px rgba(255, 255, 255, 0.795)
-                                    );
-                                    &:before {
-                                        content: "";
-                                        width: 6px;
-                                        height: 22px;
-                                        position: absolute;
-                                        top: 7px;
-                                        left: 12px;
-                                        background-color: #4f4646;
-                                        border-radius: 2px;
-                                    }
-                                    &:after {
-                                        content: "";
-                                        width: 22px;
-                                        height: 6px;
-                                        position: absolute;
-                                        top: 15px;
-                                        left: 4px;
-                                        background-color: #4f4646;
-                                        border-radius: 2px;
-                                    }
-                                    &:hover {
-                                        &:before {
-                                            background-color: #3c3737;
-                                        }
-                                        &:after {
-                                            background-color: #3c3737;
-                                        }
-                                    }
-                                    &:active {
-                                        &:before {
-                                            width: 4px;
-                                            height: 20px;
-                                            top: 8px;
-                                            left: 13px;
-                                        }
-                                        &:after {
-                                            width: 20px;
-                                            height: 4px;
-                                            top: 16px;
-                                            left: 5px;
-                                        }
-                                    }
-                                }
-                                &.relicset {
-                                    left: 6px;
-                                    &:before {
-                                        content: "";
-                                        width: 40px;
-                                        height: 40px;
-                                        position: absolute;
-                                        top: -2px;
-                                        left: -2px;
-                                        background-image: url(card-ic-koloda.png);
-                                        background-size: 100%;
-                                        background-repeat: no-repeat;
-                                    }
-                                }
-                            }
-                            .relics-pop-event-btn {
-                                width: 70px;
-                                height: 70px;
-                                position: absolute;
-                                top: -10px;
-                                left: 5px;
-                                cursor: pointer;
-                                background-image: url(offer-bk-sm1.png);
-                                background-size: 100%;
-                                background-repeat: no-repeat;
-                                .relics-pop-event-btn-text {
-                                    width: 100%;
-                                    height: auto;
-                                    position: relative;
-                                    top: 24px;
-                                    text-align: center;
-                                    color: #fff;
-                                    font-weight: bold;
-                                    font-size: 14px;
-                                    text-transform: uppercase;
-                                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-                                }
-                                &:active {
-                                    top: -9px;
-                                }
-                            }
-                        }
-                        .tower-box-all {
-                            width: 440px;
-                            height: 395px;
-                            position: absolute;
-                            bottom: 8px;
-                            left: 132px;
-                            border-radius: 0 10px 10px 0;
-                            overflow: hidden;
-                            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
-                            .all-tower-box {
-                                width: 440px;
-                                height: 395px;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                overflow: hidden;
-                                background-image: url(tower-sky-bg2.jpg);
-                                background-size: 100%;
-                                .all-tower-bg {
-                                    width: 440px;
-                                    height: 154px;
-                                    position: absolute;
-                                    bottom: 0;
-                                    background-image: url(tower-bg2.png);
-                                    background-size: 100%;
-                                }
-                                .all-tower-scroll {
-                                    width: 320px;
-                                    height: 800px;
-                                    position: absolute;
-                                    left: 60px;
-                                    bottom: 0;
-                                    &.next {
-                                        .tower-wall.a1 {
-                                            @include prefix(
-                                                animation,
-                                                next 1s 0s ease-in-out 1
-                                                    forwards
-                                            );
-                                        }
-                                        @keyframes next {
-                                            0% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, 0px)
-                                                );
-                                            }
-                                            50% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, 6px)
-                                                );
-                                            }
-                                            80% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, -3px)
-                                                );
-                                            }
-                                            100% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, 150px)
-                                                );
-                                            }
-                                        }
-                                    }
-                                    &.nextwall {
-                                        .tower-wall.a2 {
-                                            @include prefix(
-                                                animation,
-                                                nextwall 2s 0s ease-in-out 1
-                                                    forwards
-                                            );
-                                        }
-                                        .tower-wall.a3 {
-                                            @include prefix(
-                                                animation,
-                                                nextwall 2s 0s ease-in-out 1
-                                                    forwards
-                                            );
-                                        }
-                                        .tower-wall.a4 {
-                                            @include prefix(
-                                                animation,
-                                                nextwall 2s 0s ease-in-out 1
-                                                    forwards
-                                            );
-                                        }
-                                        .tower-wall.a5 {
-                                            @include prefix(
-                                                animation,
-                                                nextwall 2s 0s ease-in-out 1
-                                                    forwards
-                                            );
-                                        }
-                                        .tower-wall.a6 {
-                                            @include prefix(
-                                                animation,
-                                                nextwall 2s 0s ease-in-out 1
-                                                    forwards
-                                            );
-                                        }
-                                        .tower-wall.a7 {
-                                            @include prefix(
-                                                animation,
-                                                nextwall 2s 0s ease-in-out 1
-                                                    forwards
-                                            );
-                                        }
-                                        @keyframes nextwall {
-                                            0% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, 0px)
-                                                );
-                                            }
-                                            50% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, 6px)
-                                                );
-                                            }
-                                            80% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, 3px)
-                                                );
-                                            }
-                                            100% {
-                                                @include prefix(
-                                                    transform,
-                                                    translate(0, 92px)
-                                                );
-                                            }
-                                        }
-                                    }
-                                }
-                                .tower-wall {
-                                    width: 320px;
-                                    height: 94px;
-                                    position: absolute;
-                                    bottom: 50px;
-                                    background-image: url(tower-p1.png);
-                                    background-size: 100%;
-                                    &.lock {
-                                        .tower-lock-bg {
-                                            width: 254px;
-                                            height: 72px;
-                                            position: absolute;
-                                            top: 16px;
-                                            left: 34px;
-                                            background-color: rgba(
-                                                0,
-                                                0,
-                                                0,
-                                                0.65
-                                            );
-                                        }
-                                        .tower-lock {
-                                            width: 40px;
-                                            height: 60px;
-                                            position: absolute;
-                                            top: 22px;
-                                            left: 140px;
-                                            background-image: url(tower-lock.png);
-                                            background-size: 100%;
-                                        }
-                                        .color-btn {
-                                            display: none;
-                                        }
-                                    }
-                                    &.chest {
-                                        .tower-chest-box {
-                                            width: 64px;
-                                            height: 64px;
-                                            position: absolute;
-                                            top: 20px;
-                                            left: 38px;
-                                            @include prefix(
-                                                border-radius,
-                                                10px
-                                            );
-                                            @include background-bronze;
-                                        }
-                                        .tower-chest {
-                                            width: 60px;
-                                            height: 60px;
-                                            position: absolute;
-                                            top: 2px;
-                                            left: 2px;
-                                            background-image: url(change-sun1.png);
-                                            background-size: 100%;
-                                        }
-                                    }
-                                    &.completed {
-                                        .tower-lock-bg {
-                                            width: 254px;
-                                            height: 72px;
-                                            position: absolute;
-                                            top: 16px;
-                                            left: 34px;
-                                            background-color: rgba(
-                                                0,
-                                                0,
-                                                0,
-                                                0.65
-                                            );
-                                        }
-                                        .tower-completed {
-                                            width: 150px;
-                                            height: 40px;
-                                            position: absolute;
-                                            top: 34px;
-                                            left: 86px;
-                                            background-image: url(tower-completed.png);
-                                            background-size: 100%;
-                                        }
-                                        .color-btn {
-                                            display: none;
-                                        }
-                                    }
-                                    .tower-counter {
-                                        width: 60px;
-                                        height: 12px;
-                                        position: absolute;
-                                        top: 72px;
-                                        left: 226px;
-                                        color: #d0c199;
-                                        font-size: 12px;
-                                        font-weight: bold;
-                                        text-align: right;
-                                    }
-                                    &.a2 {
-                                        bottom: 144px;
-                                        background-image: url(tower-p2.png);
-                                    }
-                                    &.a3 {
-                                        bottom: 238px;
-                                        background-image: url(tower-p3.png);
-                                    }
-                                    &.a4 {
-                                        bottom: 332px;
-                                        background-image: url(tower-p4.png);
-                                    }
-                                    &.a5 {
-                                        bottom: 426px;
-                                        background-image: url(tower-p5.png);
-                                    }
-                                    &.a6 {
-                                        bottom: 520px;
-                                        background-image: url(tower-p3.png);
-                                    }
-                                }
-                                .color-btn {
-                                    width: 150px;
-                                    height: 50px;
-                                    position: absolute;
-                                    top: 28px;
-                                    left: 86px;
-                                    .color-btn-text {
-                                        top: 14px;
-                                        font-size: 18px;
-                                    }
-                                    &:active {
-                                        .color-btn-text {
-                                            top: 15px;
-                                        }
-                                    }
-                                }
-                                .tower-block-box {
-                                    width: 100%;
-                                    height: 100%;
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-                                    background-color: rgba(0, 0, 0, 0.75);
-                                    .tower-timer-box {
-                                        width: 200px;
-                                        height: 100px;
-                                        position: relative;
-                                        top: 150px;
-                                        margin: 0 auto;
-                                        color: #fff;
-                                        font-size: 26px;
-                                        font-weight: bold;
-                                        text-align: center;
-                                        text-transform: uppercase;
-                                        .tower-timer {
-                                            width: 100%;
-                                            height: 36px;
-                                            position: relative;
-                                            top: 10px;
-                                            color: #ffdf4a;
-                                            font-size: 36px;
-                                            font-weight: bold;
-                                            line-height: 36px;
-                                        }
-                                    }
-                                }
-                            }
-                            &.xmas {
-                                .all-tower-box {
-                                    background-image: url(tower-sky-bg2-xmas.jpg);
-                                    .all-tower-bg {
-                                        background-image: url(tower-bg2-xmas.png);
-                                    }
-                                    .all-tower-scroll {
-                                        .tower-wall {
-                                            &.a1 {
-                                                background-image: url(tower-p1-ny2019.png);
-                                            }
-                                            &.a2 {
-                                                background-image: url(tower-p2-ny2019.png);
-                                            }
-                                            &.a3 {
-                                                background-image: url(tower-p3-ny2019.png);
-                                            }
-                                            &.a4 {
-                                                background-image: url(tower-p4-ny2019.png);
-                                            }
-                                            &.a5 {
-                                                background-image: url(tower-p5-ny2019.png);
-                                            }
-                                            &.a6 {
-                                                background-image: url(tower-p3-ny2019.png);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            &.hw {
-                                .all-tower-box {
-                                    background-image: url(tower-sky-bg2-hw.jpg);
-                                    .all-tower-bg {
-                                        background-image: url(tower-bg2-hw.png);
-                                    }
-                                    .all-tower-scroll {
-                                        .tower-wall {
-                                            &.a1 {
-                                                background-image: url(tower-p1-hw.png);
-                                            }
-                                            &.a2 {
-                                                background-image: url(tower-p2-hw.png);
-                                            }
-                                            &.a3 {
-                                                background-image: url(tower-p4-hw.png);
-                                            }
-                                            &.a4 {
-                                                background-image: url(tower-p5-hw.png);
-                                            }
-                                            &.a5 {
-                                                background-image: url(tower-p1-hw.png);
-                                            }
-                                            &.a6 {
-                                                background-image: url(tower-p3-hw.png);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        .tower-btn-box-all {
-                            width: 122px;
-                            height: 395px;
-                            position: absolute;
-                            bottom: 8px;
-                            left: 10px;
-                            background-color: #8f7c6e;
-                            border-radius: 10px 0 0 10px;
-                            box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
-                                inset 0px 1px 1px rgba(0, 0, 0, 0.1);
-                            .color-btn {
-                                width: 100px;
-                                height: 60px;
-                                top: 7px;
-                                margin: 8px 11px;
-                                .color-btn-text {
-                                    top: 20px;
-                                }
-                                &:active {
-                                    .color-btn-text {
-                                        top: 21px;
-                                    }
-                                }
-                                &.select {
-                                    background: linear-gradient(
-                                        0deg,
-                                        #7cbc30 0%,
-                                        #baf279 100%
-                                    );
-                                    box-shadow: inset 0 0 0 0
-                                            rgba(0, 0, 0, 0.25),
-                                        0 2px 4px 0 rgba(0, 0, 0, 0.55);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+  .left-side {
+    .left-panel {
+      &.fight {
+        box-shadow: none;
+        .tab-loading-wrapper {
+          display: none;
         }
+        .heroes-list-all-box {
+          width: 620px;
+          box-shadow:
+            inset 0 0 0 4px #9c8b7c,
+            inset 0 0 6px rgba(0, 0, 0, 0.25),
+            0 0 0 1px rgba(0, 0, 0, 0.4),
+            0 0 2px rgba(0, 0, 0, 0.2);
+        }
+      }
+      .tab-loading-wrapper {
+        height: 511px;
+      }
+      .switchTab {
+        position: absolute;
+        left: 196px;
+        top: 86px;
+        width: 120px;
+        height: 34px;
+        background: linear-gradient(#866f68, #6f5c56);
+        box-shadow:
+          0 0 0 2px #dd9542,
+          0 2px 4px 1px rgba(0, 0, 0, 0.6),
+          inset 0 0 4px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+      }
+      .tower-rightside-box-all {
+        width: 580px;
+        height: 507px;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        .right-side {
+          top: -25px;
+          right: -9px;
+          .skills-wrap {
+            left: -17px;
+            top: 21px;
+            position: absolute;
+          }
+          .monster {
+            top: 1px;
+            right: 0;
+          }
+        }
+        .tower-right-wrap {
+          position: absolute;
+          z-index: 2;
+          width: 580px;
+          height: 507px;
+          background-color: rgb(183, 165, 151);
+          border-radius: 0px 14px 14px 0;
+          box-shadow:
+            inset -1px 1px 1px rgba(255, 255, 255, 0.2),
+            inset 2px 0 0 rgba(0, 0, 0, 0.2),
+            0 0 4px rgba(0, 0, 0, 0.2),
+            4px 0 0 #9c8b7c,
+            0 4px 0 #9c8b7c,
+            4px 4px 0 #9c8b7c,
+            0 -4px 0#9c8b7c,
+            4px -4px 0 #9c8b7c;
+          .tab-panel-box-title {
+            width: 242px;
+            height: 24px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            @include background-resourcebg;
+            @include prefix(border-radius, 12px);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            color: #3c3737;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 24px;
+            text-align: center;
+          }
+          .tower-prg-box-all {
+            width: 562px;
+            height: 50px;
+            position: absolute;
+            top: 44px;
+            left: 10px;
+            background-color: #8f7c6e;
+            border-radius: 10px;
+            box-shadow:
+              0 1px 1px rgba(255, 255, 255, 0.1),
+              inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+            .buy-relics {
+              position: absolute;
+              left: 310px;
+              top: -5px;
+              cursor: pointer;
+            }
+            .tower-prgbar-all {
+              width: 300px;
+              height: 40px;
+              position: absolute;
+              top: 5px;
+              left: 5px;
+              background: linear-gradient(180deg, #3b302f 0%, #584a49 100%);
+              .tower-prgbar {
+                width: 85%;
+                height: 40px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background: linear-gradient(
+                  0deg,
+                  #8cdd55 0%,
+                  #43a700 50%,
+                  #8cdd55 100%
+                );
+              }
+              .tower-prgbar-text {
+                width: 300px;
+                height: 40px;
+                position: relative;
+                text-align: center;
+                color: #ffd33c;
+                font-weight: bold;
+                font-size: 16px;
+                text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+                line-height: 40px;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+                text-transform: uppercase;
+                span {
+                  color: #fff;
+                  margin-left: 10px;
+                  font-size: 18px;
+                }
+              }
+            }
+            .cards-res-box {
+              width: 170px;
+              height: 36px;
+              position: absolute;
+              top: 7px;
+              left: 206px;
+              @include background-resourcebg;
+              @include prefix(border-radius, 18px);
+              box-shadow:
+                inset 0 -2px 0 0 rgba(160, 79, 0, 0.55),
+                0 2px 4px 0 rgba(0, 0, 0, 0.35);
+              &:before {
+                content: "";
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                background-image: url(gold-ticket.png);
+                background-size: 100%;
+                background-repeat: no-repeat;
+              }
+              .cards-value {
+                width: 100px;
+                height: 28px;
+                position: absolute;
+                top: 3px;
+                left: 38px;
+                background: linear-gradient(
+                  90deg,
+                  #f4bf87 0%,
+                  #d38632 50%,
+                  #92581a 100%
+                );
+                box-shadow:
+                  inset 0 2px 4px rgba(0, 0, 0, 0.25),
+                  inset 0 14px 0 rgba(255, 255, 255, 0.15);
+                @include prefix(border-radius, 6px);
+                color: #fff;
+                font-size: 20px;
+                font-weight: bold;
+                line-height: 28px;
+                text-align: center;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+              }
+              .cards-value-btn-add {
+                width: 32px;
+                height: 36px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                @include prefix(border-radius, 0 18px 18px 0);
+                cursor: pointer;
+                filter: drop-shadow(0 1px 0.5px rgba(255, 255, 255, 0.795));
+                &:before {
+                  content: "";
+                  width: 6px;
+                  height: 22px;
+                  position: absolute;
+                  top: 7px;
+                  left: 12px;
+                  background-color: #4f4646;
+                  border-radius: 2px;
+                }
+                &:after {
+                  content: "";
+                  width: 22px;
+                  height: 6px;
+                  position: absolute;
+                  top: 15px;
+                  left: 4px;
+                  background-color: #4f4646;
+                  border-radius: 2px;
+                }
+                &:hover {
+                  &:before {
+                    background-color: #3c3737;
+                  }
+                  &:after {
+                    background-color: #3c3737;
+                  }
+                }
+                &:active {
+                  &:before {
+                    width: 4px;
+                    height: 20px;
+                    top: 8px;
+                    left: 13px;
+                  }
+                  &:after {
+                    width: 20px;
+                    height: 4px;
+                    top: 16px;
+                    left: 5px;
+                  }
+                }
+              }
+              &.relicset {
+                left: 6px;
+                &:before {
+                  content: "";
+                  width: 40px;
+                  height: 40px;
+                  position: absolute;
+                  top: -2px;
+                  left: -2px;
+                  background-image: url(card-ic-koloda.png);
+                  background-size: 100%;
+                  background-repeat: no-repeat;
+                }
+              }
+            }
+            .relics-pop-event-btn {
+              width: 70px;
+              height: 70px;
+              position: absolute;
+              top: -10px;
+              left: 5px;
+              cursor: pointer;
+              background-image: url(offer-bk-sm1.png);
+              background-size: 100%;
+              background-repeat: no-repeat;
+              .relics-pop-event-btn-text {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: 24px;
+                text-align: center;
+                color: #fff;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+              }
+              &:active {
+                top: -9px;
+              }
+            }
+          }
+          .tower-box-all {
+            width: 564px;
+            height: 413px;
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.2);
+            .all-tower-box {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              overflow: hidden;
+              background-image: url(tower-sky-bg2.jpg);
+              background-size: 100%;
+              .all-tower-bg {
+                width: 100%;
+                height: 154px;
+                position: absolute;
+                bottom: 0;
+                background-image: url(tower-bg2.png);
+                background-size: 100%;
+              }
+              .all-tower-scroll {
+                width: 320px;
+                height: 800px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                &.next {
+                  .tower-wall.a1 {
+                    @include prefix(
+                      animation,
+                      next 1s 0s ease-in-out 1 forwards
+                    );
+                  }
+                  @keyframes next {
+                    0% {
+                      @include prefix(transform, translate(0, 0px));
+                    }
+                    50% {
+                      @include prefix(transform, translate(0, 6px));
+                    }
+                    80% {
+                      @include prefix(transform, translate(0, -3px));
+                    }
+                    100% {
+                      @include prefix(transform, translate(0, 150px));
+                    }
+                  }
+                }
+                &.nextwall {
+                  .tower-wall.a2 {
+                    @include prefix(
+                      animation,
+                      nextwall 2s 0s ease-in-out 1 forwards
+                    );
+                  }
+                  .tower-wall.a3 {
+                    @include prefix(
+                      animation,
+                      nextwall 2s 0s ease-in-out 1 forwards
+                    );
+                  }
+                  .tower-wall.a4 {
+                    @include prefix(
+                      animation,
+                      nextwall 2s 0s ease-in-out 1 forwards
+                    );
+                  }
+                  .tower-wall.a5 {
+                    @include prefix(
+                      animation,
+                      nextwall 2s 0s ease-in-out 1 forwards
+                    );
+                  }
+                  .tower-wall.a6 {
+                    @include prefix(
+                      animation,
+                      nextwall 2s 0s ease-in-out 1 forwards
+                    );
+                  }
+                  .tower-wall.a7 {
+                    @include prefix(
+                      animation,
+                      nextwall 2s 0s ease-in-out 1 forwards
+                    );
+                  }
+                  @keyframes nextwall {
+                    0% {
+                      @include prefix(transform, translate(0, 0px));
+                    }
+                    50% {
+                      @include prefix(transform, translate(0, 6px));
+                    }
+                    80% {
+                      @include prefix(transform, translate(0, 3px));
+                    }
+                    100% {
+                      @include prefix(transform, translate(0, 92px));
+                    }
+                  }
+                }
+              }
+              .tower-wall {
+                width: 320px;
+                height: 94px;
+                position: absolute;
+                bottom: 50px;
+                background-image: url(tower-p1.png);
+                background-size: 100%;
+                &.lock {
+                  .tower-lock-bg {
+                    width: 254px;
+                    height: 72px;
+                    position: absolute;
+                    top: 16px;
+                    left: 34px;
+                    background-color: rgba(0, 0, 0, 0.65);
+                  }
+                  .tower-lock {
+                    width: 40px;
+                    height: 60px;
+                    position: absolute;
+                    top: 22px;
+                    left: 140px;
+                    background-image: url(tower-lock.png);
+                    background-size: 100%;
+                  }
+                  .color-btn {
+                    display: none;
+                  }
+                }
+                &.chest {
+                  .tower-chest-box {
+                    width: 64px;
+                    height: 64px;
+                    position: absolute;
+                    top: 20px;
+                    left: 38px;
+                    @include prefix(border-radius, 10px);
+                    @include background-bronze;
+                  }
+                  .tower-chest {
+                    width: 60px;
+                    height: 60px;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    background-image: url(change-sun1.png);
+                    background-size: 100%;
+                  }
+                }
+                &.completed {
+                  .tower-lock-bg {
+                    width: 254px;
+                    height: 72px;
+                    position: absolute;
+                    top: 16px;
+                    left: 34px;
+                    background-color: rgba(0, 0, 0, 0.65);
+                  }
+                  .tower-completed {
+                    width: 150px;
+                    height: 40px;
+                    position: absolute;
+                    top: 34px;
+                    left: 86px;
+                    background-image: url(tower-completed.png);
+                    background-size: 100%;
+                  }
+                  .color-btn {
+                    display: none;
+                  }
+                }
+                .tower-counter {
+                  width: 60px;
+                  height: 12px;
+                  position: absolute;
+                  top: 72px;
+                  left: 226px;
+                  color: #d0c199;
+                  font-size: 12px;
+                  font-weight: bold;
+                  text-align: right;
+                }
+                &.a2 {
+                  bottom: 144px;
+                  background-image: url(tower-p2.png);
+                }
+                &.a3 {
+                  bottom: 238px;
+                  background-image: url(tower-p3.png);
+                }
+                &.a4 {
+                  bottom: 332px;
+                  background-image: url(tower-p4.png);
+                }
+                &.a5 {
+                  bottom: 426px;
+                  background-image: url(tower-p5.png);
+                }
+                &.a6 {
+                  bottom: 520px;
+                  background-image: url(tower-p3.png);
+                }
+              }
+              .color-btn {
+                width: 150px;
+                height: 50px;
+                position: absolute;
+                top: 28px;
+                left: 86px;
+                .color-btn-text {
+                  top: 14px;
+                  font-size: 18px;
+                }
+                &:active {
+                  .color-btn-text {
+                    top: 15px;
+                  }
+                }
+              }
+              .tower-block-box {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.75);
+                .tower-timer-box {
+                  width: 200px;
+                  height: 100px;
+                  position: relative;
+                  top: 150px;
+                  margin: 0 auto;
+                  color: #fff;
+                  font-size: 26px;
+                  font-weight: bold;
+                  text-align: center;
+                  text-transform: uppercase;
+                  .tower-timer {
+                    width: 100%;
+                    height: 36px;
+                    position: relative;
+                    top: 10px;
+                    color: #ffdf4a;
+                    font-size: 36px;
+                    font-weight: bold;
+                    line-height: 36px;
+                  }
+                }
+              }
+            }
+            &.xmas {
+              .all-tower-box {
+                background-image: url(tower-sky-bg2-xmas.jpg);
+                .all-tower-bg {
+                  background-image: url(tower-bg2-xmas.png);
+                }
+                .all-tower-scroll {
+                  .tower-wall {
+                    &.a1 {
+                      background-image: url(tower-p1-ny2019.png);
+                    }
+                    &.a2 {
+                      background-image: url(tower-p2-ny2019.png);
+                    }
+                    &.a3 {
+                      background-image: url(tower-p3-ny2019.png);
+                    }
+                    &.a4 {
+                      background-image: url(tower-p4-ny2019.png);
+                    }
+                    &.a5 {
+                      background-image: url(tower-p5-ny2019.png);
+                    }
+                    &.a6 {
+                      background-image: url(tower-p3-ny2019.png);
+                    }
+                  }
+                }
+              }
+            }
+            &.hw {
+              .all-tower-box {
+                background-image: url(tower-sky-bg2-hw.jpg);
+                .all-tower-bg {
+                  background-image: url(tower-bg2-hw.png);
+                }
+                .all-tower-scroll {
+                  .tower-wall {
+                    &.a1 {
+                      background-image: url(tower-p1-hw.png);
+                    }
+                    &.a2 {
+                      background-image: url(tower-p2-hw.png);
+                    }
+                    &.a3 {
+                      background-image: url(tower-p4-hw.png);
+                    }
+                    &.a4 {
+                      background-image: url(tower-p5-hw.png);
+                    }
+                    &.a5 {
+                      background-image: url(tower-p1-hw.png);
+                    }
+                    &.a6 {
+                      background-image: url(tower-p3-hw.png);
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .tower-btn-box-all {
+            width: 122px;
+            height: 395px;
+            position: absolute;
+            bottom: 8px;
+            left: 10px;
+            background-color: #8f7c6e;
+            border-radius: 10px 0 0 10px;
+            box-shadow:
+              0 1px 1px rgba(255, 255, 255, 0.1),
+              inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+            .color-btn {
+              width: 100px;
+              height: 60px;
+              top: 7px;
+              margin: 8px 11px;
+              .color-btn-text {
+                top: 20px;
+              }
+              &:active {
+                .color-btn-text {
+                  top: 21px;
+                }
+              }
+              &.select {
+                background: linear-gradient(0deg, #7cbc30 0%, #baf279 100%);
+                box-shadow:
+                  inset 0 0 0 0 rgba(0, 0, 0, 0.25),
+                  0 2px 4px 0 rgba(0, 0, 0, 0.55);
+              }
+            }
+          }
+          .hero-menu-box {
+            top: 42px;
+            right: 10px;
+            width: 560px;
+            .tabs-menu-btn {
+              width: 110px;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 .color-btn.bordo {
-    background: linear-gradient(0deg, #9a1f39 0%, #f6547a 100%);
-    &.magic {
-        background: linear-gradient(0deg, #1f399a 0%, #f6547a 100%);
-    }
-    .color-btn-text {
-        width: 110px;
-        right: 0;
-        position: absolute;
-    }
+  background: linear-gradient(0deg, #9a1f39 0%, #f6547a 100%);
+  &.magic {
+    background: linear-gradient(0deg, #1f399a 0%, #f6547a 100%);
+  }
+  .color-btn-text {
+    width: 110px;
+    right: 0;
+    position: absolute;
+  }
+  .domik {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    width: 52px;
+    height: 52px;
+    z-index: 1;
+  }
+  &:active {
     .domik {
-        position: absolute;
-        left: -4px;
-        top: -4px;
-        width: 52px;
-        height: 52px;
-        z-index: 1;
+      top: -3px;
     }
-    &:active {
-        .domik {
-            top: -3px;
-        }
-    }
+  }
 }
 
 .color-btn.gblue {
-    background: linear-gradient(
+  background: linear-gradient(
+    0deg,
+    #419ad3 0%,
+    #2c739f 18%,
+    #419ad3 60%,
+    #2c739f 85%,
+    #419ad3 100%
+  );
+  &:active {
+    .domik {
+      top: -3px;
+    }
+  }
+  &.rb-koi {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    border-radius: 12px;
+    width: 150px;
+    box-shadow:
+      inset 0 16px 4px rgba(255, 255, 255, 0.2),
+      inset 0 -4px 0 0 rgba(0, 0, 0, 0.4),
+      0 2px 4px 0 rgba(0, 0, 0, 0.55);
+    .domik {
+      top: -6px;
+    }
+    &:active {
+      background: linear-gradient(
         0deg,
         #419ad3 0%,
-        #2c739f 18%,
-        #419ad3 60%,
-        #2c739f 85%,
+        #2c739f 14%,
+        #419ad3 56%,
+        #2c739f 81%,
         #419ad3 100%
-    );
+      );
+      box-shadow:
+        inset 0 18px 4px rgba(255, 255, 255, 0.2),
+        inset 0 -2px 0 0 rgba(0, 0, 0, 0.4),
+        0 2px 4px 0 rgba(0, 0, 0, 0.55);
+      .domik {
+        top: -5px;
+      }
+    }
+  }
+  &.koi-rb {
+    //position: absolute;
+    right: 9px;
+    top: 24px;
+    width: 150px;
+  }
+  .color-btn-text {
+    width: 110px;
+    right: 0;
+    position: absolute;
+  }
+  .domik {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    width: 52px;
+    height: 52px;
+  }
+  &.fp {
     &:active {
-        .domik {
-            top: -3px;
-        }
-    }
-    &.rb-koi {
-        position: absolute;
-        right: 6px;
-        top: 5px;
-        width: 150px;
-        box-shadow: inset 0 16px 4px rgba(255, 255, 255, 0.2),
-            inset 0 -4px 0 0 rgba(0, 0, 0, 0.4), 0 2px 4px 0 rgba(0, 0, 0, 0.55);
-        .domik {
-            top: -6px;
-        }
-        &:active {
-            background: linear-gradient(
-                0deg,
-                #419ad3 0%,
-                #2c739f 14%,
-                #419ad3 56%,
-                #2c739f 81%,
-                #419ad3 100%
-            );
-            box-shadow: inset 0 18px 4px rgba(255, 255, 255, 0.2),
-                inset 0 -2px 0 0 rgba(0, 0, 0, 0.4),
-                0 2px 4px 0 rgba(0, 0, 0, 0.55);
-            .domik {
-                top: -5px;
-            }
-        }
-    }
-    &.koi-rb {
-        //position: absolute;
-        right: 9px;
-        top: 24px;
-        width: 150px;
+      .domik {
+        top: -3px;
+      }
     }
     .color-btn-text {
-        width: 110px;
-        right: 0;
-        position: absolute;
+      width: 128px;
     }
     .domik {
-        position: absolute;
-        left: -4px;
-        top: -4px;
-        width: 52px;
-        height: 52px;
+      left: -4px;
+      top: -4px;
     }
-    &.fp {
-        &:active {
-            .domik {
-                top: -3px;
-            }
-        }
-        .color-btn-text {
-            width: 128px;
-        }
-        .domik {
-            left: -4px;
-            top: -4px;
-        }
-    }
+  }
 }

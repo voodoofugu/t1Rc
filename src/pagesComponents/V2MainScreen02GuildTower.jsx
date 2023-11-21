@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useStylesLoaded } from "../components/StylesLoadedProvider";
+import WorldBtnBox from "../components/WorldBtnBox";
 
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = [
@@ -20,45 +21,10 @@ const cssFiles = [
 export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
   const currentPath = window.location.pathname.split("/").pop().split(".")[0];
   const { stylesLoaded } = useStylesLoaded();
+  const [hole, sethole] = useState(true);
 
   useEffect(() => {
     if (pageName === currentPath && stylesLoaded) {
-      // кнопка перехода в тёмный мир
-      let btn = document.createElement("div");
-      let btnText = document.createElement("div");
-      btn.className = "color-btn green world-btn";
-      btnText.className = "color-btn-text";
-      btnText.innerHTML = "To Darkworld";
-      btn.append(btnText);
-      document.querySelector("#root").append(btn);
-      const main = document.querySelector(".main");
-      const reG = document.querySelector(
-        ".resource-panel > div:nth-of-type(2)"
-      );
-      const reI = document.querySelector(".resource-pic > img");
-      const vvT = document.querySelector(".value-vip-ticket");
-      btn.addEventListener("click", () => {
-        if (main.classList.contains("world1")) {
-          main.classList.remove("world1");
-          main.classList.add("world3");
-          btnText.innerHTML = "To Earthworld";
-
-          reG.classList.remove("resource-gold");
-          reG.classList.add("resource-dark_gold");
-          reI.src = "img/v2-res-dark.png";
-          vvT.style.display = "none";
-        } else {
-          main.classList.remove("world3");
-          main.classList.add("world1");
-          btnText.innerHTML = "To Darkworld";
-
-          reG.classList.remove("resource-dark_gold");
-          reG.classList.add("resource-gold");
-          reI.src = "rc/v2-res-gold.png";
-          vvT.style.display = "block";
-        }
-      });
-
       // попапы
       [...document.querySelectorAll(".popup-layer, .m-popup")].map((i) => {
         i.style.display = "none";
@@ -122,22 +88,12 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
       // переключалки контента
       const lP = document.querySelector(".left-panel");
       const lpD = document.querySelector(".left-panel > div:nth-of-type(1)");
-      const tB1 = document.querySelector(
-        ".tower-btn-box-all > a:nth-of-type(1)"
-      );
-      const tB2 = document.querySelector(
-        ".tower-btn-box-all > a:nth-of-type(2)"
-      );
-      const tB3 = document.querySelector(
-        ".tower-btn-box-all > a:nth-of-type(3)"
-      );
-      const tB4 = document.querySelector(
-        ".tower-btn-box-all > a:nth-of-type(4)"
-      );
-      const tB5 = document.querySelector(
-        ".tower-btn-box-all > a:nth-of-type(5)"
-      );
-      const tB = document.querySelectorAll(".tower-btn-box-all > a");
+      const tB1 = document.querySelector(".towerBtn ");
+      const tB2 = document.querySelector(".topBtn");
+      const tB3 = document.querySelector(".relicsBtn");
+      const tB4 = document.querySelector(".questBtn");
+      const tB5 = document.querySelector(".trophiesBtn");
+      const tB = document.querySelectorAll(".tabs-menu-btn");
       const twF = document.querySelector(".tower-wall.a1 > .color-btn");
 
       const atB = document.querySelector(".all-tower-box");
@@ -154,10 +110,10 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
       tB.forEach((item) => {
         item.addEventListener("click", (e) => {
           tB.forEach((el) => {
-            el.classList.remove("select");
+            el.classList.remove("active");
           });
-          item.classList.add("select");
-          if (tB1.classList.contains("select")) {
+          item.classList.add("active");
+          if (tB1.classList.contains("active")) {
             lP.className = "left-panel tower wide";
             atB.style.display = "block";
             raB.style.display = "none";
@@ -170,7 +126,7 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
 
             x2B.style.display = "flex";
           }
-          if (tB2.classList.contains("select")) {
+          if (tB2.classList.contains("active")) {
             lP.className = "left-panel top wide";
             raB.style.display = "block";
             atB.style.display = "none";
@@ -183,9 +139,9 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
 
             x2B.style.display = "none";
           }
-          if (tB3.classList.contains("select")) {
+          if (tB3.classList.contains("active")) {
             lP.className = "left-panel relics wide";
-            trB.style.display = "block";
+            trB.style.display = "flex";
             raB.style.display = "none";
             atB.style.display = "none";
             tpB.style.display = "none";
@@ -196,7 +152,7 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
 
             x2B.style.display = "flex";
           }
-          if (tB4.classList.contains("select")) {
+          if (tB4.classList.contains("active")) {
             lP.className = "left-panel wide";
             lpD.style.display = "none";
             tpB.style.display = "block";
@@ -218,7 +174,7 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
 
             x2B.style.display = "flex";
           }
-          if (tB5.classList.contains("select")) {
+          if (tB5.classList.contains("active")) {
             lP.className = "left-panel trophy wide";
             ttB.style.display = "block";
             tpB.style.display = "none";
@@ -1146,6 +1102,7 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                       </div>
                     </div>
                   </div>
+                  <div className="switchTab"></div>
                   <div className="tab-loading-wrapper border"></div>
                 </div>
                 <div className="tower-rightside-box-all">
@@ -1318,8 +1275,10 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                     </div>
                   </div>
                   <div className="tower-right-wrap">
-                    <div className="tab-panel-box-title">dark tower</div>
-                    <div className="tower-prg-box-all">
+                    <div className="tab-panel-box-title">
+                      {hole === true ? "dark hole" : "dark tower"}
+                    </div>
+                    {/* <div className="tower-prg-box-all">
                       <div className="cards-res-box relicset">
                         <div
                           className="cards-value"
@@ -1331,62 +1290,46 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                         </div>
                         <div className="cards-value-btn-add"></div>
                       </div>
-                      <div className="color-btn gblue rb-koi">
-                        <img
-                          className="domik"
-                          src="img/v2-ns-chest.png"
-                          loading="lazy"
-                        />
-                        <div className="color-btn-text">Magic Boxes</div>0
-                      </div>
                       <div className="cards-res-box cards">
                         <div className="cards-value">0</div>
                         <div className="cards-value-btn-add"></div>
                       </div>
+                    </div> */}
+                    <div className="color-btn gblue rb-koi">
+                      <img
+                        className="domik"
+                        src="img/v2-ns-chest.png"
+                        loading="lazy"
+                      />
+                      <div className="color-btn-text">Magic Boxes</div>
                     </div>
-                    <div className="tower-btn-box-all">
-                      <a
-                        className="color-btn select"
-                        aria-current="page"
-                        element="div"
-                        href="#/raid-bosses/tower"
+                    <div className="hero-menu-box">
+                      <div className="tabs-menu-btn towerBtn active">
+                        <div className="txt">
+                          {hole === true ? "Hole" : "Tower"}
+                        </div>
+                      </div>
+                      <div
+                        className="tabs-menu-btn topBtn"
+                        style={{ display: "none" }}
                       >
-                        <div className="color-btn-text">tower</div>
-                      </a>
-                      <a
-                        className="color-btn"
-                        element="div"
-                        href="#/raid-bosses/top"
-                      >
-                        <div className="color-btn-text">топ</div>
-                      </a>
-                      <a
-                        className="color-btn"
-                        element="div"
-                        href="#/raid-bosses/relics"
-                      >
-                        <div className="color-btn-text">relics</div>
-                      </a>
-                      <a
-                        className="color-btn"
-                        element="div"
-                        href="#/raid-bosses/quest"
-                      >
-                        <div className="color-btn-text">quest</div>
-                      </a>
-                      <a
-                        className="color-btn"
-                        element="div"
-                        href="#/raid-bosses/trophies"
-                      >
-                        <div className="color-btn-text">trophies</div>
-                      </a>
+                        <div className="txt">Top</div>
+                      </div>
+                      <div className="tabs-menu-btn relicsBtn">
+                        <div className="txt">Relics</div>
+                      </div>
+                      <div className="tabs-menu-btn questBtn">
+                        <div className="txt">Quest</div>
+                      </div>
+                      <div className="tabs-menu-btn trophiesBtn">
+                        <div className="txt">Trophie</div>
+                      </div>
                     </div>
                     <div className="tower-box-all xmas">
                       <div className="all-tower-box">
                         <div className="all-tower-bg"></div>
-                        <div className="all-tower-scroll">
-                          <div className="tower-wall a1">
+                        <div className="all-tower-scroll nextwall">
+                          <div className="tower-wall a1 completed">
                             <div className="tower-lock-bg"></div>
                             <div className="tower-lock"></div>
                             <div className="color-btn orange">
@@ -1400,7 +1343,7 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                             <div className="tower-completed"></div>
                             <div className="tower-counter">1</div>
                           </div>
-                          <div className="tower-wall a2 lock">
+                          <div className="tower-wall a2 ">
                             <div className="tower-lock-bg"></div>
                             <div className="tower-lock"></div>
                             <div className="color-btn orange">
@@ -1729,13 +1672,15 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                         </div>
                       </div>
                       <div className="tower-relics-box-scroll">
-                        <div className="vanish-text">
-                          <div className="color-btn green">
-                            <div className="color-btn-text">Buy Relics</div>
+                        <div className="textWrap">
+                          <div className="vanish-text">
+                            <div className="color-btn green">
+                              <div className="color-btn-text">Buy Relics</div>
+                            </div>
                           </div>
-                        </div>
-                        <div className="vanish-text">
-                          All relict will next Dark Tower event!
+                          <div className="vanish-text">
+                            All relict will next Dark Tower event!
+                          </div>
                         </div>
                         <div className="tower-relics-box gold">
                           <div className="tower-relics-pic">
@@ -1896,33 +1841,31 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                         <div className="tower-trophy-box">
                           <div className="trophy-bonus-pic-box">
                             <div className="trophy-bonus-pic">
-                              <img
-                                src="img/change-ic-gem-master.png"
-                                loading="lazy"
-                              />
+                              <img src="img/v2-trophy-pillar-a.png" />
                             </div>
-                            <div className="trophy-bonus-lvl">Level 6969K</div>
+                            <div className="trophy-bonus-lvl">Lvl 2</div>
                             <div className="trophy-bonus-name-box">
                               <div className="trophy-bonus-name">
-                                Ancient of Moderation
+                                Pillar of DPC
                               </div>
                             </div>
                           </div>
                           <div className="trophy-bonus-about-box">
-                            <div className="trophy-bonus-about-name">бонус</div>
+                            <div className="trophy-bonus-about-name">bonus</div>
                             <div className="trophy-bonus-about-text-box">
                               <div className="trophy-bonus-about-text">
-                                +400% of DPS in tower divided by 1000
+                                Adds 110% to DPC
                               </div>
                             </div>
                           </div>
-                          <div className="cards-res-box cards">
-                            <div className="cards-value">696969К</div>
-                            <div className="cards-value-btn-add"></div>
+                          <div className="trophy-text">
+                            Upgrade in Trophy Room
                           </div>
                           <div className="trophy-lvlup-box">
-                            <div className="color-btn green">
-                              <div className="color-btn-text">unlock</div>
+                            <div className="color-btn green ">
+                              <div className="color-btn-text">
+                                Upgrade in Trophy Room
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1994,6 +1937,16 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                         </div>
                       </div>
                     </div>
+                  </div>
+                </div>
+                <div className="trophy-res-box-all">
+                  <div className="trophy-res-box relicset">
+                    <div className="trophy-value">696969К</div>
+                    <div className="trophy-value-btn-add"></div>
+                  </div>
+                  <div className="trophy-res-box cards">
+                    <div className="trophy-value">696969К</div>
+                    <div className="trophy-value-btn-add"></div>
                   </div>
                 </div>
               </div>
@@ -2860,7 +2813,6 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                   </div>
                 </div>
               </div>
-
               <div className="btn-close-x"></div>
             </div>
           </div>
@@ -2907,6 +2859,7 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
             </a>
           </div>
         </div>
+
         <div id="popupWrapper" className="popup-layer">
           <div className="screen-blend-55"></div>
           <div id="popupContainer">
@@ -3015,6 +2968,7 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
             </div>
           </div>
         </div>
+        {pageName === currentPath && <WorldBtnBox pageName={pageName} />}
       </div>
     </HelmetForCss>
   );
