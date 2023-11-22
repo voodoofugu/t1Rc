@@ -19,22 +19,90 @@ body .main.world3 {
             0 0 0 1px rgba(0, 0, 0, 0.4),
             0 0 2px rgba(0, 0, 0, 0.2);
         }
+        .trophy-res-box-all {
+          display: none;
+        }
       }
       .tab-loading-wrapper {
         height: 511px;
       }
       .switchTab {
         position: absolute;
-        left: 196px;
-        top: 86px;
-        width: 120px;
-        height: 34px;
+        left: 10px;
+        top: 84px;
+        width: 140px;
+        height: 30px;
         background: linear-gradient(#866f68, #6f5c56);
         box-shadow:
           0 0 0 2px #dd9542,
           0 2px 4px 1px rgba(0, 0, 0, 0.6),
           inset 0 0 4px rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
+        border-radius: 20px;
+        display: flex;
+        gap: 2px;
+        padding: 2px;
+        z-index: 1;
+        cursor: pointer;
+        &:before {
+          content: "";
+          transition:
+            left 0.1s ease-in-out,
+            all 0.04s ease-in-out;
+          width: calc(50% - 4px);
+          height: calc(100% - 4px);
+          border-radius: 20px;
+          position: absolute;
+          left: 2px;
+          background-color: #dd9542;
+          box-shadow:
+            inset 0 1px 1px rgba(255, 255, 255, 0.2),
+            0 1px 1px rgba(0, 0, 0, 0.4),
+            inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+        }
+        &:hover {
+          &:before {
+            filter: brightness(1.1);
+          }
+        }
+        &:active {
+          &:before {
+            width: calc(50% - 6px);
+            height: calc(100% - 8px);
+            margin: 2px;
+          }
+        }
+        &.left {
+          color: #46342e;
+          text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+          &:before {
+            top: 2px;
+            left: calc(50% + 2px);
+          }
+          &:active {
+            &:before {
+              left: 50%;
+            }
+          }
+        }
+        .switchBtn {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #ffc27c;
+          text-shadow:
+            0 1.2px 1px rgba(0, 0, 0, 0.4),
+            0 1px 2px rgba(0, 0, 0, 0.2);
+          font-size: 13.5px;
+          letter-spacing: 0.6px;
+          text-transform: uppercase;
+          font-weight: 700;
+          position: relative;
+          &.active {
+            color: #fff;
+          }
+        }
       }
       .tower-rightside-box-all {
         width: 580px;
@@ -72,7 +140,7 @@ body .main.world3 {
             0 -4px 0#9c8b7c,
             4px -4px 0 #9c8b7c;
           .tab-panel-box-title {
-            width: 242px;
+            width: 216px;
             height: 24px;
             position: absolute;
             top: 10px;
@@ -285,7 +353,7 @@ body .main.world3 {
           }
           .tower-box-all {
             width: 564px;
-            height: 413px;
+            height: 405px;
             position: absolute;
             bottom: 8px;
             left: 8px;
@@ -636,11 +704,11 @@ body .main.world3 {
             }
           }
           .hero-menu-box {
-            top: 42px;
+            top: 50px;
             right: 10px;
             width: 560px;
             .tabs-menu-btn {
-              width: 110px;
+              width: 146px;
             }
           }
         }
@@ -690,14 +758,10 @@ body .main.world3 {
   }
   &.rb-koi {
     position: absolute;
-    right: 1px;
-    top: 1px;
+    right: 2px;
+    top: 2px;
     border-radius: 12px;
     width: 150px;
-    box-shadow:
-      inset 0 16px 4px rgba(255, 255, 255, 0.2),
-      inset 0 -4px 0 0 rgba(0, 0, 0, 0.4),
-      0 2px 4px 0 rgba(0, 0, 0, 0.55);
     .domik {
       top: -6px;
     }
@@ -710,10 +774,6 @@ body .main.world3 {
         #2c739f 81%,
         #419ad3 100%
       );
-      box-shadow:
-        inset 0 18px 4px rgba(255, 255, 255, 0.2),
-        inset 0 -2px 0 0 rgba(0, 0, 0, 0.4),
-        0 2px 4px 0 rgba(0, 0, 0, 0.55);
       .domik {
         top: -5px;
       }
@@ -749,6 +809,32 @@ body .main.world3 {
     .domik {
       left: -4px;
       top: -4px;
+    }
+  }
+}
+.color-btn {
+  &.questBtn {
+    width: 102px;
+    top: 2px;
+    left: 64px;
+    border-radius: 12px;
+    background: linear-gradient(0deg, #1f399a 0%, #f6547a 100%);
+    &:active {
+      .icn {
+        top: -8px;
+      }
+    }
+    .icn {
+      position: absolute;
+      left: -6px;
+      top: -10px;
+      width: 56px;
+      height: 56px;
+    }
+    .color-btn-text {
+      width: 62px;
+      right: 0;
+      position: absolute;
     }
   }
 }

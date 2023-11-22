@@ -249,7 +249,7 @@ body .main {
             .tower-box-all {
               .tower-trophy-box-scroll {
                 width: 550px;
-                height: 400px;
+                height: 392px;
                 position: absolute;
                 top: 7px;
                 left: 7px;
@@ -289,6 +289,9 @@ body .main {
                   box-shadow:
                     0 1px 1px rgba(255, 255, 255, 0.1),
                     inset 0px 1px 1px rgba(0, 0, 0, 0.1);
+                  &:last-child {
+                    margin-bottom: 4px;
+                  }
                   .trophy-bonus-pic-box {
                     width: 120px;
                     height: 190px;

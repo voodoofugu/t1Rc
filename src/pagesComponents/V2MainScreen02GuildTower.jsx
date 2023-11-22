@@ -89,15 +89,13 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
       const lP = document.querySelector(".left-panel");
       const lpD = document.querySelector(".left-panel > div:nth-of-type(1)");
       const tB1 = document.querySelector(".towerBtn ");
-      const tB2 = document.querySelector(".topBtn");
       const tB3 = document.querySelector(".relicsBtn");
-      const tB4 = document.querySelector(".questBtn");
       const tB5 = document.querySelector(".trophiesBtn");
       const tB = document.querySelectorAll(".tabs-menu-btn");
-      const twF = document.querySelector(".tower-wall.a1 > .color-btn");
+      const twF = document.querySelector(".tower-wall.a2 > .color-btn");
+      const twX = document.querySelector(".quest");
 
       const atB = document.querySelector(".all-tower-box");
-      //   atB.style.display = "none";
       const raB = document.querySelector(".raidboss-animation-box");
       raB.style.display = "none";
       const trB = document.querySelector(".tower-relics-box-scroll");
@@ -126,19 +124,6 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
 
             x2B.style.display = "flex";
           }
-          if (tB2.classList.contains("active")) {
-            lP.className = "left-panel top wide";
-            raB.style.display = "block";
-            atB.style.display = "none";
-            trB.style.display = "none";
-            tpB.style.display = "none";
-            ttB.style.display = "none";
-
-            ahb[0].style.display = "none";
-            ahb[1].style.display = "block";
-
-            x2B.style.display = "none";
-          }
           if (tB3.classList.contains("active")) {
             lP.className = "left-panel relics wide";
             trB.style.display = "flex";
@@ -146,28 +131,6 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
             atB.style.display = "none";
             tpB.style.display = "none";
             ttB.style.display = "none";
-
-            ahb[0].style.display = "block";
-            ahb[1].style.display = "none";
-
-            x2B.style.display = "flex";
-          }
-          if (tB4.classList.contains("active")) {
-            lP.className = "left-panel wide";
-            lpD.style.display = "none";
-            tpB.style.display = "block";
-            atB.style.display = "block";
-            trB.style.display = "none";
-            raB.style.display = "none";
-            ttB.style.display = "none";
-            const btX = document.querySelector(".tower-quest > .btn-close-x");
-            btX.addEventListener("click", () => {
-              lP.className = "left-panel tower wide";
-              lpD.style.display = "block";
-              tpB.style.display = "none";
-              tB4.classList.remove("select");
-              tB1.classList.add("select");
-            });
 
             ahb[0].style.display = "block";
             ahb[1].style.display = "none";
@@ -195,6 +158,11 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
         const tR = document.querySelector(".tower-right-wrap");
         tR.style.display = "none";
       });
+      twX.addEventListener("click", () => {
+        lP.className = "left-panel tower wide";
+        const tR = document.querySelector(".tower-right-wrap");
+        tR.style.display = "block";
+      });
 
       // кнопки покупки в попапк реликвий
       [...document.querySelectorAll(".color-btn.purple")].map((i) => {
@@ -206,7 +174,57 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
       const ahb = document.querySelectorAll(".all-heroes-box");
       ahb[1].style.display = "none";
       const x2B = document.querySelector(".x2-btn-all-box");
-      return;
+
+      // свитчер
+      const sT = document.querySelector(".switchTab");
+      const sB = document.querySelectorAll(".switchBtn");
+      sT.addEventListener("click", () => {
+        sT.classList.toggle("left");
+        if (sT.classList.contains("left")) {
+          sB[1].classList.add("active");
+          sB[0].classList.remove("active");
+          lP.className = "left-panel top wide";
+          // окно с coming soon...
+          // raB.style.display = "block";
+          ahb[0].style.display = "none";
+          ahb[1].style.display = "block";
+          x2B.style.display = "none";
+        } else {
+          sB[1].classList.remove("active");
+          sB[0].classList.add("active");
+          lP.className = "left-panel tower wide";
+          // окно с coming soon...
+          // raB.style.display = "none";
+          ahb[0].style.display = "block";
+          ahb[1].style.display = "none";
+          x2B.style.display = "flex";
+        }
+      });
+
+      // кнопка квеста
+      const tB4 = document.querySelector(".questBtn");
+      tB4.addEventListener("click", () => {
+        lP.className = "left-panel wide";
+        lpD.style.display = "none";
+        tpB.style.display = "block";
+        atB.style.display = "block";
+        trB.style.display = "none";
+        raB.style.display = "none";
+        ttB.style.display = "none";
+
+        const btX = document.querySelector(".tower-quest > .btn-close-x");
+        btX.addEventListener("click", () => {
+          lP.className = "left-panel tower wide";
+          lpD.style.display = "block";
+          tpB.style.display = "none";
+          tB1.classList.add("select");
+        });
+
+        ahb[0].style.display = "block";
+        ahb[1].style.display = "none";
+
+        x2B.style.display = "flex";
+      });
     }
     return () => {};
   }, [pageName, currentPath, stylesLoaded]);
@@ -1103,8 +1121,8 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                     </div>
                   </div>
                   <div className="switchTab">
-                    <div className="heroesBt active">Heroes</div>
-                    <div className="topBtn">Top</div>
+                    <div className="switchBtn active">Heroes</div>
+                    <div className="switchBtn">Top</div>
                   </div>
                   <div className="tab-loading-wrapper border"></div>
                 </div>
@@ -1306,24 +1324,29 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                       />
                       <div className="color-btn-text">Magic Boxes</div>
                     </div>
+                    <div className="color-btn questBtn">
+                      <img
+                        className="icn"
+                        src="img/rpg-poly/rpg_poly-quest_icon@2x.png"
+                        loading="lazy"
+                      />
+                      <div className="color-btn-text">Quest</div>
+                    </div>
                     <div className="hero-menu-box">
                       <div className="tabs-menu-btn towerBtn active">
                         <div className="txt">
                           {hole === true ? "Hole" : "Tower"}
                         </div>
                       </div>
-                      <div
-                        className="tabs-menu-btn topBtn"
-                        style={{ display: "none" }}
-                      >
+                      {/* <div className="tabs-menu-btn topBtn">
                         <div className="txt">Top</div>
-                      </div>
+                      </div> */}
                       <div className="tabs-menu-btn relicsBtn">
                         <div className="txt">Relics</div>
                       </div>
-                      <div className="tabs-menu-btn questBtn">
+                      {/* <div className="tabs-menu-btn questBtn">
                         <div className="txt">Quest</div>
-                      </div>
+                      </div> */}
                       <div className="tabs-menu-btn trophiesBtn">
                         <div className="txt">Trophie</div>
                       </div>

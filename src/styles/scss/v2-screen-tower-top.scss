@@ -615,16 +615,16 @@ body .main.world3 {
             }
             .tower-box-all {
               .raidboss-animation-box {
-                width: 430px;
-                height: 395px;
+                width: 554px;
+                height: 404px;
                 position: absolute;
-                top: 0;
+                top: 5px;
                 left: 5px;
                 .raidboss-animation-name-box {
-                  width: 430px;
+                  width: 100%;
                   height: 40px;
                   position: absolute;
-                  top: 5px;
+                  top: 0;
                   left: 0;
                   display: table;
                   background-color: #705d4e;
@@ -648,18 +648,19 @@ body .main.world3 {
                   }
                 }
                 .raidboss-animation-scroll-box {
-                  width: 430px;
-                  height: 338px;
+                  width: 100%;
+                  height: 354px;
                   position: absolute;
-                  top: 50px;
+                  top: 49px;
                   left: 0;
                   font-size: 0;
                   .raidboss-animation-scroll {
                     width: 100%;
-                    height: 338px;
+                    height: 100%;
                     position: absolute;
                     top: 0;
                     left: 0;
+                    border-radius: 6px;
                     overflow-y: scroll;
                     &::-webkit-scrollbar-track {
                       -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
@@ -681,7 +682,7 @@ body .main.world3 {
                       );
                     }
                     .raidboss-animation-f-box {
-                      width: 414px;
+                      width: 538px;
                       height: 164px;
                       position: relative;
                       display: inline-block;
@@ -692,6 +693,9 @@ body .main.world3 {
                         inset 0px 1px 1px rgba(0, 0, 0, 0.1);
                       border-radius: 6px;
                       overflow: hidden;
+                      &:last-child {
+                        margin-bottom: 0;
+                      }
                       .rb-rignt-box {
                         width: auto;
                         height: 159px;
@@ -707,7 +711,7 @@ body .main.world3 {
                           height: 72px;
                           position: relative;
                           display: inline-block;
-                          margin: 2px;
+                          margin: 2px 2px 2px 33px;
                           @include background-gold;
                           @include prefix(border-radius, 10px);
                           box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.55);
@@ -894,7 +898,7 @@ body .main.world3 {
                       }
                       &.slot-lock {
                         .rb-slot-lock {
-                          width: 294px;
+                          width: 418px;
                           height: 81px;
                           position: absolute;
                           top: 82px;
