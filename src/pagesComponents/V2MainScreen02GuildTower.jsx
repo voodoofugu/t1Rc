@@ -1102,7 +1102,10 @@ export default function V2MainScreen02GuildTowerComponent({ pageName = "" }) {
                       </div>
                     </div>
                   </div>
-                  <div className="switchTab"></div>
+                  <div className="switchTab">
+                    <div className="heroesBt active">Heroes</div>
+                    <div className="topBtn">Top</div>
+                  </div>
                   <div className="tab-loading-wrapper border"></div>
                 </div>
                 <div className="tower-rightside-box-all">
