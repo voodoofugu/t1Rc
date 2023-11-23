@@ -41,10 +41,10 @@ export default function HelmetForCss({ cssFiles, children, scriptsProp }) {
             {` ${styles ? styles[index] : ""} `}
           </style>
         ))}
-        {[scriptsProp]}
       </HelmetComponent>
       <div className={`likeBody ${modifiedCssFileNames.join(" ")}`}>
         {!stylesLoaded && loadedStyleCount < 1 ? <Loading /> : children}
+        {stylesLoaded && <HelmetComponent>{[scriptsProp]}</HelmetComponent>}
       </div>
     </>
   );

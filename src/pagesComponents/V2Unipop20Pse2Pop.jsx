@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
+import * as PIXI from "../scripts/pixi-animate/pixi";
+import { Spine } from "../scripts/pixi-animate/pixi-spine";
+
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = [
   "01-all",
@@ -10,6 +13,7 @@ const cssFiles = [
 
   "v2-unipop-20-pse2-pop",
   "screen-bank",
+  "tutorGirlAnim",
 ];
 
 export default function V2Unipop20Pse2PopComponent({ pageName = "" }) {
@@ -84,10 +88,23 @@ export default function V2Unipop20Pse2PopComponent({ pageName = "" }) {
   }, [pageName, currentPath, stylesLoaded]);
 
   return (
-    <HelmetForCss cssFiles={cssFiles}>
+    <HelmetForCss
+      cssFiles={cssFiles}
+      scriptsProp={
+        pageName === currentPath
+          ? [
+              <script src="scripts/pixi-animate/pixi-spine-debug.js"></script>,
+              <script src="spine/tutor-girl/tutor-girl-anim.js"></script>,
+            ]
+          : []
+      }
+    >
       <div className="main world1">
         <div className="main-bg"></div>
-        <div className="quest-box-all quests" style={{ zIndex: "99999" }}>
+        <div
+          className="quest-box-all quests"
+          style={{ zIndex: "99999", left: "0" }}
+        >
           <div className="quest-box-scroll">
             <div
               className="quest-box wrap"
@@ -212,14 +229,14 @@ export default function V2Unipop20Pse2PopComponent({ pageName = "" }) {
                           </div>
                         </div>
                       </div>
-                      <div className="pse2-girl-right-box">
+                      {/* <div className="pse2-girl-right-box">
                         <div className="pse2-girl">
                           <img src="img/rating-girl.png" loading="lazy" />
                         </div>
                         <div className="pse2-girl-buble">
                           Rewards waiting for you!
                         </div>
-                      </div>
+                      </div> */}
                       <div className="pse2-reward-box-all">
                         <div className="pse2-reward">
                           <div className="pse2-pic">
@@ -298,6 +315,10 @@ export default function V2Unipop20Pse2PopComponent({ pageName = "" }) {
                       <div className="sale-banner">-50%</div>
                     </div>
                   </div>
+                </div>
+                <div id="tutorGirlBox">
+                  <div id="tutorGirl"></div>
+                  <div id="clickBox"></div>
                 </div>
                 <div className="btn-close-x"></div>
               </div>

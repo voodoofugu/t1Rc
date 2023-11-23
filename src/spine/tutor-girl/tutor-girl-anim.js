@@ -1,5 +1,5 @@
 // наш канвас
-const app = new PIXI.Application({
+const appPIXI = new PIXI.Application({
   backgroundAlpha: 0,
   antialias: true,
   width: 2400,
@@ -13,7 +13,9 @@ const appTouch = new PIXI.Application({
   width: 464,
   height: 1172,
 });
-document.getElementById("app").appendChild(app.view);
+
+const appTutorGirl = document.getElementById("tutorGirl");
+appTutorGirl.appendChild(appPIXI.view);
 clickBox = document.getElementById("clickBox");
 
 // ресурсы
@@ -23,7 +25,7 @@ loader.add("drop", "../spine/tutor-girl/drop.json");
 loader.add("hover", "../spine/tutor-girl/cursor-hover.svg");
 loader.add("active", "../spine/tutor-girl/cursor-active.svg");
 loader.add("load", "../spine/tutor-girl/cursor-load.svg");
-var tutorGirl, drop;
+let tutorGirl, drop;
 
 // курсоры
 const hovertIcon = "url('../spine/tutor-girl/cursor-hover.svg'),auto";
@@ -59,8 +61,8 @@ function dropText(x, y) {
   drop.scale.set(1.4);
 
   a = "TOUCH";
-  var txt = new PIXI.Text(a, style);
-  console.log(a);
+  let txt = new PIXI.Text(a, style);
+  // console.log(a);
   txt.scale.set(0.18);
   txt.x = 0 - txt.width / 2;
   txt.y = 0 - txt.height / 2;
@@ -70,40 +72,40 @@ function dropText(x, y) {
     complete: function (e) {
       if (e && e.drop) {
         window.setTimeout(function () {
-          app.stage.removeChild(e.drop);
+          appPIXI.stage.removeChild(e.drop);
         });
       }
     },
   });
-  app.stage.addChild(drop);
+  appPIXI.stage.addChild(drop);
 }
 
 // добавляем анимацию и клики
 function addTutorGirl(eventData) {
   tutorGirl = new PIXI.spine.Spine(rezz.tutorGirl.spineData);
   tutorGirl.scale.set(0.52);
-  tutorGirl.scale.x = -0.52;
-  tutorGirl.x = 780;
+  tutorGirl.scale.x = 0.52;
+  tutorGirl.x = 1900;
   tutorGirl.y = 1200;
 
   tutorGirl.state.setAnimation(0, "anim-start", false);
   tutorGirl.state.addListener({
     complete: nextAnim,
   });
-  app.stage.addChildAt(tutorGirl);
+  appPIXI.stage.addChildAt(tutorGirl);
   tutorGirl.interactive = true;
 
-  var handleMouseHover = function (event) {
+  let handleMouseHover = function (event) {
     clickBox.style.cursor = hovertIcon;
   };
   clickBox.addEventListener("mouseover", handleMouseHover, false);
 
-  var handleMousedownClick = function (event) {
+  let handleMousedownClick = function (event) {
     clickBox.style.cursor = activeIcon;
   };
   clickBox.addEventListener("mousedown", handleMousedownClick, false);
 
-  var handleMouseupClick = function (ev) {
+  let handleMouseupClick = function (ev) {
     clickBox.removeEventListener("mouseover", handleMouseHover, false);
     clickBox.removeEventListener("mousedown", handleMousedownClick, false);
     clickBox.removeEventListener("mouseup", handleMouseupClick, false);
@@ -123,21 +125,21 @@ function addTutorGirl(eventData) {
     }, 3950);
 
     // высчитываем позицию курсора
-    var app = document.getElementById("app").getBoundingClientRect();
-    var appDifX = ev.clientX - app.left;
-    var appDifY = ev.clientY - app.top;
+    appTutorGirl.getBoundingClientRect();
+    let appDifX = ev.clientX - appPIXI.left;
+    let appDifY = ev.clientY - appPIXI.top;
 
-    var rect = ev.target.getBoundingClientRect();
-    var boxDifX = ev.clientX - rect.left;
-    var boxDifY = ev.clientY - rect.top;
+    let rect = ev.target.getBoundingClientRect();
+    let boxDifX = ev.clientX - rect.left;
+    let boxDifY = ev.clientY - rect.top;
 
-    var sumX = boxDifX + appDifX;
-    var differenceX = boxDifX - appDifX;
-    var sumY = boxDifY + appDifY;
-    var differenceY = boxDifY - appDifY;
+    let sumX = boxDifX + appDifX;
+    let differenceX = boxDifX - appDifX;
+    let sumY = boxDifY + appDifY;
+    let differenceY = boxDifY - appDifY;
 
-    var x = sumX - differenceX;
-    var y = sumY - differenceY;
+    let x = sumX - differenceX;
+    let y = sumY - differenceY;
     dropText(x, y);
   };
   clickBox.addEventListener("mouseup", handleMouseupClick, false);
@@ -161,7 +163,7 @@ function nextAnim(entry) {
   if (numm > 7) {
     a = "anim-blob";
     tutorGirl.state.setAnimation(2, a, false);
-    console.log(a);
+    // console.log(a);
     setTimeout(() => {
       tutorGirl.state.clearTrack(2);
     }, 2950);
@@ -171,7 +173,7 @@ function nextAnim(entry) {
   if (numm == 5) {
     a = "anim-blink1";
     tutorGirl.state.setAnimation(2, a, false);
-    console.log(a);
+    // console.log(a);
     setTimeout(() => {
       tutorGirl.state.clearTrack(2);
     }, 950);
@@ -181,7 +183,7 @@ function nextAnim(entry) {
   if (numm == 6) {
     a = "anim-blink2";
     tutorGirl.state.setAnimation(2, a, false);
-    console.log(a);
+    // console.log(a);
     setTimeout(() => {
       tutorGirl.state.clearTrack(2);
     }, 950);
@@ -191,7 +193,7 @@ function nextAnim(entry) {
   if (numm < 4) {
     a = "anim-hit";
     tutorGirl.state.setAnimation(1, a, false);
-    console.log(a);
+    // console.log(a);
     setTimeout(() => {
       tutorGirl.state.clearTrack(1);
     }, 3950);
@@ -199,10 +201,10 @@ function nextAnim(entry) {
 }
 
 // загрузка ресурсов
-var rezz;
+let rezz;
 loader.load((loader, res) => {
   rezz = res;
   addTutorGirl();
 });
 
-globalThis.__PIXI_APP__ = app;
+globalThis.__PIXI_APP__ = appPIXI;

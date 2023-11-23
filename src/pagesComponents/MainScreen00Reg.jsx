@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import { useStylesLoaded } from "../components/StylesLoadedProvider";
 
-import * as PIXI from "../scripts/pixi-animate/pixi";
-import { Spine } from "../scripts/pixi-animate/pixi-spine";
-
 import HelmetForCss from "../components/HelmetForCss.jsx";
 const cssFiles = ["screen-reg"];
 
@@ -23,28 +20,19 @@ export default function MainScreen00RegComponent({ pageName = "" }) {
   }, [pageName, stylesLoaded]);
 
   return (
-    <HelmetForCss
-      cssFiles={cssFiles}
-      scriptsProp={
-        pageName === currentPath
-          ? [
-              // <script src="scripts/pixi-animate/pixi-spine-debug.js"></script>,
-              <script src="spine/tutor-girl/tutor-girl-anim.js"></script>,
-            ]
-          : []
-      }
-    >
+    <HelmetForCss cssFiles={cssFiles}>
       <div
         className="wrapStyles"
         style={{ width: "1200px", height: "640px", background: "#9f8978" }}
       >
         <div className="main">
-          {/* <div className="pers">
-                    <img 
-                        className="img"
-                        src="http://az.faptitans.com/static/rc/tutor-hero3@1.png"
-                     loading="lazy" />
-                </div> */}
+          <div className="pers">
+            <img
+              className="img"
+              src="http://az.faptitans.com/static/rc/tutor-hero3@1.png"
+              loading="lazy"
+            />
+          </div>
           <div className="info">
             <p className="billing-text">
               You are now logged out.
@@ -71,10 +59,6 @@ export default function MainScreen00RegComponent({ pageName = "" }) {
             </form>
             <p></p>
           </div>
-        </div>
-        <div id="screen">
-          <div id="app"></div>
-          <div id="clickBox"></div>
         </div>
       </div>
     </HelmetForCss>
