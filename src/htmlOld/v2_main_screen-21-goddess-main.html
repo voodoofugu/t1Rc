@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/v2-screen-goddess-main.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/v2-screen-goddess-picture.css"
+            rel="stylesheet"
+            type="text/css" />
+        <script type="text/javascript">
+            window.addEventListener("load", () => {
+                // все попапы
+                [...document.querySelectorAll(".m-popup")].map((i) => {
+                    i.style.display = "none";
+                });
+
+                const re = document.querySelector(".popup-layer");
+                const pStr = document.querySelector(".m-popup.goddess-picture");
+
+                // закрытие попапов
+                [...document.querySelectorAll(".m-popup")].map((i) => {
+                    i.style.display = "none";
+                    // закрываем все попапы при клике на затемнение
+                    const blS = document.querySelector(".screen-blend-55");
+                    blS.addEventListener("click", () => {
+                        re.classList.remove("dialog-emersion-enter");
+                        re.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            i.style.display = "none";
+                            re.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                });
+                [
+                    ...document.querySelectorAll(
+                        ".btn-close-x, div.uki-story-nav-box.btn2 > div:nth-child(1)"
+                    ),
+                ].map((i) => {
+                    i.addEventListener("click", () => {
+                        re.classList.remove("dialog-emersion-enter");
+                        re.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            i.closest(".m-popup").style.display = "none";
+                            re.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                });
+
+                const pic = document.querySelector(".b-fs");
+                pic.addEventListener("click", () => {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        pStr.style.display = "block";
+                        re.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+
+                // console.log();
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="main world1">
+            <div class="main-bg"></div>
+            <div class="header">
+                <div class="resource-panel">
+                    <div class="avatar-box-all">
+                        <div class="avatar-box-pic">
+                            <img src="rc/hero0093-ava.jpg" />
+                        </div>
+                        <div class="avatar-box-name">Dormidont</div>
+                    </div>
+                    <div class="resource-gold">
+                        <div class="value">6969K</div>
+                        <div class="value-bonus">+6969K%</div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic">
+                            <img src="rc/v2-res-gold.png" />
+                        </div>
+                    </div>
+                    <div class="resource-vip lvl5">
+                        <div class="value-vip-diamond">6969K</div>
+                        <div class="value-vip-ticket">6969K</div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic-vip">
+                            <div class="viplvl">VIP</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-chest-box-all">
+                    <div class="res-shop-btn">
+                        <div class="res-shop-btn-text">магазин</div>
+                    </div>
+                    <div class="res-chest-btn">
+                        <div class="res-chest-btn-text">открыть</div>
+                        <div class="res-chest-btn-count">6969K</div>
+                    </div>
+                </div>
+                <div class="singinout-btn out">
+                    <div class="singinout-btn-text">sign out</div>
+                </div>
+            </div>
+            <div class="quest-box-all">
+                <div class="quest-box-all-text">квесты</div>
+                <div class="quest-box">
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                </div>
+                <div class="opt-panel-box">
+                    <div class="btn feedback"></div>
+                    <div class="btn statistic"></div>
+                    <div class="btn ru"></div>
+                </div>
+            </div>
+            <div class="left-side">
+                <div class="left-panel wide">
+                    <div class="tab-panel-box goddess-room">
+                        <div class="tab-panel-box-title">Angels</div>
+                        <div class="gd-left-box-all">
+                            <div class="gd-left-box-scroll-box">
+                                <div class="hero-avatar-box cursor-pointer">
+                                    <img
+                                        class="hero-avatar"
+                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                </div>
+                                <div class="hero-avatar-box cursor-pointer">
+                                    <img
+                                        class="hero-avatar"
+                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-2/x2/ava/goddess-2-1-ava.jpg" />
+                                </div>
+                                <div class="hero-avatar-box cursor-pointer">
+                                    <img
+                                        class="hero-avatar"
+                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-3/x2/ava/goddess-3-1-ava.jpg" />
+                                </div>
+                                <div class="hero-avatar-box cursor-pointer">
+                                    <img
+                                        class="hero-avatar"
+                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/ava/goddess-4-1-ava.jpg" />
+                                </div>
+                                <div class="hero-avatar-box cursor-pointer">
+                                    <img
+                                        class="hero-avatar"
+                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-5/x2/ava/goddess-5-1-ava.jpg" />
+                                </div>
+                                <div class="hero-avatar-box cursor-pointer">
+                                    <img
+                                        class="hero-avatar"
+                                        src="https://cdn.faptitans.com/s1/images/goddess/goddess-6/x2/ava/goddess-6-1-ava.jpg" />
+                                </div>
+                                <div class="hero-avatar-box cursor-pointer">
+                                    <div
+                                        class="notif notif20"
+                                        style="right: -6px; top: -3px"></div>
+                                    <img
+                                        class="hero-avatar"
+                                        src="https://cdn.faptitans.com/s1/rc/v2-mn-chest-gold-open.png"
+                                        style="height: 90px" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gd-box-goddess">
+                            <div class="x-info-btn">?</div>
+                            <div class="gd-box-goddess-pic" style="">
+                                <div class="b-fs"></div>
+                                <img
+                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/goddess-4-1.jpg" />
+                            </div>
+                            <div class="gd-box-goddess-name-box">
+                                <div class="gd-box-goddess-name">Muse</div>
+                                <div class="gd-box-goddess-lvl">Level 615</div>
+                            </div>
+                            <div class="gd-box-goddess-bottom-box tall">
+                                <div class="gd-arrow-box-all">
+                                    <div class="gd-btn-scroll left"></div>
+                                    <div class="gd-btn-scroll right"></div>
+                                </div>
+                                <div class="info-block">
+                                    <div>Current Star</div>
+                                    <div>Max Buff Level: 100</div>
+                                    <div>Buff Bonus: x1</div>
+                                </div>
+                                <div class="info-block next">
+                                    <div>Next Star</div>
+                                    <div>Max Buff Level: 250</div>
+                                    <div>Buff Bonus: x2</div>
+                                </div>
+                                <div class="gd-prgbar-box">
+                                    <div class="gd-prgbar">
+                                        <div
+                                            class="gd-prgbar-all"
+                                            style="width: 93%"></div>
+                                    </div>
+                                    <div class="gd-prgbar-text">327/350</div>
+                                </div>
+                                <div class="gd-star-box lvl01"></div>
+                            </div>
+                        </div>
+                        <div class="gd-right-box-all">
+                            <div class="gd-attr-box-all" style="top: 10px">
+                                <div class="gd-attr-box" style="">
+                                    <div class="gd-attr-girl-box">
+                                        <div class="hero-avatar-box">
+                                            <img
+                                                class="hero-avatar"
+                                                src="https://cdn.faptitans.com/s1/__7950/images/hero-all/tithero-20/x1/ava/tithero-20-1-ava.jpg" />
+                                            <div class="sh2-icon-forgirl">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur2-barbarian.png" />
+                                            </div>
+                                            <div class="gd-hero-name">
+                                                Mi Hyo
+                                            </div>
+                                        </div>
+                                        <div class="gd-lvl-pds-box-all">
+                                            <div class="hero-level-box">
+                                                buff lvl
+                                                <div class="hero-level">
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box">
+                                                dps
+                                                <div class="hero-dps">
+                                                    3.51OD29
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box cw">
+                                                CW
+                                                <div class="hero-dps">0.3%</div>
+                                            </div>
+                                            <div class="hero-dps-box pos">
+                                                Pos
+                                                <div class="hero-dps">+0.3</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green disabled0">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-gold"></span
+                                                    >503
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    buff up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green cw">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-green"></span
+                                                    >21K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    percent up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green pos">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-blue"></span
+                                                    >41.8K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    position up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gd-attr-girl-box">
+                                        <div class="hero-avatar-box">
+                                            <img
+                                                class="hero-avatar"
+                                                src="https://cdn.faptitans.com/s1/__1d9c/images/hero-all/tithero-21/x1/ava/tithero-21-1-ava.jpg" />
+                                            <div class="sh2-icon-forgirl">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                            </div>
+                                            <div class="gd-hero-name">
+                                                Rika Mahojo
+                                            </div>
+                                        </div>
+                                        <div class="gd-lvl-pds-box-all">
+                                            <div class="hero-level-box">
+                                                buff lvl
+                                                <div class="hero-level">
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box">
+                                                dps
+                                                <div class="hero-dps">
+                                                    948OD29
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box cw">
+                                                CW
+                                                <div class="hero-dps">0.3%</div>
+                                            </div>
+                                            <div class="hero-dps-box pos">
+                                                Pos
+                                                <div class="hero-dps">+0.3</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green disabled0">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-gold"></span
+                                                    >503
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    buff up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green cw">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-green"></span
+                                                    >21K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    percent up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green pos">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-blue"></span
+                                                    >41.8K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    position up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gd-attr-girl-box">
+                                        <div class="hero-avatar-box">
+                                            <img
+                                                class="hero-avatar"
+                                                src="https://cdn.faptitans.com/s1/__e8e9/images/hero-all/tithero-22/x1/ava/tithero-22-1-ava.jpg" />
+                                            <div class="sh2-icon-forgirl">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur2-quitar.png" />
+                                            </div>
+                                            <div class="gd-hero-name">
+                                                Sango Yudoku
+                                            </div>
+                                        </div>
+                                        <div class="gd-lvl-pds-box-all">
+                                            <div class="hero-level-box">
+                                                buff lvl
+                                                <div class="hero-level">
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box">
+                                                dps
+                                                <div class="hero-dps">
+                                                    42.1DD29
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box cw">
+                                                CW
+                                                <div class="hero-dps">0.3%</div>
+                                            </div>
+                                            <div class="hero-dps-box pos">
+                                                Pos
+                                                <div class="hero-dps">+0.3</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green disabled0">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-gold"></span
+                                                    >503
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    buff up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green cw">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-green"></span
+                                                    >21K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    percent up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green pos">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-blue"></span
+                                                    >41.8K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    position up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gd-attr-girl-box">
+                                        <div class="hero-avatar-box">
+                                            <img
+                                                class="hero-avatar"
+                                                src="https://cdn.faptitans.com/s1/__c076/images/hero-all/tithero-23/x1/ava/tithero-23-1-ava.jpg" />
+                                            <div class="sh2-icon-forgirl">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur2-cleric.png" />
+                                            </div>
+                                            <div class="gd-hero-name">
+                                                Takaro Kaminoken
+                                            </div>
+                                        </div>
+                                        <div class="gd-lvl-pds-box-all">
+                                            <div class="hero-level-box">
+                                                buff lvl
+                                                <div class="hero-level">
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box">
+                                                dps
+                                                <div class="hero-dps">
+                                                    3.21KD30
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box cw">
+                                                CW
+                                                <div class="hero-dps">0.3%</div>
+                                            </div>
+                                            <div class="hero-dps-box pos">
+                                                Pos
+                                                <div class="hero-dps">+0.3</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green disabled0">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-gold"></span
+                                                    >503
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    buff up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green cw">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-green"></span
+                                                    >21K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    percent up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green pos">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-blue"></span
+                                                    >41.8K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    position up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gd-attr-girl-box">
+                                        <div class="hero-avatar-box">
+                                            <img
+                                                class="hero-avatar"
+                                                src="https://cdn.faptitans.com/s1/__cb17/images/hero-all/tithero-24/x1/ava/tithero-24-1-ava.jpg" />
+                                            <div class="sh2-icon-forgirl">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur2-wizard.png" />
+                                            </div>
+                                            <div class="gd-hero-name">
+                                                Ume Shinpu
+                                            </div>
+                                        </div>
+                                        <div class="gd-lvl-pds-box-all">
+                                            <div class="hero-level-box">
+                                                buff lvl
+                                                <div class="hero-level">
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box">
+                                                dps
+                                                <div class="hero-dps">
+                                                    2.9OD29
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box cw">
+                                                CW
+                                                <div class="hero-dps">0.3%</div>
+                                            </div>
+                                            <div class="hero-dps-box pos">
+                                                Pos
+                                                <div class="hero-dps">+0.3</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green disabled0">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-gold"></span
+                                                    >503
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    buff up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green cw">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-green"></span
+                                                    >21K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    percent up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green pos">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-blue"></span
+                                                    >41.8K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    position up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gd-attr-girl-box">
+                                        <div class="hero-avatar-box">
+                                            <img
+                                                class="hero-avatar"
+                                                src="https://cdn.faptitans.com/s1/__3c4d/images/hero-all/tithero-25/x1/ava/tithero-25-1-ava.jpg" />
+                                            <div class="sh2-icon-forgirl">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur2-druid.png" />
+                                            </div>
+                                            <div class="gd-hero-name">
+                                                Amaya Karasu
+                                            </div>
+                                        </div>
+                                        <div class="gd-lvl-pds-box-all">
+                                            <div class="hero-level-box">
+                                                buff lvl
+                                                <div class="hero-level">
+                                                    100
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box">
+                                                dps
+                                                <div class="hero-dps">
+                                                    15.4DD29
+                                                </div>
+                                            </div>
+                                            <div class="hero-dps-box cw">
+                                                CW
+                                                <div class="hero-dps">0.3%</div>
+                                            </div>
+                                            <div class="hero-dps-box pos">
+                                                Pos
+                                                <div class="hero-dps">+0.3</div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green disabled0">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-gold"></span
+                                                    >503
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    buff up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green cw">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-green"></span
+                                                    >21K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    percent up
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="color-btn green pos">
+                                            <div class="color-btn-text">
+                                                <div class="gold">
+                                                    <span class="f-blue"></span
+                                                    >41.8K/130
+                                                </div>
+                                                <div class="color-btn-text1">
+                                                    position up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gd-nl-box-all girl">
+                                <div class="gd-girl-box-all">
+                                    <div class="hero-avatar-box cursor-pointer">
+                                        <img
+                                            class="hero-avatar"
+                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/comics/ava/goddess-4-1-com-ava.jpg" />
+                                        <div class="gd-av-bg-black">
+                                            <div class="gd-av-block"></div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-avatar-box cursor-pointer">
+                                        <img
+                                            class="hero-avatar"
+                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/comics/ava/goddess-4-2-com-ava.jpg" />
+                                        <div class="gd-av-bg-black">
+                                            <div class="gd-av-block"></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hero-avatar-box cursor-pointer block">
+                                        <img
+                                            class="hero-avatar"
+                                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/comics/ava/goddess-4-3-com-ava.jpg" />
+                                        <div class="gd-av-bg-black">
+                                            <div class="gd-av-block"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gd-girl-prg-bal-all">
+                                    <div
+                                        class="gd-girl-prg"
+                                        style="width: 55.75%"></div>
+                                    <div class="gd-girl-prg-rd p1">
+                                        <div class="gd-girl-prg-rd-txt">
+                                            200
+                                        </div>
+                                    </div>
+                                    <div class="gd-girl-prg-rd p2">
+                                        <div class="gd-girl-prg-rd-txt">
+                                            500
+                                        </div>
+                                    </div>
+                                    <div class="gd-girl-prg-rd p3">
+                                        <div class="gd-girl-prg-rd-txt">
+                                            1000
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trophy-res-box-all">
+                            <div class="trophy-res-box spirit">
+                                <div class="trophy-value" style="width: 120px">
+                                    35
+                                </div>
+                            </div>
+                            <div class="trophy-res-box spirit2">
+                                <div class="trophy-value" style="width: 120px">
+                                    692
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-close-x"></div>
+                    </div>
+                </div>
+                <div class="tabs-all-box">
+                    <div class="tabs-all selected">
+                        <div class="tabs-name">Heroes</div>
+                        <div class="tabs-pic"><img src="rc/tab-01.png" /></div>
+                    </div>
+                    <div class="tabs-all">
+                        <div class="tabs-name">Album</div>
+                        <div class="tabs-pic"><img src="rc/tab-05.png" /></div>
+                    </div>
+                    <div class="tabs-all">
+                        <div class="tabs-name">Guild</div>
+                        <div class="tabs-pic"><img src="rc/tab-08.png" /></div>
+                    </div>
+                    <div class="tabs-all">
+                        <div class="tabs-name">Rating</div>
+                        <div class="tabs-pic"><img src="rc/tab-02.png" /></div>
+                    </div>
+                </div>
+            </div>
+            <div id="popupWrapper" class="popup-layer">
+                <div class="screen-blend-55"></div>
+                <div id="popupContainer">
+                    <div class="m-popup goddess-picture narrow">
+                        <div class="btn-close-x"></div>
+                        <img
+                            class="img-goddess-picture"
+                            src="https://cdn.faptitans.com/s1/images/goddess/goddess-4/x2/goddess-4-1.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

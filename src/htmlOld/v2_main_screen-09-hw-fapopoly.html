@@ -1,0 +1,2991 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/screen-fapopoly-main.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/v2-screen-hw-btlpass.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link href="rc/v2-screen-tower.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/screen-fapopoly-rating.css"
+            rel="stylesheet"
+            type="text/css" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+
+        <script type="text/javascript">
+            window.addEventListener("load", () => {
+                [...document.querySelectorAll(".popup-layer, .m-popup")].map(
+                    (i) => {
+                        i.style.display = "none";
+                    }
+                );
+                const po = document.getElementById("popupAll");
+                const re = document.querySelector(".popup-layer");
+                const hP = document.querySelector(".m-popup.hw-btlpass-pop");
+                const rP = document.querySelector(".m-popup.fapop-rating");
+
+                [
+                    ...document.querySelectorAll(
+                        ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                    ),
+                ].map((i) => {
+                    i.style.display = "none";
+
+                    // закрываем все попапы при клике на затемнение
+                    const blS = document.querySelector(".screen-blend-55");
+                    blS.addEventListener("click", () => {
+                        po.classList.remove("dialog-emersion-enter");
+                        po.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            i.style.display = "none";
+                            po.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                });
+                [
+                    ...document.querySelectorAll(
+                        ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                    ),
+                ].map((i) => {
+                    i.addEventListener("click", () => {
+                        po.classList.remove("dialog-emersion-enter");
+                        po.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            i.closest(
+                                ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                            ).style.display = "none";
+                            po.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                });
+
+                const hPb = document.querySelector(".bfIcon");
+                hPb.addEventListener("click", () => {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        hP.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+
+                const rB = document.querySelector(".color-btn.rating");
+                rB.addEventListener("click", () => {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        rP.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="main world1">
+            <div
+                class="main-bg"
+                style="background-image: url('rc/v2-fapop-hw1.jpg')"></div>
+            <div class="fapop-content-all">
+                <div>
+                    <div
+                        style="
+                            width: 1200px;
+                            height: 640px;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                        ">
+                        <div class="fp-portal disabled">
+                            <div item="[object Object]" top_offset="100">
+                                <img
+                                    class="fp-portal-img"
+                                    src="rc/v2-portal1.png" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 150px;
+                                width: 100px;
+                                left: 429px;
+                                top: 328px;
+                                z-index: 11;
+                            ">
+                            <div
+                                class="fapop-player"
+                                style="width: 100%; height: 100%">
+                                <div class="fapop-player-name">guest24783</div>
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 389.5px;
+                                top: 346px;
+                                z-index: 10;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic10.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 331.5px;
+                                top: 374px;
+                                z-index: 11;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic03.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 273.5px;
+                                top: 346px;
+                                z-index: 10;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic11.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 216.5px;
+                                top: 317px;
+                                z-index: 9;
+                            ">
+                            <div>
+                                <img
+                                    src="rc/fapop-ic02.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 272.5px;
+                                top: 288px;
+                                z-index: 8;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic08.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 215.5px;
+                                top: 261px;
+                                z-index: 7;
+                            "></div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 160.5px;
+                                top: 234px;
+                                z-index: 6;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic10.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 218.5px;
+                                top: 207px;
+                                z-index: 5;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic13.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 271.5px;
+                                top: 179px;
+                                z-index: 4;
+                            ">
+                            <div top_offset="50">
+                                <img
+                                    src="rc/fapop-ic12.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 330.5px;
+                                top: 206px;
+                                z-index: 5;
+                            ">
+                            <div>
+                                <img
+                                    src="rc/fapop-ic02.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 388.5px;
+                                top: 173px;
+                                z-index: 4;
+                            ">
+                            <div top_offset="50">
+                                <img
+                                    src="rc/fapop-ic06.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 445.5px;
+                                top: 202px;
+                                z-index: 5;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic11.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 501.5px;
+                                top: 174px;
+                                z-index: 4;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic08.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 558.5px;
+                                top: 146px;
+                                z-index: 3;
+                            ">
+                            <div>
+                                <img
+                                    src="rc/fapop-ic02.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 613.5px;
+                                top: 119px;
+                                z-index: 2;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic07.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 667.5px;
+                                top: 91px;
+                                z-index: 1;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic13.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 723.5px;
+                                top: 117px;
+                                z-index: 2;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic07.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 779.5px;
+                                top: 147px;
+                                z-index: 3;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic03.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 838.5px;
+                                top: 172px;
+                                z-index: 4;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic10.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 895.5px;
+                                top: 194px;
+                                z-index: 5;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic09.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 951.5px;
+                                top: 224px;
+                                z-index: 6;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic05.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 1010.5px;
+                                top: 252px;
+                                z-index: 7;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic07.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 953.5px;
+                                top: 280px;
+                                z-index: 8;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic05.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 1010.5px;
+                                top: 308px;
+                                z-index: 9;
+                            "></div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 954.5px;
+                                top: 336px;
+                                z-index: 10;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic09.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 898.5px;
+                                top: 366px;
+                                z-index: 11;
+                            ">
+                            <div>
+                                <img
+                                    src="rc/fapop-ic02.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 842.5px;
+                                top: 335px;
+                                z-index: 10;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic09.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 783.5px;
+                                top: 311px;
+                                z-index: 9;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic11.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 728.5px;
+                                top: 330px;
+                                z-index: 10;
+                            "></div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 672.5px;
+                                top: 366px;
+                                z-index: 11;
+                            ">
+                            <div top_offset="50">
+                                <img
+                                    src="rc/fapop-ic12.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 727.5px;
+                                top: 393px;
+                                z-index: 12;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic03.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 672.5px;
+                                top: 419px;
+                                z-index: 13;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic05.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 618.5px;
+                                top: 449px;
+                                z-index: 14;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic09.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 558.5px;
+                                top: 421px;
+                                z-index: 13;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic08.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                        <div
+                            style="
+                                position: absolute;
+                                height: 100px;
+                                width: 67px;
+                                left: 505.5px;
+                                top: 398px;
+                                z-index: 12;
+                            ">
+                            <div item="[object Object]" top_offset="50">
+                                <img
+                                    src="rc/fapop-ic13.png"
+                                    style="width: 100%; height: 100%" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fapop-exit-box">
+                        <a
+                            class="color-btn active0"
+                            aria-current="page"
+                            href="#/"
+                            ><div class="color-btn-text">exit</div></a
+                        >
+                    </div>
+                    <div class="bfIcon">
+                        <img class="icon" src="rc/ic-hw.png" />
+                    </div>
+                    <div class="fapop-rating-tokens-box">
+                        <div class="color-btn fl rating">
+                            <div class="color-btn-text">rating</div>
+                        </div>
+                        <div class="color-btn fl token">
+                            <img class="domik" src="rc/fapop-token-ic.png" />
+                            <div class="color-btn-text">tokens</div>
+                        </div>
+                        <div class="color-btn fr gblue fp" style="width: 120px">
+                            <img class="domik" src="rc/pse-epic3.png" />
+                            <div class="color-btn-text" style="width: 80px">
+                                shop
+                            </div>
+                        </div>
+                        <div class="color-btn fr bordo" style="width: 160px">
+                            <img class="domik" src="rc/pse-keygirl.png" />
+                            <div
+                                class="color-btn-text"
+                                style="right: 5px; width: 128px">
+                                Collections
+                            </div>
+                        </div>
+                        <div
+                            class="color-btn fr bordo magic"
+                            style="width: 165px">
+                            <img class="domik" src="rc/icn-dual-ball.png" />
+                            <div
+                                class="color-btn-text"
+                                style="right: 15px; width: 95px">
+                                Dual Pack
+                            </div>
+                        </div>
+                        <div class="color-btn fr gblue" style="width: 165px">
+                            <img class="domik" src="rc/val2021_res1.png" />
+                            <div
+                                class="color-btn-text"
+                                style="right: 15px; width: 95px">
+                                Craftery
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="fapop-times-around-box">
+                            <div class="fapop-times-around-prgbar">
+                                <div
+                                    class="fapop-times-around-prgbar-full"
+                                    style="height: 17%"></div>
+                                <div class="fapop-times-around-text">
+                                    Floor<br />1/13<br />Trips<br />0/13
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fapop-rewards-box-all">
+                            <div class="fapop-rewards-text">rewards</div>
+                            <div class="fapop-rewards-box">
+                                <div class="fapop-rewards girl good">
+                                    <div class="fapop-rew-pic">
+                                        <img
+                                            src="__3e87/images/superhero_new/suphero-08/x1/avatar/08sh-ava-1.jpg" />
+                                    </div>
+                                    <div class="fapop-rew-pts">
+                                        Sidzuki Yano
+                                    </div>
+                                    <div class="fapop-rew-good"></div>
+                                    <div class="fapop-pts-num">75</div>
+                                </div>
+                                <div class="fapop-rewards">
+                                    <div class="fapop-rew-pic">
+                                        <img src="rc/ic-abil-dps-plus@2x.png" />
+                                    </div>
+                                    <div class="fapop-rew-pts">x2</div>
+                                    <div class="fapop-pts-num">50</div>
+                                </div>
+                                <div class="fapop-rewards">
+                                    <div class="fapop-rew-pic">
+                                        <img src="rc/arrow_up1.png" />
+                                    </div>
+                                    <div class="fapop-rew-pts">15</div>
+                                    <div class="fapop-pts-num">35</div>
+                                </div>
+                                <div class="fapop-rewards">
+                                    <div class="fapop-rew-pic">
+                                        <img src="rc/sh-icon-chest-128.png" />
+                                    </div>
+                                    <div class="fapop-rew-pts">35</div>
+                                    <div class="fapop-pts-num">20</div>
+                                </div>
+                                <div class="fapop-rewards">
+                                    <div class="fapop-rew-pic">
+                                        <img src="rc/ic-abil-gold-up.png" />
+                                    </div>
+                                    <div class="fapop-rew-pts">10K%</div>
+                                    <div class="fapop-pts-num">10</div>
+                                </div>
+                                <div class="fapop-rewards claim">
+                                    <div class="fapop-rew-pic">
+                                        <img src="rc/sh-icon-chest-128.png" />
+                                    </div>
+                                    <div class="fapop-rew-pts">claim</div>
+                                    <div class="fapop-pts-num">3</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        position="bottom"
+                        topdistance="75"
+                        tagname="div"
+                        tooltiptext="Daily quests reset every 24h!"
+                        class="fapop-prgbar-box-all">
+                        <div class="fapop-prgbar-reward-box">
+                            <div class="fapop-prgbar-reward-pic">
+                                <img src="rc/fapop-token-ic.png" />
+                            </div>
+                            <div class="fapop-prgbar-reward-text">1</div>
+                        </div>
+                        <div class="fapop-prgbar-box">
+                            <div
+                                class="fapop-prgbar-full"
+                                style="width: 40%"></div>
+                            <div class="fapop-prgbar-text">Kill 50 minions</div>
+                            <div class="fapop-prgbar-text-count">0/50</div>
+                        </div>
+                        <div class="fapop-noquest-box">
+                            <div class="fapop-noquest-text">
+                                Quests completed. You'll get new quests with
+                                next event.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fapop-rolldice-box-all">
+                        <div class="fapop-dice-2"></div>
+                        <div class="fapop-dice-1"></div>
+                        <div class="color-btn green">
+                            <div class="color-btn-text">roll dice</div>
+                            <div class="token-count-box">
+                                <div class="token-count">
+                                    1/0<span class="f-token"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="color-btn green ten">
+                            <div class="color-btn-text">ten dice rolls</div>
+                            <div class="token-count-box">
+                                <div class="token-count">
+                                    10/0<span class="f-token"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fapop-dice-end-1">
+                            <img src="rc/fapop-dice-end1.png" />
+                        </div>
+                        <div class="fapop-dice-end-2">
+                            <img src="rc/fapop-dice-end1.png" />
+                        </div>
+                        <div class="fapop-dice-end-rolled">
+                            <div class="fapop-dice-rolled-text">you rolled</div>
+                        </div>
+                    </div>
+                    <div class="fapop-info-btn">?</div>
+                    <div class="fapop-rewardx2">
+                        <div class="fapop-rewardx2-text">double reward</div>
+                    </div>
+                </div>
+            </div>
+            <div id="popupAll" class="popup-hiden popup-view">
+                <div id="popupWrapper" class="popup-layer show">
+                    <div class="screen-blend-55"></div>
+                    <div id="popupContainer" class="popup-in">
+                        <div class="m-popup hw-btlpass-pop rpg__">
+                            <div class="title">Fapopoly Event pass</div>
+                            <div class="color-box rpg__"></div>
+                            <div class="hw-btlpass-box-all">
+                                <div class="hw-btlpass-collect-box-all">
+                                    <div class="bp-info-btn">?</div>
+                                    <div class="hw-btlpass-collect-box">
+                                        <div
+                                            class="hw-btlpass-collect-box-text">
+                                            Get 0/25.2K
+                                            <span
+                                                class="ic-pumpkins bf__"></span>
+                                            to get these girls!
+                                        </div>
+                                    </div>
+                                    <div class="hw-squad-holder">
+                                        <div class="hw-hero-box">
+                                            <div class="hero-avatar-box">
+                                                <img
+                                                    class="hero-avatar"
+                                                    src="rc/unknown-hero-ava.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="hw-hero-box">
+                                            <div class="hero-avatar-box">
+                                                <img
+                                                    class="hero-avatar"
+                                                    src="images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="hw-hero-box">
+                                            <div class="hero-avatar-box">
+                                                <img
+                                                    class="hero-avatar"
+                                                    src="images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prgball-box">
+                                        <div class="prgall-prom">
+                                            <div
+                                                class="prg-all-bar"
+                                                style="width: 20%"></div>
+                                        </div>
+                                        <div class="prg-all-text">
+                                            <span
+                                                >you have 0/28<span
+                                                    class="ic-pumpkins bf__"></span
+                                                >pumpkins</span
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hw-btlpass-level-box-all">
+                                    <div class="hw-btlpass-sim-el-box">
+                                        <div class="hw-btlpass-level">
+                                            level
+                                        </div>
+                                        <div class="hw-btlpass-elite">
+                                            rewards
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="hw-btlpass-level-simple-box-scroll indiana-scroll-container">
+                                        <div class="hw-btlpass-level-level">
+                                            <div
+                                                class="hw-btlpass-level-level-prg"></div>
+                                            <div
+                                                class="hw-btlpass-level-level-num-box">
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    1
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    5
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    6
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    7
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    8
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    9
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    10
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    11
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    12
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    13
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    14
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    15
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    16
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    17
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    18
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    19
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    20
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    21
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    22
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    23
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    24
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    25
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    26
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    27
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    28
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    29
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    30
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    31
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    32
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    33
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    34
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    35
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    36
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    37
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    38
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    39
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    40
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    41
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    42
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    43
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    44
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    45
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    46
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    47
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    48
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    49
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-level-num">
+                                                    50
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hw-btlpass-level-elite">
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-abil-gold@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    67.2Q
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/sh-icon-chest-128.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/rpg-poly/item/1.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-orange.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-blue.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-green.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-pink.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-krasn-butil@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    95
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-abil-gold@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    67.2Q
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/sh-icon-chest-128.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/rpg-poly/item/2.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-orange.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-blue.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-green.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-pink.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    2
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-krasn-butil@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    95
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-abil-gold@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    67.2Q
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/sh-icon-chest-128.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/rpg-poly/item/3.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-orange.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-blue.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-green.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-pink.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-krasn-butil@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    190
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block girl">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="__7055/images/superhero_new/suphero-652/x1/avatar/652sh-ava-1.jpg" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    700
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/sh-icon-chest-128.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/rpg-poly/item/1.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    6
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-orange.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-blue.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-green.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-diamond.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    50
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-krasn-butil@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    190
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block girl">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="__1cd8/images/superhero_new/suphero-653/x1/avatar/653sh-ava-1.jpg" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    700
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/sh-icon-chest-128.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/rpg-poly/item/2.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    6
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-orange.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-blue.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-green.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-pink.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-krasn-butil@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    190
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-abil-gold@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    67.2Q
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/sh-icon-chest-128.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    3
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/rpg-poly/item/3.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    6
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-orange.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-blue.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-green.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ms-stone-pink.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    4
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-krasn-butil@2x.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    190
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="rc/ic-diamond.png" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    100
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                            <div
+                                                class="hw-btlpass-level-rew-box block girl">
+                                                <div
+                                                    class="hw-btlpass-level-rew-pic">
+                                                    <img
+                                                        src="__41e3/images/superhero_new/suphero-656/x1/avatar/656sh-ava-1.jpg" />
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-good"></div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num">
+                                                    700
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-check"></div>
+                                                <div class="color-btn green">
+                                                    <div class="color-btn-text">
+                                                        собрать
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="hw-btlpass-level-rew-num-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hw-btlpass-girl">
+                                <img src="rc/break-girl753-hw.png" />
+                            </div>
+                            <div class="hw-btlpass-btn-box">
+                                <div class="color-btn">
+                                    <div class="color-btn-text">close</div>
+                                </div>
+                                <div class="color-btn" style="left: 552px">
+                                    <div class="color-btn-text">
+                                        Buy Pumpkins
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-close-x"></div>
+                        </div>
+                        <div class="m-popup fapop-rating">
+                            <div class="title">rating</div>
+                            <div class="btn-close-x"></div>
+                            <div class="fapop-rating-content">
+                                <div class="fapop-rating-box-all">
+                                    <div class="fapop-rating-box">
+                                        <div class="rating-scroll-name-box">
+                                            <div class="rating-scroll-name-box">
+                                                <div
+                                                    class="rating-scroll-name var1">
+                                                    Место
+                                                </div>
+                                                <div
+                                                    class="rating-scroll-name var2">
+                                                    Имя
+                                                </div>
+                                                <div
+                                                    class="rating-scroll-name var3">
+                                                    Очки
+                                                </div>
+                                            </div>
+                                            <div class="rating-scroll-box">
+                                                <div class="rating-scroll">
+                                                    <div>
+                                                        <div
+                                                            class="rating-card-rank top">
+                                                            <div
+                                                                class="top-name-diamond">
+                                                                top
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                1
+                                                            </div>
+                                                            <div class="name">
+                                                                great1962 clan
+                                                                RUS
+                                                            </div>
+                                                            <div class="points">
+                                                                915200
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                2
+                                                            </div>
+                                                            <div class="name">
+                                                                Strannyk clan
+                                                                RUS
+                                                            </div>
+                                                            <div class="points">
+                                                                792365
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                3
+                                                            </div>
+                                                            <div class="name">
+                                                                Lalo-Reborn
+                                                            </div>
+                                                            <div class="points">
+                                                                470045
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card-rank gold">
+                                                            <div class="">
+                                                                gold rank
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                4
+                                                            </div>
+                                                            <div class="name">
+                                                                BiocanonPT
+                                                            </div>
+                                                            <div class="points">
+                                                                454185
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                5
+                                                            </div>
+                                                            <div class="name">
+                                                                butterman5
+                                                            </div>
+                                                            <div class="points">
+                                                                395850
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                6
+                                                            </div>
+                                                            <div class="name">
+                                                                rage_k
+                                                            </div>
+                                                            <div class="points">
+                                                                392050
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                7
+                                                            </div>
+                                                            <div class="name">
+                                                                guest195157216
+                                                            </div>
+                                                            <div class="points">
+                                                                332695
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                8
+                                                            </div>
+                                                            <div class="name">
+                                                                seraph26
+                                                            </div>
+                                                            <div class="points">
+                                                                166255
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                9
+                                                            </div>
+                                                            <div class="name">
+                                                                Brandor
+                                                            </div>
+                                                            <div class="points">
+                                                                159065
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                10
+                                                            </div>
+                                                            <div class="name">
+                                                                Abaris
+                                                            </div>
+                                                            <div class="points">
+                                                                100240
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                11
+                                                            </div>
+                                                            <div class="name">
+                                                                vynil22
+                                                            </div>
+                                                            <div class="points">
+                                                                60355
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                12
+                                                            </div>
+                                                            <div class="name">
+                                                                dak2mee
+                                                            </div>
+                                                            <div class="points">
+                                                                49205
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                13
+                                                            </div>
+                                                            <div class="name">
+                                                                Ksirion
+                                                            </div>
+                                                            <div class="points">
+                                                                34375
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                14
+                                                            </div>
+                                                            <div class="name">
+                                                                wilfridsellars
+                                                            </div>
+                                                            <div class="points">
+                                                                28820
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                15
+                                                            </div>
+                                                            <div class="name">
+                                                                HH1488babar666
+                                                            </div>
+                                                            <div class="points">
+                                                                12275
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                16
+                                                            </div>
+                                                            <div class="name">
+                                                                DEVIL_VALAK
+                                                            </div>
+                                                            <div class="points">
+                                                                9630
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                17
+                                                            </div>
+                                                            <div class="name">
+                                                                Ron85
+                                                            </div>
+                                                            <div class="points">
+                                                                9605
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                18
+                                                            </div>
+                                                            <div class="name">
+                                                                joako33
+                                                            </div>
+                                                            <div class="points">
+                                                                9490
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                19
+                                                            </div>
+                                                            <div class="name">
+                                                                ElDarkikoulol
+                                                            </div>
+                                                            <div class="points">
+                                                                8880
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                20
+                                                            </div>
+                                                            <div class="name">
+                                                                kuroneko4110
+                                                            </div>
+                                                            <div class="points">
+                                                                8470
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card-rank silver">
+                                                            <div class="">
+                                                                silver rank
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                21
+                                                            </div>
+                                                            <div class="name">
+                                                                4nubis
+                                                            </div>
+                                                            <div class="points">
+                                                                8250
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                22
+                                                            </div>
+                                                            <div class="name">
+                                                                J1MmY9
+                                                            </div>
+                                                            <div class="points">
+                                                                8230
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                23
+                                                            </div>
+                                                            <div class="name">
+                                                                Redpala23
+                                                            </div>
+                                                            <div class="points">
+                                                                8070
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                24
+                                                            </div>
+                                                            <div class="name">
+                                                                cjdkslagtqfhedkasj
+                                                            </div>
+                                                            <div class="points">
+                                                                4650
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                25
+                                                            </div>
+                                                            <div class="name">
+                                                                blubb5511
+                                                            </div>
+                                                            <div class="points">
+                                                                3645
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card active">
+                                                            <div class="number">
+                                                                26
+                                                            </div>
+                                                            <div class="name">
+                                                                Voodoofugu
+                                                            </div>
+                                                            <div class="points">
+                                                                2760
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                27
+                                                            </div>
+                                                            <div class="name">
+                                                                Count_Dan99
+                                                            </div>
+                                                            <div class="points">
+                                                                1800
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                28
+                                                            </div>
+                                                            <div class="name">
+                                                                Aaa
+                                                            </div>
+                                                            <div class="points">
+                                                                1080
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                29
+                                                            </div>
+                                                            <div class="name">
+                                                                Noodlearms52
+                                                            </div>
+                                                            <div class="points">
+                                                                1000
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                30
+                                                            </div>
+                                                            <div class="name">
+                                                                aharond
+                                                            </div>
+                                                            <div class="points">
+                                                                1000
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                31
+                                                            </div>
+                                                            <div class="name">
+                                                                tecmogod
+                                                            </div>
+                                                            <div class="points">
+                                                                345
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                32
+                                                            </div>
+                                                            <div class="name">
+                                                                biker72
+                                                            </div>
+                                                            <div class="points">
+                                                                130
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                33
+                                                            </div>
+                                                            <div class="name">
+                                                                Fujisaki3986
+                                                            </div>
+                                                            <div class="points">
+                                                                80
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                34
+                                                            </div>
+                                                            <div class="name">
+                                                                Kojima2558
+                                                            </div>
+                                                            <div class="points">
+                                                                80
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                35
+                                                            </div>
+                                                            <div class="name">
+                                                                Bloodking6
+                                                            </div>
+                                                            <div class="points">
+                                                                80
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                36
+                                                            </div>
+                                                            <div class="name">
+                                                                roromomo2
+                                                            </div>
+                                                            <div class="points">
+                                                                80
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                37
+                                                            </div>
+                                                            <div class="name">
+                                                                lxa06
+                                                            </div>
+                                                            <div class="points">
+                                                                80
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card">
+                                                            <div class="number">
+                                                                38
+                                                            </div>
+                                                            <div class="name">
+                                                                TheOwO
+                                                            </div>
+                                                            <div class="points">
+                                                                80
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div
+                                                            class="rating-card color2">
+                                                            <div class="number">
+                                                                39
+                                                            </div>
+                                                            <div class="name">
+                                                                Ogava6114
+                                                            </div>
+                                                            <div class="points">
+                                                                40
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-ped-box">
+                                        <div class="ped-box rate1">
+                                            <div class="ped-box-noreward">
+                                                нет награды
+                                            </div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var1">
+                                                    51-100
+                                                </div>
+                                            </div>
+                                            <div class="ped-box-portrait"></div>
+                                        </div>
+                                        <div class="ped-box rate2 active">
+                                            <div class="ped-box-prize"></div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var2">
+                                                    21-50
+                                                </div>
+                                            </div>
+                                            <div class="ped-box-portrait"></div>
+                                        </div>
+                                        <div class="ped-box rate3">
+                                            <div class="ped-box-prize"></div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var3">
+                                                    4-20
+                                                </div>
+                                            </div>
+                                            <div class="ped-box-portrait"></div>
+                                        </div>
+                                        <div class="ped-box rate4">
+                                            <div class="ped-box-prize"></div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var4">
+                                                    1-3
+                                                </div>
+                                            </div>
+                                            <div class="ped-box-portrait"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fapop-topreward-box-all">
+                                    <div class="cardnameback">
+                                        <div class="card-text">top reward</div>
+                                    </div>
+                                    <div class="lhero-box">
+                                        <div class="lhero-pic">
+                                            <img
+                                                src="https://cdn.faptitans.com/s1/__4e91/images/superhero_new/suphero-250/x2/250sh-1.jpg" />
+                                        </div>
+                                        <div class="topname-box">
+                                            <div class="lrare-box common"></div>
+                                            <div class="sh2-icon left">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur-c.png" />
+                                            </div>
+                                            <div class="sh2-icon-forgirl right">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                            </div>
+                                            <div class="lhero-name-box">
+                                                <div class="lhero-name">
+                                                    Tanigawa Kazue
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="bottom-star-box-girl-count-box">
+                                            <div
+                                                class="sh2-prgbar-all undefined">
+                                                <div
+                                                    class="sh2-prgbar"
+                                                    style="width: 0%"></div>
+                                                <div class="sh2-prgbar-text">
+                                                    0/30
+                                                </div>
+                                            </div>
+                                            <div class="girl-bonus-box">
+                                                <div class="girl-bonus-pic">
+                                                    <img
+                                                        src="https://cdn.faptitans.com/s1/__3c7f/images/superhero_new/suphero-250/x2/avatar/250sh-ava-1.jpg" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sv-sale-bonus-box-all">
+                                            <div class="ashero-bonus-box">
+                                                <div class="acbonus-box">
+                                                    <div class="lvlbox-name">
+                                                        Undercover cop
+                                                    </div>
+                                                    <div
+                                                        class="bonus-lvl-box-bonus-box">
+                                                        <div
+                                                            class="bonus-lvl-box-bonus">
+                                                            +330%
+                                                            <div
+                                                                class="ff-sh2-icon gold"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="acbonus-box second">
+                                                    <div class="lvlbox-name">
+                                                        Dangerous thing
+                                                    </div>
+                                                    <div
+                                                        class="bonus-lvl-box-bonus-box">
+                                                        <div
+                                                            class="bonus-lvl-box-bonus">
+                                                            +4.1% dps to
+                                                            <div
+                                                                class="ff-sh2-icon">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/cur2-gun.png" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="color-btn">
+                                <div class="color-btn-text">закрыть</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

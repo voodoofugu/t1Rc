@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/screen-rating-maintab.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/screen-rating-maintab-coll.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link href="rc/screen-rating.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+
+        <script type="text/javascript">
+            window.addEventListener("load", () => {
+                const jB = document.querySelector(".color-btn.jewerly");
+                const cB = document.querySelector(".color-btn.collection");
+                const jW = document.querySelector(".animations");
+                const cW = document.querySelector(
+                    ".rating-card-list-box.collection"
+                );
+                cW.style.display = "none";
+
+                cB.addEventListener("click", () => {
+                    jB.classList.remove("blue");
+                    jW.style.display = "none";
+                    cB.classList.add("blue");
+                    cW.style.display = "block";
+                });
+                jB.addEventListener("click", () => {
+                    cB.classList.remove("blue");
+                    cW.style.display = "none";
+                    jB.classList.add("blue");
+                    jW.style.display = "block";
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="main world1">
+            <div class="main-bg"></div>
+            <div class="header">
+                <div class="resource-panel">
+                    <div class="avatar-box-all">
+                        <div class="avatar-box-pic">
+                            <img src="rc/hero0093-ava.jpg" />
+                        </div>
+                        <div class="avatar-box-name">Dormidont</div>
+                    </div>
+                    <div class="resource-gold">
+                        <div class="value">6969K</div>
+                        <div class="value-bonus">+6969K%</div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic">
+                            <img src="rc/v2-res-gold.png" />
+                        </div>
+                    </div>
+                    <div class="resource-vip lvl5">
+                        <div class="value-vip-diamond">6969K</div>
+                        <div class="value-vip-ticket">6969K</div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic-vip">
+                            <div class="viplvl">VIP</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-chest-box-all">
+                    <div class="res-shop-btn">
+                        <div class="res-shop-btn-text">магазин</div>
+                    </div>
+                    <div class="res-chest-btn">
+                        <div class="res-chest-btn-text">открыть</div>
+                        <div class="res-chest-btn-count">6969K</div>
+                    </div>
+                </div>
+                <div class="singinout-btn out">
+                    <div class="singinout-btn-text">sign out</div>
+                </div>
+            </div>
+            <div class="quest-box-all">
+                <div class="quest-box-all-text">квесты</div>
+                <div class="quest-box">
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                    <div class="quest">
+                        <img class="icon" src="rc/ic-abil-reborn.png" />
+                    </div>
+                </div>
+                <div class="opt-panel-box">
+                    <div class="btn feedback"></div>
+                    <div class="btn statistic"></div>
+                    <div class="btn ru"></div>
+                </div>
+            </div>
+
+            <div class="right-side"></div>
+            <div class="left-side false false">
+                <div class="left-panel wide false false">
+                    <div class="container">
+                        <div
+                            class="tab-panel rating-panel"
+                            style="visibility: visible">
+                            <div>
+                                <div class="rating-left-box">
+                                    <div class="rating-topbtn-box">
+                                        <div class="rating-timer-box">
+                                            <div class="rating-timer">
+                                                20:06:42
+                                            </div>
+                                            <div class="rating-timer-text">
+                                                до конца рейтинга
+                                            </div>
+                                        </div>
+                                        <div class="color-btn info">
+                                            <div class="color-btn-text">
+                                                информация
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rating-ped-box">
+                                        <div class="ped-box rate1 undefined">
+                                            <div class="ped-box-noreward">
+                                                нет награды
+                                            </div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var1">
+                                                    51-100
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ped-box rate2 undefined">
+                                            <div class="ped-box-prize"></div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var2">
+                                                    21-50
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ped-box rate3 undefined">
+                                            <div class="ped-box-prize"></div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var3">
+                                                    4-20
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ped-box rate4 undefined">
+                                            <div class="ped-box-prize"></div>
+                                            <div class="rating-ped-box-num">
+                                                <div
+                                                    class="ped-box-num-text var4">
+                                                    1-3
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ped-box-portrait place2">
+                                            <div class="you-box">ты</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="rating-scroll-name-box">
+                                            <div
+                                                class="rating-scroll-name var1">
+                                                Место
+                                            </div>
+                                            <div
+                                                class="rating-scroll-name var2">
+                                                Имя
+                                            </div>
+                                            <div
+                                                class="rating-scroll-name var3">
+                                                Очки
+                                            </div>
+                                        </div>
+                                        <div class="rating-scroll-box">
+                                            <div class="rating-scroll">
+                                                <div>
+                                                    <div
+                                                        class="rating-card-rank top">
+                                                        <div
+                                                            class="top-name-diamond">
+                                                            top
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            1
+                                                        </div>
+                                                        <div class="name">
+                                                            joepie
+                                                        </div>
+                                                        <div class="points">
+                                                            12071
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            2
+                                                        </div>
+                                                        <div class="name">
+                                                            icesweeyss
+                                                        </div>
+                                                        <div class="points">
+                                                            9961
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            3
+                                                        </div>
+                                                        <div class="name">
+                                                            Morgot
+                                                        </div>
+                                                        <div class="points">
+                                                            1549
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card-rank gold">
+                                                        <div class="">
+                                                            gold rank
+                                                        </div>
+                                                    </div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            4
+                                                        </div>
+                                                        <div class="name">
+                                                            mambouw
+                                                        </div>
+                                                        <div class="points">
+                                                            1273
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            5
+                                                        </div>
+                                                        <div class="name">
+                                                            Oh-My-Lord
+                                                        </div>
+                                                        <div class="points">
+                                                            945
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            6
+                                                        </div>
+                                                        <div class="name">
+                                                            luisgarcia
+                                                        </div>
+                                                        <div class="points">
+                                                            800
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            7
+                                                        </div>
+                                                        <div class="name">
+                                                            Okultist
+                                                        </div>
+                                                        <div class="points">
+                                                            800
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            8
+                                                        </div>
+                                                        <div class="name">
+                                                            lily9111110
+                                                        </div>
+                                                        <div class="points">
+                                                            428
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            9
+                                                        </div>
+                                                        <div class="name">
+                                                            alberthofer
+                                                        </div>
+                                                        <div class="points">
+                                                            354
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            10
+                                                        </div>
+                                                        <div class="name">
+                                                            Boomberjang
+                                                        </div>
+                                                        <div class="points">
+                                                            203
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            11
+                                                        </div>
+                                                        <div class="name">
+                                                            T-Kuri
+                                                        </div>
+                                                        <div class="points">
+                                                            200
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            12
+                                                        </div>
+                                                        <div class="name">
+                                                            dendroit1578
+                                                        </div>
+                                                        <div class="points">
+                                                            198
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            13
+                                                        </div>
+                                                        <div class="name">
+                                                            guestsss
+                                                        </div>
+                                                        <div class="points">
+                                                            175
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            14
+                                                        </div>
+                                                        <div class="name">
+                                                            ghostgo
+                                                        </div>
+                                                        <div class="points">
+                                                            162
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            15
+                                                        </div>
+                                                        <div class="name">
+                                                            lorddoubtful
+                                                        </div>
+                                                        <div class="points">
+                                                            157
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            16
+                                                        </div>
+                                                        <div class="name">
+                                                            eko19
+                                                        </div>
+                                                        <div class="points">
+                                                            120
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            17
+                                                        </div>
+                                                        <div class="name">
+                                                            rocko23
+                                                        </div>
+                                                        <div class="points">
+                                                            80
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            18
+                                                        </div>
+                                                        <div class="name">
+                                                            THE_LONG_ONE
+                                                        </div>
+                                                        <div class="points">
+                                                            52
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            19
+                                                        </div>
+                                                        <div class="name">
+                                                            rythm
+                                                        </div>
+                                                        <div class="points">
+                                                            45
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            20
+                                                        </div>
+                                                        <div class="name">
+                                                            chill4gill
+                                                        </div>
+                                                        <div class="points">
+                                                            40
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card-rank silver">
+                                                        <div class="">
+                                                            silver rank
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            21
+                                                        </div>
+                                                        <div class="name">
+                                                            andrey53
+                                                        </div>
+                                                        <div class="points">
+                                                            40
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            22
+                                                        </div>
+                                                        <div class="name">
+                                                            Pluxasy1367
+                                                        </div>
+                                                        <div class="points">
+                                                            25
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            23
+                                                        </div>
+                                                        <div class="name">
+                                                            DesKro
+                                                        </div>
+                                                        <div class="points">
+                                                            23
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            24
+                                                        </div>
+                                                        <div class="name">
+                                                            testuuG
+                                                        </div>
+                                                        <div class="points">
+                                                            20
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            25
+                                                        </div>
+                                                        <div class="name">
+                                                            TheSimpson
+                                                        </div>
+                                                        <div class="points">
+                                                            20
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            26
+                                                        </div>
+                                                        <div class="name">
+                                                            Littlethenr4ssan
+                                                        </div>
+                                                        <div class="points">
+                                                            18
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            27
+                                                        </div>
+                                                        <div class="name">
+                                                            dave2703
+                                                        </div>
+                                                        <div class="points">
+                                                            15
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            28
+                                                        </div>
+                                                        <div class="name">
+                                                            nitrofisch
+                                                        </div>
+                                                        <div class="points">
+                                                            15
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            29
+                                                        </div>
+                                                        <div class="name">
+                                                            nerondosgonz
+                                                        </div>
+                                                        <div class="points">
+                                                            15
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            30
+                                                        </div>
+                                                        <div class="name">
+                                                            BarbroMary
+                                                        </div>
+                                                        <div class="points">
+                                                            14
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            31
+                                                        </div>
+                                                        <div class="name">
+                                                            toxc
+                                                        </div>
+                                                        <div class="points">
+                                                            5
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            32
+                                                        </div>
+                                                        <div class="name">
+                                                            Asta1988
+                                                        </div>
+                                                        <div class="points">
+                                                            5
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2 active">
+                                                        <div class="number">
+                                                            33
+                                                        </div>
+                                                        <div class="name">
+                                                            Voodoofugu
+                                                        </div>
+                                                        <div class="points">
+                                                            5
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            34
+                                                        </div>
+                                                        <div class="name">
+                                                            Giga Chad
+                                                        </div>
+                                                        <div class="points">
+                                                            3
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            35
+                                                        </div>
+                                                        <div class="name">
+                                                            Arrowhead
+                                                        </div>
+                                                        <div class="points">
+                                                            3
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="rating-card">
+                                                        <div class="number">
+                                                            36
+                                                        </div>
+                                                        <div class="name">
+                                                            skududu99
+                                                        </div>
+                                                        <div class="points">
+                                                            1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div
+                                                        class="rating-card color2">
+                                                        <div class="number">
+                                                            37
+                                                        </div>
+                                                        <div class="name">
+                                                            JT69
+                                                        </div>
+                                                        <div class="points">
+                                                            1
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rating-right-box">
+                                    <div class="rating-right-topbtn-box">
+                                        <div class="color-btn jewerly blue">
+                                            <a class="" href="#/rating/jewerly"
+                                                ><div class="color-btn-text">
+                                                    jewelry
+                                                </div></a
+                                            >
+                                        </div>
+                                        <div class="color-btn collection">
+                                            <a
+                                                class=""
+                                                href="#/rating/collection"
+                                                ><div class="color-btn-text">
+                                                    анимации
+                                                </div></a
+                                            >
+                                        </div>
+                                    </div>
+                                    <div class="animations">
+                                        <div
+                                            class="rating-card-list-box podium">
+                                            <div
+                                                class="rating-card-girl-box card2 high">
+                                                <div
+                                                    class="rating-card-girl-name">
+                                                    Мадока Кайто
+                                                </div>
+                                                <div class="card-girl-box">
+                                                    <img
+                                                        src="https://cdn.faptitans.com/s1/__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg" />
+                                                </div>
+                                                <div class="rating-visual">
+                                                    <div class="rating-str">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-str left">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right lock">
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom lock legendary">
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="rating-card-girl-box card3 high">
+                                                <div
+                                                    class="rating-card-girl-name">
+                                                    Акэми Имма
+                                                </div>
+                                                <div class="card-girl-box">
+                                                    <img
+                                                        src="https://cdn.faptitans.com/s1/__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg" />
+                                                </div>
+                                                <div class="rating-visual">
+                                                    <div class="rating-str">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-str left">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_4.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom legendary">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="rating-card-girl-box card-none">
+                                                <div
+                                                    class="rating-card-girl-name">
+                                                    Амая Карасу
+                                                </div>
+                                                <div class="card-girl-box">
+                                                    <img
+                                                        src="https://cdn.faptitans.com/s1/__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg" />
+                                                </div>
+                                                <div class="rating-visual">
+                                                    <div class="rating-str">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-str left">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right lock">
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom lock legendary">
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="rating-card-girl-box card1 high">
+                                                <div
+                                                    class="rating-card-girl-name">
+                                                    Цубаса Акума
+                                                </div>
+                                                <div class="card-girl-box">
+                                                    <img
+                                                        src="https://cdn.faptitans.com/s1/__890f/images/superhero/suphero-04/x1/04suphero-02.jpg" />
+                                                </div>
+                                                <div class="rating-visual">
+                                                    <div class="rating-str">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-str left">
+                                                        <div
+                                                            class="rating-str-right"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right lock">
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom lock legendary">
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="btn-scroll left"></div>
+                                            <div class="btn-scroll right"></div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="rating-card-list-box collection">
+                                        <div
+                                            class="rating-card-scroll-list-box">
+                                            <div class="scroll-card-box silver">
+                                                <div class="top-name-card-box">
+                                                    <div class="top-name-card">
+                                                        Мадока Кайто
+                                                    </div>
+                                                    <div
+                                                        class="top-name-card scenes">
+                                                        сцены
+                                                    </div>
+                                                </div>
+                                                <div class="girl-card-box">
+                                                    <img
+                                                        class="girl-card"
+                                                        src="https://cdn.faptitans.com/s1/__3dc1/images/hero-all/tithero-05/x1/tithero-05-1.jpg" />
+                                                </div>
+                                                <div class="girl-bonus-fullset">
+                                                    Бонус за полный набор
+                                                </div>
+                                                <div
+                                                    class="girl-bonus-fullset-all bn-price">
+                                                    DPS +300%
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right lock">
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom lock legendary">
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-1_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-paychek"></div>
+                                                </div>
+                                            </div>
+                                            <div class="scroll-card-box gold">
+                                                <div class="top-name-card-box">
+                                                    <div class="top-name-card">
+                                                        Акэми Имма
+                                                    </div>
+                                                    <div
+                                                        class="top-name-card scenes">
+                                                        сцены
+                                                    </div>
+                                                </div>
+                                                <div class="girl-card-box">
+                                                    <img
+                                                        class="girl-card"
+                                                        src="https://cdn.faptitans.com/s1/__7ff4/images/hero-all/tithero-13/x1/tithero-13-1.jpg" />
+                                                </div>
+                                                <div class="girl-bonus-fullset">
+                                                    Бонус за полный набор
+                                                </div>
+                                                <div
+                                                    class="girl-bonus-fullset-all bn-price">
+                                                    DPC +300%
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_4.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-green@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom legendary">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-2_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-paychek"></div>
+                                                </div>
+                                            </div>
+                                            <div class="scroll-card-box silver">
+                                                <div class="top-name-card-box">
+                                                    <div class="top-name-card">
+                                                        Амая Карасу
+                                                    </div>
+                                                    <div
+                                                        class="top-name-card scenes">
+                                                        сцены
+                                                    </div>
+                                                </div>
+                                                <div class="girl-card-box">
+                                                    <img
+                                                        class="girl-card"
+                                                        src="https://cdn.faptitans.com/s1/__8a4f/images/hero-all/tithero-25/x1/tithero-25-1.jpg" />
+                                                </div>
+                                                <div class="girl-bonus-fullset">
+                                                    Бонус за полный набор
+                                                </div>
+                                                <div
+                                                    class="girl-bonus-fullset-all bn-price">
+                                                    +300%
+                                                    <div
+                                                        class="bn-icon gold"></div>
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right lock">
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-blue@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom lock legendary">
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-3_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-paychek"></div>
+                                                </div>
+                                            </div>
+                                            <div class="scroll-card-box silver">
+                                                <div class="top-name-card-box">
+                                                    <div class="top-name-card">
+                                                        Цубаса Акума
+                                                    </div>
+                                                    <div
+                                                        class="top-name-card scenes">
+                                                        сцены
+                                                    </div>
+                                                </div>
+                                                <div class="girl-card-box">
+                                                    <img
+                                                        class="girl-card"
+                                                        src="https://cdn.faptitans.com/s1/__890f/images/superhero/suphero-04/x1/04suphero-02.jpg" />
+                                                </div>
+                                                <div class="girl-bonus-fullset">
+                                                    Бонус за полный набор
+                                                </div>
+                                                <div
+                                                    class="girl-bonus-fullset-all bn-price">
+                                                    DPS +500%
+                                                </div>
+                                                <div class="rating-slot-box">
+                                                    <div>
+                                                        <div
+                                                            class="rating-slot bottom-left">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_1.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-neck-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet epic"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot top-right">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_2.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot">
+                                                            <div
+                                                                class="rating-video">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_3.jpg" />
+                                                                <div
+                                                                    class="rating-video-play"></div>
+                                                            </div>
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-ring-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet common"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom-right lock">
+                                                            <div
+                                                                class="rating-lock locked">
+                                                                <img
+                                                                    src="https://cdn.faptitans.com/s1/rc/rating-bras-red@1x.png" />
+                                                            </div>
+                                                            <div
+                                                                class="raritet rare"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                        <div
+                                                            class="rating-slot bottom lock legendary">
+                                                            <div>
+                                                                <div
+                                                                    class="rating-lock locked"></div>
+                                                                <div
+                                                                    class="legend-video-icon">
+                                                                    <img
+                                                                        src="https://cdn.faptitans.com/s1/rc/rating-video-thumbnails/Sc-4_Full.jpg" />
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="raritet legendary"></div>
+                                                            <div
+                                                                class="check"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="rating-paychek"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-close-x"></div>
+                        </div>
+                        <div class="tab-loading-wrapper border"></div>
+                    </div>
+                </div>
+                <div class="tabs-all-box">
+                    <a class="tabs-all heroes" href="#/"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Heroes</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                            </div></div></a
+                    ><a class="tabs-all guild" href="#/guild"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Guild base</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                            </div>
+                        </div>
+                        <div class="v2-tab-notif notif notif20"></div></a
+                    ><a class="tabs-all album" href="#/galery/pictures"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Gallery</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                            </div></div></a
+                    ><a
+                        class="tabs-all rating selected"
+                        href="#/rating/jewerly"
+                        aria-current="page"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Rating Tab</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                            </div></div></a
+                    ><a class="tabs-all squests" href="#/quests/daily"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Quests</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                            </div></div
+                    ></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

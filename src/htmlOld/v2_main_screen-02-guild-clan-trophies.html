@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/v2-screen-suphero.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            <link
+            href="rc/v2-screen-main-dark-world.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link href="rc/clan-trophies.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+
+        <script type="text/javascript">
+            window.addEventListener("load", () => {
+                [...document.querySelectorAll(".m-popup")].map((i) => {
+                    i.style.display = "none";
+                });
+
+                const re = document.querySelector(".popup-layer");
+                re.style.display = "none";
+                const po = document.getElementById("popupAll");
+                const cT = document.querySelector(".m-popup.clan-trophy");
+
+                [...document.querySelectorAll(".btn-close-x")].map((i) => {
+                    i.addEventListener("click", () => {
+                        po.classList.remove("popup-view");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            cT.style.display = "none";
+                        }, 104);
+                    });
+                });
+
+                [...document.querySelectorAll(".titans-garage-item-inner")].map(
+                    (i) => {
+                        i.addEventListener("click", () => {
+                            re.style.display = "block";
+                            setTimeout(function () {
+                                cT.style.display = "block";
+                                po.classList.add("popup-view");
+                            }, 100);
+                        });
+                    }
+                );
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="main world1">
+            <div class="main-bg"></div>
+            <div class="cw-content">
+                <div class="cw-bg">
+                    <div class="clan-trophies-title-big">Clan Trophies</div>
+                    <div class="clan-trophies">
+                        <div class="titans-garage-scroll-box">
+                            <div class="titans-garage-row">
+                                <div class="titans-garage-item">
+                                    <div
+                                        class="titans-garage-item-inner"
+                                        style="
+                                            background-image: url('https://cdn.faptitans.com/s1/images/back/clan/bg_01.jpg');
+                                        ">
+                                        <div class="titans-garage-item-image">
+                                            <img
+                                                src="https://cdn.faptitans.com/s1/rc/trophy/trophy/002_1.png"
+                                                alt="" />
+                                        </div>
+                                        <div class="stars">
+                                            <div class="star checked"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                        </div>
+                                        <div class="ability">Night Witch</div>
+                                        <div class="titan-progress gold">
+                                            <div
+                                                class="titan-progress__bar"
+                                                style="width: 70%"></div>
+                                            <div class="titan-progress__text">
+                                                100/200
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="titans-garage-item">
+                                    <div
+                                        class="titans-garage-item-inner"
+                                        style="
+                                            background-image: url('https://cdn.faptitans.com/s1/images/back/clan/bg_02.jpg');
+                                        ">
+                                        <div class="titans-garage-item-image">
+                                            <img
+                                                src="https://cdn.faptitans.com/s1/rc/trophy/trophy/003_1.png"
+                                                alt="" />
+                                        </div>
+                                        <div class="stars">
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                        </div>
+                                        <div class="ability">Forest Nymph</div>
+                                        <div class="titan-progress gold">
+                                            <div
+                                                class="titan-progress__bar"
+                                                style="width: 0px"></div>
+                                            <div class="titan-progress__text">
+                                                0/100
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="titans-garage-item">
+                                    <div
+                                        class="titans-garage-item-inner"
+                                        style="
+                                            background-image: url('https://cdn.faptitans.com/s1/images/back/clan/bg_03.jpg');
+                                        ">
+                                        <div class="titans-garage-item-image">
+                                            <img
+                                                src="https://cdn.faptitans.com/s1/rc/trophy/trophy/004_1.png"
+                                                alt="" />
+                                        </div>
+                                        <div class="stars">
+                                            <div class="star checked"></div>
+                                            <div class="star checked"></div>
+                                            <div class="star checked"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                            <div class="star"></div>
+                                        </div>
+                                        <div class="ability">Earth Charmer</div>
+                                        <div class="titan-progress gold">
+                                            <div
+                                                class="titan-progress__bar"
+                                                style="width: 0px"></div>
+                                            <div class="titan-progress__text">
+                                                380/400
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="titans-garage-item locked">
+                                    <div
+                                        class="titans-garage-item-inner"
+                                        style="
+                                            background-image: url('https://cdn.faptitans.com/s1/images/back/clan/bg_04.jpg');
+                                        ">
+                                        <div class="titans-garage-item-image">
+                                            <img
+                                                src="https://cdn.faptitans.com/s1/rc/trophy/trophy/006_1.png"
+                                                alt="" />
+                                        </div>
+                                        <div class="stars"></div>
+                                        <div class="ability">Heavenly Mage</div>
+                                        <div class="titan-progress gold">
+                                            <div
+                                                class="titan-progress__bar"
+                                                style="width: 0px"></div>
+                                            <div class="titan-progress__text">
+                                                0/100
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="titans-garage-item locked">
+                                    <div
+                                        class="titans-garage-item-inner"
+                                        style="
+                                            background-image: url('https://cdn.faptitans.com/s1/images/back/clan/bg_07.jpg');
+                                        ">
+                                        <div class="titans-garage-item-image">
+                                            <img
+                                                src="https://cdn.faptitans.com/s1/rc/trophy/trophy/007_1.png"
+                                                alt="" />
+                                        </div>
+                                        <div class="stars"></div>
+                                        <div class="ability">Noble Keeper</div>
+                                        <div class="titan-progress gold">
+                                            <div
+                                                class="titan-progress__bar"
+                                                style="width: 0px"></div>
+                                            <div class="titan-progress__text">
+                                                0/100
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trophy-res-box-all">
+                            <div class="trophy-res-box essence-green">
+                                <div class="trophy-value">1000</div>
+                            </div>
+                            <div class="trophy-res-box essence-blue">
+                                <div class="trophy-value">1000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-btn exit">
+                    <div class="color-btn-text">Exit</div>
+                </div>
+            </div>
+            <div id="popupAll" class="popup-hiden">
+                <div id="popupWrapper" class="popup-layer show">
+                    <div class="screen-blend-55"></div>
+                    <div id="popupContainer" class="popup-in">
+                        <div class="m-popup clan-trophy">
+                            <div class="title">Earth Charmer</div>
+                            <div class="color-box"></div>
+                            <div
+                                class="popup-trophy-image"
+                                style="
+                                    background-image: url('https://cdn.faptitans.com/s1/images/back/clan/bg_03.jpg');
+                                ">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/trophy/trophy/004_1.png"
+                                    alt="" />
+                                <div class="popup-stars">
+                                    <div class="star checked"></div>
+                                    <div class="star checked"></div>
+                                    <div class="star checked"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                                <div class="popup-name">380/400</div>
+                            </div>
+                            <div class="popup-left">
+                                <div class="rstar-box">
+                                    <div class="rname-box">Effects</div>
+                                    <div class="bonus-lvl-box first">
+                                        <div class="lvlbox-name">
+                                            Underworld Loot
+                                        </div>
+                                        <div class="bonus-lvl-box-name">
+                                            In 3 Districts
+                                        </div>
+                                        <div class="bonus-lvl-box-bonus-box">
+                                            <div class="bonus-lvl-box-bonus">
+                                                <div
+                                                    class="bonus-lvl-box-bonus">
+                                                    <img
+                                                        src="https://cdn.faptitans.com/s1/rc/ic-blue-butil.png" />600
+                                                    to Loot
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bonus-lvl-box next">
+                                        <div class="lvlbox-name">
+                                            Underworld DPS
+                                        </div>
+                                        <div class="bonus-lvl-box-name">
+                                            Level 0/10
+                                        </div>
+                                        <div class="bonus-lvl-box-bonus-box">
+                                            <div class="bonus-lvl-box-bonus">
+                                                <div
+                                                    class="bonus-lvl-box-bonus">
+                                                    +3%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rbottom-box">
+                                        <div class="all-btn-box">
+                                            <div
+                                                class="lvlup-btn undefined disabled0">
+                                                <div class="essence-text-box">
+                                                    <div
+                                                        class="essence-icon green"></div>
+                                                    <div class="essence-text">
+                                                        100/10K
+                                                    </div>
+                                                </div>
+                                                <div class="btn-text">
+                                                    level up
+                                                </div>
+                                            </div>
+                                            <div class="lvlup-btn right">
+                                                <div class="essence-text-box">
+                                                    <div
+                                                        class="essence-icon green"></div>
+                                                    <div class="essence-text">
+                                                        100/10K
+                                                    </div>
+                                                </div>
+                                                <div class="btn-text">
+                                                    level up
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rstar-box howtoget">
+                                    <div class="rname-box">How to get</div>
+                                    <div class="bonus-lvl-box">
+                                        <div class="lvlbox-name">
+                                            Get in events
+                                        </div>
+                                        <div class="bonus-lvl-box-name">
+                                            Wait for start
+                                        </div>
+                                        <div class="bonus-lvl-box-bonus-box">
+                                            <div
+                                                class="color-btn get-button"
+                                                style="filter: grayscale(1)">
+                                                <div class="color-btn-text">
+                                                    Get in events
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-close-x"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="dialogWrapper" class="popup-layer">
+                <div class="screen-blend-55"></div>
+                <div id="dialogContainer"></div>
+            </div>
+            <div class="slider-layer"></div>
+            <div class="tooltip-layer"></div>
+        </div>
+    </body>
+</html>

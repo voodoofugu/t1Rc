@@ -1,0 +1,1966 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link href="rc/notifications.css" rel="stylesheet" type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/v2-screen-main-dark-world.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/screen-master-house.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link href="rc/screen-info-pop.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+    </head>
+
+    <script type="text/javascript">
+        window.addEventListener("load", () => {
+            // все попапы
+            const po = document.getElementById("popupAll");
+            const re = document.querySelector(".popup-layer");
+            const pInf = document.querySelector(".m-popup.info-pop");
+
+            // закрытие попапов
+            [
+                ...document.querySelectorAll(
+                    ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                ),
+            ].map((i) => {
+                i.style.display = "none";
+                // закрываем все попапы при клике на затемнение
+                const blS = document.querySelector(".screen-blend-55");
+                blS.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
+            [
+                ...document.querySelectorAll(
+                    ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                ),
+            ].map((i) => {
+                i.addEventListener("click", () => {
+                    po.classList.remove("dialog-emersion-enter");
+                    po.classList.add("dialog-emersion-exit");
+                    setTimeout(function () {
+                        re.style.display = "none";
+                        i.closest(
+                            ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                        ).style.display = "none";
+                        po.classList.remove("dialog-emersion-exit");
+                    }, 100);
+                });
+            });
+
+            const bInf = document.querySelector(".color-btn-info");
+            bInf.addEventListener("click", () => {
+                re.style.display = "block";
+                setTimeout(function () {
+                    pInf.style.display = "block";
+                    po.classList.add("dialog-emersion-enter");
+                }, 100);
+            });
+
+            // окна
+            const stB = document.querySelector(".stats-box-all");
+            const abB = document.querySelector(".abils-box-all");
+            const skB = document.querySelector(".skin-box-all");
+            abB.style.display = "none";
+            skB.style.display = "none";
+            // переключалка
+            const tabAll = document.querySelectorAll(".tabs-menu-btn");
+            tabAll.forEach((item) => {
+                item.addEventListener("click", (e) => {
+                    // меню
+                    tabAll.forEach((el) => {
+                        el.classList.remove("active");
+                    });
+                    item.classList.add("active");
+                    // окна
+                    if (tabAll.item(0).classList.contains("active")) {
+                        stB.style.display = "flex";
+                        abB.style.display = "none";
+                        skB.style.display = "none";
+                    }
+                    if (tabAll.item(1).classList.contains("active")) {
+                        stB.style.display = "none";
+                        abB.style.display = "flex";
+                        skB.style.display = "none";
+                    }
+                    if (tabAll.item(2).classList.contains("active")) {
+                        stB.style.display = "none";
+                        abB.style.display = "none";
+                        skB.style.display = "flex";
+                    }
+                });
+            });
+
+            const nameBox = document.querySelector(".master-name-box");
+            const nameEdit = document.querySelector(".master-name-edit");
+            const btnEdit = document.querySelector(".btn-edit-small");
+            const btnEnter = document.querySelector(".btn-enter-small");
+            btnEdit.addEventListener("click", (e) => {
+                nameBox.classList.add("edit");
+                nameEdit.style.display = "block";
+            });
+            btnEnter.addEventListener("click", (e) => {
+                nameBox.classList.remove("edit");
+                nameEdit.style.display = "none";
+            });
+
+            // скин боксы
+            const skinB = document.querySelectorAll(".master-skin-box-all");
+            skinB.forEach((item) => {
+                // переключалка
+                if (!item.classList.contains("lock")) {
+                    item.addEventListener("click", (e) => {
+                        skinB.forEach((el) => {
+                            el.classList.remove("active");
+                        });
+                        item.classList.add("active");
+                    });
+                }
+            });
+
+            console.log(po);
+        });
+    </script>
+
+    <body>
+        <div class="main lang-ru world1">
+            <div
+                class="main-bg"
+                style="
+                    background-image: url('https://cdn.faptitans.com/s1/__3bb5/images/back/new/02-Forest-2.jpg');
+                "></div>
+            <div class="header">
+                <div class="resource-panel">
+                    <div class="avatar-box-all">
+                        <div class="avatar-box-pic">
+                            <img
+                                src="https://cdn.faptitans.com/s1/rc/v2-master-pic1.png" />
+                        </div>
+                        <div class="avatar-box-name">Rank 27</div>
+                    </div>
+                    <div class="resource-gold">
+                        <div class="value">6.57BD22</div>
+                        <div class="value-bonus"><span>+29.9M%</span></div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic">
+                            <img
+                                src="https://cdn.faptitans.com/s1/rc/v2-res-gold.png" />
+                        </div>
+                        <div class="anim-in-p gold"></div>
+                    </div>
+                    <div class="resource-vip lvl0">
+                        <div class="value-vip-diamond">21</div>
+                        <div class="value-vip-ticket">2</div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic-vip">
+                            <div class="viplvl">VIP</div>
+                        </div>
+                    </div>
+                    <div class="might-box-all">
+                        <div>
+                            <div class="might-box-pic">
+                                <img
+                                    class="bg"
+                                    src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png" /><img
+                                    class="fg"
+                                    src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png" />
+                            </div>
+                            <div class="might-box-name">Valhalla</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-chest-box-all">
+                    <div class="res-shop-btn">
+                        <div class="res-shop-btn-text">shop</div>
+                    </div>
+                    <div>
+                        <div class="res-chest-btn">
+                            <div class="res-chest-btn-text">Открыть</div>
+                            <div class="res-chest-btn-count">15</div>
+                            <div class="v2-bosschest-notif notif"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn signinout-btn out">
+                    <div class="icon-reg"></div>
+                    <div class="icon-reg2"></div>
+                </div>
+            </div>
+            <div class="quest-box-all quests">
+                <div class="quest-box-scroll">
+                    <div class="quest-box">
+                        <li class="quest quest-box">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/ic-quests.png" />
+                            <div class="quest-notif notif notif10"></div>
+                        </li>
+                        <li class="quest open" style="animation-delay: 0ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/change-sun3.png" />
+                        </li>
+                        <li class="quest open" style="animation-delay: 150ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/ic-abil-reborn.png" />
+                        </li>
+                        <li
+                            class="quest angel-pop open"
+                            style="animation-delay: 300ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/picmeh-ic-angel-pop.png" />
+                        </li>
+                        <li class="quest-fortune">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/ic-fortuna.png" />
+                            <div class="timerbox">
+                                <div class="timer">SPIN!</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 450ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/rating-sign-gold@1x.png" />
+                            <div class="timerbox">
+                                <div class="timer">19:31:07</div>
+                            </div>
+                        </li>
+                        <li class="quest startpack wide">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/v2-ns-chest.png" />
+                            <div class="timerbox">
+                                <div class="timer">19:31:07</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 600ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/v2-ns-ball.png" />
+                            <div class="timerbox">
+                                <div class="timer">19:31:07</div>
+                            </div>
+                        </li>
+                        <li class="quest startpack wide">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/v2-mn-soul-sg-160.png" />
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 750ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/m-ico-gold.png" />
+                            <div class="timerbox">
+                                <div class="timer">06:16:16</div>
+                            </div>
+                        </li>
+                        <li class="quest-fortune picmeh-info info">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/picmeh-ic-diamond.png" />
+                        </li>
+                        <li class="quest open" style="animation-delay: 900ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/m-ico-quest.png" />
+                        </li>
+                        <li class="quest open" style="animation-delay: 1050ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png" />
+                        </li>
+                        <li class="quest open" style="animation-delay: 1200ms">
+                            <img
+                                class="icon"
+                                src="https://cdn.faptitans.com/s1/rc/m-ico-quest-gift.png" />
+                        </li>
+                    </div>
+                </div>
+                <div class="opt-panel-box">
+                    <div class="color-bg"></div>
+                    <div class="btn feedback"></div>
+                    <div class="btn statistic"></div>
+                    <div class="btn settings"></div>
+                    <div class="btn ru"></div>
+                </div>
+                <a
+                    class="btn-discord"
+                    href="https://discord.gg/7pjeXF3emj"
+                    target="_blank"></a>
+            </div>
+            <div class="left-side false false">
+                <div class="left-panel wide false false">
+                    <div class="container">
+                        <div style="visibility: visible">
+                            <div class="tab-panel-box master">
+                                <div class="tab-panel-box-title">
+                                    master house
+                                </div>
+                                <div class="btn-close-x"></div>
+                                <div class="color-btn-info"></div>
+                                <div>
+                                    <div class="leftside-box-all">
+                                        <div>
+                                            <div class="master-box">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/p-master-a1.jpg"
+                                                    class="master-hero" />
+                                            </div>
+                                            <div class="master-name-box-all">
+                                                <div class="master-name-box">
+                                                    <div class="master-name">
+                                                        adad
+                                                    </div>
+                                                    <input
+                                                        class="master-name-edit"
+                                                        id="bob"
+                                                        type="text"
+                                                        name="name"
+                                                        maxlength="20"
+                                                        value="adad" />
+                                                    <div
+                                                        class="btn-edit-small"></div>
+                                                    <div
+                                                        class="btn-enter-small"></div>
+                                                </div>
+                                                <div
+                                                    class="master-bonus-box-all">
+                                                    <div
+                                                        class="master-bonus-text">
+                                                        bonus
+                                                    </div>
+                                                    <div
+                                                        class="master-bonus-num">
+                                                        +100% gold
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rightside-box-all">
+                                        <div class="hero-menu-box">
+                                            <div
+                                                class="tabs-menu-btn stats active">
+                                                <a
+                                                    class="txt"
+                                                    href="#/master-guild/stats"
+                                                    ><div
+                                                        class="color-btn-text">
+                                                        параметры
+                                                    </div></a
+                                                >
+                                            </div>
+                                            <div class="tabs-menu-btn abil">
+                                                <a
+                                                    class="txt"
+                                                    href="#/master-guild/abilities"
+                                                    ><div
+                                                        class="color-btn-text">
+                                                        способности
+                                                    </div></a
+                                                >
+                                                <div class="notif"></div>
+                                            </div>
+                                            <div class="tabs-menu-btn skin">
+                                                <a
+                                                    class="txt"
+                                                    href="#/master-guild/skins"
+                                                    ><div
+                                                        class="color-btn-text">
+                                                        skins
+                                                    </div></a
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="stats-box-all">
+                                            <div class="stats-box">
+                                                <div class="st-ic-box-all">
+                                                    <div
+                                                        class="st-icon str"></div>
+                                                    <div class="st-text">
+                                                        8500
+                                                    </div>
+                                                </div>
+                                                <div class="stone-box-all">
+                                                    <div
+                                                        class="stone str"></div>
+                                                    <div class="stone-stat">
+                                                        525K/1710
+                                                    </div>
+                                                </div>
+                                                <div class="st-bonus-box">
+                                                    <div class="st-bonus-name">
+                                                        бонус к DPC
+                                                    </div>
+                                                    <div class="st-bonus">
+                                                        + 777928%
+                                                    </div>
+                                                </div>
+                                                <div class="st-prgbar-box-all">
+                                                    <div class="st-prgbar-box">
+                                                        <div class="st-prgbar">
+                                                            <div
+                                                                class="st-prgbar-all"
+                                                                style="
+                                                                    width: 42%;
+                                                                "></div>
+                                                        </div>
+                                                        <div
+                                                            class="st-prgbar-text">
+                                                            42 %
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="ms-lvlup-btn-box-all">
+                                                    <div class="color-btn">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур.
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                56% шанс
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="v2-master-notif notif notif20"></div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn vipall red">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn max-lvl">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            max lvl up
+                                                            <div
+                                                                class="color-btn-text2"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn block">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip 5
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stats-box">
+                                                <div class="st-ic-box-all">
+                                                    <div
+                                                        class="st-icon char"></div>
+                                                    <div class="st-text">
+                                                        8338
+                                                    </div>
+                                                </div>
+                                                <div class="stone-box-all">
+                                                    <div
+                                                        class="stone char"></div>
+                                                    <div class="stone-stat">
+                                                        354K/1676
+                                                    </div>
+                                                </div>
+                                                <div class="st-bonus-box">
+                                                    <div class="st-bonus-name">
+                                                        бонус к DPS
+                                                    </div>
+                                                    <div class="st-bonus">
+                                                        + 758975%
+                                                    </div>
+                                                </div>
+                                                <div class="st-prgbar-box-all">
+                                                    <div class="st-prgbar-box">
+                                                        <div class="st-prgbar">
+                                                            <div
+                                                                class="st-prgbar-all"
+                                                                style="
+                                                                    width: 0%;
+                                                                "></div>
+                                                        </div>
+                                                        <div
+                                                            class="st-prgbar-text">
+                                                            0 %
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="ms-lvlup-btn-box-all">
+                                                    <div class="color-btn">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур.
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                14% шанс
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="v2-master-notif notif notif20"></div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn vipall red">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn max-lvl">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            max lvl up
+                                                            <div
+                                                                class="color-btn-text2"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn block">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip 5
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stats-box">
+                                                <div class="st-ic-box-all">
+                                                    <div
+                                                        class="st-icon int"></div>
+                                                    <div class="st-text">
+                                                        8133
+                                                    </div>
+                                                </div>
+                                                <div class="stone-box-all">
+                                                    <div
+                                                        class="stone int"></div>
+                                                    <div class="stone-stat">
+                                                        542K/1636
+                                                    </div>
+                                                </div>
+                                                <div class="st-bonus-box">
+                                                    <div class="st-bonus-name">
+                                                        способности
+                                                    </div>
+                                                    <div class="st-bonus">
+                                                        + 32533%
+                                                    </div>
+                                                </div>
+                                                <div class="st-prgbar-box-all">
+                                                    <div class="st-prgbar-box">
+                                                        <div class="st-prgbar">
+                                                            <div
+                                                                class="st-prgbar-all"
+                                                                style="
+                                                                    width: 57%;
+                                                                "></div>
+                                                        </div>
+                                                        <div
+                                                            class="st-prgbar-text">
+                                                            57 %
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="ms-lvlup-btn-box-all">
+                                                    <div class="color-btn">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур.
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                71% шанс
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="v2-master-notif notif notif20"></div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn vipall red">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn max-lvl">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            max lvl up
+                                                            <div
+                                                                class="color-btn-text2"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn block">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip 5
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="stats-box">
+                                                <div class="st-ic-box-all">
+                                                    <div
+                                                        class="st-icon lck"></div>
+                                                    <div class="st-text">
+                                                        8282
+                                                    </div>
+                                                </div>
+                                                <div class="stone-box-all">
+                                                    <div
+                                                        class="stone lck"></div>
+                                                    <div class="stone-stat">
+                                                        482K/1666
+                                                    </div>
+                                                </div>
+                                                <div class="st-bonus-box">
+                                                    <div class="st-bonus-name">
+                                                        шанс выпадения
+                                                    </div>
+                                                    <div>
+                                                        <div class="bn-price">
+                                                            + 752357%
+                                                            <div
+                                                                class="bn-icon gold"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="st-prgbar-box-all">
+                                                    <div class="st-prgbar-box">
+                                                        <div class="st-prgbar">
+                                                            <div
+                                                                class="st-prgbar-all"
+                                                                style="
+                                                                    width: 28%;
+                                                                "></div>
+                                                        </div>
+                                                        <div
+                                                            class="st-prgbar-text">
+                                                            28 %
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="ms-lvlup-btn-box-all">
+                                                    <div class="color-btn">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур.
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                42% шанс
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="v2-master-notif notif notif20"></div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn vipall red">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn max-lvl">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            max lvl up
+                                                            <div
+                                                                class="color-btn-text2"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="color-btn block">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            пов. ур. vip 5
+                                                            <div
+                                                                class="color-btn-text2">
+                                                                100% шанс
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="abils-box-all">
+                                            <div class="abil-box-scroll">
+                                                <div class="abil-card-box">
+                                                    <div class="abil-box">
+                                                        <div class="skills-pic">
+                                                            <img
+                                                                src="rc/skill-icons/skill-icon01.png" />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef cd check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                перезарядка -25%
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef pwr check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef dur check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                длительность x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef new check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x4
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="abil-card-box">
+                                                    <div class="abil-box">
+                                                        <div class="skills-pic">
+                                                            <img
+                                                                src="rc/skill-icons/skill-icon02.png" />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef cd check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                перезарядка -25%
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef pwr check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef dur check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                длительность x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef new check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x4
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="abil-card-box">
+                                                    <div class="abil-box">
+                                                        <div class="skills-pic">
+                                                            <img
+                                                                src="rc/skill-icons/skill-icon03.png" />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef cd check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                перезарядка -25%
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef pwr check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef dur check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                длительность x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef new check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x4
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="abil-card-box">
+                                                    <div class="abil-box">
+                                                        <div class="skills-pic">
+                                                            <img
+                                                                src="rc/skill-icons/skill-icon04.png" />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef cd check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                перезарядка -25%
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef pwr check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef dur check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                длительность x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div class="skills-ef new">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x4
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="color-btn diamonds">
+                                                            <div
+                                                                class="color-btn-text">
+                                                                <div
+                                                                    class="diamonds">
+                                                                    <span
+                                                                        class="f-diamonds"
+                                                                        >70</span
+                                                                    >
+                                                                </div>
+                                                                <div
+                                                                    class="color-btn-text1">
+                                                                    Купить
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="abil-card-box">
+                                                    <div class="abil-box">
+                                                        <div class="skills-pic">
+                                                            <img
+                                                                src="rc/skill-icons/skill-icon05.png" />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef cd check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                перезарядка -25%
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef pwr check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef dur check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                длительность x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div class="skills-ef new">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x4
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="color-btn diamonds">
+                                                            <div
+                                                                class="color-btn-text">
+                                                                <div
+                                                                    class="diamonds">
+                                                                    <span
+                                                                        class="f-diamonds"
+                                                                        >100</span
+                                                                    >
+                                                                </div>
+                                                                <div
+                                                                    class="color-btn-text1">
+                                                                    Купить
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="abil-card-box">
+                                                    <div class="abil-box">
+                                                        <div class="skills-pic">
+                                                            <img
+                                                                src="rc/skill-icons/skill-icon06.png" />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef cd check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                перезарядка -25%
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef pwr check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x2
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef dur check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x4
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div class="skills-ef new">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x6
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="color-btn diamonds">
+                                                            <div
+                                                                class="color-btn-text">
+                                                                <div
+                                                                    class="diamonds">
+                                                                    <span
+                                                                        class="f-diamonds"
+                                                                        >140</span
+                                                                    >
+                                                                </div>
+                                                                <div
+                                                                    class="color-btn-text1">
+                                                                    Купить
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="abil-card-box">
+                                                    <div class="abil-box">
+                                                        <div class="skills-pic">
+                                                            <img
+                                                                src="rc/skill-icons/skill-icon07.png" />
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef cd check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                перезарядка -25%
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div
+                                                        class="skills-ef pwr check">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x4
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="pay-check"></div>
+                                                    </div>
+                                                    <div class="skills-ef dur">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                x2 раз(а)
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="color-btn diamonds">
+                                                            <div
+                                                                class="color-btn-text">
+                                                                <div
+                                                                    class="diamonds">
+                                                                    <span
+                                                                        class="f-diamonds"
+                                                                        >100</span
+                                                                    >
+                                                                </div>
+                                                                <div
+                                                                    class="color-btn-text1">
+                                                                    Купить
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="skills-ef new">
+                                                        <div
+                                                            class="ef-name-box">
+                                                            <div
+                                                                class="ef-name">
+                                                                эффект x6
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="color-btn diamonds disabled">
+                                                            <div
+                                                                class="color-btn-text">
+                                                                <div
+                                                                    class="diamonds">
+                                                                    <span
+                                                                        class="f-diamonds"
+                                                                        >195</span
+                                                                    >
+                                                                </div>
+                                                                <div
+                                                                    class="color-btn-text1">
+                                                                    закрыто
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="skin-box-all">
+                                            <div class="skin-box-scroll">
+                                                <div
+                                                    class="master-skin-box-all active">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a1.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Master
+                                                                <span
+                                                                    >Rank
+                                                                    30</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text on">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +390% gold
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +39% gold
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a2.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Dark Emperor
+                                                                <span
+                                                                    >Rank
+                                                                    1</span
+                                                                >
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +1K% DPS
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text on">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +100% DPS
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a3.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Bloody Emperor
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +1000% DPC
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +100% DPC
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                You could get it
+                                                                in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a4.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                War Leader
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                DPC +10% of DPS
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                DPC +1% of DPS
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a5.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                X-Mas Elf
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +15K% of DPC
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +1.5K% of DPC
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a6.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Son of Santa
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +15K% of DPS
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +1.5K% of DPS
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get it in XMas
+                                                                Battle Pass
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a7.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Cupid
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +10% FW army
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +1% FW army
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a8.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Amourous gunner
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +20K% of DPS
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +2K% of DPS
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a9.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Money Lord
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +25K% gold
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +2.5K% gold
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in VIP
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a10.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Shogun
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +25% FW army
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +2.5% FW army
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a11.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Clan Leader
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +25% CW army
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +2.5% CW army
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a12.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Ghost Warrior
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +50K% DPC
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +5K% DPC
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a13.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Pumpkin Knight
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +50K% DPS
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +5K% DPS
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="master-skin-box-all lock">
+                                                    <div class="master-box">
+                                                        <img
+                                                            src="https://cdn.faptitans.com/s1/rc/p-master-a14.jpg" />
+                                                    </div>
+                                                    <div
+                                                        class="master-name-box-all">
+                                                        <div
+                                                            class="master-name-box">
+                                                            <div
+                                                                class="master-name">
+                                                                Gift Master
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                активный
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +25K% DPC
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="master-bonus-box-all passive">
+                                                            <div
+                                                                class="master-bonus-text">
+                                                                passive
+                                                            </div>
+                                                            <div
+                                                                class="master-bonus-num">
+                                                                +2.5K% DPC
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="master-skin-lock">
+                                                        <div
+                                                            class="master-skin-lock-text-box">
+                                                            <div
+                                                                class="master-skin-lock-text">
+                                                                Get in Events
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-loading-wrapper border"></div>
+                    </div>
+                </div>
+                <div class="tabs-all-box">
+                    <a class="tabs-all heroes" href="#/"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Heroes</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-01.png" />
+                            </div></div></a
+                    ><a class="tabs-all guild selected" href="#/guild"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Guild base</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-08.png" />
+                            </div></div></a
+                    ><a class="tabs-all album" href="#/galery/pictures"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Gallery</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-05.png" />
+                            </div></div></a
+                    ><a class="tabs-all rating" href="#/rating/jewerly"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Rating Tab</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-02.png" />
+                            </div></div></a
+                    ><a class="tabs-all squests" href="#/quests/daily"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Quests</div>
+                            <div class="tabs-pic">
+                                <img
+                                    src="https://cdn.faptitans.com/s1/rc/tab-10.png" />
+                            </div></div
+                    ></a>
+                </div>
+            </div>
+            <div id="popupAll" class="dialog-emersion-enter">
+                <div id="popupWrapper" class="popup-layer">
+                    <div class="screen-blend-55"></div>
+                    <div id="popupContainer" class="popup-in">
+                        <div class="m-popup info-pop">
+                            <div class="title">Info</div>
+                            <div class="btn-close-x"></div>
+                            <div class="content">
+                                <div class="text-box">
+                                    <div class="text">
+                                        <div>
+                                            Here you can raise your character's
+                                            stats, upgrade your abilities, and
+                                            get an interesting look from events.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="color-btn close">
+                                    <div class="color-btn-text">закрыть</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

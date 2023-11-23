@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/v2-screen-main-dark-world.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/v2-screen-portal-squad.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/v2-screen-fw-store.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/v2-screen-portal-shop.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link href="rc/screen-superhero.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script src="js/pixi.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("load", () => {
+                // все попапы
+                const po = document.getElementById("popupAll");
+                const re = document.querySelector(".popup-layer");
+                const fwp = document.querySelector(".m-popup.fw-store");
+                const bfp = document.querySelector(
+                    ".m-popup.bf-event__buy-keys-pop"
+                );
+                const ebp = document.querySelector(".m-popup.essence-buy");
+
+                [
+                    ...document.querySelectorAll(
+                        ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+                    ),
+                ].map((i) => {
+                    i.style.display = "none";
+                    // закрываем все попапы при клике на затемнение
+                    const blS = document.querySelector(".screen-blend-55");
+                    blS.addEventListener("click", () => {
+                        po.classList.remove("dialog-emersion-enter");
+                        po.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            i.style.display = "none";
+                            po.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                });
+
+                [
+                    ...document.querySelectorAll(
+                        ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+                    ),
+                ].map((i) => {
+                    i.addEventListener("click", () => {
+                        po.classList.remove("dialog-emersion-enter");
+                        po.classList.add("dialog-emersion-exit");
+                        setTimeout(function () {
+                            re.style.display = "none";
+                            i.closest(
+                                ".m-popup, .ratingpop-box, .quest-popup, .popup"
+                            ).style.display = "none";
+                            po.classList.remove("dialog-emersion-exit");
+                        }, 100);
+                    });
+                });
+
+                const fwb = document.querySelector(".shop-btn.under-shop");
+                fwb.addEventListener("click", () => {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        fwp.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+
+                const bfb = document.querySelector(".shop-btn.promote");
+                bfb.addEventListener("click", () => {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        bfp.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+
+                const ebb = document.querySelector(".trophy-value-btn-add");
+                ebb.addEventListener("click", () => {
+                    re.style.display = "block";
+                    setTimeout(function () {
+                        ebp.style.display = "block";
+                        po.classList.add("dialog-emersion-enter");
+                    }, 100);
+                });
+
+                // console.log(hpW);
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="main lang-ru world1">
+            <div class="btn-admin"></div>
+            <div
+                class="main-bg"
+                style="
+                    background-image: url('__675b/images/back/new/09-River.jpg');
+                "></div>
+            <div class="header">
+                <div class="resource-panel">
+                    <div class="avatar-box-all">
+                        <div class="avatar-box-pic">
+                            <img src="rc/v2-master-pic1.png" />
+                        </div>
+                        <div class="avatar-box-name">Rank 1</div>
+                    </div>
+                    <div class="resource-gold">
+                        <div class="value">100Q</div>
+                        <div class="value-bonus"><span>+30%</span></div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic">
+                            <img src="rc/v2-res-gold.png" />
+                        </div>
+                        <div class="anim-in-p gold"></div>
+                    </div>
+                    <div class="resource-vip lvl0">
+                        <div class="value-vip-diamond">1003003000000</div>
+                        <div class="value-vip-ticket">0</div>
+                        <div class="resource-btn-add"></div>
+                        <div class="resource-pic-vip">
+                            <div class="viplvl">VIP</div>
+                        </div>
+                    </div>
+                    <div class="might-box-all">
+                        <div>
+                            <div class="might-box-pic">
+                                <img class="bg" src="rc/v2-cw-bg01.png" /><img
+                                    class="fg"
+                                    src="rc/v2-cw-p01.png" />
+                            </div>
+                            <div class="might-box-name">Clan</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop-chest-box-all">
+                    <div class="res-shop-btn">
+                        <div class="res-shop-btn-text">shop</div>
+                    </div>
+                    <div>
+                        <div class="res-chest-btn">
+                            <div class="res-chest-btn-text">Купить</div>
+                            <div class="res-chest-btn-count">0</div>
+                        </div>
+                        <div class="picmeh-ex-box">
+                            <div class="color-btn green">
+                                <div class="color-btn-text">
+                                    exclusive offer
+                                </div>
+                                <div class="color-btn-timer">21:34:55</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn signinout-btn in">
+                    <div class="icon-reg"></div>
+                    <div class="icon-reg2"></div>
+                </div>
+            </div>
+            <div class="quest-box-all quests">
+                <div class="quest-box-scroll">
+                    <div class="quest-box">
+                        <li class="quest quest-box">
+                            <img class="icon" src="rc/ic-quests.png" />
+                            <div class="quest-notif notif notif10"></div>
+                        </li>
+                        <li class="quest open" style="animation-delay: 0ms">
+                            <img class="icon" src="rc/change-sun3.png" />
+                        </li>
+                        <li
+                            class="quest angel-pop open"
+                            style="animation-delay: 150ms">
+                            <img
+                                class="icon"
+                                src="rc/picmeh-ic-angel-pop.png" />
+                        </li>
+                        <li class="quest-fortune open">
+                            <img class="icon" src="rc/fapop-right-icon.png" />
+                            <div class="timerbox">
+                                <div class="timer">00:00:00</div>
+                            </div>
+                        </li>
+                        <li class="quest-fortune">
+                            <img class="icon" src="rc/ic-fortuna.png" />
+                            <div class="timerbox">
+                                <div class="timer">SPIN!</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 300ms">
+                            <img
+                                class="icon"
+                                src="rc/rating-sign-gold@1x.png" />
+                            <div class="timerbox">
+                                <div class="timer">146:36:30</div>
+                            </div>
+                        </li>
+                        <li class="quest startpack wide">
+                            <img class="icon" src="rc/v2-ns-chest.png" />
+                            <div class="timerbox">
+                                <div class="timer">6D 02:36</div>
+                            </div>
+                        </li>
+                        <li class="quest startpack wide">
+                            <img class="icon" src="rc/v2-mn-pr-100-in.png" />0
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 450ms">
+                            <img class="icon" src="rc/icn-dual-ball.png" />
+                            <div class="timerbox">
+                                <div class="timer">00:00:00</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 600ms">
+                            <img class="icon" src="rc/ic-blackfriday.png" />
+                            <div class="timerbox" style="top: 46px">
+                                <div class="timer">17D 23:36:30</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 750ms">
+                            <img class="icon" src="rc/v2-xmas-chest-red.png" />0
+                        </li>
+                        <li class="quest startpack wide">
+                            <img class="icon" src="rc/v2-mn-soul-sg-160.png" />
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 900ms">
+                            <img class="icon" src="rc/m-ico-gold.png" />
+                            <div class="timerbox">
+                                <div class="timer">21:33:40</div>
+                            </div>
+                        </li>
+                        <li class="quest-fortune picmeh-info info">
+                            <img class="icon" src="rc/picmeh-ic-diamond.png" />
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 1050ms">
+                            <img class="icon" src="rc/v2-fw-icon-fr0.png" />
+                            <div class="timerbox">
+                                <div class="timer">75:36:30</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 1200ms">
+                            <img class="icon" src="rc/ic-bf.png" />
+                            <div class="timerbox">
+                                <div class="timer">482:36:30</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 1350ms">
+                            <img class="icon" src="rc/zetta-icon-70.png" />
+                            <div class="timerbox">
+                                <div class="timer">69:34:55</div>
+                            </div>
+                        </li>
+                        <li
+                            class="quest startpack open"
+                            style="animation-delay: 1500ms">
+                            <img class="icon" src="rc/sunduk-60.png" />
+                            <div class="timerbox">
+                                <div class="timer">21:34:52</div>
+                            </div>
+                        </li>
+                        <li class="quest open" style="animation-delay: 1650ms">
+                            <img class="icon" src="rc/m-ico-quest.png" />
+                        </li>
+                        <li class="quest open" style="animation-delay: 1800ms">
+                            <img class="icon" src="rc/m-ico-quest.png" />
+                        </li>
+                    </div>
+                </div>
+                <div class="opt-panel-box">
+                    <div class="color-bg"></div>
+                    <div class="btn feedback"></div>
+                    <div class="btn statistic"></div>
+                    <div class="btn settings"></div>
+                    <div class="btn ru"></div>
+                </div>
+                <a
+                    class="btn-discord"
+                    href="https://discord.gg/7pjeXF3emj"
+                    target="_blank"></a>
+            </div>
+            <div class="left-side false false">
+                <div class="left-panel wide false false">
+                    <div class="tab-panel-box squads-panel">
+                        <div class="tab-panel-box-title">Hero Squads</div>
+                        <div class="leftside-box-all">
+                            <div class="hero-left-box">
+                                <div class="suphero-all-box">
+                                    <ul class="suphero-squad-heading premium">
+                                        <div class="heading-text">
+                                            Premium Squads
+                                        </div>
+                                    </ul>
+                                    <div
+                                        class="suphero-squad-wrap bronze-bg-fg">
+                                        <ul class="suphero-squad-heading">
+                                            <div class="heading-text">
+                                                Squad #48
+                                            </div>
+                                        </ul>
+                                        <ul class="suphero-squad-window">
+                                            <div class="hero-level-box">
+                                                Rank
+                                                <div class="hero-level">
+                                                    bronze
+                                                </div>
+                                            </div>
+                                            <li class="suphero-specialization">
+                                                <img
+                                                    class="specialization-icon cls"
+                                                    src="rc/cur2-wizard.png" />
+                                                <img
+                                                    class="specialization-icon elem"
+                                                    src="rc/elements/Water.png" />
+                                            </li>
+                                            <li class="suphero-card lvl0">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-299/x1/ava/tithero-299-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        0/100
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl1">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-300/x1/ava/tithero-300-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        100/200
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl1">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-301/x1/ava/tithero-301-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        100/200
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl2">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-302/x1/ava/tithero-302-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        200/300
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl2">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-303/x1/ava/tithero-303-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        200/300
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl2">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-304/x1/ava/tithero-304-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        200/300
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                    <div
+                                                        class="color-btn gold squad-buy-hero">
+                                                        <div
+                                                            class="color-btn-text">
+                                                            Buy Hero
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-buttons">
+                                                <div
+                                                    class="suphero-buttons-info disable">
+                                                    Album
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dpc">
+                                                    <div class="dpc-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dps">
+                                                    <div class="dps-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="suphero-squad-heading active">
+                                        <div class="heading-text">
+                                            Active Squads
+                                        </div>
+                                    </ul>
+                                    <div
+                                        class="suphero-squad-wrap silver-bg-fg">
+                                        <ul class="suphero-squad-heading">
+                                            <div class="heading-text">
+                                                Squad #46
+                                            </div>
+                                        </ul>
+                                        <ul class="suphero-squad-window">
+                                            <div class="hero-level-box">
+                                                Rank
+                                                <div class="hero-level">
+                                                    silver
+                                                </div>
+                                            </div>
+                                            <li class="suphero-specialization">
+                                                <img
+                                                    class="specialization-icon cls"
+                                                    src="rc/cur2-gun.png" />
+                                                <img
+                                                    class="specialization-icon elem"
+                                                    src="rc/elements/Fire.png" />
+                                            </li>
+                                            <li class="suphero-card lvl3">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-286/x1/ava/tithero-286-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        300/400
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl3">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-287/x1/ava/tithero-287-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        300/400
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl3">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-288/x1/ava/tithero-288-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        300/400
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl4">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-289/x1/ava/tithero-289-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        400/500
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl4">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-290/x1/ava/tithero-290-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        400/500
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl4">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-291/x1/ava/tithero-291-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        400/500
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-buttons">
+                                                <div
+                                                    class="suphero-buttons-info">
+                                                    Album
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dpc">
+                                                    <div class="dpc-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dps">
+                                                    <div class="dps-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="suphero-squad-heading inactive">
+                                        <div class="heading-text">
+                                            Inactive Squads - Promote Squads
+                                        </div>
+                                    </ul>
+                                    <div class="suphero-squad-wrap gold-bg-fg">
+                                        <ul class="suphero-squad-heading">
+                                            <div class="heading-text">
+                                                Squad #45
+                                            </div>
+                                        </ul>
+                                        <ul class="suphero-squad-window">
+                                            <div class="hero-level-box">
+                                                Rank
+                                                <div class="hero-level">
+                                                    gold
+                                                </div>
+                                            </div>
+                                            <li class="suphero-specialization">
+                                                <img
+                                                    class="specialization-icon cls"
+                                                    src="rc/cur2-ranger.png" />
+                                                <img
+                                                    class="specialization-icon elem"
+                                                    src="rc/elements/Water.png" />
+                                            </li>
+                                            <li class="suphero-card lvl5">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-280/x1/ava/tithero-280-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        500/600
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl5">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-281/x1/ava/tithero-281-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        500/600
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl5">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-282/x1/ava/tithero-282-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        500/600
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl6">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-283/x1/ava/tithero-283-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        600/700
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl6">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-284/x1/ava/tithero-284-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        600/700
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl6">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-285/x1/ava/tithero-285-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        600/700
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-buttons">
+                                                <div
+                                                    class="suphero-buttons-info">
+                                                    Album
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dpc">
+                                                    <div class="dpc-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dps">
+                                                    <div class="dps-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="suphero-squad-wrap platinum-bg-fg">
+                                        <ul class="suphero-squad-heading">
+                                            <div class="heading-text">
+                                                Squad #43
+                                            </div>
+                                        </ul>
+                                        <ul class="suphero-squad-window">
+                                            <div class="hero-level-box">
+                                                Rank
+                                                <div class="hero-level">
+                                                    platinum
+                                                </div>
+                                            </div>
+                                            <li class="suphero-specialization">
+                                                <img
+                                                    class="specialization-icon cls"
+                                                    src="rc/cur2-sword.png" />
+                                                <img
+                                                    class="specialization-icon elem"
+                                                    src="rc/elements/Life.png" />
+                                            </li>
+                                            <li class="suphero-card lvl7">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-269/x1/ava/tithero-269-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        700/800
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl7">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-270/x1/ava/tithero-270-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        700/800
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl7">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-271/x1/ava/tithero-271-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        700/800
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl8">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-272/x1/ava/tithero-272-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        800/900
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl8">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-273/x1/ava/tithero-273-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        800/900
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl8">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-274/x1/ava/tithero-274-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        800/900
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-buttons">
+                                                <div
+                                                    class="suphero-buttons-info">
+                                                    Album
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dpc">
+                                                    <div class="dpc-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dps">
+                                                    <div class="dps-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div
+                                        class="suphero-squad-wrap diamond-bg-fg">
+                                        <ul class="suphero-squad-heading">
+                                            <div class="heading-text">
+                                                Squad #42
+                                            </div>
+                                        </ul>
+                                        <ul class="suphero-squad-window">
+                                            <div class="hero-level-box">
+                                                Rank
+                                                <div class="hero-level">
+                                                    diamond
+                                                </div>
+                                            </div>
+                                            <li class="suphero-specialization">
+                                                <img
+                                                    class="specialization-icon cls"
+                                                    src="rc/cur2-barbarian.png" />
+                                                <img
+                                                    class="specialization-icon elem"
+                                                    src="rc/elements/Fire.png" />
+                                            </li>
+                                            <li class="suphero-card lvl9">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-256/x1/ava/tithero-256-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        900/1000
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl9">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-263/x1/ava/tithero-263-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        900/1000
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl9">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-264/x1/ava/tithero-264-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        900/1000
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl10">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-265/x1/ava/tithero-265-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        max
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl10">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-266/x1/ava/tithero-266-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        max
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-card lvl10">
+                                                <div class="hero-pic-box">
+                                                    <div
+                                                        class="hero-pic undefined-card-flare disabled0">
+                                                        <img
+                                                            src="images/hero-all/tithero-267/x1/ava/tithero-267-1-ava.jpg" />
+                                                    </div>
+                                                    <div class="hero-pic-gacha">
+                                                        max
+                                                    </div>
+                                                    <div class="viplvl"></div>
+                                                </div>
+                                            </li>
+                                            <li class="suphero-buttons">
+                                                <div
+                                                    class="suphero-buttons-info">
+                                                    Album
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dpc">
+                                                    <div class="dpc-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="suphero-buttons-dps">
+                                                    <div class="dps-info">
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightside-box-all">
+                            <div class="rightbox-wrap">
+                                <div class="character-information-box">
+                                    <div class="character-information-header">
+                                        <div class="avatar-box"></div>
+                                        <div class="lvl-box">
+                                            <div class="lvl-text">99</div>
+                                            <div class="lvl-text2">LVL</div>
+                                        </div>
+                                    </div>
+                                    <div class="character-information-damage">
+                                        <div
+                                            class="character-information-dpc character-information-damage-textbox">
+                                            145
+                                        </div>
+                                        <div
+                                            class="character-information-dps character-information-damage-textbox">
+                                            0
+                                        </div>
+                                        <div
+                                            class="character-information-killing character-information-damage-textbox">
+                                            0
+                                        </div>
+                                    </div>
+                                    <div class="shop-btn promote">
+                                        <div class="shop-btn-text">Promote</div>
+                                    </div>
+                                    <div class="shop-btn under-shop">
+                                        <div class="shop-btn-text">
+                                            underworld shop
+                                        </div>
+                                    </div>
+                                    <div class="world-map">
+                                        <img
+                                            src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-maps.png" />
+                                        <div class="world-map-heading">Map</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-close-x"></div>
+                        <div class="color-btn-info"></div>
+                        <div class="trophy-res-box-all">
+                            <div class="trophy-res-box orb">
+                                <div class="trophy-value">696969К</div>
+                                <div class="trophy-value-btn-add"></div>
+                            </div>
+                            <!-- <div class="trophy-res-box chips">
+                                <div class="trophy-value">696969К</div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-all-box">
+                    <a class="tabs-all heroes" href="#/"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Heroes</div>
+                            <div class="tabs-pic">
+                                <img src="rc/tab-01.png" />
+                            </div></div
+                    ></a>
+                    <a class="tabs-all rating" href="#/rating/jewerly"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Rating Tab</div>
+                            <div class="tabs-pic">
+                                <img src="rc/tab-02.png" />
+                            </div></div
+                    ></a>
+                    <a class="tabs-all squests" href="#/quests/daily"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Quests</div>
+                            <div class="tabs-pic">
+                                <img src="rc/tab-10.png" />
+                            </div></div
+                    ></a>
+                    <a class="tabs-all squads selected" href="#/squads"
+                        ><div style="width: 100%; height: 100%">
+                            <div class="tabs-name">Squads</div>
+                            <div class="tabs-pic">
+                                <img src="rc/2vip-s6.png" />
+                            </div></div
+                    ></a>
+                </div>
+            </div>
+            <div id="popupAll" class="dialog-emersion-enter">
+                <div id="popupWrapper" class="popup-layer">
+                    <div class="screen-blend-55"></div>
+                    <div id="popupContainer" class="popup-in">
+                        <div class="m-popup fw-store">
+                            <div class="title">underworld shop</div>
+                            <div class="color-box"></div>
+                            <div class="store-item-box-all">
+                                <div class="store-item-box-scroll">
+                                    <div class="store-item-all">
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                Underworld chest
+                                            </div>
+                                            <div class="item-box">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/v2-xmas-chest-purple.png" />
+                                            </div>
+                                            <div
+                                                class="color-btn diamond"
+                                                style="filter: grayscale(1)">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="orb_res"
+                                                            >5000</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                Underworld chest
+                                            </div>
+                                            <div class="item-box">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/v2-xmas-chest-purple.png" />
+                                            </div>
+                                            <div
+                                                class="color-btn diamond"
+                                                style="filter: grayscale(1)">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="orb_res"
+                                                            >5000</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="store-item-all">
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                Золото 100%
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <div class="rate gold">
+                                                    +100%
+                                                </div>
+                                            </div>
+                                            <div class="color-btn diamond">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="real"
+                                                            >$1000</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                Золото 1K%
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <div class="rate gold">
+                                                    +1K%
+                                                </div>
+                                            </div>
+                                            <div
+                                                class="color-btn diamond"
+                                                style="filter: grayscale(1)">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="real"
+                                                            >$7500</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                Золото за 1ч
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <div class="newtime t1h">
+                                                    <div class="newclocktime">
+                                                        1
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="color-btn diamond">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="real"
+                                                            >$500</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                Золото за 6ч
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/ic-abil-gold.png" />
+                                                <div class="newtime t1h">
+                                                    <div class="newclocktime">
+                                                        6
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="color-btn diamond">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="real"
+                                                            >$850</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="store-item-all">
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                50 Master Gems
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/ms-stone-all.png" />
+                                            </div>
+                                            <div class="color-btn diamond">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="orb_res"
+                                                            >1500</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                100 Master Gems
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/ms-stone-all.png" />
+                                            </div>
+                                            <div class="color-btn diamond">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="orb_res"
+                                                            >2500</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                400 Essence
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/essence-80x80.png" />
+                                            </div>
+                                            <div class="color-btn diamond">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="orb_res"
+                                                            >1500</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="store-item-box">
+                                            <div class="store-name">
+                                                1440 Essence
+                                            </div>
+                                            <div
+                                                class="item-box"
+                                                item="[object Object]"
+                                                top_offset="50">
+                                                <img
+                                                    src="https://cdn.faptitans.com/s1/rc/essence-80x80.png" />
+                                            </div>
+                                            <div
+                                                class="color-btn diamond"
+                                                style="filter: grayscale(1)">
+                                                <div class="color-btn-text">
+                                                    <div>
+                                                        buy<span class="orb_res"
+                                                            >4000</span
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sexped-chaos-btn-shop">
+                                <div class="orb-icon"></div>
+                                <div class="sexped-chaos-count">3.54K</div>
+                            </div>
+                            <div class="fw-shop-girl sp"></div>
+                            <div class="btn-close-x"></div>
+                        </div>
+                        <div class="m-popup bf-event__buy-keys-pop">
+                            <div class="timer-text">
+                                До обновления магазина:
+                            </div>
+                            <div class="update-timer-wrap">
+                                <div class="timer">01:20:10</div>
+                            </div>
+                            <div class="title">Shop</div>
+                            <div class="popup-wrap">
+                                <div class="cards-wrap">
+                                    <div class="keys-card-wrap">
+                                        <div class="keybtn-box">
+                                            <div class="keybtn">Buy</div>
+                                            <div class="quantity">150</div>
+                                        </div>
+                                        <div class="keys-card-box">
+                                            <div class="card-header">
+                                                Squad Offer
+                                            </div>
+                                            <div class="card-info-btn"></div>
+                                            <div class="keys-but-box">
+                                                <img
+                                                    src="images\superhero\suphero-506\x2\506sh-1.jpg"
+                                                    alt="" />
+                                            </div>
+                                            <div class="essence-quantity">
+                                                100
+                                            </div>
+                                            <div class="limit">5/5</div>
+                                        </div>
+                                    </div>
+                                    <div class="keys-card-wrap card-block">
+                                        <div class="keybtn-box">
+                                            <div class="keybtn">Buy</div>
+                                            <div class="quantity">150</div>
+                                        </div>
+                                        <div class="keys-card-box">
+                                            <div class="card-header">
+                                                Squad Offer
+                                            </div>
+                                            <div class="card-info-btn"></div>
+                                            <div class="keys-but-box">
+                                                <img
+                                                    src="rc/chest-shop-1.png"
+                                                    alt="" />
+                                            </div>
+                                            <div class="essence-quantity">
+                                                200
+                                            </div>
+                                            <div class="offer-attributes">
+                                                <img
+                                                    class="squad-color"
+                                                    src="rc/cur2-barbarian.png"
+                                                    alt="" />
+                                            </div>
+                                            <div class="limit">0/5</div>
+                                        </div>
+                                    </div>
+                                    <div class="keys-card-wrap">
+                                        <div class="keybtn-box">
+                                            <div class="keybtn">Buy</div>
+                                            <div class="quantity">300</div>
+                                        </div>
+                                        <div class="keys-card-box">
+                                            <div class="card-header">
+                                                Squad Offer
+                                            </div>
+                                            <div class="card-info-btn"></div>
+                                            <div class="keys-but-box">
+                                                <img
+                                                    src="rc/chest-shop-2.png"
+                                                    alt="" />
+                                            </div>
+                                            <div class="essence-quantity">
+                                                300
+                                            </div>
+                                            <div class="offer-attributes">
+                                                <img
+                                                    class="squad-class"
+                                                    src="rc/cur2-ranger.png"
+                                                    alt="" />
+                                            </div>
+                                            <div class="limit">5/5</div>
+                                        </div>
+                                    </div>
+                                    <div class="keys-card-wrap">
+                                        <div class="keybtn-box">
+                                            <div class="keybtn">Buy</div>
+                                            <div class="quantity">600</div>
+                                        </div>
+                                        <div class="keys-card-box">
+                                            <div class="card-header">
+                                                Squad Offer
+                                            </div>
+                                            <div class="card-info-btn"></div>
+                                            <div class="keys-but-box">
+                                                <img
+                                                    src="rc/chest-shop-3.png"
+                                                    alt="" />
+                                            </div>
+                                            <div class="essence-quantity">
+                                                400
+                                            </div>
+                                            <div class="offer-attributes">
+                                                <img
+                                                    class="squad-color"
+                                                    src="rc/cur2-druid.png"
+                                                    alt="" />
+                                                <img
+                                                    class="squad-class"
+                                                    src="rc/cur2-gun.png"
+                                                    alt="" />
+                                            </div>
+                                            <div class="limit">5/5</div>
+                                        </div>
+                                    </div>
+                                    <div class="keys-card-wrap">
+                                        <div class="keybtn-box">
+                                            <div class="keybtn">Buy</div>
+                                            <div class="quantity">950</div>
+                                        </div>
+                                        <div class="keys-card-box">
+                                            <div class="card-header">
+                                                Squad Offer
+                                            </div>
+                                            <div class="card-info-btn"></div>
+                                            <div class="keys-but-box">
+                                                <img
+                                                    src="rc/chest-shop-4.png"
+                                                    alt="" />
+                                            </div>
+                                            <div class="essence-quantity">
+                                                500
+                                            </div>
+                                            <div class="offer-attributes">
+                                                <div class="settings-offer-btn">
+                                                    settings offer
+                                                </div>
+                                            </div>
+                                            <div class="limit">5/5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom-block-wrap">
+                                    <div class="passed-text">
+                                        Уровней пройденных Вами:
+                                        <div class="passed-levels">6969</div>
+                                        <div class="equals">=</div>
+                                        <div class="levels-essence-quantity">
+                                            969
+                                        </div>
+                                    </div>
+                                    <div class="reward-btn">Забрать</div>
+                                </div>
+                            </div>
+                            <div class="btn-close-x"></div>
+                        </div>
+                        <div class="m-popup essence-buy">
+                            <div class="title">Buy Squad Tokens</div>
+                            <div class="essence-card-box">
+                                <div
+                                    class="essence-but-box"
+                                    style="
+                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e2.png');
+                                    "></div>
+                                <div class="essence-price"><div>5K</div></div>
+                                <div class="essence-bonus">
+                                    Daily Limit: 0/3
+                                </div>
+                                <div
+                                    class="color-btn diamonds"
+                                    style="
+                                        position: absolute;
+                                        bottom: 20px;
+                                        left: 40px;
+                                        width: 150px;
+                                    ">
+                                    <div class="color-btn-text">
+                                        <div class="diamonds">
+                                            <span class="f-diamonds">100</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="essence-card-box">
+                                <div
+                                    class="essence-but-box"
+                                    style="
+                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e4.png');
+                                    "></div>
+                                <div class="essence-price"><div>20K</div></div>
+                                <div class="essence-bonus">
+                                    Daily Limit: 0/1
+                                </div>
+                                <div
+                                    class="color-btn diamonds"
+                                    style="
+                                        position: absolute;
+                                        bottom: 20px;
+                                        left: 40px;
+                                        width: 150px;
+                                    ">
+                                    <div class="color-btn-text">
+                                        <div class="diamonds">
+                                            <span class="f-diamonds">300</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="essence-card-box">
+                                <div
+                                    class="essence-but-box"
+                                    style="
+                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e3.png');
+                                    "></div>
+                                <div class="essence-price"><div>20K</div></div>
+                                <div
+                                    class="color-btn diamonds"
+                                    style="
+                                        position: absolute;
+                                        bottom: 20px;
+                                        left: 40px;
+                                        width: 150px;
+                                    ">
+                                    <div class="color-btn-text">
+                                        <div class="diamonds">
+                                            <span class="">$4.99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="essence-card-box">
+                                <div
+                                    class="essence-but-box"
+                                    style="
+                                        background-image: url('https://cdn.faptitans.com/s1/rc/v2-f-e4.png');
+                                    "></div>
+                                <div class="essence-price"><div>250K</div></div>
+                                <div
+                                    class="color-btn diamonds"
+                                    style="
+                                        position: absolute;
+                                        bottom: 20px;
+                                        left: 40px;
+                                        width: 150px;
+                                    ">
+                                    <div class="color-btn-text">
+                                        <div class="diamonds">
+                                            <span class="">$49.99</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-close-x"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

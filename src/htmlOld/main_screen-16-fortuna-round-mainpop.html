@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/screen-fortuna-round-main.css"
+            rel="stylesheet"
+            type="text/css" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="main-bg"></div>
+
+            <div class="header">
+                <div class="res-panel">
+                    <div class="res gold">
+                        <div class="value">20349 T</div>
+                        <div class="mlt-prm">x3212</div>
+                        <div class="mlt-tmp">
+                            <div class="v">32342</div>
+                            <div class="t">12:22</div>
+                        </div>
+                        <div class="btn-add"></div>
+                    </div>
+                    <div class="res cri">
+                        <div class="value">20349 T</div>
+                        <div class="mlt-prm">x3212</div>
+                        <div class="mlt-tmp">
+                            <div class="v">32342</div>
+                            <div class="t">12:22</div>
+                        </div>
+                        <div class="btn-add"></div>
+                    </div>
+                    <div class="res mem">
+                        <div class="value">20349 T</div>
+                        <div class="mlt-prm">x3212</div>
+                        <div class="mlt-tmp">
+                            <div class="v">32342</div>
+                            <div class="t">12:22</div>
+                        </div>
+                        <div class="btn-add"></div>
+                    </div>
+                </div>
+
+                <div class="vip-btn lvl0">
+                    <div class="num">32</div>
+                </div>
+                <div class="shop-btn">
+                    <div class="btn-add"></div>
+                    <div class="icon"></div>
+                </div>
+
+                <div class="opt-panel">
+                    <div class="btn exit"></div>
+                    <div class="btn ops"></div>
+                    <div class="btn music"></div>
+                    <div class="btn sound"></div>
+                </div>
+            </div>
+
+            <div class="left-side">
+                <div class="left-panel">
+                    <div class="heroes-list">
+                        <div class="dps-dpc-panel">
+                            <div class="dpc">
+                                <div class="value">20349</div>
+                                <div class="mlt-prm">x3212</div>
+                                <div class="title">
+                                    DPC
+                                    <div class="icon-dpc"></div>
+                                </div>
+                            </div>
+                            <div class="dps">
+                                <div class="value">234234T</div>
+                                <div class="mlt-prm">x3212</div>
+                                <div class="title">
+                                    DPS
+                                    <div class="icon-dps"></div>
+                                </div>
+                            </div>
+                            <div class="dps-dpc-panel-d1"></div>
+                            <div class="dps-dpc-panel-d2"></div>
+                        </div>
+
+                        <ul class="all-heroes">
+                            <ul class="my-heroes">
+                                <li class="hero-card disabled">
+                                    <div class="avatar">
+                                        <img class="ava" src="rc/ava1.png" />
+                                    </div>
+                                    <div class="dps">234234 K</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="lvl">
+                                        <div class="n">300</div>
+                                    </div>
+                                    <div class="btn-buy disabled">
+                                        <div class="price gold">234234</div>
+                                        <div class="txt">BUY</div>
+                                    </div>
+                                </li>
+                                <li class="hero-card disabled">
+                                    <div class="avatar">
+                                        <img class="ava" src="rc/ava2.jpg" />
+                                    </div>
+                                    <div class="abil-ready"></div>
+                                    <div class="dps">234234 T</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="lvl">
+                                        <div class="n">300</div>
+                                    </div>
+                                    <div class="btn-buy disabled">
+                                        <div class="price gold">234234</div>
+                                        <div class="txt">UPGRADE</div>
+                                    </div>
+                                </li>
+                                <li class="hero-card">
+                                    <div class="avatar">
+                                        <img class="ava" src="rc/ava3.jpg" />
+                                    </div>
+                                    <div class="abil-ready"></div>
+                                    <div class="dps">234234 M</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="lvl">
+                                        <div class="n">1</div>
+                                    </div>
+                                    <div class="btn-buy">
+                                        <div class="price gold">23423</div>
+                                        <div class="txt">BUY</div>
+                                    </div>
+                                </li>
+                                <li class="hero-card">
+                                    <div class="avatar">
+                                        <img class="ava" src="rc/ava4.jpg" />
+                                    </div>
+                                    <div class="abil-ready"></div>
+                                    <div class="dps">234234 R</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="lvl">
+                                        <div class="n">1123</div>
+                                    </div>
+                                    <div class="btn-buy">
+                                        <div class="price gold">234234</div>
+                                        <div class="txt">BUY</div>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="new-heroes-title">
+                                Earn gold and unlock new heroes
+                            </div>
+
+                            <ul class="new-heroes">
+                                <li class="hero-card">
+                                    <div class="avatar"></div>
+                                    <div class="dps">234234</div>
+                                    <div class="name">
+                                        JOHN DOEHOVARIUSDSFASDFAS
+                                    </div>
+                                    <div class="btn-buy">
+                                        <div class="price gold">234234</div>
+                                    </div>
+                                </li>
+                                <li class="hero-card">
+                                    <div class="avatar"></div>
+                                    <div class="dps">234234</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="btn-buy">
+                                        <div class="price gold">234234</div>
+                                    </div>
+                                </li>
+                                <li class="hero-card">
+                                    <div class="avatar"></div>
+                                    <div class="dps">234234T</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="btn-buy">
+                                        <div class="price gold">234234</div>
+                                    </div>
+                                </li>
+                                <li class="hero-card">
+                                    <div class="avatar"></div>
+                                    <div class="dps">234234</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="btn-buy">
+                                        <div class="price gold">234234</div>
+                                    </div>
+                                </li>
+                                <li class="hero-card">
+                                    <div class="avatar"></div>
+                                    <div class="dps">234234</div>
+                                    <div class="name">JOHN DOEHOVARIUS</div>
+                                    <div class="btn-buy">
+                                        <div class="price gold">234234</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="skills">
+                        <ul class="skill-list">
+                            <li class="skill">
+                                <img class="icon" src="rc/skill-ico1.png" />
+                            </li>
+                            <li class="skill">
+                                <img class="icon" src="rc/skill-ico2.png" />
+                            </li>
+                            <li class="skill">
+                                <img class="icon" src="rc/skill-ico1.png" />
+                            </li>
+                            <li class="skill">
+                                <img class="icon" src="rc/skill-ico2.png" />
+                            </li>
+                            <li class="skill idle">
+                                <img class="icon" src="rc/skill-ico1.png" />
+                                <div class="timer">10:12</div>
+                            </li>
+                            <li class="skill disabled">
+                                <img class="icon" src="rc/skill-ico2.png" />
+                            </li>
+                            <li class="skill disabled">
+                                <img class="icon" src="rc/skill-ico2.png" />
+                            </li>
+                            <!--                     <li class="skill disabled">
+                        <img class="icon" src="rc/skill-ico2.png" />
+                    </li>
+                    <li class="skill disabled">
+                        <img class="icon" src="rc/skill-ico2.png" />
+                    </li>
+ -->
+                        </ul>
+                    </div>
+
+                    <div class="loc-list">
+                        <!-- back -->
+                        <div class="loc-back">
+                            <img class="icon" src="rc/ico-loc.png" />
+                            <div class="text">2561</div>
+                            <div class="text1">GO BACK</div>
+                        </div>
+
+                        <ul class="locs">
+                            <li class="loc">
+                                <img class="icon" src="rc/ico-loc.png" />
+                                <div class="text">2556</div>
+                            </li>
+                            <li class="loc">
+                                <img class="icon" src="rc/ico-loc.png" />
+                                <div class="text">2557</div>
+                            </li>
+                            <li class="loc">
+                                <img class="icon" src="rc/ico-loc.png" />
+                                <div class="text">2558</div>
+                            </li>
+                            <li class="loc">
+                                <img class="icon" src="rc/ico-loc.png" />
+                                <div class="text">2559</div>
+                            </li>
+                            <li class="loc">
+                                <img class="icon" src="rc/ico-loc.png" />
+                                <div class="text">2560</div>
+                            </li>
+                            <li class="loc current">
+                                <img class="icon" src="rc/ico-loc.png" />
+                                <div class="text">2561</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="tabs">
+                    <li class="heroes selected"></li>
+                    <li class="shop"></li>
+                    <li class="achiev disable"></li>
+                    <li class="stat"></li>
+                    <li class="guild disable"></li>
+                    <li class="album"></li>
+                </ul>
+            </div>
+
+            <div class="popup-layer" style="display: block">
+                <div class="screen-blend-55" style="display: block"></div>
+
+                <div class="m-popup fortuna-main-round" style="display: block">
+                    <div class="title">wheel of fortune</div>
+                    <div class="fortuna-main-box">
+                        <div class="color-btn blue rating">
+                            <div class="color-btn-text">Rating</div>
+                        </div>
+                        <div class="push-timer">
+                            Next free push in:
+                            <span class="push-timer-time">23:59:59</span>
+                        </div>
+                        <div class="place">
+                            <div class="place-text">
+                                Your place:
+                                <div>Not in rating</div>
+                            </div>
+                        </div>
+                        <div class="fortuna-wheel-all">
+                            <div class="fortuna-wheel-box">
+                                <div
+                                    class="fortuna-wheel b1 good girl doublespin">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                        <div
+                                            class="fortuna-check-num res-amount">
+                                            10
+                                        </div>
+                                        <div class="fortuna-check-num">
+                                            <!-- react-text: 613 -->x<!-- /react-text --><!-- react-text: 614 -->2<!-- /react-text -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="fortuna-wheel b2 winner selected cheked">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/ms-stone-pink.png" />
+                                        <div
+                                            class="fortuna-check-num res-amount">
+                                            5.77M
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b3">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b4">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b5">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b6">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b7">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b8">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b9">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b10">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b11">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b12">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b13">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b14">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b15">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b16">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b17">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b18">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b19">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b20">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b21">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b22">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b23">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b24">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                                <div class="fortuna-wheel b25">
+                                    <div class="fortuna-prize">
+                                        <img
+                                            class="prize-pic"
+                                            src="rc/icons/ic-abil-185.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fortuna-wheel-center">
+                                <div class="fortuna-btn-box">
+                                    <div class="color-btn green">
+                                        <div class="color-btn-text">
+                                            push x1<span class="ff-but"></span
+                                            >9999
+                                        </div>
+                                    </div>
+                                    <div class="color-btn green x10">
+                                        <div class="color-btn-text">
+                                            push x10<span class="ff-but"></span
+                                            >9999
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fortuna-main-controls-box">
+                            <div class="rjackpot-box collected">
+                                <div class="rname-box">Jackpot</div>
+                                <div class="fortuna-reward-box-all">
+                                    <div class="fortuna-reward-box claim-btn">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="images/superhero/suphero-240/x1/avatar/240sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="images/superhero/suphero-241/x1/avatar/241sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/change-ic-gold.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/change-ic-gold.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fortuna-reward-box-all second">
+                                    <div class="fortuna-reward-box claim-btn">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="images/superhero/suphero-240/x1/avatar/240sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="images/superhero/suphero-241/x1/avatar/241sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="images/superhero/suphero-242/x1/avatar/242sh-ava-1.jpg" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/change-ic-gold.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/change-ic-gold.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            6969k
+                                        </div>
+                                    </div>
+                                    <div class="wf-jp-2-cloaker">
+                                        Buy pack to unlock double rewards
+                                        <div class="color-btn">
+                                            <div class="color-btn-text">
+                                                Show me
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rjackpot-box-collected-label">
+                                    <div
+                                        class="rjackpot-box-collected-label-text">
+                                        collected
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rrevard-box">
+                                <div class="rname-box">Reward for rolls</div>
+                                <div class="fortuna-reward-btn color-btn blue">
+                                    show all
+                                </div>
+                                <div class="fortuna-prgbar-box">
+                                    <div class="f2-prgbar-empty">
+                                        <div
+                                            class="f2-prgbar-full"
+                                            style="width: 15%"></div>
+                                        <div class="f2-prgbar-text">
+                                            100/1500
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fortuna-reward-box-all">
+                                    <div class="fortuna-reward-box claim-btn">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            med x 4
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            10K%
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            35
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                        <div class="fortuna-reward-claim-btn">
+                                            15
+                                        </div>
+                                    </div>
+                                    <div class="fortuna-reward-box">
+                                        <div class="fortuna-reward-bg">
+                                            <div class="fortuna-reward">
+                                                <img
+                                                    src="rc/ms-stone-pink.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rrules-box">
+                                <div class="rules-text">
+                                    <div>
+                                        1. During the time of the event, you can
+                                        spin the Great Wheel of Fortune for
+                                        diamonds.
+                                    </div>
+                                    <div>
+                                        2. Each use of the Push button gives a
+                                        prize and increases points counter.
+                                    </div>
+                                    <div>
+                                        3. As soon as enough points accumulate,
+                                        you can get a guaranteed prize!
+                                    </div>
+                                    <div>
+                                        4. Each push increases the chance to get
+                                        Jackpot!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wpck-timer-box">
+                        <div class="time-left">time left</div>
+                        <div class="time-sec">23:54:55</div>
+                    </div>
+                    <div class="btn-close-x"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

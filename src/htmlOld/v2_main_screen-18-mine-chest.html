@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="user-scalable=0, initial-scale=1.00, width=device-width" />
+        <title>Game: Home</title>
+        <link href="rc/01-all.css" rel="stylesheet" type="text/css" />
+        <link href="rc/v2-screen-main.css" rel="stylesheet" type="text/css" />
+        <link
+            href="rc/v2-screen-main-dark-world.css"
+            rel="stylesheet"
+            type="text/css" />
+        <link
+            href="rc/v2-screen-mine-event-chest.css"
+            rel="stylesheet"
+            type="text/css" />
+        <script src="js/jquery-1.9.1.min.js"></script>
+
+        <script type="text/javascript">
+            window.addEventListener("load", () => {
+                [...document.querySelectorAll(".m-popup")].map((i) => {
+                    i.style.display = "none";
+                });
+                const aC = document.querySelector(".m-popup.angel-chests-info");
+                const aI = document.querySelector(".m-popup.angels-info");
+                const re = document.querySelector(".popup-layer");
+
+                [
+                    ...document.querySelectorAll(
+                        ".btn-close-x, .screen-blend-55"
+                    ),
+                ].map((i) => {
+                    i.addEventListener("click", () => {
+                        re.style.display = "none";
+                        aC.style.display = "none";
+                        aI.style.display = "none";
+                    });
+                });
+
+                [...document.querySelectorAll(".mn-btn-box .x-info-btn")].map(
+                    (i) => {
+                        i.addEventListener("click", () => {
+                            re.style.display = "block";
+                            aC.style.display = "block";
+                        });
+                    }
+                );
+
+                const aIb = document.querySelector(
+                    ".mine-event-screen-head .x-info-btn"
+                );
+                aIb.addEventListener("click", () => {
+                    re.style.display = "block";
+                    aI.style.display = "block";
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="main world1">
+            <div class="mine-event-screen-chest">
+                <div class="pretty-holder"></div>
+                <div class="mine-event-screen-head-box">
+                    <div class="mine-event-screen-head">
+                        <div class="x-info-btn">i</div>
+                        <div class="gray-holder first"></div>
+                        <div class="color-btn goddess disabled">
+                            <div class="color-btn-icon"></div>
+                            <div class="color-btn-text">Claim</div>
+                        </div>
+                        <div class="mn-ch-duh-count-box">
+                            <div class="mn-ch-duh-count-pic"></div>
+                            <div class="mn-ch-duh-count">19.2K</div>
+                        </div>
+                        <div class="color-btn duhbuy duhbuy2">
+                            <div class="color-btn-icon">
+                                <img src="rc/v2-mn-soul-sg-160.png" />
+                            </div>
+                            <div class="color-btn-text">Buy</div>
+                        </div>
+                        <div class="gray-holder third"></div>
+                        <div class="color-btn duhbuy bp">
+                            <div class="color-btn-icon">
+                                <img src="rc/v2-mn-ic-mine.png" />
+                            </div>
+                            <div class="color-btn-text">Battle Pass</div>
+                        </div>
+                        <div class="color-btn duhbuy">
+                            <div class="color-btn-icon">
+                                <img src="rc/v2-mn-pr-100-in.png" />
+                            </div>
+                            <div class="color-btn-text">Mine</div>
+                        </div>
+                        <div class="color-btn exit">
+                            <div class="color-btn-text">Back</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gacha-quest-prg">
+                    <div class="gacha-quest-prgbar" style="width: 0%"></div>
+                    <div class="gacha-quest-prg-text">0/1000</div>
+                </div>
+                <div class="mn-chest-box chest-silver"></div>
+                <div class="mn-chest-box chest-gold"></div>
+                <div class="mn-chest-box chest-bronze"></div>
+                <div class="mn-btn-box silver">
+                    <div class="x-info-btn">?</div>
+                    <div class="color-btn green">
+                        <div class="color-btn-text">
+                            <div class="duh">
+                                <span class="f-duh"></span>100
+                            </div>
+                            <div class="color-btn-text1">open x1</div>
+                        </div>
+                    </div>
+                    <div class="color-btn green">
+                        <div class="color-btn-text">
+                            <div class="duh">
+                                <span class="f-duh"></span>900
+                            </div>
+                            <div class="color-btn-text1">open x10</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mn-btn-box gold">
+                    <div class="x-info-btn">?</div>
+                    <div class="color-btn green">
+                        <div class="color-btn-text">
+                            <div class="duh">
+                                <span class="f-duh"></span>200
+                            </div>
+                            <div class="color-btn-text1">open x1</div>
+                        </div>
+                    </div>
+                    <div class="color-btn green">
+                        <div class="color-btn-text">
+                            <div class="duh">
+                                <span class="f-duh"></span>1.8K
+                            </div>
+                            <div class="color-btn-text1">open x10</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mn-btn-box bronze">
+                    <div class="x-info-btn">?</div>
+                    <div class="color-btn green">
+                        <div class="color-btn-text">
+                            <div class="duh"><span class="f-duh"></span>50</div>
+                            <div class="color-btn-text1">open x1</div>
+                        </div>
+                    </div>
+                    <div class="color-btn green">
+                        <div class="color-btn-text">
+                            <div class="duh">
+                                <span class="f-duh"></span>450
+                            </div>
+                            <div class="color-btn-text1">open x10</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div id="popupWrapper" class="popup-layer">
+                    <div class="screen-blend-55"></div>
+                    <div id="popupContainer" class="popup-in">
+                        <div class="m-popup angel-chests-info">
+                            <div class="title">Angel Chests Info</div>
+                            <div class="content">
+                                <div class="header-box">
+                                    <div class="header-text-wrap">
+                                        <div class="header-text">
+                                            You Can Get From
+                                            <div>1</div>
+                                            to
+                                            <div>10</div>
+                                            Pieces This Angels:
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="angels-skrollbox-wrap">
+                                    <div class="angels-skrollbox">
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="angel-avatar-box">
+                                            <div class="angel-avatar-wrap">
+                                                <img
+                                                    class="angel-avatar"
+                                                    src="https://cdn.faptitans.com/s1/images/goddess/goddess-1/x2/ava/goddess-1-1-ava.jpg" />
+                                            </div>
+                                            <div
+                                                class="angel-card-progress-bar-wrap">
+                                                <div class="progress">
+                                                    <div
+                                                        class="fulfilled"
+                                                        style="
+                                                            width: 40%;
+                                                        "></div>
+                                                </div>
+                                                <div class="value">
+                                                    <div class="from">40</div>
+                                                    <div class="to">100</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chest-points-box">
+                                    <div class="drop-angels-info">
+                                        <div class="info-icn">i</div>
+                                        <div class="info-text-box">
+                                            <div class="info-header">
+                                                Chest Has a Chance of Dropping:
+                                            </div>
+                                            <div class="text-content">
+                                                <div class="text">
+                                                    <div class="text-selected">
+                                                        100%
+                                                    </div>
+                                                    to Drop
+                                                    <div
+                                                        class="text-selected selected2">
+                                                        1
+                                                    </div>
+                                                    Angel Pieces
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-selected">
+                                                        70%
+                                                    </div>
+                                                    to Drop
+                                                    <div
+                                                        class="text-selected selected2">
+                                                        2
+                                                    </div>
+                                                    Angel Pieces
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-selected">
+                                                        50%
+                                                    </div>
+                                                    to Drop
+                                                    <div
+                                                        class="text-selected selected2">
+                                                        3
+                                                    </div>
+                                                    Angel Pieces
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-selected">
+                                                        30%
+                                                    </div>
+                                                    to Drop
+                                                    <div
+                                                        class="text-selected selected2">
+                                                        4
+                                                    </div>
+                                                    Angel Pieces
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-selected">
+                                                        5%
+                                                    </div>
+                                                    to Drop
+                                                    <div
+                                                        class="text-selected selected2">
+                                                        5
+                                                    </div>
+                                                    Angel Pieces
+                                                </div>
+                                                <div class="text">
+                                                    <div class="text-selected">
+                                                        1%
+                                                    </div>
+                                                    to Drop
+                                                    <div
+                                                        class="text-selected selected2">
+                                                        10
+                                                    </div>
+                                                    Angel Pieces
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chest-points-icn"></div>
+                                    <div class="chest-points-value">
+                                        +15
+                                        <div class="chest-points-text">
+                                            Chest Points
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-close-x"></div>
+                        </div>
+
+                        <div class="m-popup angels-info" style="display: block">
+                            <div class="title">Angels Info</div>
+                            <div class="content">
+                                <div class="text-box">
+                                    <div class="text">
+                                        <li>
+                                            Angels are unique girls who are
+                                            among the elite. They help our
+                                            heroines fight monsters.
+                                        </li>
+                                        <br />
+                                        <li>
+                                            You can get Angel and her Stars by
+                                            collecting Angel Soul Pieces from
+                                            Angel Chests in the Dark Angel
+                                            Garden. You will need Angel Spirit
+                                            to open chests. Angel Spirit can be
+                                            collected from various events in the
+                                            game and at the Spirit Shop. The
+                                            buff multiplier increases
+                                            significantly when Angels gain new
+                                            stars.
+                                        </li>
+                                        <br />
+                                        <li>
+                                            Each Angel has six Heroines attached
+                                            to her. You can add more heroines to
+                                            each Angel. You can buff each
+                                            Heroine. Also, Superheroines can be
+                                            attached to each Angel. Combine them
+                                            in such a way as to get the most
+                                            power.
+                                        </li>
+                                        <br />
+                                        <li>
+                                            You will need Angel Essence to buff
+                                            Dark DPS. Angel Essence can be
+                                            collected from Events and Angel
+                                            Chests.
+                                        </li>
+                                        <br />
+                                        <li>
+                                            Each buff increases Angel's level
+                                            required to unlock Angel's Erotic
+                                            Album.
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="color-btn gold close">
+                                    <div class="color-btn-text">Закрыть</div>
+                                </div>
+                            </div>
+                            <div class="btn-close-x"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
