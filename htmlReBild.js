@@ -1,14 +1,14 @@
 const fs = require("fs");
 const path = require("path");
 
-const folderPath = "./src/htmlOld";
+const folderPath = "./titans_rc/htmlOld";
 
 function processFile(filePath) {
   const fileContent = fs.readFileSync(filePath, "utf-8");
 
   const updatedContent = fileContent
     .replace(/href="rc\//g, 'href="../styles/css/')
-    .replace(/src="js\//g, 'src="../scripts/FapTitansScripts/');
+    .replace(/titans_rc="js\//g, 'titans_rc="../scripts/FapTitansScripts/');
 
   fs.writeFileSync(filePath, updatedContent, "utf-8");
 }

@@ -9,11 +9,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --config webpack.config.dev.js --open",
-    "compileScss": "node src/scripts/forServer/compileScss.js",
-    "buildHTMLforSSR": "node src/scripts/forServer/buildHTMLforSSR",
-    "buildCommonJS": "babel src/components/RSC --out-dir src/pagesComponents/CommonJS",
+    "compileScss": "node titans_rc/scripts/forServer/compileScss.js",
+    "buildHTMLforSSR": "node titans_rc/scripts/forServer/buildHTMLforSSR",
+    "buildCommonJS": "babel titans_rc/components/RSC --out-dir titans_rc/pagesComponents/CommonJS",
     "start-server": "nodemon -r @babel/register ./server/server.js",
-    "start-server2": "nodemon --experimental-loader ./src/scripts/forClient/node-jsx-loader.js ./server/server2.js"
+    "start-server2": "nodemon --experimental-loader ./titans_rc/scripts/forClient/node-jsx-loader.js ./server/server2.js"
   },
   "keywords": [],
   "author": "",

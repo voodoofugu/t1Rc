@@ -7,7 +7,7 @@ const path = require("path");
 
 // Функция для динамической генерации HtmlWebpackPlugin
 function generateHtmlPlugins() {
-  const pageFiles = fs.readdirSync("./src/pages");
+  const pageFiles = fs.readdirSync("./titans_rc/pages");
 
   return pageFiles
     .map((file) => {
@@ -17,7 +17,7 @@ function generateHtmlPlugins() {
         return null; // Не создавать HtmlWebpackPlugin для template.html
       } else {
         return new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, "src", "htmlContent.ejs"),
+          template: path.resolve(__dirname, "titans_rc", "htmlContent.ejs"),
           filename: `pages/${pageName}.html`,
           minify: true,
           inject: false, // не забудь проверить inject

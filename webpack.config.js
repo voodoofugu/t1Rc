@@ -2,7 +2,7 @@ const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  entry: path.resolve(__dirname, "src", "index.jsx"),
+  entry: path.resolve(__dirname, "titans_rc", "index.jsx"),
   resolve: {
     extensions: [".ts", ".js", ".jsx", ".scss"],
     fallback: {
@@ -55,7 +55,7 @@ module.exports = {
 // import TerserPlugin from "terser-webpack-plugin";
 
 // const webpackConfig = {
-//   entry: path.resolve(__dirname, "src", "index.jsx"),
+//   entry: path.resolve(__dirname, "titans_rc", "index.jsx"),
 //   resolve: {
 //     extensions: [".ts", ".js", ".jsx", ".scss"],
 //     fallback: {

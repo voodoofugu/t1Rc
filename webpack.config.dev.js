@@ -6,7 +6,7 @@ const path = require("path");
 
 function generateHtmlPlugins() {
   return new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, "src", "htmlContent.ejs"),
+    template: path.resolve(__dirname, "titans_rc", "htmlContent.ejs"),
     filename: "index.html", // этой строчкой мы и определяем какой файл будет открываться по адресу сервера
     title: "Template",
   });
@@ -32,15 +32,15 @@ const devServerConfig = {
     static: [
       // Добавляем пути для обслуживания статических файлов
       {
-        directory: path.join(__dirname, "src", "img"),
+        directory: path.join(__dirname, "titans_rc", "img"),
         publicPath: "/img/",
       },
       {
-        directory: path.join(__dirname, "src", "scripts"),
+        directory: path.join(__dirname, "titans_rc", "scripts"),
         publicPath: "/scripts/",
       },
       {
-        directory: path.join(__dirname, "src", "spine"),
+        directory: path.join(__dirname, "titans_rc", "spine"),
         publicPath: "/spine/",
       },
     ],

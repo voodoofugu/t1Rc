@@ -7,12 +7,12 @@ import ReactDOMServer from "react-dom/server";
 const app = express();
 const port = 4000;
 
-// import App from "../src/components/App";
-import App from "../src/components/RSC/MainScreen16FortunaHtml";
+// import App from "../titans_rc/components/App";
+import App from "../titans_rc/components/RSC/MainScreen16FortunaHtml";
 
 app.use("*", (req, res) => {
   let indexHTML = fs.readFileSync(
-    path.resolve(__dirname, "../src/htmlContent.ejs"),
+    path.resolve(__dirname, "../titans_rc/htmlContent.ejs"),
     { encoding: "utf8" }
   );
 

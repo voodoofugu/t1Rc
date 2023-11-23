@@ -3,7 +3,7 @@ const ReactDOMServer = require("react-dom/server");
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const MainScreen16FortunaHtml = require("../src/pagesComponents/CommonJS/MainScreen16FortunaHtml.js");
+const MainScreen16FortunaHtml = require("../titans_rc/pagesComponents/CommonJS/MainScreen16FortunaHtml.js");
 
 const app = express();
 const port = 4000;
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
 
 app.use("*", (req, res) => {
   const indexHTML = fs.readFileSync(
-    path.resolve(__dirname, "../src/htmlContent.ejs"),
+    path.resolve(__dirname, "../titans_rc/htmlContent.ejs"),
     { encoding: "utf8" }
   );
 
