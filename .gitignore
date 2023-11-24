@@ -3,4 +3,8 @@ dist/
 .vscode/
 package-lock.json
 t1Rc/titans_rc/styles/css
+<<<<<<< HEAD
 t1Rc/titans_rc
+=======
+t1Rc/titans_rc
+>>>>>>> 9508f754418faf29b14fdaaea3fcf5dbd393db32
