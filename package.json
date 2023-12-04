@@ -10,6 +10,7 @@
   "scripts": {
     "start": "webpack serve --config webpack.config.dev.js --open",
     "compileScss": "node titans_rc/scripts/forServer/compileScss.js",
+    "flow": "flow",
     "buildHTMLforSSR": "node titans_rc/scripts/forServer/buildHTMLforSSR",
     "buildCommonJS": "babel titans_rc/components/RSC --out-dir titans_rc/pagesComponents/CommonJS",
     "start-server": "nodemon -r @babel/register ./server/server.js",
@@ -49,6 +50,7 @@
     "@babel/plugin-transform-react-jsx": "^7.22.15",
     "@babel/plugin-transform-runtime": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
+    "@babel/preset-flow": "^7.23.3",
     "@babel/preset-react": "^7.22.15",
     "@babel/register": "^7.22.15",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
@@ -57,6 +59,7 @@
     "@types/react-dom": "^18.2.7",
     "chokidar": "^3.5.3",
     "express": "^4.18.2",
+    "flow-bin": "^0.223.2",
     "nodemon": "^3.0.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.1.0",
