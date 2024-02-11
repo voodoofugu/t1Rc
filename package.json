@@ -15,7 +15,8 @@
     "buildCommonJS": "babel titans_rc/components/RSC --out-dir titans_rc/pagesComponents/CommonJS",
     "start-server": "nodemon -r @babel/register ./server/server.js",
     "start-server2": "nodemon --experimental-loader ./titans_rc/scripts/forClient/node-jsx-loader.js ./server/server2.js",
-    "get-icns": " node titans_rc/scripts/forServer/fetch-icons.js"
+    "get-figma-icns": " node titans_rc/scripts/forServer/fetch-figma-icons.js",
+    "get-icns-json": " node titans_rc/scripts/forServer/do-icns-data.js"
   },
   "keywords": [],
   "author": "",
