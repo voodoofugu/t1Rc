@@ -1,9 +1,9 @@
-const React = require("react");
-const ReactDOMServer = require("react-dom/server");
-const express = require("express");
-const path = require("path");
-const fs = require("fs");
-const MainScreen16FortunaHtml = require("../titans_rc/pagesComponents/CommonJS/MainScreen16FortunaHtml.js");
+import React from "react";
+import ReactDOMServer from "react-dom/server";
+import express from "express";
+import path from "path";
+import fs from "fs";
+import { MainScreen16FortunaHtml } from "../titans_rc/pagesComponents/CommonJS/MainScreen16FortunaHtml.js";
 
 const app = express();
 const port = 4000;

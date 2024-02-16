@@ -1,18 +1,18 @@
-const { merge } = require("webpack-merge");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
-const webpackConfig = require("./webpack.config.js");
-const path = require("path");
+import { merge } from "webpack-merge";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import webpackConfig from "./webpack.config.js";
+import path from "path";
 
 function generateHtmlPlugins() {
   return new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, "titans_rc", "htmlContent.ejs"),
+    template: path.resolve("titans_rc", "htmlContent.ejs"),
     filename: "index.html", // этой строчкой мы и определяем какой файл будет открываться по адресу сервера
     title: "Template",
   });
 }
 
-const devServerConfig = {
+let devServerConfig = {
   devServer: {
     port: 3000,
     open: true,
@@ -32,22 +32,22 @@ const devServerConfig = {
     static: [
       // Добавляем пути для обслуживания статических файлов
       {
-        directory: path.join(__dirname, "titans_rc", "img"),
+        directory: path.join("titans_rc", "img"),
         publicPath: "/img/",
       },
       {
-        directory: path.join(__dirname, "titans_rc", "scripts"),
+        directory: path.join("titans_rc", "scripts"),
         publicPath: "/scripts/",
       },
       {
-        directory: path.join(__dirname, "titans_rc", "spine"),
+        directory: path.join("titans_rc", "spine"),
         publicPath: "/spine/",
       },
     ],
   },
 };
 
-module.exports = merge(webpackConfig, {
+export default devServerConfig = merge(webpackConfig, {
   mode: "development",
   output: {
     filename: "[name].js",

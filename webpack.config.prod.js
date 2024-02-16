@@ -1,9 +1,9 @@
-const { merge } = require("webpack-merge");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpackConfig = require("./webpack.config.js");
-const TerserPlugin = require("terser-webpack-plugin");
-const fs = require("fs");
-const path = require("path");
+import { merge } from "webpack-merge";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpackConfig from "./webpack.config.js";
+import TerserPlugin from "terser-webpack-plugin";
+import fs from "fs";
+import path from "path";
 
 // Функция для динамической генерации HtmlWebpackPlugin
 function generateHtmlPlugins() {
@@ -17,7 +17,7 @@ function generateHtmlPlugins() {
         return null; // Не создавать HtmlWebpackPlugin для template.html
       } else {
         return new HtmlWebpackPlugin({
-          template: path.resolve(__dirname, "titans_rc", "htmlContent.ejs"),
+          template: path.resolve("titans_rc", "htmlContent.ejs"),
           filename: `pages/${pageName}.html`,
           minify: true,
           inject: false, // не забудь проверить inject
@@ -34,7 +34,7 @@ function generateHtmlPlugins() {
 
 const plugins = [...generateHtmlPlugins()];
 
-module.exports = merge(webpackConfig, {
+const webpackConfigProd = merge(webpackConfig, {
   mode: "production",
   optimization: {
     splitChunks: {
@@ -44,7 +44,7 @@ module.exports = merge(webpackConfig, {
     minimizer: [new TerserPlugin()],
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve("dist"),
     clean: true,
     filename: "scripts/[name].[contenthash].js",
     chunkFilename: "scripts/[name].[contenthash].js",
