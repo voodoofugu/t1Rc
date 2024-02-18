@@ -17,7 +17,7 @@
     "start-server": "nodemon -r @babel/register ./server/server.js",
     "start-server2": "nodemon --experimental-loader ./titans_rc/scripts/forClient/node-jsx-loader.js ./server/server2.js",
     "get-page-list": " node titans_rc/scripts/forServer/generatePageList.js",
-    "get-figma-icns": " node titans_rc/scripts/forServer/fetch-figma-icons.js",
+    "fetch-figma-icns": " node titans_rc/scripts/forServer/fetch-figma-icons.js",
     "get-icns-json": " node titans_rc/scripts/forServer/do-icns-data.js"
   },
   "keywords": [],
@@ -29,7 +29,6 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "axios": "^1.6.7",
     "css-loader": "^6.7.3",
     "ejs": "^3.1.9",
     "escape-html": "^1.0.3",
