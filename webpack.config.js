@@ -1,4 +1,3 @@
-import TerserPlugin from "terser-webpack-plugin";
 import path from "path";
 
 const webpackConfig = {
@@ -23,7 +22,7 @@ const webpackConfig = {
           loader: "file-loader",
           options: {
             name: "[name][ext]",
-            outputPath: "assets", // Вы можете настроить директорию для разных видов файлов
+            outputPath: "assets",
           },
         },
       },
@@ -31,20 +30,14 @@ const webpackConfig = {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /(node_modules|scripts)/,
         use: {
-          loader: "swc-loader",
+          loader: "esbuild-loader",
           options: {
-            // Add your SWC options
+            loader: "tsx",
+            target: "es2015",
           },
         },
       },
     ],
-  },
-  optimization: {
-    splitChunks: {
-      chunks: "all",
-    },
-    minimize: true,
-    minimizer: [new TerserPlugin()],
   },
 };
 

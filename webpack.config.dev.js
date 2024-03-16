@@ -3,23 +3,24 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 import webpackConfig from "./webpack.config.js";
 import path from "path";
+import { EsbuildPlugin } from "esbuild-loader";
 
 function generateHtmlPlugins() {
   return new HtmlWebpackPlugin({
     template: path.resolve("titans_rc", "htmlContent.ejs"),
-    filename: "index.html", // этой строчкой мы и определяем какой файл будет открываться по адресу сервера
+    filename: "index.html",
     title: "Template",
   });
 }
 
-let devServerConfig = {
+const devServer = {
   devServer: {
     port: 3000,
     open: true,
     hot: true,
     historyApiFallback: {
       index: "/",
-    }, // штука устанавливает маршрутизацию, если вырубить можно будет попадать на страницы статических файлов ниже, видить что есть, Включаем поддержку HTML5 History API, чтобы react-router работал во время разработки
+    },
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
@@ -30,7 +31,6 @@ let devServerConfig = {
       },
     },
     static: [
-      // Добавляем пути для обслуживания статических файлов
       {
         directory: path.join("titans_rc", "img"),
         publicPath: "/img/",
@@ -47,7 +47,7 @@ let devServerConfig = {
   },
 };
 
-export default devServerConfig = merge(webpackConfig, {
+const devServerConfig = merge(webpackConfig, {
   mode: "development",
   output: {
     filename: "[name].js",
@@ -56,10 +56,16 @@ export default devServerConfig = merge(webpackConfig, {
     publicPath: "/",
   },
   devtool: "eval-cheap-module-source-map",
-  plugins: [
-    // Добавляем плагин для горячей перезагрузки
-    new ReactRefreshWebpackPlugin(),
-    generateHtmlPlugins(),
-  ],
-  ...devServerConfig,
+  plugins: [new ReactRefreshWebpackPlugin(), generateHtmlPlugins()],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new EsbuildPlugin({
+        target: "es2015",
+      }),
+    ],
+  },
+  ...devServer,
 });
+
+export default devServerConfig;

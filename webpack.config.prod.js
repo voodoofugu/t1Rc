@@ -1,7 +1,6 @@
 import { merge } from "webpack-merge";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import webpackConfig from "./webpack.config.js";
-import TerserPlugin from "terser-webpack-plugin";
+import webpackConfig from "./webpack.config";
 import fs from "fs";
 import path from "path";
 
@@ -41,7 +40,6 @@ const webpackConfigProd = merge(webpackConfig, {
       chunks: "all",
     },
     minimize: true,
-    minimizer: [new TerserPlugin()],
   },
   output: {
     path: path.resolve("dist"),
