@@ -2,7 +2,10 @@
 const plugin = require("tailwindcss/plugin");
 
 export default {
-  content: ["titans_rc/styles/tailwind/TWstyles.js"],
+  content: [
+    "titans_rc/{components/templateComponents,styles/tailwind}/**/*.{js,ejs,jsx}",
+  ],
+  darkMode: "selector",
   theme: {
     extend: {
       transitionProperty: {
@@ -11,9 +14,9 @@ export default {
       },
       transitionDuration: {
         width: "0.1s",
-        all1: "2.9s",
+        all1: "0.4s",
       },
-      transitionProperty: {
+      transitionTimingFunction: {
         width: "ease-in-out",
         all1: "cubic-bezier(0.2, 0.85, 0.32, 1.2)",
       },
@@ -47,7 +50,7 @@ export default {
         tooltipTemplate: "inset 1px 1px 2px #fff, inset -1px -1px 2px #969ee9",
         toTopBtn:
           "-1px -1px 2px #fff, inset 1px 1px 2px #dde0f8, 1px 1px 2px #818ae4, inset -1px -1px 2px #abb1ed, 0 4px 10px #969ee9",
-        darkTheme:
+        darkColor1:
           "inset -1px -1px 3px #2c3c6e, 1px 1px 3px #3b5093, inset 1px 1px 3px #161e38, -1px -1px 3px #0f1425",
         darkThemeSearchInput:
           "inset -1px -1px 3px #abb1ed, 1px 1px 3px #3b5093, inset 1px 1px 3px #25325c, -1px -1px 3px #0f1425",
@@ -56,41 +59,26 @@ export default {
         darkThemeToTopBtn:
           "inset 1px 1px 2px #5c73be, inset -1px -1px 2px #25325c, 0 4px 10px #161e38",
         shadow1: "inset 0 0 0 2px rgb(129 140 248)",
+        shadow2: "inset -4px -4px 0 #facc15",
       },
       dropShadow: {
-        dS1: "0.5px 0.5px 1px rgba(255, 255, 255, 0.2)",
+        dS1: "0.5px 0.5px 0.5px rgba(255, 255, 255, 1)",
+        darkDS1: "0.5px 0.5px 0.5px #0b1126",
       },
       textShadow: {
-        tS1: "0.5px 0.5px 1px rgba(255, 255, 255, 0.2)",
+        tS1: "0.5px 0.5px 1px rgba(255, 255, 255, 0.6)",
+        darkTS1: "0.5px 0.5px 1px #0b1126",
       },
       colors: {
         searchInputPlaceholder: "#818ae4",
-        clearBtnActive: "#indigo-400",
-        toggleBtnActive: "#blue-900",
-        toggleBtnOn: "#blue-900",
-        tooltipTemplate: "#indigo-600",
         tooltipTemplateTop: "#eaecfb",
         tooltipTemplateBottom: "#c0c5f2",
-        toTopBtn: "#gray-300",
-        toTopBtnActive: "#indigo-400",
         toTopBtnIcon: "#818ae4",
-        darkTheme: "#blue-900",
-        darkThemeTemplateTit: "#gray-800",
-        darkThemeSearchInput: "#indigo-500",
-        darkThemeSearchInputPlaceholder: "#blue-900",
-        darkThemeClearBtn: "#blue-900",
-        darkThemeClearBtnIcon: "#gray-800",
-        darkThemeToTopBtn: "#indigo-600",
         darkThemeToTopBtnIcon: "#99a2ff",
-        darkThemeToTopBtnHover: "#indigo-600",
-        darkThemePageBox: "#blue-900",
-        darkThemePageBoxHover: "#blue-900",
-        darkThemePageBoxLink: "#indigo-300",
-        darkThemePageBoxActive: "#blue-900",
-        darkThemePageBoxInfo: "#indigo-500",
-        darkThemeTooltipTemplate: "#indigo-800",
         darkThemeTooltipTemplateTop: "#5c73be",
         darkThemeTooltipTemplateBottom: "#344680",
+        "indigo-1000": "#1c1842",
+        "indigo-250": "#bbc8fc",
       },
       backgroundImage: {
         linGr1:
@@ -99,10 +87,8 @@ export default {
       fontFamily: {
         custom: ["Roboto Flex", "Montserrat", "sans-serif"],
       },
-      height: {
-        custom: "calc(100vh - 114px)",
-      },
       spacing: {
+        1186: "1186px",
         1160: "1160px",
         184: "184px",
         62: "62px",
@@ -125,8 +111,9 @@ export default {
         1: "1px",
         0.5: "0.5px",
         "2rem": "2rem",
-        "calc100%-80px": "calc(100% - 80px)",
-        "calc100%-54px": "calc(100% - 54px)",
+        "calcScreenH-114": "calc(100vh - 114px)",
+        "calcFull-80": "calc(100% - 80px)",
+        "calcFull-54": "calc(100% - 54px)",
         "Min50%": "-50%",
         "50%": "50%",
       },
