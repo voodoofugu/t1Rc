@@ -23,6 +23,7 @@ export default {
       animation: {
         appear: "appear 0.3s ease-in-out 0s 1 forwards",
         identifier: "identifier 0.2s ease-in-out 1 forwards",
+        ident: "ident 0.2s ease-in-out 1 forwards",
       },
       keyframes: {
         appear: {
@@ -32,6 +33,10 @@ export default {
         identifier: {
           "0%": { opacity: "0", width: "0" },
           "100%": { opacity: "1", width: "100%" },
+        },
+        ident: {
+          "0%": { opacity: "0", scale: "0.8" },
+          "100%": { opacity: "1", scale: "1" },
         },
       },
       boxShadow: {
@@ -48,6 +53,8 @@ export default {
         pageBoxActive:
           "0 0 2px 1px #969ee9, -2px -2px 4px #fff, inset 1px 1px 2px #fff, inset -1px -1px 2px #abb1ed, 2px 2px 4px #abb1ed",
         tooltipTemplate: "inset 1px 1px 2px #fff, inset -1px -1px 2px #969ee9",
+        tooltipTemplateDark:
+          "inset 1px 1px 2px #5c73be, inset -1px -1px 2px #25325c",
         toTopBtn:
           "-1px -1px 2px #fff, inset 1px 1px 2px #dde0f8, 1px 1px 2px #818ae4, inset -1px -1px 2px #abb1ed, 0 4px 10px #969ee9",
         darkColor1:
@@ -60,10 +67,23 @@ export default {
           "inset 1px 1px 2px #5c73be, inset -1px -1px 2px #25325c, 0 4px 10px #161e38",
         shadow1: "inset 0 0 0 2px rgb(129 140 248)",
         shadow2: "inset -4px -4px 0 #facc15",
+        shadow3:
+          "0 0 0 10px #c0c5f2,  20px 20px 40px #969ee9, -20px -20px 40px #fff",
+        shadow7:
+          "0 0 0 10px #1e284a,  20px 20px 40px #0f1425, -20px -20px 40px #3b5093",
+        shadow4:
+          "-4px -4px 8px #fff, inset 1px 1px 2px #fff, inset -1px -1px 2px #abb1ed, 4px 4px 8px #abb1ed",
+        shadow8:
+          "0 0 2px 1px #818ae4, -5px -5px 10px #fff, inset 1px 1px 2px #fff, inset -1px -1px 2px #abb1ed, 5px 5px 10px #abb1ed",
+        shadow5:
+          "-4px -4px 8px #3b5093, inset 1px 1px 2px #344680, inset -1px -1px 2px #161e38, 4px 4px 8px #161e38",
+        shadow6:
+          "0 0 2px 1px #818ae4, -5px -5px 10px #3b5093, inset 1px 1px 2px #344680, inset -1px -1px 2px #161e38, 5px 5px 10px #0f1425",
       },
       dropShadow: {
         dS1: "0.5px 0.5px 0.5px rgba(255, 255, 255, 1)",
         darkDS1: "0.5px 0.5px 0.5px #0b1126",
+        tooltipDS: "0 1px 3px rgba(4, 3, 52, 0.6)",
       },
       textShadow: {
         tS1: "0.5px 0.5px 1px rgba(255, 255, 255, 0.6)",
@@ -89,21 +109,30 @@ export default {
       },
       spacing: {
         1186: "1186px",
+        1200: "1200px",
         1160: "1160px",
+        640: "640px",
+        238: "238px",
+        214: "214px",
         184: "184px",
+        156: "156px",
         62: "62px",
         48: "48px",
+        46: "46px",
         34: "34px",
         32: "32px",
         30: "30px",
         26: "26px",
+        25: "25px",
         24: "24px",
         16: "16px",
         15: "15px",
+        14: "14px",
         13: "13px",
         12: "12px",
         10: "10px",
         9: "9px",
+        6: "6px",
         5: "5px",
         4: "4px",
         3: "3px",
@@ -114,12 +143,18 @@ export default {
         "calcScreenH-114": "calc(100vh - 114px)",
         "calcFull-80": "calc(100% - 80px)",
         "calcFull-54": "calc(100% - 54px)",
+        "calcFull-50": "calc(100% - 50px)",
+        "calc50%-119": "calc(50% - 119px)",
+        "calc50%-77": "calc(50% - 77px)",
         "Min50%": "-50%",
         "50%": "50%",
+        Min7: "-7px",
       },
       borderRadius: {
-        18: "18px",
+        50: "50px",
         30: "30px",
+        18: "18px",
+        10: "10px",
       },
       borderWidth: {
         6: "6px",
@@ -127,6 +162,9 @@ export default {
       },
       rotate: {
         Min45: "-45deg",
+      },
+      scale: {
+        0.18: "0.180134",
       },
     },
   },
