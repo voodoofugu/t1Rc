@@ -87,7 +87,8 @@ export default {
       },
       textShadow: {
         tS1: "0.5px 0.5px 1px rgba(255, 255, 255, 0.6)",
-        darkTS1: "0.5px 0.5px 1px #0b1126",
+        darkTS1: "0.5px 0.5px 1px rgba(255, 255, 255, 0.2)",
+        tS1Black: "0.5px 0.5px 1px rgba(0, 0, 0, 0.8)",
       },
       colors: {
         searchInputPlaceholder: "#818ae4",
