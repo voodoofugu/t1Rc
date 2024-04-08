@@ -120,6 +120,7 @@ export default {
         62: "62px",
         48: "48px",
         46: "46px",
+        40: "46px",
         34: "34px",
         32: "32px",
         30: "30px",
@@ -156,6 +157,7 @@ export default {
         30: "30px",
         18: "18px",
         10: "10px",
+        2: "2px",
       },
       borderWidth: {
         6: "6px",
