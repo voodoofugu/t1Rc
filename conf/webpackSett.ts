@@ -22,7 +22,7 @@ export function webpackSett(options: BuildOptions): webpack.Configuration {
       rules: loaders(options),
     },
     resolve: resolvers(options),
-    devtool: isDev ? "eval-cheap-module-source-map" : "source-map",
+    devtool: isDev ? "eval-cheap-module-source-map" : false, //false or "source-map"
     devServer: isDev ? devServer(options) : undefined,
   };
 }

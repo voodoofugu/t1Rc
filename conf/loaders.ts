@@ -1,5 +1,4 @@
 import { ModuleOptions } from "webpack";
-// import ReactRefreshTypeScript from "react-refresh-typescript";
 import { BuildOptions } from "./types";
 
 export function loaders(options: BuildOptions): ModuleOptions["rules"] {
@@ -40,24 +39,6 @@ export function loaders(options: BuildOptions): ModuleOptions["rules"] {
       },
     },
   };
-
-  //   const tsLoader = {
-  //     // ts-loader умеет работать с JSX
-  //     // Если б мы не использовали тайпскрипт: нужен был бы babel-loader
-  //     exclude: /node_modules/,
-  //     test: /\.tsx?$/,
-  //     use: [
-  //       {
-  //         loader: "ts-loader",
-  //         options: {
-  //           transpileOnly: true,
-  //           getCustomTransformers: () => ({
-  //             before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
-  //           }),
-  //         },
-  //       },
-  //     ],
-  //   };
 
   return [cssLoader, fileLoader, esbuildLoader];
 }
