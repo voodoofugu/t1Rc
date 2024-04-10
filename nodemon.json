@@ -1,6 +1,0 @@
-{
-  "watch": ["./server/*.js"],
-  "ext": "js",
-  "delay": 1000,
-  "legacy-watch": true
-}

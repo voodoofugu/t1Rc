@@ -17,11 +17,6 @@
     "build": "webpack --env mode=production",
     "compileScss": "node titans_rc/scripts/forServer/compileScss.js",
     "tailwindcss": "npx tailwindcss -i titans_rc/styles/tailwind/input.css -o titans_rc/styles/tailwind/output.css --watch --minify",
-    "flow": "flow",
-    "buildHTMLforSSR": "node titans_rc/scripts/forServer/buildHTMLforSSR",
-    "buildCommonJS": "babel titans_rc/components/RSC --out-dir titans_rc/pagesComponents/CommonJS",
-    "start-server": "nodemon -r @babel/register ./server/server.js",
-    "start-server2": "nodemon --experimental-loader ./titans_rc/scripts/forClient/node-jsx-loader.js ./server/server2.js",
     "get-page-list": " node titans_rc/scripts/forServer/generatePageList.js",
     "fetch-figma-icns": " node titans_rc/scripts/forServer/fetch-figma-icons.js",
     "get-icns-json": " node titans_rc/scripts/forServer/do-icns-data.js"
@@ -39,8 +34,7 @@
     "react-router-dom": "^6.22.2",
     "react-virtualized": "^9.22.5",
     "sass": "^1.71.1",
-    "use-immer": "^0.9.0",
-    "webpack-merge": "^5.10.0"
+    "use-immer": "^0.9.0"
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
@@ -52,10 +46,8 @@
     "dotenv": "^16.4.5",
     "esbuild-loader": "^4.1.0",
     "express": "^4.18.3",
-    "flow-bin": "^0.223.3",
-    "nodemon": "^3.1.0",
+    "fork-ts-checker-webpack-plugin": "^9.0.2",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",

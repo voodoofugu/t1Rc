@@ -8,6 +8,13 @@ export function devServer(options: BuildOptions): DevServerConfiguration {
     open: true,
     historyApiFallback: true,
     hot: true,
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+        runtimeErrors: true,
+      },
+    },
     static: [
       {
         directory: path.join("titans_rc", "img"),

@@ -1,7 +1,7 @@
 import webpack, { Configuration, DefinePlugin } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
-import path from "path";
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
 
 import { BuildOptions } from "./types";
 
@@ -25,6 +25,7 @@ export function plugins({
 
   if (isDev) {
     pluginsConf.push(new webpack.ProgressPlugin());
+    pluginsConf.push(new ForkTsCheckerWebpackPlugin());
     pluginsConf.push(new ReactRefreshWebpackPlugin());
   }
 
