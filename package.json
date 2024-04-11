@@ -15,7 +15,7 @@
   "scripts": {
     "start": "webpack serve --env mode=development",
     "build": "webpack --env mode=production",
-    "compileScss": "node titans_rc/scripts/forServer/compileScss.js",
+    "compileScss": "ts-node titans_rc/scripts/forServer/compileScss.ts",
     "tailwindcss": "npx tailwindcss -i titans_rc/styles/tailwind/input.css -o titans_rc/styles/tailwind/output.css --watch --minify",
     "get-page-list": " node titans_rc/scripts/forServer/generatePageList.js",
     "fetch-figma-icns": " node titans_rc/scripts/forServer/fetch-figma-icons.js",
