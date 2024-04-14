@@ -6,7 +6,7 @@ export function loaders(options: BuildOptions): ModuleOptions["rules"] {
 
   const cssLoader = {
     test: /\.(c|sa|sc)ss$/i,
-    exclude: /node_modules\/(?!normalize\.css)/,
+    exclude: /titans_rc\/styles\/tailwind\/(?!output\.css)/,
     use: {
       loader: "css-loader",
       options: {
