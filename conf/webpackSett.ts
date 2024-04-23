@@ -1,6 +1,7 @@
 import webpack from "webpack";
 import { devServer } from "./devServer";
 import { loaders } from "./loaders";
+import { optimization } from "./optimization";
 import { plugins } from "./plugins";
 import { resolvers } from "./resolvers";
 import { BuildOptions } from "./types";
@@ -17,6 +18,7 @@ export function webpackSett(options: BuildOptions): webpack.Configuration {
       filename: "[name].[contenthash].js",
       clean: true,
     },
+    optimization: optimization(options),
     plugins: plugins(options),
     module: {
       rules: loaders(options),
