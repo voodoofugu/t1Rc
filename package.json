@@ -17,9 +17,9 @@
     "build": "webpack --env mode=production",
     "compileScss": "ts-node titans_rc/scripts/forServer/compileScss.ts",
     "tailwindcss": "npx tailwindcss -i titans_rc/styles/tailwind/input.css -o titans_rc/styles/tailwind/output.css --watch --minify",
-    "get-page-list": " node titans_rc/scripts/forServer/generatePageList.js",
-    "fetch-figma-icns": " node titans_rc/scripts/forServer/fetch-figma-icons.js",
-    "get-icns-json": " node titans_rc/scripts/forServer/do-icns-data.js"
+    "get-page-list": " ts-node titans_rc/scripts/forServer/generatePageList.ts",
+    "fetch-figma-icns": "ts-node titans_rc/scripts/forServer/fetch-figma-icons.ts",
+    "get-icns-json": "ts-node titans_rc/scripts/forServer/get-icns-json.ts"
   },
   "dependencies": {
     "react": "^18.2.0",

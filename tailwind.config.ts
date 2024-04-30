@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-const plugin = require("tailwindcss/plugin");
+import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
@@ -46,12 +46,6 @@ export default {
           "inset -1px -1px 3px #c0c5f2, 1px 1px 3px #eaecfb, inset 1px 1px 3px #818ae4, -1px -1px 3px #5763db",
         shadowColor8:
           "-1px -1px 2px #fff, inset 1px 1px 2px #dde0f8, 1px 1px 2px #818ae4, inset -1px -1px 2px #abb1ed",
-        toggleBtn:
-          "inset -1px -1px 3px #c0c5f2, 1px 1px 3px #eaecfb, inset 1px 1px 3px #818ae4, -1px -1px 3px #5763db",
-        pageBoxHover:
-          "0 0 2px 1px #969ee9, -5px -5px 10px #fff, inset 1px 1px 2px #fff, inset -1px -1px 2px #abb1ed, 5px 5px 10px #969ee9",
-        pageBoxActive:
-          "0 0 2px 1px #969ee9, -2px -2px 4px #fff, inset 1px 1px 2px #fff, inset -1px -1px 2px #abb1ed, 2px 2px 4px #abb1ed",
         tooltipTemplate: "inset 1px 1px 2px #fff, inset -1px -1px 2px #969ee9",
         tooltipTemplateDark:
           "inset 1px 1px 2px #5c73be, inset -1px -1px 2px #25325c",
@@ -63,8 +57,6 @@ export default {
           "inset -1px -1px 3px #abb1ed, 1px 1px 3px #3b5093, inset 1px 1px 3px #25325c, -1px -1px 3px #0f1425",
         darkThemeClearBtn:
           "-1px -1px 2px #969ee9, inset 1px 1px 2px #344680, 1px 1px 2px #161e38, inset -1px -1px 2px #1e284a",
-        darkThemeToTopBtn:
-          "inset 1px 1px 2px #5c73be, inset -1px -1px 2px #25325c, 0 4px 10px #161e38",
         shadow1: "inset 0 0 0 2px rgb(129 140 248)",
         shadow2: "inset -4px -4px 0 #facc15",
         shadow3:
@@ -142,7 +134,7 @@ export default {
         1: "1px",
         0.5: "0.5px",
         "2rem": "2rem",
-        "calcScreenH-114": "calc(100vh - 114px)",
+        "calcScreenH-112": "calc(100vh - 112px)",
         "calcFull-80": "calc(100% - 80px)",
         "calcFull-54": "calc(100% - 54px)",
         "calcFull-50": "calc(100% - 50px)",
@@ -183,4 +175,4 @@ export default {
       );
     }),
   ],
-};
+} satisfies Config;

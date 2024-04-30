@@ -30,7 +30,7 @@ export function loaders(options: BuildOptions): ModuleOptions["rules"] {
 
   const esbuildLoader = {
     test: /\.(ts|tsx|js|jsx)$/,
-    exclude: /(node_modules|scripts)/,
+    exclude: /node_modules/,
     use: {
       loader: "esbuild-loader",
       options: {

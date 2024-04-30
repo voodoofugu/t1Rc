@@ -13,7 +13,7 @@ interface EnvVariables {
 export default (env: EnvVariables) => {
   const paths: BuildPaths = {
     output: path.resolve(__dirname, "dist"),
-    entry: path.resolve(__dirname, "titans_rc", "index.jsx"),
+    entry: path.resolve(__dirname, "titans_rc", "index.tsx"),
     html: path.resolve(__dirname, "titans_rc", "htmlContent.ejs"),
     public: path.resolve(__dirname, "titans_rc/img"),
     src: path.resolve(__dirname, "titans_rc"),
