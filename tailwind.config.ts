@@ -140,9 +140,7 @@ export default {
         "calcFull-50": "calc(100% - 50px)",
         "calc50%-119": "calc(50% - 119px)",
         "calc50%-77": "calc(50% - 77px)",
-        "Min50%": "-50%",
         "50%": "50%",
-        Min7: "-7px",
       },
       borderRadius: {
         50: "50px",
@@ -154,12 +152,6 @@ export default {
       borderWidth: {
         6: "6px",
         4: "4px",
-      },
-      rotate: {
-        Min45: "-45deg",
-      },
-      scale: {
-        0.18: "0.180134",
       },
     },
   },
