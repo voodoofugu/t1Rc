@@ -1,0 +1,86 @@
+import { memo, useState, useEffect } from "react";
+
+import {
+  selectors,
+  useDispatch,
+} from "../../templateComponents/GlobalStateStor";
+import infoPopHtmlReducer from "./infoPopHtmlReducer";
+
+export default function InfoPop({
+  colorBox,
+  text,
+  textExtra,
+  btnText1,
+  btnText2,
+  btnClass1,
+  btnClass2,
+  btn2State,
+}) {
+  const popupState = selectors.usePopupState();
+  const dispatch = useDispatch();
+
+  const [textExtraState, setTextExtraState] = useState(false);
+  const [htmlText, setHtmlText] = useState(null);
+
+  const handleTextExtraClick = () => {
+    setTextExtraState(!textExtraState);
+  };
+
+  useEffect(() => {
+    if (text.substring(0, 4) === "HTML") {
+      setHtmlText(text.substring(5));
+    }
+  }, [text]);
+
+  return (
+    <>
+      {colorBox ? <div className="color-box"></div> : ""}
+      <div className="content">
+        {textExtra ? (
+          <div
+            className={`color-btn-info${textExtraState ? " back" : ""}`}
+            onClick={handleTextExtraClick}
+          ></div>
+        ) : (
+          ""
+        )}
+        <div className="text-box">
+          {textExtraState ? (
+            <div key={1} className="text">
+              {textExtra}
+            </div>
+          ) : (
+            <div key={2} className="text">
+              {htmlText ? infoPopHtmlReducer(htmlText) : text}
+            </div>
+          )}
+        </div>
+        {btnText1 ? (
+          <div className={`color-btn ${btnClass1 ? btnClass1 : ""}`}>
+            <div
+              className="color-btn-text"
+              onClick={() => popupState.popClose(dispatch)}
+            >
+              {btnText1}
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+        {btnText2 ? (
+          <div
+            className={`color-btn ${btnClass2 ? btnClass2 : ""}`}
+            onClick={() => {
+              popupState.popClose(dispatch);
+              btn2State;
+            }}
+          >
+            <div className="color-btn-text">{btnText2}</div>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    </>
+  );
+}

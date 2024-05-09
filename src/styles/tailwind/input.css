@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  color: unset;
+}
+.world1 * {
+  box-sizing: unset;
+  vertical-align: unset;
+  max-width: unset;
+}
+.world1 ::after {
+  box-sizing: unset;
+  vertical-align: unset;
+}
+.world1 ::before {
+  box-sizing: unset;
+  vertical-align: unset;
+}
+
+.ReactVirtualized__Grid {
+  display: flex;
+  justify-content: center;
+}
+
+.ReactVirtualized__Grid::-webkit-scrollbar {
+  width: 22px;
+  height: 20px;
+}
+.ReactVirtualized__Grid::-webkit-scrollbar-track {
+  border-radius: 6px;
+}
+.ReactVirtualized__Grid::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #d6deff;
+  box-shadow: inset 0 0 3px 3px #c7d2fe, inset 4px 4px 2px 2px #f2f3fc,
+    inset -4px -4px 2px 2px #c0c5f2;
+}
+.ReactVirtualized__Grid::-webkit-scrollbar-thumb:hover {
+  background: #dde4ff;
+}
+
+.dark .ReactVirtualized__Grid::-webkit-scrollbar-thumb {
+  background: #272361;
+  box-shadow: inset 0 0 3px 3px #1e1b4b, inset 4px 4px 2px 2px #35328b,
+    inset -4px -4px 2px 2px #17143a;
+}
+.dark .ReactVirtualized__Grid::-webkit-scrollbar-thumb:hover {
+  background: #2b276c;
+}
