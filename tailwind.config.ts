@@ -3,7 +3,7 @@ import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
-    "src/{components/templateComponents,styles/tailwind}/**/*.{js,ejs,jsx}",
+    "src/{components/templateComponents,styles/tailwind}/**/*.{js,ts,ejs,jsx,tsx}",
   ],
   darkMode: "selector",
   theme: {
