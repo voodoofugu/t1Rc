@@ -6,9 +6,7 @@ export default async function createStyleText(cssFiles: string[]) {
 
     const cssTextArray = await Promise.all(
       cssFiles.map(async (cssFile) => {
-        const importedStyle = await import(
-          `../../../titans_rc/styles/css/${cssFile}.css`
-        );
+        const importedStyle = await import(`../../styles/css/${cssFile}.css`);
 
         if (importedStyle.default) {
           return importedStyle.default;

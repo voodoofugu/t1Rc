@@ -5,7 +5,11 @@ import chokidar from "chokidar";
 import transformCssFileNames from "../templateScripts/transformCssFileNames";
 
 const sourceDir = path.join("titans_rc/styles/scss");
-const outputDir = path.join("titans_rc/styles/css");
+const outputDir = path.join("src/styles/css");
+
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true });
+}
 
 // добавление .changesClass
 async function wrapSCSSFile(sourceFile: string) {
