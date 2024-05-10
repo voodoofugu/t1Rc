@@ -1,6 +1,6 @@
-import React, { memo } from "react";
+import React from "react";
 
-export default memo(function ItemBox({
+export default React.memo(function ItemBox({
   key,
   itemClass,
   itemPic,

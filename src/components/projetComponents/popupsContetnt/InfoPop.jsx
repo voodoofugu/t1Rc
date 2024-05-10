@@ -14,6 +14,7 @@ export default function InfoPop({
   btnText2,
   btnClass1,
   btnClass2,
+  btn2curency,
   btn2State,
 }) {
   const popupState = selectors.usePopupState();
@@ -27,7 +28,7 @@ export default function InfoPop({
   };
 
   useEffect(() => {
-    if (text.substring(0, 4) === "HTML") {
+    if (text && text.substring(0, 4) === "HTML") {
       setHtmlText(text.substring(5));
     }
   }, [text]);
@@ -75,7 +76,15 @@ export default function InfoPop({
               btn2State;
             }}
           >
-            <div className="color-btn-text">{btnText2}</div>
+            <div className="color-btn-text">
+              {btnText2}
+              {btn2curency && (
+                <>
+                  <img src={btn2curency[0]} loading="lazy" />
+                  {btn2curency[1]}
+                </>
+              )}
+            </div>
           </div>
         ) : (
           ""

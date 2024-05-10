@@ -12,6 +12,11 @@ interface PopupState {
   btnXClass: string;
   infBtn: boolean;
   timer: boolean;
+  count: {
+    icon: string;
+    value: number;
+    add?: boolean;
+  } | null;
   popupVisible: boolean;
   dialogEmersion: string;
   popOpen: (dispatch: (action: any) => void, actionStatets?: any) => void;
@@ -53,6 +58,7 @@ export const initialState: InitialState = {
     btnXClass: "",
     infBtn: false,
     timer: false,
+    count: null,
     popupVisible: false,
     dialogEmersion: "",
     popOpen: () => {},

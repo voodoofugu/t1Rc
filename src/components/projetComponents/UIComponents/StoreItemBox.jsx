@@ -1,18 +1,22 @@
 import React from "react";
 
-export default function StoreItemBox({ imgClass }) {
+export default React.memo(function StoreItemBox({
+  storeItemName,
+  currencyIcon,
+  buyValue,
+  children,
+}) {
   return (
-    <div className="store-item-box chest">
-      <div className="store-name">Wooden Chest</div>
-      <div className="rpg_poly-chest wooden-chest"></div>
+    <div className="store-item-box">
+      <div className="store-name">{storeItemName}</div>
+      {children}
       <div className="color-btn_shop">
         <div className="color-btn_shop-text">
-          <div>
-            buy
-            <span className="buy_value">7500</span>
-          </div>
+          buy
+          <img src={currencyIcon} loading="lazy" />
+          {buyValue}
         </div>
       </div>
     </div>
   );
-}
+});

@@ -49,6 +49,15 @@ export default memo(function Popup({ pageName }) {
               {popupState.popTit && (
                 <div className="title rounded-3xl">{popupState.popTit}</div>
               )}
+              {popupState.count && (
+                <div className="res-value">
+                  {popupState.count.value}
+                  <img className="res-value-icon" src={popupState.count.icon} />
+                  {popupState.count.add && (
+                    <div className="res-value-btn-add">+</div>
+                  )}
+                </div>
+              )}
               <Suspense>
                 {ComponentToRender && <ComponentToRender {...componentProps} />}
               </Suspense>

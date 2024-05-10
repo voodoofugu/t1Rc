@@ -2,11 +2,15 @@ import React from "react";
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
 import ResCount from "../UIComponents/ResCount";
+import StoreItemBox from "../UIComponents/StoreItemBox";
+import ItemBox from "../UIComponents/ItemBox";
+import { count } from "console";
 
 export const cssFiles = [
   "fap_market",
   "screen-superhero",
   "screen-unipop-subscription",
+  "screen-info-pop",
 ];
 
 export default function FapMarket({ pageName, children }) {
@@ -114,11 +118,61 @@ export default function FapMarket({ pageName, children }) {
             <div className="time-sec">23:54:55</div>
           </div>
           <div className="color-btn update">
-            <div className="color-btn-text">Update</div>
+            <div
+              className="color-btn-text"
+              onClick={() => {
+                dispatch({
+                  type: "POPUP_OPEN",
+                  payload: {
+                    mpopClass: "m-popup info-pop",
+                    popTit: "Info",
+                    popCont: [
+                      "InfoPop",
+                      {
+                        text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
+                        btnText1: "cancel",
+                        btnText2: "buy",
+                        btnClass1: "blue",
+                        btnClass2: "green",
+                        btn2curency: ["img/ic-diamond.png", 150],
+                      },
+                    ],
+                    count: {
+                      icon: "img/ic-diamond.png",
+                      value: 200,
+                      add: true,
+                    },
+                  },
+                });
+              }}
+            >
+              Update
+            </div>
           </div>
 
           <div className="store-item-box-scroll">
             <div className="store-item-all">
+              <StoreItemBox
+                storeItemName="Item Name"
+                currencyIcon="img/ic-diamond.png"
+                buyValue="750"
+              >
+                <ItemBox itemPic="img/unknown-hero-ava.jpg" count={100} />
+              </StoreItemBox>
+              <StoreItemBox
+                storeItemName="Item Name"
+                currencyIcon="img/evPopArts/potion_black.png"
+                buyValue="750"
+              >
+                <ItemBox itemPic="img/unknown-hero-ava.jpg" count={100} />
+              </StoreItemBox>
+              <StoreItemBox
+                storeItemName="Item Name"
+                currencyIcon="img/v2-f-e1.png"
+                buyValue="750"
+              >
+                <ItemBox itemPic="img/unknown-hero-ava.jpg" count={100} />
+              </StoreItemBox>
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">
