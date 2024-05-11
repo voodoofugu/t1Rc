@@ -10,9 +10,13 @@ export default React.memo(function ItemBox({
   unique,
   arrow,
   rare,
+  notif,
+  sale,
 }) {
   return (
     <div key={key} className={`itemBox${itemClass ? " " + itemClass : ""}`}>
+      {notif && <div className="notif">{notif}</div>}
+      {!!sale && <div className="sale-banner">{sale}</div>}
       {!!unique && (
         <div className={`unique ${unique[1] ? unique[1] : ""}`}>
           {unique[0] ? unique[0] : unique}

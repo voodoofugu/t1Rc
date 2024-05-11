@@ -4,7 +4,6 @@ import { useDispatch } from "../../templateComponents/GlobalStateStor";
 import ResCount from "../UIComponents/ResCount";
 import StoreItemBox from "../UIComponents/StoreItemBox";
 import ItemBox from "../UIComponents/ItemBox";
-import { count } from "console";
 
 export const cssFiles = [
   "fap_market",
@@ -157,21 +156,47 @@ export default function FapMarket({ pageName, children }) {
                 currencyIcon="img/ic-diamond.png"
                 buyValue="750"
               >
-                <ItemBox itemPic="img/unknown-hero-ava.jpg" count={100} />
+                <ItemBox
+                  itemPic="img/images/superhero/suphero-762/x2/avatar/762sh-ava-1.jpg"
+                  count={700}
+                  rare="u"
+                />
+              </StoreItemBox>
+              <StoreItemBox
+                storeItemName="Item Name"
+                currencyIcon="img/ic-diamond.png"
+                buyValue="750"
+              >
+                <ItemBox
+                  itemPic="img/images/superhero/suphero-948/x2/avatar/sh-ava-1.jpg"
+                  count={700}
+                  rare="e"
+                  notif
+                />
               </StoreItemBox>
               <StoreItemBox
                 storeItemName="Item Name"
                 currencyIcon="img/evPopArts/potion_black.png"
                 buyValue="750"
               >
-                <ItemBox itemPic="img/unknown-hero-ava.jpg" count={100} />
+                <ItemBox
+                  itemPic="img/unknown-hero-ava.jpg"
+                  itemClass="piecesHero"
+                  count={100}
+                  sale="-50%"
+                />
               </StoreItemBox>
               <StoreItemBox
                 storeItemName="Item Name"
                 currencyIcon="img/v2-f-e1.png"
                 buyValue="750"
+                check
               >
-                <ItemBox itemPic="img/unknown-hero-ava.jpg" count={100} />
+                <ItemBox
+                  itemPic="img/evPopArts/potion_green.png"
+                  itemClass="check"
+                  count={1000}
+                />
               </StoreItemBox>
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
