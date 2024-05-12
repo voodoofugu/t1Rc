@@ -9,14 +9,12 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./titans_rc/*"]
-    }
+    "baseUrl": "."
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": ["src/**/*"]
 }

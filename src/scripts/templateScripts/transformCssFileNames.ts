@@ -1,4 +1,3 @@
-// Функция для преобразования названий CSS-файлов в верблюжий стиль
 export default function transformCssFileNames(arr: string[]) {
   return arr.map((item) => {
     let transformed = item.replace(/^\d+/, "");

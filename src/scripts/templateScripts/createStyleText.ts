@@ -1,4 +1,7 @@
-export default async function createStyleText(cssFiles: string[]) {
+export default async function createStyleText(
+  cssFiles: string[],
+  pathFiles?: string
+) {
   try {
     if (!cssFiles || !Array.isArray(cssFiles)) {
       throw new Error("Invalid or missing cssFiles");
@@ -6,7 +9,11 @@ export default async function createStyleText(cssFiles: string[]) {
 
     const cssTextArray = await Promise.all(
       cssFiles.map(async (cssFile) => {
-        const importedStyle = await import(`../../styles/css/${cssFile}.css`);
+        const importedStyle = await import(
+          pathFiles
+            ? `${pathFiles}/${cssFile}.css`
+            : `../../styles/css/${cssFile}.css`
+        );
 
         if (importedStyle.default) {
           return importedStyle.default;
