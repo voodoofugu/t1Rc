@@ -33,6 +33,9 @@ importers:
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: ^0.5.11
         version: 0.5.11(@types/webpack@5.28.5(webpack-cli@5.1.4(webpack-dev-server@4.15.1)(webpack@5.90.3)))(react-refresh@0.14.0)(type-fest@0.21.3)(webpack-dev-server@4.15.1(webpack-cli@5.1.4)(webpack@5.90.3))(webpack@5.90.3(webpack-cli@5.1.4(webpack-dev-server@4.15.1)(webpack@5.90.3)))
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.21
       '@types/jest':
         specifier: ^29.5.12
         version: 29.5.12
@@ -48,6 +51,9 @@ importers:
       '@types/webpack':
         specifier: ^5.28.5
         version: 5.28.5(webpack-cli@5.1.4(webpack-dev-server@4.15.1)(webpack@5.90.3))
+      '@types/ws':
+        specifier: ^8.5.10
+        version: 8.5.10
       chokidar:
         specifier: ^3.6.0
         version: 3.6.0
@@ -108,6 +114,9 @@ importers:
       webpack-dev-server:
         specifier: ^4.15.1
         version: 4.15.1(webpack-cli@5.1.4)(webpack@5.90.3)
+      ws:
+        specifier: ^8.17.0
+        version: 8.17.0
 
 packages:
 
@@ -3459,8 +3468,8 @@ packages:
     resolution: {integrity: sha512-7KxauUdBmSdWnmpaGFg+ppNjKF8uNLry8LyzjauQDOVONfFLNKrKvQOxZ/VuTIcS/gge/YNahf5RIIQWTSarlg==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
 
-  ws@8.16.0:
-    resolution: {integrity: sha512-HS0c//TP7Ina87TfiPUz1rQzMhHrl/SG2guqRcTOIUYD2q8uhUdNHZYJUaQ8aTGPzCh+c6oawMKW35nFl1dxyQ==}
+  ws@8.17.0:
+    resolution: {integrity: sha512-uJq6108EgZMAl20KagGkzCKfMEjxmKvZHG7Tlq0Z6nOky7YF7aq4mOx6xK8TJ/i1LeK4Qus7INktacctDgY8Ow==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -7273,7 +7282,7 @@ snapshots:
       sockjs: 0.3.24
       spdy: 4.0.2
       webpack-dev-middleware: 5.3.3(webpack@5.90.3(webpack-cli@5.1.4(webpack-dev-server@4.15.1)(webpack@5.90.3)))
-      ws: 8.16.0
+      ws: 8.17.0
     optionalDependencies:
       webpack: 5.90.3(webpack-cli@5.1.4(webpack-dev-server@4.15.1)(webpack@5.90.3))
       webpack-cli: 5.1.4(webpack-dev-server@4.15.1)(webpack@5.90.3)
@@ -7382,7 +7391,7 @@ snapshots:
       imurmurhash: 0.1.4
       signal-exit: 3.0.7
 
-  ws@8.16.0: {}
+  ws@8.17.0: {}
 
   y18n@5.0.8: {}
 

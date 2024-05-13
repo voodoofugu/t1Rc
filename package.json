@@ -19,7 +19,8 @@
     "tailwindcss": "npx tailwindcss -i src/styles/tailwind/input.css -o src/styles/tailwind/output.css --watch --minify",
     "get-page-list": " ts-node src/scripts/templateScripts/get-page-list.ts",
     "fetch-figma-icns": "ts-node src/scripts/templateScripts/fetch-figma-icons.ts",
-    "get-icns-json": "ts-node src/scripts/templateScripts/get-icns-json.ts"
+    "get-icns-json": "ts-node src/scripts/templateScripts/get-icns-json.ts",
+    "start-ws-server": "ts-node src/scripts/server/wsServer.ts"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -32,11 +33,13 @@
   },
   "devDependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.6",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
     "@types/webpack": "^5.28.5",
+    "@types/ws": "^8.5.10",
     "chokidar": "^3.6.0",
     "css-loader": "^6.10.0",
     "dotenv": "^16.4.5",
@@ -56,6 +59,7 @@
     "typescript": "^5.3.3",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "ws": "^8.17.0"
   }
 }
