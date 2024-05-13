@@ -12,15 +12,17 @@ export default React.memo(function StoreItemBox({
       <div className="store-name">{storeItemName}</div>
       {children}
       {!check ? (
-        <div className="color-btn_shop">
-          <div className="color-btn_shop-text">
+        <div className="color-btn blue">
+          <div className="color-btn-text">
             buy
             <img src={currencyIcon} loading="lazy" />
             {buyValue}
           </div>
         </div>
       ) : (
-        ""
+        <div className="color-btn green">
+          <div className="color-btn-text">sold</div>
+        </div>
       )}
     </div>
   );

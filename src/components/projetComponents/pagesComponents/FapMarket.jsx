@@ -113,7 +113,7 @@ export default function FapMarket({ pageName, children }) {
 
         <div className="store-item-box-all">
           <div className="wpck-timer-box">
-            <div className="time-left">time left</div>
+            <div className="time-left">Refresh in:</div>
             <div className="time-sec">23:54:55</div>
           </div>
           <div className="color-btn update">
@@ -130,7 +130,7 @@ export default function FapMarket({ pageName, children }) {
                       {
                         text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
                         btnText1: "cancel",
-                        btnText2: "buy",
+                        btnText2: "buy 1/3",
                         btnClass1: "blue",
                         btnClass2: "green",
                         btn2curency: ["img/ic-diamond.png", 150],
@@ -145,9 +145,12 @@ export default function FapMarket({ pageName, children }) {
                 });
               }}
             >
-              Update
+              <img src="img/evPopArts/update.png" />
+              1/3
             </div>
           </div>
+
+          <div className="btnI" />
 
           <div className="store-item-box-scroll">
             <div className="store-item-all">
@@ -206,6 +209,11 @@ export default function FapMarket({ pageName, children }) {
             <div className="store-item-all">
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
+          </div>
+        </div>
+        <div className="textBubble">
+          <div className="bubbleInner">
+            <div className="bubbleText">Make me happy and buy some more!</div>
           </div>
         </div>
         <div className="fapMarket_girl"></div>

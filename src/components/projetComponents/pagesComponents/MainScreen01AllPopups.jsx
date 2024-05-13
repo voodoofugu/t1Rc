@@ -95,8 +95,11 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           </div>
         </div>
         <div className="shop-chest-box-all">
+          <div className="res-tavern-btn">
+            <div className="res-shop-btn-text">tavern</div>
+          </div>
           <div className="res-shop-btn">
-            <div className="res-shop-btn-text">магазин</div>
+            <div className="res-shop-btn-text">shop</div>
           </div>
           <div
             className="res-chest-btn"
