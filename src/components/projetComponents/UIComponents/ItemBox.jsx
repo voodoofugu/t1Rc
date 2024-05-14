@@ -1,7 +1,6 @@
 import React from "react";
 
 export default React.memo(function ItemBox({
-  key,
   itemClass,
   itemPic,
   count,
@@ -14,7 +13,7 @@ export default React.memo(function ItemBox({
   sale,
 }) {
   return (
-    <div key={key} className={`itemBox${itemClass ? " " + itemClass : ""}`}>
+    <div className={`itemBox${itemClass ? " " + itemClass : ""}`}>
       {notif && <div className="notif">{notif}</div>}
       {!!sale && <div className="sale-banner">{sale}</div>}
       {!!unique && (

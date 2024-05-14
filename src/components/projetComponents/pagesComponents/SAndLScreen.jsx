@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 
 import {
   selectors,
@@ -22,16 +22,17 @@ export const cssFiles = [
 ];
 
 function getRandomNumber() {
-  const randomNumber = Math.floor(Math.random() * 12) + 1;
-  return randomNumber === 1 ? 2 : randomNumber;
+  const randomNumber = Math.floor(Math.random() * 6) + 1;
+  return randomNumber;
 }
 
 export default function SAndLScreen({ pageName, children }) {
   const sAndLStates = selectors.useSAndLStates();
   const dispatch = useDispatch();
 
-  const [diceStateClass, setDiceStateClass] = useState("");
-  const [diceValue, setDiceValue] = useState(0);
+  const [diceStateClass, setDiceStateClass] = React.useState("");
+  const [diceValue, setDiceValue] = React.useState(0);
+  const [diceColor, setDiceColor] = React.useState(false);
 
   const specialIndexes = [
     [[88, 98], "portalRed"],
@@ -40,10 +41,61 @@ export default function SAndLScreen({ pageName, children }) {
     [[77, 93], "portalGreen"],
     [[74, 82], "portalBlue"],
     [[5, 14, 21, 37, 50, 70], "chest"],
+    [[10, 20, 30, 40, 60, 80], "itemBox"],
   ];
+
+  const specialIndexesForItems = [
+    [
+      [10, 20, 30, 40, 60],
+      [
+        {
+          ItemBox: {
+            itemClass: "wh44",
+            itemPic: "img/sAndL/whiteDice_icn1.png",
+            count: 1,
+          },
+        },
+        {
+          ItemBox: {
+            itemClass: "wh44",
+            itemPic:
+              "img/images/superhero/suphero-762/x2/avatar/762sh-ava-1.jpg",
+            count: 700,
+            rare: "u",
+          },
+        },
+        {
+          ItemBox: {
+            itemClass: "wh44",
+            itemPic: "img/images/superhero/suphero-948/x2/avatar/sh-ava-1.jpg",
+            count: 700,
+            rare: "e",
+          },
+        },
+        {
+          ItemBox: {
+            itemClass: "wh44",
+            itemPic: "img/unknown-hero-ava.jpg",
+            itemClass: "piecesHero",
+            count: 100,
+          },
+        },
+        {
+          ItemBox: {
+            itemClass: "wh44",
+            itemPic: "img/evPopArts/potion_green.png",
+            itemClass: "check",
+            count: 1000,
+          },
+        },
+      ],
+    ],
+  ];
+
   const plateComponents = Object.entries(pathsPositions).map(
     ([pathName, { top, left }], index) => {
       let additionalClass = "";
+      let additionalObject = null;
 
       if (specialIndexes.some(([indexes]) => indexes.includes(index))) {
         const matchingEntry = specialIndexes.find(([indexes]) =>
@@ -51,6 +103,13 @@ export default function SAndLScreen({ pageName, children }) {
         );
         additionalClass = matchingEntry ? matchingEntry[1] : "";
       }
+
+      // if (specialIndexesForItems.some(([indexes]) => indexes.includes(index))) {
+      //   const matchingEntry = specialIndexesForItems.find(([indexes]) =>
+      //     indexes.includes(index)
+      //   );
+      //   additionalObject = matchingEntry ? matchingEntry[1] : null;
+      // }
 
       return (
         <div
@@ -62,7 +121,8 @@ export default function SAndLScreen({ pageName, children }) {
               : ""
           }`}
         >
-          {<div className="plateNum">{index + 1}</div>}
+          <div className="plateNum">{index + 1}</div>
+          {additionalObject ? additionalObject : null}
         </div>
       );
     }
@@ -72,24 +132,34 @@ export default function SAndLScreen({ pageName, children }) {
   const activePlateStyles = pathsPositions[activePathName];
 
   function addRollClass() {
+    const diceNum = getRandomNumber();
+    const diceClass = diceColor ? "gold" : "white";
+
     dispatch({
       type: "ANIM_IN_PROG",
       payload: true,
     });
-    const diceNum = getRandomNumber();
-    setDiceStateClass("roll");
+
+    setDiceStateClass(`roll ${diceClass}`);
     setTimeout(() => {
-      setDiceStateClass(`diceNum${diceNum}`);
+      setDiceStateClass(`${diceClass}_diceNum${diceNum} ${diceClass}`);
       setDiceValue(diceNum);
       setTimeout(() => {
-        setDiceStateClass(`diceNum${diceNum} off`);
+        setDiceStateClass(`${diceClass}_diceNum${diceNum} ${diceClass} off`);
         setTimeout(() => {
           setDiceStateClass("");
           setDiceValue(0);
+          setDiceColor(false);
         }, 400);
       }, sAndLStates.activeTime * diceNum + 1200);
     }, 800);
   }
+
+  React.useEffect(() => {
+    if (diceColor) {
+      addRollClass();
+    }
+  }, [diceColor]);
 
   return (
     <div className="main world1">
@@ -129,10 +199,21 @@ export default function SAndLScreen({ pageName, children }) {
                 sAndLStates.animInProgress ? null : addRollClass();
               }}
             >
-              <div className="color-btn-text">roll dice</div>
+              <div className="color-btn-text">
+                white dice
+                <div className="diceCount">12</div>
+              </div>
             </div>
-            <div className="color-btn gold">
-              <div className="color-btn-text">roll all dice</div>
+            <div
+              className="color-btn gold"
+              onClick={() => {
+                sAndLStates.animInProgress ? null : setDiceColor(true);
+              }}
+            >
+              <div className="color-btn-text">
+                gold dice
+                <div className="diceCount">221</div>
+              </div>
             </div>
             <div className={`diceWrap ${diceStateClass}`}>
               <div className="dice"></div>
@@ -202,35 +283,6 @@ export default function SAndLScreen({ pageName, children }) {
             <img className="icn" src="img/sAndL/anvilIcn.png" loading="lazy" />
             <div className="color-btn-text">Craft Room</div>
           </div>
-          <div className="resCount">
-            <img
-              className="resIcn"
-              src="img/sAndL/whiteDice_icn1.png"
-              loading="lazy"
-            ></img>
-            <div className="resValueText">0</div>
-            <div
-              className="resAdd"
-              onClick={() => {
-                dispatch({
-                  type: "POPUP_OPEN",
-                  payload: {
-                    mpopClass: "m-popup essence-buy",
-                    popTit: "Buy Dices",
-                    popCont: [
-                      "BuyShop",
-                      {
-                        img1: "sAndL/whiteDice_shop1",
-                        img2: "sAndL/whiteDice_shop2",
-                        img3: "sAndL/whiteDice_shop3",
-                        img4: "sAndL/whiteDice_shop4",
-                      },
-                    ],
-                  },
-                });
-              }}
-            ></div>
-          </div>
           <div className="btnX"></div>
           <div className="boxTitle gold">Новый мир 1 lvl</div>
           <div
@@ -267,7 +319,66 @@ export default function SAndLScreen({ pageName, children }) {
               });
             }}
           >
-            <img className="icon" src="img/v2-ns-ball.png" loading="lazy" />
+            <img
+              className="icon"
+              src="img/sAndL/ev_duPack_ic.png"
+              loading="lazy"
+            />
+          </div>
+          <div
+            className="offerBtn"
+            onClick={() => {
+              dispatch({
+                type: "POPUP_OPEN",
+                payload: {
+                  mpopClass: "m-popup essence-buy",
+                  popTit: "Buy White Dices",
+                  popCont: [
+                    "BuyShop",
+                    {
+                      img1: "sAndL/whiteDice_shop1",
+                      img2: "sAndL/whiteDice_shop2",
+                      img3: "sAndL/whiteDice_shop3",
+                      img4: "sAndL/whiteDice_shop4",
+                    },
+                  ],
+                },
+              });
+            }}
+          >
+            <img
+              className="icon"
+              src="img/sAndL/whiteDice_shop.png"
+              loading="lazy"
+            />
+          </div>
+          <div
+            className="offerBtn"
+            onClick={() => {
+              dispatch({
+                type: "POPUP_OPEN",
+                payload: {
+                  mpopClass: "m-popup essence-buy",
+                  popTit: "Buy Gold Dices",
+                  popCont: [
+                    "BuyShop",
+                    {
+                      img1: "sAndL/goldDice_shop1",
+                      img2: "sAndL/goldDice_shop2",
+                      img3: "sAndL/goldDice_shop3",
+                      img4: "sAndL/goldDice_shop4",
+                    },
+                  ],
+                },
+              });
+            }}
+          >
+            <img
+              className="icon"
+              src="img/sAndL/goldDice_shop.png"
+              loading="lazy"
+            />
+            <div className="notif"></div>
           </div>
         </div>
       </div>
