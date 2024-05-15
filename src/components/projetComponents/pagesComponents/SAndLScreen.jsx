@@ -54,7 +54,6 @@ export default function SAndLScreen({ pageName, children }) {
           itemClass: "wh44",
           itemPic: "img/sAndL/whiteDice_icn1.png",
           count: 1,
-          arrow: true,
         },
         {
           itemClass: "wh44",
