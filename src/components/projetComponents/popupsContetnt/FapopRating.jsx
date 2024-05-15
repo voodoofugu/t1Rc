@@ -315,7 +315,7 @@ export default function FapopRating() {
               </div>
               <div className="ped-box-portrait"></div>
             </div>
-            <div className="ped-box rate2 active">
+            <div className="ped-box rate2">
               <div className="ped-box-prize"></div>
               <div className="rating-ped-box-num">
                 <div className="ped-box-num-text var2">21-50</div>

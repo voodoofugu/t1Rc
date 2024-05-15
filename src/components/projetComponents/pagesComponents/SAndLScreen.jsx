@@ -19,6 +19,8 @@ export const cssFiles = [
   "quest_chain_pop",
   "v2-screen-pse-main",
   "pop-wpck-all",
+  "screen-fapopoly-rating",
+  "screen-rating",
 ];
 
 function getRandomNumber() {
@@ -283,6 +285,24 @@ export default function SAndLScreen({ pageName, children }) {
             <img className="icn" src="img/sAndL/anvilIcn.png" loading="lazy" />
             <div className="color-btn-text">Craft Room</div>
           </div>
+
+          <div
+            className="color-btn ratingBtn"
+            onClick={() => {
+              dispatch({
+                type: "POPUP_OPEN",
+                payload: {
+                  mpopClass: "m-popup fapop-rating",
+                  popTit: "rating",
+                  popCont: ["FapopRating"],
+                },
+              });
+            }}
+          >
+            <img className="icn" src="img/sAndL/ratingIcn.png" loading="lazy" />
+            <div className="color-btn-text">Rating</div>
+          </div>
+
           <div className="btnX"></div>
           <div className="boxTitle gold">Новый мир 1 lvl</div>
           <div
