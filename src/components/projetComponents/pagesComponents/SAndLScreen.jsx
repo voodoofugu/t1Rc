@@ -51,44 +51,32 @@ export default function SAndLScreen({ pageName, children }) {
       [10, 20, 30, 40, 60],
       [
         {
-          ItemBox: {
-            itemClass: "wh44",
-            itemPic: "img/sAndL/whiteDice_icn1.png",
-            count: 1,
-          },
+          itemClass: "wh44",
+          itemPic: "img/sAndL/whiteDice_icn1.png",
+          count: 1,
+          arrow: true,
         },
         {
-          ItemBox: {
-            itemClass: "wh44",
-            itemPic:
-              "img/images/superhero/suphero-762/x2/avatar/762sh-ava-1.jpg",
-            count: 700,
-            rare: "u",
-          },
+          itemClass: "wh44",
+          itemPic: "img/images/superhero/suphero-762/x2/avatar/762sh-ava-1.jpg",
+          count: 700,
+          rare: "u",
         },
         {
-          ItemBox: {
-            itemClass: "wh44",
-            itemPic: "img/images/superhero/suphero-948/x2/avatar/sh-ava-1.jpg",
-            count: 700,
-            rare: "e",
-          },
+          itemClass: "wh44",
+          itemPic: "img/images/superhero/suphero-948/x2/avatar/sh-ava-1.jpg",
+          count: 700,
+          rare: "e",
         },
         {
-          ItemBox: {
-            itemClass: "wh44",
-            itemPic: "img/unknown-hero-ava.jpg",
-            itemClass: "piecesHero",
-            count: 100,
-          },
+          itemClass: "wh44 piecesHero",
+          itemPic: "img/unknown-hero-ava.jpg",
+          count: 100,
         },
         {
-          ItemBox: {
-            itemClass: "wh44",
-            itemPic: "img/evPopArts/potion_green.png",
-            itemClass: "check",
-            count: 1000,
-          },
+          itemClass: "wh44 check",
+          itemPic: "img/evPopArts/potion_green.png",
+          count: 1000,
         },
       ],
     ],
@@ -106,12 +94,18 @@ export default function SAndLScreen({ pageName, children }) {
         additionalClass = matchingEntry ? matchingEntry[1] : "";
       }
 
-      // if (specialIndexesForItems.some(([indexes]) => indexes.includes(index))) {
-      //   const matchingEntry = specialIndexesForItems.find(([indexes]) =>
-      //     indexes.includes(index)
-      //   );
-      //   additionalObject = matchingEntry ? matchingEntry[1] : null;
-      // }
+      const matchingEntryForItems = specialIndexesForItems.find(([indexes]) =>
+        indexes.includes(index)
+      );
+
+      if (matchingEntryForItems) {
+        const matchingIndex = matchingEntryForItems[0].indexOf(index);
+        if (matchingIndex !== -1) {
+          additionalObject = matchingEntryForItems[1][matchingIndex];
+        }
+      }
+
+      console.log(additionalObject);
 
       return (
         <div
@@ -124,7 +118,7 @@ export default function SAndLScreen({ pageName, children }) {
           }`}
         >
           <div className="plateNum">{index + 1}</div>
-          {additionalObject ? additionalObject : null}
+          {additionalObject && <ItemBox {...additionalObject} />}
         </div>
       );
     }
