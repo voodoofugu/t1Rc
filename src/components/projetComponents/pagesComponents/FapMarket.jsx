@@ -17,7 +17,14 @@ export const cssFiles = [
 export default function FapMarket({ pageName, children }) {
   const dispatch = useDispatch();
 
-  const { data } = useFetchWS();
+  const { data, loading, error } = useFetchWS();
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+  console.log("data", data);
 
   return (
     <div className="main world1">
@@ -208,7 +215,7 @@ export default function FapMarket({ pageName, children }) {
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">
-              {data}
+              {data && <p>{data}</p>}
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">

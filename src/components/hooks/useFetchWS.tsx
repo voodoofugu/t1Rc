@@ -50,9 +50,9 @@ export default function useFetchWS() {
   return (
     <div>
       {data && (
-        <>
-          <p>{data}</p>
-        </>
+        <div>
+          <p>{data.message}</p>
+        </div>
       )}
     </div>
   );

@@ -1,10 +1,6 @@
-import express from "express";
-import http from "http";
-import WebSocket from "ws";
+import { WebSocketServer } from "ws";
 
-const app = express();
-const server = http.createServer(app);
-const wss = new WebSocket.Server({ server });
+const wss = new WebSocketServer({ port: 8080 });
 
 wss.on("connection", function connection(ws) {
   console.log("Client connected");
@@ -14,9 +10,4 @@ wss.on("connection", function connection(ws) {
   });
 
   ws.send(JSON.stringify({ message: "Hello, client!" }));
-});
-
-const PORT = process.env.PORT || 8080;
-server.listen(PORT, () => {
-  console.log(`WebSocket server is listening on port ${PORT}`);
 });
