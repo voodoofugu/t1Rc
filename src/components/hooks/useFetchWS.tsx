@@ -10,12 +10,18 @@ export default function useFetchWS() {
 
     socket.onopen = () => {
       console.log("WebSocket connected");
+      const message = {
+        message: "Hello, server!",
+      };
+
+      socket.send(JSON.stringify(message));
     };
 
     socket.onmessage = (event) => {
+      const message = event.data;
+
       try {
-        const newData = JSON.parse(event.data);
-        setData(newData);
+        setData(message);
         setLoading(false);
       } catch (error) {
         console.error("Error parsing data:", error);

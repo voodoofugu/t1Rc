@@ -104,8 +104,6 @@ export default function SAndLScreen({ pageName, children }) {
         }
       }
 
-      console.log(additionalObject);
-
       return (
         <div
           key={index}
