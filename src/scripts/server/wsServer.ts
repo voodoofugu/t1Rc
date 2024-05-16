@@ -7,7 +7,21 @@ wss.on("connection", function connection(ws) {
 
   ws.on("message", function incoming(message: string) {
     console.log("received: %s", message);
+
+    let receivedData;
+    try {
+      receivedData = JSON.parse(message);
+    } catch (error) {
+      console.error("Error parsing JSON:", error);
+      return;
+    }
+
+    if (receivedData === "myRequest") {
+      ws.send(JSON.stringify({ answer: "Hello, client!" }));
+    } else {
+      ws.send(JSON.stringify({ answer: "Unknown action" }));
+    }
   });
 
-  ws.send(JSON.stringify({ message: "Hello, client!" }));
+  ws.send(JSON.stringify({ message: "Yo!" }));
 });

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function useFetchWS() {
+export default function useFetchWS(request: string) {
   const [data, setData] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState(null);
@@ -10,18 +10,13 @@ export default function useFetchWS() {
 
     socket.onopen = () => {
       console.log("WebSocket connected");
-      const message = {
-        message: "Hello, server!",
-      };
-
-      socket.send(JSON.stringify(message));
+      socket.send(request);
     };
 
     socket.onmessage = (event) => {
-      const message = event.data;
-
       try {
-        setData(message);
+        const newData = JSON.parse(event.data);
+        setData(newData);
         setLoading(false);
       } catch (error) {
         console.error("Error parsing data:", error);
@@ -43,7 +38,7 @@ export default function useFetchWS() {
     return () => {
       socket.close();
     };
-  }, []);
+  }, [request]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -53,13 +48,6 @@ export default function useFetchWS() {
     return <div>Error: {error}</div>;
   }
 
-  return (
-    <div>
-      {data && (
-        <div>
-          <p>{data.message}</p>
-        </div>
-      )}
-    </div>
-  );
+  console.log("Data received from WebSocket:", data);
+  return data;
 }
