@@ -1,4 +1,5 @@
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import ItemBox from "../UIComponents/ItemBox";
 
 export const cssFiles = [
   "screen-fapopoly-main",
@@ -8,6 +9,7 @@ export const cssFiles = [
   "screen-fapopoly-rating",
   "screen-superhero",
   "screen-unipop-subscription",
+  "screen-fapopoly-shop",
 ];
 
 export default function V2MainScreen09HwFapopoly({ pageName, children }) {
@@ -819,10 +821,22 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             >
               <div className="color-btn-text">rating</div>
             </div>
-            <div className="color-btn fl token">
+            <div
+              className="color-btn fl token"
+              onClick={() => {
+                dispatch({
+                  type: "POPUP_OPEN",
+                  payload: {
+                    mpopClass: "m-popup fapop-shop buyed",
+                    popTit: "tokens",
+                    popCont: ["FapopShopBuyed"],
+                  },
+                });
+              }}
+            >
               <img
                 className="domik"
-                src="img/fapop-token-ic.png"
+                src="img/evPopArts/fapop-token-ic.png"
                 loading="lazy"
               />
               <div className="color-btn-text">tokens</div>
@@ -892,53 +906,44 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             </div>
             <div className="fapop-rewards-box-all">
               <div className="fapop-rewards-text">rewards</div>
+
               <div className="fapop-rewards-box">
-                <div className="fapop-rewards girl good">
-                  <div className="fapop-rew-pic">
-                    <img
-                      src="img/images/superhero/suphero-08/x1/avatar/08sh-ava-1.jpg"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="fapop-rew-pts">Sidzuki Yano</div>
-                  <div className="fapop-rew-good"></div>
-                  <div className="fapop-pts-num">75</div>
-                </div>
-                <div className="fapop-rewards">
-                  <div className="fapop-rew-pic">
-                    <img src="img/ic-abil-dps-plus@2x.png" loading="lazy" />
-                  </div>
-                  <div className="fapop-rew-pts">x2</div>
-                  <div className="fapop-pts-num">50</div>
-                </div>
-                <div className="fapop-rewards">
-                  <div className="fapop-rew-pic">
-                    <img src="img/arrow_up1.png" loading="lazy" />
-                  </div>
-                  <div className="fapop-rew-pts">15</div>
-                  <div className="fapop-pts-num">35</div>
-                </div>
-                <div className="fapop-rewards">
-                  <div className="fapop-rew-pic">
-                    <img src="img/sh-icon-chest-128.png" loading="lazy" />
-                  </div>
-                  <div className="fapop-rew-pts">35</div>
-                  <div className="fapop-pts-num">20</div>
-                </div>
-                <div className="fapop-rewards">
-                  <div className="fapop-rew-pic">
-                    <img src="img/ic-abil-gold-up.png" loading="lazy" />
-                  </div>
-                  <div className="fapop-rew-pts">10K%</div>
-                  <div className="fapop-pts-num">10</div>
-                </div>
-                <div className="fapop-rewards claim">
-                  <div className="fapop-rew-pic">
-                    <img src="img/sh-icon-chest-128.png" loading="lazy" />
-                  </div>
-                  <div className="fapop-rew-pts">claim</div>
-                  <div className="fapop-pts-num">3</div>
-                </div>
+                <ItemBox
+                  itemClass="wh68"
+                  itemPic="img/images/superhero/suphero-08/x1/avatar/08sh-ava-1.jpg"
+                  countOut="75"
+                />
+                <ItemBox
+                  itemClass="wh68"
+                  itemPic="img/ic-abil-dps-plus@2x.png"
+                  count="x2"
+                  countOut="50"
+                />
+                <ItemBox
+                  itemClass="wh68"
+                  itemPic="img/arrow_up1.png"
+                  count="15"
+                  countOut="35"
+                />
+                <ItemBox
+                  itemClass="wh68"
+                  itemPic="img/sh-icon-chest-128.png"
+                  count="35"
+                  countOut="20"
+                />
+                <ItemBox
+                  itemClass="wh68"
+                  itemPic="img/ic-abil-gold-up.png"
+                  count="10K%"
+                  countOut="10"
+                  get={true}
+                />
+                <ItemBox
+                  itemClass="wh68 check"
+                  itemPic="img/sh-icon-chest-128.png"
+                  count="1"
+                  countOut="3"
+                />
               </div>
             </div>
           </div>
@@ -949,12 +954,11 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             tooltiptext="Daily quests reset every 24h!"
             className="fapop-prgbar-box-all"
           >
-            <div className="fapop-prgbar-reward-box">
-              <div className="fapop-prgbar-reward-pic">
-                <img src="img/fapop-token-ic.png" loading="lazy" />
-              </div>
-              <div className="fapop-prgbar-reward-text">1</div>
-            </div>
+            <ItemBox
+              itemClass="wh60"
+              itemPic="img/evPopArts/fapop-token-ic.png"
+              count={1}
+            />
             <div className="fapop-prgbar-box">
               <div className="fapop-prgbar-full" style={{ width: "40%" }}></div>
               <div className="fapop-prgbar-text">Kill 50 minions</div>
@@ -973,12 +977,12 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
               <div className="color-btn-text">roll dice</div>
               <div className="token-count-box">
                 <div className="token-count">
-                  1/0<span className="f-token"></span>
+                  10/0<span className="f-token"></span>
                 </div>
               </div>
             </div>
             <div className="color-btn green ten">
-              <div className="color-btn-text">ten dice rolls</div>
+              <div className="color-btn-text">roll dice</div>
               <div className="token-count-box">
                 <div className="token-count">
                   10/0<span className="f-token"></span>
