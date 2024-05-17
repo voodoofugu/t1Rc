@@ -9,8 +9,8 @@ export default function useFetchWS(request: string) {
     const socket = new WebSocket("ws://localhost:8080");
 
     socket.onopen = () => {
-      console.log("WebSocket connected");
-      socket.send(request);
+      console.log("✅ WebSocket connected");
+      socket.send(JSON.stringify(request));
     };
 
     socket.onmessage = (event) => {
@@ -19,20 +19,20 @@ export default function useFetchWS(request: string) {
         setData(newData);
         setLoading(false);
       } catch (error) {
-        console.error("Error parsing data:", error);
+        console.error("🚫 Error parsing data:", error);
         setError(error);
         setLoading(false);
       }
     };
 
     socket.onerror = (error) => {
-      console.error("WebSocket error:", error);
+      console.error("🚫 WebSocket error:", error);
       setError(error);
       setLoading(false);
     };
 
     socket.onclose = () => {
-      console.log("WebSocket closed");
+      console.log("❎ WebSocket closed");
     };
 
     return () => {
@@ -43,7 +43,6 @@ export default function useFetchWS(request: string) {
   if (loading) {
     return <div>Loading...</div>;
   }
-
   if (error) {
     return <div>Error: {error}</div>;
   }

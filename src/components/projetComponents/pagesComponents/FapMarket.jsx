@@ -17,8 +17,27 @@ export const cssFiles = [
 export default function FapMarket({ pageName, children }) {
   const dispatch = useDispatch();
 
-  const request = JSON.stringify("myRequest");
-  const dataFetch = useFetchWS(request);
+  const dataFetch = useFetchWS("myRequest");
+  const deserializeReactElement = (element) => {
+    if (!element) {
+      console.error("Element is undefined");
+      return null;
+    }
+
+    const { type, props, children } = element;
+
+    if (!type) {
+      console.error("Type is undefined in element:", element);
+      return null;
+    }
+
+    const childrenElements = Array.isArray(children)
+      ? children.map(deserializeReactElement)
+      : children;
+
+    return React.createElement(type, props, childrenElements);
+  };
+  const reactElement = deserializeReactElement(dataFetch.answer);
 
   return (
     <div className="main world1">
@@ -209,7 +228,7 @@ export default function FapMarket({ pageName, children }) {
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">
-              <p>{dataFetch.answer}</p>
+              <p>{reactElement}</p>
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">
