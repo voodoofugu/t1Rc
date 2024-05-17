@@ -1,6 +1,7 @@
 import React from "react";
 
 import QuestChainCard from "../UIComponents/QuestChainCard";
+import ItemBox from "../UIComponents/ItemBox";
 
 export default function QuestChain() {
   return (
@@ -146,25 +147,11 @@ export default function QuestChain() {
             />
           </div>
         </div>
-
-        <div className="girlReward_box">
-          <div
-            className="heroAvatar_box"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <div className="unique dark">dark hero</div>
-            <div className="heroAvatar">
-              <img src="img/images/hero-all/tithero-356/x1/ava/tithero-356-1-ava.jpg" />
-            </div>
-          </div>
-          <div className="color-btn green" style={{ filter: "grayscale(1)" }}>
-            <div className="color-btn-text">claim</div>
-          </div>
-        </div>
+        <ItemBox
+          itemClass="wh94"
+          unique={["dark hero", "dark"]}
+          itemPic="img/images/hero-all/tithero-356/x1/ava/tithero-356-1-ava.jpg"
+        />
       </div>
     </>
   );
