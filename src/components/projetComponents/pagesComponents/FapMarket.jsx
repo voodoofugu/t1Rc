@@ -31,11 +31,13 @@ export default function FapMarket({ pageName, children }) {
       return null;
     }
 
+    const Component = componentMap[type] || type;
+
     const childrenElements = Array.isArray(children)
       ? children.map(deserializeReactElement)
       : children;
 
-    return React.createElement(type, props, childrenElements);
+    return React.createElement(Component, props, childrenElements);
   };
   const reactElement = deserializeReactElement(dataFetch.answer);
 

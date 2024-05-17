@@ -11,16 +11,6 @@ const serializeReactElement = (
 ): SerializedElement => {
   const { type, props } = element;
 
-  const getTypeName = (type: React.ElementType): string => {
-    if (typeof type === "string") {
-      return type;
-    }
-    if (typeof type === "function") {
-      return type.name || "AnonymousComponent";
-    }
-    return "UnknownType";
-  };
-
   const serializeProps = (props: Record<string, any>): Record<string, any> => {
     const serializedProps: Record<string, any> = {};
     for (const [key, value] of Object.entries(props)) {
@@ -41,11 +31,21 @@ const serializeReactElement = (
         serializeReactElement(child as React.ReactElement)
       );
     }
-    return [serializeReactElement(children as React.ReactElement)];
+    // Если children - это отдельный React-элемент, то вызываем serializeReactElement
+    if (React.isValidElement(children)) {
+      return [serializeReactElement(children)];
+    }
+    // Возвращаем children как есть, если это не React-элемент
+    return children;
   };
 
   return {
-    type: getTypeName(type as React.ElementType),
+    type:
+      typeof type === "string"
+        ? type
+        : (type as React.FunctionComponent).displayName ||
+          (type as React.ComponentClass).name ||
+          "Unknown",
     props: serializeProps(props),
     children: serializeChildren(props.children),
   };
