@@ -11,7 +11,6 @@ export default React.memo(function ItemBox({
   rare,
   notif,
   sale,
-  special,
 }) {
   return (
     <div className={`itemBox${itemClass ? " " + itemClass : ""}`}>

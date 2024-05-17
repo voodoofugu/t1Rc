@@ -5,7 +5,7 @@ export const cssFiles = [
   "screen-fapopoly-main",
   "v2-screen-hw-btlpass",
   "v2-screen-events-btlpass",
-  "v2-screen-tower",
+  // "v2-screen-tower",
   "screen-fapopoly-rating",
   "screen-superhero",
   "screen-unipop-subscription",
@@ -807,7 +807,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
           </div>
           <div className="fapop-rating-tokens-box">
             <div
-              className="color-btn fl rating"
+              className="color-btn rating"
               onClick={() => {
                 dispatch({
                   type: "POPUP_OPEN",
@@ -819,10 +819,17 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
                 });
               }}
             >
-              <div className="color-btn-text">rating</div>
+              <div className="color-btn-text">
+                <img
+                  className="domik"
+                  src="img/sAndL/ratingIcn.png"
+                  loading="lazy"
+                />
+                rating
+              </div>
             </div>
             <div
-              className="color-btn fl token"
+              className="color-btn token"
               onClick={() => {
                 dispatch({
                   type: "POPUP_OPEN",
@@ -834,54 +841,48 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
                 });
               }}
             >
-              <img
-                className="domik"
-                src="img/evPopArts/fapop-token-ic.png"
-                loading="lazy"
-              />
-              <div className="color-btn-text">tokens</div>
+              <div className="color-btn-text">
+                <img
+                  className="domik"
+                  src="img/evPopArts/fapop-token-ic.png"
+                  loading="lazy"
+                />
+                tokens
+              </div>
             </div>
-            <div className="color-btn fr gblue fp" style={{ width: "120px" }}>
-              <img className="domik" src="img/pse-epic3.png" loading="lazy" />
-              <div className="color-btn-text" style={{ width: "80px" }}>
+            <div className="color-btn gblue">
+              <div className="color-btn-text">
+                <img className="domik" src="img/pse-epic3.png" loading="lazy" />
                 shop
               </div>
             </div>
-            <div className="color-btn fr bordo" style={{ width: "160px" }}>
-              <img className="domik" src="img/pse-keygirl.png" loading="lazy" />
-              <div
-                className="color-btn-text"
-                style={{ right: "5px", width: "128px" }}
-              >
+            <div className="color-btn bordo">
+              <div className="color-btn-text">
+                <img
+                  className="domik"
+                  src="img/pse-keygirl.png"
+                  loading="lazy"
+                />
                 Collections
               </div>
             </div>
-            <div
-              className="color-btn fr bordo magic"
-              style={{ width: "165px" }}
-            >
-              <img
-                className="domik"
-                src="img/icn-dual-ball.png"
-                loading="lazy"
-              />
-              <div
-                className="color-btn-text"
-                style={{ right: "15px", width: "95px" }}
-              >
+            <div className="color-btn bordo magic">
+              <div className="color-btn-text">
+                <img
+                  className="domik"
+                  src="img/icn-dual-ball.png"
+                  loading="lazy"
+                />
                 Dual Pack
               </div>
             </div>
-            <div className="color-btn fr gblue" style={{ width: "165px" }}>
-              <img
-                className="domik"
-                src="img/val2021_res1.png"
-                loading="lazy"
-              />
-              <div
-                className="color-btn-text"
-                style={{ right: "15px", width: "95px" }}
-              >
+            <div className="color-btn gblue">
+              <div className="color-btn-text">
+                <img
+                  className="domik"
+                  src="img/val2021_res1.png"
+                  loading="lazy"
+                />
                 Craftery
               </div>
             </div>
