@@ -1,5 +1,6 @@
-import { WebSocketServer } from "ws";
 import React from "react";
+import ReactDOMServer from "react-dom/server";
+import { WebSocketServer } from "ws";
 import { serializeReactElement } from "./reactToJSON";
 
 import TestCompon from "./TestCompon";
@@ -22,12 +23,27 @@ wss.on("connection", function connection(ws) {
 
     if (!receivedData) {
       ws.send(JSON.stringify({ message: "📧 Hello, client!" }));
-    } else if (receivedData === "TestCompon") {
-      const component = React.createElement(TestCompon);
-      const serializedComponent = serializeReactElement(component);
-      ws.send(JSON.stringify({ answer: serializedComponent }));
     } else {
-      ws.send(JSON.stringify({ answer: "❔ Unknown action" }));
+      switch (receivedData) {
+        case "TestCompon": {
+          const component = React.createElement(TestCompon);
+          ws.send(JSON.stringify({ answer: serializeReactElement(component) }));
+          break;
+        }
+
+        case "TestCompServer": {
+          const renderedComponent = ReactDOMServer.renderToString(
+            React.createElement(TestCompon)
+          );
+          ws.send(
+            JSON.stringify({ componentName: receivedData, renderedComponent })
+          );
+          break;
+        }
+
+        default:
+          ws.send(JSON.stringify({ answer: "❔ Unknown action" }));
+      }
     }
   });
 });

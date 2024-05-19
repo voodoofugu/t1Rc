@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
-import useFetchWS from "./useWebSocket";
+import React from "react";
+import useWebSocket from "./useWebSocket";
 import { deserializeReactElement } from "../../scripts/server/reactToJSON";
 
 export default function useDeserializedComponent(
   myRequest: string,
   componentPath: string
 ) {
-  const data = useFetchWS(myRequest);
-  const [reactElement, setReactElement] = useState<React.ReactElement | null>(
-    null
-  );
+  const { data, loading, error } = useWebSocket(myRequest);
+  const [reactElement, setReactElement] = React.useState(null);
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (data && data.answer) {
       try {
         const element = deserializeReactElement(data.answer, componentPath);
@@ -21,6 +19,14 @@ export default function useDeserializedComponent(
       }
     }
   }, [data, componentPath]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return reactElement;
 }

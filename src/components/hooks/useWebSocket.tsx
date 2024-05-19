@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function useFetchWS(request: string) {
-  const [data, setData] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState(null);
+export default function useWebSocket(request: string) {
+  const [state, setState] = React.useState({
+    data: null,
+    loading: true,
+    error: null,
+  });
 
   React.useEffect(() => {
     const socket = new WebSocket("ws://localhost:8080");
@@ -16,19 +18,16 @@ export default function useFetchWS(request: string) {
     socket.onmessage = (event) => {
       try {
         const newData = JSON.parse(event.data);
-        setData(newData);
-        setLoading(false);
+        setState({ data: newData, loading: false, error: null });
       } catch (error) {
         console.error("🚫 Error parsing data:", error);
-        setError(error);
-        setLoading(false);
+        setState({ data: null, loading: false, error });
       }
     };
 
     socket.onerror = (error) => {
       console.error("🚫 WebSocket error:", error);
-      setError(error);
-      setLoading(false);
+      setState({ data: null, loading: false, error });
     };
 
     socket.onclose = () => {
@@ -40,12 +39,5 @@ export default function useFetchWS(request: string) {
     };
   }, [request]);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-  return data;
+  return state;
 }
