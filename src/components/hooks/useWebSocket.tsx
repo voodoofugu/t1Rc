@@ -47,6 +47,5 @@ export default function useFetchWS(request: string) {
     return <div>Error: {error}</div>;
   }
 
-  console.log("Data received from WebSocket:", data);
   return data;
 }

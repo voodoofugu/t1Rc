@@ -1,10 +1,8 @@
-import React from "react";
 import { WebSocketServer } from "ws";
-import serializeReactElement from "./serializeReactElement";
-import TestCompon from "./TestCompon";
+import React from "react";
+import { serializeReactElement } from "./reactToJSON";
 
-const compon = React.createElement(TestCompon);
-const serializedAppElement = serializeReactElement(compon);
+import TestCompon from "./TestCompon";
 
 const wss = new WebSocketServer({ port: 8080 });
 
@@ -15,7 +13,6 @@ wss.on("connection", function connection(ws) {
     console.log("📧 received: %s", message);
 
     let receivedData;
-
     try {
       receivedData = JSON.parse(message);
     } catch (error) {
@@ -25,12 +22,10 @@ wss.on("connection", function connection(ws) {
 
     if (!receivedData) {
       ws.send(JSON.stringify({ message: "📧 Hello, client!" }));
-    } else if (receivedData === "myRequest") {
-      ws.send(
-        JSON.stringify({
-          answer: JSON.stringify(serializedAppElement, null, 2),
-        })
-      );
+    } else if (receivedData === "TestCompon") {
+      const component = React.createElement(TestCompon);
+      const serializedComponent = serializeReactElement(component);
+      ws.send(JSON.stringify({ answer: serializedComponent }));
     } else {
       ws.send(JSON.stringify({ answer: "❔ Unknown action" }));
     }

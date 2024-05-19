@@ -5,7 +5,7 @@ import ResCount from "../UIComponents/ResCount";
 import StoreItemBox from "../UIComponents/StoreItemBox";
 import ItemBox from "../UIComponents/ItemBox";
 
-import useFetchWS from "../../hooks/useFetchWS";
+import useDeserializedComponent from "../../hooks/useDeserializedComponent";
 
 export const cssFiles = [
   "fap_market",
@@ -16,30 +16,7 @@ export const cssFiles = [
 
 export default function FapMarket({ pageName, children }) {
   const dispatch = useDispatch();
-
-  const dataFetch = useFetchWS("myRequest");
-  const deserializeReactElement = (element) => {
-    if (!element) {
-      console.error("Element is undefined");
-      return null;
-    }
-
-    const { type, props, children } = element;
-
-    if (!type) {
-      console.error("Type is undefined in element:", element);
-      return null;
-    }
-
-    const Component = componentMap[type] || type;
-
-    const childrenElements = Array.isArray(children)
-      ? children.map(deserializeReactElement)
-      : children;
-
-    return React.createElement(Component, props, childrenElements);
-  };
-  const reactElement = deserializeReactElement(dataFetch.answer);
+  const reactElement = useDeserializedComponent("TestCompon", "./");
 
   return (
     <div className="main world1">
@@ -230,7 +207,7 @@ export default function FapMarket({ pageName, children }) {
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">
-              <p>{reactElement}</p>
+              {reactElement}
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">

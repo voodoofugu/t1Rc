@@ -10,7 +10,6 @@ const serializeReactElement = (
   element: React.ReactElement
 ): SerializedElement => {
   const { type, props } = element;
-
   const serializeProps = (props: Record<string, any>): Record<string, any> => {
     const serializedProps: Record<string, any> = {};
     for (const [key, value] of Object.entries(props)) {
@@ -20,7 +19,6 @@ const serializeReactElement = (
     }
     return serializedProps;
   };
-
   const serializeChildren = (
     children: React.ReactNode
   ): SerializedElement[] | string | null => {
@@ -31,14 +29,11 @@ const serializeReactElement = (
         serializeReactElement(child as React.ReactElement)
       );
     }
-    // Если children - это отдельный React-элемент, то вызываем serializeReactElement
     if (React.isValidElement(children)) {
       return [serializeReactElement(children)];
     }
-    // Возвращаем children как есть, если это не React-элемент
-    return children;
+    return null;
   };
-
   return {
     type:
       typeof type === "string"
@@ -51,4 +46,37 @@ const serializeReactElement = (
   };
 };
 
-export default serializeReactElement;
+const deserializeReactElement = (
+  element: SerializedElement,
+  componentPath: string
+): React.ReactElement | null => {
+  if (!element) {
+    console.error("Element is undefined");
+    return null;
+  }
+  const { type, props, children } = element;
+
+  if (!type) {
+    console.error("Type is undefined in element:", element);
+    return null;
+  } else if (!componentPath) {
+    console.error(`Component path for ${type} is not defined.`);
+    return null;
+  }
+
+  const Component = React.lazy(() =>
+    import(`${componentPath}${type}`).then((module) => ({
+      default: module.default,
+    }))
+  );
+
+  const childrenElements = Array.isArray(children)
+    ? children.map((child) =>
+        deserializeReactElement(child as SerializedElement, componentPath)
+      )
+    : children;
+
+  return React.createElement(Component, props, childrenElements);
+};
+
+export { serializeReactElement, deserializeReactElement };

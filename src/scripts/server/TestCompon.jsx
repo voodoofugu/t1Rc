@@ -1,16 +1,15 @@
-export default function TestComponent() {
+import React from "react";
+import ItemBox from "../../components/projetComponents/UIComponents/ItemBox";
+
+export default function TestCompon() {
   return (
     <div className="store-item-box">
       <div className="store-name">Item Name</div>
-      <div className="itemBox piecesHero">
-        <div className="sale-banner">-50%</div>
-        <div className="itemBox_pic">
-          <img src="img/unknown-hero-ava.jpg" />
-        </div>
-        <div className="itemBox_count_wrap">
-          <div className="itemBox_count">100</div>
-        </div>
-      </div>
+      <ItemBox
+        itemPic="img/images/superhero/suphero-762/x2/avatar/762sh-ava-1.jpg"
+        count={700}
+        rare="u"
+      />
       <div className="color-btn blue">
         <div className="color-btn-text">
           buy
