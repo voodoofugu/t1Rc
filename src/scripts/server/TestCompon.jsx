@@ -1,7 +1,7 @@
 import React from "react";
 import ItemBox from "../../components/projetComponents/UIComponents/ItemBox";
 
-export default function TestCompon({ children }) {
+export default React.memo(function TestCompon({ children }) {
   return (
     <div className="store-item-box">
       <div className="store-name">Item Name</div>
@@ -20,4 +20,4 @@ export default function TestCompon({ children }) {
       </div>
     </div>
   );
-}
+});

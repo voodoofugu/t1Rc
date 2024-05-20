@@ -21,11 +21,12 @@ export default function useDeserializedComponent(
   }, [data, componentPath]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return "🔄";
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    // console.error(error);
+    return "📦";
   }
 
   return reactElement;

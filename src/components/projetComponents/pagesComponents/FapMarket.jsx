@@ -17,6 +17,7 @@ export const cssFiles = [
 export default function FapMarket({ pageName, children }) {
   const dispatch = useDispatch();
   const reactElement = useDeserializedComponent("TestCompon", "./");
+  console.log("reactElement", reactElement, "ItemBox", ItemBox);
 
   return (
     <div className="main world1">
