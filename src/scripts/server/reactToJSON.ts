@@ -3,7 +3,6 @@ import React from "react";
 type SerializedElement = {
   type: string;
   props: Record<string, any>;
-  children: SerializedElement[] | string | null;
 };
 
 const serializeReactElement = (
@@ -19,21 +18,6 @@ const serializeReactElement = (
     }
     return serializedProps;
   };
-  const serializeChildren = (
-    children: React.ReactNode
-  ): SerializedElement[] | string | null => {
-    if (!children) return null;
-    if (typeof children === "string") return children;
-    if (Array.isArray(children)) {
-      return children.map((child) =>
-        serializeReactElement(child as React.ReactElement)
-      );
-    }
-    if (React.isValidElement(children)) {
-      return [serializeReactElement(children)];
-    }
-    return null;
-  };
   return {
     type:
       typeof type === "string"
@@ -42,7 +26,6 @@ const serializeReactElement = (
           (type as React.ComponentClass).name ||
           "Unknown",
     props: serializeProps(props),
-    children: serializeChildren(props.children),
   };
 };
 
@@ -54,7 +37,7 @@ const deserializeReactElement = (
     console.error("Element is undefined");
     return null;
   }
-  const { type, props, children } = element;
+  const { type, props } = element;
 
   if (!type) {
     console.error("Type is undefined in element:", element);
@@ -70,13 +53,7 @@ const deserializeReactElement = (
     }))
   );
 
-  const childrenElements = Array.isArray(children)
-    ? children.map((child) =>
-        deserializeReactElement(child as SerializedElement, componentPath)
-      )
-    : children;
-
-  return React.createElement(Component, props, childrenElements);
+  return React.createElement(Component, props);
 };
 
 export { serializeReactElement, deserializeReactElement };

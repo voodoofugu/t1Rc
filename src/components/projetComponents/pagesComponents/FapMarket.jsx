@@ -16,8 +16,8 @@ export const cssFiles = [
 
 export default function FapMarket({ pageName, children }) {
   const dispatch = useDispatch();
-  const reactElement = useDeserializedComponent("TestCompon", "./");
-  console.log("reactElement", reactElement, "ItemBox", ItemBox);
+  const ReactElement = useDeserializedComponent("TestCompon", "./");
+  // console.log("ReactElement", ReactElement);
 
   return (
     <div className="main world1">
@@ -208,7 +208,7 @@ export default function FapMarket({ pageName, children }) {
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">
-              {reactElement}
+              {ReactElement}
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">

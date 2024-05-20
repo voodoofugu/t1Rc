@@ -95,57 +95,42 @@ export default function DualPack({ event }) {
         <div className="lhero-box">
           <div className="lhero-pic">
             <img
-              src="img/images/superhero/suphero-761/x2/761sh-1.jpg"
+              src="img/images/hero-all/tithero-5002/x1/tithero-5002-1.jpg"
               loading="lazy"
             />
           </div>
           <div className="topname-box">
-            <div className="lrare-box common"></div>
-            <div className="sh2-icon left">
-              <img src="img/cur-c.png" loading="lazy" />
-            </div>
             <div className="sh2-icon-forgirl right">
-              <img src="img/cur2-sword.png" loading="lazy" />
+              <img src="img/cur2-cleric.png" loading="lazy" />
             </div>
             <div className="lhero-name-box">
-              <div className="lhero-name">Otake Avaron</div>
+              <div className="lhero-name">Eiko Nousagi</div>
             </div>
           </div>
           <div className="bottom-star-box-girl-count-box">
-            <div className="sh2-prgbar-all undefined">
-              <div
-                className="sh2-prgbar"
-                style={{
-                  width: "0%",
-                }}
-              ></div>
-              <div className="sh2-prgbar-text">0/10</div>
-              <div className="bonus">+700</div>
-            </div>
-            <div className="girl-bonus-box">
-              <div className="girl-bonus-pic">
-                <img
-                  src="img/images/superhero/suphero-761/x2/avatar/761sh-ava-1.jpg"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            <div className="addInfo">Hero!</div>
+            <div className="asc-lvl">10</div>
           </div>
           <div className="sv-sale-bonus-box-all">
             <div className="ashero-bonus-box">
               <div className="acbonus-box">
-                <div className="lvlbox-name">Cross - section</div>
+                <div className="lvlbox-name">DPS</div>
                 <div className="bonus-lvl-box-bonus-box">
-                  <div className="bonus-lvl-box-bonus">DPC +22.5%</div>
+                  <div className="bonus-lvl-box-bonus">
+                    277MD31
+                    <div className="ff-sh2-icon">
+                      <img src="img/ico-sword.png" loading="lazy" />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="acbonus-box second">
-                <div className="lvlbox-name">Moon Veil</div>
+                <div className="lvlbox-name">Power</div>
                 <div className="bonus-lvl-box-bonus-box">
                   <div className="bonus-lvl-box-bonus">
-                    +1.1% dps to
+                    4
                     <div className="ff-sh2-icon">
-                      <img src="img/cur2-sword.png" loading="lazy" />
+                      <img src="img/ms-hand.png" loading="lazy" />
                     </div>
                   </div>
                 </div>

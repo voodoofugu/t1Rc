@@ -22,7 +22,7 @@ wss.on("connection", function connection(ws) {
     }
 
     if (!receivedData) {
-      ws.send(JSON.stringify({ message: "📧 Hello, client!" }));
+      ws.send(JSON.stringify({ answer: "📧 Hello, client!" }));
     } else {
       switch (receivedData) {
         case "TestCompon": {
