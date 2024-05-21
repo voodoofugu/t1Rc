@@ -100,6 +100,7 @@ export default function DualPack({ event }) {
             />
           </div>
           <div className="topname-box">
+            <div className="asc-lvl">10</div>
             <div className="sh2-icon-forgirl right">
               <img src="img/cur2-cleric.png" loading="lazy" />
             </div>
@@ -109,7 +110,6 @@ export default function DualPack({ event }) {
           </div>
           <div className="bottom-star-box-girl-count-box">
             <div className="addInfo">Hero!</div>
-            <div className="asc-lvl">10</div>
           </div>
           <div className="sv-sale-bonus-box-all">
             <div className="ashero-bonus-box">
