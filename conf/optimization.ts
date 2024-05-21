@@ -16,7 +16,7 @@ export function optimization({
   }
 
   if (isProd) {
-    optimizationConf.minimizer.push(
+    (optimizationConf.minimizer ??= []).push(
       new EsbuildPlugin({
         target: "es2015",
       })
