@@ -2,13 +2,13 @@ import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 
 import Template from "./Template";
-import Loading from "./Loading.jsx";
+import Loading from "./Loading";
 import StatesStorage from "./StatesStorage";
-import { GlobalStateStorProvider } from "./GlobalStateStor";
+import { GlobalStateProvider } from "./GlobalStateStor";
 import { reducer, initialState } from "../../scripts/templateScripts/reducer";
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
 
-import HelmetForCss from "./HelmetForCss.jsx";
+import HelmetForCss from "./HelmetForCss";
 export const cssFiles = [
   "01-all",
   "01-all-res",
@@ -26,7 +26,7 @@ export default function App() {
 
   return (
     // <StrictMode>
-    <GlobalStateStorProvider reducer={reducer} initialState={states}>
+    <GlobalStateProvider reducer={reducer} initialState={states}>
       <StatesStorage />
       <HelmetProvider>
         <div
@@ -37,6 +37,6 @@ export default function App() {
           {!stylesLoaded ? <Loading noBG /> : <Template />}
         </div>
       </HelmetProvider>
-    </GlobalStateStorProvider>
+    </GlobalStateProvider>
   );
 }

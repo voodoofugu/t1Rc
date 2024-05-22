@@ -30,13 +30,14 @@ interface SAndLStates {
   animPortal: boolean;
 }
 
-interface InitialState {
+export interface InitialState {
   activePage: string;
   searchData: string[];
   pageData: PageData;
   popupState: PopupState;
   sAndLStates: SAndLStates;
   booleanState: boolean;
+  [key: string]: any;
 }
 
 export const initialState: InitialState = {
@@ -75,7 +76,7 @@ export const initialState: InitialState = {
   booleanState: false,
 };
 
-interface Action {
+export interface Action {
   type: string;
   payload?: any;
 }
@@ -98,10 +99,6 @@ export function reducer(draft: any, action: Action): any {
     // project initial states
     case "SCROLL_TOP":
       draft.toTopBtnState.scrollTop = action.payload;
-      return draft;
-
-    case "SCROLL_ANIM":
-      draft.toTopBtnState.scrollAnim = action.payload;
       return draft;
 
     case "POPUP_OPEN":
