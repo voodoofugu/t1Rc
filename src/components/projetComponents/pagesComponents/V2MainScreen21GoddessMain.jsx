@@ -84,49 +84,49 @@ export default function V2MainScreen21GoddessMain() {
             <div className="tab-panel-box-title">Angels</div>
             <div className="gd-left-box-all">
               <div className="gd-left-box-scroll-box">
-                <div className="hero-avatar-box cursor-pointer">
+                <div className="hero-avatar-box">
                   <img
                     className="hero-avatar"
                     src="img/images/goddess/goddess-1/x2/ava/goddess-ava-1.jpg "
                     loading="lazy"
                   />
                 </div>
-                <div className="hero-avatar-box cursor-pointer">
+                <div className="hero-avatar-box">
                   <img
                     className="hero-avatar"
                     src="img/images/goddess/goddess-2/x2/ava/goddess-ava-1.jpg "
                     loading="lazy"
                   />
                 </div>
-                <div className="hero-avatar-box cursor-pointer">
+                <div className="hero-avatar-box">
                   <img
                     className="hero-avatar"
                     src="img/images/goddess/goddess-3/x2/ava/goddess-ava-1.jpg "
                     loading="lazy"
                   />
                 </div>
-                <div className="hero-avatar-box cursor-pointer">
+                <div className="hero-avatar-box">
                   <img
                     className="hero-avatar"
                     src="img/images/goddess/goddess-4/x2/ava/goddess-ava-1.jpg "
                     loading="lazy"
                   />
                 </div>
-                <div className="hero-avatar-box cursor-pointer">
+                <div className="hero-avatar-box">
                   <img
                     className="hero-avatar"
                     src="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg "
                     loading="lazy"
                   />
                 </div>
-                <div className="hero-avatar-box cursor-pointer">
+                <div className="hero-avatar-box">
                   <img
                     className="hero-avatar"
                     src="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg "
                     loading="lazy"
                   />
                 </div>
-                <div className="hero-avatar-box cursor-pointer">
+                <div className="hero-avatar-box">
                   <div
                     className="notif notif20"
                     style={{
@@ -541,9 +541,9 @@ export default function V2MainScreen21GoddessMain() {
                   </div>
                 </div>
               </div>
-              <div className="gd-nl-box-all girl">
+              <div className="gd-nl-box-all girl quan3">
                 <div className="gd-girl-box-all">
-                  <div className="hero-avatar-box cursor-pointer">
+                  <div className="hero-avatar-box">
                     <img
                       className="hero-avatar"
                       src="img/images/goddess/goddess-4/comics/ava/goddess-com-ava-1.jpg"
@@ -553,7 +553,7 @@ export default function V2MainScreen21GoddessMain() {
                       <div className="gd-av-block"></div>
                     </div>
                   </div>
-                  <div className="hero-avatar-box cursor-pointer">
+                  <div className="hero-avatar-box">
                     <img
                       className="hero-avatar"
                       src="img/images/goddess/goddess-4/comics/ava/goddess-com-ava-2.jpg"
@@ -563,7 +563,7 @@ export default function V2MainScreen21GoddessMain() {
                       <div className="gd-av-block"></div>
                     </div>
                   </div>
-                  <div className="hero-avatar-box cursor-pointer block">
+                  <div className="hero-avatar-box block">
                     <img
                       className="hero-avatar"
                       src="img/images/goddess/goddess-4/comics/ava/goddess-com-ava-3.jpg"
@@ -579,13 +579,13 @@ export default function V2MainScreen21GoddessMain() {
                     className="gd-girl-prg"
                     style={{ width: "55.75%" }}
                   ></div>
-                  <div className="gd-girl-prg-rd p1">
+                  <div className="gd-girl-prg-rd">
                     <div className="gd-girl-prg-rd-txt">200</div>
                   </div>
-                  <div className="gd-girl-prg-rd p2">
+                  <div className="gd-girl-prg-rd">
                     <div className="gd-girl-prg-rd-txt">500</div>
                   </div>
-                  <div className="gd-girl-prg-rd p3">
+                  <div className="gd-girl-prg-rd">
                     <div className="gd-girl-prg-rd-txt">1000</div>
                   </div>
                 </div>
