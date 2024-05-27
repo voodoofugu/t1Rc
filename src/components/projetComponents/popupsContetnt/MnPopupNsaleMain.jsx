@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
-import NsalePrBox from "../UIComponents/NsalePrBox";
 import ItemBox from "../UIComponents/ItemBox";
 
 function NmPopContentChest({ hole }) {
   return (
     <div className="nm-pop-content">
       <div className="nsale-main-left-box">
-        <div className="nsale-gift-box">
-          <div className="nsale-gift-box-pic">
-            <img
-              src={hole ? "img/hole/holeChest@2x.png" : "img/v2-ns-chest.png"}
-            ></img>
-          </div>
-          <div className="nsale-pr-box-count">27</div>
-        </div>
+        <ItemBox
+          itemClass="wh130"
+          count="27"
+          itemPic={hole ? "img/hole/holeChest@2x.png" : "img/v2-ns-chest.png"}
+        />
         <div className="color-btn ">
           <div className="color-btn-text">
             {hole ? "open chest" : "open box"}
@@ -23,16 +19,10 @@ function NmPopContentChest({ hole }) {
         <div className="color-btn ">
           <div className="color-btn-text">open all</div>
         </div>
-        <div className="nsale-pr-box">
-          <div className="nsale-pr-box-pic-box">
-            <div className="nsale-pr-box-pic">
-              <img
-                src={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
-              ></img>
-            </div>
-            <div className="nsale-pr-box-count">1</div>
-          </div>
-        </div>
+        <ItemBox
+          count="1"
+          itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
+        />
       </div>
       <div className="nsale-main-r-top-box">
         <div className="nsale-main-r-top-text2">
@@ -72,62 +62,36 @@ function NmPopContentChest({ hole }) {
       <div className="nsale-main-r-bottom-box">
         <div className="nsale-main-r-bottom-posrew">possible rewards</div>
         <div className="nsale-pr-box-all">
-          <div className="nsale-pr-box">
-            <div className="nsale-pr-box-pic-box">
-              <div className="nsale-pr-box-pic">
-                <img
-                  src={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
-                ></img>
-              </div>
-              <div className="nsale-pr-box-count">1</div>
-            </div>
-            <div className="nsale-pr-box-text">16.67%</div>
-          </div>
-          <div className="nsale-pr-box">
-            <div className="nsale-pr-box-pic-box">
-              <div className="nsale-pr-box-pic">
-                <img src="img/change-ic-gem-master.png"></img>
-              </div>
-              <div className="nsale-pr-box-count">gems</div>
-            </div>
-            <div className="nsale-pr-box-text">16.67%</div>
-          </div>
-          <div className="nsale-pr-box">
-            <div className="nsale-pr-box-pic-box">
-              <div className="nsale-pr-box-pic">
-                <img src="img/change-ic-gold.png"></img>
-              </div>
-              <div className="nsale-pr-box-count">1h</div>
-            </div>
-            <div className="nsale-pr-box-text">16.67%</div>
-          </div>
-          <div className="nsale-pr-box">
-            <div className="nsale-pr-box-pic-box">
-              <div className="nsale-pr-box-pic">
-                <img src="img/change-ic-essence.png"></img>
-              </div>
-              <div className="nsale-pr-box-count">pack</div>
-            </div>
-            <div className="nsale-pr-box-text">16.67%</div>
-          </div>
-          <div className="nsale-pr-box">
-            <div className="nsale-pr-box-pic-box">
-              <div className="nsale-pr-box-pic">
-                <img src="img/v2-res-mithril2.png"></img>
-              </div>
-              <div className="nsale-pr-box-count">15K</div>
-            </div>
-            <div className="nsale-pr-box-text">16.67%</div>
-          </div>
-          <div className="nsale-pr-box">
-            <div className="nsale-pr-box-pic-box">
-              <div className="nsale-pr-box-pic">
-                <img src="img/change-ic-ticket.png"></img>
-              </div>
-              <div className="nsale-pr-box-count">1</div>
-            </div>
-            <div className="nsale-pr-box-text">16.67%</div>
-          </div>
+          <ItemBox
+            count="1"
+            countOut="16.67%"
+            itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
+          />
+          <ItemBox
+            count="gems"
+            countOut="16.67%"
+            itemPic="img/change-ic-gem-master.png"
+          />
+          <ItemBox
+            count="1h"
+            countOut="16.67%"
+            itemPic="img/change-ic-gold.png"
+          />
+          <ItemBox
+            count="pack"
+            countOut="16.67%"
+            itemPic="img/change-ic-essence.png"
+          />
+          <ItemBox
+            count="15K"
+            countOut="16.67%"
+            itemPic="img/v2-res-mithril2.png"
+          />
+          <ItemBox
+            count="1"
+            countOut="16.67%"
+            itemPic="img/change-ic-ticket.png"
+          />
         </div>
       </div>
       <div className="nsale-plus"></div>
@@ -138,6 +102,18 @@ function NmPopContentChest({ hole }) {
 function NmPopContentMagic({ handleMenuClick, hole }) {
   return (
     <div className="nm-pop-content">
+      <div className="nmPopCount">
+        <div className="countPic"></div>
+        <div className="countValue">0</div>
+      </div>
+      {hole ? (
+        ""
+      ) : (
+        <div className="nmPopCount countTwo">
+          <div className="countPic"></div>
+          <div className="countValue">0</div>
+        </div>
+      )}
       <div className="koi-arrow slick-disabled"></div>
       <div className="koi-arrow right"></div>
       <div className="stageWrap">
@@ -224,6 +200,14 @@ function NmPopContentMagicStage({ handleMenuClick, hole }) {
         <div className="countPic"></div>
         <div className="countValue">0</div>
       </div>
+      {hole ? (
+        ""
+      ) : (
+        <div className="nmPopCount countTwo">
+          <div className="countPic"></div>
+          <div className="countValue">0</div>
+        </div>
+      )}
       <div className="np-pop-stupen-pop-m-text">
         Unlock the next stage by claiming any 2 items
       </div>
@@ -292,7 +276,9 @@ function NmPopContentFountain({ hole }) {
         <div className="countValue">0</div>
       </div>
       <div className="nm-pop-fon-rew-pop">
-        {addedReward === true ? <NsalePrBox /> : null}
+        {addedReward === true ? (
+          <ItemBox count="120" itemPic="img/v2-res-mithril2.png" />
+        ) : null}
         <div className="nm-pop-fon-rew-pop-text">0 coins tossed</div>
       </div>
       <div className="nm-pop-fon-coin-box silver0">
@@ -310,7 +296,6 @@ function NmPopContentFountain({ hole }) {
             src={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
           ></img>
         </div>
-        {/* <div className="nm-pop-fon-coin-count">0</div> */}
       </div>
       <div className="nm-pop-fon-coin-box right">
         <div className="nm-pop-fon-coin">
@@ -319,90 +304,32 @@ function NmPopContentFountain({ hole }) {
             src={hole ? "img/hole/holeCoin2.png" : "img/v2-ns-coin2.png"}
           ></img>
         </div>
-        {/* <div className="nm-pop-fon-coin-count">0</div> */}
       </div>
       <div className="nm-pop-fon-rew-box-all">
-        {/* <div className="nm-pop-fon-rew-box-line"></div> */}
-        <div className="nsale-pr-box check">
-          <div
-            className="nsale-pr-box-pic-box"
-            item="[object Object]"
-            hero_id="0"
-            top_offset="10"
-          >
-            <div className="nsale-pr-box-pic">
-              <img src="img/evPopArts/potion_yellow.png"></img>
-            </div>
-            <div className="nsale-pr-box-count">5000</div>
-          </div>
-          <div className="nm-pop-fon-rew-box-count">10</div>
-          <div className="nm-pop-fon-rew-box-check"></div>
-        </div>
-        <div className="nsale-pr-box check">
-          <div
-            className="nsale-pr-box-pic-box"
-            item="[object Object]"
-            hero_id="0"
-            top_offset="10"
-          >
-            <div className="nsale-pr-box-pic">
-              <img src="img/ms-stone-all.png"></img>
-            </div>
-            <div className="nsale-pr-box-count">giga x 5</div>
-          </div>
-          <div className="nm-pop-fon-rew-box-count">20</div>
-          <div className="nm-pop-fon-rew-box-check"></div>
-        </div>
-        <div className="nsale-pr-box ">
-          <div
-            className="nsale-pr-box-pic-box"
-            item="[object Object]"
-            hero_id="0"
-            top_offset="10"
-          >
-            <div className="nsale-pr-box-pic">
-              <img src="img/ic-abil-gold-up.png"></img>
-            </div>
-            <div className="nsale-pr-box-count">10K%</div>
-          </div>
-          <div className="nm-pop-fon-rew-box-count">50</div>
-          <div className="nm-pop-fon-rew-box-check"></div>
-        </div>
-        <div className="nsale-pr-box ">
-          <div className="nsale-pr-box-pic-box">
-            <div className="nsale-pr-box-pic">
-              <img src="img/images/superhero/suphero-01/x2/avatar/01sh-ava-1.jpg"></img>
-            </div>
-            <div className="nsale-pr-box-count">100</div>
-          </div>
-          <div className="nm-pop-fon-rew-box-count">100</div>
-          <div className="nm-pop-fon-rew-box-check"></div>
-        </div>
-        <div className="nsale-pr-box ">
-          <div
-            className="nsale-pr-box-pic-box"
-            item="[object Object]"
-            hero_id="0"
-            top_offset="10"
-          >
-            <div className="nsale-pr-box-pic">
-              <img src="img/arrow_up1.png"></img>
-            </div>
-            <div className="nsale-pr-box-count">15</div>
-          </div>
-          <div className="nm-pop-fon-rew-box-count">200</div>
-          <div className="nm-pop-fon-rew-box-check"></div>
-        </div>
-        <div className="nsale-pr-box ">
-          <div className="nsale-pr-box-pic-box">
-            <div className="nsale-pr-box-pic">
-              <img src="img/images/hero-all/tithero-58/x2/ava/tithero-58-1-ava.jpg"></img>
-            </div>
-            <div className="nsale-pr-box-count">1</div>
-          </div>
-          <div className="nm-pop-fon-rew-box-count">500</div>
-          <div className="nm-pop-fon-rew-box-check"></div>
-        </div>
+        <ItemBox
+          itemClass="check"
+          count="5000"
+          countOut="10"
+          itemPic="img/evPopArts/potion_yellow.png"
+        />
+        <ItemBox
+          itemClass="check"
+          count="giga x5"
+          countOut="20"
+          itemPic="img/ms-stone-all.png"
+        />
+        <ItemBox count="10K%" countOut="50" itemPic="img/ic-abil-gold-up.png" />
+        <ItemBox
+          count="100"
+          countOut="100"
+          itemPic="img/images/superhero/suphero-01/x2/avatar/01sh-ava-1.jpg"
+        />
+        <ItemBox count="15" countOut="200" itemPic="img/arrow_up1.png" />
+        <ItemBox
+          count="1"
+          countOut="500"
+          itemPic="img/images/hero-all/tithero-58/x2/ava/tithero-58-1-ava.jpg"
+        />
       </div>
     </div>
   );
@@ -415,36 +342,15 @@ function NmPopContentOffer({ hole }) {
         <div className="nm-pop-offer-scroll">
           <div className="nm-pop-offer-box-all">
             <div className="n-sale-box">
-              <div className="nsale-pr-box">
-                <div className="nsale-pr-box-pic-box">
-                  <div className="nsale-pr-box-pic">
-                    <img
-                      src={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
-                    ></img>
-                  </div>
-                  <div className="nsale-pr-box-count">300</div>
-                </div>
-              </div>
-              <div className="nsale-pr-box">
-                <div className="nsale-pr-box-pic-box">
-                  <div className="nsale-pr-box-pic">
-                    <img
-                      src={
-                        hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"
-                      }
-                    ></img>
-                  </div>
-                  <div className="nsale-pr-box-count">25</div>
-                </div>
-              </div>
-              <div className="nsale-pr-box">
-                <div className="nsale-pr-box-pic-box">
-                  <div className="nsale-pr-box-pic">
-                    <img src="img/card-ic-koloda2@2x.png"></img>
-                  </div>
-                  <div className="nsale-pr-box-count">25</div>
-                </div>
-              </div>
+              <ItemBox
+                count="300"
+                itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
+              />
+              <ItemBox
+                count="25"
+                itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
+              />
+              <ItemBox count="25" itemPic="img/card-ic-koloda2@2x.png" />
             </div>
             <div className="store-button">
               <div className="but-price">$19.99</div>
@@ -452,36 +358,15 @@ function NmPopContentOffer({ hole }) {
           </div>
           <div className="nm-pop-offer-box-all">
             <div className="n-sale-box">
-              <div className="nsale-pr-box">
-                <div className="nsale-pr-box-pic-box">
-                  <div className="nsale-pr-box-pic">
-                    <img
-                      src={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
-                    ></img>
-                  </div>
-                  <div className="nsale-pr-box-count">1250</div>
-                </div>
-              </div>
-              <div className="nsale-pr-box">
-                <div className="nsale-pr-box-pic-box">
-                  <div className="nsale-pr-box-pic">
-                    <img
-                      src={
-                        hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"
-                      }
-                    ></img>
-                  </div>
-                  <div className="nsale-pr-box-count">100</div>
-                </div>
-              </div>
-              <div className="nsale-pr-box">
-                <div className="nsale-pr-box-pic-box">
-                  <div className="nsale-pr-box-pic">
-                    <img src="img/card-ic-koloda2@2x.png"></img>
-                  </div>
-                  <div className="nsale-pr-box-count">50</div>
-                </div>
-              </div>
+              <ItemBox
+                count="1250"
+                itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
+              />
+              <ItemBox
+                count="100"
+                itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
+              />
+              <ItemBox count="50" itemPic="img/card-ic-koloda2@2x.png" />
             </div>
             <div className="store-button">
               <div className="but-price">$49.99</div>
@@ -580,7 +465,11 @@ export default function MnPopupNsaleMain({ hole }) {
           onClick={() => handleMenuClick("magic")}
         >
           <div className="mn-pop-menu-pic">
-            {hole ? "" : <img src="img/v2-ns-ball.png" alt="Magic" />}
+            {hole ? (
+              ""
+            ) : (
+              <img src="img/evPopArts/magicBall_icn.png" alt="Magic" />
+            )}
           </div>
           <div className="mn-pop-menu-text">{hole ? "gates" : "magic"}</div>
         </div>

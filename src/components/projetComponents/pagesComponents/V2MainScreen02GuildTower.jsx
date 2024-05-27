@@ -291,7 +291,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                               mpopClass: `mn-popup ${hole ? "hole" : ""}`,
                               popCont: [
                                 "MnPopupNsaleMain",
-                                { hole: `${hole}` },
+                                hole ? { hole: `${hole}` } : "",
                               ],
                               btnXClass: "mn-pop-btn-close-x",
                             },
