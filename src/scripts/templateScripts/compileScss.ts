@@ -58,7 +58,10 @@ async function wrapSCSSFile(sourceFile: string) {
 // компиляция
 async function compileSCSSFile(sourceFile: string) {
   try {
-    if (sourceFile === "sass_commons.scss") {
+    if (
+      sourceFile === "sass_commons.scss" ||
+      sourceFile === "quest_chain_icns.scss"
+    ) {
       console.log(`➖ Файл "${sourceFile}" пропускает компиляцию`);
       return;
     }
