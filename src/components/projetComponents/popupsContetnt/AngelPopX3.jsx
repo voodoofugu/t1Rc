@@ -1,5 +1,4 @@
 import React, { memo } from "react";
-import useStore from "../../templateComponents/GlobalStateStor";
 
 export default memo(function AngelPopX3() {
   return (
