@@ -417,6 +417,21 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           ],
           [
             true,
+            "Лето",
+            [
+              [
+                "evPopArts/butterflyIcn",
+                "287:21:43",
+                {
+                  mpopClass: "m-popup events-btlpass-pop summer",
+                  popTit: "Summer Event Pass",
+                  popCont: ["BtlPass", { btlClass: "summer" }],
+                },
+              ],
+            ],
+          ],
+          [
+            true,
             "easter",
             [
               [

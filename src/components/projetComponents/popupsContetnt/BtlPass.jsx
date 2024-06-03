@@ -15,7 +15,7 @@ export default function BtlPass({ btlClass }) {
       ? [
           "BuyShop",
           {
-            img: "ic-tickets-xmas-1",
+            img1: "ic-tickets-xmas-1",
             img2: "ic-tickets-xmas-2",
             img3: "ic-tickets-xmas-3",
           },
@@ -24,7 +24,7 @@ export default function BtlPass({ btlClass }) {
       ? [
           "BuyShop",
           {
-            img: "ic-pumpkins-150-1",
+            img1: "ic-pumpkins-150-1",
             img2: "ic-pumpkins-150-2",
             img3: "ic-pumpkins-150-3",
           },
@@ -33,7 +33,7 @@ export default function BtlPass({ btlClass }) {
       ? [
           "BuyShop",
           {
-            img: "ic-tickets-bf-1",
+            img1: "ic-tickets-bf-1",
             img2: "ic-tickets-bf-2",
             img3: "ic-tickets-bf-3",
           },
@@ -42,7 +42,7 @@ export default function BtlPass({ btlClass }) {
       ? [
           "BuyShop",
           {
-            img: "ic-tickets-vl-1",
+            img1: "ic-tickets-vl-1",
             img2: "ic-tickets-vl-2",
             img3: "ic-tickets-vl-3",
           },
@@ -51,16 +51,25 @@ export default function BtlPass({ btlClass }) {
       ? [
           "BuyShop",
           {
-            img: "ic-march-flower-pink-1",
+            img1: "ic-march-flower-pink-1",
             img2: "ic-march-flower-pink-2",
             img3: "ic-march-flower-pink-3",
+          },
+        ]
+      : btlClass === "summer"
+      ? [
+          "BuyShop",
+          {
+            img1: "evPopArts/butterfly_1",
+            img2: "evPopArts/butterfly_2",
+            img3: "evPopArts/butterfly_3",
           },
         ]
       : btlClass === "autumn"
       ? [
           "BuyShop",
           {
-            img: "ic-autumn-leaf-1",
+            img1: "ic-autumn-leaf-1",
             img2: "ic-autumn-leaf-2",
             img3: "ic-autumn-leaf-3",
           },
@@ -176,6 +185,8 @@ export default function BtlPass({ btlClass }) {
           <img src="img/break-girl842.png" loading="lazy" />
         ) : btlClass === "autumn" ? (
           <img src="img/break-girl848.png" loading="lazy" />
+        ) : btlClass === "summer" ? (
+          <img src="img/break-girls/break-girl952.png" loading="lazy" />
         ) : null}
       </div>
       <div className="btlpass-btn-box">
