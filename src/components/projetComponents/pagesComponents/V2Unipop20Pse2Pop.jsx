@@ -1,4 +1,5 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { useEffect } from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
 import * as PIXI from "../../../scripts/pixi-animate/pixi";
 // import { Spine } from "../scripts/pixi-animate/pixi-spine";
@@ -205,9 +206,16 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                             <div className="icon-dps"></div>
                           </div>
                         </div>
-                        <div className="prize-promote-box">
-                          <div className="prize-promote-text">3</div>
+                        <div className="pow-extra">
+                          <div className="value">51</div>
+                          <div className="pow-title">
+                            POW
+                            <div className="icon-pow"></div>
+                          </div>
                         </div>
+                      </div>
+                      <div className="prize-promote-box">
+                        <div className="prize-promote-text">3</div>
                       </div>
                     </div>
                     {/* <div className="pse2-girl-right-box">
@@ -219,81 +227,36 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                         </div>
                       </div> */}
                     <div className="pse2-reward-box-all">
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/images/superhero/suphero-26/x1/avatar/26sh-ava-1.jpg"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">700</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/images/superhero/suphero-25/x1/avatar/25sh-ava-1.jpg"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">700</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/images/superhero/suphero-251/x1/avatar/251sh-ava-1.jpg"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">100</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/ic-abil-dps-plus@2x.png"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">x2</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img src="img/v2-fw-icon-fr0.png" loading="lazy" />
-                        </div>
-                        <div className="pse2-num">1600</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img src="img/cw-quest-icon.png" loading="lazy" />
-                        </div>
-                        <div className="pse2-num">1200</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/evPopArts/potion_blue.png"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">500</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/evPopArts/potion_green.png"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">500</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/evPopArts/potion_green.png"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">500</div>
-                      </div>
+                      <ItemBox
+                        count="700"
+                        itemPic="img/images/superhero/suphero-26/x1/avatar/26sh-ava-1.jpg"
+                      />
+                      <ItemBox
+                        count="700"
+                        itemPic="img/images/superhero/suphero-25/x1/avatar/25sh-ava-1.jpg"
+                      />
+                      <ItemBox
+                        count="100"
+                        itemPic="img/images/superhero/suphero-251/x1/avatar/251sh-ava-1.jpg"
+                      />
+                      <ItemBox
+                        count="x2"
+                        itemPic="img/ic-abil-dps-plus@2x.png"
+                      />
+                      <ItemBox count="1600" itemPic="img/v2-fw-icon-fr0.png" />
+                      <ItemBox count="1200" itemPic="img/cw-quest-icon.png" />
+                      <ItemBox
+                        count="500"
+                        itemPic="img/evPopArts/potion_blue.png"
+                      />
+                      <ItemBox
+                        count="500"
+                        itemPic="img/evPopArts/potion_green.png"
+                      />
+                      <ItemBox
+                        count="500"
+                        itemPic="img/evPopArts/potion_green.png"
+                      />
                     </div>
                     <div className="store-button">
                       <div className="but-price">
@@ -334,77 +297,33 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                       </div>
                     </div>
                     <div className="pse2-reward-box-all">
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/images/hero-all/tithero-108/x1/ava/tithero-108-1-ava.jpg"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/images/superhero/suphero-211/x1/avatar/211sh-ava-1.jpg"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">700</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/images/superhero/suphero-600/x1/avatar/600sh-ava-1.jpg"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">100</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/ic-abil-dps-plus@2x.png"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">x2</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img src="img/v2-fw-icon-fr0.png" loading="lazy" />
-                        </div>
-                        <div className="pse2-num">1600</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img src="img/cw-quest-icon.png" loading="lazy" />
-                        </div>
-                        <div className="pse2-num">1200</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/evPopArts/potion_blue.png"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">500</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img
-                            src="img/evPopArts/potion_green.png"
-                            loading="lazy"
-                          />
-                        </div>
-                        <div className="pse2-num">500</div>
-                      </div>
-                      <div className="pse2-reward">
-                        <div className="pse2-pic">
-                          <img src="img/elements/Dark.png" loading="lazy" />
-                        </div>
-                        <div className="pse2-num">Squad #14</div>
-                      </div>
+                      <ItemBox itemPic="img/images/hero-all/tithero-108/x1/ava/tithero-108-1-ava.jpg" />
+                      <ItemBox
+                        count="700"
+                        itemPic="img/images/superhero/suphero-211/x1/avatar/211sh-ava-1.jpg"
+                      />
+                      <ItemBox
+                        count="100"
+                        itemPic="img/images/superhero/suphero-600/x1/avatar/600sh-ava-1.jpg"
+                      />
+                      <ItemBox
+                        count="x2"
+                        itemPic="img/ic-abil-dps-plus@2x.png"
+                      />
+                      <ItemBox count="1600" itemPic="img/v2-fw-icon-fr0.png" />
+                      <ItemBox count="1200" itemPic="img/cw-quest-icon.png" />
+                      <ItemBox
+                        count="500"
+                        itemPic="img/evPopArts/potion_blue.png"
+                      />
+                      <ItemBox
+                        count="500"
+                        itemPic="img/evPopArts/potion_green.png"
+                      />
+                      <ItemBox
+                        count="Squad #14"
+                        itemPic="img/elements/Dark.png"
+                      />
                     </div>
                     <div className="store-button">
                       <div className="but-price">$29.99</div>
