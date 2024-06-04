@@ -10,6 +10,7 @@ export const cssFiles = [
 ];
 
 export default function V2MainScreen01({ pageName }) {
+  const currentPath = window.location.hash.substring(3).split("/")[0];
   useEffect(() => {
     if (pageName === currentPath) {
       // все попапы
