@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 export const cssFiles = ["gf-sale-pop"];
 
 export default function V2MainScreen01DarkWorld({ pageName }) {
-  const currentPath = window.location.hash.substring(2);
+  const currentPath = window.location.hash.substring(3).split("/")[0];
 
   useEffect(() => {
     if (pageName === currentPath) {

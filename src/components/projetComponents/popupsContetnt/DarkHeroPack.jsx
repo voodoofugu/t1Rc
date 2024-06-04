@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
 export default memo(function DarkHeroPack() {
   return (
@@ -25,6 +26,13 @@ export default memo(function DarkHeroPack() {
                 <div className="icon-dps"></div>
               </div>
             </div>
+            <div className="pow-extra">
+              <div className="value">51</div>
+              <div className="pow-title">
+                POW
+                <div className="icon-pow"></div>
+              </div>
+            </div>
             <div className="prize-promote-box">
               <div className="prize-promote-text">3</div>
             </div>
@@ -32,18 +40,9 @@ export default memo(function DarkHeroPack() {
           <div className="progress-banner-red">only in the dark world</div>
         </div>
         <div className="right-side-reward-box">
-          <div className="reward-box">
-            <img src="img/ic-diamond.png" loading="lazy" />
-            <div className="reward-value">x100</div>
-          </div>
-          <div className="reward-box">
-            <img src="img/evPopArts/potion_yellow.png" loading="lazy" />
-            <div className="reward-value">x100</div>
-          </div>
-          <div className="reward-box">
-            <img src="img/ic-diamond.png" loading="lazy" />
-            <div className="reward-value">x100</div>
-          </div>
+          <ItemBox itemPic="img/ic-diamond.png" count="x100" />
+          <ItemBox itemPic="img/evPopArts/potion_yellow.png" count="x100" />
+          <ItemBox itemPic="img/ic-diamond.png" count="x100" />
         </div>
         <div className="btn-bay-wrap">
           <div className="color-btn green">

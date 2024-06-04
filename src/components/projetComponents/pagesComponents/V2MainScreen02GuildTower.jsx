@@ -49,7 +49,6 @@ export const cssFiles = [
 export default function V2MainScreen02GuildTower({ pageName, children }) {
   const dispatch = useDispatch();
 
-  const currentPath = window.location.hash.substring(2);
   const [hole, sethole] = useState(false);
   const [leftPanel, setLeftPanel] = useState(true);
   const [fight, setFight] = useState(false);
@@ -569,7 +568,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
         </div>
       </div>
 
-      {pageName === currentPath && <WorldBtnBox className={pageName} />}
+      <WorldBtnBox className={pageName} />
       <StateChangeBtn
         state={hole}
         setState={sethole}

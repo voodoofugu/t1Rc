@@ -59,8 +59,6 @@ export default function MainScreen01AllPopups({ pageName, children }) {
   const dispatch = useDispatch();
   const [xmasPop, setXmasPop] = useState("xmas-pop1");
 
-  const currentPath = window.location.hash.substring(2);
-
   return (
     <div className="main world1">
       <div
@@ -1808,7 +1806,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           <div className="close-btn"></div>
         </div>
       </div>
-      {pageName === currentPath && <WorldBtnBox pageName={pageName} />}
+      <WorldBtnBox pageName={pageName} />
       {children}
     </div>
   );

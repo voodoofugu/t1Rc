@@ -5,18 +5,30 @@
 * {
   color: unset;
 }
-.world1 * {
-  box-sizing: unset;
-  vertical-align: unset;
-  max-width: unset;
+.world1,
+.world2,
+.world3 {
+  * {
+    box-sizing: unset;
+    vertical-align: unset;
+    max-width: unset;
+  }
 }
-.world1 ::after {
-  box-sizing: unset;
-  vertical-align: unset;
+.world1,
+.world2,
+.world3 {
+  ::after {
+    box-sizing: unset;
+    vertical-align: unset;
+  }
 }
-.world1 ::before {
-  box-sizing: unset;
-  vertical-align: unset;
+.world1,
+.world2,
+.world3 {
+  ::before {
+    box-sizing: unset;
+    vertical-align: unset;
+  }
 }
 
 .ReactVirtualized__Grid {

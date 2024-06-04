@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
 export default memo(function AngelPop() {
   return (
@@ -55,22 +56,10 @@ export default memo(function AngelPop() {
         </div>
       </div>
       <div className="right-side-reward-box x2-sale">
-        <div className="reward-box">
-          <img src="img/ic-diamond.png" loading="lazy" />
-          <div className="reward-value">x100</div>
-        </div>
-        <div className="reward-box">
-          <img src="img/evPopArts/potion_yellow.png" loading="lazy" />
-          <div className="reward-value">x100</div>
-        </div>
-        <div className="reward-box">
-          <img src="img/ic-diamond.png" loading="lazy" />
-          <div className="reward-value">x100</div>
-        </div>
-        <div className="reward-box">
-          <img src="img/evPopArts/potion_yellow.png" loading="lazy" />
-          <div className="reward-value">x100</div>
-        </div>
+        <ItemBox itemPic="img/ic-diamond.png" count="x100" />
+        <ItemBox itemPic="img/evPopArts/potion_yellow.png" count="x100" />
+        <ItemBox itemPic="img/ic-diamond.png" count="x100" />
+        <ItemBox itemPic="img/evPopArts/potion_yellow.png" count="x100" />
         <div className="sale-banner">X2</div>
       </div>
       <div className="btn-bay-wrap">

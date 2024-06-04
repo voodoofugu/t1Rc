@@ -10,8 +10,6 @@ export const cssFiles = [
 ];
 
 export default function V2MainScreen01({ pageName }) {
-  const currentPath = window.location.hash.substring(2);
-
   useEffect(() => {
     if (pageName === currentPath) {
       // все попапы
@@ -3823,7 +3821,7 @@ export default function V2MainScreen01({ pageName }) {
           </div>
         </div>
       </div>
-      {pageName === currentPath && <WorldBtnBox pageName={pageName} />}
+      <WorldBtnBox pageName={pageName} />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
 export default memo(function AngelPopX3() {
   return (
@@ -31,30 +32,21 @@ export default memo(function AngelPopX3() {
               </div>
             </div>
             <div className="reward-box">
-              <div className="reward-piece">
-                <img
-                  className="reward-img"
-                  src="img/v2-res-diamond.png"
-                  loading="lazy"
-                />
-                <div className="reward-value">1000</div>
-              </div>
-              <div className="reward-piece">
-                <img
-                  className="reward-img"
-                  src="img/v2-res-diamond.png"
-                  loading="lazy"
-                />
-                <div className="reward-value">1000</div>
-              </div>
-              <div className="reward-piece">
-                <img
-                  className="reward-img"
-                  src="img/v2-res-diamond.png"
-                  loading="lazy"
-                />
-                <div className="reward-value">1000</div>
-              </div>
+              <ItemBox
+                itemClass="wh60"
+                itemPic="img/v2-res-diamond.png"
+                count="1000"
+              />
+              <ItemBox
+                itemClass="wh60"
+                itemPic="img/v2-res-diamond.png"
+                count="1000"
+              />
+              <ItemBox
+                itemClass="wh60"
+                itemPic="img/v2-res-diamond.png"
+                count="1000"
+              />
             </div>
             <div className="btn-bay-wrap">
               <div className="color-btn green">
@@ -103,38 +95,26 @@ export default memo(function AngelPopX3() {
               </div>
             </div>
             <div className="reward-box">
-              <div className="reward-piece">
-                <img
-                  className="reward-img"
-                  src="img/v2-res-diamond.png"
-                  loading="lazy"
-                />
-                <div className="reward-value">1000</div>
-              </div>
-              <div className="reward-piece">
-                <img
-                  className="reward-img"
-                  src="img/v2-res-diamond.png"
-                  loading="lazy"
-                />
-                <div className="reward-value">1000</div>
-              </div>
-              <div className="reward-piece">
-                <img
-                  className="reward-img"
-                  src="img/v2-res-diamond.png"
-                  loading="lazy"
-                />
-                <div className="reward-value">1000</div>
-              </div>
-              <div className="reward-piece">
-                <img
-                  className="reward-img"
-                  src="img/v2-res-diamond.png"
-                  loading="lazy"
-                />
-                <div className="reward-value">1000</div>
-              </div>
+              <ItemBox
+                itemClass="wh60"
+                itemPic="img/v2-res-diamond.png"
+                count="1000"
+              />
+              <ItemBox
+                itemClass="wh60"
+                itemPic="img/v2-res-diamond.png"
+                count="1000"
+              />
+              <ItemBox
+                itemClass="wh60"
+                itemPic="img/v2-res-diamond.png"
+                count="1000"
+              />
+              <ItemBox
+                itemClass="wh60"
+                itemPic="img/v2-res-diamond.png"
+                count="1000"
+              />
             </div>
             <div className="btn-bay-wrap">
               <div className="color-btn green disabled">

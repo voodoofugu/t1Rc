@@ -10,7 +10,7 @@ const inlineStyles = {
 };
 
 export default function WorldBtnBox({ pageName }) {
-  const currentPath = window.location.hash.substring(2);
+  const currentPath = window.location.hash.substring(3).split("/")[0];
   const [isDarkWorld, setIsDarkWorld] = useState(false);
   const btnClickHandler = () => {
     setIsDarkWorld((prevIsDarkWorld) => !prevIsDarkWorld);
