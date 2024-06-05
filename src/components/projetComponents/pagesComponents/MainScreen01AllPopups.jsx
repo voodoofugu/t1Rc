@@ -49,6 +49,7 @@ export const cssFiles = [
   "screen-bank",
   "screen-rating-fullcoll",
   "screen-bank-5st",
+  "pop-wpck5",
 ];
 
 const childClickStopPropagation = (e) => {
@@ -200,7 +201,15 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                   popCont: ["CwOffersPop"],
                 },
               ],
-              ["images/hero-all/tithero-335/icons/ic-hero-335", "309:14:11"],
+              [
+                "images/hero-all/tithero-335/icons/ic-hero-335",
+                "309:14:11",
+                {
+                  mpopClass: "m-popup wpck5",
+                  popTit: "Blackhole sale",
+                  popCont: ["Wpck5"],
+                },
+              ],
               [
                 "v2-ns-ball",
                 "00:00:00",

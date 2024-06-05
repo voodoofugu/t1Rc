@@ -4,7 +4,7 @@ export default memo(function Wpck5() {
   return (
     <>
       {/* <div className="title">Blackhole sale</div> */}
-      {/* <div className="color-box"></div> */}
+      <div className="color-box"></div>
       <div className="content-all">
         <div className="prize-one-box">
           <div className="girl-box">
@@ -15,8 +15,19 @@ export default memo(function Wpck5() {
             />
           </div>
           <div className="prize-name-box">Toyama Mai</div>
-          <div className="prize-dps-box">
-            <div className="prize-dps-text">2.14BD3</div>
+          <div className="dps-extra">
+            <div className="value">2.32B</div>
+            <div className="dps-title">
+              DPS
+              <div className="icon-dps"></div>
+            </div>
+          </div>
+          <div className="pow-extra">
+            <div className="value">51</div>
+            <div className="pow-title">
+              POW
+              <div className="icon-pow"></div>
+            </div>
           </div>
           <div className="prize-promote-box">
             <div className="prize-promote-text"></div>

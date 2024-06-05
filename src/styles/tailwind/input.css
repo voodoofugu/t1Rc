@@ -12,6 +12,9 @@
     box-sizing: unset;
     vertical-align: unset;
     max-width: unset;
+    img {
+      display: unset;
+    }
   }
 }
 .world1,
