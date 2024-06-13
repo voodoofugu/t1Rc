@@ -12,6 +12,7 @@ export const cssFiles = [
   "screen-superhero",
   "screen-unipop-subscription",
   "screen-info-pop",
+  "store-items",
 ];
 
 export default function FapMarket({ pageName, children }) {

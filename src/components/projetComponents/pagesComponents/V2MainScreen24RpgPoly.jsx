@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export const cssFiles = ["v2-screen-rpg_poly"];
+export const cssFiles = ["v2-screen-rpg_poly", "store-items"];
 
 export default function V2MainScreen24RpgPoly({ pageName }) {
   const currentPath = window.location.hash.substring(3).split("/")[0];

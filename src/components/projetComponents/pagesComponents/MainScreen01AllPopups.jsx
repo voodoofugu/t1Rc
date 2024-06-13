@@ -50,6 +50,8 @@ export const cssFiles = [
   "screen-rating-fullcoll",
   "screen-bank-5st",
   "pop-wpck5",
+  "fap_market",
+  "store-items",
 ];
 
 const childClickStopPropagation = (e) => {
