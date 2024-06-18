@@ -21,12 +21,8 @@ export function devServer(options: BuildOptions): DevServerConfiguration {
         publicPath: "/img/",
       },
       {
-        directory: path.join("titans_rc", "scripts"),
-        publicPath: "/scripts/",
-      },
-      {
-        directory: path.join("titans_rc", "spine"),
-        publicPath: "/spine/",
+        directory: path.join("src", "scripts/pixi-animate"),
+        publicPath: "/pixi/",
       },
     ],
   };

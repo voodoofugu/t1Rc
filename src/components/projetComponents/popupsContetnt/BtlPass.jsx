@@ -103,7 +103,7 @@ export default function BtlPass({ btlClass }) {
               <div className="hero-avatar-box">
                 <img
                   className="hero-avatar"
-                  src="img/unknown-hero-ava.jpg"
+                  src="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
                   loading="lazy"
                 />
               </div>

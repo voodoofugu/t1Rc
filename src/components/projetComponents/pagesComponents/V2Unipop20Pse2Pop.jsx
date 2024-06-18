@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import ItemBox from "../UIComponents/ItemBox";
-
-import * as PIXI from "../../../scripts/pixi-animate/pixi";
-// import { Spine } from "../scripts/pixi-animate/pixi-spine";
-import spine from "../../../scripts/pixi-animate/pixi-spine-3.8";
 
 export const cssFiles = [
   "v2-unipop-20-pse2-pop",
@@ -82,6 +79,9 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
 
   return (
     <div className="main world1">
+      {/* <Helmet>
+        <script src="pixi/spine/tutor-girl/tutor-girl-anim.js"></script>
+      </Helmet> */}
       <div className="main-bg"></div>
       <div
         className="quest-box-all quests"

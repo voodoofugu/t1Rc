@@ -792,7 +792,10 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-name">Random</div>
                     <div className="item-box piecesHero">
                       <div className="img-wrap">
-                        <img src="img/unknown-hero-ava.jpg" loading="lazy" />
+                        <img
+                          src="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="store-quant">
                         <div className="quantity">0/10</div>

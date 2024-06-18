@@ -1,0 +1,95 @@
+{
+  "skeleton": {
+    "hash": "mlr5T3Ue/nUk3l+05DB3AQiDevU",
+    "spine": "3.8.75",
+    "x": -111.01,
+    "y": -108.76,
+    "width": 220.27,
+    "height": 220.27,
+    "images": "",
+    "audio": ""
+  },
+  "bones": [{ "name": "root" }, { "name": "drop", "parent": "root" }],
+  "slots": [
+    { "name": "drop", "bone": "drop", "attachment": "drop-heart" },
+    { "name": "drop_path", "bone": "root", "attachment": "drop_path" },
+    { "name": "drop-splash", "bone": "drop", "attachment": "drop-splash" }
+  ],
+  "path": [
+    {
+      "name": "drop_path_c",
+      "bones": ["drop"],
+      "target": "drop_path",
+      "rotateMix": 0,
+      "translateMix": 0
+    }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "drop-splash": {
+          "drop-splash": {
+            "x": -0.88,
+            "y": 1.38,
+            "scaleX": 0.4,
+            "scaleY": 0.4,
+            "rotation": -0.07,
+            "width": 550,
+            "height": 550
+          }
+        },
+        "drop": {
+          "drop-heart": { "x": 0.5, "y": -0.05, "width": 64, "height": 64 }
+        },
+        "drop_path": {
+          "drop_path": {
+            "type": "path",
+            "lengths": [134.04, 198.46, 550.74],
+            "vertexCount": 9,
+            "vertices": [
+              -3.76, -154.46, 0.71, -0.65, 1.93, 41.43, 0.27, 97.31, 0.09,
+              133.38, -0.12, 175.29, -0.18, 164.67, -0.07, 197.8, 0.3, 302.5
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "drop": {
+      "slots": {
+        "drop-splash": {
+          "color": [
+            { "color": "ffffff00" },
+            { "time": 0.1333, "color": "ffffffff" },
+            { "time": 0.1667, "color": "ffffff00" }
+          ]
+        },
+        "drop": {
+          "color": [
+            { "color": "ffffff00" },
+            { "time": 0.1667, "color": "ffffffff", "curve": "stepped" },
+            { "time": 0.5, "color": "ffffffff" },
+            { "time": 0.5667, "color": "ffffff00" }
+          ]
+        }
+      },
+      "bones": {
+        "drop": { "scale": [{ "x": 0, "y": 0 }, { "time": 0.1667 }] }
+      },
+      "path": {
+        "drop_path_c": {
+          "position": [
+            { "position": -0.1837 },
+            { "time": 0.1 },
+            { "time": 0.2333, "position": 0.3633 },
+            { "time": 0.4333, "position": 0.5222 },
+            { "time": 0.5667, "position": 1 }
+          ],
+          "mix": [{ "rotateMix": 0 }]
+        }
+      }
+    }
+  }
+}

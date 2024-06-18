@@ -26,7 +26,7 @@ function XmasPop1({ setXmasPop }) {
               <div className="hero-avatar-box">
                 <img
                   className="hero-avatar"
-                  src="img/unknown-hero-ava.jpg"
+                  src="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
                   loading="lazy"
                 />
               </div>
@@ -35,7 +35,7 @@ function XmasPop1({ setXmasPop }) {
               <div className="hero-avatar-box">
                 <img
                   className="hero-avatar"
-                  src="img/unknown-hero-ava.jpg"
+                  src="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
                   loading="lazy"
                 />
               </div>

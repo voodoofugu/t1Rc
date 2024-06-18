@@ -2,12 +2,12 @@
 
 // // import spineHash from "conf/spine";
 // // import { loadResource, Resources } from "utils/animation/loader";
-// // PIXI = window.PIXI;
+// PIXI = window.PIXI;
 
-// // import App from "App";
-// // import { cdnURL } from "utils/jsxHelpers";
+// import App from "App";
+// import { cdnURL } from "utils/jsxHelpers";
 // // eslint-disable-next-line no-unused-vars
-// import spine from "./pixi-spine-3.8";
+// import spine from "vendor/pixi-spine-3.8";
 
 // type Options = ?{
 //   resolution?: number,
@@ -98,11 +98,11 @@
 //     if (this.loader.loading) this.loader.onComplete.add(add);
 //     else add();
 
-//     return new Promise((resolve) => {
+//     return new Promise(resolve => {
 //       this.loader.load((_loader, resources) => {
 //         resolve(resources);
 //       });
-//     }).then((resources) => {
+//     }).then(resources => {
 //       this.data = resources[name];
 //       this.loading = null;
 //       this.loaded = true;
@@ -116,7 +116,9 @@
 //     load: boolean = false
 //   ): SpineLibrary {
 //     const spineAtlasFile = options && options.spineAtlasFile;
-//     const localName = spineAtlasFile ? `${name}:${spineAtlasFile}` : name;
+//     const localName = spineAtlasFile
+//       ? `${name}:${spineAtlasFile}`
+//       : name;
 //     let lib = this.libraries[localName];
 //     if (!lib) {
 //       lib = new SpineLibrary(name, options);
@@ -131,9 +133,15 @@
 //     return this.libraries[localName];
 //   }
 
-//   static get(name: string, options: ?Options = null, load: boolean = false) {
+//   static get(
+//     name: string,
+//     options: ?Options = null,
+//     load: boolean = false
+//   ) {
 //     const spineAtlasFile = options && options.spineAtlasFile;
-//     const localName = spineAtlasFile ? `${name}:${spineAtlasFile}` : name;
+//     const localName = spineAtlasFile
+//       ? `${name}:${spineAtlasFile}`
+//       : name;
 //     let lib = this.libraries[localName];
 //     if (lib) return lib;
 

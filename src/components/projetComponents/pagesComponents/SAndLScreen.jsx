@@ -69,7 +69,7 @@ export default function SAndLScreen({ pageName, children }) {
         },
         {
           itemClass: "wh44 piecesHero",
-          itemPic: "img/unknown-hero-ava.jpg",
+          itemPic: "img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg",
           count: 100,
         },
         {

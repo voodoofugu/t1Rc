@@ -86,7 +86,7 @@ export default function DualPack({ event }) {
           <ItemBox itemPic="img/evPopArts/potion_green.png" count={1000} />
           <ItemBox
             itemClass="piecesHero"
-            itemPic="img/unknown-hero-ava.jpg"
+            itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
             count={100}
           />
         </div>

@@ -17,7 +17,7 @@ export const cssFiles = [
 
 export default function FapMarket({ pageName, children }) {
   const dispatch = useDispatch();
-  const ReactElement = useDeserializedComponent("TestCompon", "./");
+  // const ReactElement = useDeserializedComponent("TestCompon", "./");
 
   return (
     <div className="main world1">
@@ -179,7 +179,7 @@ export default function FapMarket({ pageName, children }) {
                 buyValue="750"
               >
                 <ItemBox
-                  itemPic="img/unknown-hero-ava.jpg"
+                  itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
                   itemClass="piecesHero"
                   count={100}
                   sale="-50%"
@@ -200,7 +200,7 @@ export default function FapMarket({ pageName, children }) {
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">
-              {ReactElement}
+              {/* {ReactElement} */}
               <div className="store-item-all-name">Wooden Chest</div>
             </div>
             <div className="store-item-all">

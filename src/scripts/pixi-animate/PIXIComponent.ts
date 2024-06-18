@@ -1,14 +1,12 @@
-// // @flow
-
-// // PIXI = window.PIXI;
+// PIXI = window.PIXI;
 
 // import React, { Component } from "react";
 
-// // import App from "App";
+// import App from "App";
 
-// // import type PIXIView from "./PIXIView";
+// import type PIXIView from "./PIXIView";
 
-// // import LoadingProgress from "./LoadingProgress";
+// import LoadingProgress from "./LoadingProgress";
 
 // declare var DEBUG: number;
 
@@ -132,7 +130,7 @@
 //     if (!this.app) {
 //       return;
 //     }
-//     this.app.renderer.extract.canvas(this.app.stage).toBlob((b) => {
+//     this.app.renderer.extract.canvas(this.app.stage).toBlob(b => {
 //       const a = document.createElement("a");
 //       // $FlowFixMe
 //       document.body.append(a);
