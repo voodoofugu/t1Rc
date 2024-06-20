@@ -52,10 +52,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-rubin.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -63,10 +63,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-gold.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -74,10 +74,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-rubin.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -85,10 +85,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-gold.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -101,10 +101,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-rubin.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -112,10 +112,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-gold.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -123,10 +123,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-rubin.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -134,10 +134,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-gold.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -150,10 +150,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-rubin.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -161,10 +161,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-gold.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -172,10 +172,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-rubin.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -183,10 +183,10 @@ export default function V2MainScreen03StoreMain() {
                   <div className="store-item-box">
                     <div className="store-name">More Gold</div>
                     <ItemBox itemPic="img/ic-abil-gold.png" />
-                    <div className="color-btn diamond">
+                    <div className="color-btn diamonds">
                       <div className="color-btn-text">
                         buy
-                        <span className="f-diamond">696</span>
+                        <span className="f-diamonds">696</span>
                       </div>
                     </div>
                     <div className="i-ico"></div>
@@ -209,10 +209,10 @@ export default function V2MainScreen03StoreMain() {
                       <div className="store-timer-text">70% off</div>
                     </div>
                   </div>
-                  <div className="color-btn diamond">
+                  <div className="color-btn diamonds">
                     <div className="color-btn-text">
                       buy
-                      <span className="f-diamond">696</span>
+                      <span className="f-diamonds">696</span>
                     </div>
                   </div>
                   <div className="store-timer-box"></div>
@@ -227,10 +227,10 @@ export default function V2MainScreen03StoreMain() {
                       <div className="store-timer-text">70% off</div>
                     </div>
                   </div>
-                  <div className="color-btn diamond">
+                  <div className="color-btn diamonds">
                     <div className="color-btn-text">
                       buy
-                      <span className="f-diamond">696</span>
+                      <span className="f-diamonds">696</span>
                     </div>
                   </div>
                   <div className="store-timer-box"></div>
