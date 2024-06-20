@@ -20,7 +20,7 @@ export default function Dating({ pageName, children }) {
         <div className="dating_title">Your date</div>
         <div className="counterBox">
           <ResCount
-            img="img/ic-diamond.png"
+            img="img/dating/datingCoin.png"
             value="234"
             plus
             onClick={() => {
@@ -47,6 +47,17 @@ export default function Dating({ pageName, children }) {
           <div className="color-btn-text"></div>
         </div>
         <div className="btnI" />
+
+        <div className="avaScroll">
+          <div className="ava">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-13/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
       </div>
       {children}
     </div>
