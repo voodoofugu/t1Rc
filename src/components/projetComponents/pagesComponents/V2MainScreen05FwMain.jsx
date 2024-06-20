@@ -1,6 +1,10 @@
 import React from "react";
 
-export const cssFiles = ["v2-screen-fw-main", "v2-screen-fw-map"];
+export const cssFiles = [
+  "v2-screen-fw-main",
+  "v2-screen-fw-map",
+  "screen-unipop-subscription",
+];
 
 export default function V2MainScreen05FwMain() {
   return (

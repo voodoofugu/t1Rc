@@ -6,6 +6,7 @@ export const cssFiles = [
   "v2-unipop-20-pse2-pop",
   "screen-bank",
   "tutorGirlAnim",
+  "screen-unipop-subscription",
 ];
 
 export default function V2Unipop20Pse2Pop({ pageName }) {

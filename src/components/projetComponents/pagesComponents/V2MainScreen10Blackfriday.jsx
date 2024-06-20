@@ -1,6 +1,10 @@
 import React from "react";
 
-export const cssFiles = ["v2-screen-tower", "v2-screen-bf"];
+export const cssFiles = [
+  "v2-screen-tower",
+  "v2-screen-bf",
+  "screen-unipop-subscription",
+];
 
 export default function V2MainScreen10Blackfriday() {
   return (

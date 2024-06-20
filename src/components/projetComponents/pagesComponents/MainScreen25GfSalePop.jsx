@@ -1,6 +1,6 @@
 import React from "react";
 
-export const cssFiles = ["gf-sale-pop"];
+export const cssFiles = ["gf-sale-pop", "screen-unipop-subscription"];
 
 export default function MainScreen25GfSalePop() {
   return (
