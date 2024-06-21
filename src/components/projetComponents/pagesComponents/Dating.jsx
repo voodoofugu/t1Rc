@@ -3,6 +3,7 @@ import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
+import ScrollCopponent from "../UIComponents/ScrollCopponent";
 
 export const cssFiles = [
   "dating",
@@ -48,8 +49,8 @@ export default function Dating({ pageName, children }) {
         </div>
         <div className="btnI" />
 
-        <div className="avaScroll">
-          <div className="ava">
+        <ScrollCopponent width={92} height={574} alignment="left">
+          <div className="ava active">
             <div className="avaWrap">
               <img
                 src="img/images/goddess/goddess-13/x2/ava/goddess-ava-1.jpg"
@@ -57,7 +58,55 @@ export default function Dating({ pageName, children }) {
               />
             </div>
           </div>
-        </div>
+          <div className="ava">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-12/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="ava">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-11/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="ava">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-10/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="ava disabled">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-9/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="ava disabled">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-8/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="ava disabled">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-7/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </ScrollCopponent>
       </div>
       {children}
     </div>
