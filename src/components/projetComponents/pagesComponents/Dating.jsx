@@ -6,6 +6,7 @@ import ResCount from "../UIComponents/ResCount";
 import ScrollCopponent from "../UIComponents/ScrollCopponent";
 
 export const cssFiles = [
+  "scroll",
   "dating",
   "screen-superhero",
   "screen-unipop-subscription",
@@ -49,7 +50,18 @@ export default function Dating({ pageName, children }) {
         </div>
         <div className="btnI" />
 
-        <ScrollCopponent width={92} height={574} alignment="left">
+        <ScrollCopponent
+          className="datingScroll"
+          width={92}
+          height={574}
+          // width={574}
+          // height={92}
+          scrollObjectSize="86"
+          gap={10}
+          // xDirection
+          scrollReverse
+          draggable
+        >
           <div className="ava active">
             <div className="avaWrap">
               <img
@@ -102,6 +114,22 @@ export default function Dating({ pageName, children }) {
             <div className="avaWrap">
               <img
                 src="img/images/goddess/goddess-7/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="ava disabled">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div className="ava disabled">
+            <div className="avaWrap">
+              <img
+                src="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg"
                 loading="lazy"
               />
             </div>
