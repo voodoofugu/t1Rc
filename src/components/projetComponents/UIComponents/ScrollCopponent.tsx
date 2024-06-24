@@ -5,7 +5,7 @@ interface ScrollComponentType {
   className?: string;
   width: number;
   height: number;
-  scrollObjectSize: number; // it is for X or Y
+  scrollingObjectSize: number; // it is for X or Y
   xDirection?: boolean;
   gap?: number;
   paddingX?: number;
@@ -13,6 +13,7 @@ interface ScrollComponentType {
   scrollReverse?: boolean;
   draggableScroll?: boolean;
   scrollOnHover?: boolean;
+  lazyRender?: boolean;
   children: React.ReactNode;
 }
 
@@ -20,7 +21,7 @@ export default function ScrollComponent({
   className = "",
   width,
   height,
-  scrollObjectSize,
+  scrollingObjectSize,
   xDirection = false,
   gap = 0,
   paddingX = 0,
@@ -28,6 +29,7 @@ export default function ScrollComponent({
   scrollReverse = false,
   draggableScroll = false,
   scrollOnHover = false,
+  lazyRender = false,
   children,
 }: ScrollComponentType) {
   const updateMeasurementsCounterRef = useRef(0);
@@ -94,7 +96,7 @@ export default function ScrollComponent({
 
           if (
             objectsWrapperWidth ===
-            scrollObjectSize * childrenCount +
+            scrollingObjectSize * childrenCount +
               gap * (childrenCount - 1) +
               paddingX * 2
           ) {
@@ -110,7 +112,7 @@ export default function ScrollComponent({
 
           if (
             objectsWrapperHeight ===
-            scrollObjectSize * childrenCount +
+            scrollingObjectSize * childrenCount +
               gap * (childrenCount - 1) +
               paddingY * 2
           ) {
@@ -127,7 +129,7 @@ export default function ScrollComponent({
     };
 
     updateMeasurements();
-  }, [xDirection, width, height, scrollObjectSize, gap]);
+  }, [xDirection, width, height, scrollingObjectSize, gap]);
 
   return (
     <div
@@ -169,7 +171,7 @@ export default function ScrollComponent({
             ? {
                 width: `${height}px`,
                 height: `${width}px`,
-                transform: `rotate(-90deg) translate(${translateProperty}px, ${translateProperty}px)`,
+                transform: `rotate(-90deg) translate(${translateProperty}px, ${translateProperty}px) scaleX(-1)`,
               }
             : {
                 width: `${width}px`,
@@ -192,13 +194,20 @@ export default function ScrollComponent({
                 }
           }
         >
-          <React.Suspense fallback={null}>
-            {React.Children.map(children, (child) => (
-              <LazyRender width={scrollObjectSize} height={scrollObjectSize}>
+          {React.Children.map(children, (child) =>
+            lazyRender ? (
+              <LazyRender
+                refObject={scrollElementRef}
+                width={scrollingObjectSize}
+                height={scrollingObjectSize}
+                rootMargin={`${scrollingObjectSize}px 0px ${scrollingObjectSize}px 0px`}
+              >
                 {child}
               </LazyRender>
-            ))}
-          </React.Suspense>
+            ) : (
+              <div>{child}</div>
+            )
+          )}
         </div>
       </div>
     </div>

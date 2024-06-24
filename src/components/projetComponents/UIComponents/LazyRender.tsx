@@ -1,15 +1,23 @@
 import React from "react";
 
 interface LazyRenderProps {
-  children: React.ReactNode;
+  refObject?: React.RefObject<HTMLDivElement>;
   width?: number;
   height?: number;
   threshold?: number;
   rootMargin?: string;
+  children: React.ReactNode;
 }
 
 const LazyRender: React.FC<LazyRenderProps> = React.memo(
-  ({ children, threshold = 0.1, rootMargin = "0px", width, height }) => {
+  ({
+    refObject = { current: null },
+    children,
+    threshold = 0,
+    rootMargin = "0px",
+    width,
+    height,
+  }) => {
     const [isVisible, setIsVisible] = React.useState(false);
     const wrapperRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -17,13 +25,11 @@ const LazyRender: React.FC<LazyRenderProps> = React.memo(
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setIsVisible(true);
-              observer.disconnect();
-            }
+            setIsVisible(entry.isIntersecting);
           });
         },
         {
+          root: refObject.current,
           threshold,
           rootMargin,
         }

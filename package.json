@@ -27,6 +27,7 @@
     "react-dom": "^18.2.0",
     "react-helmet-async": "^1.3.0",
     "react-virtualized": "^9.22.5",
+    "reat": "0.0.1-security",
     "use-context-selector": "^1.4.4",
     "use-immer": "^0.9.0"
   },
