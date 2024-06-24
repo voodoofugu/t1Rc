@@ -1,14 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
+import LazyRender from "./LazyRender";
 
 interface ScrollComponentType {
   className?: string;
   width: number;
   height: number;
   scrollObjectSize: number; // it is for X or Y
-  gap?: number;
   xDirection?: boolean;
+  gap?: number;
+  paddingX?: number;
+  paddingY?: number;
   scrollReverse?: boolean;
-  draggable?: boolean;
+  draggableScroll?: boolean;
+  scrollOnHover?: boolean;
   children: React.ReactNode;
 }
 
@@ -17,14 +21,19 @@ export default function ScrollComponent({
   width,
   height,
   scrollObjectSize,
-  gap = 0,
   xDirection = false,
+  gap = 0,
+  paddingX = 0,
+  paddingY = 0,
   scrollReverse = false,
-  draggable = false,
+  draggableScroll = false,
+  scrollOnHover = false,
   children,
 }: ScrollComponentType) {
+  const updateMeasurementsCounterRef = useRef(0);
   const scrollElementRef = useRef<HTMLDivElement | null>(null);
   const objectsWrapperRef = useRef<HTMLDivElement | null>(null);
+  const customScrollRef = useRef<HTMLDivElement | null>(null);
 
   const [measuring, setMeasuring] = useState(0);
   const [scroll, setScroll] = useState(0);
@@ -42,11 +51,9 @@ export default function ScrollComponent({
 
   const handleMouseMove = (e: MouseEvent) => {
     if (xDirection) {
-      scrollElementRef.current!.scrollTop =
-        scrollElementRef.current.scrollTop - -e.movementX;
+      scrollElementRef.current!.scrollTop += e.movementX;
     } else {
-      scrollElementRef.current!.scrollTop =
-        scrollElementRef.current.scrollTop - -e.movementY;
+      scrollElementRef.current!.scrollTop += e.movementY;
     }
   };
 
@@ -54,18 +61,29 @@ export default function ScrollComponent({
     window.removeEventListener("mousemove", handleMouseMove);
     window.removeEventListener("mouseup", handleMouseUp);
     document.body.style.cursor = "auto";
+    customScrollRef.current!.classList.remove("dragging");
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
     document.body.style.cursor = "grabbing";
+    customScrollRef.current!.classList.add("dragging");
   };
 
   useEffect(() => {
     let animationFrameId: number;
 
     const updateMeasurements = () => {
+      // size error handling
+      updateMeasurementsCounterRef.current += 1;
+      if (updateMeasurementsCounterRef.current > 1000) {
+        updateMeasurementsCounterRef.current = 0;
+        cancelAnimationFrame(animationFrameId);
+        console.error("🚫 ScrollComponent hasn`t defined the size parameters");
+        return;
+      }
+
       if (objectsWrapperRef.current) {
         const objectsWrapperRect =
           objectsWrapperRef.current.getBoundingClientRect();
@@ -76,7 +94,9 @@ export default function ScrollComponent({
 
           if (
             objectsWrapperWidth ===
-            scrollObjectSize * childrenCount + gap * (childrenCount - 1)
+            scrollObjectSize * childrenCount +
+              gap * (childrenCount - 1) +
+              paddingX * 2
           ) {
             const widthDifference = width - objectsWrapperWidth;
             const objectsWrapperNewWidth = width - Math.abs(widthDifference);
@@ -85,14 +105,14 @@ export default function ScrollComponent({
           } else {
             animationFrameId = requestAnimationFrame(updateMeasurements);
           }
-        }
-
-        if (!xDirection) {
+        } else {
           const objectsWrapperHeight = Math.round(objectsWrapperRect.height);
 
           if (
             objectsWrapperHeight ===
-            scrollObjectSize * childrenCount + gap * (childrenCount - 1)
+            scrollObjectSize * childrenCount +
+              gap * (childrenCount - 1) +
+              paddingY * 2
           ) {
             const heightDifference = height - objectsWrapperHeight;
             const objectsWrapperNewHeight = height - Math.abs(heightDifference);
@@ -111,9 +131,10 @@ export default function ScrollComponent({
 
   return (
     <div
-      className={`customScroll ${
-        xDirection ? "xDirection" : "yDirection"
-      } ${className}`}
+      className={`customScroll${xDirection ? " xDirection" : " yDirection"}${
+        draggableScroll && " draggableScroll"
+      }${scrollOnHover && " scrollOnHover"} ${className}`}
+      ref={customScrollRef}
       style={
         xDirection
           ? {
@@ -130,8 +151,7 @@ export default function ScrollComponent({
         <div className={scrollReverse ? "scrollBar first" : "scrollBar last"}>
           <div
             className="scrollBarThumb"
-            onMouseDown={(e) => draggable && handleMouseDown(e)}
-            onMouseUp={handleMouseUp}
+            onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
             style={
               xDirection
                 ? { width: `${measuring}px`, left: `${scroll}px` }
@@ -161,14 +181,24 @@ export default function ScrollComponent({
           className="objectsWrapper"
           ref={objectsWrapperRef}
           style={
-            xDirection
+            (xDirection && paddingX > 0) || (xDirection && paddingY > 0)
               ? {
                   gap: `${gap}px`,
+                  padding: `${paddingX}px ${paddingY}px`,
                 }
-              : { gap: `${gap}px` }
+              : {
+                  gap: `${gap}px`,
+                  padding: `${paddingY}px ${paddingX}px`,
+                }
           }
         >
-          {children}
+          <React.Suspense fallback={null}>
+            {React.Children.map(children, (child) => (
+              <LazyRender width={scrollObjectSize} height={scrollObjectSize}>
+                {child}
+              </LazyRender>
+            ))}
+          </React.Suspense>
         </div>
       </div>
     </div>

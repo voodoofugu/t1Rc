@@ -4,9 +4,10 @@ import { useDispatch } from "../../templateComponents/GlobalStateStor";
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import ScrollCopponent from "../UIComponents/ScrollCopponent";
+import PersonAva from "../UIComponents/PersonAva";
 
 export const cssFiles = [
-  "scroll",
+  "customScroll",
   "dating",
   "screen-superhero",
   "screen-unipop-subscription",
@@ -52,88 +53,49 @@ export default function Dating({ pageName, children }) {
 
         <ScrollCopponent
           className="datingScroll"
-          width={92}
-          height={574}
-          // width={574}
-          // height={92}
+          // width={90}
+          // height={530}
+          width={574}
+          height={92}
           scrollObjectSize="86"
+          xDirection
           gap={10}
-          // xDirection
+          // paddingX={10}
+          // paddingY={10}
           scrollReverse
-          draggable
+          draggableScroll
+          scrollOnHover
         >
-          <div className="ava active">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-13/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-12/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-11/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-10/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava disabled">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-9/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava disabled">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-8/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava disabled">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-7/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava disabled">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div className="ava disabled">
-            <div className="avaWrap">
-              <img
-                src="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          <PersonAva
+            active
+            img="img/images/goddess/goddess-13/x2/ava/goddess-ava-1.jpg"
+          />
+          <PersonAva img="img/images/goddess/goddess-12/x2/ava/goddess-ava-1.jpg" />
+          <PersonAva img="img/images/goddess/goddess-11/x2/ava/goddess-ava-1.jpg" />
+          <PersonAva
+            disabled
+            img="img/images/goddess/goddess-10/x2/ava/goddess-ava-1.jpg"
+          />
+          <PersonAva
+            closed
+            img="img/images/goddess/goddess-9/x2/ava/goddess-ava-1.jpg"
+          />
+          <PersonAva
+            closed
+            img="img/images/goddess/goddess-8/x2/ava/goddess-ava-1.jpg"
+          />
+          <PersonAva
+            closed
+            img="img/images/goddess/goddess-7/x2/ava/goddess-ava-1.jpg"
+          />
+          <PersonAva
+            closed
+            img="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg"
+          />
+          <PersonAva
+            closed
+            img="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg"
+          />
         </ScrollCopponent>
       </div>
       {children}
