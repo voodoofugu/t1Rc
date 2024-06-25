@@ -41,15 +41,28 @@ export default function ScrollComponent({
   const [scroll, setScroll] = useState(0);
 
   const translateProperty = width / 2 - height / 2;
+  let differenceInProzent;
 
   const handleScroll = () => {
     if (scrollElementRef.current) {
-      const newScroll = Math.floor(scrollElementRef.current.scrollTop);
+      // const newScroll = Math.floor(scrollElementRef.current.scrollTop);
+
+      const newScroll = Math.abs(
+        Math.round(
+          (scrollElementRef.current.scrollTop / 100) * (100 - 46.82080924855491)
+        )
+      );
+      console.log(
+        "scrollElementRef.current.scrollTop",
+        scrollElementRef.current.scrollTop
+      );
+      // console.log("newScroll", newScroll);
       if (newScroll !== scroll) {
         setScroll(newScroll);
       }
     }
   };
+  // -46.82080924855491
 
   const handleMouseMove = (e: MouseEvent) => {
     if (xDirection) {
@@ -100,8 +113,18 @@ export default function ScrollComponent({
               gap * (childrenCount - 1) +
               paddingX * 2
           ) {
-            const widthDifference = width - objectsWrapperWidth;
-            const objectsWrapperNewWidth = width - Math.abs(widthDifference);
+            // const widthDifference = width - objectsWrapperWidth;
+            // const objectsWrapperNewWidth =
+            //   widthDifference < 0 ? width - Math.abs(widthDifference) : width;
+
+            differenceInProzent =
+              ((width - objectsWrapperWidth) /
+                ((width + objectsWrapperWidth) / 2)) *
+              100;
+            const objectsWrapperNewWidth = Math.abs(
+              Math.round((width / 100) * differenceInProzent)
+            );
+            console.log("differenceInProzent", differenceInProzent);
 
             setMeasuring(objectsWrapperNewWidth);
           } else {
@@ -117,9 +140,14 @@ export default function ScrollComponent({
               paddingY * 2
           ) {
             const heightDifference = height - objectsWrapperHeight;
-            const objectsWrapperNewHeight = height - Math.abs(heightDifference);
+            console.log("heightDifference", heightDifference);
+            const objectsWrapperNewHeight =
+              heightDifference < 0
+                ? height - Math.abs(heightDifference)
+                : height;
 
             setMeasuring(objectsWrapperNewHeight);
+            console.log("objectsWrapperNewHeight", objectsWrapperNewHeight);
             cancelAnimationFrame(animationFrameId);
           } else {
             animationFrameId = requestAnimationFrame(updateMeasurements);
@@ -134,8 +162,8 @@ export default function ScrollComponent({
   return (
     <div
       className={`customScroll${xDirection ? " xDirection" : " yDirection"}${
-        draggableScroll && " draggableScroll"
-      }${scrollOnHover && " scrollOnHover"} ${className}`}
+        draggableScroll ? " draggableScroll" : ""
+      }${scrollOnHover ? " scrollOnHover" : ""} ${className}`}
       ref={customScrollRef}
       style={
         xDirection
@@ -149,19 +177,37 @@ export default function ScrollComponent({
             }
       }
     >
-      {measuring > 0 && (
-        <div className={scrollReverse ? "scrollBar first" : "scrollBar last"}>
-          <div
-            className="scrollBarThumb"
-            onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
-            style={
-              xDirection
-                ? { width: `${measuring}px`, left: `${scroll}px` }
-                : { height: `${measuring}px`, top: `${scroll}px` }
-            }
-          />
-        </div>
-      )}
+      {xDirection
+        ? measuring < width && (
+            <div
+              className={scrollReverse ? "scrollBar first" : "scrollBar last"}
+            >
+              <div
+                className="scrollBarThumb"
+                onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
+                style={
+                  xDirection
+                    ? { width: `${measuring}px`, left: `${scroll}px` }
+                    : { height: `${measuring}px`, top: `${scroll}px` }
+                }
+              />
+            </div>
+          )
+        : measuring < height && (
+            <div
+              className={scrollReverse ? "scrollBar first" : "scrollBar last"}
+            >
+              <div
+                className="scrollBarThumb"
+                onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
+                style={
+                  xDirection
+                    ? { width: `${measuring}px`, left: `${scroll}px` }
+                    : { height: `${measuring}px`, top: `${scroll}px` }
+                }
+              />
+            </div>
+          )}
       <div
         className="scrollElement"
         ref={scrollElementRef}
