@@ -186,7 +186,7 @@ export default function BtlPass({ btlClass }) {
         ) : btlClass === "autumn" ? (
           <img src="img/break-girl848.png" loading="lazy" />
         ) : btlClass === "summer" ? (
-          <img src="img/break-girls/break-girl952.png" loading="lazy" />
+          <img src="img/break-girls/break-girl949.png" loading="lazy" />
         ) : null}
       </div>
       <div className="btlpass-btn-box">
