@@ -53,19 +53,20 @@ export default function Dating({ pageName, children }) {
 
         <ScrollCopponent
           className="datingScroll"
-          // width={90}
-          // height={530}
-          width={530}
-          height={92}
+          width={90}
+          height={530}
+          // width={530}
+          // height={92}
           scrollingObjectSize="86"
-          xDirection
+          // xDirection
           gap={10}
           // paddingX={10}
-          // paddingY={10}
+          paddingY={10}
           scrollReverse
           draggableScroll
           // scrollOnHover
           lazyRender
+          rootMargin="86px 0px 86px 0px"
         >
           <PersonAva
             active
