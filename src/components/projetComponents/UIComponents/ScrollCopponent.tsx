@@ -46,6 +46,9 @@ export default function ScrollComponent({
   const [scroll, setScroll] = useState(0);
 
   const translateProperty = width / 2 - height / 2;
+  const rowsQuantity = xDirection
+    ? Math.ceil(height / scrollingObjectSize)
+    : Math.ceil(width / scrollingObjectSize);
 
   const handleScroll = () => {
     const xy = xDirection ? width : height;
@@ -112,10 +115,16 @@ export default function ScrollComponent({
           objectsWrapperSize.current = Math.round(objWrapXY);
 
           if (
-            objectsWrapperSize.current ===
-            scrollingObjectSize * childrenCount +
-              gap * (childrenCount - 1) +
-              paddingXY * 2
+            objectsWrapperSize.current === rowsQuantity
+              ? scrollingObjectSize * childrenCount +
+                gap * (childrenCount - 1) +
+                paddingXY * 2
+              : scrollingObjectSize * Math.ceil(childrenCount / rowsQuantity) +
+                gap *
+                  (rowsQuantity
+                    ? Math.ceil(childrenCount / rowsQuantity)
+                    : childrenCount - 1) +
+                paddingXY * 2
           ) {
             thumbSize.current = (xy / objectsWrapperSize.current) * xy;
 
@@ -148,7 +157,7 @@ export default function ScrollComponent({
         height: `${height}px`,
       }}
     >
-      {thumbMeasuring < (xDirection ? width : height) && (
+      {thumbMeasuring > 0 && (
         <div className={`scrollBar ${scrollReverse ? "first" : "last"}`}>
           <div
             className="scrollBarThumb"
@@ -181,17 +190,12 @@ export default function ScrollComponent({
         <div
           className="objectsWrapper"
           ref={objectsWrapperRef}
-          style={
-            xDirection && (paddingX > 0 || paddingY > 0)
-              ? {
-                  gap: `${gap}px`,
-                  padding: `${paddingX}px ${paddingY}px`,
-                }
-              : {
-                  gap: `${gap}px`,
-                  padding: `${paddingY}px ${paddingX}px`,
-                }
-          }
+          style={{
+            gap: `${gap}px`,
+            padding: xDirection
+              ? `${paddingX}px ${paddingY}px`
+              : `${paddingY}px ${paddingX}px`,
+          }}
         >
           {React.Children.map(children, (child) =>
             lazyRender ? (
