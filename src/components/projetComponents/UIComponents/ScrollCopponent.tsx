@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import LazyRender from "./LazyRender";
 
 interface ScrollComponentType {
@@ -19,7 +19,7 @@ interface ScrollComponentType {
   children: React.ReactNode;
 }
 
-export default function ScrollComponent({
+const ScrollComponent: React.FC<ScrollComponentType> = ({
   className = "",
   scrollXY,
   objectXY,
@@ -35,19 +35,24 @@ export default function ScrollComponent({
   lazyRender = false,
   rootMargin = "0px 0px 0px 0px",
   children,
-}: ScrollComponentType) {
-  const scrollElementRef = useRef<HTMLDivElement | null>(null);
-  const objectsWrapperRef = useRef<HTMLDivElement | null>(null);
-  const customScrollRef = useRef<HTMLDivElement | null>(null);
+}) => {
+  const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
+  const objectsWrapperRef = React.useRef<HTMLDivElement | null>(null);
+  const customScrollRef = React.useRef<HTMLDivElement | null>(null);
 
-  const updateMeasurementsCounterRef = useRef(0);
-  const objectsWrapperSize = useRef(0);
-  const thumbSize = useRef(0);
+  const updateMeasurementsCounterRef = React.useRef(0);
+  const objectsWrapperSize = React.useRef(0);
+  const thumbSize = React.useRef(0);
 
-  const [thumbMeasuring, setThumbMeasuring] = useState(0);
-  const [scroll, setScroll] = useState(0);
+  const [thumbMeasuring, setThumbMeasuring] = React.useState(0);
+  const [scroll, setScroll] = React.useState(0);
 
   const translateProperty = scrollXY[0] / 2 - scrollXY[1] / 2;
+  const childCount = React.Children.count(children);
+  const objectsWrapperSizeXY = xDirection
+    ? childCount * objectXY[0] + gap * (childCount - 1) + paddingX * 2
+    : childCount * objectXY[1] + gap * (childCount - 1) + paddingY * 2;
+  console.log("objectsWrapperSizeXY", objectsWrapperSizeXY);
 
   const handleScroll = () => {
     if (!scrollMute) {
@@ -79,7 +84,7 @@ export default function ScrollComponent({
   const handleMouseUp = () => {
     window.removeEventListener("mousemove", handleMouseMove);
     window.removeEventListener("mouseup", handleMouseUp);
-    document.body.style.cursor = "auto";
+    document.body.style.removeProperty("cursor");
     customScrollRef.current!.classList.remove("dragging");
   };
 
@@ -90,45 +95,75 @@ export default function ScrollComponent({
     customScrollRef.current!.classList.add("dragging");
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
+    // warn handling
+    function warn(propsName: string) {
+      console.warn(`🧰 You are using the ${propsName} without scrollMute...`);
+    }
+    if (!lazyRender && rootMargin != "0px 0px 0px 0px") {
+      scrollReverse && warn("rootMargin");
+    }
+    if (scrollMute) {
+      scrollReverse && warn("scrollReverse");
+      draggableScroll && warn("draggableScroll");
+      scrollOnHover && warn("scrollOnHover");
+    }
+  }, []);
+
+  React.useEffect(() => {
     if (!scrollMute) {
       let animationFrameId: number;
 
       const updateMeasurements = () => {
+        console.log("updateMeasurements");
         // size error handling
+        if (xDirection) {
+          if (rowsQuantity * objectXY[1] > scrollXY[1]) {
+            console.error("🚫 rowsQuantity needs more scrolling height!");
+            return;
+          }
+        } else if (!xDirection) {
+          if (rowsQuantity * objectXY[0] > scrollXY[0]) {
+            console.error("🚫 rowsQuantity needs more scrolling width!");
+            return;
+          }
+        }
         updateMeasurementsCounterRef.current += 1;
         if (updateMeasurementsCounterRef.current > 800) {
           updateMeasurementsCounterRef.current = 0;
           cancelAnimationFrame(animationFrameId);
+
           console.error(
-            "🚫 ScrollComponent hasn`t defined the size parameters"
+            "🚫 ScrollComponent hasn`t defined the size parameters!"
           );
           return;
         }
 
+        // update measurements
         if (objectsWrapperRef.current) {
           const objectsWrapperRect =
             objectsWrapperRef.current.getBoundingClientRect();
-          const childrenCount = objectsWrapperRef.current.childElementCount;
 
           function getThumbSize(
-            objWrapXY: number,
+            objectWrapperXY: number,
             paddingXY: number,
             xy: number
           ) {
-            objectsWrapperSize.current = Math.round(objWrapXY);
+            objectsWrapperSize.current = Math.round(objectWrapperXY);
 
             if (
               objectsWrapperSize.current ===
               (rowsQuantity
-                ? objectXY[0] * Math.ceil(childrenCount / rowsQuantity) +
-                  gap * (Math.ceil(childrenCount / rowsQuantity) - 1) +
+                ? objectXY[0] * Math.ceil(childCount / rowsQuantity) +
+                  gap * (Math.ceil(childCount / rowsQuantity) - 1) +
                   paddingXY * 2
-                : objectXY[1] * childrenCount +
-                  gap * (childrenCount - 1) +
+                : objectXY[1] * childCount +
+                  gap * (childCount - 1) +
                   paddingXY * 2)
             ) {
-              thumbSize.current = (xy / objectsWrapperSize.current) * xy;
+              thumbSize.current = Math.round(
+                (xy / objectsWrapperSize.current) * xy
+              );
 
               setThumbMeasuring(thumbSize.current);
               cancelAnimationFrame(animationFrameId);
@@ -160,19 +195,23 @@ export default function ScrollComponent({
         height: `${scrollXY[1]}px`,
       }}
     >
-      {!scrollMute && thumbMeasuring > 0 && (
-        <div className={`scrollBar ${scrollReverse ? "first" : "last"}`}>
-          <div
-            className="scrollBarThumb"
-            onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
-            style={
-              xDirection
-                ? { width: `${thumbMeasuring}px`, left: `${scroll}px` }
-                : { height: `${thumbMeasuring}px`, top: `${scroll}px` }
-            }
-          />
-        </div>
-      )}
+      {!scrollMute &&
+        !!thumbMeasuring &&
+        (xDirection
+          ? thumbMeasuring <= scrollXY[0]
+          : thumbMeasuring <= scrollXY[1]) && (
+          <div className={`scrollBar ${scrollReverse ? "first" : "last"}`}>
+            <div
+              className="scrollBarThumb"
+              onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
+              style={
+                xDirection
+                  ? { width: `${thumbMeasuring}px`, left: `${scroll}px` }
+                  : { height: `${thumbMeasuring}px`, top: `${scroll}px` }
+              }
+            />
+          </div>
+        )}
       <div
         className="scrollElement"
         ref={scrollElementRef}
@@ -228,4 +267,6 @@ export default function ScrollComponent({
       </div>
     </div>
   );
-}
+};
+
+export default ScrollComponent;

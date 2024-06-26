@@ -60,10 +60,9 @@ export default function Dating({ pageName, children }) {
           scrollReverse
           draggableScroll
           // scrollOnHover
-          // lazyRender
-          rootMargin="86px 0px 86px 0px"
           // scrollMute
-          rowsQuantity={2}
+          // xDirection
+          // rowsQuantity={2}
         >
           <PersonAva
             active
