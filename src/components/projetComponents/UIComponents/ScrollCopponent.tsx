@@ -3,16 +3,17 @@ import LazyRender from "./LazyRender";
 
 interface ScrollComponentType {
   className?: string;
-  width: number;
-  height: number;
-  scrollingObjectSize: number; // it is for X or Y
+  scrollXY: number[];
+  objectXY: number[];
   xDirection?: boolean;
+  rowsQuantity?: number;
   gap?: number;
   paddingX?: number;
   paddingY?: number;
   scrollReverse?: boolean;
   draggableScroll?: boolean;
   scrollOnHover?: boolean;
+  scrollMute?: boolean;
   lazyRender?: boolean;
   rootMargin?: string;
   children: React.ReactNode;
@@ -20,16 +21,17 @@ interface ScrollComponentType {
 
 export default function ScrollComponent({
   className = "",
-  width,
-  height,
-  scrollingObjectSize,
+  scrollXY,
+  objectXY,
   xDirection = false,
+  rowsQuantity = 1,
   gap = 0,
   paddingX = 0,
   paddingY = 0,
   scrollReverse = false,
   draggableScroll = false,
   scrollOnHover = false,
+  scrollMute = false,
   lazyRender = false,
   rootMargin = "0px 0px 0px 0px",
   children,
@@ -45,26 +47,25 @@ export default function ScrollComponent({
   const [thumbMeasuring, setThumbMeasuring] = useState(0);
   const [scroll, setScroll] = useState(0);
 
-  const translateProperty = width / 2 - height / 2;
-  const rowsQuantity = xDirection
-    ? Math.ceil(height / scrollingObjectSize)
-    : Math.ceil(width / scrollingObjectSize);
+  const translateProperty = scrollXY[0] / 2 - scrollXY[1] / 2;
 
   const handleScroll = () => {
-    const xy = xDirection ? width : height;
-    let newScroll: number;
+    if (!scrollMute) {
+      const xy = xDirection ? scrollXY[0] : scrollXY[1];
+      let newScroll: number;
 
-    (function (xy: number) {
-      newScroll = Math.abs(
-        Math.round(
-          (scrollElementRef.current.scrollTop /
-            (xy - objectsWrapperSize.current)) *
-            (xy - thumbSize.current)
-        )
-      );
-    })(xy);
+      (function (xy: number) {
+        newScroll = Math.abs(
+          Math.round(
+            (scrollElementRef.current.scrollTop /
+              (xy - objectsWrapperSize.current)) *
+              (xy - thumbSize.current)
+          )
+        );
+      })(xy);
 
-    newScroll !== scroll && setScroll(newScroll);
+      newScroll !== scroll && setScroll(newScroll);
+    }
   };
 
   const handleMouseMove = (e: MouseEvent) => {
@@ -90,61 +91,63 @@ export default function ScrollComponent({
   };
 
   useEffect(() => {
-    let animationFrameId: number;
+    if (!scrollMute) {
+      let animationFrameId: number;
 
-    const updateMeasurements = () => {
-      // size error handling
-      updateMeasurementsCounterRef.current += 1;
-      if (updateMeasurementsCounterRef.current > 800) {
-        updateMeasurementsCounterRef.current = 0;
-        cancelAnimationFrame(animationFrameId);
-        console.error("🚫 ScrollComponent hasn`t defined the size parameters");
-        return;
-      }
+      const updateMeasurements = () => {
+        // size error handling
+        updateMeasurementsCounterRef.current += 1;
+        if (updateMeasurementsCounterRef.current > 800) {
+          updateMeasurementsCounterRef.current = 0;
+          cancelAnimationFrame(animationFrameId);
+          console.error(
+            "🚫 ScrollComponent hasn`t defined the size parameters"
+          );
+          return;
+        }
 
-      if (objectsWrapperRef.current) {
-        const objectsWrapperRect =
-          objectsWrapperRef.current.getBoundingClientRect();
-        const childrenCount = objectsWrapperRef.current.childElementCount;
+        if (objectsWrapperRef.current) {
+          const objectsWrapperRect =
+            objectsWrapperRef.current.getBoundingClientRect();
+          const childrenCount = objectsWrapperRef.current.childElementCount;
 
-        function getThumbSize(
-          objWrapXY: number,
-          paddingXY: number,
-          xy: number
-        ) {
-          objectsWrapperSize.current = Math.round(objWrapXY);
-
-          if (
-            objectsWrapperSize.current === rowsQuantity
-              ? scrollingObjectSize * childrenCount +
-                gap * (childrenCount - 1) +
-                paddingXY * 2
-              : scrollingObjectSize * Math.ceil(childrenCount / rowsQuantity) +
-                gap *
-                  (rowsQuantity
-                    ? Math.ceil(childrenCount / rowsQuantity)
-                    : childrenCount - 1) +
-                paddingXY * 2
+          function getThumbSize(
+            objWrapXY: number,
+            paddingXY: number,
+            xy: number
           ) {
-            thumbSize.current = (xy / objectsWrapperSize.current) * xy;
+            objectsWrapperSize.current = Math.round(objWrapXY);
 
-            setThumbMeasuring(thumbSize.current);
-            cancelAnimationFrame(animationFrameId);
+            if (
+              objectsWrapperSize.current ===
+              (rowsQuantity
+                ? objectXY[0] * Math.ceil(childrenCount / rowsQuantity) +
+                  gap * (Math.ceil(childrenCount / rowsQuantity) - 1) +
+                  paddingXY * 2
+                : objectXY[1] * childrenCount +
+                  gap * (childrenCount - 1) +
+                  paddingXY * 2)
+            ) {
+              thumbSize.current = (xy / objectsWrapperSize.current) * xy;
+
+              setThumbMeasuring(thumbSize.current);
+              cancelAnimationFrame(animationFrameId);
+            } else {
+              animationFrameId = requestAnimationFrame(updateMeasurements);
+            }
+          }
+
+          if (xDirection) {
+            getThumbSize(objectsWrapperRect.width, paddingX, scrollXY[0]);
           } else {
-            animationFrameId = requestAnimationFrame(updateMeasurements);
+            getThumbSize(objectsWrapperRect.height, paddingY, scrollXY[1]);
           }
         }
+      };
 
-        if (xDirection) {
-          getThumbSize(objectsWrapperRect.width, paddingX, width);
-        } else {
-          getThumbSize(objectsWrapperRect.height, paddingY, height);
-        }
-      }
-    };
-
-    updateMeasurements();
-  }, [xDirection, width, height, scrollingObjectSize, gap]);
+      updateMeasurements();
+    }
+  }, [xDirection, scrollXY, objectXY, gap, scrollMute]);
 
   return (
     <div
@@ -153,11 +156,11 @@ export default function ScrollComponent({
       }${scrollOnHover ? " scrollOnHover" : ""} ${className}`}
       ref={customScrollRef}
       style={{
-        width: `${width}px`,
-        height: `${height}px`,
+        width: `${scrollXY[0]}px`,
+        height: `${scrollXY[1]}px`,
       }}
     >
-      {thumbMeasuring > 0 && (
+      {!scrollMute && thumbMeasuring > 0 && (
         <div className={`scrollBar ${scrollReverse ? "first" : "last"}`}>
           <div
             className="scrollBarThumb"
@@ -177,13 +180,13 @@ export default function ScrollComponent({
         style={
           xDirection
             ? {
-                width: `${height}px`,
-                height: `${width}px`,
+                width: `${scrollXY[1]}px`,
+                height: `${scrollXY[0]}px`,
                 transform: `rotate(-90deg) translate(${translateProperty}px, ${translateProperty}px) scaleX(-1)`,
               }
             : {
-                width: `${width}px`,
-                height: `${height}px`,
+                width: `${scrollXY[0]}px`,
+                height: `${scrollXY[1]}px`,
               }
         }
       >
@@ -195,20 +198,30 @@ export default function ScrollComponent({
             padding: xDirection
               ? `${paddingX}px ${paddingY}px`
               : `${paddingY}px ${paddingX}px`,
+            width: xDirection
+              ? `${objectXY[1] * rowsQuantity + gap * (rowsQuantity - 1)}px`
+              : `${objectXY[0] * rowsQuantity + gap * (rowsQuantity - 1)}px`,
           }}
         >
           {React.Children.map(children, (child) =>
             lazyRender ? (
               <LazyRender
                 refObject={scrollElementRef}
-                width={scrollingObjectSize}
-                height={scrollingObjectSize}
+                width={objectXY[0]}
+                height={objectXY[1]}
                 rootMargin={rootMargin}
               >
                 {child}
               </LazyRender>
             ) : (
-              <div>{child}</div>
+              <div
+                style={{
+                  width: `${objectXY[0]}px`,
+                  height: `${objectXY[1]}px`,
+                }}
+              >
+                {child}
+              </div>
             )
           )}
         </div>
