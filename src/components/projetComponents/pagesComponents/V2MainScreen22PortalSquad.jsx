@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
 export const cssFiles = [
   "v2-screen-portal-squad",
   "v2-screen-fw-store",
   "v2-screen-portal-shop",
   "screen-superhero",
+  "store-items",
 ];
 
 export default function V2MainScreen22PortalSquad({ pageName }) {
@@ -89,7 +91,6 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
 
   return (
     <div className="main lang-ru world1">
-      <div className="btn-admin"></div>
       <div
         className="main-bg"
         style={{
@@ -982,12 +983,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                   <div className="store-item-all">
                     <div className="store-item-box">
                       <div className="store-name">Underworld chest</div>
-                      <div className="item-box">
-                        <img
-                          src="img/v2-xmas-chest-purple.png"
-                          loading="lazy"
-                        />
-                      </div>
+                      <ItemBox itemPic="img/v2-xmas-chest-purple.png" />
                       <div
                         className="color-btn diamond"
                         style={{
@@ -1004,12 +1000,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                     </div>
                     <div className="store-item-box">
                       <div className="store-name">Underworld chest</div>
-                      <div className="item-box">
-                        <img
-                          src="img/v2-xmas-chest-purple.png"
-                          loading="lazy"
-                        />
-                      </div>
+                      <ItemBox itemPic="img/v2-xmas-chest-purple.png" />
                       <div
                         className="color-btn diamond"
                         style={{
@@ -1028,14 +1019,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                   <div className="store-item-all">
                     <div className="store-item-box">
                       <div className="store-name">Золото 100%</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img src="img/ic-abil-gold.png" loading="lazy" />
-                        <div className="rate gold">+100%</div>
-                      </div>
+                      <ItemBox itemPic="img/ic-abil-gold.png" count="+100%" />
                       <div className="color-btn diamond">
                         <div className="color-btn-text">
                           <div>
@@ -1047,14 +1031,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                     </div>
                     <div className="store-item-box">
                       <div className="store-name">Золото 1K%</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img src="img/ic-abil-gold.png" loading="lazy" />
-                        <div className="rate gold">+1K%</div>
-                      </div>
+                      <ItemBox itemPic="img/ic-abil-gold.png" count="+1K%" />
                       <div
                         className="color-btn diamond"
                         style={{
@@ -1071,16 +1048,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                     </div>
                     <div className="store-item-box">
                       <div className="store-name">Золото за 1ч</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img src="img/ic-abil-gold.png" loading="lazy" />
-                        <div className="newtime t1h">
-                          <div className="newclocktime">1</div>
-                        </div>
-                      </div>
+                      <ItemBox itemPic="img/ic-abil-gold.png" count="+1K%" />
                       <div className="color-btn diamond">
                         <div className="color-btn-text">
                           <div>
@@ -1092,16 +1060,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                     </div>
                     <div className="store-item-box">
                       <div className="store-name">Золото за 6ч</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img src="img/ic-abil-gold.png" loading="lazy" />
-                        <div className="newtime t1h">
-                          <div className="newclocktime">6</div>
-                        </div>
-                      </div>
+                      <ItemBox itemPic="img/ic-abil-gold.png" count="+1K%" />
                       <div className="color-btn diamond">
                         <div className="color-btn-text">
                           <div>
@@ -1115,13 +1074,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                   <div className="store-item-all">
                     <div className="store-item-box">
                       <div className="store-name">50 Master Gems</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img src="img/ms-stone-all.png" loading="lazy" />
-                      </div>
+                      <ItemBox itemPic="img/ms-stone-all.png" />
                       <div className="color-btn diamond">
                         <div className="color-btn-text">
                           <div>
@@ -1133,13 +1086,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                     </div>
                     <div className="store-item-box">
                       <div className="store-name">100 Master Gems</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img src="img/ms-stone-all.png" loading="lazy" />
-                      </div>
+                      <ItemBox itemPic="img/ms-stone-all.png" />
                       <div className="color-btn diamond">
                         <div className="color-btn-text">
                           <div>
@@ -1151,16 +1098,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                     </div>
                     <div className="store-item-box">
                       <div className="store-name">400 Essence</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img
-                          src="img/evPopArts/potion_red.png"
-                          loading="lazy"
-                        />
-                      </div>
+                      <ItemBox itemPic="img/evPopArts/potion_red.png" />
                       <div className="color-btn diamond">
                         <div className="color-btn-text">
                           <div>
@@ -1172,16 +1110,7 @@ export default function V2MainScreen22PortalSquad({ pageName }) {
                     </div>
                     <div className="store-item-box">
                       <div className="store-name">1440 Essence</div>
-                      <div
-                        className="item-box"
-                        item="[object Object]"
-                        top_offset="50"
-                      >
-                        <img
-                          src="img/evPopArts/potion_red.png"
-                          loading="lazy"
-                        />
-                      </div>
+                      <ItemBox itemPic="img/evPopArts/potion_red.png" />
                       <div
                         className="color-btn diamond"
                         style={{

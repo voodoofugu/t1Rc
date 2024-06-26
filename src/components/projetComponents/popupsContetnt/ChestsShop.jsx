@@ -1,4 +1,5 @@
 import { memo } from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
 import {
   selectors,
@@ -89,10 +90,7 @@ export default memo(function ChestsShop() {
       <div className="item-box">
         <div className="store-item-box">
           <div className="store-name">Boss Chest</div>
-          <div className="item">
-            <img src="img/change-sun1.png" loading="lazy" />
-            <div className="reward-value">100</div>
-          </div>
+          <ItemBox itemClass="wh94" itemPic="img/change-sun1.png" count={100} />
           <div className="chest-currency"></div>
           <div className="color-btn gold">
             <div
@@ -111,14 +109,11 @@ export default memo(function ChestsShop() {
         </div>
         <div className="store-item-box orange">
           <div className="store-name">Superhero Chest</div>
-          <div className="item">
-            <img
-              className="winner-prize"
-              src="img/sh-icon-chest-128.png"
-              loading="lazy"
-            />
-            <div className="reward-value">100</div>
-          </div>
+          <ItemBox
+            itemClass="wh94"
+            itemPic="img/sh-icon-chest-128.png"
+            count={100}
+          />
           <div className="chest-currency"></div>
           <div className="color-btn gold">
             <div
@@ -137,10 +132,11 @@ export default memo(function ChestsShop() {
         </div>
         <div className="store-item-box blue">
           <div className="store-name">Superhero Chest</div>
-          <div className="item">
-            <img src="img/sh-icon-chest-dark.png" loading="lazy" />
-            <div className="reward-value">100</div>
-          </div>
+          <ItemBox
+            itemClass="wh94"
+            itemPic="img/sh-icon-chest-dark.png"
+            count={100}
+          />
           <div className="chest-currency"></div>
           <div className="color-btn gold">
             <div
@@ -159,10 +155,7 @@ export default memo(function ChestsShop() {
         </div>
         <div className="store-item-box gold">
           <div className="store-name">Angel Chest</div>
-          <div className="item">
-            <img src="img/darkworld-chest-agels.png" loading="lazy" />
-            <div className="reward-value">100</div>
-          </div>
+          <ItemBox itemClass="wh94" itemPic="img/darkworld-chest-agels.png" />
           <div className="chest-currency"></div>
           <div className="color-btn gold">
             <div className="color-btn-text">Open</div>

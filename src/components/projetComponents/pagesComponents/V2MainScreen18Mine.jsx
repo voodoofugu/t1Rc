@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
-export const cssFiles = ["v2-screen-mine-event", "v2-screen-fw-store"];
+export const cssFiles = [
+  "v2-screen-mine-event",
+  "v2-screen-fw-store",
+  "store-items",
+];
 
 export default function V2MainScreen18Mine({ pageName }) {
   const currentPath = window.location.hash.substring(3).split("/")[0];
@@ -801,221 +806,207 @@ export default function V2MainScreen18Mine({ pageName }) {
                         <div className="quantity">0/10</div>
                       </div>
                       <div className="rate">10</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/unknown-hero-ava.jpg"
+                        count={10}
+                      />
+                      <div className="store-quant">
+                        <div className="quantity">0/10</div>
+                      </div>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">199</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">199</span>
+                    <div className="store-item-box">
+                      <div className="store-name">Takaro Kaminoken</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/images/hero-all/tithero-230/x1/ava/tithero-230-1-ava.jpg"
+                        count={10}
+                      />
+                      <div className="store-quant">
+                        <div className="quantity">0/10</div>
+                      </div>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">199</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="store-item-box">
+                      <div className="store-name">Chiasa Saike</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/images/hero-all/tithero-231/x1/ava/tithero-231-1-ava.jpg"
+                        count={10}
+                      />
+                      <div className="store-quant">
+                        <div className="quantity">0/10</div>
+                      </div>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">199</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="store-item-box">
+                      <div className="store-name">Azumi Uchubito</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/images/hero-all/tithero-310/x1/ava/tithero-310-1-ava.jpg"
+                        count={10}
+                      />
+                      <div className="store-quant">
+                        <div className="quantity">0/10</div>
+                      </div>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">199</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div className="store-item-box">
-                    <div className="store-name">Takaro Kaminoken</div>
-                    <div className="item-box piecesHero">
-                      <div className="img-wrap">
-                        <img
-                          src="img/images/hero-all/tithero-230/x1/ava/tithero-230-1-ava.jpg"
-                          loading="lazy"
-                        />
-                      </div>
+                  <div className="store-item-all">
+                    <div className="store-item-box">
+                      <div className="store-name">Dark Super Chests 1</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/sh-icon-chest-dark.png"
+                        count={100}
+                      />
                       <div className="store-quant">
                         <div className="quantity">0/10</div>
                       </div>
-                      <div className="rate">10</div>
-                    </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">199</span>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">3000</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="store-item-box">
-                    <div className="store-name">Chiasa Saike</div>
-                    <div className="item-box piecesHero">
-                      <div className="img-wrap">
-                        <img
-                          src="img/images/hero-all/tithero-231/x1/ava/tithero-231-1-ava.jpg"
-                          loading="lazy"
-                        />
-                      </div>
+                    <div className="store-item-box">
+                      <div className="store-name">Dark Super Chests 2</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/sh-icon-chest-dark.png"
+                        count={20}
+                      />
                       <div className="store-quant">
                         <div className="quantity">0/10</div>
                       </div>
-                      <div className="rate">10</div>
-                    </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">199</span>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">700</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="store-item-box">
-                    <div className="store-name">Azumi Uchubito</div>
-                    <div className="item-box piecesHero">
-                      <div className="img-wrap">
-                        <img
-                          src="img/images/hero-all/tithero-310/x1/ava/tithero-310-1-ava.jpg"
-                          loading="lazy"
-                        />
-                      </div>
+                    <div className="store-item-box">
+                      <div className="store-name">Rika Mahojo</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/images/hero-all/tithero-311/x1/ava/tithero-311-1-ava.jpg"
+                        count={10}
+                      />
                       <div className="store-quant">
                         <div className="quantity">0/10</div>
                       </div>
-                      <div className="rate">10</div>
-                    </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">199</span>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">199</span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="store-item-all">
-                  <div className="store-item-box">
-                    <div className="store-name">Dark Super Chests 1</div>
-                    <div className="item-box undefined">
-                      <div className="img-wrap">
-                        <img src="img/sh-icon-chest-dark.png" loading="lazy" />
-                      </div>
+                    <div className="store-item-box">
+                      <div className="store-name">Yukiko Hikogatana</div>
+                      <ItemBox
+                        itemClass="piecesHero"
+                        itemPic="img/images/hero-all/tithero-360/x1/ava/tithero-360-1-ava.jpg"
+                        count={10}
+                      />
                       <div className="store-quant">
                         <div className="quantity">0/10</div>
                       </div>
-                      <div className="rate">100</div>
-                    </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">3000</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="store-item-box">
-                    <div className="store-name">Dark Super Chests 2</div>
-                    <div className="item-box undefined">
-                      <div className="img-wrap">
-                        <img src="img/sh-icon-chest-dark.png" loading="lazy" />
-                      </div>
-                      <div className="store-quant">
-                        <div className="quantity">0/10</div>
-                      </div>
-                      <div className="rate">20</div>
-                    </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">700</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="store-item-box">
-                    <div className="store-name">Rika Mahojo</div>
-                    <div className="item-box piecesHero">
-                      <div className="img-wrap">
-                        <img
-                          src="img/images/hero-all/tithero-311/x1/ava/tithero-311-1-ava.jpg"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="store-quant">
-                        <div className="quantity">0/10</div>
-                      </div>
-                      <div className="rate">10</div>
-                    </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">199</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="store-item-box">
-                    <div className="store-name">Yukiko Hikogatana</div>
-                    <div className="item-box piecesHero">
-                      <div className="img-wrap">
-                        <img
-                          src="img/images/hero-all/tithero-360/x1/ava/tithero-360-1-ava.jpg"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="store-quant">
-                        <div className="quantity">0/10</div>
-                      </div>
-                      <div className="rate">10</div>
-                    </div>
-                    <div
-                      className="color-btn diamond"
-                      style={{
-                        filter: "grayscale(1)",
-                      }}
-                    >
-                      <div className="color-btn-text">
-                        <div>
-                          buy
-                          <span className="f-contrib spirit3">199</span>
+                      <div
+                        className="color-btn diamond"
+                        style={{
+                          filter: "grayscale(1)",
+                        }}
+                      >
+                        <div className="color-btn-text">
+                          <div>
+                            buy
+                            <span className="f-contrib spirit3">199</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="fw-main-bl-name">
+                <span className="f-contrib spirit3">0</span>
+              </div>
+              <div className="fw-shop-girl"></div>
+              <div className="btn-close-x"></div>
             </div>
-            <div className="fw-main-bl-name">
-              <span className="f-contrib spirit3">0</span>
-            </div>
-            <div className="fw-shop-girl"></div>
-            <div className="btn-close-x"></div>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
+import ItemBox from "../UIComponents/ItemBox";
 
-export const cssFiles = ["v2-screen-fw-store"];
+export const cssFiles = ["v2-screen-fw-store", "store-items"];
 
 export default function V2MainScreen05FwStore() {
   return (
@@ -17,9 +18,7 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-rubin.png" loading="lazy" />
-                  </div>
+                  <ItemBox itemPic="img/ic-abil-rubin.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
@@ -30,9 +29,7 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-gold.png" loading="lazy" />
-                  </div>
+                  <ItemBox itemPic="img/ic-abil-gold.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
@@ -43,9 +40,7 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-rubin.png" loading="lazy" />
-                  </div>
+                  <ItemBox itemPic="img/ic-abil-rubin.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
@@ -56,66 +51,7 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-gold.png" loading="lazy" />
-                  </div>
-                  <div className="color-btn diamond">
-                    <div className="color-btn-text">
-                      buy
-                      <span className="f-diamond">696</span>
-                    </div>
-                  </div>
-                  <div className="i-ico"></div>
-                </div>
-              </div>
-              <div className="store-item-all">
-                <div className="store-item-all-name">
-                  Gold and Shards multipliers
-                </div>
-                <div className="store-item-box">
-                  <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-rubin.png" loading="lazy" />
-                  </div>
-                  <div className="color-btn diamond">
-                    <div className="color-btn-text">
-                      buy
-                      <span className="f-diamond">696</span>
-                    </div>
-                  </div>
-                  <div className="i-ico"></div>
-                </div>
-                <div className="store-item-box">
-                  <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-gold.png" loading="lazy" />
-                  </div>
-                  <div className="color-btn diamond">
-                    <div className="color-btn-text">
-                      buy
-                      <span className="f-diamond">696</span>
-                    </div>
-                  </div>
-                  <div className="i-ico"></div>
-                </div>
-                <div className="store-item-box">
-                  <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-rubin.png" loading="lazy" />
-                  </div>
-                  <div className="color-btn diamond">
-                    <div className="color-btn-text">
-                      buy
-                      <span className="f-diamond">696</span>
-                    </div>
-                  </div>
-                  <div className="i-ico"></div>
-                </div>
-                <div className="store-item-box">
-                  <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-gold.png" loading="lazy" />
-                  </div>
+                  <ItemBox itemPic="img/ic-abil-gold.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
@@ -131,9 +67,7 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-rubin.png" loading="lazy" />
-                  </div>
+                  <ItemBox itemPic="img/ic-abil-rubin.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
@@ -144,9 +78,7 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-gold.png" loading="lazy" />
-                  </div>
+                  <ItemBox itemPic="img/ic-abil-gold.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
@@ -157,9 +89,7 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-rubin.png" loading="lazy" />
-                  </div>
+                  <ItemBox itemPic="img/ic-abil-rubin.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
@@ -170,9 +100,56 @@ export default function V2MainScreen05FwStore() {
                 </div>
                 <div className="store-item-box">
                   <div className="store-name">More Gold</div>
-                  <div className="item-box">
-                    <img src="img/ic-abil-gold.png" loading="lazy" />
+                  <ItemBox itemPic="img/ic-abil-gold.png" />
+                  <div className="color-btn diamond">
+                    <div className="color-btn-text">
+                      buy
+                      <span className="f-diamond">696</span>
+                    </div>
                   </div>
+                  <div className="i-ico"></div>
+                </div>
+              </div>
+              <div className="store-item-all">
+                <div className="store-item-all-name">
+                  Gold and Shards multipliers
+                </div>
+                <div className="store-item-box">
+                  <div className="store-name">More Gold</div>
+                  <ItemBox itemPic="img/ic-abil-rubin.png" />
+                  <div className="color-btn diamond">
+                    <div className="color-btn-text">
+                      buy
+                      <span className="f-diamond">696</span>
+                    </div>
+                  </div>
+                  <div className="i-ico"></div>
+                </div>
+                <div className="store-item-box">
+                  <div className="store-name">More Gold</div>
+                  <ItemBox itemPic="img/ic-abil-gold.png" />
+                  <div className="color-btn diamond">
+                    <div className="color-btn-text">
+                      buy
+                      <span className="f-diamond">696</span>
+                    </div>
+                  </div>
+                  <div className="i-ico"></div>
+                </div>
+                <div className="store-item-box">
+                  <div className="store-name">More Gold</div>
+                  <ItemBox itemPic="img/ic-abil-rubin.png" />
+                  <div className="color-btn diamond">
+                    <div className="color-btn-text">
+                      buy
+                      <span className="f-diamond">696</span>
+                    </div>
+                  </div>
+                  <div className="i-ico"></div>
+                </div>
+                <div className="store-item-box">
+                  <div className="store-name">More Gold</div>
+                  <ItemBox itemPic="img/ic-abil-gold.png" />
                   <div className="color-btn diamond">
                     <div className="color-btn-text">
                       buy
