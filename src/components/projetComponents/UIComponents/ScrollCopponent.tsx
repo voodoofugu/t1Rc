@@ -40,30 +40,29 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
   const objectsWrapperRef = React.useRef<HTMLDivElement | null>(null);
   const customScrollRef = React.useRef<HTMLDivElement | null>(null);
 
-  const updateMeasurementsCounterRef = React.useRef(0);
-  const objectsWrapperSize = React.useRef(0);
   const thumbSize = React.useRef(0);
 
   const [thumbMeasuring, setThumbMeasuring] = React.useState(0);
   const [scroll, setScroll] = React.useState(0);
 
+  const xy = xDirection ? scrollXY[0] : scrollXY[1];
   const translateProperty = scrollXY[0] / 2 - scrollXY[1] / 2;
   const childCount = React.Children.count(children);
+  const childsPerRow = rowsQuantity
+    ? Math.round(childCount / rowsQuantity)
+    : childCount;
   const objectsWrapperSizeXY = xDirection
-    ? childCount * objectXY[0] + gap * (childCount - 1) + paddingX * 2
-    : childCount * objectXY[1] + gap * (childCount - 1) + paddingY * 2;
-  console.log("objectsWrapperSizeXY", objectsWrapperSizeXY);
+    ? childsPerRow * objectXY[0] + gap * (childsPerRow - 1) + paddingX * 2
+    : childsPerRow * objectXY[1] + gap * (childsPerRow - 1) + paddingY * 2;
 
   const handleScroll = () => {
     if (!scrollMute) {
-      const xy = xDirection ? scrollXY[0] : scrollXY[1];
       let newScroll: number;
 
       (function (xy: number) {
         newScroll = Math.abs(
           Math.round(
-            (scrollElementRef.current.scrollTop /
-              (xy - objectsWrapperSize.current)) *
+            (scrollElementRef.current.scrollTop / (xy - objectsWrapperSizeXY)) *
               (xy - thumbSize.current)
           )
         );
@@ -112,75 +111,26 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
 
   React.useEffect(() => {
     if (!scrollMute) {
-      let animationFrameId: number;
-
-      const updateMeasurements = () => {
-        console.log("updateMeasurements");
-        // size error handling
-        if (xDirection) {
-          if (rowsQuantity * objectXY[1] > scrollXY[1]) {
-            console.error("🚫 rowsQuantity needs more scrolling height!");
-            return;
-          }
-        } else if (!xDirection) {
-          if (rowsQuantity * objectXY[0] > scrollXY[0]) {
-            console.error("🚫 rowsQuantity needs more scrolling width!");
-            return;
-          }
-        }
-        updateMeasurementsCounterRef.current += 1;
-        if (updateMeasurementsCounterRef.current > 800) {
-          updateMeasurementsCounterRef.current = 0;
-          cancelAnimationFrame(animationFrameId);
-
-          console.error(
-            "🚫 ScrollComponent hasn`t defined the size parameters!"
-          );
+      // size error handling
+      if (xDirection) {
+        if (rowsQuantity * objectXY[1] > scrollXY[1]) {
+          console.error("🚫 rowsQuantity needs more scrolling height!");
           return;
         }
-
-        // update measurements
-        if (objectsWrapperRef.current) {
-          const objectsWrapperRect =
-            objectsWrapperRef.current.getBoundingClientRect();
-
-          function getThumbSize(
-            objectWrapperXY: number,
-            paddingXY: number,
-            xy: number
-          ) {
-            objectsWrapperSize.current = Math.round(objectWrapperXY);
-
-            if (
-              objectsWrapperSize.current ===
-              (rowsQuantity
-                ? objectXY[0] * Math.ceil(childCount / rowsQuantity) +
-                  gap * (Math.ceil(childCount / rowsQuantity) - 1) +
-                  paddingXY * 2
-                : objectXY[1] * childCount +
-                  gap * (childCount - 1) +
-                  paddingXY * 2)
-            ) {
-              thumbSize.current = Math.round(
-                (xy / objectsWrapperSize.current) * xy
-              );
-
-              setThumbMeasuring(thumbSize.current);
-              cancelAnimationFrame(animationFrameId);
-            } else {
-              animationFrameId = requestAnimationFrame(updateMeasurements);
-            }
-          }
-
-          if (xDirection) {
-            getThumbSize(objectsWrapperRect.width, paddingX, scrollXY[0]);
-          } else {
-            getThumbSize(objectsWrapperRect.height, paddingY, scrollXY[1]);
-          }
+      } else if (!xDirection) {
+        if (rowsQuantity * objectXY[0] > scrollXY[0]) {
+          console.error("🚫 rowsQuantity needs more scrolling width!");
+          return;
         }
-      };
+      }
 
-      updateMeasurements();
+      // update measurements
+      if (objectsWrapperRef.current) {
+        (function (xy: number) {
+          thumbSize.current = Math.round((xy / objectsWrapperSizeXY) * xy);
+          setThumbMeasuring(thumbSize.current);
+        })(xy);
+      }
     }
   }, [xDirection, scrollXY, objectXY, gap, scrollMute]);
 
