@@ -1,7 +1,7 @@
 import React from "react";
 import LazyRender from "./LazyRender";
 
-interface ScrollComponentType {
+interface ScrollType {
   className?: string;
   scrollXY: number[];
   objectXY: number[];
@@ -19,7 +19,7 @@ interface ScrollComponentType {
   children: React.ReactNode;
 }
 
-const ScrollComponent: React.FC<ScrollComponentType> = ({
+const Scroll: React.FC<ScrollType> = ({
   className = "",
   scrollXY,
   objectXY,
@@ -45,15 +45,41 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
   const [thumbMeasuring, setThumbMeasuring] = React.useState(0);
   const [scroll, setScroll] = React.useState(0);
 
-  const xy = xDirection ? scrollXY[0] : scrollXY[1];
-  const translateProperty = scrollXY[0] / 2 - scrollXY[1] / 2;
+  let localScrollXY = scrollXY;
+
   const childCount = React.Children.count(children);
+  const xyObject = xDirection ? objectXY[0] : objectXY[1];
+  const xyObjectReverse = xDirection ? objectXY[1] : objectXY[0];
+  const paddingXAll = paddingX * 2;
+  const xyPaddingYAll = paddingY * 2;
+  const xyPaddingAll = xDirection ? paddingXAll : xyPaddingYAll;
+  const gapAll = gap * (rowsQuantity - 1);
+
   const childsPerRow = rowsQuantity
-    ? Math.round(childCount / rowsQuantity)
+    ? Math.ceil(childCount / rowsQuantity)
     : childCount;
-  const objectsWrapperSizeXY = xDirection
-    ? childsPerRow * objectXY[0] + gap * (childsPerRow - 1) + paddingX * 2
-    : childsPerRow * objectXY[1] + gap * (childsPerRow - 1) + paddingY * 2;
+  const objectsWrapperSizeXY = xyObject * childsPerRow + gapAll + xyPaddingAll;
+  console.log("childsPerRow", childsPerRow);
+  console.log("rowsQuantity", rowsQuantity);
+
+  if (rowsQuantity > 1) {
+    localScrollXY = (() => {
+      const [x, y] = scrollXY;
+      const adjustedX =
+        x < xyObjectReverse * rowsQuantity + gapAll + paddingXAll
+          ? xyObjectReverse * rowsQuantity + gapAll + paddingXAll
+          : x;
+      const adjustedY =
+        y < xyObjectReverse * rowsQuantity + gapAll + xyPaddingYAll
+          ? xyObjectReverse * rowsQuantity + gapAll + xyPaddingYAll
+          : y;
+
+      return xDirection ? [x, adjustedY] : [adjustedX, y];
+    })();
+  }
+
+  const xy = xDirection ? localScrollXY[0] : localScrollXY[1];
+  const translateProperty = localScrollXY[0] / 2 - localScrollXY[1] / 2;
 
   const handleScroll = () => {
     if (!scrollMute) {
@@ -73,11 +99,9 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
   };
 
   const handleMouseMove = (e: MouseEvent) => {
-    if (xDirection) {
-      scrollElementRef.current!.scrollTop += e.movementX;
-    } else {
-      scrollElementRef.current!.scrollTop += e.movementY;
-    }
+    xDirection
+      ? (scrollElementRef.current!.scrollTop += e.movementX)
+      : (scrollElementRef.current!.scrollTop += e.movementY);
   };
 
   const handleMouseUp = () => {
@@ -97,7 +121,7 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
   React.useEffect(() => {
     // warn handling
     function warn(propsName: string) {
-      console.warn(`🧰 You are using the ${propsName} without scrollMute...`);
+      console.warn(`🧰👷‍♂️ You are using the ${propsName} without scrollMute...`);
     }
     if (!lazyRender && rootMargin != "0px 0px 0px 0px") {
       scrollReverse && warn("rootMargin");
@@ -114,13 +138,17 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
       // size error handling
       if (xDirection) {
         if (rowsQuantity * objectXY[1] > scrollXY[1]) {
-          console.error("🚫 rowsQuantity needs more scrolling height!");
-          return;
+          console.error(
+            `⛔👷‍♂️ rowsQuantity needs more height in scrollXY!\nvalue ${scrollXY[1]}`
+          );
+          // return;
         }
-      } else if (!xDirection) {
+      } else {
         if (rowsQuantity * objectXY[0] > scrollXY[0]) {
-          console.error("🚫 rowsQuantity needs more scrolling width!");
-          return;
+          console.error(
+            `⛔👷‍♂️ rowsQuantity needs more width in scrollXY!\nvalue ${scrollXY[0]}`
+          );
+          // return;
         }
       }
 
@@ -141,27 +169,23 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
       }${scrollOnHover ? " scrollOnHover" : ""} ${className}`}
       ref={customScrollRef}
       style={{
-        width: `${scrollXY[0]}px`,
-        height: `${scrollXY[1]}px`,
+        width: `${localScrollXY[0]}px`,
+        height: `${localScrollXY[1]}px`,
       }}
     >
-      {!scrollMute &&
-        !!thumbMeasuring &&
-        (xDirection
-          ? thumbMeasuring <= scrollXY[0]
-          : thumbMeasuring <= scrollXY[1]) && (
-          <div className={`scrollBar ${scrollReverse ? "first" : "last"}`}>
-            <div
-              className="scrollBarThumb"
-              onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
-              style={
-                xDirection
-                  ? { width: `${thumbMeasuring}px`, left: `${scroll}px` }
-                  : { height: `${thumbMeasuring}px`, top: `${scroll}px` }
-              }
-            />
-          </div>
-        )}
+      {!scrollMute && !!thumbMeasuring && thumbMeasuring < xy && (
+        <div className={`scrollBar ${scrollReverse ? "first" : "last"}`}>
+          <div
+            className="scrollBarThumb"
+            onMouseDown={(e) => draggableScroll && handleMouseDown(e)}
+            style={
+              xDirection
+                ? { width: `${thumbMeasuring}px`, left: `${scroll}px` }
+                : { height: `${thumbMeasuring}px`, top: `${scroll}px` }
+            }
+          />
+        </div>
+      )}
       <div
         className="scrollElement"
         ref={scrollElementRef}
@@ -169,13 +193,13 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
         style={
           xDirection
             ? {
-                width: `${scrollXY[1]}px`,
-                height: `${scrollXY[0]}px`,
+                width: `${localScrollXY[1]}px`,
+                height: `${localScrollXY[0]}px`,
                 transform: `rotate(-90deg) translate(${translateProperty}px, ${translateProperty}px) scaleX(-1)`,
               }
             : {
-                width: `${scrollXY[0]}px`,
-                height: `${scrollXY[1]}px`,
+                width: `${localScrollXY[0]}px`,
+                height: `${localScrollXY[1]}px`,
               }
         }
       >
@@ -219,4 +243,4 @@ const ScrollComponent: React.FC<ScrollComponentType> = ({
   );
 };
 
-export default ScrollComponent;
+export default Scroll;

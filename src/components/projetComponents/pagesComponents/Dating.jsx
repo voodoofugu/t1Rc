@@ -3,7 +3,7 @@ import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
-import ScrollCopponent from "../UIComponents/ScrollCopponent";
+import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
 
 export const cssFiles = [
@@ -51,18 +51,19 @@ export default function Dating({ pageName, children }) {
         </div>
         <div className="btnI" />
 
-        <ScrollCopponent
+        <Scroll
           className="datingScroll"
           scrollXY={[86, 486]}
           objectXY={[86, 86]}
           gap={10}
-          paddingY={10}
+          // paddingY={10}
+          // paddingX={10}
           scrollReverse
           draggableScroll
           // scrollOnHover
           // scrollMute
-          // xDirection
-          // rowsQuantity={2}
+          xDirection
+          rowsQuantity={4}
         >
           <PersonAva
             active
@@ -94,7 +95,7 @@ export default function Dating({ pageName, children }) {
             closed
             img="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg"
           />
-        </ScrollCopponent>
+        </Scroll>
       </div>
       {children}
     </div>
