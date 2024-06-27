@@ -3,10 +3,10 @@ import LazyRender from "./LazyRender";
 
 interface ScrollType {
   className?: string;
-  scrollXY: number[];
+  scrollXY?: number[];
   objectXY: number[];
   xDirection?: boolean;
-  rowsQuantity?: number;
+  directionQuantity?: number;
   gap?: number;
   paddingX?: number;
   paddingY?: number;
@@ -24,7 +24,7 @@ const Scroll: React.FC<ScrollType> = ({
   scrollXY,
   objectXY,
   xDirection = false,
-  rowsQuantity = 1,
+  directionQuantity = 1,
   gap = 0,
   paddingX = 0,
   paddingY = 0,
@@ -45,36 +45,35 @@ const Scroll: React.FC<ScrollType> = ({
   const [thumbMeasuring, setThumbMeasuring] = React.useState(0);
   const [scroll, setScroll] = React.useState(0);
 
-  let localScrollXY = scrollXY;
+  let localScrollXY = scrollXY || objectXY;
 
   const childCount = React.Children.count(children);
-  const xyObject = xDirection ? objectXY[0] : objectXY[1];
-  const xyObjectReverse = xDirection ? objectXY[1] : objectXY[0];
+  const childsPerDirection = directionQuantity
+    ? Math.ceil(childCount / directionQuantity)
+    : childCount;
   const paddingXAll = paddingX * 2;
   const xyPaddingYAll = paddingY * 2;
+
+  const gapAllX = (directionQuantity - 1) * gap;
+  const gapAllY = (childsPerDirection - 1) * gap;
+
+  const xyObject = xDirection ? objectXY[0] : objectXY[1];
+  const xyObjectReverse = xDirection ? objectXY[1] : objectXY[0];
+
   const xyPaddingAll = xDirection ? paddingXAll : xyPaddingYAll;
-  const gapAll = gap * (rowsQuantity - 1);
+  const objectsWrapperSizeXY =
+    xyObject * childsPerDirection + gapAllY + xyPaddingAll;
 
-  const childsPerRow = rowsQuantity
-    ? Math.ceil(childCount / rowsQuantity)
-    : childCount;
-  const objectsWrapperSizeXY = xyObject * childsPerRow + gapAll + xyPaddingAll;
-  console.log("childsPerRow", childsPerRow);
-  console.log("rowsQuantity", rowsQuantity);
-
-  if (rowsQuantity > 1) {
+  if (directionQuantity > 1) {
+    const adjustedX =
+      xyObjectReverse * directionQuantity + gapAllX + xyPaddingYAll;
+    const adjustedY =
+      xyObjectReverse * directionQuantity + gapAllX + xyPaddingYAll;
     localScrollXY = (() => {
-      const [x, y] = scrollXY;
-      const adjustedX =
-        x < xyObjectReverse * rowsQuantity + gapAll + paddingXAll
-          ? xyObjectReverse * rowsQuantity + gapAll + paddingXAll
-          : x;
-      const adjustedY =
-        y < xyObjectReverse * rowsQuantity + gapAll + xyPaddingYAll
-          ? xyObjectReverse * rowsQuantity + gapAll + xyPaddingYAll
-          : y;
-
-      return xDirection ? [x, adjustedY] : [adjustedX, y];
+      const [x, y] = scrollXY || objectXY;
+      return xDirection
+        ? [x, y < adjustedY ? adjustedY : y]
+        : [x < adjustedX ? adjustedX : x, y];
     })();
   }
 
@@ -136,21 +135,14 @@ const Scroll: React.FC<ScrollType> = ({
   React.useEffect(() => {
     if (!scrollMute) {
       // size error handling
-      if (xDirection) {
-        if (rowsQuantity * objectXY[1] > scrollXY[1]) {
-          console.error(
-            `⛔👷‍♂️ rowsQuantity needs more height in scrollXY!\nvalue ${scrollXY[1]}`
-          );
-          // return;
-        }
-      } else {
-        if (rowsQuantity * objectXY[0] > scrollXY[0]) {
-          console.error(
-            `⛔👷‍♂️ rowsQuantity needs more width in scrollXY!\nvalue ${scrollXY[0]}`
-          );
-          // return;
-        }
-      }
+      // if (xDirection) {
+      //   if (directionQuantity * objectXY[1] > scrollXY[1]) {
+      //     console.error(
+      //       `⛔👷‍♂️ directionQuantity needs more height in scrollXY!\nvalue ${scrollXY[1]}`
+      //     );
+      //     // return;
+      //   }
+      // }
 
       // update measurements
       if (objectsWrapperRef.current) {
@@ -211,9 +203,7 @@ const Scroll: React.FC<ScrollType> = ({
             padding: xDirection
               ? `${paddingX}px ${paddingY}px`
               : `${paddingY}px ${paddingX}px`,
-            width: xDirection
-              ? `${objectXY[1] * rowsQuantity + gap * (rowsQuantity - 1)}px`
-              : `${objectXY[0] * rowsQuantity + gap * (rowsQuantity - 1)}px`,
+            width: directionQuantity === 1 && `${objectXY[0]}px`,
           }}
         >
           {React.Children.map(children, (child) =>

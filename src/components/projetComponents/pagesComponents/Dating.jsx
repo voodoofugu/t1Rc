@@ -53,8 +53,8 @@ export default function Dating({ pageName, children }) {
 
         <Scroll
           className="datingScroll"
-          scrollXY={[86, 486]}
-          objectXY={[86, 86]}
+          // scrollXY={[86, 526]}
+          objectXY={[86, 186]}
           gap={10}
           // paddingY={10}
           // paddingX={10}
@@ -63,7 +63,7 @@ export default function Dating({ pageName, children }) {
           // scrollOnHover
           // scrollMute
           xDirection
-          rowsQuantity={4}
+          // directionQuantity={3}
         >
           <PersonAva
             active
