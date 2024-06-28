@@ -63,20 +63,6 @@ const Scroll: React.FC<ScrollType> = ({
     ? [scrollXY[0] + paddingXAll, scrollXY[1] + xyPaddingYAll]
     : [objectXY[0] + paddingXAll, objectXY[1] + xyPaddingYAll];
 
-  const childsPerDirectionScrollXY = Math.ceil(
-    childCount /
-      Math.round(
-        ((xDirection ? localScrollXY[1] : localScrollXY[0]) - xyPaddingAll) /
-          (xyObject + gap)
-      )
-  );
-  const objectsWrapperSizeXY =
-    scrollXY && directionQuantity === 1
-      ? xyObject * childsPerDirectionScrollXY +
-        (childsPerDirectionScrollXY - 1) * gap +
-        xyPaddingAll
-      : xyObject * childsPerDirection + gapAllY + xyPaddingAll;
-
   if (directionQuantity > 1) {
     const adjustedX =
       xyObjectReverse * directionQuantity + gapAllX + paddingXAll;
@@ -89,37 +75,62 @@ const Scroll: React.FC<ScrollType> = ({
         : [x < adjustedX ? adjustedX : x, y + xyPaddingYAll];
     })();
   }
-
   const xy = xDirection ? localScrollXY[0] : localScrollXY[1];
-  const translateProperty = localScrollXY[0] / 2 - localScrollXY[1] / 2;
-  console.log(
-    "qwe",
-    objectXY[0] * directionQuantity +
-      gap * (directionQuantity - 1) +
-      xyPaddingYAll
-  );
-  console.log("scrollXY[0]", scrollXY[0]);
-  console.log(
-    "qweqwe",
-    objectXY[0] * directionQuantity + gapAllX + xyPaddingYAll
-  );
+  const xyReverse = xDirection ? localScrollXY[1] : localScrollXY[0];
 
-  const handleScroll = () => {
-    if (!scrollMute) {
-      let newScroll: number;
-
-      (function (xy: number) {
-        newScroll = Math.abs(
-          Math.round(
-            (scrollElementRef.current.scrollTop / (xy - objectsWrapperSizeXY)) *
-              (xy - thumbSize.current)
+  const childsPerDirectionScrollXY = xDirection
+    ? localScrollXY[1] > objectXY[1]
+      ? Math.ceil(
+          childCount /
+            Math.floor(
+              (localScrollXY[1] - xyPaddingAll + gap) / (objectXY[1] + gap)
+            )
+        )
+      : childCount
+    : localScrollXY[0] > objectXY[0]
+    ? Math.ceil(
+        childCount /
+          Math.floor(
+            (localScrollXY[0] - xyPaddingAll + gap) / (objectXY[1] + gap)
           )
-        );
-      })(xy);
+      )
+    : childCount;
+  console.log(
+    "childsPerDirectionScrollXY",
+    Math.floor((localScrollXY[1] - xyPaddingAll + gap) / (objectXY[1] + gap))
+  ); // !!!!!!
 
-      newScroll !== scroll && setScroll(newScroll);
+  const objectsWrapperWidth =
+    directionQuantity > 1
+      ? scrollXY &&
+        xy < xyObject * directionQuantity + gapAllX &&
+        xyObject * directionQuantity + gapAllX + xyPaddingAll
+      : NaN;
+
+  const objectsWrapperSizeXY =
+    scrollXY && directionQuantity === 1
+      ? xyObject * childsPerDirectionScrollXY +
+        (childsPerDirectionScrollXY - 1) * gap +
+        xyPaddingAll
+      : xyObject * childsPerDirection + gapAllY + xyPaddingAll;
+  console.log("objectsWrapperSizeXY", objectsWrapperSizeXY);
+
+  const handleScroll = React.useCallback(() => {
+    if (!scrollMute) {
+      const newScroll = Math.abs(
+        Math.round(
+          (scrollElementRef.current.scrollTop / (xy - objectsWrapperSizeXY)) *
+            (xy - thumbSize.current)
+        )
+      );
+
+      if (newScroll !== scroll) {
+        setScroll(newScroll);
+      }
     }
-  };
+  }, [scrollMute, xy, objectsWrapperSizeXY, scroll]);
+
+  const translateProperty = localScrollXY[0] / 2 - localScrollXY[1] / 2;
 
   const handleMouseMove = (e: MouseEvent) => {
     xDirection
@@ -158,16 +169,6 @@ const Scroll: React.FC<ScrollType> = ({
 
   React.useEffect(() => {
     if (!scrollMute) {
-      // size error handling
-      // if (xDirection) {
-      //   if (directionQuantity * objectXY[1] > scrollXY[1]) {
-      //     console.error(
-      //       `⛔👷‍♂️ directionQuantity needs more height in scrollXY!\nvalue ${scrollXY[1]}`
-      //     );
-      //     // return;
-      //   }
-      // }
-
       // update measurements
       if (objectsWrapperRef.current) {
         (function (xy: number) {
@@ -227,15 +228,9 @@ const Scroll: React.FC<ScrollType> = ({
             padding: xDirection
               ? `${paddingX}px ${paddingY}px`
               : `${paddingY}px ${paddingX}px`,
-            ...(directionQuantity > 1 &&
-              scrollXY[0] <
-                objectXY[0] * directionQuantity +
-                  gap * (directionQuantity - 1) +
-                  xyPaddingYAll && {
-                width: `${
-                  objectXY[0] * directionQuantity + gapAllX + xyPaddingYAll
-                }px`,
-              }),
+            ...(objectsWrapperWidth
+              ? { width: `${objectsWrapperWidth}px` }
+              : {}),
           }}
         >
           {React.Children.map(children, (child) =>
@@ -250,12 +245,19 @@ const Scroll: React.FC<ScrollType> = ({
               </LazyRender>
             ) : (
               <div
-                style={{
-                  width: `${objectXY[0]}px`,
-                  height: `${objectXY[1]}px`,
-                }}
+                style={
+                  xDirection
+                    ? {
+                        width: `${objectXY[1]}px`,
+                        height: `${objectXY[0]}px`,
+                      }
+                    : {
+                        width: `${objectXY[0]}px`,
+                        height: `${objectXY[1]}px`,
+                      }
+                }
               >
-                {child}
+                <div>{child}</div>
               </div>
             )
           )}
