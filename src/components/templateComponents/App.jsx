@@ -1,3 +1,4 @@
+import { StrictMode } from "react";
 import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -25,18 +26,22 @@ export default function App() {
     : initialState;
 
   return (
-    // <StrictMode>
-    <GlobalStateProvider reducer={reducer} initialState={states}>
-      <StatesStorage />
-      <HelmetProvider>
-        <div
-          className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}
-          id="templateBody"
-        >
-          <HelmetForCss cssFiles={cssFiles} setStylesLoaded={setStylesLoaded} />
-          {!stylesLoaded ? <Loading noBG /> : <Template />}
-        </div>
-      </HelmetProvider>
-    </GlobalStateProvider>
+    <StrictMode>
+      <GlobalStateProvider reducer={reducer} initialState={states}>
+        <StatesStorage />
+        <HelmetProvider>
+          <div
+            className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}
+            id="templateBody"
+          >
+            <HelmetForCss
+              cssFiles={cssFiles}
+              setStylesLoaded={setStylesLoaded}
+            />
+            {!stylesLoaded ? <Loading noBG /> : <Template />}
+          </div>
+        </HelmetProvider>
+      </GlobalStateProvider>
+    </StrictMode>
   );
 }

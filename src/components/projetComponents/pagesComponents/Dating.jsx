@@ -53,17 +53,21 @@ export default function Dating({ pageName, children }) {
 
         <Scroll
           className="datingScroll"
-          scrollXY={[286, 306]}
-          objectXY={[86, 106]}
+          scrollXY={[86, 276]}
+          objectXY={[86, 86]}
           gap={10}
-          // paddingY={10}
-          // paddingX={10}
+          paddingY={10}
+          paddingX={10}
           scrollReverse
           draggableScroll
+          lazyRender
+          // rootMargin="20px 0px 20px 0px"
           // scrollOnHover
           // scrollMute
-          xDirection
+          // xDirection
           // directionQuantity={2}
+          // suspending
+          // fallback={<div>loading</div>}
         >
           <PersonAva
             active

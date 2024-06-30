@@ -1,5 +1,5 @@
 import React from "react";
-import LazyRender from "./LazyRender";
+import IntersectionTracking from "./IntersectionTracking";
 
 interface ScrollType {
   className?: string;
@@ -16,6 +16,13 @@ interface ScrollType {
   scrollMute?: boolean;
   lazyRender?: boolean;
   rootMargin?: string;
+  suspending?: boolean;
+  fallback?: React.ReactNode;
+  scrollTop?: number;
+  // multipleDirectionQuantity?: boolean;
+  // draggableContent?: boolean;
+  // onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
+  // autoSize?: boolean;
   children: React.ReactNode;
 }
 
@@ -34,6 +41,9 @@ const Scroll: React.FC<ScrollType> = ({
   scrollMute = false,
   lazyRender = false,
   rootMargin = "0px 0px 0px 0px",
+  suspending = false,
+  fallback = null,
+  scrollTop = 0,
   children,
 }) => {
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
@@ -41,9 +51,10 @@ const Scroll: React.FC<ScrollType> = ({
   const customScrollRef = React.useRef<HTMLDivElement | null>(null);
 
   const thumbSize = React.useRef(0);
+  const scrollDirectionMove = React.useRef(0);
 
   const [thumbMeasuring, setThumbMeasuring] = React.useState(0);
-  const [scroll, setScroll] = React.useState(0);
+  const [scroll, setScroll] = React.useState(scrollTop);
 
   const childCount = React.Children.count(children);
   const childsPerDirection = directionQuantity
@@ -78,7 +89,7 @@ const Scroll: React.FC<ScrollType> = ({
   const xy = xDirection ? localScrollXY[0] : localScrollXY[1];
   const xyReverse = xDirection ? localScrollXY[1] : localScrollXY[0];
 
-  const childsPerDirectionScrollXY = xDirection
+  const childsPerScrollXY = xDirection
     ? localScrollXY[1] > objectXY[1]
       ? Math.ceil(
           childCount /
@@ -91,16 +102,13 @@ const Scroll: React.FC<ScrollType> = ({
     ? Math.ceil(
         childCount /
           Math.floor(
-            (localScrollXY[0] - xyPaddingAll + gap) / (objectXY[1] + gap)
+            (localScrollXY[0] - xyPaddingAll + gap) / (objectXY[0] + gap)
           )
       )
     : childCount;
-  console.log(
-    "childsPerDirectionScrollXY",
-    Math.floor((localScrollXY[1] - xyPaddingAll + gap) / (objectXY[1] + gap))
-  ); // !!!!!!
 
   const objectsWrapperWidth =
+    // for style only
     directionQuantity > 1
       ? scrollXY &&
         xy < xyObject * directionQuantity + gapAllX &&
@@ -109,17 +117,16 @@ const Scroll: React.FC<ScrollType> = ({
 
   const objectsWrapperSizeXY =
     scrollXY && directionQuantity === 1
-      ? xyObject * childsPerDirectionScrollXY +
-        (childsPerDirectionScrollXY - 1) * gap +
+      ? xyObject * childsPerScrollXY +
+        (childsPerScrollXY - 1) * gap +
         xyPaddingAll
       : xyObject * childsPerDirection + gapAllY + xyPaddingAll;
-  console.log("objectsWrapperSizeXY", objectsWrapperSizeXY);
 
   const handleScroll = React.useCallback(() => {
     if (!scrollMute) {
       const newScroll = Math.abs(
         Math.round(
-          (scrollElementRef.current.scrollTop / (xy - objectsWrapperSizeXY)) *
+          (scrollElementRef.current!.scrollTop / (xy - objectsWrapperSizeXY)) *
             (xy - thumbSize.current)
         )
       );
@@ -134,8 +141,10 @@ const Scroll: React.FC<ScrollType> = ({
 
   const handleMouseMove = (e: MouseEvent) => {
     xDirection
-      ? (scrollElementRef.current!.scrollTop += e.movementX)
-      : (scrollElementRef.current!.scrollTop += e.movementY);
+      ? (scrollElementRef.current!.scrollTop +=
+          e.movementX * scrollDirectionMove.current)
+      : (scrollElementRef.current!.scrollTop +=
+          e.movementY * scrollDirectionMove.current);
   };
 
   const handleMouseUp = () => {
@@ -146,6 +155,11 @@ const Scroll: React.FC<ScrollType> = ({
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
+    scrollDirectionMove.current = Math.round(
+      objectsWrapperRef.current!.clientHeight /
+        scrollElementRef.current!.clientHeight
+    );
+
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
     document.body.style.cursor = "grabbing";
@@ -154,16 +168,19 @@ const Scroll: React.FC<ScrollType> = ({
 
   React.useEffect(() => {
     // warn handling
-    function warn(propsName: string) {
-      console.warn(`🧰👷‍♂️ You are using the ${propsName} without scrollMute...`);
+    function warn(prop: string, missingProp: string) {
+      console.warn(`🧰👷‍♂️ You are using the ${prop} without ${missingProp}...`);
     }
     if (!lazyRender && rootMargin != "0px 0px 0px 0px") {
-      scrollReverse && warn("rootMargin");
+      scrollReverse && warn("rootMargin", "scrollMute");
     }
     if (scrollMute) {
-      scrollReverse && warn("scrollReverse");
-      draggableScroll && warn("draggableScroll");
-      scrollOnHover && warn("scrollOnHover");
+      scrollReverse && warn("scrollReverse", "scrollMute");
+      draggableScroll && warn("draggableScroll", "scrollMute");
+      scrollOnHover && warn("scrollOnHover", "scrollMute");
+    }
+    if (!suspending && fallback) {
+      scrollReverse && warn("fallback", "suspending");
     }
   }, []);
 
@@ -233,38 +250,92 @@ const Scroll: React.FC<ScrollType> = ({
               : {}),
           }}
         >
-          {React.Children.map(children, (child) =>
-            lazyRender ? (
-              <LazyRender
-                refObject={scrollElementRef}
-                width={objectXY[0]}
-                height={objectXY[1]}
-                rootMargin={rootMargin}
-              >
-                {child}
-              </LazyRender>
-            ) : (
-              <div
-                style={
-                  xDirection
-                    ? {
-                        width: `${objectXY[1]}px`,
-                        height: `${objectXY[0]}px`,
-                      }
-                    : {
-                        width: `${objectXY[0]}px`,
-                        height: `${objectXY[1]}px`,
-                      }
-                }
-              >
-                <div>{child}</div>
-              </div>
-            )
-          )}
+          {React.Children.map(children, (child) => (
+            <ScrollObjectWrapper
+              {...{
+                child,
+                xyObject,
+                xyObjectReverse,
+                objectXY,
+                suspending,
+                fallback,
+                lazyRender,
+                scrollElementRef,
+                rootMargin,
+              }}
+            />
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
+interface ScrollObjectWrapperProps
+  extends Pick<
+    ScrollType,
+    "objectXY" | "suspending" | "fallback" | "lazyRender" | "rootMargin"
+  > {
+  child: React.ReactNode;
+  xyObject: number;
+  xyObjectReverse: number;
+  scrollElementRef?: React.RefObject<HTMLDivElement>;
+}
+
+const ScrollObjectWrapper: React.FC<ScrollObjectWrapperProps> = React.memo(
+  ({
+    child,
+    xyObject,
+    xyObjectReverse,
+    objectXY,
+    suspending,
+    fallback,
+    lazyRender,
+    scrollElementRef,
+    rootMargin,
+  }) => {
+    return lazyRender ? (
+      <IntersectionTracking
+        root={scrollElementRef?.current}
+        width={objectXY[0]}
+        height={objectXY[1]}
+        rootMargin={rootMargin}
+      >
+        <div
+          style={{
+            width: `${xyObjectReverse}px`,
+            height: `${xyObject}px`,
+          }}
+        >
+          {suspending ? (
+            <React.Suspense fallback={fallback}>{child}</React.Suspense>
+          ) : (
+            child
+          )}
+        </div>
+      </IntersectionTracking>
+    ) : (
+      <div
+        style={{
+          width: `${xyObjectReverse}px`,
+          height: `${xyObject}px`,
+        }}
+      >
+        <div
+          style={{
+            width: `${objectXY[0]}px`,
+            height: `${objectXY[1]}px`,
+          }}
+        >
+          {suspending ? (
+            <React.Suspense fallback={fallback}>{child}</React.Suspense>
+          ) : (
+            child
+          )}
+        </div>
+      </div>
+    );
+  }
+);
 
 export default Scroll;
