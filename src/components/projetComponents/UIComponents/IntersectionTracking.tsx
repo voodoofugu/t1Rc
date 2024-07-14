@@ -1,25 +1,30 @@
 import React from "react";
 
 interface IntersectionTrackingProps {
-  width?: number;
-  height?: number;
-  threshold?: number; // 0
-  root?: Element | null; // window
-  rootMargin?: string; // 0px 0px 0px 0px
-  // lazyLoad?: boolean;
   children: React.ReactNode;
+  root?: Element | null;
+  threshold?: number;
+  rootMargin?: number[] | number;
+  wrapSyle?: React.CSSProperties;
 }
 
 const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
-  root,
   children,
+  root,
   threshold,
   rootMargin,
-  width,
-  height,
+  wrapSyle,
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const observableElement = React.useRef<HTMLDivElement | null>(null);
+
+  const marginString = rootMargin
+    ? typeof rootMargin === "number"
+      ? `${rootMargin}px ${rootMargin}px ${rootMargin}px ${rootMargin}px`
+      : rootMargin.length === 2
+      ? `${rootMargin[0]}px ${rootMargin[1]}px ${rootMargin[0]}px ${rootMargin[1]}px`
+      : `${rootMargin[0]}px ${rootMargin[1]}px ${rootMargin[2]}px ${rootMargin[3]}px`
+    : "";
 
   const callback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
@@ -28,9 +33,9 @@ const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
   };
 
   const options = {
-    root: root,
+    root,
     threshold,
-    rootMargin,
+    rootMargin: marginString,
   };
 
   React.useEffect(() => {
@@ -48,13 +53,7 @@ const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
   }, [root, threshold, rootMargin]);
 
   return (
-    <div
-      ref={observableElement}
-      style={{
-        width: `${width}px`,
-        height: `${height}px`,
-      }}
-    >
+    <div ref={observableElement} style={wrapSyle}>
       {isVisible && children}
     </div>
   );
