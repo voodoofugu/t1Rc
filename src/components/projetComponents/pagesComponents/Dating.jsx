@@ -53,18 +53,17 @@ export default function Dating({ pageName, children }) {
 
         <Scroll
           className="datingScroll"
-          scrollXY={[378, 86]}
+          scrollXY={[108, 520]}
           objectXY={[86, 86]}
           gap={10}
           padding={10}
           scrollReverse
-          // scrollTrigger="<c>/←O→"
-          // scrollVisibility="↓<O>"
+          scrollTrigger="←→/←O→"
+          scrollVisibility="↓<O>"
           // lazyRender
           // infiniteScroll
           // rootMargin={[0, 0]}
-          xDirection
-          // directionQuantity={3}
+          // xDirection
           // suspending
           // fallback={<div>loading</div>}
           // contentAlignCenter

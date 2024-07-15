@@ -6,7 +6,6 @@ interface ScrollType {
   scrollXY?: number[];
   objectXY: number[];
   xDirection?: boolean;
-  directionQuantity?: number;
   gap?: number[] | number;
   padding?: number[] | number;
   scrollReverse?: boolean;
@@ -39,7 +38,6 @@ const Scroll: React.FC<ScrollType> = ({
   scrollXY,
   objectXY,
   xDirection = false,
-  directionQuantity = 1,
   gap = [0, 0],
   padding = [0, 0, 0, 0],
   scrollReverse = false,
@@ -107,36 +105,25 @@ const Scroll: React.FC<ScrollType> = ({
       : [mRootLocal[2], mRootLocal[0]]
     : [0, 0];
 
-  // calculations
-  const childsPerDirection = React.useMemo(() => {
-    return directionQuantity > 1
-      ? Math.ceil(childCount / directionQuantity)
-      : childCount;
-  }, [childCount, directionQuantity]);
-
   const localScrollXY = React.useMemo(() => {
     const [x, y] = scrollXY || objectXY;
+    return [x, y];
+  }, []);
 
-    if (directionQuantity > 1) {
-      const adjustedX =
-        xyObjectReverse * directionQuantity +
-        (directionQuantity - 1) * gapY +
-        pY;
-      const adjustedY =
-        xyObjectReverse * directionQuantity +
-        (directionQuantity - 1) * gapY +
-        pX;
+  // calculations
+  const objectsPerDirection = React.useMemo(() => {
+    const objects = xDirection
+      ? Math.abs(Math.floor((localScrollXY[1] - pY) / (objectXY[0] + gapX)))
+      : Math.abs(Math.floor((localScrollXY[0] - pY) / (objectXY[0] + gapX)));
 
-      return xDirection
-        ? [x + pY, y < adjustedY ? adjustedY : y]
-        : [x < adjustedX ? adjustedX : x, y + pX];
-    } else {
-      return [x + pY, y + pX];
-    }
-  }, [scrollXY, objectXY, directionQuantity, xDirection, xyObjectReverse, gap]);
+    return objects > childCount ? childCount : objects < 1 ? 1 : objects;
+  }, []);
+
+  const directionQuantity = React.useMemo(() => {
+    return xDirection ? objectsPerDirection : objectsPerDirection;
+  }, []);
 
   const xy = xDirection ? localScrollXY[0] : localScrollXY[1];
-  const xyReverse = xDirection ? localScrollXY[1] : localScrollXY[0];
 
   const splitIndices = React.useMemo(() => {
     if (!infiniteScroll || directionQuantity <= 1) {
@@ -158,54 +145,25 @@ const Scroll: React.FC<ScrollType> = ({
     return result;
   }, [children, directionQuantity, infiniteScroll]);
 
-  const childsPerScrollXY = React.useMemo(() => {
-    return xyReverse > xyObjectReverse
-      ? Math.ceil(
-          childCount /
-            Math.floor((xyReverse - pLocalXY + gapX) / (xyObjectReverse + gapX))
-        )
+  const childsPerDirection = React.useMemo(() => {
+    return directionQuantity > 1
+      ? Math.ceil(childCount / directionQuantity)
       : childCount;
-  }, [childCount, xyReverse, xyObjectReverse, gap]);
+  }, [childCount, directionQuantity]);
 
   const objectsWrapperWidth = React.useMemo(() => {
-    return infiniteScroll
-      ? xyObjectReverse * directionQuantity + gapY * directionQuantity - gapY
-      : directionQuantity > 1
-      ? scrollXY &&
-        xy < xyObject * directionQuantity + (directionQuantity - 1) * gapX &&
-        xyObject * directionQuantity + (directionQuantity - 1) * gapX + pLocalXY
-      : NaN;
-  }, [
-    objectXY,
-    xy,
-    xyObject,
-    directionQuantity,
-    gap,
-    scrollXY,
-    infiniteScroll,
-  ]);
+    return (
+      xyObjectReverse * objectsPerDirection + (objectsPerDirection - 1) * gapY
+    );
+  }, []);
 
   const objectsWrapperHeight = React.useMemo(() => {
-    return infiniteScroll
-      ? xyObject * Math.ceil(childCount / directionQuantity) +
-          gapX * Math.floor((childCount - 1) / directionQuantity)
-      : NaN;
-  }, [childCount, xyObject, directionQuantity, gap, infiniteScroll]);
+    return xyObject * childsPerDirection + (childsPerDirection - 1) * gapX;
+  }, []);
 
   const objectsWrapperSizeXY = React.useMemo(() => {
-    return scrollXY && directionQuantity === 1
-      ? xyObject * childsPerScrollXY + (childsPerScrollXY - 1) * gapX + pLocalXY
-      : xyObject * childsPerDirection +
-          (childsPerDirection - 1) * gapX +
-          pLocalXY;
-  }, [
-    scrollXY,
-    directionQuantity,
-    xyObject,
-    childsPerDirection,
-    childsPerScrollXY,
-    gap,
-  ]);
+    return objectsWrapperHeight + pLocalXY;
+  }, [objectsWrapperWidth, objectsWrapperHeight]);
 
   const translateProperty = React.useMemo(() => {
     return localScrollXY[0] / 2 - localScrollXY[1] / 2;
@@ -293,21 +251,19 @@ const Scroll: React.FC<ScrollType> = ({
   ]);
 
   objectsWrapperAligning.current = React.useMemo(() => {
-    const heightChildsPerScroll =
-      childsPerScrollXY * objectXY[1] + gapX * childsPerScrollXY - gapX;
     if (scrollXY) {
       if (xDirection) {
-        if (localScrollXY[0] > heightChildsPerScroll) {
+        if (localScrollXY[0] > objectsWrapperHeight + pLocalXY) {
           return true;
         }
       } else {
-        if (localScrollXY[1] > heightChildsPerScroll) {
+        if (localScrollXY[1] > objectsWrapperHeight + pLocalXY) {
           return true;
         }
       }
     }
     return false;
-  }, [xDirection, localScrollXY, objectXY, childsPerScrollXY, gap]);
+  }, [xDirection, localScrollXY, objectXY, gap]);
 
   // events
   const handleScroll = React.useCallback(() => {
@@ -375,9 +331,6 @@ const Scroll: React.FC<ScrollType> = ({
     }
     if (!suspending && fallback) {
       scrollReverse && warn("fallback", "suspending");
-    }
-    if (directionQuantity === 1 && contentAlignCenter) {
-      scrollReverse && warn("contentAlignCenter", "directionQuantity");
     }
   }, []);
 
@@ -471,7 +424,7 @@ const Scroll: React.FC<ScrollType> = ({
               ? { width: `${objectsWrapperWidth}px` }
               : {}),
             ...(objectsWrapperHeight && {
-              position: "relative",
+              position: "absolute",
               height: `${objectsWrapperHeight}px`,
             }),
             ...(!infiniteScroll &&
@@ -600,10 +553,7 @@ const ScrollObjectWrapper: React.FC<ScrollObjectWrapperProps> = React.memo(
 );
 
 interface InfiniteScrollObjectWrapperProps
-  extends Pick<
-    ScrollType,
-    "suspending" | "fallback" | "rootMargin" | "directionQuantity"
-  > {
+  extends Pick<ScrollType, "suspending" | "fallback" | "rootMargin"> {
   child: React.ReactNode;
   xyObject: number;
   xyObjectReverse: number;
