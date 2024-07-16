@@ -94,6 +94,12 @@ export default function V2MainScreen18Mine({ pageName }) {
               <div className="mine-quest-prgbar" style={{ width: "0%" }}></div>
               <div className="mine-quest-prg-text">0/25</div>
             </div>
+            <div className="color-btn green">
+              <div className="color-btn-text">
+                <img src="https://cdn.faptitans.com/s1/rc/v2-mn-pr-100-in.png" />
+                <div className="color-btn-text">Claim</div>
+              </div>
+            </div>
           </div>
           <div className="mine-quest-all q3">
             <div className="mine-quest-text">Open cells</div>

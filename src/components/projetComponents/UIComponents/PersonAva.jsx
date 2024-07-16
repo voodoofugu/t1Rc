@@ -2,15 +2,12 @@ import React from "react";
 
 export default function PersonAva({
   img,
-  active = "",
-  disabled = "",
-  closed = "",
+  condition = "", // "active" | "disabled" | "closed"
   onClick,
 }) {
   return (
     <div
-      className={`personAva${active && " active"}${disabled && " disabled"}${
-        closed && " closed"
+      className={`personAva ${condition}
       }`}
       onClick={onClick}
     >

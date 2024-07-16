@@ -11,7 +11,7 @@ export default function WpckTimer({ text, timer, updateBtn, onClick }) {
           <div className="update_value">1/3</div>
         </div>
       )}
-      <div className="time-left">{text ? text : "Refresh in:"}</div>
+      {text && <div className="time-left">{text}</div>}
       <div className="time-sec">{timer}</div>
     </div>
   );

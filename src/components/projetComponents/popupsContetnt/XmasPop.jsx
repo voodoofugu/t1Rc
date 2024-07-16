@@ -109,7 +109,7 @@ function XmasPop1({ setXmasPop }) {
         </div>
       </div>
       <div className="xmas-girl">
-        <img src="img/break-girl933.png" loading="lazy" />
+        <img src="img/breakGirls/break-girl933.png" loading="lazy" />
       </div>
       <div className="xmas-btn-box">
         <div className="color-btn quest">
@@ -228,7 +228,7 @@ function XmasPop2({ setXmasPop }) {
         </div>
       </div>
       <div className="xmas-girl">
-        <img src="img/break-girl927.png" loading="lazy" />
+        <img src="img/breakGirls/break-girl927.png" loading="lazy" />
       </div>
       <div className="xmas-btn-box">
         <div className="color-btn">
@@ -250,7 +250,7 @@ function XmasPop3({ setXmasPop }) {
       <div className="color-box xmas"></div>
       <div className="xmas-daily-prg-box-all">
         <div className="xmas-prg-girl">
-          <img src="img/break-girl927.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl927.png" loading="lazy" />
         </div>
         <div className="xmas-prg-bar-box">
           <div className="xmas-prg-name-pic">0</div>

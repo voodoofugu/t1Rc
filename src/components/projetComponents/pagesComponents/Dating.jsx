@@ -5,6 +5,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
+import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 
 export const cssFiles = [
   "customScroll",
@@ -15,6 +16,8 @@ export const cssFiles = [
 
 export default function Dating({ pageName, children }) {
   const dispatch = useDispatch();
+
+  const [activeGirl, setActiveGirl] = React.useState(0);
 
   return (
     <div className="main world1">
@@ -51,13 +54,22 @@ export default function Dating({ pageName, children }) {
         </div>
         <div className="btnI" />
 
+        <div className="heroFigure"></div>
+        <div className="girlFigure">
+          <img
+            src={`img/breakGirls/break-girl${girlsInfo[activeGirl].id}.png`}
+            loading="lazy"
+          />
+        </div>
+
+        <div className="progBar"></div>
+
         <Scroll
-          className="datingScroll"
-          scrollXY={[108, 520]}
+          className="scrollAvatars"
+          scrollXY={[92, 526]}
           objectXY={[86, 86]}
           gap={10}
-          padding={10}
-          scrollReverse
+          padding={[4, 10]}
           scrollTrigger="←→/←O→"
           scrollVisibility="↓<O>"
           // lazyRender
@@ -68,37 +80,27 @@ export default function Dating({ pageName, children }) {
           // fallback={<div>loading</div>}
           // contentAlignCenter
         >
-          <PersonAva
-            active
-            img="img/images/goddess/goddess-13/x2/ava/goddess-ava-1.jpg"
-          />
-          <PersonAva img="img/images/goddess/goddess-12/x2/ava/goddess-ava-1.jpg" />
-          <PersonAva img="img/images/goddess/goddess-11/x2/ava/goddess-ava-1.jpg" />
-          <PersonAva
-            disabled
-            img="img/images/goddess/goddess-10/x2/ava/goddess-ava-1.jpg"
-          />
-          <PersonAva
-            closed
-            img="img/images/goddess/goddess-9/x2/ava/goddess-ava-1.jpg"
-          />
-          <PersonAva
-            closed
-            img="img/images/goddess/goddess-8/x2/ava/goddess-ava-1.jpg"
-          />
-          <PersonAva
-            closed
-            img="img/images/goddess/goddess-7/x2/ava/goddess-ava-1.jpg"
-          />
-          <PersonAva
-            closed
-            img="img/images/goddess/goddess-6/x2/ava/goddess-ava-1.jpg"
-          />
-          <PersonAva
-            closed
-            img="img/images/goddess/goddess-5/x2/ava/goddess-ava-1.jpg"
-          />
+          {girlsInfo.map((item, index) => (
+            <PersonAva
+              condition={
+                index === activeGirl && !item.condition
+                  ? "active"
+                  : item.condition
+              }
+              img={`img/images/${item.type}/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
+              onClick={() => !item.condition && setActiveGirl(index)}
+            />
+          ))}
         </Scroll>
+
+        <Scroll
+          className="scrollChat"
+          scrollXY={[500, 520]}
+          objectXY={[86, 86]}
+          gap={10}
+          padding={10}
+          scrollTrigger="←→/←O→"
+        ></Scroll>
       </div>
       {children}
     </div>

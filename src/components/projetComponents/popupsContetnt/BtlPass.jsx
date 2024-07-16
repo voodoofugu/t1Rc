@@ -174,19 +174,25 @@ export default function BtlPass({ btlClass }) {
       </div>
       <div className="btlpass-girl">
         {btlClass === "xmas" ? (
-          <img src="img/break-girl901.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl901.png" loading="lazy" />
         ) : btlClass === "hw" ? (
-          <img src="img/break-girl331.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl331.png" loading="lazy" />
         ) : btlClass === "bf" ? (
-          <img src="img/break-girl761-event-pass.png" loading="lazy" />
+          <img
+            src="img/breakGirls/break-girl761-event-pass.png"
+            loading="lazy"
+          />
         ) : btlClass === "vl" ? (
-          <img src="img/break-girl798-vd.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl798-vd.png" loading="lazy" />
         ) : btlClass === "spring" ? (
-          <img src="img/break-girl842.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl842.png" loading="lazy" />
         ) : btlClass === "autumn" ? (
-          <img src="img/break-girl848.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl848.png" loading="lazy" />
         ) : btlClass === "summer" ? (
-          <img src="img/break-girls/break-girl949.png" loading="lazy" />
+          <img
+            src="img/breakGirls/break-girls/break-girl949.png"
+            loading="lazy"
+          />
         ) : null}
       </div>
       <div className="btlpass-btn-box">

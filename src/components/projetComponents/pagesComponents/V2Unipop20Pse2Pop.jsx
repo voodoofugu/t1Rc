@@ -286,7 +286,10 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                     <div className="right-box-f-name-box">Squad Hero pack</div>
                     <div className="pse2-girl-left-box">
                       <div className="pse2-girl">
-                        <img src="img/break-girl238.png" loading="lazy" />
+                        <img
+                          src="img/breakGirls/break-girl238.png"
+                          loading="lazy"
+                        />
                       </div>
                     </div>
                     <div className="pse2-girl-right-box">
