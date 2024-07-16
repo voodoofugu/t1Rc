@@ -61,7 +61,7 @@ const Scroll: React.FC<ScrollType> = ({
   const objectsWrapperAligning = React.useRef(false);
   const clickedObject = React.useRef("");
 
-  const [thumbMeasuring, setThumbMeasuring] = React.useState(0);
+  // const [thumbMeasuring, setThumbMeasuring] = React.useState(0);
   const [scroll, setScroll] = React.useState(scrollTop);
 
   const childCount = React.Children.count(children);
@@ -155,15 +155,20 @@ const Scroll: React.FC<ScrollType> = ({
     return (
       xyObjectReverse * objectsPerDirection + (objectsPerDirection - 1) * gapY
     );
-  }, []);
+  }, [xyObjectReverse, objectsPerDirection, gapY]);
 
   const objectsWrapperHeight = React.useMemo(() => {
     return xyObject * childsPerDirection + (childsPerDirection - 1) * gapX;
-  }, []);
+  }, [xyObject, childsPerDirection, gapX]);
 
-  const objectsWrapperSizeXY = React.useMemo(() => {
-    return objectsWrapperHeight + pLocalXY;
-  }, [objectsWrapperWidth, objectsWrapperHeight]);
+  const thumbMeasuring = React.useMemo(() => {
+    if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
+      return Math.round((xy / (objectsWrapperHeight + pLocalXY)) * xy);
+    } else {
+      return NaN;
+    }
+  }, [xy, objectsWrapperHeight, pLocalXY, scrollVisibility]);
+  console.log("thumbMeasuring", thumbMeasuring);
 
   const translateProperty = React.useMemo(() => {
     return localScrollXY[0] / 2 - localScrollXY[1] / 2;
@@ -270,7 +275,8 @@ const Scroll: React.FC<ScrollType> = ({
     if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
       const newScroll = Math.abs(
         Math.round(
-          (scrollElementRef.current!.scrollTop / (xy - objectsWrapperSizeXY)) *
+          (scrollElementRef.current!.scrollTop /
+            (xy - (objectsWrapperHeight + pLocalXY))) *
             (xy - thumbSize.current)
         )
       );
@@ -279,7 +285,7 @@ const Scroll: React.FC<ScrollType> = ({
         setScroll(newScroll);
       }
     }
-  }, [xy, objectsWrapperSizeXY, scroll]);
+  }, [xy, scroll]);
 
   const handleMouseMove = React.useCallback(
     (e: MouseEvent) => {
@@ -342,14 +348,16 @@ const Scroll: React.FC<ScrollType> = ({
     );
 
     // ???
-    if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
-      if (objectsWrapperRef.current) {
-        (function (xy: number) {
-          thumbSize.current = Math.round((xy / objectsWrapperSizeXY) * xy);
-          setThumbMeasuring(thumbSize.current);
-        })(xy);
-      }
-    }
+    // if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
+    //   if (objectsWrapperRef.current) {
+    //     (function (xy: number) {
+    //       thumbSize.current = Math.round(
+    //         (xy / (objectsWrapperHeight + pLocalXY)) * xy
+    //       );
+    //       setThumbMeasuring(thumbSize.current);
+    //     })(xy);
+    //   }
+    // }
   }, [xDirection, scrollXY, objectXY, gap]);
 
   return (
@@ -370,9 +378,15 @@ const Scroll: React.FC<ScrollType> = ({
       }}
     >
       {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
-        !!thumbMeasuring &&
         thumbMeasuring < xy && (
-          <div className={`scrollBar ${scrollReverse ? "first" : "last"}`}>
+          <div
+            className={`scrollBar ${scrollReverse ? "first" : "last"}`}
+            style={
+              scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→"
+                ? {}
+                : { pointerEvents: "none" }
+            }
+          >
             <div
               className="scrollBarThumb"
               onMouseDown={(e) =>
@@ -446,7 +460,7 @@ const Scroll: React.FC<ScrollType> = ({
               return (
                 isElementVisible && (
                   <InfiniteScrollObjectWrapper
-                    key={index}
+                    // key={index}
                     {...{
                       child,
                       xyObjectReverse,
@@ -465,6 +479,7 @@ const Scroll: React.FC<ScrollType> = ({
             } else {
               return (
                 <ScrollObjectWrapper
+                  // key={index}
                   {...{
                     child,
                     xyObject,

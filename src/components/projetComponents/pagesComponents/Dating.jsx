@@ -57,6 +57,7 @@ export default function Dating({ pageName, children }) {
         <div className="heroFigure"></div>
         <div className="girlFigure">
           <img
+            key={girlsInfo[activeGirl].id}
             src={`img/breakGirls/break-girl${girlsInfo[activeGirl].id}.png`}
             loading="lazy"
           />
@@ -71,7 +72,7 @@ export default function Dating({ pageName, children }) {
           gap={10}
           padding={[4, 10]}
           scrollTrigger="←→/←O→"
-          scrollVisibility="↓<O>"
+          // scrollVisibility="↓<O>"
           // lazyRender
           // infiniteScroll
           // rootMargin={[0, 0]}
@@ -93,14 +94,14 @@ export default function Dating({ pageName, children }) {
           ))}
         </Scroll>
 
-        <Scroll
+        {/* <Scroll
           className="scrollChat"
           scrollXY={[500, 520]}
           objectXY={[86, 86]}
           gap={10}
           padding={10}
           scrollTrigger="←→/←O→"
-        ></Scroll>
+        ></Scroll> */}
       </div>
       {children}
     </div>
