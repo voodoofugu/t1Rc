@@ -36,6 +36,7 @@ export interface InitialState {
   pageData: PageData;
   popupState: PopupState;
   sAndLStates: SAndLStates;
+  dateGirlIndex: number;
   booleanState: boolean;
   [key: string]: any;
 }
@@ -72,6 +73,8 @@ export const initialState: InitialState = {
     animInProgress: false,
     animPortal: false,
   },
+
+  dateGirlIndex: 0,
 
   booleanState: false,
 };
@@ -158,6 +161,10 @@ export function reducer(draft: any, action: Action): any {
 
     case "BOOL_STATE":
       draft.booleanState = !draft.booleanState;
+      return draft;
+
+    case "DATE_GIRL_INDEX":
+      draft.dateGirlIndex = action.payload;
       return draft;
 
     default:
