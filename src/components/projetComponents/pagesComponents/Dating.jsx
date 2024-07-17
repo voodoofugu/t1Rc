@@ -83,6 +83,7 @@ export default function Dating({ pageName, children }) {
         >
           {girlsInfo.map((item, index) => (
             <PersonAva
+              key={item.id}
               condition={
                 index === activeGirl && !item.condition
                   ? "active"
