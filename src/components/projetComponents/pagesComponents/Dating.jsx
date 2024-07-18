@@ -57,8 +57,7 @@ export default function Dating({ pageName, children }) {
 
         <div className="heroFigure"></div>
 
-        {/* <GirlIndexDependencies girlsInfo={girlsInfo} /> */}
-        <GirlsMenu girlsInfo={girlsInfo} />
+        <GirlIndexDependencies girlsInfo={girlsInfo} />
       </div>
       {children}
     </div>
@@ -66,67 +65,100 @@ export default function Dating({ pageName, children }) {
 }
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
-  const dateGirlIndex = selectors.useDateGirlIndex();
+  const [girlIndex, setGirlIndex] = React.useState(0);
+  const [chatProgress, setChatProgress] = React.useState(1);
+  console.log("chatProgress", chatProgress);
+  const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
+
+  const nextMessage = girlsInfo[girlIndex].chat[chatProgress + 1];
+  if ("Girl" in nextMessage) {
+    setChatProgress(chatProgress + 1);
+  }
 
   return (
     <>
       <div className="girlFigure">
         <img
-          key={girlsInfo[dateGirlIndex].id}
-          src={`img/breakGirls/break-girl${girlsInfo[dateGirlIndex].id}.png`}
+          key={girlsInfo[girlIndex].id}
+          src={`img/breakGirls/break-girl${girlsInfo[girlIndex].id}.png`}
           loading="lazy"
         />
       </div>
 
       <div className="progBar"></div>
 
+      <div className="scrollChatWrap">
+        <Scroll
+          className="scrollChat"
+          scrollXY={[500, 480]}
+          objectXY={[460, 86]}
+          gap={10}
+          padding={10}
+          scrollTrigger="←→/←O→"
+        >
+          {arrayFromChatProgress.map((item, index) => {
+            const currentMessage = girlsInfo[girlIndex].chat[item];
+
+            if ("Girl" in currentMessage) {
+              return currentMessage.Girl.map((t) => (
+                <div key={index} className="messageBox right">
+                  <div className="message">{t}</div>
+                </div>
+              ));
+            } else if ("Hero" in currentMessage) {
+              return currentMessage.Hero.map((t) => (
+                <div key={index} className="messageBox">
+                  <div className="message">{t}</div>
+                </div>
+              ));
+            }
+          })}
+        </Scroll>
+        {"Hero" in nextMessage && (
+          <div className="btnBox">
+            {nextMessage.Hero.map((item) => (
+              <div
+                className="btnMessage"
+                onClick={() => setChatProgress(chatProgress + 1)}
+              >
+                {item}
+                <PersonAva img={`img/v2-master-pic1.png`} />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="girlName">
+        <div className="name">{girlsInfo[girlIndex].name}</div>
+      </div>
+
       <Scroll
-        className="scrollChat"
-        scrollXY={[500, 520]}
+        className="scrollAvatars"
+        scrollXY={[92, 526]}
         objectXY={[86, 86]}
         gap={10}
-        padding={10}
+        padding={[4, 10]}
         scrollTrigger="←→/←O→"
-      ></Scroll>
+        wrapAlignCenter
+        // scrollVisibility="↓<O>"
+        // lazyRender
+        // infiniteScroll
+        // rootMargin={[0, 0]}
+        // xDirection
+        // suspending
+        // fallback={<div>loading</div>}
+        // contentAlignCenter
+      >
+        {girlsInfo.map((item, index) => (
+          <PersonAva
+            key={item.id}
+            className={index === girlIndex ? "active" : item.condition}
+            img={`img/images/${item.type}/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
+            onClick={() => !item.condition && setGirlIndex(index)}
+          />
+        ))}
+      </Scroll>
     </>
-  );
-};
-
-const GirlsMenu = ({ girlsInfo }) => {
-  const dispatch = useDispatch();
-
-  return (
-    <Scroll
-      className="scrollAvatars"
-      scrollXY={[92, 526]}
-      objectXY={[86, 86]}
-      gap={10}
-      padding={[4, 10]}
-      scrollTrigger="←→/←O→"
-      // scrollVisibility="↓<O>"
-      // lazyRender
-      // infiniteScroll
-      // rootMargin={[0, 0]}
-      // xDirection
-      // suspending
-      // fallback={<div>loading</div>}
-      // contentAlignCenter
-    >
-      {girlsInfo.map((item, index) => (
-        <PersonAva
-          key={item.id}
-          condition={item.condition}
-          img={`img/images/${item.type}/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
-          index={index}
-          onClick={() =>
-            !item.condition &&
-            dispatch({
-              type: "DATE_GIRL_INDEX",
-              payload: index,
-            })
-          }
-        />
-      ))}
-    </Scroll>
   );
 };

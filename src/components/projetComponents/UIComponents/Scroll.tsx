@@ -30,6 +30,7 @@ interface ScrollType {
   // autoSize?: boolean;
   infiniteScroll?: boolean;
   contentAlignCenter?: boolean;
+  wrapAlignCenter?: boolean;
   children: React.ReactNode;
 }
 
@@ -50,13 +51,14 @@ const Scroll: React.FC<ScrollType> = ({
   scrollTop = 0,
   infiniteScroll = false,
   contentAlignCenter = false,
+  wrapAlignCenter = false,
   children,
 }) => {
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
   const objectsWrapperRef = React.useRef<HTMLDivElement | null>(null);
   const customScrollRef = React.useRef<HTMLDivElement | null>(null);
 
-  const objectsWrapperAligning = React.useRef(false);
+  let objectsWrapperAligning = false;
   const clickedObject = React.useRef("");
 
   const [scroll, setScroll] = React.useState(scrollTop);
@@ -251,8 +253,8 @@ const Scroll: React.FC<ScrollType> = ({
     directionQuantity,
   ]);
 
-  objectsWrapperAligning.current = React.useMemo(() => {
-    if (scrollXY) {
+  objectsWrapperAligning = React.useMemo(() => {
+    if (wrapAlignCenter && scrollXY) {
       if (xDirection) {
         if (localScrollXY[0] > objectsWrapperHeight + pLocalXY) {
           return true;
@@ -267,7 +269,9 @@ const Scroll: React.FC<ScrollType> = ({
   }, [xDirection, localScrollXY, objectXY, gap]);
 
   const scrollingSizeToObjectsWrapper = React.useMemo(() => {
-    return Math.round(objectsWrapperHeight / localScrollXY[1]);
+    return xDirection
+      ? Math.round(objectsWrapperHeight / localScrollXY[0])
+      : Math.round(objectsWrapperHeight / localScrollXY[1]);
   }, [xDirection, localScrollXY, objectXY, gap]);
 
   // events
@@ -394,7 +398,7 @@ const Scroll: React.FC<ScrollType> = ({
           ...(xDirection && {
             transform: `rotate(-90deg) translate(${translateProperty}px, ${translateProperty}px) scaleX(-1)`,
           }),
-          ...(objectsWrapperAligning.current && {
+          ...(objectsWrapperAligning && {
             alignItems: "center",
           }),
           ...(scrollTrigger === "←→" || scrollTrigger === "←→/←O→"
