@@ -66,13 +66,19 @@ export default function Dating({ pageName, children }) {
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
   const [girlIndex, setGirlIndex] = React.useState(0);
-  const [chatProgress, setChatProgress] = React.useState(1);
-  console.log("chatProgress", chatProgress);
-  const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
+  const [chatProgress, setChatProgress] = React.useState([0, 0]);
 
-  const nextMessage = girlsInfo[girlIndex].chat[chatProgress + 1];
+  const chatMap = [...Array(girlsInfo[girlIndex].chat.length).keys()];
+  const arrayFromChatProgress = [...Array(chatProgress[0] + 1).keys()];
+
+  const chatMapWithMessageIndex = chatMap.map((item, index) => {
+    return index === chatProgress[0] ? chatProgress[1] : item;
+  });
+  console.log("chatProgress", chatProgress);
+
+  const nextMessage = girlsInfo[girlIndex].chat[chatProgress[0] + 1];
   if ("Girl" in nextMessage) {
-    setChatProgress(chatProgress + 1);
+    setChatProgress([chatProgress[0] + 1, 0]);
   }
 
   return (
@@ -116,13 +122,13 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </Scroll>
         {"Hero" in nextMessage && (
           <div className="btnBox">
-            {nextMessage.Hero.map((item) => (
+            {nextMessage.Hero.map((item, index) => (
               <div
                 className="btnMessage"
-                onClick={() => setChatProgress(chatProgress + 1)}
+                onClick={() => setChatProgress([chatProgress[0] + 1, index])}
               >
                 {item}
-                <PersonAva img={`img/v2-master-pic1.png`} />
+                <PersonAva img={`img/dating/heroAva.jpg`} />
               </div>
             ))}
           </div>

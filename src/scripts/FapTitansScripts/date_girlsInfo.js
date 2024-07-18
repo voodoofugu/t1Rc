@@ -22,7 +22,7 @@ const chat = [
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
     ],
   },
-  { Girl: 1 },
+  { Girl: ["1"] },
   { Hero: ["totam rem aperiam"] },
 ];
 
