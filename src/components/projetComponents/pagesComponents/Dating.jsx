@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   selectors,
   useDispatch,
@@ -66,20 +66,31 @@ export default function Dating({ pageName, children }) {
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
   const [girlIndex, setGirlIndex] = React.useState(0);
-  const [chatProgress, setChatProgress] = React.useState([0, 0]);
+  const [chatProgress, setChatProgress] = React.useState(0);
+  const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
 
-  const chatMap = [...Array(girlsInfo[girlIndex].chat.length).keys()];
-  const arrayFromChatProgress = [...Array(chatProgress[0] + 1).keys()];
+  const chatMapArray = useRef(Array(girlsInfo[girlIndex].chat.length).fill(0));
+  console.log("chatMapArray", chatMapArray.current);
 
-  const chatMapWithMessageIndex = chatMap.map((item, index) => {
-    return index === chatProgress[0] ? chatProgress[1] : item;
-  });
-  console.log("chatProgress", chatProgress);
+  const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
+  const nextMessage = girlsInfo[girlIndex].chat[chatProgress + 1];
 
-  const nextMessage = girlsInfo[girlIndex].chat[chatProgress[0] + 1];
-  if ("Girl" in nextMessage) {
-    setChatProgress([chatProgress[0] + 1, 0]);
-  }
+  React.useEffect(() => {
+    if ("Girl" in nextMessage) {
+      setChatProgress(chatProgress + 1);
+    }
+  }, [chatProgress]);
+
+  React.useEffect(() => {
+    chatMapArray.current = chatMapArray.current.map((item, index) => {
+      return index === chatProgress ? currentMessageIndex : item;
+    });
+  }, [currentMessageIndex]);
+
+  const handleClick = (index) => {
+    setChatProgress((prevChatProgress) => prevChatProgress + 1);
+    setCurrentMessageIndex(index);
+  };
 
   return (
     <>
@@ -103,30 +114,30 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           scrollTrigger="←→/←O→"
         >
           {arrayFromChatProgress.map((item, index) => {
-            const currentMessage = girlsInfo[girlIndex].chat[item];
+            const message = girlsInfo[girlIndex].chat[item];
 
-            if ("Girl" in currentMessage) {
-              return currentMessage.Girl.map((t) => (
+            if ("Girl" in message) {
+              return message.Girl.map((text) => (
                 <div key={index} className="messageBox right">
-                  <div className="message">{t}</div>
+                  <div className="message">{text}</div>
                 </div>
               ));
-            } else if ("Hero" in currentMessage) {
-              return currentMessage.Hero.map((t) => (
-                <div key={index} className="messageBox">
-                  <div className="message">{t}</div>
-                </div>
-              ));
+            } else if ("Hero" in message) {
+              return message.Hero.map(
+                (text, i) =>
+                  i === chatMapArray.current[index] && (
+                    <div key={index + i} className="messageBox">
+                      <div className="message">{text}</div>
+                    </div>
+                  )
+              );
             }
           })}
         </Scroll>
         {"Hero" in nextMessage && (
           <div className="btnBox">
             {nextMessage.Hero.map((item, index) => (
-              <div
-                className="btnMessage"
-                onClick={() => setChatProgress([chatProgress[0] + 1, index])}
-              >
+              <div className="btnMessage" onClick={() => handleClick(index)}>
                 {item}
                 <PersonAva img={`img/dating/heroAva.jpg`} />
               </div>
