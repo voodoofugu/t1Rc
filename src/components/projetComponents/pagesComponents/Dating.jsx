@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import {
   selectors,
   useDispatch,
@@ -67,9 +67,10 @@ export default function Dating({ pageName, children }) {
 const GirlIndexDependencies = ({ girlsInfo }) => {
   const [girlIndex, setGirlIndex] = React.useState(0);
   const [chatProgress, setChatProgress] = React.useState(0);
-  const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
+  const [messageFallback, setMessageFallback] = React.useState(false);
 
-  const chatMapArray = useRef(Array(girlsInfo[girlIndex].chat.length).fill(0));
+  const chatMapArray = React.useRef([]);
+  const currentMessageIndex = React.useRef(NaN);
   console.log("chatMapArray", chatMapArray.current);
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
@@ -77,19 +78,21 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
   React.useEffect(() => {
     if ("Girl" in nextMessage) {
-      setChatProgress(chatProgress + 1);
+      setChatProgress((prevChatProgress) => prevChatProgress + 1);
     }
+
+    chatMapArray.current =
+      chatMapArray.current.length < arrayFromChatProgress.length
+        ? [...chatMapArray.current, currentMessageIndex.current]
+        : [...chatMapArray.current];
+
+    currentMessageIndex.current = NaN;
   }, [chatProgress]);
 
-  React.useEffect(() => {
-    chatMapArray.current = chatMapArray.current.map((item, index) => {
-      return index === chatProgress ? currentMessageIndex : item;
-    });
-  }, [currentMessageIndex]);
-
   const handleClick = (index) => {
+    currentMessageIndex.current = index;
+    setMessageFallback(true);
     setChatProgress((prevChatProgress) => prevChatProgress + 1);
-    setCurrentMessageIndex(index);
   };
 
   return (
@@ -104,7 +107,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
       <div className="progBar"></div>
 
-      <div className="scrollChatWrap">
+      <div className="scrollChatWrap" key={girlsInfo[girlIndex].id}>
         <Scroll
           className="scrollChat"
           scrollXY={[500, 480]}
@@ -117,42 +120,77 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             const message = girlsInfo[girlIndex].chat[item];
 
             if ("Girl" in message) {
-              return message.Girl.map((text) => (
-                <div key={index} className="messageBox right">
-                  <div className="message">{text}</div>
-                </div>
-              ));
-            } else if ("Hero" in message) {
+              if (index === 0) {
+                return message.Girl.map((text) => (
+                  <Delay key={index} delay={index * 100 + 200}>
+                    <Message right text={text} />
+                  </Delay>
+                ));
+              } else {
+                return message.Girl.map((text) => (
+                  <Delay
+                    key={index}
+                    delay={text.split(" ")[0].length * 300}
+                    onTimeout={() => setMessageFallback(false)}
+                  >
+                    <Message right text={text} />
+                  </Delay>
+                ));
+              }
+            }
+
+            if ("Hero" in message) {
               return message.Hero.map(
-                (text, i) =>
-                  i === chatMapArray.current[index] && (
-                    <div key={index + i} className="messageBox">
-                      <div className="message">{text}</div>
-                    </div>
+                (text, textIndex) =>
+                  textIndex === chatMapArray.current[index] && (
+                    <Delay key={index} delay={index * 100 + 200}>
+                      <Message text={text} />
+                    </Delay>
                   )
               );
             }
           })}
         </Scroll>
+
         {"Hero" in nextMessage && (
-          <div className="btnBox">
-            {nextMessage.Hero.map((item, index) => (
-              <div className="btnMessage" onClick={() => handleClick(index)}>
-                {item}
-                <PersonAva img={`img/dating/heroAva.jpg`} />
-              </div>
-            ))}
-          </div>
+          <Delay delay={chatProgress * 100 + 200}>
+            <div className="btnBox">
+              {messageFallback ? (
+                <Message className="infoMessage" right>
+                  <PersonAva
+                    img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
+                  />
+                </Message>
+              ) : (
+                nextMessage.Hero.map((text, index) => (
+                  <Delay key={index} delay={index * 100 + 400}>
+                    <Message
+                      className="btnMessage"
+                      text={text}
+                      onClick={() => handleClick(index)}
+                    >
+                      <PersonAva img={`img/dating/heroAva.jpg`} />
+                    </Message>
+                  </Delay>
+                ))
+              )}
+            </div>
+          </Delay>
         )}
       </div>
 
       <div className="girlName">
-        <div className="name">{girlsInfo[girlIndex].name}</div>
+        <div className="addText">with</div>
+        <div className="nameWrap">
+          <div className="name" key={girlsInfo[girlIndex].name}>
+            {girlsInfo[girlIndex].name}
+          </div>
+        </div>
       </div>
 
       <Scroll
         className="scrollAvatars"
-        scrollXY={[92, 526]}
+        scrollXY={[92, 530]}
         objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
@@ -171,11 +209,57 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           <PersonAva
             key={item.id}
             className={index === girlIndex ? "active" : item.condition}
-            img={`img/images/${item.type}/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
+            img={`img/images/superhero/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
             onClick={() => !item.condition && setGirlIndex(index)}
           />
         ))}
       </Scroll>
     </>
   );
+};
+
+const Message = ({
+  className, // simpleMessage d*, btnMessage, infoMessage
+  onClick,
+  right,
+  text,
+  children,
+}) => {
+  return (
+    <div
+      className={`message ${className ? className : "simpleMessage"} ${
+        right ? "right" : ""
+      }`}
+      onClick={onClick}
+    >
+      {text ? (
+        <div className="text">{text}</div>
+      ) : (
+        <div className="messageFallback">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      )}
+      {children}
+    </div>
+  );
+};
+
+const Delay = ({ delay, children, onTimeout }) => {
+  const [show, setShow] = React.useState(false);
+
+  const onTimeoutHandler = () => {
+    setShow(true);
+    if (onTimeout) {
+      onTimeout();
+    }
+  };
+
+  React.useEffect(() => {
+    const timer = setTimeout(onTimeoutHandler, delay);
+    return () => clearTimeout(timer);
+  }, [delay]);
+
+  return show ? children : null;
 };

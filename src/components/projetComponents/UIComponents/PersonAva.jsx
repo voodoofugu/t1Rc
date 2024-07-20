@@ -3,7 +3,10 @@ import { selectors } from "../../templateComponents/GlobalStateStor";
 
 export default function PersonAva({ img, className, onClick }) {
   return (
-    <div className={`personAva ${className}`} onClick={onClick}>
+    <div
+      className={`personAva ${className ? className : ""}`}
+      onClick={onClick}
+    >
       <div className="avaBg">
         <div className="avaBgExtra"></div>
       </div>
