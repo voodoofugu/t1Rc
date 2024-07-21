@@ -24,7 +24,7 @@ interface ScrollType {
   rootMargin?: number[] | number;
   suspending?: boolean;
   fallback?: React.ReactNode;
-  scrollTop?: number;
+  scrollTop?: number | "end";
   // multipleDirectionQuantity?: boolean;
   // onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
   // autoSize?: boolean;
@@ -48,7 +48,7 @@ const Scroll: React.FC<ScrollType> = ({
   rootMargin = null,
   suspending = false,
   fallback = null,
-  scrollTop = 0,
+  scrollTop,
   infiniteScroll = false,
   contentAlignCenter = false,
   wrapAlignCenter = false,
@@ -61,7 +61,7 @@ const Scroll: React.FC<ScrollType> = ({
   let objectsWrapperAligning = false;
   const clickedObject = React.useRef("");
 
-  const [scroll, setScroll] = React.useState(scrollTop);
+  const [scroll, setScroll] = React.useState(0);
 
   const childCount = React.Children.count(children);
 
@@ -325,6 +325,7 @@ const Scroll: React.FC<ScrollType> = ({
     [handleMouseMove, handleMouseUp, customScrollRef]
   );
 
+  // effects
   React.useEffect(() => {
     // warn handling
     function warn(prop: string, missingProp: string) {
@@ -343,6 +344,35 @@ const Scroll: React.FC<ScrollType> = ({
       scrollReverse && warn("fallback", "suspending");
     }
   }, []);
+
+  React.useEffect(() => {
+    if (scrollTop && scrollElementRef.current) {
+      let lastScrollTop: number;
+      let animationId: number;
+
+      const localScrollTop =
+        typeof scrollTop === "number"
+          ? scrollTop
+          : objectsWrapperHeight > thumbSize
+          ? objectsWrapperHeight - thumbSize
+          : 0;
+
+      const getTop = function () {
+        if (scrollElementRef.current.scrollTop === 0) {
+          scrollElementRef.current.scrollTop += localScrollTop;
+        } else {
+          return;
+        }
+        if (scrollElementRef.current.scrollTop !== lastScrollTop) {
+          animationId = requestAnimationFrame(getTop);
+        }
+      };
+
+      animationId = requestAnimationFrame(getTop);
+
+      return () => cancelAnimationFrame(animationId);
+    }
+  }, [scrollTop]);
 
   return (
     <div

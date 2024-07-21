@@ -69,16 +69,22 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const [chatProgress, setChatProgress] = React.useState(0);
   const [messageFallback, setMessageFallback] = React.useState(false);
 
-  const chatMapArray = React.useRef([]);
+  const chatMapArray = React.useRef([NaN]);
   const currentMessageIndex = React.useRef(NaN);
-  console.log("chatMapArray", chatMapArray.current);
+  const clickedRef = React.useRef(false);
+  console.log("clickedRef", clickedRef.current);
+  console.log("messageFallback", messageFallback);
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
   const nextMessage = girlsInfo[girlIndex].chat[chatProgress + 1];
 
   React.useEffect(() => {
-    if ("Girl" in nextMessage) {
-      setChatProgress((prevChatProgress) => prevChatProgress + 1);
+    if ("Girl" in nextMessage && !messageFallback) {
+      clickedRef.current = true;
+      setMessageFallback(true);
+      setTimeout(() => {
+        setChatProgress((prevChatProgress) => prevChatProgress + 1);
+      }, 2000);
     }
 
     chatMapArray.current =
@@ -91,7 +97,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
   const handleClick = (index) => {
     currentMessageIndex.current = index;
-    setMessageFallback(true);
+    clickedRef.current = true;
     setChatProgress((prevChatProgress) => prevChatProgress + 1);
   };
 
@@ -115,35 +121,36 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           gap={10}
           padding={10}
           scrollTrigger="←→/←O→"
+          scrollTop="end"
         >
           {arrayFromChatProgress.map((item, index) => {
             const message = girlsInfo[girlIndex].chat[item];
 
             if ("Girl" in message) {
-              if (index === 0) {
-                return message.Girl.map((text) => (
-                  <Delay key={index} delay={index * 100 + 200}>
-                    <Message right text={text} />
-                  </Delay>
-                ));
-              } else {
-                return message.Girl.map((text) => (
-                  <Delay
-                    key={index}
-                    delay={text.split(" ")[0].length * 300}
-                    onTimeout={() => setMessageFallback(false)}
-                  >
-                    <Message right text={text} />
-                  </Delay>
-                ));
-              }
+              return message.Girl.map((text) => (
+                <Delay
+                  key={index}
+                  delay={
+                    clickedRef.current
+                      ? text.split(" ")[0].length * 100 + 500
+                      : index * 100 + 100
+                  }
+                  onTimeout={() =>
+                    messageFallback &&
+                    clickedRef.current &&
+                    (setMessageFallback(false), (clickedRef.current = false))
+                  }
+                >
+                  <Message right text={text} />
+                </Delay>
+              ));
             }
 
             if ("Hero" in message) {
               return message.Hero.map(
                 (text, textIndex) =>
                   textIndex === chatMapArray.current[index] && (
-                    <Delay key={index} delay={index * 100 + 200}>
+                    <Delay key={index} delay={index * 100 + 100}>
                       <Message text={text} />
                     </Delay>
                   )
@@ -152,31 +159,33 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           })}
         </Scroll>
 
-        {"Hero" in nextMessage && (
-          <Delay delay={chatProgress * 100 + 200}>
-            <div className="btnBox">
-              {messageFallback ? (
-                <Message className="infoMessage" right>
-                  <PersonAva
-                    img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
-                  />
-                </Message>
-              ) : (
-                nextMessage.Hero.map((text, index) => (
-                  <Delay key={index} delay={index * 100 + 400}>
-                    <Message
-                      className="btnMessage"
-                      text={text}
-                      onClick={() => handleClick(index)}
-                    >
-                      <PersonAva img={`img/dating/heroAva.jpg`} />
-                    </Message>
-                  </Delay>
-                ))
-              )}
-            </div>
-          </Delay>
-        )}
+        <div className="btnBox">
+          {"Hero" in nextMessage && !messageFallback && (
+            <Delay delay={chatProgress * 100 + 400}>
+              {nextMessage.Hero.map((text, index) => (
+                <Delay key={index} delay={index * 100 + 100}>
+                  <Message
+                    className="btnMessage"
+                    text={text}
+                    onClick={() => handleClick(index)}
+                  >
+                    <PersonAva img={`img/dating/heroAva.jpg`} />
+                  </Message>
+                </Delay>
+              ))}
+            </Delay>
+          )}
+
+          {"Girl" in nextMessage && messageFallback && (
+            <Delay delay={600}>
+              <Message className="infoMessage" right>
+                <PersonAva
+                  img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
+                />
+              </Message>
+            </Delay>
+          )}
+        </div>
       </div>
 
       <div className="girlName">
@@ -204,6 +213,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         // suspending
         // fallback={<div>loading</div>}
         // contentAlignCenter
+        // scrollTop={100}
       >
         {girlsInfo.map((item, index) => (
           <PersonAva
@@ -251,13 +261,12 @@ const Delay = ({ delay, children, onTimeout }) => {
 
   const onTimeoutHandler = () => {
     setShow(true);
-    if (onTimeout) {
-      onTimeout();
-    }
+    onTimeout && onTimeout();
   };
 
   React.useEffect(() => {
     const timer = setTimeout(onTimeoutHandler, delay);
+
     return () => clearTimeout(timer);
   }, [delay]);
 
