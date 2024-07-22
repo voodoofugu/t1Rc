@@ -65,15 +65,16 @@ export default function Dating({ pageName, children }) {
 }
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
-  const [girlIndex, setGirlIndex] = React.useState(0);
-  const [chatProgress, setChatProgress] = React.useState(0);
-  const [messageFallback, setMessageFallback] = React.useState(false);
-
-  const chatMapArray = React.useRef([NaN]);
   const currentMessageIndex = React.useRef(NaN);
   const clickedRef = React.useRef(false);
-  console.log("clickedRef", clickedRef.current);
-  console.log("messageFallback", messageFallback);
+
+  const [chatMapArray, setChatMapArray] = React.useState([0]);
+  console.log("chatMapArray", chatMapArray);
+  const [girlIndex, setGirlIndex] = React.useState(0);
+  const [chatProgress, setChatProgress] = React.useState(
+    chatMapArray.length - 1
+  );
+  const [messageFallback, setMessageFallback] = React.useState(false);
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
   const nextMessage = girlsInfo[girlIndex].chat[chatProgress + 1];
@@ -83,21 +84,22 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       clickedRef.current = true;
       setMessageFallback(true);
       setTimeout(() => {
+        currentMessageIndex.current = 0; // если будет логика смены сообщения для Girl то заменить на нужное значение
         setChatProgress((prevChatProgress) => prevChatProgress + 1);
       }, 2000);
     }
 
-    chatMapArray.current =
-      chatMapArray.current.length < arrayFromChatProgress.length
-        ? [...chatMapArray.current, currentMessageIndex.current]
-        : [...chatMapArray.current];
-
-    currentMessageIndex.current = NaN;
+    if (chatMapArray.length < arrayFromChatProgress.length) {
+      setChatMapArray((prevChatProgress) => [
+        ...prevChatProgress,
+        currentMessageIndex.current,
+      ]);
+    }
   }, [chatProgress]);
 
   const handleClick = (index) => {
-    currentMessageIndex.current = index;
     clickedRef.current = true;
+    currentMessageIndex.current = index;
     setChatProgress((prevChatProgress) => prevChatProgress + 1);
   };
 
@@ -123,16 +125,16 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           scrollTrigger="←→/←O→"
           scrollTop="end"
         >
-          {arrayFromChatProgress.map((item, index) => {
-            const message = girlsInfo[girlIndex].chat[item];
+          {chatMapArray.map((item, index) => {
+            const message = girlsInfo[girlIndex].chat[index];
 
             if ("Girl" in message) {
-              return message.Girl.map((text) => (
+              return (
                 <Delay
                   key={index}
                   delay={
                     clickedRef.current
-                      ? text.split(" ")[0].length * 100 + 500
+                      ? message.Girl[item].split(" ")[0].length * 100 + 500
                       : index * 100 + 100
                   }
                   onTimeout={() =>
@@ -141,19 +143,16 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                     (setMessageFallback(false), (clickedRef.current = false))
                   }
                 >
-                  <Message right text={text} />
+                  <Message right text={message.Girl[item]} />
                 </Delay>
-              ));
+              );
             }
 
             if ("Hero" in message) {
-              return message.Hero.map(
-                (text, textIndex) =>
-                  textIndex === chatMapArray.current[index] && (
-                    <Delay key={index} delay={index * 100 + 100}>
-                      <Message text={text} />
-                    </Delay>
-                  )
+              return (
+                <Delay key={index} delay={index * 100 + 100}>
+                  <Message text={message.Hero[item]} />
+                </Delay>
               );
             }
           })}
@@ -213,7 +212,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         // suspending
         // fallback={<div>loading</div>}
         // contentAlignCenter
-        // scrollTop={100}
+        scrollTop={100}
       >
         {girlsInfo.map((item, index) => (
           <PersonAva

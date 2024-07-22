@@ -28,6 +28,7 @@ interface ScrollType {
   // multipleDirectionQuantity?: boolean;
   // onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
   // autoSize?: boolean;
+  // overflowEdgeGradient?: boolean | string;
   infiniteScroll?: boolean;
   contentAlignCenter?: boolean;
   wrapAlignCenter?: boolean;
@@ -48,10 +49,11 @@ const Scroll: React.FC<ScrollType> = ({
   rootMargin = null,
   suspending = false,
   fallback = null,
-  scrollTop,
+  scrollTop = 0,
   infiniteScroll = false,
   contentAlignCenter = false,
   wrapAlignCenter = false,
+  // overflowEdgeGradient = "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%)",
   children,
 }) => {
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
@@ -372,7 +374,13 @@ const Scroll: React.FC<ScrollType> = ({
 
       return () => cancelAnimationFrame(animationId);
     }
-  }, [scrollTop]);
+  }, [
+    scrollTop,
+    scrollElementRef,
+    localScrollXY,
+    objectsWrapperHeight,
+    thumbSize,
+  ]);
 
   return (
     <div
