@@ -69,23 +69,31 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const clickedRef = React.useRef(false);
   const btnBoxRef = React.useRef();
 
-  const [chatMapArray, setChatMapArray] = React.useState([0]);
+  const [chatMapArray, setChatMapArray] = React.useState([0, 0, 0, 0, 0]);
   const [girlIndex, setGirlIndex] = React.useState(0);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
-  const [messageFallback, setMessageFallback] = React.useState(false);
-  console.log("messageFallback", messageFallback);
+  const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
-  const nextMessage = girlsInfo[girlIndex].chat[chatProgress + 1];
+  const nextMessage =
+    girlsInfo[girlIndex].chat.length >= chatProgress + 1
+      ? girlsInfo[girlIndex].chat[chatProgress + 1]
+      : false;
 
   React.useEffect(() => {
-    if ("Girl" in nextMessage && !messageFallback) {
-      clickedRef.current = true;
-      setMessageFallback(true);
-      currentMessageIndex.current = 0; // если будет логика смены сообщения для Girl то заменить на нужное значение
-      setChatProgress((prevChatProgress) => prevChatProgress + 1);
+    if (nextMessage) {
+      if ("Girl" in nextMessage && messageFallback === "none") {
+        clickedRef.current = true;
+        girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
+          ? setMessageFallback("photo")
+          : setMessageFallback("message");
+        currentMessageIndex.current = 0; // если будет логика смены сообщения для Girl то заменить на нужное значение
+        setChatProgress((prevChatProgress) => prevChatProgress + 1);
+      }
+    } else {
+      setMessageFallback("none"), (clickedRef.current = false);
     }
 
     if (chatMapArray.length < arrayFromChatProgress.length) {
@@ -94,7 +102,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         currentMessageIndex.current,
       ]);
     }
-  }, [chatProgress]);
+  }, [chatProgress, messageFallback]);
 
   const handleClick = (index) => {
     clickedRef.current = true;
@@ -121,14 +129,14 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       <div className="progBar"></div>
 
       <div className="scrollChatWrap" key={girlsInfo[girlIndex].id}>
-        <Scroll
+        {/* <Scroll
           className="scrollChat"
           scrollXY={[500, 480]}
-          objectXY={[460, 86]}
-          gap={10}
+          // objectXY={[460, 86]}
+          gap={[16, 0]}
           padding={10}
           scrollTrigger="←→/←O→"
-          scrollTop="end"
+          // scrollTop="end"
         >
           {chatMapArray.map((item, index) => {
             const message = girlsInfo[girlIndex].chat[index];
@@ -140,55 +148,69 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                   delay={
                     clickedRef.current
                       ? message.Girl[item].split(" ")[0].length * 100 + 2500
-                      : index * 100 + 100
+                      : index * 100
                   }
-                  onTimeout={
-                    () =>
-                      messageFallback &&
-                      clickedRef.current &&
-                      (btnBoxRef.current.classList.add("hiddenInner"),
-                      setTimeout(() => {
-                        setMessageFallback(false),
-                          (clickedRef.current = false),
-                          btnBoxRef.current.classList.remove("hiddenInner");
-                      }, 1000))
-                    // setMessageFallback(false), (clickedRef.current = false)
+                  onTimeout={() =>
+                    (messageFallback === "message" ||
+                      messageFallback === "photo") &&
+                    clickedRef.current &&
+                    (btnBoxRef.current.classList.add("hiddenInner"),
+                    setTimeout(() => {
+                      setMessageFallback("none"),
+                        (clickedRef.current = false),
+                        btnBoxRef.current.classList.remove("hiddenInner");
+                    }, 1000))
                   }
                 >
-                  <Message right text={message.Girl[item]} />
+                  {message.Girl[item] === "img" ? (
+                    <Message right text>
+                      <div className="photo">
+                        <div className="imgWrap">
+                          <img
+                            src={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/sh-6.jpg`}
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    </Message>
+                  ) : (
+                    <Message right text={message.Girl[item]} />
+                  )}
                 </Delay>
               );
             }
 
             if ("Hero" in message) {
               return (
-                <Delay key={index} delay={index * 100 + 100}>
+                <Delay key={index} delay={index * 100}>
                   <Message text={message.Hero[item]} />
                 </Delay>
               );
             }
           })}
-        </Scroll>
+        </Scroll> */}
 
         <div className="btnBox" ref={btnBoxRef}>
-          {"Hero" in nextMessage && !messageFallback && (
-            <>
-              <div className="messageBack"></div>
-              {nextMessage.Hero.map((text, index) => (
-                <Delay key={index} delay={index * 100 + 500}>
-                  <Message
-                    className="btnMessage"
-                    text={text}
-                    onClick={() => handleClick(index)}
-                  >
-                    <PersonAva img={`img/dating/heroAva.jpg`} />
-                  </Message>
-                </Delay>
-              ))}
-            </>
-          )}
+          {nextMessage &&
+            "Hero" in nextMessage &&
+            messageFallback === "none" && (
+              <>
+                <div className="messageBack"></div>
+                {nextMessage.Hero.map((text, index) => (
+                  <Delay key={index} delay={index * 100 + 500}>
+                    <Message
+                      className="btnMessage"
+                      text={text}
+                      onClick={() => handleClick(index)}
+                    >
+                      <PersonAva img={`img/dating/heroAva.jpg`} />
+                    </Message>
+                  </Delay>
+                ))}
+              </>
+            )}
 
-          {messageFallback && (
+          {messageFallback === "message" && (
             <Delay delay={600}>
               <div className="messageBack"></div>
               <Message className="infoMessage" right>
@@ -198,8 +220,27 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
               </Message>
             </Delay>
           )}
+          {messageFallback === "photo" && (
+            <Delay delay={600}>
+              <div className="messageBack"></div>
+              <Message className="infoMessage" text right>
+                <ProgressBar
+                  className={"messageProgressBar fillingAnimation"}
+                />
+                <PersonAva
+                  img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
+                />
+              </Message>
+            </Delay>
+          )}
         </div>
       </div>
+
+      <ProgressBar
+        className={"progressBar"}
+        currentProgress={chatProgress}
+        maxProgress={girlsInfo[girlIndex].chat.length - 1}
+      />
 
       <div className="girlName">
         <div className="addText">with</div>
@@ -213,7 +254,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       <Scroll
         className="scrollAvatars"
         scrollXY={[92, 530]}
-        objectXY={[86, 86]}
+        // objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
         scrollTrigger="←→/←O→"
@@ -240,6 +281,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     </>
   );
 };
+// console.log("dsfsad");
 
 const Message = ({
   className, // simpleMessage d*, btnMessage, infoMessage
@@ -268,6 +310,7 @@ const Message = ({
           <div></div>
         </div>
       )}
+
       {children}
     </div>
   );
@@ -288,4 +331,42 @@ const Delay = ({ delay, children, onTimeout }) => {
   }, [delay]);
 
   return show ? children : null;
+};
+
+const ProgressBar = ({
+  className,
+  currentProgress,
+  maxProgress,
+  text,
+  objectsPerProgress,
+  children,
+}) => {
+  const widthPerProgress = 100 / maxProgress;
+
+  return (
+    <div className={`${className}`}>
+      <div className="barScaleWrap">
+        <div
+          className="barScale"
+          style={{ width: `${widthPerProgress * currentProgress}%` }}
+        ></div>
+      </div>
+
+      {objectsPerProgress
+        ? maxProgress.map((_, index) =>
+            typeof objectsPerProgress === "object"
+              ? objectsPerProgress
+              : typeof objectsPerProgress === "array"
+              ? objectsPerProgress.map((obj) => obj[index])
+              : null
+          )
+        : null}
+
+      {text ? (
+        <div className="barText">{`${text} ${currentProgress}/${maxProgress}`}</div>
+      ) : null}
+
+      {children}
+    </div>
+  );
 };
