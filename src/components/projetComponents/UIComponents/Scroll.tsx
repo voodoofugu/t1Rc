@@ -59,12 +59,12 @@ const Scroll: React.FC<ScrollType> = ({
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
   const objectsWrapperRef = React.useRef<HTMLDivElement | null>(null);
   const customScrollRef = React.useRef<HTMLDivElement | null>(null);
-  const thumbRef = React.useRef<HTMLDivElement | null>(null);
 
   let objectsWrapperAligning = false;
   const clickedObject = React.useRef("");
 
   const [scroll, setScroll] = React.useState(0);
+  const [thumb, setThumb] = React.useState(0);
 
   const childCount = React.Children.count(children);
 
@@ -288,7 +288,7 @@ const Scroll: React.FC<ScrollType> = ({
         Math.round(
           (scrollElementRef.current!.scrollTop /
             (xy - (objectsWrapperHeight + pLocalXY))) *
-            (xy - thumbSize)
+            (xy - thumbSize || thumb)
         )
       );
 
@@ -352,31 +352,35 @@ const Scroll: React.FC<ScrollType> = ({
     }
   }, []);
 
-  // React.useEffect(() => {
-  //   if (!thumbSize && !objectsWrapperHeight && objectsWrapperRef.current) {
-  //     let oldHeight: number;
-  //     let animationId: number;
+  React.useEffect(() => {
+    if (!thumbSize && !objectsWrapperHeight && objectsWrapperRef.current) {
+      let oldHeight: number;
+      let animationId: number;
 
-  //     const getThumbSize = function () {
-  //       console.log('getThumbSize');
-  //       if (objectsWrapperRef.current.clientHeight) {
-  //         objectsWrapperHeight = objectsWrapperRef.current.clientHeight;
-  //         // thumbRef.current.style.height = `${Math.round(
-  //         //   (xy / (objectsWrapperHeight + pLocalXY)) * xy
-  //         // )}`;
-  //       } else {
-  //         return;
-  //       }
-  //       console.log((xy / (objectsWrapperHeight + pLocalXY)) * xy);
+      const getThumbSize = function () {
+        console.log("getThumbSize");
+        if (objectsWrapperRef.current.clientHeight) {
+          const height = Math.round(
+            (xy / (objectsWrapperRef.current.clientHeight + pLocalXY)) * xy
+          );
+          // objectsWrapperHeight = objectsWrapperRef.current.clientHeight;
+          if (oldHeight !== height) {
+            setThumb(height);
+            oldHeight = Math.round(
+              (xy / (objectsWrapperRef.current.clientHeight + pLocalXY)) * xy
+            );
+          } else {
+            return;
+          }
+          animationId = requestAnimationFrame(getThumbSize);
+        }
+      };
 
-  //       animationId = requestAnimationFrame(getThumbSize);
-  //     };
+      animationId = requestAnimationFrame(getThumbSize);
 
-  //     animationId = requestAnimationFrame(getThumbSize);
-
-  //     return () => cancelAnimationFrame(animationId);
-  //   }
-  // }, []);
+      return () => cancelAnimationFrame(animationId);
+    }
+  }, []);
 
   React.useEffect(() => {
     if (scrollTop && scrollElementRef.current) {
@@ -422,29 +426,18 @@ const Scroll: React.FC<ScrollType> = ({
       }}
     >
       {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
-        thumbSize < xy && (
-          <div
-            className={`scrollBar ${scrollReverse ? "first" : "last"}`}
-            style={
-              scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→"
-                ? {}
-                : { pointerEvents: "none" }
-            }
-          >
-            <div
-              ref={thumbRef}
-              className="scrollBarThumb"
-              onMouseDown={(e) =>
-                (scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→") &&
-                handleMouseDown(e, "thumb")
-              }
-              style={
-                xDirection
-                  ? { width: `${thumbSize}px`, left: `${scroll}px` }
-                  : { height: `${thumbSize}px`, top: `${scroll}px` }
-              }
-            />
-          </div>
+        (thumbSize < xy || thumb < xy) && (
+          <ScrollBar
+            {...{
+              handleMouseDown,
+              thumbSize,
+              xDirection,
+              scrollReverse,
+              scrollTrigger,
+              thumb,
+              scroll,
+            }}
+          />
         )}
 
       <div
@@ -697,3 +690,47 @@ const InfiniteScrollObjectWrapper: React.FC<InfiniteScrollObjectWrapperProps> =
   );
 
 export default Scroll;
+
+interface ScrollBarProps
+  extends Pick<ScrollType, "scrollTrigger" | "xDirection" | "scrollReverse"> {
+  handleMouseDown: (e: React.MouseEvent, type: "thumb") => void;
+  thumbSize: number;
+  thumb: number;
+  scroll: number;
+}
+
+const ScrollBar: React.FC<ScrollBarProps> = React.memo(
+  ({
+    scrollTrigger,
+    xDirection,
+    scrollReverse,
+    handleMouseDown,
+    thumbSize,
+    thumb,
+    scroll,
+  }) => {
+    return (
+      <div
+        className={`scrollBar ${scrollReverse ? "first" : "last"}`}
+        style={
+          scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→"
+            ? {}
+            : { pointerEvents: "none" }
+        }
+      >
+        <div
+          className="scrollBarThumb"
+          onMouseDown={(e) =>
+            (scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→") &&
+            handleMouseDown(e, "thumb")
+          }
+          style={
+            xDirection
+              ? { width: `${thumbSize || thumb}px`, left: `${scroll}px` }
+              : { height: `${thumbSize || thumb}px`, top: `${scroll}px` }
+          }
+        />
+      </div>
+    );
+  }
+);
