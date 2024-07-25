@@ -64,18 +64,12 @@ const Scroll: React.FC<ScrollType> = ({
   const clickedObject = React.useRef("");
 
   const [scroll, setScroll] = React.useState(0);
-  const [thumb, setThumb] = React.useState(0);
+  const [receivedObjectsWrapperSize, setReceivedObjectsWrapperSize] =
+    React.useState(0);
 
   const childCount = React.Children.count(children);
 
   // variables
-  const xyObject = objectXY ? (xDirection ? objectXY[0] : objectXY[1]) : NaN;
-  const xyObjectReverse = objectXY
-    ? xDirection
-      ? objectXY[1]
-      : objectXY[0]
-    : NaN;
-
   const pLocal =
     typeof padding === "number"
       ? [padding, padding, padding, padding]
@@ -92,6 +86,23 @@ const Scroll: React.FC<ScrollType> = ({
 
   const [gapX, gapY] =
     typeof gap === "number" ? [gap, gap] : xDirection ? [gap[1], gap[0]] : gap;
+
+  const localObjectXY = objectXY
+    ? objectXY
+    : xDirection
+    ? [NaN, scrollXY[1] - pY]
+    : [scrollXY[0] - pX, NaN];
+
+  const xyObject = localObjectXY
+    ? xDirection
+      ? localObjectXY[0]
+      : localObjectXY[1]
+    : NaN;
+  const xyObjectReverse = localObjectXY
+    ? xDirection
+      ? localObjectXY[1]
+      : localObjectXY[0]
+    : NaN;
 
   const mRootLocal = rootMargin
     ? typeof rootMargin === "number"
@@ -112,17 +123,19 @@ const Scroll: React.FC<ScrollType> = ({
     : [0, 0];
 
   const localScrollXY = React.useMemo(() => {
-    const [x, y] = scrollXY || objectXY || [NaN, NaN];
+    const [x, y] = scrollXY || localObjectXY;
     return [x, y];
   }, []);
 
   // calculations
-  const objectsPerDirection = objectXY
+  const objectsPerDirection = localObjectXY
     ? React.useMemo(() => {
         const objects = xDirection
-          ? Math.abs(Math.floor((localScrollXY[1] - pY) / (objectXY[0] + gapX)))
+          ? Math.abs(
+              Math.floor((localScrollXY[1] - pY) / (localObjectXY[0] + gapX))
+            )
           : Math.abs(
-              Math.floor((localScrollXY[0] - pY) / (objectXY[0] + gapX))
+              Math.floor((localScrollXY[0] - pY) / (localObjectXY[0] + gapX))
             );
 
         return objects > childCount ? childCount : objects < 1 ? 1 : objects;
@@ -163,11 +176,15 @@ const Scroll: React.FC<ScrollType> = ({
     );
   }, [xyObjectReverse, objectsPerDirection, gapY]);
 
-  let objectsWrapperHeight = React.useMemo(() => {
-    return xyObject * childsPerDirection + (childsPerDirection - 1) * gapX;
-  }, [xyObject, childsPerDirection, gapX]);
+  const objectsWrapperHeight = objectXY
+    ? React.useMemo(() => {
+        return xyObject * childsPerDirection + (childsPerDirection - 1) * gapX;
+      }, [xyObject, childsPerDirection, gapX])
+    : React.useMemo(() => {
+        return receivedObjectsWrapperSize;
+      }, [receivedObjectsWrapperSize]);
 
-  let thumbSize = React.useMemo(() => {
+  const thumbSize = React.useMemo(() => {
     if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
       return Math.round((xy / (objectsWrapperHeight + pLocalXY)) * xy);
     } else {
@@ -230,7 +247,7 @@ const Scroll: React.FC<ScrollType> = ({
       );
 
       const elementBottom = (function () {
-        return infiniteScroll ? elementTop + objectXY[1] : null;
+        return infiniteScroll ? elementTop + localObjectXY[1] : null;
       })();
 
       const left =
@@ -254,7 +271,7 @@ const Scroll: React.FC<ScrollType> = ({
   }, [
     children,
     splitIndices,
-    objectXY,
+    localObjectXY,
     gap,
     infiniteScroll,
     objectsPerDirection,
@@ -273,13 +290,13 @@ const Scroll: React.FC<ScrollType> = ({
       }
     }
     return false;
-  }, [xDirection, localScrollXY, objectXY, gap]);
+  }, [xDirection, localScrollXY, localObjectXY, gap]);
 
   const scrollingSizeToObjectsWrapper = React.useMemo(() => {
     return xDirection
       ? Math.round(objectsWrapperHeight / localScrollXY[0])
       : Math.round(objectsWrapperHeight / localScrollXY[1]);
-  }, [xDirection, localScrollXY, objectXY, gap]);
+  }, [xDirection, localScrollXY, localObjectXY, gap]);
 
   // events
   const handleScroll = React.useCallback(() => {
@@ -288,7 +305,7 @@ const Scroll: React.FC<ScrollType> = ({
         Math.round(
           (scrollElementRef.current!.scrollTop /
             (xy - (objectsWrapperHeight + pLocalXY))) *
-            (xy - thumbSize || thumb)
+            (xy - thumbSize)
         )
       );
 
@@ -353,34 +370,37 @@ const Scroll: React.FC<ScrollType> = ({
   }, []);
 
   React.useEffect(() => {
-    if (!thumbSize && !objectsWrapperHeight && objectsWrapperRef.current) {
+    if (!objectXY && objectsWrapperRef.current) {
+      let functionCount: number = 0;
       let oldHeight: number;
       let animationId: number;
 
-      const getThumbSize = function () {
+      const getObjectsSize = function () {
         console.log("getThumbSize");
-        if (objectsWrapperRef.current.clientHeight) {
-          const height = Math.round(
-            (xy / (objectsWrapperRef.current.clientHeight + pLocalXY)) * xy
-          );
-          // objectsWrapperHeight = objectsWrapperRef.current.clientHeight;
-          if (oldHeight !== height) {
-            setThumb(height);
-            oldHeight = Math.round(
-              (xy / (objectsWrapperRef.current.clientHeight + pLocalXY)) * xy
-            );
+        if (objectsWrapperRef.current) {
+          oldHeight = objectsWrapperRef.current.clientHeight;
+          if (oldHeight !== objectsWrapperRef.current.clientHeight) {
+            animationId = requestAnimationFrame(getObjectsSize);
           } else {
-            return;
+            if (functionCount < 6) {
+              functionCount++;
+              animationId = requestAnimationFrame(getObjectsSize);
+            } else {
+              setReceivedObjectsWrapperSize(
+                xDirection
+                  ? objectsWrapperRef.current.clientWidth - pL - pR
+                  : objectsWrapperRef.current.clientHeight - pT - pB
+              );
+            }
           }
-          animationId = requestAnimationFrame(getThumbSize);
         }
       };
 
-      animationId = requestAnimationFrame(getThumbSize);
+      animationId = requestAnimationFrame(getObjectsSize);
 
       return () => cancelAnimationFrame(animationId);
     }
-  }, []);
+  }, [objectXY, objectsWrapperRef.current, receivedObjectsWrapperSize]);
 
   React.useEffect(() => {
     if (scrollTop && scrollElementRef.current) {
@@ -389,8 +409,10 @@ const Scroll: React.FC<ScrollType> = ({
       const localScrollTop =
         typeof scrollTop === "number"
           ? scrollTop
-          : objectsWrapperHeight > thumbSize
-          ? objectsWrapperHeight - thumbSize
+          : scrollTop === "end"
+          ? objectsWrapperHeight > thumbSize
+            ? objectsWrapperHeight - thumbSize
+            : 0
           : 0;
 
       const getTop = function () {
@@ -406,7 +428,7 @@ const Scroll: React.FC<ScrollType> = ({
 
       return () => cancelAnimationFrame(animationId);
     }
-  }, [scrollTop, scrollElementRef.current]);
+  }, [scrollTop, scrollElementRef.current, receivedObjectsWrapperSize]);
 
   return (
     <div
@@ -426,18 +448,28 @@ const Scroll: React.FC<ScrollType> = ({
       }}
     >
       {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
-        (thumbSize < xy || thumb < xy) && (
-          <ScrollBar
-            {...{
-              handleMouseDown,
-              thumbSize,
-              xDirection,
-              scrollReverse,
-              scrollTrigger,
-              thumb,
-              scroll,
-            }}
-          />
+        thumbSize < xy && (
+          <div
+            className={`scrollBar ${scrollReverse ? "first" : "last"}`}
+            style={
+              scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→"
+                ? {}
+                : { pointerEvents: "none" }
+            }
+          >
+            <div
+              className="scrollBarThumb"
+              onMouseDown={(e) =>
+                (scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→") &&
+                handleMouseDown(e, "thumb")
+              }
+              style={
+                xDirection
+                  ? { width: `${thumbSize}px`, left: `${scroll}px` }
+                  : { height: `${thumbSize}px`, top: `${scroll}px` }
+              }
+            />
+          </div>
         )}
 
       <div
@@ -475,17 +507,15 @@ const Scroll: React.FC<ScrollType> = ({
             ...(objectsWrapperWidth
               ? { width: `${objectsWrapperWidth}px` }
               : {}),
-            ...(objectsWrapperHeight && {
-              position: "absolute",
-              height: `${objectsWrapperHeight}px`,
-            }),
+            ...(objectXY &&
+              objectsWrapperHeight && {
+                position: "absolute",
+                height: `${objectsWrapperHeight}px`,
+              }),
             ...(!infiniteScroll &&
               contentAlignCenter && {
                 justifyContent: "center",
               }),
-            ...(!objectXY && {
-              width: `${100 - pL}%`,
-            }),
           }}
         >
           {React.Children.map(children, (child, index) => {
@@ -505,7 +535,6 @@ const Scroll: React.FC<ScrollType> = ({
                       child,
                       xyObjectReverse,
                       xyObject,
-                      objectXY,
                       suspending,
                       fallback,
                       scrollElementRef: scrollElementRef.current,
@@ -521,7 +550,7 @@ const Scroll: React.FC<ScrollType> = ({
                 <ScrollObjectWrapper
                   {...{
                     child,
-                    objectXY,
+                    localObjectXY,
                     xDirection,
                     suspending,
                     fallback,
@@ -542,21 +571,17 @@ const Scroll: React.FC<ScrollType> = ({
 interface ScrollObjectWrapperProps
   extends Pick<
     ScrollType,
-    | "objectXY"
-    | "suspending"
-    | "fallback"
-    | "lazyRender"
-    | "rootMargin"
-    | "xDirection"
+    "suspending" | "fallback" | "lazyRender" | "rootMargin" | "xDirection"
   > {
   child: React.ReactNode;
   scrollElementRef?: Element | null;
+  localObjectXY?: number[];
 }
 
 const ScrollObjectWrapper: React.FC<ScrollObjectWrapperProps> = React.memo(
   ({
     child,
-    objectXY,
+    localObjectXY,
     xDirection,
     suspending,
     fallback,
@@ -564,36 +589,31 @@ const ScrollObjectWrapper: React.FC<ScrollObjectWrapperProps> = React.memo(
     scrollElementRef,
     rootMargin,
   }) => {
-    const xyObject = objectXY ? (xDirection ? objectXY[0] : objectXY[1]) : NaN;
-    const xyObjectReverse = objectXY
+    const xyObject = localObjectXY
       ? xDirection
-        ? objectXY[1]
-        : objectXY[0]
+        ? localObjectXY[0]
+        : localObjectXY[1]
+      : NaN;
+    const xyObjectReverse = localObjectXY
+      ? xDirection
+        ? localObjectXY[1]
+        : localObjectXY[0]
       : NaN;
 
     return lazyRender ? (
       <IntersectionTracking
         root={scrollElementRef}
         rootMargin={rootMargin}
-        wrapSyle={
-          objectXY
-            ? { width: `${objectXY[0]}px`, height: `${objectXY[1]}px` }
-            : xDirection
-            ? { height: "100%" }
-            : { width: "100%" }
-        }
+        wrapSyle={{
+          width: `${localObjectXY[0]}px`,
+          height: `${localObjectXY[1]}px`,
+        }}
       >
         <div
-          style={
-            objectXY
-              ? {
-                  width: `${xyObjectReverse}px`,
-                  height: `${xyObject}px`,
-                }
-              : xDirection
-              ? { height: "100%" }
-              : { width: "100%" }
-          }
+          style={{
+            width: `${xyObjectReverse}px`,
+            height: `${xyObject}px`,
+          }}
         >
           {suspending ? (
             <React.Suspense fallback={fallback}>{child}</React.Suspense>
@@ -604,28 +624,16 @@ const ScrollObjectWrapper: React.FC<ScrollObjectWrapperProps> = React.memo(
       </IntersectionTracking>
     ) : (
       <div
-        style={
-          objectXY
-            ? {
-                width: `${xyObjectReverse}px`,
-                height: `${xyObject}px`,
-              }
-            : xDirection
-            ? { height: "100%" }
-            : { width: "100%" }
-        }
+        style={{
+          width: `${xyObjectReverse}px`,
+          height: `${xyObject}px`,
+        }}
       >
         <div
-          style={
-            objectXY
-              ? {
-                  width: `${objectXY[0]}px`,
-                  height: `${objectXY[1]}px`,
-                }
-              : xDirection
-              ? { height: "100%" }
-              : { width: "100%" }
-          }
+          style={{
+            width: `${localObjectXY[0]}px`,
+            height: `${localObjectXY[1]}px`,
+          }}
         >
           {suspending ? (
             <React.Suspense fallback={fallback}>{child}</React.Suspense>
@@ -690,47 +698,3 @@ const InfiniteScrollObjectWrapper: React.FC<InfiniteScrollObjectWrapperProps> =
   );
 
 export default Scroll;
-
-interface ScrollBarProps
-  extends Pick<ScrollType, "scrollTrigger" | "xDirection" | "scrollReverse"> {
-  handleMouseDown: (e: React.MouseEvent, type: "thumb") => void;
-  thumbSize: number;
-  thumb: number;
-  scroll: number;
-}
-
-const ScrollBar: React.FC<ScrollBarProps> = React.memo(
-  ({
-    scrollTrigger,
-    xDirection,
-    scrollReverse,
-    handleMouseDown,
-    thumbSize,
-    thumb,
-    scroll,
-  }) => {
-    return (
-      <div
-        className={`scrollBar ${scrollReverse ? "first" : "last"}`}
-        style={
-          scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→"
-            ? {}
-            : { pointerEvents: "none" }
-        }
-      >
-        <div
-          className="scrollBarThumb"
-          onMouseDown={(e) =>
-            (scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→") &&
-            handleMouseDown(e, "thumb")
-          }
-          style={
-            xDirection
-              ? { width: `${thumbSize || thumb}px`, left: `${scroll}px` }
-              : { height: `${thumbSize || thumb}px`, top: `${scroll}px` }
-          }
-        />
-      </div>
-    );
-  }
-);

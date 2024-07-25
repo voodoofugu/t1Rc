@@ -70,7 +70,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const btnBoxRef = React.useRef();
 
   const [chatMapArray, setChatMapArray] = React.useState([0, 0, 0, 0, 0]);
-  const [girlIndex, setGirlIndex] = React.useState(0);
+  const [girlIndex, setGirlIndex] = React.useState(2);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
@@ -129,14 +129,14 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       <div className="progBar"></div>
 
       <div className="scrollChatWrap" key={girlsInfo[girlIndex].id}>
-        {/* <Scroll
+        <Scroll
           className="scrollChat"
-          scrollXY={[500, 480]}
+          scrollXY={[480, 480]}
           // objectXY={[460, 86]}
           gap={[16, 0]}
           padding={10}
           scrollTrigger="←→/←O→"
-          // scrollTop="end"
+          scrollTop="end"
         >
           {chatMapArray.map((item, index) => {
             const message = girlsInfo[girlIndex].chat[index];
@@ -188,7 +188,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
               );
             }
           })}
-        </Scroll> */}
+        </Scroll>
 
         <div className="btnBox" ref={btnBoxRef}>
           {nextMessage &&
@@ -251,10 +251,10 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      <Scroll
+      {/* <Scroll
         className="scrollAvatars"
         scrollXY={[92, 530]}
-        // objectXY={[86, 86]}
+        objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
         scrollTrigger="←→/←O→"
@@ -267,7 +267,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         // suspending
         // fallback={<div>loading</div>}
         // contentAlignCenter
-        scrollTop={100}
+        // scrollTop={100}
       >
         {girlsInfo.map((item, index) => (
           <PersonAva
@@ -277,7 +277,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             onClick={() => !item.condition && setGirlIndex(index)}
           />
         ))}
-      </Scroll>
+      </Scroll> */}
     </>
   );
 };
