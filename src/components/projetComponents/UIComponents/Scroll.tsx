@@ -186,6 +186,7 @@ const Scroll: React.FC<ScrollType> = ({
 
   const thumbSize = React.useMemo(() => {
     if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
+      if (objectsWrapperHeight === 0) return 0;
       return Math.round((xy / (objectsWrapperHeight + pLocalXY)) * xy);
     } else {
       return NaN;
@@ -300,10 +301,13 @@ const Scroll: React.FC<ScrollType> = ({
 
   // events
   const handleScroll = React.useCallback(() => {
-    if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
+    if (
+      (scrollElementRef.current && scrollVisibility === "<O>") ||
+      scrollVisibility === "↓<O>"
+    ) {
       const newScroll = Math.abs(
         Math.round(
-          (scrollElementRef.current!.scrollTop /
+          (scrollElementRef.current.scrollTop /
             (xy - (objectsWrapperHeight + pLocalXY))) *
             (xy - thumbSize)
         )
@@ -376,13 +380,12 @@ const Scroll: React.FC<ScrollType> = ({
       let animationId: number;
 
       const getObjectsSize = function () {
-        console.log("getThumbSize");
         if (objectsWrapperRef.current) {
           oldHeight = objectsWrapperRef.current.clientHeight;
           if (oldHeight !== objectsWrapperRef.current.clientHeight) {
             animationId = requestAnimationFrame(getObjectsSize);
           } else {
-            if (functionCount < 6) {
+            if (functionCount < 8) {
               functionCount++;
               animationId = requestAnimationFrame(getObjectsSize);
             } else {
@@ -404,31 +407,34 @@ const Scroll: React.FC<ScrollType> = ({
 
   React.useEffect(() => {
     if (scrollTop && scrollElementRef.current) {
+      let objectsWrapperHeightOld: number = 0;
       let animationId: number;
 
       const localScrollTop =
         typeof scrollTop === "number"
           ? scrollTop
           : scrollTop === "end"
-          ? objectsWrapperHeight > thumbSize
-            ? objectsWrapperHeight - thumbSize
+          ? objectsWrapperHeight + pY > xy
+            ? Math.abs(objectsWrapperHeight + pY - xy)
             : 0
           : 0;
 
       const getTop = function () {
-        if (scrollElementRef.current.scrollTop === 0) {
-          scrollElementRef.current.scrollTop += localScrollTop;
+        console.log("getTop");
+        objectsWrapperHeightOld = localScrollTop;
+        if (objectsWrapperHeightOld !== localScrollTop) {
+          animationId = requestAnimationFrame(getTop);
         } else {
+          scrollElementRef.current.scrollTop += localScrollTop;
           return;
         }
-        animationId = requestAnimationFrame(getTop);
       };
 
       animationId = requestAnimationFrame(getTop);
 
       return () => cancelAnimationFrame(animationId);
     }
-  }, [scrollTop, scrollElementRef.current, receivedObjectsWrapperSize]);
+  }, [scrollTop, scrollElementRef.current, objectsWrapperHeight, thumbSize]);
 
   return (
     <div

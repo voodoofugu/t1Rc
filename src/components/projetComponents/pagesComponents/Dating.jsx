@@ -148,7 +148,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                   delay={
                     clickedRef.current
                       ? message.Girl[item].split(" ")[0].length * 100 + 2500
-                      : index * 100
+                      : 0 // index * 100
                   }
                   onTimeout={() =>
                     (messageFallback === "message" ||
@@ -182,7 +182,8 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
             if ("Hero" in message) {
               return (
-                <Delay key={index} delay={index * 100}>
+                // index * 100
+                <Delay key={index} delay={0}>
                   <Message text={message.Hero[item]} />
                 </Delay>
               );
