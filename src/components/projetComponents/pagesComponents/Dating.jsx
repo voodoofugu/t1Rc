@@ -69,7 +69,15 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const clickedRef = React.useRef(false);
   const btnBoxRef = React.useRef();
 
-  const [chatMapArray, setChatMapArray] = React.useState([0, 0, 0, 0, 0]);
+  const timeoutsRef = React.useRef([]);
+  const clearAllTimeouts = () => {
+    timeoutsRef.current.forEach((timeoutId) => clearTimeout(timeoutId));
+    timeoutsRef.current = [];
+  };
+
+  const [chatMapArray, setChatMapArray] = React.useState([
+    0, 0, 0, 0, 0, 0, 0, 0,
+  ]);
   const [girlIndex, setGirlIndex] = React.useState(2);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
@@ -77,10 +85,31 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
+  // const currentMessage = girlsInfo[girlIndex].chat[chatMapArray.length - 1];
   const nextMessage =
     girlsInfo[girlIndex].chat.length >= chatProgress + 1
       ? girlsInfo[girlIndex].chat[chatProgress + 1]
       : false;
+
+  const handleClick = (index) => {
+    clickedRef.current = true;
+    currentMessageIndex.current = index;
+
+    const timeoutId1 = setTimeout(() => {
+      if (btnBoxRef.current) {
+        btnBoxRef.current.classList.add("hiddenInner");
+      }
+    }, 200);
+    timeoutsRef.current.push(timeoutId1);
+
+    const timeoutId2 = setTimeout(() => {
+      setChatProgress((prevChatProgress) => prevChatProgress + 1);
+      if (btnBoxRef.current) {
+        btnBoxRef.current.classList.remove("hiddenInner");
+      }
+    }, 400);
+    timeoutsRef.current.push(timeoutId2);
+  };
 
   React.useEffect(() => {
     if (nextMessage) {
@@ -90,7 +119,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           ? setMessageFallback("photo")
           : setMessageFallback("message");
         currentMessageIndex.current = 0; // если будет логика смены сообщения для Girl то заменить на нужное значение
-        setChatProgress((prevChatProgress) => prevChatProgress + 1);
+        setChatProgress(chatProgress + 1);
       }
     } else {
       setMessageFallback("none"), (clickedRef.current = false);
@@ -104,17 +133,11 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     }
   }, [chatProgress, messageFallback]);
 
-  const handleClick = (index) => {
-    clickedRef.current = true;
-    currentMessageIndex.current = index;
-    setTimeout(() => {
-      btnBoxRef.current.classList.add("hiddenInner");
-    }, 200);
-    setTimeout(() => {
-      setChatProgress((prevChatProgress) => prevChatProgress + 1);
-      btnBoxRef.current.classList.remove("hiddenInner");
-    }, 400);
-  };
+  React.useEffect(() => {
+    return () => {
+      clearAllTimeouts();
+    };
+  }, []);
 
   return (
     <>
@@ -134,7 +157,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           scrollXY={[480, 480]}
           // objectXY={[460, 86]}
           gap={[16, 0]}
-          padding={10}
+          padding={20}
           scrollTrigger="←→/←O→"
           scrollTop="end"
         >
@@ -146,14 +169,15 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                 <Delay
                   key={index}
                   delay={
-                    clickedRef.current
-                      ? message.Girl[item].split(" ")[0].length * 100 + 2500
-                      : 0 // index * 100
+                    clickedRef.current && index === chatMapArray.length - 1
+                      ? 0
+                      : 0
                   }
                   onTimeout={() =>
                     (messageFallback === "message" ||
                       messageFallback === "photo") &&
                     clickedRef.current &&
+                    index === chatMapArray.length - 1 &&
                     (btnBoxRef.current.classList.add("hiddenInner"),
                     setTimeout(() => {
                       setMessageFallback("none"),
@@ -182,11 +206,14 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
             if ("Hero" in message) {
               return (
-                // index * 100
                 <Delay key={index} delay={0}>
                   <Message text={message.Hero[item]} />
                 </Delay>
               );
+            }
+
+            if ("Quest" in message) {
+              return null;
             }
           })}
         </Scroll>
@@ -202,9 +229,24 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                     <Message
                       className="btnMessage"
                       text={text}
-                      onClick={() => handleClick(index)}
+                      onClick={() => !clickedRef.current && handleClick(index)}
                     >
                       <PersonAva img={`img/dating/heroAva.jpg`} />
+                    </Message>
+                  </Delay>
+                ))}
+              </>
+            )}
+
+          {nextMessage &&
+            "Quest" in nextMessage &&
+            messageFallback === "none" && (
+              <>
+                <div className="messageBack"></div>
+                {nextMessage.Quest.map((text, index) => (
+                  <Delay key={index} delay={index * 100 + 500}>
+                    <Message className="infoMessage quest" text={text}>
+                      <Button className="btnGold" text={"Перейти"} />
                     </Message>
                   </Delay>
                 ))}
@@ -252,7 +294,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      {/* <Scroll
+      <Scroll
         className="scrollAvatars"
         scrollXY={[92, 530]}
         objectXY={[86, 86]}
@@ -278,7 +320,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             onClick={() => !item.condition && setGirlIndex(index)}
           />
         ))}
-      </Scroll> */}
+      </Scroll>
     </>
   );
 };
@@ -368,6 +410,17 @@ const ProgressBar = ({
       ) : null}
 
       {children}
+    </div>
+  );
+};
+
+const Button = ({ className, text, children }) => {
+  return (
+    <div className={`btn ${className}`}>
+      <div className="btnContentWrap">
+        <div className="btnText">{text}</div>
+        {children}
+      </div>
     </div>
   );
 };

@@ -22,8 +22,23 @@ const chat = [
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
     ],
   },
+  {
+    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
+  {
+    Girl: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    ],
+  },
+  {
+    Quest: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    ],
+  },
+  {
+    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
   { Girl: ["img"] },
-  { Hero: ["totam rem aperiam"] },
 ];
 
 const girlsInfo = [

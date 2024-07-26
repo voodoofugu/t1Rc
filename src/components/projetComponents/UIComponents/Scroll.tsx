@@ -67,7 +67,11 @@ const Scroll: React.FC<ScrollType> = ({
   const [receivedObjectsWrapperSize, setReceivedObjectsWrapperSize] =
     React.useState(0);
 
-  const childCount = React.Children.count(children);
+  const childCount = React.useMemo(() => {
+    return React.Children.toArray(children).filter(
+      (child) => child !== null && child !== undefined
+    ).length;
+  }, [children]);
 
   // variables
   const pLocal =
@@ -149,7 +153,10 @@ const Scroll: React.FC<ScrollType> = ({
       return [];
     }
 
-    const indices = React.Children.map(children, (_, index) => index);
+    const indices = React.Children.toArray(children)
+      .filter((child) => child !== null && child !== undefined)
+      .map((_, index) => index);
+
     if (!indices) return [];
 
     const result: number[][] = Array.from(
@@ -201,11 +208,20 @@ const Scroll: React.FC<ScrollType> = ({
     let lastIndices: number[] = [];
     let balanceHeight: number = 0;
 
+    const validChildren = React.Children.toArray(children).filter(
+      (child) => child !== null && child !== undefined
+    );
+    const validChildCount = validChildren.length;
+
     if (infiniteScroll && contentAlignCenter) {
-      const indices = Array.from({ length: childCount }, (_, index) => index);
+      const indices = Array.from(
+        { length: validChildCount },
+        (_, index) => index
+      );
       const lastChildsInDirection = Math.abs(
-        Math.floor(childCount / objectsPerDirection) * objectsPerDirection -
-          childCount
+        Math.floor(validChildCount / objectsPerDirection) *
+          objectsPerDirection -
+          validChildCount
       );
       lastIndices = lastChildsInDirection
         ? indices.slice(-lastChildsInDirection)
@@ -216,7 +232,7 @@ const Scroll: React.FC<ScrollType> = ({
         2;
     }
 
-    return React.Children.map(children, (_, index) => {
+    return validChildren.map((_, index) => {
       const indexAndSubIndex = (function (
         index: number,
         splitIndices: number[][]
@@ -302,7 +318,9 @@ const Scroll: React.FC<ScrollType> = ({
   // events
   const handleScroll = React.useCallback(() => {
     if (
-      (scrollElementRef.current && scrollVisibility === "<O>") ||
+      (scrollElementRef.current &&
+        thumbSize !== 0 &&
+        scrollVisibility === "<O>") ||
       scrollVisibility === "↓<O>"
     ) {
       const newScroll = Math.abs(
@@ -380,21 +398,21 @@ const Scroll: React.FC<ScrollType> = ({
       let animationId: number;
 
       const getObjectsSize = function () {
-        if (objectsWrapperRef.current) {
-          oldHeight = objectsWrapperRef.current.clientHeight;
-          if (oldHeight !== objectsWrapperRef.current.clientHeight) {
-            animationId = requestAnimationFrame(getObjectsSize);
+        console.log("getObjectsSize");
+        oldHeight = objectsWrapperRef.current.clientHeight;
+        if (oldHeight !== objectsWrapperRef.current.clientHeight) {
+          functionCount = 0;
+          requestAnimationFrame(getObjectsSize);
+        } else {
+          if (functionCount < 8) {
+            functionCount++;
+            requestAnimationFrame(getObjectsSize);
           } else {
-            if (functionCount < 8) {
-              functionCount++;
-              animationId = requestAnimationFrame(getObjectsSize);
-            } else {
-              setReceivedObjectsWrapperSize(
-                xDirection
-                  ? objectsWrapperRef.current.clientWidth - pL - pR
-                  : objectsWrapperRef.current.clientHeight - pT - pB
-              );
-            }
+            setReceivedObjectsWrapperSize(
+              xDirection
+                ? objectsWrapperRef.current.clientWidth - pL - pR
+                : objectsWrapperRef.current.clientHeight - pT - pB
+            );
           }
         }
       };
@@ -403,11 +421,16 @@ const Scroll: React.FC<ScrollType> = ({
 
       return () => cancelAnimationFrame(animationId);
     }
-  }, [objectXY, objectsWrapperRef.current, receivedObjectsWrapperSize]);
+  }, [
+    objectXY,
+    objectsWrapperRef.current?.clientHeight,
+    objectsWrapperRef.current?.clientWidth,
+  ]);
+  // console.log("receivedObjectsWrapperSize", receivedObjectsWrapperSize);
+  console.log("clientHeight", objectsWrapperRef.current?.clientHeight);
 
   React.useEffect(() => {
     if (scrollTop && scrollElementRef.current) {
-      let objectsWrapperHeightOld: number = 0;
       let animationId: number;
 
       const localScrollTop =
@@ -420,13 +443,16 @@ const Scroll: React.FC<ScrollType> = ({
           : 0;
 
       const getTop = function () {
-        console.log("getTop");
-        objectsWrapperHeightOld = localScrollTop;
-        if (objectsWrapperHeightOld !== localScrollTop) {
-          animationId = requestAnimationFrame(getTop);
-        } else {
-          scrollElementRef.current.scrollTop += localScrollTop;
-          return;
+        scrollElementRef.current.scrollTop = localScrollTop;
+        console.log("localScrollTop", localScrollTop);
+        const newScroll = Math.abs(
+          Math.round(
+            (localScrollTop / (xy - (objectsWrapperHeight + pLocalXY))) *
+              (xy - thumbSize)
+          )
+        );
+        if (newScroll !== scroll) {
+          setScroll(newScroll);
         }
       };
 
@@ -434,7 +460,7 @@ const Scroll: React.FC<ScrollType> = ({
 
       return () => cancelAnimationFrame(animationId);
     }
-  }, [scrollTop, scrollElementRef.current, objectsWrapperHeight, thumbSize]);
+  }, [scrollTop, scrollElementRef.current, objectsWrapperHeight]);
 
   return (
     <div
@@ -524,50 +550,55 @@ const Scroll: React.FC<ScrollType> = ({
               }),
           }}
         >
-          {React.Children.map(children, (child, index) => {
-            if (infiniteScroll && scrollElementRef.current) {
-              const { elementTop, elementBottom, left } =
-                memoizedChildrenData[index];
+          {React.Children.toArray(children)
+            .filter((child) => child !== null && child !== undefined)
+            .map((child, index) => {
+              if (infiniteScroll && scrollElementRef.current) {
+                const { elementTop, elementBottom, left } =
+                  memoizedChildrenData[index];
 
-              const isElementVisible =
-                (xDirection ? localScrollXY[0] : localScrollXY[1]) + mRootX >
-                  elementTop - scrollElementRef.current.scrollTop &&
-                elementBottom - scrollElementRef.current.scrollTop > 0 - mRootY;
+                const isElementVisible =
+                  (xDirection ? localScrollXY[0] : localScrollXY[1]) + mRootX >
+                    elementTop - scrollElementRef.current.scrollTop &&
+                  elementBottom - scrollElementRef.current.scrollTop >
+                    0 - mRootY;
 
-              return (
-                isElementVisible && (
-                  <InfiniteScrollObjectWrapper
+                return (
+                  isElementVisible && (
+                    <InfiniteScrollObjectWrapper
+                      key={index}
+                      {...{
+                        child,
+                        xyObjectReverse,
+                        xyObject,
+                        suspending,
+                        fallback,
+                        scrollElementRef: scrollElementRef.current,
+                        rootMargin: mRootLocal,
+                        top: elementTop,
+                        left: left,
+                      }}
+                    />
+                  )
+                );
+              } else {
+                return (
+                  <ScrollObjectWrapper
+                    key={index}
                     {...{
                       child,
-                      xyObjectReverse,
-                      xyObject,
+                      localObjectXY,
+                      xDirection,
                       suspending,
                       fallback,
+                      lazyRender,
                       scrollElementRef: scrollElementRef.current,
                       rootMargin: mRootLocal,
-                      top: elementTop,
-                      left: left,
                     }}
                   />
-                )
-              );
-            } else {
-              return (
-                <ScrollObjectWrapper
-                  {...{
-                    child,
-                    localObjectXY,
-                    xDirection,
-                    suspending,
-                    fallback,
-                    lazyRender,
-                    scrollElementRef: scrollElementRef.current,
-                    rootMargin: mRootLocal,
-                  }}
-                />
-              );
-            }
-          })}
+                );
+              }
+            })}
         </div>
       </div>
     </div>

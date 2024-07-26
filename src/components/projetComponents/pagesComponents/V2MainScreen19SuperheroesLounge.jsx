@@ -9,48 +9,34 @@ function RlevelBox({ addClass }) {
       <div className="rname-box">star bonus</div>
       {!addClass ? (
         <>
+          <div className="rname-box">star bonus</div>
           <div className="bonus-lvl-box undefined">
             <div className="herostar-box">
-              <div className="herostar lvl04 " />
+              <div className="herostar lvl010 ult" />
             </div>
             <div className="first-bonus-box">
-              <div className="box-name">Handy woman</div>
-              <div className="bonus-size">x8</div>
+              <div className="box-name">Aura of flame</div>
+              <div className="bonus-size">x45</div>
             </div>
             <div className="second-bonus-box">
-              <div className="box-name">Magic shooter</div>
-              <div className="bonus-size">x8</div>
-            </div>
-          </div>
-          <div className="bonus-lvl-box next">
-            <div className="herostar-box">
-              <div className="herostar lvl06 " />
-            </div>
-            <div className="first-bonus-box">
-              <div className="box-name">Handy woman</div>
-              <div className="bonus-size">x12</div>
-            </div>
-            <div className="second-bonus-box">
-              <div className="box-name">Magic shooter</div>
-              <div className="bonus-size">x12</div>
-            </div>
-          </div>
-          <div className="bonus-hero-pic-box-all">
-            <div className="bonus-hero-pic-box">
-              <div className="bonus-hero-pic">
-                <img src="https://cdn.faptitans.com/s1/__6676/images/superhero_new/suphero-10/x2/avatar/10sh-ava-6.jpg" />
-              </div>
-              <div className="herostar-box">
-                <div className="herostar lvl0undefined ult" />
-              </div>
-            </div>
-            <div className="bonus-box" />
-            <div className="bonus-box-all">
-              <div className="box-name">bonuses</div>
+              <div className="box-name">Hardened blades</div>
               <div className="bonus-size">x45</div>
             </div>
           </div>
-          <div className="rarrow" />
+          <div className="rarrow"></div>
+          <div className="bonus-lvl-box lvl012">
+            <div className="herostar-box">
+              <div className="herostar lvl012" />
+            </div>
+            <div className="first-bonus-box">
+              <div className="box-name">Aura of flame</div>
+              <div className="bonus-size">x45</div>
+            </div>
+            <div className="second-bonus-box">
+              <div className="box-name">Hardened blades</div>
+              <div className="bonus-size">x45</div>
+            </div>
+          </div>
         </>
       ) : addClass === "upgrade" ? (
         <>
