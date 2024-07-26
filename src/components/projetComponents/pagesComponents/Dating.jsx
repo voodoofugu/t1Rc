@@ -170,8 +170,9 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                   key={index}
                   delay={
                     clickedRef.current && index === chatMapArray.length - 1
-                      ? 0
-                      : 0
+                      ? message.Girl[item].split(" ")[0].length * 100 + 2500
+                      : index * 100
+                    // 0
                   }
                   onTimeout={() =>
                     (messageFallback === "message" ||
@@ -206,7 +207,10 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
             if ("Hero" in message) {
               return (
-                <Delay key={index} delay={0}>
+                <Delay
+                  key={index}
+                  delay={index === chatMapArray.length - 1 ? 100 : index * 100} // 0
+                >
                   <Message text={message.Hero[item]} />
                 </Delay>
               );
