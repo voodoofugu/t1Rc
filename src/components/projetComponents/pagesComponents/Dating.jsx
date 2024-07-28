@@ -160,6 +160,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           padding={20}
           scrollTrigger="←→/←O→"
           scrollTop="end"
+          // xDirection
         >
           {chatMapArray.map((item, index) => {
             const message = girlsInfo[girlIndex].chat[index];

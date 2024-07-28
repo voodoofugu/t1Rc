@@ -38,6 +38,12 @@ const chat = [
   {
     Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
   },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
+  {
+    Hero: [
+      "onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    ],
+  },
   { Girl: ["img"] },
 ];
 

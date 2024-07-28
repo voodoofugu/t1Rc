@@ -1,12 +1,12 @@
 import React from "react";
 
-interface IntersectionTrackingProps {
+type IntersectionTrackingProps = {
   children: React.ReactNode;
   root?: Element | null;
   threshold?: number;
   rootMargin?: number[] | number;
   wrapSyle?: React.CSSProperties;
-}
+};
 
 const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
   children,
