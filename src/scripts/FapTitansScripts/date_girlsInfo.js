@@ -32,7 +32,7 @@ const chat = [
   },
   {
     Quest: [
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
     ],
   },
   {

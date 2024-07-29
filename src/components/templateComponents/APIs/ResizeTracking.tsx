@@ -3,11 +3,13 @@ import React from "react";
 type ResizeTrackingProps = {
   children: (width: number, height: number) => React.ReactNode;
   onResize: (width: number, height: number) => void;
+  style?: React.CSSProperties;
 };
 
 const ResizeTracking: React.FC<ResizeTrackingProps> = ({
   children,
   onResize,
+  style,
 }) => {
   const containerRef = React.useRef<HTMLDivElement | null>(null);
   const [dimensions, setDimensions] = React.useState({ width: 0, height: 0 });
@@ -36,8 +38,9 @@ const ResizeTracking: React.FC<ResizeTrackingProps> = ({
 
   return (
     <div
+      className="ResizeObserver"
       ref={containerRef}
-      style={{ width: "max-content", height: "max-content" }}
+      style={{ width: "max-content", height: "max-content", ...style }}
     >
       {children(dimensions.width, dimensions.height)}
     </div>

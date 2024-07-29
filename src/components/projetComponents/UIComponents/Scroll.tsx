@@ -33,6 +33,7 @@ interface ScrollType {
   infiniteScroll?: boolean;
   contentAlignCenter?: boolean;
   wrapAlignCenter?: boolean;
+  objectsWrapperMinSize?: number; // px
   children: React.ReactNode;
 }
 
@@ -55,6 +56,7 @@ const Scroll: React.FC<ScrollType> = ({
   contentAlignCenter = false,
   wrapAlignCenter = false,
   // overflowEdgeGradient = "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%)",
+  objectsWrapperMinSize,
   children,
 }) => {
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
@@ -96,7 +98,7 @@ const Scroll: React.FC<ScrollType> = ({
     ? objectXY
     : xDirection
     ? [NaN, scrollXY[1] - pY]
-    : [scrollXY[0] - pX, NaN];
+    : [scrollXY[0] - pY, NaN];
 
   const xyObject = localObjectXY
     ? xDirection
@@ -327,7 +329,7 @@ const Scroll: React.FC<ScrollType> = ({
       const newScroll = Math.abs(
         Math.round(
           (scrollElementRef.current.scrollTop /
-            (xy - (objectsWrapperHeight + pLocalXY))) *
+            (xy - (objectsWrapperHeight + pY))) *
             (xy - thumbSize)
         )
       );
@@ -374,9 +376,7 @@ const Scroll: React.FC<ScrollType> = ({
 
   const handleResize = React.useCallback(
     (width: number, height: number) => {
-      setReceivedObjectsWrapperSize(
-        xDirection ? width - pL - pR : height - pT - pB
-      );
+      setReceivedObjectsWrapperSize(xDirection ? width - pY : height - pY);
     },
     [xDirection, pL, pR, pT, pB]
   );
@@ -432,7 +432,7 @@ const Scroll: React.FC<ScrollType> = ({
           } else {
             const newScroll = Math.abs(
               Math.round(
-                (targetScrollTop / (xy - (objectsWrapperHeight + pLocalXY))) *
+                (targetScrollTop / (xy - (objectsWrapperHeight + pY))) *
                   (xy - thumbSize)
               )
             );
@@ -469,6 +469,9 @@ const Scroll: React.FC<ScrollType> = ({
               position: "absolute",
               height: `${objectsWrapperHeight}px`,
             }),
+          ...(objectsWrapperMinSize && {
+            minHeight: `calc(${objectsWrapperMinSize}px - ${pY}px)`,
+          }),
           ...(!infiniteScroll &&
             contentAlignCenter && {
               justifyContent: "center",
@@ -606,7 +609,12 @@ const Scroll: React.FC<ScrollType> = ({
         {objectXY ? (
           objectsWrapper
         ) : (
-          <ResizeTracking onResize={handleResize}>
+          <ResizeTracking
+            onResize={handleResize}
+            style={{
+              minHeight: `${localScrollXY[1]}px`,
+            }}
+          >
             {(width, height) => objectsWrapper}
           </ResizeTracking>
         )}
