@@ -445,7 +445,7 @@ const Scroll: React.FC<ScrollType> = ({
         animationId = requestAnimationFrame(scrollStep);
       };
 
-      smoothScroll(localScrollTop, 100);
+      smoothScroll(localScrollTop, 200);
 
       return () => cancelAnimationFrame(animationId);
     }
@@ -470,7 +470,7 @@ const Scroll: React.FC<ScrollType> = ({
               height: `${objectsWrapperHeight}px`,
             }),
           ...(objectsWrapperMinSize && {
-            minHeight: `calc(${objectsWrapperMinSize}px - ${pY}px)`,
+            minHeight: `calc(${objectsWrapperMinSize}px - ${pLocalXY}px)`,
           }),
           ...(!infiniteScroll &&
             contentAlignCenter && {
