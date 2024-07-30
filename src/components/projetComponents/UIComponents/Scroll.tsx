@@ -329,7 +329,7 @@ const Scroll: React.FC<ScrollType> = ({
       const newScroll = Math.abs(
         Math.round(
           (scrollElementRef.current.scrollTop /
-            (xy - (objectsWrapperHeight + pY))) *
+            (xy - (objectsWrapperHeight + pLocalXY))) *
             (xy - thumbSize)
         )
       );
@@ -376,9 +376,11 @@ const Scroll: React.FC<ScrollType> = ({
 
   const handleResize = React.useCallback(
     (width: number, height: number) => {
-      setReceivedObjectsWrapperSize(xDirection ? width - pY : height - pY);
+      setReceivedObjectsWrapperSize(
+        xDirection ? width - pLocalXY : height - pLocalXY
+      );
     },
-    [xDirection, pL, pR, pT, pB]
+    [xDirection, pLocalXY]
   );
 
   // effects
@@ -409,8 +411,8 @@ const Scroll: React.FC<ScrollType> = ({
         typeof scrollTop === "number"
           ? scrollTop
           : scrollTop === "end"
-          ? objectsWrapperHeight + pY > xy
-            ? Math.abs(objectsWrapperHeight + pY - xy)
+          ? objectsWrapperHeight + pLocalXY > xy
+            ? Math.abs(objectsWrapperHeight + pLocalXY - xy)
             : 0
           : 0;
 
@@ -432,7 +434,7 @@ const Scroll: React.FC<ScrollType> = ({
           } else {
             const newScroll = Math.abs(
               Math.round(
-                (targetScrollTop / (xy - (objectsWrapperHeight + pY))) *
+                (targetScrollTop / (xy - (objectsWrapperHeight + pLocalXY))) *
                   (xy - thumbSize)
               )
             );
@@ -451,6 +453,7 @@ const Scroll: React.FC<ScrollType> = ({
     }
   }, [scrollTop, scrollElementRef.current, objectsWrapperHeight]);
 
+  // contents
   const objectsWrapper = React.useMemo(
     () => (
       <div

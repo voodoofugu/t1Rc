@@ -9,6 +9,7 @@ import ResCount from "../UIComponents/ResCount";
 import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
+import ResizeTracking from "../../templateComponents/APIs/ResizeTracking";
 
 export const cssFiles = [
   "customScroll",
@@ -77,26 +78,26 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     timeoutsRef.current = [];
   };
 
-  const [chatMapArray, setChatMapArray] = React.useState([0]);
-  console.log("chatMapArray", chatMapArray);
+  const [chatMapArray, setChatMapArray] = React.useState([
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  ]);
   const [girlIndex, setGirlIndex] = React.useState(2);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
+  console.log("messageFallback", messageFallback);
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
-  // const currentMessage = girlsInfo[girlIndex].chat[chatMapArray.length - 1];
+  const currentMessage = girlsInfo[girlIndex].chat[chatMapArray.length - 1];
   const nextMessage =
     girlsInfo[girlIndex].chat.length >= chatProgress + 1
       ? girlsInfo[girlIndex].chat[chatProgress + 1]
       : false;
 
   const handleClick = (index) => {
-    if (index) {
-      clickedRef.current = true;
-      currentMessageIndex.current = index;
-    }
+    clickedRef.current = true;
+    currentMessageIndex.current = index;
 
     const timeoutId1 = setTimeout(() => {
       if (btnBoxRef.current) {
@@ -106,7 +107,8 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     timeoutsRef.current.push(timeoutId1);
 
     const timeoutId2 = setTimeout(() => {
-      setChatProgress((prevChatProgress) => prevChatProgress + 1);
+      // setChatProgress((prevChatProgress) => prevChatProgress + 1);
+      setChatProgress(chatProgress + 1);
       if (btnBoxRef.current) {
         btnBoxRef.current.classList.remove("hiddenInner");
       }
@@ -119,17 +121,25 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
     if (nextMessage) {
       if ("Girl" in nextMessage && messageFallback === "none") {
-        clickedRef.current = true;
+        if (currentMessage.Girl && nextMessage.Girl) {
+          setMessageFallback("none");
+          clickedRef.current = false;
+        }
+        // clickedRef.current = true;
         girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
           ? setMessageFallback("photo")
           : setMessageFallback("message");
-        currentMessageIndex.current = 0; // если будет логика смены сообщения для Girl то заменить на нужное значение
         timeoutId = setTimeout(() => {
-          setChatProgress(chatProgress + 1);
+          // currentMessageIndex.current = 0; // если будет логика смены сообщения для Girl то тут
+          // setChatProgress(chatProgress + 1);
+          handleClick(0);
+        }, 400);
+      } else if ("Hero" in nextMessage && messageFallback === "none") {
+        timeoutId = setTimeout(() => {
+          setMessageFallback("none");
+          clickedRef.current = false;
         }, 400);
       }
-    } else {
-      setMessageFallback("none"), (clickedRef.current = false);
     }
 
     if (chatMapArray.length < arrayFromChatProgress.length) {
@@ -137,7 +147,6 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         ...prevChatProgress,
         currentMessageIndex.current,
       ]);
-      console.log("currentMessageIndex.current", currentMessageIndex.current);
     }
 
     timeoutsRef.current.push(timeoutId);
@@ -177,21 +186,16 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             const message = girlsInfo[girlIndex].chat[index];
 
             if ("Girl" in message) {
-              const textToTime =
-                message.Girl[item].split(" ")[0].length * 100 + 2500;
-
               return (
                 <Delay
                   key={index}
                   delay={
                     clickedRef.current && index === chatMapArray.length - 1
-                      ? textToTime
+                      ? message.Girl[item].split(" ")[0].length * 100 + 1500
                       : index * 100
-                    // 0
                   }
                   onTimeout={() =>
-                    (messageFallback === "message" ||
-                      messageFallback === "photo") &&
+                    messageFallback !== "none" &&
                     clickedRef.current &&
                     index === chatMapArray.length - 1 &&
                     fallbackBoxRef.current.classList.add("hiddenInner")
@@ -210,7 +214,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                     }}
                   >
                     {message.Girl[item] === "img" ? (
-                      <Message right>
+                      <Message>
                         <div className="photo">
                           <div className="imgWrap">
                             <img
@@ -221,7 +225,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                         </div>
                       </Message>
                     ) : (
-                      <Message right text={message.Girl[item]} />
+                      <Message text={message.Girl[item]} />
                     )}
                   </Delay>
                 </Delay>
@@ -232,9 +236,9 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
               return (
                 <Delay
                   key={index}
-                  delay={index === chatMapArray.length - 1 ? 100 : index * 100} // 0
+                  delay={index === chatMapArray.length - 1 ? 100 : index * 100}
                 >
-                  <Message text={message.Hero[item]} />
+                  <Message position="right" text={message.Hero[item]} />
                 </Delay>
               );
             }
@@ -244,60 +248,72 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             }
           })}
 
-          <div className="btnBox" ref={btnBoxRef}>
-            {nextMessage &&
-              "Hero" in nextMessage &&
-              messageFallback === "none" && (
-                <>
-                  {nextMessage.Hero.map((text, index) => (
-                    <Delay key={index} delay={index * 100 + 500}>
-                      <Message
-                        className="btnMessage"
-                        text={text}
-                        onClick={() =>
-                          !clickedRef.current && handleClick(index)
-                        }
-                      >
-                        <PersonAva img={`img/dating/heroAva.jpg`} />
-                      </Message>
-                    </Delay>
-                  ))}
-                </>
-              )}
+          {nextMessage && (
+            <ResizeTracking>
+              {(width, height) => (
+                <div className="btnBox" ref={btnBoxRef}>
+                  {nextMessage &&
+                    "Hero" in nextMessage &&
+                    messageFallback === "none" && (
+                      <>
+                        {nextMessage.Hero.map((text, index) => (
+                          <Delay key={index} delay={index * 100 + 500}>
+                            <Message
+                              className="btnMessage"
+                              text={text}
+                              onClick={() =>
+                                !clickedRef.current &&
+                                ((btnBoxRef.current.style.height = `${height}px`),
+                                handleClick(index))
+                              }
+                            >
+                              <PersonAva img={`img/dating/heroAva.jpg`} />
+                            </Message>
+                          </Delay>
+                        ))}
+                      </>
+                    )}
 
-            {nextMessage &&
-              "Quest" in nextMessage &&
-              messageFallback === "none" && (
-                <>
-                  {nextMessage.Quest.map((text, index) => (
-                    <Delay key={index} delay={index * 100 + 500}>
-                      <Message className="infoMessage quest" text={text}>
-                        <Button
-                          className="btnGold"
-                          text={"Перейти"}
-                          onClick={() => {
-                            !clickedRef.current && handleClick();
-                          }}
-                        />
-                        <ProgressBar
-                          className="messageProgressBar"
-                          text
-                          currentProgress={4}
-                          maxProgress={10}
-                        />
-                      </Message>
-                    </Delay>
-                  ))}
-                </>
+                  {nextMessage &&
+                    "Quest" in nextMessage &&
+                    messageFallback === "none" && (
+                      <>
+                        {nextMessage.Quest.map((text, index) => (
+                          <Delay key={index} delay={index * 100 + 500}>
+                            <Message className="infoMessage quest" text={text}>
+                              <Button
+                                className="btnGold"
+                                text={"Перейти"}
+                                onClick={() => {
+                                  !clickedRef.current && handleClick(0);
+                                }}
+                              />
+                              <ProgressBar
+                                className="messageProgressBar"
+                                text
+                                currentProgress={4}
+                                maxProgress={10}
+                              />
+                            </Message>
+                          </Delay>
+                        ))}
+                      </>
+                    )}
+                </div>
               )}
-          </div>
+            </ResizeTracking>
+          )}
         </Scroll>
 
         <div className="fallbackBox" ref={fallbackBoxRef}>
           {messageFallback === "message" && (
             <Delay delay={600}>
               <div className="messageBack"></div>
-              <Message className="infoMessage" condition="load" right>
+              <Message
+                className="infoMessage"
+                condition="load"
+                position="center"
+              >
                 <PersonAva
                   img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
                 />
@@ -308,7 +324,12 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           {messageFallback === "photo" && (
             <Delay delay={600}>
               <div className="messageBack"></div>
-              <Message className="infoMessage" condition="photo" right>
+              <Message
+                className="infoMessage"
+                condition="photo"
+                position="center"
+              >
+                <div className="imgIcon">•</div>
                 <ProgressBar
                   className={"messageProgressBar fillingAnimation"}
                 />
@@ -344,7 +365,8 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         padding={[4, 10]}
         scrollTrigger="←→/←O→"
         wrapAlignCenter
-        // scrollVisibility="↓<O>"
+        scrollReverse
+        scrollVisibility="↓<O>"
         // lazyRender
         // infiniteScroll
         // rootMargin={[0, 0]}
@@ -371,7 +393,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 const Message = ({
   className, // simpleMessage d*, btnMessage, infoMessage
   onClick,
-  right,
+  position, // "right", "center"
   text,
   condition, // "load", "photo",
   children,
@@ -381,7 +403,7 @@ const Message = ({
   return (
     <div
       className={`message ${className ? className : "simpleMessage"} ${
-        right ? "right" : ""
+        position ? position : ""
       } ${active ? "active" : ""}`}
       onClick={() => {
         if (onClick) onClick(), setActive(!active);

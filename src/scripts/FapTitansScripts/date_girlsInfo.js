@@ -44,7 +44,49 @@ const chat = [
       "onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
     ],
   },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
+  {
+    Hero: [
+      "onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    ],
+  },
+  {
+    Girl: [
+      "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    ],
+  },
+  {
+    Hero: [
+      "Excepteur sint occaecat cupidatat non proident",
+      "sunt in culpa qui officia",
+      "deserunt mollit anim id est laborum",
+    ],
+  },
+  {
+    Girl: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    ],
+  },
+  {
+    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
+  {
+    Girl: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    ],
+  },
+  {
+    Quest: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    ],
+  },
+  {
+    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
   { Girl: ["img"] },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
 ];
 
 const girlsInfo = [

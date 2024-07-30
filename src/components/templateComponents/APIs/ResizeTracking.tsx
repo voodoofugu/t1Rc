@@ -2,7 +2,7 @@ import React from "react";
 
 type ResizeTrackingProps = {
   children: (width: number, height: number) => React.ReactNode;
-  onResize: (width: number, height: number) => void;
+  onResize?: (width: number, height: number) => void;
   style?: React.CSSProperties;
 };
 
@@ -24,7 +24,7 @@ const ResizeTracking: React.FC<ResizeTrackingProps> = ({
         const height = entry.contentRect.height;
 
         setDimensions({ width, height });
-        onResize(width, height);
+        onResize && onResize(width, height);
       }
     });
 
@@ -40,7 +40,11 @@ const ResizeTracking: React.FC<ResizeTrackingProps> = ({
     <div
       className="ResizeObserver"
       ref={containerRef}
-      style={{ width: "max-content", height: "max-content", ...style }}
+      style={{
+        width: "max-content",
+        height: "max-content",
+        ...style,
+      }}
     >
       {children(dimensions.width, dimensions.height)}
     </div>
