@@ -107,11 +107,10 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     timeoutsRef.current.push(timeoutId1);
 
     const timeoutId2 = setTimeout(() => {
-      // setChatProgress((prevChatProgress) => prevChatProgress + 1);
-      setChatProgress(chatProgress + 1);
       if (btnBoxRef.current) {
         btnBoxRef.current.classList.remove("hiddenInner");
       }
+      setChatProgress(chatProgress + 1); // ((prevChatProgress) => prevChatProgress + 1)
     }, 600);
     timeoutsRef.current.push(timeoutId2);
   };
@@ -121,25 +120,19 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
     if (nextMessage) {
       if ("Girl" in nextMessage && messageFallback === "none") {
-        if (currentMessage.Girl && nextMessage.Girl) {
-          setMessageFallback("none");
-          clickedRef.current = false;
-        }
-        // clickedRef.current = true;
-        girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
-          ? setMessageFallback("photo")
-          : setMessageFallback("message");
         timeoutId = setTimeout(() => {
-          // currentMessageIndex.current = 0; // если будет логика смены сообщения для Girl то тут
-          // setChatProgress(chatProgress + 1);
+          girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
+            ? setMessageFallback("photo")
+            : setMessageFallback("message");
           handleClick(0);
         }, 400);
-      } else if ("Hero" in nextMessage && messageFallback === "none") {
-        timeoutId = setTimeout(() => {
-          setMessageFallback("none");
-          clickedRef.current = false;
-        }, 400);
       }
+      // else if ("Hero" in nextMessage && messageFallback !== "none") {
+      //   timeoutId = setTimeout(() => {
+      //     setMessageFallback("none");
+      //     clickedRef.current = false;
+      //   }, 400);
+      // }
     }
 
     if (chatMapArray.length < arrayFromChatProgress.length) {

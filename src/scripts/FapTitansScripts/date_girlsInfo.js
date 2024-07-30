@@ -87,6 +87,8 @@ const chat = [
   { Girl: ["Lorem ipsum dolor sit amet"] },
   { Girl: ["img"] },
   { Girl: ["Lorem ipsum dolor sit amet"] },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
 ];
 
 const girlsInfo = [
