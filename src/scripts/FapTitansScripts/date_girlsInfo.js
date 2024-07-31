@@ -2,12 +2,12 @@ const chat = [
   { Girl: ["Lorem ipsum dolor sit amet"] },
   {
     Hero: [
-      "onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+      "Onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
     ],
   },
   {
     Girl: [
-      "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
     ],
   },
   {
@@ -23,7 +23,7 @@ const chat = [
     ],
   },
   {
-    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
   },
   {
     Girl: [
@@ -36,23 +36,11 @@ const chat = [
     ],
   },
   {
-    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
-  },
-  { Girl: ["Lorem ipsum dolor sit amet"] },
-  {
-    Hero: [
-      "onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    ],
-  },
-  { Girl: ["Lorem ipsum dolor sit amet"] },
-  {
-    Hero: [
-      "onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-    ],
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
   },
   {
     Girl: [
-      "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
     ],
   },
   {
@@ -68,7 +56,7 @@ const chat = [
     ],
   },
   {
-    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
   },
   {
     Girl: [
@@ -81,14 +69,10 @@ const chat = [
     ],
   },
   {
-    Hero: ["sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
   },
-  { Girl: ["Lorem ipsum dolor sit amet"] },
   { Girl: ["Lorem ipsum dolor sit amet"] },
   { Girl: ["img"] },
-  { Girl: ["Lorem ipsum dolor sit amet"] },
-  { Girl: ["Lorem ipsum dolor sit amet"] },
-  { Girl: ["Lorem ipsum dolor sit amet"] },
 ];
 
 const girlsInfo = [

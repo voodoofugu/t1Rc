@@ -67,7 +67,7 @@ export default function Dating({ pageName, children }) {
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
   const currentMessageIndex = React.useRef(NaN);
-  const clickedRef = React.useRef(false);
+  const chatProgressHandleConditionRef = React.useRef(false);
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
@@ -79,25 +79,40 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   };
 
   const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
   const [girlIndex, setGirlIndex] = React.useState(2);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
-  console.log("messageFallback", messageFallback);
+
+  const lastTenIndices = chatMapArray.slice(-10);
+  const lastTenElements = girlsInfo[girlIndex].chat.slice(-10);
+  console.log("lastTenElements", lastTenElements);
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
-  const currentMessage = girlsInfo[girlIndex].chat[chatMapArray.length - 1];
   const nextMessage =
     girlsInfo[girlIndex].chat.length >= chatProgress + 1
       ? girlsInfo[girlIndex].chat[chatProgress + 1]
       : false;
+  console.log("nextMessage", nextMessage);
 
-  const handleClick = (index) => {
-    clickedRef.current = true;
+  const chatProgressHandle = (index) => {
+    chatProgressHandleConditionRef.current = true;
     currentMessageIndex.current = index;
+    if ("Girl" in nextMessage && messageFallback === "none") {
+      girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
+        ? setMessageFallback("photo")
+        : setMessageFallback("message");
+
+      if (fallbackBoxRef.current) {
+        const timeoutId3 = setTimeout(() => {
+          fallbackBoxRef.current.classList.add("hiddenInner");
+        }, nextMessage.Girl[0].split(" ")[0].length * 100 + 1400);
+        timeoutsRef.current.push(timeoutId3);
+      }
+    }
 
     const timeoutId1 = setTimeout(() => {
       if (btnBoxRef.current) {
@@ -108,31 +123,24 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
     const timeoutId2 = setTimeout(() => {
       if (btnBoxRef.current) {
-        btnBoxRef.current.classList.remove("hiddenInner");
+        btnBoxRef.current?.classList.remove("hiddenInner");
       }
-      setChatProgress(chatProgress + 1); // ((prevChatProgress) => prevChatProgress + 1)
+      setChatProgress((prevChatProgress) => prevChatProgress + 1);
     }, 600);
     timeoutsRef.current.push(timeoutId2);
+
+    chatProgressHandleConditionRef.current = false;
   };
 
   React.useEffect(() => {
     let timeoutId;
 
-    if (nextMessage) {
+    if (nextMessage && !chatProgressHandleConditionRef.current) {
       if ("Girl" in nextMessage && messageFallback === "none") {
         timeoutId = setTimeout(() => {
-          girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
-            ? setMessageFallback("photo")
-            : setMessageFallback("message");
-          handleClick(0);
+          chatProgressHandle(0);
         }, 400);
       }
-      // else if ("Hero" in nextMessage && messageFallback !== "none") {
-      //   timeoutId = setTimeout(() => {
-      //     setMessageFallback("none");
-      //     clickedRef.current = false;
-      //   }, 400);
-      // }
     }
 
     if (chatMapArray.length < arrayFromChatProgress.length) {
@@ -167,7 +175,6 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         <Scroll
           className="scrollChat"
           scrollXY={[480, 496]}
-          // objectXY={[460, 86]}
           gap={[16, 0]}
           padding={[4, 20]}
           scrollTrigger="←→/←O→"
@@ -175,52 +182,40 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           objectsWrapperMinSize={496}
           // xDirection
         >
-          {chatMapArray.map((item, index) => {
-            const message = girlsInfo[girlIndex].chat[index];
+          {lastTenIndices.map((item, index) => {
+            const message = lastTenElements[index];
+            // {chatMapArray.map((item, index) => {
+            //   const message = girlsInfo[girlIndex].chat[index];
 
             if ("Girl" in message) {
               return (
                 <Delay
                   key={index}
                   delay={
-                    clickedRef.current && index === chatMapArray.length - 1
-                      ? message.Girl[item].split(" ")[0].length * 100 + 1500
+                    messageFallback !== "none" &&
+                    index === chatMapArray.length - 1
+                      ? message.Girl[item].split(" ")[0].length * 100 + 2100
                       : index * 100
                   }
-                  onTimeout={() =>
-                    messageFallback !== "none" &&
-                    clickedRef.current &&
-                    index === chatMapArray.length - 1 &&
-                    fallbackBoxRef.current.classList.add("hiddenInner")
-                  }
+                  onTimeout={() => {
+                    fallbackBoxRef.current.classList.remove("hiddenInner");
+                    setMessageFallback("none");
+                  }}
                 >
-                  <Delay
-                    delay={
-                      clickedRef.current && index === chatMapArray.length - 1
-                        ? 500
-                        : 0
-                    }
-                    onTimeout={() => {
-                      setMessageFallback("none"),
-                        (clickedRef.current = false),
-                        fallbackBoxRef.current.classList.remove("hiddenInner");
-                    }}
-                  >
-                    {message.Girl[item] === "img" ? (
-                      <Message>
-                        <div className="photo">
-                          <div className="imgWrap">
-                            <img
-                              src={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/sh-6.jpg`}
-                              loading="lazy"
-                            />
-                          </div>
+                  {message.Girl[item] === "img" ? (
+                    <Message>
+                      <div className="photo">
+                        <div className="imgWrap">
+                          <img
+                            src={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/sh-6.jpg`}
+                            loading="lazy"
+                          />
                         </div>
-                      </Message>
-                    ) : (
-                      <Message text={message.Girl[item]} />
-                    )}
-                  </Delay>
+                      </div>
+                    </Message>
+                  ) : (
+                    <Message text={message.Girl[item]} />
+                  )}
                 </Delay>
               );
             }
@@ -236,9 +231,9 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
               );
             }
 
-            if ("Quest" in message) {
-              return null;
-            }
+            // if ("Quest" in message) {
+            //   return null;
+            // }
           })}
 
           {nextMessage && (
@@ -254,11 +249,11 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                             <Message
                               className="btnMessage"
                               text={text}
-                              onClick={() =>
-                                !clickedRef.current &&
-                                ((btnBoxRef.current.style.height = `${height}px`),
-                                handleClick(index))
-                              }
+                              onClick={() => {
+                                !chatProgressHandleConditionRef.current &&
+                                  (btnBoxRef.current.style.height = `${height}px`);
+                                chatProgressHandle(index);
+                              }}
                             >
                               <PersonAva img={`img/dating/heroAva.jpg`} />
                             </Message>
@@ -278,7 +273,8 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                                 className="btnGold"
                                 text={"Перейти"}
                                 onClick={() => {
-                                  !clickedRef.current && handleClick(0);
+                                  !chatProgressHandleConditionRef.current &&
+                                    chatProgressHandle(0);
                                 }}
                               />
                               <ProgressBar
@@ -335,12 +331,6 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      <ProgressBar
-        className={"progressBar"}
-        currentProgress={chatProgress}
-        maxProgress={girlsInfo[girlIndex].chat.length - 1}
-      />
-
       <div className="girlName">
         <div className="addText">with</div>
         <div className="nameWrap">
@@ -352,7 +342,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
       <Scroll
         className="scrollAvatars"
-        scrollXY={[92, 530]}
+        scrollXY={[100, 530]}
         objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
@@ -381,7 +371,6 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     </>
   );
 };
-// console.log("dsfsad");
 
 const Message = ({
   className, // simpleMessage d*, btnMessage, infoMessage
@@ -417,17 +406,19 @@ const Message = ({
   );
 };
 
-const Delay = ({ delay, children, onTimeout }) => {
+const Delay = ({ delay = 0, children, onTimeout }) => {
   const [show, setShow] = React.useState(false);
 
   const onTimeoutHandler = () => {
     setShow(true);
-    onTimeout && onTimeout();
   };
 
   React.useEffect(() => {
-    const timer = setTimeout(onTimeoutHandler, delay);
+    onTimeout && show && onTimeout();
+  }, [show]);
 
+  React.useEffect(() => {
+    const timer = setTimeout(onTimeoutHandler, delay);
     return () => clearTimeout(timer);
   }, [delay]);
 

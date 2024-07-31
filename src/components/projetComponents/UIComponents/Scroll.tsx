@@ -365,7 +365,7 @@ const Scroll: React.FC<ScrollType> = ({
   const handleMouseDown = React.useCallback(
     (e: React.MouseEvent, clicked: "thumb" | "wrapp") => {
       clickedObject.current = clicked;
-      scrollVisibility === "↓<O>" &&
+      (scrollVisibility === "↓<O>" || scrollVisibility === "<O>") &&
         customScrollRef.current.classList.add("grabbingScroll");
       window.addEventListener("mousemove", handleMouseMove);
       window.addEventListener("mouseup", handleMouseUp);
