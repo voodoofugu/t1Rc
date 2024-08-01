@@ -68,20 +68,15 @@ export default function Dating({ pageName, children }) {
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
   const currentMessageIndex = React.useRef(NaN);
-  const chatProgressHandleConditionRef = React.useRef(false);
+  const chatProgressHandleCondition = React.useRef(false);
   const firstMessageViewCount = React.useRef(0);
+  const timeoutsRef = React.useRef([]);
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
 
-  const timeoutsRef = React.useRef([]);
-  const clearAllTimeouts = () => {
-    timeoutsRef.current.forEach((timeoutId) => clearTimeout(timeoutId));
-    timeoutsRef.current = [];
-  };
-
   const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
   const [girlIndex, setGirlIndex] = React.useState(2);
   const [chatProgress, setChatProgress] = React.useState(
@@ -90,21 +85,26 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
   const [lastElements, setLastElements] = React.useState(-10);
 
-  const lastMessageIndices = chatMapArray.slice(lastElements);
-  const lastMessages = girlsInfo[girlIndex].chat.slice(lastElements);
-  const firstMessageIndex = lastMessageIndices.length - Math.abs(lastElements);
-  const firstMessageIndexInArray =
-    firstMessageIndex < 0 ? NaN : firstMessageIndex;
-
+  // variables
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
   const nextMessage =
     girlsInfo[girlIndex].chat.length >= chatProgress + 1
       ? girlsInfo[girlIndex].chat[chatProgress + 1]
-      : false; // undefined
+      : false;
 
+  const lastMessageIndices = chatMapArray.slice(lastElements); // items
+  const lastMessagesFromChatProgress =
+    arrayFromChatProgress.slice(lastElements); // indices
+
+  const firstMessageIndex = lastMessagesFromChatProgress[0]; // lastMessageIndices.length - Math.abs(lastElements)
+  const firstMessageIndexInArray =
+    firstMessageIndex < 0 ? NaN : firstMessageIndex;
+
+  // events
   const chatProgressHandle = (index) => {
-    chatProgressHandleConditionRef.current = true;
+    chatProgressHandleCondition.current = true;
     currentMessageIndex.current = index;
+
     if ("Girl" in nextMessage && messageFallback === "none") {
       girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
         ? setMessageFallback("photo")
@@ -133,9 +133,43 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     }, 600);
     timeoutsRef.current.push(timeoutId2);
 
-    chatProgressHandleConditionRef.current = false;
+    chatProgressHandleCondition.current = false;
   };
 
+  const clearAllTimeouts = () => {
+    timeoutsRef.current.forEach((timeoutId) => clearTimeout(timeoutId));
+    timeoutsRef.current = [];
+  };
+
+  // effects
+  React.useEffect(() => {
+    let timeoutId;
+
+    if (nextMessage && !chatProgressHandleCondition.current) {
+      if ("Girl" in nextMessage && messageFallback === "none") {
+        timeoutId = setTimeout(() => {
+          chatProgressHandle(0);
+        }, 400);
+      }
+    }
+
+    if (chatMapArray.length < arrayFromChatProgress.length) {
+      setChatMapArray((prevChatProgress) => [
+        ...prevChatProgress,
+        currentMessageIndex.current,
+      ]);
+    }
+
+    timeoutsRef.current.push(timeoutId);
+  }, [chatProgress, messageFallback]);
+
+  React.useEffect(() => {
+    return () => {
+      clearAllTimeouts();
+    };
+  }, []);
+
+  // content
   const messageContent = (message, item, index) => {
     if ("Girl" in message) {
       return (
@@ -195,33 +229,6 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     }
   };
 
-  React.useEffect(() => {
-    let timeoutId;
-
-    if (nextMessage && !chatProgressHandleConditionRef.current) {
-      if ("Girl" in nextMessage && messageFallback === "none") {
-        timeoutId = setTimeout(() => {
-          chatProgressHandle(0);
-        }, 400);
-      }
-    }
-
-    if (chatMapArray.length < arrayFromChatProgress.length) {
-      setChatMapArray((prevChatProgress) => [
-        ...prevChatProgress,
-        currentMessageIndex.current,
-      ]);
-    }
-
-    timeoutsRef.current.push(timeoutId);
-  }, [chatProgress, messageFallback]);
-
-  React.useEffect(() => {
-    return () => {
-      clearAllTimeouts();
-    };
-  }, []);
-
   return (
     <>
       <div className="girlFigure">
@@ -246,12 +253,13 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           // xDirection
         >
           {lastMessageIndices.map((item, index) => {
-            const message = lastMessages[index]; // undefined
+            const textIndex = lastMessagesFromChatProgress[index];
+            const message = girlsInfo[girlIndex].chat[textIndex]; // undefined
 
             if (message) {
               if (
                 (firstMessageIndexInArray || firstMessageIndexInArray === 0) &&
-                index === firstMessageIndexInArray
+                textIndex === firstMessageIndexInArray
               ) {
                 return (
                   <IntersectionTracking
@@ -262,13 +270,13 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                         ? firstMessageViewCount.current++
                         : setLastElements((prev) => prev - 10);
                     }}
-                    key={index}
+                    key={textIndex}
                   >
-                    {messageContent(message, item, index)}
+                    {messageContent(message, item, textIndex)}
                   </IntersectionTracking>
                 );
               } else {
-                return messageContent(message, item, index);
+                return messageContent(message, item, textIndex);
               }
             }
           })}
@@ -287,7 +295,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                               className="btnMessage"
                               text={text}
                               onClick={() => {
-                                !chatProgressHandleConditionRef.current &&
+                                !chatProgressHandleCondition.current &&
                                   (btnBoxRef.current.style.height = `${height}px`);
                                 chatProgressHandle(index);
                               }}
@@ -310,7 +318,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                                 className="btnGold"
                                 text={"Перейти"}
                                 onClick={() => {
-                                  !chatProgressHandleConditionRef.current &&
+                                  !chatProgressHandleCondition.current &&
                                     chatProgressHandle(0);
                                 }}
                               />

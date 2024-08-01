@@ -67,7 +67,6 @@ const Scroll: React.FC<ScrollType> = ({
   const clickedObject = React.useRef("");
 
   const [scroll, setScroll] = React.useState(0);
-  console.log("scroll", scroll);
   const [receivedObjectsWrapperSize, setReceivedObjectsWrapperSize] =
     React.useState(0);
 
@@ -334,10 +333,9 @@ const Scroll: React.FC<ScrollType> = ({
 
       if (newScroll !== scroll) {
         setScroll(newScroll);
-        console.log("handleScroll");
       }
     }
-  }, [xy, scroll]);
+  }, [xy, scroll, thumbSize]);
 
   const handleMouseMove = React.useCallback(
     (e: MouseEvent) => {
@@ -429,17 +427,6 @@ const Scroll: React.FC<ScrollType> = ({
 
           if (timeElapsed < duration) {
             animationId = requestAnimationFrame(scrollStep);
-          } else {
-            const newScroll = Math.abs(
-              Math.round(
-                (targetScrollTop / (xy - (objectsWrapperHeight + pLocalXY))) *
-                  (xy - thumbSize)
-              )
-            );
-
-            if (newScroll !== scroll) {
-              setScroll(newScroll);
-            }
           }
         };
 
