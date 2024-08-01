@@ -67,6 +67,7 @@ const Scroll: React.FC<ScrollType> = ({
   const clickedObject = React.useRef("");
 
   const [scroll, setScroll] = React.useState(0);
+  console.log("scroll", scroll);
   const [receivedObjectsWrapperSize, setReceivedObjectsWrapperSize] =
     React.useState(0);
 
@@ -186,13 +187,11 @@ const Scroll: React.FC<ScrollType> = ({
     );
   }, [xyObjectReverse, objectsPerDirection, gapY]);
 
-  const objectsWrapperHeight = objectXY
-    ? React.useMemo(() => {
-        return xyObject * childsPerDirection + (childsPerDirection - 1) * gapX;
-      }, [xyObject, childsPerDirection, gapX])
-    : React.useMemo(() => {
-        return receivedObjectsWrapperSize;
-      }, [receivedObjectsWrapperSize]);
+  const objectsWrapperHeight = React.useMemo(() => {
+    return objectXY
+      ? xyObject * childsPerDirection + (childsPerDirection - 1) * gapX
+      : receivedObjectsWrapperSize;
+  }, [xyObject, childsPerDirection, gapX, receivedObjectsWrapperSize]);
 
   const thumbSize = React.useMemo(() => {
     if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
@@ -321,10 +320,9 @@ const Scroll: React.FC<ScrollType> = ({
   // events
   const handleScroll = React.useCallback(() => {
     if (
-      (scrollElementRef.current &&
-        thumbSize !== 0 &&
-        scrollVisibility === "<O>") ||
-      scrollVisibility === "↓<O>"
+      scrollElementRef.current &&
+      thumbSize !== 0 &&
+      (scrollVisibility === "<O>" || scrollVisibility === "↓<O>")
     ) {
       const newScroll = Math.abs(
         Math.round(
@@ -336,6 +334,7 @@ const Scroll: React.FC<ScrollType> = ({
 
       if (newScroll !== scroll) {
         setScroll(newScroll);
+        console.log("handleScroll");
       }
     }
   }, [xy, scroll]);
@@ -394,9 +393,8 @@ const Scroll: React.FC<ScrollType> = ({
     }
     if (scrollVisibility === "<Ø>") {
       scrollReverse && warn("scrollReverse", "scrollVisibility <O>");
-      scrollTrigger === "←→" ||
-        (scrollTrigger === "←→/←O→" &&
-          warn("scrollTrigger ←→ or ←→/←O→", "scrollVisibility <O>"));
+      (scrollTrigger === "←→" || scrollTrigger === "←→/←O→") &&
+        warn("scrollTrigger ←→ or ←→/←O→", "scrollVisibility <O>");
     }
     if (!suspending && fallback) {
       scrollReverse && warn("fallback", "suspending");
@@ -438,6 +436,7 @@ const Scroll: React.FC<ScrollType> = ({
                   (xy - thumbSize)
               )
             );
+
             if (newScroll !== scroll) {
               setScroll(newScroll);
             }
@@ -664,7 +663,7 @@ const ScrollObjectWrapper: React.FC<ScrollObjectWrapperProps> = React.memo(
       <IntersectionTracking
         root={scrollElementRef}
         rootMargin={rootMargin}
-        wrapSyle={{
+        style={{
           width: `${localObjectXY[0]}px`,
           height: `${localObjectXY[1]}px`,
         }}
@@ -733,7 +732,7 @@ const InfiniteScrollObjectWrapper: React.FC<InfiniteScrollObjectWrapperProps> =
         <IntersectionTracking
           root={scrollElementRef}
           rootMargin={rootMargin}
-          wrapSyle={{
+          style={{
             position: "absolute",
             width: `${xyObjectReverse}px`,
             height: `${xyObject}px`,

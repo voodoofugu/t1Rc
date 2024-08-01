@@ -5,7 +5,9 @@ type IntersectionTrackingProps = {
   root?: Element | null;
   threshold?: number;
   rootMargin?: number[] | number;
-  wrapSyle?: React.CSSProperties;
+  style?: React.CSSProperties;
+  visibleContent?: boolean;
+  onVisible?: () => void;
 };
 
 const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
@@ -13,7 +15,9 @@ const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
   root,
   threshold,
   rootMargin,
-  wrapSyle,
+  style,
+  visibleContent = false,
+  onVisible,
 }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const observableElement = React.useRef<HTMLDivElement | null>(null);
@@ -52,9 +56,15 @@ const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
     };
   }, [root, threshold, rootMargin]);
 
+  React.useEffect(() => {
+    if (isVisible && onVisible) {
+      onVisible();
+    }
+  }, [isVisible]);
+
   return (
-    <div ref={observableElement} style={wrapSyle}>
-      {isVisible && children}
+    <div className="intersectionTracking" ref={observableElement} style={style}>
+      {visibleContent ? children : isVisible && children}
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 import ResizeTracking from "../../templateComponents/APIs/ResizeTracking";
+import IntersectionTracking from "../../templateComponents/APIs/IntersectionTracking";
 
 export const cssFiles = [
   "customScroll",
@@ -68,6 +69,7 @@ export default function Dating({ pageName, children }) {
 const GirlIndexDependencies = ({ girlsInfo }) => {
   const currentMessageIndex = React.useRef(NaN);
   const chatProgressHandleConditionRef = React.useRef(false);
+  const firstMessageViewCount = React.useRef(0);
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
@@ -79,24 +81,26 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   };
 
   const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
   const [girlIndex, setGirlIndex] = React.useState(2);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
+  const [lastElements, setLastElements] = React.useState(-10);
 
-  const lastTenIndices = chatMapArray.slice(-10);
-  const lastTenElements = girlsInfo[girlIndex].chat.slice(-10);
-  console.log("lastTenElements", lastTenElements);
+  const lastMessageIndices = chatMapArray.slice(lastElements);
+  const lastMessages = girlsInfo[girlIndex].chat.slice(lastElements);
+  const firstMessageIndex = lastMessageIndices.length - Math.abs(lastElements);
+  const firstMessageIndexInArray =
+    firstMessageIndex < 0 ? NaN : firstMessageIndex;
 
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
   const nextMessage =
     girlsInfo[girlIndex].chat.length >= chatProgress + 1
       ? girlsInfo[girlIndex].chat[chatProgress + 1]
-      : false;
-  console.log("nextMessage", nextMessage);
+      : false; // undefined
 
   const chatProgressHandle = (index) => {
     chatProgressHandleConditionRef.current = true;
@@ -130,6 +134,65 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     timeoutsRef.current.push(timeoutId2);
 
     chatProgressHandleConditionRef.current = false;
+  };
+
+  const messageContent = (message, item, index) => {
+    if ("Girl" in message) {
+      return (
+        <Delay
+          key={index}
+          delay={
+            messageFallback !== "none" && index === chatMapArray.length - 1
+              ? message.Girl[item].split(" ")[0].length * 100 + 2100
+              : index * 100
+          }
+          onTimeout={() => {
+            fallbackBoxRef.current.classList.remove("hiddenInner");
+            setMessageFallback("none");
+          }}
+        >
+          {message.Girl[item] === "img" ? (
+            <Message>
+              <div className="photo">
+                <div className="imgWrap">
+                  <img
+                    src={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/sh-6.jpg`}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </Message>
+          ) : (
+            <Message text={message.Girl[item]} />
+          )}
+        </Delay>
+      );
+    }
+
+    if ("Hero" in message) {
+      return (
+        <Delay
+          key={index}
+          delay={index === chatMapArray.length - 1 ? 100 : index * 100}
+        >
+          <Message position="right" text={message.Hero[item]} />
+        </Delay>
+      );
+    }
+
+    if ("Quest" in message) {
+      return (
+        <Delay
+          key={index}
+          delay={index === chatMapArray.length - 1 ? 100 : index * 100}
+        >
+          <Message
+            className="infoMessage questDone"
+            text="The quest has been completed successfully!"
+          />
+        </Delay>
+      );
+    }
   };
 
   React.useEffect(() => {
@@ -175,65 +238,39 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         <Scroll
           className="scrollChat"
           scrollXY={[480, 496]}
+          objectsWrapperMinSize={496}
           gap={[16, 0]}
           padding={[4, 20]}
           scrollTrigger="←→/←O→"
-          scrollTop="end"
-          objectsWrapperMinSize={496}
+          // scrollTop="end"
           // xDirection
         >
-          {lastTenIndices.map((item, index) => {
-            const message = lastTenElements[index];
-            // {chatMapArray.map((item, index) => {
-            //   const message = girlsInfo[girlIndex].chat[index];
+          {lastMessageIndices.map((item, index) => {
+            const message = lastMessages[index]; // undefined
 
-            if ("Girl" in message) {
-              return (
-                <Delay
-                  key={index}
-                  delay={
-                    messageFallback !== "none" &&
-                    index === chatMapArray.length - 1
-                      ? message.Girl[item].split(" ")[0].length * 100 + 2100
-                      : index * 100
-                  }
-                  onTimeout={() => {
-                    fallbackBoxRef.current.classList.remove("hiddenInner");
-                    setMessageFallback("none");
-                  }}
-                >
-                  {message.Girl[item] === "img" ? (
-                    <Message>
-                      <div className="photo">
-                        <div className="imgWrap">
-                          <img
-                            src={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/sh-6.jpg`}
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </Message>
-                  ) : (
-                    <Message text={message.Girl[item]} />
-                  )}
-                </Delay>
-              );
+            if (message) {
+              if (
+                (firstMessageIndexInArray || firstMessageIndexInArray === 0) &&
+                index === firstMessageIndexInArray
+              ) {
+                return (
+                  <IntersectionTracking
+                    rootMargin={[0, 0]}
+                    visibleContent
+                    onVisible={() => {
+                      firstMessageViewCount.current === 0
+                        ? firstMessageViewCount.current++
+                        : setLastElements((prev) => prev - 10);
+                    }}
+                    key={index}
+                  >
+                    {messageContent(message, item, index)}
+                  </IntersectionTracking>
+                );
+              } else {
+                return messageContent(message, item, index);
+              }
             }
-
-            if ("Hero" in message) {
-              return (
-                <Delay
-                  key={index}
-                  delay={index === chatMapArray.length - 1 ? 100 : index * 100}
-                >
-                  <Message position="right" text={message.Hero[item]} />
-                </Delay>
-              );
-            }
-
-            // if ("Quest" in message) {
-            //   return null;
-            // }
           })}
 
           {nextMessage && (
