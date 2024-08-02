@@ -188,7 +188,9 @@ const Scroll: React.FC<ScrollType> = ({
 
   const objectsWrapperHeight = React.useMemo(() => {
     return objectXY
-      ? xyObject * childsPerDirection + (childsPerDirection - 1) * gapX
+      ? xyObject * childsPerDirection +
+          pLocalXY +
+          (childsPerDirection - 1) * gapX
       : receivedObjectsWrapperSize;
   }, [xyObject, childsPerDirection, gapX, receivedObjectsWrapperSize]);
 
@@ -373,11 +375,13 @@ const Scroll: React.FC<ScrollType> = ({
 
   const handleResize = React.useCallback(
     (width: number, height: number) => {
-      setReceivedObjectsWrapperSize(
-        xDirection ? width - pLocalXY : height - pLocalXY
-      );
+      const newSize = xDirection ? width - pLocalXY : height - pLocalXY;
+      setReceivedObjectsWrapperSize(newSize);
+      if (objectsWrapperHeight < newSize) {
+        scrollElementRef.current.scrollTop = newSize - objectsWrapperHeight;
+      }
     },
-    [xDirection, pLocalXY]
+    [xDirection, pLocalXY, objectsWrapperHeight]
   );
 
   // effects
@@ -407,8 +411,8 @@ const Scroll: React.FC<ScrollType> = ({
         typeof scrollTop === "number"
           ? scrollTop
           : scrollTop === "end"
-          ? objectsWrapperHeight + pLocalXY > xy
-            ? Math.abs(objectsWrapperHeight + pLocalXY - xy)
+          ? objectsWrapperHeight > xy
+            ? Math.abs(objectsWrapperHeight - xy)
             : 0
           : 0;
 
@@ -440,6 +444,110 @@ const Scroll: React.FC<ScrollType> = ({
   }, [scrollTop, scrollElementRef.current, objectsWrapperHeight]);
 
   // contents
+  const infiniteScrollObjectWrapper = ({
+    child,
+    xyObject,
+    xyObjectReverse,
+    suspending,
+    fallback,
+    scrollElementRef,
+    rootMargin,
+    top,
+    left,
+  }: InfiniteScrollObjectWrapperProps) => {
+    return (
+      <IntersectionTracking
+        root={scrollElementRef}
+        rootMargin={rootMargin}
+        style={{
+          position: "absolute",
+          width: `${xyObjectReverse}px`,
+          height: `${xyObject}px`,
+          top: `${top}px`,
+          ...(left !== null ? { left: `${left}px` } : {}),
+        }}
+      >
+        <div
+          style={{
+            width: `${xyObjectReverse}px`,
+          }}
+        >
+          {suspending ? (
+            <React.Suspense fallback={fallback}>{child}</React.Suspense>
+          ) : (
+            child
+          )}
+        </div>
+      </IntersectionTracking>
+    );
+  };
+
+  const scrollObjectWrapper = ({
+    child,
+    localObjectXY,
+    xDirection,
+    suspending,
+    fallback,
+    lazyRender,
+    scrollElementRef,
+    rootMargin,
+  }: ScrollObjectWrapperProps) => {
+    const xyObject = localObjectXY
+      ? xDirection
+        ? localObjectXY[0]
+        : localObjectXY[1]
+      : NaN;
+    const xyObjectReverse = localObjectXY
+      ? xDirection
+        ? localObjectXY[1]
+        : localObjectXY[0]
+      : NaN;
+
+    return lazyRender ? (
+      <IntersectionTracking
+        root={scrollElementRef}
+        rootMargin={rootMargin}
+        style={{
+          width: `${localObjectXY[0]}px`,
+          height: `${localObjectXY[1]}px`,
+        }}
+      >
+        <div
+          style={{
+            width: `${xyObjectReverse}px`,
+            height: `${xyObject}px`,
+          }}
+        >
+          {suspending ? (
+            <React.Suspense fallback={fallback}>{child}</React.Suspense>
+          ) : (
+            child
+          )}
+        </div>
+      </IntersectionTracking>
+    ) : (
+      <div
+        style={{
+          width: `${xyObjectReverse}px`,
+          height: `${xyObject}px`,
+        }}
+      >
+        <div
+          style={{
+            width: `${localObjectXY[0]}px`,
+            height: `${localObjectXY[1]}px`,
+          }}
+        >
+          {suspending ? (
+            <React.Suspense fallback={fallback}>{child}</React.Suspense>
+          ) : (
+            child
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const objectsWrapper = React.useMemo(
     () => (
       <div
@@ -480,39 +588,30 @@ const Scroll: React.FC<ScrollType> = ({
                 elementBottom - scrollElementRef.current.scrollTop > 0 - mRootY;
 
               return (
-                isElementVisible && (
-                  <InfiniteScrollObjectWrapper
-                    key={index}
-                    {...{
-                      child,
-                      xyObjectReverse,
-                      xyObject,
-                      suspending,
-                      fallback,
-                      scrollElementRef: scrollElementRef.current,
-                      rootMargin: mRootLocal,
-                      top: elementTop,
-                      left: left,
-                    }}
-                  />
-                )
+                isElementVisible &&
+                infiniteScrollObjectWrapper({
+                  child,
+                  xyObjectReverse,
+                  xyObject,
+                  suspending,
+                  fallback,
+                  scrollElementRef: scrollElementRef.current,
+                  rootMargin: mRootLocal,
+                  top: elementTop,
+                  left: left,
+                })
               );
             } else {
-              return (
-                <ScrollObjectWrapper
-                  key={index}
-                  {...{
-                    child,
-                    localObjectXY,
-                    xDirection,
-                    suspending,
-                    fallback,
-                    lazyRender,
-                    scrollElementRef: scrollElementRef.current,
-                    rootMargin: mRootLocal,
-                  }}
-                />
-              );
+              return scrollObjectWrapper({
+                child,
+                localObjectXY,
+                xDirection,
+                suspending,
+                fallback,
+                lazyRender,
+                scrollElementRef: scrollElementRef.current,
+                rootMargin: mRootLocal,
+              });
             }
           })}
       </div>
@@ -603,6 +702,7 @@ const Scroll: React.FC<ScrollType> = ({
             style={{
               minHeight: `${localScrollXY[1]}px`,
             }}
+            key="resizeTracker"
           >
             {(width, height) => objectsWrapper}
           </ResizeTracking>
@@ -624,74 +724,6 @@ interface ScrollObjectWrapperProps
   localObjectXY?: number[];
 }
 
-const ScrollObjectWrapper: React.FC<ScrollObjectWrapperProps> = React.memo(
-  ({
-    child,
-    localObjectXY,
-    xDirection,
-    suspending,
-    fallback,
-    lazyRender,
-    scrollElementRef,
-    rootMargin,
-  }) => {
-    const xyObject = localObjectXY
-      ? xDirection
-        ? localObjectXY[0]
-        : localObjectXY[1]
-      : NaN;
-    const xyObjectReverse = localObjectXY
-      ? xDirection
-        ? localObjectXY[1]
-        : localObjectXY[0]
-      : NaN;
-
-    return lazyRender ? (
-      <IntersectionTracking
-        root={scrollElementRef}
-        rootMargin={rootMargin}
-        style={{
-          width: `${localObjectXY[0]}px`,
-          height: `${localObjectXY[1]}px`,
-        }}
-      >
-        <div
-          style={{
-            width: `${xyObjectReverse}px`,
-            height: `${xyObject}px`,
-          }}
-        >
-          {suspending ? (
-            <React.Suspense fallback={fallback}>{child}</React.Suspense>
-          ) : (
-            child
-          )}
-        </div>
-      </IntersectionTracking>
-    ) : (
-      <div
-        style={{
-          width: `${xyObjectReverse}px`,
-          height: `${xyObject}px`,
-        }}
-      >
-        <div
-          style={{
-            width: `${localObjectXY[0]}px`,
-            height: `${localObjectXY[1]}px`,
-          }}
-        >
-          {suspending ? (
-            <React.Suspense fallback={fallback}>{child}</React.Suspense>
-          ) : (
-            child
-          )}
-        </div>
-      </div>
-    );
-  }
-);
-
 interface InfiniteScrollObjectWrapperProps
   extends Pick<ScrollType, "suspending" | "fallback" | "rootMargin"> {
   child: React.ReactNode;
@@ -701,44 +733,3 @@ interface InfiniteScrollObjectWrapperProps
   top: number;
   left: number;
 }
-
-const InfiniteScrollObjectWrapper: React.FC<InfiniteScrollObjectWrapperProps> =
-  React.memo(
-    ({
-      child,
-      xyObject,
-      xyObjectReverse,
-      suspending,
-      fallback,
-      scrollElementRef,
-      rootMargin,
-      top,
-      left,
-    }) => {
-      return (
-        <IntersectionTracking
-          root={scrollElementRef}
-          rootMargin={rootMargin}
-          style={{
-            position: "absolute",
-            width: `${xyObjectReverse}px`,
-            height: `${xyObject}px`,
-            top: `${top}px`,
-            ...(left !== null ? { left: `${left}px` } : {}),
-          }}
-        >
-          <div
-            style={{
-              width: `${xyObjectReverse}px`,
-            }}
-          >
-            {suspending ? (
-              <React.Suspense fallback={fallback}>{child}</React.Suspense>
-            ) : (
-              child
-            )}
-          </div>
-        </IntersectionTracking>
-      );
-    }
-  );

@@ -84,6 +84,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
   const [lastElements, setLastElements] = React.useState(-10);
+  console.log("lastElements", lastElements);
 
   // variables
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
@@ -95,8 +96,12 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const lastMessageIndices = chatMapArray.slice(lastElements); // items
   const lastMessagesFromChatProgress =
     arrayFromChatProgress.slice(lastElements); // indices
+  const firstUnloadedIndexes = arrayFromChatProgress.slice(0, lastElements);
 
-  const firstMessageIndex = lastMessagesFromChatProgress[0]; // lastMessageIndices.length - Math.abs(lastElements)
+  const firstMessageIndex =
+    lastMessagesFromChatProgress[
+      lastMessageIndices.length - Math.abs(lastElements)
+    ];
   const firstMessageIndexInArray =
     firstMessageIndex < 0 ? NaN : firstMessageIndex;
 
@@ -252,14 +257,14 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           // scrollTop="end"
           // xDirection
         >
-          {lastMessageIndices.map((item, index) => {
-            const textIndex = lastMessagesFromChatProgress[index];
-            const message = girlsInfo[girlIndex].chat[textIndex]; // undefined
+          {chatMapArray.map((item, index) => {
+            const textIndex = arrayFromChatProgress[index];
+            const message = girlsInfo[girlIndex].chat[index]; // undefined
 
             if (message) {
               if (
                 (firstMessageIndexInArray || firstMessageIndexInArray === 0) &&
-                textIndex === firstMessageIndexInArray
+                index === firstMessageIndexInArray
               ) {
                 return (
                   <IntersectionTracking
@@ -270,19 +275,19 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                         ? firstMessageViewCount.current++
                         : setLastElements((prev) => prev - 10);
                     }}
-                    key={textIndex}
+                    key={index}
                   >
-                    {messageContent(message, item, textIndex)}
+                    {messageContent(message, item, index)}
                   </IntersectionTracking>
                 );
-              } else {
-                return messageContent(message, item, textIndex);
+              } else if (index !== firstUnloadedIndexes[index]) {
+                return messageContent(message, item, index);
               }
             }
           })}
 
-          {nextMessage && (
-            <ResizeTracking>
+          {nextMessage && (nextMessage.Hero || nextMessage.Quest) && (
+            <ResizeTracking key="btnBox">
               {(width, height) => (
                 <div className="btnBox" ref={btnBoxRef}>
                   {nextMessage &&
@@ -385,7 +390,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      <Scroll
+      {/* <Scroll
         className="scrollAvatars"
         scrollXY={[100, 530]}
         objectXY={[86, 86]}
@@ -412,7 +417,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             onClick={() => !item.condition && setGirlIndex(index)}
           />
         ))}
-      </Scroll>
+      </Scroll> */}
     </>
   );
 };
@@ -463,9 +468,9 @@ const Delay = ({ delay = 0, children, onTimeout }) => {
   }, [show]);
 
   React.useEffect(() => {
-    const timer = setTimeout(onTimeoutHandler, delay);
+    const timer = setTimeout(onTimeoutHandler, 0);
     return () => clearTimeout(timer);
-  }, [delay]);
+  }, []);
 
   return show ? children : null;
 };
