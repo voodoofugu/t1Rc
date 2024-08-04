@@ -1,16 +1,13 @@
 import React from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
-import ResizeTracking from "../../templateComponents/APIs/ResizeTracking";
-import IntersectionTracking from "../../templateComponents/APIs/IntersectionTracking";
+import ResizeTracker from "../../templateComponents/APIs/ResizeTracker";
+import IntersectionTracker from "../../templateComponents/APIs/IntersectionTracker";
 
 export const cssFiles = [
   "customScroll",
@@ -76,7 +73,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
   const fallbackBoxRef = React.useRef(null);
 
   const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
   const [girlIndex, setGirlIndex] = React.useState(2);
   const [chatProgress, setChatProgress] = React.useState(
@@ -179,7 +176,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     if ("Girl" in message) {
       return (
         <Delay
-          key={index}
+          key={`message${index}`}
           delay={
             messageFallback !== "none" && index === chatMapArray.length - 1
               ? message.Girl[item].split(" ")[0].length * 100 + 2100
@@ -211,7 +208,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     if ("Hero" in message) {
       return (
         <Delay
-          key={index}
+          key={`message${index}`}
           delay={index === chatMapArray.length - 1 ? 100 : index * 100}
         >
           <Message position="right" text={message.Hero[item]} />
@@ -222,7 +219,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
     if ("Quest" in message) {
       return (
         <Delay
-          key={index}
+          key={`message${index}`}
           delay={index === chatMapArray.length - 1 ? 100 : index * 100}
         >
           <Message
@@ -254,7 +251,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           gap={[16, 0]}
           padding={[4, 20]}
           scrollTrigger="←→/←O→"
-          // scrollTop="end"
+          scrollTop="end"
           // xDirection
         >
           {chatMapArray.map((item, index) => {
@@ -267,7 +264,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                 index === firstMessageIndexInArray
               ) {
                 return (
-                  <IntersectionTracking
+                  <IntersectionTracker
                     rootMargin={[0, 0]}
                     visibleContent
                     onVisible={() => {
@@ -275,19 +272,21 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                         ? firstMessageViewCount.current++
                         : setLastElements((prev) => prev - 10);
                     }}
-                    key={index}
+                    key={`message${textIndex}`}
                   >
                     {messageContent(message, item, index)}
-                  </IntersectionTracking>
+                  </IntersectionTracker>
                 );
-              } else if (index !== firstUnloadedIndexes[index]) {
+              } else if (index === firstUnloadedIndexes[index]) {
+                return null;
+              } else {
                 return messageContent(message, item, index);
               }
             }
           })}
 
           {nextMessage && (nextMessage.Hero || nextMessage.Quest) && (
-            <ResizeTracking key="btnBox">
+            <ResizeTracker key="nextMessageBox">
               {(width, height) => (
                 <div className="btnBox" ref={btnBoxRef}>
                   {nextMessage &&
@@ -295,7 +294,10 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                     messageFallback === "none" && (
                       <>
                         {nextMessage.Hero.map((text, index) => (
-                          <Delay key={index} delay={index * 100 + 500}>
+                          <Delay
+                            key={`nextMessage${index}`}
+                            delay={index * 100 + 500}
+                          >
                             <Message
                               className="btnMessage"
                               text={text}
@@ -317,7 +319,10 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                     messageFallback === "none" && (
                       <>
                         {nextMessage.Quest.map((text, index) => (
-                          <Delay key={index} delay={index * 100 + 500}>
+                          <Delay
+                            key={`nextMessage${index}`}
+                            delay={index * 100 + 500}
+                          >
                             <Message className="infoMessage quest" text={text}>
                               <Button
                                 className="btnGold"
@@ -340,7 +345,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
                     )}
                 </div>
               )}
-            </ResizeTracking>
+            </ResizeTracker>
           )}
         </Scroll>
 
@@ -390,7 +395,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      {/* <Scroll
+      <Scroll
         className="scrollAvatars"
         scrollXY={[100, 530]}
         objectXY={[86, 86]}
@@ -417,7 +422,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             onClick={() => !item.condition && setGirlIndex(index)}
           />
         ))}
-      </Scroll> */}
+      </Scroll>
     </>
   );
 };

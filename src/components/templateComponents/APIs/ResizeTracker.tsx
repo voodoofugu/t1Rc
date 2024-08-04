@@ -6,7 +6,7 @@ type ResizeTrackingProps = {
   style?: React.CSSProperties;
 };
 
-const ResizeTracking: React.FC<ResizeTrackingProps> = ({
+const ResizeTracker: React.FC<ResizeTrackingProps> = ({
   children,
   onResize,
   style,
@@ -38,7 +38,7 @@ const ResizeTracking: React.FC<ResizeTrackingProps> = ({
 
   return (
     <div
-      className="ResizeObserver"
+      className="resizeTracker"
       ref={containerRef}
       style={{
         width: "max-content",
@@ -51,4 +51,4 @@ const ResizeTracking: React.FC<ResizeTrackingProps> = ({
   );
 };
 
-export default ResizeTracking;
+export default ResizeTracker;

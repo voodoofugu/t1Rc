@@ -1,6 +1,6 @@
 import React from "react";
 
-type IntersectionTrackingProps = {
+type IntersectionTrackerProps = {
   children: React.ReactNode;
   root?: Element | null;
   threshold?: number;
@@ -10,7 +10,7 @@ type IntersectionTrackingProps = {
   onVisible?: () => void;
 };
 
-const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
+const IntersectionTracker: React.FC<IntersectionTrackerProps> = ({
   children,
   root,
   threshold,
@@ -63,9 +63,9 @@ const IntersectionTracking: React.FC<IntersectionTrackingProps> = ({
   }, [isVisible]);
 
   return (
-    <div className="intersectionTracking" ref={observableElement} style={style}>
+    <div className="IntersectionTracker" ref={observableElement} style={style}>
       {visibleContent ? children : isVisible && children}
     </div>
   );
 };
-export default IntersectionTracking;
+export default IntersectionTracker;

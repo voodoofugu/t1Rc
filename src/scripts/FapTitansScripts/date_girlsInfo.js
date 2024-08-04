@@ -73,6 +73,80 @@ const chat = [
   },
   { Girl: ["Lorem ipsum dolor sit amet"] },
   { Girl: ["img"] },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
+  {
+    Hero: [
+      "Onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+    ],
+  },
+  {
+    Girl: [
+      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    ],
+  },
+  {
+    Hero: [
+      "Excepteur sint occaecat cupidatat non proident",
+      "sunt in culpa qui officia",
+      "deserunt mollit anim id est laborum",
+    ],
+  },
+  {
+    Girl: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    ],
+  },
+  {
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
+  {
+    Girl: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    ],
+  },
+  {
+    Quest: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    ],
+  },
+  {
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
+  {
+    Girl: [
+      "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    ],
+  },
+  {
+    Hero: [
+      "Excepteur sint occaecat cupidatat non proident",
+      "sunt in culpa qui officia",
+      "deserunt mollit anim id est laborum",
+    ],
+  },
+  {
+    Girl: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    ],
+  },
+  {
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
+  {
+    Girl: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+    ],
+  },
+  {
+    Quest: [
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+    ],
+  },
+  {
+    Hero: ["Sunt in culpa qui officia", "deserunt mollit anim id est laborum"],
+  },
+  { Girl: ["Lorem ipsum dolor sit amet"] },
+  { Girl: ["img"] },
 ];
 
 const girlsInfo = [
