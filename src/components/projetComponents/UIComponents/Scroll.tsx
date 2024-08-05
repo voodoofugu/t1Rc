@@ -216,6 +216,18 @@ const Scroll: React.FC<ScrollType> = ({
     }
   }, [xy, objectsWrapperHeight, pLocalXY, scrollVisibility]);
 
+  const localScrollTop = React.useMemo(() => {
+    if (scrollTop) {
+      return typeof scrollTop === "number"
+        ? scrollTop
+        : scrollTop === "end"
+        ? objectsWrapperHeight + pLocalXY > xy
+          ? objectsWrapperHeight + pLocalXY - xy
+          : 0
+        : 0;
+    }
+  }, [scrollTop, objectsWrapperHeight]);
+
   const translateProperty = React.useMemo(() => {
     return localScrollXY[0] / 2 - localScrollXY[1] / 2;
   }, [localScrollXY]);
@@ -389,6 +401,34 @@ const Scroll: React.FC<ScrollType> = ({
     [xDirection, pLocalXY, objectsWrapperHeight]
   );
 
+  const smoothScroll = React.useCallback(
+    (duration: number, targetScrollTop: number, callback: () => void) => {
+      if (!scrollElementRef.current) return;
+
+      const startScrollTop = scrollElementRef.current.scrollTop;
+      const startTime = performance.now();
+
+      const scrollStep = (currentTime: number) => {
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+
+        if (targetScrollTop) {
+          scrollElementRef.current!.scrollTop =
+            startScrollTop + (targetScrollTop - startScrollTop) * progress;
+        }
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(scrollStep);
+        } else {
+          callback();
+        }
+      };
+
+      requestAnimationFrame(scrollStep);
+    },
+    [scrollElementRef]
+  );
+
   // effects
   React.useEffect(() => {
     // warn handling
@@ -409,63 +449,48 @@ const Scroll: React.FC<ScrollType> = ({
   }, []);
 
   React.useEffect(() => {
-    if (scrollTop && scrollElementRef.current) {
+    if (
+      scrollTop &&
+      scrollElementRef.current &&
+      validChildren.length > 0 &&
+      scrollTop === "end"
+    ) {
       let animationId: number;
-
-      const localScrollTop =
-        typeof scrollTop === "number"
-          ? scrollTop
-          : scrollTop === "end"
-          ? objectsWrapperHeight + pLocalXY > xy
-            ? Math.abs(objectsWrapperHeight + pLocalXY - xy)
-            : 0
-          : 0;
-
-      const smoothScroll = (
-        duration: number,
-        targetScrollTop?: number,
-        callback?: () => void
-      ) => {
-        if (!scrollElementRef.current) return;
-
-        const startScrollTop = scrollElementRef.current.scrollTop;
-        const startTime = performance.now();
-
-        const scrollStep = (currentTime: number) => {
-          const timeElapsed = currentTime - startTime;
-          const progress = Math.min(timeElapsed / duration, 1);
-
-          if (targetScrollTop) {
-            scrollElementRef.current!.scrollTop =
-              startScrollTop + (targetScrollTop - startScrollTop) * progress;
-          }
-
-          if (timeElapsed < duration) {
-            animationId = requestAnimationFrame(scrollStep);
-          } else {
-            callback();
-          }
-        };
-
-        animationId = requestAnimationFrame(scrollStep);
+      const scrollCallback = () => {
+        prevKey.current = firstChildKey;
       };
 
-      if (scrollTop === "end" && validChildren.length > 0) {
-        if (prevKey.current === null || prevKey.current !== firstChildKey) {
-          smoothScroll(200, NaN, () => {
-            prevKey.current = firstChildKey;
-          });
-        } else if (prevKey.current === firstChildKey) {
-          smoothScroll(200, localScrollTop, () => {});
-        }
-      } else {
-        smoothScroll(200, localScrollTop, () => {});
+      if (prevKey.current === null) {
+        animationId = requestAnimationFrame(() =>
+          smoothScroll(200, localScrollTop, scrollCallback)
+        );
+      } else if (prevKey.current !== firstChildKey) {
+        smoothScroll(200, NaN, scrollCallback);
+      } else if (prevKey.current === firstChildKey) {
+        animationId = requestAnimationFrame(() =>
+          smoothScroll(200, localScrollTop, () => {})
+        );
       }
 
       return () => cancelAnimationFrame(animationId);
     }
-  }, [scrollTop, objectsWrapperHeight, validChildren]);
-  // console.log("firstChildKey", firstChildKey);
+  }, [objectsWrapperHeight]);
+
+  React.useEffect(() => {
+    if (
+      scrollTop &&
+      scrollElementRef.current &&
+      validChildren.length > 0 &&
+      typeof scrollTop === "number" &&
+      scrollTop
+    ) {
+      let animationId: number;
+
+      smoothScroll(200, localScrollTop, () => {});
+
+      return () => cancelAnimationFrame(animationId);
+    }
+  }, []);
 
   // contents
   const infiniteScrollObjectWrapper = (

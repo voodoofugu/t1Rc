@@ -6,7 +6,7 @@ import ResizeTracker from "../../templateComponents/APIs/ResizeTracker";
 import IntersectionTracker from "../../templateComponents/APIs/IntersectionTracker";
 import Button from "../UIComponents/Button";
 import ProgressBar from "../UIComponents/ProgressBar";
-import Delay from "../UIComponents/Delay";
+import Delay from "./Delay";
 import Message from "../UIComponents/Message";
 
 const Chat = ({ girlsInfo, girlIndex }) => {
@@ -19,7 +19,8 @@ const Chat = ({ girlsInfo, girlIndex }) => {
   const fallbackBoxRef = React.useRef(null);
 
   const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0,
   ]);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
@@ -136,6 +137,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
             fallbackBoxRef.current.classList.remove("hiddenInner");
             setMessageFallback("none");
           }}
+          style={{ visibility: "hidden" }}
         >
           {message.Girl[item] === "img" ? (
             <Message>
@@ -160,6 +162,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
         <Delay
           key={`message${index}`}
           delay={index === chatMapArray.length - 1 ? 100 : index * 100}
+          style={{ visibility: "hidden" }}
         >
           <Message position="right" text={message.Hero[item]} />
         </Delay>
@@ -171,6 +174,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
         <Delay
           key={`message${index}`}
           delay={index === chatMapArray.length - 1 ? 100 : index * 100}
+          style={{ visibility: "hidden" }}
         >
           <Message
             className="infoMessage questDone"
