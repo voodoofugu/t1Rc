@@ -465,6 +465,7 @@ const Scroll: React.FC<ScrollType> = ({
       return () => cancelAnimationFrame(animationId);
     }
   }, [scrollTop, objectsWrapperHeight, validChildren]);
+  // console.log("firstChildKey", firstChildKey);
 
   // contents
   const infiniteScrollObjectWrapper = (
