@@ -124,20 +124,32 @@ const Chat = ({ girlsInfo, girlIndex }) => {
 
   // content
   const messageContent = (message, item, index) => {
+    const delayStyle = {
+      visibility: "hidden",
+      animation: "none",
+    };
+    const lastIndex = chatMapArray.length - 1;
+    const lastIndexCheck = lastIndex === index ? true : false;
+    const lastIndexToDeley =
+      index in arrayFromChatProgress.slice(0, -5)
+        ? 0
+        : lastMessagesFromChatProgress.indexOf(index) * 100;
+
     if ("Girl" in message) {
       return (
         <Delay
           key={`message${index}`}
           delay={
-            messageFallback !== "none" && index === chatMapArray.length - 1
+            messageFallback !== "none" && lastIndexCheck
               ? message.Girl[item].split(" ")[0].length * 100 + 2100
-              : index * 100
+              : lastIndexToDeley
           }
           onTimeout={() => {
             fallbackBoxRef.current.classList.remove("hiddenInner");
             setMessageFallback("none");
           }}
-          style={{ visibility: "hidden" }}
+          styleBeforeTimeout={delayStyle}
+          renderOnTimeout={lastIndexCheck}
         >
           {message.Girl[item] === "img" ? (
             <Message>
@@ -161,8 +173,9 @@ const Chat = ({ girlsInfo, girlIndex }) => {
       return (
         <Delay
           key={`message${index}`}
-          delay={index === chatMapArray.length - 1 ? 100 : index * 100}
-          style={{ visibility: "hidden" }}
+          delay={lastIndexCheck ? 100 : lastIndexToDeley}
+          styleBeforeTimeout={delayStyle}
+          renderOnTimeout={lastIndexCheck}
         >
           <Message position="right" text={message.Hero[item]} />
         </Delay>
@@ -173,8 +186,9 @@ const Chat = ({ girlsInfo, girlIndex }) => {
       return (
         <Delay
           key={`message${index}`}
-          delay={index === chatMapArray.length - 1 ? 100 : index * 100}
-          style={{ visibility: "hidden" }}
+          delay={lastIndexCheck ? 100 : lastIndexToDeley}
+          styleBeforeTimeout={delayStyle}
+          renderOnTimeout={lastIndexCheck}
         >
           <Message
             className="infoMessage questDone"

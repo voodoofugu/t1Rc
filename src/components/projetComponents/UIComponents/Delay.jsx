@@ -1,32 +1,41 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
-const Delay = ({ delay = 0, children, onTimeout, style }) => {
-  const [delayState, setDelayState] = React.useState(false);
+const Delay = ({
+  delay = 0,
+  children,
+  onTimeout,
+  styleBeforeTimeout,
+  renderOnTimeout = false,
+}) => {
+  const [delayState, setDelayState] = useState(false);
 
-  const validChildren = React.useMemo(() => {
+  const validChildren = useMemo(() => {
     return React.Children.toArray(children).filter(
       (child) => child !== null && child !== undefined
     );
   }, [children]);
 
-  const styledChildren = validChildren.map((child) => {
-    return delayState ? child : React.cloneElement(child, { style: style });
-  });
+  const localChildren = validChildren.map((child) =>
+    styleBeforeTimeout
+      ? delayState
+        ? child
+        : React.cloneElement(child, { style: styleBeforeTimeout })
+      : child
+  );
 
-  const onTimeoutHandler = () => {
-    setDelayState(true);
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDelayState(true);
+    }, delay);
+
+    return () => clearTimeout(timer);
+  }, [delay]);
 
   React.useEffect(() => {
     onTimeout && delayState && onTimeout();
   }, [delayState]);
 
-  React.useEffect(() => {
-    const timer = setTimeout(onTimeoutHandler, delay);
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  return styledChildren;
+  return renderOnTimeout ? (delayState ? localChildren : null) : localChildren;
 };
 
 export default Delay;

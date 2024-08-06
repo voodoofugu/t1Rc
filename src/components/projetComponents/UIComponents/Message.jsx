@@ -1,7 +1,7 @@
 import React from "react";
 
 const Message = ({
-  className, // simpleMessage d*, btnMessage, infoMessage
+  className = "simpleMessage", // simpleMessage d*, btnMessage, infoMessage
   onClick,
   position, // "right", "center"
   text,
@@ -14,9 +14,9 @@ const Message = ({
   return (
     <div
       style={style}
-      className={`message ${className ? className : "simpleMessage"} ${
-        position ? position : ""
-      } ${active ? "active" : ""}`}
+      className={`message ${className} ${position ? position : ""} ${
+        active ? "active" : ""
+      }`}
       onClick={() => {
         if (onClick) onClick(), setActive(!active);
       }}

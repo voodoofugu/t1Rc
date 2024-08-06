@@ -7,6 +7,7 @@ import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 import Chat from "../UIComponents/Chat";
+import ProgressBar from "../UIComponents/ProgressBar";
 
 export const cssFiles = [
   "customScroll",
@@ -63,7 +64,7 @@ export default function Dating({ pageName, children }) {
 }
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
-  const [girlIndex, setGirlIndex] = React.useState(2);
+  const [girlIndex, setGirlIndex] = React.useState(0);
 
   return (
     <>
@@ -75,7 +76,21 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         />
       </div>
 
-      <div className="progBar"></div>
+      <div className="progBar">
+        <ProgressBar
+          className="progresBar progressBarOfSympathy yDirection"
+          text
+          currentProgress={4}
+          maxProgress={10}
+          serifsPerProgress
+        >
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+          />
+        </ProgressBar>
+      </div>
 
       <Chat girlIndex={girlIndex} girlsInfo={girlsInfo} />
 

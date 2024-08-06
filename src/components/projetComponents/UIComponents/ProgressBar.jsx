@@ -4,9 +4,11 @@ const ProgressBar = ({
   maxProgress,
   text,
   objectsPerProgress,
+  serifsPerProgress,
   children,
 }) => {
   const widthPerProgress = 100 / maxProgress;
+  const arrayFromMaxProgress = [...Array(maxProgress + 1).keys()];
 
   return (
     <div className={`${className}`}>
@@ -16,6 +18,14 @@ const ProgressBar = ({
           style={{ width: `${widthPerProgress * currentProgress}%` }}
         ></div>
       </div>
+
+      {serifsPerProgress ? (
+        <div className="barSerifWrap">
+          {arrayFromMaxProgress.map(() => (
+            <div className="barSerif"></div>
+          ))}
+        </div>
+      ) : null}
 
       {objectsPerProgress
         ? maxProgress.map((_, index) =>
