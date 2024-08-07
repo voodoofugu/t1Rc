@@ -7,7 +7,7 @@ export default React.memo(function ItemBox({
   countOut,
   get,
   unique,
-  arrow,
+  arrow, // left, right, top, bottom
   rare,
   notif,
   sale,

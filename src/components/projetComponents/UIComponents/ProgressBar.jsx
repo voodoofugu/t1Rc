@@ -1,44 +1,83 @@
+import React from "react";
+
 const ProgressBar = ({
   className,
+  progressSize,
   currentProgress,
   maxProgress,
   text,
-  objectsPerProgress,
   serifsPerProgress,
+  itemsBoxFirst,
+  itemsBoxLast,
   children,
 }) => {
   const widthPerProgress = 100 / maxProgress;
-  const arrayFromMaxProgress = [...Array(maxProgress + 1).keys()];
 
   return (
     <div className={`${className}`}>
-      <div className="barScaleWrap">
+      <div
+        className="progressScaleWrap"
+        style={{ width: progressSize[0], height: progressSize[1] }}
+      >
         <div
-          className="barScale"
+          className="progressScale"
           style={{ width: `${widthPerProgress * currentProgress}%` }}
         ></div>
       </div>
 
       {serifsPerProgress ? (
-        <div className="barSerifWrap">
-          {arrayFromMaxProgress.map(() => (
-            <div className="barSerif"></div>
+        <div
+          className="serifWrap"
+          style={{
+            width: `${progressSize[0] - progressSize[0] / maxProgress}px`,
+          }}
+        >
+          {[...Array(maxProgress)].map((_, index) => (
+            <div className="serif" key={index}></div>
           ))}
         </div>
       ) : null}
 
-      {objectsPerProgress
-        ? maxProgress.map((_, index) =>
-            typeof objectsPerProgress === "object"
-              ? objectsPerProgress
-              : typeof objectsPerProgress === "array"
-              ? objectsPerProgress.map((obj) => obj[index])
-              : null
-          )
-        : null}
+      {Array.isArray(itemsBoxFirst) ? (
+        <div
+          className="itemsBoxWrap first"
+          style={{
+            width: `${progressSize[0] - progressSize[0] / maxProgress}px`,
+          }}
+        >
+          {itemsBoxFirst.map((item, index) => (
+            <div
+              key={index}
+              className="itemWrap"
+              style={{
+                transform: `translateX(calc(-50% + ${
+                  progressSize[0] / maxProgress
+                }px * ${index}))`,
+              }}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      ) : null}
+
+      {Array.isArray(itemsBoxLast) ? (
+        <div
+          className="itemsBoxWrap last"
+          style={{
+            width: `${progressSize[0] - progressSize[0] / maxProgress}px`,
+          }}
+        >
+          {itemsBoxLast.map((item, index) => (
+            <div key={index} className="itemWrap">
+              {item}
+            </div>
+          ))}
+        </div>
+      ) : null}
 
       {text ? (
-        <div className="barText">{`${
+        <div className="text">{`${
           text === true ? "" : text
         } ${currentProgress}/${maxProgress}`}</div>
       ) : null}
