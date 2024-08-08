@@ -76,67 +76,66 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         />
       </div>
 
-      <div className="progBar">
-        <ProgressBar
-          className="progresBar progressBarOfSympathy yDirection"
-          progressSize={[300, 18]}
-          currentProgress={2}
-          maxProgress={6}
-          serifsPerProgress
-          itemsBoxFirst={[
-            <ItemBox
-              itemClass="wh44"
-              itemPic="img/dating/datingCoin.png"
-              count={1}
-              arrow="bottom"
-            />,
-            <ItemBox
-              itemClass="wh44"
-              itemPic="img/dating/datingCoin.png"
-              count={1}
-              arrow="bottom"
-            />,
-            <ItemBox
-              itemClass="wh44"
-              itemPic="img/dating/datingCoin.png"
-              count={1}
-              arrow="bottom"
-            />,
-            <ItemBox
-              itemClass="wh44"
-              itemPic="img/dating/datingCoin.png"
-              count={1}
-              arrow="bottom"
-            />,
-            <ItemBox
-              itemClass="wh44"
-              itemPic="img/dating/datingCoin.png"
-              count={1}
-              arrow="bottom"
-            />,
-            <ItemBox
-              itemClass="wh44"
-              itemPic="img/dating/datingCoin.png"
-              count={1}
-              arrow="bottom"
-            />,
-          ]}
-          itemsBoxLast={[
-            <ItemBox
-              itemClass="wh44"
-              itemPic="img/dating/datingCoin.png"
-              count={1}
-              arrow="top"
-            />,
-          ]}
-        >
-          {/* <ItemBox
+      <ProgressBar
+        className="progresBar progressBarOfSympathy"
+        progressSize={[300, 18]}
+        currentProgress={2}
+        maxProgress={6}
+        serifsPerProgress
+        yDirection
+        itemsBoxFirst={[
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+            arrow="right"
+          />,
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+            arrow="right"
+          />,
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+            arrow="right"
+          />,
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+            arrow="right"
+          />,
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+            arrow="right"
+          />,
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+            arrow="right"
+          />,
+        ]}
+        itemsBoxLast={[
+          <ItemBox
+            itemClass="wh44"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+            arrow="left"
+          />,
+        ]}
+      >
+        {/* <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
           /> */}
-        </ProgressBar>
-      </div>
+      </ProgressBar>
 
       <Chat girlIndex={girlIndex} girlsInfo={girlsInfo} />
 
