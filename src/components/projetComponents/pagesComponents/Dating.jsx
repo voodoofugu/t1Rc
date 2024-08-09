@@ -161,7 +161,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      <Scroll
+      {/* <Scroll
         className="scrollAvatars"
         scrollXY={[100, 530]}
         objectXY={[86, 86]}
@@ -188,7 +188,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             onClick={() => !item.condition && setGirlIndex(index)}
           />
         ))}
-      </Scroll>
+      </Scroll> */}
     </>
   );
 };
