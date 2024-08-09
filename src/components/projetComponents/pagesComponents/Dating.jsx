@@ -77,65 +77,78 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       </div>
 
       <ProgressBar
-        className="progresBar progressBarOfSympathy"
-        progressSize={[300, 18]}
+        className="progresBar progressBarOfSympathy framedText"
+        progressSize={[10, 400]}
         currentProgress={2}
         maxProgress={6}
         serifsPerProgress
         yDirection
+        text
         itemsBoxFirst={[
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
-            arrow="right"
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
-            arrow="right"
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
-            arrow="right"
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
-            arrow="right"
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
-            arrow="right"
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
-            arrow="right"
           />,
         ]}
         itemsBoxLast={[
           <ItemBox
-            itemClass="wh44"
+            itemClass="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
-            arrow="left"
+          />,
+          <ItemBox
+            itemClass="wh44 simpleItem"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+          />,
+          <ItemBox
+            itemClass="wh44 simpleItem"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+          />,
+          <ItemBox
+            itemClass="wh44 simpleItem"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+          />,
+          <ItemBox
+            itemClass="wh44 simpleItem"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
+          />,
+          <ItemBox
+            itemClass="wh44 simpleItem"
+            itemPic="img/dating/datingCoin.png"
+            count={1}
           />,
         ]}
-      >
-        {/* <ItemBox
-            itemClass="wh44"
-            itemPic="img/dating/datingCoin.png"
-            count={1}
-          /> */}
-      </ProgressBar>
+      />
 
       <Chat girlIndex={girlIndex} girlsInfo={girlsInfo} />
 
