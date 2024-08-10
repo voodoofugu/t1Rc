@@ -291,7 +291,9 @@ const Chat = ({ girlsInfo, girlIndex }) => {
                             />
                             <ProgressBar
                               className="messageProgressBar"
+                              progressSize={[312, 6]}
                               text
+                              textWithMaxProgress
                               currentProgress={4}
                               maxProgress={10}
                             />
@@ -327,7 +329,8 @@ const Chat = ({ girlsInfo, girlIndex }) => {
               position="center"
             >
               <div className="imgIcon">•</div>
-              <ProgressBar className={"messageProgressBar fillingAnimation"} />
+              <ProgressBar className="messageProgressBar fillingAnimation"
+                progressSize={[28, 4]}/>
               <PersonAva
                 img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
               />

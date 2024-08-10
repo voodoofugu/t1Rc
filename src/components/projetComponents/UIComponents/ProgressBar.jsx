@@ -1,8 +1,6 @@
-import React from "react";
-
 const ProgressBar = ({
   className,
-  progressSize: [width, height],
+  progressSize: [width, height] = [0, 0],
   currentProgress,
   maxProgress,
   text,
@@ -46,23 +44,23 @@ const ProgressBar = ({
 
   return (
     <div
-      className={`progresBarWrap`}
+      className={`progresBarWrap ${className ? className : ""}${
+          yDirection ? " yDirection" : ""
+        }${itemsBoxFirst || itemsBoxLast ? " head" : ""}`}
       style={{
-        width: `${width + 6}px`,
-        height: `${height + 6}px`,
+        width: `${width}px`,
+        height: `${height}px`,
       }}
     >
       <div
-        className={`${className ? className : ""}${
-          yDirection ? " yDirection" : ""
-        }${itemsBoxFirst || itemsBoxLast ? " head" : ""}`}
+        className="progresBar"
         style={{
           ...(text && yDirection ? { paddingLeft: `29px` } : {}),
           ...(itemsBoxFirst || itemsBoxLast ? { paddingRight: `25px` } : {}),
         }}
       >
         <div
-          className="container"
+          className="contentContainer"
           style={{
             width: `${localProgressSize[0]}px`,
             height: `${localProgressSize[1]}px`,

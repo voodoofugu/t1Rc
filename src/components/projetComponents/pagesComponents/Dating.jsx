@@ -77,7 +77,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       </div>
 
       <ProgressBar
-        className="progresBar progressBarOfSympathy framedText"
+        className="progressBarOfSympathy framedText"
         progressSize={[10, 400]}
         currentProgress={2}
         maxProgress={6}
