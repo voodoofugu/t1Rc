@@ -141,7 +141,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
           key={`message${index}`}
           delay={
             messageFallback !== "none" && lastIndexCheck
-              ? message.Girl[item].split(" ")[0].length * 100 + 2100
+              ? message.Girl[item].split(" ")[0].length * 100 + 1400
               : lastIndexToDeley
           }
           onTimeout={() => {
@@ -205,7 +205,6 @@ const Chat = ({ girlsInfo, girlIndex }) => {
         className="scrollChat"
         scrollXY={[480, 496]}
         objectsWrapperMinSize={496}
-        gap={[16, 0]}
         padding={[4, 20]}
         scrollTrigger="←→/←O→"
         scrollTop="end"
@@ -249,7 +248,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
                 {nextMessage &&
                   "Hero" in nextMessage &&
                   messageFallback === "none" && (
-                    <>
+                    <Delay delay={800} renderOnTimeout>
                       {nextMessage.Hero.map((text, index) => (
                         <Delay
                           key={`nextMessage${index}`}
@@ -268,13 +267,13 @@ const Chat = ({ girlsInfo, girlIndex }) => {
                           </Message>
                         </Delay>
                       ))}
-                    </>
+                    </Delay>
                   )}
 
                 {nextMessage &&
                   "Quest" in nextMessage &&
                   messageFallback === "none" && (
-                    <>
+                    <Delay delay={800} renderOnTimeout>
                       {nextMessage.Quest.map((text, index) => (
                         <Delay
                           key={`nextMessage${index}`}
@@ -300,7 +299,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
                           </Message>
                         </Delay>
                       ))}
-                    </>
+                    </Delay>
                   )}
               </div>
             )}
@@ -329,8 +328,10 @@ const Chat = ({ girlsInfo, girlIndex }) => {
               position="center"
             >
               <div className="imgIcon">•</div>
-              <ProgressBar className="messageProgressBar fillingAnimation"
-                progressSize={[28, 4]}/>
+              <ProgressBar
+                className="messageProgressBar fillingAnimation"
+                progressSize={[28, 4]}
+              />
               <PersonAva
                 img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
               />

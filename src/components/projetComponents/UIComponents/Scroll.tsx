@@ -150,7 +150,7 @@ const Scroll: React.FC<ScrollType> = ({
     ? React.useMemo(() => {
         const objects = xDirection
           ? Math.abs(
-              Math.floor((localScrollXY[1] - pY) / (localObjectXY[0] + gapX))
+              Math.floor((localScrollXY[1] - pY) / (localObjectXY[1] + gapX))
             )
           : Math.abs(
               Math.floor((localScrollXY[0] - pY) / (localObjectXY[0] + gapX))
@@ -201,9 +201,7 @@ const Scroll: React.FC<ScrollType> = ({
 
   const objectsWrapperHeight = React.useMemo(() => {
     return objectXY
-      ? xyObject * childsPerDirection +
-          pLocalXY +
-          (childsPerDirection - 1) * gapX
+      ? xyObject * childsPerDirection + (childsPerDirection - 1) * gapX
       : receivedObjectsWrapperSize;
   }, [xyObject, childsPerDirection, gapX, receivedObjectsWrapperSize]);
 
@@ -409,6 +407,8 @@ const Scroll: React.FC<ScrollType> = ({
       const startTime = performance.now();
 
       const scrollStep = (currentTime: number) => {
+        if (!scrollElementRef.current) return;
+
         const timeElapsed = currentTime - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
 
@@ -496,21 +496,21 @@ const Scroll: React.FC<ScrollType> = ({
   const infiniteScrollObjectWrapper = (
     child: React.ReactNode,
     key: string,
-    top: number,
-    left: number,
-    scrollElementRef?: Element | null
+    elementTop: number,
+    left: number
   ) => {
     return (
       <IntersectionTracker
-        root={scrollElementRef}
+        root={scrollElementRef.current}
         rootMargin={rootMargin}
         style={{
           position: "absolute",
           width: `${xyObjectReverse}px`,
           height: `${xyObject}px`,
-          top: `${top}px`,
+          top: `${elementTop}px`,
           ...(left !== null ? { left: `${left}px` } : {}),
         }}
+        key={key}
       >
         <div
           key={key}
@@ -528,37 +528,23 @@ const Scroll: React.FC<ScrollType> = ({
     );
   };
 
-  const scrollObjectWrapper = (
-    child: React.ReactNode,
-    key: string,
-    scrollElementRef?: Element | null
-  ) => {
-    const xyObject = localObjectXY
-      ? xDirection
-        ? localObjectXY[0]
-        : localObjectXY[1]
-      : NaN;
-    const xyObjectReverse = localObjectXY
-      ? xDirection
-        ? localObjectXY[1]
-        : localObjectXY[0]
-      : NaN;
+  const scrollObjectWrapper = (child: React.ReactNode, key: string) => {
+    const wrapStyle1 = {
+      width: `${localObjectXY[0]}px`,
+      height: `${localObjectXY[1]}px`,
+    };
+    const wrapStyle2 = {
+      width: `${xyObjectReverse}px`,
+      height: `${xyObject}px`,
+    };
 
     return lazyRender ? (
       <IntersectionTracker
-        root={scrollElementRef}
+        root={scrollElementRef.current}
         rootMargin={mRootLocal}
-        style={{
-          width: `${localObjectXY[0]}px`,
-          height: `${localObjectXY[1]}px`,
-        }}
+        style={wrapStyle1}
       >
-        <div
-          style={{
-            width: `${xyObjectReverse}px`,
-            height: `${xyObject}px`,
-          }}
-        >
+        <div style={wrapStyle2}>
           {suspending ? (
             <React.Suspense fallback={fallback}>{child}</React.Suspense>
           ) : (
@@ -567,19 +553,8 @@ const Scroll: React.FC<ScrollType> = ({
         </div>
       </IntersectionTracker>
     ) : (
-      <div
-        key={key}
-        style={{
-          width: `${xyObjectReverse}px`,
-          height: `${xyObject}px`,
-        }}
-      >
-        <div
-          style={{
-            width: `${localObjectXY[0]}px`,
-            height: `${localObjectXY[1]}px`,
-          }}
-        >
+      <div key={key} style={wrapStyle2}>
+        <div style={wrapStyle1}>
           {suspending ? (
             <React.Suspense fallback={fallback}>{child}</React.Suspense>
           ) : (
@@ -590,73 +565,53 @@ const Scroll: React.FC<ScrollType> = ({
     );
   };
 
-  const objectsWrapper = React.useMemo(
-    () => (
-      <div
-        className="objectsWrapper"
-        ref={objectsWrapperRef}
-        onMouseDown={(e) =>
-          (scrollTrigger === "<c>" || scrollTrigger === "<c>/←O→") &&
-          handleMouseDown(e, "wrapp")
-        }
-        style={{
-          gap: `${gapX}px ${gapY}px`,
-          padding: `${pT}px ${pR}px ${pB}px ${pL}px`,
-          ...(objectsWrapperWidth ? { width: `${objectsWrapperWidth}px` } : {}),
-          ...(objectXY &&
-            objectsWrapperHeight && {
-              position: "absolute",
-              height: `${objectsWrapperHeight}px`,
-            }),
-          ...(objectsWrapperMinSize && {
-            minHeight: `calc(${objectsWrapperMinSize}px - ${pLocalXY}px)`,
+  const objectsWrapper = (
+    <div
+      className="objectsWrapper"
+      ref={objectsWrapperRef}
+      onMouseDown={(e) =>
+        (scrollTrigger === "<c>" || scrollTrigger === "<c>/←O→") &&
+        handleMouseDown(e, "wrapp")
+      }
+      style={{
+        gap: `${gapX}px ${gapY}px`,
+        padding: `${pT}px ${pR}px ${pB}px ${pL}px`,
+        ...(objectsWrapperWidth ? { width: `${objectsWrapperWidth}px` } : {}),
+        ...(objectXY &&
+          objectsWrapperHeight && {
+            position: "absolute",
+            height: `${objectsWrapperHeight}px`,
           }),
-          ...(!infiniteScroll &&
-            contentAlignCenter && {
-              justifyContent: "center",
-            }),
-        }}
-      >
-        {validChildren.map((child, index) => {
-          const key = (child as React.ReactElement).key;
+        ...(objectsWrapperMinSize && {
+          minHeight: `calc(${objectsWrapperMinSize}px - ${pLocalXY}px)`,
+        }),
+        ...(!infiniteScroll &&
+          contentAlignCenter && {
+            flexDirection: "row",
+            justifyContent: "center",
+          }),
+      }}
+    >
+      {validChildren.map((child, index) => {
+        const key = (child as React.ReactElement).key;
 
-          if (infiniteScroll && scrollElementRef.current) {
-            const { elementTop, elementBottom, left } =
-              memoizedChildrenData[index];
+        if (infiniteScroll) {
+          const { elementTop, elementBottom, left } =
+            memoizedChildrenData[index];
 
-            const isElementVisible =
-              (xDirection ? localScrollXY[0] : localScrollXY[1]) + mRootX >
-                elementTop - scrollElementRef.current.scrollTop &&
-              elementBottom - scrollElementRef.current.scrollTop > 0 - mRootY;
+          const isElementVisible =
+            (xDirection ? localScrollXY[0] : localScrollXY[1]) + mRootX >
+              elementTop - scrollElementRef.current?.scrollTop &&
+            elementBottom - scrollElementRef.current?.scrollTop > 0 - mRootY;
 
-            return (
-              isElementVisible &&
-              infiniteScrollObjectWrapper(
-                child,
-                key,
-                elementTop,
-                left,
-                scrollElementRef.current
-              )
-            );
-          } else {
-            return scrollObjectWrapper(child, key, scrollElementRef.current);
+          if (isElementVisible) {
+            return infiniteScrollObjectWrapper(child, key, elementTop, left);
           }
-        })}
-      </div>
-    ),
-    [
-      children,
-      contentAlignCenter,
-      gapX,
-      gapY,
-      infiniteScroll,
-      lazyRender,
-      localScrollXY,
-      mRootX,
-      mRootY,
-      mRootLocal,
-    ]
+        } else {
+          return scrollObjectWrapper(child, key);
+        }
+      })}
+    </div>
   );
 
   return (
@@ -726,6 +681,7 @@ const Scroll: React.FC<ScrollType> = ({
         {objectXY ? (
           objectsWrapper
         ) : (
+          // не реализовано
           <ResizeTracker
             onResize={handleResize}
             style={{
