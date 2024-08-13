@@ -30,7 +30,7 @@ interface ScrollType {
   // onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
   // autoSize?: boolean;
   // overflowEdgeGradient?: boolean | string;
-  infiniteScroll?: boolean;
+  infiniteScroll?: boolean; // not working
   contentAlignCenter?: boolean;
   wrapAlignCenter?: boolean;
   objectsWrapperMinSize?: number; // px
@@ -51,7 +51,7 @@ const Scroll: React.FC<ScrollType> = ({
   rootMargin = null,
   suspending = false,
   fallback = null,
-  scrollTop = 0,
+  scrollTop,
   infiniteScroll = false,
   contentAlignCenter = false,
   wrapAlignCenter = false,
@@ -354,6 +354,10 @@ const Scroll: React.FC<ScrollType> = ({
       if (newScroll !== scroll) {
         setScroll(newScroll);
       }
+
+      if (scrollElementRef.current.scrollTop === 0 && !clickedObject.current) {
+        scrollElementRef.current.scrollTop = 1;
+      }
     }
   }, [xy, scroll, thumbSize]);
 
@@ -413,7 +417,7 @@ const Scroll: React.FC<ScrollType> = ({
         const progress = Math.min(timeElapsed / duration, 1);
 
         if (targetScrollTop) {
-          scrollElementRef.current!.scrollTop =
+          scrollElementRef.current.scrollTop =
             startScrollTop + (targetScrollTop - startScrollTop) * progress;
         }
 
@@ -456,6 +460,7 @@ const Scroll: React.FC<ScrollType> = ({
       scrollTop === "end"
     ) {
       let animationId: number;
+
       const scrollCallback = () => {
         prevKey.current = firstChildKey;
       };
@@ -590,6 +595,9 @@ const Scroll: React.FC<ScrollType> = ({
             flexDirection: "row",
             justifyContent: "center",
           }),
+        ...(!xDirection && {
+          flexDirection: "column",
+        }),
       }}
     >
       {validChildren.map((child, index) => {

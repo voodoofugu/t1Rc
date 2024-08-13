@@ -12,22 +12,27 @@ import Message from "../UIComponents/Message";
 const Chat = ({ girlsInfo, girlIndex }) => {
   const currentMessageIndex = React.useRef(NaN);
   const chatProgressHandleCondition = React.useRef(false);
-  const firstMessageViewCount = React.useRef(0);
   const timeoutsRef = React.useRef([]);
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
 
-  const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,
-  ]);
+  const [chatMapArray, setChatMapArray] = React.useState([0]);
+  // 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  //   0,
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
-  const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
-  const [lastElements, setLastElements] = React.useState(-10);
-  console.log("lastElements", lastElements);
+  const [messageFallback, setMessageFallback] = React.useState("none"); // t: none, message, photo
+  const firstName = girlsInfo[girlIndex].name.split(" ")[0];
+  const [lastElements, setLastElements] = React.useState({
+    [firstName]: -10,
+  });
+  if (lastElements[firstName] === undefined) {
+    setLastElements({
+      [firstName]: -10,
+    });
+  }
 
   // variables
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
@@ -36,22 +41,23 @@ const Chat = ({ girlsInfo, girlIndex }) => {
       ? girlsInfo[girlIndex].chat[chatProgress + 1]
       : false;
 
-  const lastMessageIndices = chatMapArray.slice(lastElements);
-  const lastMessagesFromChatProgress =
-    arrayFromChatProgress.slice(lastElements);
+  const lastMessageIndices = chatMapArray.slice(lastElements[firstName]);
+  const lastMessagesFromChatProgress = arrayFromChatProgress.slice(
+    lastElements[firstName]
+  );
 
   const firstUnloadedIndexes = React.useMemo(() => {
-    return arrayFromChatProgress.slice(0, lastElements);
-  }, [lastElements]);
+    return arrayFromChatProgress.slice(0, lastElements[firstName]);
+  }, [lastElements[firstName]]);
 
   const firstMessageIndex =
     lastMessagesFromChatProgress[
-      lastMessageIndices.length - Math.abs(lastElements)
+      lastMessageIndices.length - Math.abs(lastElements[firstName])
     ];
 
   const firstMessageIndexInArray = React.useMemo(() => {
     return firstMessageIndex < 0 ? NaN : firstMessageIndex;
-  }, [lastElements]);
+  }, [lastElements[firstName]]);
 
   // events
   const chatProgressHandle = (index) => {
@@ -131,9 +137,9 @@ const Chat = ({ girlsInfo, girlIndex }) => {
     const lastIndex = chatMapArray.length - 1;
     const lastIndexCheck = lastIndex === index ? true : false;
     const lastIndexToDeley =
-      index in arrayFromChatProgress.slice(0, -5)
+      index in arrayFromChatProgress.slice(0, -9)
         ? 0
-        : lastMessagesFromChatProgress.indexOf(index) * 100;
+        : lastMessagesFromChatProgress.indexOf(index) * 60;
 
     if ("Girl" in message) {
       return (
@@ -205,7 +211,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
         className="scrollChat"
         scrollXY={[480, 496]}
         objectsWrapperMinSize={496}
-        padding={[4, 20]}
+        padding={[0, 20]}
         scrollTrigger="←→/←O→"
         scrollTop="end"
         // xDirection
@@ -221,14 +227,15 @@ const Chat = ({ girlsInfo, girlIndex }) => {
             ) {
               return (
                 <IntersectionTracker
-                  rootMargin={[0, 0]}
-                  visibleContent
-                  onVisible={() => {
-                    firstMessageViewCount.current === 0
-                      ? firstMessageViewCount.current++
-                      : setLastElements((prev) => prev - 10);
-                  }}
                   key={`message${textIndex}`}
+                  visibleContent
+                  intersectionDeley={300}
+                  onVisible={() => {
+                    setLastElements((prevState) => ({
+                      ...prevState,
+                      [firstName]: prevState[firstName] - 10,
+                    }));
+                  }}
                 >
                   {messageContent(message, item, index)}
                 </IntersectionTracker>
