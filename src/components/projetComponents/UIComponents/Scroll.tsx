@@ -359,7 +359,7 @@ const Scroll: React.FC<ScrollType> = ({
         scrollElementRef.current.scrollTop = 1;
       }
     }
-  }, [xy, scroll, thumbSize]);
+  }, [xy, thumbSize]);
 
   const handleMouseMove = React.useCallback(
     (e: MouseEvent) => {
