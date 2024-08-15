@@ -1327,30 +1327,32 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                     src="img/comics/step_1_01.jpg"
                     loading="lazy"
                   />
-                  <div
-                    className="journal-comics-ballon-box"
-                    style={{
-                      top: "0px",
-                      left: "80px",
-                      width: "170px",
-                      opacity: "1",
-                    }}
-                  >
-                    <div className="journal-comics-ballon-text">
-                      Damn it... we're out of gold again.
+                  <div className="ballonsWrap">
+                    <div
+                      className="journal-comics-ballon-box"
+                      style={{
+                        top: "0px",
+                        left: "80px",
+                        width: "170px",
+                        opacity: "1",
+                      }}
+                    >
+                      <div className="journal-comics-ballon-text">
+                        Damn it... we're out of gold again.
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="journal-comics-ballon-box"
-                    style={{
-                      bottom: "15px",
-                      right: "20px",
-                      width: "230px",
-                      opacity: "1",
-                    }}
-                  >
-                    <div className="journal-comics-ballon-text">
-                      The best monster orders are taken by the Guilders
+                    <div
+                      className="journal-comics-ballon-box"
+                      style={{
+                        bottom: "15px",
+                        right: "20px",
+                        width: "230px",
+                        opacity: "1",
+                      }}
+                    >
+                      <div className="journal-comics-ballon-text">
+                        The best monster orders are taken by the Guilders
+                      </div>
                     </div>
                   </div>
                   <div className="trophy-bonus-pic-lup"></div>
