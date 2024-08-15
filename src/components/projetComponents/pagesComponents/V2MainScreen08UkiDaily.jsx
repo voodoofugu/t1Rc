@@ -1,81 +1,15 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import ComicsPop from "../popupsContetnt/ComicsPop";
 
 export const cssFiles = ["quests_all", "quests-ui", "v2-screen-uki-story-pop"];
 
-export default function V2MainScreen08UkiDaily({ pageName }) {
+export default function V2MainScreen08UkiDaily({ pageName, children }) {
   const currentPath = window.location.hash.substring(3).split("/")[0];
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (pageName === currentPath) {
-      // все попапы
-      [...document.querySelectorAll(".m-popup")].map((i) => {
-        i.style.display = "none";
-      });
-
-      const re = document.querySelector(".popup-layer");
-      const pStr = document.querySelector(".m-popup.uki-story-popup");
-      const quPop = document.querySelectorAll(".quest-popup");
-
-      // закрытие попапов
-      [...document.querySelectorAll(".m-popup, .quest-popup")].map((i) => {
-        i.style.display = "none";
-        // закрываем все попапы при клике на затемнение
-        const blS = document.querySelector(".screen-blend-55");
-        blS.addEventListener("click", () => {
-          re.classList.remove("dialog-emersion-enter");
-          re.classList.add("dialog-emersion-exit");
-          setTimeout(function () {
-            re.style.display = "none";
-            i.style.display = "none";
-            re.classList.remove("dialog-emersion-exit");
-          }, 100);
-        });
-      });
-      [
-        ...document.querySelectorAll(
-          ".btn-close-x, .btn-close, div.uki-story-nav-box.btn2 > div:nth-of-type(1)"
-        ),
-      ].map((i) => {
-        i.addEventListener("click", () => {
-          re.classList.remove("dialog-emersion-enter");
-          re.classList.add("dialog-emersion-exit");
-          setTimeout(function () {
-            re.style.display = "none";
-            i.closest(".m-popup").style.display = "none";
-            i.closest(".quest-popup").style.display = "none";
-            re.classList.remove("dialog-emersion-exit");
-          }, 100);
-        });
-      });
-
-      // попапы
-      const pic = document.querySelector(".pic");
-      pic.addEventListener("click", () => {
-        re.style.display = "block";
-        setTimeout(function () {
-          pStr.style.display = "block";
-          re.classList.add("dialog-emersion-enter");
-        }, 100);
-      });
-
-      const quB1 = document.querySelector(".quest1");
-      quB1.addEventListener("click", () => {
-        re.style.display = "block";
-        setTimeout(function () {
-          quPop[0].style.display = "block";
-          re.classList.add("dialog-emersion-enter");
-        }, 100);
-      });
-
-      const quB2 = document.querySelector(".quest2");
-      quB2.addEventListener("click", () => {
-        re.style.display = "block";
-        setTimeout(function () {
-          quPop[1].style.display = "block";
-          re.classList.add("dialog-emersion-enter");
-        }, 100);
-      });
-
       // переключалка меню
       const tmAll = document.querySelectorAll(".tabs-menu-btn");
       const tmD = document.querySelector(".tabs-menu-btn.quest-daily");
@@ -166,7 +100,6 @@ export default function V2MainScreen08UkiDaily({ pageName }) {
         el.addEventListener("click", () => {
           el.parentNode.classList.toggle("view");
         });
-        // console.log(el);
       });
 
       const jc = document.querySelectorAll(".journal-comics-box");
@@ -304,181 +237,7 @@ export default function V2MainScreen08UkiDaily({ pageName }) {
           backgroundImage: "url('../img/images/back/new/09-River.jpg')",
         }}
       ></div>
-      <div className="header">
-        <div className="resource-panel">
-          <div className="avatar-box-all">
-            <div className="avatar-box-pic">
-              <img src="img/hero0093-ava.jpg" loading="lazy" />
-            </div>
-            <div className="avatar-box-name">Dormidont</div>
-          </div>
-          <div className="resource-gold">
-            <div className="value">6969K</div>
-            <div className="value-bonus">+6969K%</div>
-            <div className="resource-btn-add"></div>
-            <div className="resource-pic">
-              <img src="img/v2-res-gold.png" loading="lazy" />
-            </div>
-          </div>
-          <div className="resource-vip lvl5">
-            <div className="value-vip-diamond">6969K</div>
-            <div className="value-vip-ticket">6969K</div>
-            <div className="resource-btn-add"></div>
-            <div className="resource-pic-vip">
-              <div className="viplvl">VIP</div>
-            </div>
-          </div>
-        </div>
-        <div className="shop-chest-box-all">
-          <div className="res-shop-btn">
-            <div className="res-shop-btn-text">магазин</div>
-          </div>
-          <div className="res-chest-btn">
-            <div className="res-chest-btn-text">Chests</div>
-          </div>
-        </div>
-        <div className="singinout-btn out">
-          <div className="singinout-btn-text">sign out</div>
-        </div>
-      </div>
-      <div className="quest-box-all">
-        <div className="quest-box-scroll">
-          <div className="quest-box">
-            <li className="quest">
-              <img
-                className="icon"
-                src="img/ic-abil-reborn.png"
-                loading="lazy"
-              />
-            </li>
-          </div>
-          <div className="quest-box wrap closed">
-            <div className="quest-title-btn">offers</div>
-            <div className="quest-wrap">
-              <li className="quest angel-pop">
-                <img
-                  className="icon"
-                  src="img/picmeh-ic-angel-pop.png"
-                  loading="lazy"
-                />
-              </li>
-              <li className="quest angel-pop-x3">
-                <img
-                  className="icon"
-                  src="img/picmeh-ic-angel-pop-x3.png"
-                  loading="lazy"
-                />
-              </li>
-              <li
-                className="quest default-hero"
-                style={{ animationDelay: "0ms" }}
-              >
-                <img className="icon" src="img/ic-sh-28.png" loading="lazy" />
-              </li>
-              <li className="quest picmeh-info info">
-                <img
-                  className="icon"
-                  src="img/picmeh-ic-diamond.png"
-                  loading="lazy"
-                />
-              </li>
-              <li
-                className="quest startpack open"
-                style={{ animationDelay: "450ms" }}
-              >
-                <img
-                  className="icon"
-                  src="img/ic-hero-211.png"
-                  loading="lazy"
-                />
-                <div className="timerbox">
-                  <div className="timer">23:29:14</div>
-                </div>
-                <div className="v2-uni-notif notif notif20"></div>
-              </li>
-              <li
-                className="quest startpack open"
-                style={{ animationDelay: "600ms" }}
-              >
-                <img
-                  className="icon"
-                  src="img/v2-ico-gold.png"
-                  loading="lazy"
-                />
-                <div className="timerbox">
-                  <div className="timer">23:36:10</div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="quest-box wrap closed">
-            <div className="quest-title-btn">events</div>
-            <div className="quest-wrap">
-              <li className="quest startpack wide">
-                <img
-                  className="icon"
-                  src="img/cw-quest-icon.png"
-                  loading="lazy"
-                />
-                <div className="timerbox">
-                  <div className="timer">1D 03:08</div>
-                </div>
-              </li>
-              <li
-                className="quest startpack open"
-                style={{ animationDelay: "150ms" }}
-              >
-                <img
-                  className="icon"
-                  src="img/v2-fw-icon-fr0.png"
-                  loading="lazy"
-                />
-                <div className="timerbox">
-                  <div className="timer">71:32:33</div>
-                </div>
-              </li>
-              <li className="quest startpack wide">
-                <img
-                  className="icon"
-                  src="img/evPopArts/angel_spirit_1.png"
-                  loading="lazy"
-                />
-              </li>
-              <li className="quest marked">
-                <img className="icon" src="img/ic-quests.png" loading="lazy" />
-                <div className="quest-notif"></div>
-              </li>
-            </div>
-          </div>
-          <div className="quest-box wrap">
-            <div className="quest-title-btn">quests</div>
-            <div className="quest-wrap">
-              <li className="quest quest1" style={{ animationDelay: "750ms" }}>
-                <img
-                  className="icon"
-                  src="img/m-ico-quest.png"
-                  loading="lazy"
-                />
-              </li>
-              <li className="quest quest2" style={{ animationDelay: "750ms" }}>
-                <img
-                  className="icon"
-                  src="img/m-ico-quest-gift.png"
-                  loading="lazy"
-                />
-              </li>
-            </div>
-          </div>
-        </div>
-        <div className="opt-panel-box">
-          <div className="color-bg"></div>
-          <div className="btn feedback"></div>
-          <div className="btn statistic"></div>
-          <div className="btn settings"></div>
-          <div className="btn ru"></div>
-        </div>
-        <div className="btn-discord"></div>
-      </div>
+      <div className="quest-box-all"></div>
 
       <div className="left-side false false">
         <div className="left-panel false false">
@@ -1551,10 +1310,21 @@ export default function V2MainScreen08UkiDaily({ pageName }) {
             <div className="journal-parth-name">Intro</div>
             <div className="journal-comics-view-box">
               <div className="journal-comics-view">
-                <div className="journal-comics">
+                <div
+                  className="journal-comics"
+                  onClick={() => {
+                    dispatch({
+                      type: "POPUP_OPEN",
+                      payload: {
+                        mpopClass: "m-popup uki-story-popup contentOnly",
+                        popCont: ["ComicsPop"],
+                      },
+                    });
+                  }}
+                >
                   <img
                     className="pic"
-                    src="img/story/p1-c1.png"
+                    src="img/comics/step_1_01.jpg"
                     loading="lazy"
                   />
                   <div
@@ -1642,131 +1412,7 @@ export default function V2MainScreen08UkiDaily({ pageName }) {
           </a>
         </div>
       </div>
-      <div id="popupWrapper" className="popup-layer">
-        <div className="screen-blend-55"></div>
-        <div id="popupContainer">
-          <div className="m-popup uki-story-popup">
-            <div className="title">New story picture!</div>
-            <div className="color-box">
-              <div className="journal-comics-view c10">
-                <div className="journal-comics">
-                  <img
-                    className="pic"
-                    src="img/story/p1-c1.png"
-                    loading="lazy"
-                  />
-                  <div
-                    className="journal-comics-ballon-box"
-                    style={{
-                      top: "0px",
-                      left: "80px",
-                      width: "170px",
-                      opacity: "1",
-                    }}
-                  >
-                    <div className="journal-comics-ballon-text">
-                      Damn it... we're out of gold again.
-                    </div>
-                  </div>
-                  <div
-                    className="journal-comics-ballon-box"
-                    style={{
-                      bottom: "15px",
-                      right: "20px",
-                      width: "230px",
-                      opacity: "1",
-                    }}
-                  >
-                    <div className="journal-comics-ballon-text">
-                      The best monster orders are taken by the Guilders
-                    </div>
-                  </div>
-                  <div className="trophy-bonus-pic-lup"></div>
-                </div>
-              </div>
-              <div className="uki-story-nav-box btn2">
-                <div className="color-btn">
-                  <div className="color-btn-text">ок</div>
-                </div>
-                <div className="color-btn green">
-                  <div className="color-btn-text">next</div>
-                </div>
-              </div>
-            </div>
-            <div className="btn-close-x"></div>
-          </div>
-
-          <div className="quest-popup stage-1">
-            <div className="balloon">
-              <div>
-                <div className="title">
-                  Выполните задание и получите награду!
-                </div>
-                <p className="text">
-                  Raise the attribute "strength" to 2 in Master House
-                </p>
-                <div className="progress">
-                  <div className="num">0/2</div>
-                  <div className="prg-box">
-                    <div className="prg" style={{ width: "0%" }}></div>
-                  </div>
-                </div>
-                <div className="rewards">
-                  <p className="t">Награда:</p>
-                  <p className="icon">
-                    <img
-                      className="img"
-                      src="img/ms-stone-orange.png"
-                      loading="lazy"
-                    />
-                  </p>
-                  <p className="n">10</p>
-                </div>
-              </div>
-              <div className="btn-box">
-                <div className="btn-simple-silver btn-close">
-                  <div className="txt">Закрыть</div>
-                </div>
-              </div>
-            </div>
-            <div className="person"></div>
-          </div>
-
-          <div className="quest-popup stage-1">
-            <div className="balloon">
-              <div>
-                <div className="title">
-                  Выполните задание и получите награду!
-                </div>
-                <p className="text">Hire 2 any heroines</p>
-                <div className="progress">
-                  <div className="num">2/2</div>
-                  <div className="prg-box">
-                    <div className="prg" style={{ width: "100%" }}></div>
-                  </div>
-                </div>
-                <div className="rewards">
-                  <p className="t">Награда:</p>
-                  <p className="icon">
-                    <img
-                      className="img"
-                      src="img/ico-click.png"
-                      loading="lazy"
-                    />
-                  </p>
-                  <p className="n">8</p>
-                </div>
-              </div>
-              <div className="btn-box">
-                <div className="btn-simple-gold btn-get">
-                  <div className="txt">Получить награду!</div>
-                </div>
-              </div>
-            </div>
-            <div className="person"></div>
-          </div>
-        </div>
-      </div>
+      {children}
     </div>
   );
 }
