@@ -70,6 +70,7 @@ const Scroll: React.FC<ScrollType> = ({
   const [scroll, setScroll] = React.useState(0);
   const [receivedObjectsWrapperSize, setReceivedObjectsWrapperSize] =
     React.useState(0);
+  const [infiniteScrollState, setInfiniteScrollState] = React.useState(false);
 
   const validChildren = React.useMemo(() => {
     return React.Children.toArray(children).filter(
@@ -495,6 +496,10 @@ const Scroll: React.FC<ScrollType> = ({
 
       return () => cancelAnimationFrame(animationId);
     }
+
+    if (infiniteScroll) {
+      setInfiniteScrollState(true);
+    }
   }, []);
 
   // contents
@@ -613,7 +618,10 @@ const Scroll: React.FC<ScrollType> = ({
             elementBottom - scrollElementRef.current?.scrollTop > 0 - mRootY;
 
           if (isElementVisible) {
-            return infiniteScrollObjectWrapper(child, key, elementTop, left);
+            return (
+              infiniteScrollState &&
+              infiniteScrollObjectWrapper(child, key, elementTop, left)
+            );
           }
         } else {
           return scrollObjectWrapper(child, key);

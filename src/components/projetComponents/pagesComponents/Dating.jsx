@@ -172,7 +172,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         scrollReverse
         scrollVisibility="↓<O>"
         // lazyRender
-        // infiniteScroll
+        infiniteScroll
         // rootMargin={[0, 0]}
         // xDirection
         // suspending
