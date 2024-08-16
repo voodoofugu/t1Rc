@@ -3,13 +3,17 @@ export default function ComicsPop() {
     <div className="content">
       <div className="journal-comics-view c10">
         <div className="journal-comics">
-          <img className="pic" src="img/comics/step_1_01.jpg" loading="lazy" />
+          <img
+            className="pic"
+            src="img/quests/comics/step_1_01.jpg"
+            loading="lazy"
+          />
           <div className="ballonsWrap">
             <div
-              className="journal-comics-ballon-box top"
+              className="journal-comics-ballon-box"
               style={{
-                top: "0px",
-                left: "80px",
+                top: "26px",
+                left: "166px",
                 width: "170px",
                 opacity: "1",
               }}
@@ -20,10 +24,10 @@ export default function ComicsPop() {
               </div>
             </div>
             <div
-              className="journal-comics-ballon-box"
+              className="journal-comics-ballon-box end right"
               style={{
-                bottom: "15px",
-                right: "20px",
+                top: "20px",
+                right: "146px",
                 width: "230px",
                 opacity: "1",
               }}
@@ -34,9 +38,7 @@ export default function ComicsPop() {
               </div>
             </div>
           </div>
-          <div className="color-btn ballonsHidden">
-            <div className="color-btn-text"></div>
-          </div>
+          <div className="ballonsVisibility hidden"></div>
         </div>
       </div>
       <div className="uki-story-nav-box btn2">

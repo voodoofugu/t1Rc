@@ -1324,7 +1324,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                 >
                   <img
                     className="pic"
-                    src="img/comics/step_1_01.jpg"
+                    src="img/quests/comics/step_1_01.jpg"
                     loading="lazy"
                   />
                   <div className="ballonsWrap">
