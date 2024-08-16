@@ -68,7 +68,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
 
   return (
     <>
-      <div className="girlFigure">
+      <div className={`girlFigure ${girlsInfo[girlIndex].condition}`}>
         <img
           key={girlsInfo[girlIndex].id}
           src={`img/breakGirls/break-girl${girlsInfo[girlIndex].id}.png`}
@@ -183,9 +183,11 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         {girlsInfo.map((item, index) => (
           <PersonAva
             key={item.id}
-            className={index === girlIndex ? "active" : item.condition}
+            className={
+              index === girlIndex ? item.condition + " active" : item.condition
+            }
             img={`img/images/superhero/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
-            onClick={() => !item.condition && setGirlIndex(index)}
+            onClick={() => setGirlIndex(index)}
           />
         ))}
       </Scroll>
