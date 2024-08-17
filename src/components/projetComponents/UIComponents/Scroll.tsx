@@ -3,6 +3,7 @@ import IntersectionTracker from "../../templateComponents/APIs/IntersectionTrack
 import ResizeTracker from "../../templateComponents/APIs/ResizeTracker";
 
 interface ScrollType {
+  scrollID?: string; // This is only used to better recognize warnings
   className?: string;
   scrollXY?: number[];
   objectXY?: number[];
@@ -28,8 +29,8 @@ interface ScrollType {
   scrollTop?: number | "end";
   // multipleDirectionQuantity?: boolean;
   // onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
-  // autoSize?: boolean;
   // overflowEdgeGradient?: boolean | string;
+  // autoSize?: boolean;
   infiniteScroll?: boolean; // not working
   contentAlignCenter?: boolean;
   wrapAlignCenter?: boolean;
@@ -38,6 +39,7 @@ interface ScrollType {
 }
 
 const Scroll: React.FC<ScrollType> = ({
+  scrollID = "",
   className = "",
   scrollXY,
   objectXY,
@@ -360,7 +362,7 @@ const Scroll: React.FC<ScrollType> = ({
         scrollElementRef.current.scrollTop = 1;
       }
     }
-  }, [xy, thumbSize]);
+  }, [xy, thumbSize, scroll]);
 
   const handleMouseMove = React.useCallback(
     (e: MouseEvent) => {
@@ -437,16 +439,27 @@ const Scroll: React.FC<ScrollType> = ({
   // effects
   React.useEffect(() => {
     // warn handling
-    function warn(prop: string, missingProp: string) {
-      console.warn(`🧰👷‍♂️ You are using the ${prop} without ${missingProp}...`);
+    function warn(
+      prop: string,
+      missingProp: string,
+      availability: boolean = false
+    ) {
+      console.warn(
+        `⛔ You are using the ${prop} ${
+          availability ? "with" : "without"
+        } ${missingProp}${scrollID ? ` in ${scrollID}` : ""}`
+      );
     }
     if (!lazyRender && rootMargin) {
       scrollReverse && warn("rootMargin", "lazyRender");
     }
+    if (infiniteScroll && lazyRender) {
+      scrollReverse && warn("lazyRender", "infiniteScroll", true);
+    }
     if (scrollVisibility === "<Ø>") {
-      scrollReverse && warn("scrollReverse", "scrollVisibility <O>");
+      scrollReverse && warn("scrollReverse", "scrollVisibility `<O>`");
       (scrollTrigger === "←→" || scrollTrigger === "←→/←O→") &&
-        warn("scrollTrigger ←→ or ←→/←O→", "scrollVisibility <O>");
+        warn("scrollTrigger `←→` or `←→/←O→`", "scrollVisibility `<O>`");
     }
     if (!suspending && fallback) {
       scrollReverse && warn("fallback", "suspending");
@@ -503,78 +516,6 @@ const Scroll: React.FC<ScrollType> = ({
   }, []);
 
   // contents
-  const infiniteScrollObjectWrapper = (
-    child: React.ReactNode,
-    key: string,
-    elementTop: number,
-    left: number
-  ) => {
-    return (
-      <IntersectionTracker
-        root={scrollElementRef.current}
-        rootMargin={rootMargin}
-        style={{
-          position: "absolute",
-          width: `${xyObjectReverse}px`,
-          height: `${xyObject}px`,
-          top: `${elementTop}px`,
-          ...(left !== null ? { left: `${left}px` } : {}),
-        }}
-        key={key}
-      >
-        <div
-          key={key}
-          style={{
-            width: `${xyObjectReverse}px`,
-          }}
-        >
-          {suspending ? (
-            <React.Suspense fallback={fallback}>{child}</React.Suspense>
-          ) : (
-            child
-          )}
-        </div>
-      </IntersectionTracker>
-    );
-  };
-
-  const scrollObjectWrapper = (child: React.ReactNode, key: string) => {
-    const wrapStyle1 = {
-      width: `${localObjectXY[0]}px`,
-      height: `${localObjectXY[1]}px`,
-    };
-    const wrapStyle2 = {
-      width: `${xyObjectReverse}px`,
-      height: `${xyObject}px`,
-    };
-
-    return lazyRender ? (
-      <IntersectionTracker
-        root={scrollElementRef.current}
-        rootMargin={mRootLocal}
-        style={wrapStyle1}
-      >
-        <div style={wrapStyle2}>
-          {suspending ? (
-            <React.Suspense fallback={fallback}>{child}</React.Suspense>
-          ) : (
-            child
-          )}
-        </div>
-      </IntersectionTracker>
-    ) : (
-      <div key={key} style={wrapStyle2}>
-        <div style={wrapStyle1}>
-          {suspending ? (
-            <React.Suspense fallback={fallback}>{child}</React.Suspense>
-          ) : (
-            child
-          )}
-        </div>
-      </div>
-    );
-  };
-
   const objectsWrapper = (
     <div
       className="objectsWrapper"
@@ -608,7 +549,7 @@ const Scroll: React.FC<ScrollType> = ({
       {validChildren.map((child, index) => {
         const key = (child as React.ReactElement).key;
 
-        if (infiniteScroll) {
+        if (infiniteScroll && infiniteScrollState) {
           const { elementTop, elementBottom, left } =
             memoizedChildrenData[index];
 
@@ -619,12 +560,40 @@ const Scroll: React.FC<ScrollType> = ({
 
           if (isElementVisible) {
             return (
-              infiniteScrollState &&
-              infiniteScrollObjectWrapper(child, key, elementTop, left)
+              <ScrollObjectWrapper
+                key={key}
+                children={child}
+                scrollElementRef={scrollElementRef}
+                xyObjectReverse={xyObjectReverse}
+                xyObject={xyObject}
+                rootMargin={rootMargin}
+                suspending={suspending}
+                fallback={fallback}
+                elementTop={elementTop}
+                left={left}
+                mRootLocal={mRootLocal}
+                infiniteScroll={infiniteScroll}
+                infiniteScrollState={infiniteScrollState}
+                localObjectXY={localObjectXY}
+              />
             );
           }
         } else {
-          return scrollObjectWrapper(child, key);
+          return (
+            <ScrollObjectWrapper
+              key={key}
+              children={child}
+              scrollElementRef={scrollElementRef}
+              xyObjectReverse={xyObjectReverse}
+              xyObject={xyObject}
+              rootMargin={rootMargin}
+              suspending={suspending}
+              fallback={fallback}
+              mRootLocal={mRootLocal}
+              localObjectXY={localObjectXY}
+              lazyRender={lazyRender}
+            />
+          );
         }
       })}
     </div>
@@ -713,3 +682,92 @@ const Scroll: React.FC<ScrollType> = ({
 };
 
 export default Scroll;
+
+interface ScrollObjectWrapperType
+  extends Pick<
+    ScrollType,
+    "rootMargin" | "suspending" | "fallback" | "infiniteScroll" | "lazyRender"
+  > {
+  children: React.ReactNode;
+  elementTop?: number;
+  left?: number;
+  mRootLocal?: number[] | number;
+  scrollElementRef: React.RefObject<HTMLDivElement>;
+  infiniteScrollState?: boolean;
+  xyObject: number;
+  xyObjectReverse: number;
+  localObjectXY: number[];
+}
+
+const ScrollObjectWrapper: React.FC<ScrollObjectWrapperType> = React.memo(
+  ({
+    children,
+    elementTop,
+    left,
+    mRootLocal,
+    scrollElementRef,
+    infiniteScrollState,
+    xyObject,
+    xyObjectReverse,
+    localObjectXY,
+    rootMargin,
+    suspending,
+    fallback,
+    infiniteScroll,
+    lazyRender,
+  }) => {
+    const content = suspending ? (
+      <React.Suspense fallback={fallback}>{children}</React.Suspense>
+    ) : (
+      children
+    );
+
+    if (infiniteScroll && infiniteScrollState) {
+      return (
+        <IntersectionTracker
+          root={scrollElementRef.current}
+          rootMargin={rootMargin}
+          style={{
+            position: "absolute",
+            width: `${xyObjectReverse}px`,
+            height: `${xyObject}px`,
+            top: `${elementTop}px`,
+            ...(left !== null ? { left: `${left}px` } : {}),
+          }}
+        >
+          <div
+            style={{
+              width: `${xyObjectReverse}px`,
+            }}
+          >
+            {content}
+          </div>
+        </IntersectionTracker>
+      );
+    } else {
+      const wrapStyle1 = {
+        width: `${localObjectXY[0]}px`,
+        height: `${localObjectXY[1]}px`,
+      };
+      const wrapStyle2 = {
+        width: `${xyObjectReverse}px`,
+        height: `${xyObject}px`,
+      };
+
+      return lazyRender ? (
+        <IntersectionTracker
+          root={scrollElementRef.current}
+          rootMargin={mRootLocal}
+          style={wrapStyle1}
+        >
+          <div style={wrapStyle2}>{content}</div>
+        </IntersectionTracker>
+      ) : (
+        <div style={wrapStyle2}>
+          <div style={wrapStyle1}>{content}</div>
+        </div>
+      );
+    }
+  }
+);
+ScrollObjectWrapper.displayName = "ScrollObject";

@@ -162,6 +162,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       </div>
 
       <Scroll
+        scrollID="datingAvatars"
         className="scrollAvatars"
         scrollXY={[100, 530]}
         objectXY={[86, 86]}
