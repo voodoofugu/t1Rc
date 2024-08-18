@@ -17,9 +17,10 @@ const Chat = ({ girlsInfo, girlIndex }) => {
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
 
-  const [chatMapArray, setChatMapArray] = React.useState([0]);
-  // 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  //   0,
+  const [chatMapArray, setChatMapArray] = React.useState([
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0,
+  ]);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
@@ -230,7 +231,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];
-              const message = girlsInfo[girlIndex].chat[index]; // undefined
+              const message = girlsInfo[girlIndex].chat[index];
 
               if (message) {
                 if (

@@ -169,11 +169,11 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         gap={10}
         padding={[4, 10]}
         scrollTrigger="←→/←O→"
-        wrapAlignCenter
         scrollReverse
-        scrollVisibility="↓<O>"
+        // wrapAlignCenter
+        // scrollVisibility="↓<O>"
         // lazyRender
-        infiniteScroll
+        // infiniteScroll
         // rootMargin={[0, 0]}
         // xDirection
         // suspending

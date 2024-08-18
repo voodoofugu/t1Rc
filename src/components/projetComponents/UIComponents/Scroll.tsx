@@ -44,7 +44,7 @@ const Scroll: React.FC<ScrollType> = ({
   scrollXY,
   objectXY,
   xDirection = false,
-  gap = [0, 0],
+  gap,
   padding = [0, 0, 0, 0],
   scrollReverse = false,
   scrollTrigger = "←→",
@@ -102,17 +102,23 @@ const Scroll: React.FC<ScrollType> = ({
   const [pT, pR, pB, pL] = xDirection
     ? [pLocal[1], pLocal[2], pLocal[3], pLocal[0]]
     : pLocal;
-  const [pX, pY] = [pLocal[0] + pLocal[2], pLocal[1] + pLocal[3]];
+  const pY = pLocal[1] + pLocal[3];
   const pLocalXY = pT + pB;
 
   const [gapX, gapY] =
-    typeof gap === "number" ? [gap, gap] : xDirection ? [gap[1], gap[0]] : gap;
+    typeof gap === "number"
+      ? [gap, gap]
+      : xDirection
+      ? [gap[1], gap[0]]
+      : [0, 0];
 
-  const localObjectXY = objectXY
-    ? objectXY
-    : xDirection
-    ? [NaN, scrollXY[1] - pY]
-    : [scrollXY[0] - pY, NaN];
+  const localObjectXY = React.useMemo(() => {
+    return objectXY
+      ? objectXY
+      : xDirection
+      ? [NaN, scrollXY[1] - pY]
+      : [scrollXY[0] - pY, NaN];
+  }, [objectXY, xDirection, scrollXY, pY]);
 
   const xyObject = localObjectXY
     ? xDirection
@@ -438,35 +444,6 @@ const Scroll: React.FC<ScrollType> = ({
 
   // effects
   React.useEffect(() => {
-    // warn handling
-    function warn(
-      prop: string,
-      missingProp: string,
-      availability: boolean = false
-    ) {
-      console.warn(
-        `⛔ You are using the ${prop} ${
-          availability ? "with" : "without"
-        } ${missingProp}${scrollID ? ` in ${scrollID}` : ""}`
-      );
-    }
-    if (!lazyRender && rootMargin) {
-      scrollReverse && warn("rootMargin", "lazyRender");
-    }
-    if (infiniteScroll && lazyRender) {
-      scrollReverse && warn("lazyRender", "infiniteScroll", true);
-    }
-    if (scrollVisibility === "<Ø>") {
-      scrollReverse && warn("scrollReverse", "scrollVisibility `<O>`");
-      (scrollTrigger === "←→" || scrollTrigger === "←→/←O→") &&
-        warn("scrollTrigger `←→` or `←→/←O→`", "scrollVisibility `<O>`");
-    }
-    if (!suspending && fallback) {
-      scrollReverse && warn("fallback", "suspending");
-    }
-  }, []);
-
-  React.useEffect(() => {
     if (
       scrollTop &&
       scrollElementRef.current &&
@@ -496,6 +473,34 @@ const Scroll: React.FC<ScrollType> = ({
   }, [objectsWrapperHeight]);
 
   React.useEffect(() => {
+    // warn handling
+    function warn(
+      prop: string,
+      missingProp: string,
+      availability: boolean = false
+    ) {
+      console.warn(
+        `⛔ You are using the ${prop} ${
+          availability ? "with" : "without"
+        } ${missingProp}${scrollID ? ` in ${scrollID}` : ""}`
+      );
+    }
+    if (!lazyRender && rootMargin) {
+      scrollReverse && warn("rootMargin", "lazyRender");
+    }
+    if (infiniteScroll && lazyRender) {
+      scrollReverse && warn("lazyRender", "infiniteScroll", true);
+    }
+    if (scrollVisibility === "<Ø>") {
+      scrollReverse && warn("scrollReverse", "scrollVisibility `<O>`");
+      (scrollTrigger === "←→" || scrollTrigger === "←→/←O→") &&
+        warn("scrollTrigger `←→` or `←→/←O→`", "scrollVisibility `<O>`");
+    }
+    if (!suspending && fallback) {
+      scrollReverse && warn("fallback", "suspending");
+    }
+
+    // other
     if (
       scrollTop &&
       scrollElementRef.current &&
@@ -525,8 +530,8 @@ const Scroll: React.FC<ScrollType> = ({
         handleMouseDown(e, "wrapp")
       }
       style={{
-        gap: `${gapX}px ${gapY}px`,
         padding: `${pT}px ${pR}px ${pB}px ${pL}px`,
+        ...(gap ? { gap: `${gapX}px ${gapY}px` } : {}),
         ...(objectsWrapperWidth ? { width: `${objectsWrapperWidth}px` } : {}),
         ...(objectXY &&
           objectsWrapperHeight && {
@@ -616,35 +621,8 @@ const Scroll: React.FC<ScrollType> = ({
         height: `${localScrollXY[1]}px`,
       }}
     >
-      {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
-        thumbSize < xy && (
-          <div
-            className={`scrollBar ${scrollReverse ? "first" : "last"}`}
-            style={
-              scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→"
-                ? {}
-                : { pointerEvents: "none" }
-            }
-          >
-            <div
-              className="scrollBarThumb"
-              onMouseDown={(e) =>
-                (scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→") &&
-                handleMouseDown(e, "thumb")
-              }
-              style={
-                xDirection
-                  ? { width: `${thumbSize}px`, left: `${scroll}px` }
-                  : { height: `${thumbSize}px`, top: `${scroll}px` }
-              }
-            />
-          </div>
-        )}
-
       <div
-        className="scrollElement"
-        ref={scrollElementRef}
-        onScroll={handleScroll}
+        className="scrollContent"
         style={{
           width: xDirection ? `${localScrollXY[1]}px` : `${localScrollXY[0]}px`,
           height: xDirection
@@ -653,29 +631,57 @@ const Scroll: React.FC<ScrollType> = ({
           ...(xDirection && {
             transform: `rotate(-90deg) translate(${translateProperty}px, ${translateProperty}px) scaleX(-1)`,
           }),
-          ...(objectsWrapperAligning && {
-            alignItems: "center",
-          }),
-          ...(scrollTrigger === "←→" || scrollTrigger === "←→/←O→"
-            ? {
-                overflow: "hidden auto",
-              }
-            : { overflow: "hidden hidden" }),
         }}
       >
-        {objectXY ? (
-          objectsWrapper
-        ) : (
-          // не реализовано
-          <ResizeTracker
-            onResize={handleResize}
-            style={{
-              minHeight: `${localScrollXY[1]}px`,
-            }}
-          >
-            {(width, height) => objectsWrapper}
-          </ResizeTracker>
-        )}
+        {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
+          thumbSize < xy && (
+            <div
+              className={`scrollBar ${scrollReverse ? "scrollReverse" : ""}`}
+              style={
+                scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→"
+                  ? {}
+                  : { pointerEvents: "none" }
+              }
+            >
+              <div
+                className="scrollBarThumb"
+                onMouseDown={(e) =>
+                  (scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→") &&
+                  handleMouseDown(e, "thumb")
+                }
+                style={{ height: `${thumbSize}px`, top: `${scroll}px` }}
+              />
+            </div>
+          )}
+
+        <div
+          className="scrollElement"
+          ref={scrollElementRef}
+          onScroll={handleScroll}
+          style={{
+            ...(objectsWrapperAligning && {
+              alignItems: "center",
+            }),
+            ...(scrollTrigger === "←→" || scrollTrigger === "←→/←O→"
+              ? {
+                  overflow: "hidden auto",
+                }
+              : { overflow: "hidden hidden" }),
+          }}
+        >
+          {objectXY ? (
+            objectsWrapper
+          ) : (
+            <ResizeTracker
+              onResize={handleResize}
+              style={{
+                minHeight: `${localScrollXY[1]}px`,
+              }}
+            >
+              {(width, height) => objectsWrapper}
+            </ResizeTracker>
+          )}
+        </div>
       </div>
     </div>
   );
