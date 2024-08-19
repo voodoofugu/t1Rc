@@ -8,6 +8,7 @@ import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 import Chat from "../UIComponents/Chat";
 import ProgressBar from "../UIComponents/ProgressBar";
+import Button from "../UIComponents/Button";
 
 export const cssFiles = [
   "customScroll",
@@ -49,25 +50,44 @@ export default function Dating({ pageName, children }) {
             }}
           />
         </div>
-        <div className="color-btn exit">
-          <div className="color-btn-text"></div>
-        </div>
+
+        <Button className="exit" text onClick={() => {}} />
+
         <div className="btnI" />
 
         <div className="heroFigure"></div>
 
         <GirlIndexDependencies girlsInfo={girlsInfo} />
       </div>
+
       {children}
     </div>
   );
 }
 
 const GirlIndexDependencies = ({ girlsInfo }) => {
+  const dispatch = useDispatch();
+
   const [girlIndex, setGirlIndex] = React.useState(0);
 
   return (
     <>
+      <Button
+        className="orage giftsBtn"
+        text="Girl gifts"
+        img="img/dating/giftsIcn.png"
+        onClick={() => {
+          dispatch({
+            type: "POPUP_OPEN",
+            payload: {
+              mpopClass: "m-popup",
+              popTit: "",
+              popCont: [""],
+            },
+          });
+        }}
+      />
+
       <div className={`girlFigure ${girlsInfo[girlIndex].condition}`}>
         <img
           key={girlsInfo[girlIndex].id}

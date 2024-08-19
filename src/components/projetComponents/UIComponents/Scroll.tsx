@@ -118,7 +118,7 @@ const Scroll: React.FC<ScrollType> = ({
       : xDirection
       ? [NaN, scrollXY[1] - pY]
       : [scrollXY[0] - pY, NaN];
-  }, [objectXY, xDirection, scrollXY, pY]);
+  }, [objectXY, scrollXY, pY, xDirection]);
 
   const xyObject = localObjectXY
     ? xDirection
@@ -152,7 +152,7 @@ const Scroll: React.FC<ScrollType> = ({
   const localScrollXY = React.useMemo(() => {
     const [x, y] = scrollXY || localObjectXY;
     return [x, y];
-  }, []);
+  }, [scrollXY, localObjectXY]);
 
   // calculations
   const objectsPerDirection = localObjectXY
@@ -343,7 +343,7 @@ const Scroll: React.FC<ScrollType> = ({
     return xDirection
       ? Math.round(objectsWrapperHeight / localScrollXY[0])
       : Math.round(objectsWrapperHeight / localScrollXY[1]);
-  }, [xDirection, localScrollXY, localObjectXY, gap]);
+  }, [xDirection, localScrollXY, objectsWrapperHeight]);
 
   // events
   const handleScroll = React.useCallback(() => {
@@ -385,8 +385,7 @@ const Scroll: React.FC<ScrollType> = ({
   );
 
   const handleMouseUp = React.useCallback(() => {
-    clickedObject.current === "thumb" &&
-      customScrollRef.current.classList.remove("grabbingScroll");
+    customScrollRef.current.classList.remove("grabbingScroll");
     window.removeEventListener("mousemove", handleMouseMove);
     window.removeEventListener("mouseup", handleMouseUp);
     document.body.style.removeProperty("cursor");
