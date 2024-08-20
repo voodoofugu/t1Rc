@@ -36,6 +36,7 @@ interface ScrollType {
   wrapAlignCenter?: boolean;
   objectsWrapperMinSize?: number; // px
   children: React.ReactNode;
+  onScrollValue?: (value: number) => void;
 }
 
 const Scroll: React.FC<ScrollType> = ({
@@ -53,20 +54,21 @@ const Scroll: React.FC<ScrollType> = ({
   rootMargin = null,
   suspending = false,
   fallback = null,
-  scrollTop,
+  scrollTop = 1,
   infiniteScroll = false,
   contentAlignCenter = false,
   wrapAlignCenter = false,
   // overflowEdgeGradient = "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%)",
   objectsWrapperMinSize,
   children,
+  onScrollValue,
 }) => {
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
   const objectsWrapperRef = React.useRef<HTMLDivElement | null>(null);
   const customScrollRef = React.useRef<HTMLDivElement | null>(null);
 
   let objectsWrapperAligning = false;
-  const clickedObject = React.useRef("");
+  const clickedObject = React.useRef("none");
   const prevKey = React.useRef<string | null>(null);
 
   const [scroll, setScroll] = React.useState(0);
@@ -214,26 +216,36 @@ const Scroll: React.FC<ScrollType> = ({
       : receivedObjectsWrapperSize;
   }, [xyObject, childsPerDirection, gapX, receivedObjectsWrapperSize]);
 
+  const objectsWrapperHeightFull = React.useMemo(() => {
+    return objectsWrapperHeight + pLocalXY;
+  }, [objectsWrapperHeight, pLocalXY]);
+
   const thumbSize = React.useMemo(() => {
     if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
       if (objectsWrapperHeight === 0) return 0;
-      return Math.round((xy / (objectsWrapperHeight + pLocalXY)) * xy);
+      return Math.round((xy / objectsWrapperHeightFull) * xy);
     } else {
       return NaN;
     }
-  }, [xy, objectsWrapperHeight, pLocalXY, scrollVisibility]);
+  }, [xy, objectsWrapperHeightFull, scrollVisibility]);
+
+  const bottomObjectsWrapper = React.useMemo(() => {
+    return (
+      objectsWrapperHeightFull - xy // in scroll vindow
+    );
+  }, [objectsWrapperHeightFull, xy]);
 
   const localScrollTop = React.useMemo(() => {
     if (scrollTop) {
       return typeof scrollTop === "number"
         ? scrollTop
         : scrollTop === "end"
-        ? objectsWrapperHeight + pLocalXY > xy
-          ? objectsWrapperHeight + pLocalXY - xy
+        ? objectsWrapperHeightFull > xy
+          ? bottomObjectsWrapper
           : 0
         : 0;
     }
-  }, [scrollTop, objectsWrapperHeight]);
+  }, [scrollTop, objectsWrapperHeightFull, bottomObjectsWrapper]);
 
   const translateProperty = React.useMemo(() => {
     return localScrollXY[0] / 2 - localScrollXY[1] / 2;
@@ -327,11 +339,11 @@ const Scroll: React.FC<ScrollType> = ({
   objectsWrapperAligning = React.useMemo(() => {
     if (wrapAlignCenter && scrollXY) {
       if (xDirection) {
-        if (localScrollXY[0] > objectsWrapperHeight + pLocalXY) {
+        if (localScrollXY[0] > objectsWrapperHeightFull) {
           return true;
         }
       } else {
-        if (localScrollXY[1] > objectsWrapperHeight + pLocalXY) {
+        if (localScrollXY[1] > objectsWrapperHeightFull) {
           return true;
         }
       }
@@ -354,8 +366,7 @@ const Scroll: React.FC<ScrollType> = ({
     ) {
       const newScroll = Math.abs(
         Math.round(
-          (scrollElementRef.current.scrollTop /
-            (xy - (objectsWrapperHeight + pLocalXY))) *
+          (scrollElementRef.current.scrollTop / bottomObjectsWrapper) *
             (xy - thumbSize)
         )
       );
@@ -363,9 +374,16 @@ const Scroll: React.FC<ScrollType> = ({
       if (newScroll !== scroll) {
         setScroll(newScroll);
       }
-
-      if (scrollElementRef.current.scrollTop === 0 && !clickedObject.current) {
+      // avoid jumping to the top when loading new items in the scroll
+      if (
+        scrollElementRef.current.scrollTop === 0 &&
+        clickedObject.current === "none"
+      ) {
         scrollElementRef.current.scrollTop = 1;
+      }
+      // lock objectsWrapper to bottom
+      if (scrollElementRef.current.scrollTop > bottomObjectsWrapper) {
+        scrollElementRef.current.scrollTop = bottomObjectsWrapper;
       }
     }
   }, [xy, thumbSize, scroll]);
@@ -389,6 +407,7 @@ const Scroll: React.FC<ScrollType> = ({
     window.removeEventListener("mousemove", handleMouseMove);
     window.removeEventListener("mouseup", handleMouseUp);
     document.body.style.removeProperty("cursor");
+    clickedObject.current = "none";
   }, [handleMouseMove, customScrollRef]);
 
   const handleMouseDown = React.useCallback(
@@ -443,6 +462,40 @@ const Scroll: React.FC<ScrollType> = ({
 
   // effects
   React.useEffect(() => {
+    // warn handling
+    function warn(
+      prop: string,
+      missingProp: string,
+      availability: boolean = false
+    ) {
+      console.warn(
+        `⛔ You are using the ${prop} ${
+          availability ? "with" : "without"
+        } ${missingProp}${scrollID ? ` in ${scrollID}` : ""}`
+      );
+    }
+    if (!lazyRender && rootMargin) {
+      scrollReverse && warn("rootMargin", "lazyRender");
+    }
+    if (infiniteScroll && lazyRender) {
+      scrollReverse && warn("lazyRender", "infiniteScroll", true);
+    }
+    if (scrollVisibility === "<Ø>") {
+      scrollReverse && warn("scrollReverse", "scrollVisibility `<O>`");
+      (scrollTrigger === "←→" || scrollTrigger === "←→/←O→") &&
+        warn("scrollTrigger `←→` or `←→/←O→`", "scrollVisibility `<O>`");
+    }
+    if (!suspending && fallback) {
+      scrollReverse && warn("fallback", "suspending");
+    }
+
+    // other
+    if (infiniteScroll) {
+      setInfiniteScrollState(true);
+    }
+  }, []);
+
+  React.useEffect(() => {
     if (
       scrollTop &&
       scrollElementRef.current &&
@@ -472,52 +525,8 @@ const Scroll: React.FC<ScrollType> = ({
   }, [objectsWrapperHeight]);
 
   React.useEffect(() => {
-    // warn handling
-    function warn(
-      prop: string,
-      missingProp: string,
-      availability: boolean = false
-    ) {
-      console.warn(
-        `⛔ You are using the ${prop} ${
-          availability ? "with" : "without"
-        } ${missingProp}${scrollID ? ` in ${scrollID}` : ""}`
-      );
-    }
-    if (!lazyRender && rootMargin) {
-      scrollReverse && warn("rootMargin", "lazyRender");
-    }
-    if (infiniteScroll && lazyRender) {
-      scrollReverse && warn("lazyRender", "infiniteScroll", true);
-    }
-    if (scrollVisibility === "<Ø>") {
-      scrollReverse && warn("scrollReverse", "scrollVisibility `<O>`");
-      (scrollTrigger === "←→" || scrollTrigger === "←→/←O→") &&
-        warn("scrollTrigger `←→` or `←→/←O→`", "scrollVisibility `<O>`");
-    }
-    if (!suspending && fallback) {
-      scrollReverse && warn("fallback", "suspending");
-    }
-
-    // other
-    if (
-      scrollTop &&
-      scrollElementRef.current &&
-      validChildren.length > 0 &&
-      typeof scrollTop === "number" &&
-      scrollTop
-    ) {
-      let animationId: number;
-
-      smoothScroll(200, localScrollTop, () => {});
-
-      return () => cancelAnimationFrame(animationId);
-    }
-
-    if (infiniteScroll) {
-      setInfiniteScrollState(true);
-    }
-  }, []);
+    console.log("scrollTop");
+  }, [scrollElementRef.current?.scrollTop]);
 
   // contents
   const objectsWrapper = (
@@ -663,7 +672,7 @@ const Scroll: React.FC<ScrollType> = ({
             }),
             ...(scrollTrigger === "←→" || scrollTrigger === "←→/←O→"
               ? {
-                  overflow: "hidden auto",
+                  overflow: "hidden scroll",
                 }
               : { overflow: "hidden hidden" }),
           }}

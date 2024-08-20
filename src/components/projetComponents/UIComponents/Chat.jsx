@@ -234,26 +234,27 @@ const Chat = ({ girlsInfo, girlIndex }) => {
               const message = girlsInfo[girlIndex].chat[index];
 
               if (message) {
-                if (
-                  firstMessageIndexInArray !== undefined &&
-                  index === firstMessageIndexInArray
-                ) {
-                  return (
-                    <IntersectionTracker
-                      key={`message${textIndex}`}
-                      visibleContent
-                      intersectionDeley={300}
-                      onVisible={() => {
-                        setLastElements((prevState) => ({
-                          ...prevState,
-                          [firstName]: prevState[firstName] - 10,
-                        }));
-                      }}
-                    >
-                      {messageContent(message, item, index)}
-                    </IntersectionTracker>
-                  );
-                } else if (index === firstUnloadedIndexes[index]) {
+                // if (
+                //   firstMessageIndexInArray !== undefined &&
+                //   index === firstMessageIndexInArray
+                // ) {
+                //   return (
+                //     <IntersectionTracker
+                //       key={`message${textIndex}`}
+                //       visibleContent
+                //       intersectionDeley={200}
+                //       onVisible={() => {
+                //         setLastElements((prevState) => ({
+                //           ...prevState,
+                //           [firstName]: prevState[firstName] - 10,
+                //         }));
+                //       }}
+                //     >
+                //       {messageContent(message, item, index)}
+                //     </IntersectionTracker>
+                //   );
+                // } else
+                if (index === firstUnloadedIndexes[index]) {
                   return null;
                 } else {
                   return messageContent(message, item, index);
