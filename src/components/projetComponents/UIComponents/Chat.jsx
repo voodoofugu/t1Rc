@@ -227,6 +227,14 @@ const Chat = ({ girlsInfo, girlIndex }) => {
             padding={[0, 20]}
             scrollTrigger="←→/←O→"
             scrollTop="end"
+            onScrollValue={[
+              1,
+              () =>
+                setLastElements((prevState) => ({
+                  ...prevState,
+                  [firstName]: prevState[firstName] - 10,
+                })),
+            ]}
             // xDirection
           >
             {chatMapArray.map((item, index) => {

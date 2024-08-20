@@ -181,7 +181,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      {/* <Scroll
+      <Scroll
         scrollID="datingAvatars"
         className="scrollAvatars"
         scrollXY={[100, 530]}
@@ -211,7 +211,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-      </Scroll> */}
+      </Scroll>
     </>
   );
 };

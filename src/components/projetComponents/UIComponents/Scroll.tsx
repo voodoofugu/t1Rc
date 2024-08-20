@@ -36,7 +36,7 @@ interface ScrollType {
   wrapAlignCenter?: boolean;
   objectsWrapperMinSize?: number; // px
   children: React.ReactNode;
-  onScrollValue?: (value: number) => void;
+  onScrollValue?: [number, () => void];
 }
 
 const Scroll: React.FC<ScrollType> = ({
@@ -385,6 +385,13 @@ const Scroll: React.FC<ScrollType> = ({
       if (scrollElementRef.current.scrollTop > bottomObjectsWrapper) {
         scrollElementRef.current.scrollTop = bottomObjectsWrapper;
       }
+      // onScrollValue
+      if (
+        onScrollValue &&
+        Math.round(scrollElementRef.current.scrollTop) === onScrollValue[0]
+      ) {
+        onScrollValue[1]();
+      }
     }
   }, [xy, thumbSize, scroll]);
 
@@ -523,10 +530,6 @@ const Scroll: React.FC<ScrollType> = ({
       return () => cancelAnimationFrame(animationId);
     }
   }, [objectsWrapperHeight]);
-
-  React.useEffect(() => {
-    console.log("scrollTop");
-  }, [scrollElementRef.current?.scrollTop]);
 
   // contents
   const objectsWrapper = (
