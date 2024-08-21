@@ -1,3 +1,5 @@
+import ComicsBallon from "../UIComponents/ComicsBallon";
+
 export default function ComicsPop() {
   return (
     <div className="content">
@@ -9,34 +11,28 @@ export default function ComicsPop() {
             loading="lazy"
           />
           <div className="ballonsWrap">
-            <div
-              className="journal-comics-ballon-box"
+            <ComicsBallon
+              text="Damn it... we're out of gold again."
               style={{
                 top: "26px",
                 left: "166px",
                 width: "170px",
                 opacity: "1",
               }}
-            >
-              <div className="ballonArrow"></div>
-              <div className="journal-comics-ballon-text">
-                Damn it... we're out of gold again.
-              </div>
-            </div>
-            <div
-              className="journal-comics-ballon-box end right"
+            />
+            <ComicsBallon
+              text="The best monster orders are taken by the Guilders"
               style={{
                 top: "20px",
                 right: "146px",
-                width: "230px",
+                width: "153px",
                 opacity: "1",
               }}
-            >
-              <div className="ballonArrow"></div>
-              <div className="journal-comics-ballon-text">
-                The best monster orders are taken by the Guilders
-              </div>
-            </div>
+              // changeDirectionArrow
+              arrowdirection="xDirection"
+              align="center"
+              // arrowPosition="last"
+            />
           </div>
           <div className="ballonsVisibility hidden"></div>
         </div>
