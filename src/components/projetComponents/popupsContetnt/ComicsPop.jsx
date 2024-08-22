@@ -12,27 +12,43 @@ export default function ComicsPop() {
           />
           <div className="ballonsWrap">
             <ComicsBallon
-              text="Damn it... we're out of gold again."
+              text="Welcome to the team! Now we're ready to conquer the world..."
               style={{
-                top: "26px",
-                left: "166px",
-                width: "170px",
-                opacity: "1",
+                top: "14px",
+                left: "714px",
+                width: "275px",
               }}
+              changeDirectionArrow
+              // arrowDirection="xDirection"
+              arrowPosition="last"
+              align="center"
             />
-            <ComicsBallon
-              text="The best monster orders are taken by the Guilders"
+
+            {/* <ComicsBallon
+              text="I told you we'd make a deal."
               style={{
-                top: "20px",
-                right: "146px",
-                width: "153px",
-                opacity: "1",
+                top: "124px",
+                left: "324px",
+                width: "200px",
               }}
               // changeDirectionArrow
-              arrowdirection="xDirection"
+              arrowDirection="xDirection"
+              arrowPosition="last"
               align="center"
-              // arrowPosition="last"
-            />
+            /> */}
+
+            {/* <ComicsBallon
+              text="Top monster orders always fall into the Guild."
+              style={{
+                top: "52px",
+                right: "62px",
+                width: "240px",
+              }}
+              // changeDirectionArrow
+              // arrowDirection="xDirection"
+              arrowPosition="last"
+              // align="center"
+            /> */}
           </div>
           <div className="ballonsVisibility hidden"></div>
         </div>
