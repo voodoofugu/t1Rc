@@ -16,10 +16,10 @@ export default function ComicsPop() {
               style={{
                 top: "14px",
                 left: "714px",
-                width: "275px",
+                width: "175px",
               }}
-              changeDirectionArrow
-              // arrowDirection="xDirection"
+              // changeDirectionArrow
+              arrowDirection="xDirection"
               arrowPosition="last"
               align="center"
             />
