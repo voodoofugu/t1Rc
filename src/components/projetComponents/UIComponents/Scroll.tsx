@@ -36,7 +36,7 @@ interface ScrollType {
   wrapAlignCenter?: boolean;
   objectsWrapperMinSize?: number; // px
   children: React.ReactNode;
-  onScrollValue?: [number, () => void];
+  onScrollValue?: [(scrollTop: number) => boolean, () => void][];
 }
 
 const Scroll: React.FC<ScrollType> = ({
@@ -386,11 +386,12 @@ const Scroll: React.FC<ScrollType> = ({
         scrollElementRef.current.scrollTop = bottomObjectsWrapper;
       }
       // onScrollValue
-      if (
-        onScrollValue &&
-        Math.round(scrollElementRef.current.scrollTop) === onScrollValue[0]
-      ) {
-        onScrollValue[1]();
+      if (onScrollValue) {
+        onScrollValue.forEach(([conditionFunc, callbackFunc]) => {
+          if (conditionFunc(scrollElementRef.current.scrollTop)) {
+            callbackFunc();
+          }
+        });
       }
     }
   }, [xy, thumbSize, scroll]);

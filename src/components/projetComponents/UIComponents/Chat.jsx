@@ -228,12 +228,14 @@ const Chat = ({ girlsInfo, girlIndex }) => {
             scrollTrigger="←→/←O→"
             scrollTop="end"
             onScrollValue={[
-              1,
-              () =>
-                setLastElements((prevState) => ({
-                  ...prevState,
-                  [firstName]: prevState[firstName] - 10,
-                })),
+              [
+                (scrollTop) => scrollTop <= 1,
+                () =>
+                  setLastElements((prevState) => ({
+                    ...prevState,
+                    [firstName]: prevState[firstName] - 10,
+                  })),
+              ],
             ]}
             // xDirection
           >
