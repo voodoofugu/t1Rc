@@ -21,6 +21,7 @@ interface PopupState {
   dialogEmersion: string;
   popOpen: (dispatch: (action: any) => void, actionStatets?: any) => void;
   popClose: (dispatch: (action: any) => void) => void;
+  props?: Record<string, any>[];
 }
 
 interface SAndLStates {
@@ -65,6 +66,7 @@ export const initialState: InitialState = {
     dialogEmersion: "",
     popOpen: () => {},
     popClose: () => {},
+    props: [],
   },
 
   sAndLStates: {

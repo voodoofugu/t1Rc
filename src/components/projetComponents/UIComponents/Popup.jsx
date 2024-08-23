@@ -17,6 +17,7 @@ export default memo(function Popup({ pageName }) {
 
   const ComponentToRender = componentsMap[popupState.popCont[0]];
   const componentProps = popupState.popCont[1];
+  const props = popupState.props;
 
   const storageInitialData = JSON.parse(
     sessionStorage.getItem("initialStates")
@@ -59,7 +60,9 @@ export default memo(function Popup({ pageName }) {
                 </div>
               )}
               <Suspense>
-                {ComponentToRender && <ComponentToRender {...componentProps} />}
+                {ComponentToRender && (
+                  <ComponentToRender {...componentProps} {...props} />
+                )}
               </Suspense>
               <div
                 className={popupState.btnXClass}

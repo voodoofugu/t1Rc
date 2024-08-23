@@ -8,7 +8,7 @@ export default memo(function ResCount({
   className,
 }) {
   return (
-    <div className={`resCount ${className}`}>
+    <div className={`resCount${className ? ` ${className}` : ""}`}>
       <img className="resIcn" src={img} loading="lazy"></img>
       <div className="resValueText">{value ? value : 0}</div>
       {plus && <div className="resAdd" onClick={onClick && onClick}></div>}

@@ -2,15 +2,16 @@ import chokidar from "chokidar";
 import path from "path";
 import fs from "fs/promises";
 
-// для попапов
-// const directoryPath = path.join(
-//   "./src/components/projetComponents/popupsContetnt"
-// );
-// const outputPath = path.join(directoryPath, "a_popupList.json");
-const directoryPath = path.join(
-  "./src/components/projetComponents/pagesComponents"
-);
-const outputPath = path.join(directoryPath, "a_pageList.json");
+const neededFile: string = "popupList"; // popupList, pageList
+
+const directoryPath =
+  (neededFile === "pageList" &&
+    path.join("./src/components/projetComponents/pagesComponents")) ||
+  (neededFile === "popupList" &&
+    path.join("./src/components/projetComponents/popupsContetnt"));
+const outputPath =
+  (neededFile === "pageList" && path.join(directoryPath, "a_pageList.json")) ||
+  (neededFile === "popupList" && path.join(directoryPath, "a_popupList.json"));
 
 async function getPageList() {
   try {

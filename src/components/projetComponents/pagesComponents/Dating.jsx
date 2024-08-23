@@ -15,6 +15,7 @@ export const cssFiles = [
   "dating",
   "screen-superhero",
   "screen-unipop-subscription",
+  "daiting-gifts-pop",
 ];
 
 export default function Dating({ pageName, children }) {
@@ -80,9 +81,17 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
           dispatch({
             type: "POPUP_OPEN",
             payload: {
-              mpopClass: "m-popup",
+              mpopClass: "m-popup contentOnly daitingGiftsPop",
               popTit: "",
-              popCont: [""],
+              popCont: ["DaitingGiftsPop"],
+              props: [
+                {
+                  girleID: girlsInfo[girlIndex].id,
+                },
+                {
+                  girle: "sympathy",
+                },
+              ],
             },
           });
         }}
@@ -191,7 +200,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         scrollTrigger="←→/←O→"
         scrollReverse
         // wrapAlignCenter
-        // scrollVisibility="↓<O>"
+        scrollVisibility="↓<O>"
         // lazyRender
         // infiniteScroll
         // rootMargin={[0, 0]}
