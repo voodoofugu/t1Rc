@@ -84,14 +84,9 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
               mpopClass: "m-popup contentOnly daitingGiftsPop",
               popTit: "",
               popCont: ["DaitingGiftsPop"],
-              props: [
-                {
-                  girleID: girlsInfo[girlIndex].id,
-                },
-                {
-                  girle: "sympathy",
-                },
-              ],
+              props: {
+                girleID: girlsInfo[girlIndex].id,
+              },
             },
           });
         }}
