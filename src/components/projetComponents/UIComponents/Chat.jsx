@@ -9,10 +9,13 @@ import ProgressBar from "../UIComponents/ProgressBar";
 import Delay from "./Delay";
 import Message from "../UIComponents/Message";
 
-const Chat = ({ girlsInfo, girlIndex }) => {
+const Chat = ({ girlInfo }) => {
+  const firstName = girlInfo.name.split(" ")[0];
+
   const currentMessageIndex = React.useRef(NaN);
   const chatProgressHandleCondition = React.useRef(false);
   const timeoutsRef = React.useRef([]);
+  const lastElementsReady = React.useRef({ [firstName]: false });
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
@@ -24,8 +27,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
-  const [messageFallback, setMessageFallback] = React.useState("none"); // t: none, message, photo
-  const firstName = girlsInfo[girlIndex].name.split(" ")[0];
+  const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
   const [lastElements, setLastElements] = React.useState({
     [firstName]: -10,
   });
@@ -38,8 +40,8 @@ const Chat = ({ girlsInfo, girlIndex }) => {
   // variables
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
   const nextMessage =
-    girlsInfo[girlIndex].chat.length >= chatProgress + 1
-      ? girlsInfo[girlIndex].chat[chatProgress + 1]
+    girlInfo.chat.length >= chatProgress + 1
+      ? girlInfo.chat[chatProgress + 1]
       : false;
 
   const lastMessageIndices = chatMapArray.slice(lastElements[firstName]);
@@ -66,7 +68,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
     currentMessageIndex.current = index;
 
     if ("Girl" in nextMessage && messageFallback === "none") {
-      girlsInfo[girlIndex].chat[chatProgress + 1].Girl[0] === "img"
+      girlInfo.chat[chatProgress + 1].Girl[0] === "img"
         ? setMessageFallback("photo")
         : setMessageFallback("message");
 
@@ -124,6 +126,15 @@ const Chat = ({ girlsInfo, girlIndex }) => {
   }, [chatProgress, messageFallback]);
 
   React.useEffect(() => {
+    if (!lastElementsReady.current[firstName]) {
+      const timeout = setTimeout(() => {
+        lastElementsReady.current = { [firstName]: true };
+      }, 1000);
+      timeoutsRef.current.push(timeout);
+    }
+  }, [firstName]);
+
+  React.useEffect(() => {
     return () => {
       clearAllTimeouts();
     };
@@ -163,7 +174,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
               <div className="photo">
                 <div className="imgWrap">
                   <img
-                    src={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/sh-6.jpg`}
+                    src={`img/images/superhero/suphero-${girlInfo.id}/x1/sh-6.jpg`}
                     loading="lazy"
                   />
                 </div>
@@ -206,11 +217,11 @@ const Chat = ({ girlsInfo, girlIndex }) => {
     }
   };
 
-  const chatCondition =
-    girlsInfo[girlIndex].condition === "closed" ? false : true;
+  const chatCondition = girlInfo.condition === "closed" ? false : true;
+  console.log(lastElementsReady?.current);
 
   return (
-    <div className="scrollChatWrap" key={girlsInfo[girlIndex].id}>
+    <div className="scrollChatWrap" key={girlInfo.id}>
       {!chatCondition ? (
         <div className="chatClosed">
           <Message
@@ -227,44 +238,43 @@ const Chat = ({ girlsInfo, girlIndex }) => {
             padding={[0, 20]}
             scrollTrigger="←→/←O→"
             scrollTop="end"
-            onScrollValue={[
-              [
-                (scrollTop) => scrollTop <= 1,
-                () =>
-                  setLastElements((prevState) => ({
-                    ...prevState,
-                    [firstName]: prevState[firstName] - 10,
-                  })),
-              ],
-            ]}
+            // onScrollValue={[
+            //   [
+            //     (scrollTop) => scrollTop <= 1,
+            //     () =>
+            //       setLastElements((prevState) => ({
+            //         ...prevState,
+            //         [firstName]: prevState[firstName] - 10,
+            //       })),
+            //   ],
+            // ]}
             // xDirection
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];
-              const message = girlsInfo[girlIndex].chat[index];
+              const message = girlInfo.chat[index];
 
               if (message) {
-                // if (
-                //   firstMessageIndexInArray !== undefined &&
-                //   index === firstMessageIndexInArray
-                // ) {
-                //   return (
-                //     <IntersectionTracker
-                //       key={`message${textIndex}`}
-                //       visibleContent
-                //       intersectionDeley={200}
-                //       onVisible={() => {
-                //         setLastElements((prevState) => ({
-                //           ...prevState,
-                //           [firstName]: prevState[firstName] - 10,
-                //         }));
-                //       }}
-                //     >
-                //       {messageContent(message, item, index)}
-                //     </IntersectionTracker>
-                //   );
-                // } else
-                if (index === firstUnloadedIndexes[index]) {
+                if (
+                  firstMessageIndexInArray !== undefined &&
+                  index === firstMessageIndexInArray
+                ) {
+                  return (
+                    <IntersectionTracker
+                      key={`message${textIndex}`}
+                      visibleContent
+                      onVisible={() => {
+                        lastElementsReady.current[firstName] &&
+                          setLastElements((prevState) => ({
+                            ...prevState,
+                            [firstName]: prevState[firstName] - 10,
+                          }));
+                      }}
+                    >
+                      {messageContent(message, item, index)}
+                    </IntersectionTracker>
+                  );
+                } else if (index === firstUnloadedIndexes[index]) {
                   return null;
                 } else {
                   return messageContent(message, item, index);
@@ -353,7 +363,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
                   position="center"
                 >
                   <PersonAva
-                    img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
+                    img={`img/images/superhero/suphero-${girlInfo.id}/x1/avatar/sh-ava-1.jpg`}
                   />
                 </Message>
               </Delay>
@@ -373,7 +383,7 @@ const Chat = ({ girlsInfo, girlIndex }) => {
                     progressSize={[28, 4]}
                   />
                   <PersonAva
-                    img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
+                    img={`img/images/superhero/suphero-${girlInfo.id}/x1/avatar/sh-ava-1.jpg`}
                   />
                 </Message>
               </Delay>

@@ -174,7 +174,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         ]}
       />
 
-      <Chat girlIndex={girlIndex} girlsInfo={girlsInfo} />
+      <Chat girlInfo={girlsInfo[girlIndex]} />
 
       <div className="girlName">
         <div className="addText">with</div>

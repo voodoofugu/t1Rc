@@ -15,6 +15,7 @@ export const cssFiles = [
   "01-all-res",
   "v2-screen-main",
   "v2-screen-main-dark-world",
+  "keyframes-animations",
 ];
 
 const transformedCssFiles = transformCssFileNames(cssFiles).join(" ");
