@@ -26,7 +26,7 @@ export default function Dating({ pageName, children }) {
       <div className="main-bg dating"></div>
       <div className="dating_content">
         <div className="dating_title">Your date</div>
-        <div className="counterBox">
+        {/* <div className="counterBox">
           <ResCount
             img="img/dating/datingCoin.png"
             value="234"
@@ -50,7 +50,7 @@ export default function Dating({ pageName, children }) {
               });
             }}
           />
-        </div>
+        </div> */}
 
         <Button className="exit" text onClick={() => {}} />
 

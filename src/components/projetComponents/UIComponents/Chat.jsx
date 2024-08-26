@@ -10,12 +10,9 @@ import Delay from "./Delay";
 import Message from "../UIComponents/Message";
 
 const Chat = ({ girlInfo }) => {
-  const firstName = girlInfo.name.split(" ")[0];
-
   const currentMessageIndex = React.useRef(NaN);
   const chatProgressHandleCondition = React.useRef(false);
   const timeoutsRef = React.useRef([]);
-  const lastElementsReady = React.useRef({ [firstName]: false });
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
@@ -28,12 +25,15 @@ const Chat = ({ girlInfo }) => {
     chatMapArray.length - 1
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
+
   const [lastElements, setLastElements] = React.useState({
-    [firstName]: -10,
+    [girlInfo.id]: -10,
+    loadingReady: false,
   });
-  if (lastElements[firstName] === undefined) {
+  if (lastElements[girlInfo.id] === undefined) {
     setLastElements({
-      [firstName]: -10,
+      [girlInfo.id]: -10,
+      loadingReady: false,
     });
   }
 
@@ -44,23 +44,23 @@ const Chat = ({ girlInfo }) => {
       ? girlInfo.chat[chatProgress + 1]
       : false;
 
-  const lastMessageIndices = chatMapArray.slice(lastElements[firstName]);
+  const lastMessageIndices = chatMapArray.slice(lastElements[girlInfo.id]);
   const lastMessagesFromChatProgress = arrayFromChatProgress.slice(
-    lastElements[firstName]
+    lastElements[girlInfo.id]
   );
 
   const firstUnloadedIndexes = React.useMemo(() => {
-    return arrayFromChatProgress.slice(0, lastElements[firstName]);
-  }, [lastElements[firstName]]);
+    return arrayFromChatProgress.slice(0, lastElements[girlInfo.id]);
+  }, [lastElements[girlInfo.id]]);
 
   const firstMessageIndex =
     lastMessagesFromChatProgress[
-      lastMessageIndices.length - Math.abs(lastElements[firstName])
+      lastMessageIndices.length - Math.abs(lastElements[girlInfo.id])
     ];
 
   const firstMessageIndexInArray = React.useMemo(() => {
     return firstMessageIndex < 0 ? NaN : firstMessageIndex;
-  }, [lastElements[firstName]]);
+  }, [lastElements[girlInfo.id]]);
 
   // events
   const chatProgressHandle = (index) => {
@@ -126,13 +126,16 @@ const Chat = ({ girlInfo }) => {
   }, [chatProgress, messageFallback]);
 
   React.useEffect(() => {
-    if (!lastElementsReady.current[firstName]) {
+    if (!lastElements.loadingReady) {
       const timeout = setTimeout(() => {
-        lastElementsReady.current = { [firstName]: true };
+        setLastElements((prev) => ({
+          ...prev,
+          loadingReady: true,
+        }));
       }, 1000);
       timeoutsRef.current.push(timeout);
     }
-  }, [firstName]);
+  }, [girlInfo.id]);
 
   React.useEffect(() => {
     return () => {
@@ -218,7 +221,6 @@ const Chat = ({ girlInfo }) => {
   };
 
   const chatCondition = girlInfo.condition === "closed" ? false : true;
-  console.log(lastElementsReady?.current);
 
   return (
     <div className="scrollChatWrap" key={girlInfo.id}>
@@ -226,7 +228,7 @@ const Chat = ({ girlInfo }) => {
         <div className="chatClosed">
           <Message
             className="infoMessage closed"
-            text={`Here you can start a chat with ${firstName}!`}
+            text={`Here you can start a chat with ${girlInfo.name}!`}
           />
         </div>
       ) : (
@@ -244,7 +246,7 @@ const Chat = ({ girlInfo }) => {
             //     () =>
             //       setLastElements((prevState) => ({
             //         ...prevState,
-            //         [firstName]: prevState[firstName] - 10,
+            //         [girlInfo.id]: prevState[girlInfo.id] - 10,
             //       })),
             //   ],
             // ]}
@@ -263,11 +265,12 @@ const Chat = ({ girlInfo }) => {
                     <IntersectionTracker
                       key={`message${textIndex}`}
                       visibleContent
+                      // intersectionDeley={100}
                       onVisible={() => {
-                        lastElementsReady.current[firstName] &&
+                        lastElements.loadingReady &&
                           setLastElements((prevState) => ({
                             ...prevState,
-                            [firstName]: prevState[firstName] - 10,
+                            [girlInfo.id]: prevState[girlInfo.id] - 10,
                           }));
                       }}
                     >
