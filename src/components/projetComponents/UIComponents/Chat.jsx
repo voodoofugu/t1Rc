@@ -8,6 +8,7 @@ import Button from "../UIComponents/Button";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Delay from "./Delay";
 import Message from "../UIComponents/Message";
+import ScrollThumb from "../UIComponents/ScrollThumb";
 
 const Chat = ({ girlInfo }) => {
   const currentMessageIndex = React.useRef(NaN);
@@ -234,12 +235,13 @@ const Chat = ({ girlInfo }) => {
       ) : (
         <>
           <Scroll
-            className="scrollChat"
-            scrollXY={[480, 496]}
+            className="chatDaiting"
+            scrollXY={[490, 496]}
             objectsWrapperMinSize={496}
             padding={[0, 20]}
             scrollTrigger="←→/←O→"
             scrollTop="end"
+            thumbElement={<ScrollThumb className="centerImg" />}
             // onScrollValue={[
             //   [
             //     (scrollTop) => scrollTop <= 1,

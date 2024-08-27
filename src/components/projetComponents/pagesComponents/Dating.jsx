@@ -9,6 +9,7 @@ import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 import Chat from "../UIComponents/Chat";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
+import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export const cssFiles = [
   "customScroll",
@@ -186,16 +187,17 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
       </div>
 
       <Scroll
-        scrollID="datingAvatars"
         className="scrollAvatars"
-        scrollXY={[100, 530]}
+        scrollID="datingAvatars"
+        scrollXY={[104, 494]}
         objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
         scrollTrigger="←→/←O→"
         scrollReverse
-        // wrapAlignCenter
         scrollVisibility="↓<O>"
+        thumbElement={<ScrollThumb />}
+        // wrapAlignCenter
         // lazyRender
         // infiniteScroll
         // rootMargin={[0, 0]}

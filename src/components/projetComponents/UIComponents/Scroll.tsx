@@ -37,6 +37,7 @@ interface ScrollType {
   objectsWrapperMinSize?: number; // px
   children: React.ReactNode;
   onScrollValue?: [(scrollTop: number) => boolean, () => void][];
+  thumbElement?: React.ReactNode;
 }
 
 const Scroll: React.FC<ScrollType> = ({
@@ -62,6 +63,7 @@ const Scroll: React.FC<ScrollType> = ({
   objectsWrapperMinSize,
   children,
   onScrollValue,
+  thumbElement,
 }) => {
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
   const objectsWrapperRef = React.useRef<HTMLDivElement | null>(null);
@@ -656,13 +658,18 @@ const Scroll: React.FC<ScrollType> = ({
               }
             >
               <div
-                className="scrollBarThumb"
+                className={`scrollBarThumb${
+                  thumbElement ? "" : " defaultThumb"
+                }`}
                 onMouseDown={(e) =>
                   (scrollTrigger === "←→/←O→" || scrollTrigger === "<c>/←O→") &&
                   handleMouseDown(e, "thumb")
                 }
                 style={{ height: `${thumbSize}px`, top: `${scroll}px` }}
-              />
+              >
+                {thumbElement}
+                <div className="clickField"></div>
+              </div>
             </div>
           )}
 
