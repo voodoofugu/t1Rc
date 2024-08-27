@@ -173,7 +173,11 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             count={1}
           />,
         ]}
-      />
+      >
+        <PersonAva
+          img={`img/images/superhero/suphero-${girlsInfo[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
+        />
+      </ProgressBar>
 
       <Chat girlInfo={girlsInfo[girlIndex]} />
 

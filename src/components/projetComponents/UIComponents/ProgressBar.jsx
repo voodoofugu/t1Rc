@@ -45,8 +45,8 @@ const ProgressBar = ({
   return (
     <div
       className={`progresBarWrap ${className ? className : ""}${
-          yDirection ? " yDirection" : ""
-        }${itemsBoxFirst || itemsBoxLast ? " head" : ""}`}
+        yDirection ? " yDirection" : ""
+      }${itemsBoxFirst || itemsBoxLast ? " head" : ""}`}
       style={{
         width: `${width}px`,
         height: `${height}px`,
@@ -101,7 +101,7 @@ const ProgressBar = ({
           }`}</div>
         )}
 
-        {children}
+        {children && <div className="childrenWrap">{children}</div>}
       </div>
     </div>
   );
