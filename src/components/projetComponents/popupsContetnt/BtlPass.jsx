@@ -187,7 +187,7 @@ export default function BtlPass({ btlClass }) {
         ) : btlClass === "spring" ? (
           <img src="img/breakGirls/break-girl842.png" loading="lazy" />
         ) : btlClass === "autumn" ? (
-          <img src="img/breakGirls/break-girl848.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl890.png" loading="lazy" />
         ) : btlClass === "summer" ? (
           <img src="img/breakGirls/break-girl955.png" loading="lazy" />
         ) : null}
