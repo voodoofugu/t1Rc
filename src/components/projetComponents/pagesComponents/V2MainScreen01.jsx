@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
+
 import WorldBtnBox from "../UIComponents/WorldBtnBox.jsx";
+import Button from "../UIComponents/Button";
 
 export const cssFiles = [
   "screen-bank",
@@ -102,14 +104,14 @@ export default function V2MainScreen01({ pageName }) {
       //   }, 100);
       // });
 
-      const bGb = document.querySelector(".buster-btn.buster-gold");
-      bGb.addEventListener("click", () => {
-        re.style.display = "block";
-        setTimeout(function () {
-          gC.style.display = "block";
-          po.classList.add("popup-view");
-        }, 100);
-      });
+      // const bGb = document.querySelector(".buster-btn.buster-gold");
+      // bGb.addEventListener("click", () => {
+      //   re.style.display = "block";
+      //   setTimeout(function () {
+      //     gC.style.display = "block";
+      //     po.classList.add("popup-view");
+      //   }, 100);
+      // });
 
       const aGb = document.querySelector(".resource-gold .resource-btn-add");
       aGb.addEventListener("click", () => {
@@ -606,15 +608,16 @@ export default function V2MainScreen01({ pageName }) {
           <img src="img/portal-darkworld.png" loading="lazy" />
           <div className="title">Darkworld</div>
         </div>
-        <div className="buster-box">
+        {/* <div className="buster-box">
           <div className="buster-btn buster-gold x2 active">
             <div className="buster-icn"></div>
             <div className="timerbox">
               <div className="timer">4:32:33</div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="monster"></div>
+        <Button className="imgOnly datingIcn" img="img/dating/datingIcn.png" />
         <div className="monster-prg-box-all">
           <div className="lvl-prg">3/10</div>
           <div className="name">The boss name</div>
