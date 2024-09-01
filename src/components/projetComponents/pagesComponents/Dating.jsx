@@ -1,9 +1,10 @@
 import React from "react";
+import RVS from "react-variable-scroll";
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
+// import Scroll from "../UIComponents/Scroll";
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
-import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 import Chat from "../UIComponents/Chat";
@@ -190,7 +191,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      <Scroll
+      <RVS.Scroll
         className="scrollAvatars"
         scrollID="datingAvatars"
         scrollXY={[104, 494]}
@@ -221,7 +222,7 @@ const GirlIndexDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-      </Scroll>
+      </RVS.Scroll>
     </>
   );
 };
