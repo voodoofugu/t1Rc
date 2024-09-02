@@ -1,6 +1,3 @@
-import React from "react";
-import { selectors } from "../../templateComponents/GlobalStateStor";
-
 export default function PersonAva({ img, className, onClick }) {
   return (
     <div

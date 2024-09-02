@@ -1,6 +1,6 @@
-import React, { memo } from "react";
+import React from "react";
 
-export default memo(function ResCount({
+export default React.memo(function ResCount({
   img,
   value,
   plus,
@@ -9,8 +9,10 @@ export default memo(function ResCount({
 }) {
   return (
     <div className={`resCount${className ? ` ${className}` : ""}`}>
-      <img className="resIcn" src={img} loading="lazy"></img>
-      <div className="resValueText">{value ? value : 0}</div>
+      {img && <img className="resIcn" src={img} loading="lazy"></img>}
+      <div className={`resValueText${img ? "" : " withoutImg"}`}>
+        {value ? value : 0}
+      </div>
       {plus && <div className="resAdd" onClick={onClick && onClick}></div>}
     </div>
   );

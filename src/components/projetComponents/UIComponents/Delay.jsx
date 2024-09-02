@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 
 const Delay = ({
   delay = 0,
@@ -7,9 +7,9 @@ const Delay = ({
   styleBeforeTimeout,
   renderOnTimeout = false,
 }) => {
-  const [delayState, setDelayState] = useState(false);
+  const [delayState, setDelayState] = React.useState(false);
 
-  const validChildren = useMemo(() => {
+  const validChildren = React.useMemo(() => {
     return React.Children.toArray(children).filter(
       (child) => child !== null && child !== undefined
     );
@@ -23,7 +23,7 @@ const Delay = ({
       : child
   );
 
-  useEffect(() => {
+  React.useEffect(() => {
     const timer = setTimeout(() => {
       setDelayState(true);
     }, delay);

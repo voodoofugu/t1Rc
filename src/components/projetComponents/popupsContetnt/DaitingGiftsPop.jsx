@@ -22,7 +22,7 @@ export default function DaitingGiftsPop({ girleID }) {
           itemClass="wh200 simpleItem"
           itemPic="img/dating/giftsIcn.png"
         />
-        <ResCount img="img/dating/giftsIcn.png" value="234" />
+        <ResCount value="234" />
       </OfferCardBox>
 
       <OfferCardBox

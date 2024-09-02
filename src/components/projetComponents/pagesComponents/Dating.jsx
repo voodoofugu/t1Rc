@@ -27,6 +27,7 @@ export default function Dating({ pageName, children }) {
     <div className="main world1">
       <div className="main-bg dating"></div>
       <div className="dating_content">
+        <div className="datingBG"></div>
         <div className="dating_title">Your date</div>
         {/* <div className="counterBox">
           <ResCount
@@ -60,7 +61,7 @@ export default function Dating({ pageName, children }) {
 
         <div className="heroFigure"></div>
 
-        <GirlIndexDependencies girlsInfo={girlsInfo} />
+        <GirlDependencies girlsInfo={girlsInfo} />
       </div>
 
       {children}
@@ -68,7 +69,7 @@ export default function Dating({ pageName, children }) {
   );
 }
 
-const GirlIndexDependencies = ({ girlsInfo }) => {
+const GirlDependencies = ({ girlsInfo }) => {
   const dispatch = useDispatch();
 
   const [girlIndex, setGirlIndex] = React.useState(0);
