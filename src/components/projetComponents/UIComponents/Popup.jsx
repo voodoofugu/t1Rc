@@ -64,10 +64,10 @@ export default memo(function Popup({ pageName }) {
                   <ComponentToRender {...componentProps} {...props} />
                 )}
               </Suspense>
-              <div
+              {/* <div
                 className={popupState.btnXClass}
                 onClick={() => popupState.popClose(dispatch)}
-              ></div>
+              ></div> */}
               {popupState.timer && (
                 <div className="wpck-timer-box">
                   <div className="time-left">time left</div>

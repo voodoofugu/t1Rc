@@ -18,10 +18,7 @@ const Chat = ({ girlInfo }) => {
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
 
-  const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0,
-  ]);
+  const [chatMapArray, setChatMapArray] = React.useState([0]);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );

@@ -1,8 +1,8 @@
 import React from "react";
-import RVS from "react-variable-scroll";
+// import RVS from "react-variable-scroll";
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
-// import Scroll from "../UIComponents/Scroll";
+import Scroll from "../UIComponents/Scroll";
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import PersonAva from "../UIComponents/PersonAva";
@@ -57,7 +57,22 @@ export default function Dating({ pageName, children }) {
 
         <Button className="exit" text onClick={() => {}} />
 
-        <div className="btnI" />
+        <div
+          className="btnI"
+          onClick={() => {
+            dispatch({
+              type: "POPUP_OPEN",
+              payload: {
+                mpopClass: "m-popup contentOnly framedPop",
+                popTit: "",
+                popCont: ["InfoPopFramed"],
+                props: {
+                  text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                },
+              },
+            });
+          }}
+        />
 
         <div className="heroFigure"></div>
 
@@ -84,7 +99,7 @@ const GirlDependencies = ({ girlsInfo }) => {
           dispatch({
             type: "POPUP_OPEN",
             payload: {
-              mpopClass: "m-popup contentOnly daitingGiftsPop",
+              mpopClass: "m-popup contentOnly framedPop",
               popTit: "",
               popCont: ["DaitingGiftsPop"],
               props: {
@@ -192,7 +207,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         </div>
       </div>
 
-      <RVS.Scroll
+      <Scroll
         className="scrollAvatars"
         scrollID="datingAvatars"
         scrollXY={[104, 494]}
@@ -223,7 +238,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-      </RVS.Scroll>
+      </Scroll>
     </>
   );
 };

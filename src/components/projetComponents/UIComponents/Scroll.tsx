@@ -351,7 +351,7 @@ const Scroll: React.FC<ScrollType> = ({
       }
     }
     return false;
-  }, [xDirection, localScrollXY, localObjectXY, gap]);
+  }, [xDirection, localScrollXY, localObjectXY, gap, objectsWrapperHeightFull]);
 
   const scrollingSizeToObjectsWrapper = React.useMemo(() => {
     return xDirection
@@ -693,9 +693,10 @@ const Scroll: React.FC<ScrollType> = ({
           ) : (
             <ResizeTracker
               onResize={handleResize}
-              style={{
-                minHeight: `${localScrollXY[1]}px`,
-              }}
+              // ???
+              // style={{
+              //   minHeight: `${localScrollXY[1]}px`,
+              // }}
             >
               {(width, height) => objectsWrapper}
             </ResizeTracker>

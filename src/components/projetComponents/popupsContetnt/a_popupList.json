@@ -28,7 +28,7 @@
   "Fullcoll",
   "HeroPopup",
   "InfoPop",
-  "infoPopHtmlReducer",
+  "InfoPopFramed",
   "LoseBoss",
   "MainRelics",
   "MnPopupNsaleMain",
@@ -37,8 +37,8 @@
   "QuestChain",
   "QuestPopup",
   "Rankchange",
-  "RatingpopBox",
   "RatingReward",
+  "RatingpopBox",
   "RebornDarkPopup",
   "RebornPopup",
   "RelicsPop",
@@ -50,5 +50,6 @@
   "TsConfirm",
   "Wpck5",
   "WpckEnd",
-  "XmasPop"
+  "XmasPop",
+  "infoPopHtmlReducer"
 ]
