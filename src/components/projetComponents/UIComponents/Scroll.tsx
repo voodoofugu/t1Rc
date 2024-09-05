@@ -113,7 +113,7 @@ const Scroll: React.FC<ScrollType> = ({
     typeof gap === "number"
       ? [gap, gap]
       : xDirection
-      ? [gap[1], gap[0]]
+      ? [gap ? gap[1] : 0, gap ? gap[0] : 0]
       : [0, 0];
 
   const localObjectXY = React.useMemo(() => {
@@ -218,36 +218,36 @@ const Scroll: React.FC<ScrollType> = ({
       : receivedObjectsWrapperSize;
   }, [xyObject, childsPerDirection, gapX, receivedObjectsWrapperSize]);
 
-  const objectsWrapperHeightFull = React.useMemo(() => {
+  const objectsWrapperSizeFull = React.useMemo(() => {
     return objectsWrapperHeight + pLocalXY;
   }, [objectsWrapperHeight, pLocalXY]);
 
   const thumbSize = React.useMemo(() => {
     if (scrollVisibility === "<O>" || scrollVisibility === "↓<O>") {
       if (objectsWrapperHeight === 0) return 0;
-      return Math.round((xy / objectsWrapperHeightFull) * xy);
+      return Math.round((xy / objectsWrapperSizeFull) * xy);
     } else {
       return NaN;
     }
-  }, [xy, objectsWrapperHeightFull, scrollVisibility]);
+  }, [xy, objectsWrapperSizeFull, scrollVisibility]);
 
-  const bottomObjectsWrapper = React.useMemo(() => {
+  const endObjectsWrapper = React.useMemo(() => {
     return (
-      objectsWrapperHeightFull - xy // in scroll vindow
+      objectsWrapperSizeFull - xy // in scroll vindow
     );
-  }, [objectsWrapperHeightFull, xy]);
+  }, [objectsWrapperSizeFull, xy]);
 
   const localScrollTop = React.useMemo(() => {
     if (scrollTop) {
       return typeof scrollTop === "number"
         ? scrollTop
         : scrollTop === "end"
-        ? objectsWrapperHeightFull > xy
-          ? bottomObjectsWrapper
+        ? objectsWrapperSizeFull > xy
+          ? endObjectsWrapper
           : 0
         : 0;
     }
-  }, [scrollTop, objectsWrapperHeightFull, bottomObjectsWrapper]);
+  }, [scrollTop, objectsWrapperSizeFull, endObjectsWrapper]);
 
   const translateProperty = React.useMemo(() => {
     return localScrollXY[0] / 2 - localScrollXY[1] / 2;
@@ -341,17 +341,17 @@ const Scroll: React.FC<ScrollType> = ({
   objectsWrapperAligning = React.useMemo(() => {
     if (wrapAlignCenter && scrollXY) {
       if (xDirection) {
-        if (localScrollXY[0] > objectsWrapperHeightFull) {
+        if (localScrollXY[0] > objectsWrapperSizeFull) {
           return true;
         }
       } else {
-        if (localScrollXY[1] > objectsWrapperHeightFull) {
+        if (localScrollXY[1] > objectsWrapperSizeFull) {
           return true;
         }
       }
     }
     return false;
-  }, [xDirection, localScrollXY, localObjectXY, gap, objectsWrapperHeightFull]);
+  }, [xDirection, localScrollXY, localObjectXY, gap, objectsWrapperSizeFull]);
 
   const scrollingSizeToObjectsWrapper = React.useMemo(() => {
     return xDirection
@@ -368,7 +368,7 @@ const Scroll: React.FC<ScrollType> = ({
     ) {
       const newScroll = Math.abs(
         Math.round(
-          (scrollElementRef.current.scrollTop / bottomObjectsWrapper) *
+          (scrollElementRef.current.scrollTop / endObjectsWrapper) *
             (xy - thumbSize)
         )
       );
@@ -378,14 +378,14 @@ const Scroll: React.FC<ScrollType> = ({
       }
       // avoid jumping to the top when loading new items in the scroll
       if (
-        scrollElementRef.current.scrollTop === 0 &&
+        scrollElementRef.current.scrollTop === 0 && // xDirection!!! scrollLeft === 0
         clickedObject.current === "none"
       ) {
         scrollElementRef.current.scrollTop = 1;
       }
       // lock objectsWrapper to bottom
-      if (scrollElementRef.current.scrollTop > bottomObjectsWrapper) {
-        scrollElementRef.current.scrollTop = bottomObjectsWrapper;
+      if (scrollElementRef.current.scrollTop > endObjectsWrapper) {
+        scrollElementRef.current.scrollTop = endObjectsWrapper;
       }
       // onScrollValue
       if (onScrollValue) {
