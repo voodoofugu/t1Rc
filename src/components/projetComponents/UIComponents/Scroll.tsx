@@ -360,7 +360,24 @@ const Scroll: React.FC<ScrollType> = ({
       : Math.round(objectsWrapperHeight / localScrollXY[1]);
   }, [xDirection, localScrollXY, objectsWrapperHeight]);
 
+  const edgeColor =
+    typeof edgeGradient === "string"
+      ? { background: `linear-gradient(${edgeGradient}, transparent)` }
+      : {
+          background: `linear-gradient(rgba(0,0,0,0.4), transparent)`,
+        };
+
   // events
+  const edgeGradientCheck = React.useCallback(() => {
+    if (!edgeGradient) return;
+
+    const { scrollTop } = scrollElementRef.current;
+    const isNotAtBottom = Math.round(scrollTop + xy) !== objectsWrapperSizeFull;
+
+    scrollContentlRef.current.classList.toggle("edgeBottom", isNotAtBottom);
+    scrollContentlRef.current.classList.toggle("edgeTop", scrollTop > 1);
+  }, [edgeGradient, xy, objectsWrapperSizeFull]);
+
   const handleScroll = React.useCallback(() => {
     if (
       scrollElementRef.current &&
@@ -396,24 +413,9 @@ const Scroll: React.FC<ScrollType> = ({
           }
         });
       }
-
-      if (edgeGradient) {
-        if (
-          scrollContentlRef.current.scrollTop + xy !==
-          objectsWrapperSizeFull
-        ) {
-          scrollContentlRef.current.classList.add("edgeGradientBottom");
-        } else {
-          scrollContentlRef.current.classList.remove("edgeGradientBottom");
-        }
-
-        if (scrollContentlRef.current.scrollTop !== (0 || 1)) {
-          scrollContentlRef.current.classList.add("edgeGradientTop");
-        } else {
-          scrollContentlRef.current.classList.remove("edgeGradientTop");
-        }
-      }
     }
+
+    edgeGradientCheck();
   }, [xy, thumbSize, scroll]);
 
   const handleMouseMove = React.useCallback(
@@ -488,13 +490,6 @@ const Scroll: React.FC<ScrollType> = ({
     [scrollElementRef]
   );
 
-  const edgeGradientColor =
-    typeof edgeGradient === "string"
-      ? { background: `linear-gradient(${edgeGradient}, transparent)` }
-      : {
-          background: `linear-gradient(rgba(0,0,0,0.4), transparent)`,
-        };
-
   // effects
   React.useEffect(() => {
     // warn handling
@@ -528,6 +523,8 @@ const Scroll: React.FC<ScrollType> = ({
     if (infiniteScroll) {
       setInfiniteScrollState(true);
     }
+
+    edgeGradientCheck();
   }, []);
 
   React.useEffect(() => {
@@ -673,12 +670,7 @@ const Scroll: React.FC<ScrollType> = ({
           }),
         }}
       >
-        {edgeGradient && (
-          <>
-            <div className="edgeGradient" style={edgeGradientColor}></div>
-            <div className="edgeGradient" style={edgeGradientColor}></div>
-          </>
-        )}
+        {edgeGradient && <div className="edge top" style={edgeColor}></div>}
 
         {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
           thumbSize < xy && (
@@ -735,6 +727,8 @@ const Scroll: React.FC<ScrollType> = ({
             </ResizeTracker>
           )}
         </div>
+
+        {edgeGradient && <div className="edge bottom" style={edgeColor}></div>}
       </div>
     </div>
   );
