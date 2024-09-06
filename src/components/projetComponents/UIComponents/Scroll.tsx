@@ -29,7 +29,7 @@ interface ScrollType {
   scrollTop?: number | "end";
   // multipleDirectionQuantity?: boolean;
   // onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
-  // overflowEdgeGradient?: boolean | string;
+  edgeGradient?: boolean | string;
   // autoSize?: boolean;
   infiniteScroll?: boolean; // not working
   contentAlignCenter?: boolean;
@@ -59,15 +59,16 @@ const Scroll: React.FC<ScrollType> = ({
   infiniteScroll = false,
   contentAlignCenter = false,
   wrapAlignCenter = false,
-  // overflowEdgeGradient = "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%)",
+  edgeGradient = false,
   objectsWrapperMinSize,
   children,
   onScrollValue,
   thumbElement,
 }) => {
+  const customScrollRef = React.useRef<HTMLDivElement | null>(null);
+  const scrollContentlRef = React.useRef<HTMLDivElement | null>(null);
   const scrollElementRef = React.useRef<HTMLDivElement | null>(null);
   const objectsWrapperRef = React.useRef<HTMLDivElement | null>(null);
-  const customScrollRef = React.useRef<HTMLDivElement | null>(null);
 
   let objectsWrapperAligning = false;
   const clickedObject = React.useRef("none");
@@ -395,6 +396,23 @@ const Scroll: React.FC<ScrollType> = ({
           }
         });
       }
+
+      if (edgeGradient) {
+        if (
+          scrollContentlRef.current.scrollTop + xy !==
+          objectsWrapperSizeFull
+        ) {
+          scrollContentlRef.current.classList.add("edgeGradientBottom");
+        } else {
+          scrollContentlRef.current.classList.remove("edgeGradientBottom");
+        }
+
+        if (scrollContentlRef.current.scrollTop !== (0 || 1)) {
+          scrollContentlRef.current.classList.add("edgeGradientTop");
+        } else {
+          scrollContentlRef.current.classList.remove("edgeGradientTop");
+        }
+      }
     }
   }, [xy, thumbSize, scroll]);
 
@@ -469,6 +487,13 @@ const Scroll: React.FC<ScrollType> = ({
     },
     [scrollElementRef]
   );
+
+  const edgeGradientColor =
+    typeof edgeGradient === "string"
+      ? { background: `linear-gradient(${edgeGradient}, transparent)` }
+      : {
+          background: `linear-gradient(rgba(0,0,0,0.4), transparent)`,
+        };
 
   // effects
   React.useEffect(() => {
@@ -637,6 +662,7 @@ const Scroll: React.FC<ScrollType> = ({
     >
       <div
         className="scrollContent"
+        ref={scrollContentlRef}
         style={{
           width: xDirection ? `${localScrollXY[1]}px` : `${localScrollXY[0]}px`,
           height: xDirection
@@ -647,6 +673,13 @@ const Scroll: React.FC<ScrollType> = ({
           }),
         }}
       >
+        {edgeGradient && (
+          <>
+            <div className="edgeGradient" style={edgeGradientColor}></div>
+            <div className="edgeGradient" style={edgeGradientColor}></div>
+          </>
+        )}
+
         {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
           thumbSize < xy && (
             <div

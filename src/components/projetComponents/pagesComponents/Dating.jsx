@@ -11,6 +11,7 @@ import Chat from "../UIComponents/Chat";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ScrollThumb from "../UIComponents/ScrollThumb";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export const cssFiles = [
   "customScroll",
@@ -200,11 +201,11 @@ const GirlDependencies = ({ girlsInfo }) => {
 
       <div className="girlName">
         <div className="addText">with</div>
-        <div className="nameWrap">
-          <div className="name" key={girlsInfo[girlIndex].name}>
-            {girlsInfo[girlIndex].name}
-          </div>
-        </div>
+        <FraimedTitle
+          className="corners"
+          text={girlsInfo[girlIndex].name}
+          key={girlsInfo[girlIndex].name}
+        />
       </div>
 
       <Scroll
@@ -227,6 +228,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // fallback={<div>loading</div>}
         // contentAlignCenter
         // scrollTop={100}
+        edgeGradient="#5b2914"
       >
         {girlsInfo.map((item, index) => (
           <PersonAva
