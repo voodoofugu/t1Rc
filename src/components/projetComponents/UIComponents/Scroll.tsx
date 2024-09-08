@@ -6,10 +6,15 @@ interface ScrollType {
   scrollID?: string; // This is only used to better recognize warnings
   className?: string;
   scrollXY?: number[];
+
   objectXY?: number[];
-  xDirection?: boolean;
   gap?: number[] | number;
   padding?: number[] | number;
+
+  xDirection?: boolean;
+  contentAlignCenter?: boolean;
+  wrapAlignCenter?: boolean;
+
   scrollReverse?: boolean;
   scrollTrigger?:
     | "←→" // mouse wheel (default)
@@ -22,22 +27,22 @@ interface ScrollType {
     | "<O>" // visible (default)
     | "↓<O>" // visible on hover
     | "<Ø>"; // hidden
+  scrollTop?: number | "end";
+
   lazyRender?: boolean;
+  infiniteScroll?: boolean;
   rootMargin?: number[] | number;
   suspending?: boolean;
+
   fallback?: React.ReactNode;
-  scrollTop?: number | "end";
-  // multipleDirectionQuantity?: boolean;
-  // onScroll?: (e: React.UIEvent<HTMLDivElement, UIEvent>) => void;
-  edgeGradient?: boolean | string;
-  // autoSize?: boolean;
-  infiniteScroll?: boolean; // not working
-  contentAlignCenter?: boolean;
-  wrapAlignCenter?: boolean;
-  objectsWrapperMinSize?: number; // px
-  children: React.ReactNode;
-  onScrollValue?: [(scrollTop: number) => boolean, () => void][];
   thumbElement?: React.ReactNode;
+  edgeGradient?: boolean | string;
+
+  objectsWrapperMinSize?: number;
+  onScrollValue?: [(scrollTop: number) => boolean, () => void][];
+  children: React.ReactNode;
+  // multipleDirectionQuantity?: boolean;
+  // autoSize?: boolean;
 }
 
 const Scroll: React.FC<ScrollType> = ({
@@ -121,7 +126,7 @@ const Scroll: React.FC<ScrollType> = ({
     return objectXY
       ? objectXY
       : xDirection
-      ? [NaN, scrollXY[1] - pY]
+      ? [scrollXY[0], scrollXY[1] - pY]
       : [scrollXY[0] - pY, NaN];
   }, [objectXY, scrollXY, pY, xDirection]);
 
@@ -453,8 +458,8 @@ const Scroll: React.FC<ScrollType> = ({
   );
 
   const handleResize = React.useCallback(
-    (width: number, height: number) => {
-      const newSize = xDirection ? width - pLocalXY : height - pLocalXY;
+    (_: number, height: number) => {
+      const newSize = height - pLocalXY;
       setReceivedObjectsWrapperSize(newSize);
     },
     [xDirection, pLocalXY, objectsWrapperHeight]
@@ -723,7 +728,7 @@ const Scroll: React.FC<ScrollType> = ({
               //   minHeight: `${localScrollXY[1]}px`,
               // }}
             >
-              {(width, height) => objectsWrapper}
+              {() => objectsWrapper}
             </ResizeTracker>
           )}
         </div>
@@ -800,7 +805,7 @@ const ScrollObjectWrapper: React.FC<ScrollObjectWrapperType> = React.memo(
     } else {
       const wrapStyle1 = {
         width: `${localObjectXY[0]}px`,
-        height: `${localObjectXY[1]}px`,
+        // height: `${localObjectXY[1]}px`,
       };
       const wrapStyle2 = {
         width: `${xyObjectReverse}px`,
@@ -811,9 +816,9 @@ const ScrollObjectWrapper: React.FC<ScrollObjectWrapperType> = React.memo(
         <IntersectionTracker
           root={scrollElementRef.current}
           rootMargin={mRootLocal}
-          style={wrapStyle1}
+          style={wrapStyle2}
         >
-          <div style={wrapStyle2}>{content}</div>
+          <div style={wrapStyle1}>{content}</div>
         </IntersectionTracker>
       ) : (
         <div style={wrapStyle2}>
