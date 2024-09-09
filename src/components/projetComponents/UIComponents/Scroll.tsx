@@ -676,6 +676,7 @@ const Scroll: React.FC<ScrollType> = ({
         }}
       >
         {edgeGradient && <div className="edge top" style={edgeColor}></div>}
+        {edgeGradient && <div className="edge bottom" style={edgeColor}></div>}
 
         {(scrollVisibility === "<O>" || scrollVisibility === "↓<O>") &&
           thumbSize < xy && (
@@ -732,8 +733,6 @@ const Scroll: React.FC<ScrollType> = ({
             </ResizeTracker>
           )}
         </div>
-
-        {edgeGradient && <div className="edge bottom" style={edgeColor}></div>}
       </div>
     </div>
   );
