@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
+import { NexusProvider } from "nexus-state";
 
 import Template from "./Template";
 import Loading from "./Loading";
@@ -28,6 +29,7 @@ export default function App() {
 
   return (
     <StrictMode>
+      {/* <NexusProvider> */}
       <GlobalStateProvider reducer={reducer} initialState={states}>
         <StatesStorage />
         <HelmetProvider>
@@ -43,6 +45,7 @@ export default function App() {
           </div>
         </HelmetProvider>
       </GlobalStateProvider>
+      {/* </NexusProvider> */}
     </StrictMode>
   );
 }
