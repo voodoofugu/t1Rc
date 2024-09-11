@@ -1,6 +1,7 @@
 import React from "react";
 // import RVS from "react-variable-scroll";
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import useNexus, { useNexusAll } from "nexus-state";
 
 import Scroll from "../UIComponents/Scroll";
 import ItemBox from "../UIComponents/ItemBox";
@@ -23,6 +24,8 @@ export const cssFiles = [
 
 export default function Dating({ pageName, children }) {
   const dispatch = useDispatch();
+  const [someData, setSomeData] = useNexus("value1");
+  console.log("useNexusAll", useNexusAll());
 
   return (
     <div className="main world1">

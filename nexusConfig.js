@@ -1,5 +1,6 @@
 export const initialStates = {
-  value1: "123",
+  value1: "YO!",
+  value2: 123,
 };
 
 export const actions = {
