@@ -24,8 +24,8 @@ export const cssFiles = [
 
 export default function Dating({ pageName, children }) {
   const dispatch = useDispatch();
-  const [someData, setSomeData] = useNexus("value1");
-  console.log("useNexusAll", useNexusAll());
+  // const [someData, setSomeData] = useNexus("value1");
+  // console.log("useNexusAll", useNexusAll());
 
   return (
     <div className="main world1">

@@ -1,9 +1,7 @@
 import { StrictMode } from "react";
 import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
-import { NexusProvider, configureNexus } from "nexus-state";
-import { initialStates, actions } from "../../../nexusConfig";
-configureNexus({ initialStates, actions });
+import { NexusProvider } from "nexus-state";
 
 import Template from "./Template";
 import Loading from "./Loading";
