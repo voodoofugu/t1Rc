@@ -105,7 +105,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
               popTit: "",
-              popCont: ["DaitingGiftsPop"],
+              popCont: ["DatingGiftsPop"],
               props: {
                 girleID: girlsInfo[girlIndex].id,
               },

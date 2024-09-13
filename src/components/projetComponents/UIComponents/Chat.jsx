@@ -1,5 +1,7 @@
 import React from "react";
 
+import { useDispatch } from "../../templateComponents/GlobalStateStor";
+
 import Scroll from "../UIComponents/Scroll";
 import PersonAva from "../UIComponents/PersonAva";
 import ResizeTracker from "../../templateComponents/APIs/ResizeTracker";
@@ -11,6 +13,8 @@ import Message from "../UIComponents/Message";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 const Chat = ({ girlInfo }) => {
+  const dispatch = useDispatch();
+
   const currentMessageIndex = React.useRef(NaN);
   const chatProgressHandleCondition = React.useRef(false);
   const timeoutsRef = React.useRef([]);
@@ -19,7 +23,7 @@ const Chat = ({ girlInfo }) => {
   const fallbackBoxRef = React.useRef(null);
 
   const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
@@ -173,7 +177,20 @@ const Chat = ({ girlInfo }) => {
           renderOnTimeout={lastIndexCheck}
         >
           {message.Girl[item] === "img" ? (
-            <Message>
+            <Message
+              onClick={() => {
+                dispatch({
+                  type: "POPUP_OPEN",
+                  payload: {
+                    mpopClass: "m-popup uki-story-popup contentOnly",
+                    popCont: ["DatingImgPop"],
+                    props: {
+                      img: `img/images/superhero/suphero-${girlInfo.id}/x1/sh-6.jpg`,
+                    },
+                  },
+                });
+              }}
+            >
               <div className="photo">
                 <div className="imgWrap">
                   <img

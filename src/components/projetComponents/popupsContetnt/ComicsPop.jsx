@@ -1,6 +1,13 @@
+import {
+  selectors,
+  useDispatch,
+} from "../../templateComponents/GlobalStateStor";
 import ComicsBallon from "../UIComponents/ComicsBallon";
 
 export default function ComicsPop() {
+  const popupState = selectors.usePopupState();
+  const dispatch = useDispatch();
+
   return (
     <div className="content">
       <div className="journal-comics-view c10">
@@ -61,6 +68,10 @@ export default function ComicsPop() {
           <div className="color-btn-text">next</div>
         </div>
       </div>
+      <div
+        className="btn-close-x"
+        onClick={() => popupState.popClose(dispatch)}
+      />
     </div>
   );
 }
