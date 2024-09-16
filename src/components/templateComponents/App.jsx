@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { NexusProvider } from "nexus-state";
+import { initialStates, actions } from "../../../nexusConfig";
 
 import Template from "./Template";
 import Loading from "./Loading";
@@ -29,7 +30,7 @@ export default function App() {
 
   return (
     <StrictMode>
-      <NexusProvider watch>
+      <NexusProvider initialStates={initialStates} actions={actions} watch>
         <GlobalStateProvider reducer={reducer} initialState={states}>
           <StatesStorage />
           <HelmetProvider>

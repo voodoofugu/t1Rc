@@ -1,7 +1,10 @@
 import React from "react";
 // import RVS from "react-variable-scroll";
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
-import useNexus, { useNexusAll } from "nexus-state";
+import {
+  useDispatch,
+  selectors,
+} from "../../templateComponents/GlobalStateStor";
+import { useNexus, useNexusAll } from "nexus-state";
 
 import Scroll from "../UIComponents/Scroll";
 import ItemBox from "../UIComponents/ItemBox";
@@ -24,7 +27,9 @@ export const cssFiles = [
 
 export default function Dating({ pageName, children }) {
   const dispatch = useDispatch();
-  // const [someData, setSomeData] = useNexus("value1");
+
+  const [activePage, setActivePage] = useNexus("activePage");
+  const [increment, setIncrement] = useNexus("increment");
   // console.log("useNexusAll", useNexusAll());
 
   return (
@@ -59,7 +64,28 @@ export default function Dating({ pageName, children }) {
           />
         </div> */}
 
-        <Button className="exit" text onClick={() => {}} />
+        <Button
+          className="exit"
+          text
+          onClick={() => {
+            setActivePage({
+              // type: "SOME_ACTION1",
+              payload: { activePage: "123" },
+            });
+          }}
+        />
+        <div style={{ position: "absolute", right: "80px", top: "0px" }}>
+          <Button
+            className="exit"
+            text
+            onClick={() => {
+              setIncrement({
+                type: "INCREMENT",
+                payload: { increment: 1 },
+              });
+            }}
+          />
+        </div>
 
         <div
           className="btnI"
@@ -71,7 +97,9 @@ export default function Dating({ pageName, children }) {
                 popTit: "",
                 popCont: ["InfoPopFramed"],
                 props: {
-                  text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                  inner:
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                  girlImg: "img/breakGirls/break-girl915.png",
                 },
               },
             });

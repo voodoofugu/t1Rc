@@ -40,6 +40,7 @@ export interface InitialState {
   dateGirlIndex: number;
   booleanState: boolean;
   [key: string]: any;
+  increment: number;
 }
 
 export const initialState: InitialState = {
@@ -79,6 +80,8 @@ export const initialState: InitialState = {
   dateGirlIndex: 0,
 
   booleanState: false,
+
+  increment: 0,
 };
 
 export interface Action {
@@ -167,6 +170,10 @@ export function reducer(draft: any, action: Action): any {
 
     case "DATE_GIRL_INDEX":
       draft.dateGirlIndex = action.payload;
+      return draft;
+
+    case "INCREMENT":
+      draft.increment = draft.increment + action.payload;
       return draft;
 
     default:
