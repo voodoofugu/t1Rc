@@ -157,7 +157,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         maxProgress={6}
         serifsPerProgress
         yDirection
-        text
+        // text
         itemsBoxFirst={[
           <ItemBox
             itemClass="wh44"
