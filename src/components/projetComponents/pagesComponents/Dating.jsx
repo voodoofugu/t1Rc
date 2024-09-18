@@ -1,12 +1,12 @@
 import React from "react";
-// import RVS from "react-variable-scroll";
+import { Scroll } from "react-variable-scroll";
 import {
   useDispatch,
   selectors,
 } from "../../templateComponents/GlobalStateStor";
 import { useNexus, useNexusAll } from "nexus-state";
 
-import Scroll from "../UIComponents/Scroll";
+// import Scroll from "../UIComponents/Scroll";
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import PersonAva from "../UIComponents/PersonAva";
