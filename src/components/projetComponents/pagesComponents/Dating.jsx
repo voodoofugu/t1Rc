@@ -1,12 +1,12 @@
 import React from "react";
-import { Scroll } from "react-variable-scroll";
+import MorphingScroll from "morphing-scroll";
+import { useNexus, useNexusAll } from "nexus-state";
+
 import {
   useDispatch,
   selectors,
 } from "../../templateComponents/GlobalStateStor";
-import { useNexus, useNexusAll } from "nexus-state";
 
-// import Scroll from "../UIComponents/Scroll";
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import PersonAva from "../UIComponents/PersonAva";
@@ -16,6 +16,7 @@ import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import FraimedTitle from "../UIComponents/FraimedTitle";
+import TsTest from "../UIComponents/TsTest";
 
 export const cssFiles = [
   "customScroll",
@@ -239,7 +240,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </div>
 
-      <Scroll
+      <MorphingScroll
         className="scrollAvatars"
         scrollID="datingAvatars"
         scrollXY={[104, 494]}
@@ -271,7 +272,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-      </Scroll>
+      </MorphingScroll>
     </>
   );
 };

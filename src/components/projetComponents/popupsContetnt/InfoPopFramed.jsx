@@ -2,7 +2,8 @@ import {
   selectors,
   useDispatch,
 } from "../../templateComponents/GlobalStateStor";
-import Scroll from "../UIComponents/Scroll";
+
+import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export default function InfoPopFramed({ inner, girlImg }) {
@@ -20,7 +21,7 @@ export default function InfoPopFramed({ inner, girlImg }) {
           <div className="frame top"></div>
           <div className="frame bottom"></div>
         </div>
-        <Scroll
+        <MorphingScroll
           className="scrollW8"
           scrollXY={[700, 342]}
           padding={[0, 20]}
@@ -29,7 +30,7 @@ export default function InfoPopFramed({ inner, girlImg }) {
           wrapAlignCenter
         >
           <div className="inner">{inner}</div>
-        </Scroll>
+        </MorphingScroll>
 
         <div
           className="btn-close-x"

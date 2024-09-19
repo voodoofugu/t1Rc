@@ -2,10 +2,11 @@ import React from "react";
 
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
-import Scroll from "../UIComponents/Scroll";
+import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import ResizeTracker from "../../../../morphing-scroll/src/ResizeTracker";
+import IntersectionTracker from "../../../../morphing-scroll/src/IntersectionTracker";
+
 import PersonAva from "../UIComponents/PersonAva";
-import ResizeTracker from "../../templateComponents/APIs/ResizeTracker";
-import IntersectionTracker from "../../templateComponents/APIs/IntersectionTracker";
 import Button from "../UIComponents/Button";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Delay from "./Delay";
@@ -250,7 +251,7 @@ const Chat = ({ girlInfo }) => {
         </div>
       ) : (
         <>
-          <Scroll
+          <MorphingScroll
             className="chatDaiting"
             scrollXY={[490, 496]}
             objectsWrapperMinSize={496}
@@ -374,7 +375,7 @@ const Chat = ({ girlInfo }) => {
                 </>
               )}
             </ResizeTracker>
-          </Scroll>
+          </MorphingScroll>
 
           <div className="fallbackBox" ref={fallbackBoxRef}>
             {messageFallback === "message" && (
