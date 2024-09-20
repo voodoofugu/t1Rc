@@ -1,5 +1,6 @@
 import React from "react";
-import MorphingScroll from "morphing-scroll";
+// import MorphingScroll from "morphing-scroll";
+import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import { useNexus, useNexusAll } from "nexus-state";
 
 import {
@@ -247,9 +248,9 @@ const GirlDependencies = ({ girlsInfo }) => {
         objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
-        scrollTrigger="←→/←O→"
+        scrollTrigger={["mouseWheel", "scrollThumb"]}
         scrollReverse
-        scrollVisibility="↓<O>"
+        scrollVisibility="hover"
         thumbElement={<ScrollThumb />}
         // wrapAlignCenter
         // lazyRender

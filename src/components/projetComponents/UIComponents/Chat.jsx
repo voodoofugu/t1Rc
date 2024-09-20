@@ -256,7 +256,7 @@ const Chat = ({ girlInfo }) => {
             scrollXY={[490, 496]}
             objectsWrapperMinSize={496}
             padding={[0, 20]}
-            scrollTrigger="←→/←O→"
+            scrollTrigger={["mouseWheel", "scrollThumb"]}
             scrollTop="end"
             thumbElement={<ScrollThumb className="centerImg" />}
             // onScrollValue={[
