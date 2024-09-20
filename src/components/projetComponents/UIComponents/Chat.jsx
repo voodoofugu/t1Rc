@@ -64,7 +64,7 @@ const Chat = ({ girlInfo }) => {
     ];
 
   const firstMessageIndexInArray = React.useMemo(() => {
-    return firstMessageIndex < 0 ? NaN : firstMessageIndex;
+    return firstMessageIndex < 0 ? null : firstMessageIndex;
   }, [lastElements[girlInfo.id]]);
 
   // events
@@ -279,7 +279,7 @@ const Chat = ({ girlInfo }) => {
 
               if (message) {
                 if (
-                  firstMessageIndexInArray !== undefined &&
+                  firstMessageIndexInArray !== null &&
                   index === firstMessageIndexInArray
                 ) {
                   return (
