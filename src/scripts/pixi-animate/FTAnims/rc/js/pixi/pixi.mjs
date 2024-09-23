@@ -322,7 +322,7 @@ Promise$1._immediateFn =
 
 Promise$1._unhandledRejectionFn = function _unhandledRejectionFn(err) {
   if (typeof console !== 'undefined' && console) {
-    console.warn('Possible Unhandled Promise Rejection:', err); // eslint-disable-line no-console
+    console.warn('Possible Unhandled Promise Rejection:', err);  
   }
 };
 
@@ -333,7 +333,7 @@ object-assign
 */
 
 'use strict';
-/* eslint-disable no-unused-vars */
+ 
 var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 var hasOwnProperty$1 = Object.prototype.hasOwnProperty;
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
@@ -355,7 +355,7 @@ function shouldUseNative() {
 		// Detect buggy property enumeration order in older V8 versions.
 
 		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		var test1 = new String('abc');   
 		test1[5] = 'de';
 		if (Object.getOwnPropertyNames(test1)[0] === '5') {
 			return false;
@@ -4122,7 +4122,7 @@ var path = {
      * @param path - The path to check
      */
     isDataUrl: function (path) {
-        // eslint-disable-next-line max-len
+         
         return (/^data:([a-z]+\/[a-z0-9-+.]+(;[a-z0-9-.!#$%*+.{}|~`]+=[a-z0-9-.!#$%*+.{}()_|~`]+)*)?(;base64)?,([a-z0-9!$&',()*+;=\-._~:@\/?%\s<>]*?)$/i)
             .test(path);
     },
@@ -4278,7 +4278,7 @@ var path = {
             }
         }
         // if end is -1 and its a url then we need to add the path back
-        // eslint-disable-next-line no-nested-ternary
+         
         if (end === -1)
             { return hasRoot ? '/' : this.isUrl(origpath) ? proto + path : proto; }
         if (hasRoot && end === 1)
@@ -4441,7 +4441,7 @@ var path = {
             // We saw a non-dot character immediately before the dot
             || preDotState === 0
             // The (right-most) trimmed path component is exactly '..'
-            // eslint-disable-next-line no-mixed-operators
+             
             || preDotState === 1 && startDot === end - 1 && startDot === startPart + 1) {
             return '';
         }
@@ -4510,7 +4510,7 @@ var path = {
             // We saw a non-dot character immediately before the dot
             || preDotState === 0
             // The (right-most) trimmed path component is exactly '..'
-            // eslint-disable-next-line no-mixed-operators
+             
             || preDotState === 1 && startDot === end - 1 && startDot === startPart + 1) {
             if (end !== -1) {
                 if (startPart === 0 && isAbsolute)
@@ -5190,7 +5190,7 @@ function getBufferType(array) {
     return null;
 }
 
-/* eslint-disable object-shorthand */
+ 
 var map$2 = { Float32Array: Float32Array, Uint32Array: Uint32Array, Int32Array: Int32Array, Uint8Array: Uint8Array };
 function interleaveTypedArrays$1(arrays, sizes) {
     var outSize = 0;
@@ -5340,7 +5340,7 @@ function deprecation(version, message, ignoreDepth) {
     if (warnings[message]) {
         return;
     }
-    /* eslint-disable no-console */
+     
     var stack = new Error().stack;
     // Handle IE < 10 and Safari < 6
     if (typeof stack === 'undefined') {
@@ -5359,7 +5359,7 @@ function deprecation(version, message, ignoreDepth) {
             console.warn(stack);
         }
     }
-    /* eslint-enable no-console */
+     
     warnings[message] = true;
 }
 
@@ -8184,7 +8184,7 @@ var DisplayObject = /** @class */ (function (_super) {
          */
         get: function () {
             if (this.tempDisplayObjectParent === null) {
-                // eslint-disable-next-line @typescript-eslint/no-use-before-define
+                 
                 this.tempDisplayObjectParent = new TemporaryDisplayObject();
             }
             return this.tempDisplayObjectParent;
@@ -8556,7 +8556,7 @@ var Container = /** @class */ (function (_super) {
         if (children.length > 1) {
             // loop through the array and add all children
             for (var i = 0; i < children.length; i++) {
-                // eslint-disable-next-line prefer-rest-params
+                 
                 this.addChild(children[i]);
             }
         }
@@ -10939,7 +10939,7 @@ var BaseTexture = /** @class */ (function (_super) {
                 baseTexture.textureCacheIds.push(id);
             }
             if (BaseTextureCache[id]) {
-                // eslint-disable-next-line no-console
+                 
                 console.warn("BaseTexture added to the cache with an id [" + id + "] that already had an entry");
             }
             BaseTextureCache[id] = baseTexture;
@@ -11293,7 +11293,7 @@ var CanvasResource = /** @class */ (function (_super) {
     /**
      * @param source - Canvas element to use
      */
-    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
+     
     function CanvasResource(source) {
         return _super.call(this, source) || this;
     }
@@ -11756,7 +11756,7 @@ var SVGResource = /** @class */ (function (_super) {
      * @example &lt;svg width="100" height="100"&gt;&lt;/svg&gt;
      * @readonly
      */
-    SVGResource.SVG_SIZE = /<svg[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*>/i; // eslint-disable-line max-len
+    SVGResource.SVG_SIZE = /<svg[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*>/i;  
     return SVGResource;
 }(BaseImageResource));
 
@@ -12020,7 +12020,7 @@ var ImageBitmapResource = /** @class */ (function (_super) {
     /**
      * @param source - Image element to use
      */
-    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
+     
     function ImageBitmapResource(source) {
         return _super.call(this, source) || this;
     }
@@ -12149,7 +12149,7 @@ var Framebuffer = /** @class */ (function () {
      * @param texture - Texture to add.
      */
     Framebuffer.prototype.addDepthTexture = function (texture) {
-        /* eslint-disable max-len */
+         
         this.depthTexture = texture || new BaseTexture(new DepthResource(null, { width: this.width, height: this.height }), {
             scaleMode: SCALE_MODES.NEAREST,
             resolution: 1,
@@ -12271,14 +12271,14 @@ var BaseRenderTexture = /** @class */ (function (_super) {
         if (options === void 0) { options = {}; }
         var _this = this;
         if (typeof options === 'number') {
-            /* eslint-disable prefer-rest-params */
+             
             // Backward compatibility of signature
             var width = arguments[0];
             var height = arguments[1];
             var scaleMode = arguments[2];
             var resolution = arguments[3];
             options = { width: width, height: height, scaleMode: scaleMode, resolution: resolution };
-            /* eslint-enable prefer-rest-params */
+             
         }
         options.width = options.width || 100;
         options.height = options.height || 100;
@@ -12725,7 +12725,7 @@ var Texture = /** @class */ (function (_super) {
                 texture.textureCacheIds.push(id);
             }
             if (TextureCache[id]) {
-                // eslint-disable-next-line no-console
+                 
                 console.warn("Texture added to the cache with an id [" + id + "] that already had an entry");
             }
             TextureCache[id] = texture;
@@ -12997,14 +12997,14 @@ var RenderTexture = /** @class */ (function (_super) {
         // @deprecated fallback, old-style: create(width, height, scaleMode, resolution)
         if (typeof options === 'number') {
             deprecation('6.0.0', 'Arguments (width, height, scaleMode, resolution) have been deprecated.');
-            /* eslint-disable prefer-rest-params */
+             
             options = {
                 width: options,
                 height: rest[0],
                 scaleMode: rest[1],
                 resolution: rest[2],
             };
-            /* eslint-enable prefer-rest-params */
+             
         }
         return new RenderTexture(new BaseRenderTexture(options));
     };
@@ -13168,7 +13168,7 @@ var RenderTexturePool = /** @class */ (function () {
     return RenderTexturePool;
 }());
 
-/* eslint-disable max-len */
+ 
 /**
  * Holds the information for a single attribute structure required to render geometry.
  *
@@ -13292,7 +13292,7 @@ var Buffer = /** @class */ (function () {
     return Buffer;
 }());
 
-/* eslint-disable object-shorthand */
+ 
 var map$1 = {
     Float32Array: Float32Array,
     Uint32Array: Uint32Array,
@@ -13330,7 +13330,7 @@ function interleaveTypedArrays(arrays, sizes) {
 
 var byteSizeMap$1 = { 5126: 4, 5123: 2, 5121: 1 };
 var UID$3 = 0;
-/* eslint-disable object-shorthand */
+ 
 var map = {
     Float32Array: Float32Array,
     Uint32Array: Uint32Array,
@@ -13338,7 +13338,7 @@ var map = {
     Uint8Array: Uint8Array,
     Uint16Array: Uint16Array,
 };
-/* eslint-disable max-len */
+ 
 /**
  * The Geometry represents a model. It consists of two components:
  * - GeometryStyle - The structure of the model such as the attributes layout
@@ -13781,7 +13781,7 @@ var UniformGroup = /** @class */ (function () {
             this.uniforms[name] = new UniformGroup(uniforms, _static);
         }
         else {
-            // eslint-disable-next-line max-len
+             
             throw new Error('[UniformGroup] uniform groups in ubo mode cannot be modified, or have uniform groups nested in them');
         }
     };
@@ -14540,16 +14540,16 @@ var ContextSystem = /** @class */ (function () {
         }
         // this is going to be fairly simple for now.. but at least we have room to grow!
         if (attributes && !attributes.stencil) {
-            /* eslint-disable max-len, no-console */
+             
             console.warn('Provided WebGL context does not have a stencil buffer, masks may not render correctly');
-            /* eslint-enable max-len, no-console */
+             
         }
         var hasuint32 = isWebGl2 || !!gl.getExtension('OES_element_index_uint');
         this.supports.uint32Indices = hasuint32;
         if (!hasuint32) {
-            /* eslint-disable max-len, no-console */
+             
             console.warn('Provided WebGL context does not support 32 index buffer, complex graphics may not render correctly');
-            /* eslint-enable max-len, no-console */
+             
         }
     };
     return ContextSystem;
@@ -15230,7 +15230,7 @@ var GeometrySystem = /** @class */ (function () {
                 attributes[j].size = program.attributeData[j].size;
             }
             else if (!attributes[j].size) {
-                console.warn("PIXI Geometry attribute '" + j + "' size cannot be determined (likely the bound shader does not have the attribute)"); // eslint-disable-line
+                console.warn("PIXI Geometry attribute '" + j + "' size cannot be determined (likely the bound shader does not have the attribute)");  
             }
             tempStride[attributes[j].buffer] += attributes[j].size * byteSizeMap[attributes[j].type];
         }
@@ -15390,14 +15390,14 @@ var GeometrySystem = /** @class */ (function () {
             var glType = byteSize === 2 ? gl.UNSIGNED_SHORT : gl.UNSIGNED_INT;
             if (byteSize === 2 || (byteSize === 4 && this.canUseUInt32ElementIndex)) {
                 if (geometry.instanced) {
-                    /* eslint-disable max-len */
+                     
                     gl.drawElementsInstanced(type, size || geometry.indexBuffer.data.length, glType, (start || 0) * byteSize, instanceCount || 1);
-                    /* eslint-enable max-len */
+                     
                 }
                 else {
-                    /* eslint-disable max-len */
+                     
                     gl.drawElements(type, size || geometry.indexBuffer.data.length, glType, (start || 0) * byteSize);
-                    /* eslint-enable max-len */
+                     
                 }
             }
             else {
@@ -15553,10 +15553,10 @@ function logPrettyShaderError(gl, shader) {
         .join('\n');
     logArgs[0] = fragmentSourceToLog;
     console.error(shaderLog);
-    // eslint-disable-next-line no-console
+     
     console.groupCollapsed('click to view full shader code');
     console.warn.apply(console, logArgs);
-    // eslint-disable-next-line no-console
+     
     console.groupEnd();
 }
 /**
@@ -15785,7 +15785,7 @@ var GL_TO_GLSL_TYPES = {
     INT_SAMPLER_2D_ARRAY: 'sampler2DArray',
     UNSIGNED_INT_SAMPLER_2D_ARRAY: 'sampler2DArray',
 };
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+ 
 function mapType(gl, type) {
     if (!GL_TABLE) {
         var typeNames = Object.keys(GL_TO_GLSL_TYPES);
@@ -15798,7 +15798,7 @@ function mapType(gl, type) {
     return GL_TABLE[type];
 }
 
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+ 
 // Parsers, each one of these will take a look at the type of shader property and uniform.
 // if they pass the test function then the code function is called that returns a the shader upload code for that uniform.
 // Shader upload code is automagically generated with these parsers.
@@ -15827,7 +15827,7 @@ var uniformParsers = [
     // handling samplers
     {
         test: function (data, uniform) {
-            // eslint-disable-next-line max-len,no-eq-null,eqeqeq
+             
             return (data.type === 'sampler2D' || data.type === 'samplerCube' || data.type === 'sampler2DArray') && data.size === 1 && !data.isArray && (uniform == null || uniform.castToBaseTexture !== undefined);
         },
         code: function (name) { return "t = syncData.textureCount++;\n\n            renderer.texture.bind(uv[\"" + name + "\"], t);\n\n            if(ud[\"" + name + "\"].value !== t)\n            {\n                ud[\"" + name + "\"].value = t;\n                gl.uniform1i(ud[\"" + name + "\"].location, t);\n; // eslint-disable-line max-len\n            }"; },
@@ -15979,7 +15979,7 @@ function generateUniformsSync(group, uniformData) {
      * no matter which group is being used
      *
      */
-    // eslint-disable-next-line no-new-func
+     
     return new Function('ud', 'uv', 'renderer', 'syncData', funcFragments.join('\n'));
 }
 
@@ -16007,7 +16007,7 @@ function checkMaxIfStatementsInShader(maxIfs, gl) {
         throw new Error('Invalid value of `0` passed to `checkMaxIfStatementsInShader`');
     }
     var shader = gl.createShader(gl.FRAGMENT_SHADER);
-    while (true) // eslint-disable-line no-constant-condition
+    while (true)  
      {
         var fragmentSrc = fragTemplate$1.replace(/%forloop%/gi, generateIfTestSrc(maxIfs));
         gl.shaderSource(shader, fragmentSrc);
@@ -16036,9 +16036,9 @@ function unsafeEvalSupported() {
         return unsafeEval;
     }
     try {
-        /* eslint-disable no-new-func */
+         
         var func = new Function('param1', 'param2', 'param3', 'return param1[param2] === param3;');
-        /* eslint-enable no-new-func */
+         
         unsafeEval = func({ a: 'b' }, 'a', 'b') === true;
     }
     catch (e) {
@@ -16209,7 +16209,7 @@ var Shader = /** @class */ (function () {
     return Shader;
 }());
 
-/* eslint-disable max-len */
+ 
 var BLEND$1 = 0;
 var OFFSET$1 = 1;
 var CULLING$1 = 2;
@@ -17430,7 +17430,7 @@ var ProjectionSystem = /** @class */ (function () {
 var tempRect = new Rectangle();
 // Temporary rectangle for renderTexture destinationFrame
 var tempRect2 = new Rectangle();
-/* eslint-disable max-len */
+ 
 /**
  * System plugin to the renderer to manage render textures.
  *
@@ -17706,7 +17706,7 @@ function generateUniformBufferSync(group, uniformData) {
     funcFragments.push("\n       renderer.buffer.update(buffer);\n    ");
     return {
         size: size,
-        // eslint-disable-next-line no-new-func
+         
         syncFunc: new Function('ud', 'uv', 'renderer', 'syncData', 'buffer', funcFragments.join('\n'))
     };
 }
@@ -17823,7 +17823,7 @@ function generateProgram(gl, program) {
     //            or assigned by the layout specifier in the shader source code
     if (!(/^[ \t]*#[ \t]*version[ \t]+300[ \t]+es[ \t]*$/m).test(program.vertexSrc)) {
         var keys = Object.keys(program.attributeData);
-        keys.sort(function (a, b) { return (a > b) ? 1 : -1; }); // eslint-disable-line no-confusing-arrow
+        keys.sort(function (a, b) { return (a > b) ? 1 : -1; });  
         for (var i = 0; i < keys.length; i++) {
             program.attributeData[keys[i]].location = i;
             gl.bindAttribLocation(webGLProgram, i, keys[i]);
@@ -17913,7 +17913,7 @@ var ShaderSystem = /** @class */ (function () {
         var glProgram = shader.glPrograms[this.renderer.CONTEXT_UID];
         shader.syncUniforms(glProgram.uniformData, uniforms, this.renderer);
     };
-    /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+     
     /**
      * Syncs uniforms on the group
      * @param group - the uniform group to sync
@@ -18811,9 +18811,9 @@ var TextureSystem = /** @class */ (function () {
         gl.texParameteri(texture.target, gl.TEXTURE_WRAP_S, glTexture.wrapMode);
         gl.texParameteri(texture.target, gl.TEXTURE_WRAP_T, glTexture.wrapMode);
         if (glTexture.mipmap) {
-            /* eslint-disable max-len */
+             
             gl.texParameteri(texture.target, gl.TEXTURE_MIN_FILTER, texture.scaleMode === SCALE_MODES.LINEAR ? gl.LINEAR_MIPMAP_LINEAR : gl.NEAREST_MIPMAP_NEAREST);
-            /* eslint-disable max-len */
+             
             var anisotropicExt = this.renderer.context.extensions.anisotropicFiltering;
             if (anisotropicExt && texture.anisotropicLevel > 0 && texture.scaleMode === SCALE_MODES.LINEAR) {
                 var level = Math.min(texture.anisotropicLevel, gl.getParameter(anisotropicExt.MAX_TEXTURE_MAX_ANISOTROPY_EXT));
@@ -19486,12 +19486,12 @@ var Renderer = /** @class */ (function (_super) {
         if (options) {
             if (options instanceof RenderTexture) {
                 deprecation('6.0.0', 'Renderer#render arguments changed, use options instead.');
-                /* eslint-disable prefer-rest-params */
+                 
                 renderTexture = options;
                 clear = arguments[2];
                 transform = arguments[3];
                 skipUpdateTransform = arguments[4];
-                /* eslint-enable prefer-rest-params */
+                 
             }
             else {
                 renderTexture = options.renderTexture;
@@ -19918,7 +19918,7 @@ var AbstractBatchRenderer = /** @class */ (function (_super) {
         // we use the second shader as the first one depending on your browser
         // may omit aTextureId as it is not used by the shader so is optimized out.
         for (var i = 0; i < this._packedGeometryPoolSize; i++) {
-            /* eslint-disable max-len */
+             
             this._packedGeometries[i] = new (this.geometryClass)();
         }
         this.initFlushBuffers();
@@ -23047,7 +23047,7 @@ var SignalBinding = /** @class */ (function () {
      * @param {object} [thisArg] - The context of the callback function.
      * @api private
      */
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+     
     function SignalBinding(fn, once, thisArg) {
         if (once === void 0) { once = false; }
         this._fn = fn;
@@ -23229,16 +23229,16 @@ var Signal = /** @class */ (function () {
 function parseUri(str, opts) {
     opts = opts || {};
     var o = {
-        // eslint-disable-next-line max-len
+         
         key: ['source', 'protocol', 'authority', 'userInfo', 'user', 'password', 'host', 'port', 'relative', 'path', 'directory', 'file', 'query', 'anchor'],
         q: {
             name: 'queryKey',
             parser: /(?:^|&)([^&=]*)=?([^&]*)/g
         },
         parser: {
-            // eslint-disable-next-line max-len
+             
             strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
-            // eslint-disable-next-line max-len
+             
             loose: /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
         }
     };
@@ -23764,7 +23764,7 @@ var LoaderResource = /** @class */ (function () {
         if (typeof this.xhrType !== 'string') {
             this.xhrType = this._determineXhrType();
         }
-        var xdr = this.xhr = new globalThis.XDomainRequest(); // eslint-disable-line no-undef
+        var xdr = this.xhr = new globalThis.XDomainRequest();  
         // XDomainRequest has a few quirks. Occasionally it will abort requests
         // A way to avoid this is to make sure ALL callbacks are set even if not used
         // More info here: http://stackoverflow.com/questions/15786966/xdomainrequest-aborts-post-on-ie-9
@@ -23906,7 +23906,7 @@ var LoaderResource = /** @class */ (function () {
      * @param [loc=globalThis.location] - The location object to test against.
      * @returns The crossOrigin value to use (or empty string for none).
      */
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+     
     LoaderResource.prototype._determineCrossOrigin = function (url, loc) {
         // data: and javascript: urls are considered same-origin
         if (url.indexOf('data:') === 0) {
@@ -24001,7 +24001,7 @@ var LoaderResource = /** @class */ (function () {
     };
     return LoaderResource;
 }());
-// eslint-disable-next-line @typescript-eslint/no-namespace
+ 
 (function (LoaderResource) {
     (function (STATUS_FLAGS) {
         /** None */
@@ -24182,7 +24182,7 @@ var AsyncQueue = /** @class */ (function () {
                 throw new Error('task callback must be a function');
             }
             _this.started = true;
-            // eslint-disable-next-line no-eq-null,eqeqeq
+             
             if (data == null && _this.idle()) {
                 // call drain immediately if there are no tasks
                 setTimeout(function () { return _this.drain(); }, 1);
@@ -24232,7 +24232,7 @@ var AsyncQueue = /** @class */ (function () {
             }
             _this.workers -= 1;
             task.callback.apply(task, args);
-            // eslint-disable-next-line no-eq-null,eqeqeq
+             
             if (args[0] != null) {
                 _this.error(args[0], task.data);
             }
@@ -24246,7 +24246,7 @@ var AsyncQueue = /** @class */ (function () {
         };
     };
     // That was in object
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+     
     AsyncQueue.prototype.push = function (data, callback) {
         this._insert(data, false, callback);
     };
@@ -24256,7 +24256,7 @@ var AsyncQueue = /** @class */ (function () {
         this.started = false;
         this._tasks = [];
     };
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+     
     AsyncQueue.prototype.unshift = function (data, callback) {
         this._insert(data, true, callback);
     };
@@ -25038,7 +25038,7 @@ var INTERNAL_FORMATS;
     INTERNAL_FORMATS[INTERNAL_FORMATS["COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL"] = 35986] = "COMPRESSED_RGBA_ATC_EXPLICIT_ALPHA_WEBGL";
     INTERNAL_FORMATS[INTERNAL_FORMATS["COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL"] = 34798] = "COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL";
     // WEBGL_compressed_texture_astc
-    /* eslint-disable-next-line camelcase */
+     
     INTERNAL_FORMATS[INTERNAL_FORMATS["COMPRESSED_RGBA_ASTC_4x4_KHR"] = 37808] = "COMPRESSED_RGBA_ASTC_4x4_KHR";
 })(INTERNAL_FORMATS || (INTERNAL_FORMATS = {}));
 /**
@@ -25084,7 +25084,7 @@ var INTERNAL_FORMAT_TO_BYTES_PER_PIXEL = (_a$2 = {},
     _a$2[INTERNAL_FORMATS.COMPRESSED_RGBA_ATC_INTERPOLATED_ALPHA_WEBGL] = 1,
     // @see https://registry.khronos.org/OpenGL/extensions/KHR/KHR_texture_compression_astc_hdr.txt
     // WEBGL_compressed_texture_astc
-    /* eslint-disable-next-line camelcase */
+     
     _a$2[INTERNAL_FORMATS.COMPRESSED_RGBA_ASTC_4x4_KHR] = 1,
     _a$2);
 
@@ -25402,7 +25402,7 @@ var CompressedTextureResource = /** @class */ (function (_super) {
     return CompressedTextureResource;
 }(BlobResource));
 
-/* eslint-enable camelcase */
+ 
 /**
  * Loader plugin for handling compressed textures for all platforms.
  * @class
@@ -25875,7 +25875,7 @@ function parseDDS(arrayBuffer) {
             throw new Error('DDSParser does not supported 3D texture data');
         }
         // Uint8Array buffers of image data, including all mipmap levels in each image
-        var imageBuffers = new Array();
+        var imageBuffers = [];
         var dataOffset = DDS_MAGIC_SIZE
             + DDS_HEADER_SIZE
             + DDS_HEADER_DX10_SIZE;
@@ -28007,7 +28007,7 @@ var ArcUtils = /** @class */ (function () {
             anticlockwise: (b1 * a2 > b2 * a1),
         };
     };
-    /* eslint-disable max-len */
+     
     /**
      * The arc method creates an arc/curve (used to create circles, or parts of circles).
      * @private
@@ -28325,7 +28325,7 @@ var tmpPoint = new Point();
  */
 var GraphicsGeometry = /** @class */ (function (_super) {
     __extends$e(GraphicsGeometry, _super);
-    // eslint-disable-next-line @typescript-eslint/no-useless-constructor
+     
     function GraphicsGeometry() {
         var _this = _super.call(this) || this;
         /** Minimal distance between points that are considered different. Affects line tesselation. */
@@ -31892,7 +31892,7 @@ var Text = /** @class */ (function (_super) {
         // Checking that we can use moddern canvas2D api
         // https://developer.chrome.com/origintrials/#/view_trial/3585991203293757441
         // note: this is unstable API, Chrome less 94 use a `textLetterSpacing`, newest use a letterSpacing
-        // eslint-disable-next-line max-len
+         
         var supportLetterSpacing = Text.experimentalLetterSpacing
             && ('letterSpacing' in CanvasRenderingContext2D.prototype
                 || 'textLetterSpacing' in CanvasRenderingContext2D.prototype);
@@ -33035,7 +33035,7 @@ var SpritesheetLoader = /** @class */ (function () {
         }
         // Check and add the multi atlas
         // Heavily influenced and based on https://github.com/rocket-ua/pixi-tps-loader/blob/master/src/ResourceLoader.js
-        // eslint-disable-next-line camelcase
+         
         var multiPacks = (_b = (_a = resource.data) === null || _a === void 0 ? void 0 : _a.meta) === null || _b === void 0 ? void 0 : _b.related_multi_packs;
         if (Array.isArray(multiPacks)) {
             var _loop_1 = function (item) {
@@ -34062,7 +34062,7 @@ function __extends$8(d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 }
 
-/* eslint-disable max-len */
+ 
 /**
  * Normalized parsed data from .fnt files.
  * @memberof PIXI
@@ -35878,12 +35878,12 @@ var BlurFilterPass = /** @class */ (function (_super) {
             }
         }
         else {
-            if (this.horizontal) // eslint-disable-line
+            if (this.horizontal)  
              {
                 this.uniforms.strength = (1 / filterManager.renderer.width) * (filterManager.renderer.width / input.width);
             }
             else {
-                this.uniforms.strength = (1 / filterManager.renderer.height) * (filterManager.renderer.height / input.height); // eslint-disable-line
+                this.uniforms.strength = (1 / filterManager.renderer.height) * (filterManager.renderer.height / input.height);  
             }
         }
         // screen space!

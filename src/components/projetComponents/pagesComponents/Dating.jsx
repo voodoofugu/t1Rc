@@ -1,15 +1,15 @@
 import React from "react";
 // import MorphingScroll from "morphing-scroll";
 import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
-import { useNexus, useNexusAll } from "nexus-state";
+// import { useNexus, useNexusAll } from "nexus-state";
 
 import {
   useDispatch,
-  selectors,
+  // selectors,
 } from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
-import ResCount from "../UIComponents/ResCount";
+// import ResCount from "../UIComponents/ResCount";
 import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 import Chat from "../UIComponents/Chat";
@@ -17,7 +17,6 @@ import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import FraimedTitle from "../UIComponents/FraimedTitle";
-import TsTest from "../UIComponents/TsTest";
 
 export const cssFiles = [
   "customScroll",
@@ -30,8 +29,8 @@ export const cssFiles = [
 export default function Dating({ pageName, children }) {
   const dispatch = useDispatch();
 
-  const [activePage, setActivePage] = useNexus("activePage");
-  const [increment, setIncrement] = useNexus("increment");
+  // const [activePage, setActivePage] = useNexus("activePage");
+  // const [increment, setIncrement] = useNexus("increment");
   // console.log("useNexusAll", useNexusAll());
 
   return (
@@ -40,52 +39,27 @@ export default function Dating({ pageName, children }) {
       <div className="dating_content">
         <div className="datingBG"></div>
         <div className="dating_title">Your date</div>
-        {/* <div className="counterBox">
-          <ResCount
-            img="img/dating/datingCoin.png"
-            value="234"
-            plus
-            onClick={() => {
-              dispatch({
-                type: "POPUP_OPEN",
-                payload: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy Dices",
-                  popCont: [
-                    "BuyShop",
-                    {
-                      img1: "dating/datingCoin_1",
-                      img2: "dating/datingCoin_2",
-                      img3: "dating/datingCoin_3",
-                      img4: "dating/datingCoin_4",
-                    },
-                  ],
-                },
-              });
-            }}
-          />
-        </div> */}
 
         <Button
           className="exit"
           text
-          onClick={() => {
-            setActivePage({
-              // type: "SOME_ACTION1",
-              payload: { activePage: "123" },
-            });
-          }}
+          // onClick={() => {
+          //   setActivePage({
+          //     // type: "SOME_ACTION1",
+          //     payload: { activePage: "123" },
+          //   });
+          // }}
         />
         <div style={{ position: "absolute", right: "80px", top: "0px" }}>
           <Button
             className="exit"
             text
-            onClick={() => {
-              setIncrement({
-                type: "INCREMENT",
-                payload: { increment: 1 },
-              });
-            }}
+            // onClick={() => {
+            //   setIncrement({
+            //     type: "INCREMENT",
+            //     payload: { increment: 1 },
+            //   });
+            // }}
           />
         </div>
 
@@ -165,63 +139,75 @@ const GirlDependencies = ({ girlsInfo }) => {
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={1}
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={2}
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={3}
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={4}
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={5}
           />,
           <ItemBox
             itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={6}
           />,
         ]}
         itemsBoxLast={[
           <ItemBox
-            itemClass="wh44 simpleItem"
+            itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={1}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={2}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={3}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={4}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={5}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            itemClass="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
+            key={6}
           />,
         ]}
       >
@@ -248,9 +234,9 @@ const GirlDependencies = ({ girlsInfo }) => {
         objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
-        scrollTrigger={["mouseWheel", "scrollThumb"]}
+        scrollTrigger="arrows"
         scrollReverse
-        scrollVisibility="hover"
+        // scrollVisibility="hover"
         thumbElement={<ScrollThumb />}
         // wrapAlignCenter
         // lazyRender

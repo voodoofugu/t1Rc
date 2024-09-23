@@ -287,7 +287,7 @@ export default function V2MainScreen07Album({ pageName }) {
             <a
               className="btn-discord"
               href="https://discord.gg/7pjeXF3emj"
-              target="_blank"
+              target="_blank" rel="noreferrer"
             ></a>
           </div>
           <div className="left-side false false">

@@ -36,7 +36,7 @@ export function addTooltipData(
     const halfHeight = window.innerHeight / 2;
     const oneFreethWidth = window.innerWidth / 3;
 
-    let newTooltipData = {
+    const newTooltipData = {
       text: text,
       top: 0,
       left: 0,
@@ -44,7 +44,7 @@ export function addTooltipData(
       positionClassX: "",
     };
 
-    if (!!position) {
+    if (position) {
       if (position === "top") {
         newTooltipData.top = top;
         newTooltipData.positionClassY =

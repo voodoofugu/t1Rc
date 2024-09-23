@@ -162,7 +162,7 @@ export default memo(function CellContent({ pageName, loadable }) {
             "animate-ident text-indigo-500 dark:text-indigo-400 rounded-18 bg-indigo-100 shadow-shadow4 hover:shadow-shadow8 w-238 h-156 relative overflow-hidden flex justify-center items-center active:scale-95 transition-all1 hover:bg-indigo-50 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:shadow-shadow5 dark:hover:shadow-shadow6"
           }
         >
-          {!!activePage ? (
+          {activePage ? (
             <>
               {activePage === pageName ? (
                 <>

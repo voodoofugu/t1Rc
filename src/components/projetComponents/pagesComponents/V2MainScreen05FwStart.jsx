@@ -171,7 +171,7 @@ export default function V2MainScreen05FwStart() {
         <a
           className="btn-discord"
           href="https://discord.gg/7pjeXF3emj"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         ></a>
       </div>
       <div className="left-side false false">

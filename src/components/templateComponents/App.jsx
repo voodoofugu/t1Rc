@@ -24,7 +24,7 @@ const transformedCssFiles = transformCssFileNames(cssFiles).join(" ");
 
 export default function App() {
   const [stylesLoaded, setStylesLoaded] = useState(false);
-  const states = !!sessionStorage.getItem("initialStates")
+  const states = sessionStorage.getItem("initialStates")
     ? JSON.parse(sessionStorage.getItem("initialStates"))
     : initialState;
 

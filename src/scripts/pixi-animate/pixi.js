@@ -1317,7 +1317,7 @@ object-assign
 */
 
 'use strict';
-/* eslint-disable no-unused-vars */
+ 
 var getOwnPropertySymbols = Object.getOwnPropertySymbols;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 var propIsEnumerable = Object.prototype.propertyIsEnumerable;
@@ -1339,7 +1339,7 @@ function shouldUseNative() {
 		// Detect buggy property enumeration order in older V8 versions.
 
 		// https://bugs.chromium.org/p/v8/issues/detail?id=4118
-		var test1 = new String('abc');  // eslint-disable-line no-new-wrappers
+		var test1 = new String('abc');   
 		test1[5] = 'de';
 		if (Object.getOwnPropertyNames(test1)[0] === '5') {
 			return false;
@@ -6680,7 +6680,7 @@ function onlyOnce(fn) {
  */
 function queue(worker, concurrency) {
     if (concurrency == null) {
-        // eslint-disable-line no-eq-null,eqeqeq
+         
         concurrency = 1;
     } else if (concurrency === 0) {
         throw new Error('Concurrency must not be zero');
@@ -6760,14 +6760,14 @@ function queue(worker, concurrency) {
 
     function _insert(data, insertAtFront, callback) {
         if (callback != null && typeof callback !== 'function') {
-            // eslint-disable-line no-eq-null,eqeqeq
+             
             throw new Error('task callback must be a function');
         }
 
         q.started = true;
 
         if (data == null && q.idle()) {
-            // eslint-disable-line no-eq-null,eqeqeq
+             
             // call drain immediately if there are no tasks
             setTimeout(function () {
                 return q.drain();
@@ -6799,7 +6799,7 @@ function queue(worker, concurrency) {
             task.callback.apply(task, arguments);
 
             if (arguments[0] != null) {
-                // eslint-disable-line no-eq-null,eqeqeq
+                 
                 q.error(arguments[0], task.data);
             }
 
@@ -6916,7 +6916,7 @@ _Loader2.default.async = async;
 _Loader2.default.base64 = b64;
 
 // export manually, and also as default
-module.exports = _Loader2.default; // eslint-disable-line no-undef
+module.exports = _Loader2.default;  
 exports.default = _Loader2.default;
 
 },{"./Loader":30,"./Resource":31,"./async":32,"./b64":33}],35:[function(require,module,exports){
@@ -8353,7 +8353,7 @@ var DATA_URI = exports.DATA_URI = /^\s*data:(?:([\w-]+)\/([\w+.-]+))?(?:;(charse
  * @type {RegExp|string}
  * @example &lt;svg width="100" height="100"&gt;&lt;/svg&gt;
  */
-var SVG_SIZE = exports.SVG_SIZE = /<svg[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*>/i; // eslint-disable-line max-len
+var SVG_SIZE = exports.SVG_SIZE = /<svg[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*(?:\s(width|height)=('|")(\d*(?:\.\d+)?)(?:px)?('|"))[^>]*>/i;  
 
 /**
  * Constants that identify shapes, mainly to prevent `instanceof` calls.
@@ -9279,7 +9279,7 @@ var Container = function (_DisplayObject) {
      */
 
 
-    Container.prototype._renderWebGL = function _renderWebGL(renderer) // eslint-disable-line no-unused-vars
+    Container.prototype._renderWebGL = function _renderWebGL(renderer)  
     {}
     // this is where content itself gets rendered...
 
@@ -9292,7 +9292,7 @@ var Container = function (_DisplayObject) {
      */
     ;
 
-    Container.prototype._renderCanvas = function _renderCanvas(renderer) // eslint-disable-line no-unused-vars
+    Container.prototype._renderCanvas = function _renderCanvas(renderer)  
     {}
     // this is where content itself gets rendered...
 
@@ -9765,7 +9765,7 @@ var DisplayObject = function (_EventEmitter) {
      */
 
 
-    DisplayObject.prototype.renderWebGL = function renderWebGL(renderer) // eslint-disable-line no-unused-vars
+    DisplayObject.prototype.renderWebGL = function renderWebGL(renderer)  
     {}
     // OVERWRITE;
 
@@ -9777,7 +9777,7 @@ var DisplayObject = function (_EventEmitter) {
      */
     ;
 
-    DisplayObject.prototype.renderCanvas = function renderCanvas(renderer) // eslint-disable-line no-unused-vars
+    DisplayObject.prototype.renderCanvas = function renderCanvas(renderer)  
     {}
     // OVERWRITE;
 
@@ -11287,7 +11287,7 @@ var Graphics = function (_Container) {
             points = new Array(arguments.length);
 
             for (var i = 0; i < points.length; ++i) {
-                points[i] = arguments[i]; // eslint-disable-line prefer-rest-params
+                points[i] = arguments[i];  
             }
         }
 
@@ -18170,7 +18170,7 @@ var Filter = function () {
    */
 
 
-  Filter.prototype.apply = function apply(filterManager, input, output, clear, currentState) // eslint-disable-line no-unused-vars
+  Filter.prototype.apply = function apply(filterManager, input, output, clear, currentState)  
   {
     // --- //
     //  this.uniforms.filterMatrix = filterManager.calculateSpriteMatrix(tempMatrix, window.panda );
@@ -19470,7 +19470,7 @@ var ObjectRenderer = function (_WebGLManager) {
    */
   ;
 
-  ObjectRenderer.prototype.render = function render(object) // eslint-disable-line no-unused-vars
+  ObjectRenderer.prototype.render = function render(object)  
   {
     // render the object
   };
@@ -20020,7 +20020,7 @@ function checkMaxIfStatmentsInShader(maxIfs, gl) {
 
     var shader = gl.createShader(gl.FRAGMENT_SHADER);
 
-    while (true) // eslint-disable-line no-constant-condition
+    while (true)  
     {
         var fragmentSrc = fragTemplate.replace(/%forloop%/gi, generateIfTestSrc(maxIfs));
 
@@ -20147,9 +20147,9 @@ function validateContext(gl) {
 
     // this is going to be fairly simple for now.. but at least we have room to grow!
     if (!attributes.stencil) {
-        /* eslint-disable no-console */
+         
         console.warn('Provided WebGL context does not have a stencil buffer, masks may not render correctly');
-        /* eslint-enable no-console */
+         
     }
 }
 
@@ -21622,9 +21622,9 @@ var SpriteRenderer = function (_ObjectRenderer) {
         var attrs = this.shader.attributes;
 
         for (var i = 0; i < this.vaoMax; i++) {
-            /* eslint-disable max-len */
+             
             var vertexBuffer = this.vertexBuffers[i] = _pixiGlCore2.default.GLBuffer.createVertexBuffer(gl, null, gl.STREAM_DRAW);
-            /* eslint-enable max-len */
+             
 
             // build the vao object that will render..
             var vao = this.renderer.createVao().addIndex(this.indexBuffer).addAttribute(vertexBuffer, attrs.aVertexPosition, gl.FLOAT, false, this.vertByteSize, 0).addAttribute(vertexBuffer, attrs.aTextureCoord, gl.UNSIGNED_SHORT, true, this.vertByteSize, 2 * 4).addAttribute(vertexBuffer, attrs.aColor, gl.UNSIGNED_BYTE, true, this.vertByteSize, 3 * 4);
@@ -21839,11 +21839,11 @@ var SpriteRenderer = function (_ObjectRenderer) {
             uint32View[index + 12] = uvs[2];
             uint32View[index + 17] = uvs[3];
 
-            /* eslint-disable max-len */
+             
             uint32View[index + 3] = uint32View[index + 8] = uint32View[index + 13] = uint32View[index + 18] = sprite._tintRGB + (Math.min(sprite.worldAlpha, 1) * 255 << 24);
 
             float32View[index + 4] = float32View[index + 9] = float32View[index + 14] = float32View[index + 19] = nextTexture._virtalBoundId;
-            /* eslint-enable max-len */
+             
 
             index += 20;
         }
@@ -21858,9 +21858,9 @@ var SpriteRenderer = function (_ObjectRenderer) {
 
                 var attrs = this.shader.attributes;
 
-                /* eslint-disable max-len */
+                 
                 var vertexBuffer = this.vertexBuffers[this.vertexCount] = _pixiGlCore2.default.GLBuffer.createVertexBuffer(gl, null, gl.STREAM_DRAW);
-                /* eslint-enable max-len */
+                 
 
                 // build the vao object that will render..
                 var vao = this.renderer.createVao().addIndex(this.indexBuffer).addAttribute(vertexBuffer, attrs.aVertexPosition, gl.FLOAT, false, this.vertByteSize, 0).addAttribute(vertexBuffer, attrs.aTextureCoord, gl.UNSIGNED_SHORT, true, this.vertByteSize, 2 * 4).addAttribute(vertexBuffer, attrs.aColor, gl.UNSIGNED_BYTE, true, this.vertByteSize, 3 * 4);
@@ -24497,7 +24497,7 @@ var BaseTexture = function (_EventEmitter) {
                 baseTexture.textureCacheIds.push(id);
             }
 
-            /* eslint-disable no-console */
+             
             if (_utils.BaseTextureCache[id]) {
                 // console.warn('BaseTexture added to the cache with an id [' + id + '] that already had an entry');
             }
@@ -24621,7 +24621,7 @@ var RenderTexture = function (_Texture) {
         var _legacyRenderer = null;
 
         if (!(baseRenderTexture instanceof _BaseRenderTexture2.default)) {
-            /* eslint-disable prefer-rest-params, no-console */
+             
             var width = arguments[1];
             var height = arguments[2];
             var scaleMode = arguments[3];
@@ -24630,7 +24630,7 @@ var RenderTexture = function (_Texture) {
             // we have an old render texture..
             console.warn('Please use RenderTexture.create(' + width + ', ' + height + ') instead of the ctor directly.');
             _legacyRenderer = arguments[0];
-            /* eslint-enable prefer-rest-params, no-console */
+            /* eslint-enable prefer-rest-params */
 
             frame = null;
             baseRenderTexture = new _BaseRenderTexture2.default(width, height, scaleMode, resolution);
@@ -25456,11 +25456,11 @@ var Texture = function (_EventEmitter) {
                 texture.textureCacheIds.push(id);
             }
 
-            /* eslint-disable no-console */
+             
             if (_utils.TextureCache[id]) {
                 // console.warn('Texture added to the cache with an id [' + id + '] that already had an entry');
             }
-            /* eslint-enable no-console */
+             
 
             _utils.TextureCache[id] = texture;
         }
@@ -27524,7 +27524,7 @@ exports.default = deprecation;
 // useful for tracking-down where deprecated methods/properties/classes
 // are being used within the code
 function warn(msg) {
-    /* eslint-disable no-console */
+     
     var stack = new Error().stack;
 
     // Handle IE < 10 and Safari < 6
@@ -27543,7 +27543,7 @@ function warn(msg) {
             console.warn(stack);
         }
     }
-    /* eslint-enable no-console */
+     
 }
 
 function deprecation(core) {
@@ -32127,7 +32127,7 @@ var ColorMatrixFilter = function (_core$Filter) {
      */
 
 
-    ColorMatrixFilter.prototype.desaturate = function desaturate() // eslint-disable-line no-unused-vars
+    ColorMatrixFilter.prototype.desaturate = function desaturate()  
     {
         this.saturate(-1);
     };
@@ -33816,7 +33816,7 @@ var InteractionManager = function (_EventEmitter) {
         // but there was a scenario of a display object moving under a static mouse cursor.
         // In this case, mouseover and mouseevents would not pass the flag test in dispatchEvent function
         for (var k in this.activeInteractionData) {
-            // eslint-disable-next-line no-prototype-builtins
+             
             if (this.activeInteractionData.hasOwnProperty(k)) {
                 var interactionData = this.activeInteractionData[k];
 
@@ -39342,7 +39342,7 @@ if (typeof _deprecation2.default === 'function') {
 }
 
 // Always export pixi globally.
-global.PIXI = exports; // eslint-disable-line
+global.PIXI = exports;  
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 

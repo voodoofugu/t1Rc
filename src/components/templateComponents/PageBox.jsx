@@ -49,7 +49,7 @@ export default memo(function PageBox() {
   const [scrollTopValue, setScrollTopValue] = useState(0);
 
   const usedPages = useMemo(() => {
-    if (!!sessionStorage.getItem("searchText")) {
+    if (sessionStorage.getItem("searchText")) {
       return searchData;
     } else {
       return PageList;

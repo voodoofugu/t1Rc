@@ -21,7 +21,8 @@
     "get-neededFile-list": "ts-node src/scripts/templateScripts/get-neededFile-list.ts",
     "fetch-figma-icns": "ts-node src/scripts/templateScripts/fetch-figma-icons.ts",
     "get-icns-json": "ts-node src/scripts/templateScripts/get-icns-json.ts",
-    "start-ws-server": "ts-node src/scripts/server/wsServer.ts"
+    "start-ws-server": "ts-node src/scripts/server/wsServer.ts",
+    "lint": "eslint ."
   },
   "dependencies": {
     "immer": "^10.1.1",
@@ -37,6 +38,7 @@
     "use-immer": "^0.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@types/express": "^4.17.21",
     "@types/jest": "^29.5.12",
@@ -49,9 +51,12 @@
     "css-loader": "^6.10.0",
     "dotenv": "^16.4.5",
     "esbuild-loader": "^4.1.0",
+    "eslint": "^9.11.0",
+    "eslint-plugin-react": "^7.36.1",
     "express": "^4.21.0",
     "file-loader": "^6.2.0",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
+    "globals": "^15.9.0",
     "html-webpack-plugin": "^5.6.0",
     "jest": "^29.7.0",
     "pixi-spine": "^3.1.2",
@@ -61,6 +66,7 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
+    "typescript-eslint": "^8.6.0",
     "webpack": "^5.90.3",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
