@@ -234,7 +234,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
-        scrollTrigger="arrows"
+        scrollTrigger={["arrows", "mouseWheel"]}
         scrollReverse
         // scrollVisibility="hover"
         thumbElement={<ScrollThumb />}
@@ -247,7 +247,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         // fallback={<div>loading</div>}
         // contentAlignCenter
         // scrollTop={100}
-        edgeGradient="#5b2914"
+        // edgeGradient="#5b2914"
+        edgeGradient="#642e16"
       >
         {girlsInfo.map((item, index) => (
           <PersonAva

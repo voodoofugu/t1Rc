@@ -251,7 +251,7 @@ const Chat = ({ girlInfo }) => {
         </div>
       ) : (
         <>
-          <MorphingScroll
+          {/* <MorphingScroll
             className="chatDaiting"
             scrollXY={[490, 496]}
             objectsWrapperMinSize={496}
@@ -375,7 +375,7 @@ const Chat = ({ girlInfo }) => {
                 </>
               )}
             </ResizeTracker>
-          </MorphingScroll>
+          </MorphingScroll> */}
 
           <div className="fallbackBox" ref={fallbackBoxRef}>
             {messageFallback === "message" && (

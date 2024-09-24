@@ -1338,7 +1338,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                       }}
                     >
                       <div className="journal-comics-ballon-text">
-                        Damn it... we're out of gold again.
+                        Damn it... were out of gold again.
                       </div>
                     </div>
                     <div
