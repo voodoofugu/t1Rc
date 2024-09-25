@@ -230,10 +230,10 @@ const GirlDependencies = ({ girlsInfo }) => {
       <MorphingScroll
         className="scrollAvatars"
         scrollID="datingAvatars"
-        scrollXY={[104, 494]}
+        scrollXY={[376, 176]}
         objectXY={[86, 86]}
         gap={10}
-        padding={[4, 10]}
+        padding={[10, 10]}
         scrollTrigger={["arrows", "mouseWheel"]}
         scrollReverse
         // scrollVisibility="hover"
@@ -242,7 +242,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // lazyRender
         // infiniteScroll
         // rootMargin={[0, 0]}
-        // xDirection
+        xDirection
         // suspending
         // fallback={<div>loading</div>}
         // contentAlignCenter
