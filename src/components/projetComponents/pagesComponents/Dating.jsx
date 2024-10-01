@@ -234,9 +234,10 @@ const GirlDependencies = ({ girlsInfo }) => {
         objectXY={[86, 86]}
         gap={10}
         padding={[4, 10]}
-        scrollTrigger={["arrows", "mouseWheel"]}
+        progressTrigger={["arrows", "progressElement"]}
         progressReverse
         thumbElement={<ScrollThumb />}
+        sliderType
         // progressVisibility="hover"
         // wrapAlignCenter
         // lazyRender
