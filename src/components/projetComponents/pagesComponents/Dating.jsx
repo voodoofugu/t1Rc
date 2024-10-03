@@ -236,7 +236,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         padding={[4, 10]}
         progressTrigger={["arrows", "progressElement"]}
         progressReverse
-        thumbElement={<ScrollThumb />}
+        // thumbElement={<ScrollThumb />}
         sliderType
         // progressVisibility="hover"
         // wrapAlignCenter
