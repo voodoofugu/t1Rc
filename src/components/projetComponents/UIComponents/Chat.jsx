@@ -251,12 +251,12 @@ const Chat = ({ girlInfo }) => {
         </div>
       ) : (
         <>
-          {/* <MorphingScroll
+          <MorphingScroll
             className="chatDaiting"
             scrollXY={[490, 496]}
             objectsWrapperMinSize={496}
             padding={[0, 20]}
-            progressTrigger={["wheel", "progressElement"]}
+            progressTrigger={["wheel", "progressElement", "content"]}
             scrollTop="end"
             thumbElement={<ScrollThumb className="centerImg" />}
             // onScrollValue={[
@@ -375,7 +375,7 @@ const Chat = ({ girlInfo }) => {
                 </>
               )}
             </ResizeTracker>
-          </MorphingScroll> */}
+          </MorphingScroll>
 
           <div className="fallbackBox" ref={fallbackBoxRef}>
             {messageFallback === "message" && (

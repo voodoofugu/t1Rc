@@ -249,7 +249,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // contentAlignCenter
         // scrollTop={100}
         // edgeGradient="#5b2914"
-        edgeGradient="#642e16"
+        edgeGradient={{ color: "#642e16" }}
       >
         {girlsInfo.map((item, index) => (
           <PersonAva
