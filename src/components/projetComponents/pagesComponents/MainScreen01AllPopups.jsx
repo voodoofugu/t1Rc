@@ -261,12 +261,31 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             "Хелуин",
             [
               [
-                "ic-hw",
+                "evPopArts/halloweenIcn",
+                "287:21:43",
+                {
+                  mpopClass: "m-popup main-relics-pop hw",
+                  popTit: "Halloween Event Pass",
+                  popCont: ["RelicsPop", { event: "hw" }],
+                },
+              ],
+              [
+                "evPopArts/halloweenIcn",
                 "287:21:43",
                 {
                   mpopClass: "m-popup events-btlpass-pop hw",
                   popTit: "Halloween Event Pass",
                   popCont: ["BtlPass", { btlClass: "hw" }],
+                },
+              ],
+              [
+                "ic-dark-btlpas",
+                "00:00:00",
+                {
+                  mpopClass: "m-popup dark-btlpas",
+                  popTit: "Halloween Battle Pass",
+                  popCont: ["DarkBtlPass"],
+                  timer: true,
                 },
               ],
             ],
@@ -1786,7 +1805,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             </div>
           </div>
           <div className="tabs-all w-house2">
-            <div className="tabs-name">Women's</div>
+            <div className="tabs-name">Womens</div>
             <div className="tabs-pic">
               <img src="img/tab-11.png" loading="lazy" />
             </div>

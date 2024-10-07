@@ -19,7 +19,6 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export const cssFiles = [
-  "customScroll",
   "dating",
   "screen-superhero",
   "screen-unipop-subscription",

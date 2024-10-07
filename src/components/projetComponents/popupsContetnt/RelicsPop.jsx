@@ -1,6 +1,12 @@
 import React, { memo } from "react";
+import {
+  selectors,
+  useDispatch,
+} from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
+import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export default memo(function RelicsPop({ event }) {
   let data = [
@@ -79,9 +85,26 @@ export default memo(function RelicsPop({ event }) {
         "img/evPopArts/strawberry_icn.png",
       ],
     },
+    {
+      hw: [
+        "img/images/superhero/suphero-890/x2/sh-1.jpg",
+        "Halloween's Day Orgy!",
+        [
+          "img/evPopArts/thongs_1.png",
+          "img/evPopArts/thongs_2.png",
+          "img/evPopArts/thongs_3.png",
+          "img/evPopArts/thongs_4.png",
+          "img/evPopArts/thongs_5.png",
+          "img/evPopArts/thongs_6.png",
+        ],
+        "img/evPopArts/pumpkin_icn.png",
+      ],
+    },
   ];
 
   const evData = data.find((item) => item[event]);
+  const popupState = selectors.usePopupState();
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -104,7 +127,15 @@ export default memo(function RelicsPop({ event }) {
           </div>
         </div>
       </div>
-      <div className="main-relics-right-box-all xmas">
+      <div className="main-relics-right-box-all xmas"></div>
+
+      <MorphingScroll
+        className="main-relics-right-box-all overNone"
+        scrollXY={[710, 446]}
+        progressTrigger={["wheel", "progressElement"]}
+        thumbElement={<ScrollThumb />}
+        progressBarSize={8}
+      >
         <div className="main-relics-bonus-box xmas">
           <ItemBox
             itemClass="wh100"
@@ -393,7 +424,8 @@ export default memo(function RelicsPop({ event }) {
             />
           </div>
         </div>
-      </div>
+      </MorphingScroll>
+
       <div className="main-buttons">
         <div className="color-btn green disabled0">
           <div className="color-btn-text">
@@ -414,6 +446,11 @@ export default memo(function RelicsPop({ event }) {
           </div>
         </div>
       </div>
+
+      <div
+        className="btn-close-x"
+        onClick={() => popupState.popClose(dispatch)}
+      />
     </>
   );
 });
