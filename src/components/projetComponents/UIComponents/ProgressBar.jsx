@@ -46,19 +46,13 @@ const ProgressBar = ({
     <div
       className={`progresBarWrap ${className ? className : ""}${
         yDirection ? " yDirection" : ""
-      }${itemsBoxFirst || itemsBoxLast ? " head" : ""}`}
+      }`}
       style={{
         width: `${width}px`,
         height: `${height}px`,
       }}
     >
-      <div
-        className="progresBar"
-        style={{
-          ...(text && yDirection ? { paddingLeft: `29px` } : {}),
-          ...(itemsBoxFirst || itemsBoxLast ? { paddingRight: `25px` } : {}),
-        }}
-      >
+      <div className="progresBar">
         <div
           className="contentContainer"
           style={{

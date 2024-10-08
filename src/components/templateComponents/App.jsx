@@ -19,6 +19,7 @@ export const cssFiles = [
   "v2-screen-main-dark-world",
   "keyframes-animations",
   "customScroll",
+  "ui-elements",
 ];
 
 const transformedCssFiles = transformCssFileNames(cssFiles).join(" ");

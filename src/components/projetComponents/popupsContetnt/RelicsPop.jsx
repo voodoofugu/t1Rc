@@ -7,6 +7,9 @@ import {
 import ItemBox from "../UIComponents/ItemBox";
 import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
+import ComicsBallon from "../UIComponents/ComicsBallon";
+import ProgressBar from "../UIComponents/ProgressBar";
+import Button from "../UIComponents/Button";
 
 export default memo(function RelicsPop({ event }) {
   let data = [
@@ -97,7 +100,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/thongs_5.png",
           "img/evPopArts/thongs_6.png",
         ],
-        "img/evPopArts/pumpkin_icn.png",
+        "img/evPopArts/candyBag.png",
       ],
     },
   ];
@@ -108,18 +111,37 @@ export default memo(function RelicsPop({ event }) {
 
   return (
     <>
+      <div className="bg"></div>
+
       <div className="main-relics-girl-box">
         <div className="main-relics-girl-pic">
           <img src={evData?.[event][0]} loading="lazy" />
         </div>
-        <div className="main-relics-info"></div>
-        <div className="main-relics-girl-ballon">
+        {/* <div className="main-relics-info"></div> */}
+        <div className="tltI"></div>
+
+        {/* <div className="main-relics-girl-ballon">
           <div className="main-relics-girl-ballon-text-box">
             <div className="main-relics-girl-ballon-text">
               {evData?.[event][1]}
             </div>
           </div>
-        </div>
+        </div> */}
+
+        <ComicsBallon
+          text={evData?.[event][1]}
+          style={{
+            top: "364px",
+            left: "50%",
+            width: "auto",
+            transform: "translateX(-50%)",
+          }}
+          changeDirectionArrow
+          // arrowDirection="xDirection"
+          // arrowPosition="last"
+          // align="end"
+        />
+
         <div className="pse-count-res-box">
           <div className="pse-count-res-text">
             <span className="ic-pse-keygirl"></span>
@@ -127,7 +149,6 @@ export default memo(function RelicsPop({ event }) {
           </div>
         </div>
       </div>
-      <div className="main-relics-right-box-all xmas"></div>
 
       <MorphingScroll
         className="main-relics-right-box-all overNone"
@@ -136,6 +157,55 @@ export default memo(function RelicsPop({ event }) {
         thumbElement={<ScrollThumb />}
         progressBarSize={8}
       >
+        <div className="main-relics-bonus-box xmas">
+          <ProgressBar
+            className="progressBarOfSympathy"
+            progressSize={[560, 28]}
+            currentProgress={2}
+            maxProgress={5}
+            serifsPerProgress
+            itemsBoxFirst={[
+              <ItemBox
+                itemClass="check"
+                itemPic="img/images/hero-all/tithero-349/x2/ava/tithero-349-1-ava.jpg"
+                countOut={"5K"}
+                arrow="bottom"
+                key={1}
+              />,
+              <ItemBox
+                itemPic={evData?.[event][3]}
+                count={"10K"}
+                countOut={"6K"}
+                arrow="bottom"
+                key={2}
+              />,
+              <ItemBox
+                itemPic={evData?.[event][3]}
+                countOut={"7K"}
+                arrow="bottom"
+                key={3}
+              />,
+              <ItemBox
+                itemPic={evData?.[event][3]}
+                countOut={"8.5K"}
+                arrow="bottom"
+                key={4}
+              />,
+              <ItemBox
+                itemPic="img/images/hero-all/tithero-349/x2/ava/tithero-349-1-ava.jpg"
+                countOut={"10K"}
+                arrow="bottom"
+                key={5}
+              />,
+            ]}
+          >
+            <ItemBox
+              itemClass="wh100"
+              itemPic={evData?.[event][2][0]}
+              count={"0/10K"}
+            />
+          </ProgressBar>
+        </div>
         <div className="main-relics-bonus-box xmas">
           <ItemBox
             itemClass="wh100"
@@ -427,24 +497,15 @@ export default memo(function RelicsPop({ event }) {
       </MorphingScroll>
 
       <div className="main-buttons">
-        <div className="color-btn green disabled0">
+        {/* <div className="color-btn green disabled0">
           <div className="color-btn-text">
             <div>Fapopoly</div>
             <div className="t">00:00:00</div>
           </div>
-        </div>
-        <div className="color-btn green disabled0">
-          <div className="color-btn-text">
-            <div>Dark Tower</div>
-            <div className="t">00:00:00</div>
-          </div>
-        </div>
-        <div className="color-btn green">
-          <div className="color-btn-text">
-            <div>XXXMAS Pass</div>
-            <div className="t">4D 03:07:21</div>
-          </div>
-        </div>
+        </div> */}
+        <Button className="green max" text="Fapopoly<p>00:00:00" />
+        <Button className="green max" text="Dark Tower<p>00:00:00" />
+        <Button className="green max" text="XXXMAS Pass<p>4D 03:07:21" />
       </div>
 
       <div

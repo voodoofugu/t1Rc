@@ -5,6 +5,8 @@ import {
 } from "../../templateComponents/GlobalStateStor";
 import a_popupList from "../popupsContetnt/a_popupList";
 
+import FraimedTitle from "../UIComponents/FraimedTitle";
+
 const componentsMap = a_popupList.reduce((map, name) => {
   map[name] = lazy(() => import(`../popupsContetnt/${name}`));
   return map;
@@ -47,9 +49,15 @@ export default memo(function Popup({ pageName }) {
           ></div>
           <div id="popupContainer">
             <div className={popupState.mpopClass} style={popupState.popStyle}>
-              {popupState.popTit && (
-                <div className="title rounded-3xl">{popupState.popTit}</div>
-              )}
+              {popupState.popTit &&
+                (popupState.popTit.endsWith("<FRAMED>") ? (
+                  <FraimedTitle
+                    className="corners"
+                    text={popupState.popTit.replace(/<FRAMED>$/, "")}
+                  />
+                ) : (
+                  <div className="title rounded-3xl">{popupState.popTit}</div>
+                ))}
               {popupState.count && (
                 <div className="res-value">
                   {popupState.count.value}
