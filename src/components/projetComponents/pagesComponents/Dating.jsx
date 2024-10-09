@@ -39,31 +39,10 @@ export default function Dating({ pageName, children }) {
         <div className="datingBG"></div>
         <div className="dating_title">Your date</div>
 
+        <Button className="exit" text="✖" />
         <Button
-          className="exit"
-          text
-          // onClick={() => {
-          //   setActivePage({
-          //     // type: "SOME_ACTION1",
-          //     payload: { activePage: "123" },
-          //   });
-          // }}
-        />
-        <div style={{ position: "absolute", right: "80px", top: "0px" }}>
-          <Button
-            className="exit"
-            text
-            // onClick={() => {
-            //   setIncrement({
-            //     type: "INCREMENT",
-            //     payload: { increment: 1 },
-            //   });
-            // }}
-          />
-        </div>
-
-        <div
-          className="btnI"
+          className="info"
+          text="i"
           onClick={() => {
             dispatch({
               type: "POPUP_OPEN",
@@ -80,6 +59,19 @@ export default function Dating({ pageName, children }) {
             });
           }}
         />
+
+        <div style={{ position: "absolute", right: "80px", top: "0px" }}>
+          <Button
+            className="exit"
+            text
+            // onClick={() => {
+            //   setIncrement({
+            //     type: "INCREMENT",
+            //     payload: { increment: 1 },
+            //   });
+            // }}
+          />
+        </div>
 
         <div className="heroFigure"></div>
 

@@ -142,9 +142,6 @@ export default memo(function RelicsPop({ event }) {
             transform: "translateX(-50%)",
           }}
           changeDirectionArrow
-          // arrowDirection="xDirection"
-          // arrowPosition="last"
-          // align="end"
         />
 
         <div className="pse-count-res-box">
