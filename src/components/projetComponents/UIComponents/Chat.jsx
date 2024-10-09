@@ -256,11 +256,7 @@ const Chat = ({ girlInfo }) => {
             scrollXY={[490, 496]}
             objectsWrapperMinSize={496}
             padding={[0, 20]}
-            progressTrigger={[
-              "wheel",
-              "progressElement",
-              // "content"
-            ]}
+            progressTrigger={["wheel", "progressElement", "content"]}
             scrollTop="end"
             thumbElement={<ScrollThumb className="centerImg" />}
             progressBarSize={8}
