@@ -99,7 +99,7 @@ const GirlDependencies = ({ girlsInfo }) => {
   return (
     <>
       <Button
-        className="orage giftsBtn"
+        className="orange giftsBtn"
         text="Girl gifts"
         img="img/dating/giftsIcn.png"
         onClick={() => {

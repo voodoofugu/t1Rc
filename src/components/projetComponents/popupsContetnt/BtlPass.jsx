@@ -5,6 +5,9 @@ import {
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
+import ScrollThumb from "../UIComponents/ScrollThumb";
+import ProgressBar from "../UIComponents/ProgressBar";
+import Button from "../UIComponents/Button";
 
 export default function BtlPass({ btlClass }) {
   const popupState = selectors.usePopupState();
@@ -78,9 +81,27 @@ export default function BtlPass({ btlClass }) {
 
   return (
     <>
+      <Button
+        className="info"
+        text="i"
+        onClick={() =>
+          popupState.popOpen(dispatch, {
+            mpopClass: "m-popup fapop-rules btlpass-info",
+            popTit: "правила",
+            popCont: ["FapopRules"],
+          })
+        }
+      />
+
+      <Button
+        className="exit"
+        text="✖"
+        onClick={() => popupState.popClose(dispatch)}
+      />
+
       <div className="btlpass-box-all">
         <div className="btlpass-collect-box-all">
-          <div
+          {/* <div
             className="bp-info-btn"
             onClick={() =>
               popupState.popOpen(dispatch, {
@@ -91,7 +112,7 @@ export default function BtlPass({ btlClass }) {
             }
           >
             ?
-          </div>
+          </div> */}
           <div className="btlpass-collect-box">
             <div className="btlpass-collect-box-text">
               Get 0/25.2K
@@ -155,7 +176,9 @@ export default function BtlPass({ btlClass }) {
               <div className="btlpass-level-level-prg"></div>
               <div className="btlpass-level-level-num-box">
                 {elements.map((element, index) => (
-                  <div className="btlpass-level-level-num">{index + 1}</div>
+                  <div key={index} className="btlpass-level-level-num">
+                    {index + 1}
+                  </div>
                 ))}
               </div>
             </div>
@@ -166,6 +189,7 @@ export default function BtlPass({ btlClass }) {
                   itemPic={element.itemPic}
                   count={element.count}
                   get={element.itemClass === "get" && true}
+                  key={index}
                 />
               ))}
             </div>
@@ -176,7 +200,7 @@ export default function BtlPass({ btlClass }) {
         {btlClass === "xmas" ? (
           <img src="img/breakGirls/break-girl901.png" loading="lazy" />
         ) : btlClass === "hw" ? (
-          <img src="img/breakGirls/break-girl331.png" loading="lazy" />
+          <img src="img/breakGirls/break-girl915.png" loading="lazy" />
         ) : btlClass === "bf" ? (
           <img
             src="img/breakGirls/break-girl761-event-pass.png"
@@ -192,7 +216,7 @@ export default function BtlPass({ btlClass }) {
           <img src="img/breakGirls/break-girl955.png" loading="lazy" />
         ) : null}
       </div>
-      <div className="btlpass-btn-box">
+      {/* <div className="btlpass-btn-box">
         <div className="color-btn">
           <div
             className="color-btn-text"
@@ -215,7 +239,21 @@ export default function BtlPass({ btlClass }) {
             Buy Currency
           </div>
         </div>
-      </div>
+
+      </div> */}
+      {/* <Button onClick={() => popupState.popClose(dispatch)} text="close" /> */}
+      <Button
+        className="orange schop"
+        text="Buy Currency"
+        img
+        onClick={() =>
+          popupState.popOpen(dispatch, {
+            mpopClass: "m-popup essence-buy",
+            popTit: "Buy Event Tokens",
+            popCont: buyShopCont,
+          })
+        }
+      />
     </>
   );
 }

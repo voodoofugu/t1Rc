@@ -264,7 +264,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/halloweenIcn",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup main-relics-pop hw contentOnly framedPop",
+                  mpopClass: "m-popup main-relics-pop hw contentOnly",
                   popTit: "Halloween Event Pass<FRAMED>",
                   popCont: ["RelicsPop", { event: "hw" }],
                 },
@@ -273,8 +273,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/halloweenBP",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup events-btlpass-pop hw",
-                  popTit: "Halloween Event Pass",
+                  mpopClass: "m-popup events-btlpass-pop hw contentOnly",
+                  popTit: "Halloween Event Pass<FRAMED>",
                   popCont: ["BtlPass", { btlClass: "hw" }],
                 },
               ],

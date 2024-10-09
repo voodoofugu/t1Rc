@@ -5,11 +5,11 @@ const Button = ({
   text = "",
   crossedOutText = "",
   discountSticker,
-  img,
+  img = false,
   onClick,
   children,
 }) => {
-  const wrapTextWithP = (text) => {
+  const wrappedText = React.useMemo(() => {
     if (typeof text === "string") {
       if (text.includes("<p>")) {
         const lines = text.split("<p>").filter((line) => line.trim() !== "");
@@ -24,14 +24,20 @@ const Button = ({
     }
 
     return text;
-  };
-
-  const wrappedText = wrapTextWithP(text);
+  }, [text]);
 
   return (
     <div className={`butn ${className}`} onClick={onClick}>
       <div className="btnContentWrap">
-        {img && <img className="btnImg" src={img} loading="lazy" />}
+        {img ? (
+          typeof img === "string" ? (
+            <img className="btnImg" src={img} loading="lazy" />
+          ) : (
+            <div className="btnImg"></div>
+          )
+        ) : (
+          ""
+        )}
         {text && (
           <div className="btnText">
             {wrappedText}

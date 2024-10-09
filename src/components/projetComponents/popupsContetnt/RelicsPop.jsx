@@ -111,16 +111,21 @@ export default memo(function RelicsPop({ event }) {
 
   return (
     <>
-      <div className="bg"></div>
+      <Button
+        className="exit"
+        text="✖"
+        onClick={() => popupState.popClose(dispatch)}
+      />
 
       <div className="main-relics-girl-box">
         <div className="main-relics-girl-pic">
           <img src={evData?.[event][0]} loading="lazy" />
         </div>
-        {/* <div className="main-relics-info"></div> */}
-        <div className="tltI"></div>
+        {/* <div className="main-relics-info"></div> // !!! */}
+        {/* <div className="tltI"></div> */}
+        <Button className="infoOnly" text="i" />
 
-        {/* <div className="main-relics-girl-ballon">
+        {/* <div className="main-relics-girl-ballon"> // !!!
           <div className="main-relics-girl-ballon-text-box">
             <div className="main-relics-girl-ballon-text">
               {evData?.[event][1]}
@@ -131,7 +136,7 @@ export default memo(function RelicsPop({ event }) {
         <ComicsBallon
           text={evData?.[event][1]}
           style={{
-            top: "364px",
+            top: "344px",
             left: "50%",
             width: "auto",
             transform: "translateX(-50%)",
@@ -507,11 +512,6 @@ export default memo(function RelicsPop({ event }) {
         <Button className="green max" text="Dark Tower<p>00:00:00" />
         <Button className="green max" text="XXXMAS Pass<p>4D 03:07:21" />
       </div>
-
-      <div
-        className="btn-close-x"
-        onClick={() => popupState.popClose(dispatch)}
-      />
     </>
   );
 });
