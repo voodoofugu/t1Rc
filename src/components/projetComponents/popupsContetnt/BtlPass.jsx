@@ -5,6 +5,7 @@ import {
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
+import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
@@ -99,6 +100,19 @@ export default function BtlPass({ btlClass }) {
         onClick={() => popupState.popClose(dispatch)}
       />
 
+      <Button
+        className="blue schop"
+        text="Buy Currency"
+        img
+        onClick={() =>
+          popupState.popOpen(dispatch, {
+            mpopClass: "m-popup essence-buy",
+            popTit: "Buy Event Tokens",
+            popCont: buyShopCont,
+          })
+        }
+      />
+
       <div className="btlpass-box-all">
         <div className="btlpass-collect-box-all">
           {/* <div
@@ -120,7 +134,21 @@ export default function BtlPass({ btlClass }) {
             </div>
           </div>
           <div className="squad-holder">
-            <div className="hero-box">
+            <ItemBox
+              itemClass={`cardAva`}
+              itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
+            />
+            <ItemBox
+              itemClass={`cardAva`}
+              itemPic="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
+              unique={["sh"]}
+            />
+            <ItemBox
+              itemClass={`cardAva`}
+              itemPic="img/images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg"
+              unique={["dh", "dark"]}
+            />
+            {/* <div className="hero-box">
               <div className="hero-avatar-box">
                 <img
                   className="hero-avatar"
@@ -128,27 +156,9 @@ export default function BtlPass({ btlClass }) {
                   loading="lazy"
                 />
               </div>
-            </div>
-            <div className="hero-box">
-              <div className="hero-avatar-box">
-                <img
-                  className="hero-avatar"
-                  src="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="hero-box">
-              <div className="hero-avatar-box">
-                <img
-                  className="hero-avatar"
-                  src="img/images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            </div> */}
           </div>
-          <div className="prgball-box">
+          {/* <div className="prgball-box">
             <div className="prgall-prom">
               <div
                 className="prg-all-bar"
@@ -164,14 +174,24 @@ export default function BtlPass({ btlClass }) {
                 currency
               </span>
             </div>
-          </div>
+          </div> */}
+          <ProgressBar
+            className="progressBarOfSympathy"
+            progressSize={[600, 30]}
+            currentProgress={42}
+            maxProgress={100}
+            text="you have"
+            textIcn="img/ic-pumpkins.png"
+            textWithMaxProgress
+          />
         </div>
         <div className="btlpass-level-box-all">
           <div className="btlpass-sim-el-box">
             <div className="btlpass-level">level</div>
             <div className="btlpass-elite">rewards</div>
+            <Button className="btnGold max" text="get all" />
           </div>
-          <div className="btlpass-level-simple-box-scroll indiana-scroll-container">
+          {/* <div className="btlpass-level-simple-box-scroll indiana-scroll-container">
             <div className="btlpass-level-level">
               <div className="btlpass-level-level-prg"></div>
               <div className="btlpass-level-level-num-box">
@@ -193,7 +213,29 @@ export default function BtlPass({ btlClass }) {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
+          <MorphingScroll
+            className="btlpass_scroll"
+            scrollXY={[1000, 116]}
+            objectXY={[80, 112]}
+            progressTrigger={["wheel", "progressElement", "content"]}
+            thumbElement={<ScrollThumb />}
+            edgeGradient={{ color: "#202c38" }}
+            progressBarSize={8}
+            infiniteScroll
+            xDirection
+          >
+            {elements.map((element, index) => (
+              <ItemBox
+                itemClass={`wh68 ${element.itemClass}`}
+                itemPic={element.itemPic}
+                count={element.count}
+                get={element.itemClass === "get" && true}
+                key={index}
+                countOut={index + 1}
+              />
+            ))}
+          </MorphingScroll>
         </div>
       </div>
       <div className="btlpass-girl">
@@ -241,19 +283,6 @@ export default function BtlPass({ btlClass }) {
         </div>
 
       </div> */}
-      {/* <Button onClick={() => popupState.popClose(dispatch)} text="close" /> */}
-      <Button
-        className="orange schop"
-        text="Buy Currency"
-        img
-        onClick={() =>
-          popupState.popOpen(dispatch, {
-            mpopClass: "m-popup essence-buy",
-            popTit: "Buy Event Tokens",
-            popCont: buyShopCont,
-          })
-        }
-      />
     </>
   );
 }

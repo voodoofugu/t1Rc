@@ -282,8 +282,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/halloweenBP_DW",
                 "00:00:00",
                 {
-                  mpopClass: "m-popup dark-btlpas",
-                  popTit: "Halloween Battle Pass",
+                  mpopClass: "m-popup dark-btlpas contentOnly",
+                  popTit: "Halloween Battle Pass<FRAMED>",
                   popCont: ["DarkBtlPass"],
                   timer: true,
                 },

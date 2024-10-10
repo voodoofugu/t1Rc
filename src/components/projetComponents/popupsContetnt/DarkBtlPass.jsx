@@ -1,14 +1,37 @@
 import React from "react";
+import {
+  selectors,
+  useDispatch,
+} from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
+import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
+import ProgressBar from "../UIComponents/ProgressBar";
+import Button from "../UIComponents/Button";
 
 export default function DarkBtlPass() {
+  const popupState = selectors.usePopupState();
+  const dispatch = useDispatch();
+
   return (
     <>
+      <Button
+        className="exit"
+        text="✖"
+        onClick={() => popupState.popClose(dispatch)}
+      />
+
+      <Button className="blue schop" text="Buy Currency" img />
+
+      <div className="btlpass-girl">
+        <img src="img/breakGirls/break-girl915.png" loading="lazy" />
+      </div>
+
       <div className="btlpass-box-all">
         <div className="btlpass-collect-box-all">
-          <div className="btlpass-collect-box">
+          {/* <div className="btlpass-collect-box">
             <div className="color-btn bay-res">
               <div className="color-btn-text">Buy Red Potion</div>
             </div>
@@ -17,7 +40,7 @@ export default function DarkBtlPass() {
               <div className="btlpass-collect-value">0/25.2K</div>
               <span className="ic-event"></span> to get these girls!
             </div>
-          </div>
+          </div> */}
           <div className="hero-box-title">
             GET the dark heroines from the NEW DARKWORLD
           </div>
@@ -70,7 +93,7 @@ export default function DarkBtlPass() {
           </div>
         </div>
         <div className="btlpass-level-box-all">
-          <div className="btlpass-buy-box-all">
+          {/* <div className="btlpass-buy-box-all">
             <div className="btlpass-girl"></div>
             <div className="store-button">
               <div className="but-price-text">become elite</div>
@@ -79,13 +102,35 @@ export default function DarkBtlPass() {
                 <div className="price-nutaku"></div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="btlpass-sim-el-box">
             <div className="btlpass-simple">simple</div>
             <div className="btlpass-level">level</div>
             <div className="btlpass-elite">elite</div>
           </div>
-          <div className="btlpass-level-simple-box-scroll indiana-scroll-container">
+          <MorphingScroll
+            className="btlpass_scroll"
+            scrollXY={[1000, 116]}
+            objectXY={[80, 112]}
+            progressTrigger={["wheel", "progressElement", "content"]}
+            thumbElement={<ScrollThumb />}
+            edgeGradient={{ color: "#202c38" }}
+            progressBarSize={8}
+            infiniteScroll
+            xDirection
+          >
+            {elements.map((element, index) => (
+              <ItemBox
+                itemClass={`wh68 ${element.itemClass}`}
+                itemPic={element.itemPic}
+                count={element.count}
+                get={element.itemClass === "get" && true}
+                key={index}
+                countOut={index + 1}
+              />
+            ))}
+          </MorphingScroll>
+          {/* <div className="btlpass-level-simple-box-scroll indiana-scroll-container">
             <div className="btlpass-level-simple">
               {elements.map((element, index) => (
                 <ItemBox
@@ -93,6 +138,7 @@ export default function DarkBtlPass() {
                   itemPic={element.itemPic}
                   count={element.count}
                   get={element.itemClass === "get" && true}
+                  key={index}
                 />
               ))}
             </div>
@@ -100,7 +146,9 @@ export default function DarkBtlPass() {
               <div className="btlpass-level-level-prg"></div>
               <div className="btlpass-level-level-num-box">
                 {elements.map((element, index) => (
-                  <div className="btlpass-level-level-num">{index + 1}</div>
+                  <div className="btlpass-level-level-num" key={index}>
+                    {index + 1}
+                  </div>
                 ))}
               </div>
             </div>
@@ -111,10 +159,11 @@ export default function DarkBtlPass() {
                   itemPic={element.itemPic}
                   count={element.count}
                   get={element.itemClass === "get" && true}
+                  key={index}
                 />
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

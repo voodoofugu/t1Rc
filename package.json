@@ -13,7 +13,6 @@
   ],
   "main": "src/index.tsx",
   "scripts": {
-    "changeNode": "nvm use 20.11.1",
     "start": "webpack serve --env mode=development",
     "build": "webpack --env mode=production",
     "compileScss": "ts-node src/scripts/templateScripts/compileScss.ts",

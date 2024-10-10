@@ -4,6 +4,7 @@ const ProgressBar = ({
   currentProgress,
   maxProgress,
   text,
+  textIcn,
   textWithMaxProgress,
   serifsPerProgress,
   itemsBoxFirst,
@@ -88,11 +89,15 @@ const ProgressBar = ({
           <div
             className="text"
             style={{ lineHeight: `${localProgressSize[1]}px` }}
-          >{`${text === true ? "" : text} ${
-            textWithMaxProgress
-              ? `${currentProgress}/${maxProgress}`
-              : currentProgress
-          }`}</div>
+          >
+            {`${text === true ? "" : `${text} `}`}
+            {`${
+              textWithMaxProgress
+                ? `${currentProgress}/${maxProgress} `
+                : `${currentProgress} `
+            }`}
+            {textIcn ? <img className="icn" src={`${textIcn}`} /> : ""}
+          </div>
         )}
 
         {children && <div className="childrenWrap">{children}</div>}
