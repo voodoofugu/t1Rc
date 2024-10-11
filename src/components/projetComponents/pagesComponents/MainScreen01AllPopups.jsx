@@ -45,7 +45,7 @@ export const cssFiles = [
   "v2-screen-main-relics-pop",
   "screen-chests-shop",
   "screen-info-pop",
-  "pop-dark-btlpas",
+  // "pop-dark-btlpas",
   "screen-bank",
   "screen-rating-fullcoll",
   "screen-bank-5st",

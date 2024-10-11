@@ -133,13 +133,18 @@ export default memo(function RelicsPop({ event }) {
           </div>
         </div> */}
 
+        <div className="main-relics-timer-box">
+          <div className="main-relics-timer-text">осталось</div>
+          <div className="main-relics-timer">3D 23:46:59</div>
+        </div>
+
         <ComicsBallon
           text={evData?.[event][1]}
           style={{
             top: "344px",
             left: "50%",
             width: "auto",
-            transform: "translateX(-50%)",
+            transform: "translateX(-80%)",
           }}
           changeDirectionArrow
         />

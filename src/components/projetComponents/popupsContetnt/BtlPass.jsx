@@ -216,7 +216,7 @@ export default function BtlPass({ btlClass }) {
           </div> */}
           <MorphingScroll
             className="btlpass_scroll"
-            scrollXY={[1000, 116]}
+            scrollXY={[1000, 124]}
             objectXY={[80, 112]}
             progressTrigger={["wheel", "progressElement", "content"]}
             thumbElement={<ScrollThumb />}
