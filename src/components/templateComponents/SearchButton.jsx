@@ -4,6 +4,7 @@ import {
   useCallback,
   useRef,
   startTransition,
+  useDeferredValue,
 } from "react";
 
 import PageList from "../projetComponents/pagesComponents/a_pageList.json";
@@ -12,19 +13,21 @@ import { useDispatch } from "./GlobalStateStor";
 export default function SearchButton() {
   const dispatch = useDispatch();
 
+  const [focus, setFocus] = useState(false);
   const [searchText, setSearchText] = useState(
     sessionStorage.getItem("searchText") || ""
   );
-  const prevSearchTextRef = useRef("");
-  const clearBtnRef = useRef();
 
-  const [focus, setFocus] = useState(false);
+  const clearBtnRef = useRef(null);
   const searchInputRef = useRef(null);
 
-  const [loadedData, setLoadedData] = useState(PageList);
-
+  const prevSearchTextRef = useRef("");
   const prevFilteredValueRef = useRef([]);
+  const loadedData = useRef(PageList);
 
+  const deferredSearchText = useDeferredValue(searchText);
+
+  // events
   const handleSearch = useCallback(
     (text) => {
       const searchInput = text.trim().toLowerCase();
@@ -70,23 +73,8 @@ export default function SearchButton() {
     inputFocus();
   };
 
-  useEffect(() => {
-    sessionStorage.setItem("searchText", searchText);
-  }, [searchText]);
-
-  useEffect(() => {
-    prevSearchTextRef.current = searchText;
-
-    const timeoutId = setTimeout(() => {
-      if (prevSearchTextRef.current === searchText) {
-        handleSearch(searchText);
-      }
-    }, 500);
-
-    return () => clearTimeout(timeoutId);
-  }, [searchText, handleSearch]);
-
   const handleOutsideClick = (event) => {
+    console.log("handleOutsideClick");
     if (
       searchInputRef.current &&
       !searchInputRef.current.contains(event.target) &&
@@ -96,16 +84,25 @@ export default function SearchButton() {
     }
   };
 
+  // effects
+  useEffect(() => {
+    sessionStorage.setItem("searchText", searchText);
+    prevSearchTextRef.current = searchText;
+
+    if (prevSearchTextRef.current === searchText) {
+      handleSearch(searchText);
+    }
+  }, [searchText, handleSearch]);
+
   useEffect(() => {
     const handleDocumentClick = (event) => {
       handleOutsideClick(event);
     };
-
-    document.addEventListener("mousedown", handleDocumentClick);
-
-    return () => {
+    if (focus) {
+      document.addEventListener("mousedown", handleDocumentClick);
+    } else {
       document.removeEventListener("mousedown", handleDocumentClick);
-    };
+    }
   }, [handleOutsideClick]);
 
   return (
@@ -123,7 +120,7 @@ export default function SearchButton() {
             : " w-0 pointer-events-none"
         }`}
         placeholder="Search"
-        value={searchText}
+        value={deferredSearchText}
         onChange={(event) =>
           startTransition(() => setSearchText(event.target.value))
         }
@@ -136,7 +133,7 @@ export default function SearchButton() {
       >
         <div
           className={`absolute w-full h-full drop-shadow-dS1 dark:drop-shadow-darkDS1 before:absolute after:absolute before:transition-all1 after:transition-all1 before:rounded-30 after:rounded-30 after:-rotate-45 ${
-            focus && searchText
+            focus && deferredSearchText
               ? "before:border-none before:left-50% before:top-5 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-15 before:bg-red-500 after:left-50% after:top-5 after:-translate-x-1/2 after:w-3 after:h-15 after:bg-red-500"
               : focus
               ? "before:border-none before:left-50% before:top-5 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-15 before:bg-indigo-400 after:left-50% after:top-5 after:-translate-x-1/2 after:w-3 after:h-15 after:bg-indigo-400"
