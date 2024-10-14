@@ -5,7 +5,7 @@ import {
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
-import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
@@ -214,7 +214,7 @@ export default function BtlPass({ btlClass }) {
               ))}
             </div>
           </div> */}
-          <MorphingScroll
+          <Scroll
             className="btlpass_scroll"
             scrollXY={[1000, 124]}
             objectXY={[80, 112]}
@@ -235,7 +235,7 @@ export default function BtlPass({ btlClass }) {
                 countOut={index + 1}
               />
             ))}
-          </MorphingScroll>
+          </Scroll>
         </div>
       </div>
       <div className="btlpass-girl">

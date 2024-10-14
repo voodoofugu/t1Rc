@@ -1,6 +1,6 @@
 import React from "react";
-// import MorphingScroll from "morphing-scroll";
-import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+// import { Scroll } from "morphing-scroll";
+import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 // import { useNexus, useNexusAll } from "nexus-state";
 
 import {
@@ -218,7 +218,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </div>
 
-      <MorphingScroll
+      <Scroll
         className="scrollAvatars"
         scrollID="datingAvatars"
         scrollXY={[104, 494]}
@@ -252,7 +252,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-      </MorphingScroll>
+      </Scroll>
     </>
   );
 };

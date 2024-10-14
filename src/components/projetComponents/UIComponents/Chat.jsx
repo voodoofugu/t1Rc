@@ -2,7 +2,7 @@ import React from "react";
 
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
-import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ResizeTracker from "../../../../morphing-scroll/src/ResizeTracker";
 import IntersectionTracker from "../../../../morphing-scroll/src/IntersectionTracker";
 
@@ -251,7 +251,7 @@ const Chat = ({ girlInfo }) => {
         </div>
       ) : (
         <>
-          <MorphingScroll
+          <Scroll
             className="chatDaiting"
             scrollXY={[490, 496]}
             objectsWrapperMinSize={496}
@@ -376,7 +376,7 @@ const Chat = ({ girlInfo }) => {
                 </>
               )}
             </ResizeTracker>
-          </MorphingScroll>
+          </Scroll>
 
           <div className="fallbackBox" ref={fallbackBoxRef}>
             {messageFallback === "message" && (

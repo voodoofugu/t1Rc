@@ -6,7 +6,7 @@ import {
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
-import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
@@ -165,7 +165,7 @@ export default function DarkBtlPass() {
             </div>
             <Button className="btnGold max" text="get all" />
           </div>
-          <MorphingScroll
+          <Scroll
             className="btlpass_scroll"
             scrollXY={[1000, 202]}
             objectXY={[80, 190]}
@@ -193,7 +193,7 @@ export default function DarkBtlPass() {
                 />
               </div>
             ))}
-          </MorphingScroll>
+          </Scroll>
           {/* <div className="btlpass-level-simple-box-scroll indiana-scroll-container">
             <div className="btlpass-level-simple">
               {elements.map((element, index) => (

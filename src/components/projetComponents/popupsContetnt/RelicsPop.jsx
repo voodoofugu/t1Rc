@@ -5,7 +5,7 @@ import {
 } from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
-import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ComicsBallon from "../UIComponents/ComicsBallon";
 import ProgressBar from "../UIComponents/ProgressBar";
@@ -93,12 +93,12 @@ export default memo(function RelicsPop({ event }) {
         "img/images/superhero/suphero-890/x2/sh-1.jpg",
         "Halloween's Day Orgy!",
         [
-          "img/evPopArts/thongs_1.png",
-          "img/evPopArts/thongs_2.png",
-          "img/evPopArts/thongs_3.png",
-          "img/evPopArts/thongs_4.png",
-          "img/evPopArts/thongs_5.png",
-          "img/evPopArts/thongs_6.png",
+          "img/evPopArts/pumpkin1_icn.png",
+          "img/evPopArts/pumpkin2_icn.png",
+          "img/evPopArts/cat_icn.png",
+          "img/evPopArts/cat_icn.png",
+          "img/evPopArts/glass_icn.png",
+          "img/evPopArts/greenPotion_icn.png",
         ],
         "img/evPopArts/candyBag.png",
       ],
@@ -157,7 +157,7 @@ export default memo(function RelicsPop({ event }) {
         </div>
       </div>
 
-      <MorphingScroll
+      <Scroll
         className="main-relics-right-box-all overNone"
         scrollXY={[710, 446]}
         progressTrigger={["wheel", "progressElement"]}
@@ -501,7 +501,7 @@ export default memo(function RelicsPop({ event }) {
             />
           </div>
         </div>
-      </MorphingScroll>
+      </Scroll>
 
       <div className="main-buttons">
         {/* <div className="color-btn green disabled0">
