@@ -3,7 +3,7 @@ import {
   useDispatch,
 } from "../../templateComponents/GlobalStateStor";
 
-import MorphingScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export default function InfoPopFramed({ inner, girlImg }) {
@@ -21,16 +21,16 @@ export default function InfoPopFramed({ inner, girlImg }) {
           <div className="frame top"></div>
           <div className="frame bottom"></div>
         </div>
-        <MorphingScroll
-          className="scrollW8"
+        <Scroll
           scrollXY={[700, 342]}
           padding={[0, 20]}
-          scrollTrigger="←→/←O→"
+          progressTrigger={["wheel", "progressElement"]}
           thumbElement={<ScrollThumb />}
+          progressBarSize={8}
           wrapAlignCenter
         >
           <div className="inner">{inner}</div>
-        </MorphingScroll>
+        </Scroll>
 
         <div
           className="btn-close-x"

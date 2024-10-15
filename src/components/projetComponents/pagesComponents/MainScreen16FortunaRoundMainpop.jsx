@@ -1,6 +1,6 @@
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
-export const cssFiles = ["screen-fortuna-round-main_16x"];
+export const cssFiles = ["screen-fortuna-round-main_16x", "daiting-gifts-pop"];
 
 export default function MainScreen16FortunaRoundMainpop({
   pageName,
@@ -11,7 +11,7 @@ export default function MainScreen16FortunaRoundMainpop({
   return (
     <div className="main world1">
       <div className="main-bg"></div>
-      <div className="quest-box-all" style={{ zIndex: 99999 }}>
+      <div className="quest-box-all">
         <div
           className="quest-box-scroll"
           style={{ display: "flex", justifyContent: "center" }}
@@ -41,13 +41,13 @@ export default function MainScreen16FortunaRoundMainpop({
                 dispatch({
                   type: "POPUP_OPEN",
                   payload: {
-                    mpopClass: "m-popup fortuna-main-round",
-                    popStyle: {
-                      width: "960px",
-                      height: "620px",
-                      left: "120px",
-                    },
-                    popTit: "wheel of fortune - spin your discount!",
+                    mpopClass: "m-popup fortuna-main-round contentOnly",
+                    // popStyle: {
+                    //   width: "960px",
+                    //   height: "620px",
+                    //   left: "120px",
+                    // },
+                    popTit: "wheel of fortune - spin your discount!<FRAMED>",
                     popCont: ["FortunaMainRound16Big"],
                   },
                 });

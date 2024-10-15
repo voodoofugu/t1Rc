@@ -1,3 +1,5 @@
+import React from "react";
+
 const ProgressBar = ({
   className,
   progressSize: [width, height] = [0, 0],
@@ -5,7 +7,7 @@ const ProgressBar = ({
   maxProgress,
   text,
   textIcn,
-  textWithMaxProgress,
+  textWithProgress, // current, max
   serifsPerProgress,
   itemsBoxFirst,
   itemsBoxLast,
@@ -91,11 +93,10 @@ const ProgressBar = ({
             style={{ lineHeight: `${localProgressSize[1]}px` }}
           >
             {`${text === true ? "" : `${text} `}`}
-            {`${
-              textWithMaxProgress
-                ? `${currentProgress}/${maxProgress} `
-                : `${currentProgress} `
-            }`}
+            {textWithProgress === "current" ? `${currentProgress} ` : ""}
+            {textWithProgress === "max"
+              ? `${currentProgress}/${maxProgress} `
+              : ""}
             {textIcn ? <img className="icn" src={`${textIcn}`} /> : ""}
           </div>
         )}

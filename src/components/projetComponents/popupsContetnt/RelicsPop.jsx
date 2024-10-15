@@ -111,6 +111,10 @@ export default memo(function RelicsPop({ event }) {
 
   return (
     <>
+      <div className="pop_bg framedPop">
+        <img src="img/evPopArts/halloweenBg.jpg" loading="lazy" alt="bG" />
+      </div>
+
       <Button
         className="exit"
         text="✖"
@@ -171,6 +175,8 @@ export default memo(function RelicsPop({ event }) {
             currentProgress={2}
             maxProgress={5}
             serifsPerProgress
+            text="+1"
+            textIcn="img/violet_piece.png"
             itemsBoxFirst={[
               <ItemBox
                 itemClass="check"
