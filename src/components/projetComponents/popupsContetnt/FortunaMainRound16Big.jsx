@@ -107,11 +107,18 @@ export default function FortunaMainRound16Big() {
         </div>
       </Button>
 
+      <div className="girl">
+        <img
+          src="img/images/hero-all/tithero-428/icons/break-girl.png"
+          loading="lazy"
+        />
+      </div>
+
       <div className="fortuna-main-box">
         {/* <div className="color-btn blue rating">
           <div className="color-btn-text">Rating</div>
         </div> */}
-        <div className="push-timer">19K Wheel Tokens</div>
+        {/* <div className="push-timer">19K Wheel Tokens</div> */}
         {/* <ResValue classProp="orb" value="1000" /> */}
         {/* <div className="in-gacha-box">
         <div className="gacha-value">19K</div>
@@ -289,7 +296,7 @@ export default function FortunaMainRound16Big() {
         </div>
         <div className="fortuna-main-controls-box">
           <div className="mission-box-all">
-            <div className="daily-mission-box">
+            {/* <div className="daily-mission-box">
               <div className="daily-mission-name">mission clear 0/6</div>
               <div className="daily-prgbar-all">
                 <div className="daily-prgbar" style={{ width: "0%" }}></div>
@@ -307,8 +314,20 @@ export default function FortunaMainRound16Big() {
             </div>
             <div className="color-btn green">
               <div className="color-btn-text">Get rolls</div>
-            </div>
+            </div> */}
+            <ProgressBar
+              className="progressBarOfSympathy"
+              progressSize={[240, 24]}
+              currentProgress={1}
+              maxProgress={6}
+              text="mission clear"
+              textWithProgress="max"
+            >
+              <ItemBox itemClass="wh44" itemPic="img/heartCoin.png" />
+            </ProgressBar>
+            <Button className="green" text="Go to quests" />
           </div>
+
           <div className="rrevard-box">
             <div className="rname-box">Guaranteed Rewards</div>
             <div className="fortuna-reward-btn color-btn blue">show all</div>
