@@ -28,9 +28,10 @@ export default function BtlPass({ btlClass }) {
       ? [
           "BuyShop",
           {
-            img1: "ic-pumpkins-150-1",
-            img2: "ic-pumpkins-150-2",
-            img3: "ic-pumpkins-150-3",
+            img1: "evPopArts/bat_icn_1",
+            img2: "evPopArts/bat_icn_2",
+            img3: "evPopArts/bat_icn_3",
+            img4: "evPopArts/bat_icn_4",
           },
         ]
       : btlClass === "bf"
@@ -89,13 +90,21 @@ export default function BtlPass({ btlClass }) {
       <Button
         className="info"
         text="i"
-        onClick={() =>
-          popupState.popOpen(dispatch, {
-            mpopClass: "m-popup fapop-rules btlpass-info",
-            popTit: "правила",
-            popCont: ["FapopRules"],
-          })
-        }
+        onClick={() => {
+          dispatch({
+            type: "POPUP_OPEN",
+            payload: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popTit: "",
+              popCont: ["InfoPopFramed"],
+              props: {
+                inner:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                girlImg: "img/breakGirls/break-girl915.png",
+              },
+            },
+          });
+        }}
       />
 
       <Button
@@ -110,8 +119,8 @@ export default function BtlPass({ btlClass }) {
         img
         onClick={() =>
           popupState.popOpen(dispatch, {
-            mpopClass: "m-popup essence-buy",
-            popTit: "Buy Event Tokens",
+            mpopClass: "m-popup essence-buy contentOnly framedPop",
+            // popTit: "Buy Event Tokens",
             popCont: buyShopCont,
           })
         }
