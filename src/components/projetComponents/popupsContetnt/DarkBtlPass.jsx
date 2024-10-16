@@ -17,16 +17,32 @@ export default function DarkBtlPass() {
 
   return (
     <>
+      <div className="pop_bg framedPop">
+        <img
+          src="img/images/back/new/07-Cemetery.jpg"
+          loading="lazy"
+          alt="bG"
+        />
+      </div>
+
       <Button
         className="info"
         text="i"
-        onClick={() =>
-          popupState.popOpen(dispatch, {
-            mpopClass: "m-popup fapop-rules btlpass-info",
-            popTit: "правила",
-            popCont: ["FapopRules"],
-          })
-        }
+        onClick={() => {
+          dispatch({
+            type: "POPUP_OPEN",
+            payload: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popTit: "",
+              popCont: ["InfoPopFramed"],
+              props: {
+                inner:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                girlImg: "img/breakGirls/break-girl915.png",
+              },
+            },
+          });
+        }}
       />
 
       <Button
@@ -39,6 +55,21 @@ export default function DarkBtlPass() {
         className="blue schop"
         text="Buy Currency"
         img="img/ic-red-potion-1.png"
+        onClick={() =>
+          popupState.popOpen(dispatch, {
+            mpopClass: "m-popup essence-buy contentOnly framedPop",
+            // popTit: "Buy Event Tokens",
+            popCont: [
+              "BuyShop",
+              {
+                img1: "ic-red-potion-1",
+                img2: "ic-red-potion-2",
+                img3: "ic-red-potion-3",
+                img4: "ic-red-potion-4",
+              },
+            ],
+          })
+        }
       />
 
       <div className="btlpass-girl">
