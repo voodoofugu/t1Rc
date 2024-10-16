@@ -361,8 +361,7 @@ const Chat = ({ girlInfo }) => {
                                   <ProgressBar
                                     className="messageProgressBar"
                                     progressSize={[312, 6]}
-                                    text
-                                    textWithMaxProgress
+                                    textWithProgress="max"
                                     currentProgress={4}
                                     maxProgress={10}
                                   />

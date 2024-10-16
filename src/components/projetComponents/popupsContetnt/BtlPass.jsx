@@ -82,6 +82,10 @@ export default function BtlPass({ btlClass }) {
 
   return (
     <>
+      <div className="pop_bg framedPop">
+        <img src="img/evPopArts/halloweenBg.jpg" loading="lazy" alt="bG" />
+      </div>
+
       <Button
         className="info"
         text="i"
@@ -181,8 +185,8 @@ export default function BtlPass({ btlClass }) {
             currentProgress={42}
             maxProgress={100}
             text="you have"
-            textIcn="img/ic-pumpkins.png"
-            textWithMaxProgress
+            textIcn="img/evPopArts/bat_icn.png"
+            textWithProgress="max"
           />
         </div>
         <div className="btlpass-level-box-all">
@@ -242,7 +246,10 @@ export default function BtlPass({ btlClass }) {
         {btlClass === "xmas" ? (
           <img src="img/breakGirls/break-girl901.png" loading="lazy" />
         ) : btlClass === "hw" ? (
-          <img src="img/breakGirls/break-girl915.png" loading="lazy" />
+          <img
+            src="img/images/hero-all/tithero-429/icons/break-girl.png"
+            loading="lazy"
+          />
         ) : btlClass === "bf" ? (
           <img
             src="img/breakGirls/break-girl761-event-pass.png"

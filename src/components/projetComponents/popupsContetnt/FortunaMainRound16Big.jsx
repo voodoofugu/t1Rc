@@ -96,10 +96,16 @@ export default function FortunaMainRound16Big() {
       />
 
       <Button
-        className="blue rating"
+        className="orange rating"
         text="rating"
         img="img/sAndL/ratingIcn.png"
-      />
+      >
+        <div className="place">
+          <div className="place-text">
+            Your place<div>Not in rating</div>
+          </div>
+        </div>
+      </Button>
 
       <div className="fortuna-main-box">
         {/* <div className="color-btn blue rating">
@@ -111,11 +117,6 @@ export default function FortunaMainRound16Big() {
         <div className="gacha-value">19K</div>
         <div className="gacha-btn-add"></div>
       </div> */}
-        <div className="place">
-          <div className="place-text">
-            Your place<div>Not in rating</div>
-          </div>
-        </div>
         <div className="fortuna-wheel-all">
           <div className="fortuna-wheel-box">
             <div className="fortuna-wheel b1">

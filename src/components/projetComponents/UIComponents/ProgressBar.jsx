@@ -87,15 +87,15 @@ const ProgressBar = ({
           )}
         </div>
 
-        {text && (
+        {(text || textWithProgress) && (
           <div
             className="text"
             style={{ lineHeight: `${localProgressSize[1]}px` }}
           >
-            {`${text === true ? "" : `${text} `}`}
-            {textWithProgress === "current" ? `${currentProgress} ` : ""}
+            {text}
+            {textWithProgress === "current" ? ` ${currentProgress}` : ""}
             {textWithProgress === "max"
-              ? `${currentProgress}/${maxProgress} `
+              ? ` ${currentProgress}/${maxProgress} `
               : ""}
             {textIcn ? <img className="icn" src={`${textIcn}`} /> : ""}
           </div>
