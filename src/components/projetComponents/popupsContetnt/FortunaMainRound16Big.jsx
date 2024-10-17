@@ -7,8 +7,6 @@ import {
 import ResValue from "../UIComponents/ResValue";
 
 import ItemBox from "../UIComponents/ItemBox";
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
-import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ResCount from "../UIComponents/ResCount";
@@ -20,7 +18,7 @@ export default function FortunaMainRound16Big() {
   return (
     <>
       <div className="pop_bg framedPop">
-        <img src="img/evPopArts/fortuneBg.jpg" loading="lazy" alt="bG" />
+        <img src="img/evPopArts/fortuneBg_hw.jpg" loading="lazy" alt="bG" />
       </div>
 
       <Button
@@ -30,27 +28,23 @@ export default function FortunaMainRound16Big() {
       />
 
       <ResCount
-        img="img/v2-f-e1.png"
+        img="img/heartCoin.png"
         value="234"
         plus
-        onClick={() => {
-          dispatch({
-            type: "POPUP_OPEN",
-            payload: {
-              mpopClass: "m-popup essence-buy",
-              popTit: "Buy Dices",
-              popCont: [
-                "BuyShop",
-                {
-                  img1: "v2-f-e1",
-                  img2: "v2-f-e2",
-                  img3: "v2-f-e3",
-                  img4: "v2-f-e4",
-                },
-              ],
-            },
-          });
-        }}
+        onClick={() =>
+          popupState.popOpen(dispatch, {
+            mpopClass: "m-popup essence-buy contentOnly framedPop",
+            popCont: [
+              "BuyShop",
+              {
+                img1: "heartCoin-1",
+                img2: "heartCoin-2",
+                img3: "heartCoin-3",
+                img4: "heartCoin-4",
+              },
+            ],
+          })
+        }
       />
 
       <Button
@@ -61,7 +55,6 @@ export default function FortunaMainRound16Big() {
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
-              popTit: "",
               popCont: ["InfoPopFramed"],
               props: {
                 inner: (
@@ -98,7 +91,7 @@ export default function FortunaMainRound16Big() {
       <Button
         className="orange rating"
         text="rating"
-        img="img/sAndL/ratingIcn.png"
+        img="img/evPopArts/star_icn.png"
       >
         <div className="place">
           <div className="place-text">
@@ -315,9 +308,10 @@ export default function FortunaMainRound16Big() {
             <div className="color-btn green">
               <div className="color-btn-text">Get rolls</div>
             </div> */}
+            <div className="rname-box">Missions</div>
             <ProgressBar
               className="progressBarOfSympathy"
-              progressSize={[240, 24]}
+              progressSize={[200, 24]}
               currentProgress={1}
               maxProgress={6}
               text="mission clear"
@@ -325,27 +319,44 @@ export default function FortunaMainRound16Big() {
             >
               <ItemBox itemClass="wh44" itemPic="img/heartCoin.png" />
             </ProgressBar>
-            <Button className="green" text="Go to quests" />
+            <Button
+              className="lightGreen"
+              img="img/evPopArts/questBook_icn.png"
+              text="Go to quests"
+            />
           </div>
 
           <div className="rrevard-box">
             <div className="rname-box">Guaranteed Rewards</div>
-            <div className="fortuna-reward-btn color-btn blue">show all</div>
+            {/* <div className="fortuna-reward-btn color-btn blue">show all</div>
             <div className="fortuna-prgbar-box">
               <div className="f2-prgbar-empty">
                 <div className="f2-prgbar-full" style={{ width: "0%" }}></div>
                 <div className="f2-prgbar-text">0/10</div>
               </div>
-            </div>
+            </div> */}
+            <ProgressBar
+              className="progressBarOfSympathy"
+              progressSize={[230, 24]}
+              currentProgress={1}
+              maxProgress={10}
+              textWithProgress="max"
+            />
+            <Button
+              className="orange"
+              img="img/evPopArts/questBook_icn.png"
+              text="Go to rewards"
+            />
             <div className="fortuna-reward-box-all">
-              <div className="fortuna-reward-box claim-btn">
+              {/* <div className="fortuna-reward-box claim-btn">
                 <div className="fortuna-reward-bg">
                   <div className="fortuna-reward">
                     <img src="img/sh-icon-chest-128.png"></img>
                   </div>
                 </div>
                 <div className="fortuna-reward-claim-btn">5</div>
-              </div>
+              </div> */}
+              <ItemBox itemClass="wh44" itemPic="img/sh-icon-chest-128.png" />
             </div>
           </div>
           {/* <div className="rrules-box">
