@@ -344,7 +344,7 @@ export default function FortunaMainRound16Big() {
             />
             <Button
               className="orange"
-              img="img/evPopArts/questBook_icn.png"
+              img="img/evPopArts/reward_icn.png"
               text="Go to rewards"
             />
             <div className="fortuna-reward-box-all">
