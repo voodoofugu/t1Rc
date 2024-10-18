@@ -214,13 +214,13 @@ export default function DarkBtlPass() {
                   itemPic={element.itemPic}
                   count={element.count}
                   get={element.itemClass === "get" && true}
+                  countOut={index + 1}
                 />
                 <ItemBox
                   itemClass={`wh68 ${element.itemClass}`}
                   itemPic={element.itemPic}
                   count={element.count}
                   get={element.itemClass === "get" && true}
-                  countOut={index + 1}
                 />
               </div>
             ))}

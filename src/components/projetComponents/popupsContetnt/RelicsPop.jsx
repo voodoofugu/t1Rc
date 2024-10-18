@@ -172,8 +172,8 @@ export default memo(function RelicsPop({ event }) {
           <ProgressBar
             className="progressBarOfSympathy"
             progressSize={[560, 28]}
-            currentProgress={2}
-            maxProgress={5}
+            currentProgress={1}
+            maxProgress={4}
             serifsPerProgress
             text="+1"
             textIcn="img/violet_piece.png"
@@ -199,16 +199,10 @@ export default memo(function RelicsPop({ event }) {
                 key={3}
               />,
               <ItemBox
-                itemPic={evData?.[event][3]}
-                countOut={"8.5K"}
-                arrow="bottom"
-                key={4}
-              />,
-              <ItemBox
                 itemPic="img/images/hero-all/tithero-349/x2/ava/tithero-349-1-ava.jpg"
                 countOut={"10K"}
                 arrow="bottom"
-                key={5}
+                key={4}
               />,
             ]}
           >
