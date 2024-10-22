@@ -1,12 +1,16 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "../../templateComponents/GlobalStateStor";
 
 export const cssFiles = [
   "v2-screen-sexped-main",
   "screen-info-pop",
   "v2-screen-sexped-questevent",
+  "v2-screen-events-btlpass",
 ];
 
-export default function V2MainScreen12SexpedMain({ pageName }) {
+export default function V2MainScreen12SexpedMain({ pageName, children }) {
+  const dispatch = useDispatch();
+
   const currentPath = window.location.hash.substring(3).split("/")[0];
 
   useEffect(() => {
@@ -190,9 +194,22 @@ export default function V2MainScreen12SexpedMain({ pageName }) {
               <img src="img/v2-ic-book.png" loading="lazy" />
             </div>
           </div>
-          <div className="color-btn rating">
+          <div
+            className="color-btn rating"
+            onClick={() => {
+              dispatch({
+                type: "POPUP_OPEN",
+                payload: {
+                  mpopClass:
+                    "m-popup events-btlpass-pop sexpedition contentOnly",
+                  popTit: "Sexpedition Event Pass<FRAMED>",
+                  popCont: ["BtlPass", { btlClass: "sexpedition" }],
+                },
+              });
+            }}
+          >
             <div className="sexped-btn-pic">
-              <img src="img/v2-ic-rating.png" loading="lazy" />
+              <img src="img/evPopArts/gem_icn.png" loading="lazy" />
             </div>
           </div>
           <div className="color-btn dual-pack">
@@ -1576,6 +1593,7 @@ export default function V2MainScreen12SexpedMain({ pageName }) {
           </div>
         </div>
       </div>
+      {children}
     </div>
   );
 }

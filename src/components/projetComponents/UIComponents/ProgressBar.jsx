@@ -97,7 +97,15 @@ const ProgressBar = ({
             {textWithProgress === "max"
               ? ` ${currentProgress}/${maxProgress} `
               : ""}
-            {textIcn ? <img className="icn" src={`${textIcn}`} /> : ""}
+            {textIcn ? (
+              typeof textIcn === "string" ? (
+                <img className="icn" src={`${textIcn}`} />
+              ) : (
+                <div className="icn"></div>
+              )
+            ) : (
+              ""
+            )}
           </div>
         )}
 

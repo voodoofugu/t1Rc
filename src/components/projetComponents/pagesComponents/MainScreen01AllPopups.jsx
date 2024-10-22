@@ -24,7 +24,6 @@ export const cssFiles = [
   "screen-rating",
   "screen-rating-popstart",
   "screen-fortuna-dual-pack",
-  "screen-superhero",
   "quests-ui",
   "screen-fortuna-winpop",
   "pop-wpck-end",
@@ -284,7 +283,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup dark-btlpas contentOnly",
                   popTit: "Halloween Battle Pass<FRAMED>",
-                  popCont: ["DarkBtlPass"],
+                  popCont: ["DarkBtlPass", { event: "dark-btlpas" }],
                   timer: true,
                 },
               ],
