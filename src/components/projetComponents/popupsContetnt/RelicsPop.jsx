@@ -10,7 +10,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 import ComicsBallon from "../UIComponents/ComicsBallon";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
-import Image from "../UIComponents/Image";
+import ImageBg from "../UIComponents/ImageBg";
 
 export default memo(function RelicsPop({ event }) {
   let data = [
@@ -112,7 +112,7 @@ export default memo(function RelicsPop({ event }) {
 
   return (
     <>
-      <Image className="bG framedBg" img="img/bGs/halloweenBg.jpg" />
+      <ImageBg className="bG framedBg" img="img/bGs/halloweenBg.jpg" />
 
       <Button
         className="exit"

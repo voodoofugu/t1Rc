@@ -10,7 +10,7 @@ import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
-import Image from "../UIComponents/Image";
+import ImageBg from "../UIComponents/ImageBg";
 
 export default function DarkBtlPass() {
   const popupState = selectors.usePopupState();
@@ -18,7 +18,7 @@ export default function DarkBtlPass() {
 
   return (
     <>
-      <Image className="bG framedBg" img />
+      <ImageBg className="bG framedBg" img />
 
       <Button
         className="info"
@@ -66,7 +66,7 @@ export default function DarkBtlPass() {
         }
       />
 
-      <Image
+      <ImageBg
         className="girlImg btlpass-girl"
         img="img/breakGirls/break-girl915.png"
       />
