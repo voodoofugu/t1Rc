@@ -15,6 +15,23 @@ export default function BtlPass({ btlClass }) {
   const popupState = selectors.usePopupState();
   const dispatch = useDispatch();
 
+  const girlImg =
+    btlClass === "xmas"
+      ? "images/hero-all/tithero-430/icons/break-girl"
+      : btlClass === "hw"
+      ? "images/hero-all/tithero-429/icons/break-girl"
+      : btlClass === "bf"
+      ? "images/hero-all/tithero-429/icons/break-girl"
+      : btlClass === "vl"
+      ? "images/hero-all/tithero-430/icons/break-girl"
+      : btlClass === "spring"
+      ? "images/hero-all/tithero-430/icons/break-girl"
+      : btlClass === "summer"
+      ? "images/hero-all/tithero-430/icons/break-girl"
+      : btlClass === "sexpedition"
+      ? "images/hero-all/tithero-423/icons/break-girl4"
+      : null;
+
   const buyShopCont =
     btlClass === "xmas"
       ? [
@@ -191,7 +208,7 @@ export default function BtlPass({ btlClass }) {
         </div>
       </div>
 
-      <Image className="girlImg btlpass-girl" img />
+      <Image className="girlImg btlpass-girl" img={`img/${girlImg}.png`} />
     </>
   );
 }

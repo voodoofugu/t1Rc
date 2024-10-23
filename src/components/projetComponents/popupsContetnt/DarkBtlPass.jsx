@@ -66,7 +66,10 @@ export default function DarkBtlPass() {
         }
       />
 
-      <Image className="girlImg btlpass-girl" img />
+      <Image
+        className="girlImg btlpass-girl"
+        img="img/breakGirls/break-girl915.png"
+      />
 
       <div className="btlpass-box-all">
         <div className="btlpass-collect-box-all">

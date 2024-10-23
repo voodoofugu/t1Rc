@@ -105,15 +105,6 @@ export default function FortunaMainRound16Big() {
       />
 
       <div className="fortuna-main-box">
-        {/* <div className="color-btn blue rating">
-          <div className="color-btn-text">Rating</div>
-        </div> */}
-        {/* <div className="push-timer">19K Wheel Tokens</div> */}
-        {/* <ResValue classProp="orb" value="1000" /> */}
-        {/* <div className="in-gacha-box">
-        <div className="gacha-value">19K</div>
-        <div className="gacha-btn-add"></div>
-      </div> */}
         <div className="fortuna-wheel-all">
           <div className="fortuna-wheel-box">
             <div className="fortuna-wheel b1">
@@ -286,25 +277,6 @@ export default function FortunaMainRound16Big() {
         </div>
         <div className="fortuna-main-controls-box">
           <div className="mission-box-all">
-            {/* <div className="daily-mission-box">
-              <div className="daily-mission-name">mission clear 0/6</div>
-              <div className="daily-prgbar-all">
-                <div className="daily-prgbar" style={{ width: "0%" }}></div>
-                <div className="daily-prgbar-text">0/6</div>
-              </div>
-              <div className="daily-reward">
-                <div className="daily-reward-pic">
-                  <img src="img/v2-f-e1.png"></img>
-                </div>
-                <div className="daily-reward-count">16</div>
-              </div>
-            </div>
-            <div className="color-btn green">
-              <div className="color-btn-text">Go to quests</div>
-            </div>
-            <div className="color-btn green">
-              <div className="color-btn-text">Get rolls</div>
-            </div> */}
             <div className="rname-box">Missions</div>
             <ProgressBar
               className="progressBarOfSympathy"
@@ -325,13 +297,6 @@ export default function FortunaMainRound16Big() {
 
           <div className="rrevard-box">
             <div className="rname-box">Guaranteed Rewards</div>
-            {/* <div className="fortuna-reward-btn color-btn blue">show all</div>
-            <div className="fortuna-prgbar-box">
-              <div className="f2-prgbar-empty">
-                <div className="f2-prgbar-full" style={{ width: "0%" }}></div>
-                <div className="f2-prgbar-text">0/10</div>
-              </div>
-            </div> */}
             <ProgressBar
               className="progressBarOfSympathy"
               progressSize={[230, 24]}
@@ -345,65 +310,10 @@ export default function FortunaMainRound16Big() {
               text="Go to rewards"
             />
             <div className="fortuna-reward-box-all">
-              {/* <div className="fortuna-reward-box claim-btn">
-                <div className="fortuna-reward-bg">
-                  <div className="fortuna-reward">
-                    <img src="img/sh-icon-chest-128.png"></img>
-                  </div>
-                </div>
-                <div className="fortuna-reward-claim-btn">5</div>
-              </div> */}
               <ItemBox itemClass="wh44" itemPic="img/sh-icon-chest-128.png" />
             </div>
           </div>
-          {/* <div className="rrules-box">
-            <div className="rules-name">Rules</div>
-            <div className="rules-text">
-              <div>
-                1. During the time of the event, you can spin the Great Wheel of
-                Fortune for diamonds.
-              </div>
-              <div>
-                2. Each use of the Push button gives a prize and increases
-                points counter.
-              </div>
-              <div>
-                3. As soon as enough points accumulate, you can get a guaranteed
-                prize!
-              </div>
-              <div>
-                4. You can get FREE WHEEL ROLLS for doing daily quests EACH DAY
-                OF AN EVENT.
-              </div>
-              /!*<div>5. Remember, fortune loves stubborn.</div>*!/
-            </div>
-          </div> */}
         </div>
-        {/* <div className="fortuna-main-center-box">
-        <div className="fortuna-prgbar-box">
-          <div className="f2-prgbar-empty">
-            <div className="f2-prgbar-full" style={{ width: "0%" }}></div>
-            <div className="f2-prgbar-text">0/500</div>
-          </div>
-          <div className="fortuna-reward-txt">reward for rolling</div>
-        </div>
-        <div className="fortuna-btn-box">
-          <div className="color-btn green xsingle ">
-            <div className="color-btn-text">
-              <div>
-                Push x1<span className="ff-but"></span>1K
-              </div>
-            </div>
-          </div>
-          <div className="color-btn green xmultiply ">
-            <div className="color-btn-text">
-              <div>
-                Push x10<span className="ff-but"></span>9K
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       </div>
     </>
   );
