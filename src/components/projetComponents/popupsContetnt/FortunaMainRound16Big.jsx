@@ -10,6 +10,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ResCount from "../UIComponents/ResCount";
+import Image from "../UIComponents/Image";
 
 export default function FortunaMainRound16Big() {
   const popupState = selectors.usePopupState();
@@ -17,9 +18,7 @@ export default function FortunaMainRound16Big() {
 
   return (
     <>
-      <div className="pop_bg framedPop">
-        <img src="img/evPopArts/fortuneBg_hw.jpg" loading="lazy" alt="bG" />
-      </div>
+      <Image className="bG framedBg" img="img/bGs/fortuneBg_hw.jpg" />
 
       <Button
         className="exit"
@@ -100,12 +99,10 @@ export default function FortunaMainRound16Big() {
         </div>
       </Button>
 
-      <div className="girl">
-        <img
-          src="img/images/hero-all/tithero-428/icons/break-girl.png"
-          loading="lazy"
-        />
-      </div>
+      <Image
+        className="girl"
+        img="img/images/hero-all/tithero-428/icons/break-girl.png"
+      />
 
       <div className="fortuna-main-box">
         {/* <div className="color-btn blue rating">
