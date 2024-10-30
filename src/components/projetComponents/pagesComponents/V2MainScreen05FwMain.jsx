@@ -1,10 +1,35 @@
 import React from "react";
 
+import ItemBox from "../UIComponents/ItemBox";
+import ProgressBar from "../UIComponents/ProgressBar";
+import Button from "../UIComponents/Button";
+import ResCount from "../UIComponents/ResCount";
+import ImageBg from "../UIComponents/ImageBg";
+import FraimedTitle from "../UIComponents/FraimedTitle";
+import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
+
+import elements from "../popupsContetnt/PopResValue";
+
 export const cssFiles = [
   "v2-screen-fw-main",
   "v2-screen-fw-map",
   "screen-unipop-subscription",
 ];
+
+function ClanWarBox({ className, title, img, btnText, onClick, children }) {
+  return (
+    <div className={`fw-main-bl ${className}`}>
+      {/* <div className="fw-main-bl-name">{title}</div> */}
+      <FraimedTitle className="banner blue clanWarTit" text={title} />
+      <div className="fw-main-bl-pic">
+        <img src={img} loading="lazy" />
+      </div>
+      <Button className="clanWarBtn" text={btnText} onClick={() => onClick} />
+      {children}
+    </div>
+  );
+}
 
 export default function V2MainScreen05FwMain() {
   return (
@@ -15,323 +40,66 @@ export default function V2MainScreen05FwMain() {
           backgroundImage: "url('../img/images/back/new/09-River.jpg')",
         }}
       ></div>
-      <div className="header">
-        <div className="resource-panel">
-          <div className="avatar-box-all">
-            <div className="avatar-box-pic">
-              <img src="img/hero0093-ava.jpg" loading="lazy" />
-            </div>
-            <div className="avatar-box-name">Dormidont</div>
-          </div>
-          <div className="resource-gold">
-            <div className="value">6969K</div>
-            <div className="value-bonus">+6969K%</div>
-            <div className="resource-btn-add"></div>
-            <div className="resource-pic">
-              <img src="img/v2-res-gold.png" loading="lazy" />
-            </div>
-          </div>
-          <div className="resource-vip lvl5">
-            <div className="value-vip-diamond">6969K</div>
-            <div className="value-vip-ticket">6969K</div>
-            <div className="resource-btn-add"></div>
-            <div className="resource-pic-vip">
-              <div className="viplvl">VIP</div>
-            </div>
-          </div>
-        </div>
-        <div className="shop-chest-box-all">
-          <div className="res-shop-btn">
-            <div className="res-shop-btn-text">магазин</div>
-          </div>
-          <div className="res-chest-btn">
-            <div className="res-chest-btn-text">Chests</div>
-          </div>
-        </div>
-        <div className="singinout-btn out">
-          <div className="singinout-btn-text">sign out</div>
-        </div>
-      </div>
-      <div className="quest-box-all">
-        <div className="quest-box">
-          <div className="quest">
-            <img className="icon" src="img/ic-abil-reborn.png" loading="lazy" />
-          </div>
-          <div className="quest">
-            <img className="icon" src="img/ic-abil-reborn.png" loading="lazy" />
-          </div>
-          <div className="quest">
-            <img className="icon" src="img/ic-abil-reborn.png" loading="lazy" />
-          </div>
-          <div className="quest">
-            <img className="icon" src="img/ic-abil-reborn.png" loading="lazy" />
-          </div>
-          <div className="quest">
-            <img className="icon" src="img/ic-abil-reborn.png" loading="lazy" />
-          </div>
-          <div className="quest">
-            <img className="icon" src="img/ic-abil-reborn.png" loading="lazy" />
-          </div>
-          <div className="quest">
-            <img className="icon" src="img/ic-abil-reborn.png" loading="lazy" />
-          </div>
-        </div>
-        <div className="opt-panel-box">
-          <div className="btn feedback"></div>
-          <div className="btn statistic"></div>
-          <div className="btn ru"></div>
-        </div>
-      </div>
       <div className="left-side">
         <div className="left-panel wide">
           <div className="tab-panel-box fw-main btlpass-buy-box">
             <div className="tab-panel-box-title">fraction war</div>
             <div className="fw-main-bl-box">
-              <div className="fw-main-bl map">
-                <div className="fw-main-bl-name">map of war</div>
-                <div className="fw-main-bl-pic">
-                  <img src="img/v2-fw-icon-maps.png" loading="lazy" />
-                </div>
-                <div className="color-btn">
-                  <div className="color-btn-text">battle</div>
-                </div>
-              </div>
-              <div className="fw-main-bl shop">
-                <div className="fw-main-bl-name">fraction shop</div>
-                <div className="fw-main-bl-pic">
-                  <img src="img/v2-fw-icon-shop.png" loading="lazy" />
-                </div>
-                <div className="color-btn">
-                  <div className="color-btn-text">shop</div>
-                </div>
-              </div>
-              <div className="fw-main-bl fraction">
-                <div className="fw-main-bl-name">fraction</div>
-                <div className="fw-main-bl-pic">
-                  <img src="img/v2-fw-icon-fraction.png" loading="lazy" />
-                </div>
-                <div className="color-btn">
-                  <div className="color-btn-text">rating</div>
-                </div>
-              </div>
-            </div>
-            <div className="fw-level-box-all">
-              <div className="fw-sim-el-box">
-                <div className="fw-simple">simple</div>
-                <div className="fw-level">level</div>
-                <div className="fw-elite">elite</div>
-              </div>
-              <div className="fw-level-simple-box-scroll">
-                <div className="fw-level-simple">
-                  <div className="fw-level-rew-box">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box collect">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box check">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-good"></div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box girl">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/hero0093-ava.jpg" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-good"></div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box empty">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                </div>
-                <div className="fw-level-level">
-                  <div className="fw-level-level-prg"></div>
-                  <div className="fw-level-level-num-box">
-                    <div className="fw-level-level-num">1</div>
-                    <div className="fw-level-level-num">2</div>
-                    <div className="fw-level-level-num">3</div>
-                    <div className="fw-level-level-num">4</div>
-                    <div className="fw-level-level-num">5</div>
-                    <div className="fw-level-level-num">6</div>
-                    <div className="fw-level-level-num">7</div>
-                    <div className="fw-level-level-num">8</div>
-                    <div className="fw-level-level-num">9</div>
-                    <div className="fw-level-level-num">10</div>
-                    <div className="fw-level-level-num">11</div>
-                    <div className="fw-level-level-num">12</div>
-                    <div className="fw-level-level-num">13</div>
-                    <div className="fw-level-level-num">14</div>
-                    <div className="fw-level-level-num">15</div>
-                    <div className="fw-level-level-num">16</div>
-                    <div className="fw-level-level-num">17</div>
-                    <div className="fw-level-level-num">18</div>
-                    <div className="fw-level-level-num">19</div>
-                    <div className="fw-level-level-num">20</div>
-                  </div>
-                </div>
-                <div className="fw-level-elite">
-                  <div className="fw-level-rew-box">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box collect">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box check">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                  <div className="fw-level-rew-box block">
-                    <div className="fw-level-rew-pic">
-                      <img src="img/change-ic-rubin.png" loading="lazy" />
-                    </div>
-                    <div className="fw-level-rew-num">99999</div>
-                    <div className="fw-level-rew-num-check"></div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">collect</div>
-                    </div>
-                    <div className="fw-level-rew-num-block"></div>
-                  </div>
-                </div>
-              </div>
+              <ClanWarBox
+                className="map"
+                title="map of war"
+                img="img/v2-fw-icon-maps.png"
+                btnText="battle"
+              />
+
+              <ClanWarBox
+                className="shop"
+                title="fraction shop"
+                img="img/v2-fw-icon-shop.png"
+                btnText="clans"
+              >
+                <Button className="clanWarBtn shop" text="shop" />
+              </ClanWarBox>
+
+              <ClanWarBox
+                className="fraction"
+                title="fraction"
+                img="img/v2-fw-icon-fraction.png"
+                btnText="rating"
+              />
             </div>
             <div className="btn-close-x"></div>
+
+            <Scroll
+              className="btlpass_scroll"
+              scrollXY={[760, 202]}
+              objectXY={[80, 190]}
+              progressTrigger={["wheel", "progressElement", "content"]}
+              thumbElement={<ScrollThumb />}
+              edgeGradient={{ color: "#b7a597" }}
+              progressBarSize={8}
+              infiniteScroll
+              xDirection
+            >
+              {elements.map((element, index) => (
+                <div className="rewardsWrap" key={index}>
+                  <ItemBox
+                    itemClass={`wh68 ${element.itemClass}`}
+                    itemPic={element.itemPic}
+                    count={element.count}
+                    get={element.itemClass === "get" && true}
+                    countOut={index + 1}
+                  />
+                  <ItemBox
+                    itemClass={`wh68 ${element.itemClass}`}
+                    itemPic={element.itemPic}
+                    count={element.count}
+                    get={element.itemClass === "get" && true}
+                  />
+                </div>
+              ))}
+            </Scroll>
+
             <div className="fw-btlpass-buy-box-all">
               <div className="fw-btlpass-girl"></div>
               <div className="store-button both">
