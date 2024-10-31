@@ -17,11 +17,9 @@ export const cssFiles = [
   "screen-unipop-subscription",
 ];
 
-function ClanWarBox({ className, title, img, btnText, onClick, children }) {
+function ClanWarBox({ className, img, btnText, onClick, children }) {
   return (
     <div className={`fw-main-bl ${className}`}>
-      {/* <div className="fw-main-bl-name">{title}</div> */}
-      <FraimedTitle className="banner blue clanWarTit" text={title} />
       <div className="fw-main-bl-pic">
         <img src={img} loading="lazy" />
       </div>
@@ -44,20 +42,43 @@ export default function V2MainScreen05FwMain() {
         <div className="left-panel wide">
           <div className="tab-panel-box fw-main btlpass-buy-box">
             <div className="tab-panel-box-title">fraction war</div>
+
+            <Button className="info clanWarInfo" text="i" />
+
             <div className="fw-main-bl-box">
               <ClanWarBox
                 className="map"
-                title="map of war"
                 img="img/v2-fw-icon-maps.png"
                 btnText="battle"
-              />
+              >
+                <FraimedTitle
+                  className="banner blue clanWarTit"
+                  text="map of war"
+                />
+              </ClanWarBox>
 
               <ClanWarBox
                 className="shop"
-                title="fraction shop"
                 img="img/v2-fw-icon-shop.png"
                 btnText="clans"
               >
+                <div className="fw-map-name-box-all cw">
+                  <div className="fw-map-time-box">
+                    <div>
+                      <div className="fw-map-time1">
+                        clash starts in: <span className="t">00:00:00</span>
+                      </div>
+                      <div className="fw-map-time2">
+                        Map locks 3 mins before clash
+                      </div>
+                    </div>
+                  </div>
+                  <div className="fw-map-name-box">
+                    <div className="fw-map-name">day 3</div>
+                    <div className="fw-map-date">Round 12/16</div>
+                  </div>
+                </div>
+
                 <Button className="clanWarBtn shop" text="shop" />
               </ClanWarBox>
 
@@ -66,39 +87,50 @@ export default function V2MainScreen05FwMain() {
                 title="fraction"
                 img="img/v2-fw-icon-fraction.png"
                 btnText="rating"
-              />
+              >
+                <FraimedTitle
+                  className="banner blue clanWarTit"
+                  text="fraction"
+                />
+              </ClanWarBox>
             </div>
             <div className="btn-close-x"></div>
-
-            <Scroll
-              className="btlpass_scroll"
-              scrollXY={[760, 202]}
-              objectXY={[80, 190]}
-              progressTrigger={["wheel", "progressElement", "content"]}
-              thumbElement={<ScrollThumb />}
-              edgeGradient={{ color: "#b7a597" }}
-              progressBarSize={8}
-              infiniteScroll
-              xDirection
-            >
-              {elements.map((element, index) => (
-                <div className="rewardsWrap" key={index}>
-                  <ItemBox
-                    itemClass={`wh68 ${element.itemClass}`}
-                    itemPic={element.itemPic}
-                    count={element.count}
-                    get={element.itemClass === "get" && true}
-                    countOut={index + 1}
-                  />
-                  <ItemBox
-                    itemClass={`wh68 ${element.itemClass}`}
-                    itemPic={element.itemPic}
-                    count={element.count}
-                    get={element.itemClass === "get" && true}
-                  />
-                </div>
-              ))}
-            </Scroll>
+            <div className="fw-level-box-all">
+              <div className="fw-sim-el-box">
+                <div className="fw-simple">simple</div>
+                <div className="fw-level">4.32K/4.48K</div>
+                <div className="fw-elite">elite</div>
+              </div>
+              <Scroll
+                className="btlpass_scroll"
+                scrollXY={[786, 190]}
+                objectXY={[80, 190]}
+                progressTrigger={["wheel", "progressElement", "content"]}
+                thumbElement={<ScrollThumb />}
+                edgeGradient={{ color: "#3f3c3a" }}
+                progressBarSize={8}
+                infiniteScroll
+                xDirection
+              >
+                {elements.map((element, index) => (
+                  <div className="rewardsWrap" key={index}>
+                    <ItemBox
+                      itemClass={`wh68 ${element.itemClass}`}
+                      itemPic={element.itemPic}
+                      count={element.count}
+                      get={element.itemClass === "get" && true}
+                      countOut={index + 1}
+                    />
+                    <ItemBox
+                      itemClass={`wh68 ${element.itemClass}`}
+                      itemPic={element.itemPic}
+                      count={element.count}
+                      get={element.itemClass === "get" && true}
+                    />
+                  </div>
+                ))}
+              </Scroll>
+            </div>
 
             <div className="fw-btlpass-buy-box-all">
               <div className="fw-btlpass-girl"></div>
