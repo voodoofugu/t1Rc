@@ -1,9 +1,7 @@
 import React from "react";
 
 import ItemBox from "../UIComponents/ItemBox";
-import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
-import ResCount from "../UIComponents/ResCount";
 import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
@@ -41,9 +39,10 @@ export default function V2MainScreen05FwMain() {
       <div className="left-side">
         <div className="left-panel wide">
           <div className="tab-panel-box fw-main btlpass-buy-box">
-            <div className="tab-panel-box-title">fraction war</div>
+            <FraimedTitle className="tabPanelTit" text="clan war" />
 
             <Button className="info clanWarInfo" text="i" />
+            <Button className="back" text />
 
             <div className="fw-main-bl-box">
               <ClanWarBox
@@ -52,7 +51,7 @@ export default function V2MainScreen05FwMain() {
                 btnText="battle"
               >
                 <FraimedTitle
-                  className="banner blue clanWarTit"
+                  className="corners blue clanWarTit"
                   text="map of war"
                 />
               </ClanWarBox>
@@ -89,12 +88,12 @@ export default function V2MainScreen05FwMain() {
                 btnText="rating"
               >
                 <FraimedTitle
-                  className="banner blue clanWarTit"
+                  className="corners blue clanWarTit"
                   text="fraction"
                 />
               </ClanWarBox>
             </div>
-            <div className="btn-close-x"></div>
+            {/* <div className="btn-close-x"></div> */}
             <div className="fw-level-box-all">
               <div className="fw-sim-el-box">
                 <div className="fw-simple">simple</div>
@@ -132,13 +131,16 @@ export default function V2MainScreen05FwMain() {
               </Scroll>
             </div>
 
-            <div className="fw-btlpass-buy-box-all">
-              <div className="fw-btlpass-girl"></div>
-              <div className="store-button both">
-                <div className="but-price-text">become elite</div>
-                <div className="but-price">$19.99</div>
-              </div>
-            </div>
+            <ImageBg
+              className="girlImg clanWarGirl"
+              img="img/images/hero-all/tithero-430/icons/break-girl.png"
+            >
+              <Button className="info" text="i" />
+              <Button
+                className="btnGold max eliteBtn"
+                text="become elite<p>$19.99"
+              />
+            </ImageBg>
           </div>
         </div>
         <div className="tabs-all-box">
