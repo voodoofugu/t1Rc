@@ -1,6 +1,10 @@
+import { createAction } from "nexus-state";
+
+export type InitialState = typeof initialStates;
+
 export const initialStates = {
   activePage: "",
-  searchData: [],
+  searchData: {},
   pageData: {
     scrollTop: 0,
     top: 0,
@@ -12,16 +16,16 @@ export const initialStates = {
     mpopClass: "",
     popStyle: {},
     popTit: "",
-    popCont: [],
+    popCont: {},
     btnXClass: "",
     infBtn: false,
     timer: false,
-    count: null,
+    count: false,
     popupVisible: false,
     dialogEmersion: "",
     popOpen: () => {},
     popClose: () => {},
-    props: [],
+    props: {},
   },
 
   sAndLStates: {
@@ -38,13 +42,9 @@ export const initialStates = {
 };
 
 export const actions = {
-  SOME_ACTION1: {},
-  INCREMENT: {
-    reducer: (state, action) => {
-      return {
-        ...state,
-        increment: state.increment + action.payload.increment,
-      };
-    },
-  },
+  SOME_ACTION1: createAction(),
+  INCREMENT: createAction((state, action) => ({
+    ...state,
+    increment: state.increment + action.payload.increment,
+  })),
 };

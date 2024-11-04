@@ -1,7 +1,7 @@
 import React from "react";
 // import { Scroll } from "morphing-scroll";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
-// import { useNexus, useNexusAll } from "nexus-state";
+// import { useNexus, nexusDispatch } from "nexus-state";
 
 import {
   useDispatch,
@@ -28,9 +28,13 @@ export const cssFiles = [
 export default function Dating({ pageName, children }) {
   const dispatch = useDispatch();
 
-  // const [activePage, setActivePage] = useNexus("activePage");
-  // const [increment, setIncrement] = useNexus("increment");
-  // console.log("useNexusAll", useNexusAll());
+  // const activePage = useNexus();
+  // console.log("activePage", activePage);
+  // const increment = () => {
+  //   nexusDispatch({
+  //     type: "INCREMENT",
+  //   });
+  // };
 
   return (
     <div className="main world1">

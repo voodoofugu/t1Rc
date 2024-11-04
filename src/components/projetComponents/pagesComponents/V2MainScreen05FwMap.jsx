@@ -2,6 +2,288 @@ import React from "react";
 
 export const cssFiles = ["v2-screen-fw-map", "v2-screen-fw-map-warpop"];
 
+const yourFrIcon = ["img/v2-cw-bg34.png", "img/v2-cw-p03.png"];
+const mapCellData = [
+  {
+    className: "selected",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "c3",
+    yourFr: false,
+    frIcon: ["img/v2-cw-bg47.png", "img/v2-cw-p14.png"],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "img/v2-fw-icon-w3.png",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 3,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 5,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 2,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "c6",
+    yourFr: false,
+    frIcon: ["img/v2-cw-bg41.png", "img/v2-cw-p13.png"],
+    type: 2,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 3,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 4,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 5,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 2,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 4,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 3,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 5,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 4,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: true,
+    frIcon: yourFrIcon,
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "img/v2-fw-icon-sword.png",
+    icon: "img/v2-fw-icon-w3.png",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+  {
+    className: "",
+    yourFr: false,
+    frIcon: [],
+    type: 0,
+    img: "",
+    icon: "",
+  },
+];
+
+function MapCell({
+  className,
+  yourFr,
+  frIcon,
+  type,
+  img,
+  icon,
+  onClick,
+  children,
+}) {
+  return (
+    <div
+      className={`fw-map-claim-box${className ? ` ${className}` : ""}${
+        yourFr ? " fr-your " : " fr0"
+      }${type ? ` type-${type}` : " type-0"}`}
+      onClick={onClick}
+    >
+      {frIcon.length > 0 && (
+        <div className="fw-icon-fr cw">
+          <img className="bg" src={frIcon[0]} alt="Background Icon" />
+          <img className="fg" src={frIcon[1]} alt="Foreground Icon" />
+        </div>
+      )}
+      {img && (
+        <div className="imgWrap">
+          <img src={img} loading="lazy" alt="Cell Image" />
+        </div>
+      )}
+      {icon && (
+        <div className="iconWrap">
+          <img src={icon} loading="lazy" alt="Icon" />
+        </div>
+      )}
+      {children}
+    </div>
+  );
+}
+
 export default function V2MainScreen05FwMap() {
   return (
     <div className="main lang-ru world1">
@@ -14,7 +296,7 @@ export default function V2MainScreen05FwMap() {
       />
       <div>
         <div className="fw-map-claim-box-all cw">
-          <div className="cw-field-label l1">1</div>
+          {/* <div className="cw-field-label l1">1</div>
           <div className="cw-field-label l2">2</div>
           <div className="cw-field-label l3">3</div>
           <div className="cw-field-label l4">4</div>
@@ -24,277 +306,12 @@ export default function V2MainScreen05FwMap() {
           <div className="cw-field-label lC">C</div>
           <div className="cw-field-label lD">D</div>
           <div className="cw-field-label lE">E</div>
-          <div className="cw-field-label lF">F</div>
-          <div className="fw-map-claim-box fr0  type-0" />
-          <div
-            className="fw-map-claim-box fr0  type-0"
-            style={{ boxShadow: "green 0px 0px 50px inset" }}
-          />
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr0  type-0" />
-          <div
-            className="fw-map-claim-box fr0 selected type-5"
-            style={{ boxShadow: "green 0px 0px 50px inset" }}
-          />
-          <div className="fw-map-claim-box fr-your  type-4">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-4">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div
-            className="fw-map-claim-box c0  type-5"
-            style={{ boxShadow: "green 0px 0px 50px inset" }}
-          >
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg41.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p13.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr0  type-0" />
-          <div
-            className="fw-map-claim-box fr0  type-3"
-            style={{ boxShadow: "green 0px 0px 50px inset" }}
-          />
-          <div className="fw-map-claim-box fr-your  type-2">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-4">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-2">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr0  type-0" />
-          <div
-            className="fw-map-claim-box fr0  type-5"
-            style={{ boxShadow: "green 0px 0px 50px inset" }}
-          />
-          <div className="fw-map-claim-box fr-your  type-3">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-2">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-3">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr0  type-0" />
-          <div
-            className="fw-map-claim-box fr0  type-0"
-            style={{ boxShadow: "green 0px 0px 50px inset" }}
-          />
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
-          <div className="fw-map-claim-box fr-your  type-0">
-            <div className="fw-icon-fr cw">
-              <img
-                className="bg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-bg34.png"
-              />
-              <img
-                className="fg"
-                src="https://cdn.faptitans.com/s1/rc/v2-cw-p03.png"
-              />
-            </div>
-          </div>
+          <div className="cw-field-label lF">F</div> */}
+          {mapCellData.map((item, index) => (
+            <MapCell key={index} {...item} />
+          ))}
         </div>
-        <div className="fw-warpop-box-all ">
+        {/* <div className="fw-warpop-box-all ">
           <div className="fw-warpop-box-pic">
             <img src="https://cdn.faptitans.com/s1/rc/v2-fw-map-bg8.jpg" />
             <div className="fr-warpop-building type-5" />
@@ -353,7 +370,7 @@ export default function V2MainScreen05FwMap() {
             </div>
           </div>
           <div className="fw-warpop-close" />
-        </div>
+        </div> */}
         <a
           className="color-btn green exit active0"
           aria-current="page"

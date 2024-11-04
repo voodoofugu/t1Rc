@@ -6,6 +6,7 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
+import ResCount from "../UIComponents/ResCount";
 
 import elements from "../popupsContetnt/PopResValue";
 
@@ -39,6 +40,14 @@ export default function V2MainScreen05FwMain() {
       <div className="left-side">
         <div className="left-panel wide">
           <div className="tab-panel-box fw-main btlpass-buy-box">
+            <div className="trophy-res-box-all">
+              <ResCount
+                className="fw-main-btlpass"
+                value="4.13K"
+                img="img/ic-contrip-red.png"
+              />
+            </div>
+
             <FraimedTitle className="tabPanelTit" text="clan war" />
 
             <Button className="info clanWarInfo" text="i" />

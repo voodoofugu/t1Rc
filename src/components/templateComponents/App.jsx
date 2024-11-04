@@ -1,8 +1,7 @@
 import { StrictMode } from "react";
 import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
-import { NexusProvider } from "nexus-state";
-import { initialStates, actions } from "../../../nexusConfig";
+// import { NexusProvider } from "nexus-state";
 
 import Template from "./Template";
 import Loading from "./Loading";
@@ -32,23 +31,23 @@ export default function App() {
 
   return (
     <StrictMode>
-      <NexusProvider initialStates={initialStates} actions={actions} watch>
-        <GlobalStateProvider reducer={reducer} initialState={states}>
-          <StatesStorage />
-          <HelmetProvider>
-            <div
-              className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}
-              id="templateBody"
-            >
-              <HelmetForCss
-                cssFiles={cssFiles}
-                setStylesLoaded={setStylesLoaded}
-              />
-              {!stylesLoaded ? <Loading noBG /> : <Template />}
-            </div>
-          </HelmetProvider>
-        </GlobalStateProvider>
-      </NexusProvider>
+      {/* <NexusProvider> */}
+      <GlobalStateProvider reducer={reducer} initialState={states}>
+        <StatesStorage />
+        <HelmetProvider>
+          <div
+            className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}
+            id="templateBody"
+          >
+            <HelmetForCss
+              cssFiles={cssFiles}
+              setStylesLoaded={setStylesLoaded}
+            />
+            {!stylesLoaded ? <Loading noBG /> : <Template />}
+          </div>
+        </HelmetProvider>
+      </GlobalStateProvider>
+      {/* </NexusProvider> */}
     </StrictMode>
   );
 }
