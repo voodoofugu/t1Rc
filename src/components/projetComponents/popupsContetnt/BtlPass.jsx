@@ -15,6 +15,8 @@ export default function BtlPass({ btlClass }) {
   const popupState = selectors.usePopupState();
   const dispatch = useDispatch();
 
+  const edgeGradient = btlClass === "xmas" ? "#288cbe" : "#202c38";
+
   const girlImg =
     btlClass === "xmas"
       ? "images/hero-all/tithero-430/icons/break-girl"
@@ -137,7 +139,6 @@ export default function BtlPass({ btlClass }) {
         onClick={() =>
           popupState.popOpen(dispatch, {
             mpopClass: "m-popup essence-buy contentOnly framedPop",
-            // popTit: "Buy Event Tokens",
             popCont: buyShopCont,
           })
         }
@@ -185,11 +186,11 @@ export default function BtlPass({ btlClass }) {
           </div>
           <Scroll
             className="btlpass_scroll"
-            scrollXY={[1000, 124]}
+            scrollXY={[1000, 128]}
             objectXY={[80, 112]}
             progressTrigger={["wheel", "progressElement", "content"]}
             thumbElement={<ScrollThumb />}
-            edgeGradient={{ color: "#202c38" }}
+            edgeGradient={{ color: edgeGradient }}
             progressBarSize={8}
             infiniteScroll
             xDirection

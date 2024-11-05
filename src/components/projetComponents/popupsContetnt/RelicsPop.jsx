@@ -106,13 +106,16 @@ export default memo(function RelicsPop({ event }) {
     },
   ];
 
+  const bg =
+    event === "xmas" ? "img/bGs/xmasBg.jpg" : "img/bGs/halloweenBg.jpg";
+
   const evData = data.find((item) => item[event]);
   const popupState = selectors.usePopupState();
   const dispatch = useDispatch();
 
   return (
     <>
-      <ImageBg className="bG framedBg" img="img/bGs/halloweenBg.jpg" />
+      <ImageBg className="bG framedBg" img={bg} />
 
       <Button
         className="exit"
@@ -124,17 +127,7 @@ export default memo(function RelicsPop({ event }) {
         <div className="main-relics-girl-pic">
           <img src={evData?.[event][0]} loading="lazy" />
         </div>
-        {/* <div className="main-relics-info"></div> // !!! */}
-        {/* <div className="tltI"></div> */}
         <Button className="infoOnly" text="i" />
-
-        {/* <div className="main-relics-girl-ballon"> // !!!
-          <div className="main-relics-girl-ballon-text-box">
-            <div className="main-relics-girl-ballon-text">
-              {evData?.[event][1]}
-            </div>
-          </div>
-        </div> */}
 
         <div className="main-relics-timer-box">
           <div className="main-relics-timer-text">осталось</div>
@@ -503,12 +496,6 @@ export default memo(function RelicsPop({ event }) {
       </Scroll>
 
       <div className="main-buttons">
-        {/* <div className="color-btn green disabled0">
-          <div className="color-btn-text">
-            <div>Fapopoly</div>
-            <div className="t">00:00:00</div>
-          </div>
-        </div> */}
         <Button className="green max" text="Fapopoly<p>00:00:00" />
         <Button className="green max" text="Dark Tower<p>00:00:00" />
         <Button className="green max" text="XXXMAS Pass<p>4D 03:07:21" />

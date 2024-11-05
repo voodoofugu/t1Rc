@@ -120,7 +120,7 @@ export default function DarkBtlPass() {
             <Button className="btnGold max" text="get all" />
           </div>
           <Scroll
-            className="btlpass_scroll"
+            className="btlpass_scroll two"
             scrollXY={[1000, 202]}
             objectXY={[80, 190]}
             progressTrigger={["wheel", "progressElement", "content"]}

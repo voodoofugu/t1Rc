@@ -340,10 +340,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-ny-sneg",
                 "00:00:09",
                 {
-                  mpopClass: "m-popup main-relics-pop xmas",
-                  popTit: "XXXMAS Orgy",
+                  mpopClass: "m-popup main-relics-pop xmas contentOnly",
+                  popTit: "XXXMAS Orgy<FRAMED>",
                   popCont: ["RelicsPop", { event: "xmas" }],
-                  timer: true,
                 },
               ],
             ],
