@@ -1,5 +1,21 @@
 import React from "react";
 
+const BtnWrap = ({ className, onClick, href, children }) => {
+  return (
+    <>
+      {href ? (
+        <a className={`butn ${className}`} onClick={onClick} href={href}>
+          {children}
+        </a>
+      ) : (
+        <div className={`butn ${className}`} onClick={onClick}>
+          {children}
+        </div>
+      )}
+    </>
+  );
+};
+
 const Button = ({
   className,
   text = "",
@@ -7,6 +23,7 @@ const Button = ({
   discountSticker,
   img = false,
   onClick,
+  href,
   children,
 }) => {
   const wrappedText = React.useMemo(() => {
@@ -27,7 +44,7 @@ const Button = ({
   }, [text]);
 
   return (
-    <div className={`butn ${className}`} onClick={onClick}>
+    <BtnWrap className={className} onClick={onClick} href={href}>
       <div className="btnContentWrap">
         {img ? (
           typeof img === "string" ? (
@@ -49,7 +66,7 @@ const Button = ({
         {children}
       </div>
       {discountSticker && <div className="sale-banner">{discountSticker}</div>}
-    </div>
+    </BtnWrap>
   );
 };
 
