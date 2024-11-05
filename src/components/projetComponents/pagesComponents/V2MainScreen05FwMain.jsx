@@ -110,7 +110,7 @@ export default function V2MainScreen05FwMain() {
                 <div className="fw-elite">elite</div>
               </div>
               <Scroll
-                className="btlpass_scroll"
+                className="btlpass_scroll two"
                 scrollXY={[786, 190]}
                 objectXY={[80, 190]}
                 progressTrigger={["wheel", "progressElement", "content"]}
