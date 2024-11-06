@@ -264,7 +264,6 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "287:21:43",
                 {
                   mpopClass: "m-popup main-relics-pop hw contentOnly",
-                  popTit: "Halloween Event Pass<FRAMED>",
                   popCont: ["RelicsPop", { event: "hw" }],
                 },
               ],
@@ -273,7 +272,6 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "287:21:43",
                 {
                   mpopClass: "m-popup events-btlpass-pop hw contentOnly",
-                  popTit: "Halloween Event Pass<FRAMED>",
                   popCont: ["BtlPass", { btlClass: "hw" }],
                 },
               ],
@@ -282,7 +280,6 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "00:00:00",
                 {
                   mpopClass: "m-popup dark-btlpas contentOnly",
-                  popTit: "Halloween Battle Pass<FRAMED>",
                   popCont: ["DarkBtlPass", { event: "dark-btlpas" }],
                   timer: true,
                 },
@@ -323,7 +320,6 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "00:44:09",
                 {
                   mpopClass: "m-popup events-btlpass-pop xmas contentOnly",
-                  popTit: "Christmas Event Pass<FRAMED>",
                   popCont: ["BtlPass", { btlClass: "xmas" }],
                 },
               ],
@@ -341,7 +337,6 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "00:00:09",
                 {
                   mpopClass: "m-popup main-relics-pop xmas contentOnly",
-                  popTit: "XXXMAS Orgy<FRAMED>",
                   popCont: ["RelicsPop", { event: "xmas" }],
                 },
               ],

@@ -4,13 +4,12 @@ import {
   useDispatch,
 } from "../../templateComponents/GlobalStateStor";
 
-import ResValue from "../UIComponents/ResValue";
-
 import ItemBox from "../UIComponents/ItemBox";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ResCount from "../UIComponents/ResCount";
 import ImageBg from "../UIComponents/ImageBg";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function FortunaMainRound16Big() {
   const popupState = selectors.usePopupState();
@@ -19,6 +18,11 @@ export default function FortunaMainRound16Big() {
   return (
     <>
       <ImageBg className="bG framedBg" img="img/bGs/fortuneBg_hw.jpg" />
+
+      <FraimedTitle
+        className="cornersTop"
+        text="Wheel of fortune - spin your discount!"
+      />
 
       <Button
         className="exit"

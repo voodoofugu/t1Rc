@@ -42,12 +42,6 @@ export default function MainScreen16FortunaRoundMainpop({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup fortuna-main-round contentOnly",
-                    // popStyle: {
-                    //   width: "960px",
-                    //   height: "620px",
-                    //   left: "120px",
-                    // },
-                    popTit: "wheel of fortune - spin your discount!<FRAMED>",
                     popCont: ["FortunaMainRound16Big"],
                   },
                 });

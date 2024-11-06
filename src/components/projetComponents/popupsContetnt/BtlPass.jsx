@@ -10,6 +10,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function BtlPass({ btlClass }) {
   const popupState = selectors.usePopupState();
@@ -126,6 +127,8 @@ export default function BtlPass({ btlClass }) {
           });
         }}
       />
+
+      <FraimedTitle className="cornersTop" text="Event Pass" />
 
       <Button
         className="exit"

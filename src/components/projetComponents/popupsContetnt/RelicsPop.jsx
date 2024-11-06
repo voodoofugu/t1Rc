@@ -11,6 +11,7 @@ import ComicsBallon from "../UIComponents/ComicsBallon";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default memo(function RelicsPop({ event }) {
   let data = [
@@ -116,6 +117,8 @@ export default memo(function RelicsPop({ event }) {
   return (
     <>
       <ImageBg className="bG framedBg" img={bg} />
+
+      <FraimedTitle className="cornersTop" text="Orgy Event" />
 
       <Button
         className="exit"

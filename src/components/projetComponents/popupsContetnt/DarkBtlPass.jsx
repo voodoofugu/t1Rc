@@ -11,6 +11,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function DarkBtlPass() {
   const popupState = selectors.usePopupState();
@@ -39,6 +40,8 @@ export default function DarkBtlPass() {
           });
         }}
       />
+
+      <FraimedTitle className="cornersTop" text="Dark World Event Pass" />
 
       <Button
         className="exit"
