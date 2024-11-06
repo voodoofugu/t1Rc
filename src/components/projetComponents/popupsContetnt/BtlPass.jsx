@@ -39,9 +39,10 @@ export default function BtlPass({ btlClass }) {
       ? [
           "BuyShop",
           {
-            img1: "ic-tickets-xmas-1",
-            img2: "ic-tickets-xmas-2",
-            img3: "ic-tickets-xmas-3",
+            img1: "evPopArts/ic-tickets-xmas-1",
+            img2: "evPopArts/ic-tickets-xmas-2",
+            img3: "evPopArts/ic-tickets-xmas-3",
+            img4: "evPopArts/ic-tickets-xmas-4",
           },
         ]
       : btlClass === "hw"
