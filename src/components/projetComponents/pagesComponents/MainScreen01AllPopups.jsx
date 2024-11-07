@@ -3,8 +3,7 @@ import WorldBtnBox from "../UIComponents/WorldBtnBox";
 
 import { useDispatch } from "../../templateComponents/GlobalStateStor";
 import QuestBoxAll from "../UIComponents/QuestBoxAll";
-
-import XmasPop from "../popupsContetnt/XmasPop"; // сюда передовался сет стейт
+import Notification from "../UIComponents/Notification";
 
 export const cssFiles = [
   "screen-fapopoly-rules",
@@ -69,6 +68,13 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           backgroundImage: "url('../img/images/back/new/09-River.jpg')",
         }}
       ></div>
+
+      {/* <Notification
+        img="img/ms-stone-orange.png"
+        text="you get"
+        count="11.6K"
+      /> */}
+
       <div className="header">
         <div className="resource-panel">
           <div className="avatar-box-all">

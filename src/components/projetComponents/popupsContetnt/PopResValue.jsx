@@ -3,9 +3,9 @@ const elements = [
   { itemPic: "img/sh-icon-chest-128.png", count: "4", itemClass: "check" },
   { itemPic: "img/photo-ic@2x.png", count: "2", itemClass: "check" },
   { itemPic: "img/ms-stone-orange.png", count: "160", itemClass: "get" },
-  { itemPic: "img/ms-stone-blue.png", count: "4", itemClass: "block" },
-  { itemPic: "img/ms-stone-green.png", count: "4", itemClass: "block" },
-  { itemPic: "img/ms-stone-pink.png", count: "4", itemClass: "block" },
+  { itemPic: "img/ms-stone-blue.png", count: "400", itemClass: "get" },
+  { itemPic: "img/ms-stone-green.png", count: "389", itemClass: "get" },
+  { itemPic: "img/ms-stone-pink.png", count: "234", itemClass: "get" },
   {
     itemPic: "img/evPopArts/potion_red@2x.png",
     count: "230",

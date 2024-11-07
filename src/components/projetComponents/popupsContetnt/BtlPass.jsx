@@ -116,7 +116,6 @@ export default function BtlPass({ btlClass }) {
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
-              popTit: "",
               popCont: ["InfoPopFramed"],
               props: {
                 inner:
@@ -207,6 +206,17 @@ export default function BtlPass({ btlClass }) {
                 get={element.itemClass === "get" && true}
                 key={index}
                 countOut={index + 1}
+                onClick={() => {
+                  element.itemClass === "get" &&
+                    dispatch({
+                      type: "NOTIF_VIEW",
+                      payload: {
+                        view: true,
+                        img: element.itemPic,
+                        text: `You got ${element.count}`,
+                      },
+                    });
+                }}
               />
             ))}
           </Scroll>

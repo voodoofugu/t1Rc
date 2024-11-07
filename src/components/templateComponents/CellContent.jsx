@@ -14,7 +14,7 @@ import { selectors, useDispatch } from "./GlobalStateStor";
 import Loading from "./Loading";
 import HelmetForCss from "./HelmetForCss";
 
-import Popup from "../projetComponents/UIComponents/Popup";
+import ComponToLoad from "../projetComponents/UIComponents/ComponToLoad";
 import Tooltip from "./Tooltip";
 
 export default memo(function CellContent({ pageName, loadable }) {
@@ -197,8 +197,9 @@ export default memo(function CellContent({ pageName, loadable }) {
                                 <DynamicComponent
                                   pageName={pageName}
                                   key={pageName}
-                                  children={<Popup pageName={pageName} />}
-                                />
+                                >
+                                  <ComponToLoad pageName={pageName} />
+                                </DynamicComponent>
                               </>
                             )}
                             <a

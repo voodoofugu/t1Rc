@@ -41,6 +41,7 @@ export interface InitialState {
   booleanState: boolean;
   [key: string]: any;
   increment: number;
+  notif: object;
 }
 
 export const initialState: InitialState = {
@@ -82,6 +83,7 @@ export const initialState: InitialState = {
   booleanState: false,
 
   increment: 0,
+  notif: {},
 };
 
 export interface Action {
@@ -174,6 +176,10 @@ export function reducer(draft: any, action: Action): any {
 
     case "INCREMENT":
       draft.increment = draft.increment + action.payload;
+      return draft;
+
+    case "NOTIF_VIEW":
+      draft.notif = action.payload;
       return draft;
 
     default:

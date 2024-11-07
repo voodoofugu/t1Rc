@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 export default React.memo(function ItemBox({
   itemClass,
@@ -11,6 +12,7 @@ export default React.memo(function ItemBox({
   rare,
   notif,
   sale,
+  onClick,
 }) {
   return (
     <div className={`itemBox${itemClass ? " " + itemClass : ""}`}>
@@ -31,9 +33,7 @@ export default React.memo(function ItemBox({
       )}
       {!!countOut && <div className="itemBox_countOut">{countOut}</div>}
       {get && (
-        <div className="color-btn green">
-          <div className="color-btn-text">get {count}</div>
-        </div>
+        <Button className="max green" text={`get ${count}`} onClick={onClick} />
       )}
       {!!rare && <img className="rare" src={`img/cur-${rare}.png`} />}
       {arrow ? <div className={`itemBox_arrow ${arrow}`}></div> : ""}
