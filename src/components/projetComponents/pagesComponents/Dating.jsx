@@ -1,11 +1,11 @@
 import React from "react";
 // import { Scroll } from "morphing-scroll";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
-// import { useNexus, nexusDispatch } from "nexus-state";
+import { useNexus } from "nexus-state";
 
 import {
   useDispatch,
-  // selectors,
+  selectors,
 } from "../../templateComponents/GlobalStateStor";
 
 import ItemBox from "../UIComponents/ItemBox";
@@ -27,14 +27,6 @@ export const cssFiles = [
 
 export default function Dating({ pageName, children }) {
   const dispatch = useDispatch();
-
-  // const activePage = useNexus();
-  // console.log("activePage", activePage);
-  // const increment = () => {
-  //   nexusDispatch({
-  //     type: "INCREMENT",
-  //   });
-  // };
 
   return (
     <div className="main world1">
@@ -65,16 +57,7 @@ export default function Dating({ pageName, children }) {
         />
 
         <div style={{ position: "absolute", right: "80px", top: "0px" }}>
-          <Button
-            className="exit"
-            text
-            // onClick={() => {
-            //   setIncrement({
-            //     type: "INCREMENT",
-            //     payload: { increment: 1 },
-            //   });
-            // }}
-          />
+          <Button className="exit" text />
         </div>
 
         <div className="heroFigure"></div>

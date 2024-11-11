@@ -1,23 +1,22 @@
-const throttle = (func: Function, limit: number) => {
-  let lastFunc: any;
-  let lastRan: any;
+type AnyFunction = (...args: any[]) => any;
 
-  return function () {
-    const context = this;
-    const args = arguments;
+const throttle = (func: AnyFunction, limit: number) => {
+  let lastFunc: ReturnType<typeof setTimeout> | null;
+  let lastRan: number | null = null;
+
+  return function (...args: any[]) {
     if (!lastRan) {
-      func.apply(context, args);
+      func(...args); // вызываем функцию без применения `this`
       lastRan = Date.now();
     } else {
-      clearTimeout(lastFunc);
-      lastFunc = setTimeout(function () {
-        if (Date.now() - lastRan >= limit) {
-          func.apply(context, args);
+      clearTimeout(lastFunc as ReturnType<typeof setTimeout>);
+      lastFunc = setTimeout(() => {
+        // используем стрелочную функцию, чтобы не потерять контекст
+        if (Date.now() - (lastRan as number) >= limit) {
+          func(...args);
           lastRan = Date.now();
         }
-      }, limit - (Date.now() - lastRan));
+      }, limit - (Date.now() - (lastRan as number)));
     }
   };
 };
-
-export default throttle;

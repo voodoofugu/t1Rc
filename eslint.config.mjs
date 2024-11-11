@@ -26,11 +26,8 @@ export default [
   },
   {
     rules: {
-      // убираем обязательный prop-types в jsx
       "react/prop-types": "off",
-      // не используемые переменный
       "@typescript-eslint/no-unused-vars": "off",
-      // сокращаем "if" до тернарного "&&" в функциях
       "no-unused-expressions": [
         "error",
         { allowShortCircuit: true, allowTernary: true },
@@ -39,8 +36,9 @@ export default [
         "error",
         { allowShortCircuit: true, allowTernary: true },
       ],
-      // принудительный импорт React
       "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
     },
   },
 ];

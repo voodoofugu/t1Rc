@@ -10,14 +10,14 @@ export default function useDeserializedComponent(
   const [reactElement, setReactElement] = React.useState(null);
 
   React.useEffect(() => {
-    if (data && data.answer) {
-      try {
-        const element = deserializeReactElement(data.answer, componentPath);
-        setReactElement(element);
-      } catch (error) {
-        console.error("Error parsing or deserializing:", error);
-      }
-    }
+    // if (data && data.answer) {
+    //   try {
+    //     const element = deserializeReactElement(data.answer, componentPath);
+    //     setReactElement(element);
+    //   } catch (error) {
+    //     console.error("Error parsing or deserializing:", error);
+    //   }
+    // }
   }, [data, componentPath]);
 
   if (loading) {

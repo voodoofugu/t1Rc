@@ -142,7 +142,7 @@ export default memo(function RelicsPop({ event }) {
           style={{
             top: "344px",
             left: "50%",
-            width: "auto",
+            width: "min-content",
             transform: "translateX(-80%)",
           }}
           changeDirectionArrow

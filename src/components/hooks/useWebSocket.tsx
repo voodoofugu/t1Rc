@@ -21,13 +21,13 @@ export default function useWebSocket(request: string) {
         setState({ data: newData, loading: false, error: null });
       } catch (error) {
         console.error("🚫 Error parsing data:", error);
-        setState({ data: null, loading: false, error });
+        setState({ data: null, loading: false, error: null });
       }
     };
 
     socket.onerror = (error) => {
       console.error("🚫 WebSocket error:", error);
-      setState({ data: null, loading: false, error });
+      setState({ data: null, loading: false, error: null });
     };
 
     socket.onclose = () => {

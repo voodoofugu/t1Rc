@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
-// import { NexusProvider } from "nexus-state";
+import { NexusProvider } from "nexus-state";
 
 import Template from "./Template";
 import Loading from "./Loading";
@@ -9,6 +9,9 @@ import StatesStorage from "./StatesStorage";
 import { GlobalStateProvider } from "./GlobalStateStor";
 import { reducer, initialState } from "../../scripts/templateScripts/reducer";
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
+
+import { initialStates, actions } from "../../../nexus/nexusConfig";
+import Storage from "../../components/templateComponents/Storage";
 
 import HelmetForCss from "./HelmetForCss";
 export const cssFiles = [
@@ -31,23 +34,24 @@ export default function App() {
 
   return (
     <StrictMode>
-      {/* <NexusProvider> */}
-      <GlobalStateProvider reducer={reducer} initialState={states}>
-        <StatesStorage />
-        <HelmetProvider>
-          <div
-            className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}
-            id="templateBody"
-          >
-            <HelmetForCss
-              cssFiles={cssFiles}
-              setStylesLoaded={setStylesLoaded}
-            />
-            {!stylesLoaded ? <Loading noBG /> : <Template />}
-          </div>
-        </HelmetProvider>
-      </GlobalStateProvider>
-      {/* </NexusProvider> */}
+      <NexusProvider initialStates={initialStates} actions={actions}>
+        <Storage watch />
+        <GlobalStateProvider reducer={reducer} initialState={states}>
+          <StatesStorage />
+          <HelmetProvider>
+            <div
+              className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}
+              id="templateBody"
+            >
+              <HelmetForCss
+                cssFiles={cssFiles}
+                setStylesLoaded={setStylesLoaded}
+              />
+              {!stylesLoaded ? <Loading noBG /> : <Template />}
+            </div>
+          </HelmetProvider>
+        </GlobalStateProvider>
+      </NexusProvider>
     </StrictMode>
   );
 }
