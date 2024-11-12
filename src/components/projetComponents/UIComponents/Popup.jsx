@@ -13,10 +13,13 @@ export default memo(function Popup({ pageName }) {
   const activePage = useNexus("activePage");
   const popupState = useNexus("popupState");
 
-  const ComponentToRender = popupState.popCont[0]
+  const ComponentToRender = popupState?.popCont?.[0]
     ? componentsMap[popupState.popCont[0]]
     : null;
-  const componentProps = popupState.popCont[1] ? popupState.popCont[1] : null;
+
+  const componentProps = popupState?.popCont?.[1]
+    ? popupState.popCont[1]
+    : null;
   const props = popupState.props;
 
   return (
