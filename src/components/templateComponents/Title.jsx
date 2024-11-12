@@ -1,9 +1,9 @@
 import React, { memo } from "react";
 import { Helmet } from "react-helmet-async";
-import { selectors } from "./GlobalStateStor";
+import { useNexus } from "nexus-state";
 
 export default memo(function Title() {
-  const activePage = selectors.useActivePage();
+  const activePage = useNexus("activePage");
   return (
     <Helmet>
       <title>{activePage ? activePage : "Template"}</title>

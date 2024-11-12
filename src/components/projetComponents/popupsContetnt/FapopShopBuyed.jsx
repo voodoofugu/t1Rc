@@ -1,12 +1,8 @@
 import React from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 export default React.memo(function FapopShopBuyed() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
@@ -49,7 +45,7 @@ export default React.memo(function FapopShopBuyed() {
             <div className="sv-sale-bonus-box-all">
               <div className="ashero-bonus-box">
                 <div className="acbonus-box">
-                  <div className="lvlbox-name">Leprechaun's luck</div>
+                  <div className="lvlbox-name">Leprechauns luck</div>
                   <div className="bonus-lvl-box-bonus-box">
                     <div className="bonus-lvl-box-bonus">
                       +45%
@@ -58,7 +54,7 @@ export default React.memo(function FapopShopBuyed() {
                   </div>
                 </div>
                 <div className="acbonus-box second">
-                  <div className="lvlbox-name">Fairy's blessing</div>
+                  <div className="lvlbox-name">Fairys blessing</div>
                   <div className="bonus-lvl-box-bonus-box">
                     <div className="bonus-lvl-box-bonus">
                       +2.15% dps to
@@ -133,7 +129,7 @@ export default React.memo(function FapopShopBuyed() {
       <div className="color-btn">
         <div
           className="color-btn-text"
-          onClick={() => popupState.popClose(dispatch)}
+          onClick={() => popupState.popClose(nexusDispatch)}
         >
           закрыть
         </div>

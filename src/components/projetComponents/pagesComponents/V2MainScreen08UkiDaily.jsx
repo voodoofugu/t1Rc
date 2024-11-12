@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 import ComicsPop from "../popupsContetnt/ComicsPop";
 
 export const cssFiles = ["quests_all", "quests-ui", "v2-screen-uki-story-pop"];
 
 export default function V2MainScreen08UkiDaily({ pageName, children }) {
   const currentPath = window.location.hash.substring(3).split("/")[0];
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (pageName === currentPath) {
@@ -1313,7 +1312,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                 <div
                   className="journal-comics"
                   onClick={() => {
-                    dispatch({
+                    nexusDispatch({
                       type: "POPUP_OPEN",
                       payload: {
                         mpopClass: "m-popup uki-story-popup contentOnly",

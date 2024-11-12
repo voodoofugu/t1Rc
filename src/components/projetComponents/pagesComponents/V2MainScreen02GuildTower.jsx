@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 import WorldBtnBox from "../UIComponents/WorldBtnBox";
 import StateChangeBtn from "../UIComponents/StateChangeBtn";
@@ -47,8 +47,6 @@ export const cssFiles = [
 ];
 
 export default function V2MainScreen02GuildTower({ pageName, children }) {
-  const dispatch = useDispatch();
-
   const [hole, sethole] = useState(false);
   const [leftPanel, setLeftPanel] = useState(true);
   const [fight, setFight] = useState(false);
@@ -127,7 +125,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest trophy-pop"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup tower-relics-pop",
@@ -149,7 +147,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest tower-trophy-pop"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup tower-trophy-pop",
@@ -171,7 +169,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest tower-mag-box"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     popCont: ["MnPopupNsaleMain", { hole: `${hole}` }],
@@ -193,7 +191,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest InfoPop"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: `m-popup info-pop ${
@@ -284,7 +282,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                       <div
                         className="color-btn gblue rb-koi"
                         onClick={() => {
-                          dispatch({
+                          nexusDispatch({
                             type: "POPUP_OPEN",
                             payload: {
                               mpopClass: `mn-popup ${hole ? "hole" : ""}`,
@@ -340,7 +338,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                   <div
                                     className="color-btn-text"
                                     onClick={() => {
-                                      dispatch({
+                                      nexusDispatch({
                                         type: "POPUP_OPEN",
                                         payload: {
                                           mpopClass: "m-popup info-pop hole",
@@ -368,7 +366,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                   value="234"
                                   plus
                                   onClick={() => {
-                                    dispatch({
+                                    nexusDispatch({
                                       type: "POPUP_OPEN",
                                       payload: {
                                         mpopClass: "m-popup essence-buy",
@@ -405,7 +403,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                               <div
                                 className="towerAddRelics"
                                 onClick={() => {
-                                  dispatch({
+                                  nexusDispatch({
                                     type: "POPUP_OPEN",
                                     payload: {
                                       mpopClass:
@@ -427,7 +425,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                           "Trophie",
                           <TowerTrophyBoxScroll
                             onClick={() => {
-                              dispatch({
+                              nexusDispatch({
                                 type: "POPUP_OPEN",
                                 payload: {
                                   mpopClass: "m-popup tower-trophy-pop",
@@ -483,7 +481,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             class1={hole === true ? "relicsCards" : "relicset"}
             class2={hole === true ? "holeGem" : "cards"}
             onClick1={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup main-relics-pop tower",
@@ -493,7 +491,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               });
             }}
             onClick2={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup essence-buy",

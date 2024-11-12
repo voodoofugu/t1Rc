@@ -1,9 +1,5 @@
 import React from "react";
-
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import SVGIcon from "../UIComponents/SVGIcon.jsx";
@@ -29,8 +25,7 @@ function getRandomNumber() {
 }
 
 export default function SAndLScreen({ pageName, children }) {
-  const sAndLStates = selectors.useSAndLStates();
-  const dispatch = useDispatch();
+  const sAndLStates = useNexus("sAndLStates");
 
   const [diceStateClass, setDiceStateClass] = React.useState("");
   const [diceValue, setDiceValue] = React.useState(0);
@@ -128,7 +123,7 @@ export default function SAndLScreen({ pageName, children }) {
     const diceNum = getRandomNumber();
     const diceClass = diceColor ? "gold" : "white";
 
-    dispatch({
+    nexusDispatch({
       type: "ANIM_IN_PROG",
       payload: true,
     });
@@ -167,7 +162,7 @@ export default function SAndLScreen({ pageName, children }) {
         <div className="sAndL">
           <SAndLSVGPlates
             sAndLStates={sAndLStates}
-            dispatch={dispatch}
+            dispatch={nexusDispatch}
             diceValue={diceValue}
             specialIndexes={specialIndexes}
             pageName={pageName}
@@ -189,7 +184,7 @@ export default function SAndLScreen({ pageName, children }) {
             <div
               className="color-btn green"
               onClick={() => {
-                sAndLStates.animInProgress ? null : addRollClass();
+                sAndLStates.animInProgress && addRollClass();
               }}
             >
               <div className="color-btn-text">
@@ -200,7 +195,7 @@ export default function SAndLScreen({ pageName, children }) {
             <div
               className="color-btn gold"
               onClick={() => {
-                sAndLStates.animInProgress ? null : setDiceColor(true);
+                sAndLStates.animInProgress && setDiceColor(true);
               }}
             >
               <div className="color-btn-text">
@@ -244,7 +239,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn questBtn"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup questChain",
@@ -262,7 +257,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn craftBtn"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup psemain sAndL",
@@ -280,7 +275,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn ratingBtn"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup fapop-rating",
@@ -299,7 +294,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="btnI"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup info-pop",
@@ -320,7 +315,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup fortuna-main uni-sale",
@@ -339,7 +334,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup essence-buy",
@@ -366,7 +361,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup essence-buy",

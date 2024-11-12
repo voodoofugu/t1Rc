@@ -1,14 +1,10 @@
 import { memo } from "react";
+import { nexusDispatch, useNexus } from "nexus-state";
+
 import ItemBox from "../UIComponents/ItemBox";
 
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
-
 export default memo(function ChestsShop() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <div className="content">
@@ -16,7 +12,7 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box diamonds"
           onClick={() =>
-            popupState.popOpen(dispatch, {
+            popupState.popOpen(nexusDispatch, {
               mpopClass: "m-popup diamond-buy",
               popTit: "Buy Diamonds!",
               popCont: ["DiamondBuy"],
@@ -29,7 +25,7 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box oil"
           onClick={() =>
-            popupState.popOpen(dispatch, {
+            popupState.popOpen(nexusDispatch, {
               mpopClass: "m-popup essence-buy",
               popTit: "Buy Oil",
               popCont: [
@@ -50,7 +46,7 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box spirit"
           onClick={() =>
-            popupState.popOpen(dispatch, {
+            popupState.popOpen(nexusDispatch, {
               mpopClass: "m-popup essence-buy",
               popTit: "Buy Angel Spirit",
               popCont: [
@@ -71,7 +67,7 @@ export default memo(function ChestsShop() {
         <div
           className="color-btn info"
           onClick={() =>
-            popupState.popOpen(dispatch, {
+            popupState.popOpen(nexusDispatch, {
               mpopClass: "m-popup info-pop",
               popTit: "Chest Shop Info",
               popCont: [
@@ -96,7 +92,7 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                popupState.popOpen(dispatch, {
+                popupState.popOpen(nexusDispatch, {
                   mpopClass: "m-popup openchest",
                   popTit: "open the chest",
                   popCont: ["OpenChest"],
@@ -119,7 +115,7 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                popupState.popOpen(dispatch, {
+                popupState.popOpen(nexusDispatch, {
                   mpopClass: "m-popup sh2-openchest2",
                   popTit: "open the chest",
                   popCont: ["Sh2Openchest", { shClass: "sh2" }],
@@ -142,7 +138,7 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                popupState.popOpen(dispatch, {
+                popupState.popOpen(nexusDispatch, {
                   mpopClass: "m-popup sh2-openchest2",
                   popTit: "open the chest",
                   popCont: ["Sh2Openchest", { shClass: "sh2", dark: true }],

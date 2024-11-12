@@ -1,12 +1,7 @@
 import React from "react";
 // import { Scroll } from "morphing-scroll";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
-import { useNexus } from "nexus-state";
-
-import {
-  useDispatch,
-  selectors,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 // import ResCount from "../UIComponents/ResCount";
@@ -26,8 +21,6 @@ export const cssFiles = [
 ];
 
 export default function Dating({ pageName, children }) {
-  const dispatch = useDispatch();
-
   return (
     <div className="main world1">
       <div className="main-bg dating"></div>
@@ -40,7 +33,7 @@ export default function Dating({ pageName, children }) {
           className="info"
           text="i"
           onClick={() => {
-            dispatch({
+            nexusDispatch({
               type: "POPUP_OPEN",
               payload: {
                 mpopClass: "m-popup contentOnly framedPop",
@@ -56,10 +49,6 @@ export default function Dating({ pageName, children }) {
           }}
         />
 
-        <div style={{ position: "absolute", right: "80px", top: "0px" }}>
-          <Button className="exit" text />
-        </div>
-
         <div className="heroFigure"></div>
 
         <GirlDependencies girlsInfo={girlsInfo} />
@@ -71,8 +60,6 @@ export default function Dating({ pageName, children }) {
 }
 
 const GirlDependencies = ({ girlsInfo }) => {
-  const dispatch = useDispatch();
-
   const [girlIndex, setGirlIndex] = React.useState(0);
 
   return (
@@ -82,7 +69,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         text="Girl gifts"
         img="img/dating/giftsIcn.png"
         onClick={() => {
-          dispatch({
+          nexusDispatch({
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",

@@ -1,15 +1,10 @@
-import React from "react";
+import { nexusDispatch, useNexus } from "nexus-state";
 
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
 
 function XmasPop1({ setXmasPop }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
@@ -91,13 +86,16 @@ function XmasPop1({ setXmasPop }) {
               ></div>
               <div className="xmas-level-level-num-box">
                 {elements.map((element, index) => (
-                  <div className="xmas-level-level-num">{index + 1}</div>
+                  <div key={index} className="xmas-level-level-num">
+                    {index + 1}
+                  </div>
                 ))}
               </div>
             </div>
             <div className="xmas-level-reward">
               {elements.map((element, index) => (
                 <ItemBox
+                  key={index}
                   itemClass={`wh60 ${element.itemClass}`}
                   itemPic={element.itemPic}
                   count={element.count}
@@ -122,7 +120,7 @@ function XmasPop1({ setXmasPop }) {
         </div>
         <div
           className="color-btn green"
-          onClick={() => popupState.popClose(dispatch)}
+          onClick={() => popupState.popClose(nexusDispatch)}
         >
           <div className="color-btn-text">close</div>
         </div>

@@ -1,12 +1,9 @@
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
+
 import ComicsBallon from "../UIComponents/ComicsBallon";
 
 export default function ComicsPop() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <div className="content">
@@ -70,7 +67,7 @@ export default function ComicsPop() {
       </div>
       <div
         className="btn-close-x"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       />
     </div>
   );

@@ -1,8 +1,4 @@
-import React from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
@@ -10,14 +6,13 @@ import ResCount from "../UIComponents/ResCount";
 import OfferCardBox from "../UIComponents/OfferCardBox";
 
 export default function DaitingGiftsPop({ girleID }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       ></div>
 
       <div className="content">
@@ -74,7 +69,7 @@ export default function DaitingGiftsPop({ girleID }) {
 
         <div
           className="btn-close-x"
-          onClick={() => popupState.popClose(dispatch)}
+          onClick={() => popupState.popClose(nexusDispatch)}
         />
       </div>
     </>

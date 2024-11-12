@@ -1,6 +1,6 @@
 import TrophyResBoxAll from "../UIComponents/TrophyResBoxAll";
 
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 export const cssFiles = ["clan-trophies", "screen-superhero"];
 
@@ -8,8 +8,6 @@ export default function V2MainScreen02GuildClanTrophies({
   pageName,
   children,
 }) {
-  const dispatch = useDispatch();
-
   return (
     <div className="main world1">
       <div className="main-bg"></div>
@@ -22,7 +20,7 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    dispatch({
+                    nexusDispatch({
                       type: "POPUP_OPEN",
                       payload: {
                         mpopClass: "m-popup clan-trophy",
@@ -68,7 +66,7 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    dispatch({
+                    nexusDispatch({
                       type: "POPUP_OPEN",
                       payload: {
                         mpopClass: "m-popup clan-trophy",
@@ -119,7 +117,7 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    dispatch({
+                    nexusDispatch({
                       type: "POPUP_OPEN",
                       payload: {
                         mpopClass: "m-popup clan-trophy",

@@ -1,8 +1,4 @@
-import React from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ProgressBar from "../UIComponents/ProgressBar";
@@ -12,8 +8,7 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function FortunaMainRound16Big() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
@@ -27,7 +22,7 @@ export default function FortunaMainRound16Big() {
       <Button
         className="exit"
         text="✖"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       />
 
       <ResCount
@@ -35,7 +30,7 @@ export default function FortunaMainRound16Big() {
         value="234"
         plus
         onClick={() =>
-          popupState.popOpen(dispatch, {
+          popupState.popOpen(nexusDispatch, {
             mpopClass: "m-popup essence-buy contentOnly framedPop",
             popCont: [
               "BuyShop",
@@ -54,7 +49,7 @@ export default function FortunaMainRound16Big() {
         className="info"
         text="i"
         onClick={() => {
-          dispatch({
+          nexusDispatch({
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",

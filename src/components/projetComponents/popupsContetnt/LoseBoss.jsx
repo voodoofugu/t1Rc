@@ -1,12 +1,8 @@
 import React, { memo } from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 export default memo(function LoseBoss() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
@@ -35,7 +31,7 @@ export default memo(function LoseBoss() {
         <div className="lbclose-btn">
           <div
             className="btn-text"
-            onClick={() => popupState.popClose(dispatch)}
+            onClick={() => popupState.popClose(nexusDispatch)}
           >
             закрыть
           </div>

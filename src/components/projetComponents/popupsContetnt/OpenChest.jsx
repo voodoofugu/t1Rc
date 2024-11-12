@@ -1,14 +1,10 @@
 import { memo, useState } from "react";
+import { nexusDispatch, useNexus } from "nexus-state";
 
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
 import PopResValue from "../UIComponents/PopResValue";
 
 export default memo(function OpenChest() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   const [rightBox, setRightBox] = useState("");
 
@@ -56,7 +52,7 @@ export default memo(function OpenChest() {
             <div
               className="openchest-bonus-btn free"
               onClick={() =>
-                popupState.popOpen(dispatch, {
+                popupState.popOpen(nexusDispatch, {
                   mpopClass: "m-popup change-givepic",
                   popTit: "Новая картинка!",
                   popCont: ["ChangeGivepic"],

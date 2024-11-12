@@ -1,4 +1,5 @@
 import React, { memo, useEffect, useState } from "react";
+import { nexusDispatch } from "nexus-state";
 
 import ItemNotiz from "./ItemNotiz";
 
@@ -219,7 +220,7 @@ export default memo(function SAndLSVGPlates({
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
-    dispatch({
+    nexusDispatch({
       type: "ACTIVE_TIME",
       payload: 150,
     });
@@ -231,7 +232,7 @@ export default memo(function SAndLSVGPlates({
   useEffect(() => {
     if (targetPlate !== sAndLStates.activePlate) {
       interval = setTimeout(() => {
-        dispatch({
+        nexusDispatch({
           type: "ACTIVE_PLATE",
           payload:
             sAndLStates.activePlate < targetPlate
@@ -244,7 +245,7 @@ export default memo(function SAndLSVGPlates({
           sAndLStates.activePlate === targetPlate + 1
         ) {
           clearInterval(interval);
-          dispatch({
+          nexusDispatch({
             type: "ANIM_IN_PROG",
             payload: false,
           });
@@ -264,12 +265,12 @@ export default memo(function SAndLSVGPlates({
     if (!sAndLStates.animInProgress && index !== -1) {
       const targetPlate = validIndexes[index][0][1];
       setTimeout(() => {
-        dispatch({ type: "ANIM_PORTAL", payload: true });
+        nexusDispatch({ type: "ANIM_PORTAL", payload: true });
       }, 400);
       setTimeout(() => {
         setTargetPlate(targetPlate);
-        dispatch({ type: "ACTIVE_PLATE", payload: targetPlate });
-        dispatch({ type: "ANIM_PORTAL", payload: false });
+        nexusDispatch({ type: "ACTIVE_PLATE", payload: targetPlate });
+        nexusDispatch({ type: "ANIM_PORTAL", payload: false });
       }, 800);
     }
   }, [specialIndexes, sAndLStates.activePlate, sAndLStates.animInProgress]);
@@ -284,7 +285,7 @@ export default memo(function SAndLSVGPlates({
   // Обработчик клика по плашке
   const handleClick = (index) => {
     if (!sAndLStates.animInProgress && index !== sAndLStates.activePlate) {
-      dispatch({
+      nexusDispatch({
         type: "ANIM_IN_PROG",
         payload: true,
       });

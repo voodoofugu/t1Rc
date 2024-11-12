@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 export const cssFiles = [
   "v2-screen-sexped-main",
@@ -9,8 +9,6 @@ export const cssFiles = [
 ];
 
 export default function V2MainScreen12SexpedMain({ pageName, children }) {
-  const dispatch = useDispatch();
-
   const currentPath = window.location.hash.substring(3).split("/")[0];
 
   useEffect(() => {
@@ -197,7 +195,7 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
           <div
             className="color-btn rating"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass:

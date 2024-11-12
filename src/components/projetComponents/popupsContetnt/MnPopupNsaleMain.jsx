@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 import ItemBox from "../UIComponents/ItemBox";
 
 function NmPopContentChest({ hole }) {
@@ -379,12 +379,10 @@ function NmPopContentOffer({ hole }) {
 }
 
 export default function MnPopupNsaleMain({ hole }) {
-  const dispatch = useDispatch();
-
   const [activeMenu, setActiveMenu] = useState("chest");
 
   useEffect(() => {
-    dispatch({
+    nexusDispatch({
       type: "POPUP_CHANGE",
       payload: `mn-popup ${
         activeMenu === "magic"

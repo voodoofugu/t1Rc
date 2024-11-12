@@ -1,8 +1,5 @@
 import React, { memo } from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
@@ -111,8 +108,7 @@ export default memo(function RelicsPop({ event }) {
     event === "xmas" ? "img/bGs/xmasBg.jpg" : "img/bGs/halloweenBg.jpg";
 
   const evData = data.find((item) => item[event]);
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
@@ -123,7 +119,7 @@ export default memo(function RelicsPop({ event }) {
       <Button
         className="exit"
         text="✖"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       />
 
       <div className="main-relics-girl-box">

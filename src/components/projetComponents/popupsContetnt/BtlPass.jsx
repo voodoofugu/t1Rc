@@ -1,7 +1,4 @@
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { useNexus, nexusDispatch } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
@@ -13,8 +10,7 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function BtlPass({ btlClass }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   const edgeGradient = btlClass === "xmas" ? "#288cbe" : "#202c38";
 
@@ -112,7 +108,7 @@ export default function BtlPass({ btlClass }) {
         className="info"
         text="i"
         onClick={() => {
-          dispatch({
+          nexusDispatch({
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
@@ -132,7 +128,7 @@ export default function BtlPass({ btlClass }) {
       <Button
         className="exit"
         text="✖"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       />
 
       <Button
@@ -140,7 +136,7 @@ export default function BtlPass({ btlClass }) {
         text="Buy Currency"
         img
         onClick={() =>
-          popupState.popOpen(dispatch, {
+          popupState.popOpen(nexusDispatch, {
             mpopClass: "m-popup essence-buy contentOnly framedPop",
             popCont: buyShopCont,
           })
@@ -208,7 +204,7 @@ export default function BtlPass({ btlClass }) {
                 countOut={index + 1}
                 onClick={() => {
                   element.itemClass === "get" &&
-                    dispatch({
+                    nexusDispatch({
                       type: "NOTIF_VIEW",
                       payload: {
                         view: true,

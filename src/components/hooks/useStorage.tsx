@@ -1,28 +1,31 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 /**
  * Хук для управления состоянием с использованием localStorage или sessionStorage.
  * @param {string} storageKey - Ключ, используемый для хранения в localStorage или sessionStorage.
- * @param {string} defaultValue - Значение по умолчанию, используемое, если нет сохраненного значения.
- * @param {boolean} storageType - Если true, используется localStorage; если false, sessionStorage.
+ * @param {string} storageType - Тип хранилища: "local" или "session".
  * @returns {[string, (value: string) => void]} - Массив, содержащий текущее значение и функцию для его обновления.
  */
 
 export default function useStorage(
-  storageKey: string,
-  defaultValue: string,
-  storageType: boolean
-): [string, (value: string) => void] {
-  const storage = storageType ? localStorage : sessionStorage;
-
-  const [value, setValue] = useState(() => {
-    const storedValue = storage.getItem(storageKey);
-    return storedValue ? JSON.parse(storedValue) : defaultValue;
-  });
-
+  storItem:
+    | {
+        name: string;
+        value: Record<string, unknown> | unknown[] | string | number | boolean;
+        type: "local" | "session";
+      }
+    | {
+        name: string;
+        value: Record<string, unknown> | unknown[] | string | number | boolean;
+        type: "local" | "session";
+      }[]
+) {
   useEffect(() => {
-    storage.setItem(storageKey, JSON.stringify(value));
-  }, [storageKey, value, storage]);
+    const items = Array.isArray(storItem) ? storItem : [storItem];
 
-  return [value, setValue];
+    items.forEach((item) => {
+      const storageType = item.type === "local" ? localStorage : sessionStorage;
+      storageType.setItem(item.name, JSON.stringify(item.value));
+    });
+  }, [storItem]);
 }

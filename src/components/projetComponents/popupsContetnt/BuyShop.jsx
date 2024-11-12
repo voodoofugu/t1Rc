@@ -1,20 +1,15 @@
-import React from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import Button from "../UIComponents/Button";
 
 export default function BuyShop({ img1, img2, img3, img4, diamond }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       ></div>
 
       <div className="content">
@@ -26,7 +21,7 @@ export default function BuyShop({ img1, img2, img3, img4, diamond }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() => popupState.popClose(dispatch)}
+          onClick={() => popupState.popClose(nexusDispatch)}
         />
 
         <div className="essence-card-box">

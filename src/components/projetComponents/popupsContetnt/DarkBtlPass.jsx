@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "./PopResValue";
@@ -14,8 +11,7 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function DarkBtlPass() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
@@ -25,7 +21,7 @@ export default function DarkBtlPass() {
         className="info"
         text="i"
         onClick={() => {
-          dispatch({
+          nexusDispatch({
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
@@ -46,7 +42,7 @@ export default function DarkBtlPass() {
       <Button
         className="exit"
         text="✖"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       />
 
       <Button
@@ -54,7 +50,7 @@ export default function DarkBtlPass() {
         text="Buy Currency"
         img="img/ic-red-potion-1.png"
         onClick={() =>
-          popupState.popOpen(dispatch, {
+          popupState.popOpen(nexusDispatch, {
             mpopClass: "m-popup essence-buy contentOnly framedPop",
             popCont: [
               "BuyShop",

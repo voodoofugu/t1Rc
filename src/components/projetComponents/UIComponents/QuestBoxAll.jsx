@@ -1,9 +1,7 @@
 import { memo, useState } from "react";
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 function Quest({ img, timerbox, payload }) {
-  const dispatch = useDispatch();
-
   const renderImages = () => {
     if (Array.isArray(img)) {
       return img.map((i, index) => (
@@ -21,7 +19,7 @@ function Quest({ img, timerbox, payload }) {
       className={`quest`}
       onClick={() => {
         payload
-          ? dispatch({
+          ? nexusDispatch({
               type: "POPUP_OPEN",
               payload: payload,
             })

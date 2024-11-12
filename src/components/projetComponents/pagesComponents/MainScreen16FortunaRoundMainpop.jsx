@@ -1,4 +1,4 @@
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 export const cssFiles = ["screen-fortuna-round-main_16x", "daiting-gifts-pop"];
 
@@ -6,8 +6,6 @@ export default function MainScreen16FortunaRoundMainpop({
   pageName,
   children,
 }) {
-  const dispatch = useDispatch();
-
   return (
     <div className="main world1">
       <div className="main-bg"></div>
@@ -20,7 +18,7 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup fortuna-main-round",
@@ -38,7 +36,7 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup fortuna-main-round contentOnly",
@@ -55,7 +53,7 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup fortuna-main-round",

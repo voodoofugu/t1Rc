@@ -6,13 +6,11 @@ import {
   startTransition,
   useDeferredValue,
 } from "react";
+import { nexusDispatch } from "nexus-state";
 
 import PageList from "../projetComponents/pagesComponents/a_pageList.json";
-import { useDispatch } from "./GlobalStateStor";
 
 export default function SearchButton() {
-  const dispatch = useDispatch();
-
   const [focus, setFocus] = useState(false);
   const [searchText, setSearchText] = useState(
     sessionStorage.getItem("searchText") || ""
@@ -50,7 +48,7 @@ export default function SearchButton() {
       }
 
       if (filteredData.length !== prevFilteredValueRef.current.length) {
-        dispatch({
+        nexusDispatch({
           type: "SEARCH_DATA",
           payload: filteredData,
         });

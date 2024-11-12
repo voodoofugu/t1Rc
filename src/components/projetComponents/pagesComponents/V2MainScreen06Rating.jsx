@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-import { selectors } from "../../templateComponents/GlobalStateStor";
+import { useNexus } from "nexus-state";
 
 import StateChangeBtn from "../UIComponents/StateChangeBtn";
 
@@ -141,7 +140,7 @@ function Tooltip() {
 }
 
 export default function V2MainScreen06Rating({ pageName }) {
-  const activePage = selectors.useActivePage();
+  const activePage = useNexus("activePage");
 
   const [tooltip, setTooltip] = useState(false);
 

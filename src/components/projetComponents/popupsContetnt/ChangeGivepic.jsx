@@ -1,13 +1,8 @@
 import { memo } from "react";
-
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 export default memo(function ChangeGivepic() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
@@ -42,7 +37,7 @@ export default memo(function ChangeGivepic() {
           <div
             className="change-btn-info"
             onClick={() =>
-              popupState.popOpen(dispatch, {
+              popupState.popOpen(nexusDispatch, {
                 mpopClass: "m-popup change-collpop",
                 popTit: "collection",
                 popCont: ["ChangeCollpop"],
@@ -75,7 +70,7 @@ export default memo(function ChangeGivepic() {
       </div>
       <div
         className="color-btn okgoit green"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       >
         <div className="color-btn-text">ок</div>
       </div>

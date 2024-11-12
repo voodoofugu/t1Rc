@@ -1,20 +1,15 @@
 import React, { memo } from "react";
-
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 export default memo(function ChangeCollpop() {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
       <div className="color-box"></div>
       <div
         className="close-btn-box"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       >
         <div className="color-btn close">
           <div className="color-btn-text">закрыть</div>

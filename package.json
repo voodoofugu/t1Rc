@@ -17,7 +17,7 @@
     "build": "webpack --env mode=production",
     "compileScss": "ts-node src/scripts/templateScripts/compileScss.ts",
     "tailwindcss": "npx tailwindcss -i src/styles/tailwind/input.css -o src/styles/tailwind/output.css --watch --minify",
-    "get-neededFile-list": "ts-node src/scripts/templateScripts/get-neededFile-list.ts",
+    "get-page/popup-list": "ts-node src/scripts/templateScripts/get-pageORpopup-list.ts",
     "fetch-figma-icns": "ts-node src/scripts/templateScripts/fetch-figma-icons.ts",
     "get-icns-json": "ts-node src/scripts/templateScripts/get-icns-json.ts",
     "start-ws-server": "ts-node src/scripts/server/wsServer.ts",

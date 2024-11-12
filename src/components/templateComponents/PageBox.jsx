@@ -1,7 +1,6 @@
 import { memo, useMemo, useState, useEffect, useLayoutEffect } from "react";
 import { MultiGrid, AutoSizer } from "react-virtualized";
-
-import { selectors } from "./GlobalStateStor";
+import { useNexus } from "nexus-state";
 
 import CellContent from "./CellContent";
 import ToTopButton from "./ToTopButton";
@@ -43,7 +42,7 @@ function Cell({
 }
 
 export default memo(function PageBox() {
-  const searchData = selectors.useSearchData();
+  const searchData = useNexus("searchData");
 
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollTopValue, setScrollTopValue] = useState(0);

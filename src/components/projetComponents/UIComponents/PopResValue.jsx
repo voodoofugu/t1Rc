@@ -1,19 +1,14 @@
 import { memo } from "react";
-
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 export default memo(function PopResValue({ resClass, resValue, notPlus }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   let click = null;
 
   if (resClass === "chest") {
     click = () =>
-      popupState.popOpen(dispatch, {
+      popupState.popOpen(nexusDispatch, {
         mpopClass: "m-popup change-addchest",
         popTit: "Купите еще Boss Chests!",
         popCont: ["ChangeAddchest"],

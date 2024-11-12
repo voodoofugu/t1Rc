@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { useNexus, nexusDispatch } from "nexus-state";
 
 import ItemBox from "./ItemBox";
 
@@ -18,8 +15,7 @@ export default function Notification({
   const timer2 = useRef(null);
   const randomKey = Math.random().toString(36).slice(2, 6);
 
-  const notifState = selectors.useNotif();
-  const dispatch = useDispatch();
+  const notifState = useNexus("notif");
 
   const localView = view || notifState.view;
   const localClassName = className || notifState.className;
@@ -42,7 +38,7 @@ export default function Notification({
 
     timer2.current = setTimeout(() => {
       clearTimeouts();
-      dispatch({
+      nexusDispatch({
         type: "NOTIF_VIEW",
         payload: {},
       });

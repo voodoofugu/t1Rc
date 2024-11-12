@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ResizeTracker from "../../../../morphing-scroll/src/ResizeTracker";
@@ -14,8 +14,6 @@ import Message from "../UIComponents/Message";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 const Chat = ({ girlInfo }) => {
-  const dispatch = useDispatch();
-
   const currentMessageIndex = React.useRef(NaN);
   const chatProgressHandleCondition = React.useRef(false);
   const timeoutsRef = React.useRef([]);
@@ -180,7 +178,7 @@ const Chat = ({ girlInfo }) => {
           {message.Girl[item] === "img" ? (
             <Message
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup uki-story-popup contentOnly",

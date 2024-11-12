@@ -1,5 +1,3 @@
-import React from "react";
-
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";

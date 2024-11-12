@@ -1,10 +1,5 @@
-import { memo, useState, useEffect } from "react";
-
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
-import infoPopHtmlReducer from "./infoPopHtmlReducer";
+import { useState, useEffect } from "react";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 export default function InfoPop({
   colorBox,
@@ -17,8 +12,7 @@ export default function InfoPop({
   btn2curency,
   btn2State,
 }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   const [textExtraState, setTextExtraState] = useState(false);
   const [htmlText, setHtmlText] = useState(null);
@@ -51,16 +45,14 @@ export default function InfoPop({
               {textExtra}
             </div>
           ) : (
-            <div key={2} className="text">
-              {htmlText ? infoPopHtmlReducer(htmlText) : text}
-            </div>
+            <div key={2} className="text"></div>
           )}
         </div>
         {btnText1 ? (
           <div className={`color-btn ${btnClass1 ? btnClass1 : ""}`}>
             <div
               className="color-btn-text"
-              onClick={() => popupState.popClose(dispatch)}
+              onClick={() => popupState.popClose(nexusDispatch)}
             >
               {btnText1}
             </div>
@@ -72,8 +64,8 @@ export default function InfoPop({
           <div
             className={`color-btn ${btnClass2 ? btnClass2 : ""}`}
             onClick={() => {
-              popupState.popClose(dispatch);
-              btn2State;
+              popupState.popClose(nexusDispatch);
+              // btn2State;
             }}
           >
             <div className="color-btn-text">

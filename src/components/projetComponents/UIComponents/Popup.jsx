@@ -1,10 +1,7 @@
 import { memo, lazy, useEffect, Suspense } from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
-import a_popupList from "../popupsContetnt/a_popupList";
+import { nexusDispatch, useNexus } from "nexus-state";
 
+import a_popupList from "../popupsContetnt/a_popupList";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 const componentsMap = a_popupList.reduce((map, name) => {
@@ -13,28 +10,14 @@ const componentsMap = a_popupList.reduce((map, name) => {
 }, {});
 
 export default memo(function Popup({ pageName }) {
-  const activePage = selectors.useActivePage();
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const activePage = useNexus("activePage");
+  const popupState = useNexus("popupState");
 
-  const ComponentToRender = componentsMap[popupState.popCont[0]];
-  const componentProps = popupState.popCont[1];
+  const ComponentToRender = popupState.popCont[0]
+    ? componentsMap[popupState.popCont[0]]
+    : null;
+  const componentProps = popupState.popCont[1] ? popupState.popCont[1] : null;
   const props = popupState.props;
-
-  const storageInitialData = JSON.parse(
-    sessionStorage.getItem("initialStates")
-  );
-
-  useEffect(() => {
-    if (storageInitialData.popupState.popupVisible) {
-      dispatch({
-        type: "POPUP_OPEN",
-        payload: {
-          ...storageInitialData.popupState,
-        },
-      });
-    }
-  }, []);
 
   return (
     <>
@@ -45,7 +28,7 @@ export default memo(function Popup({ pageName }) {
         >
           <div
             className="screen-blend-55"
-            onClick={() => popupState.popClose(dispatch)}
+            onClick={() => popupState.popClose(nexusDispatch)}
           ></div>
           <div id="popupContainer">
             <div className={popupState.mpopClass} style={popupState.popStyle}>
@@ -72,10 +55,6 @@ export default memo(function Popup({ pageName }) {
                   <ComponentToRender {...componentProps} {...props} />
                 )}
               </Suspense>
-              {/* <div
-                className={popupState.btnXClass}
-                onClick={() => popupState.popClose(dispatch)}
-              ></div> */}
               {popupState.timer && (
                 <div className="wpck-timer-box">
                   <div className="time-left">time left</div>

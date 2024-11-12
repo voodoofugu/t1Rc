@@ -1,4 +1,4 @@
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 import ItemBox from "../UIComponents/ItemBox";
 
 export const cssFiles = [
@@ -13,8 +13,6 @@ export const cssFiles = [
 ];
 
 export default function V2MainScreen09HwFapopoly({ pageName, children }) {
-  const dispatch = useDispatch();
-
   return (
     <div className="main world1">
       <div
@@ -771,7 +769,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
           <div
             className="bfIcon"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup events-btlpass-pop hw",
@@ -786,7 +784,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
           <div
             className="bfIcon second"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup essence-buy",
@@ -809,7 +807,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             <div
               className="color-btn rating"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup fapop-rating",
@@ -831,7 +829,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             <div
               className="color-btn token"
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup fapop-shop buyed",

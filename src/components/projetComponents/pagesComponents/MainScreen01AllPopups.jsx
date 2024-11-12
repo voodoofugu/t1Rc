@@ -1,7 +1,7 @@
 import { useState } from "react";
 import WorldBtnBox from "../UIComponents/WorldBtnBox";
 
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 import QuestBoxAll from "../UIComponents/QuestBoxAll";
 import Notification from "../UIComponents/Notification";
 
@@ -57,7 +57,6 @@ const childClickStopPropagation = (e) => {
 };
 
 export default function MainScreen01AllPopups({ pageName, children }) {
-  const dispatch = useDispatch();
   const [xmasPop, setXmasPop] = useState("xmas-pop1");
 
   return (
@@ -110,7 +109,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           <div
             className="res-chest-btn"
             onClick={() => {
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup chests-shop",
@@ -596,7 +595,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                   <div
                     className="hero-card highlight"
                     onClick={() => {
-                      dispatch({
+                      nexusDispatch({
                         type: "POPUP_OPEN",
                         payload: {
                           mpopClass: "m-popup hero-popup",

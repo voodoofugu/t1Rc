@@ -9,7 +9,7 @@ import {
 import { createPortal } from "react-dom";
 
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
-import { selectors, useDispatch } from "./GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import Loading from "./Loading";
 import HelmetForCss from "./HelmetForCss";
@@ -18,8 +18,7 @@ import ComponToLoad from "../projetComponents/UIComponents/ComponToLoad";
 import Tooltip from "./Tooltip";
 
 export default memo(function CellContent({ pageName, loadable }) {
-  const activePage = selectors.useActivePage();
-  const dispatch = useDispatch();
+  const activePage = useNexus("activePage");
 
   const [stylesLoaded, setStylesLoaded] = useState(false);
   const [isCSSFiles, setIsCSSFiles] = useState([]);
@@ -32,10 +31,6 @@ export default memo(function CellContent({ pageName, loadable }) {
     top: 0,
     left: 0,
   });
-
-  const storageInitialData = JSON.parse(
-    sessionStorage.getItem("initialStates")
-  );
 
   let transformedCssFiles = Array.isArray(isCSSFiles)
     ? transformCssFileNames(isCSSFiles).join(" ")
@@ -66,7 +61,7 @@ export default memo(function CellContent({ pageName, loadable }) {
         const statesNewTab = window.location.hash.substring(3);
         const hashParts = statesNewTab.split("/");
         if (hashParts[0] === pageName) {
-          dispatch({
+          nexusDispatch({
             type: "PAGE_DATA",
             payload: {
               scrollTop: hashParts[1],
@@ -75,7 +70,7 @@ export default memo(function CellContent({ pageName, loadable }) {
             },
           });
 
-          dispatch({
+          nexusDispatch({
             type: "ACTIVE_PAGE",
             payload: hashParts[0],
           });
@@ -100,12 +95,12 @@ export default memo(function CellContent({ pageName, loadable }) {
       const positionData = computePositionData(event);
 
       setPosition(positionData);
-      dispatch({
+      nexusDispatch({
         type: "ACTIVE_PAGE",
         payload: pageName,
       });
 
-      dispatch({
+      nexusDispatch({
         type: "PAGE_DATA",
         payload: positionData,
       });
@@ -123,7 +118,7 @@ export default memo(function CellContent({ pageName, loadable }) {
   };
 
   const pageClose = () => {
-    const { top, left } = storageInitialData.pageData;
+    const { top, left } = JSON.parse(sessionStorage.getItem("pageData"));
 
     setPosition({
       top: top,
@@ -132,7 +127,7 @@ export default memo(function CellContent({ pageName, loadable }) {
     setStyle(false);
 
     setTimeout(() => {
-      dispatch({
+      nexusDispatch({
         type: "ACTIVE_PAGE",
         payload: "",
       });

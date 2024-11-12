@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 
@@ -16,8 +16,6 @@ export const cssFiles = [
 ];
 
 export default function V2MainScreen02GuildMaster({ pageName, children }) {
-  const dispatch = useDispatch();
-
   const [activeMenu, setActiveMenu] = useState("stats");
   const [nameEdit, setNameEdit] = useState(false);
 
@@ -197,7 +195,8 @@ export default function V2MainScreen02GuildMaster({ pageName, children }) {
         <a
           className="btn-discord"
           href="https://discord.gg/7pjeXF3emj"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         ></a>
       </div>
       <div className="left-side false false">
@@ -210,7 +209,7 @@ export default function V2MainScreen02GuildMaster({ pageName, children }) {
                 <div
                   className="color-btn-info"
                   onClick={() => {
-                    dispatch({
+                    nexusDispatch({
                       type: "POPUP_OPEN",
                       payload: {
                         mpopClass: "m-popup info-pop",

@@ -1,24 +1,19 @@
-import React from "react";
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 export default function DatingImgPop({ img }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       ></div>
       <div className="content">
         <img className="pic" src={img} loading="lazy" />
         <div
           className="btn-close-x"
-          onClick={() => popupState.popClose(dispatch)}
+          onClick={() => popupState.popClose(nexusDispatch)}
         />
       </div>
     </>

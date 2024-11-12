@@ -1,4 +1,5 @@
 import { createAction } from "nexus-state";
+import { PopupState } from "./types";
 
 type InitialStatesT = typeof initialStates;
 type InitialActionsT = typeof actions;
@@ -98,7 +99,7 @@ export const actions = {
 
   POPUP_CLOSE: createAction((state) => ({
     ...state,
-    popupState: state.popupState,
+    popupState: initialStates.popupState,
   })),
 
   POPUP_CHANGE: createAction((state, action) => ({

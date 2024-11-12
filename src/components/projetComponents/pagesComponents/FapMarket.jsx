@@ -1,5 +1,4 @@
-import React from "react";
-import { useDispatch } from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch } from "nexus-state";
 
 import ResCount from "../UIComponents/ResCount";
 import StoreItemBox from "../UIComponents/StoreItemBox";
@@ -17,7 +16,6 @@ export const cssFiles = [
 ];
 
 export default function FapMarket({ pageName, children }) {
-  const dispatch = useDispatch();
   // const ReactElement = useDeserializedComponent("TestCompon", "./");
 
   return (
@@ -49,7 +47,7 @@ export default function FapMarket({ pageName, children }) {
             timer="23:54:55"
             updateBtn
             onClick={() =>
-              dispatch({
+              nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup info-pop",
@@ -81,7 +79,7 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup essence-buy",
@@ -104,7 +102,7 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup essence-buy",
@@ -127,7 +125,7 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                dispatch({
+                nexusDispatch({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup essence-buy",

@@ -1,20 +1,18 @@
-import {
-  selectors,
-  useDispatch,
-} from "../../templateComponents/GlobalStateStor";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
+import ImageBg from "../UIComponents/ImageBg";
+import Button from "../UIComponents/Button";
 
 export default function InfoPopFramed({ inner, girlImg }) {
-  const popupState = selectors.usePopupState();
-  const dispatch = useDispatch();
+  const popupState = useNexus("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() => popupState.popClose(dispatch)}
+        onClick={() => popupState.popClose(nexusDispatch)}
       ></div>
       <div className="content">
         <div className="popupFrame">
@@ -32,14 +30,14 @@ export default function InfoPopFramed({ inner, girlImg }) {
           <div className="inner">{inner}</div>
         </Scroll>
 
-        <div
-          className="btn-close-x"
-          onClick={() => popupState.popClose(dispatch)}
+        <Button
+          className="exit"
+          text="✖"
+          onClick={() => popupState.popClose(nexusDispatch)}
         />
       </div>
-      <div className="girlImg">
-        <img src={girlImg} />
-      </div>
+
+      <ImageBg className="girlImg infoGirl" img={girlImg} />
     </>
   );
 }
