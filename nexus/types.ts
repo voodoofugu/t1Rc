@@ -13,3 +13,10 @@ export type PopupState = {
   popClose?: () => void;
   props?: any[];
 };
+
+export type SAndLT = {
+  activePlate: number;
+  activeTime: number;
+  animInProgress: boolean;
+  animPortal: boolean;
+};

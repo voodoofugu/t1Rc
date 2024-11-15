@@ -12,7 +12,12 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 export default function BtlPass({ btlClass }) {
   const popupState = useNexus("popupState");
 
-  const edgeGradient = btlClass === "xmas" ? "#288cbe" : "#202c38";
+  const edgeGradient =
+    btlClass === "autumn"
+      ? "#b01a6c"
+      : btlClass === "xmas"
+      ? "#288cbe"
+      : "#202c38";
 
   const girlImg =
     btlClass === "xmas"
@@ -27,6 +32,8 @@ export default function BtlPass({ btlClass }) {
       ? "images/hero-all/tithero-430/icons/break-girl"
       : btlClass === "summer"
       ? "images/hero-all/tithero-430/icons/break-girl"
+      : btlClass === "autumn"
+      ? "images/hero-all/tithero-440/icons/break-girl"
       : btlClass === "sexpedition"
       ? "images/hero-all/tithero-423/icons/break-girl4"
       : null;

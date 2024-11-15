@@ -480,8 +480,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-autumn-leaf-120",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup events-btlpass-pop autumn",
-                  popTit: "Valentine's Day Event Pass",
+                  mpopClass: "m-popup events-btlpass-pop autumn contentOnly",
                   popCont: ["BtlPass", { btlClass: "autumn" }],
                 },
               ],

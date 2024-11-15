@@ -37,17 +37,25 @@ export default memo(function CellContent({ pageName, loadable }) {
     : "";
 
   const fetchComponentData = async () => {
-    const { cssFiles } = await import(
-      `../projetComponents/pagesComponents/${pageName}`
-    );
-    const pagesComponent = lazy(() =>
-      import(`../projetComponents/pagesComponents/${pageName}`)
-    );
+    try {
+      const module = await import(
+        `../projetComponents/pagesComponents/${pageName}`
+      );
 
-    startTransition(() => {
-      setIsCSSFiles(cssFiles);
-      setDynamicComponent(pagesComponent);
-    });
+      const { cssFiles } = module;
+      const pagesComponent = module.default;
+
+      if (!pagesComponent) {
+        throw new Error("Компонент по умолчанию не найден");
+      }
+
+      startTransition(() => {
+        setIsCSSFiles(cssFiles);
+        setDynamicComponent(() => pagesComponent);
+      });
+    } catch (error) {
+      console.error("Ошибка загрузки компонента:", error);
+    }
   };
 
   useEffect(() => {

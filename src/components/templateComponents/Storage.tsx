@@ -10,7 +10,6 @@ export default function Storage({ watch }: StorageType): null {
   const allStates = useNexus();
 
   const popupStateStor = JSON.parse(sessionStorage.getItem("popupState"));
-  console.log("popupStateStor", popupStateStor);
 
   useEffect(() => {
     if (popupStateStor && popupStateStor.popupVisible) {
@@ -30,6 +29,11 @@ export default function Storage({ watch }: StorageType): null {
     {
       name: "popupState",
       value: allStates.popupState,
+      type: "session",
+    },
+    watch && {
+      name: "allStates✨",
+      value: allStates,
       type: "session",
     },
   ]);

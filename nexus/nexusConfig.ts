@@ -1,5 +1,5 @@
 import { createAction } from "nexus-state";
-import { PopupState } from "./types";
+import { PopupState, SAndLT } from "./types";
 
 import {
   POPUP_OPEN,
@@ -7,6 +7,13 @@ import {
   POPUP_FOR_CLOSE,
   POPUP_CHANGE,
 } from "./actions/POPUP";
+
+import {
+  ACTIVE_PLATE,
+  ACTIVE_TIME,
+  ANIM_IN_PROG,
+  ANIM_PORTAL,
+} from "./actions/SANDL";
 
 type InitialStatesT = typeof initialStates;
 type InitialActionsT = typeof actions;
@@ -64,37 +71,10 @@ export const actions = {
   POPUP_FOR_CLOSE,
   POPUP_CHANGE,
 
-  ACTIVE_PLATE: createAction((state, action) => ({
-    ...state,
-    sAndLStates: {
-      ...state.sAndLStates,
-      activePlate: action.payload,
-    },
-  })),
-
-  ACTIVE_TIME: createAction((state, action) => ({
-    ...state,
-    sAndLStates: {
-      ...state.sAndLStates,
-      activeTime: action.payload,
-    },
-  })),
-
-  ANIM_IN_PROG: createAction((state, action) => ({
-    ...state,
-    sAndLStates: {
-      ...state.sAndLStates,
-      animInProgress: action.payload,
-    },
-  })),
-
-  ANIM_PORTAL: createAction((state, action) => ({
-    ...state,
-    sAndLStates: {
-      ...state.sAndLStates,
-      animPortal: action.payload,
-    },
-  })),
+  ACTIVE_PLATE,
+  ACTIVE_TIME,
+  ANIM_IN_PROG,
+  ANIM_PORTAL,
 
   BOOL_STATE: createAction((state) => ({
     ...state,

@@ -19,6 +19,7 @@ const BtnWrap = ({ className, onClick, href, children }) => {
 const Button = ({
   className,
   text = "",
+  textIcn = "",
   crossedOutText = "",
   discountSticker,
   img = false,
@@ -60,6 +61,20 @@ const Button = ({
             {wrappedText}
             {crossedOutText && (
               <div className="crossedOutText">{crossedOutText}</div>
+            )}
+          </div>
+        )}
+        {textIcn && (
+          <div
+            className="textIcnWrap"
+            style={
+              text && typeof text === "string" ? { marginLeft: "-6px" } : {}
+            }
+          >
+            {typeof textIcn === "string" ? (
+              <img className="textIcn" src={textIcn} />
+            ) : (
+              <div className="textIcn"></div>
             )}
           </div>
         )}

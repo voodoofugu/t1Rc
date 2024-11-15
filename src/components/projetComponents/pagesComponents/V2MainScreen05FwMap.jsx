@@ -293,6 +293,7 @@ function MapCell({
   iconFr,
   iconSword,
   iconShield,
+  iconRiot,
   img,
   onClick,
   children,
@@ -318,6 +319,11 @@ function MapCell({
           <img className="fg" src={iconFr[1]} alt="Foreground Icon" />
         </div>
       )}
+      {iconRiot && (
+        <div className="fw-icon-riot">
+          <img src="img/v2-fw-icon-w4.png" loading="lazy" alt="Icon" />
+        </div>
+      )}
       {iconSword && (
         <div className="fw-icon-sword">
           <img src="img/v2-fw-icon-w3.png" loading="lazy" alt="Icon" />
@@ -339,8 +345,7 @@ export default function V2MainScreen05FwMap() {
       <div
         className="main-bg"
         style={{
-          backgroundImage:
-            'url("https://cdn.faptitans.com/s1/rc/v2-fw-map-bg.jpg")',
+          backgroundImage: "url(img/bGs/warMapBg.jpg)",
         }}
       />
 
@@ -350,6 +355,10 @@ export default function V2MainScreen05FwMap() {
         className="banner clanWarMapTit"
         text="Clan Wars battle map"
       />
+
+      <Button className="green updateBtn" textIcn="img/ic-refresh.svg" />
+
+      <Button className="green chatBtn" textIcn="img/ic-chat.svg" />
 
       <Button className="exit" text="✖" href="#/guild/clans/wars" />
 
@@ -429,22 +438,6 @@ export default function V2MainScreen05FwMap() {
           </div>
           <div className="fw-warpop-close" />
         </div> */}
-      <div
-        className="color-btn green update"
-        style={{ position: "absolute", right: 10, top: 60, width: 28 }}
-      >
-        <div className="color-btn-text">
-          <img src="https://cdn.faptitans.com/s1/rc/refresh-icon-white-1.png" />
-        </div>
-      </div>
-      <div
-        className="color-btn green chat"
-        style={{ position: "absolute", right: 10, top: 110, width: 28 }}
-      >
-        <div className="color-btn-text">
-          <img src="https://cdn.faptitans.com/s1/rc/ob-ico-5.png" />
-        </div>
-      </div>
       <div />
       <div className="slider-layer" />
       <div className="tooltip-layer" />
