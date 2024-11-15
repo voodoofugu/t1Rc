@@ -339,6 +339,69 @@ function MapCell({
   );
 }
 
+function Warpop() {
+  return (
+    <div className="fw-warpop-box-all ">
+      <div className="fw-warpop-box-pic">
+        <img src="https://cdn.faptitans.com/s1/rc/v2-fw-map-bg8.jpg" />
+        <div className="fr-warpop-building type-5" />
+      </div>
+      <div className="fw-warpop-box-name">B2: Watchtower</div>
+      <div className="fw-warpop-effect-box-all">
+        <div className="fw-warpop-effect-box">
+          <div className="fw-warpop-effect-name">effect</div>
+          <div className="fw-warpop-effect-text-box">
+            <div className="fw-warpop-effect-text">
+              3 war rating points per round
+            </div>
+          </div>
+        </div>
+        <div className="fw-warpop-income-box">
+          <div className="fw-warpop-income-name">rewards</div>
+          <div className="fw-warpop-income-text">
+            <span className="ic-contrip cw" />
+            144/round
+          </div>
+          <div className="fw-warpop-income-text second">
+            <span className="ic-warchest" />
+            3/round
+          </div>
+        </div>
+      </div>
+      <div className="fw-warpop-at-def-box-all attack">
+        <div className="fw-warpop-def-box">
+          <div className="fw-warpop-def-name">defence</div>
+          <div className="fw-warpop-def-pic">
+            <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png" />
+          </div>
+          <div className="fw-warpop-def-num">
+            <span>0</span>
+          </div>
+        </div>
+        <div className="fw-warpop-at-box-all">
+          <div className="fw-warpop-at-name">attackers</div>
+        </div>
+        <div className="fw-warpop-army-power-box">
+          <div className="fw-warpop-army-power-text">Your army power here</div>
+          <div className="fw-warpop-army-power-num">0</div>
+        </div>
+        <div className="fw-warpop-gr-con-power-box">
+          <div className="fw-warpop-gr-box">
+            <div className="fw-warpop-army-power-text">Your army power</div>
+            <div className="fw-warpop-army-power-num">0</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="color-btn green" style={{ filter: "grayscale(1)" }}>
+          <div className="color-btn-text">clash in progress</div>
+        </div>
+      </div>
+      <div className="fw-warpop-close" />
+    </div>
+  );
+}
+
 export default function V2MainScreen05FwMap() {
   return (
     <div className="main lang-ru world1">
@@ -363,81 +426,11 @@ export default function V2MainScreen05FwMap() {
       <Button className="exit" text="✖" href="#/guild/clans/wars" />
 
       <div className="fw-map-claim-box-all cw">
-        {/* <div className="cw-field-label l1">1</div>
-          <div className="cw-field-label l2">2</div>
-          <div className="cw-field-label l3">3</div>
-          <div className="cw-field-label l4">4</div>
-          <div className="cw-field-label l5">5</div>
-          <div className="cw-field-label lA">A</div>
-          <div className="cw-field-label lB">B</div>
-          <div className="cw-field-label lC">C</div>
-          <div className="cw-field-label lD">D</div>
-          <div className="cw-field-label lE">E</div>
-          <div className="cw-field-label lF">F</div> */}
         {mapCellData.map((item, index) => (
           <MapCell key={index} {...item} />
         ))}
       </div>
-      {/* <div className="fw-warpop-box-all ">
-          <div className="fw-warpop-box-pic">
-            <img src="https://cdn.faptitans.com/s1/rc/v2-fw-map-bg8.jpg" />
-            <div className="fr-warpop-building type-5" />
-          </div>
-          <div className="fw-warpop-box-name">B2: Watchtower</div>
-          <div className="fw-warpop-effect-box-all">
-            <div className="fw-warpop-effect-box">
-              <div className="fw-warpop-effect-name">effect</div>
-              <div className="fw-warpop-effect-text-box">
-                <div className="fw-warpop-effect-text">
-                  3 war rating points per round
-                </div>
-              </div>
-            </div>
-            <div className="fw-warpop-income-box">
-              <div className="fw-warpop-income-name">rewards</div>
-              <div className="fw-warpop-income-text">
-                <span className="ic-contrip cw" />
-                144/round
-              </div>
-              <div className="fw-warpop-income-text second">
-                <span className="ic-warchest" />
-                3/round
-              </div>
-            </div>
-          </div>
-          <div className="fw-warpop-at-def-box-all attack">
-            <div className="fw-warpop-def-box">
-              <div className="fw-warpop-def-name">defence</div>
-              <div className="fw-warpop-def-pic">
-                <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png" />
-              </div>
-              <div className="fw-warpop-def-num">
-                <span>0</span>
-              </div>
-            </div>
-            <div className="fw-warpop-at-box-all">
-              <div className="fw-warpop-at-name">attackers</div>
-            </div>
-            <div className="fw-warpop-army-power-box">
-              <div className="fw-warpop-army-power-text">
-                Your army power here
-              </div>
-              <div className="fw-warpop-army-power-num">0</div>
-            </div>
-            <div className="fw-warpop-gr-con-power-box">
-              <div className="fw-warpop-gr-box">
-                <div className="fw-warpop-army-power-text">Your army power</div>
-                <div className="fw-warpop-army-power-num">0</div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="color-btn green" style={{ filter: "grayscale(1)" }}>
-              <div className="color-btn-text">clash in progress</div>
-            </div>
-          </div>
-          <div className="fw-warpop-close" />
-        </div> */}
+
       <div />
       <div className="slider-layer" />
       <div className="tooltip-layer" />

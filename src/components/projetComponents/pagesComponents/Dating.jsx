@@ -1,7 +1,7 @@
 import React from "react";
+import { nexusDispatch } from "nexus-state";
 // import { Scroll } from "morphing-scroll";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
-import { nexusDispatch } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 // import ResCount from "../UIComponents/ResCount";
@@ -198,12 +198,12 @@ const GirlDependencies = ({ girlsInfo }) => {
         scrollXY={[104, 494]}
         objectXY={[86, 86]}
         gap={10}
-        padding={[4, 10]}
-        progressTrigger={["arrows", "progressElement"]}
+        padding={10}
+        progressTrigger={["wheel", "progressElement"]}
         progressReverse
-        // thumbElement={<ScrollThumb />}
-        sliderType
-        // progressVisibility="hover"
+        thumbElement={<ScrollThumb />}
+        // sliderType
+        progressVisibility="hover"
         // wrapAlignCenter
         // lazyRender
         // infiniteScroll
