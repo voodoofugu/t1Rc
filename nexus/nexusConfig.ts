@@ -1,4 +1,4 @@
-import { createAction } from "nexus-state";
+import { nexusAction } from "nexus-state";
 import { PopupState, SAndLT } from "./types";
 
 import {
@@ -51,17 +51,17 @@ export const initialStates = {
 };
 
 export const actions = {
-  ACTIVE_PAGE: createAction((state, action) => ({
+  ACTIVE_PAGE: nexusAction((state, action) => ({
     ...state,
     activePage: action.payload,
   })),
 
-  SEARCH_DATA: createAction((state, action) => ({
+  SEARCH_DATA: nexusAction((state, action) => ({
     ...state,
     searchData: action.payload,
   })),
 
-  PAGE_DATA: createAction((state, action) => ({
+  PAGE_DATA: nexusAction((state, action) => ({
     ...state,
     pageData: action.payload,
   })),
@@ -76,22 +76,22 @@ export const actions = {
   ANIM_IN_PROG,
   ANIM_PORTAL,
 
-  BOOL_STATE: createAction((state) => ({
+  BOOL_STATE: nexusAction((state) => ({
     ...state,
     booleanState: !state.booleanState,
   })),
 
-  DATE_GIRL_INDEX: createAction((state, action) => ({
+  DATE_GIRL_INDEX: nexusAction((state, action) => ({
     ...state,
     dateGirlIndex: action.payload,
   })),
 
-  INCREMENT: createAction((state, action) => ({
+  INCREMENT: nexusAction((state, action) => ({
     ...state,
     increment: state.increment + action.payload,
   })),
 
-  NOTIF_VIEW: createAction((state, action) => ({
+  NOTIF_VIEW: nexusAction((state, action) => ({
     ...state,
     notif: action.payload,
   })),

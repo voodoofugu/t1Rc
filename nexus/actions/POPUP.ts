@@ -1,6 +1,6 @@
-import { createAction } from "nexus-state";
+import { nexusAction } from "nexus-state";
 
-const POPUP_OPEN = createAction((state, action) => ({
+const POPUP_OPEN = nexusAction((state, action) => ({
   ...state,
   popupState: {
     ...action.payload,
@@ -26,7 +26,7 @@ const POPUP_OPEN = createAction((state, action) => ({
   },
 }));
 
-const POPUP_FOR_CLOSE = createAction((state) => ({
+const POPUP_FOR_CLOSE = nexusAction((state) => ({
   ...state,
   popupState: {
     ...state.popupState,
@@ -34,12 +34,12 @@ const POPUP_FOR_CLOSE = createAction((state) => ({
   },
 }));
 
-const POPUP_CLOSE = createAction((state) => ({
+const POPUP_CLOSE = nexusAction((state) => ({
   ...state,
   popupState: {},
 }));
 
-const POPUP_CHANGE = createAction((state, action) => ({
+const POPUP_CHANGE = nexusAction((state, action) => ({
   ...state,
   popupState: {
     ...state.popupState,

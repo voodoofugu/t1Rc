@@ -1,4 +1,4 @@
-import { createAction } from "nexus-state";
+import { nexusAction } from "nexus-state";
 
 export type InitialState = typeof initialStates;
 
@@ -42,8 +42,8 @@ export const initialStates = {
 };
 
 export const actions = {
-  SOME_ACTION1: createAction(),
-  INCREMENT: createAction((state, action) => ({
+  SOME_ACTION1: nexusAction(),
+  INCREMENT: nexusAction((state, action) => ({
     ...state,
     increment: state.increment + action.payload.increment,
   })),

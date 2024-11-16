@@ -1,6 +1,6 @@
-import { createAction } from "nexus-state";
+import { nexusAction } from "nexus-state";
 
-const ACTIVE_PLATE = createAction((state, action) => ({
+const ACTIVE_PLATE = nexusAction((state, action) => ({
   ...state,
   sAndLStates: {
     ...state.sAndLStates,
@@ -8,7 +8,7 @@ const ACTIVE_PLATE = createAction((state, action) => ({
   },
 }));
 
-const ACTIVE_TIME = createAction((state, action) => ({
+const ACTIVE_TIME = nexusAction((state, action) => ({
   ...state,
   sAndLStates: {
     ...state.sAndLStates,
@@ -16,7 +16,7 @@ const ACTIVE_TIME = createAction((state, action) => ({
   },
 }));
 
-const ANIM_IN_PROG = createAction((state, action) => ({
+const ANIM_IN_PROG = nexusAction((state, action) => ({
   ...state,
   sAndLStates: {
     ...state.sAndLStates,
@@ -24,7 +24,7 @@ const ANIM_IN_PROG = createAction((state, action) => ({
   },
 }));
 
-const ANIM_PORTAL = createAction((state, action) => ({
+const ANIM_PORTAL = nexusAction((state, action) => ({
   ...state,
   sAndLStates: {
     ...state.sAndLStates,
