@@ -7,19 +7,13 @@ import { useEffect } from "react";
  * @returns {[string, (value: string) => void]} - Массив, содержащий текущее значение и функцию для его обновления.
  */
 
-export default function useStorage(
-  storItem:
-    | {
-        name: string;
-        value: Record<string, unknown> | unknown[] | string | number | boolean;
-        type: "local" | "session";
-      }
-    | {
-        name: string;
-        value: Record<string, unknown> | unknown[] | string | number | boolean;
-        type: "local" | "session";
-      }[]
-) {
+export type StorageItemT = {
+  name: string;
+  value: Record<string, unknown> | unknown[] | string | number | boolean;
+  type?: "local" | "session";
+};
+
+export default function useStorage(storItem: StorageItemT | StorageItemT[]) {
   useEffect(() => {
     const items = Array.isArray(storItem) ? storItem : [storItem];
 
