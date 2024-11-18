@@ -1,9 +1,131 @@
 import React from "react";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
+import Warpop from "../popupsContetnt/Warpop";
+import ImageBg from "../UIComponents/ImageBg";
 
 export const cssFiles = ["v2-screen-fw-map", "v2-screen-fw-map-warpop"];
+
+function isLeftOrRightHalf(elementRef) {
+  if (!elementRef) return null;
+
+  const rect = elementRef.getBoundingClientRect();
+  const elementCenterX = rect.left + rect.width / 2;
+  const screenCenterX = window.innerWidth / 2;
+
+  return elementCenterX < screenCenterX ? "" : "left";
+}
+
+function mapCellSelectHandler(mapCellRef, index, type) {
+  document.querySelectorAll(".fw-map-claim-box").forEach((el) => {
+    el.classList.remove("selected");
+  });
+  mapCellRef.classList.toggle("selected");
+  nexusDispatch({
+    type: "WAR_POP",
+    payload: {
+      key: index,
+      visible: true,
+      tit: `Cell on the Map ${index + 1}`,
+      className: `cell_${index + 1} ${isLeftOrRightHalf(mapCellRef)}`,
+      type: type,
+    },
+  });
+}
+
+function MapCell({
+  className,
+  index,
+  yourFr,
+  type,
+  iconFr,
+  iconSword,
+  iconShield,
+  iconRiot,
+  img,
+  children,
+}) {
+  const warpop = useNexus("warpop");
+
+  const mapCellRef = React.useRef(null);
+
+  if (mapCellRef.current && !warpop.visible) {
+    mapCellRef.current.classList?.remove("selected");
+  }
+
+  return (
+    <>
+      <div
+        className={`fw-map-claim-box${className ? ` ${className}` : ""}${
+          yourFr ? " fr-your " : " fr0"
+        }${type ? ` type-${type}` : " type-0"}`}
+        onClick={() => {
+          mapCellSelectHandler(mapCellRef.current, index, type);
+        }}
+        ref={mapCellRef}
+      >
+        {iconShield && (
+          <div className="fw-icon-ws">
+            <img src="img/v2-fw-icon-w1.png" loading="lazy" alt="Icon" />
+          </div>
+        )}
+        {iconFr.length > 0 && (
+          <div className="fw-icon-fr cw">
+            <img className="bg" src={iconFr[0]} alt="Background Icon" />
+            <img className="fg" src={iconFr[1]} alt="Foreground Icon" />
+          </div>
+        )}
+        {iconRiot && (
+          <div className="fw-icon-riot">
+            <img src="img/v2-fw-icon-w4.png" loading="lazy" alt="Icon" />
+          </div>
+        )}
+        {iconSword && (
+          <div className="fw-icon-sword">
+            <img src="img/v2-fw-icon-w3.png" loading="lazy" alt="Icon" />
+          </div>
+        )}
+        {img && (
+          <div className="imgWrap">
+            <img src={img} loading="lazy" alt="Cell Image" />
+          </div>
+        )}
+        {children}
+      </div>
+    </>
+  );
+}
+
+export default function V2MainScreen05FwMap() {
+  return (
+    <div className="main lang-ru world1">
+      <ImageBg className="main-bg" img="img/bGs/warMapBg.jpg" />
+
+      <Button className="info" text="i" />
+
+      <FraimedTitle
+        className="banner clanWarMapTit"
+        text="Clan Wars battle map"
+      />
+
+      <Button className="green updateBtn" textIcn="img/ic-refresh.svg" />
+
+      <Button className="green chatBtn" textIcn="img/ic-chat.svg" />
+
+      <Button className="exit" text="✖" href="#/guild/clans/wars" />
+
+      <div className="fw-map-claim-box-all cw">
+        {mapCellData.map((item, index) => (
+          <MapCell key={index} index={index} {...item} />
+        ))}
+      </div>
+
+      <Warpop />
+    </div>
+  );
+}
 
 const yourFrIcon = ["img/v2-cw-bg34.png", "img/v2-cw-p03.png"];
 const mapCellData = [
@@ -278,162 +400,3 @@ const mapCellData = [
     img: "",
   },
 ];
-
-function mapCellSelectHandler(mapCellRef) {
-  document.querySelectorAll(".fw-map-claim-box").forEach((el) => {
-    el.classList.remove("selected");
-  });
-  mapCellRef.classList.toggle("selected");
-}
-
-function MapCell({
-  className,
-  yourFr,
-  type,
-  iconFr,
-  iconSword,
-  iconShield,
-  iconRiot,
-  img,
-  onClick,
-  children,
-}) {
-  const mapCellRef = React.useRef(null);
-
-  return (
-    <div
-      className={`fw-map-claim-box${className ? ` ${className}` : ""}${
-        yourFr ? " fr-your " : " fr0"
-      }${type ? ` type-${type}` : " type-0"}`}
-      onClick={() => mapCellSelectHandler(mapCellRef.current)}
-      ref={mapCellRef}
-    >
-      {iconShield && (
-        <div className="fw-icon-ws">
-          <img src="img/v2-fw-icon-w1.png" loading="lazy" alt="Icon" />
-        </div>
-      )}
-      {iconFr.length > 0 && (
-        <div className="fw-icon-fr cw">
-          <img className="bg" src={iconFr[0]} alt="Background Icon" />
-          <img className="fg" src={iconFr[1]} alt="Foreground Icon" />
-        </div>
-      )}
-      {iconRiot && (
-        <div className="fw-icon-riot">
-          <img src="img/v2-fw-icon-w4.png" loading="lazy" alt="Icon" />
-        </div>
-      )}
-      {iconSword && (
-        <div className="fw-icon-sword">
-          <img src="img/v2-fw-icon-w3.png" loading="lazy" alt="Icon" />
-        </div>
-      )}
-      {img && (
-        <div className="imgWrap">
-          <img src={img} loading="lazy" alt="Cell Image" />
-        </div>
-      )}
-      {children}
-    </div>
-  );
-}
-
-function Warpop() {
-  return (
-    <div className="fw-warpop-box-all ">
-      <div className="fw-warpop-box-pic">
-        <img src="https://cdn.faptitans.com/s1/rc/v2-fw-map-bg8.jpg" />
-        <div className="fr-warpop-building type-5" />
-      </div>
-      <div className="fw-warpop-box-name">B2: Watchtower</div>
-      <div className="fw-warpop-effect-box-all">
-        <div className="fw-warpop-effect-box">
-          <div className="fw-warpop-effect-name">effect</div>
-          <div className="fw-warpop-effect-text-box">
-            <div className="fw-warpop-effect-text">
-              3 war rating points per round
-            </div>
-          </div>
-        </div>
-        <div className="fw-warpop-income-box">
-          <div className="fw-warpop-income-name">rewards</div>
-          <div className="fw-warpop-income-text">
-            <span className="ic-contrip cw" />
-            144/round
-          </div>
-          <div className="fw-warpop-income-text second">
-            <span className="ic-warchest" />
-            3/round
-          </div>
-        </div>
-      </div>
-      <div className="fw-warpop-at-def-box-all attack">
-        <div className="fw-warpop-def-box">
-          <div className="fw-warpop-def-name">defence</div>
-          <div className="fw-warpop-def-pic">
-            <img src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png" />
-          </div>
-          <div className="fw-warpop-def-num">
-            <span>0</span>
-          </div>
-        </div>
-        <div className="fw-warpop-at-box-all">
-          <div className="fw-warpop-at-name">attackers</div>
-        </div>
-        <div className="fw-warpop-army-power-box">
-          <div className="fw-warpop-army-power-text">Your army power here</div>
-          <div className="fw-warpop-army-power-num">0</div>
-        </div>
-        <div className="fw-warpop-gr-con-power-box">
-          <div className="fw-warpop-gr-box">
-            <div className="fw-warpop-army-power-text">Your army power</div>
-            <div className="fw-warpop-army-power-num">0</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="color-btn green" style={{ filter: "grayscale(1)" }}>
-          <div className="color-btn-text">clash in progress</div>
-        </div>
-      </div>
-      <div className="fw-warpop-close" />
-    </div>
-  );
-}
-
-export default function V2MainScreen05FwMap() {
-  return (
-    <div className="main lang-ru world1">
-      <div
-        className="main-bg"
-        style={{
-          backgroundImage: "url(img/bGs/warMapBg.jpg)",
-        }}
-      />
-
-      <Button className="info" text="i" />
-
-      <FraimedTitle
-        className="banner clanWarMapTit"
-        text="Clan Wars battle map"
-      />
-
-      <Button className="green updateBtn" textIcn="img/ic-refresh.svg" />
-
-      <Button className="green chatBtn" textIcn="img/ic-chat.svg" />
-
-      <Button className="exit" text="✖" href="#/guild/clans/wars" />
-
-      <div className="fw-map-claim-box-all cw">
-        {mapCellData.map((item, index) => (
-          <MapCell key={index} {...item} />
-        ))}
-      </div>
-
-      <div />
-      <div className="slider-layer" />
-      <div className="tooltip-layer" />
-    </div>
-  );
-}

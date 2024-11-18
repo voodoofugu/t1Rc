@@ -48,6 +48,7 @@ export const initialStates = {
 
   increment: 0,
   notif: {},
+  warpop: {},
 };
 
 export const actions = {
@@ -94,5 +95,10 @@ export const actions = {
   NOTIF_VIEW: nexusAction((state, action) => ({
     ...state,
     notif: action.payload,
+  })),
+
+  WAR_POP: nexusAction((state, action) => ({
+    ...state,
+    warpop: action.payload,
   })),
 };
