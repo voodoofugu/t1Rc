@@ -35,7 +35,7 @@ export default React.memo(function ItemBox({
       {get && (
         <Button className="max green" text={`get ${count}`} onClick={onClick} />
       )}
-      {!!rare && <img className="rare" src={`img/cur-${rare}.png`} />}
+      {!!rare && <img className="rare" src={`img/cur2-${rare}.png`} />}
       {arrow ? <div className={`itemBox_arrow ${arrow}`}></div> : ""}
     </div>
   );

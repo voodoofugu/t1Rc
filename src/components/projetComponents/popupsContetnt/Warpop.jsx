@@ -105,13 +105,25 @@ export default function Warpop() {
               </div>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className="color-btn green" style={{ filter: "grayscale(1)" }}>
               <div className="color-btn-text">clash in progress</div>
             </div>
-          </div>
+          </div> */}
 
-          <Button className="green max warPopBtn" text="clash in progress" />
+          <Button
+            className="green max warPopBtn"
+            text="clash in progress"
+            onClick={() => {
+              nexusDispatch({
+                type: "POPUP_OPEN",
+                payload: {
+                  mpopClass: "m-popup contentOnly framedPop",
+                  popCont: ["ArmySetupCW"],
+                },
+              });
+            }}
+          />
 
           <Button className="exit" text="✖" onClick={() => warpopClose()} />
         </div>

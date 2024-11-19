@@ -1,6 +1,7 @@
 [
   "AngelPop",
   "AngelPopX3",
+  "ArmySetupCW",
   "BtlPass",
   "BuyShop",
   "ChangeAddchest",
@@ -49,8 +50,8 @@
   "TowerRelics",
   "TowerTrophy",
   "TsConfirm",
+  "Warpop",
   "Wpck5",
   "WpckEnd",
-  "XmasPop",
-  "infoPopHtmlReducer"
+  "XmasPop"
 ]
