@@ -12,6 +12,11 @@ interface Icon {
 }
 
 function createJSON() {
+  if (!OUTPUT_DIR) {
+    console.error("❓ Переменная окружения OUTPUT_DIR не установлена");
+    return;
+  }
+
   const icons: Icon[] = [];
 
   fs.readdir(OUTPUT_DIR, (err, files) => {

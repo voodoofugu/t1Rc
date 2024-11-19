@@ -15,7 +15,7 @@ wss.on("connection", function connection(ws) {
 
     let receivedData;
     try {
-      receivedData = JSON.parse(message);
+      receivedData = JSON.parse(message || "");
     } catch (error) {
       console.error("🚫 Error parsing JSON:", error);
       return;

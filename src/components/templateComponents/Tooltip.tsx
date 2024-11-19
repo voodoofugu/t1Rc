@@ -9,17 +9,17 @@ type TooltipProps = {
   position?: "top" | "bottom" | "left" | "right";
 };
 
-type NewTooltipData = {
-  text: TooltipProps["text"];
+type TooltipData = {
   top: number;
   left: number;
-  positionClassY: string;
+  text: string;
   positionClassX: string;
+  positionClassY?: string;
 };
 
 export function addTooltipData(
   event: React.MouseEvent,
-  setTooltipData: React.Dispatch<React.SetStateAction<NewTooltipData>>,
+  setTooltipData: React.Dispatch<React.SetStateAction<TooltipData>>,
   render: boolean,
   setRender: React.Dispatch<React.SetStateAction<boolean>>,
   setVisible: React.Dispatch<React.SetStateAction<boolean>>,
@@ -116,7 +116,7 @@ export function addTooltipData(
 }
 
 export function removeTooltipData(
-  setTooltipData: React.Dispatch<React.SetStateAction<NewTooltipData>>,
+  setTooltipData: React.Dispatch<React.SetStateAction<TooltipData | null>>,
   setRender: React.Dispatch<React.SetStateAction<boolean>>,
   setVisible: React.Dispatch<React.SetStateAction<boolean>>
 ) {
@@ -128,7 +128,7 @@ export function removeTooltipData(
 }
 
 export default function Tooltip({ children, text, position }: TooltipProps) {
-  const [tooltipData, setTooltipData] = useState(null);
+  const [tooltipData, setTooltipData] = useState<TooltipData | null>(null);
   const [render, setRender] = useState(false);
   const [visible, setVisible] = useState(false);
 
@@ -137,7 +137,7 @@ export default function Tooltip({ children, text, position }: TooltipProps) {
       onMouseEnter={(e) =>
         addTooltipData(
           e,
-          setTooltipData,
+          setTooltipData as any,
           render,
           setRender,
           setVisible,
@@ -154,18 +154,18 @@ export default function Tooltip({ children, text, position }: TooltipProps) {
         ? createPortal(
             <div
               className={`absolute px-14 py-10 rounded-10 bg-indigo-100 shadow-tooltipTemplate drop-shadow-tooltipDS text-indigo-600 text-shadow-tS1 transition-all1 text-sm font-bold pointer-events-none flex dark:bg-indigo-800 dark:shadow-tooltipTemplateDark dark:text-indigo-400 dark:text-shadow-tS1Black after:w-0 after:h-0 after:absolute z-10 ${
-                tooltipData.positionClassY
+                tooltipData?.positionClassY
                   ? tooltipData.positionClassY +
                     " after:border-x-8 after:border-x-transparent"
                   : "m-0"
-              } ${tooltipData.positionClassX} ${
+              } ${tooltipData?.positionClassX} ${
                 visible
                   ? "opacity-100 scale-100"
                   : "opacity-0 scale-90 mt-[0px]"
               }`}
               style={{
-                top: tooltipData.top,
-                left: tooltipData.left,
+                top: tooltipData?.top,
+                left: tooltipData?.left,
               }}
               id={text}
             >
@@ -173,9 +173,9 @@ export default function Tooltip({ children, text, position }: TooltipProps) {
                 className="inline-block w-14 fill-indigo-500 dark:fill-indigo-400 drop-shadow-dS1 dark:drop-shadow-darkDS1 mr-6"
                 style={null}
               />
-              {tooltipData.text}
+              {tooltipData?.text}
             </div>,
-            document.querySelector("#templateBody > main")
+            document.querySelector("#templateBody > main") as HTMLElement
           )
         : ""}
     </div>

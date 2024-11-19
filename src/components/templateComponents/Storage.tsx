@@ -2,40 +2,34 @@ import { useEffect } from "react";
 import { useNexus, nexusDispatch } from "nexus-state";
 import useStorage, { StorageItemT } from "../../components/hooks/useStorage";
 
-export type nexusStorageItemT = {
-  name: keyof StatesT;
-  type?: "local" | "session";
-};
-
 type StorageType = {
   watch?: boolean;
-  storageData?: nexusStorageItemT | nexusStorageItemT[];
+  storageData?: [keyof StatesT, type?: "local" | "session"][];
 };
 
 export default function Storage({ watch, storageData }: StorageType): null {
   const nexusAll = useNexus();
 
-  const popupStateStor = JSON.parse(sessionStorage.getItem("popupState"));
+  const popupStateStor = sessionStorage.getItem("popupState");
+  const parsedPopupState = popupStateStor ? JSON.parse(popupStateStor) : null;
 
   useEffect(() => {
-    if (popupStateStor && popupStateStor.popupVisible) {
+    if (parsedPopupState && parsedPopupState.popupVisible) {
       nexusDispatch({
         type: "POPUP_OPEN",
-        payload: popupStateStor,
+        payload: parsedPopupState,
       });
     }
   }, []);
 
-  const processedStorageData = (
-    Array.isArray(storageData) ? storageData : [storageData]
-  )
-    .map((item) => ({
-      name: item.name as string,
-      value:
-        item.name && nexusAll ? nexusAll[item.name as keyof StatesT] : null,
-      type: item.type ? (item.type as "local" | "session") : "session",
-    }))
-    .filter((item) => item.name && item.value !== null);
+  const processedStorageData: StorageItemT[] =
+    storageData && Array.isArray(storageData)
+      ? storageData.map((item) => ({
+          name: item[0] as string,
+          value: item[0] && nexusAll ? nexusAll[item[0] as keyof StatesT] : {},
+          type: item[1] ? (item[1] as "local" | "session") : "session",
+        }))
+      : [];
 
   const storageItems: StorageItemT[] = [
     ...processedStorageData,

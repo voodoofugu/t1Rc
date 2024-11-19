@@ -1,11 +1,4 @@
-import {
-  memo,
-  Suspense,
-  useEffect,
-  useState,
-  startTransition,
-  lazy,
-} from "react";
+import { memo, Suspense, useEffect, useState, startTransition } from "react";
 import { createPortal } from "react-dom";
 
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";

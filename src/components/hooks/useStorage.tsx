@@ -13,13 +13,35 @@ export type StorageItemT = {
   type?: "local" | "session";
 };
 
-export default function useStorage(storItem: StorageItemT | StorageItemT[]) {
+export default function useStorage(storItem: StorageItemT[]) {
   useEffect(() => {
+    if (
+      typeof window === "undefined" ||
+      !window.localStorage ||
+      !window.sessionStorage
+    ) {
+      console.warn("Storage is not available in this environment.");
+      return;
+    }
+
     const items = Array.isArray(storItem) ? storItem : [storItem];
 
     items.forEach((item) => {
-      const storageType = item.type === "local" ? localStorage : sessionStorage;
-      storageType.setItem(item.name, JSON.stringify(item.value));
+      try {
+        const storageType =
+          item.type === "local" ? localStorage : sessionStorage;
+        const serializedValue = JSON.stringify(item.value);
+
+        // Записываем данные в хранилище
+        storageType.setItem(item.name, serializedValue);
+      } catch (error) {
+        console.error(
+          `Failed to save item "${item.name}" to ${
+            item.type || "local"
+          } storage:`,
+          error
+        );
+      }
     });
   }, [storItem]);
 }

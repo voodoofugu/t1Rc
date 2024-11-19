@@ -17,9 +17,7 @@ export default memo(function Popup({ pageName }) {
     ? componentsMap[popupState.popCont[0]]
     : null;
 
-  const componentProps = popupState?.popCont?.[1]
-    ? popupState.popCont[1]
-    : null;
+  const componentProps = popupState?.popCont?.[1] || {};
   const props = popupState.props;
 
   return (

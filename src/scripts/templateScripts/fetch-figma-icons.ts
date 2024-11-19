@@ -21,6 +21,11 @@ interface ImageInfo {
 }
 
 async function getIconIdsAndNamesInFrame(frameName: string) {
+  if (!FIGMA_TOKEN) {
+    console.error("❓ Переменная окружения FIGMA_TOKEN не установлена");
+    return;
+  }
+
   try {
     const response = await fetch(`${FIGMA_API_HOST}/files/${FIGMA_FILE_KEY}`, {
       headers: {
@@ -69,6 +74,11 @@ async function getIconIdsAndNamesInFrame(frameName: string) {
 }
 
 async function fetchImageInfo(iconIds: string[]): Promise<ImageInfo> {
+  if (!FIGMA_TOKEN) {
+    console.error("❓ Переменная окружения FIGMA_TOKEN не установлена");
+    return {};
+  }
+
   try {
     const response = await fetch(
       `${FIGMA_API_HOST}/images/${FIGMA_FILE_KEY}?ids=${iconIds.join(
@@ -99,6 +109,11 @@ async function createIcnFiles(
   iconIdsAndNames: IconData[],
   imageInfo: ImageInfo
 ) {
+  if (!OUTPUT_DIR) {
+    console.error("❓ Переменная окружения OUTPUT_DIR не установлена");
+    return;
+  }
+
   try {
     // Проверяем, существует ли директория OUTPUT_DIR, если нет, создаем ее
     if (!fs.existsSync(OUTPUT_DIR)) {
@@ -157,8 +172,15 @@ async function createIcnFiles(
 }
 
 async function main() {
+  if (!TARGET_FRAME_NAME) {
+    console.error("❓ Переменная окружения TARGET_FRAME_NAME не установлена");
+    return;
+  }
+
   try {
-    const iconIdsAndNames = await getIconIdsAndNamesInFrame(TARGET_FRAME_NAME);
+    const iconIdsAndNames = (await getIconIdsAndNamesInFrame(
+      TARGET_FRAME_NAME
+    )) as IconData[];
 
     const imageInfo = await fetchImageInfo(
       iconIdsAndNames.map((icon) => icon.id)
