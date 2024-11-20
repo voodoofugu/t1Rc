@@ -10,6 +10,7 @@ export default React.memo(function ItemBox({
   unique,
   arrow, // left, right, top, bottom
   rare,
+  type,
   notif,
   sale,
   onClick,
@@ -35,7 +36,8 @@ export default React.memo(function ItemBox({
       {get && (
         <Button className="max green" text={`get ${count}`} onClick={onClick} />
       )}
-      {!!rare && <img className="rare" src={`img/cur2-${rare}.png`} />}
+      {!!rare && <img className="rare" src={`img/cur-${rare}.png`} />}
+      {!!type && <img className="type" src={`img/cur2-${type}.png`} />}
       {arrow ? <div className={`itemBox_arrow ${arrow}`}></div> : ""}
     </div>
   );

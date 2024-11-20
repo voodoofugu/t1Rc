@@ -118,7 +118,7 @@ export default function Warpop() {
               nexusDispatch({
                 type: "POPUP_OPEN",
                 payload: {
-                  mpopClass: "m-popup contentOnly framedPop",
+                  mpopClass: "m-popup army-setup contentOnly",
                   popCont: ["ArmySetupCW"],
                 },
               });
