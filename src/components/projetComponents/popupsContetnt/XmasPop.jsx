@@ -1,7 +1,7 @@
 import { nexusDispatch, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
-import elements from "./PopResValue";
+import elements from "../data/PopResValue";
 
 function XmasPop1({ setXmasPop }) {
   const popupState = useNexus("popupState");

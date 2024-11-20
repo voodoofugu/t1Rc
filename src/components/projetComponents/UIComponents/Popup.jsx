@@ -1,15 +1,24 @@
-import { memo, lazy, useEffect, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { nexusDispatch, useNexus } from "nexus-state";
 
-import a_popupList from "../popupsContetnt/a_popupList";
+import a_popupList from "../popupsContetnt/a_popupList.json";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 const componentsMap = a_popupList.reduce((map, name) => {
-  map[name] = lazy(() => import(`../popupsContetnt/${name}`));
+  map[name] = lazy(() =>
+    import(`../popupsContetnt/${name}`).then((module) => {
+      if (!module.default) {
+        throw new Error(
+          `Module "../popupsContetnt/${name}" does not have a default export`
+        );
+      }
+      return module;
+    })
+  );
   return map;
 }, {});
 
-export default memo(function Popup({ pageName }) {
+export default function Popup({ pageName }) {
   const activePage = useNexus("activePage");
   const popupState = useNexus("popupState");
 
@@ -69,4 +78,4 @@ export default memo(function Popup({ pageName }) {
       )}
     </>
   );
-});
+}

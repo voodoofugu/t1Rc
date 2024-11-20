@@ -140,7 +140,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike I</div>
           <div className="text">
-            +50% DPS for self and +1 to hero's tribute to Squad DPS
+            +50% DPS for self and +1 to heros tribute to Squad DPS
           </div>
         </li>
         <li className="abil">
@@ -151,7 +151,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike II</div>
           <div className="text">
-            +50% DPS for self and +1 to hero's tribute to Squad DPS
+            +50% DPS for self and +1 to heros tribute to Squad DPS
           </div>
         </li>
         <li className="abil">
@@ -162,7 +162,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike III</div>
           <div className="text">
-            +75% DPS for self and +1 to hero's tribute to Squad DPS
+            +75% DPS for self and +1 to heros tribute to Squad DPS
           </div>
         </li>
         <li className="abil">
@@ -173,7 +173,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike IV</div>
           <div className="text">
-            +7.5% DPS of all heroes and +1 to hero's tribute to Squad DPS
+            +7.5% DPS of all heroes and +1 to heros tribute to Squad DPS
           </div>
         </li>
         <li className="abil locked">
@@ -184,7 +184,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike V</div>
           <div className="text">
-            +75% DPS for self and +1 to hero's tribute to Squad DPS
+            +75% DPS for self and +1 to heros tribute to Squad DPS
           </div>
           <div className="btn-buy">
             <div className="price gold">35.1M</div>
@@ -199,7 +199,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike VI</div>
           <div className="text">
-            +7.5% DPS of all heroes and +1 to hero's tribute to Squad DPS
+            +7.5% DPS of all heroes and +1 to heros tribute to Squad DPS
           </div>
           <div className="btn-buy">
             <div className="price gold">1.81T</div>
@@ -214,7 +214,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike VII</div>
           <div className="text">
-            +100% DPS for self and +1 to hero's tribute to Squad DPS
+            +100% DPS for self and +1 to heros tribute to Squad DPS
           </div>
           <div className="btn-buy disabled">
             <div className="price">500 Уровень</div>
@@ -228,7 +228,7 @@ function HeroRightSideCont2() {
           />
           <div className="name">Meteor Strike VIII</div>
           <div className="text">
-            Increases your DPC by 0.5% of your total DPS. and +1 to hero's
+            Increases your DPC by 0.5% of your total DPS. and +1 to heros
             tribute to Squad DPS
           </div>
           <div className="btn-buy disabled">
@@ -289,8 +289,8 @@ export default memo(function HeroPopup() {
       <HeroMenuBox
         activeMenu={activeMenu}
         setActiveMenu={setActiveMenu}
-        tab1={["abils-btn", "Abilities", <HeroRightSideCont1 />]}
-        tab2={["promotion-btn", "Promotion", <HeroRightSideCont2 />]}
+        tab1={["abils-btn", "Abilities", <HeroRightSideCont1 key={1} />]}
+        tab2={["promotion-btn", "Promotion", <HeroRightSideCont2 key={2} />]}
         contentWrapClass={`hero-right-side${
           activeMenu === "abils-btn" ? " promotion" : ""
         }`}

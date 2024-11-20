@@ -6,7 +6,7 @@ import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ResCount from "../UIComponents/ResCount";
 
-import elements from "../popupsContetnt/PopResValue";
+import elements from "../data/PopResValue";
 
 export const cssFiles = [
   "v2-screen-fw-main",

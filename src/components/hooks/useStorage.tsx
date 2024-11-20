@@ -43,5 +43,5 @@ export default function useStorage(storItem: StorageItemT[]) {
         );
       }
     });
-  }, [storItem]);
+  }, [JSON.stringify(storItem)]);
 }

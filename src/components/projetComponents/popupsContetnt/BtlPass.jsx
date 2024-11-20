@@ -1,7 +1,7 @@
 import { useNexus, nexusDispatch } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
-import elements from "./PopResValue";
+import elements from "../data/PopResValue";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
