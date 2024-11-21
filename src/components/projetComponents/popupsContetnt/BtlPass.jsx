@@ -9,37 +9,34 @@ import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
-export default function BtlPass({ btlClass }) {
+export default function BtlPass({ event }) {
+  console.log("event", event);
   const popupState = useNexus("popupState");
 
   const edgeGradient =
-    btlClass === "autumn"
-      ? "#b01a6c"
-      : btlClass === "xmas"
-      ? "#288cbe"
-      : "#202c38";
+    event === "autumn" ? "#b01a6c" : event === "xmas" ? "#288cbe" : "#202c38";
 
   const girlImg =
-    btlClass === "xmas"
+    event === "xmas"
       ? "images/hero-all/tithero-430/icons/break-girl"
-      : btlClass === "hw"
+      : event === "hw"
       ? "images/hero-all/tithero-429/icons/break-girl"
-      : btlClass === "bf"
+      : event === "bf"
       ? "images/hero-all/tithero-429/icons/break-girl"
-      : btlClass === "vl"
+      : event === "vl"
       ? "images/hero-all/tithero-430/icons/break-girl"
-      : btlClass === "spring"
+      : event === "spring"
       ? "images/hero-all/tithero-430/icons/break-girl"
-      : btlClass === "summer"
+      : event === "summer"
       ? "images/hero-all/tithero-430/icons/break-girl"
-      : btlClass === "autumn"
+      : event === "autumn"
       ? "images/hero-all/tithero-440/icons/break-girl"
-      : btlClass === "sexpedition"
+      : event === "sexpedition"
       ? "images/hero-all/tithero-423/icons/break-girl4"
       : null;
 
   const buyShopCont =
-    btlClass === "xmas"
+    event === "xmas"
       ? [
           "BuyShop",
           {
@@ -49,7 +46,7 @@ export default function BtlPass({ btlClass }) {
             img4: "evPopArts/ic-tickets-xmas-4",
           },
         ]
-      : btlClass === "hw"
+      : event === "hw"
       ? [
           "BuyShop",
           {
@@ -59,7 +56,7 @@ export default function BtlPass({ btlClass }) {
             img4: "evPopArts/bat_icn_4",
           },
         ]
-      : btlClass === "bf"
+      : event === "bf"
       ? [
           "BuyShop",
           {
@@ -68,7 +65,7 @@ export default function BtlPass({ btlClass }) {
             img3: "ic-tickets-bf-3",
           },
         ]
-      : btlClass === "vl"
+      : event === "vl"
       ? [
           "BuyShop",
           {
@@ -77,7 +74,7 @@ export default function BtlPass({ btlClass }) {
             img3: "ic-tickets-vl-3",
           },
         ]
-      : btlClass === "spring"
+      : event === "spring"
       ? [
           "BuyShop",
           {
@@ -86,7 +83,7 @@ export default function BtlPass({ btlClass }) {
             img3: "ic-march-flower-pink-3",
           },
         ]
-      : btlClass === "summer"
+      : event === "summer"
       ? [
           "BuyShop",
           {
@@ -95,7 +92,7 @@ export default function BtlPass({ btlClass }) {
             img3: "evPopArts/butterfly_3",
           },
         ]
-      : btlClass === "sexpedition"
+      : event === "sexpedition"
       ? [
           "BuyShop",
           {
@@ -119,7 +116,7 @@ export default function BtlPass({ btlClass }) {
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
-              popCont: ["InfoPopFramed"],
+              popCont: "InfoPopFramed",
               props: {
                 inner:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
@@ -132,11 +129,7 @@ export default function BtlPass({ btlClass }) {
 
       <FraimedTitle className="cornersTop" text="Event Pass" />
 
-      <Button
-        className="exit"
-        text="✖"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      />
+      <Button className="exit" text="✖" onClick={() => popupState.popClose()} />
 
       <Button
         className="lightGreen schop"

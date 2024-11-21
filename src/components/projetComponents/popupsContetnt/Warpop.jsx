@@ -119,7 +119,7 @@ export default function Warpop() {
                 type: "POPUP_OPEN",
                 payload: {
                   mpopClass: "m-popup army-setup contentOnly",
-                  popCont: ["ArmySetupCW"],
+                  popCont: "ArmySetupCW",
                 },
               });
             }}

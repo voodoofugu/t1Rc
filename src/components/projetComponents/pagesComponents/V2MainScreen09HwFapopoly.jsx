@@ -774,7 +774,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
                 payload: {
                   mpopClass: "m-popup events-btlpass-pop hw",
                   popTit: "HALLOWEEN EVENT PASS",
-                  popCont: ["BtlPass"],
+                  popCont: "BtlPass",
                 },
               });
             }}
@@ -812,7 +812,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
                   payload: {
                     mpopClass: "m-popup fapop-rating",
                     popTit: "rating",
-                    popCont: ["FapopRating"],
+                    popCont: "FapopRating",
                   },
                 });
               }}
@@ -834,7 +834,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
                   payload: {
                     mpopClass: "m-popup fapop-shop buyed",
                     popTit: "tokens",
-                    popCont: ["FapopShopBuyed"],
+                    popCont: "FapopShopBuyed",
                   },
                 });
               }}

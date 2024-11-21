@@ -10,10 +10,7 @@ export default function InfoPopFramed({ inner, girlImg }) {
 
   return (
     <>
-      <div
-        className="closeBG"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      ></div>
+      <div className="closeBG" onClick={() => popupState.popClose()}></div>
       <div className="content">
         <div className="popupFrame">
           <div className="frame top"></div>
@@ -33,7 +30,7 @@ export default function InfoPopFramed({ inner, girlImg }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() => popupState.popClose(nexusDispatch)}
+          onClick={() => popupState.popClose()}
         />
       </div>
 

@@ -1,33 +1,12 @@
-import { lazy, Suspense } from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import React from "react";
+import { useNexus } from "nexus-state";
 
-import a_popupList from "../popupsContetnt/a_popupList.json";
-import FraimedTitle from "../UIComponents/FraimedTitle";
-
-const componentsMap = a_popupList.reduce((map, name) => {
-  map[name] = lazy(() =>
-    import(`../popupsContetnt/${name}`).then((module) => {
-      if (!module.default) {
-        throw new Error(
-          `Module "../popupsContetnt/${name}" does not have a default export`
-        );
-      }
-      return module;
-    })
-  );
-  return map;
-}, {});
+import FraimedTitle from "./FraimedTitle";
+import DynamicComponent from "../other/DynamicComponent";
 
 export default function Popup({ pageName }) {
   const activePage = useNexus("activePage");
   const popupState = useNexus("popupState");
-
-  const ComponentToRender = popupState?.popCont?.[0]
-    ? componentsMap[popupState.popCont[0]]
-    : null;
-
-  const componentProps = popupState?.popCont?.[1] || {};
-  const props = popupState.props;
 
   return (
     <>
@@ -38,7 +17,7 @@ export default function Popup({ pageName }) {
         >
           <div
             className="screen-blend-55"
-            onClick={() => popupState.popClose(nexusDispatch)}
+            onClick={() => popupState.popClose()}
           ></div>
           <div id="popupContainer">
             <div className={popupState.mpopClass} style={popupState.popStyle}>
@@ -60,11 +39,12 @@ export default function Popup({ pageName }) {
                   )}
                 </div>
               )}
-              <Suspense>
-                {ComponentToRender && (
-                  <ComponentToRender {...componentProps} {...props} />
-                )}
-              </Suspense>
+
+              <DynamicComponent
+                name={popupState.popCont}
+                props={popupState.props}
+                path="popupComponents"
+              />
               {popupState.timer && (
                 <div className="wpck-timer-box">
                   <div className="time-left">time left</div>

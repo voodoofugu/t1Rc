@@ -152,7 +152,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                   payload: {
                     mpopClass: "m-popup tower-trophy-pop",
                     popTit: "Pillar of DPC",
-                    popCont: ["TowerTrophy"],
+                    popCont: "TowerTrophy",
                   },
                 });
               }}
@@ -430,7 +430,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                 payload: {
                                   mpopClass: "m-popup tower-trophy-pop",
                                   popTit: "Pillar of DPC",
-                                  popCont: ["TowerTrophy"],
+                                  popCont: "TowerTrophy",
                                 },
                               });
                             }}

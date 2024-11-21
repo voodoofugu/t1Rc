@@ -1,4 +1,4 @@
-import { nexusAction } from "nexus-state";
+import { nexusAction, nexusDispatch } from "nexus-state";
 
 const POPUP_OPEN = nexusAction((state, action) => ({
   ...state,
@@ -10,7 +10,7 @@ const POPUP_OPEN = nexusAction((state, action) => ({
       state.popupState && "btnXClass" in state.popupState
         ? state.popupState.btnXClass
         : "btn-close-x",
-    popClose: (nexusDispatch: (action: any) => void) => {
+    popClose: () => {
       nexusDispatch({ type: "POPUP_FOR_CLOSE" });
       setTimeout(() => nexusDispatch({ type: "POPUP_CLOSE" }), 200);
     },

@@ -65,10 +65,7 @@ export default function ComicsPop() {
           <div className="color-btn-text">next</div>
         </div>
       </div>
-      <div
-        className="btn-close-x"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      />
+      <div className="btn-close-x" onClick={() => popupState.popClose()} />
     </div>
   );
 }

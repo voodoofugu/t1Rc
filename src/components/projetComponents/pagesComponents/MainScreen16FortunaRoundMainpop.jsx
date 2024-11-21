@@ -23,7 +23,7 @@ export default function MainScreen16FortunaRoundMainpop({
                   payload: {
                     mpopClass: "m-popup fortuna-main-round",
                     popTit: "wheel of fortune - spin your discount!",
-                    popCont: ["FortunaMainRound16"],
+                    popCont: "FortunaMainRound16",
                   },
                 });
               }}
@@ -40,7 +40,7 @@ export default function MainScreen16FortunaRoundMainpop({
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup fortuna-main-round contentOnly",
-                    popCont: ["FortunaMainRound16Big"],
+                    popCont: "FortunaMainRound16Big",
                   },
                 });
               }}
@@ -63,7 +63,7 @@ export default function MainScreen16FortunaRoundMainpop({
                       left: "120px",
                     },
                     popTit: "wheel of fortune - spin your discount!",
-                    popCont: ["FortunaMainRound25"],
+                    popCont: "FortunaMainRound25",
                   },
                 });
               }}

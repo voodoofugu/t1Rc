@@ -127,10 +127,7 @@ export default React.memo(function FapopShopBuyed() {
         </div>
       </div>
       <div className="color-btn">
-        <div
-          className="color-btn-text"
-          onClick={() => popupState.popClose(nexusDispatch)}
-        >
+        <div className="color-btn-text" onClick={() => popupState.popClose()}>
           закрыть
         </div>
       </div>

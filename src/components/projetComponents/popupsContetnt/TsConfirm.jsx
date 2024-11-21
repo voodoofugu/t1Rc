@@ -20,7 +20,7 @@ export default memo(function TsConfirm() {
       </div>
       <div
         className="btn-simple-green btn-ok"
-        onClick={() => popupState.popClose(nexusDispatch)}
+        onClick={() => popupState.popClose()}
       >
         Ок
       </div>

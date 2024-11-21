@@ -38,7 +38,7 @@ export default function Dating({ pageName, children }) {
               payload: {
                 mpopClass: "m-popup contentOnly framedPop",
                 popTit: "",
-                popCont: ["InfoPopFramed"],
+                popCont: "InfoPopFramed",
                 props: {
                   inner:
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
@@ -74,7 +74,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
               popTit: "",
-              popCont: ["DatingGiftsPop"],
+              popCont: "DatingGiftsPop",
               props: {
                 girleID: girlsInfo[girlIndex].id,
               },

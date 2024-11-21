@@ -1,4 +1,4 @@
-import { memo, Suspense, useEffect, useState, startTransition } from "react";
+import { memo, Suspense, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
@@ -42,10 +42,8 @@ export default memo(function CellContent({ pageName, loadable }) {
         throw new Error("Компонент по умолчанию не найден");
       }
 
-      startTransition(() => {
         setIsCSSFiles(cssFiles);
         setDynamicComponent(() => pagesComponent);
-      });
     } catch (error) {
       console.error("Ошибка загрузки компонента:", error);
     }

@@ -403,10 +403,7 @@ export default function FapopRating() {
         </div>
       </div>
       <div className="color-btn">
-        <div
-          className="color-btn-text"
-          onClick={() => popupState.popClose(nexusDispatch)}
-        >
+        <div className="color-btn-text" onClick={() => popupState.popClose()}>
           закрыть
         </div>
       </div>

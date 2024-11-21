@@ -182,7 +182,7 @@ const Chat = ({ girlInfo }) => {
                   type: "POPUP_OPEN",
                   payload: {
                     mpopClass: "m-popup uki-story-popup contentOnly",
-                    popCont: ["DatingImgPop"],
+                    popCont: "DatingImgPop",
                     props: {
                       img: `img/images/superhero/suphero-${girlInfo.id}/x1/sh-6.jpg`,
                     },

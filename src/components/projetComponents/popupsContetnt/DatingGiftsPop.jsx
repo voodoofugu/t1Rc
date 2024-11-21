@@ -10,10 +10,7 @@ export default function DaitingGiftsPop({ girleID }) {
 
   return (
     <>
-      <div
-        className="closeBG"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      ></div>
+      <div className="closeBG" onClick={() => popupState.popClose()}></div>
 
       <div className="content">
         <div className="popupFrame">
@@ -67,10 +64,7 @@ export default function DaitingGiftsPop({ girleID }) {
           />
         </OfferCardBox>
 
-        <div
-          className="btn-close-x"
-          onClick={() => popupState.popClose(nexusDispatch)}
-        />
+        <div className="btn-close-x" onClick={() => popupState.popClose()} />
       </div>
     </>
   );

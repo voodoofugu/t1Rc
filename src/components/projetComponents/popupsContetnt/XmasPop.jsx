@@ -118,10 +118,7 @@ function XmasPop1({ setXmasPop }) {
             quest
           </div>
         </div>
-        <div
-          className="color-btn green"
-          onClick={() => popupState.popClose(nexusDispatch)}
-        >
+        <div className="color-btn green" onClick={() => popupState.popClose()}>
           <div className="color-btn-text">close</div>
         </div>
         <div className="color-btn shop">

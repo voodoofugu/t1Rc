@@ -26,7 +26,7 @@ export default function DarkBtlPass() {
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
               popTit: "",
-              popCont: ["InfoPopFramed"],
+              popCont: "InfoPopFramed",
               props: {
                 inner:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
@@ -39,11 +39,7 @@ export default function DarkBtlPass() {
 
       <FraimedTitle className="cornersTop" text="Dark World Event Pass" />
 
-      <Button
-        className="exit"
-        text="✖"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      />
+      <Button className="exit" text="✖" onClick={() => popupState.popClose()} />
 
       <Button
         className="blue schop"

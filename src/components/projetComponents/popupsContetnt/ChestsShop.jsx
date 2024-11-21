@@ -15,7 +15,7 @@ export default memo(function ChestsShop() {
             popupState.popOpen(nexusDispatch, {
               mpopClass: "m-popup diamond-buy",
               popTit: "Buy Diamonds!",
-              popCont: ["DiamondBuy"],
+              popCont: "DiamondBuy",
             })
           }
         >
@@ -95,7 +95,7 @@ export default memo(function ChestsShop() {
                 popupState.popOpen(nexusDispatch, {
                   mpopClass: "m-popup openchest",
                   popTit: "open the chest",
-                  popCont: ["OpenChest"],
+                  popCont: "OpenChest",
                 })
               }
             >

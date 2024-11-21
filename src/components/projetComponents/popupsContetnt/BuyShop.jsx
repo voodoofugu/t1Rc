@@ -7,10 +7,7 @@ export default function BuyShop({ img1, img2, img3, img4, diamond }) {
 
   return (
     <>
-      <div
-        className="closeBG"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      ></div>
+      <div className="closeBG" onClick={() => popupState.popClose()}></div>
 
       <div className="content">
         <div className="popupFrame">
@@ -21,7 +18,7 @@ export default function BuyShop({ img1, img2, img3, img4, diamond }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() => popupState.popClose(nexusDispatch)}
+          onClick={() => popupState.popClose()}
         />
 
         <div className="essence-card-box">

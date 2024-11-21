@@ -5,16 +5,10 @@ export default function DatingImgPop({ img }) {
 
   return (
     <>
-      <div
-        className="closeBG"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      ></div>
+      <div className="closeBG" onClick={() => popupState.popClose()}></div>
       <div className="content">
         <img className="pic" src={img} loading="lazy" />
-        <div
-          className="btn-close-x"
-          onClick={() => popupState.popClose(nexusDispatch)}
-        />
+        <div className="btn-close-x" onClick={() => popupState.popClose()} />
       </div>
     </>
   );

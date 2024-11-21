@@ -11,7 +11,7 @@ export default memo(function PopResValue({ resClass, resValue, notPlus }) {
       popupState.popOpen(nexusDispatch, {
         mpopClass: "m-popup change-addchest",
         popTit: "Купите еще Boss Chests!",
-        popCont: ["ChangeAddchest"],
+        popCont: "ChangeAddchest",
       });
   }
 

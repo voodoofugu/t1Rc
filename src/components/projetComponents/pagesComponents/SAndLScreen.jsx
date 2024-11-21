@@ -244,7 +244,7 @@ export default function SAndLScreen({ pageName, children }) {
                 payload: {
                   mpopClass: "m-popup questChain",
                   popTit: "Quest Chain",
-                  popCont: ["QuestChain"],
+                  popCont: "QuestChain",
                 },
               });
             }}
@@ -262,7 +262,7 @@ export default function SAndLScreen({ pageName, children }) {
                 payload: {
                   mpopClass: "m-popup psemain sAndL",
                   popTit: "Craft Room",
-                  popCont: ["CraftPop"],
+                  popCont: "CraftPop",
                   infBtn: true,
                 },
               });
@@ -280,7 +280,7 @@ export default function SAndLScreen({ pageName, children }) {
                 payload: {
                   mpopClass: "m-popup fapop-rating",
                   popTit: "rating",
-                  popCont: ["FapopRating"],
+                  popCont: "FapopRating",
                 },
               });
             }}

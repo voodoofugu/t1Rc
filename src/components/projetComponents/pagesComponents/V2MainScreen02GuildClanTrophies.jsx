@@ -25,7 +25,7 @@ export default function V2MainScreen02GuildClanTrophies({
                       payload: {
                         mpopClass: "m-popup clan-trophy",
                         popTit: "Earth Charmer",
-                        popCont: ["ClanTrophy"],
+                        popCont: "ClanTrophy",
                       },
                     });
                   }}
@@ -71,7 +71,7 @@ export default function V2MainScreen02GuildClanTrophies({
                       payload: {
                         mpopClass: "m-popup clan-trophy",
                         popTit: "Earth Charmer",
-                        popCont: ["ClanTrophy"],
+                        popCont: "ClanTrophy",
                       },
                     });
                   }}
@@ -122,7 +122,7 @@ export default function V2MainScreen02GuildClanTrophies({
                       payload: {
                         mpopClass: "m-popup clan-trophy",
                         popTit: "Earth Charmer",
-                        popCont: ["ClanTrophy"],
+                        popCont: "ClanTrophy",
                       },
                     });
                   }}

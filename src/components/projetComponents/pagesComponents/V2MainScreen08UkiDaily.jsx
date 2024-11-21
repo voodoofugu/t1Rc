@@ -1316,7 +1316,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                       type: "POPUP_OPEN",
                       payload: {
                         mpopClass: "m-popup uki-story-popup contentOnly",
-                        popCont: ["ComicsPop"],
+                        popCont: "ComicsPop",
                       },
                     });
                   }}

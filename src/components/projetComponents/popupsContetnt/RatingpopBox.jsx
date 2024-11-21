@@ -21,10 +21,7 @@ export default memo(function RatingpopBox() {
           />
         </div>
         <div className="color-btn">
-          <div
-            className="color-btn-text"
-            onClick={() => popupState.popClose(nexusDispatch)}
-          >
+          <div className="color-btn-text" onClick={() => popupState.popClose()}>
             ок
           </div>
         </div>

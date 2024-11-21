@@ -114,7 +114,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 payload: {
                   mpopClass: "m-popup chests-shop",
                   popTit: "Chest Shop",
-                  popCont: ["ChestsShop"],
+                  popCont: "ChestsShop",
                 },
               });
             }}
@@ -136,7 +136,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             {
               mpopClass: "reborn-popup",
               popTit: "Reborn!",
-              popCont: ["RebornPopup"],
+              popCont: "RebornPopup",
             },
           ],
           [
@@ -145,7 +145,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             {
               mpopClass: "m-popup reborn-dark-popup",
               popTit: "Reborn!",
-              popCont: ["RebornDarkPopup"],
+              popCont: "RebornDarkPopup",
             },
           ],
         ]}
@@ -160,7 +160,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup sh2-openchest1",
                   popTit: "Buy Chests",
-                  popCont: ["Sh2Openchest"],
+                  popCont: "Sh2Openchest",
                 },
               ],
               [
@@ -169,7 +169,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup sh2-openchest3",
                   popTit: "open chests",
-                  popCont: ["Sh2Openchest", { shClass: "sh3" }],
+                  popCont: "Sh2Openchest",
+                  props: { shClass: "sh3" },
                 },
               ],
               [
@@ -177,7 +178,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "",
                 {
                   mpopClass: "m-popup angel-pop",
-                  popCont: ["AngelPop"],
+                  popCont: "AngelPop",
                 },
               ],
               [
@@ -185,7 +186,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "",
                 {
                   mpopClass: "m-popup hero-pop",
-                  popCont: ["DarkHeroPack"],
+                  popCont: "DarkHeroPack",
                 },
               ],
               [
@@ -194,7 +195,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup angel-pop-x3",
                   popTit: "Triple Strike Pack!",
-                  popCont: ["AngelPopX3"],
+                  popCont: "AngelPopX3",
                   timer: true,
                 },
               ],
@@ -204,7 +205,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup cw-offers-pop",
                   popTit: "boss chest offer",
-                  popCont: ["CwOffersPop"],
+                  popCont: "CwOffersPop",
                 },
               ],
               [
@@ -213,7 +214,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup wpck5",
                   popTit: "Blackhole sale",
-                  popCont: ["Wpck5"],
+                  popCont: "Wpck5",
                 },
               ],
               [
@@ -222,7 +223,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup fortuna-main uni-sale",
                   popTit: "Dual pack",
-                  popCont: ["DualPack", { event: "uni-sale" }],
+                  popCont: "DualPack",
+                  props: { event: "uni-sale" },
                 },
               ],
               [
@@ -231,7 +233,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup dark-btlpas",
                   popTit: "Dark World Battle Pass",
-                  popCont: ["DarkBtlPass"],
+                  popCont: "DarkBtlPass",
                   timer: true,
                 },
               ],
@@ -246,7 +248,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "",
                 {
                   mpopClass: "quest-popup stage-1",
-                  popCont: ["QuestPopup"],
+                  popCont: "QuestPopup",
                 },
               ],
               [
@@ -254,7 +256,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "",
                 {
                   mpopClass: "quest-popup stage-1",
-                  popCont: ["QuestPopup", { done: true }],
+                  popCont: "QuestPopup",
+                  props: { done: true },
                 },
               ],
               ["sunduk-60", "21:36:22"],
@@ -269,7 +272,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "287:21:43",
                 {
                   mpopClass: "m-popup main-relics-pop hw contentOnly",
-                  popCont: ["RelicsPop", { event: "hw" }],
+                  popCont: "RelicsPop",
+                  props: { event: "hw" },
                 },
               ],
               [
@@ -277,7 +281,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "287:21:43",
                 {
                   mpopClass: "m-popup events-btlpass-pop hw contentOnly",
-                  popCont: ["BtlPass", { btlClass: "hw" }],
+                  popCont: "BtlPass",
+                  props: { event: "hw" },
                 },
               ],
               [
@@ -285,8 +290,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "00:00:00",
                 {
                   mpopClass: "m-popup dark-btlpas contentOnly",
-                  popCont: ["DarkBtlPass", { event: "dark-btlpas" }],
+                  popCont: "DarkBtlPass",
                   timer: true,
+                  props: { event: "dark-btlpas" },
                 },
               ],
             ],
@@ -301,7 +307,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup events-btlpass-pop bf",
                   popTit: "Black Friday Event Pass",
-                  popCont: ["BtlPass", { btlClass: "bf" }],
+                  popCont: "BtlPass",
+                  props: { event: "bf" },
                 },
               ],
               [
@@ -310,8 +317,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup sale-event-pop bf-event",
                   popTit: "black friday sale",
-                  popCont: ["SaleEventPop", { event: "bf" }],
+                  popCont: "SaleEventPop",
                   timer: true,
+                  props: { event: "bf" },
                 },
               ],
             ],
@@ -325,7 +333,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "00:44:09",
                 {
                   mpopClass: "m-popup events-btlpass-pop xmas contentOnly",
-                  popCont: ["BtlPass", { btlClass: "xmas" }],
+                  popCont: "BtlPass",
+                  props: { event: "xmas" },
                 },
               ],
               [
@@ -334,7 +343,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: `m-popup ${xmasPop} xmas`,
                   popTit: "XXXMAS Celebration Pass",
-                  popCont: ["XmasPop", { xmasPop: xmasPop }],
+                  popCont: "XmasPop",
+                  props: { event: "xmas" },
                 },
               ],
               [
@@ -342,7 +352,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "00:00:09",
                 {
                   mpopClass: "m-popup main-relics-pop xmas contentOnly",
-                  popCont: ["RelicsPop", { event: "xmas" }],
+                  popCont: "RelicsPop",
+                  props: { event: "xmas" },
                 },
               ],
             ],
@@ -357,7 +368,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup events-btlpass-pop vl",
                   popTit: "Valentine's Day Event Pass",
-                  popCont: ["BtlPass", { btlClass: "vl" }],
+                  popCont: "BtlPass",
+                  props: { event: "vl" },
                 },
               ],
               [
@@ -366,8 +378,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup sale-event-pop vl-event",
                   popTit: "Valentine's Day",
-                  popCont: ["SaleEventPop", { event: "vl" }],
+                  popCont: "SaleEventPop",
                   timer: true,
+                  props: { event: "vl" },
                 },
               ],
               [
@@ -376,7 +389,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup main-relics-pop vl",
                   popTit: "Valentine's Day Orgy",
-                  popCont: ["RelicsPop", { event: "vl" }],
+                  popCont: "RelicsPop",
+                  props: { event: "vl" },
                 },
               ],
               [
@@ -385,8 +399,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup fortuna-main sv-sale",
                   popTit: "Dual pack",
-                  popCont: ["DualPack", { event: "sv-sale" }],
+                  popCont: "DualPack",
                   timer: true,
+                  props: { event: "sv-sale" },
                 },
               ],
             ],
@@ -401,8 +416,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup main-relics-pop march",
                   popTit: "March's Day Orgy",
-                  popCont: ["RelicsPop", { event: "march" }],
+                  popCont: "RelicsPop",
                   timer: true,
+                  props: { event: "march" },
                 },
               ],
               [
@@ -411,8 +427,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup main-relics-pop march",
                   popTit: "March's Day Orgy",
-                  popCont: ["RelicsPop", { event: "march2" }],
+                  popCont: "RelicsPop",
                   timer: true,
+                  props: { event: "march2" },
                 },
               ],
             ],
@@ -427,7 +444,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup events-btlpass-pop spring",
                   popTit: "Valentine's Day Event Pass",
-                  popCont: ["BtlPass", { btlClass: "spring" }],
+                  popCont: "BtlPass",
+                  props: { event: "spring" },
                 },
               ],
               [
@@ -436,7 +454,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: `m-popup ${xmasPop} spring`,
                   popTit: "Spring Celebration Pass",
-                  popCont: ["XmasPop", { xmasPop: xmasPop }],
+                  popCont: "XmasPop",
+                  props: { event: "spring" },
                 },
               ],
             ],
@@ -451,7 +470,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup events-btlpass-pop summer",
                   popTit: "Summer Event Pass",
-                  popCont: ["BtlPass", { btlClass: "summer" }],
+                  popCont: "BtlPass",
+                  props: { event: "summer" },
                 },
               ],
             ],
@@ -466,8 +486,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup main-relics-pop easter",
                   popTit: "Easter's Day Orgy",
-                  popCont: ["RelicsPop", { event: "easter" }],
+                  popCont: "RelicsPop",
                   timer: true,
+                  props: { event: "easter" },
                 },
               ],
             ],
@@ -481,7 +502,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "287:21:43",
                 {
                   mpopClass: "m-popup events-btlpass-pop autumn contentOnly",
-                  popCont: ["BtlPass", { btlClass: "autumn" }],
+                  popCont: "BtlPass",
+                  props: { event: "autumn" },
                 },
               ],
             ],
@@ -496,7 +518,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup lose-boss",
                   popTit: "проигрыш боссу",
-                  popCont: ["LoseBoss"],
+                  popCont: "LoseBoss",
                 },
               ],
               [
@@ -505,7 +527,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup error-popup",
                   popTit: "Error",
-                  popCont: ["ErrorPopup"],
+                  popCont: "ErrorPopup",
                 },
               ],
               [
@@ -513,7 +535,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "",
                 {
                   mpopClass: "ratingpop-box",
-                  popCont: ["RatingpopBox"],
+                  popCont: "RatingpopBox",
                 },
               ],
               [
@@ -522,7 +544,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   mpopClass: "m-popup red ts_confirm",
                   popTit: "Поздравляем!",
-                  popCont: ["TsConfirm"],
+                  popCont: "TsConfirm",
                 },
               ],
               ["ic-hero-220", ""],
@@ -599,7 +621,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                         payload: {
                           mpopClass: "m-popup hero-popup",
                           popTit: "Moe Kasa",
-                          popCont: ["HeroPopup"],
+                          popCont: "HeroPopup",
                         },
                       });
                     }}

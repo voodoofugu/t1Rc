@@ -200,7 +200,8 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
                 payload: {
                   mpopClass:
                     "m-popup events-btlpass-pop sexpedition contentOnly",
-                  popCont: ["BtlPass", { btlClass: "sexpedition" }],
+                  popCont: "BtlPass",
+                  props: { event: "sexpedition" },
                 },
               });
             }}

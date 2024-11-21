@@ -39,14 +39,14 @@ export default memo(function QuestPopup({ done }) {
           {!done ? (
             <div
               className="btn-simple-silver btn-close"
-              onClick={() => popupState.popClose(nexusDispatch)}
+              onClick={() => popupState.popClose()}
             >
               <div className="txt">Закрыть</div>
             </div>
           ) : (
             <div
               className="btn-simple-gold btn-get"
-              onClick={() => popupState.popClose(nexusDispatch)}
+              onClick={() => popupState.popClose()}
             >
               <div className="txt">Получить награду!</div>
             </div>

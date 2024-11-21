@@ -19,11 +19,7 @@ export default function FortunaMainRound16Big() {
         text="Wheel of fortune - spin your discount!"
       />
 
-      <Button
-        className="exit"
-        text="✖"
-        onClick={() => popupState.popClose(nexusDispatch)}
-      />
+      <Button className="exit" text="✖" onClick={() => popupState.popClose()} />
 
       <ResCount
         img="img/heartCoin.png"
@@ -53,7 +49,7 @@ export default function FortunaMainRound16Big() {
             type: "POPUP_OPEN",
             payload: {
               mpopClass: "m-popup contentOnly framedPop",
-              popCont: ["InfoPopFramed"],
+              popCont: "InfoPopFramed",
               props: {
                 inner: (
                   <div className="rrules-box">

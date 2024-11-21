@@ -55,7 +55,7 @@ export default memo(function OpenChest() {
                 popupState.popOpen(nexusDispatch, {
                   mpopClass: "m-popup change-givepic",
                   popTit: "Новая картинка!",
-                  popCont: ["ChangeGivepic"],
+                  popCont: "ChangeGivepic",
                 })
               }
             >
