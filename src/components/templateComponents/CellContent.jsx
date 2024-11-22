@@ -42,8 +42,8 @@ export default memo(function CellContent({ pageName, loadable }) {
         throw new Error("Компонент по умолчанию не найден");
       }
 
-        setIsCSSFiles(cssFiles);
-        setDynamicComponent(() => pagesComponent);
+      setIsCSSFiles(cssFiles);
+      setDynamicComponent(() => pagesComponent);
     } catch (error) {
       console.error("Ошибка загрузки компонента:", error);
     }

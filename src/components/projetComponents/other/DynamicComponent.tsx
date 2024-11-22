@@ -16,7 +16,6 @@ export default function DynamicComponent({
   props,
   path,
 }: DynamicComponentProps) {
-  console.log("PATH_MAP[path]", PATH_MAP[path]);
   const [LoadedComponent, setLoadedComponent] =
     React.useState<React.ComponentType<any> | null>(null);
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-export default React.memo(function ItemBox({
+export default function ItemBox({
   itemClass,
   itemPic,
   count,
@@ -14,9 +14,16 @@ export default React.memo(function ItemBox({
   notif,
   sale,
   onClick,
+  ref,
 }) {
+  const selectable = itemClass && itemClass.includes("selectable");
+
   return (
-    <div className={`itemBox${itemClass ? " " + itemClass : ""}`}>
+    <div
+      className={`itemBox${itemClass ? " " + itemClass : ""}`}
+      onClick={selectable && onClick}
+      ref={ref}
+    >
       {notif && <div className="notif">{notif}</div>}
       {!!sale && <div className="sale-banner">{sale}</div>}
       {!!unique && (
@@ -34,11 +41,15 @@ export default React.memo(function ItemBox({
       )}
       {!!countOut && <div className="itemBox_countOut">{countOut}</div>}
       {get && (
-        <Button className="max green" text={`get ${count}`} onClick={onClick} />
+        <Button
+          className="max green"
+          text={`get ${count}`}
+          onClick={!selectable && onClick}
+        />
       )}
       {!!rare && <img className="rare" src={`img/cur-${rare}.png`} />}
       {!!type && <img className="type" src={`img/cur2-${type}.png`} />}
       {arrow ? <div className={`itemBox_arrow ${arrow}`}></div> : ""}
     </div>
   );
-});
+}
