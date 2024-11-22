@@ -16,7 +16,7 @@ export default (env: EnvVariables) => {
     entry: path.resolve(__dirname, "src", "index.tsx"),
     html: path.resolve(__dirname, "htmlContent.ejs"),
     public: path.resolve(__dirname, "titans_rc/img"),
-    src: path.resolve(__dirname, "titans_rc"),
+    mainDir: path.resolve(__dirname, "./"),
   };
 
   const config: webpack.Configuration = webpackSett({

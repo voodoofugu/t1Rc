@@ -14,15 +14,13 @@ export default function ItemBox({
   notif,
   sale,
   onClick,
-  ref,
 }) {
   const selectable = itemClass && itemClass.includes("selectable");
 
   return (
     <div
       className={`itemBox${itemClass ? " " + itemClass : ""}`}
-      onClick={selectable && onClick}
-      ref={ref}
+      onClick={selectable ? onClick : undefined}
     >
       {notif && <div className="notif">{notif}</div>}
       {!!sale && <div className="sale-banner">{sale}</div>}
@@ -44,7 +42,7 @@ export default function ItemBox({
         <Button
           className="max green"
           text={`get ${count}`}
-          onClick={!selectable && onClick}
+          onClick={!selectable ? onClick : undefined}
         />
       )}
       {!!rare && <img className="rare" src={`img/cur-${rare}.png`} />}

@@ -1,5 +1,6 @@
 import React from "react";
 
+export const yo = "YO!";
 export default function RebornPopup() {
   return (
     <div className="content">

@@ -7,7 +7,7 @@ const elements = [
   { itemPic: "img/ms-stone-green.png", count: "389", itemClass: "get" },
   { itemPic: "img/ms-stone-pink.png", count: "234", itemClass: "get" },
   {
-    itemPic: "img/evPopArts/potion_red@2x.png",
+    itemPic: "img/evPopArts/potion_red.png",
     count: "230",
     itemClass: "block",
   },
@@ -19,7 +19,7 @@ const elements = [
   { itemPic: "img/ms-stone-green.png", count: "4", itemClass: "block" },
   { itemPic: "img/ms-stone-pink.png", count: "4", itemClass: "block" },
   {
-    itemPic: "img/evPopArts/potion_red@2x.png",
+    itemPic: "img/evPopArts/potion_red.png",
     count: "230",
     itemClass: "block",
   },
@@ -31,7 +31,7 @@ const elements = [
   { itemPic: "img/ms-stone-green.png", count: "10", itemClass: "block" },
   { itemPic: "img/ms-stone-pink.png", count: "10", itemClass: "block" },
   {
-    itemPic: "img/evPopArts/potion_red@2x.png",
+    itemPic: "img/evPopArts/potion_red.png",
     count: "575",
     itemClass: "block",
   },
@@ -43,7 +43,7 @@ const elements = [
   { itemPic: "img/ms-stone-green.png", count: "10", itemClass: "block" },
   { itemPic: "img/ms-stone-pink.png", count: "10", itemClass: "block" },
   {
-    itemPic: "img/evPopArts/potion_red@2x.png",
+    itemPic: "img/evPopArts/potion_red.png",
     count: "575",
     itemClass: "block",
   },
@@ -55,7 +55,7 @@ const elements = [
   { itemPic: "img/ms-stone-green.png", count: "10", itemClass: "block" },
   { itemPic: "img/ms-stone-pink.png", count: "10", itemClass: "block" },
   {
-    itemPic: "img/evPopArts/potion_red@2x.png",
+    itemPic: "img/evPopArts/potion_red.png",
     count: "575",
     itemClass: "block",
   },
@@ -67,7 +67,7 @@ const elements = [
   { itemPic: "img/ms-stone-green.png", count: "10", itemClass: "block" },
   { itemPic: "img/ms-stone-pink.png", count: "10", itemClass: "block" },
   {
-    itemPic: "img/evPopArts/potion_red@2x.png",
+    itemPic: "img/evPopArts/potion_red.png",
     count: "575",
     itemClass: "block",
   },

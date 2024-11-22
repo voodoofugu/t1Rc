@@ -10,7 +10,6 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function BtlPass({ event }) {
-  console.log("event", event);
   const popupState = useNexus("popupState");
 
   const edgeGradient =
@@ -136,9 +135,11 @@ export default function BtlPass({ event }) {
         text="Buy Currency"
         img
         onClick={() =>
+          buyShopCont &&
           popupState.popOpen(nexusDispatch, {
             mpopClass: "m-popup essence-buy contentOnly framedPop",
-            popCont: buyShopCont,
+            popCont: buyShopCont[0],
+            props: buyShopCont[1],
           })
         }
       />
@@ -219,7 +220,9 @@ export default function BtlPass({ event }) {
         </div>
       </div>
 
-      <ImageBg className="girlImg btlpass-girl" img={`img/${girlImg}.png`} />
+      {girlImg && (
+        <ImageBg className="girlImg btlpass-girl" img={`img/${girlImg}.png`} />
+      )}
     </>
   );
 }

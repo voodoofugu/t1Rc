@@ -814,7 +814,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                       <div className="rate">10</div>
                       <ItemBox
                         itemClass="piecesHero"
-                        itemPic="img/unknown-hero-ava.jpg"
+                        itemPic="img/images/hero-all/tithero-00/x1/ava/tithero-ava-1.jpg"
                         count={10}
                       />
                       <div className="store-quant">

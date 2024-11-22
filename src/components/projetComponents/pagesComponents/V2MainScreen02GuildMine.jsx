@@ -178,7 +178,8 @@ export default function V2MainScreen02GuildMine() {
         <a
           className="btn-discord"
           href="https://discord.gg/7pjeXF3emj"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         ></a>
       </div>
       <div className="left-side false false">
@@ -239,7 +240,7 @@ export default function V2MainScreen02GuildMine() {
                       className="mine-worker-pic"
                       style={{
                         backgroundImage:
-                          "url('../img/images/back/06-Cave.jpg')",
+                          "url('../img/images/back/new/06-Cave.jpg')",
                         backgroundPosition: "0% center",
                         backgroundSize: "cover",
                       }}
@@ -274,7 +275,7 @@ export default function V2MainScreen02GuildMine() {
                       className="mine-worker-pic"
                       style={{
                         backgroundImage:
-                          "url('../img/images/back/06-Cave.jpg')",
+                          "url('../img/images/back/new/06-Cave.jpg')",
                         backgroundPosition: "31% center",
                         backgroundSize: "cover",
                       }}
@@ -309,7 +310,7 @@ export default function V2MainScreen02GuildMine() {
                       className="mine-worker-pic"
                       style={{
                         backgroundImage:
-                          "url('../img/images/back/06-Cave.jpg')",
+                          "url('../img/images/back/new/06-Cave.jpg')",
                         backgroundPosition: "70% center",
                         backgroundSize: "cover",
                       }}
@@ -344,7 +345,7 @@ export default function V2MainScreen02GuildMine() {
                       className="mine-worker-pic"
                       style={{
                         backgroundImage:
-                          "url('../img/images/back/06-Cave.jpg')",
+                          "url('../img/images/back/new/06-Cave.jpg')",
                         backgroundPosition: "100% center",
                         backgroundSize: "cover",
                       }}

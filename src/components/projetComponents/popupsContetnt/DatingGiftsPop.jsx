@@ -1,4 +1,4 @@
-import { nexusDispatch, useNexus } from "nexus-state";
+import { useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
@@ -21,10 +21,7 @@ export default function DaitingGiftsPop({ girleID }) {
           className="oneItem"
           btnWrap={<Button className="green big" text="Open" />}
         >
-          <ItemBox
-            itemClass="wh200 simpleItem"
-            itemPic="img/dating/giftsIcn.png"
-          />
+          <ItemBox itemClass="wh200" itemPic="img/dating/giftsIcn.png" />
           <ResCount value="234" />
         </OfferCardBox>
 

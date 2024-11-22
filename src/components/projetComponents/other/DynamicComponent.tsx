@@ -24,7 +24,9 @@ export default function DynamicComponent({
 
     (async () => {
       try {
-        const module = await import(`../${PATH_MAP[path]}/${name}`);
+        const module = await import(
+          `@/src/components/projetComponents/${PATH_MAP[path]}/${name}`
+        );
         const Component = module.default;
 
         if (!Component) {

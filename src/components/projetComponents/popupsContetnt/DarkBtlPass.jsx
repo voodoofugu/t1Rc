@@ -48,15 +48,13 @@ export default function DarkBtlPass() {
         onClick={() =>
           popupState.popOpen(nexusDispatch, {
             mpopClass: "m-popup essence-buy contentOnly framedPop",
-            popCont: [
-              "BuyShop",
-              {
-                img1: "ic-red-potion-1",
-                img2: "ic-red-potion-2",
-                img3: "ic-red-potion-3",
-                img4: "ic-red-potion-4",
-              },
-            ],
+            popCont: "BuyShop",
+            props: {
+              img1: "ic-red-potion-1",
+              img2: "ic-red-potion-2",
+              img3: "ic-red-potion-3",
+              img4: "ic-red-potion-4",
+            },
           })
         }
       />
