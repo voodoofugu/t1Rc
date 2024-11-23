@@ -1,98 +1,44 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-type UseDynamicImportResult<
-  T extends Record<string, unknown> & { default?: unknown } = Record<
-    string,
-    unknown
-  > & { default?: unknown }
-> = {
-  module: T | null;
-  component: T["default"] | null;
-  namedExport: (exportName: string) => unknown | null;
-  error: Error | null;
-  isLoading: boolean;
+const PATH_MAP = {
+  pagesComponents: "pagesComponents",
+  popupsContetnt: "popupsContetnt",
 };
 
-export default function useDynamicImport<
-  T extends Record<string, unknown> & { default?: unknown } = Record<
-    string,
-    unknown
-  > & { default?: unknown }
->(path: string | null): UseDynamicImportResult<T> {
-  const [module, setModule] = useState<T | null>(null);
-  const [component, setComponent] = useState<T["default"] | null>(null);
-  const [error, setError] = useState<Error | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+const useDynamicImport = (name: string, pathType: keyof typeof PATH_MAP) => {
+  const [module, setModule] = useState<null | Record<string, any>>(null);
 
   useEffect(() => {
-    if (!path) return;
+    let isActive = true;
 
-    const fetchModule = async () => {
-      setIsLoading(true);
-      setError(null);
+    if (!name) {
+      setModule(null);
+      return;
+    }
 
-      const timeout = setTimeout(() => {
-        setError(new Error("Загрузка модуля превысила лимит времени."));
-        setIsLoading(false);
-      }, 10000);
-
-      const fullPath = `../projetComponents/popupsContetnt/${path}`;
+    (async () => {
       try {
-        const importedModule = (await import(
-          /* webpackChunkName: "[request]" */ /* @vite-ignore */ `../projetComponents/popupsContetnt/${path}`
-        )) as T;
+        const data = await import(
+          `@/src/components/projetComponents/${PATH_MAP[pathType]}/${name}`
+        );
 
-        clearTimeout(timeout);
-        setModule(importedModule || null);
-        setComponent(importedModule.default || null);
-
-        if (!importedModule.default) {
-          console.warn(
-            `В модуле "${fullPath}" отсутствует экспорт по умолчанию.`
-          );
+        if (isActive) {
+          setModule(data);
         }
-      } catch (err) {
-        clearTimeout(timeout);
-        setError(err as Error);
-        console.error(`Ошибка загрузки модуля "${fullPath}":`, err);
-      } finally {
-        setIsLoading(false);
+      } catch (error) {
+        if (isActive) {
+          console.error(`Модуль "${name}" не найден.`, error);
+          setModule(null);
+        }
       }
-    };
-
-    fetchModule();
+    })();
 
     return () => {
-      setIsLoading(false);
-      setError(null);
+      isActive = false;
     };
-  }, [path]);
+  }, [name, pathType]);
 
-  const namedExport = <E = unknown,>(exportName: string): E | null => {
-    try {
-      if (module && exportName in module) {
-        return module[exportName] as E;
-      } else {
-        console.warn(
-          `Экспорт с именем "${exportName}" не найден в модуле:`,
-          module
-        );
-        return null;
-      }
-    } catch (err) {
-      console.error(`Ошибка при попытке извлечь экспорт "${exportName}":`, err);
-      return null;
-    }
-  };
+  return module;
+};
 
-  return { module, component, namedExport, error, isLoading };
-}
-
-/**
- * Хук для динамической загрузки модулей с поддержкой тайм-аутов и обработки ошибок.
- *
- * @template T Тип модуля, который должен быть загружен.
- * @param path Путь к модулю, который необходимо загрузить.
- * @param options Опциональные колбэки:
- * @returns Объект с данными модуля, компонентом, экспортами, состоянием загрузки и ошибками.
- */
+export default useDynamicImport;

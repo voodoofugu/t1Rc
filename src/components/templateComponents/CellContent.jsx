@@ -1,8 +1,9 @@
 import { memo, Suspense, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { nexusDispatch, useNexus } from "nexus-state";
 
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
-import { nexusDispatch, useNexus } from "nexus-state";
+import useDynamicImport from "../hooks/useDynamicImport";
 
 import Loading from "./Loading";
 import HelmetForCss from "./HelmetForCss";
@@ -14,8 +15,6 @@ export default memo(function CellContent({ pageName, loadable }) {
   const activePage = useNexus("activePage");
 
   const [stylesLoaded, setStylesLoaded] = useState(false);
-  const [isCSSFiles, setIsCSSFiles] = useState([]);
-  const [dynamicComponent, setDynamicComponent] = useState(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const [style, setStyle] = useState(false);
 
@@ -25,33 +24,16 @@ export default memo(function CellContent({ pageName, loadable }) {
     left: 0,
   });
 
-  let transformedCssFiles = Array.isArray(isCSSFiles)
-    ? transformCssFileNames(isCSSFiles).join(" ")
+  const module = useDynamicImport(
+    `${activePage || pageName || ""}`,
+    "pagesComponents"
+  );
+  const DynamicComponent = module?.default;
+  const cssFiles = module?.cssFiles;
+
+  let transformedCssFiles = Array.isArray(cssFiles)
+    ? transformCssFileNames(cssFiles).join(" ")
     : "";
-
-  const fetchComponentData = async () => {
-    try {
-      const module = await import(
-        `../projetComponents/pagesComponents/${pageName}`
-      );
-
-      const { cssFiles } = module;
-      const pagesComponent = module.default;
-
-      if (!pagesComponent) {
-        throw new Error("Компонент по умолчанию не найден");
-      }
-
-      setIsCSSFiles(cssFiles);
-      setDynamicComponent(() => pagesComponent);
-    } catch (error) {
-      console.error("Ошибка загрузки компонента:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchComponentData();
-  }, []);
 
   useEffect(() => {
     if (window.location.hash.length > 2) {
@@ -146,8 +128,6 @@ export default memo(function CellContent({ pageName, loadable }) {
     ></div>
   );
 
-  let DynamicComponent = dynamicComponent;
-
   return (
     <>
       {loadable ? (
@@ -172,9 +152,9 @@ export default memo(function CellContent({ pageName, loadable }) {
                         left: position.left + "px",
                       }}
                     >
-                      {isCSSFiles && (
+                      {cssFiles && (
                         <HelmetForCss
-                          cssFiles={isCSSFiles}
+                          cssFiles={cssFiles}
                           setStylesLoaded={setStylesLoaded}
                         />
                       )}
@@ -216,10 +196,10 @@ export default memo(function CellContent({ pageName, loadable }) {
                 </div>
               )}
             </>
-          ) : isCSSFiles ? (
+          ) : cssFiles ? (
             <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
               <HelmetForCss
-                cssFiles={isCSSFiles}
+                cssFiles={cssFiles}
                 setStylesLoaded={setStylesLoaded}
               />
               <Suspense fallback={loadFill}>

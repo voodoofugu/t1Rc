@@ -72,7 +72,6 @@ export default function SearchButton() {
   };
 
   const handleOutsideClick = (event) => {
-    console.log("handleOutsideClick");
     if (
       searchInputRef.current &&
       !searchInputRef.current.contains(event.target) &&

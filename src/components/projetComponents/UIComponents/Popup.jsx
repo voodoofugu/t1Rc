@@ -1,12 +1,18 @@
-import React from "react";
 import { useNexus } from "nexus-state";
 
+import useDynamicImport from "../../hooks/useDynamicImport";
+
 import FraimedTitle from "./FraimedTitle";
-import DynamicComponent from "../other/DynamicComponent";
 
 export default function Popup({ pageName }) {
   const activePage = useNexus("activePage");
   const popupState = useNexus("popupState");
+
+  const module = useDynamicImport(
+    `${popupState?.popCont || ""}`,
+    "popupsContetnt"
+  );
+  const DynamicComponent = module?.default;
 
   return (
     <>
@@ -40,11 +46,13 @@ export default function Popup({ pageName }) {
                 </div>
               )}
 
-              <DynamicComponent
-                name={popupState.popCont}
-                props={popupState.props}
-                path="popupComponents"
-              />
+              {DynamicComponent && (
+                <DynamicComponent
+                  {...(popupState.popCont ? popupState.popCont[1] : {})}
+                  {...(popupState.props || {})}
+                />
+              )}
+
               {popupState.timer && (
                 <div className="wpck-timer-box">
                   <div className="time-left">time left</div>
