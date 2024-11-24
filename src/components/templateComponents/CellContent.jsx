@@ -42,19 +42,20 @@ export default memo(function CellContent({ pageName, loadable }) {
         const statesNewTab = window.location.hash.substring(3);
         const hashParts = statesNewTab.split("/");
         if (hashParts[0] === pageName) {
-          nexusDispatch({
-            type: "PAGE_DATA",
-            payload: {
-              scrollTop: hashParts[1],
-              top: hashParts[2],
-              left: hashParts[3],
+          nexusDispatch([
+            {
+              type: "PAGE_DATA",
+              payload: {
+                scrollTop: hashParts[1],
+                top: hashParts[2],
+                left: hashParts[3],
+              },
             },
-          });
-
-          nexusDispatch({
-            type: "ACTIVE_PAGE",
-            payload: hashParts[0],
-          });
+            {
+              type: "ACTIVE_PAGE",
+              payload: hashParts[0],
+            },
+          ]);
 
           setStyle(true);
         }
@@ -76,15 +77,16 @@ export default memo(function CellContent({ pageName, loadable }) {
       const positionData = computePositionData(event);
 
       setPosition(positionData);
-      nexusDispatch({
-        type: "ACTIVE_PAGE",
-        payload: pageName,
-      });
-
-      nexusDispatch({
-        type: "PAGE_DATA",
-        payload: positionData,
-      });
+      nexusDispatch([
+        {
+          type: "ACTIVE_PAGE",
+          payload: pageName,
+        },
+        {
+          type: "PAGE_DATA",
+          payload: positionData,
+        },
+      ]);
 
       setTimeout(() => {
         setStyle(true);
