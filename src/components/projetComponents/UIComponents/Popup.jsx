@@ -3,6 +3,7 @@ import { useNexus } from "nexus-state";
 import useDynamicImport from "../../hooks/useDynamicImport";
 
 import FraimedTitle from "./FraimedTitle";
+import Loading from "../../templateComponents/Loading";
 
 export default function Popup({ pageName }) {
   const activePage = useNexus("activePage");
@@ -46,11 +47,13 @@ export default function Popup({ pageName }) {
                 </div>
               )}
 
-              {DynamicComponent && (
+              {DynamicComponent ? (
                 <DynamicComponent
                   {...(popupState.popCont ? popupState.popCont[1] : {})}
                   {...(popupState.props || {})}
                 />
+              ) : (
+                <Loading />
               )}
 
               {popupState.timer && (
