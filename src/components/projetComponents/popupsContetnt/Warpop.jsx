@@ -40,7 +40,7 @@ export default function Warpop() {
     visible && (
       <>
         <div
-          className={`warpopBack${className ? ` ${className}` : ""}`}
+          className={`warpopBack${className?.includes("left") ? " left" : ""}`}
           ref={warpopBackRef}
         ></div>
         <div
@@ -80,10 +80,7 @@ export default function Warpop() {
             <div className="fw-warpop-def-box">
               <div className="fw-warpop-def-name">defence</div>
               <div className="fw-warpop-def-pic">
-                <img
-                  src="https://cdn.faptitans.com/s1/rc/v2-fw-icon-fr0.png"
-                  alt="Defence Icon"
-                />
+                <img src="img/v2-fw-icon-fr0.png" alt="Defence Icon" />
               </div>
               <div className="fw-warpop-def-num">
                 <span>0</span>
@@ -91,19 +88,38 @@ export default function Warpop() {
             </div>
             <div className="fw-warpop-at-box-all">
               <div className="fw-warpop-at-name">attackers</div>
+              <div className="fw-warpop-at-text">There are no attackers</div>
+              {/* <div className="fw-warpop-at-box cw">
+                <div className="fw-warpop-at-pic">
+                  <img
+                    className="bg"
+                    src="img/v2-cw-bg34.png"
+                    alt="Background Icon"
+                  />
+                  <img
+                    className="fg"
+                    src="img/v2-cw-p03.png"
+                    alt="Foreground Icon"
+                  />
+                </div>
+              </div> */}
             </div>
-            <div className="fw-warpop-army-power-box">
+            {/* <div className="fw-warpop-army-power-box">
               <div className="fw-warpop-army-power-text">
                 Your army power here
               </div>
               <div className="fw-warpop-army-power-num">0</div>
-            </div>
-            <div className="fw-warpop-gr-con-power-box">
+            </div> */}
+            {/* <div className="fw-warpop-gr-con-power-box">
               <div className="fw-warpop-gr-box">
                 <div className="fw-warpop-army-power-text">Your army power</div>
                 <div className="fw-warpop-army-power-num">0</div>
               </div>
-            </div>
+            </div> */}
+          </div>
+          <div className="fw-warpop-army-power-box">
+            <div className="fw-warpop-tit">Your army power here</div>
+            <div className="fw-warpop-army-power-num">0</div>
           </div>
           {/* <div>
             <div className="color-btn green" style={{ filter: "grayscale(1)" }}>

@@ -148,6 +148,11 @@ export default function ArmySetupCW() {
           onClick={() => toggleSelect()}
         />
         <ResCount className="max armyPower" value="POWER 234" />
+
+        <div className="armySetupInfo">
+          <div className="armySetupText">power needed 0</div>
+          {/* <div className="armySetupInfo"></div> */}
+        </div>
       </div>
 
       <div className="armySetupFilter">

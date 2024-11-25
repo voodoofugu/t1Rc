@@ -53,7 +53,7 @@ export default function Popup({ pageName }) {
                   {...(popupState.props || {})}
                 />
               ) : (
-                <Loading />
+                <Loading noBG />
               )}
 
               {popupState.timer && (
