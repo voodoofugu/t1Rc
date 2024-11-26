@@ -29,7 +29,10 @@ export default function App() {
   return (
     <StrictMode>
       <NexusProvider initialStates={initialStates} actions={actions}>
-        <Storage watch storageData={[["pageData"], ["popupState"]]} />
+        <Storage
+          watch
+          storageData={[["darkTheme", "local"], ["pageData"], ["popupState"]]}
+        />
         <HelmetProvider>
           <div
             className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}

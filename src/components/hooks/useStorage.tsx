@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 /**
  * Хук для управления состоянием с использованием localStorage или sessionStorage.
@@ -10,8 +10,15 @@ import { useEffect } from "react";
 export default function useStorage(
   storItem: {
     name: string;
-    value: Record<string, unknown> | unknown[] | string | number | boolean;
+    value?:
+      | Record<string, unknown>
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
     type?: "local" | "session";
+    remove?: boolean;
   }[],
   callback?: (item: {
     name: string;
@@ -19,6 +26,15 @@ export default function useStorage(
     type: "local" | "session";
   }) => void
 ) {
+  const [currentValues, setCurrentValues] = useState(() =>
+    storItem.reduce((acc, { name, type }) => {
+      const storageType = type === "local" ? localStorage : sessionStorage;
+      const storedValue = storageType.getItem(name);
+      acc[name] = storedValue ? JSON.parse(storedValue) : null;
+      return acc;
+    }, {} as Record<string, unknown>)
+  );
+
   useEffect(() => {
     if (
       typeof window === "undefined" ||
@@ -29,22 +45,37 @@ export default function useStorage(
       return;
     }
 
-    const items = Array.isArray(storItem) ? storItem : [storItem];
-
-    items.forEach((item) => {
+    storItem.forEach((item) => {
       try {
         const storageType =
           item.type === "local" ? localStorage : sessionStorage;
-        const serializedValue = JSON.stringify(item.value);
 
-        // Записываем данные в хранилище
-        storageType.setItem(item.name, serializedValue);
+        if (item.remove) {
+          storageType.removeItem(item.name);
+          setCurrentValues((prev) => {
+            if (prev[item.name] !== null) {
+              return { ...prev, [item.name]: null };
+            }
+            return prev;
+          });
+          return;
+        }
+
+        if (item.value) {
+          const serializedValue = JSON.stringify(item.value);
+          if (storageType.getItem(item.name) !== serializedValue) {
+            storageType.setItem(item.name, serializedValue);
+            setCurrentValues((prev) => ({ ...prev, [item.name]: item.value }));
+          }
+        } else {
+          storageType.removeItem(item.name);
+        }
 
         // Вызов коллбека
         if (callback) {
           callback({
             name: item.name,
-            value: item.value,
+            value: item.value ?? null,
             type: item.type || "session",
           });
         }
@@ -57,7 +88,9 @@ export default function useStorage(
         );
       }
     });
-  }, [JSON.stringify(storItem), callback]);
+  }, [storItem, callback]);
+
+  return currentValues;
 }
 
 export type StorageItemT = Parameters<typeof useStorage>[0];

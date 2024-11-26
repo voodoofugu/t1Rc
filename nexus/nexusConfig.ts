@@ -24,6 +24,8 @@ declare global {
 
 // Начальное состояние
 export const initialStates = {
+  darkTheme: false,
+
   activePage: "",
   searchData: [] as string[],
   pageData: {
@@ -33,7 +35,7 @@ export const initialStates = {
   },
 
   // project initial states
-  popupState: {} as PopupState,
+  popupState: null as PopupState | null,
 
   sAndLStates: {
     activePlate: 0,
@@ -52,6 +54,11 @@ export const initialStates = {
 };
 
 export const actions = {
+  THEME: nexusAction((state) => ({
+    ...state,
+    darkTheme: !state.darkTheme ? true : false,
+  })),
+
   ACTIVE_PAGE: nexusAction((state, action) => ({
     ...state,
     activePage: action.payload,

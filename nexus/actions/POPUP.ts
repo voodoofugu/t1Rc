@@ -37,7 +37,7 @@ const POPUP_FOR_CLOSE = nexusAction((state) => ({
 
 const POPUP_CLOSE = nexusAction((state) => ({
   ...state,
-  popupState: {},
+  popupState: null,
 }));
 
 const POPUP_CHANGE = nexusAction((state, action) => ({

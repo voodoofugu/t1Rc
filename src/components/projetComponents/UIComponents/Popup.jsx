@@ -17,7 +17,7 @@ export default function Popup({ pageName }) {
 
   return (
     <>
-      {activePage === pageName && popupState.popupVisible && (
+      {activePage === pageName && popupState?.popupVisible && (
         <div
           id="popupWrapper"
           className={`popup-layer ${popupState.dialogEmersion}`}

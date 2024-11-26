@@ -60,6 +60,7 @@ export default memo(function PageBox() {
     if (sessionStorage.getItem("scrollTop")) {
       setScrollTopValue(Number(sessionStorage.getItem("scrollTop")));
     } else if (window.location.hash.length > 2) {
+      // устанавливаем scrollTop в новом окне
       const sectionChar = window.location.hash[2];
       if (sectionChar === "&") {
         const statesNewTab = window.location.hash.substring(3);
@@ -72,7 +73,7 @@ export default memo(function PageBox() {
   useStorage([
     {
       name: "scrollTop",
-      value: scrollTopValue !== 0 && Math.round(scrollTopValue),
+      value: Math.round(scrollTopValue) || false,
     },
   ]);
 

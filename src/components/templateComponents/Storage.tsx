@@ -30,7 +30,6 @@ export default function Storage({ watch, storageData }: StorageType): null {
     });
 
     if (Object.keys(dataToUpdate).length > 0) {
-      console.log("dataToUpdate", dataToUpdate);
       nexusDispatch({
         type: "STATES_UPDATE",
         payload: dataToUpdate,
