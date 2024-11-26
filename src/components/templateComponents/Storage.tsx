@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useNexus, nexusDispatch } from "nexus-state";
 import useStorage, { StorageItemT } from "../../components/hooks/useStorage";
 
@@ -9,18 +9,36 @@ type StorageType = {
 
 export default function Storage({ watch, storageData }: StorageType): null {
   const nexusAll = useNexus();
-
-  const popupStateStor = sessionStorage.getItem("popupState");
-  const parsedPopupState = popupStateStor ? JSON.parse(popupStateStor) : null;
+  const hasInitialized = useRef(false);
 
   useEffect(() => {
-    if (parsedPopupState && parsedPopupState.popupVisible) {
+    if (!storageData?.length || hasInitialized.current) return;
+
+    const dataToUpdate: Partial<StatesT> = {};
+    storageData.forEach(([key, storageType]) => {
+      const storage = storageType === "local" ? localStorage : sessionStorage;
+      const rawData = storage.getItem(key as string);
+
+      if (rawData) {
+        try {
+          const parsedData = JSON.parse(rawData);
+          dataToUpdate[key as keyof StatesT] = parsedData;
+        } catch (error) {
+          console.error(`Ошибка парсинга данных для ключа "${key}":`, error);
+        }
+      }
+    });
+
+    if (Object.keys(dataToUpdate).length > 0) {
+      console.log("dataToUpdate", dataToUpdate);
       nexusDispatch({
-        type: "POPUP_OPEN",
-        payload: parsedPopupState,
+        type: "STATES_UPDATE",
+        payload: dataToUpdate,
       });
     }
-  }, []);
+
+    hasInitialized.current = true; // Предотвращаем повторное выполнение эффекта
+  }, [storageData]);
 
   const processedStorageData: StorageItemT[] =
     storageData && Array.isArray(storageData)

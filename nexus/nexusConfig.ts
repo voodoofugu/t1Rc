@@ -101,4 +101,9 @@ export const actions = {
     ...state,
     warpop: action.payload,
   })),
+
+  STATES_UPDATE: nexusAction((state, action) => ({
+    ...state,
+    ...action.payload,
+  })),
 };
