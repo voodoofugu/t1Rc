@@ -6,10 +6,11 @@ const POPUP_OPEN = nexusAction((state, action) => ({
     ...action.payload,
     popupVisible: true,
     dialogEmersion: "show dialog-emersion-enter",
-    btnXClass:
-      state.popupState && "btnXClass" in state.popupState
-        ? state.popupState.btnXClass
-        : "btn-close-x",
+    // btnXClass:
+    //   state.popupState && "btnXClass" in state.popupState
+    //     ? state.popupState.btnXClass
+    //     : "btn-close-x",
+    // функции передовать не хорошо!
     popClose: () => {
       nexusDispatch({ type: "POPUP_FOR_CLOSE" });
       setTimeout(() => nexusDispatch({ type: "POPUP_CLOSE" }), 200);

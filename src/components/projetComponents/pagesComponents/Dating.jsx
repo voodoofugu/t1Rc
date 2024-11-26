@@ -42,7 +42,7 @@ export default function Dating({ pageName, children }) {
                 props: {
                   inner:
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                  girlImg: "img/breakGirls/break-girl915.png",
+                  girlImg: "img/break-girls/break-girl915.png",
                 },
               },
             });
@@ -86,7 +86,7 @@ const GirlDependencies = ({ girlsInfo }) => {
       <div className={`girlFigure ${girlsInfo[girlIndex].condition}`}>
         <img
           key={girlsInfo[girlIndex].id}
-          src={`img/breakGirls/break-girl${girlsInfo[girlIndex].id}.png`}
+          src={`img/break-girls/break-girl${girlsInfo[girlIndex].id}.png`}
           loading="lazy"
         />
       </div>

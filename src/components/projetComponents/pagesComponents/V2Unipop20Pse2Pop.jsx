@@ -287,7 +287,7 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                     <div className="pse2-girl-left-box">
                       <div className="pse2-girl">
                         <img
-                          src="img/breakGirls/break-girl238.png"
+                          src="img/break-girls/break-girl238.png"
                           loading="lazy"
                         />
                       </div>

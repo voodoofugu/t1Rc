@@ -1,4 +1,4 @@
-import { useNexus } from "nexus-state";
+import { useNexus, nexusDispatch } from "nexus-state";
 
 import useDynamicImport from "../../hooks/useDynamicImport";
 
@@ -24,7 +24,10 @@ export default function Popup({ pageName }) {
         >
           <div
             className="screen-blend-55"
-            onClick={() => popupState.popClose()}
+            onClick={() => {
+              nexusDispatch({ type: "POPUP_FOR_CLOSE" });
+              setTimeout(() => nexusDispatch({ type: "POPUP_CLOSE" }), 200);
+            }}
           ></div>
           <div id="popupContainer">
             <div className={popupState.mpopClass} style={popupState.popStyle}>

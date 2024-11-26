@@ -305,8 +305,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-bf",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup events-btlpass-pop bf",
-                  popTit: "Black Friday Event Pass",
+                  mpopClass: "m-popup events-btlpass-pop bf contentOnly",
                   popCont: "BtlPass",
                   props: { event: "bf" },
                 },

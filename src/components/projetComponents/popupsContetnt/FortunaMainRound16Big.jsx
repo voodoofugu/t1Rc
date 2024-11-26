@@ -75,7 +75,7 @@ export default function FortunaMainRound16Big() {
                     </div>
                   </div>
                 ),
-                girlImg: "img/breakGirls/break-girl915.png",
+                girlImg: "img/break-girls/break-girl915.png",
               },
             },
           });

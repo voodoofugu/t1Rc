@@ -95,7 +95,7 @@ export default function ArmySetupCW() {
               props: {
                 inner:
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                girlImg: "img/breakGirls/break-girl915.png",
+                girlImg: "img/break-girls/break-girl915.png",
               },
             },
           });
@@ -119,6 +119,7 @@ export default function ArmySetupCW() {
           className="armySetupScroll"
           scrollXY={[1100, 450]}
           objectXY={[94, 107]}
+          padding={[6, 0]}
           gap={12}
           progressTrigger={["wheel", "progressElement"]}
           thumbElement={<ScrollThumb />}
@@ -149,9 +150,11 @@ export default function ArmySetupCW() {
         />
         <ResCount className="max armyPower" value="POWER 234" />
 
-        <div className="armySetupInfo">
-          <div className="armySetupText">power needed 0</div>
-          {/* <div className="armySetupInfo"></div> */}
+        <div className="powerInfoWrap">
+          <div className="powerInfoText">
+            power needed
+            <div className="powerInfoValue"> 0</div>
+          </div>
         </div>
       </div>
 
