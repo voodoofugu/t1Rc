@@ -6,6 +6,7 @@ import CellContent from "./CellContent";
 import ToTopButton from "./ToTopButton";
 import Page404Component from "../projetComponents/pagesComponents/Page404";
 import PageList from "../projetComponents/pagesComponents/a_pageList";
+import useStorage from "../hooks/useStorage";
 
 const componentLoadStatus = {};
 
@@ -68,11 +69,12 @@ export default memo(function PageBox() {
     }
   }, []);
 
-  useEffect(() => {
-    if (scrollTopValue !== 0) {
-      sessionStorage.setItem("scrollTop", scrollTopValue);
-    }
-  }, [scrollTopValue]);
+  useStorage([
+    {
+      name: "scrollTop",
+      value: scrollTopValue !== 0 && Math.round(scrollTopValue),
+    },
+  ]);
 
   return (
     <>

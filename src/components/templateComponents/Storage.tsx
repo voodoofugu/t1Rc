@@ -40,7 +40,7 @@ export default function Storage({ watch, storageData }: StorageType): null {
     hasInitialized.current = true; // Предотвращаем повторное выполнение эффекта
   }, [storageData]);
 
-  const processedStorageData: StorageItemT[] =
+  const processedStorageData: StorageItemT =
     storageData && Array.isArray(storageData)
       ? storageData.map((item) => ({
           name: item[0] as string,
@@ -49,7 +49,7 @@ export default function Storage({ watch, storageData }: StorageType): null {
         }))
       : [];
 
-  const storageItems: StorageItemT[] = [
+  const storageItems: StorageItemT = [
     ...processedStorageData,
     ...(watch
       ? [

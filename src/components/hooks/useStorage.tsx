@@ -7,13 +7,18 @@ import { useEffect } from "react";
  * @returns {[string, (value: string) => void]} - Массив, содержащий текущее значение и функцию для его обновления.
  */
 
-export type StorageItemT = {
-  name: string;
-  value: Record<string, unknown> | unknown[] | string | number | boolean;
-  type?: "local" | "session";
-};
-
-export default function useStorage(storItem: StorageItemT[]) {
+export default function useStorage(
+  storItem: {
+    name: string;
+    value: Record<string, unknown> | unknown[] | string | number | boolean;
+    type?: "local" | "session";
+  }[],
+  callback?: (item: {
+    name: string;
+    value: unknown;
+    type: "local" | "session";
+  }) => void
+) {
   useEffect(() => {
     if (
       typeof window === "undefined" ||
@@ -34,6 +39,15 @@ export default function useStorage(storItem: StorageItemT[]) {
 
         // Записываем данные в хранилище
         storageType.setItem(item.name, serializedValue);
+
+        // Вызов коллбека
+        if (callback) {
+          callback({
+            name: item.name,
+            value: item.value,
+            type: item.type || "session",
+          });
+        }
       } catch (error) {
         console.error(
           `Failed to save item "${item.name}" to ${
@@ -43,5 +57,7 @@ export default function useStorage(storItem: StorageItemT[]) {
         );
       }
     });
-  }, [JSON.stringify(storItem)]);
+  }, [JSON.stringify(storItem), callback]);
 }
+
+export type StorageItemT = Parameters<typeof useStorage>[0];

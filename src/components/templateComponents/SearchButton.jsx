@@ -10,6 +10,8 @@ import { nexusDispatch } from "nexus-state";
 
 import PageList from "../projetComponents/pagesComponents/a_pageList.json";
 
+import useStorage from "../hooks/useStorage";
+
 export default function SearchButton() {
   const [focus, setFocus] = useState(false);
   const [searchText, setSearchText] = useState(
@@ -90,6 +92,20 @@ export default function SearchButton() {
       handleSearch(searchText);
     }
   }, [searchText, handleSearch]);
+  // useStorage(
+  //   [
+  //     {
+  //       name: "searchText",
+  //       value: searchText,
+  //     },
+  //   ],
+  //   () => {
+  //     prevSearchTextRef.current = searchText;
+  //     if (prevSearchTextRef.current === searchText) {
+  //       handleSearch(searchText);
+  //     }
+  //   }
+  // );
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
