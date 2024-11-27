@@ -6,13 +6,15 @@ import {
   startTransition,
   useDeferredValue,
 } from "react";
-import { nexusDispatch } from "nexus-state";
+import { useNexus, nexusDispatch } from "nexus-state";
 
 import PageList from "../projetComponents/pagesComponents/a_pageList.json";
 
 import useStorage from "../hooks/useStorage";
 
 export default function SearchButton() {
+  // const searchData = useNexus("searchData");
+  // console.log("searchData", searchData);
   const [focus, setFocus] = useState(false);
   const [searchText, setSearchText] = useState(
     sessionStorage.getItem("searchText") || ""
@@ -54,6 +56,7 @@ export default function SearchButton() {
           type: "SEARCH_DATA",
           payload: filteredData,
         });
+        console.log("filteredData", filteredData);
         prevFilteredValueRef.current = filteredData;
       }
     },
@@ -92,6 +95,7 @@ export default function SearchButton() {
       handleSearch(searchText);
     }
   }, [searchText, handleSearch]);
+
   // useStorage(
   //   [
   //     {
@@ -111,6 +115,7 @@ export default function SearchButton() {
     const handleDocumentClick = (event) => {
       handleOutsideClick(event);
     };
+
     if (focus) {
       document.addEventListener("mousedown", handleDocumentClick);
     } else {
