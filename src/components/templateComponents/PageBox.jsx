@@ -57,11 +57,6 @@ export default memo(function PageBox() {
   }, [searchData]);
 
   useLayoutEffect(() => {
-    // if (sessionStorage.getItem("scrollTop")) {
-    //   // получаем из хранилища scrollTop
-    //   setScrollTopValue(Number(sessionStorage.getItem("scrollTop")));
-    // }
-
     if (window.location.hash.length > 2) {
       // устанавливаем scrollTop в новом окне
       const sectionChar = window.location.hash[2];
