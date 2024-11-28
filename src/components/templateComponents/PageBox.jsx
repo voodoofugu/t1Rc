@@ -58,7 +58,7 @@ export default memo(function PageBox() {
 
   useLayoutEffect(() => {
     if (sessionStorage.getItem("scrollTop")) {
-      setScrollTopValue(Number(sessionStorage.getItem("scrollTop")));
+      // setScrollTopValue(Number(sessionStorage.getItem("scrollTop")));
     } else if (window.location.hash.length > 2) {
       // устанавливаем scrollTop в новом окне
       const sectionChar = window.location.hash[2];
