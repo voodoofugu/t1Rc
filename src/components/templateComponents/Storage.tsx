@@ -12,6 +12,7 @@ export default function Storage({ watch, storageData }: StorageType): null {
   const hasInitialized = useRef(false);
 
   useEffect(() => {
+    // берем данные из хранилища и обновляем состояния
     if (!storageData?.length || hasInitialized.current) return;
 
     const dataToUpdate: Partial<StatesT> = {};
@@ -53,7 +54,7 @@ export default function Storage({ watch, storageData }: StorageType): null {
     ...(watch
       ? [
           {
-            name: "NEXUS_ALL",
+            name: "✨NEXUS✨",
             value: nexusAll,
           },
         ]

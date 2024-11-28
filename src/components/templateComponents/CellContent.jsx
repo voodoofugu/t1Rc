@@ -13,6 +13,7 @@ import Tooltip from "./Tooltip";
 
 export default memo(function CellContent({ pageName, loadable }) {
   const activePage = useNexus("activePage");
+  const searchText = useNexus("searchText");
 
   const [stylesLoaded, setStylesLoaded] = useState(false);
   const [position, setPosition] = useState({ top: 0, left: 0 });
@@ -37,28 +38,30 @@ export default memo(function CellContent({ pageName, loadable }) {
 
   useEffect(() => {
     if (window.location.hash.length > 2) {
-      const sectionChar = window.location.hash[2];
+      const sectionChar = window.location.hash[2]; // выбираем разделитель &
       if (sectionChar === "&") {
         const statesNewTab = window.location.hash.substring(3);
         const hashParts = statesNewTab.split("/");
-        if (hashParts[0] === pageName) {
-          nexusDispatch([
-            {
-              type: "PAGE_DATA",
-              payload: {
-                scrollTop: hashParts[1],
-                top: hashParts[2],
-                left: hashParts[3],
-              },
+        nexusDispatch([
+          {
+            type: "PAGE_DATA",
+            payload: {
+              scrollTop: hashParts[1],
+              top: hashParts[2],
+              left: hashParts[3],
             },
-            {
-              type: "ACTIVE_PAGE",
-              payload: hashParts[0],
-            },
-          ]);
+          },
+          {
+            type: "ACTIVE_PAGE",
+            payload: hashParts[0],
+          },
+          {
+            type: "SEARCH_TEXT",
+            payload: hashParts[4],
+          },
+        ]);
 
-          setStyle(true);
-        }
+        setStyle(true);
       }
     }
   }, []);
@@ -112,7 +115,6 @@ export default memo(function CellContent({ pageName, loadable }) {
     setTimeout(() => {
       nexusDispatch({
         type: "ACTIVE_PAGE",
-        payload: "",
       });
     }, 200);
 
@@ -228,7 +230,7 @@ export default memo(function CellContent({ pageName, loadable }) {
           )}
           <a
             className="absolute left-0 top-0 w-full h-full px-25 font-bold text-xs text-center leading-7 whitespace-no-wrap overflow-hidden text-ellipsis dark:text-shadow-tS1Black cursor-pointer"
-            href={`#/&${pageName}/${newTabPosition.scrollTop}/${newTabPosition.top}/${newTabPosition.left}`}
+            href={`#/&${pageName}/${newTabPosition.scrollTop}/${newTabPosition.top}/${newTabPosition.left}/${searchText}`}
             onClick={pageOpen}
             onMouseUp={pageOpenNewTab}
           >

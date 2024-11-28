@@ -26,7 +26,7 @@ declare global {
 export const initialStates = {
   darkTheme: false,
 
-  // searchText: "",
+  searchText: "",
 
   activePage: "",
   searchData: [] as string[],
@@ -61,14 +61,14 @@ export const actions = {
     darkTheme: !state.darkTheme ? true : false,
   })),
 
-  // SEARCH_TEXT: nexusAction((state, action) => ({
-  //   ...state,
-  //   searchText: action.payload,
-  // })),
+  SEARCH_TEXT: nexusAction((state, action) => ({
+    ...state,
+    searchText: action.payload || "",
+  })),
 
   ACTIVE_PAGE: nexusAction((state, action) => ({
     ...state,
-    activePage: action.payload,
+    activePage: action.payload || "",
   })),
 
   SEARCH_DATA: nexusAction((state, action) => ({

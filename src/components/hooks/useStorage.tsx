@@ -19,6 +19,7 @@ export default function useStorage(
       | null;
     type?: "local" | "session";
     remove?: boolean;
+    setState?: (state: any) => void;
   }[],
   callback?: (item: {
     name: string;
@@ -35,7 +36,22 @@ export default function useStorage(
     }, {} as Record<string, unknown>)
   );
 
-  const windowCheck = () => {
+  useEffect(() => {
+    storItem.forEach((item) => {
+      if (item.setState) {
+        const storageType =
+          item.type === "local" ? localStorage : sessionStorage;
+        const storedValue = storageType.getItem(item.name);
+
+        if (storedValue) {
+          const parsedValue = JSON.parse(storedValue);
+          item.setState(parsedValue);
+        }
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     if (
       typeof window === "undefined" ||
       !window.localStorage ||
@@ -44,28 +60,6 @@ export default function useStorage(
       console.warn("Storage is not available in this environment.");
       return;
     }
-  };
-
-  // useEffect(() => {
-  //   storItem.forEach((item) => {
-  //     const storageType = item.type === "local" ? localStorage : sessionStorage;
-
-  //     if (storageType.getItem(item.name)) {
-  //       setCurrentValues((prev) => {
-  //         if (prev[item.name] !== null) {
-  //           return { ...prev, [item.name]: null };
-  //         } else {
-  //           return prev;
-  //         }
-  //       }
-  //     } else {
-  //       setCurrentValues((prev) => ({ ...prev, [item.name]: null }));
-  //     }
-  //   });
-  // }, []);
-
-  useEffect(() => {
-    windowCheck();
 
     storItem.forEach((item) => {
       try {

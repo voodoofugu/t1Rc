@@ -10,15 +10,9 @@ import { useNexus, nexusDispatch } from "nexus-state";
 
 import PageList from "../projetComponents/pagesComponents/a_pageList.json";
 
-import useStorage from "../hooks/useStorage";
-
 export default function SearchButton() {
-  // const searchData = useNexus("searchData");
-  // console.log("searchData", searchData);
+  const searchText = useNexus("searchText");
   const [focus, setFocus] = useState(false);
-  const [searchText, setSearchText] = useState(
-    sessionStorage.getItem("searchText") || ""
-  );
 
   const clearBtnRef = useRef(null);
   const searchInputRef = useRef(null);
@@ -56,7 +50,6 @@ export default function SearchButton() {
           type: "SEARCH_DATA",
           payload: filteredData,
         });
-        console.log("filteredData", filteredData);
         prevFilteredValueRef.current = filteredData;
       }
     },
@@ -72,7 +65,9 @@ export default function SearchButton() {
   };
 
   const handleClear = () => {
-    setSearchText("");
+    nexusDispatch({
+      type: "SEARCH_TEXT",
+    });
     inputFocus();
   };
 
@@ -88,28 +83,12 @@ export default function SearchButton() {
 
   // effects
   useEffect(() => {
-    sessionStorage.setItem("searchText", searchText);
     prevSearchTextRef.current = searchText;
 
     if (prevSearchTextRef.current === searchText) {
       handleSearch(searchText);
     }
   }, [searchText, handleSearch]);
-
-  // useStorage(
-  //   [
-  //     {
-  //       name: "searchText",
-  //       value: searchText,
-  //     },
-  //   ],
-  //   () => {
-  //     prevSearchTextRef.current = searchText;
-  //     if (prevSearchTextRef.current === searchText) {
-  //       handleSearch(searchText);
-  //     }
-  //   }
-  // );
 
   useEffect(() => {
     const handleDocumentClick = (event) => {
@@ -140,7 +119,12 @@ export default function SearchButton() {
         placeholder="Search"
         value={deferredSearchText}
         onChange={(event) =>
-          startTransition(() => setSearchText(event.target.value))
+          startTransition(() =>
+            nexusDispatch({
+              type: "SEARCH_TEXT",
+              payload: event.target.value,
+            })
+          )
         }
         autoComplete="off"
       />

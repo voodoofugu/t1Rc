@@ -31,7 +31,12 @@ export default function App() {
       <NexusProvider initialStates={initialStates} actions={actions}>
         <Storage
           watch
-          storageData={[["darkTheme", "local"], ["pageData"], ["popupState"]]}
+          storageData={[
+            ["darkTheme", "local"],
+            ["searchText"],
+            ["pageData"],
+            ["popupState"],
+          ]}
         />
         <HelmetProvider>
           <div
