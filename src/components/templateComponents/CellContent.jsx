@@ -102,6 +102,7 @@ export default memo(function CellContent({ pageName, loadable }) {
     setTimeout(() => {
       nexusUpdate({
         activePage: "",
+        pageData: null,
       });
     }, 200);
 

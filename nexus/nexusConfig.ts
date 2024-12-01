@@ -5,6 +5,7 @@ import handlePopup from "./actions/handlePopup";
 // states
 import popupState from "./states/popupState";
 import sAndLStates from "./states/sAndLStates";
+import pageData from "./states/pageData";
 
 type InitialStatesT = typeof initialStates;
 type InitialActionsT = typeof actions;
@@ -20,11 +21,7 @@ export const initialStates = {
   searchText: "",
   activePage: "",
   searchData: [] as string[],
-  pageData: {
-    scrollTop: 0,
-    top: 0,
-    left: 0,
-  },
+  pageData,
 
   // project
   popupState,
