@@ -19,24 +19,39 @@ export default function FortunaMainRound16Big() {
         text="Wheel of fortune - spin your discount!"
       />
 
-      <Button className="exit" text="✖" onClick={() => popupState.popClose()} />
+      <Button
+        className="exit"
+        text="✖"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      />
 
       <ResCount
         img="img/heartCoin.png"
         value="234"
         plus
         onClick={() =>
-          popupState.popOpen(nexusDispatch, {
-            mpopClass: "m-popup essence-buy contentOnly framedPop",
-            popCont: [
-              "BuyShop",
-              {
-                img1: "heartCoin-1",
-                img2: "heartCoin-2",
-                img3: "heartCoin-3",
-                img4: "heartCoin-4",
+          nexusDispatch({
+            type: "handlePopup",
+            payload: {
+              type: "open",
+              data: {
+                mpopClass: "m-popup essence-buy contentOnly framedPop",
+                popCont: [
+                  "BuyShop",
+                  {
+                    img1: "heartCoin-1",
+                    img2: "heartCoin-2",
+                    img3: "heartCoin-3",
+                    img4: "heartCoin-4",
+                  },
+                ],
               },
-            ],
+            },
           })
         }
       />
@@ -46,36 +61,39 @@ export default function FortunaMainRound16Big() {
         text="i"
         onClick={() => {
           nexusDispatch({
-            type: "POPUP_OPEN",
+            type: "handlePopup",
             payload: {
-              mpopClass: "m-popup contentOnly framedPop",
-              popCont: "InfoPopFramed",
-              props: {
-                inner: (
-                  <div className="rrules-box">
-                    <div className="rules-name">Rules</div>
-                    <div className="rules-text">
-                      <div>
-                        1. During the time of the event, you can spin the Great
-                        Wheel of Fortune for diamonds.
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly framedPop",
+                popCont: "InfoPopFramed",
+                props: {
+                  inner: (
+                    <div className="rrules-box">
+                      <div className="rules-name">Rules</div>
+                      <div className="rules-text">
+                        <div>
+                          1. During the time of the event, you can spin the
+                          Great Wheel of Fortune for diamonds.
+                        </div>
+                        <div>
+                          2. Each use of the Push button gives a prize and
+                          increases points counter.
+                        </div>
+                        <div>
+                          3. As soon as enough points accumulate, you can get a
+                          guaranteed prize!
+                        </div>
+                        <div>
+                          4. You can get FREE WHEEL ROLLS for doing daily quests
+                          EACH DAY OF AN EVENT.
+                        </div>
+                        <div>5. Remember, fortune loves stubborn.</div>
                       </div>
-                      <div>
-                        2. Each use of the Push button gives a prize and
-                        increases points counter.
-                      </div>
-                      <div>
-                        3. As soon as enough points accumulate, you can get a
-                        guaranteed prize!
-                      </div>
-                      <div>
-                        4. You can get FREE WHEEL ROLLS for doing daily quests
-                        EACH DAY OF AN EVENT.
-                      </div>
-                      <div>5. Remember, fortune loves stubborn.</div>
                     </div>
-                  </div>
-                ),
-                girlImg: "img/break-girls/break-girl915.png",
+                  ),
+                  girlImg: "img/break-girls/break-girl915.png",
+                },
               },
             },
           });

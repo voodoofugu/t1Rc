@@ -22,15 +22,18 @@ export default function DarkBtlPass() {
         text="i"
         onClick={() => {
           nexusDispatch({
-            type: "POPUP_OPEN",
+            type: "handlePopup",
             payload: {
-              mpopClass: "m-popup contentOnly framedPop",
-              popTit: "",
-              popCont: "InfoPopFramed",
-              props: {
-                inner:
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                girlImg: "img/break-girls/break-girl915.png",
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly framedPop",
+                popTit: "",
+                popCont: "InfoPopFramed",
+                props: {
+                  inner:
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                  girlImg: "img/break-girls/break-girl915.png",
+                },
               },
             },
           });
@@ -39,21 +42,36 @@ export default function DarkBtlPass() {
 
       <FraimedTitle className="cornersTop" text="Dark World Event Pass" />
 
-      <Button className="exit" text="✖" onClick={() => popupState.popClose()} />
+      <Button
+        className="exit"
+        text="✖"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      />
 
       <Button
         className="blue schop"
         text="Buy Currency"
         img="img/ic-red-potion-1.png"
         onClick={() =>
-          popupState.popOpen(nexusDispatch, {
-            mpopClass: "m-popup essence-buy contentOnly framedPop",
-            popCont: "BuyShop",
-            props: {
-              img1: "ic-red-potion-1",
-              img2: "ic-red-potion-2",
-              img3: "ic-red-potion-3",
-              img4: "ic-red-potion-4",
+          nexusDispatch({
+            type: "handlePopup",
+            payload: {
+              type: "open",
+              data: {
+                mpopClass: "m-popup essence-buy contentOnly framedPop",
+                popCont: "BuyShop",
+                props: {
+                  img1: "ic-red-potion-1",
+                  img2: "ic-red-potion-2",
+                  img3: "ic-red-potion-3",
+                  img4: "ic-red-potion-4",
+                },
+              },
             },
           })
         }

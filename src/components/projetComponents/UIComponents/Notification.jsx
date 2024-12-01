@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useNexus, nexusDispatch } from "nexus-state";
+import { useNexus, nexusUpdate } from "nexus-state";
 
 import ItemBox from "./ItemBox";
 
@@ -17,10 +17,10 @@ export default function Notification({
 
   const notifState = useNexus("notif");
 
-  const localView = view || notifState.view;
-  const localClassName = className || notifState.className;
-  const localImg = img || notifState.img;
-  const localText = text || notifState.text;
+  const localView = view || notifState?.view;
+  const localClassName = className || notifState?.className;
+  const localImg = img || notifState?.img;
+  const localText = text || notifState?.text;
   //   const localOnClick = onClick || notifState.onClick;
 
   const clearTimeouts = () => {
@@ -38,9 +38,8 @@ export default function Notification({
 
     timer2.current = setTimeout(() => {
       clearTimeouts();
-      nexusDispatch({
-        type: "NOTIF_VIEW",
-        payload: {},
+      nexusUpdate({
+        notif: {},
       });
     }, t2);
   };

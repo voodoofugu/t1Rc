@@ -1313,10 +1313,13 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                   className="journal-comics"
                   onClick={() => {
                     nexusDispatch({
-                      type: "POPUP_OPEN",
+                      type: "handlePopup",
                       payload: {
-                        mpopClass: "m-popup uki-story-popup contentOnly",
-                        popCont: "ComicsPop",
+                        type: "open",
+                        data: {
+                          mpopClass: "m-popup uki-story-popup contentOnly",
+                          popCont: "ComicsPop",
+                        },
                       },
                     });
                   }}

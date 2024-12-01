@@ -1,6 +1,6 @@
 import { memo, Suspense, useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { useNexus, nexusUpdate } from "nexus-state";
 
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
 import useDynamicImport from "../hooks/useDynamicImport";
@@ -42,24 +42,16 @@ export default memo(function CellContent({ pageName, loadable }) {
       if (sectionChar === "&") {
         const statesNewTab = window.location.hash.substring(3);
         const hashParts = statesNewTab.split("/");
-        nexusDispatch([
-          {
-            type: "PAGE_DATA",
-            payload: {
-              scrollTop: hashParts[1],
-              top: hashParts[2],
-              left: hashParts[3],
-            },
+
+        nexusUpdate({
+          pageData: {
+            scrollTop: hashParts[1],
+            top: hashParts[2],
+            left: hashParts[3],
           },
-          {
-            type: "ACTIVE_PAGE",
-            payload: hashParts[0],
-          },
-          {
-            type: "SEARCH_TEXT",
-            payload: hashParts[4],
-          },
-        ]);
+          activePage: hashParts[0],
+          searchText: hashParts[4],
+        });
 
         setStyle(true);
       }
@@ -80,16 +72,11 @@ export default memo(function CellContent({ pageName, loadable }) {
       const positionData = computePositionData(event);
 
       setPosition(positionData);
-      nexusDispatch([
-        {
-          type: "ACTIVE_PAGE",
-          payload: pageName,
-        },
-        {
-          type: "PAGE_DATA",
-          payload: positionData,
-        },
-      ]);
+
+      nexusUpdate({
+        pageData: positionData,
+        activePage: pageName,
+      });
 
       setTimeout(() => {
         setStyle(true);
@@ -113,8 +100,8 @@ export default memo(function CellContent({ pageName, loadable }) {
     setStyle(false);
 
     setTimeout(() => {
-      nexusDispatch({
-        type: "ACTIVE_PAGE",
+      nexusUpdate({
+        activePage: "",
       });
     }, 200);
 

@@ -1,4 +1,4 @@
-import { useNexus, nexusDispatch } from "nexus-state";
+import { useNexus, nexusDispatch, nexusUpdate } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
@@ -112,14 +112,17 @@ export default function BtlPass({ event }) {
         text="i"
         onClick={() => {
           nexusDispatch({
-            type: "POPUP_OPEN",
+            type: "handlePopup",
             payload: {
-              mpopClass: "m-popup contentOnly framedPop",
-              popCont: "InfoPopFramed",
-              props: {
-                inner:
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                girlImg: "img/break-girls/break-girl915.png",
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly framedPop",
+                popCont: "InfoPopFramed",
+                props: {
+                  inner:
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                  girlImg: "img/break-girls/break-girl915.png",
+                },
               },
             },
           });
@@ -128,7 +131,16 @@ export default function BtlPass({ event }) {
 
       <FraimedTitle className="cornersTop" text="Event Pass" />
 
-      <Button className="exit" text="✖" onClick={() => popupState.popClose()} />
+      <Button
+        className="exit"
+        text="✖"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      />
 
       <Button
         className="lightGreen schop"
@@ -136,10 +148,16 @@ export default function BtlPass({ event }) {
         img
         onClick={() =>
           buyShopCont &&
-          popupState.popOpen(nexusDispatch, {
-            mpopClass: "m-popup essence-buy contentOnly framedPop",
-            popCont: buyShopCont[0],
-            props: buyShopCont[1],
+          nexusDispatch({
+            type: "handlePopup",
+            payload: {
+              type: "open",
+              data: {
+                mpopClass: "m-popup essence-buy contentOnly framedPop",
+                popCont: buyShopCont[0],
+                props: buyShopCont[1],
+              },
+            },
           })
         }
       />
@@ -205,9 +223,8 @@ export default function BtlPass({ event }) {
                 countOut={index + 1}
                 onClick={() => {
                   element.itemClass === "get" &&
-                    nexusDispatch({
-                      type: "NOTIF_VIEW",
-                      payload: {
+                    nexusUpdate({
+                      notif: {
                         view: true,
                         img: element.itemPic,
                         text: `You got ${element.count}`,

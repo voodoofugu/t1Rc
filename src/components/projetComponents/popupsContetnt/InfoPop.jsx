@@ -52,7 +52,12 @@ export default function InfoPop({
           <div className={`color-btn ${btnClass1 ? btnClass1 : ""}`}>
             <div
               className="color-btn-text"
-              onClick={() => popupState.popClose()}
+              onClick={() =>
+                nexusDispatch({
+                  type: "handlePopup",
+                  payload: { type: "close" },
+                })
+              }
             >
               {btnText1}
             </div>
@@ -64,7 +69,10 @@ export default function InfoPop({
           <div
             className={`color-btn ${btnClass2 ? btnClass2 : ""}`}
             onClick={() => {
-              popupState.popClose();
+              nexusDispatch({
+                type: "handlePopup",
+                payload: { type: "close" },
+              });
               // btn2State;
             }}
           >

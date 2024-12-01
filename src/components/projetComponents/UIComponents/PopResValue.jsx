@@ -8,10 +8,16 @@ export default memo(function PopResValue({ resClass, resValue, notPlus }) {
 
   if (resClass === "chest") {
     click = () =>
-      popupState.popOpen(nexusDispatch, {
-        mpopClass: "m-popup change-addchest",
-        popTit: "Купите еще Boss Chests!",
-        popCont: "ChangeAddchest",
+      nexusDispatch({
+        type: "handlePopup",
+        payload: {
+          type: "open",
+          data: {
+            mpopClass: "m-popup change-addchest",
+            popTit: "Купите еще Boss Chests!",
+            popCont: "ChangeAddchest",
+          },
+        },
       });
   }
 

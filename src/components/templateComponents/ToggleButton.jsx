@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { useNexus, nexusDispatch } from "nexus-state";
+import { useEffect, useRef } from "react";
+import { useNexus, nexusUpdate } from "nexus-state";
 
 export default function ToggleButton() {
   const theme = useNexus("darkTheme");
@@ -8,7 +8,9 @@ export default function ToggleButton() {
   const toggleButtonRef = useRef(null);
 
   const handleClick = () => {
-    nexusDispatch({ type: "THEME" });
+    nexusUpdate({
+      darkTheme: (prev) => !prev,
+    });
   };
 
   useEffect(() => {

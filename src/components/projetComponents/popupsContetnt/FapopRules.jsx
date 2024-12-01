@@ -19,7 +19,15 @@ export default memo(function FapopRules() {
         </div>
       </div>
       <div className="color-btn">
-        <div className="color-btn-text" onClick={() => popupState.popClose()}>
+        <div
+          className="color-btn-text"
+          onClick={() =>
+            nexusDispatch({
+              type: "handlePopup",
+              payload: { type: "close" },
+            })
+          }
+        >
           закрыть
         </div>
       </div>

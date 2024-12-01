@@ -196,12 +196,15 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
             className="color-btn rating"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass:
-                    "m-popup events-btlpass-pop sexpedition contentOnly",
-                  popCont: "BtlPass",
-                  props: { event: "sexpedition" },
+                  type: "open",
+                  data: {
+                    mpopClass:
+                      "m-popup events-btlpass-pop sexpedition contentOnly",
+                    popCont: "BtlPass",
+                    props: { event: "sexpedition" },
+                  },
                 },
               });
             }}

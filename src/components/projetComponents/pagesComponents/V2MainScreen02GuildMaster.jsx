@@ -210,17 +210,20 @@ export default function V2MainScreen02GuildMaster({ pageName, children }) {
                   className="color-btn-info"
                   onClick={() => {
                     nexusDispatch({
-                      type: "POPUP_OPEN",
+                      type: "handlePopup",
                       payload: {
-                        mpopClass: "m-popup info-pop",
-                        popTit: "Info",
-                        popCont: [
-                          "InfoPop",
-                          {
-                            text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
-                            btnText1: "I understand",
-                          },
-                        ],
+                        type: "open",
+                        data: {
+                          mpopClass: "m-popup info-pop",
+                          popTit: "Info",
+                          popCont: [
+                            "InfoPop",
+                            {
+                              text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
+                              btnText1: "I understand",
+                            },
+                          ],
+                        },
                       },
                     });
                   }}

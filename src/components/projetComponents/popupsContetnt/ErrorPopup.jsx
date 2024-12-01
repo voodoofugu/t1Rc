@@ -15,7 +15,12 @@ export default memo(function ErrorPopup() {
       </div>
       <div
         className="btn-simple-gold btn-ok"
-        onClick={() => popupState.popClose()}
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
       >
         Ок
       </div>

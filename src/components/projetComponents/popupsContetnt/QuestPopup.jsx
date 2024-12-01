@@ -39,14 +39,24 @@ export default memo(function QuestPopup({ done }) {
           {!done ? (
             <div
               className="btn-simple-silver btn-close"
-              onClick={() => popupState.popClose()}
+              onClick={() =>
+                nexusDispatch({
+                  type: "handlePopup",
+                  payload: { type: "close" },
+                })
+              }
             >
               <div className="txt">Закрыть</div>
             </div>
           ) : (
             <div
               className="btn-simple-gold btn-get"
-              onClick={() => popupState.popClose()}
+              onClick={() =>
+                nexusDispatch({
+                  type: "handlePopup",
+                  payload: { type: "close" },
+                })
+              }
             >
               <div className="txt">Получить награду!</div>
             </div>

@@ -7,7 +7,15 @@ export default memo(function ChangeCollpop() {
   return (
     <>
       <div className="color-box"></div>
-      <div className="close-btn-box" onClick={() => popupState.popClose()}>
+      <div
+        className="close-btn-box"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      >
         <div className="color-btn close">
           <div className="color-btn-text">закрыть</div>
         </div>

@@ -110,11 +110,14 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             className="res-chest-btn"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup chests-shop",
-                  popTit: "Chest Shop",
-                  popCont: "ChestsShop",
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup chests-shop",
+                    popTit: "Chest Shop",
+                    popCont: "ChestsShop",
+                  },
                 },
               });
             }}
@@ -616,11 +619,14 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                     className="hero-card highlight"
                     onClick={() => {
                       nexusDispatch({
-                        type: "POPUP_OPEN",
+                        type: "handlePopup",
                         payload: {
-                          mpopClass: "m-popup hero-popup",
-                          popTit: "Moe Kasa",
-                          popCont: "HeroPopup",
+                          type: "open",
+                          data: {
+                            mpopClass: "m-popup hero-popup",
+                            popTit: "Moe Kasa",
+                            popCont: "HeroPopup",
+                          },
                         },
                       });
                     }}

@@ -1,8 +1,8 @@
-export type PopupState = {
+type PopupStateT = {
   mpopClass?: string;
   popStyle?: Record<string, any>;
   popTit?: string;
-  popCont?: any[];
+  popCont?: string;
   btnXClass?: string;
   infBtn?: boolean;
   timer?: boolean;
@@ -14,9 +14,6 @@ export type PopupState = {
   props?: any[];
 };
 
-export type SAndLT = {
-  activePlate: number;
-  activeTime: number;
-  animInProgress: boolean;
-  animPortal: boolean;
-};
+const popupState: PopupStateT | null = null;
+
+export default popupState;

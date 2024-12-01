@@ -21,11 +21,14 @@ export default function V2MainScreen02GuildClanTrophies({
                   className="titans-garage-item"
                   onClick={() => {
                     nexusDispatch({
-                      type: "POPUP_OPEN",
+                      type: "handlePopup",
                       payload: {
-                        mpopClass: "m-popup clan-trophy",
-                        popTit: "Earth Charmer",
-                        popCont: "ClanTrophy",
+                        type: "open",
+                        data: {
+                          mpopClass: "m-popup clan-trophy",
+                          popTit: "Earth Charmer",
+                          popCont: "ClanTrophy",
+                        },
                       },
                     });
                   }}
@@ -67,11 +70,14 @@ export default function V2MainScreen02GuildClanTrophies({
                   className="titans-garage-item"
                   onClick={() => {
                     nexusDispatch({
-                      type: "POPUP_OPEN",
+                      type: "handlePopup",
                       payload: {
-                        mpopClass: "m-popup clan-trophy",
-                        popTit: "Earth Charmer",
-                        popCont: "ClanTrophy",
+                        type: "open",
+                        data: {
+                          mpopClass: "m-popup clan-trophy",
+                          popTit: "Earth Charmer",
+                          popCont: "ClanTrophy",
+                        },
                       },
                     });
                   }}
@@ -118,11 +124,14 @@ export default function V2MainScreen02GuildClanTrophies({
                   className="titans-garage-item"
                   onClick={() => {
                     nexusDispatch({
-                      type: "POPUP_OPEN",
+                      type: "handlePopup",
                       payload: {
-                        mpopClass: "m-popup clan-trophy",
-                        popTit: "Earth Charmer",
-                        popCont: "ClanTrophy",
+                        type: "open",
+                        data: {
+                          mpopClass: "m-popup clan-trophy",
+                          popTit: "Earth Charmer",
+                          popCont: "ClanTrophy",
+                        },
                       },
                     });
                   }}

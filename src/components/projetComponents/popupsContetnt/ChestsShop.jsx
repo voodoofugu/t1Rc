@@ -12,10 +12,16 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box diamonds"
           onClick={() =>
-            popupState.popOpen(nexusDispatch, {
-              mpopClass: "m-popup diamond-buy",
-              popTit: "Buy Diamonds!",
-              popCont: "DiamondBuy",
+            nexusDispatch({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup diamond-buy",
+                  popTit: "Buy Diamonds!",
+                  popCont: "DiamondBuy",
+                },
+              },
             })
           }
         >
@@ -25,18 +31,24 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box oil"
           onClick={() =>
-            popupState.popOpen(nexusDispatch, {
-              mpopClass: "m-popup essence-buy",
-              popTit: "Buy Oil",
-              popCont: [
-                "BuyShop",
-                {
-                  img1: "evPopArts/potion_black_1",
-                  img2: "evPopArts/potion_black_2",
-                  img3: "evPopArts/potion_black_3",
-                  img4: "evPopArts/potion_black_4",
+            nexusDispatch({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup essence-buy",
+                  popTit: "Buy Oil",
+                  popCont: [
+                    "BuyShop",
+                    {
+                      img1: "evPopArts/potion_black_1",
+                      img2: "evPopArts/potion_black_2",
+                      img3: "evPopArts/potion_black_3",
+                      img4: "evPopArts/potion_black_4",
+                    },
+                  ],
                 },
-              ],
+              },
             })
           }
         >
@@ -46,18 +58,24 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box spirit"
           onClick={() =>
-            popupState.popOpen(nexusDispatch, {
-              mpopClass: "m-popup essence-buy",
-              popTit: "Buy Angel Spirit",
-              popCont: [
-                "BuyShop",
-                {
-                  img1: "evPopArts/angel_spirit_1",
-                  img2: "evPopArts/angel_spirit_2",
-                  img3: "evPopArts/angel_spirit_3",
-                  img4: "evPopArts/angel_spirit_4",
+            nexusDispatch({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup essence-buy",
+                  popTit: "Buy Angel Spirit",
+                  popCont: [
+                    "BuyShop",
+                    {
+                      img1: "evPopArts/angel_spirit_1",
+                      img2: "evPopArts/angel_spirit_2",
+                      img3: "evPopArts/angel_spirit_3",
+                      img4: "evPopArts/angel_spirit_4",
+                    },
+                  ],
                 },
-              ],
+              },
             })
           }
         >
@@ -67,16 +85,22 @@ export default memo(function ChestsShop() {
         <div
           className="color-btn info"
           onClick={() =>
-            popupState.popOpen(nexusDispatch, {
-              mpopClass: "m-popup info-pop",
-              popTit: "Chest Shop Info",
-              popCont: [
-                "InfoPop",
-                {
-                  text: "HTML_CHEST",
-                  btnText1: "Close",
+            nexusDispatch({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup info-pop",
+                  popTit: "Chest Shop Info",
+                  popCont: [
+                    "InfoPop",
+                    {
+                      text: "HTML_CHEST",
+                      btnText1: "Close",
+                    },
+                  ],
                 },
-              ],
+              },
             })
           }
         >
@@ -92,10 +116,16 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                popupState.popOpen(nexusDispatch, {
-                  mpopClass: "m-popup openchest",
-                  popTit: "open the chest",
-                  popCont: "OpenChest",
+                nexusDispatch({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup openchest",
+                      popTit: "open the chest",
+                      popCont: "OpenChest",
+                    },
+                  },
                 })
               }
             >
@@ -115,10 +145,16 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                popupState.popOpen(nexusDispatch, {
-                  mpopClass: "m-popup sh2-openchest2",
-                  popTit: "open the chest",
-                  popCont: ["Sh2Openchest", { shClass: "sh2" }],
+                nexusDispatch({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup sh2-openchest2",
+                      popTit: "open the chest",
+                      popCont: ["Sh2Openchest", { shClass: "sh2" }],
+                    },
+                  },
                 })
               }
             >
@@ -138,10 +174,16 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                popupState.popOpen(nexusDispatch, {
-                  mpopClass: "m-popup sh2-openchest2",
-                  popTit: "open the chest",
-                  popCont: ["Sh2Openchest", { shClass: "sh2", dark: true }],
+                nexusDispatch({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup sh2-openchest2",
+                      popTit: "open the chest",
+                      popCont: ["Sh2Openchest", { shClass: "sh2", dark: true }],
+                    },
+                  },
                 })
               }
             >

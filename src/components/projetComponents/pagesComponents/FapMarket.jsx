@@ -48,13 +48,14 @@ export default function FapMarket({ pageName, children }) {
             updateBtn
             onClick={() =>
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup info-pop",
-                  popTit: "Info",
-                  popCont: [
-                    "InfoPop",
-                    {
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup info-pop",
+                    popTit: "Info",
+                    popCont: "InfoPop",
+                    props: {
                       text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
                       btnText1: "cancel",
                       btnText2: "buy 1/3",
@@ -62,11 +63,11 @@ export default function FapMarket({ pageName, children }) {
                       btnClass2: "green",
                       btn2curency: ["img/ic-diamond.png", 150],
                     },
-                  ],
-                  count: {
-                    icon: "img/ic-diamond.png",
-                    value: 200,
-                    add: true,
+                    count: {
+                      icon: "img/ic-diamond.png",
+                      value: 200,
+                      add: true,
+                    },
                   },
                 },
               })
@@ -80,19 +81,22 @@ export default function FapMarket({ pageName, children }) {
               plus
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup essence-buy",
-                    popTit: "Buy Dices",
-                    popCont: [
-                      "BuyShop",
-                      {
-                        img1: "diamond1",
-                        img2: "diamond2",
-                        img3: "diamond4",
-                        img4: "diamond6",
-                      },
-                    ],
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup essence-buy",
+                      popTit: "Buy Dices",
+                      popCont: [
+                        "BuyShop",
+                        {
+                          img1: "diamond1",
+                          img2: "diamond2",
+                          img3: "diamond4",
+                          img4: "diamond6",
+                        },
+                      ],
+                    },
                   },
                 });
               }}
@@ -103,19 +107,22 @@ export default function FapMarket({ pageName, children }) {
               plus
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup essence-buy",
-                    popTit: "Buy Dices",
-                    popCont: [
-                      "BuyShop",
-                      {
-                        img1: "evPopArts/potion_black_1",
-                        img2: "evPopArts/potion_black_2",
-                        img3: "evPopArts/potion_black_3",
-                        img4: "evPopArts/potion_black_4",
-                      },
-                    ],
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup essence-buy",
+                      popTit: "Buy Dices",
+                      popCont: [
+                        "BuyShop",
+                        {
+                          img1: "evPopArts/potion_black_1",
+                          img2: "evPopArts/potion_black_2",
+                          img3: "evPopArts/potion_black_3",
+                          img4: "evPopArts/potion_black_4",
+                        },
+                      ],
+                    },
                   },
                 });
               }}
@@ -126,19 +133,22 @@ export default function FapMarket({ pageName, children }) {
               plus
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup essence-buy",
-                    popTit: "Buy Dices",
-                    popCont: [
-                      "BuyShop",
-                      {
-                        img1: "v2-f-e1",
-                        img2: "v2-f-e2",
-                        img3: "v2-f-e3",
-                        img4: "v2-f-e4",
-                      },
-                    ],
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup essence-buy",
+                      popTit: "Buy Dices",
+                      popCont: [
+                        "BuyShop",
+                        {
+                          img1: "v2-f-e1",
+                          img2: "v2-f-e2",
+                          img3: "v2-f-e3",
+                          img4: "v2-f-e4",
+                        },
+                      ],
+                    },
                   },
                 });
               }}

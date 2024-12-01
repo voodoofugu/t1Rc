@@ -179,12 +179,15 @@ const Chat = ({ girlInfo }) => {
             <Message
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup uki-story-popup contentOnly",
-                    popCont: "DatingImgPop",
-                    props: {
-                      img: `img/images/superhero/suphero-${girlInfo.id}/x1/sh-6.jpg`,
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup uki-story-popup contentOnly",
+                      popCont: "DatingImgPop",
+                      props: {
+                        img: `img/images/superhero/suphero-${girlInfo.id}/x1/sh-6.jpg`,
+                      },
                     },
                   },
                 });

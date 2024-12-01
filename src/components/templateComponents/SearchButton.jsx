@@ -6,7 +6,7 @@ import {
   startTransition,
   useDeferredValue,
 } from "react";
-import { useNexus, nexusDispatch } from "nexus-state";
+import { useNexus, nexusUpdate } from "nexus-state";
 
 import PageList from "../projetComponents/pagesComponents/a_pageList.json";
 
@@ -45,10 +45,15 @@ export default function SearchButton() {
         }
       }
 
-      if (filteredData.length !== prevFilteredValueRef.current.length) {
-        nexusDispatch({
-          type: "SEARCH_DATA",
-          payload: filteredData,
+      if (
+        filteredData.length !== prevFilteredValueRef.current.length ||
+        !filteredData.every(
+          (value, index) => value === prevFilteredValueRef.current[index]
+        )
+      ) {
+        // тут что-то не так!!!
+        nexusUpdate({
+          searchData: filteredData,
         });
         prevFilteredValueRef.current = filteredData;
       }
@@ -65,8 +70,8 @@ export default function SearchButton() {
   };
 
   const handleClear = () => {
-    nexusDispatch({
-      type: "SEARCH_TEXT",
+    nexusUpdate({
+      searchText: "",
     });
     inputFocus();
   };
@@ -120,9 +125,8 @@ export default function SearchButton() {
         value={deferredSearchText}
         onChange={(event) =>
           startTransition(() =>
-            nexusDispatch({
-              type: "SEARCH_TEXT",
-              payload: event.target.value,
+            nexusUpdate({
+              searchText: event.target.value,
             })
           )
         }

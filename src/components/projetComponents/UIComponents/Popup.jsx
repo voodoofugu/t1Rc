@@ -25,8 +25,10 @@ export default function Popup({ pageName }) {
           <div
             className="screen-blend-55"
             onClick={() => {
-              nexusDispatch({ type: "POPUP_FOR_CLOSE" });
-              setTimeout(() => nexusDispatch({ type: "POPUP_CLOSE" }), 200);
+              nexusDispatch({
+                type: "handlePopup",
+                payload: { type: "close" },
+              });
             }}
           ></div>
           <div id="popupContainer">

@@ -37,10 +37,16 @@ export default memo(function ChangeGivepic() {
           <div
             className="change-btn-info"
             onClick={() =>
-              popupState.popOpen(nexusDispatch, {
-                mpopClass: "m-popup change-collpop",
-                popTit: "collection",
-                popCont: "ChangeCollpop",
+              nexusDispatch({
+                type: "handlePopup",
+                payload: {
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup change-collpop",
+                    popTit: "collection",
+                    popCont: "ChangeCollpop",
+                  },
+                },
               })
             }
           >
@@ -70,7 +76,12 @@ export default memo(function ChangeGivepic() {
       </div>
       <div
         className="color-btn okgoit green"
-        onClick={() => popupState.popClose()}
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
       >
         <div className="color-btn-text">ок</div>
       </div>

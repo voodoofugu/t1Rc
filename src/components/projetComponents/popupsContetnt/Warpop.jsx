@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusDispatch, useNexus, nexusUpdate } from "nexus-state";
 
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
@@ -11,19 +11,18 @@ export default function Warpop() {
   const warpopBackRef = React.useRef(null);
   const timeoutRef = React.useRef(0);
 
-  const key = warpop.key || false;
-  const visible = warpop.visible || false;
-  const tit = warpop.tit || "";
-  const className = warpop.className || "";
-  const type = warpop.type || "";
+  const key = warpop?.key || false;
+  const visible = warpop?.visible || false;
+  const tit = warpop?.tit || "";
+  const className = warpop?.className || "";
+  const type = warpop?.type || "";
 
   function warpopClose() {
     warpopBoxRef.current.classList.add("close");
     warpopBackRef.current.classList.add("close");
     timeoutRef.current = setTimeout(() => {
-      nexusDispatch({
-        type: "WAR_POP",
-        payload: {},
+      nexusUpdate({
+        warpop: null,
       });
     }, 250);
   }
@@ -132,10 +131,13 @@ export default function Warpop() {
             text="clash in progress"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup army-setup contentOnly",
-                  popCont: "ArmySetupCW",
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup army-setup contentOnly",
+                    popCont: "ArmySetupCW",
+                  },
                 },
               });
             }}

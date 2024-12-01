@@ -240,11 +240,14 @@ export default function SAndLScreen({ pageName, children }) {
             className="color-btn questBtn"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup questChain",
-                  popTit: "Quest Chain",
-                  popCont: "QuestChain",
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup questChain",
+                    popTit: "Quest Chain",
+                    popCont: "QuestChain",
+                  },
                 },
               });
             }}
@@ -258,12 +261,15 @@ export default function SAndLScreen({ pageName, children }) {
             className="color-btn craftBtn"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup psemain sAndL",
-                  popTit: "Craft Room",
-                  popCont: "CraftPop",
-                  infBtn: true,
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup psemain sAndL",
+                    popTit: "Craft Room",
+                    popCont: "CraftPop",
+                    infBtn: true,
+                  },
                 },
               });
             }}
@@ -276,11 +282,14 @@ export default function SAndLScreen({ pageName, children }) {
             className="color-btn ratingBtn"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup fapop-rating",
-                  popTit: "rating",
-                  popCont: "FapopRating",
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup fapop-rating",
+                    popTit: "rating",
+                    popCont: "FapopRating",
+                  },
                 },
               });
             }}
@@ -295,17 +304,20 @@ export default function SAndLScreen({ pageName, children }) {
             className="btnI"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup info-pop",
-                  popTit: "Info",
-                  popCont: [
-                    "InfoPop",
-                    {
-                      text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
-                      btnText1: "I understand",
-                    },
-                  ],
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup info-pop",
+                    popTit: "Info",
+                    popCont: [
+                      "InfoPop",
+                      {
+                        text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
+                        btnText1: "I understand",
+                      },
+                    ],
+                  },
                 },
               });
             }}
@@ -316,11 +328,14 @@ export default function SAndLScreen({ pageName, children }) {
             className="offerBtn"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup fortuna-main uni-sale",
-                  popTit: "Dual pack",
-                  popCont: ["DualPack", { event: "uni-sale" }],
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup fortuna-main uni-sale",
+                    popTit: "Dual pack",
+                    popCont: ["DualPack", { event: "uni-sale" }],
+                  },
                 },
               });
             }}
@@ -335,19 +350,22 @@ export default function SAndLScreen({ pageName, children }) {
             className="offerBtn"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy White Dices",
-                  popCont: [
-                    "BuyShop",
-                    {
-                      img1: "sAndL/whiteDice_shop1",
-                      img2: "sAndL/whiteDice_shop2",
-                      img3: "sAndL/whiteDice_shop3",
-                      img4: "sAndL/whiteDice_shop4",
-                    },
-                  ],
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup essence-buy",
+                    popTit: "Buy White Dices",
+                    popCont: [
+                      "BuyShop",
+                      {
+                        img1: "sAndL/whiteDice_shop1",
+                        img2: "sAndL/whiteDice_shop2",
+                        img3: "sAndL/whiteDice_shop3",
+                        img4: "sAndL/whiteDice_shop4",
+                      },
+                    ],
+                  },
                 },
               });
             }}
@@ -362,19 +380,22 @@ export default function SAndLScreen({ pageName, children }) {
             className="offerBtn"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy Gold Dices",
-                  popCont: [
-                    "BuyShop",
-                    {
-                      img1: "sAndL/goldDice_shop1",
-                      img2: "sAndL/goldDice_shop2",
-                      img3: "sAndL/goldDice_shop3",
-                      img4: "sAndL/goldDice_shop4",
-                    },
-                  ],
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup essence-buy",
+                    popTit: "Buy Gold Dices",
+                    popCont: [
+                      "BuyShop",
+                      {
+                        img1: "sAndL/goldDice_shop1",
+                        img2: "sAndL/goldDice_shop2",
+                        img3: "sAndL/goldDice_shop3",
+                        img4: "sAndL/goldDice_shop4",
+                      },
+                    ],
+                  },
                 },
               });
             }}

@@ -29,7 +29,15 @@ export default memo(function LoseBoss() {
           </div>
         </div>
         <div className="lbclose-btn">
-          <div className="btn-text" onClick={() => popupState.popClose()}>
+          <div
+            className="btn-text"
+            onClick={() =>
+              nexusDispatch({
+                type: "handlePopup",
+                payload: { type: "close" },
+              })
+            }
+          >
             закрыть
           </div>
         </div>

@@ -10,7 +10,15 @@ export default function InfoPopFramed({ inner, girlImg }) {
 
   return (
     <>
-      <div className="closeBG" onClick={() => popupState.popClose()}></div>
+      <div
+        className="closeBG"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      ></div>
       <div className="content">
         <div className="popupFrame">
           <div className="frame top"></div>
@@ -30,7 +38,12 @@ export default function InfoPopFramed({ inner, girlImg }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() => popupState.popClose()}
+          onClick={() =>
+            nexusDispatch({
+              type: "handlePopup",
+              payload: { type: "close" },
+            })
+          }
         />
       </div>
 

@@ -20,7 +20,12 @@ export default memo(function TsConfirm() {
       </div>
       <div
         className="btn-simple-green btn-ok"
-        onClick={() => popupState.popClose()}
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
       >
         Ок
       </div>

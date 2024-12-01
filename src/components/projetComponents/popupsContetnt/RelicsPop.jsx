@@ -116,7 +116,16 @@ export default memo(function RelicsPop({ event }) {
 
       <FraimedTitle className="cornersTop" text="Orgy Event" />
 
-      <Button className="exit" text="✖" onClick={() => popupState.popClose()} />
+      <Button
+        className="exit"
+        text="✖"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      />
 
       <div className="main-relics-girl-box">
         <div className="main-relics-girl-pic">

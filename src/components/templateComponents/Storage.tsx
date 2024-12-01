@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useNexus, nexusDispatch } from "nexus-state";
+import { useNexus, nexusUpdate } from "nexus-state";
 import useStorage, { StorageItemT } from "../../components/hooks/useStorage";
 
 type StorageType = {
@@ -31,9 +31,8 @@ export default function Storage({ watch, storageData }: StorageType): null {
     });
 
     if (Object.keys(dataToUpdate).length > 0) {
-      nexusDispatch({
-        type: "STATES_UPDATE",
-        payload: dataToUpdate,
+      nexusUpdate({
+        _NEXUS_: dataToUpdate,
       });
     }
 
@@ -49,7 +48,7 @@ export default function Storage({ watch, storageData }: StorageType): null {
         }))
       : [];
 
-  const storageItems: StorageItemT = [
+  const storageItems = [
     ...processedStorageData,
     ...(watch
       ? [
@@ -61,7 +60,7 @@ export default function Storage({ watch, storageData }: StorageType): null {
       : []),
   ];
 
-  useStorage(storageItems);
+  useStorage(storageItems as StorageItemT);
 
   return null;
 }

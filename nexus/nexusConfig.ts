@@ -1,19 +1,10 @@
 import { nexusAction } from "nexus-state";
-import { PopupState, SAndLT } from "./types";
 
-import {
-  POPUP_OPEN,
-  POPUP_CLOSE,
-  POPUP_FOR_CLOSE,
-  POPUP_CHANGE,
-} from "./actions/POPUP";
-
-import {
-  ACTIVE_PLATE,
-  ACTIVE_TIME,
-  ANIM_IN_PROG,
-  ANIM_PORTAL,
-} from "./actions/SANDL";
+// actions
+import handlePopup from "./actions/handlePopup";
+// states
+import popupState from "./states/popupState";
+import sAndLStates from "./states/sAndLStates";
 
 type InitialStatesT = typeof initialStates;
 type InitialActionsT = typeof actions;
@@ -22,12 +13,11 @@ declare global {
   interface ActionsT extends InitialActionsT {}
 }
 
-// Начальное состояние
+// initial states
 export const initialStates = {
+  // template
   darkTheme: false,
-
   searchText: "",
-
   activePage: "",
   searchData: [] as string[],
   pageData: {
@@ -36,88 +26,13 @@ export const initialStates = {
     left: 0,
   },
 
-  // project initial states
-  popupState: null as PopupState | null,
-
-  sAndLStates: {
-    activePlate: 0,
-    activeTime: 0,
-    animInProgress: false,
-    animPortal: false,
-  },
-
-  dateGirlIndex: 0,
-
-  booleanState: false,
-
-  increment: 0,
-  notif: {},
-  warpop: {},
+  // project
+  popupState,
+  sAndLStates,
+  notif: null as {} | null,
+  warpop: null as {} | null,
 };
 
 export const actions = {
-  THEME: nexusAction((state) => ({
-    ...state,
-    darkTheme: !state.darkTheme ? true : false,
-  })),
-
-  SEARCH_TEXT: nexusAction((state, action) => ({
-    ...state,
-    searchText: action.payload || "",
-  })),
-
-  ACTIVE_PAGE: nexusAction((state, action) => ({
-    ...state,
-    activePage: action.payload || "",
-  })),
-
-  SEARCH_DATA: nexusAction((state, action) => ({
-    ...state,
-    searchData: action.payload,
-  })),
-
-  PAGE_DATA: nexusAction((state, action) => ({
-    ...state,
-    pageData: action.payload,
-  })),
-
-  POPUP_OPEN,
-  POPUP_CLOSE,
-  POPUP_FOR_CLOSE,
-  POPUP_CHANGE,
-
-  ACTIVE_PLATE,
-  ACTIVE_TIME,
-  ANIM_IN_PROG,
-  ANIM_PORTAL,
-
-  BOOL_STATE: nexusAction((state) => ({
-    ...state,
-    booleanState: !state.booleanState,
-  })),
-
-  DATE_GIRL_INDEX: nexusAction((state, action) => ({
-    ...state,
-    dateGirlIndex: action.payload,
-  })),
-
-  INCREMENT: nexusAction((state, action) => ({
-    ...state,
-    increment: state.increment + action.payload,
-  })),
-
-  NOTIF_VIEW: nexusAction((state, action) => ({
-    ...state,
-    notif: action.payload,
-  })),
-
-  WAR_POP: nexusAction((state, action) => ({
-    ...state,
-    warpop: action.payload,
-  })),
-
-  STATES_UPDATE: nexusAction((state, action) => ({
-    ...state,
-    ...action.payload,
-  })),
+  handlePopup,
 };

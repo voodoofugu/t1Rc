@@ -126,11 +126,15 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               className="quest trophy-pop"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup tower-relics-pop",
-                    popTit: "choose a relic",
-                    popCont: ["TowerRelics", { hole: `${hole}` }],
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup tower-relics-pop",
+                      popTit: "choose a relic",
+                      popCont: "TowerRelics",
+                      props: { hole: `${hole}` },
+                    },
                   },
                 });
               }}
@@ -148,11 +152,14 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               className="quest tower-trophy-pop"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup tower-trophy-pop",
-                    popTit: "Pillar of DPC",
-                    popCont: "TowerTrophy",
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup tower-trophy-pop",
+                      popTit: "Pillar of DPC",
+                      popCont: "TowerTrophy",
+                    },
                   },
                 });
               }}
@@ -170,10 +177,14 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               className="quest tower-mag-box"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    popCont: ["MnPopupNsaleMain", { hole: `${hole}` }],
-                    btnXClass: "mn-pop-btn-close-x",
+                    type: "open",
+                    data: {
+                      popCont: "MnPopupNsaleMain",
+                      props: { hole: `${hole}` },
+                      btnXClass: "mn-pop-btn-close-x",
+                    },
                   },
                 });
               }}
@@ -192,15 +203,16 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               className="quest InfoPop"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: `m-popup info-pop ${
-                      hole === true ? "hole" : ""
-                    }`,
-                    popTit: "Info",
-                    popCont: [
-                      "InfoPop",
-                      {
+                    type: "open",
+                    data: {
+                      mpopClass: `m-popup info-pop ${
+                        hole === true ? "hole" : ""
+                      }`,
+                      popTit: "Info",
+                      popCont: "InfoPop",
+                      props: {
                         colorBox: true,
                         text: "HTML_TEXT2",
                         textExtra:
@@ -210,7 +222,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                         btnClass1: "bleuPurple",
                         btnClass2: "bleuRed",
                       },
-                    ],
+                    },
                   },
                 });
               }}
@@ -283,14 +295,14 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                         className="color-btn gblue rb-koi"
                         onClick={() => {
                           nexusDispatch({
-                            type: "POPUP_OPEN",
+                            type: "handlePopup",
                             payload: {
-                              mpopClass: `mn-popup ${hole ? "hole" : ""}`,
-                              popCont: [
-                                "MnPopupNsaleMain",
-                                hole ? { hole: `${hole}` } : "",
-                              ],
-                              btnXClass: "mn-pop-btn-close-x",
+                              type: "open",
+                              data: {
+                                popCont: "MnPopupNsaleMain",
+                                props: { hole: `${hole}` },
+                                btnXClass: "mn-pop-btn-close-x",
+                              },
                             },
                           });
                         }}
@@ -339,13 +351,14 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                     className="color-btn-text"
                                     onClick={() => {
                                       nexusDispatch({
-                                        type: "POPUP_OPEN",
+                                        type: "handlePopup",
                                         payload: {
-                                          mpopClass: "m-popup info-pop hole",
-                                          popTit: "Info",
-                                          popCont: [
-                                            "InfoPop",
-                                            {
+                                          type: "open",
+                                          data: {
+                                            mpopClass: "m-popup info-pop hole",
+                                            popTit: "Info",
+                                            popCont: "InfoPop",
+                                            props: {
                                               colorBox: true,
                                               text: "HTML_TEXT3",
                                               btnText1: "Return to сurrent lvl",
@@ -353,7 +366,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                               btnClass1: "bleuPurple",
                                               btnClass2: "bleuRed",
                                             },
-                                          ],
+                                          },
                                         },
                                       });
                                     }}
@@ -367,19 +380,20 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                   plus
                                   onClick={() => {
                                     nexusDispatch({
-                                      type: "POPUP_OPEN",
+                                      type: "handlePopup",
                                       payload: {
-                                        mpopClass: "m-popup essence-buy",
-                                        popTit: "Buy Dices",
-                                        popCont: [
-                                          "BuyShop",
-                                          {
+                                        type: "open",
+                                        data: {
+                                          mpopClass: "m-popup essence-buy",
+                                          popTit: "Buy Dices",
+                                          popCont: "BuyShop",
+                                          props: {
                                             img1: "hole/holeEnergy_1",
                                             img2: "hole/holeEnergy_2",
                                             img3: "hole/holeEnergy_3",
                                             img4: "hole/holeEnergy_4",
                                           },
-                                        ],
+                                        },
                                       },
                                     });
                                   }}
@@ -404,15 +418,16 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                 className="towerAddRelics"
                                 onClick={() => {
                                   nexusDispatch({
-                                    type: "POPUP_OPEN",
+                                    type: "handlePopup",
                                     payload: {
-                                      mpopClass:
-                                        "m-popup main-relics-pop tower",
-                                      popTit: "Buy Relics",
-                                      popCont: [
-                                        "MainRelics",
-                                        { hole: `${hole}` },
-                                      ],
+                                      type: "open",
+                                      data: {
+                                        mpopClass:
+                                          "m-popup main-relics-pop tower",
+                                        popTit: "Buy Relics",
+                                        popCont: "MainRelics",
+                                        props: { hole: `${hole}` },
+                                      },
                                     },
                                   });
                                 }}
@@ -426,11 +441,14 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                           <TowerTrophyBoxScroll
                             onClick={() => {
                               nexusDispatch({
-                                type: "POPUP_OPEN",
+                                type: "handlePopup",
                                 payload: {
-                                  mpopClass: "m-popup tower-trophy-pop",
-                                  popTit: "Pillar of DPC",
-                                  popCont: "TowerTrophy",
+                                  type: "open",
+                                  data: {
+                                    mpopClass: "m-popup tower-trophy-pop",
+                                    popTit: "Pillar of DPC",
+                                    popCont: "TowerTrophy",
+                                  },
                                 },
                               });
                             }}
@@ -482,41 +500,43 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             class2={hole === true ? "holeGem" : "cards"}
             onClick1={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup main-relics-pop tower",
-                  popTit: "Buy Relics",
-                  popCont: ["MainRelics", { hole: `${hole}` }],
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup main-relics-pop tower",
+                    popTit: "Buy Relics",
+                    popCont: "MainRelics",
+                    props: { hole: `${hole}` },
+                  },
                 },
               });
             }}
             onClick2={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy Hole Gems",
-                  popCont: hole
-                    ? [
-                        "BuyShop",
-                        {
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup essence-buy",
+                    popTit: "Buy Hole Gems",
+                    popCont: "BuyShop",
+                    props: hole
+                      ? {
                           img1: "hole/holeGem-1",
                           img2: "hole/holeGem-2",
                           img3: "hole/holeGem-3",
                           img4: "hole/holeGem-4",
                           diamond: true,
-                        },
-                      ]
-                    : [
-                        "BuyShop",
-                        {
+                        }
+                      : {
                           img1: "v2-gold-ticket2",
                           img2: "v2-gold-ticket2",
                           img3: "v2-gold-ticket2",
                           img4: "v2-gold-ticket2",
                           diamond: true,
                         },
-                      ],
+                  },
                 },
               });
             }}

@@ -52,10 +52,16 @@ export default memo(function OpenChest() {
             <div
               className="openchest-bonus-btn free"
               onClick={() =>
-                popupState.popOpen(nexusDispatch, {
-                  mpopClass: "m-popup change-givepic",
-                  popTit: "Новая картинка!",
-                  popCont: "ChangeGivepic",
+                nexusDispatch({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup change-givepic",
+                      popTit: "Новая картинка!",
+                      popCont: "ChangeGivepic",
+                    },
+                  },
                 })
               }
             >

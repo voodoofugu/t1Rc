@@ -65,7 +65,15 @@ export default function ComicsPop() {
           <div className="color-btn-text">next</div>
         </div>
       </div>
-      <div className="btn-close-x" onClick={() => popupState.popClose()} />
+      <div
+        className="btn-close-x"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      />
     </div>
   );
 }

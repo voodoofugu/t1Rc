@@ -1,4 +1,4 @@
-import { useNexus } from "nexus-state";
+import { useNexus, nexusDispatch } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
@@ -10,7 +10,15 @@ export default function DaitingGiftsPop({ girleID }) {
 
   return (
     <>
-      <div className="closeBG" onClick={() => popupState.popClose()}></div>
+      <div
+        className="closeBG"
+        onClick={() =>
+          nexusDispatch({
+            type: "handlePopup",
+            payload: { type: "close" },
+          })
+        }
+      ></div>
 
       <div className="content">
         <div className="popupFrame">
@@ -61,7 +69,15 @@ export default function DaitingGiftsPop({ girleID }) {
           />
         </OfferCardBox>
 
-        <div className="btn-close-x" onClick={() => popupState.popClose()} />
+        <div
+          className="btn-close-x"
+          onClick={() =>
+            nexusDispatch({
+              type: "handlePopup",
+              payload: { type: "close" },
+            })
+          }
+        />
       </div>
     </>
   );

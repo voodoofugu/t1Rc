@@ -19,11 +19,14 @@ export default function MainScreen16FortunaRoundMainpop({
               className="quest quest-fortune"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup fortuna-main-round",
-                    popTit: "wheel of fortune - spin your discount!",
-                    popCont: "FortunaMainRound16",
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup fortuna-main-round",
+                      popTit: "wheel of fortune - spin your discount!",
+                      popCont: "FortunaMainRound16",
+                    },
                   },
                 });
               }}
@@ -37,10 +40,13 @@ export default function MainScreen16FortunaRoundMainpop({
               className="quest quest-fortune"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup fortuna-main-round contentOnly",
-                    popCont: "FortunaMainRound16Big",
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup fortuna-main-round contentOnly",
+                      popCont: "FortunaMainRound16Big",
+                    },
                   },
                 });
               }}
@@ -54,16 +60,19 @@ export default function MainScreen16FortunaRoundMainpop({
               className="quest quest-fortune"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup fortuna-main-round",
-                    popStyle: {
-                      width: "960px",
-                      height: "620px",
-                      left: "120px",
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup fortuna-main-round",
+                      popStyle: {
+                        width: "960px",
+                        height: "620px",
+                        left: "120px",
+                      },
+                      popTit: "wheel of fortune - spin your discount!",
+                      popCont: "FortunaMainRound25",
                     },
-                    popTit: "wheel of fortune - spin your discount!",
-                    popCont: "FortunaMainRound25",
                   },
                 });
               }}

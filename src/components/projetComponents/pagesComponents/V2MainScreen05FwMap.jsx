@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { useNexus, nexusUpdate } from "nexus-state";
 
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
@@ -29,9 +29,8 @@ function mapCellSelectHandler(mapCellRef, index, type) {
     el.classList.remove("selected");
   });
   mapCellRef.classList.toggle("selected");
-  nexusDispatch({
-    type: "WAR_POP",
-    payload: {
+  nexusUpdate({
+    warpop: {
       key: index,
       visible: true,
       tit: `Cell on the Map ${index + 1}`,
@@ -57,7 +56,7 @@ function MapCell({
 
   const mapCellRef = React.useRef(null);
 
-  if (mapCellRef.current && !warpop.visible) {
+  if (mapCellRef.current && !warpop?.visible) {
     mapCellRef.current.classList?.remove("selected");
   }
 

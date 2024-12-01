@@ -770,11 +770,14 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             className="bfIcon"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup events-btlpass-pop hw",
-                  popTit: "HALLOWEEN EVENT PASS",
-                  popCont: "BtlPass",
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup events-btlpass-pop hw",
+                    popTit: "HALLOWEEN EVENT PASS",
+                    popCont: "BtlPass",
+                  },
                 },
               });
             }}
@@ -785,18 +788,21 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             className="bfIcon second"
             onClick={() => {
               nexusDispatch({
-                type: "POPUP_OPEN",
+                type: "handlePopup",
                 payload: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy Event Tokens",
-                  popCont: [
-                    "BuyShop",
-                    {
-                      img1: "heartCoin-1",
-                      img2: "heartCoin-2",
-                      img3: "heartCoin-3",
-                    },
-                  ],
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup essence-buy",
+                    popTit: "Buy Event Tokens",
+                    popCont: [
+                      "BuyShop",
+                      {
+                        img1: "heartCoin-1",
+                        img2: "heartCoin-2",
+                        img3: "heartCoin-3",
+                      },
+                    ],
+                  },
                 },
               });
             }}
@@ -808,11 +814,14 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
               className="color-btn rating"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup fapop-rating",
-                    popTit: "rating",
-                    popCont: "FapopRating",
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup fapop-rating",
+                      popTit: "rating",
+                      popCont: "FapopRating",
+                    },
                   },
                 });
               }}
@@ -830,11 +839,14 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
               className="color-btn token"
               onClick={() => {
                 nexusDispatch({
-                  type: "POPUP_OPEN",
+                  type: "handlePopup",
                   payload: {
-                    mpopClass: "m-popup fapop-shop buyed",
-                    popTit: "tokens",
-                    popCont: "FapopShopBuyed",
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup fapop-shop buyed",
+                      popTit: "tokens",
+                      popCont: "FapopShopBuyed",
+                    },
                   },
                 });
               }}

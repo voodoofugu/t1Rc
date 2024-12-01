@@ -34,15 +34,17 @@ export default function Dating({ pageName, children }) {
           text="i"
           onClick={() => {
             nexusDispatch({
-              type: "POPUP_OPEN",
+              type: "handlePopup",
               payload: {
-                mpopClass: "m-popup contentOnly framedPop",
-                popTit: "",
-                popCont: "InfoPopFramed",
-                props: {
-                  inner:
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                  girlImg: "img/break-girls/break-girl915.png",
+                type: "open",
+                data: {
+                  mpopClass: "m-popup contentOnly framedPop",
+                  popCont: "InfoPopFramed",
+                  props: {
+                    inner:
+                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                    girlImg: "img/break-girls/break-girl915.png",
+                  },
                 },
               },
             });
@@ -70,13 +72,15 @@ const GirlDependencies = ({ girlsInfo }) => {
         img="img/dating/giftsIcn.png"
         onClick={() => {
           nexusDispatch({
-            type: "POPUP_OPEN",
+            type: "handlePopup",
             payload: {
-              mpopClass: "m-popup contentOnly framedPop",
-              popTit: "",
-              popCont: "DatingGiftsPop",
-              props: {
-                girleID: girlsInfo[girlIndex].id,
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly framedPop",
+                popCont: "DatingGiftsPop",
+                props: {
+                  girleID: girlsInfo[girlIndex].id,
+                },
               },
             },
           });

@@ -20,8 +20,13 @@ function Quest({ img, timerbox, payload }) {
       onClick={() => {
         payload
           ? nexusDispatch({
-              type: "POPUP_OPEN",
-              payload: payload,
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  ...payload,
+                },
+              },
             })
           : "";
       }}
