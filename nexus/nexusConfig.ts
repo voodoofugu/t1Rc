@@ -1,5 +1,3 @@
-import { nexusAction } from "nexus-state";
-
 // actions
 import handlePopup from "./actions/handlePopup";
 // states
@@ -14,7 +12,6 @@ declare global {
   interface ActionsT extends InitialActionsT {}
 }
 
-// initial states
 export const initialStates = {
   // template
   darkTheme: false,

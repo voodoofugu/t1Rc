@@ -1,10 +1,8 @@
-import { useNexus } from "nexus-state";
+import { nexusDispatch } from "nexus-state";
 
 import Button from "../UIComponents/Button";
 
 export default function BuyShop({ img1, img2, img3, img4, diamond }) {
-  const popupState = useNexus("popupState");
-
   return (
     <>
       <div
