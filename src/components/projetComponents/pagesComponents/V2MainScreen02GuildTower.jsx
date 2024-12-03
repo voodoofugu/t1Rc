@@ -20,7 +20,7 @@ import MonsterPrgBoxAll from "../UIComponents/MonsterPrgBoxAll";
 import BossbtnBox from "../UIComponents/BossbtnBox";
 
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
-import SwitchTab from "../UIComponents/SwitchTab";
+// import SwitchTab from "../UIComponents/SwitchTab";
 import RatingPedBox from "../UIComponents/RatingPedBox";
 import AllHeroesBoxScroll from "../UIComponents/AllHeroesBoxScroll";
 import ResCount from "../UIComponents/ResCount";
@@ -262,12 +262,12 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                       <RatingPedBox />
                     )}
                   </div>
-                  <SwitchTab
+                  {/* <SwitchTab
                     activeTab={activeTab}
                     setActiveTab={setActiveTab}
                     tab1={["Heroes"]}
                     tab2={["Top"]}
-                  />
+                  /> */}
                   {activeTab === false && <X2BtnAllBox />}
                 </div>
                 <div className="tab-loading-wrapper border"></div>
