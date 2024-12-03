@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 
@@ -209,7 +209,7 @@ export default function V2MainScreen02GuildMaster({ pageName, children }) {
                 <div
                   className="color-btn-info"
                   onClick={() => {
-                    nexusDispatch({
+                    nexusEffect({
                       type: "handlePopup",
                       payload: {
                         type: "open",

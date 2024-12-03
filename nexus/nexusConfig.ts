@@ -1,15 +1,14 @@
-// actions
 import handlePopup from "./actions/handlePopup";
-// states
+
 import popupState from "./states/popupState";
 import sAndLStates from "./states/sAndLStates";
 import pageData from "./states/pageData";
 
 type InitialStatesT = typeof initialStates;
-type InitialActionsT = typeof actions;
+type InitialFuncsT = typeof initialFuncs;
 declare global {
   interface StatesT extends InitialStatesT {}
-  interface ActionsT extends InitialActionsT {}
+  interface FuncsT extends InitialFuncsT {}
 }
 
 export const initialStates = {
@@ -27,6 +26,6 @@ export const initialStates = {
   warpop: null as {} | null,
 };
 
-export const actions = {
+export const initialFuncs = {
   handlePopup,
 };

@@ -7,7 +7,7 @@ import Template from "./Template";
 import Loading from "./Loading";
 import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
 
-import { initialStates, actions } from "../../../nexus/nexusConfig";
+import { initialStates, initialFuncs } from "../../../nexus/nexusConfig";
 import Storage from "../../components/templateComponents/Storage";
 
 import HelmetForCss from "./HelmetForCss";
@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <StrictMode>
-      <NexusProvider initialStates={initialStates} actions={actions}>
+      <NexusProvider initialStates={initialStates} initialFuncs={initialFuncs}>
         <Storage
           watch
           storageData={[

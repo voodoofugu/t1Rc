@@ -1,4 +1,4 @@
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
@@ -121,7 +121,7 @@ function XmasPop1({ setXmasPop }) {
         <div
           className="color-btn green"
           onClick={() =>
-            nexusDispatch({
+            nexusEffect({
               type: "handlePopup",
               payload: { type: "close" },
             })

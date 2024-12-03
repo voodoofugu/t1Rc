@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 import ComicsPop from "../popupsContetnt/ComicsPop";
 
 export const cssFiles = ["quests_all", "quests-ui", "v2-screen-uki-story-pop"];
@@ -1312,7 +1312,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                 <div
                   className="journal-comics"
                   onClick={() => {
-                    nexusDispatch({
+                    nexusEffect({
                       type: "handlePopup",
                       payload: {
                         type: "open",

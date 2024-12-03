@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 import Button from "../UIComponents/Button";
 import ItemBox from "../UIComponents/ItemBox";
@@ -87,7 +87,7 @@ export default function ArmySetupCW() {
         className="info"
         text="i"
         onClick={() => {
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: {
               type: "open",
@@ -111,7 +111,7 @@ export default function ArmySetupCW() {
         className="exit"
         text="✖"
         onClick={() =>
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -192,7 +192,7 @@ export default function ArmySetupCW() {
         className="lightGreen attackBtn disabled"
         text="Attack"
         onClick={() =>
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: { type: "close" },
           })

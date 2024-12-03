@@ -1,6 +1,6 @@
 import React from "react";
 
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ResizeTracker from "../../../../morphing-scroll/src/ResizeTracker";
@@ -178,7 +178,7 @@ const Chat = ({ girlInfo }) => {
           {message.Girl[item] === "img" ? (
             <Message
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",

@@ -1,4 +1,4 @@
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 import ItemBox from "../UIComponents/ItemBox";
 
 export const cssFiles = [
@@ -769,7 +769,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
           <div
             className="bfIcon"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -787,7 +787,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
           <div
             className="bfIcon second"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -813,7 +813,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             <div
               className="color-btn rating"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -838,7 +838,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             <div
               className="color-btn token"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",

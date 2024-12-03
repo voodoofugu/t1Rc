@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusDispatch, useNexus, nexusUpdate } from "nexus-state";
+import { nexusEffect, useNexus, nexusUpdate } from "nexus-state";
 
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
@@ -130,7 +130,7 @@ export default function Warpop() {
             className="green max warPopBtn"
             text="clash in progress"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",

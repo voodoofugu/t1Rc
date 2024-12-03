@@ -5802,7 +5802,7 @@ object-assign
               this.loading = true;
 
               // notify of start
-              this.onStart.nexusDispatch(this);
+              this.onStart.nexusEffect(this);
 
               // start loading
               this._queue.resume();
@@ -5910,7 +5910,7 @@ object-assign
             Loader.prototype._onComplete = function _onComplete() {
               this.loading = false;
 
-              this.onComplete.nexusDispatch(this, this.resources);
+              this.onComplete.nexusEffect(this, this.resources);
             };
 
             /**
@@ -5936,19 +5936,19 @@ object-assign
                   fn.call(_this3, resource, next);
                 },
                 function () {
-                  resource.onAfterMiddleware.nexusDispatch(resource);
+                  resource.onAfterMiddleware.nexusEffect(resource);
 
                   _this3.progress += resource.progressChunk;
-                  _this3.onProgress.nexusDispatch(_this3, resource);
+                  _this3.onProgress.nexusEffect(_this3, resource);
 
                   if (resource.error) {
-                    _this3.onError.nexusDispatch(
+                    _this3.onError.nexusEffect(
                       resource.error,
                       _this3,
                       resource
                     );
                   } else {
-                    _this3.onLoad.nexusDispatch(_this3, resource);
+                    _this3.onLoad.nexusEffect(_this3, resource);
                   }
 
                   _this3._resourcesParsing.splice(
@@ -6415,7 +6415,7 @@ object-assign
               this._setFlag(Resource.STATUS_FLAGS.COMPLETE, true);
               this._setFlag(Resource.STATUS_FLAGS.LOADING, false);
 
-              this.onComplete.nexusDispatch(this);
+              this.onComplete.nexusEffect(this);
             };
 
             /**
@@ -6482,7 +6482,7 @@ object-assign
 
               this._setFlag(Resource.STATUS_FLAGS.LOADING, true);
 
-              this.onStart.nexusDispatch(this);
+              this.onStart.nexusEffect(this);
 
               // if unset, determine the value
               if (
@@ -6762,7 +6762,7 @@ object-assign
 
             Resource.prototype._onProgress = function _onProgress(event) {
               if (event && event.lengthComputable) {
-                this.onProgress.nexusDispatch(this, event.loaded / event.total);
+                this.onProgress.nexusEffect(this, event.loaded / event.total);
               }
             };
 
@@ -7810,7 +7810,7 @@ object-assign
               },
               {
                 key: "dispatch",
-                value: function nexusDispatch() {
+                value: function nexusEffect() {
                   var node = this._head;
 
                   if (!node) return false;
@@ -8821,7 +8821,8 @@ object-assign
                     ticker.add(this.render, this, _const.UPDATE_PRIORITY.LOW);
                   }
                 },
-                get: function get() { // eslint-disable-line require-jsdoc
+                get: function get() {
+                  // eslint-disable-line require-jsdoc
                   return this._ticker;
                 },
               },

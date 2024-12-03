@@ -1,4 +1,4 @@
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ProgressBar from "../UIComponents/ProgressBar";
@@ -23,7 +23,7 @@ export default function FortunaMainRound16Big() {
         className="exit"
         text="✖"
         onClick={() =>
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -35,21 +35,19 @@ export default function FortunaMainRound16Big() {
         value="234"
         plus
         onClick={() =>
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: {
               type: "open",
               data: {
                 mpopClass: "m-popup essence-buy contentOnly framedPop",
-                popCont: [
-                  "BuyShop",
-                  {
-                    img1: "heartCoin-1",
-                    img2: "heartCoin-2",
-                    img3: "heartCoin-3",
-                    img4: "heartCoin-4",
-                  },
-                ],
+                popCont: "BuyShop",
+                props: {
+                  img1: "heartCoin-1",
+                  img2: "heartCoin-2",
+                  img3: "heartCoin-3",
+                  img4: "heartCoin-4",
+                },
               },
             },
           })
@@ -60,7 +58,7 @@ export default function FortunaMainRound16Big() {
         className="info"
         text="i"
         onClick={() => {
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: {
               type: "open",

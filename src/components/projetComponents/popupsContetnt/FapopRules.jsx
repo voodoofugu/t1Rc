@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 export default memo(function FapopRules() {
   const popupState = useNexus("popupState");
@@ -22,7 +22,7 @@ export default memo(function FapopRules() {
         <div
           className="color-btn-text"
           onClick={() =>
-            nexusDispatch({
+            nexusEffect({
               type: "handlePopup",
               payload: { type: "close" },
             })

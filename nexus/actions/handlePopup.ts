@@ -47,7 +47,7 @@ function handlePopupFunc(type: "open" | "close", data?: any) {
 }
 
 const handlePopup = {
-  action: ({
+  fData: ({
     type,
     data,
   }: {

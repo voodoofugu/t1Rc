@@ -1,4 +1,4 @@
-import { useNexus, nexusDispatch } from "nexus-state";
+import { useNexus, nexusEffect } from "nexus-state";
 
 import useDynamicImport from "../../hooks/useDynamicImport";
 
@@ -25,7 +25,7 @@ export default function Popup({ pageName }) {
           <div
             className="screen-blend-55"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: { type: "close" },
               });

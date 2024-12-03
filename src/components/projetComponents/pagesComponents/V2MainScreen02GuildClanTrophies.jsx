@@ -1,6 +1,6 @@
 import TrophyResBoxAll from "../UIComponents/TrophyResBoxAll";
 
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 
 export const cssFiles = ["clan-trophies", "screen-superhero"];
 
@@ -20,7 +20,7 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    nexusDispatch({
+                    nexusEffect({
                       type: "handlePopup",
                       payload: {
                         type: "open",
@@ -69,7 +69,7 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    nexusDispatch({
+                    nexusEffect({
                       type: "handlePopup",
                       payload: {
                         type: "open",
@@ -123,7 +123,7 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    nexusDispatch({
+                    nexusEffect({
                       type: "handlePopup",
                       payload: {
                         type: "open",

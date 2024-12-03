@@ -1,4 +1,4 @@
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 
 export const cssFiles = ["screen-fortuna-round-main_16x", "daiting-gifts-pop"];
 
@@ -18,7 +18,7 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -39,7 +39,7 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -59,7 +59,7 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",

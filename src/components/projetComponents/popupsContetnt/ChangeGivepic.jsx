@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 export default memo(function ChangeGivepic() {
   const popupState = useNexus("popupState");
@@ -37,7 +37,7 @@ export default memo(function ChangeGivepic() {
           <div
             className="change-btn-info"
             onClick={() =>
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -77,7 +77,7 @@ export default memo(function ChangeGivepic() {
       <div
         className="color-btn okgoit green"
         onClick={() =>
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: { type: "close" },
           })

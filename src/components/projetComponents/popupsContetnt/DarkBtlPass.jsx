@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
@@ -21,7 +21,7 @@ export default function DarkBtlPass() {
         className="info"
         text="i"
         onClick={() => {
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: {
               type: "open",
@@ -46,7 +46,7 @@ export default function DarkBtlPass() {
         className="exit"
         text="✖"
         onClick={() =>
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -58,7 +58,7 @@ export default function DarkBtlPass() {
         text="Buy Currency"
         img="img/ic-red-potion-1.png"
         onClick={() =>
-          nexusDispatch({
+          nexusEffect({
             type: "handlePopup",
             payload: {
               type: "open",

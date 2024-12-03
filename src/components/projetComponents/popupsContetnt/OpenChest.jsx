@@ -1,5 +1,5 @@
 import { memo, useState } from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 import PopResValue from "../UIComponents/PopResValue";
 
@@ -52,7 +52,7 @@ export default memo(function OpenChest() {
             <div
               className="openchest-bonus-btn free"
               onClick={() =>
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",

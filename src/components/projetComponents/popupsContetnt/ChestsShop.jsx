@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 
@@ -12,7 +12,7 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box diamonds"
           onClick={() =>
-            nexusDispatch({
+            nexusEffect({
               type: "handlePopup",
               payload: {
                 type: "open",
@@ -31,7 +31,7 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box oil"
           onClick={() =>
-            nexusDispatch({
+            nexusEffect({
               type: "handlePopup",
               payload: {
                 type: "open",
@@ -58,7 +58,7 @@ export default memo(function ChestsShop() {
         <div
           className="trophy-res-box spirit"
           onClick={() =>
-            nexusDispatch({
+            nexusEffect({
               type: "handlePopup",
               payload: {
                 type: "open",
@@ -85,7 +85,7 @@ export default memo(function ChestsShop() {
         <div
           className="color-btn info"
           onClick={() =>
-            nexusDispatch({
+            nexusEffect({
               type: "handlePopup",
               payload: {
                 type: "open",
@@ -116,7 +116,7 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -145,7 +145,7 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -174,7 +174,7 @@ export default memo(function ChestsShop() {
             <div
               className="color-btn-text"
               onClick={() =>
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",

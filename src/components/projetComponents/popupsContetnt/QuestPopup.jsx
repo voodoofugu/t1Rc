@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 export default memo(function QuestPopup({ done }) {
   const popupState = useNexus("popupState");
@@ -40,7 +40,7 @@ export default memo(function QuestPopup({ done }) {
             <div
               className="btn-simple-silver btn-close"
               onClick={() =>
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: { type: "close" },
                 })
@@ -52,7 +52,7 @@ export default memo(function QuestPopup({ done }) {
             <div
               className="btn-simple-gold btn-get"
               onClick={() =>
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: { type: "close" },
                 })

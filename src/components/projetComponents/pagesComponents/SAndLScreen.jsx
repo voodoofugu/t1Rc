@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import SVGIcon from "../UIComponents/SVGIcon.jsx";
@@ -123,7 +123,7 @@ export default function SAndLScreen({ pageName, children }) {
     const diceNum = getRandomNumber();
     const diceClass = diceColor ? "gold" : "white";
 
-    nexusDispatch({
+    nexusEffect({
       type: "ANIM_IN_PROG",
       payload: true,
     });
@@ -162,7 +162,7 @@ export default function SAndLScreen({ pageName, children }) {
         <div className="sAndL">
           <SAndLSVGPlates
             sAndLStates={sAndLStates}
-            dispatch={nexusDispatch}
+            dispatch={nexusEffect}
             diceValue={diceValue}
             specialIndexes={specialIndexes}
             pageName={pageName}
@@ -239,7 +239,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn questBtn"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -260,7 +260,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn craftBtn"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -281,7 +281,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn ratingBtn"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -303,7 +303,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="btnI"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -327,7 +327,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -349,7 +349,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -379,7 +379,7 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",

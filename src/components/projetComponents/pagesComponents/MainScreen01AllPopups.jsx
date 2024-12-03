@@ -1,7 +1,7 @@
 import { useState } from "react";
 import WorldBtnBox from "../UIComponents/WorldBtnBox";
 
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 import QuestBoxAll from "../UIComponents/QuestBoxAll";
 import Notification from "../UIComponents/Notification";
 
@@ -109,7 +109,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           <div
             className="res-chest-btn"
             onClick={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -618,7 +618,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                   <div
                     className="hero-card highlight"
                     onClick={() => {
-                      nexusDispatch({
+                      nexusEffect({
                         type: "handlePopup",
                         payload: {
                           type: "open",

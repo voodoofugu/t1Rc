@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { nexusDispatch, useNexus } from "nexus-state";
+import { nexusEffect, useNexus } from "nexus-state";
 
 export default memo(function PopResValue({ resClass, resValue, notPlus }) {
   const popupState = useNexus("popupState");
@@ -8,7 +8,7 @@ export default memo(function PopResValue({ resClass, resValue, notPlus }) {
 
   if (resClass === "chest") {
     click = () =>
-      nexusDispatch({
+      nexusEffect({
         type: "handlePopup",
         payload: {
           type: "open",

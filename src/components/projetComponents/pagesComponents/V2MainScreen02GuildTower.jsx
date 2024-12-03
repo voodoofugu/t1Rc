@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 
 import WorldBtnBox from "../UIComponents/WorldBtnBox";
 import StateChangeBtn from "../UIComponents/StateChangeBtn";
@@ -125,7 +125,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest trophy-pop"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -151,7 +151,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest tower-trophy-pop"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -176,7 +176,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest tower-mag-box"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -202,7 +202,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div
               className="quest InfoPop"
               onClick={() => {
-                nexusDispatch({
+                nexusEffect({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -294,7 +294,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                       <div
                         className="color-btn gblue rb-koi"
                         onClick={() => {
-                          nexusDispatch({
+                          nexusEffect({
                             type: "handlePopup",
                             payload: {
                               type: "open",
@@ -350,7 +350,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                   <div
                                     className="color-btn-text"
                                     onClick={() => {
-                                      nexusDispatch({
+                                      nexusEffect({
                                         type: "handlePopup",
                                         payload: {
                                           type: "open",
@@ -379,7 +379,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                   value="234"
                                   plus
                                   onClick={() => {
-                                    nexusDispatch({
+                                    nexusEffect({
                                       type: "handlePopup",
                                       payload: {
                                         type: "open",
@@ -417,7 +417,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                               <div
                                 className="towerAddRelics"
                                 onClick={() => {
-                                  nexusDispatch({
+                                  nexusEffect({
                                     type: "handlePopup",
                                     payload: {
                                       type: "open",
@@ -440,7 +440,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                           "Trophie",
                           <TowerTrophyBoxScroll
                             onClick={() => {
-                              nexusDispatch({
+                              nexusEffect({
                                 type: "handlePopup",
                                 payload: {
                                   type: "open",
@@ -499,7 +499,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             class1={hole === true ? "relicsCards" : "relicset"}
             class2={hole === true ? "holeGem" : "cards"}
             onClick1={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -513,7 +513,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               });
             }}
             onClick2={() => {
-              nexusDispatch({
+              nexusEffect({
                 type: "handlePopup",
                 payload: {
                   type: "open",

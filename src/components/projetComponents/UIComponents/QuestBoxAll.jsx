@@ -1,5 +1,5 @@
 import { memo, useState } from "react";
-import { nexusDispatch } from "nexus-state";
+import { nexusEffect } from "nexus-state";
 
 function Quest({ img, timerbox, payload }) {
   const renderImages = () => {
@@ -19,7 +19,7 @@ function Quest({ img, timerbox, payload }) {
       className={`quest`}
       onClick={() => {
         payload
-          ? nexusDispatch({
+          ? nexusEffect({
               type: "handlePopup",
               payload: {
                 type: "open",
