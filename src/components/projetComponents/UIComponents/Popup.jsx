@@ -3,7 +3,6 @@ import { useNexus, nexusEffect } from "nexus-state";
 import useDynamicImport from "../../hooks/useDynamicImport";
 
 import FraimedTitle from "./FraimedTitle";
-import Loading from "../../templateComponents/Loading";
 
 export default function Popup({ pageName }) {
   const activePage = useNexus("activePage");
@@ -58,7 +57,7 @@ export default function Popup({ pageName }) {
                   {...(popupState.props || {})}
                 />
               ) : (
-                <Loading noBG />
+                <div className="screen-blend-55"></div>
               )}
 
               {popupState.timer && (
