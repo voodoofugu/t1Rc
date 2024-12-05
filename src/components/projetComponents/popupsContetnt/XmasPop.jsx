@@ -1,11 +1,13 @@
-import { nexusEffect, useNexus } from "nexus-state";
+import { useState, useLayoutEffect } from "react";
+import { nexusEffect, nexusUpdate } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
+import StoreItemBox from "../UIComponents/StoreItemBox";
 
-function XmasPop1({ setXmasPop }) {
-  const popupState = useNexus("popupState");
+const girlImg = "img/images/hero-all/tithero-441/icons/break-girl4.png";
 
+function XmasPop1({ setXmasPopLocal }) {
   return (
     <>
       <div className="color-box"></div>
@@ -17,42 +19,27 @@ function XmasPop1({ setXmasPop }) {
             </div>
           </div>
           <div className="xmas-squad-holder">
-            <div className="hero-box">
-              <div className="hero-avatar-box">
-                <img
-                  className="hero-avatar"
-                  src="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="hero-box">
-              <div className="hero-avatar-box">
-                <img
-                  className="hero-avatar"
-                  src="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="hero-box">
-              <div className="hero-avatar-box">
-                <img
-                  className="hero-avatar"
-                  src="img/images/superhero/suphero-771/x1/avatar/771sh-ava-1.jpg"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="hero-box">
-              <div className="hero-avatar-box">
-                <img
-                  className="hero-avatar"
-                  src="img/images/superhero/suphero-777/x1/avatar/777sh-ava-1.jpg"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+            <ItemBox
+              itemClass="cardAva"
+              itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
+            />
+
+            <ItemBox
+              itemClass="cardAva"
+              itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
+            />
+
+            <ItemBox
+              itemClass="cardAva"
+              itemPic="img/images/superhero/suphero-771/x1/avatar/771sh-ava-1.jpg"
+              unique={["sh"]}
+            />
+
+            <ItemBox
+              itemClass="cardAva"
+              itemPic="img/images/superhero/suphero-777/x1/avatar/777sh-ava-1.jpg"
+              unique={["sh"]}
+            />
           </div>
           <div className="prgball-box">
             <div className="prgall-prom">
@@ -107,13 +94,13 @@ function XmasPop1({ setXmasPop }) {
         </div>
       </div>
       <div className="xmas-girl">
-        <img src="img/break-girls/break-girl933.png" loading="lazy" />
+        <img src={girlImg} loading="lazy" />
       </div>
       <div className="xmas-btn-box">
         <div className="color-btn quest">
           <div
             className="color-btn-text"
-            onClick={() => setXmasPop("xmas-pop3")}
+            onClick={() => setXmasPopLocal("xmas-pop3")}
           >
             quest
           </div>
@@ -132,7 +119,9 @@ function XmasPop1({ setXmasPop }) {
         <div className="color-btn shop">
           <div
             className="color-btn-text"
-            onClick={() => setXmasPop("xmas-pop2")}
+            onClick={() => {
+              setXmasPopLocal("xmas-pop2");
+            }}
           >
             shop
           </div>
@@ -142,7 +131,7 @@ function XmasPop1({ setXmasPop }) {
   );
 }
 
-function XmasPop2({ setXmasPop }) {
+function XmasPop2({ setXmasPopLocal }) {
   return (
     <>
       <div className="color-box"></div>
@@ -172,7 +161,7 @@ function XmasPop2({ setXmasPop }) {
         </div>
         <div className="store-item-all">
           <div className="store-item-all-name">x-mas chests</div>
-          <div className="store-item-box">
+          {/* <div className="store-item-box">
             <div className="store-name">1 XMas Chest</div>
             <div className="item-box">
               <img src="img/v2-xmas-chest-red.png" loading="lazy" />
@@ -185,59 +174,49 @@ function XmasPop2({ setXmasPop }) {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="store-item-box">
-            <div className="store-name">3 XMas Chests</div>
-            <div className="item-box">
-              <img src="img/v2-xmas-chest-red.png" loading="lazy" />
-            </div>
-            <div className="color-btn diamond">
-              <div className="color-btn-text">
-                <div className="diamonds">
-                  buy
-                  <span className="f-diamond">43</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="store-item-box">
-            <div className="store-name">5 XMas Chests</div>
-            <div className="item-box">
-              <img src="img/v2-xmas-chest-red.png" loading="lazy" />
-            </div>
-            <div className="color-btn diamond">
-              <div className="color-btn-text">
-                <div className="diamonds">
-                  buy
-                  <span className="f-diamond">63</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="store-item-box">
-            <div className="store-name">10 XMas Chests</div>
-            <div className="item-box">
-              <img src="img/v2-xmas-chest-red.png" loading="lazy" />
-            </div>
-            <div className="color-btn diamond">
-              <div className="color-btn-text">
-                <div className="diamonds">
-                  buy
-                  <span className="f-diamond">108</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          </div> */}
+          <StoreItemBox
+            storeItemName="1 XMas Chest"
+            currencyIcon="img/ic-diamond.png"
+            buyValue="18"
+          >
+            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+          </StoreItemBox>
+
+          <StoreItemBox
+            storeItemName="3 XMas Chest"
+            currencyIcon="img/ic-diamond.png"
+            buyValue="43"
+          >
+            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+          </StoreItemBox>
+
+          <StoreItemBox
+            storeItemName="5 XMas Chest"
+            currencyIcon="img/ic-diamond.png"
+            buyValue="63"
+          >
+            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+          </StoreItemBox>
+
+          <StoreItemBox
+            storeItemName="10 XMas Chest"
+            currencyIcon="img/ic-diamond.png"
+            buyValue="sold"
+            check
+          >
+            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+          </StoreItemBox>
         </div>
       </div>
       <div className="xmas-girl">
-        <img src="img/break-girls/break-girl927.png" loading="lazy" />
+        <img src={girlImg} loading="lazy" />
       </div>
       <div className="xmas-btn-box">
         <div className="color-btn">
           <div
             className="color-btn-text"
-            onClick={() => setXmasPop("xmas-pop1")}
+            onClick={() => setXmasPopLocal("xmas-pop1")}
           >
             back
           </div>
@@ -247,13 +226,13 @@ function XmasPop2({ setXmasPop }) {
   );
 }
 
-function XmasPop3({ setXmasPop }) {
+function XmasPop3({ setXmasPopLocal }) {
   return (
     <>
       <div className="color-box xmas"></div>
       <div className="xmas-daily-prg-box-all">
         <div className="xmas-prg-girl">
-          <img src="img/break-girls/break-girl927.png" loading="lazy" />
+          <img src={girlImg} loading="lazy" />
         </div>
         <div className="xmas-prg-bar-box">
           <div className="xmas-prg-name-pic">0</div>
@@ -472,7 +451,7 @@ function XmasPop3({ setXmasPop }) {
         <div className="color-btn">
           <div
             className="color-btn-text"
-            onClick={() => setXmasPop("xmas-pop1")}
+            onClick={() => setXmasPopLocal("xmas-pop1")}
           >
             back
           </div>
@@ -482,13 +461,24 @@ function XmasPop3({ setXmasPop }) {
   );
 }
 
-export default function XmasPop({ event, xmasPop, setXmasPop }) {
-  return xmasPop === "xmas-pop1" ? (
-    <XmasPop1 setXmasPop={setXmasPop} />
-  ) : xmasPop === "xmas-pop2" ? (
-    <XmasPop2 setXmasPop={setXmasPop} />
-  ) : xmasPop === "xmas-pop3" ? (
-    <XmasPop3 setXmasPop={setXmasPop} />
+export default function XmasPop({ xmasPop }) {
+  const [xmasPopLocal, setXmasPopLocal] = useState(xmasPop);
+
+  useLayoutEffect(() => {
+    nexusUpdate({
+      popupState: (prev) => ({
+        ...prev,
+        mpopClass: `m-popup ${xmasPopLocal} xmas`,
+      }),
+    });
+  }, [xmasPopLocal]);
+
+  return xmasPopLocal === "xmas-pop1" ? (
+    <XmasPop1 setXmasPopLocal={setXmasPopLocal} />
+  ) : xmasPopLocal === "xmas-pop2" ? (
+    <XmasPop2 setXmasPopLocal={setXmasPopLocal} />
+  ) : xmasPopLocal === "xmas-pop3" ? (
+    <XmasPop3 setXmasPopLocal={setXmasPopLocal} />
   ) : (
     ""
   );

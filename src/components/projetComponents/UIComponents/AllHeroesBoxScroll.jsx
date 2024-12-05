@@ -23,23 +23,29 @@ function HeroBox({
   btnText,
   btnOnClick,
 }) {
+  const heroCardClass = `hero-card${className ? ` ${className}` : ""}`;
+
+  // check classes existing from className with RegEx
+  const offerExist = /offer/.test(className);
+  const starterExist = /starterpack/.test(className);
+  const offerCloseExist = /offerClose/.test(className);
+  const disabledExist = /disabled/.test(className);
+
+  const offerStarterExist = offerExist || starterExist;
+  const offerDisabledExist = offerExist || disabledExist;
+
   return (
-    <div
-      className={`hero-card${className ? ` ${className}` : ""}`}
-      onClick={onClick}
-    >
-      {!/\offerClose/.test(className) && (
+    <div className={heroCardClass} onClick={onClick}>
+      {!offerCloseExist && (
         <Button
-          className={`${
-            /\offer|starterpack/.test(className) ? " btnGold btnBuy" : " green"
-          }`}
+          className={`max ${offerStarterExist ? "btnGold btnBuy" : "green"}`}
           text={btnText}
           onClick={btnOnClick}
         />
       )}
 
       <ItemBox
-        itemClass={`cardAva${className.includes("close") ? " close" : ""}`}
+        itemClass={`cardAva${offerDisabledExist ? " close" : ""}`}
         type={heroType}
         itemPic={img}
       />
@@ -57,14 +63,14 @@ function HeroBox({
         {text && <div className="hero-info">{text}</div>}
       </div>
 
-      {/\starterpack/.test(className) ? (
+      {timer && starterExist && (
         <div className="timerBox">
           <div className="timerText">осталось</div>
           <div className="timer">{timer}</div>
         </div>
-      ) : /\offer/.test(className) ? (
-        ""
-      ) : (
+      )}
+
+      {!offerStarterExist && (
         <div className="hero-level-box">
           <div className="hero-level-box">
             level
@@ -81,9 +87,7 @@ function HeroBox({
         </div>
       )}
 
-      {/\offer|starterpack/.test(className) && (
-        <Button className="exit" text="✖" />
-      )}
+      {offerStarterExist && <Button className="exit" text="✖" />}
     </div>
   );
 }

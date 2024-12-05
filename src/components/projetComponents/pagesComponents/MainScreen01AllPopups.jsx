@@ -343,10 +343,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "v2-xmas-chest-red",
                 "287:21:43",
                 {
-                  mpopClass: `m-popup ${xmasPop} xmas`,
                   popTit: "XXXMAS Celebration Pass",
                   popCont: "XmasPop",
-                  props: { event: "xmas" },
+                  props: { xmasPop: xmasPop },
                 },
               ],
               [

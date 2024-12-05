@@ -1,14 +1,16 @@
 import React from "react";
 
 const BtnWrap = ({ className, onClick, href, children }) => {
+  const btnClass = `butn${className ? ` ${className}` : ""}`;
+
   return (
     <>
       {href ? (
-        <a className={`butn ${className}`} onClick={onClick} href={href}>
+        <a className={btnClass} onClick={onClick} href={href}>
           {children}
         </a>
       ) : (
-        <div className={`butn ${className}`} onClick={onClick}>
+        <div className={btnClass} onClick={onClick}>
           {children}
         </div>
       )}
