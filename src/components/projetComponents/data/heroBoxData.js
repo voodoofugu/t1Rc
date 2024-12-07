@@ -18,7 +18,7 @@ const heroBoxData = [
   },
   {
     className: "offerClose",
-    name: "Tokuda Arisu",
+    name: "Yukiko Hikogatana",
     text: "Вы сможете получить эту карту на уровне 100500",
     lvl: "6969",
     dps: "777",
@@ -51,7 +51,7 @@ const heroBoxData = [
     btnOnClick: null,
   },
   {
-    className: "highlight",
+    className: "disabled",
     name: "Tokuda Arisu",
     text: "",
     lvl: "6969",
@@ -64,11 +64,11 @@ const heroBoxData = [
     abilImg: "",
     abilOnClick: null,
     onClick: null,
-    btnText: "3453<p>up",
+    btnText: "3453<p>hire",
     btnOnClick: null,
   },
   {
-    className: "",
+    className: "highlight",
     name: "Tokuda Arisu",
     text: "",
     lvl: "6969",

@@ -1,29 +1,20 @@
 import React from "react";
 
-export default function X2BtnAllBox() {
+import Button from "../UIComponents/Button";
+
+const btnQuantity = [1, 10, 25, 100, 200, 500, 1000];
+
+export default function X2BtnAllBox({ quantity, setQuantity }) {
   return (
     <div className="x2-btn-all-box">
-      <div className="x2-btn selected">
-        <div className="x2-btn-text">x1</div>
-      </div>
-      <div className="x2-btn">
-        <div className="x2-btn-text">x10</div>
-      </div>
-      <div className="x2-btn">
-        <div className="x2-btn-text">x25</div>
-      </div>
-      <div className="x2-btn">
-        <div className="x2-btn-text">x100</div>
-      </div>
-      <div className="x2-btn">
-        <div className="x2-btn-text">x200</div>
-      </div>
-      <div className="x2-btn">
-        <div className="x2-btn-text">x500</div>
-      </div>
-      <div className="x2-btn">
-        <div className="x2-btn-text">x1000</div>
-      </div>
+      {btnQuantity.map((item, index) => (
+        <Button
+          key={index}
+          className={`${quantity === item ? "check green" : "gray"}`}
+          text={`x${item}`}
+          onClick={() => setQuantity(item)}
+        />
+      ))}
     </div>
   );
 }

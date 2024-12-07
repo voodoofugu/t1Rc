@@ -54,6 +54,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
   const [activeTab, setActiveTab] = useState(false);
   const [topContent, setTopContent] = useState(false);
   const [toHard, setToHard] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
   return (
     <div className="main world1">
@@ -268,7 +269,12 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                     tab1={["Heroes"]}
                     tab2={["Top"]}
                   /> */}
-                  {activeTab === false && <X2BtnAllBox />}
+                  {activeTab === false && (
+                    <X2BtnAllBox
+                      quantity={quantity}
+                      setQuantity={setQuantity}
+                    />
+                  )}
                 </div>
                 <div className="tab-loading-wrapper border"></div>
               </div>
