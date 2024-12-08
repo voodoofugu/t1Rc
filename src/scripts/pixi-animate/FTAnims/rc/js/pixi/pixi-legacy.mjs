@@ -25749,7 +25749,7 @@ var Signal = /** @class */ (function () {
    * @example
    * let mySignal = new Signal();
    * let binding = mySignal.add(onSignal);
-   * mySignal.nexusEffect('foo', 'bar');
+   * mySignal.nexusTrigger('foo', 'bar');
    * mySignal.detach(binding);
    */
   function Signal() {
@@ -26268,7 +26268,7 @@ var LoaderResource = /** @class */ (function () {
       this.onComplete.once(cb);
     }
     this._setFlag(LoaderResource.STATUS_FLAGS.LOADING, true);
-    this.onStart.nexusEffect(this);
+    this.onStart.nexusTrigger(this);
     // if unset, determine the value
     if (this.crossOrigin === false || typeof this.crossOrigin !== "string") {
       this.crossOrigin = this._determineCrossOrigin(this.url);
@@ -26356,7 +26356,7 @@ var LoaderResource = /** @class */ (function () {
     }
     this._setFlag(LoaderResource.STATUS_FLAGS.COMPLETE, true);
     this._setFlag(LoaderResource.STATUS_FLAGS.LOADING, false);
-    this.onComplete.nexusEffect(this);
+    this.onComplete.nexusTrigger(this);
   };
   /**
    * Loads this resources using an element that has a single source,
@@ -26524,7 +26524,7 @@ var LoaderResource = /** @class */ (function () {
    */
   LoaderResource.prototype._onProgress = function (event) {
     if (event && event.lengthComputable) {
-      this.onProgress.nexusEffect(this, event.loaded / event.total);
+      this.onProgress.nexusTrigger(this, event.loaded / event.total);
     }
   };
   /** Called if a timeout event fires for an element. */
@@ -27419,13 +27419,13 @@ var Loader = /** @class */ (function () {
   Loader.prototype._onStart = function () {
     this.progress = 0;
     this.loading = true;
-    this.onStart.nexusEffect(this);
+    this.onStart.nexusTrigger(this);
   };
   /** Called once each resource has loaded. */
   Loader.prototype._onComplete = function () {
     this.progress = MAX_PROGRESS;
     this.loading = false;
-    this.onComplete.nexusEffect(this, this.resources);
+    this.onComplete.nexusTrigger(this, this.resources);
   };
   /**
    * Called each time a resources is loaded.
@@ -27444,16 +27444,16 @@ var Loader = /** @class */ (function () {
         fn.call(_this, resource, next);
       },
       function () {
-        resource.onAfterMiddleware.nexusEffect(resource);
+        resource.onAfterMiddleware.nexusTrigger(resource);
         _this.progress = Math.min(
           MAX_PROGRESS,
           _this.progress + resource.progressChunk
         );
-        _this.onProgress.nexusEffect(_this, resource);
+        _this.onProgress.nexusTrigger(_this, resource);
         if (resource.error) {
-          _this.onError.nexusEffect(resource.error, _this, resource);
+          _this.onError.nexusTrigger(resource.error, _this, resource);
         } else {
-          _this.onLoad.nexusEffect(_this, resource);
+          _this.onLoad.nexusTrigger(_this, resource);
         }
         _this._resourcesParsing.splice(
           _this._resourcesParsing.indexOf(resource),

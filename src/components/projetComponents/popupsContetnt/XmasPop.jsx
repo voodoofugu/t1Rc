@@ -1,5 +1,5 @@
 import { useState, useLayoutEffect } from "react";
-import { nexusEffect, nexusUpdate } from "nexus-state";
+import { nexusTrigger, nexusUpdate } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
@@ -108,7 +108,7 @@ function XmasPop1({ setXmasPopLocal }) {
         <div
           className="color-btn green"
           onClick={() =>
-            nexusEffect({
+            nexusTrigger({
               type: "handlePopup",
               payload: { type: "close" },
             })

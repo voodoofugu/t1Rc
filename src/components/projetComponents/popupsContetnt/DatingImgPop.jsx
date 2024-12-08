@@ -1,4 +1,4 @@
-import { nexusEffect, useNexus } from "nexus-state";
+import { nexusTrigger, useNexus } from "nexus-state";
 
 export default function DatingImgPop({ img }) {
   const popupState = useNexus("popupState");
@@ -8,7 +8,7 @@ export default function DatingImgPop({ img }) {
       <div
         className="closeBG"
         onClick={() =>
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -19,7 +19,7 @@ export default function DatingImgPop({ img }) {
         <div
           className="btn-close-x"
           onClick={() =>
-            nexusEffect({
+            nexusTrigger({
               type: "handlePopup",
               payload: { type: "close" },
             })

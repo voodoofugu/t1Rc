@@ -1,4 +1,4 @@
-import { nexusEffect, useNexus } from "nexus-state";
+import { nexusTrigger, useNexus } from "nexus-state";
 
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
@@ -13,7 +13,7 @@ export default function InfoPopFramed({ inner, girlImg }) {
       <div
         className="closeBG"
         onClick={() =>
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -39,7 +39,7 @@ export default function InfoPopFramed({ inner, girlImg }) {
           className="exit"
           text="✖"
           onClick={() =>
-            nexusEffect({
+            nexusTrigger({
               type: "handlePopup",
               payload: { type: "close" },
             })

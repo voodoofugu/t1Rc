@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { nexusEffect, useNexus } from "nexus-state";
+import { nexusTrigger, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
@@ -120,7 +120,7 @@ export default memo(function RelicsPop({ event }) {
         className="exit"
         text="✖"
         onClick={() =>
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: { type: "close" },
           })

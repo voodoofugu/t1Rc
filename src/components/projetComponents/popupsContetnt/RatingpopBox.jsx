@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { nexusEffect, useNexus } from "nexus-state";
+import { nexusTrigger, useNexus } from "nexus-state";
 
 export default memo(function RatingpopBox() {
   const popupState = useNexus("popupState");
@@ -24,7 +24,7 @@ export default memo(function RatingpopBox() {
           <div
             className="color-btn-text"
             onClick={() =>
-              nexusEffect({
+              nexusTrigger({
                 type: "handlePopup",
                 payload: { type: "close" },
               })

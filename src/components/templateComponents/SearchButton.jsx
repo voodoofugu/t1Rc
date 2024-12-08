@@ -51,9 +51,8 @@ export default function SearchButton() {
           (value, index) => value === prevFilteredValueRef.current[index]
         )
       ) {
-        // тут что-то не так!!!
         nexusUpdate({
-          searchData: filteredData,
+          searchData: filteredData.length > 0 ? filteredData : null,
         });
         prevFilteredValueRef.current = filteredData;
       }

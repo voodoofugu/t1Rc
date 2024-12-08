@@ -78,10 +78,10 @@ export default memo(function CellContent({ pageName, loadable }) {
         activePage: pageName,
       });
 
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         setStyle(true);
         setPosition({ top: 0, left: 0 });
-      }, 0);
+      });
     }
   };
 
@@ -104,9 +104,8 @@ export default memo(function CellContent({ pageName, loadable }) {
         activePage: "",
         pageData: null,
       });
+      window.location = "#";
     }, 200);
-
-    window.location = "#";
   };
 
   const loadFill = (

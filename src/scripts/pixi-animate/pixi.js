@@ -5802,7 +5802,7 @@ object-assign
               this.loading = true;
 
               // notify of start
-              this.onStart.nexusEffect(this);
+              this.onStart.nexusTrigger(this);
 
               // start loading
               this._queue.resume();
@@ -5910,7 +5910,7 @@ object-assign
             Loader.prototype._onComplete = function _onComplete() {
               this.loading = false;
 
-              this.onComplete.nexusEffect(this, this.resources);
+              this.onComplete.nexusTrigger(this, this.resources);
             };
 
             /**
@@ -5936,19 +5936,19 @@ object-assign
                   fn.call(_this3, resource, next);
                 },
                 function () {
-                  resource.onAfterMiddleware.nexusEffect(resource);
+                  resource.onAfterMiddleware.nexusTrigger(resource);
 
                   _this3.progress += resource.progressChunk;
-                  _this3.onProgress.nexusEffect(_this3, resource);
+                  _this3.onProgress.nexusTrigger(_this3, resource);
 
                   if (resource.error) {
-                    _this3.onError.nexusEffect(
+                    _this3.onError.nexusTrigger(
                       resource.error,
                       _this3,
                       resource
                     );
                   } else {
-                    _this3.onLoad.nexusEffect(_this3, resource);
+                    _this3.onLoad.nexusTrigger(_this3, resource);
                   }
 
                   _this3._resourcesParsing.splice(
@@ -6415,7 +6415,7 @@ object-assign
               this._setFlag(Resource.STATUS_FLAGS.COMPLETE, true);
               this._setFlag(Resource.STATUS_FLAGS.LOADING, false);
 
-              this.onComplete.nexusEffect(this);
+              this.onComplete.nexusTrigger(this);
             };
 
             /**
@@ -6482,7 +6482,7 @@ object-assign
 
               this._setFlag(Resource.STATUS_FLAGS.LOADING, true);
 
-              this.onStart.nexusEffect(this);
+              this.onStart.nexusTrigger(this);
 
               // if unset, determine the value
               if (
@@ -6762,7 +6762,7 @@ object-assign
 
             Resource.prototype._onProgress = function _onProgress(event) {
               if (event && event.lengthComputable) {
-                this.onProgress.nexusEffect(this, event.loaded / event.total);
+                this.onProgress.nexusTrigger(this, event.loaded / event.total);
               }
             };
 
@@ -7810,7 +7810,7 @@ object-assign
               },
               {
                 key: "dispatch",
-                value: function nexusEffect() {
+                value: function nexusTrigger() {
                   var node = this._head;
 
                   if (!node) return false;

@@ -1,4 +1,4 @@
-import { useNexus, nexusEffect, nexusUpdate } from "nexus-state";
+import { useNexus, nexusTrigger, nexusUpdate } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
@@ -111,7 +111,7 @@ export default function BtlPass({ event }) {
         className="info"
         text="i"
         onClick={() => {
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: {
               type: "open",
@@ -135,7 +135,7 @@ export default function BtlPass({ event }) {
         className="exit"
         text="✖"
         onClick={() =>
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -148,7 +148,7 @@ export default function BtlPass({ event }) {
         img
         onClick={() =>
           buyShopCont &&
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: {
               type: "open",

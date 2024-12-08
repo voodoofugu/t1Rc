@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { nexusEffect } from "nexus-state";
+import { nexusTrigger } from "nexus-state";
 
 export const cssFiles = [
   "v2-screen-sexped-main",
@@ -195,7 +195,7 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
           <div
             className="color-btn rating"
             onClick={() => {
-              nexusEffect({
+              nexusTrigger({
                 type: "handlePopup",
                 payload: {
                   type: "open",

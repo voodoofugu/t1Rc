@@ -1,4 +1,4 @@
-import { nexusEffect } from "nexus-state";
+import { nexusTrigger } from "nexus-state";
 
 import Button from "../UIComponents/Button";
 
@@ -8,7 +8,7 @@ export default function BuyShop({ img1, img2, img3, img4, diamond }) {
       <div
         className="closeBG"
         onClick={() =>
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -25,7 +25,7 @@ export default function BuyShop({ img1, img2, img3, img4, diamond }) {
           className="exit"
           text="✖"
           onClick={() =>
-            nexusEffect({
+            nexusTrigger({
               type: "handlePopup",
               payload: { type: "close" },
             })

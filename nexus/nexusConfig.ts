@@ -16,7 +16,7 @@ export const initialStates = {
   darkTheme: false,
   searchText: "",
   activePage: "",
-  searchData: [] as string[],
+  searchData: null as string[] | null,
   pageData,
 
   // project

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { nexusEffect, useNexus } from "nexus-state";
+import { nexusTrigger, useNexus } from "nexus-state";
 
 export default function InfoPop({
   colorBox,
@@ -53,7 +53,7 @@ export default function InfoPop({
             <div
               className="color-btn-text"
               onClick={() =>
-                nexusEffect({
+                nexusTrigger({
                   type: "handlePopup",
                   payload: { type: "close" },
                 })
@@ -69,7 +69,7 @@ export default function InfoPop({
           <div
             className={`color-btn ${btnClass2 ? btnClass2 : ""}`}
             onClick={() => {
-              nexusEffect({
+              nexusTrigger({
                 type: "handlePopup",
                 payload: { type: "close" },
               });

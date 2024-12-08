@@ -1,4 +1,4 @@
-import { useNexus, nexusEffect } from "nexus-state";
+import { useNexus, nexusTrigger } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
@@ -13,7 +13,7 @@ export default function DaitingGiftsPop({ girleID }) {
       <div
         className="closeBG"
         onClick={() =>
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: { type: "close" },
           })
@@ -72,7 +72,7 @@ export default function DaitingGiftsPop({ girleID }) {
         <div
           className="btn-close-x"
           onClick={() =>
-            nexusEffect({
+            nexusTrigger({
               type: "handlePopup",
               payload: { type: "close" },
             })

@@ -1,4 +1,4 @@
-import { nexusEffect } from "nexus-state";
+import { nexusTrigger } from "nexus-state";
 
 import ResCount from "../UIComponents/ResCount";
 import StoreItemBox from "../UIComponents/StoreItemBox";
@@ -47,7 +47,7 @@ export default function FapMarket({ pageName, children }) {
             timer="23:54:55"
             updateBtn
             onClick={() =>
-              nexusEffect({
+              nexusTrigger({
                 type: "handlePopup",
                 payload: {
                   type: "open",
@@ -80,7 +80,7 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                nexusEffect({
+                nexusTrigger({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -106,7 +106,7 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                nexusEffect({
+                nexusTrigger({
                   type: "handlePopup",
                   payload: {
                     type: "open",
@@ -132,7 +132,7 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                nexusEffect({
+                nexusTrigger({
                   type: "handlePopup",
                   payload: {
                     type: "open",

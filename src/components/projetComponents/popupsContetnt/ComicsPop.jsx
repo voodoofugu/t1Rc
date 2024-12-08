@@ -1,4 +1,4 @@
-import { nexusEffect, useNexus } from "nexus-state";
+import { nexusTrigger, useNexus } from "nexus-state";
 
 import ComicsBallon from "../UIComponents/ComicsBallon";
 
@@ -68,7 +68,7 @@ export default function ComicsPop() {
       <div
         className="btn-close-x"
         onClick={() =>
-          nexusEffect({
+          nexusTrigger({
             type: "handlePopup",
             payload: { type: "close" },
           })
