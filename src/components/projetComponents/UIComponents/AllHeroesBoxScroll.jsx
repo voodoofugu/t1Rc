@@ -1,3 +1,4 @@
+import { nexusTrigger } from "nexus-state";
 import React from "react";
 
 import Button from "../UIComponents/Button";
@@ -23,7 +24,9 @@ function HeroBox({
   abilOnClick,
   onClick,
   btnText,
+  btnNumX,
   btnOnClick,
+  squadRank,
 }) {
   const heroCardClass = `hero-card${className ? ` ${className}` : ""}`;
 
@@ -50,9 +53,14 @@ function HeroBox({
           />
         )}
 
+        {btnNumX && !offerStarterExist && !disabledExist && btnNumX > 1 && (
+          <div className="numX">{`x${btnNumX}`}</div>
+        )}
+
         <ItemBox
           itemClass={`cardAva${offerDisabledExist ? " close" : ""}`}
           type={heroType}
+          squadRank={squadRank}
           itemPic={img}
         />
 
@@ -66,7 +74,6 @@ function HeroBox({
 
         <div className="hero-name-box">
           <FraimedTitle className="corners" text={name} />
-          {/* <div className="hero-name">{name}</div> */}
           {text && <div className="hero-info">{text}</div>}
         </div>
 
@@ -100,7 +107,7 @@ function HeroBox({
   );
 }
 
-export default function AllHeroesBoxScroll() {
+export default function AllHeroesBoxScroll({ numX }) {
   return (
     <Scroll
       className="heroBoxsScroll"
@@ -116,7 +123,27 @@ export default function AllHeroesBoxScroll() {
       progressVisibility="hover"
     >
       {heroBoxData.map((item, index) => (
-        <HeroBox key={index} {...item} />
+        <HeroBox
+          key={index}
+          {...item}
+          btnNumX={numX}
+          btnOnClick={() => {
+            index === 2 &&
+              nexusTrigger({
+                type: "handlePopup",
+                payload: {
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly framedPop",
+                    popCont: "HeroOfferPop",
+                    props: {
+                      data: item,
+                    },
+                  },
+                },
+              });
+          }}
+        />
       ))}
     </Scroll>
   );

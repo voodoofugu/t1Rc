@@ -1,6 +1,19 @@
 import React from "react";
 import Button from "./Button";
 
+const arabicToRoman = {
+  1: "I",
+  2: "II",
+  3: "III",
+  4: "IV",
+  5: "V",
+  6: "VI",
+  7: "VII",
+  8: "VIII",
+  9: "IX",
+  10: "X",
+};
+
 export default function ItemBox({
   itemClass,
   itemPic,
@@ -11,11 +24,13 @@ export default function ItemBox({
   arrow, // left, right, top, bottom
   rare,
   type,
+  squadRank,
   notif,
   sale,
   onClick,
 }) {
   const selectable = itemClass && itemClass.includes("selectable");
+  const greekNum = squadRank && arabicToRoman[squadRank];
 
   return (
     <div
@@ -45,8 +60,14 @@ export default function ItemBox({
           onClick={!selectable ? onClick : undefined}
         />
       )}
-      {!!rare && <img className="rare" src={`img/cur-${rare}.png`} />}
-      {!!type && <img className="type" src={`img/cur2-${type}.png`} />}
+      {rare && <img className="rare" src={`img/cur-${rare}.png`} />}
+      {type && <img className="type" src={`img/cur2-${type}.png`} />}
+      {squadRank && (
+        <div className="squadRank">
+          <img className="rankImg" src={`img/2vip-s${squadRank}.png`} />
+          <div className="rank">{greekNum}</div>
+        </div>
+      )}
       {arrow ? <div className={`itemBox_arrow ${arrow}`}></div> : ""}
     </div>
   );

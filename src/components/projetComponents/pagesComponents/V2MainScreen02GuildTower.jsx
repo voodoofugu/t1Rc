@@ -258,7 +258,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                   <DpsDpcPanelBox />
                   <div className="all-heroes-box">
                     {activeTab === false ? (
-                      <AllHeroesBoxScroll />
+                      <AllHeroesBoxScroll numX={quantity} />
                     ) : (
                       <RatingPedBox />
                     )}
@@ -592,7 +592,8 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
         </div>
       </div>
 
-      <WorldBtnBox className={pageName} />
+      <WorldBtnBox pageName={pageName} />
+
       <StateChangeBtn
         state={hole}
         setState={sethole}

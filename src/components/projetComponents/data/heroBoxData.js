@@ -15,6 +15,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "bay",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "offerClose",
@@ -32,6 +33,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "offer",
@@ -42,13 +44,14 @@ const heroBoxData = [
     power: "123",
     timer: "",
     itemClass: "selectable cardAva",
-    img: "img/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg",
+    img: "img/images/hero-all/tithero-443/x1/ava/tithero-ava-1.jpg",
     heroType: "wizard",
     abilImg: "",
     abilOnClick: null,
     onClick: null,
     btnText: "bay",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "disabled",
@@ -66,6 +69,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>hire",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "highlight",
@@ -83,6 +87,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "bronzeCard",
@@ -100,6 +105,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: 1,
   },
   {
     className: "silverCard",
@@ -117,6 +123,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: 3,
   },
   {
     className: "goldCard",
@@ -134,6 +141,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: 6,
   },
   {
     className: "",
@@ -151,6 +159,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "",
@@ -168,6 +177,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "",
@@ -185,6 +195,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "",
@@ -202,6 +213,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "",
@@ -219,6 +231,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "",
@@ -236,6 +249,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "",
@@ -253,6 +267,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
   {
     className: "",
@@ -270,6 +285,7 @@ const heroBoxData = [
     onClick: null,
     btnText: "3453<p>up",
     btnOnClick: null,
+    squadRank: null,
   },
 ];
 
