@@ -18,7 +18,7 @@ function HeroBox({
   dps,
   power,
   timer,
-  img,
+  imgId,
   heroType,
   abilImg,
   abilOnClick,
@@ -42,7 +42,7 @@ function HeroBox({
 
   return (
     <>
-      {highlightExist && <div className="heroCardBg"></div>}
+      {highlightExist && <div className="highlightBg"></div>}
       <div className={heroCardClass} onClick={onClick}>
         {!offerCloseExist && (
           <Button
@@ -61,15 +61,18 @@ function HeroBox({
           itemClass={`cardAva${offerDisabledExist ? " close" : ""}`}
           type={heroType}
           squadRank={squadRank}
-          itemPic={img}
+          itemPic={`img/images/hero-all/tithero-${imgId}/x1/ava/tithero-ava-1.jpg`}
         />
 
         {abilImg && (
-          <ItemBox
-            itemClass="heroAbilIcn"
-            itemPic={abilImg}
-            onClick={abilOnClick}
-          />
+          <div className="heroAbilWrap">
+            <div className="highlightBg"></div>
+            <ItemBox
+              itemClass="wh44 selectable"
+              itemPic={`img/images/hero-all/tithero-${imgId}/icons/ic-abil.jpg`}
+              onClick={abilOnClick}
+            />
+          </div>
         )}
 
         <div className="hero-name-box">
@@ -128,20 +131,20 @@ export default function AllHeroesBoxScroll({ numX }) {
           {...item}
           btnNumX={numX}
           btnOnClick={() => {
-            index === 2 &&
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup contentOnly framedPop",
-                    popCont: "HeroOfferPop",
-                    props: {
-                      data: item,
-                    },
+            // index === 2 &&
+            nexusTrigger({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup contentOnly framedPop heroOfferPop",
+                  popCont: "HeroOfferPop",
+                  props: {
+                    data: item,
                   },
                 },
-              });
+              },
+            });
           }}
         />
       ))}

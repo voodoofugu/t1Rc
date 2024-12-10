@@ -4,18 +4,12 @@ import ImageBg from "../UIComponents/ImageBg";
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import FraimedTitle from "../UIComponents/FraimedTitle";
-import { url } from "inspector";
+import OfferCardBox from "../UIComponents/OfferCardBox";
 
 export default function HeroOfferPop({ data }) {
-  const img = data.img;
+  const imgId = data.imgId;
   const name = data.name;
   const heroType = data.heroType;
-
-  // метчим иконку фигуры
-  const girlFigure = img.match(/^(.*?tithero-\d+)(?=\/)/);
-  const girlMatch = girlFigure ? girlFigure[1] : null;
-  // получаем x2 аву
-  const x2Ava = img.replace(/\/x1\//, "/x2/");
 
   return (
     <>
@@ -35,15 +29,46 @@ export default function HeroOfferPop({ data }) {
           <div className="frame bottom"></div>
         </div>
 
-        <div className="offer-card-box noneAnim">
-          <div
-            className="card-content"
-            style={{ background: `url(${girlMatch}/icons/break-girl.png)` }}
-          >
+        <OfferCardBox
+          className="noneAnim"
+          addBg={`img/images/hero-all/tithero-${imgId}/x2/tithero-1.jpg`}
+          title={name}
+          rewardCard={
+            <ItemBox
+              itemClass="cardAvaX2"
+              type={heroType}
+              itemPic={`img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`}
+            />
+          }
+          btnWrap={
+            <Button
+              className="btnGold big"
+              text="49.90$"
+              crossedOutText="99.90$"
+              onClick={() => {}}
+              discountSticker="-50%"
+            />
+          }
+        >
+          Теперь вы можете купить эту особенную карту героини!
+        </OfferCardBox>
+        {/* <div className="offer-card-box noneAnim">
+          <div className="card-content">
+            <div
+              className="imgBg"
+              style={{
+                background: `url(img/images/hero-all/tithero-${imgId}/x2/tithero-1.jpg)`,
+              }}
+            ></div>
+
             <FraimedTitle className="cornersTop" text={name} />
 
             <div className="reward-card-box">
-              <ItemBox itemClass="cardAvaX2" type={heroType} itemPic={x2Ava} />
+              <ItemBox
+                itemClass="cardAvaX2"
+                type={heroType}
+                itemPic={`img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`}
+              />
             </div>
 
             <div className="btnWrap">
@@ -56,7 +81,7 @@ export default function HeroOfferPop({ data }) {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <Button
           className="exit"
@@ -73,8 +98,8 @@ export default function HeroOfferPop({ data }) {
       <ImageBg
         className="girlImg infoGirl"
         img={
-          girlMatch
-            ? `${girlMatch}/icons/break-girl.png`
+          imgId
+            ? `img/images/hero-all/tithero-${imgId}/icons/break-girl.png`
             : "img/break-girls/break-girl915.png"
         }
       />
