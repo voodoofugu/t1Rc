@@ -104,6 +104,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
       <div className="quest-box-all">
         <div className="quest-box-scroll">
           <div className="quest-box">
+            {/* кнопки */}
             <div
               className="quest"
               onClick={() => {
@@ -118,11 +119,13 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                 loading="lazy"
               />
             </div>
+
             <div className="quest" style={{ transform: "translateY(-12px)" }}>
               <div className="timerbox">
                 <div className="timer">Popups</div>
               </div>
             </div>
+
             <div
               className="quest trophy-pop"
               onClick={() => {
@@ -149,6 +152,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                 <div className="timer">Trophy</div>
               </div>
             </div>
+
             <div
               className="quest tower-trophy-pop"
               onClick={() => {
@@ -174,6 +178,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                 <div className="timer">Relics</div>
               </div>
             </div>
+
             <div
               className="quest tower-mag-box"
               onClick={() => {
@@ -200,6 +205,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                 loading="lazy"
               />
             </div>
+
             <div
               className="quest InfoPop"
               onClick={() => {
@@ -231,6 +237,36 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               <img className="icon" src="img/2vip-s5@2x.png" loading="lazy" />
               <div className="timerbox">
                 <div className="timer">Info</div>
+              </div>
+            </div>
+
+            <div
+              className="quest heroOfferPop"
+              onClick={() => {
+                nexusTrigger({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup contentOnly framedPop heroOfferPop",
+                      popCont: "HeroOfferPop",
+                      props: {
+                        imgId: 443,
+                        name: "Tokuda Arisu",
+                        heroType: "wizard",
+                      },
+                    },
+                  },
+                });
+              }}
+            >
+              <img
+                className="icon"
+                src="img/images/hero-all/tithero-443/icons/ic-hero.png"
+                loading="lazy"
+              />
+              <div className="timerbox">
+                <div className="timer">Hero Offer</div>
               </div>
             </div>
           </div>

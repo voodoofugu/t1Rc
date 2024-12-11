@@ -28,8 +28,6 @@ function HeroBox({
   btnOnClick,
   squadRank,
 }) {
-  const heroCardClass = `hero-card${className ? ` ${className}` : ""}`;
-
   // check classes existing from className with RegEx
   const offerExist = /offer/.test(className);
   const starterExist = /starterpack/.test(className);
@@ -43,7 +41,8 @@ function HeroBox({
   return (
     <>
       {highlightExist && <div className="highlightBg"></div>}
-      <div className={heroCardClass} onClick={onClick}>
+      <div className="clickArea" onClick={onClick}></div>
+      <div className={`hero-card${className ? ` ${className}` : ""}`}>
         {!offerCloseExist && (
           <Button
             className={`max ${offerStarterExist ? "btnGold btnBuy" : "green"}`}
@@ -139,9 +138,7 @@ export default function AllHeroesBoxScroll({ numX }) {
                 data: {
                   mpopClass: "m-popup contentOnly framedPop heroOfferPop",
                   popCont: "HeroOfferPop",
-                  props: {
-                    data: item,
-                  },
+                  props: { ...item },
                 },
               },
             });

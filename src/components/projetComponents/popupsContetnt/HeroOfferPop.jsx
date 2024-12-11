@@ -1,16 +1,11 @@
-import { nexusTrigger, useNexus } from "nexus-state";
+import { nexusTrigger } from "nexus-state";
 
 import ImageBg from "../UIComponents/ImageBg";
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
-import FraimedTitle from "../UIComponents/FraimedTitle";
 import OfferCardBox from "../UIComponents/OfferCardBox";
 
-export default function HeroOfferPop({ data }) {
-  const imgId = data.imgId;
-  const name = data.name;
-  const heroType = data.heroType;
-
+export default function HeroOfferPop({ imgId, name, heroType }) {
   return (
     <>
       <div
@@ -45,43 +40,32 @@ export default function HeroOfferPop({ data }) {
               className="btnGold big"
               text="49.90$"
               crossedOutText="99.90$"
-              onClick={() => {}}
+              onClick={() =>
+                nexusTrigger({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+                      popCont: "CongraPop",
+                      props: {
+                        rewardsData: [
+                          {
+                            type: `${heroType}`,
+                            itemPic: `img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`,
+                          },
+                        ],
+                      },
+                    },
+                  },
+                })
+              }
               discountSticker="-50%"
             />
           }
         >
           Теперь вы можете купить эту особенную карту героини!
         </OfferCardBox>
-        {/* <div className="offer-card-box noneAnim">
-          <div className="card-content">
-            <div
-              className="imgBg"
-              style={{
-                background: `url(img/images/hero-all/tithero-${imgId}/x2/tithero-1.jpg)`,
-              }}
-            ></div>
-
-            <FraimedTitle className="cornersTop" text={name} />
-
-            <div className="reward-card-box">
-              <ItemBox
-                itemClass="cardAvaX2"
-                type={heroType}
-                itemPic={`img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`}
-              />
-            </div>
-
-            <div className="btnWrap">
-              <Button
-                className="btnGold big"
-                text="49.90$"
-                crossedOutText="99.90$"
-                onClick={() => {}}
-                discountSticker="-50%"
-              />
-            </div>
-          </div>
-        </div> */}
 
         <Button
           className="exit"
