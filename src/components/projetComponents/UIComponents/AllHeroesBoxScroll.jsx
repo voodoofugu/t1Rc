@@ -19,7 +19,7 @@ function HeroBox({
   power,
   timer,
   imgId,
-  heroType,
+  heroClass,
   cardType,
   abilImg,
   abilOnClick,
@@ -59,10 +59,10 @@ function HeroBox({
 
         <ItemBox
           itemClass={`cardAva${offerDisabledExist ? " close" : ""}`}
-          type={heroType}
+          heroClass={heroClass}
+          cardType={cardType}
           squadRank={squadRank}
           itemPic={`img/images/hero-all/tithero-${imgId}/x1/ava/tithero-ava-1.jpg`}
-          cardType={cardType}
         />
 
         {abilImg && (

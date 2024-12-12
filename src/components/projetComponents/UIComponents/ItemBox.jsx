@@ -23,7 +23,7 @@ export default function ItemBox({
   unique,
   arrow, // left, right, top, bottom
   rare,
-  type,
+  heroClass,
   cardType,
   squadRank,
   notif,
@@ -62,7 +62,9 @@ export default function ItemBox({
         />
       )}
       {rare && <img className="rare" src={`img/cur-${rare}.png`} />}
-      {type && <img className="type" src={`img/cur2-${type}.png`} />}
+      {heroClass && (
+        <img className="heroClass" src={`img/cur2-${heroClass}.png`} />
+      )}
       {cardType && (
         <div className={`cardTypeBox ${cardType}`}>
           <div className="cardType"></div>

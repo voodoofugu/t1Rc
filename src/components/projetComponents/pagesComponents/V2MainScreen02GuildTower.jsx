@@ -253,7 +253,8 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                       props: {
                         imgId: 443,
                         name: "Tokuda Arisu",
-                        heroType: "wizard",
+                        heroClass: "wizard",
+                        cardType: "h",
                       },
                     },
                   },
