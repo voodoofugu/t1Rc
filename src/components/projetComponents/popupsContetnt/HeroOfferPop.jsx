@@ -5,7 +5,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import OfferCardBox from "../UIComponents/OfferCardBox";
 
-export default function HeroOfferPop({ imgId, name, heroType }) {
+export default function HeroOfferPop({ imgId, name, heroType, cardType }) {
   return (
     <>
       <div
@@ -33,6 +33,7 @@ export default function HeroOfferPop({ imgId, name, heroType }) {
               itemClass="cardAvaX2"
               type={heroType}
               itemPic={`img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`}
+              cardType={cardType}
             />
           }
           btnWrap={
@@ -52,6 +53,7 @@ export default function HeroOfferPop({ imgId, name, heroType }) {
                         rewardsData: [
                           {
                             type: `${heroType}`,
+                            cardType: `${cardType}`,
                             itemPic: `img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`,
                           },
                         ],

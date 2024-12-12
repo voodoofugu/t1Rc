@@ -20,6 +20,7 @@ function HeroBox({
   timer,
   imgId,
   heroType,
+  cardType,
   abilImg,
   abilOnClick,
   onClick,
@@ -61,6 +62,7 @@ function HeroBox({
           type={heroType}
           squadRank={squadRank}
           itemPic={`img/images/hero-all/tithero-${imgId}/x1/ava/tithero-ava-1.jpg`}
+          cardType={cardType}
         />
 
         {abilImg && (
