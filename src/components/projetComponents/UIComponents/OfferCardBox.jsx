@@ -24,7 +24,7 @@ export default function OfferCardBox({
 
         <div className="reward-card-box">{rewardCard}</div>
         <div className="reward-boxWrap">
-          <div className="reward-box">{children}</div>
+          <div className="reward-box curlFrame">{children}</div>
         </div>
         <div className="btnWrap">{btnWrap}</div>
       </div>
