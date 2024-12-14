@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
 
-const PATH_MAP = {
+import {
+  importPage,
+  importPopup,
+} from "../../scripts/templateScripts/importFuncs";
+
+const PATHS_MAP = {
   pagesComponents: "pagesComponents",
   popupsContetnt: "popupsContetnt",
 };
 
-const useDynamicImport = (name: string, pathType: keyof typeof PATH_MAP) => {
+const useDynamicImport = (name: string, pathType: keyof typeof PATHS_MAP) => {
   const [module, setModule] = useState<null | Record<string, any>>(null);
 
   useEffect(() => {
@@ -18,9 +23,10 @@ const useDynamicImport = (name: string, pathType: keyof typeof PATH_MAP) => {
 
     (async () => {
       try {
-        const data = await import(
-          `@/src/components/projetComponents/${PATH_MAP[pathType]}/${name}`
-        );
+        const data =
+          pathType === "pagesComponents"
+            ? await importPage({ fileName: name })
+            : await importPopup({ fileName: name });
 
         if (isActive) {
           setModule(data);
