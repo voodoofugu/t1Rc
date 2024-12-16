@@ -130,7 +130,7 @@ export default function ArmySetupCW() {
 
         <Scroll
           className="armySetupScroll"
-          scrollXY={[1100, 450]}
+          scrollXY={[1100, 436]}
           objectXY={[94, 107]}
           padding={[6, 0]}
           gap={12}
@@ -141,6 +141,7 @@ export default function ArmySetupCW() {
           infiniteScroll
           contentAlignCenter
           wrapAlignCenter
+          rootMargin={[0, 100]}
         >
           {getHeroData()
             .filter((item) => !heroClass || item.type === heroClass) // Фильтрация по heroClass
