@@ -7,6 +7,7 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import ResCount from "../UIComponents/ResCount";
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
+import Info from "../UIComponents/Info";
 
 import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
@@ -162,12 +163,8 @@ export default function ArmySetupCW() {
         />
         <ResCount className="max armyPower" value="POWER 234" />
 
-        <div className="powerInfoWrap">
-          <div className="powerInfoText">
-            power needed
-            <div className="powerInfoValue"> 0</div>
-          </div>
-        </div>
+        <Info className="powerInfo" text="power needed 10" />
+        <Info className="powerInfoClan" text="clan power 1000" />
       </div>
 
       <div className="armySetupFilter">

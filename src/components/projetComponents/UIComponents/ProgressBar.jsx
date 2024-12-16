@@ -89,7 +89,7 @@ const ProgressBar = ({
 
         {(text || textWithProgress) && (
           <div
-            className="text"
+            className={`text${serifsPerProgress ? " withBG" : ""}`}
             style={{ lineHeight: `${localProgressSize[1]}px` }}
           >
             {text}
