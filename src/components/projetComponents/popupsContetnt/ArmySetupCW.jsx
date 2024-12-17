@@ -143,21 +143,16 @@ export default function ArmySetupCW() {
         >
           {getHeroData()
             .filter((item) => !heroClass || item.heroClass === heroClass) // Фильтрация по heroClass
-            .map(
-              (item) => (
-                console.log("item", item),
-                (
-                  <ItemBox
-                    key={extractKey(item.itemPic)}
-                    {...item}
-                    itemClass={`${item.itemClass || ""} ${
-                      activeKeys.has(extractKey(item.itemPic)) ? "check" : ""
-                    }`}
-                    onClick={() => toggleActive(extractKey(item.itemPic))}
-                  />
-                )
-              )
-            )}
+            .map((item) => (
+              <ItemBox
+                key={extractKey(item.itemPic)}
+                {...item}
+                itemClass={`${item.itemClass || ""} ${
+                  activeKeys.has(extractKey(item.itemPic)) ? "check" : ""
+                }`}
+                onClick={() => toggleActive(extractKey(item.itemPic))}
+              />
+            ))}
         </Scroll>
 
         <Button
