@@ -36,8 +36,6 @@ const extractKey = (itemPic) => {
 };
 
 export default function ArmySetupCW() {
-  const popupState = useNexus("popupState");
-
   const [activeKeys, setActiveKeys] = React.useState(new Set());
   const [activeMenu, setActiveMenu] = React.useState("girlsBtn");
   const [selectAll, setSelectAll] = React.useState(false);
@@ -144,17 +142,22 @@ export default function ArmySetupCW() {
           rootMargin={[0, 100]}
         >
           {getHeroData()
-            .filter((item) => !heroClass || item.type === heroClass) // Фильтрация по heroClass
-            .map((item) => (
-              <ItemBox
-                key={extractKey(item.itemPic)}
-                {...item}
-                itemClass={`${item.itemClass || ""} ${
-                  activeKeys.has(extractKey(item.itemPic)) ? "check" : ""
-                }`}
-                onClick={() => toggleActive(extractKey(item.itemPic))}
-              />
-            ))}
+            .filter((item) => !heroClass || item.heroClass === heroClass) // Фильтрация по heroClass
+            .map(
+              (item) => (
+                console.log("item", item),
+                (
+                  <ItemBox
+                    key={extractKey(item.itemPic)}
+                    {...item}
+                    itemClass={`${item.itemClass || ""} ${
+                      activeKeys.has(extractKey(item.itemPic)) ? "check" : ""
+                    }`}
+                    onClick={() => toggleActive(extractKey(item.itemPic))}
+                  />
+                )
+              )
+            )}
         </Scroll>
 
         <Button
