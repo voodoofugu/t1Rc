@@ -272,8 +272,6 @@ const Chat = ({ girlInfo }) => {
             //   ],
             // ]}
             // xDirection
-            // contentAlignCenter
-            // wrapAlignCenter
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];

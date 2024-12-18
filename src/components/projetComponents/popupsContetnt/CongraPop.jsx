@@ -37,8 +37,8 @@ export default function CongraPop({ rewardsData }) {
           progressTrigger={["wheel", "progressElement"]}
           thumbElement={<ScrollThumb />}
           progressBarSize={8}
-          contentAlignCenter
-          wrapAlignCenter
+          elementsAlign={"center"}
+          contentAlign={["center", "center"]}
         >
           {rewardsData.map((item, index) => (
             <ItemBox key={index} {...item} />

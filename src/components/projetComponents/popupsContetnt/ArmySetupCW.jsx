@@ -137,9 +137,9 @@ export default function ArmySetupCW() {
           edgeGradient={{ color: "#52413f" }}
           progressBarSize={8}
           infiniteScroll
-          contentAlignCenter
-          wrapAlignCenter
+          elementsAlign={"center"}
           rootMargin={[0, 100]}
+          contentAlign={["center", "center"]}
         >
           {getHeroData()
             .filter((item) => !heroClass || item.heroClass === heroClass) // Фильтрация по heroClass

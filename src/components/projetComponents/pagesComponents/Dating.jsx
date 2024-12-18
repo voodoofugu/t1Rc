@@ -208,14 +208,12 @@ const GirlDependencies = ({ girlsInfo }) => {
         thumbElement={<ScrollThumb />}
         // sliderType
         progressVisibility="hover"
-        // wrapAlignCenter
         // lazyRender
         // infiniteScroll
         // rootMargin={[0, 0]}
         // xDirection
         // suspending
         // fallback={<div>loading</div>}
-        // contentAlignCenter
         // scrollTop={100}
         // edgeGradient="#5b2914"
         edgeGradient={{ color: "#642e16" }}
