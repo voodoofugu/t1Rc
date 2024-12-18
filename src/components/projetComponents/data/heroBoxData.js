@@ -303,6 +303,25 @@ const heroBoxData = [
     btnOnClick: null,
     squadRank: null,
   },
+  {
+    className: "",
+    name: "Tokuda Arisu",
+    text: "",
+    lvl: "6969",
+    dps: "777",
+    power: "123",
+    timer: "",
+    itemClass: "selectable cardAva",
+    imgId: 429,
+    heroClass: "druid",
+    cardType: "h",
+    abilImg: false,
+    abilOnClick: null,
+    onClick: null,
+    btnText: "3453<p>up",
+    btnOnClick: null,
+    squadRank: null,
+  },
 ];
 
 export default heroBoxData;

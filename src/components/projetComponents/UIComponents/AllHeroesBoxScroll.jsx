@@ -125,6 +125,9 @@ export default function AllHeroesBoxScroll({ numX }) {
       progressBarSize={8}
       infiniteScroll
       progressVisibility="hover"
+      wrapAlignCenter
+      // xDirection
+      contentAlign={["center"]}
     >
       {heroBoxData.map((item, index) => (
         <HeroBox
