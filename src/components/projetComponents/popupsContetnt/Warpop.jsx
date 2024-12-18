@@ -52,7 +52,7 @@ export default function Warpop() {
           </div>
 
           {/* <div className="fw-warpop-box-name">{tit}</div> */}
-          <FraimedTitle className="corners warPopTit" text={tit} />
+          <FraimedTitle className="cornersTop warPopTit" text={tit} />
 
           <div className="fw-warpop-effect-box-all">
             <div className="fw-warpop-effect-box">

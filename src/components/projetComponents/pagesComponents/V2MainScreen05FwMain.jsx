@@ -55,7 +55,7 @@ export default function V2MainScreen05FwMain() {
               <ClanWarBox
                 className="map"
                 img="img/v2-fw-icon-maps.png"
-                btnText="battle"
+                btnText="to battle"
               >
                 <FraimedTitle
                   className="corners blue clanWarTit"
