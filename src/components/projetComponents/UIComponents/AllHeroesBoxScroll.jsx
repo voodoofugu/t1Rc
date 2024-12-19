@@ -40,7 +40,7 @@ function HeroBox({
   const offerDisabledExist = offerExist || disabledExist;
 
   return (
-    <>
+    <div className="heroCardBox">
       {highlightExist && <div className="highlightBg"></div>}
       <div className="clickArea" onClick={onClick}></div>
       <div className={`hero-card${className ? ` ${className}` : ""}`}>
@@ -107,7 +107,7 @@ function HeroBox({
 
         {offerStarterExist && <Button className="exit" text="✖" />}
       </div>
-    </>
+    </div>
   );
 }
 
@@ -126,6 +126,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       infiniteScroll
       progressVisibility="hover"
       contentAlign={["center", "center"]}
+      // xDirection
     >
       {heroBoxData.map((item, index) => (
         <HeroBox
