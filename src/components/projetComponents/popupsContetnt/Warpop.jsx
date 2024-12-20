@@ -87,8 +87,8 @@ export default function Warpop() {
             </div>
             <div className="fw-warpop-at-box-all">
               <div className="fw-warpop-at-name">attackers</div>
-              <div className="fw-warpop-at-text">There are no attackers</div>
-              {/* <div className="fw-warpop-at-box cw">
+              {/* <div className="fw-warpop-at-text">There are no attackers</div> */}
+              <div className="fw-warpop-at-box cw">
                 <div className="fw-warpop-at-pic">
                   <img
                     className="bg"
@@ -101,7 +101,7 @@ export default function Warpop() {
                     alt="Foreground Icon"
                   />
                 </div>
-              </div> */}
+              </div>
             </div>
             {/* <div className="fw-warpop-army-power-box">
               <div className="fw-warpop-army-power-text">
