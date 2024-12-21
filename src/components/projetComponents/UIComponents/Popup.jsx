@@ -8,9 +8,8 @@ export default function Popup({ pageName }) {
   const activePage = useNexus("activePage");
   const popupState = useNexus("popupState");
 
-  const module = useDynamicImport(
-    `${popupState?.popCont || ""}`,
-    "popupsContetnt"
+  const module = useDynamicImport(`${popupState?.popCont || ""}`, (name) =>
+    import(`@prCo/popupsContetnt/${name}`)
   );
   const DynamicComponent = module?.default;
 

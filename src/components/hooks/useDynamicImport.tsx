@@ -1,16 +1,8 @@
 import { useEffect, useState } from "react";
 
-import {
-  importPage,
-  importPopup,
-} from "../../scripts/templateScripts/importFuncs";
+type ImportFileT = (fileName: string) => Promise<Record<string, any>>;
 
-const PATHS_MAP = {
-  pagesComponents: "pagesComponents",
-  popupsContetnt: "popupsContetnt",
-};
-
-const useDynamicImport = (name: string, pathType: keyof typeof PATHS_MAP) => {
+const useDynamicImport = (name: string, importFile: ImportFileT) => {
   const [module, setModule] = useState<null | Record<string, any>>(null);
 
   useEffect(() => {
@@ -23,17 +15,14 @@ const useDynamicImport = (name: string, pathType: keyof typeof PATHS_MAP) => {
 
     (async () => {
       try {
-        const data =
-          pathType === "pagesComponents"
-            ? await importPage({ fileName: name })
-            : await importPopup({ fileName: name });
+        const data = await importFile(name);
 
         if (isActive) {
           setModule(data);
         }
       } catch (error) {
         if (isActive) {
-          console.error(`Модуль "${name}" не найден.`, error);
+          console.error(`Module "${name}" not found`, error);
           setModule(null);
         }
       }
@@ -42,7 +31,7 @@ const useDynamicImport = (name: string, pathType: keyof typeof PATHS_MAP) => {
     return () => {
       isActive = false;
     };
-  }, [name, pathType]);
+  }, [name, importFile]);
 
   return module;
 };

@@ -25,9 +25,8 @@ export default memo(function CellContent({ pageName, loadable }) {
     left: 0,
   });
 
-  const module = useDynamicImport(
-    `${activePage || pageName || ""}`,
-    "pagesComponents"
+  const module = useDynamicImport(`${activePage || pageName || ""}`, (name) =>
+    import(`@prCo/pagesComponents/${name}`)
   );
   const DynamicComponent = module?.default;
   const cssFiles = module?.cssFiles;

@@ -7,6 +7,10 @@ export function resolvers(options: BuildOptions): Configuration["resolve"] {
     extensions: [".ts", ".js", ".tsx", ".jsx", ".css", ".scss", ".json"],
     alias: {
       "@": path.resolve(options.paths.mainDir),
+      "@prCo": path.resolve(
+        options.paths.mainDir,
+        "src/components/projetComponents"
+      ),
     },
   };
 }
