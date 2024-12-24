@@ -17,7 +17,7 @@ export default function BtlPass({ event }) {
 
   const girlImg =
     event === "xmas"
-      ? "images/hero-all/tithero-430/icons/break-girl"
+      ? "images/hero-all/tithero-454/icons/break-girl3"
       : event === "hw"
       ? "images/hero-all/tithero-429/icons/break-girl"
       : event === "bf"
