@@ -2,7 +2,7 @@ const yourFrIcon = ["img/v2-cw-bg34.png", "img/v2-cw-p03.png"];
 const mapCell = [
   {
     className: "c3",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: ["img/v2-cw-bg47.png", "img/v2-cw-p14.png"],
@@ -11,7 +11,7 @@ const mapCell = [
   },
   {
     className: "c3 openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: ["img/v2-cw-bg47.png", "img/v2-cw-p14.png"],
@@ -20,7 +20,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 0,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -29,7 +29,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 0,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -38,7 +38,7 @@ const mapCell = [
   },
   {
     className: "openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -47,7 +47,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -56,7 +56,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -65,7 +65,7 @@ const mapCell = [
   },
   {
     className: "c3 openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 3,
     iconShield: true,
     iconFr: ["img/v2-cw-bg47.png", "img/v2-cw-p14.png"],
@@ -74,7 +74,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 5,
     iconShield: true,
     iconFr: yourFrIcon,
@@ -83,7 +83,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 2,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -92,7 +92,7 @@ const mapCell = [
   },
   {
     className: "c6 openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 2,
     iconShield: false,
     iconFr: ["img/v2-cw-bg41.png", "img/v2-cw-p13.png"],
@@ -101,7 +101,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -110,7 +110,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -119,7 +119,7 @@ const mapCell = [
   },
   {
     className: "openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 3,
     iconShield: false,
     iconFr: [],
@@ -128,7 +128,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 4,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -137,7 +137,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 5,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -146,7 +146,7 @@ const mapCell = [
   },
   {
     className: "openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 2,
     iconShield: false,
     iconFr: [],
@@ -155,7 +155,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -164,7 +164,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -173,7 +173,7 @@ const mapCell = [
   },
   {
     className: "openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 4,
     iconShield: false,
     iconFr: [],
@@ -182,7 +182,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 3,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -191,7 +191,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 5,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -200,7 +200,7 @@ const mapCell = [
   },
   {
     className: "openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 4,
     iconShield: false,
     iconFr: [],
@@ -209,7 +209,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -218,7 +218,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -227,7 +227,7 @@ const mapCell = [
   },
   {
     className: "openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -236,7 +236,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: true,
+    fraction: 1,
     type: 0,
     iconShield: false,
     iconFr: yourFrIcon,
@@ -245,7 +245,7 @@ const mapCell = [
   },
   {
     className: "openToAttack",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -254,7 +254,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],
@@ -263,7 +263,7 @@ const mapCell = [
   },
   {
     className: "",
-    yourFr: false,
+    fraction: 0,
     type: 0,
     iconShield: false,
     iconFr: [],

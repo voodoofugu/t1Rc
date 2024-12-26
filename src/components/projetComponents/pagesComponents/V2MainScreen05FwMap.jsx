@@ -43,7 +43,7 @@ function mapCellSelectHandler(mapCellRef, index, type) {
 function MapCell({
   className,
   index,
-  yourFr,
+  fraction,
   type,
   iconFr,
   iconSword,
@@ -63,9 +63,9 @@ function MapCell({
   return (
     <>
       <div
-        className={`fw-map-claim-box${className ? ` ${className}` : ""}${
-          yourFr ? " fr-your " : " fr0"
-        }${type ? ` type-${type}` : " type-0"}`}
+        className={`fw-map-claim-box${
+          className ? ` ${className}` : ""
+        }${` fr${fraction}`}${type ? ` type-${type}` : " type-0"}`}
         onClick={() => {
           mapCellSelectHandler(mapCellRef.current, index, type);
         }}
