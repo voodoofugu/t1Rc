@@ -1,6 +1,10 @@
 import React from "react";
 
-export const cssFiles = ["v2-screen-fw-map", "v2-screen-fw-map-warpop"];
+export const cssFiles = [
+  "v2-screen-fw-map",
+  "v2-screen-fw-map-warpop",
+  "v2-screen-fw-main",
+];
 
 export default function V2MainScreen05FwMapWarpop() {
   return (
