@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { useState } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { NexusProvider } from "nexus-state";
+import { StyleCore, StyledAtom } from "styled-atom";
 
 import Template from "./Template";
 import Loading from "./Loading";
@@ -28,6 +29,10 @@ export default function App() {
 
   return (
     <StrictMode>
+      <StyleCore
+        watch
+        path={(name) => import(`../../styles/css/${name}.css`)}
+      />
       <NexusProvider initialStates={initialStates} initialFuncs={initialFuncs}>
         <Storage
           watch
@@ -38,6 +43,7 @@ export default function App() {
             ["popupState"],
           ]}
         />
+        <StyledAtom fileNames={["keyframes-animations"]} />
         <HelmetProvider>
           <div
             className={`likeBody ${transformedCssFiles} absolute overflow-hidden`}
