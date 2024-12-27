@@ -71,6 +71,11 @@ function MapCell({
         }}
         ref={mapCellRef}
       >
+        {img && (
+          <div className="imgWrap">
+            <img src={img} loading="lazy" alt="Cell Image" />
+          </div>
+        )}
         {iconShield && (
           <div className="fw-icon-ws">
             <img src="img/v2-fw-icon-w1.png" loading="lazy" alt="Icon" />
@@ -79,7 +84,9 @@ function MapCell({
         {iconFr.length > 0 && (
           <div className="fw-icon-fr cw">
             <img className="bg" src={iconFr[0]} alt="Background Icon" />
-            <img className="fg" src={iconFr[1]} alt="Foreground Icon" />
+            {iconFr[1] && (
+              <img className="fg" src={iconFr[1]} alt="Foreground Icon" />
+            )}
           </div>
         )}
         {iconRiot && (
@@ -90,11 +97,6 @@ function MapCell({
         {iconSword && (
           <div className="fw-icon-sword">
             <img src="img/v2-fw-icon-w3.png" loading="lazy" alt="Icon" />
-          </div>
-        )}
-        {img && (
-          <div className="imgWrap">
-            <img src={img} loading="lazy" alt="Cell Image" />
           </div>
         )}
       </div>

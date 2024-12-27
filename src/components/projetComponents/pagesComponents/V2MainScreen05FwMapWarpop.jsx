@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "../UIComponents/Button";
+
 export const cssFiles = [
   "v2-screen-fw-map",
   "v2-screen-fw-map-warpop",
@@ -10,6 +12,14 @@ export default function V2MainScreen05FwMapWarpop() {
   return (
     <div className="main world1">
       <div className="main-bg fw-map"></div>
+
+      <Button className="exit" text="✖" />
+      <Button
+        className="green refreshBtn"
+        textIcn="img/ic-refresh.svg"
+        text="refresh"
+      />
+
       <div className="fw-map-name-box-all">
         <div className="fw-map-time-box">
           <div className="fw-map-time1">битва начнется: 06:59</div>
@@ -20,6 +30,7 @@ export default function V2MainScreen05FwMapWarpop() {
           <div className="fw-map-date">day 31</div>
         </div>
       </div>
+
       <div className="fw-map-claim-box-all fw">
         <div className="fw-map-claim-box"></div>
         <div className="fw-map-claim-box fr1 w1">
@@ -67,7 +78,7 @@ export default function V2MainScreen05FwMapWarpop() {
         <div className="fw-map-claim-box fr2"></div>
         <div className="fw-map-claim-box">
           <div className="fw-icon-fr">
-            <img src="img/v2-fw-icon-fr4.png" loading="lazy" />
+            <img src="img/v2-fw-icon-fr3.png" loading="lazy" />
           </div>
           <div className="fw-icon-ws">
             <img src="img/v2-fw-icon-w1.png" loading="lazy" />

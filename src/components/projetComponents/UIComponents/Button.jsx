@@ -59,7 +59,7 @@ const Button = ({
           ""
         )}
         {textIcn && (
-          <div className="textIcnWrap">
+          <div className={`textIcnWrap${text && " withText"}`}>
             {typeof textIcn === "string" ? (
               <img className="textIcn" src={textIcn} />
             ) : (
@@ -68,7 +68,7 @@ const Button = ({
           </div>
         )}
         {text && (
-          <div className="btnText">
+          <div className={`btnText${textIcn && " withTextIcn"}`}>
             {wrappedText}
             {crossedOutText && (
               <div className="crossedOutText">{crossedOutText}</div>
