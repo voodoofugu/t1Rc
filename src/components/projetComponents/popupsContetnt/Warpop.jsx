@@ -3,6 +3,7 @@ import { nexusTrigger, useNexus, nexusUpdate } from "nexus-state";
 
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
+import ItemBox from "../UIComponents/ItemBox";
 
 export default function Warpop() {
   const warpop = useNexus("warpop");
@@ -78,17 +79,22 @@ export default function Warpop() {
           <div className="fw-warpop-at-def-box-all attack">
             <div className="fw-warpop-def-box">
               <div className="fw-warpop-def-name">defence</div>
-              <div className="fw-warpop-def-pic">
+              {/* <div className="fw-warpop-def-pic">
                 <img src="img/v2-fw-icon-fr0.png" alt="Defence Icon" />
               </div>
               <div className="fw-warpop-def-num">
                 <span>0</span>
-              </div>
+              </div> */}
+              <ItemBox
+                itemClass="wh68 simpleItem clan"
+                itemPic="img/v2-fw-icon-fr0.png"
+                countOut={10}
+              />
             </div>
             <div className="fw-warpop-at-box-all">
               <div className="fw-warpop-at-name">attackers</div>
               {/* <div className="fw-warpop-at-text">There are no attackers</div> */}
-              <div className="fw-warpop-at-box cw">
+              {/* <div className="fw-warpop-at-box cw">
                 <div className="fw-warpop-at-pic">
                   <img
                     className="bg"
@@ -101,7 +107,17 @@ export default function Warpop() {
                     alt="Foreground Icon"
                   />
                 </div>
-              </div>
+              </div> */}
+              <ItemBox
+                itemClass="wh68 simpleItem clan"
+                itemPic={["img/v2-cw-bg34.png", "img/v2-cw-p03.png"]}
+                countOut={10}
+              />
+              <ItemBox
+                itemClass="wh68 simpleItem clan"
+                itemPic={["img/v2-cw-bg34.png", "img/v2-cw-p03.png"]}
+                countOut={10}
+              />
             </div>
             {/* <div className="fw-warpop-army-power-box">
               <div className="fw-warpop-army-power-text">

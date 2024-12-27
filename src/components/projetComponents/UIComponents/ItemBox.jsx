@@ -46,7 +46,14 @@ export default function ItemBox({
         </div>
       )}
       <div className="itemBox_pic">
-        <img src={itemPic}></img>
+        {typeof itemPic === "string" ? (
+          <img src={itemPic}></img>
+        ) : Array.isArray(itemPic) ? (
+          <>
+            <img src={itemPic[0]}></img>
+            <img src={itemPic[1]}></img>
+          </>
+        ) : null}
       </div>
       {!!count && !get && (
         <div className="itemBox_count_wrap">
