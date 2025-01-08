@@ -1,6 +1,3 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
 const LoadCss = `
 
   @keyframes rotate-one {
@@ -113,16 +110,14 @@ const LoadCss = `
 
 export default function Loading({ noBG, addStyle }) {
   return (
-    <div>
-      <Helmet>
-        <style>{LoadCss}</style>
-      </Helmet>
+    <>
+      <style>{LoadCss}</style>
       {!noBG && <div className="blurBg"></div>}
       <div className="loader" style={addStyle}>
         <div className="inner one"></div>
         <div className="inner two"></div>
         <div className="inner three"></div>
       </div>
-    </div>
+    </>
   );
 }

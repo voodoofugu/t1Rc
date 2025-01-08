@@ -1,6 +1,14 @@
-import { memo, useMemo, useState, useEffect, useLayoutEffect } from "react";
-import { MultiGrid, AutoSizer } from "react-virtualized";
+import {
+  memo,
+  useMemo,
+  useState,
+  useLayoutEffect,
+  useEffect,
+  useCallback,
+} from "react";
 import { useNexus } from "nexus-state";
+
+import Scroll from "../../../morphing-scroll/src/MorphingScroll";
 
 import CellContent from "./CellContent";
 import ToTopButton from "./ToTopButton";
@@ -8,45 +16,12 @@ import Page404Component from "../projetComponents/pagesComponents/Page404";
 import PageList from "../projetComponents/pagesComponents/a_pageList";
 import useStorage from "../hooks/useStorage";
 
-const componentLoadStatus = {};
-
-function Cell({
-  itemsPerRow,
-  columnIndex,
-  rowIndex,
-  style,
-  usedPages,
-  isScrolling,
-}) {
-  const index = rowIndex * itemsPerRow + columnIndex;
-  if (index >= usedPages.length) {
-    return null;
-  }
-
-  const pageName = usedPages[index];
-
-  const isComponentLoaded = componentLoadStatus[pageName];
-  componentLoadStatus[pageName] = false;
-  if (!isScrolling) {
-    componentLoadStatus[pageName] = true;
-  }
-
-  return (
-    <div key={index} style={style} className="flex justify-center items-center">
-      {isScrolling && !isComponentLoaded ? (
-        <CellContent pageName={pageName} />
-      ) : (
-        <CellContent pageName={pageName} loadable />
-      )}
-    </div>
-  );
-}
-
 export default memo(function PageBox() {
   const searchData = useNexus("searchData");
 
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollTopValue, setScrollTopValue] = useState(0);
+  const [scrollNew, setScrollNew] = useState();
 
   const usedPages = useMemo(() => {
     if (searchData) {
@@ -55,6 +30,13 @@ export default memo(function PageBox() {
       return PageList;
     }
   }, [searchData]);
+
+  const components = useCallback(
+    usedPages.map((pageName, index) => (
+      <CellContent key={index} pageName={pageName} isScrolling={isScrolling} />
+    )),
+    [usedPages, isScrolling]
+  );
 
   useLayoutEffect(() => {
     if (window.location.hash.length > 2) {
@@ -66,7 +48,17 @@ export default memo(function PageBox() {
         setScrollTopValue(Number(hashParts[1]));
       }
     }
+    // setScrollNew(scrollTopValue);
   }, []);
+
+  useEffect(() => {
+    if (scrollTopValue === 1) {
+      setScrollNew(1);
+      requestAnimationFrame(() => {
+        setScrollNew(null);
+      });
+    }
+  }, [scrollTopValue]);
 
   useStorage([
     {
@@ -79,46 +71,33 @@ export default memo(function PageBox() {
   return (
     <>
       {usedPages[0] !== "not found" ? (
-        <div className="h-calcScreenH-112 m-auto max-w-1186 w-calcFull-54">
-          <AutoSizer>
-            {({ height, width }) => {
-              let itemsPerRow;
-              if (width < 298 * 2) {
-                itemsPerRow = 1;
-              } else if (width < 298 * 3) {
-                itemsPerRow = 2;
-              } else {
-                itemsPerRow = 3;
-              }
-
-              const rowCount = usedPages
-                ? Math.ceil(usedPages.length / itemsPerRow)
-                : 0;
-
-              return (
-                <MultiGrid
-                  cellRenderer={(params) =>
-                    Cell({
-                      ...params,
-                      usedPages: usedPages,
-                      itemsPerRow: itemsPerRow,
-                    })
-                  }
-                  columnCount={itemsPerRow}
-                  columnWidth={298}
-                  height={height}
-                  rowCount={rowCount}
-                  rowHeight={214}
-                  width={width}
-                  overscanRowCount={0}
-                  scrollTop={scrollTopValue}
-                  onScroll={({ scrollTop }) =>
-                    !isScrolling && setScrollTopValue(Math.ceil(scrollTop))
-                  }
-                />
-              );
-            }}
-          </AutoSizer>
+        <div className="h-calcScreenH-112 m-auto max-w-1160 w-calcFull-80">
+          <Scroll
+            className="templateScroll"
+            scrollID="templateScroll"
+            scrollXY="auto"
+            objectXY={[238, 156]}
+            gap={60}
+            padding={[14, 0]}
+            progressTrigger={["wheel", "progressElement"]}
+            // thumbElement={<ScrollThumb />}
+            edgeGradient={{ color: "rgb(199, 210, 254)" }}
+            elementsAlign="center"
+            contentAlign={["center", "center"]}
+            infiniteScroll
+            scrollTop={scrollNew}
+            onScrollValue={[
+              [
+                (scroll) => {
+                  setScrollTopValue(scroll);
+                },
+              ],
+            ]}
+            isScrolling={(isScrolling) => setIsScrolling(isScrolling)}
+            // renderOnScroll
+          >
+            {components}
+          </Scroll>
           <ToTopButton
             usedPages={usedPages}
             scrollTopValue={scrollTopValue}

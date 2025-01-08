@@ -1,19 +1,32 @@
 import { memo } from "react";
+import { StyledAtom } from "styled-atom";
 
 import PageBox from "./PageBox";
 
-import HelmetTailwind from "./HelmetTailwind";
 import TemplateContent from "./TemplateContent";
-import TitlePage from "./Title";
+import Loading from "./Loading";
 
 export default memo(function Template() {
   return (
     <>
-      <TitlePage />
-      <HelmetTailwind />
-      <TemplateContent>
-        <PageBox />
-      </TemplateContent>
+      <StyledAtom
+        fileNames={[
+          "01-all",
+          "01-all-res",
+          "v2-screen-main",
+          "v2-screen-main-dark-world",
+          "keyframes-animations",
+          "customScroll",
+          "ui-elements",
+        ]}
+        fallback={<Loading noBG />}
+      >
+        <div className={`likeBody absolute overflow-hidden`} id="templateBody">
+          <TemplateContent>
+            <PageBox />
+          </TemplateContent>
+        </div>
+      </StyledAtom>
     </>
   );
 });

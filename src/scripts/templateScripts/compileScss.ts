@@ -52,7 +52,8 @@ async function wrapSCSSFile(sourceFile: string) {
   const finalContent = charsetImports.join("\n") + "\n" + wrappedContent;
 
   fs.writeFileSync(outputFilePath, finalContent);
-  console.log(`✅ "${outputFilePath}" - создан и обернут в .changesClass`);
+  // console.log(`✅ "${outputFilePath}" - создан и обернут в .changesClass`);
+  console.log(`✅ "${outputFilePath}"`);
 }
 
 // компиляция
@@ -98,10 +99,12 @@ async function compileSCSSFile(sourceFile: string) {
         }
       );
       // заменяем все классы .changesClass на имя файла
-      modifiedContent = modifiedContent.replace(
-        /changesClass/g,
-        transformCssFileNames([sourceFile.replace(".scss", "")])[0]
-      );
+      // modifiedContent = modifiedContent.replace(
+      //   /changesClass/g,
+      //   transformCssFileNames([sourceFile.replace(".scss", "")])[0]
+      // );
+      // заменяем все классы .changesClass на ""
+      modifiedContent = modifiedContent.replace(/.changesClass/g, "");
 
       fs.writeFileSync(outputFilePath, modifiedContent);
       console.log(

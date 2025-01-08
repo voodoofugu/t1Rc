@@ -1,6 +1,6 @@
 import React from "react";
 
-export const cssFiles = [];
+// export const cssFiles = [];
 
 const inlineStyles = {
   position: "absolute",

@@ -1,21 +1,19 @@
-import { memo, Suspense, useEffect, useState } from "react";
+import { memo, useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { useNexus, nexusUpdate } from "nexus-state";
+import { StyledAtom } from "styled-atom";
 
-import transformCssFileNames from "../../scripts/templateScripts/transformCssFileNames";
 import useDynamicImport from "../hooks/useDynamicImport";
 
 import Loading from "./Loading";
-import HelmetForCss from "./HelmetForCss";
 
 import ComponToLoad from "../projetComponents/UIComponents/ComponToLoad";
 import Tooltip from "./Tooltip";
 
-export default memo(function CellContent({ pageName, loadable }) {
+export default memo(function CellContent({ pageName, isScrolling }) {
   const activePage = useNexus("activePage");
   const searchText = useNexus("searchText");
 
-  const [stylesLoaded, setStylesLoaded] = useState(false);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const [style, setStyle] = useState(false);
 
@@ -25,37 +23,13 @@ export default memo(function CellContent({ pageName, loadable }) {
     left: 0,
   });
 
+  const loadedObjects = useRef(false);
+
   const module = useDynamicImport(`${activePage || pageName || ""}`, (name) =>
     import(`@prCo/pagesComponents/${name}`)
   );
   const DynamicComponent = module?.default;
   const cssFiles = module?.cssFiles;
-
-  let transformedCssFiles = Array.isArray(cssFiles)
-    ? transformCssFileNames(cssFiles).join(" ")
-    : "";
-
-  useEffect(() => {
-    if (window.location.hash.length > 2) {
-      const sectionChar = window.location.hash[2]; // выбираем разделитель &
-      if (sectionChar === "&") {
-        const statesNewTab = window.location.hash.substring(3);
-        const hashParts = statesNewTab.split("/");
-
-        nexusUpdate({
-          pageData: {
-            scrollTop: hashParts[1],
-            top: hashParts[2],
-            left: hashParts[3],
-          },
-          activePage: hashParts[0],
-          searchText: hashParts[4],
-        });
-
-        setStyle(true);
-      }
-    }
-  }, []);
 
   const computePositionData = (event) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -118,10 +92,56 @@ export default memo(function CellContent({ pageName, loadable }) {
     ></div>
   );
 
+  useEffect(() => {
+    if (window.location.hash.length > 2) {
+      const sectionChar = window.location.hash[2]; // выбираем разделитель &
+      if (sectionChar === "&") {
+        const statesNewTab = window.location.hash.substring(3);
+        const hashParts = statesNewTab.split("/");
+
+        nexusUpdate({
+          pageData: {
+            scrollTop: hashParts[1],
+            top: hashParts[2],
+            left: hashParts[3],
+          },
+          activePage: hashParts[0],
+          searchText: hashParts[4],
+        });
+
+        setStyle(true);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    const element = document.querySelector(`[data-cell="${pageName}"]`);
+    if (element) {
+      loadedObjects.current = true;
+    }
+
+    return () => {
+      loadedObjects.current = false;
+    };
+  }, [isScrolling, pageName]);
+
   return (
     <>
-      {loadable ? (
+      {isScrolling && !loadedObjects.current ? (
+        <div className="animate-ident text-indigo-500 dark:text-indigo-400 rounded-18 bg-indigo-100 shadow-shadow4 hover:shadow-shadow8 w-238 h-156 relative overflow-hidden flex justify-center items-center active:scale-95 transition-all1 hover:bg-indigo-50 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:shadow-shadow5 dark:hover:shadow-shadow6">
+          <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
+            {loadFill}
+          </div>
+          <a className="absolute left-0 top-0 w-full h-full px-25 font-bold text-xs text-center leading-7 whitespace-no-wrap overflow-hidden text-ellipsis dark:text-shadow-tS1Black">
+            {pageName}
+          </a>
+          <div className="absolute top-6 left-214 w-16 h-16 bg-indigo-200 shadow-shadowColorDark7 rounded-3xl text-indigo-500 text-base font-bold text-shadow-tS1 cursor-help transition-all1 flex justify-center items-center dark:bg-indigo-500 dark:text-indigo-900 dark:shadow-darkThemeSearchInput hover:bg-blue-200 dark:hover:bg-emerald-500 pointer-events-none">
+            i
+          </div>
+        </div>
+      ) : (
         <div
+          data-cell={pageName}
           className={
             "animate-ident text-indigo-500 dark:text-indigo-400 rounded-18 bg-indigo-100 shadow-shadow4 hover:shadow-shadow8 w-238 h-156 relative overflow-hidden flex justify-center items-center active:scale-95 transition-all1 hover:bg-indigo-50 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:shadow-shadow5 dark:hover:shadow-shadow6"
           }
@@ -132,7 +152,7 @@ export default memo(function CellContent({ pageName, loadable }) {
                 <>
                   {createPortal(
                     <div
-                      className={`absolute overflow-hidden transition-all1 ${
+                      className={`fixed overflow-hidden transition-all1 ${
                         style
                           ? "scale-1 w-full h-full bg-[#9F8978]"
                           : "scale-[0.180134] w-1200 h-640 rounded-50 shadow-shadow3 bg-white dark:shadow-shadow7"
@@ -142,20 +162,13 @@ export default memo(function CellContent({ pageName, loadable }) {
                         left: position.left + "px",
                       }}
                     >
-                      {cssFiles && (
-                        <HelmetForCss
-                          cssFiles={cssFiles}
-                          setStylesLoaded={setStylesLoaded}
-                        />
-                      )}
-                      <Suspense fallback={loadFill}>
-                        {!stylesLoaded ? (
-                          <Loading />
-                        ) : (
-                          <div
-                            className={`likeBody ${transformedCssFiles}`}
-                            id={pageName}
-                          >
+                      {cssFiles ? (
+                        <StyledAtom
+                          fileNames={cssFiles}
+                          fallback={<Loading />}
+                          encap
+                        >
+                          <div className="likeBody" id={pageName}>
                             {DynamicComponent && (
                               <>
                                 <DynamicComponent
@@ -174,8 +187,28 @@ export default memo(function CellContent({ pageName, loadable }) {
                               <div className="absolute w-full h-full drop-shadow-dS1 dark:drop-shadow-darkDS1 before:absolute after:absolute before:transition-all1 after:transition-all1 before:rounded-30 after:rounded-30 after:-rotate-45 before:left-50% before:top-50% before:-translate-x-50% before:-translate-y-50% before:rotate-45 before:w-3 before:h-24 before:bg-indigo-400 hover:before:bg-red-500 after:left-50% after:top-50% after:-translate-x-50% after:-translate-y-50% after:w-3 after:h-24 after:bg-indigo-400 hover:after:bg-red-500"></div>
                             </a>
                           </div>
-                        )}
-                      </Suspense>
+                        </StyledAtom>
+                      ) : (
+                        <div className="likeBody" id={pageName}>
+                          {DynamicComponent && (
+                            <>
+                              <DynamicComponent
+                                pageName={pageName}
+                                key={pageName}
+                              >
+                                <ComponToLoad pageName={pageName} />
+                              </DynamicComponent>
+                            </>
+                          )}
+                          <a
+                            className={`absolute left-50% -translate-x-50% bottom-30 w-40 h-40 cursor-pointer bg-indigo-200 dark:bg-indigo-900 rounded-3xl shadow-toTopBtn dark:shadow-darkThemeClearBtn active:scale-90 brightness-105 hover:brightness-110 transition-all1`}
+                            onClick={pageClose}
+                            href="#"
+                          >
+                            <div className="absolute w-full h-full drop-shadow-dS1 dark:drop-shadow-darkDS1 before:absolute after:absolute before:transition-all1 after:transition-all1 before:rounded-30 after:rounded-30 after:-rotate-45 before:left-50% before:top-50% before:-translate-x-50% before:-translate-y-50% before:rotate-45 before:w-3 before:h-24 before:bg-indigo-400 hover:before:bg-red-500 after:left-50% after:top-50% after:-translate-x-50% after:-translate-y-50% after:w-3 after:h-24 after:bg-indigo-400 hover:after:bg-red-500"></div>
+                          </a>
+                        </div>
+                      )}
                     </div>,
                     document.querySelector("#templateBody")
                   )}
@@ -188,30 +221,21 @@ export default memo(function CellContent({ pageName, loadable }) {
             </>
           ) : cssFiles ? (
             <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
-              <HelmetForCss
-                cssFiles={cssFiles}
-                setStylesLoaded={setStylesLoaded}
-              />
-              <Suspense fallback={loadFill}>
-                {!stylesLoaded ? (
-                  <Loading />
-                ) : (
-                  <div
-                    className={`likeBody ${transformedCssFiles}`}
-                    id={pageName}
-                  >
-                    {DynamicComponent ? (
-                      <DynamicComponent pageName={pageName} key={pageName} />
-                    ) : (
-                      loadFill
-                    )}
-                  </div>
-                )}
-              </Suspense>
+              <StyledAtom fileNames={cssFiles} fallback={<Loading />} encap>
+                <div className="likeBody" id={pageName}>
+                  {DynamicComponent ? (
+                    <DynamicComponent pageName={pageName} key={pageName} />
+                  ) : (
+                    loadFill
+                  )}
+                </div>
+              </StyledAtom>
             </div>
           ) : (
             <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
-              {loadFill}
+              {DynamicComponent && (
+                <DynamicComponent pageName={pageName} key={pageName} />
+              )}
             </div>
           )}
           <a
@@ -227,18 +251,6 @@ export default memo(function CellContent({ pageName, loadable }) {
               i
             </div>
           </Tooltip>
-        </div>
-      ) : (
-        <div className="animate-ident text-indigo-500 dark:text-indigo-400 rounded-18 bg-indigo-100 shadow-shadow4 hover:shadow-shadow8 w-238 h-156 relative overflow-hidden flex justify-center items-center active:scale-95 transition-all1 hover:bg-indigo-50 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:shadow-shadow5 dark:hover:shadow-shadow6">
-          <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
-            {loadFill}
-          </div>
-          <a className="absolute left-0 top-0 w-full h-full px-25 font-bold text-xs text-center leading-7 whitespace-no-wrap overflow-hidden text-ellipsis dark:text-shadow-tS1Black">
-            {pageName}
-          </a>
-          <div className="absolute top-6 left-214 w-16 h-16 bg-indigo-200 shadow-shadowColorDark7 rounded-3xl text-indigo-500 text-base font-bold text-shadow-tS1 cursor-help transition-all1 flex justify-center items-center dark:bg-indigo-500 dark:text-indigo-900 dark:shadow-darkThemeSearchInput hover:bg-blue-200 dark:hover:bg-emerald-500 pointer-events-none">
-            i
-          </div>
         </div>
       )}
     </>

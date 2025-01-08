@@ -201,6 +201,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         scrollID="datingAvatars"
         scrollXY={[104, 494]}
         objectXY={[86, 86]}
+        // scrollXY="auto"
+        // objectXY="auto"
         gap={10}
         padding={10}
         progressTrigger={["wheel", "progressElement"]}
@@ -217,6 +219,9 @@ const GirlDependencies = ({ girlsInfo }) => {
         // scrollTop={100}
         // edgeGradient="#5b2914"
         edgeGradient={{ color: "#642e16" }}
+        elementsAlign="center"
+        contentAlign={["center", "center"]}
+        // infiniteScroll
       >
         {girlsInfo.map((item, index) => (
           <PersonAva
