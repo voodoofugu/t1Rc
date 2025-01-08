@@ -196,6 +196,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </div>
 
+      {/* <div className="girlMood">
+      </div> */}
       <Scroll
         className="scrollAvatars"
         scrollID="datingAvatars"
