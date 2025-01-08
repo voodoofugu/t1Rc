@@ -14,34 +14,7 @@ export default memo(function ToTopButton({
       return;
     }
 
-    const animationDuration = 2000;
-    const listHeight = (usedPages.length / 3) * 214;
-    const scrollSpeed = listHeight / animationDuration;
-    const currentTopDuration = scrollTopValue / scrollSpeed;
-
-    const startTime = performance.now();
-    const endTime = startTime + scrollTopValue / scrollSpeed;
-
-    function animateScroll(currentTime) {
-      setIsScrolling(true);
-
-      const elapsedTime = currentTime - startTime;
-      const scrollProgress = elapsedTime / currentTopDuration;
-
-      if (currentTime <= endTime) {
-        let newScrollTop = scrollTopValue - scrollProgress * scrollTopValue;
-
-        startTransition(() => {
-          setScrollTopValue(newScrollTop);
-        });
-        requestAnimationFrame(animateScroll);
-      } else {
-        setScrollTopValue(1);
-        setIsScrolling(false);
-      }
-    }
-
-    requestAnimationFrame(animateScroll);
+    setScrollTopValue(1);
   }, [isScrolling, scrollTopValue, usedPages]);
 
   return (
