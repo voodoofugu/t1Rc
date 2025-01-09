@@ -10,7 +10,7 @@ import { useNexus } from "nexus-state";
 
 import Scroll from "../../../morphing-scroll/src/MorphingScroll";
 
-import CellContent from "./CellContent";
+import Cell from "./CellContent";
 import ToTopButton from "./ToTopButton";
 import Page404Component from "../projetComponents/pagesComponents/Page404";
 import PageList from "../projetComponents/pagesComponents/a_pageList";
@@ -19,7 +19,7 @@ import useStorage from "../hooks/useStorage";
 export default memo(function PageBox() {
   const searchData = useNexus("searchData");
 
-  const [isScrolling, setIsScrolling] = useState(false);
+  const [isScrolling, setIsScrolling] = useState();
   const [scrollTopValue, setScrollTopValue] = useState(0);
   const [scrollNew, setScrollNew] = useState();
 
@@ -33,7 +33,7 @@ export default memo(function PageBox() {
 
   const components = useCallback(
     usedPages.map((pageName, index) => (
-      <CellContent key={index} pageName={pageName} isScrolling={isScrolling} />
+      <Cell key={index} pageName={pageName} isScrolling={isScrolling} />
     )),
     [usedPages, isScrolling]
   );
@@ -46,25 +46,16 @@ export default memo(function PageBox() {
         const statesNewTab = window.location.hash.substring(3);
         const hashParts = statesNewTab.split("/");
         setScrollTopValue(Number(hashParts[1]));
+        setScrollNew(Number(hashParts[1]));
       }
     }
-    // setScrollNew(scrollTopValue);
   }, []);
-
-  useEffect(() => {
-    if (scrollTopValue === 1) {
-      setScrollNew(1);
-      requestAnimationFrame(() => {
-        setScrollNew(null);
-      });
-    }
-  }, [scrollTopValue]);
 
   useStorage([
     {
       name: "scrollTop",
       value: Math.round(scrollTopValue) || false,
-      setState: setScrollTopValue,
+      onLoad: (value) => setScrollNew(value),
     },
   ]);
 
@@ -93,11 +84,14 @@ export default memo(function PageBox() {
             {components}
           </Scroll>
           <ToTopButton
-            usedPages={usedPages}
             scrollTopValue={scrollTopValue}
-            setScrollTopValue={setScrollTopValue}
             isScrolling={isScrolling}
-            setIsScrolling={setIsScrolling}
+            onClick={() => {
+              setScrollNew(undefined);
+              requestAnimationFrame(() => {
+                setScrollNew(0);
+              });
+            }}
           />
         </div>
       ) : (

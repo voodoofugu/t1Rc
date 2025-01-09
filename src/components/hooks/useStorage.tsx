@@ -7,19 +7,21 @@ import { useState, useEffect } from "react";
  * @returns {[string, (value: string) => void]} - Массив, содержащий текущее значение и функцию для его обновления.
  */
 
+type DataT =
+  | Record<string, unknown>
+  | unknown[]
+  | string
+  | number
+  | boolean
+  | null;
+
 export default function useStorage(
   storItem: {
     name: string;
-    value?:
-      | Record<string, unknown>
-      | unknown[]
-      | string
-      | number
-      | boolean
-      | null;
+    value?: DataT;
     type?: "local" | "session";
     remove?: boolean;
-    setState?: (state: any) => void;
+    onLoad?: (data: DataT) => void;
   }[],
   callback?: (item: {
     name: string;
@@ -38,14 +40,14 @@ export default function useStorage(
 
   useEffect(() => {
     storItem.forEach((item) => {
-      if (item.setState) {
+      if (item.onLoad) {
         const storageType =
           item.type === "local" ? localStorage : sessionStorage;
         const storedValue = storageType.getItem(item.name);
 
         if (storedValue) {
           const parsedValue = JSON.parse(storedValue);
-          item.setState(parsedValue);
+          item.onLoad(parsedValue);
         }
       }
     });

@@ -1,11 +1,9 @@
-import React, { memo, useMemo, useCallback, startTransition } from "react";
+import React, { memo, useMemo, useCallback } from "react";
 
 export default memo(function ToTopButton({
-  usedPages,
   scrollTopValue,
-  setScrollTopValue,
   isScrolling,
-  setIsScrolling,
+  onClick,
 }) {
   const scrollTrigger = useMemo(() => scrollTopValue > 400, [scrollTopValue]);
 
@@ -14,8 +12,8 @@ export default memo(function ToTopButton({
       return;
     }
 
-    setScrollTopValue(1);
-  }, [isScrolling, scrollTopValue, usedPages]);
+    onClick();
+  }, [isScrolling, onClick]);
 
   return (
     <>
