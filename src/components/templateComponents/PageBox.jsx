@@ -1,11 +1,4 @@
-import {
-  memo,
-  useMemo,
-  useState,
-  useLayoutEffect,
-  useEffect,
-  useCallback,
-} from "react";
+import { memo, useMemo, useState, useLayoutEffect, useCallback } from "react";
 import { useNexus } from "nexus-state";
 
 import Scroll from "../../../morphing-scroll/src/MorphingScroll";
