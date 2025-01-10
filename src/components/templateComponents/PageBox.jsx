@@ -59,7 +59,6 @@ export default memo(function PageBox() {
           <Scroll
             className="templateScroll"
             scrollID="templateScroll"
-            scrollXY="auto"
             objectXY={[238, 156]}
             gap={60}
             padding={[14, 0]}

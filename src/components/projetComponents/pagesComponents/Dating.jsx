@@ -201,8 +201,8 @@ const GirlDependencies = ({ girlsInfo }) => {
       <Scroll
         className="scrollAvatars"
         scrollID="datingAvatars"
-        scrollXY={[104, 494]}
-        objectXY={[86, 86]}
+        scrollXY={[244, 494]}
+        objectXY={["outer", 86]}
         // scrollXY="auto"
         // objectXY="auto"
         gap={10}
