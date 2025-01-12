@@ -253,9 +253,10 @@ const Chat = ({ girlInfo }) => {
       ) : (
         <>
           <Scroll
+            // scrollID="chatDaiting"
             className="chatDaiting"
             scrollXY={[490, 496]}
-            objectXY={["outer", "inner"]}
+            objectXY={["none", "none"]}
             objectsWrapperMinSize={496}
             padding={[0, 20]}
             progressTrigger={["wheel", "progressElement", "content"]}

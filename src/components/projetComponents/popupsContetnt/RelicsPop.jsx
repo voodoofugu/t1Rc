@@ -158,9 +158,10 @@ export default memo(function RelicsPop({ event }) {
       </div>
 
       <Scroll
+        scrollID="relicsScroll"
         className="main-relics-right-box-all overNone"
         scrollXY={[710, 446]}
-        objectXY={["outer", "inner"]}
+        objectXY={["none", "none"]}
         progressTrigger={["wheel", "progressElement"]}
         thumbElement={<ScrollThumb />}
         progressBarSize={8}

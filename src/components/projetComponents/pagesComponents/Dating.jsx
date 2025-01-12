@@ -199,12 +199,10 @@ const GirlDependencies = ({ girlsInfo }) => {
       {/* <div className="girlMood">
       </div> */}
       <Scroll
+        // scrollID="datingAvatars"
         className="scrollAvatars"
-        scrollID="datingAvatars"
-        scrollXY={[244, 494]}
-        objectXY={["outer", 86]}
-        // scrollXY="auto"
-        // objectXY="auto"
+        scrollXY={[104, 494]}
+        objectXY={[86, 86]}
         gap={10}
         padding={10}
         progressTrigger={["wheel", "progressElement"]}
@@ -213,14 +211,13 @@ const GirlDependencies = ({ girlsInfo }) => {
         // sliderType
         progressVisibility="hover"
         // lazyRender
-        // infiniteScroll
         // rootMargin={[0, 0]}
         // xDirection
         // suspending
         // fallback={<div>loading</div>}
         // scrollTop={100}
         // edgeGradient="#5b2914"
-        edgeGradient={{ color: "#642e16" }}
+        edgeGradient={{ color: "#572e19" }}
         elementsAlign="center"
         contentAlign={["center", "center"]}
         // infiniteScroll

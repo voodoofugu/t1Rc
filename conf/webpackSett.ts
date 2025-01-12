@@ -6,7 +6,9 @@ import { plugins } from "./plugins";
 import { resolvers } from "./resolvers";
 import { BuildOptions } from "./types";
 
-export function webpackSett(options: BuildOptions): webpack.Configuration {
+export default function webpackSett(
+  options: BuildOptions
+): webpack.Configuration {
   const { mode, paths } = options;
   const isDev = mode === "development";
 

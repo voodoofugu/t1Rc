@@ -58,7 +58,7 @@ export default memo(function PageBox() {
         <div className="h-calcScreenH-112 m-auto max-w-1160 w-calcFull-80">
           <Scroll
             className="templateScroll"
-            scrollID="templateScroll"
+            // scrollID="templateScroll"
             objectXY={[238, 156]}
             gap={60}
             padding={[14, 0]}

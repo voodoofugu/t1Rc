@@ -1,6 +1,6 @@
 import path from "path";
 import webpack from "webpack";
-import { webpackSett } from "./conf/webpackSett";
+import webpackSett from "./conf/webpackSett";
 import { BuildMode, BuildPaths, BuildPlatform } from "./conf/types";
 
 interface EnvVariables {

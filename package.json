@@ -4,7 +4,7 @@
   "version": "1.2.2",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "webpack serve --env mode=development",
+    "start": "ts-node --transpile-only ./node_modules/webpack/bin/webpack serve --env mode=development",
     "build": "webpack --env mode=production",
     "compileScss": "ts-node src/scripts/templateScripts/compileScss.ts",
     "tailwindcss": "npx tailwindcss -i src/styles/tailwind/input.css -o src/styles/css/output.css --watch --minify",
@@ -17,23 +17,22 @@
   "dependencies": {
     "morphing-scroll": "^1.1.4",
     "nexus-state": "^1.6.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-refresh": "^0.14.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-refresh": "^0.16.0",
     "styled-atom": "^2.0.9"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
-    "@types/express": "^4.17.21",
+    "@types/express": "^5.0.0",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.6",
-    "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
     "@types/webpack": "^5.28.5",
     "@types/ws": "^8.5.10",
-    "chokidar": "^3.6.0",
-    "css-loader": "^6.10.0",
+    "chokidar": "^4.0.3",
+    "css-loader": "^7.1.2",
     "dotenv": "^16.4.5",
     "esbuild-loader": "^4.1.0",
     "eslint": "^9.11.0",
@@ -50,9 +49,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.6.0",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
     "ws": "^8.17.0"
   }
 }

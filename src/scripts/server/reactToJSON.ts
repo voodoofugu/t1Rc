@@ -25,7 +25,7 @@ const serializeReactElement = (
         : (type as React.FunctionComponent).displayName ||
           (type as React.ComponentClass).name ||
           "Unknown",
-    props: serializeProps(props),
+    props: serializeProps(props as Record<string, any>),
   };
 };
 
