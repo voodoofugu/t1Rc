@@ -2,6 +2,7 @@ import { useState } from "react";
 import WorldBtnBox from "../UIComponents/WorldBtnBox";
 
 import { nexusTrigger } from "nexus-state";
+
 import QuestBoxAll from "../UIComponents/QuestBoxAll";
 import Notification from "../UIComponents/Notification";
 
@@ -76,12 +77,27 @@ export default function MainScreen01AllPopups({ pageName, children }) {
 
       <div className="header">
         <div className="resource-panel">
-          <div className="avatar-box-all">
+          <div
+            className="avatar-box-all"
+            onClick={() => {
+              nexusTrigger({
+                type: "handlePopup",
+                payload: {
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup red sign-up",
+                    popCont: "SignIn",
+                  },
+                },
+              });
+            }}
+          >
             <div className="avatar-box-pic">
-              <img src="img/hero0093-ava.jpg" loading="lazy" />
+              <img src="img/v2-master-pic1.png" />
             </div>
-            <div className="avatar-box-name">Dormidont</div>
+            <div className="avatar-box-name">Rank 31</div>
           </div>
+
           <div className="resource-gold">
             <div className="value">6969K</div>
             <div className="value-bonus">+6969K%</div>

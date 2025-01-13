@@ -17,7 +17,7 @@ export default function BtlPass({ event }) {
 
   const girlImg =
     event === "xmas"
-      ? "images/hero-all/tithero-454/icons/break-girl3"
+      ? "images/hero-all/tithero-449/icons/break-girl4"
       : event === "hw"
       ? "images/hero-all/tithero-429/icons/break-girl"
       : event === "bf"
@@ -34,15 +34,33 @@ export default function BtlPass({ event }) {
       ? "images/hero-all/tithero-423/icons/break-girl4"
       : null;
 
+  const icon =
+    event === "xmas"
+      ? "ic-ny-sneg-4"
+      : event === "hw"
+      ? "evPopArts/bat_icn"
+      : event === "bf"
+      ? "ic-tickets-bf-1"
+      : event === "vl"
+      ? "ic-tickets-vl"
+      : event === "spring"
+      ? "ic-march-flower-dark-blue"
+      : event === "summer"
+      ? "evPopArts/butterfly"
+      : event === "autumn"
+      ? "ic-autumn-leaf"
+      : event === "sexpedition"
+      ? "evPopArts/gem_icn"
+      : null;
+
   const buyShopCont =
     event === "xmas"
       ? [
           "BuyShop",
           {
-            img1: "evPopArts/ic-tickets-xmas-1",
-            img2: "evPopArts/ic-tickets-xmas-2",
-            img3: "evPopArts/ic-tickets-xmas-3",
-            img4: "evPopArts/ic-tickets-xmas-4",
+            img1: "ic-ny-sneg-4",
+            img2: "ic-ny-sneg-4",
+            img3: "ic-ny-sneg-4",
           },
         ]
       : event === "hw"
@@ -145,7 +163,7 @@ export default function BtlPass({ event }) {
       <Button
         className="lightGreen schop"
         text="Buy Currency"
-        img
+        img={`img/${icon}.png`}
         onClick={() =>
           buyShopCont &&
           nexusTrigger({
@@ -167,7 +185,8 @@ export default function BtlPass({ event }) {
           <div className="btlpass-collect-box">
             <div className="btlpass-collect-box-text">
               Collect 0/25.2K
-              <span className="ic-event"></span> to get these girls!
+              <img className="ic-event" src={`img/${icon}.png`}></img>
+              to get these girls!
             </div>
           </div>
           <div className="squad-holder">
@@ -192,7 +211,7 @@ export default function BtlPass({ event }) {
             currentProgress={42}
             maxProgress={100}
             text="you have"
-            textIcn
+            textIcn={`img/${icon}.png`}
             textWithProgress="max"
           />
         </div>
