@@ -85,8 +85,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 payload: {
                   type: "open",
                   data: {
+                    popCont: "SignInUP",
                     mpopClass: "m-popup red sign-up",
-                    popCont: "SignIn",
                   },
                 },
               });
