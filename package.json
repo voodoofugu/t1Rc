@@ -17,10 +17,10 @@
   "dependencies": {
     "morphing-scroll": "^1.1.4",
     "nexus-state": "^1.6.7",
+    "styled-atom": "^2.0.9",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-refresh": "^0.16.0",
-    "styled-atom": "^2.0.9"
+    "react-refresh": "^0.16.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.0",

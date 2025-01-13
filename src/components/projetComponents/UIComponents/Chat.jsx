@@ -253,7 +253,7 @@ const Chat = ({ girlInfo }) => {
       ) : (
         <>
           <Scroll
-            // scrollID="chatDaiting"
+            scrollID="chatDaiting"
             className="chatDaiting"
             scrollXY={[490, 496]}
             objectXY={["none", "none"]}

@@ -57,8 +57,8 @@ export default memo(function PageBox() {
       {usedPages[0] !== "not found" ? (
         <div className="h-calcScreenH-112 m-auto max-w-1160 w-calcFull-80">
           <Scroll
-            className="templateScroll"
             // scrollID="templateScroll"
+            className="templateScroll"
             objectXY={[238, 156]}
             gap={60}
             padding={[14, 0]}
