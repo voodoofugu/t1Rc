@@ -71,7 +71,6 @@ export default memo(function PageBox() {
             scrollTop={scrollNew}
             onScrollValue={[(scroll) => setScrollTopValue(scroll)]}
             isScrolling={(isScrolling) => setIsScrolling(isScrolling)}
-            // renderOnScroll
           >
             {components}
           </Scroll>
