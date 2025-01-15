@@ -128,8 +128,8 @@ export default function ArmySetupCW() {
 
         <Scroll
           className="armySetupScroll"
-          scrollXY={[1100, 436]}
-          objectXY={[94, 107]}
+          size={[1100, 436]}
+          objectsSize={[94, 107]}
           padding={[6, 0]}
           gap={12}
           progressTrigger={["wheel", "progressElement"]}

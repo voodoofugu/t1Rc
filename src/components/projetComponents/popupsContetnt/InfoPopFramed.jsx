@@ -25,8 +25,8 @@ export default function InfoPopFramed({ inner, girlImg }) {
           <div className="frame bottom"></div>
         </div>
         <Scroll
-          scrollXY={[700, 342]}
-          objectXY={["none", "none"]}
+          size={[700, 342]}
+          objectsSize={["none", "none"]}
           padding={[0, 20]}
           progressTrigger={["wheel", "progressElement"]}
           thumbElement={<ScrollThumb />}

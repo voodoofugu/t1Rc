@@ -115,8 +115,8 @@ export default function AllHeroesBoxScroll({ numX }) {
   return (
     <Scroll
       className="heroBoxsScroll"
-      scrollXY={[504, 346]}
-      objectXY={[230, 124]}
+      size={[504, 346]}
+      objectsSize={[230, 124]}
       gap={12}
       padding={[5, 0]}
       progressTrigger={["wheel", "progressElement"]}

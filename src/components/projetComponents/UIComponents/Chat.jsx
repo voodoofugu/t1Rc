@@ -255,11 +255,11 @@ const Chat = ({ girlInfo }) => {
           <Scroll
             scrollID="chatDaiting"
             className="chatDaiting"
-            scrollXY={[490, 496]}
-            objectXY={["none", "none"]}
-            objectsWrapperMinSize={496}
+            size={[490, 496]}
+            objectsSize={["none", "none"]}
+            objectsBoxFullMinSize
             padding={[0, 20]}
-            progressTrigger={["wheel", "progressElement", "content"]}
+            progressTrigger={["wheel", "progressElement"]}
             scrollTop="end"
             thumbElement={<ScrollThumb className="centerImg" />}
             progressBarSize={8}

@@ -223,8 +223,8 @@ export default function BtlPass({ event }) {
           </div>
           <Scroll
             className="btlpass_scroll"
-            scrollXY={[1000, 128]}
-            objectXY={[80, 112]}
+            size={[1000, 128]}
+            objectsSize={[80, 112]}
             progressTrigger={["wheel", "progressElement", "content"]}
             thumbElement={<ScrollThumb />}
             edgeGradient={{ color: edgeGradient }}

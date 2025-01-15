@@ -132,8 +132,8 @@ export default function DarkBtlPass() {
           </div>
           <Scroll
             className="btlpass_scroll two"
-            scrollXY={[1000, 202]}
-            objectXY={[80, 190]}
+            size={[1000, 202]}
+            objectsSize={[80, 190]}
             progressTrigger={["wheel", "progressElement", "content"]}
             thumbElement={<ScrollThumb />}
             edgeGradient={{ color: "#202c38" }}

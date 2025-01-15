@@ -143,37 +143,37 @@ const GirlDependencies = ({ girlsInfo }) => {
         ]}
         itemsBoxLast={[
           <ItemBox
-            itemClass="wh44"
+            itemClass="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={1}
           />,
           <ItemBox
-            itemClass="wh44"
+            itemClass="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={2}
           />,
           <ItemBox
-            itemClass="wh44"
+            itemClass="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={3}
           />,
           <ItemBox
-            itemClass="wh44"
+            itemClass="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={4}
           />,
           <ItemBox
-            itemClass="wh44"
+            itemClass="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={5}
           />,
           <ItemBox
-            itemClass="wh44"
+            itemClass="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={6}
@@ -201,8 +201,8 @@ const GirlDependencies = ({ girlsInfo }) => {
       <Scroll
         // scrollID="datingAvatars"
         className="scrollAvatars"
-        scrollXY={[104, 494]}
-        objectXY={[86, 86]}
+        size={[104, 494]}
+        objectsSize={[86, 86]}
         gap={10}
         padding={10}
         progressTrigger={["wheel", "progressElement"]}

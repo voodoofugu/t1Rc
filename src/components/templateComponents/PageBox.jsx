@@ -59,7 +59,7 @@ export default memo(function PageBox() {
           <Scroll
             // scrollID="templateScroll"
             className="templateScroll"
-            objectXY={[238, 156]}
+            objectsSize={[238, 156]}
             gap={60}
             padding={[14, 0]}
             progressTrigger={["wheel", "progressElement"]}
@@ -70,7 +70,7 @@ export default memo(function PageBox() {
             infiniteScroll
             scrollTop={scrollNew}
             onScrollValue={[(scroll) => setScrollTopValue(scroll)]}
-            isScrolling={(isScrolling) => setIsScrolling(isScrolling)}
+            isScrolling={(value) => setIsScrolling(value)}
           >
             {components}
           </Scroll>

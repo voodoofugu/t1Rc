@@ -109,8 +109,8 @@ export default function V2MainScreen05FwMain() {
               </div>
               <Scroll
                 className="btlpass_scroll two"
-                scrollXY={[786, 190]}
-                objectXY={[80, 190]}
+                size={[786, 190]}
+                objectsSize={[80, 190]}
                 progressTrigger={["wheel", "progressElement", "content"]}
                 thumbElement={<ScrollThumb />}
                 edgeGradient={{ color: "#3f3c3a" }}

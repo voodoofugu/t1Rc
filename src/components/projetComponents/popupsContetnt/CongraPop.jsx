@@ -30,8 +30,8 @@ export default function CongraPop({ rewardsData }) {
 
         <Scroll
           className="rewardsScroll"
-          scrollXY={[490, 275]}
-          objectXY={[80, 80]}
+          size={[490, 275]}
+          objectsSize={[80, 80]}
           gap={12}
           padding={[5, 0]}
           progressTrigger={["wheel", "progressElement"]}
