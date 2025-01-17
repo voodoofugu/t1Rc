@@ -383,8 +383,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-vl",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup events-btlpass-pop vl",
-                  popTit: "Valentine's Day Event Pass",
+                  mpopClass: "m-popup events-btlpass-pop vl contentOnly",
                   popCont: "BtlPass",
                   props: { event: "vl" },
                 },
@@ -404,8 +403,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-vl-orgy",
                 "00:00:09",
                 {
-                  mpopClass: "m-popup main-relics-pop vl",
-                  popTit: "Valentine's Day Orgy",
+                  mpopClass: "m-popup main-relics-pop vl contentOnly",
                   popCont: "RelicsPop",
                   props: { event: "vl" },
                 },

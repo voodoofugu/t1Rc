@@ -13,7 +13,13 @@ export default function BtlPass({ event }) {
   const popupState = useNexus("popupState");
 
   const edgeGradient =
-    event === "autumn" ? "#b01a6c" : event === "xmas" ? "#288cbe" : "#202c38";
+    event === "autumn"
+      ? "#b01a6c"
+      : event === "xmas"
+      ? "#288cbe"
+      : event === "vl"
+      ? "#c32e76"
+      : "#202c38";
 
   const girlImg =
     event === "xmas"
@@ -23,7 +29,7 @@ export default function BtlPass({ event }) {
       : event === "bf"
       ? "images/hero-all/tithero-429/icons/break-girl"
       : event === "vl"
-      ? "images/hero-all/tithero-430/icons/break-girl"
+      ? "images/hero-all/tithero-462/icons/break-girl4"
       : event === "spring"
       ? "images/hero-all/tithero-430/icons/break-girl"
       : event === "summer"
@@ -42,7 +48,7 @@ export default function BtlPass({ event }) {
       : event === "bf"
       ? "ic-tickets-bf-1"
       : event === "vl"
-      ? "ic-tickets-vl"
+      ? "evPopArts/ic-feather1"
       : event === "spring"
       ? "ic-march-flower-dark-blue"
       : event === "summer"
@@ -86,9 +92,10 @@ export default function BtlPass({ event }) {
       ? [
           "BuyShop",
           {
-            img1: "ic-tickets-vl-1",
-            img2: "ic-tickets-vl-2",
-            img3: "ic-tickets-vl-3",
+            img1: "evPopArts/ic-feather1",
+            img2: "evPopArts/ic-feather2",
+            img3: "evPopArts/ic-feather3",
+            img4: "evPopArts/ic-feather4",
           },
         ]
       : event === "spring"
