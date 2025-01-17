@@ -105,7 +105,11 @@ export default memo(function RelicsPop({ event }) {
   ];
 
   const bg =
-    event === "xmas" ? "img/bGs/xmasBg.jpg" : "img/bGs/halloweenBg.jpg";
+    event === "xmas"
+      ? "img/bGs/xmasBg.jpg"
+      : "vl"
+      ? "img/bGs/vDayBg.jpg"
+      : "img/bGs/halloweenBg.jpg";
 
   const evData = data.find((item) => item[event]);
   const popupState = useNexus("popupState");
