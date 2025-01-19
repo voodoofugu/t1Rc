@@ -238,7 +238,6 @@ export default function BtlPass({ event }) {
             progressBarSize={8}
             infiniteScroll
             xDirection
-            progressVisibility="hover"
           >
             {elements.map((element, index) => (
               <ItemBox
