@@ -233,11 +233,12 @@ export default function BtlPass({ event }) {
             size={[1000, 128]}
             objectsSize={[80, 112]}
             progressTrigger={["wheel", "progressElement", "content"]}
-            thumbElement={<ScrollThumb />}
+            progressElement={<ScrollThumb />}
             edgeGradient={{ color: edgeGradient }}
             progressBarSize={8}
             infiniteScroll
             xDirection
+            progressVisibility="hover"
           >
             {elements.map((element, index) => (
               <ItemBox

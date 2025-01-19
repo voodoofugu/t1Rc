@@ -63,7 +63,6 @@ export default memo(function PageBox() {
             gap={60}
             padding={[14, 0]}
             progressTrigger={["wheel", "progressElement"]}
-            // thumbElement={<ScrollThumb />}
             edgeGradient={{ color: "rgb(199, 210, 254)" }}
             elementsAlign="center"
             contentAlign={["center", "center"]}

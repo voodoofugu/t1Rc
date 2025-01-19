@@ -135,7 +135,7 @@ export default function DarkBtlPass() {
             size={[1000, 202]}
             objectsSize={[80, 190]}
             progressTrigger={["wheel", "progressElement", "content"]}
-            thumbElement={<ScrollThumb />}
+            progressElement={<ScrollThumb />}
             edgeGradient={{ color: "#202c38" }}
             progressBarSize={8}
             infiniteScroll

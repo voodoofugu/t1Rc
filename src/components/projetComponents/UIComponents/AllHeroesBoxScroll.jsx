@@ -120,13 +120,13 @@ export default function AllHeroesBoxScroll({ numX }) {
       gap={12}
       padding={[5, 0]}
       progressTrigger={["wheel", "progressElement"]}
-      thumbElement={<ScrollThumb />}
+      progressElement={<ScrollThumb />}
       edgeGradient={{ color: "#584a49" }}
       progressBarSize={8}
       infiniteScroll
       progressVisibility="hover"
       contentAlign={["center", "center"]}
-      // xDirection
+      // direction
     >
       {heroBoxData.map((item, index) => (
         <HeroBox

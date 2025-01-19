@@ -207,8 +207,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         padding={10}
         progressTrigger={["wheel", "progressElement"]}
         progressReverse
-        thumbElement={<ScrollThumb />}
-        // sliderType
+        progressElement={<ScrollThumb />}
         progressVisibility="hover"
         // lazyRender
         // rootMargin={[0, 0]}

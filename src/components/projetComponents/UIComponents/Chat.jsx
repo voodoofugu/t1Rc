@@ -253,7 +253,7 @@ const Chat = ({ girlInfo }) => {
       ) : (
         <>
           <Scroll
-            scrollID="chatDaiting"
+            // scrollID="chatDaiting"
             className="chatDaiting"
             size={[490, 496]}
             objectsSize={["none", "none"]}
@@ -261,7 +261,7 @@ const Chat = ({ girlInfo }) => {
             padding={[0, 20]}
             progressTrigger={["wheel", "progressElement"]}
             scrollTop="end"
-            thumbElement={<ScrollThumb className="centerImg" />}
+            progressElement={<ScrollThumb className="centerImg" />}
             progressBarSize={8}
             // onScrollValue={[
             //   [
@@ -273,7 +273,7 @@ const Chat = ({ girlInfo }) => {
             //       })),
             //   ],
             // ]}
-            // xDirection
+            // direction
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];

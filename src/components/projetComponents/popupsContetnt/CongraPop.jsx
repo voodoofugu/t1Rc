@@ -35,7 +35,7 @@ export default function CongraPop({ rewardsData }) {
           gap={12}
           padding={[5, 0]}
           progressTrigger={["wheel", "progressElement"]}
-          thumbElement={<ScrollThumb />}
+          progressElement={<ScrollThumb />}
           progressBarSize={8}
           elementsAlign={"center"}
           contentAlign={["center", "center"]}

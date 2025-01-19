@@ -167,7 +167,7 @@ export default memo(function RelicsPop({ event }) {
         size={[710, 446]}
         objectsSize={["none", "none"]}
         progressTrigger={["wheel", "progressElement"]}
-        thumbElement={<ScrollThumb />}
+        progressElement={<ScrollThumb />}
         progressBarSize={8}
       >
         <div className="main-relics-bonus-box xmas">

@@ -112,11 +112,11 @@ export default function V2MainScreen05FwMain() {
                 size={[786, 190]}
                 objectsSize={[80, 190]}
                 progressTrigger={["wheel", "progressElement", "content"]}
-                thumbElement={<ScrollThumb />}
+                progressElement={<ScrollThumb />}
                 edgeGradient={{ color: "#3f3c3a" }}
                 progressBarSize={8}
                 infiniteScroll
-                xDirection
+                direction
               >
                 {elements.map((element, index) => (
                   <div className="rewardsWrap" key={index}>
