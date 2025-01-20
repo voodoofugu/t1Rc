@@ -220,6 +220,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         elementsAlign="center"
         contentAlign={["center", "center"]}
         // infiniteScroll
+        // type="slider"
       >
         {girlsInfo.map((item, index) => (
           <PersonAva
