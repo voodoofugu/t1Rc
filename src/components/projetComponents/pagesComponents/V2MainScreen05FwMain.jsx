@@ -114,7 +114,6 @@ export default function V2MainScreen05FwMain() {
                 progressTrigger={["wheel", "progressElement", "content"]}
                 progressElement={<ScrollThumb />}
                 edgeGradient={{ color: "#3f3c3a" }}
-                progressBarSize={8}
                 infiniteScroll
                 direction
               >

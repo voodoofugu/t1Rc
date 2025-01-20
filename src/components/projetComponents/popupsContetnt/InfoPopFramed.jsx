@@ -30,7 +30,6 @@ export default function InfoPopFramed({ inner, girlImg }) {
           padding={[0, 20]}
           progressTrigger={["wheel", "progressElement"]}
           progressElement={<ScrollThumb />}
-          progressBarSize={8}
           contentAlign={["center", "center"]}
         >
           <div className="inner">{inner}</div>

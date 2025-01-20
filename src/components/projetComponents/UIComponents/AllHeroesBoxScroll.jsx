@@ -122,7 +122,6 @@ export default function AllHeroesBoxScroll({ numX }) {
       progressTrigger={["wheel", "progressElement"]}
       progressElement={<ScrollThumb />}
       edgeGradient={{ color: "#584a49" }}
-      progressBarSize={8}
       infiniteScroll
       progressVisibility="hover"
       contentAlign={["center", "center"]}

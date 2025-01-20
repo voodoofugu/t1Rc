@@ -262,7 +262,6 @@ const Chat = ({ girlInfo }) => {
             progressTrigger={["wheel", "progressElement"]}
             scrollTop="end"
             progressElement={<ScrollThumb className="centerImg" />}
-            progressBarSize={8}
             // onScrollValue={[
             //   [
             //     (scrollTop) => scrollTop <= 1,

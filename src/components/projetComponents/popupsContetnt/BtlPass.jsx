@@ -235,7 +235,6 @@ export default function BtlPass({ event }) {
             progressTrigger={["wheel", "progressElement", "content"]}
             progressElement={<ScrollThumb />}
             edgeGradient={{ color: edgeGradient }}
-            progressBarSize={8}
             infiniteScroll
             xDirection
           >
