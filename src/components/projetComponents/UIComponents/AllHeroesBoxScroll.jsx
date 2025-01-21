@@ -5,7 +5,7 @@ import Button from "../UIComponents/Button";
 import ItemBox from "../UIComponents/ItemBox";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import heroBoxData from "../data/heroBoxData";
@@ -113,13 +113,13 @@ function HeroBox({
 
 export default function AllHeroesBoxScroll({ numX }) {
   return (
-    <Scroll
+    <MorphScroll
       className="heroBoxsScroll"
       size={[504, 346]}
       objectsSize={[230, 124]}
       gap={12}
       padding={[5, 0]}
-      progressTrigger={["wheel", "progressElement"]}
+      progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       progressElement={<ScrollThumb />}
       edgeGradient={{ color: "#584a49" }}
       infiniteScroll
@@ -148,6 +148,6 @@ export default function AllHeroesBoxScroll({ numX }) {
           }}
         />
       ))}
-    </Scroll>
+    </MorphScroll>
   );
 }

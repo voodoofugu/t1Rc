@@ -1,7 +1,7 @@
 import { memo, useMemo, useState, useLayoutEffect, useCallback } from "react";
 import { useNexus } from "nexus-state";
 
-import Scroll from "../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../morphing-scroll/src/MorphingScroll";
 
 import Cell from "./CellContent";
 import ToTopButton from "./ToTopButton";
@@ -56,13 +56,13 @@ export default memo(function PageBox() {
     <>
       {usedPages[0] !== "not found" ? (
         <div className="h-calcScreenH-112 m-auto max-w-1160 w-calcFull-80">
-          <Scroll
+          <MorphScroll
             // scrollID="templateScroll"
             className="templateScroll"
             objectsSize={[238, 156]}
             gap={60}
             padding={[14, 0]}
-            progressTrigger={["wheel", "progressElement"]}
+            progressTrigger={{ wheel: true, progressElement: true }}
             edgeGradient={{ color: "rgb(199, 210, 254)" }}
             elementsAlign="center"
             contentAlign={["center", "center"]}
@@ -72,7 +72,7 @@ export default memo(function PageBox() {
             isScrolling={(value) => setIsScrolling(value)}
           >
             {components}
-          </Scroll>
+          </MorphScroll>
           <ToTopButton
             scrollTopValue={scrollTopValue}
             isScrolling={isScrolling}

@@ -2,7 +2,7 @@ import React from "react";
 
 import { nexusTrigger } from "nexus-state";
 
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ResizeTracker from "../../../../morphing-scroll/src/ResizeTracker";
 import IntersectionTracker from "../../../../morphing-scroll/src/IntersectionTracker";
 
@@ -21,9 +21,7 @@ const Chat = ({ girlInfo }) => {
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
 
-  const [chatMapArray, setChatMapArray] = React.useState([
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-  ]);
+  const [chatMapArray, setChatMapArray] = React.useState([0, 0, 0]);
   const [chatProgress, setChatProgress] = React.useState(
     chatMapArray.length - 1
   );
@@ -252,27 +250,15 @@ const Chat = ({ girlInfo }) => {
         </div>
       ) : (
         <>
-          <Scroll
+          <MorphScroll
             // scrollID="chatDaiting"
             className="chatDaiting"
             size={[490, 496]}
-            objectsSize={["none", "none"]}
-            objectsBoxFullMinSize
+            objectsSize={[450, "none"]}
+            objectsWrapFullMinSize
             padding={[0, 20]}
-            progressTrigger={["wheel", "progressElement"]}
+            progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollTop={{ value: "end" }}
-            progressElement={<ScrollThumb className="centerImg" />}
-            // onScrollValue={[
-            //   [
-            //     (scrollTop) => scrollTop <= 1,
-            //     () =>
-            //       setLastElements((prevState) => ({
-            //         ...prevState,
-            //         [girlInfo.id]: prevState[girlInfo.id] - 10,
-            //       })),
-            //   ],
-            // ]}
-            // direction
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];
@@ -375,7 +361,7 @@ const Chat = ({ girlInfo }) => {
                 </>
               )}
             </ResizeTracker>
-          </Scroll>
+          </MorphScroll>
 
           <div className="fallbackBox" ref={fallbackBoxRef}>
             {messageFallback === "message" && (

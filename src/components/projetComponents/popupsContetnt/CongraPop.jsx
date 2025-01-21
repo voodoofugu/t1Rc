@@ -1,6 +1,6 @@
 import { nexusTrigger } from "nexus-state";
 
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ImageBg from "../UIComponents/ImageBg";
 import ItemBox from "../UIComponents/ItemBox";
@@ -28,13 +28,13 @@ export default function CongraPop({ rewardsData }) {
 
         <FraimedTitle className="cornersTop" text="Congratulations" />
 
-        <Scroll
+        <MorphScroll
           className="rewardsScroll"
           size={[490, 275]}
           objectsSize={[80, 80]}
           gap={12}
           padding={[5, 0]}
-          progressTrigger={["wheel", "progressElement"]}
+          progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           progressElement={<ScrollThumb />}
           elementsAlign={"center"}
           contentAlign={["center", "center"]}
@@ -42,7 +42,7 @@ export default function CongraPop({ rewardsData }) {
           {rewardsData.map((item, index) => (
             <ItemBox key={index} {...item} />
           ))}
-        </Scroll>
+        </MorphScroll>
 
         <Button
           className="exit"

@@ -23,7 +23,7 @@ export default function ComicsPop() {
                 width: "175px",
               }}
               // changeDirectionArrow
-              arrowDirection="xDirection"
+              arrowDirection="direction"
               arrowPosition="last"
               align="center"
             />
@@ -36,7 +36,7 @@ export default function ComicsPop() {
                 width: "200px",
               }}
               // changeDirectionArrow
-              arrowDirection="xDirection"
+              arrowDirection="direction"
               arrowPosition="last"
               align="center"
             /> */}
@@ -49,7 +49,7 @@ export default function ComicsPop() {
                 width: "240px",
               }}
               // changeDirectionArrow
-              // arrowDirection="xDirection"
+              // arrowDirection="direction"
               arrowPosition="last"
               // align="center"
             /> */}

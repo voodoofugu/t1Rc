@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { nexusTrigger, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ComicsBallon from "../UIComponents/ComicsBallon";
 import ProgressBar from "../UIComponents/ProgressBar";
@@ -161,13 +161,12 @@ export default memo(function RelicsPop({ event }) {
         </div>
       </div>
 
-      <Scroll
+      <MorphScroll
         scrollID="relicsScroll"
         className="main-relics-right-box-all overNone"
         size={[710, 446]}
         objectsSize={["none", "none"]}
-        progressTrigger={["wheel", "progressElement"]}
-        progressElement={<ScrollThumb />}
+        progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       >
         <div className="main-relics-bonus-box xmas">
           <ProgressBar
@@ -502,7 +501,7 @@ export default memo(function RelicsPop({ event }) {
             />
           </div>
         </div>
-      </Scroll>
+      </MorphScroll>
 
       <div className="main-buttons">
         <Button className="green max" text="Fapopoly<p>00:00:00" />

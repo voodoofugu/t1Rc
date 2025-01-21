@@ -2,7 +2,7 @@ import { useNexus, nexusTrigger, nexusUpdate } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
@@ -228,15 +228,18 @@ export default function BtlPass({ event }) {
             <div className="btlpass-elite">rewards</div>
             <Button className="btnGold max" text="get all" />
           </div>
-          <Scroll
+          <MorphScroll
             className="btlpass_scroll"
             size={[1000, 128]}
             objectsSize={[80, 112]}
-            progressTrigger={["wheel", "progressElement", "content"]}
-            progressElement={<ScrollThumb />}
+            progressTrigger={{
+              wheel: true,
+              progressElement: <ScrollThumb />,
+              content: true,
+            }}
             edgeGradient={{ color: edgeGradient }}
             infiniteScroll
-            xDirection
+            direction="x"
           >
             {elements.map((element, index) => (
               <ItemBox
@@ -258,7 +261,7 @@ export default function BtlPass({ event }) {
                 }}
               />
             ))}
-          </Scroll>
+          </MorphScroll>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { nexusTrigger } from "nexus-state";
 // import { Scroll } from "morphing-scroll";
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 
 import ItemBox from "../UIComponents/ItemBox";
 // import ResCount from "../UIComponents/ResCount";
@@ -198,20 +198,23 @@ const GirlDependencies = ({ girlsInfo }) => {
 
       {/* <div className="girlMood">
       </div> */}
-      <Scroll
+      <MorphScroll
         // scrollID="datingAvatars"
         className="scrollAvatars"
         size={[104, 494]}
         objectsSize={[86, 86]}
         gap={10}
         padding={10}
-        progressTrigger={["wheel", "progressElement"]}
+        progressTrigger={{
+          wheel: true,
+          progressElement: <ScrollThumb />,
+          arrows: true,
+        }}
         progressReverse
-        progressElement={<ScrollThumb />}
         progressVisibility="hover"
         // lazyRender
         // rootMargin={[0, 0]}
-        // xDirection
+        // direction
         // suspending
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"
@@ -231,7 +234,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-      </Scroll>
+      </MorphScroll>
     </>
   );
 };

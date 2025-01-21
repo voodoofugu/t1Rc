@@ -1,6 +1,6 @@
 import { nexusTrigger, useNexus } from "nexus-state";
 
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ImageBg from "../UIComponents/ImageBg";
 import Button from "../UIComponents/Button";
@@ -24,16 +24,15 @@ export default function InfoPopFramed({ inner, girlImg }) {
           <div className="frame top"></div>
           <div className="frame bottom"></div>
         </div>
-        <Scroll
+        <MorphScroll
           size={[700, 342]}
           objectsSize={["none", "none"]}
           padding={[0, 20]}
-          progressTrigger={["wheel", "progressElement"]}
-          progressElement={<ScrollThumb />}
+          progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           contentAlign={["center", "center"]}
         >
           <div className="inner">{inner}</div>
-        </Scroll>
+        </MorphScroll>
 
         <Button
           className="exit"

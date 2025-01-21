@@ -2,7 +2,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ResCount from "../UIComponents/ResCount";
 
@@ -107,7 +107,7 @@ export default function V2MainScreen05FwMain() {
                 <div className="fw-level">4.32K/4.48K</div>
                 <div className="fw-elite">elite</div>
               </div>
-              <Scroll
+              <MorphScroll
                 className="btlpass_scroll two"
                 size={[786, 190]}
                 objectsSize={[80, 190]}
@@ -134,7 +134,7 @@ export default function V2MainScreen05FwMain() {
                     />
                   </div>
                 ))}
-              </Scroll>
+              </MorphScroll>
             </div>
 
             <ImageBg

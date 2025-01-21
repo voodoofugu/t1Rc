@@ -9,7 +9,7 @@ import ResCount from "../UIComponents/ResCount";
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 import Info from "../UIComponents/Info";
 
-import Scroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import girleCards from "../data/girleCards";
@@ -126,13 +126,13 @@ export default function ArmySetupCW() {
           tab3={["supHeroBtn", "Super Hero"]}
         />
 
-        <Scroll
+        <MorphScroll
           className="armySetupScroll"
           size={[1100, 436]}
           objectsSize={[94, 107]}
           padding={[6, 0]}
           gap={12}
-          progressTrigger={["wheel", "progressElement"]}
+          progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           progressElement={<ScrollThumb />}
           edgeGradient={{ color: "#52413f" }}
           infiniteScroll
@@ -152,7 +152,7 @@ export default function ArmySetupCW() {
                 onClick={() => toggleActive(extractKey(item.itemPic))}
               />
             ))}
-        </Scroll>
+        </MorphScroll>
 
         <Button
           className="green max selectBtn"
