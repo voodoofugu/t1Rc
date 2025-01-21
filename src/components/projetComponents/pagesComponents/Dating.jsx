@@ -214,7 +214,6 @@ const GirlDependencies = ({ girlsInfo }) => {
         // xDirection
         // suspending
         // fallback={<div>loading</div>}
-        // scrollTop={100}
         // edgeGradient="#5b2914"
         edgeGradient={{ color: "#572e19" }}
         elementsAlign="center"

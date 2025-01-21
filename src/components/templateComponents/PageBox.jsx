@@ -67,7 +67,7 @@ export default memo(function PageBox() {
             elementsAlign="center"
             contentAlign={["center", "center"]}
             infiniteScroll
-            scrollTop={scrollNew}
+            scrollTop={{ value: scrollNew }}
             onScrollValue={[(scroll) => setScrollTopValue(scroll)]}
             isScrolling={(value) => setIsScrolling(value)}
           >

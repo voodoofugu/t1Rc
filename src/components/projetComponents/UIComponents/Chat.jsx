@@ -260,7 +260,7 @@ const Chat = ({ girlInfo }) => {
             objectsBoxFullMinSize
             padding={[0, 20]}
             progressTrigger={["wheel", "progressElement"]}
-            scrollTop="end"
+            scrollTop={{ value: "end" }}
             progressElement={<ScrollThumb className="centerImg" />}
             // onScrollValue={[
             //   [
@@ -307,7 +307,7 @@ const Chat = ({ girlInfo }) => {
               }
             })}
 
-            <ResizeTracker key="nextMessageBox">
+            <ResizeTracker measure="all" key="nextMessageBox">
               {(width, height) => (
                 <>
                   {nextMessage && (nextMessage.Hero || nextMessage.Quest) && (
