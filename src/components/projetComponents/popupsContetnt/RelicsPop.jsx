@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { nexusTrigger, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
-import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ComicsBallon from "../UIComponents/ComicsBallon";
 import ProgressBar from "../UIComponents/ProgressBar";

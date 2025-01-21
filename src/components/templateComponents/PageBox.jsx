@@ -1,7 +1,8 @@
 import { memo, useMemo, useState, useLayoutEffect, useCallback } from "react";
 import { useNexus } from "nexus-state";
+import { MorphScroll } from "morphing-scroll";
 
-import MorphScroll from "../../../morphing-scroll/src/MorphingScroll";
+// import MorphScroll from "../../../morphing-scroll/src/MorphScroll";
 
 import Cell from "./CellContent";
 import ToTopButton from "./ToTopButton";

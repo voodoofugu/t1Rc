@@ -2,7 +2,7 @@ import React from "react";
 
 import { nexusTrigger } from "nexus-state";
 
-import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
 import ResizeTracker from "../../../../morphing-scroll/src/ResizeTracker";
 import IntersectionTracker from "../../../../morphing-scroll/src/IntersectionTracker";
 

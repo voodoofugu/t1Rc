@@ -9,7 +9,7 @@ import ResCount from "../UIComponents/ResCount";
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 import Info from "../UIComponents/Info";
 
-import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import girleCards from "../data/girleCards";

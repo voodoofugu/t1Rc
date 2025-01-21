@@ -1,7 +1,7 @@
 import React from "react";
 import { nexusTrigger } from "nexus-state";
 // import { Scroll } from "morphing-scroll";
-import MorphScroll from "../../../../morphing-scroll/src/MorphingScroll";
+import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
 
 import ItemBox from "../UIComponents/ItemBox";
 // import ResCount from "../UIComponents/ResCount";
@@ -208,7 +208,6 @@ const GirlDependencies = ({ girlsInfo }) => {
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
-          arrows: true,
         }}
         progressReverse
         progressVisibility="hover"
