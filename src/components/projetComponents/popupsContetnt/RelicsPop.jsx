@@ -165,7 +165,7 @@ export default memo(function RelicsPop({ event }) {
         scrollID="relicsScroll"
         className="main-relics-right-box-all overNone"
         size={[710, 446]}
-        objectsSize={["none", "none"]}
+        objectsSize={[710, 194]}
         progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       >
         <div className="main-relics-bonus-box xmas">

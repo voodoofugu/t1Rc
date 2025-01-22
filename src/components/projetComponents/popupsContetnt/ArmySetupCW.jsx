@@ -133,7 +133,6 @@ export default function ArmySetupCW() {
           padding={[6, 0]}
           gap={12}
           progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
-          progressElement={<ScrollThumb />}
           edgeGradient={{ color: "#52413f" }}
           infiniteScroll
           rootMargin={[0, 100]}
