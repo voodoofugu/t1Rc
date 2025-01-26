@@ -213,7 +213,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         progressVisibility="hover"
         // lazyRender
         // rootMargin={[0, 0]}
-        // direction
+        // direction="x"
         // suspending
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"

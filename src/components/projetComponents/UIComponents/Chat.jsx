@@ -152,7 +152,7 @@ const Chat = ({ girlInfo }) => {
     };
     const lastIndex = chatMapArray.length - 1;
     const lastIndexCheck = lastIndex === index ? true : false;
-    const lastIndexToDeley =
+    const lastIndexToDelay =
       index in arrayFromChatProgress.slice(0, -9)
         ? 0
         : lastMessagesFromChatProgress.indexOf(index) * 60;
@@ -164,7 +164,7 @@ const Chat = ({ girlInfo }) => {
           delay={
             messageFallback !== "none" && lastIndexCheck
               ? message.Girl[item].split(" ")[0].length * 100 + 1400
-              : lastIndexToDeley
+              : lastIndexToDelay
           }
           onTimeout={() => {
             fallbackBoxRef.current.classList.remove("hiddenInner");
@@ -211,7 +211,7 @@ const Chat = ({ girlInfo }) => {
       return (
         <Delay
           key={`message${index}`}
-          delay={lastIndexCheck ? 100 : lastIndexToDeley}
+          delay={lastIndexCheck ? 100 : lastIndexToDelay}
           styleBeforeTimeout={delayStyle}
           renderOnTimeout={lastIndexCheck}
         >
@@ -224,7 +224,7 @@ const Chat = ({ girlInfo }) => {
       return (
         <Delay
           key={`message${index}`}
-          delay={lastIndexCheck ? 100 : lastIndexToDeley}
+          delay={lastIndexCheck ? 100 : lastIndexToDelay}
           styleBeforeTimeout={delayStyle}
           renderOnTimeout={lastIndexCheck}
         >
@@ -256,7 +256,7 @@ const Chat = ({ girlInfo }) => {
             size={[490, 496]}
             objectsSize={[450, "none"]}
             objectsWrapFullMinSize
-            padding={[0, 20]}
+            padding={[20, 0]}
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollTop={{ value: "end" }}
           >
@@ -273,7 +273,7 @@ const Chat = ({ girlInfo }) => {
                     <IntersectionTracker
                       key={`message${textIndex}`}
                       visibleContent
-                      // intersectionDeley={100}
+                      // intersectionDelay={100}
                       onVisible={() => {
                         lastElements.loadingReady &&
                           setLastElements((prevState) => ({

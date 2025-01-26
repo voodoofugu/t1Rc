@@ -62,14 +62,14 @@ export default memo(function PageBox() {
             className="templateScroll"
             objectsSize={[238, 156]}
             gap={60}
-            padding={[14, 0]}
+            padding={[0, 14]}
             progressTrigger={{ wheel: true, progressElement: true }}
             edgeGradient={{ color: "rgb(199, 210, 254)" }}
             elementsAlign="center"
             contentAlign={["center", "center"]}
             infiniteScroll
             scrollTop={{ value: scrollNew }}
-            onScrollValue={[(scroll) => setScrollTopValue(scroll)]}
+            onScrollValue={(scroll) => setScrollTopValue(scroll)}
             isScrolling={(value) => setIsScrolling(value)}
           >
             {components}
