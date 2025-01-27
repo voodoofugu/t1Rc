@@ -204,7 +204,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         size={[104, 494]}
         objectsSize={[86, 86]}
         gap={10}
-        padding={10}
+        padding={[0, 10]}
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,

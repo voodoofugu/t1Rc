@@ -118,7 +118,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       size={[504, 346]}
       objectsSize={[230, 124]}
       gap={12}
-      padding={[5, 0]}
+      padding={[0, 5]}
       progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       progressElement={<ScrollThumb />}
       edgeGradient={{ color: "#584a49" }}
