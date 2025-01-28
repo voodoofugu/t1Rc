@@ -49,11 +49,12 @@ export default [
       "react/react-in-jsx-scope": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-empty-object-type": "off",
+      "react/display-name": "off",
     },
   },
-  {
-    env: {
-      browser: true,
-    },
-  },
+  // {
+  //   env: {
+  //     browser: true,
+  //   },
+  // },
 ];

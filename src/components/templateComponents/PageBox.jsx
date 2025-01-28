@@ -1,4 +1,11 @@
-import { memo, useMemo, useState, useLayoutEffect, useCallback } from "react";
+import {
+  memo,
+  useMemo,
+  useState,
+  useLayoutEffect,
+  useCallback,
+  useEffect,
+} from "react";
 import { useNexus } from "nexus-state";
 // import { MorphScroll } from "morphing-scroll";
 
@@ -32,6 +39,14 @@ export default memo(function PageBox() {
     [usedPages, isScrolling]
   );
 
+  useStorage([
+    {
+      name: "scrollTop",
+      value: Math.round(scrollTopValue) || false,
+      onLoad: (value) => setScrollNew(value),
+    },
+  ]);
+
   useLayoutEffect(() => {
     if (window.location.hash.length > 2) {
       // устанавливаем scrollTop в новом окне
@@ -45,20 +60,21 @@ export default memo(function PageBox() {
     }
   }, []);
 
-  useStorage([
-    {
-      name: "scrollTop",
-      value: Math.round(scrollTopValue) || false,
-      onLoad: (value) => setScrollNew(value),
-    },
-  ]);
+  const onClickHandler = () => {
+    setScrollNew(null);
+  };
+
+  useEffect(() => {
+    if (scrollNew === null) {
+      setScrollNew(0); // Второе состояние устанавливается после первого
+    }
+  }, [scrollNew]);
 
   return (
     <>
       {usedPages[0] !== "not found" ? (
         <div className="h-calcScreenH-112 m-auto max-w-1160 w-calcFull-80">
           <MorphScroll
-            // scrollID="templateScroll"
             className="templateScroll"
             objectsSize={[238, 156]}
             gap={60}
@@ -78,10 +94,7 @@ export default memo(function PageBox() {
             scrollTopValue={scrollTopValue}
             isScrolling={isScrolling}
             onClick={() => {
-              setScrollNew(undefined);
-              requestAnimationFrame(() => {
-                setScrollNew(0);
-              });
+              onClickHandler();
             }}
           />
         </div>
