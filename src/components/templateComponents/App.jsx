@@ -1,4 +1,3 @@
-import { StrictMode } from "react";
 import { NexusProvider } from "nexus-state";
 import { StyleCore, StyledAtom } from "styled-atom";
 
@@ -10,7 +9,7 @@ import Storage from "../../components/templateComponents/Storage";
 
 export default function App() {
   return (
-    <StrictMode>
+    <>
       <StyleCore path={(name) => import(`../../styles/css/${name}.css`)} />
       <StyledAtom fileNames={["output"]} />
       <NexusProvider initialStates={initialStates} initialFuncs={initialFuncs}>
@@ -26,6 +25,6 @@ export default function App() {
         <TitlePage />
         <Template />
       </NexusProvider>
-    </StrictMode>
+    </>
   );
 }

@@ -199,7 +199,6 @@ const GirlDependencies = ({ girlsInfo }) => {
       {/* <div className="girlMood">
       </div> */}
       <MorphScroll
-        // scrollID="datingAvatars"
         className="scrollAvatars"
         size={[104, 494]}
         objectsSize={[86, 86]}

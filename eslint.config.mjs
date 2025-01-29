@@ -52,9 +52,9 @@ export default [
       "react/display-name": "off",
     },
   },
-  // {
-  //   env: {
-  //     browser: true,
-  //   },
-  // },
+  {
+    env: {
+      browser: true,
+    },
+  },
 ];

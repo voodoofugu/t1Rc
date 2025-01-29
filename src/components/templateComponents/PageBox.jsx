@@ -17,7 +17,7 @@ import Page404Component from "../projetComponents/pagesComponents/Page404";
 import PageList from "../projetComponents/pagesComponents/a_pageList";
 import useStorage from "../hooks/useStorage";
 
-export default memo(function PageBox() {
+export default function PageBox() {
   const searchData = useNexus("searchData");
 
   const [isScrolling, setIsScrolling] = useState();
@@ -34,7 +34,11 @@ export default memo(function PageBox() {
 
   const components = useCallback(
     usedPages.map((pageName, index) => (
-      <Cell key={index} pageName={pageName} isScrolling={isScrolling} />
+      <Cell
+        key={`${index}cell`}
+        pageName={pageName}
+        isScrolling={isScrolling}
+      />
     )),
     [usedPages, isScrolling]
   );
@@ -112,4 +116,4 @@ export default memo(function PageBox() {
       )}
     </>
   );
-});
+}
