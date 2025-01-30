@@ -20,6 +20,10 @@ export const cssFiles = [
   "daiting-gifts-pop",
 ];
 
+function FakeComponent() {
+  return null;
+}
+
 export default function Dating({ pageName, children }) {
   return (
     <div className="main world1">
@@ -185,7 +189,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </ProgressBar>
 
-      <Chat girlInfo={girlsInfo[girlIndex]} />
+      {/* <Chat girlInfo={girlsInfo[girlIndex]} /> */}
 
       <div className="girlName">
         <div className="addText">with</div>
@@ -222,16 +226,22 @@ const GirlDependencies = ({ girlsInfo }) => {
         // infiniteScroll
         // type="slider"
       >
-        {girlsInfo.map((item, index) => (
-          <PersonAva
-            key={item.id}
-            className={
-              index === girlIndex ? item.condition + " active" : item.condition
-            }
-            img={`img/images/superhero/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
-            onClick={() => setGirlIndex(index)}
-          />
-        ))}
+        <>
+          {girlsInfo.map((item, index) => (
+            <PersonAva
+              key={item.id}
+              className={
+                index === girlIndex
+                  ? item.condition + " active"
+                  : item.condition
+              }
+              img={`img/images/superhero/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
+              onClick={() => setGirlIndex(index)}
+            />
+          ))}
+          <FakeComponent />
+          {/* <div className="scrollEnd"></div> */}
+        </>
       </MorphScroll>
     </>
   );
