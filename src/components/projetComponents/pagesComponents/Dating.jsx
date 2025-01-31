@@ -189,7 +189,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </ProgressBar>
 
-      {/* <Chat girlInfo={girlsInfo[girlIndex]} /> */}
+      <Chat girlInfo={girlsInfo[girlIndex]} />
 
       <div className="girlName">
         <div className="addText">with</div>
@@ -214,7 +214,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         }}
         progressReverse
         progressVisibility="hover"
-        // lazyRender
+        lazyRender
         // rootMargin={[0, 0]}
         // direction="x"
         // suspending
