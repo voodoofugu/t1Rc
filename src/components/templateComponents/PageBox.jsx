@@ -87,7 +87,7 @@ export default function PageBox() {
             edgeGradient={{ color: "rgb(199, 210, 254)" }}
             elementsAlign="center"
             contentAlign={["center", "center"]}
-            infiniteScroll
+            render={{ type: "virtual" }}
             scrollTop={{ value: scrollNew }}
             onScrollValue={(scroll) => setScrollTopValue(scroll)}
             isScrolling={(value) => setIsScrolling(value)}

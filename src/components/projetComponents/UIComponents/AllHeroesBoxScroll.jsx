@@ -111,6 +111,10 @@ function HeroBox({
   );
 }
 
+function FakeComponent() {
+  return null;
+}
+
 export default function AllHeroesBoxScroll({ numX }) {
   return (
     <MorphScroll
@@ -122,32 +126,35 @@ export default function AllHeroesBoxScroll({ numX }) {
       progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       progressElement={<ScrollThumb />}
       edgeGradient={{ color: "#584a49" }}
-      infiniteScroll
+      render={{ type: "virtual" }}
       progressVisibility="hover"
       contentAlign={["center", "center"]}
       // direction
     >
-      {heroBoxData.map((item, index) => (
-        <HeroBox
-          key={index}
-          {...item}
-          btnNumX={numX}
-          btnOnClick={() => {
-            // index === 2 &&
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup contentOnly framedPop heroOfferPop",
-                  popCont: "HeroOfferPop",
-                  props: { ...item },
+      <>
+        <FakeComponent />
+        {heroBoxData.map((item, index) => (
+          <HeroBox
+            key={index}
+            {...item}
+            btnNumX={numX}
+            btnOnClick={() => {
+              // index === 2 &&
+              nexusTrigger({
+                type: "handlePopup",
+                payload: {
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly framedPop heroOfferPop",
+                    popCont: "HeroOfferPop",
+                    props: { ...item },
+                  },
                 },
-              },
-            });
-          }}
-        />
-      ))}
+              });
+            }}
+          />
+        ))}
+      </>
     </MorphScroll>
   );
 }

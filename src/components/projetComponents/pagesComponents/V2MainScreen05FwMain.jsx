@@ -117,7 +117,7 @@ export default function V2MainScreen05FwMain() {
                   content: true,
                 }}
                 edgeGradient={{ color: "#3f3c3a" }}
-                infiniteScroll
+                render={{ type: "virtual" }}
                 direction="x"
               >
                 {elements.map((element, index) => (

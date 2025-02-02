@@ -140,7 +140,7 @@ export default function DarkBtlPass() {
               content: true,
             }}
             edgeGradient={{ color: "#202c38" }}
-            infiniteScroll
+            render={{ type: "virtual" }}
             direction="x"
           >
             {elements.map((element, index) => (

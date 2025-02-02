@@ -214,7 +214,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         }}
         progressReverse
         progressVisibility="hover"
-        lazyRender
+        // lazyRender
         // rootMargin={[0, 0]}
         // direction="x"
         // suspending
@@ -223,10 +223,13 @@ const GirlDependencies = ({ girlsInfo }) => {
         edgeGradient={{ color: "#572e19" }}
         elementsAlign="center"
         contentAlign={["center", "center"]}
-        // infiniteScroll
+        render={{ type: "virtual" }}
+        // render={{ type: "lazy" }}
         // type="slider"
+        // scrollTop={{ value: "end" }}
       >
         <>
+          <FakeComponent />
           {girlsInfo.map((item, index) => (
             <PersonAva
               key={item.id}

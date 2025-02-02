@@ -1,13 +1,4 @@
-import React from "react";
-
 export default function PersonAva({ img, className, onClick }) {
-  React.useEffect(() => {
-    if (img) {
-      const image = new Image();
-      image.src = img;
-    }
-  }, [img]);
-
   return (
     <div
       className={`personAva ${className ? className : ""}`}

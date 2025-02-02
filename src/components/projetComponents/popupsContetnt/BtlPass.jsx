@@ -238,7 +238,7 @@ export default function BtlPass({ event }) {
               content: true,
             }}
             edgeGradient={{ color: edgeGradient }}
-            infiniteScroll
+            render={{ type: "virtual" }}
             direction="x"
           >
             {elements.map((element, index) => (
