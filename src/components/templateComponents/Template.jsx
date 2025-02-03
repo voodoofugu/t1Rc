@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 import { StyledAtom } from "styled-atom";
 
 import PageBox from "./PageBox";
@@ -5,7 +7,7 @@ import PageBox from "./PageBox";
 import TemplateContent from "./TemplateContent";
 import Loading from "./Loading";
 
-export default function Template() {
+export default memo(function Template() {
   return (
     <>
       <StyledAtom
@@ -28,4 +30,4 @@ export default function Template() {
       </StyledAtom>
     </>
   );
-}
+});

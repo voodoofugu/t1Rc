@@ -1,11 +1,13 @@
-import React from "react";
+import HeroBox from "../UIComponents/HeroBox";
+
+import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export const cssFiles = ["v2-screen-portal-squad"];
 
 export default function V2MainScreen22SquadMain() {
   return (
     <div className="main lang-ru world2">
-      <div className="btn-admin"></div>
       <div
         className="main-bg"
         style={{
@@ -255,7 +257,8 @@ export default function V2MainScreen22SquadMain() {
         <a
           className="btn-discord"
           href="https://discord.gg/7pjeXF3emj"
-          target="_blank" rel="noreferrer"
+          target="_blank"
+          rel="noreferrer"
         ></a>
       </div>
       <div className="left-side false false">
@@ -293,430 +296,443 @@ export default function V2MainScreen22SquadMain() {
                   </div>
                 </div>
                 <div className="all-heroes-box">
-                  <div className="all-heroes-box-scroll">
-                    <div className="hero-card-box-all">
-                      <div className="hero-card-wrap bronze-color-bg">
-                        <div className="hero-card">
-                          <div className="squad-info-buttons">
-                            <div className="suphero-buttons-info">Squad #1</div>
-                            <div className="suphero-buttons-dpc">
-                              <div className="dpc-info">200</div>
-                            </div>
-                            <div className="suphero-buttons-dps">
-                              <div className="dps-info">6.33K</div>
-                            </div>
+                  <MorphScroll
+                    className="heroBoxsScroll"
+                    size={[504, 346]}
+                    objectsSize={[470, 132]}
+                    gap={12}
+                    padding={[0, 5]}
+                    progressTrigger={{
+                      wheel: true,
+                      progressElement: <ScrollThumb />,
+                    }}
+                    progressElement={<ScrollThumb />}
+                    edgeGradient={{ color: "#584a49" }}
+                    render={{ type: "virtual" }}
+                    progressVisibility="hover"
+                    contentAlign={["center", "center"]}
+                    emptyElements={{ mode: "clear" }}
+                  >
+                    <HeroBox
+                      key={1}
+                      className="squad"
+                      name="Squad #1"
+                      lvl="6969"
+                      dps="777"
+                      power="123"
+                      itemClass="selectable cardAva block"
+                      imgId={446}
+                      heroClass="gun"
+                    />
+                    <div className="hero-card-wrap bronze-color-bg">
+                      <div className="hero-card">
+                        <div className="squad-info-buttons">
+                          <div className="suphero-buttons-info">Squad #1</div>
+                          <div className="suphero-buttons-dpc">
+                            <div className="dpc-info">200</div>
                           </div>
-                          <div className="hero-level-box">
-                            Rank
-                            <div className="hero-level">bronze</div>
+                          <div className="suphero-buttons-dps">
+                            <div className="dps-info">6.33K</div>
                           </div>
-                          <div className="specialization-icon">
-                            <div className="cls">
-                              <img src="img/cur2-wizard.png" loading="lazy" />
-                            </div>
-                            <div className="elem">
+                        </div>
+                        <div className="hero-level-box">
+                          Rank
+                          <div className="hero-level">bronze</div>
+                        </div>
+                        <div className="specialization-icon">
+                          <div className="cls">
+                            <img src="img/cur2-wizard.png" loading="lazy" />
+                          </div>
+                          <div className="elem">
+                            <img src="img/elements/Water.png" loading="lazy" />
+                          </div>
+                        </div>
+                        <div className="squad-card-heroes">
+                          <div className="squad-card-hero-wrap lvl0">
+                            <div className="squad-card-hero">
                               <img
-                                src="img/elements/Water.png"
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
                                 loading="lazy"
                               />
                             </div>
                           </div>
-                          <div className="squad-card-heroes">
-                            <div className="squad-card-hero-wrap lvl0">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5001/x1/ava/tithero-5001-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl1">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl1">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl2">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl2">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl2">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5006/x1/ava/tithero-5006-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="hero-card-wrap silver-color-bg">
-                        <div className="hero-card">
-                          <div className="squad-info-buttons">
-                            <div className="suphero-buttons-info">Squad #2</div>
-                            <div className="suphero-buttons-dpc">
-                              <div className="dpc-info">100</div>
-                            </div>
-                            <div className="suphero-buttons-dps">
-                              <div className="dps-info">1.78K</div>
-                            </div>
-                          </div>
-                          <div className="hero-level-box">
-                            Rank
-                            <div className="hero-level">silver</div>
-                          </div>
-                          <div className="specialization-icon">
-                            <div className="cls">
-                              <img src="img/cur2-druid.png" loading="lazy" />
-                            </div>
-                            <div className="elem">
-                              <img src="img/elements/Fire.png" loading="lazy" />
-                            </div>
-                          </div>
-                          <div className="squad-card-heroes">
-                            <div className="squad-card-hero-wrap lvl3">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5007/x1/ava/tithero-5007-4-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl3">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5008/x1/ava/tithero-5008-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl3">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5009/x1/ava/tithero-5009-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl4">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-5010/x1/ava/tithero-5010-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl4">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-11/x1/ava/tithero-11-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl4">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-13/x1/ava/tithero-13-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="hero-card-wrap gold-color-bg">
-                        <div className="hero-card">
-                          <div className="squad-info-buttons">
-                            <div className="suphero-buttons-info">Squad #3</div>
-                            <div className="suphero-buttons-dpc">
-                              <div className="dpc-info">100</div>
-                            </div>
-                            <div className="suphero-buttons-dps">
-                              <div className="dps-info">1.89K</div>
-                            </div>
-                          </div>
-                          <div className="hero-level-box">
-                            Rank
-                            <div className="hero-level">gold</div>
-                          </div>
-                          <div className="specialization-icon">
-                            <div className="hero-level"></div>
-                            <div className="cls">
-                              <img src="img/cur2-cleric.png" loading="lazy" />
-                            </div>
-                            <div className="elem">
+                          <div className="squad-card-hero-wrap lvl1">
+                            <div className="squad-card-hero">
                               <img
-                                src="img/elements/Earth.png"
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5002/x1/ava/tithero-5002-5-ava.jpg"
                                 loading="lazy"
                               />
                             </div>
                           </div>
-                          <div className="squad-card-heroes">
-                            <div className="squad-card-hero-wrap lvl5">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-14/x1/ava/tithero-14-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl5">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-15/x1/ava/tithero-15-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl5">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-16/x1/ava/tithero-16-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl6">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-17/x1/ava/tithero-17-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl6">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-18/x1/ava/tithero-18-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl6">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-19/x1/ava/tithero-19-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="hero-card-wrap platinum-color-bg">
-                        <div className="hero-card">
-                          <div className="squad-info-buttons">
-                            <div className="suphero-buttons-info">Squad #4</div>
-                            <div className="suphero-buttons-dpc">
-                              <div className="dpc-info">100</div>
-                            </div>
-                            <div className="suphero-buttons-dps">
-                              <div className="dps-info">2K</div>
-                            </div>
-                          </div>
-                          <div className="hero-level-box">
-                            Rank
-                            <div className="hero-level">platinum</div>
-                          </div>
-                          <div className="specialization-icon">
-                            <div className="hero-level"></div>
-                            <div className="cls">
+                          <div className="squad-card-hero-wrap lvl1">
+                            <div className="squad-card-hero">
                               <img
-                                src="img/cur2-barbarian.png"
-                                loading="lazy"
-                              />
-                            </div>
-                            <div className="elem">
-                              <img src="img/elements/Air.png" loading="lazy" />
-                            </div>
-                          </div>
-                          <div className="squad-card-heroes">
-                            <div className="squad-card-hero-wrap lvl7">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-20/x1/ava/tithero-20-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl7">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-21/x1/ava/tithero-21-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl7">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-22/x1/ava/tithero-22-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl8">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-23/x1/ava/tithero-23-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl8">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-24/x1/ava/tithero-24-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl8">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-25/x1/ava/tithero-25-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="hero-card-wrap diamond-color-bg">
-                        <div className="hero-card">
-                          <div className="squad-info-buttons">
-                            <div className="suphero-buttons-info">Squad #5</div>
-                            <div className="suphero-buttons-dpc">
-                              <div className="dpc-info">200</div>
-                            </div>
-                            <div className="suphero-buttons-dps">
-                              <div className="dps-info">9.67K</div>
-                            </div>
-                          </div>
-                          <div className="hero-level-box">
-                            Rank
-                            <div className="hero-level">diamond</div>
-                          </div>
-                          <div className="specialization-icon">
-                            <div className="hero-level"></div>
-                            <div className="cls">
-                              <img src="img/cur2-gun.png" loading="lazy" />
-                            </div>
-                            <div className="elem">
-                              <img
-                                src="img/elements/Death.png"
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5003/x1/ava/tithero-5003-5-ava.jpg"
                                 loading="lazy"
                               />
                             </div>
                           </div>
-                          <div className="squad-card-heroes">
-                            <div className="squad-card-hero-wrap lvl9">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-26/x1/ava/tithero-26-4-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
+                          <div className="squad-card-hero-wrap lvl2">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5004/x1/ava/tithero-5004-5-ava.jpg"
+                                loading="lazy"
+                              />
                             </div>
-                            <div className="squad-card-hero-wrap lvl9">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-27/x1/ava/tithero-27-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl2">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5005/x1/ava/tithero-5005-5-ava.jpg"
+                                loading="lazy"
+                              />
                             </div>
-                            <div className="squad-card-hero-wrap lvl9">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-28/x1/ava/tithero-28-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl10">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-29/x1/ava/tithero-29-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl10">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-30/x1/ava/tithero-30-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
-                            </div>
-                            <div className="squad-card-hero-wrap lvl10">
-                              <div className="squad-card-hero">
-                                <img
-                                  className="squad-card-hero-img"
-                                  src="img/images/hero-all/tithero-31/x1/ava/tithero-31-5-ava.jpg"
-                                  loading="lazy"
-                                />
-                              </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl2">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5006/x1/ava/tithero-5006-5-ava.jpg"
+                                loading="lazy"
+                              />
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                    <div className="hero-card-wrap silver-color-bg">
+                      <div className="hero-card">
+                        <div className="squad-info-buttons">
+                          <div className="suphero-buttons-info">Squad #2</div>
+                          <div className="suphero-buttons-dpc">
+                            <div className="dpc-info">100</div>
+                          </div>
+                          <div className="suphero-buttons-dps">
+                            <div className="dps-info">1.78K</div>
+                          </div>
+                        </div>
+                        <div className="hero-level-box">
+                          Rank
+                          <div className="hero-level">silver</div>
+                        </div>
+                        <div className="specialization-icon">
+                          <div className="cls">
+                            <img src="img/cur2-druid.png" loading="lazy" />
+                          </div>
+                          <div className="elem">
+                            <img src="img/elements/Fire.png" loading="lazy" />
+                          </div>
+                        </div>
+                        <div className="squad-card-heroes">
+                          <div className="squad-card-hero-wrap lvl3">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5007/x1/ava/tithero-5007-4-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl3">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5008/x1/ava/tithero-5008-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl3">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5009/x1/ava/tithero-5009-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl4">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-5010/x1/ava/tithero-5010-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl4">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-11/x1/ava/tithero-11-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl4">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-13/x1/ava/tithero-13-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="hero-card-wrap gold-color-bg">
+                      <div className="hero-card">
+                        <div className="squad-info-buttons">
+                          <div className="suphero-buttons-info">Squad #3</div>
+                          <div className="suphero-buttons-dpc">
+                            <div className="dpc-info">100</div>
+                          </div>
+                          <div className="suphero-buttons-dps">
+                            <div className="dps-info">1.89K</div>
+                          </div>
+                        </div>
+                        <div className="hero-level-box">
+                          Rank
+                          <div className="hero-level">gold</div>
+                        </div>
+                        <div className="specialization-icon">
+                          <div className="hero-level"></div>
+                          <div className="cls">
+                            <img src="img/cur2-cleric.png" loading="lazy" />
+                          </div>
+                          <div className="elem">
+                            <img src="img/elements/Earth.png" loading="lazy" />
+                          </div>
+                        </div>
+                        <div className="squad-card-heroes">
+                          <div className="squad-card-hero-wrap lvl5">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-14/x1/ava/tithero-14-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl5">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-15/x1/ava/tithero-15-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl5">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-16/x1/ava/tithero-16-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl6">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-17/x1/ava/tithero-17-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl6">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-18/x1/ava/tithero-18-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl6">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-19/x1/ava/tithero-19-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="hero-card-wrap platinum-color-bg">
+                      <div className="hero-card">
+                        <div className="squad-info-buttons">
+                          <div className="suphero-buttons-info">Squad #4</div>
+                          <div className="suphero-buttons-dpc">
+                            <div className="dpc-info">100</div>
+                          </div>
+                          <div className="suphero-buttons-dps">
+                            <div className="dps-info">2K</div>
+                          </div>
+                        </div>
+                        <div className="hero-level-box">
+                          Rank
+                          <div className="hero-level">platinum</div>
+                        </div>
+                        <div className="specialization-icon">
+                          <div className="hero-level"></div>
+                          <div className="cls">
+                            <img src="img/cur2-barbarian.png" loading="lazy" />
+                          </div>
+                          <div className="elem">
+                            <img src="img/elements/Air.png" loading="lazy" />
+                          </div>
+                        </div>
+                        <div className="squad-card-heroes">
+                          <div className="squad-card-hero-wrap lvl7">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-20/x1/ava/tithero-20-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl7">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-21/x1/ava/tithero-21-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl7">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-22/x1/ava/tithero-22-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl8">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-23/x1/ava/tithero-23-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl8">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-24/x1/ava/tithero-24-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl8">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-25/x1/ava/tithero-25-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="hero-card-wrap diamond-color-bg">
+                      <div className="hero-card">
+                        <div className="squad-info-buttons">
+                          <div className="suphero-buttons-info">Squad #5</div>
+                          <div className="suphero-buttons-dpc">
+                            <div className="dpc-info">200</div>
+                          </div>
+                          <div className="suphero-buttons-dps">
+                            <div className="dps-info">9.67K</div>
+                          </div>
+                        </div>
+                        <div className="hero-level-box">
+                          Rank
+                          <div className="hero-level">diamond</div>
+                        </div>
+                        <div className="specialization-icon">
+                          <div className="hero-level"></div>
+                          <div className="cls">
+                            <img src="img/cur2-gun.png" loading="lazy" />
+                          </div>
+                          <div className="elem">
+                            <img src="img/elements/Death.png" loading="lazy" />
+                          </div>
+                        </div>
+                        <div className="squad-card-heroes">
+                          <div className="squad-card-hero-wrap lvl9">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-26/x1/ava/tithero-26-4-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl9">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-27/x1/ava/tithero-27-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl9">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-28/x1/ava/tithero-28-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl10">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-29/x1/ava/tithero-29-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl10">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-30/x1/ava/tithero-30-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                          <div className="squad-card-hero-wrap lvl10">
+                            <div className="squad-card-hero">
+                              <img
+                                className="squad-card-hero-img"
+                                src="img/images/hero-all/tithero-31/x1/ava/tithero-31-5-ava.jpg"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </MorphScroll>
                 </div>
                 <div className="x2-btn-all-box">
                   <div className="x2-btn wide">

@@ -20,10 +20,6 @@ export const cssFiles = [
   "daiting-gifts-pop",
 ];
 
-function FakeComponent() {
-  return null;
-}
-
 export default function Dating({ pageName, children }) {
   return (
     <div className="main world1">
@@ -224,27 +220,21 @@ const GirlDependencies = ({ girlsInfo }) => {
         elementsAlign="center"
         contentAlign={["center", "center"]}
         render={{ type: "virtual" }}
+        // emptyElements={{ mode: "clear" }}
         // render={{ type: "lazy" }}
         // type="slider"
         // scrollTop={{ value: "end" }}
       >
-        <>
-          <FakeComponent />
-          {girlsInfo.map((item, index) => (
-            <PersonAva
-              key={item.id}
-              className={
-                index === girlIndex
-                  ? item.condition + " active"
-                  : item.condition
-              }
-              img={`img/images/superhero/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
-              onClick={() => setGirlIndex(index)}
-            />
-          ))}
-          <FakeComponent />
-          {/* <div className="scrollEnd"></div> */}
-        </>
+        {girlsInfo.map((item, index) => (
+          <PersonAva
+            key={item.id}
+            className={
+              index === girlIndex ? item.condition + " active" : item.condition
+            }
+            img={`img/images/superhero/suphero-${item.id}/x1/avatar/sh-ava-1.jpg`}
+            onClick={() => setGirlIndex(index)}
+          />
+        ))}
       </MorphScroll>
     </>
   );
