@@ -65,12 +65,12 @@ export default function PageBox() {
   }, []);
 
   const onClickHandler = () => {
-    setScrollNew(null);
+    setScrollNew(0);
   };
 
   useEffect(() => {
-    if (scrollNew === null) {
-      setScrollNew(0); // Второе состояние устанавливается после первого
+    if (scrollNew === 0) {
+      setScrollNew(null); // Второе состояние устанавливается после первого
     }
   }, [scrollNew]);
 
@@ -97,9 +97,7 @@ export default function PageBox() {
           <ToTopButton
             scrollTopValue={scrollTopValue}
             isScrolling={isScrolling}
-            onClick={() => {
-              onClickHandler();
-            }}
+            onClick={onClickHandler}
           />
         </div>
       ) : (

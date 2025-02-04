@@ -20,13 +20,11 @@ export default function AllHeroesBoxScroll({ numX }) {
       gap={12}
       padding={[0, 5]}
       progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
-      progressElement={<ScrollThumb />}
       edgeGradient={{ color: "#584a49" }}
       render={{ type: "virtual" }}
       progressVisibility="hover"
       contentAlign={["center", "center"]}
       emptyElements={{ mode: "clear" }}
-      // direction
     >
       <>
         <FakeComponent />

@@ -1,7 +1,6 @@
-import HeroBox from "../UIComponents/HeroBox";
-
 import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
+import Button from "../UIComponents/Button";
 
 export const cssFiles = ["v2-screen-portal-squad"];
 
@@ -313,17 +312,6 @@ export default function V2MainScreen22SquadMain() {
                     contentAlign={["center", "center"]}
                     emptyElements={{ mode: "clear" }}
                   >
-                    <HeroBox
-                      key={1}
-                      className="squad"
-                      name="Squad #1"
-                      lvl="6969"
-                      dps="777"
-                      power="123"
-                      itemClass="selectable cardAva block"
-                      imgId={446}
-                      heroClass="gun"
-                    />
                     <div className="hero-card-wrap bronze-color-bg">
                       <div className="hero-card">
                         <div className="squad-info-buttons">
@@ -735,15 +723,9 @@ export default function V2MainScreen22SquadMain() {
                   </MorphScroll>
                 </div>
                 <div className="x2-btn-all-box">
-                  <div className="x2-btn wide">
-                    <div className="x2-btn-text">ALL SQUADS</div>
-                  </div>
-                  <div className="x2-btn wide">
-                    <div className="x2-btn-text">PROMOTE SQUADS</div>
-                  </div>
-                  <div className="x2-btn wide">
-                    <div className="x2-btn-text">WORLD QUESTS</div>
-                  </div>
+                  <Button className="lightBlue max" text="ALL SQUADS" />
+                  <Button className="lightBlue max" text="PROMOTE SQUADS" />
+                  <Button className="lightBlue max" text="WORLD QUESTS" />
                 </div>
               </div>
               <div className="tab-loading-wrapper border"></div>
@@ -841,14 +823,6 @@ export default function V2MainScreen22SquadMain() {
               <div className="tabs-name">Rating Tab</div>
               <div className="tabs-pic">
                 <img src="img/tab-02.png" loading="lazy" />
-              </div>
-            </div>
-          </a>
-          <a className="tabs-all squests" href="#/quests/daily">
-            <div style={{ width: "100%", height: "100%" }}>
-              <div className="tabs-name">Quests</div>
-              <div className="tabs-pic">
-                <img src="img/tab-10.png" loading="lazy" />
               </div>
             </div>
           </a>
