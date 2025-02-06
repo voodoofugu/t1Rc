@@ -1,3 +1,4 @@
+import React from "react";
 import { nexusTrigger } from "nexus-state";
 
 import HeroBox from "../UIComponents/HeroBox";
@@ -6,10 +7,6 @@ import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import heroBoxData from "../data/heroBoxData";
-
-function FakeComponent() {
-  return null;
-}
 
 export default function AllHeroesBoxScroll({ numX }) {
   return (
@@ -23,33 +20,30 @@ export default function AllHeroesBoxScroll({ numX }) {
       edgeGradient={{ color: "#584a49" }}
       render={{ type: "virtual" }}
       progressVisibility="hover"
-      contentAlign={["center", "center"]}
-      emptyElements={{ mode: "clear" }}
+      contentAlign={["center", "start"]}
+      emptyElements={{ mode: "clear", closeSelector: ".exit" }}
     >
-      <>
-        <FakeComponent />
-        {heroBoxData.map((item, index) => (
-          <HeroBox
-            key={index}
-            {...item}
-            btnNumX={numX}
-            btnOnClick={() => {
-              // index === 2 &&
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup contentOnly framedPop heroOfferPop",
-                    popCont: "HeroOfferPop",
-                    props: { ...item },
-                  },
+      {heroBoxData.map((item, index) => (
+        <HeroBox
+          key={index}
+          {...item}
+          btnNumX={numX}
+          btnOnClick={() => {
+            // index === 2 &&
+            nexusTrigger({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup contentOnly framedPop heroOfferPop",
+                  popCont: "HeroOfferPop",
+                  props: { ...item },
                 },
-              });
-            }}
-          />
-        ))}
-      </>
+              },
+            });
+          }}
+        />
+      ))}
     </MorphScroll>
   );
 }

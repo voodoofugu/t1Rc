@@ -20,6 +20,10 @@ export const cssFiles = [
   "daiting-gifts-pop",
 ];
 
+function FakeComponent() {
+  return null;
+}
+
 export default function Dating({ pageName, children }) {
   return (
     <div className="main world1">
@@ -220,11 +224,12 @@ const GirlDependencies = ({ girlsInfo }) => {
         elementsAlign="center"
         contentAlign={["center", "center"]}
         render={{ type: "virtual" }}
-        // emptyElements={{ mode: "clear" }}
+        emptyElements={{ mode: "clear" }}
         // render={{ type: "lazy" }}
         // type="slider"
         // scrollTop={{ value: "end" }}
       >
+        <FakeComponent key="q1" />
         {girlsInfo.map((item, index) => (
           <PersonAva
             key={item.id}
@@ -235,6 +240,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
+        <FakeComponent key="q2" />
       </MorphScroll>
     </>
   );

@@ -1,3 +1,4 @@
+import React from "react";
 import Button from "../UIComponents/Button";
 import ItemBox from "../UIComponents/ItemBox";
 import FraimedTitle from "../UIComponents/FraimedTitle";
@@ -21,6 +22,8 @@ export default function HeroBox({
   btnOnClick,
   squadRank,
 }) {
+  const [visible, setVisible] = React.useState(true);
+
   // check classes existing from className with RegEx
   const offerExist = /offer/.test(className);
   const starterExist = /starterpack/.test(className);
@@ -31,7 +34,7 @@ export default function HeroBox({
   const offerStarterExist = offerExist || starterExist;
   const offerDisabledExist = offerExist || disabledExist;
 
-  return (
+  return visible ? (
     <div className="heroCardBox">
       {highlightExist && <div className="highlightBg"></div>}
       <div className="clickArea" onClick={onClick}></div>
@@ -97,8 +100,10 @@ export default function HeroBox({
           </div>
         )}
 
-        {offerStarterExist && <Button className="exit" text="✖" />}
+        {offerStarterExist && (
+          <Button className="exit" text="✖" onClick={() => setVisible(false)} />
+        )}
       </div>
     </div>
-  );
+  ) : null;
 }

@@ -33,7 +33,7 @@ const Chat = ({ girlInfo }) => {
     [girlInfo.id]: -10,
     loadingReady: false,
   });
-  if (lastElements[girlInfo.id] === undefined) {
+  if (!lastElements[girlInfo.id]) {
     setLastElements({
       [girlInfo.id]: -10,
       loadingReady: false,

@@ -50,11 +50,23 @@ export default [
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-empty-object-type": "off",
       "react/display-name": "off",
+      "no-undef": "off",
     },
   },
   {
-    env: {
-      browser: true,
+    languageOptions: {
+      parserOptions: {
+        project: "./tsconfig.json",
+        tsconfigRootDir: process.cwd(),
+      },
+      globals: {
+        window: "readonly",
+        document: "readonly",
+        navigator: "readonly",
+        console: "readonly",
+        process: "readonly",
+        module: "readonly",
+      },
     },
   },
 ];

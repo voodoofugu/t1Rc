@@ -455,33 +455,32 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                         tab2={[
                           "relicsBtn",
                           "Relics",
-                          <TowerRelicsBoxScroll
-                            children={
-                              <div
-                                className="towerAddRelics"
-                                onClick={() => {
-                                  nexusTrigger({
-                                    type: "handlePopup",
-                                    payload: {
-                                      type: "open",
-                                      data: {
-                                        mpopClass:
-                                          "m-popup main-relics-pop tower",
-                                        popTit: "Buy Relics",
-                                        popCont: "MainRelics",
-                                        props: { hole: `${hole}` },
-                                      },
+                          <TowerRelicsBoxScroll key={1}>
+                            <div
+                              className="towerAddRelics"
+                              onClick={() => {
+                                nexusTrigger({
+                                  type: "handlePopup",
+                                  payload: {
+                                    type: "open",
+                                    data: {
+                                      mpopClass:
+                                        "m-popup main-relics-pop tower",
+                                      popTit: "Buy Relics",
+                                      popCont: "MainRelics",
+                                      props: { hole: `${hole}` },
                                     },
-                                  });
-                                }}
-                              ></div>
-                            }
-                          />,
+                                  },
+                                });
+                              }}
+                            ></div>
+                          </TowerRelicsBoxScroll>,
                         ]}
                         tab3={[
                           "trophiesBtn",
                           "Trophie",
                           <TowerTrophyBoxScroll
+                            key={2}
                             onClick={() => {
                               nexusTrigger({
                                 type: "handlePopup",
@@ -615,14 +614,6 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
               <div className="tabs-name">Rating Tab</div>
               <div className="tabs-pic">
                 <img src="img/tab-02.png" loading="lazy" />
-              </div>
-            </div>
-          </a>
-          <a className="tabs-all squests" href="#/quests/daily">
-            <div style={{ width: "100%", height: "100%" }}>
-              <div className="tabs-name">Quests</div>
-              <div className="tabs-pic">
-                <img src="img/tab-10.png" loading="lazy" />
               </div>
             </div>
           </a>
