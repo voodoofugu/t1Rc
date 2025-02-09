@@ -22,7 +22,10 @@ export default function PageBox() {
 
   const [isScrolling, setIsScrolling] = useState();
   const [scrollTopValue, setScrollTopValue] = useState(0);
-  const [scrollNew, setScrollNew] = useState();
+  const [scrollNew, setScrollNew] = useState({
+    value: 0,
+    updater: false,
+  });
 
   const usedPages = useMemo(() => {
     if (searchData) {
@@ -34,11 +37,7 @@ export default function PageBox() {
 
   const components = useCallback(
     usedPages.map((pageName, index) => (
-      <Cell
-        key={`${index}cell`}
-        pageName={pageName}
-        isScrolling={isScrolling}
-      />
+      <Cell key={`${index}`} pageName={pageName} isScrolling={isScrolling} />
     )),
     [usedPages, isScrolling]
   );
@@ -47,7 +46,7 @@ export default function PageBox() {
     {
       name: "scrollTop",
       value: Math.round(scrollTopValue) || false,
-      onLoad: (value) => setScrollNew(value),
+      onLoad: (value) => setScrollNew((prev) => ({ ...prev, value: value })),
     },
   ]);
 
@@ -59,59 +58,53 @@ export default function PageBox() {
         const statesNewTab = window.location.hash.substring(3);
         const hashParts = statesNewTab.split("/");
         setScrollTopValue(Number(hashParts[1]));
-        setScrollNew(Number(hashParts[1]));
+        setScrollNew((prev) => ({
+          ...prev,
+          value: Number(hashParts[1]),
+          duration: 0,
+        }));
       }
     }
   }, []);
 
   const onClickHandler = () => {
-    setScrollNew(0);
+    setScrollNew((prev) => ({ ...prev, value: 0, updater: !prev.updater }));
   };
 
-  useEffect(() => {
-    if (scrollNew === 0) {
-      setScrollNew(null); // Второе состояние устанавливается после первого
-    }
-  }, [scrollNew]);
-
-  return (
-    <>
-      {usedPages[0] !== "not found" ? (
-        <div className="h-calcScreenH-112 m-auto max-w-1160 w-calcFull-80">
-          <MorphScroll
-            className="templateScroll"
-            objectsSize={[238, 156]}
-            gap={60}
-            padding={[0, 14]}
-            progressTrigger={{ wheel: true, progressElement: true }}
-            edgeGradient={{ color: "rgb(199, 210, 254)" }}
-            elementsAlign="center"
-            contentAlign={["center", "center"]}
-            render={{ type: "virtual" }}
-            scrollTop={{ value: scrollNew }}
-            onScrollValue={(scroll) => setScrollTopValue(scroll)}
-            isScrolling={(value) => setIsScrolling(value)}
-          >
-            {components}
-          </MorphScroll>
-          <ToTopButton
-            scrollTopValue={scrollTopValue}
-            isScrolling={isScrolling}
-            onClick={onClickHandler}
-          />
+  return usedPages[0] !== "not found" ? (
+    <div className="h-calcScreenH-112 m-auto  w-calcFull-80">
+      <MorphScroll
+        className="templateScroll"
+        objectsSize={[238, 156]}
+        gap={60}
+        padding={[0, 14]}
+        progressTrigger={{ wheel: true, progressElement: true }}
+        edgeGradient={{ color: "rgb(199, 210, 254)" }}
+        elementsAlign="center"
+        contentAlign={["center", "center"]}
+        render={{ type: "virtual" }}
+        scrollTop={scrollNew}
+        onScrollValue={(v) => setScrollTopValue(v)}
+        isScrolling={(v) => setIsScrolling(v)}
+      >
+        {components}
+      </MorphScroll>
+      <ToTopButton
+        scrollTopValue={scrollTopValue}
+        isScrolling={isScrolling}
+        onClick={onClickHandler}
+      />
+    </div>
+  ) : (
+    <div className="animate-ident text-indigo-500 dark:text-indigo-400 rounded-18 bg-indigo-100 shadow-shadow4 hover:shadow-shadow8 w-238 h-156 overflow-hidden flex justify-center items-center active:scale-95 transition-all1 hover:bg-indigo-50 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:shadow-shadow5 dark:hover:shadow-shadow6 absolute top-calc50%-77 left-calc50%-119 rotate-6 transition-none">
+      <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
+        <div>
+          <Page404Component />
         </div>
-      ) : (
-        <div className="animate-ident text-indigo-500 dark:text-indigo-400 rounded-18 bg-indigo-100 shadow-shadow4 hover:shadow-shadow8 w-238 h-156 overflow-hidden flex justify-center items-center active:scale-95 transition-all1 hover:bg-indigo-50 dark:bg-indigo-900 dark:hover:bg-indigo-800 dark:shadow-shadow5 dark:hover:shadow-shadow6 absolute top-calc50%-77 left-calc50%-119 rotate-6 transition-none">
-          <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
-            <div>
-              <Page404Component />
-            </div>
-          </div>
-          <div className="absolute left-0 top-0 w-full h-full px-25 font-bold text-xs text-center leading-7 whitespace-no-wrap overflow-hidden text-ellipsis dark:text-shadow-darkTS1">
-            not found
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+      <div className="absolute left-0 top-0 w-full h-full px-25 font-bold text-xs text-center leading-7 whitespace-no-wrap overflow-hidden text-ellipsis dark:text-shadow-darkTS1">
+        not found
+      </div>
+    </div>
   );
 }

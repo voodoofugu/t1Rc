@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 
 /**
  * Хук для управления состоянием с использованием localStorage или sessionStorage.
@@ -38,7 +38,7 @@ export default function useStorage(
     }, {} as Record<string, unknown>)
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     storItem.forEach((item) => {
       if (item.onLoad) {
         const storageType =
