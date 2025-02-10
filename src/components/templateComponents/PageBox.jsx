@@ -72,7 +72,7 @@ export default function PageBox() {
   };
 
   return usedPages[0] !== "not found" ? (
-    <div className="h-calcScreenH-112 m-auto  w-calcFull-80">
+    <div className="h-calcScreenH-112 m-auto max-w-1160  w-calcFull-80">
       <MorphScroll
         className="templateScroll"
         objectsSize={[238, 156]}
