@@ -5,7 +5,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
 import StoreItemBox from "../UIComponents/StoreItemBox";
 
-const girlImg = "img/images/hero-all/tithero-441/icons/break-girl4.png";
+const girlImg = "img/images/hero-all/tithero-479/icons/break-girl4.png";
 
 function XmasPop1({ setXmasPopLocal }) {
   return (
