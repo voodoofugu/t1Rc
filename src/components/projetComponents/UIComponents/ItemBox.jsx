@@ -29,6 +29,7 @@ export default function ItemBox({
   notif,
   sale,
   onClick,
+  children,
 }) {
   const selectable = itemClass && itemClass.includes("selectable");
   const greekNum = squadRank && arabicToRoman[squadRank];
@@ -84,6 +85,7 @@ export default function ItemBox({
         </div>
       )}
       {arrow ? <div className={`itemBox_arrow ${arrow}`}></div> : ""}
+      {children}
     </div>
   );
 }
