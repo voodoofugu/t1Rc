@@ -44,6 +44,10 @@ export const cssFiles = [
   "v2-screen-nsale-stupen",
   "v2-screen-nsale-stupen-pop",
   "screen-info-pop",
+
+  "v2-screen-hero",
+  "v2-screen-hero-promotion",
+  "pop-wpck-all",
 ];
 
 export default function V2MainScreen02GuildTower({ pageName, children }) {

@@ -6,6 +6,11 @@ import { nexusTrigger } from "nexus-state";
 import QuestBoxAll from "../UIComponents/QuestBoxAll";
 import Notification from "../UIComponents/Notification";
 
+import AllHeroesBoxScroll from "../UIComponents/AllHeroesBoxScroll";
+import DpsDpcPanelBox from "../UIComponents/DpsDpcPanelBox";
+import RatingPedBox from "../UIComponents/RatingPedBox";
+import X2BtnAllBox from "../UIComponents/X2BtnAllBox";
+
 export const cssFiles = [
   "screen-fapopoly-rules",
   "screen-unipop-subscription",
@@ -63,6 +68,8 @@ const childClickStopPropagation = (e) => {
 
 export default function MainScreen01AllPopups({ pageName, children }) {
   const [xmasPop, setXmasPop] = useState("xmas-pop1");
+  const [quantity, setQuantity] = useState(1);
+  const [activeTab, setActiveTab] = useState(false);
 
   return (
     <div className="main world1">
@@ -581,330 +588,17 @@ export default function MainScreen01AllPopups({ pageName, children }) {
       <div className="left-side">
         <div className="left-panel">
           <div className="heroes-list-all-box" style={{ display: "block" }}>
-            <div className="dps-dpc-panel-box">
-              <div className="dpc">
-                <div className="value">20349</div>
-                <div className="mlt-prm">x3212</div>
-                <div className="title">
-                  DPC
-                  <div className="icon-dpc"></div>
-                </div>
-              </div>
-              <div className="dps">
-                <div className="value">234234T</div>
-                <div className="mlt-prm">x3212</div>
-                <div className="title">
-                  DPS
-                  <div className="icon-dps"></div>
-                </div>
-              </div>
-            </div>
+            <DpsDpcPanelBox />
             <div className="all-heroes-box">
-              <div className="all-heroes-box-scroll">
-                <div className="hero-card-box-all">
-                  <div className="hero-card starterpack">
-                    <div
-                      className="btn-close-x"
-                      style={{
-                        zoom: "0.75",
-                        top: "0px",
-                        right: "0px",
-                      }}
-                    ></div>
-                    <div className="hero-avatar-box">
-                      <img
-                        className="hero-avatar"
-                        src="img/images/hero-all/tithero-328/x2/ava/tithero-328-1-ava.jpg"
-                        loading="lazy"
-                      />
-                      <div className="sh2-icon-forgirl">
-                        <img src="img/cur2-gun.png" loading="lazy" />
-                      </div>
-                    </div>
-                    <div className="hero-level-box">Осталось</div>
-                    <div className="hero-dps-box">
-                      <div className="st-time">15:01:37</div>
-                    </div>
-                    <div className="hero-name-box">
-                      <div className="hero-name">Tokuda Arisu</div>
-                    </div>
-                    <div className="btn-buy starterpack">
-                      <div className="txt">Купить</div>
-                    </div>
-                  </div>
-                  <div
-                    className="hero-card highlight"
-                    onClick={() => {
-                      nexusTrigger({
-                        type: "handlePopup",
-                        payload: {
-                          type: "open",
-                          data: {
-                            mpopClass: "m-popup hero-popup",
-                            popTit: "Moe Kasa",
-                            popCont: "HeroPopup",
-                          },
-                        },
-                      });
-                    }}
-                  >
-                    <div className="hero-avatar-box">
-                      <img
-                        className="hero-avatar"
-                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
-                        loading="lazy"
-                      />
-                      <div className="sh2-icon-forgirl">
-                        <img src="img/cur2-barbarian.png" loading="lazy" />
-                      </div>
-                    </div>
-                    <div className="hero-level-box">
-                      level
-                      <div className="hero-level">6969</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      dps
-                      <div className="hero-dps">6969K</div>
-                    </div>
-                    <div className="hero-power-box">
-                      power
-                      <div className="hero-power">223</div>
-                    </div>
-                    <div className="hero-name-box">
-                      <div className="hero-name">Murayama Naora Blowjob</div>
-                    </div>
-                    <div
-                      className="color-btn green"
-                      onClick={(e) => childClickStopPropagation(e)}
-                    >
-                      <div className="color-btn-text">
-                        <div className="gold">
-                          <span className="f-gold">6969K</span>
-                        </div>
-                        <div className="color-btn-text">up</div>
-                      </div>
-                    </div>
-                    <div
-                      className="hero-pieces-icon"
-                      onClick={(e) => childClickStopPropagation(e)}
-                    ></div>
-                  </div>
-                  <div className="hero-card">
-                    <div className="hero-avatar-box">
-                      <img
-                        className="hero-avatar"
-                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
-                        loading="lazy"
-                      />
-                      <div className="sh2-icon-forgirl">
-                        <img src="img/cur2-barbarian.png" loading="lazy" />
-                      </div>
-                    </div>
-                    <div className="hero-level-box">
-                      level
-                      <div className="hero-level">6969</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      dps
-                      <div className="hero-dps">6969K</div>
-                    </div>
-                    <div className="hero-power-box">
-                      power
-                      <div className="hero-power">223</div>
-                    </div>
-                    <div className="hero-name-box">
-                      <div className="hero-name">Murayama Naora</div>
-                    </div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">
-                        <div className="gold">
-                          <span className="f-gold">6969K</span>
-                        </div>
-                        <div className="color-btn-text">buy</div>
-                      </div>
-                    </div>
-                    <div className="hero-abil-icon">
-                      <img src="img/icons/ic-abil-78.jpg" loading="lazy" />
-                    </div>
-                  </div>
-                  <div className="hero-card">
-                    <div className="hero-avatar-box">
-                      <img
-                        className="hero-avatar"
-                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
-                        loading="lazy"
-                      />
-                      <div className="sh2-icon-forgirl">
-                        <img src="img/cur2-barbarian.png" loading="lazy" />
-                      </div>
-                    </div>
-                    <div className="hero-level-box">
-                      level
-                      <div className="hero-level">6969</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      dps
-                      <div className="hero-dps">6969K</div>
-                    </div>
-                    <div className="hero-power-box">
-                      power
-                      <div className="hero-power">223</div>
-                    </div>
-                    <div className="hero-name-box">
-                      <div className="hero-name">Murayama Naora Blowjob</div>
-                    </div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">
-                        <div className="gold">
-                          <span className="f-gold">6969K</span>
-                        </div>
-                        <div className="color-btn-text">up</div>
-                      </div>
-                    </div>
-                    <div className="hero-abil-icon">
-                      <img src="img/icons/ic-abil-78.jpg" loading="lazy" />
-                    </div>
-                  </div>
-                  <div className="hero-card">
-                    <div className="hero-avatar-box">
-                      <img
-                        className="hero-avatar"
-                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
-                        loading="lazy"
-                      />
-                      <div className="sh2-icon-forgirl">
-                        <img src="img/cur2-barbarian.png" loading="lazy" />
-                      </div>
-                    </div>
-                    <div className="hero-level-box">
-                      level
-                      <div className="hero-level">6969</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      dps
-                      <div className="hero-dps">6969K</div>
-                    </div>
-                    <div className="hero-power-box">
-                      power
-                      <div className="hero-power">223</div>
-                    </div>
-                    <div className="hero-name-box">
-                      <div className="hero-name">Murayama Naora Blowjob</div>
-                    </div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">
-                        <div className="gold">
-                          <span className="f-gold">6969K</span>
-                        </div>
-                        <div className="color-btn-text">up</div>
-                      </div>
-                    </div>
-                    <div className="hero-abil-icon">
-                      <img src="img/icons/ic-abil-78.jpg" loading="lazy" />
-                    </div>
-                  </div>
-                  <div className="hero-card">
-                    <div className="hero-avatar-box">
-                      <img
-                        className="hero-avatar"
-                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
-                        loading="lazy"
-                      />
-                      <div className="sh2-icon-forgirl">
-                        <img src="img/cur2-barbarian.png" loading="lazy" />
-                      </div>
-                    </div>
-                    <div className="hero-level-box">
-                      level
-                      <div className="hero-level">6969</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      dps
-                      <div className="hero-dps">6969K</div>
-                    </div>
-                    <div className="hero-power-box">
-                      power
-                      <div className="hero-power">223</div>
-                    </div>
-                    <div className="hero-name-box">
-                      <div className="hero-name">Murayama Naora Blowjob</div>
-                    </div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">
-                        <div className="gold">
-                          <span className="f-gold">6969K</span>
-                        </div>
-                        <div className="color-btn-text">up</div>
-                      </div>
-                    </div>
-                    <div className="hero-abil-icon">
-                      <img src="img/icons/ic-abil-78.jpg" loading="lazy" />
-                    </div>
-                  </div>
-                  <div className="hero-card">
-                    <div className="hero-avatar-box">
-                      <img
-                        className="hero-avatar"
-                        src="img/images/hero-all/tithero-11/x2/ava/tithero-11-1-ava.jpg"
-                        loading="lazy"
-                      />
-                      <div className="sh2-icon-forgirl">
-                        <img src="img/cur2-barbarian.png" loading="lazy" />
-                      </div>
-                    </div>
-                    <div className="hero-level-box">
-                      level
-                      <div className="hero-level">6969</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      dps
-                      <div className="hero-dps">6969K</div>
-                    </div>
-                    <div className="hero-power-box">
-                      power
-                      <div className="hero-power">223</div>
-                    </div>
-                    <div className="hero-name-box">
-                      <div className="hero-name">Murayama Naora Blowjob</div>
-                    </div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">
-                        <div className="gold">
-                          <span className="f-gold">6969K</span>
-                        </div>
-                        <div className="color-btn-text">up</div>
-                      </div>
-                    </div>
-                    <div className="hero-abil-icon">
-                      <img src="img/icons/ic-abil-78.jpg" loading="lazy" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {activeTab === false ? (
+                <AllHeroesBoxScroll numX={quantity} />
+              ) : (
+                <RatingPedBox />
+              )}
             </div>
-            <div className="x2-btn-all-box">
-              <div className="x2-btn selected">
-                <div className="x2-btn-text">x1</div>
-              </div>
-              <div className="x2-btn">
-                <div className="x2-btn-text">x10</div>
-              </div>
-              <div className="x2-btn">
-                <div className="x2-btn-text">x25</div>
-              </div>
-              <div className="x2-btn">
-                <div className="x2-btn-text">x100</div>
-              </div>
-              <div className="x2-btn">
-                <div className="x2-btn-text">x200</div>
-              </div>
-              <div className="x2-btn">
-                <div className="x2-btn-text">x500</div>
-              </div>
-              <div className="x2-btn">
-                <div className="x2-btn-text">x1000</div>
-              </div>
-            </div>
+            {activeTab === false && (
+              <X2BtnAllBox quantity={quantity} setQuantity={setQuantity} />
+            )}
           </div>
           <div className="womens-btns-screen" style={{ display: "none" }}>
             <div className="womens-btns-content">

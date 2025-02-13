@@ -28,6 +28,19 @@ export default function AllHeroesBoxScroll({ numX }) {
           key={index}
           {...item}
           btnNumX={numX}
+          onClick={() => {
+            nexusTrigger({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup hero-popup",
+                  popTit: "Moe Kasa",
+                  popCont: "HeroPopup",
+                },
+              },
+            });
+          }}
           btnOnClick={() => {
             // index === 2 &&
             nexusTrigger({
