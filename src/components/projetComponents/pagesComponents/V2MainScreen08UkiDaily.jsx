@@ -1370,7 +1370,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
         </div>
         <div className="tabs-all-box">
           <a className="tabs-all heroes" href="#/">
-            <div style={{ width: "100%", height: "100%" }}>
+            <div>
               <div className="tabs-name">Heroes</div>
               <div className="tabs-pic">
                 <img src="img/tab-01.png" loading="lazy" />
@@ -1378,7 +1378,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
             </div>
           </a>
           <a className="tabs-all guild" href="#/guild">
-            <div style={{ width: "100%", height: "100%" }}>
+            <div>
               <div className="tabs-name">Guild base</div>
               <div className="tabs-pic">
                 <img src="img/tab-08.png" loading="lazy" />
@@ -1387,7 +1387,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
             <div className="v2-tab-notif notif notif20"></div>
           </a>
           <a className="tabs-all album" href="#/galery/pictures">
-            <div style={{ width: "100%", height: "100%" }}>
+            <div>
               <div className="tabs-name">Gallery</div>
               <div className="tabs-pic">
                 <img src="img/tab-05.png" loading="lazy" />
@@ -1395,7 +1395,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
             </div>
           </a>
           <a className="tabs-all rating" href="#/rating/jewerly">
-            <div style={{ width: "100%", height: "100%" }}>
+            <div>
               <div className="tabs-name">Rating Tab</div>
               <div className="tabs-pic">
                 <img src="img/tab-02.png" loading="lazy" />
@@ -1407,7 +1407,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
             href="#/quests/daily"
             aria-current="page"
           >
-            <div style={{ width: "100%", height: "100%" }}>
+            <div>
               <div className="tabs-name">Quests</div>
               <div className="tabs-pic">
                 <img src="img/tab-10.png" loading="lazy" />

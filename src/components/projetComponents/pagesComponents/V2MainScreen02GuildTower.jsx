@@ -11,8 +11,6 @@ import TowerTrophyBoxScroll from "../UIComponents/TowerTrophyBoxScroll";
 import RaidbossAnimationBox from "../UIComponents/RaidbossAnimationBox";
 
 import TrophyResBoxAll from "../UIComponents/TrophyResBoxAll";
-import DpsDpcPanelBox from "../UIComponents/DpsDpcPanelBox";
-import X2BtnAllBox from "../UIComponents/X2BtnAllBox";
 import TabPanelTowerQuest from "../UIComponents/TabPanelTowerQuest";
 import SkillsAllBox from "../UIComponents/SkillsAllBox";
 import Monster from "../UIComponents/Monster";
@@ -22,8 +20,9 @@ import BossbtnBox from "../UIComponents/BossbtnBox";
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 // import SwitchTab from "../UIComponents/SwitchTab";
 import RatingPedBox from "../UIComponents/RatingPedBox";
-import AllHeroesBoxScroll from "../UIComponents/AllHeroesBoxScroll";
 import ResCount from "../UIComponents/ResCount";
+
+import TitHeroBox from "../UIComponents/TitHeroBox";
 
 export const cssFiles = [
   "v2-screen-tower",
@@ -296,26 +295,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             <div>
               <div className="container">
                 <div className="heroes-list-all-box">
-                  <DpsDpcPanelBox />
-                  <div className="all-heroes-box">
-                    {activeTab === false ? (
-                      <AllHeroesBoxScroll numX={quantity} />
-                    ) : (
-                      <RatingPedBox />
-                    )}
-                  </div>
-                  {/* <SwitchTab
-                    activeTab={activeTab}
-                    setActiveTab={setActiveTab}
-                    tab1={["Heroes"]}
-                    tab2={["Top"]}
-                  /> */}
-                  {activeTab === false && (
-                    <X2BtnAllBox
-                      quantity={quantity}
-                      setQuantity={setQuantity}
-                    />
-                  )}
+                  <TitHeroBox />
                 </div>
                 <div className="tab-loading-wrapper border"></div>
               </div>
@@ -589,24 +569,25 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
           />
         </div>
         <div className="tabs-all-box">
-          <a className="tabs-all heroes" href="#/">
-            <div style={{ width: "100%", height: "100%" }}>
+          <a className="tabs-all heroes selected" href="#/">
+            <div>
               <div className="tabs-name">Heroes</div>
               <div className="tabs-pic">
                 <img src="img/tab-01.png" loading="lazy" />
               </div>
             </div>
           </a>
-          <a className="tabs-all guild selected" href="#/guild">
-            <div style={{ width: "100%", height: "100%" }}>
+          <a className="tabs-all guild" href="#/guild">
+            <div>
               <div className="tabs-name">Guild base</div>
               <div className="tabs-pic">
                 <img src="img/tab-08.png" loading="lazy" />
               </div>
             </div>
+            <div className="v2-tab-notif notif notif20"></div>
           </a>
-          <a className="tabs-all album disable" href="#/galery/pictures">
-            <div style={{ width: "100%", height: "100%" }}>
+          <a className="tabs-all album" href="#/galery/pictures">
+            <div>
               <div className="tabs-name">Gallery</div>
               <div className="tabs-pic">
                 <img src="img/tab-05.png" loading="lazy" />
@@ -614,10 +595,22 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
             </div>
           </a>
           <a className="tabs-all rating" href="#/rating/jewerly">
-            <div style={{ width: "100%", height: "100%" }}>
+            <div>
               <div className="tabs-name">Rating Tab</div>
               <div className="tabs-pic">
                 <img src="img/tab-02.png" loading="lazy" />
+              </div>
+            </div>
+          </a>
+          <a
+            className="tabs-all squests"
+            href="#/quests/daily"
+            aria-current="page"
+          >
+            <div>
+              <div className="tabs-name">Quests</div>
+              <div className="tabs-pic">
+                <img src="img/tab-10.png" loading="lazy" />
               </div>
             </div>
           </a>

@@ -6,10 +6,7 @@ import { nexusTrigger } from "nexus-state";
 import QuestBoxAll from "../UIComponents/QuestBoxAll";
 import Notification from "../UIComponents/Notification";
 
-import AllHeroesBoxScroll from "../UIComponents/AllHeroesBoxScroll";
-import DpsDpcPanelBox from "../UIComponents/DpsDpcPanelBox";
-import RatingPedBox from "../UIComponents/RatingPedBox";
-import X2BtnAllBox from "../UIComponents/X2BtnAllBox";
+import TitHeroBox from "../UIComponents/TitHeroBox";
 
 export const cssFiles = [
   "screen-fapopoly-rules",
@@ -68,8 +65,6 @@ const childClickStopPropagation = (e) => {
 
 export default function MainScreen01AllPopups({ pageName, children }) {
   const [xmasPop, setXmasPop] = useState("xmas-pop1");
-  const [quantity, setQuantity] = useState(1);
-  const [activeTab, setActiveTab] = useState(false);
 
   return (
     <div className="main world1">
@@ -587,18 +582,8 @@ export default function MainScreen01AllPopups({ pageName, children }) {
       <div className="right-side"></div>
       <div className="left-side">
         <div className="left-panel">
-          <div className="heroes-list-all-box" style={{ display: "block" }}>
-            <DpsDpcPanelBox />
-            <div className="all-heroes-box">
-              {activeTab === false ? (
-                <AllHeroesBoxScroll numX={quantity} />
-              ) : (
-                <RatingPedBox />
-              )}
-            </div>
-            {activeTab === false && (
-              <X2BtnAllBox quantity={quantity} setQuantity={setQuantity} />
-            )}
+          <div className="heroes-list-all-box">
+            <TitHeroBox />
           </div>
           <div className="womens-btns-screen" style={{ display: "none" }}>
             <div className="womens-btns-content">
@@ -1515,42 +1500,51 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           </div>
         </div>
         <div className="tabs-all-box">
-          <div className="tabs-all heroes selected">
-            <div className="tabs-name">Heroes</div>
-            <div className="tabs-pic">
-              <img src="img/tab-01.png" loading="lazy" />
+          <a className="tabs-all heroes selected" href="#/">
+            <div>
+              <div className="tabs-name">Heroes</div>
+              <div className="tabs-pic">
+                <img src="img/tab-01.png" loading="lazy" />
+              </div>
             </div>
-          </div>
-          <div className="tabs-all">
-            <div className="tabs-name">Album</div>
-            <div className="tabs-pic">
-              <img src="img/tab-05.png" loading="lazy" />
+          </a>
+          <a className="tabs-all guild" href="#/guild">
+            <div>
+              <div className="tabs-name">Guild base</div>
+              <div className="tabs-pic">
+                <img src="img/tab-08.png" loading="lazy" />
+              </div>
             </div>
-          </div>
-          <div className="tabs-all">
-            <div className="tabs-name">Guild</div>
-            <div className="tabs-pic">
-              <img src="img/tab-08.png" loading="lazy" />
+            <div className="v2-tab-notif notif notif20"></div>
+          </a>
+          <a className="tabs-all album" href="#/galery/pictures">
+            <div>
+              <div className="tabs-name">Gallery</div>
+              <div className="tabs-pic">
+                <img src="img/tab-05.png" loading="lazy" />
+              </div>
             </div>
-          </div>
-          <div className="tabs-all">
-            <div className="tabs-name">Rating</div>
-            <div className="tabs-pic">
-              <img src="img/tab-02.png" loading="lazy" />
+          </a>
+          <a className="tabs-all rating" href="#/rating/jewerly">
+            <div>
+              <div className="tabs-name">Rating Tab</div>
+              <div className="tabs-pic">
+                <img src="img/tab-02.png" loading="lazy" />
+              </div>
             </div>
-          </div>
-          <div className="tabs-all w-house2">
-            <div className="tabs-name">Womens</div>
-            <div className="tabs-pic">
-              <img src="img/tab-11.png" loading="lazy" />
+          </a>
+          <a
+            className="tabs-all squests"
+            href="#/quests/daily"
+            aria-current="page"
+          >
+            <div>
+              <div className="tabs-name">Quests</div>
+              <div className="tabs-pic">
+                <img src="img/tab-10.png" loading="lazy" />
+              </div>
             </div>
-          </div>
-          <div className="tabs-all w-house">
-            <div className="tabs-name">Angels</div>
-            <div className="tabs-pic">
-              <img src="img/tab-12.png" loading="lazy" />
-            </div>
-          </div>
+          </a>
         </div>
       </div>
       <div className="slider-layer" style={{ display: "block" }}>
