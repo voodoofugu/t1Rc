@@ -223,9 +223,9 @@ const GirlDependencies = ({ girlsInfo }) => {
         edgeGradient={{ color: "#572e19" }}
         elementsAlign="center"
         contentAlign={["center", "center"]}
-        render={{ type: "virtual" }}
+        // render={{ type: "virtual" }}
+        render={{ type: "lazy" }}
         emptyElements={{ mode: "clear" }}
-        // render={{ type: "lazy" }}
         // type="slider"
         // scrollTop={{ value: "end" }}
       >
