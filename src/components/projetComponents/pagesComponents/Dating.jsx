@@ -224,7 +224,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         elementsAlign="center"
         contentAlign={["center", "center"]}
         // render={{ type: "virtual" }}
-        render={{ type: "lazy" }}
+        render={{ type: "lazy", onVisible: console.log("hi") }}
         emptyElements={{ mode: "clear" }}
         // type="slider"
         // scrollTop={{ value: "end" }}
