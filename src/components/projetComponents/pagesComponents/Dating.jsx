@@ -223,8 +223,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         edgeGradient={{ color: "#572e19" }}
         elementsAlign="center"
         contentAlign={["center", "center"]}
-        // render={{ type: "virtual" }}
-        render={{ type: "lazy", onVisible: console.log("hi") }}
+        render={{ type: "virtual" }}
+        // render={{ type: "lazy", rootMargin: [0, 0, 1000, 0] }}
         emptyElements={{ mode: "clear" }}
         // type="slider"
         // scrollTop={{ value: "end" }}
