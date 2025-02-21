@@ -21,7 +21,10 @@ export default function AllHeroesBoxScroll({ numX }) {
       render={{ type: "virtual" }}
       progressVisibility="hover"
       contentAlign={["center", "start"]}
-      emptyElements={{ mode: "clear", closeSelector: ".exit" }}
+      emptyElements={{
+        mode: "clear",
+        clickTrigger: { selector: ".exit" },
+      }}
     >
       {heroBoxData.map((item, index) => (
         <HeroBox
