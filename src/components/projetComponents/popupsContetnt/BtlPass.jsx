@@ -29,7 +29,7 @@ export default function BtlPass({ event }) {
       : event === "bf"
       ? "images/hero-all/tithero-429/icons/break-girl"
       : event === "vl"
-      ? "images/hero-all/tithero-462/icons/break-girl4"
+      ? "images/superhero/suphero-958/icons/break-girl4"
       : event === "spring"
       ? "images/hero-all/tithero-430/icons/break-girl"
       : event === "summer"
@@ -48,7 +48,7 @@ export default function BtlPass({ event }) {
       : event === "bf"
       ? "ic-tickets-bf-1"
       : event === "vl"
-      ? "evPopArts/ic-feather1"
+      ? "evPopArts/ic-shoe"
       : event === "spring"
       ? "ic-march-flower-dark-blue"
       : event === "summer"
@@ -92,10 +92,9 @@ export default function BtlPass({ event }) {
       ? [
           "BuyShop",
           {
-            img1: "evPopArts/ic-feather1",
-            img2: "evPopArts/ic-feather2",
-            img3: "evPopArts/ic-feather3",
-            img4: "evPopArts/ic-feather4",
+            img1: "evPopArts/ic-shoe",
+            img2: "evPopArts/ic-shoe",
+            img3: "evPopArts/ic-shoe",
           },
         ]
       : event === "spring"
@@ -237,7 +236,7 @@ export default function BtlPass({ event }) {
               progressElement: <ScrollThumb />,
               content: true,
             }}
-            edgeGradient={{ color: edgeGradient }}
+            edgeGradient
             render={{ type: "virtual" }}
             direction="x"
           >

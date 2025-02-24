@@ -296,7 +296,7 @@ const Chat = ({ girlInfo }) => {
             })}
 
             <ResizeTracker measure="all" key="nextMessageBox">
-              {(width, height) => (
+              {(rect) => (
                 <>
                   {nextMessage && (nextMessage.Hero || nextMessage.Quest) && (
                     <div className="btnBox" ref={btnBoxRef}>
@@ -314,7 +314,7 @@ const Chat = ({ girlInfo }) => {
                                   text={text}
                                   onClick={() => {
                                     !chatProgressHandleCondition.current &&
-                                      (btnBoxRef.current.style.height = `${height}px`);
+                                      (btnBoxRef.current.style.height = `${rect.height}px`);
                                     chatProgressHandle(index);
                                   }}
                                 >
