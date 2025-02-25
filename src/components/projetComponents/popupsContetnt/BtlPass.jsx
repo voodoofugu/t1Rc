@@ -10,16 +10,14 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function BtlPass({ event }) {
-  const popupState = useNexus("popupState");
-
-  const edgeGradient =
-    event === "autumn"
-      ? "#b01a6c"
-      : event === "xmas"
-      ? "#288cbe"
-      : event === "vl"
-      ? "#c32e76"
-      : "#202c38";
+  // const edgeGradient =
+  //   event === "autumn"
+  //     ? "#b01a6c"
+  //     : event === "xmas"
+  //     ? "#288cbe"
+  //     : event === "vl"
+  //     ? "#c32e76"
+  //     : "#202c38";
 
   const girlImg =
     event === "xmas"
