@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export const cssFiles = ["gf-sale-pop"];
+export const cssFiles = ["gf-sale-pop", "angel-tab"];
 
 export default function V2MainScreen01DarkWorld({ pageName }) {
   const currentPath = window.location.hash.substring(3).split("/")[0];
