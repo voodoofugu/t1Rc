@@ -108,7 +108,7 @@ export default memo(function RelicsPop({ event }) {
     event === "xmas"
       ? "img/bGs/xmasBg.jpg"
       : "vl"
-      ? "img/bGs/clubBg.jpg"
+      ? "img/bGs/marchBg.jpg"
       : "img/bGs/halloweenBg.jpg";
 
   const evData = data.find((item) => item[event]);
