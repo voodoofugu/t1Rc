@@ -69,7 +69,7 @@ const GirlDependencies = ({ girlsInfo }) => {
   const [girlIndex, setGirlIndex] = React.useState(0);
 
   const keyСheck = (key) => {
-    console.log("keyСheck", key);
+    // console.log("keyСheck", key);
     // if (key.includes("821")) {
     //   console.log("key .1=2$821 found");
     // }
@@ -196,7 +196,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </ProgressBar>
 
-      {/* <Chat girlInfo={girlsInfo[girlIndex]} /> */}
+      <Chat girlInfo={girlsInfo[girlIndex]} />
 
       <div className="girlName">
         <div className="addText">with</div>

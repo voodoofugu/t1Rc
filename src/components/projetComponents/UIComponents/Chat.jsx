@@ -275,7 +275,6 @@ const Chat = ({ girlInfo }) => {
                     <IntersectionTracker
                       key={`message${textIndex}`}
                       visibleContent
-                      // intersectionDelay={100}
                       onVisible={() => {
                         lastElements.loadingReady &&
                           setLastElements((prevState) => ({
