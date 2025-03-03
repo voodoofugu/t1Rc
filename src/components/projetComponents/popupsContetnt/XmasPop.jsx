@@ -5,7 +5,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
 import StoreItemBox from "../UIComponents/StoreItemBox";
 
-const girlImg = "img/images/hero-all/tithero-479/icons/break-girl4.png";
+const girlImg = "img/images/hero-all/tithero-477/icons/break-girl4.png";
 
 function XmasPop1({ setXmasPopLocal }) {
   return (
@@ -229,7 +229,7 @@ function XmasPop2({ setXmasPopLocal }) {
 function XmasPop3({ setXmasPopLocal }) {
   return (
     <>
-      <div className="color-box xmas"></div>
+      <div className="color-box"></div>
       <div className="xmas-daily-prg-box-all">
         <div className="xmas-prg-girl">
           <img src={girlImg} loading="lazy" />
@@ -461,14 +461,14 @@ function XmasPop3({ setXmasPopLocal }) {
   );
 }
 
-export default function XmasPop({ xmasPop }) {
+export default function XmasPop({ xmasPop, event }) {
   const [xmasPopLocal, setXmasPopLocal] = useState(xmasPop);
 
   useLayoutEffect(() => {
     nexusUpdate({
       popupState: (prev) => ({
         ...prev,
-        mpopClass: `m-popup ${xmasPopLocal} xmas`,
+        mpopClass: `m-popup ${xmasPopLocal} ${event}`,
       }),
     });
   }, [xmasPopLocal]);

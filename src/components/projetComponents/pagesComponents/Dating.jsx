@@ -68,6 +68,13 @@ export default function Dating({ pageName, children }) {
 const GirlDependencies = ({ girlsInfo }) => {
   const [girlIndex, setGirlIndex] = React.useState(0);
 
+  const keyСheck = (key) => {
+    console.log("keyСheck", key);
+    // if (key.includes("821")) {
+    //   console.log("key .1=2$821 found");
+    // }
+  };
+
   return (
     <>
       <Button
@@ -189,7 +196,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </ProgressBar>
 
-      <Chat girlInfo={girlsInfo[girlIndex]} />
+      {/* <Chat girlInfo={girlsInfo[girlIndex]} /> */}
 
       <div className="girlName">
         <div className="addText">with</div>
@@ -214,7 +221,6 @@ const GirlDependencies = ({ girlsInfo }) => {
         }}
         progressReverse
         progressVisibility="hover"
-        // lazyRender
         // rootMargin={[0, 0]}
         // direction="x"
         // suspending
@@ -223,7 +229,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         edgeGradient={{ color: "#572e19" }}
         elementsAlign="center"
         contentAlign={["center", "center"]}
-        render={{ type: "virtual" }}
+        render={{ type: "lazy", onVisible: keyСheck }}
         // render={{ type: "lazy", rootMargin: [0, 0, 1000, 0] }}
         emptyElements={{ mode: "clear" }}
         // type="slider"

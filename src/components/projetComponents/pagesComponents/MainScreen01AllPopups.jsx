@@ -367,7 +367,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   popTit: "XXXMAS Celebration Pass",
                   popCont: "XmasPop",
-                  props: { xmasPop: xmasPop },
+                  props: { xmasPop: xmasPop, event: "xmas" },
                 },
               ],
               [
@@ -435,7 +435,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-march-flower",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup main-relics-pop march",
+                  mpopClass: "m-popup main-relics-pop march contentOnly",
                   popTit: "March's Day Orgy",
                   popCont: "RelicsPop",
                   timer: true,
@@ -446,7 +446,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/strawberry_icn",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup main-relics-pop march",
+                  mpopClass: "m-popup main-relics-pop march contentOnly",
                   popTit: "March's Day Orgy",
                   popCont: "RelicsPop",
                   timer: true,
@@ -463,8 +463,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-march-flower-pink",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup events-btlpass-pop spring",
-                  popTit: "Valentine's Day Event Pass",
+                  mpopClass: "m-popup events-btlpass-pop spring contentOnly",
                   popCont: "BtlPass",
                   props: { event: "spring" },
                 },
@@ -473,10 +472,9 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/flowerChest",
                 "287:21:43",
                 {
-                  mpopClass: `m-popup ${xmasPop} spring`,
                   popTit: "Spring Celebration Pass",
                   popCont: "XmasPop",
-                  props: { event: "spring" },
+                  props: { xmasPop: xmasPop, event: "spring" },
                 },
               ],
             ],
@@ -489,7 +487,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/butterflyIcn",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup events-btlpass-pop summer",
+                  mpopClass: "m-popup events-btlpass-pop summer contentOnly",
                   popTit: "Summer Event Pass",
                   popCont: "BtlPass",
                   props: { event: "summer" },
@@ -505,7 +503,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/eggs_basket",
                 "287:21:43",
                 {
-                  mpopClass: "m-popup main-relics-pop easter",
+                  mpopClass: "m-popup main-relics-pop easter contentOnly",
                   popTit: "Easter's Day Orgy",
                   popCont: "RelicsPop",
                   timer: true,
