@@ -216,54 +216,6 @@ export default memo(function RelicsPop({ event }) {
         <div className="main-relics-bonus-box xmas">
           <ItemBox
             itemClass="wh100"
-            itemPic={evData?.[event][2][0]}
-            count={"0/10K"}
-          />
-          <div className="relics-prg-box-all">
-            <div className="relics-prg-box">
-              <div className="prg-box">
-                <div
-                  className="prgbar"
-                  style={{
-                    width: "0%",
-                  }}
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div className="relics-coll-box-all">
-            <ItemBox
-              itemClass="check"
-              itemPic="img/images/hero-all/tithero-349/x2/ava/tithero-349-1-ava.jpg"
-              countOut={"5K"}
-              arrow="bottom"
-            />
-            <ItemBox
-              itemPic={evData?.[event][3]}
-              count={"10K"}
-              countOut={"6K"}
-              arrow="bottom"
-            />
-            <ItemBox
-              itemPic={evData?.[event][3]}
-              countOut={"7K"}
-              arrow="bottom"
-            />
-            <ItemBox
-              itemPic={evData?.[event][3]}
-              countOut={"8.5K"}
-              arrow="bottom"
-            />
-            <ItemBox
-              itemPic="img/images/hero-all/tithero-349/x2/ava/tithero-349-1-ava.jpg"
-              countOut={"10K"}
-              arrow="bottom"
-            />
-          </div>
-        </div>
-        <div className="main-relics-bonus-box xmas">
-          <ItemBox
-            itemClass="wh100"
             itemPic={evData?.[event][2][1]}
             count={"0/10K"}
           />

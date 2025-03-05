@@ -229,13 +229,13 @@ const GirlDependencies = ({ girlsInfo }) => {
         edgeGradient={{ color: "#572e19" }}
         elementsAlign="center"
         contentAlign={["center", "center"]}
-        render={{ type: "lazy", onVisible: keyСheck }}
+        // render={{ type: "lazy", onVisible: keyСheck }}
         // render={{ type: "lazy", rootMargin: [0, 0, 1000, 0] }}
-        emptyElements={{ mode: "clear" }}
-        // type="slider"
+        // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
+        // type="slider"
       >
-        <FakeComponent key="q1" />
+        {/* <FakeComponent key="q1" /> */}
         {girlsInfo.map((item, index) => (
           <PersonAva
             key={item.id}
@@ -246,7 +246,7 @@ const GirlDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-        <FakeComponent key="q2" />
+        {/* <FakeComponent key="q2" /> */}
       </MorphScroll>
     </>
   );
