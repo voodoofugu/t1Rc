@@ -230,7 +230,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         elementsAlign="center"
         contentAlign={["center", "center"]}
         // render={{ type: "lazy", onVisible: keyСheck }}
-        // render={{ type: "lazy", rootMargin: [0, 0, 1000, 0] }}
+        render={{ type: "virtual" }}
         // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
         // type="slider"
