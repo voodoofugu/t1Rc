@@ -237,7 +237,7 @@ export default function BtlPass({ event }) {
             edgeGradient
             render={{ type: "virtual" }}
             direction="x"
-            contentAlign={["center", "center"]}
+            // contentAlign={["center", "center"]}
           >
             {elements.map((element, index) => (
               <ItemBox
