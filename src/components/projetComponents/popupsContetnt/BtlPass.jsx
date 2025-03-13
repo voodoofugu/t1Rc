@@ -238,6 +238,7 @@ export default function BtlPass({ event }) {
             render={{ type: "virtual" }}
             direction="x"
             // contentAlign={["center", "center"]}
+            // progressReverse
           >
             {elements.map((element, index) => (
               <ItemBox
