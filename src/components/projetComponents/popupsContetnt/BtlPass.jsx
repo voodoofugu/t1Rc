@@ -261,6 +261,49 @@ export default function BtlPass({ event }) {
               />
             ))}
           </MorphScroll>
+
+          {/* <div
+            style={{
+              position: "absolute",
+              transform: "rotate(-90deg)",
+              transformOrigin: "left top",
+              left: "120px",
+            }}
+          >
+            <MorphScroll
+              className="btlpass_scroll"
+              size={[128, 1000]}
+              objectsSize={[112, 80]}
+              progressTrigger={{
+                wheel: true,
+                progressElement: <ScrollThumb />,
+                content: true,
+              }}
+              edgeGradient
+              render={{ type: "virtual" }}
+            >
+              {elements.map((element, index) => (
+                <ItemBox
+                  itemClass={`wh68 ${element.itemClass}`}
+                  itemPic={element.itemPic}
+                  count={element.count}
+                  get={element.itemClass === "get" && true}
+                  key={index}
+                  countOut={index + 1}
+                  onClick={() => {
+                    element.itemClass === "get" &&
+                      nexusUpdate({
+                        notif: {
+                          view: true,
+                          img: element.itemPic,
+                          text: `You got ${element.count}`,
+                        },
+                      });
+                  }}
+                />
+              ))}
+            </MorphScroll>
+          </div> */}
         </div>
       </div>
 
