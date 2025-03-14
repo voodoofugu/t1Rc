@@ -1,8 +1,9 @@
 import React from "react";
+import { useNexus, nexusTrigger, nexusUpdate } from "nexus-state";
 
 export const cssFiles = ["v2-screen-goddess-main", "v2-screen-goddess-picture"];
 
-export default function V2MainScreen21GoddessMain() {
+export default function V2MainScreen21GoddessMain({ children }) {
   return (
     <div className="main world1">
       <div
@@ -146,7 +147,21 @@ export default function V2MainScreen21GoddessMain() {
             <div className="gd-box-goddess">
               <div className="x-info-btn">?</div>
               <div className="gd-box-goddess-pic" style={{}}>
-                <div className="b-fs"></div>
+                <div
+                  className="b-fs"
+                  onClick={() => {
+                    nexusTrigger({
+                      type: "handlePopup",
+                      payload: {
+                        type: "open",
+                        data: {
+                          mpopClass: "m-popup goddess-picture",
+                          popCont: "GoddessPicture",
+                        },
+                      },
+                    });
+                  }}
+                ></div>
                 <img
                   src="img/images/goddess/goddess-4/x2/goddess-1.jpg"
                   loading="lazy"
@@ -633,19 +648,7 @@ export default function V2MainScreen21GoddessMain() {
           </div>
         </div>
       </div>
-      <div id="popupWrapper" className="popup-layer">
-        <div className="screen-blend-55"></div>
-        <div id="popupContainer">
-          <div className="m-popup goddess-picture narrow">
-            <div className="btn-close-x"></div>
-            <img
-              className="img-goddess-picture"
-              src="img/images/goddess/goddess-4/x2/goddess-1.jpg"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
+      {children}
     </div>
   );
 }
