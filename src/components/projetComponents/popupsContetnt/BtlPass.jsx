@@ -237,6 +237,7 @@ export default function BtlPass({ event }) {
             edgeGradient
             render={{ type: "virtual" }}
             direction="x"
+            // type="slider"
             // contentAlign={["center", "center"]}
             // progressReverse
           >
