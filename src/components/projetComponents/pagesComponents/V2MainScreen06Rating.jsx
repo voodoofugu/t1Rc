@@ -21,7 +21,7 @@ function Tooltip() {
         transform: "translate(-50%, -50%)",
       }}
     >
-      <div className="rating-hint-box">
+      {/* <div className="rating-hint-box">
         <div>
           <div className="rating-hint-box-name">сундук топ ранга</div>
           <div className>
@@ -131,6 +131,74 @@ function Tooltip() {
               </div>
               <div className="hint-box empty" />
               <div className="hint-box empty" />
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+      <div className="rating-hint-box-rel">
+        <div className="prize-one-box-all-rel">
+          <div className="girl-box">
+            <img
+              className="girl-prize"
+              src="https://cdn.faptitans.com/s1/__c154/images/hero-all/tithero-496/x1/tithero-1.jpg"
+            />
+          </div>
+          <div className="prize-name-box">Himeko Akira</div>
+          <div className="prize-dps-box">
+            <div className="prize-dps-text">124sD4</div>
+          </div>
+          <div className="prize-promote-box">
+            <div className="prize-promote-text" />
+          </div>
+          <div className="prize-name-box small">rare hero</div>
+          <div className="unique-skill-box-all">
+            <div className="prize-name-box small">with unique skills</div>
+            <div className="unique-skill-box">
+              <div className="unique-skill">
+                <div className="skill-pic-box">
+                  <img
+                    className="skill-pic"
+                    src="https://cdn.faptitans.com/s1/__744d/images/hero-all/tithero-496/icons/ic-abil.jpg"
+                  />
+                </div>
+                <div className="skill-text-box">
+                  <div className="skill-text">+1000% DPS for self</div>
+                </div>
+              </div>
+              <div className="unique-skill">
+                <div className="skill-pic-box">
+                  <img
+                    className="skill-pic"
+                    src="https://cdn.faptitans.com/s1/__744d/images/hero-all/tithero-496/icons/ic-abil.jpg"
+                  />
+                </div>
+                <div className="skill-text-box">
+                  <div className="skill-text">Boss gold drop + 3900%</div>
+                </div>
+              </div>
+              <div className="unique-skill">
+                <div className="skill-pic-box">
+                  <img
+                    className="skill-pic"
+                    src="https://cdn.faptitans.com/s1/__744d/images/hero-all/tithero-496/icons/ic-abil.jpg"
+                  />
+                </div>
+                <div className="skill-text-box">
+                  <div className="skill-text">+2500% DPS for self</div>
+                </div>
+              </div>
+              <div className="unique-skill">
+                <div className="skill-pic-box">
+                  <img
+                    className="skill-pic"
+                    src="https://cdn.faptitans.com/s1/__744d/images/hero-all/tithero-496/icons/ic-abil.jpg"
+                  />
+                </div>
+                <div className="skill-text-box">
+                  <div className="skill-text">+3000% DPS for self</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
