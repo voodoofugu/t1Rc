@@ -236,8 +236,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         }}
         progressReverse
         progressVisibility="hover"
+        // direction="hybrid"
         // rootMargin={[0, 0]}
-        // direction="x"
         // suspending
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"
