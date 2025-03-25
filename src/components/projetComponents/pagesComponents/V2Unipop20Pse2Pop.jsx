@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+
+import ImageBg from "../UIComponents/ImageBg";
 import ItemBox from "../UIComponents/ItemBox";
 
 export const cssFiles = [
@@ -279,7 +281,7 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
               <div className="unipop-box-content-all">
                 <div className="unipop-box-right-box" style={{ left: "100px" }}>
                   <div className="right-box-f">
-                    <div className="right-box-f-name-box">Squad Hero pack</div>
+                    {/* <div className="right-box-f-name-box">Squad Hero pack</div> */}
                     <div className="pse2-girl-left-box">
                       <div className="pse2-girl">
                         <img
@@ -288,14 +290,18 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                         />
                       </div>
                     </div>
-                    <div className="pse2-girl-right-box">
+                    {/* <div className="pse2-girl-right-box">
                       <div className="pse2-girl">
                         <img src="img/bre-pse1.png" loading="lazy" />
                       </div>
                       <div className="pse2-girl-buble">
                         I'm ready for EVERYTHING
                       </div>
-                    </div>
+                    </div> */}
+                    <ImageBg
+                      className="girlImg"
+                      img={`img/images/hero-all/tithero-430/icons/break-girl.png`}
+                    />
                     <div className="pse2-reward-box-all">
                       <ItemBox itemPic="img/images/hero-all/tithero-108/x1/ava/tithero-108-1-ava.jpg" />
                       <ItemBox
