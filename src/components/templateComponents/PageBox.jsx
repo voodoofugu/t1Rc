@@ -80,7 +80,7 @@ export default function PageBox() {
         padding={[0, 14]}
         progressTrigger={{ wheel: true, progressElement: true }}
         edgeGradient={{ color: "rgb(199, 210, 254)" }}
-        elementsAlign="center"
+        // elementsAlign="center"
         contentAlign={["center", "center"]}
         render={{ type: "virtual" }}
         scrollTop={scrollNew}

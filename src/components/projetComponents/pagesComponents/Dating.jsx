@@ -242,7 +242,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"
         edgeGradient={{ color: "#572e19" }}
-        elementsAlign="center"
+        // elementsAlign="center"
         contentAlign={["center", "center"]}
         // render={{ type: "lazy", onVisible: keyСheck }}
         render={{ type: "virtual" }}
