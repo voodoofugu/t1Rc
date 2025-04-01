@@ -9,6 +9,7 @@ import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
+import VideoTag from "../UIComponents/VideoTag";
 
 export default memo(function RelicsPop({ event }) {
   let data = [
@@ -132,9 +133,17 @@ export default memo(function RelicsPop({ event }) {
       />
 
       <div className="main-relics-girl-box">
-        <div className="main-relics-girl-pic">
+        {/* <div className="main-relics-girl-pic">
           <img src={evData?.[event][0]} loading="lazy" />
-        </div>
+        </div> */}
+        <VideoTag
+          className="relics-vidio"
+          poster="img/images/superhero/suphero-965/x2/sh-6.jpg"
+          source={["img/images/superhero/suphero-965/video.mp4"]}
+          autoPlay
+          loop
+        />
+
         <Button className="infoOnly" text="i" />
 
         <div className="main-relics-timer-box">
@@ -142,7 +151,7 @@ export default memo(function RelicsPop({ event }) {
           <div className="main-relics-timer">3D 23:46:59</div>
         </div>
 
-        <ComicsBallon
+        {/* <ComicsBallon
           text={evData?.[event][1]}
           style={{
             top: "344px",
@@ -151,7 +160,7 @@ export default memo(function RelicsPop({ event }) {
             transform: "translateX(-80%)",
           }}
           changeDirectionArrow
-        />
+        /> */}
 
         <div className="pse-count-res-box">
           <div className="pse-count-res-text">
