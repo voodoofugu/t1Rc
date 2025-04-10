@@ -2,6 +2,7 @@ import { memo } from "react";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
+import ImageBg from "../UIComponents/ImageBg";
 
 export default memo(function Wpck5() {
   return (
@@ -13,7 +14,7 @@ export default memo(function Wpck5() {
           <div className="lhero-box">
             <div className="lhero-pic">
               <img
-                src="img/images/hero-all/tithero-335/x1/tithero-335-1.jpg"
+                src="img/images/hero-all/tithero-430/x1/tithero-1.jpg"
                 loading="lazy"
               />
             </div>
@@ -43,7 +44,7 @@ export default memo(function Wpck5() {
               <div className="girl-bonus-box">
                 <div className="girl-bonus-pic">
                   <img
-                    src="img/images/hero-all/tithero-335/x1/ava/tithero-335-1-ava.jpg"
+                    src="img/images/hero-all/tithero-430/x1/ava/tithero-ava-1.jpg"
                     loading="lazy"
                   />
                 </div>
@@ -79,7 +80,7 @@ export default memo(function Wpck5() {
           {/* <div className="girl-box">
             <img
               className="girl-prize"
-              src="img/images/hero-all/tithero-335/x1/tithero-335-1.jpg"
+              src="img/images/hero-all/tithero-430/x1/tithero-430-1.jpg"
               loading="lazy"
             />
           </div> */}
@@ -109,13 +110,13 @@ export default memo(function Wpck5() {
                 {/* <div className="skill-pic-box">
                   <img
                     className="skill-pic"
-                    src="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                    src="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                     loading="lazy"
                   />
                 </div> */}
                 <ItemBox
                   itemClass="wh60"
-                  itemPic="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                  itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
                   <div className="skill-text">Boss gold drop + 500%</div>
@@ -125,13 +126,13 @@ export default memo(function Wpck5() {
                 {/* <div className="skill-pic-box">
                   <img
                     className="skill-pic"
-                    src="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                    src="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                     loading="lazy"
                   />
                 </div> */}
                 <ItemBox
                   itemClass="wh60"
-                  itemPic="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                  itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
                   <div className="skill-text">Boss gold drop + 1000%</div>
@@ -141,13 +142,13 @@ export default memo(function Wpck5() {
                 {/* <div className="skill-pic-box">
                   <img
                     className="skill-pic"
-                    src="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                    src="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                     loading="lazy"
                   />
                 </div> */}
                 <ItemBox
                   itemClass="wh60"
-                  itemPic="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                  itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
                   <div className="skill-text">Boss gold drop + 1500%</div>
@@ -157,13 +158,13 @@ export default memo(function Wpck5() {
                 {/* <div className="skill-pic-box">
                   <img
                     className="skill-pic"
-                    src="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                    src="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                     loading="lazy"
                   />
                 </div> */}
                 <ItemBox
                   itemClass="wh60"
-                  itemPic="img/images/hero-all/tithero-335/icons/ic-abil-335.jpg"
+                  itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
                   <div className="skill-text">Boss gold drop + 2500%</div>
@@ -179,7 +180,7 @@ export default memo(function Wpck5() {
             {/* <div className="girl-avatar-box">
               <img
                 className="girl-avatar"
-                src="img/images/hero-all/tithero-335/x1/ava/tithero-335-1-ava.jpg"
+                src="img/images/hero-all/tithero-430/x1/ava/tithero-ava-1.jpg"
                 loading="lazy"
               />
               <div className="prize-promote-box">
@@ -230,6 +231,11 @@ export default memo(function Wpck5() {
         </div>
         <div className="wpck-plus"></div>
         <div className="wpck-plus-text">and</div>
+
+        <ImageBg
+          className="girlImg wpck5Girl"
+          img={`img/images/hero-all/tithero-430/icons/break-girl.png`}
+        />
       </div>
       <div className="wpck-timer-box">
         <div className="time-left">осталось</div>
