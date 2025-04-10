@@ -233,6 +233,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
+          // content: true,
+          // arrows: true,
         }}
         progressReverse
         progressVisibility="hover"
@@ -249,6 +251,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
         // type="slider"
+        // crossCount={3}
       >
         {/* <FakeComponent key="q1" /> */}
         {girlsInfo.map((item, index) => (
