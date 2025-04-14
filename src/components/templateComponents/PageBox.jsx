@@ -78,7 +78,16 @@ export default function PageBox() {
         objectsSize={[238, 156]}
         gap={60}
         padding={[0, 14]}
-        progressTrigger={{ wheel: true, progressElement: true }}
+        progressTrigger={{
+          wheel: true,
+          progressElement:
+            // (
+            //   <div
+            //     style={{ backgroundColor: "#000", width: "8px", height: "100%" }}
+            //   />
+            // )
+            true,
+        }}
         edgeGradient={{ color: "rgb(199, 210, 254)" }}
         // elementsAlign="center"
         contentAlign={["center", "center"]}
