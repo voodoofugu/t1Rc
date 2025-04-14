@@ -227,6 +227,7 @@ const GirlDependencies = ({ girlsInfo }) => {
       <MorphScroll
         className="scrollAvatars"
         size={[104, 494]}
+        // size={[204, 204]}
         objectsSize={[86, 86]}
         gap={10}
         padding={[0, 10]}
@@ -239,6 +240,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         progressReverse
         progressVisibility="hover"
         // direction="hybrid"
+        // direction="x"
         // rootMargin={[0, 0]}
         // suspending
         // fallback={<div>loading</div>}
@@ -252,6 +254,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // scrollTop={{ value: "end" }}
         // type="slider"
         // crossCount={3}
+        // scrollTop={{ value: [86, 86] }}
       >
         {/* <FakeComponent key="q1" /> */}
         {girlsInfo.map((item, index) => (
