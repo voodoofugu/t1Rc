@@ -4,13 +4,16 @@ import { nexusTrigger, nexusUpdate } from "nexus-state";
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
 import StoreItemBox from "../UIComponents/StoreItemBox";
+import ImageBg from "../UIComponents/ImageBg";
 
-const girlImg = "img/images/hero-all/tithero-477/icons/break-girl4.png";
+const girlImg = "images/hero-all/tithero-517/icons/break-girl";
 
 function XmasPop1({ setXmasPopLocal }) {
   return (
     <>
       <div className="color-box"></div>
+      <ImageBg className="girlImg xmas-girl" img={`img/${girlImg}.png`} />
+
       <div className="xmas-box-all">
         <div className="xmas-collect-box-all">
           <div className="xmas-collect-box">
@@ -93,9 +96,6 @@ function XmasPop1({ setXmasPopLocal }) {
           </div>
         </div>
       </div>
-      <div className="xmas-girl">
-        <img src={girlImg} loading="lazy" />
-      </div>
       <div className="xmas-btn-box">
         <div className="color-btn quest">
           <div
@@ -135,6 +135,8 @@ function XmasPop2({ setXmasPopLocal }) {
   return (
     <>
       <div className="color-box"></div>
+      <ImageBg className="girlImg xmas-girl" img={`img/${girlImg}.png`} />
+
       <div className="xmas-box-all">
         <div className="xmas-collect-box-all">
           <div className="xmas-collect-box">
@@ -209,9 +211,6 @@ function XmasPop2({ setXmasPopLocal }) {
           </StoreItemBox>
         </div>
       </div>
-      <div className="xmas-girl">
-        <img src={girlImg} loading="lazy" />
-      </div>
       <div className="xmas-btn-box">
         <div className="color-btn">
           <div
@@ -230,10 +229,9 @@ function XmasPop3({ setXmasPopLocal }) {
   return (
     <>
       <div className="color-box"></div>
+      <ImageBg className="girlImg xmas-girl" img={`img/${girlImg}.png`} />
+
       <div className="xmas-daily-prg-box-all">
-        <div className="xmas-prg-girl">
-          <img src={girlImg} loading="lazy" />
-        </div>
         <div className="xmas-prg-bar-box">
           <div className="xmas-prg-name-pic">0</div>
           <div className="xmas-prg-bar">
