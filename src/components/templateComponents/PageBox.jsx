@@ -92,7 +92,7 @@ export default function PageBox() {
         // elementsAlign="center"
         contentAlign={["center", "center"]}
         render={{ type: "virtual" }}
-        scrollTop={scrollNew}
+        scrollPosition={scrollNew}
         onScrollValue={(v) => setScrollTopValue(v)}
         isScrolling={(v) => setIsScrolling(v)}
       >

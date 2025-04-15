@@ -260,7 +260,7 @@ const Chat = ({ girlInfo }) => {
             objectsWrapFullMinSize
             padding={[20, 0]}
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
-            scrollTop={{ value: "end" }}
+            scrollPosition={{ value: "end" }}
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];

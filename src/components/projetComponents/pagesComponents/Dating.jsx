@@ -231,25 +231,25 @@ const GirlDependencies = ({ girlsInfo }) => {
         objectsSize={[86, 86]}
         gap={10}
         padding={[0, 10]}
+        progressReverse
+        progressVisibility="hover"
+        edgeGradient={{ color: "#572e19" }}
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
           // content: true,
           // arrows: true,
         }}
-        progressReverse
-        progressVisibility="hover"
+        contentAlign="center"
+        // elementsAlign="center"
         // direction="hybrid"
         // direction="x"
         // rootMargin={[0, 0]}
         // suspending
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"
-        edgeGradient={{ color: "#572e19" }}
-        // elementsAlign="center"
-        contentAlign={["center", "center"]}
         // render={{ type: "lazy", onVisible: keyСheck }}
-        render={{ type: "virtual" }}
+        // render={{ type: "virtual" }}
         // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
         // type="slider"
