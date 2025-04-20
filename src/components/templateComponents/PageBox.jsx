@@ -72,29 +72,26 @@ export default function PageBox() {
   };
 
   return usedPages[0] !== "not found" ? (
-    <div className="h-calcScreenH-112 m-auto max-w-1160  w-calcFull-80">
+    <div className="h-calcScreenH-112 m-auto  w-calcFull-80">
       <MorphScroll
         className="templateScroll"
         objectsSize={[238, 156]}
         gap={60}
-        padding={[0, 14]}
+        wrapper={{
+          margin: [0, 14],
+        }}
         progressTrigger={{
           wheel: true,
-          progressElement:
-            // (
-            //   <div
-            //     style={{ backgroundColor: "#000", width: "8px", height: "100%" }}
-            //   />
-            // )
-            true,
+          progressElement: true,
         }}
         edgeGradient={{ color: "rgb(199, 210, 254)" }}
         // elementsAlign="center"
-        contentAlign={["center", "center"]}
+        contentAlign={["center", "start"]}
         render={{ type: "virtual" }}
         scrollPosition={scrollNew}
-        onScrollValue={(v) => setScrollTopValue(v)}
+        onScrollValue={(_, t) => setScrollTopValue(t)}
         isScrolling={(v) => setIsScrolling(v)}
+        crossCount={3}
       >
         {components}
       </MorphScroll>

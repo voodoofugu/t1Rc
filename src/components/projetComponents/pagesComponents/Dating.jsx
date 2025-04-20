@@ -226,34 +226,36 @@ const GirlDependencies = ({ girlsInfo }) => {
       </div> */}
       <MorphScroll
         className="scrollAvatars"
-        size={[104, 494]}
-        // size={[204, 204]}
+        // size={[104, 494]}
+        size={[190, 190]}
         objectsSize={[86, 86]}
-        gap={10}
-        padding={[0, 10]}
+        gap={24}
+        wrapper={{
+          margin: 12,
+        }}
         progressReverse
-        progressVisibility="hover"
+        // progressVisibility="hover"
         edgeGradient={{ color: "#572e19" }}
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
-          // content: true,
-          // arrows: true,
+          content: true,
+          arrows: true,
         }}
         contentAlign="center"
         // elementsAlign="center"
-        // direction="hybrid"
+        direction="hybrid"
         // direction="x"
         // rootMargin={[0, 0]}
         // suspending
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"
         // render={{ type: "lazy", onVisible: keyСheck }}
-        // render={{ type: "virtual" }}
+        render={{ type: "virtual" }}
         // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
-        // type="slider"
-        // crossCount={3}
+        type="slider"
+        crossCount={3}
         // scrollTop={{ value: [86, 86] }}
       >
         {/* <FakeComponent key="q1" /> */}

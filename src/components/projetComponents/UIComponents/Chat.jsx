@@ -257,8 +257,10 @@ const Chat = ({ girlInfo }) => {
             className="chatDaiting"
             size={[490, 496]}
             objectsSize={[450, "none"]}
-            objectsWrapFullMinSize
-            padding={[20, 0]}
+            wrapper={{
+              // margin: [20, 0],
+              minSize: "full",
+            }}
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollPosition={{ value: "end" }}
           >
