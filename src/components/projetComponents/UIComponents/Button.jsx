@@ -1,16 +1,34 @@
 import React from "react";
 
-const BtnWrap = ({ className, onClick, href, children }) => {
+const BtnWrap = ({
+  className,
+  onMouseEnter,
+  onMouseLeave,
+  onClick,
+  href,
+  children,
+}) => {
   const btnClass = `butn${className ? ` ${className}` : ""}`;
 
   return (
     <>
       {href ? (
-        <a className={btnClass} onClick={onClick} href={href}>
+        <a
+          className={btnClass}
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          href={href}
+        >
           {children}
         </a>
       ) : (
-        <div className={btnClass} onClick={onClick}>
+        <div
+          className={btnClass}
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
           {children}
         </div>
       )}
@@ -26,6 +44,8 @@ const Button = ({
   discountSticker,
   img = false,
   onClick,
+  onMouseEnter,
+  onMouseLeave,
   href,
   children,
 }) => {
@@ -47,7 +67,13 @@ const Button = ({
   }, [text]);
 
   return (
-    <BtnWrap className={className} onClick={onClick} href={href}>
+    <BtnWrap
+      className={className}
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      href={href}
+    >
       <div className="btnContentWrap">
         {img ? (
           typeof img === "string" ? (

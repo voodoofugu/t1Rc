@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 
 import ImageBg from "../UIComponents/ImageBg";
 import ItemBox from "../UIComponents/ItemBox";
+import Button from "../UIComponents/Button";
+import Tooltip from "../UIComponents/Tooltip";
 
 export const cssFiles = [
   "v2-unipop-20-pse2-pop",
@@ -197,6 +199,20 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                           loading="lazy"
                         />
                       </div>
+
+                      <Tooltip
+                        className="pse2"
+                        targetContent={
+                          <div className="achiev-hint">
+                            <div className="tooltip">
+                              Demon that penetrates into the peoples dreams.
+                            </div>
+                          </div>
+                        }
+                      >
+                        <Button className="infoOnly" text="i" />
+                      </Tooltip>
+
                       <div className="info-box">
                         <div className="dps-extra">
                           <div className="value">2.32B</div>
@@ -289,6 +305,18 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                           loading="lazy"
                         />
                       </div>
+                      <Tooltip
+                        className="pse2"
+                        targetContent={
+                          <div className="achiev-hint">
+                            <div className="tooltip">
+                              Demon that penetrates into the peoples dreams.
+                            </div>
+                          </div>
+                        }
+                      >
+                        <Button className="infoOnly" text="i" />
+                      </Tooltip>
                     </div>
                     {/* <div className="pse2-girl-right-box">
                       <div className="pse2-girl">

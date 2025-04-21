@@ -19,6 +19,7 @@ export default memo(function Template() {
           "keyframes-animations",
           "customScroll",
           "ui-elements",
+          "screen-achiev",
         ]}
         fallback={<Loading noBG />}
       >

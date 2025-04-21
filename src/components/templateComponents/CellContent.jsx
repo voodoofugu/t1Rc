@@ -144,6 +144,7 @@ function CellContent({ pageName }) {
                               key={pageName}
                             >
                               <ComponToLoad pageName={pageName} />
+                              <div className="tooltip-layer" />
                             </DynamicComponent>
                           </>
                         )}
@@ -162,6 +163,7 @@ function CellContent({ pageName }) {
                         <>
                           <DynamicComponent pageName={pageName} key={pageName}>
                             <ComponToLoad pageName={pageName} />
+                            <div className="tooltip-layer" />
                           </DynamicComponent>
                         </>
                       )}

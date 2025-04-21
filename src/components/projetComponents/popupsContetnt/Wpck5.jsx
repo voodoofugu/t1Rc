@@ -3,6 +3,7 @@ import { memo } from "react";
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
+import Tooltip from "../UIComponents/Tooltip";
 
 export default memo(function Wpck5() {
   return (
@@ -18,6 +19,19 @@ export default memo(function Wpck5() {
                 loading="lazy"
               />
             </div>
+
+            <Tooltip
+              className="lheroPic"
+              targetContent={
+                <div className="achiev-hint">
+                  <div className="tooltip">
+                    Demon that penetrates into the peoples dreams.
+                  </div>
+                </div>
+              }
+            >
+              <Button className="infoOnly" text="i" />
+            </Tooltip>
             <div className="topname-box">
               <div className="lrare-box uncommon"></div>
               <div className="sh2-icon left">

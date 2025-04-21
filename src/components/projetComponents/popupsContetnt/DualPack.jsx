@@ -1,6 +1,8 @@
 import React from "react";
 
 import ItemBox from "../UIComponents/ItemBox";
+import Button from "../UIComponents/Button";
+import Tooltip from "../UIComponents/Tooltip";
 
 export default function DualPack({ event }) {
   return (
@@ -13,6 +15,20 @@ export default function DualPack({ event }) {
               loading="lazy"
             />
           </div>
+
+          <Tooltip
+            className="lheroPic"
+            targetContent={
+              <div className="achiev-hint">
+                <div className="tooltip">
+                  Demon that penetrates into the peoples dreams.
+                </div>
+              </div>
+            }
+          >
+            <Button className="infoOnly" text="i" />
+          </Tooltip>
+
           <div className="topname-box">
             <div className="lrare-box uncommon"></div>
             <div className="sh2-icon left">
@@ -99,6 +115,20 @@ export default function DualPack({ event }) {
               loading="lazy"
             />
           </div>
+
+          <Tooltip
+            className="lheroPic"
+            targetContent={
+              <div className="achiev-hint">
+                <div className="tooltip">
+                  Demon that penetrates into the peoples dreams.
+                </div>
+              </div>
+            }
+          >
+            <Button className="infoOnly" text="i" />
+          </Tooltip>
+
           <div className="topname-box">
             <div className="asc-lvl">10</div>
             <div className="sh2-icon-forgirl right">

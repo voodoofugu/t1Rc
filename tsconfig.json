@@ -22,5 +22,10 @@
       "typeRoots": ["./node_modules/@types", "./types"]
     }
   },
-  "include": ["src/**/*", "pathMap.ts", "eslint.config.mjs"]
+  "include": [
+    "src/**/*",
+    "pathMap.ts",
+    "eslint.config.mjs",
+    "tailwind.config.ts"
+  ]
 }
