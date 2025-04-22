@@ -14,6 +14,7 @@ export default function Tooltip({ className = "", targetContent, children }) {
   const tooltipLayer = document.querySelector(".tooltip-layer");
 
   const handleEnter = () => {
+    if (!tooltipLayer) return;
     tooltipRef.current = document.querySelector(`.tooltip-${tooltipId}`);
     if (!tooltipRef.current) return;
 
@@ -71,7 +72,7 @@ export default function Tooltip({ className = "", targetContent, children }) {
   return (
     <>
       {wrappedChild}
-      {typeof window !== "undefined" && visible && targetContent
+      {typeof window !== "undefined" && tooltipLayer && visible && targetContent
         ? createPortal(
             React.cloneElement(targetContent, {
               style: {
