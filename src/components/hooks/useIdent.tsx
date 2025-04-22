@@ -1,16 +1,13 @@
-import { useRef, useCallback } from "react";
+import { useRef } from "react";
 
-const letters = "abcdefghijklmnopqrstuvwxyz";
+let idCounter = 1;
 
 export default function useIdent() {
-  let idCounter = 0;
-  const idGenerator = useCallback(() => {
-    const prefix = letters[Math.floor(Math.random() * letters.length)];
-    return `${prefix}${idCounter++}`;
-  }, []);
+  const idRef = useRef<string | null>(null);
 
-  const generatorRef = useRef(idGenerator());
-  const id = useRef(generatorRef.current);
+  if (idRef.current === null) {
+    idRef.current = `${idCounter++}`;
+  }
 
-  return id.current;
+  return idRef.current;
 }

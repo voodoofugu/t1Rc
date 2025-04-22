@@ -23,7 +23,7 @@ export default memo(function Wpck5() {
             <Tooltip
               className="lheroPic"
               targetContent={
-                <div className="achiev-hint">
+                <div className="achiev-hint default">
                   <div className="tooltip">
                     Demon that penetrates into the peoples dreams.
                   </div>

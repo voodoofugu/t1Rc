@@ -19,7 +19,7 @@ export default function DualPack({ event }) {
           <Tooltip
             className="lheroPic"
             targetContent={
-              <div className="achiev-hint">
+              <div className="achiev-hint default">
                 <div className="tooltip">
                   Demon that penetrates into the peoples dreams.
                 </div>
@@ -119,7 +119,7 @@ export default function DualPack({ event }) {
           <Tooltip
             className="lheroPic"
             targetContent={
-              <div className="achiev-hint">
+              <div className="achiev-hint default">
                 <div className="tooltip">
                   Demon that penetrates into the peoples dreams.
                 </div>

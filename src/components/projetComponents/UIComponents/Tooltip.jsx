@@ -1,80 +1,77 @@
 import React from "react";
 import { createPortal } from "react-dom";
 
-export default function Tooltip({ className = "", children, targetContent }) {
+import useIdent from "../../hooks/useIdent";
+
+export default function Tooltip({ className = "", targetContent, children }) {
   const tooltipRef = React.useRef(null);
-  const layerRef = React.useRef(null);
   const style = React.useRef({});
+  const timer = React.useRef(null);
 
   const [visible, setVisible] = React.useState(false);
 
+  const tooltipId = useIdent();
+  const tooltipLayer = document.querySelector(".tooltip-layer");
+
   const handleEnter = () => {
-    console.log("handleEnter");
+    tooltipRef.current = document.querySelector(`.tooltip-${tooltipId}`);
     if (!tooltipRef.current) return;
-    layerRef.current = document.querySelector(".tooltip-layer");
-    if (!layerRef.current) return;
 
     const rect = tooltipRef.current.getBoundingClientRect();
     const difference =
       window.innerWidth < 1200 ? 0 : (window.innerWidth - 1200) / 2;
-    console.log("window.width", window);
+
     style.current = {
       left: `${rect.left + window.scrollX - difference}px`,
       top: `${rect.bottom + window.scrollY}px`,
     };
-    console.log("rect", rect);
 
     setVisible(true);
   };
 
   const handleLeave = () => {
+    Array.from(tooltipLayer?.children || []).forEach((child) => {
+      child.classList.remove("fadeIn");
+    });
     style.current = {};
-    setVisible(false);
+    tooltipRef.current = null;
+
+    timer.current = setTimeout(() => setVisible(false), 100);
   };
 
-  // const isSingleValidElement =
-  //   React.isValidElement(children) && !Array.isArray(children);
-  // const wrappedChild = isSingleValidElement ? (
-  //   React.cloneElement(children, {
-  //     onMouseEnter: handleEnter,
-  //     onMouseLeave: handleLeave,
-  //     className: `${children.props.className ?? ""} ${className}`.trim(),
-  //   })
-  // ) : (
-  //   <div
-  //     onMouseEnter={handleEnter}
-  //     onMouseLeave={handleLeave}
-  //     className={`tooltipWrap${className ? ` ${className}` : ""}`}
-  //     style={{
-  //       position: "absolute",
-  //       width: "fit-content",
-  //       height: "fit-content",
-  //     }}
-  //   >
-  //     {children}
-  //   </div>
-  // );
-  const isDOMElement = typeof children?.type === "string";
-  const wrappedChild = isDOMElement
-    ? React.cloneElement(children, {
-        ref: tooltipRef,
-        onMouseEnter: handleEnter,
-        onMouseLeave: handleLeave,
-        className: `${children.props.className ?? ""} ${className}`.trim(),
-      })
-    : React.cloneElement(children, {
-        onMouseEnter: handleEnter,
-        onMouseLeave: handleLeave,
-        className: `${children.props?.className ?? ""} ${className}`.trim(),
+  const isSingleValidElement =
+    React.isValidElement(children) && !Array.isArray(children);
+
+  const commonProps = {
+    onMouseEnter: handleEnter,
+    onMouseLeave: handleLeave,
+    className: `${
+      children.props?.className ?? ""
+    } ${className} tooltip-${tooltipId}`.trim(),
+  };
+
+  const wrappedChild = isSingleValidElement ? (
+    React.cloneElement(children, commonProps)
+  ) : (
+    <div {...commonProps}>{children}</div>
+  );
+
+  React.useEffect(() => {
+    if (visible) {
+      Array.from(tooltipLayer?.children || []).forEach((child) => {
+        child.classList.add("fadeIn");
       });
+    }
+
+    return () => {
+      clearTimeout(timer.current);
+    };
+  }, [visible]);
 
   return (
     <>
       {wrappedChild}
-      {typeof window !== "undefined" &&
-      visible &&
-      layerRef.current &&
-      targetContent
+      {typeof window !== "undefined" && visible && targetContent
         ? createPortal(
             React.cloneElement(targetContent, {
               style: {
@@ -82,7 +79,7 @@ export default function Tooltip({ className = "", children, targetContent }) {
                 ...style.current,
               },
             }),
-            layerRef.current
+            tooltipLayer
           )
         : null}
     </>
