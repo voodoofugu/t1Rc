@@ -130,13 +130,13 @@ export default function ArmySetupCW() {
           className="armySetupScroll"
           size={[1100, 436]}
           objectsSize={[94, 107]}
-          padding={[6, 0]}
+          wrapperMargin={[6, 0]}
           gap={12}
           progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           edgeGradient={{ color: "#52413f" }}
           render={{ type: "virtual" }}
           rootMargin={[0, 100]}
-          contentAlign={["center", "center"]}
+          wrapperAlign={["center", "center"]}
           elementsAlign={"center"}
         >
           {getHeroData()

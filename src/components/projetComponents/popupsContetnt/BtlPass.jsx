@@ -238,7 +238,7 @@ export default function BtlPass({ event }) {
             render={{ type: "virtual" }}
             direction="x"
             // type="slider"
-            // contentAlign={["center", "center"]}
+            // wrapperAlign={["center", "center"]}
             // progressReverse
           >
             {elements.map((element, index) => (

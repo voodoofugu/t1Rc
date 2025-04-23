@@ -15,12 +15,12 @@ export default function AllHeroesBoxScroll({ numX }) {
       size={[504, 346]}
       objectsSize={[230, 124]}
       gap={12}
-      padding={[0, 5]}
+      wrapperMargin={[0, 5]}
       progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       edgeGradient={{ color: "#584a49" }}
       render={{ type: "virtual" }}
       progressVisibility="hover"
-      contentAlign={["center", "start"]}
+      wrapperAlign={["center", "start"]}
       emptyElements={{
         mode: "clear",
         clickTrigger: { selector: ".exit" },

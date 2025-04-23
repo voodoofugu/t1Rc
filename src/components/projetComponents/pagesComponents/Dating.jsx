@@ -230,9 +230,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         size={[190, 190]}
         objectsSize={[86, 86]}
         gap={24}
-        wrapper={{
-          margin: 12,
-        }}
+        wrapperMargin={12}
         progressReverse
         // progressVisibility="hover"
         edgeGradient={{ color: "#572e19" }}
@@ -242,7 +240,7 @@ const GirlDependencies = ({ girlsInfo }) => {
           content: true,
           arrows: true,
         }}
-        contentAlign="center"
+        wrapperAlign="center"
         // elementsAlign="center"
         direction="hybrid"
         // direction="x"

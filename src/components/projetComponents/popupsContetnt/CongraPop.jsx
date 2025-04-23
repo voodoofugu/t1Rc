@@ -33,11 +33,11 @@ export default function CongraPop({ rewardsData }) {
           size={[490, 275]}
           objectsSize={[80, 80]}
           gap={12}
-          padding={[5, 0]}
+          wrapperMargin={[5, 0]}
           progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           progressElement={<ScrollThumb />}
           elementsAlign={"center"}
-          contentAlign={["center", "center"]}
+          wrapperAlign={["center", "center"]}
         >
           {rewardsData.map((item, index) => (
             <ItemBox key={index} {...item} />

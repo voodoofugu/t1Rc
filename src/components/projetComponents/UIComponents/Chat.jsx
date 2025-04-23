@@ -257,12 +257,10 @@ const Chat = ({ girlInfo }) => {
             className="chatDaiting"
             size={[490, 496]}
             objectsSize={[450, "none"]}
-            wrapper={{
-              // margin: [20, 0],
-              minSize: "full",
-            }}
+            wrapperMinSize={"full"}
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollPosition={{ value: "end" }}
+            wrapperAlign={"center"}
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];

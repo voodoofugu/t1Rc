@@ -77,16 +77,14 @@ export default function PageBox() {
         className="templateScroll"
         objectsSize={[238, 156]}
         gap={60}
-        wrapper={{
-          margin: [0, 14],
-        }}
+        wrapperMargin={[0, 14]}
         progressTrigger={{
           wheel: true,
           progressElement: true,
         }}
         edgeGradient={{ color: "rgb(199, 210, 254)" }}
         // elementsAlign="center"
-        contentAlign={["center", "start"]}
+        wrapperAlign={["center", "start"]}
         render={{ type: "virtual" }}
         scrollPosition={scrollNew}
         onScrollValue={(_, t) => setScrollTopValue(t)}

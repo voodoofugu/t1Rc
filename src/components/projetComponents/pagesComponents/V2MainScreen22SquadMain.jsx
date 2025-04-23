@@ -300,16 +300,15 @@ export default function V2MainScreen22SquadMain() {
                     size={[504, 346]}
                     objectsSize={[470, 132]}
                     gap={12}
-                    padding={[0, 5]}
+                    wrapperMargin={[0, 5]}
                     progressTrigger={{
                       wheel: true,
                       progressElement: <ScrollThumb />,
                     }}
-                    progressElement={<ScrollThumb />}
                     edgeGradient={{ color: "#584a49" }}
                     render={{ type: "virtual" }}
                     progressVisibility="hover"
-                    contentAlign={["center", "center"]}
+                    wrapperAlign={["center", "center"]}
                     emptyElements={{ mode: "clear" }}
                   >
                     <div className="hero-card-wrap bronze-color-bg">
