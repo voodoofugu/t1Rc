@@ -145,13 +145,19 @@ function Tooltip() {
             />
           </div>
           <div className="prize-name-box">Himeko Akira</div>
-          <div className="prize-dps-box">
+          {/* <div className="prize-dps-box">
             <div className="prize-dps-text">124sD4</div>
           </div>
           <div className="prize-promote-box">
             <div className="prize-promote-text" />
-          </div>
+          </div> */}
           <div className="prize-name-box small">rare hero</div>
+          <div className="prize-textBox">
+            <div className="prize-text">
+              Demon that penetrates into the peoples dreams.
+            </div>
+          </div>
+
           <div className="unique-skill-box-all">
             <div className="prize-name-box small">with unique skills</div>
             <div className="unique-skill-box">
