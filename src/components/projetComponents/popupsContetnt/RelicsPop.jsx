@@ -30,15 +30,23 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       vl: [
-        "img/images/superhero/suphero-922/x2/sh-1.jpg",
+        "img/images/superhero/suphero-969/x2/sh-6.jpg",
         "Send us to Valentine's Day Orgy!",
+        // [
+        //   "img/ic-vl-heart-dark-blue.png",
+        //   "img/ic-vl-heart-red.png",
+        //   "img/ic-vl-heart-dark-lilac.png",
+        //   "img/ic-vl-heart-green.png",
+        //   "img/ic-vl-heart-pink.png",
+        //   "img/ic-vl-heart-blue.png",
+        // ],
         [
-          "img/ic-vl-heart-dark-blue.png",
-          "img/ic-vl-heart-red.png",
-          "img/ic-vl-heart-dark-lilac.png",
-          "img/ic-vl-heart-green.png",
-          "img/ic-vl-heart-pink.png",
-          "img/ic-vl-heart-blue.png",
+          "img/evPopArts/puzzle-darkBlue.png",
+          "img/evPopArts/puzzle-gray.png",
+          "img/evPopArts/puzzle-green.png",
+          "img/evPopArts/puzzle-lightBlue.png",
+          "img/evPopArts/puzzle-pink.png",
+          "img/evPopArts/puzzle-red.png",
         ],
         "img/v2-vl-candys-box.png",
       ],
@@ -109,7 +117,7 @@ export default memo(function RelicsPop({ event }) {
     event === "xmas"
       ? "img/bGs/xmasBg.jpg"
       : "vl"
-      ? "img/bGs/bedspreadBg.jpg"
+      ? "img/bGs/mountainsBg.jpg"
       : "img/bGs/halloweenBg.jpg";
 
   const evData = data.find((item) => item[event]);
@@ -133,16 +141,16 @@ export default memo(function RelicsPop({ event }) {
       />
 
       <div className="main-relics-girl-box">
-        {/* <div className="main-relics-girl-pic">
+        <div className="main-relics-girl-pic">
           <img src={evData?.[event][0]} loading="lazy" />
-        </div> */}
-        <VideoTag
+        </div>
+        {/* <VideoTag
           className="relics-vidio"
           poster="img/images/superhero/suphero-965/x2/sh-6.jpg"
           source={["img/images/superhero/suphero-965/video.mp4"]}
           autoPlay
           loop
-        />
+        /> */}
 
         <Button className="infoOnly" text="i" />
 
@@ -151,7 +159,7 @@ export default memo(function RelicsPop({ event }) {
           <div className="main-relics-timer">3D 23:46:59</div>
         </div>
 
-        {/* <ComicsBallon
+        <ComicsBallon
           text={evData?.[event][1]}
           style={{
             top: "344px",
@@ -160,7 +168,7 @@ export default memo(function RelicsPop({ event }) {
             transform: "translateX(-80%)",
           }}
           changeDirectionArrow
-        /> */}
+        />
 
         <div className="pse-count-res-box">
           <div className="pse-count-res-text">
