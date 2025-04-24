@@ -25,6 +25,7 @@ export default function AllHeroesBoxScroll({ numX }) {
         mode: "clear",
         clickTrigger: { selector: ".exit" },
       }}
+      // render={{ type: "lazy" }}
     >
       {heroBoxData.map((item, index) => (
         <HeroBox
