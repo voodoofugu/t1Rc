@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNexus } from "nexus-state";
 
 import StateChangeBtn from "../UIComponents/StateChangeBtn";
+import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export const cssFiles = [
   "screen-rating-maintab",
@@ -11,13 +13,55 @@ export const cssFiles = [
 ];
 
 function Tooltip() {
+  const timerRef = useRef(null);
+
+  const [scrollVisibility, setScrollVisibility] = useState(false);
+  const [scrollClasses, setScrollClasses] = useState("prize-textBox");
+
+  const scrollHandler = (motion) => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+
+    if (!motion && !scrollVisibility) {
+      timerRef.current = setTimeout(() => {
+        setScrollVisibility(true);
+        timerRef.current = null;
+      }, 1000);
+    } else if (!motion) {
+      timerRef.current = setTimeout(() => {
+        setScrollClasses("prize-textBox hide");
+
+        timerRef.current = setTimeout(() => {
+          setScrollVisibility(motion);
+          setScrollClasses("prize-textBox");
+          timerRef.current = null;
+        }, 200);
+      }, 1000);
+    }
+  };
+
+  const text = `Her skin is like bronze polished by the sun, and her long red hair
+              is a flame of passion. She sings not only with her voice, but her
+              body becomes a melody, her every movement a rhythm of seduction.
+              The psaltery in her hands is not just an instrument, but a weapon
+              that drives you crazy. When she smiles, men forget why they came.
+              She is a fire into which you want to dive, knowing that you will
+              be burned. Strings of Vice - She strikes the strings of the
+              psaltery, emitting vibrations that penetrate the flesh of her
+              enemies, making them feel aroused and weak.`;
+  const scrollProps = {
+    scrollPosition: scrollVisibility
+      ? { value: "end", duration: text.length * 60 }
+      : { value: 0, duration: 0 },
+  };
+
   return (
     <div
       className="tooltip-layer"
       style={{
         top: "50%",
         left: "50%",
-        width: "962px",
         transform: "translate(-50%, -50%)",
       }}
     >
@@ -152,11 +196,20 @@ function Tooltip() {
             <div className="prize-promote-text" />
           </div> */}
           <div className="prize-name-box small">rare hero</div>
-          <div className="prize-textBox">
-            <div className="prize-text">
-              Demon that penetrates into the peoples dreams.
-            </div>
-          </div>
+          <MorphScroll
+            className={scrollClasses}
+            size={[198, 68]}
+            objectsSize={[178, "none"]}
+            progressTrigger={{
+              progressElement: <ScrollThumb />,
+            }}
+            edgeGradient={{ color: "#C6BDB4", size: 16 }}
+            wrapperMargin={[10, 0]}
+            scrollPosition={scrollProps.scrollPosition}
+            isScrolling={scrollHandler}
+          >
+            <div className="prize-text">{text}</div>
+          </MorphScroll>
 
           <div className="unique-skill-box-all">
             <div className="prize-name-box small">with unique skills</div>
