@@ -8,6 +8,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import heroBoxData from "../data/heroBoxData";
 
+// добавить таймаут и вернуть что-то
 const EmptyElement = () => {
   return null;
 };
