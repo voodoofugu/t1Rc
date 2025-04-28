@@ -8,6 +8,10 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import heroBoxData from "../data/heroBoxData";
 
+const EmptyElement = () => {
+  return null;
+};
+
 export default function AllHeroesBoxScroll({ numX }) {
   return (
     <MorphScroll
@@ -18,15 +22,16 @@ export default function AllHeroesBoxScroll({ numX }) {
       wrapperMargin={[0, 5]}
       progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       edgeGradient={{ color: "#584a49" }}
-      render={{ type: "virtual" }}
+      // render={{ type: "virtual" }}
+      render={{ type: "lazy" }}
       progressVisibility="hover"
       wrapperAlign={["center", "start"]}
       emptyElements={{
         mode: "clear",
         clickTrigger: { selector: ".exit" },
       }}
-      // render={{ type: "lazy" }}
     >
+      <EmptyElement />
       {heroBoxData.map((item, index) => (
         <HeroBox
           key={index}

@@ -52,7 +52,7 @@ function Tooltip() {
               enemies, making them feel aroused and weak.`;
   const scrollProps = {
     scrollPosition: scrollVisibility
-      ? { value: "end", duration: text.length * 60 }
+      ? { value: "end", duration: text.length * 50 }
       : { value: 0, duration: 0 },
   };
 
@@ -207,6 +207,7 @@ function Tooltip() {
             wrapperMargin={[10, 0]}
             scrollPosition={scrollProps.scrollPosition}
             isScrolling={scrollHandler}
+            wrapperAlign={"center"}
           >
             <div className="prize-text">{text}</div>
           </MorphScroll>
