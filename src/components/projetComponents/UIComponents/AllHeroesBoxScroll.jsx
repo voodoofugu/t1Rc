@@ -10,7 +10,17 @@ import heroBoxData from "../data/heroBoxData";
 
 // добавить таймаут и вернуть что-то
 const EmptyElement = () => {
-  return null;
+  const [state, setState] = React.useState(null);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setState(<div style={{ color: "#fff", fontSize: "20px" }}>hi</div>);
+    }, 5000);
+
+    return () => clearTimeout(timer); // безопасная очистка
+  }, []);
+
+  return state;
 };
 
 export default function AllHeroesBoxScroll({ numX }) {
