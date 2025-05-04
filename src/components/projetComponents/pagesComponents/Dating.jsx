@@ -238,10 +238,11 @@ const GirlDependencies = ({ girlsInfo }) => {
           wheel: true,
           progressElement: <ScrollThumb />,
           content: true,
-          // arrows: true, // !!!
+          // arrows: true,
         }}
         wrapperAlign="center"
         // elementsAlign="center"
+        // elementsDirection="column"
         // direction="hybrid"
         // direction="x"
         // rootMargin={[0, 0]}

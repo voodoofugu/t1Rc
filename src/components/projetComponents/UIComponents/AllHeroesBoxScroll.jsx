@@ -33,14 +33,16 @@ export default function AllHeroesBoxScroll({ numX }) {
       wrapperMargin={[0, 5]}
       progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
       edgeGradient={{ color: "#584a49" }}
-      // render={{ type: "virtual" }}
-      render={{ type: "lazy" }}
+      // render={{ type: "default" }}
+      // render={{ type: "lazy", stopLoadOnScroll: true }}
+      render={{ type: "virtual" }}
       progressVisibility="hover"
       wrapperAlign={["center", "start"]}
       emptyElements={{
         mode: "clear",
         clickTrigger: { selector: ".exit" },
       }}
+      // fallback={<div style={{ color: "#fff", fontSize: "20px" }}>loading</div>}
     >
       <EmptyElement />
       {heroBoxData.map((item, index) => (
