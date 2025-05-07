@@ -27,7 +27,7 @@ export default function BtlPass({ event }) {
       : event === "bf"
       ? "images/hero-all/tithero-429/icons/break-girl"
       : event === "vl"
-      ? "images/hero-all/tithero-507/icons/break-girl"
+      ? "images/hero-all/tithero-509/icons/break-girl4"
       : event === "spring"
       ? "images/hero-all/tithero-430/icons/break-girl"
       : event === "summer"
