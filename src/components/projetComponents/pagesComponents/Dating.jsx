@@ -243,8 +243,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         wrapperAlign="center"
         // elementsAlign="center"
         // elementsDirection="column"
-        // direction="hybrid"
-        // direction="x"
+        // direction="hybridY"
+        // direction="x" // проверить!
         // rootMargin={[0, 0]}
         // suspending
         // fallback={<div>loading</div>}
