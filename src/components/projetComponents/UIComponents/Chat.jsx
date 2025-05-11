@@ -28,6 +28,10 @@ const Chat = ({ girlInfo }) => {
     chatMapArray.length - 1
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
+  const [rect, setRect] = React.useState(null);
+  const setRectFunction = React.useCallback((newRect) => {
+    setRect(newRect);
+  }, []);
 
   const [lastElements, setLastElements] = React.useState({
     [girlInfo.id]: -10,
@@ -39,6 +43,15 @@ const Chat = ({ girlInfo }) => {
       loadingReady: false,
     });
   }
+  const setLastElementsFunction = React.useCallback(
+    (entry) => {
+      setLastElements((prevState) => ({
+        ...prevState,
+        [girlInfo.id]: prevState[girlInfo.id] - 10,
+      }));
+    },
+    [lastElements.loadingReady]
+  );
 
   // variables
   const arrayFromChatProgress = [...Array(chatProgress + 1).keys()];
@@ -253,7 +266,6 @@ const Chat = ({ girlInfo }) => {
       ) : (
         <>
           <MorphScroll
-            // scrollID="chatDaiting"
             className="chatDaiting"
             size={[490, 496]}
             objectsSize={[450, "none"]}
@@ -261,6 +273,9 @@ const Chat = ({ girlInfo }) => {
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollPosition={{ value: "end" }}
             wrapperAlign={"center"}
+            edgeGradient
+            // render={{ type: "virtual" }}
+            // render={{ type: "lazy" }}
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];
@@ -275,13 +290,8 @@ const Chat = ({ girlInfo }) => {
                     <IntersectionTracker
                       key={`message${textIndex}`}
                       visibleContent
-                      onVisible={() => {
-                        lastElements.loadingReady &&
-                          setLastElements((prevState) => ({
-                            ...prevState,
-                            [girlInfo.id]: prevState[girlInfo.id] - 10,
-                          }));
-                      }}
+                      onVisible={setLastElementsFunction}
+                      threshold={1}
                     >
                       {messageContent(message, item, index)}
                     </IntersectionTracker>
@@ -294,8 +304,12 @@ const Chat = ({ girlInfo }) => {
               }
             })}
 
-            <ResizeTracker measure="all" key="nextMessageBox">
-              {(rect) => (
+            <ResizeTracker
+              measure="all"
+              key="nextMessageBox"
+              onResize={setRectFunction}
+            >
+              {
                 <>
                   {nextMessage && (nextMessage.Hero || nextMessage.Quest) && (
                     <div className="btnBox" ref={btnBoxRef}>
@@ -360,7 +374,7 @@ const Chat = ({ girlInfo }) => {
                     </div>
                   )}
                 </>
-              )}
+              }
             </ResizeTracker>
           </MorphScroll>
 

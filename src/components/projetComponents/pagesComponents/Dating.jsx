@@ -237,14 +237,14 @@ const GirlDependencies = ({ girlsInfo }) => {
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
-          content: true,
+          // content: true,
           // arrows: true,
         }}
         wrapperAlign="center"
         // elementsAlign="center"
         // elementsDirection="column"
         // direction="hybridY"
-        // direction="x" // проверить!
+        // direction="x"
         // rootMargin={[0, 0]}
         // suspending
         // fallback={<div>loading</div>}
@@ -256,7 +256,6 @@ const GirlDependencies = ({ girlsInfo }) => {
         // type="slider"
         // crossCount={3}
         // scrollTop={{ value: [86, 86] }}
-        // elementsDirection="column"
       >
         {/* <FakeComponent key="q1" /> */}
         {girlsInfo.map((item, index) => (

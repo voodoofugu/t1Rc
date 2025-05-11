@@ -3,38 +3,23 @@ import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
 
 export default [
-  { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-  {
-    languageOptions: {
-      globals: {
-        window: "readonly",
-        document: "readonly",
-        navigator: "readonly",
-        console: "readonly",
-        process: "readonly",
-        module: "readonly",
-      },
-    },
-  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     settings: {
       react: {
         version: "detect",
       },
     },
-  },
-  {
     ignores: [
       "node_modules/",
       "dist/",
       "src/scripts/pixi-animate",
       "titans_rc",
+      "**/*.d.ts",
     ],
-  },
-  {
     rules: {
       "react/prop-types": "off",
       "@typescript-eslint/no-unused-vars": "off",
@@ -52,8 +37,6 @@ export default [
       "react/display-name": "off",
       "no-undef": "off",
     },
-  },
-  {
     languageOptions: {
       parserOptions: {
         project: "./tsconfig.json",
