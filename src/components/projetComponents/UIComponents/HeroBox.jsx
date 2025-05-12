@@ -23,6 +23,14 @@ export default function HeroBox({
   squadRank,
 }) {
   const [visible, setVisible] = React.useState(true);
+  const heroCardRef = React.useRef(null);
+
+  const closeEvent = () => {
+    heroCardRef.current.classList.add("close");
+    setTimeout(() => {
+      setVisible(false);
+    }, 200);
+  };
 
   // check classes existing from className with RegEx
   const offerExist = /offer/.test(className);
@@ -38,7 +46,10 @@ export default function HeroBox({
     <div className="heroCardBox">
       {highlightExist && <div className="highlightBg"></div>}
       <div className="clickArea" onClick={onClick}></div>
-      <div className={`hero-card${className ? ` ${className}` : ""}`}>
+      <div
+        className={`hero-card${className ? ` ${className}` : ""}`}
+        ref={heroCardRef}
+      >
         {!offerCloseExist && (
           <Button
             className={`max ${offerStarterExist ? "btnGold btnBuy" : "green"}`}
@@ -101,7 +112,7 @@ export default function HeroBox({
         )}
 
         {offerStarterExist && (
-          <Button className="exit" text="✖" onClick={() => setVisible(false)} />
+          <Button className="exit" text="✖" onClick={closeEvent} />
         )}
       </div>
     </div>

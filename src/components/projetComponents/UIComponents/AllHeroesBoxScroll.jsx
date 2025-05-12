@@ -40,7 +40,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       wrapperAlign={["center", "start"]}
       emptyElements={{
         mode: "clear",
-        clickTrigger: { selector: ".exit" },
+        clickTrigger: { selector: ".exit", delay: 220 },
       }}
       // fallback={<div style={{ color: "#fff", fontSize: "20px" }}>loading</div>}
     >
