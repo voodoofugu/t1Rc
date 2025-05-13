@@ -3,7 +3,7 @@ import { nexusTrigger, useNexus } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";

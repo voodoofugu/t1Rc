@@ -3,7 +3,7 @@ import { nexusTrigger } from "nexus-state";
 
 import HeroBox from "../UIComponents/HeroBox";
 
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import heroBoxData from "../data/heroBoxData";

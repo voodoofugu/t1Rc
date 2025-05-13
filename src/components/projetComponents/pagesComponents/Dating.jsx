@@ -1,7 +1,7 @@
 import React from "react";
 import { nexusTrigger } from "nexus-state";
 // import { Scroll } from "morphing-scroll";
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 
 import ItemBox from "../UIComponents/ItemBox";
 // import ResCount from "../UIComponents/ResCount";

@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNexus } from "nexus-state";
 
 import StateChangeBtn from "../UIComponents/StateChangeBtn";
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export const cssFiles = [

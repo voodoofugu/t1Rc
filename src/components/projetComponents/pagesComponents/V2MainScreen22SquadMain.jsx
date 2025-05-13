@@ -1,4 +1,4 @@
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import Button from "../UIComponents/Button";
 

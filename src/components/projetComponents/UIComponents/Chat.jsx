@@ -2,9 +2,9 @@ import React from "react";
 
 import { nexusTrigger } from "nexus-state";
 
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
-import ResizeTracker from "../../../../morphing-scroll/src/ResizeTracker";
-import IntersectionTracker from "../../../../morphing-scroll/src/IntersectionTracker";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import ResizeTracker from "../../../../morphing-scroll/src/components/ResizeTracker";
+import IntersectionTracker from "../../../../morphing-scroll/src/components/IntersectionTracker";
 
 import PersonAva from "../UIComponents/PersonAva";
 import Button from "../UIComponents/Button";

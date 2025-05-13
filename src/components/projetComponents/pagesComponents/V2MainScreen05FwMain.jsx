@@ -2,7 +2,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ResCount from "../UIComponents/ResCount";
 

@@ -1,6 +1,6 @@
 import { nexusTrigger, useNexus } from "nexus-state";
 
-import MorphScroll from "../../../../morphing-scroll/src/MorphScroll";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ImageBg from "../UIComponents/ImageBg";
 import Button from "../UIComponents/Button";
