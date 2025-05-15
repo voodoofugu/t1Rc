@@ -488,7 +488,6 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "287:21:43",
                 {
                   mpopClass: "m-popup events-btlpass-pop summer contentOnly",
-                  popTit: "Summer Event Pass",
                   popCont: "BtlPass",
                   props: { event: "summer" },
                 },

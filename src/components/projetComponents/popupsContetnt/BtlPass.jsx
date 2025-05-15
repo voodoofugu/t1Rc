@@ -50,7 +50,7 @@ export default function BtlPass({ event }) {
       : event === "spring"
       ? "ic-march-flower-dark-blue"
       : event === "summer"
-      ? "evPopArts/butterfly"
+      ? "evPopArts/strawberry_1"
       : event === "autumn"
       ? "ic-autumn-leaf"
       : event === "sexpedition"
@@ -108,9 +108,9 @@ export default function BtlPass({ event }) {
       ? [
           "BuyShop",
           {
-            img1: "evPopArts/butterfly_1",
-            img2: "evPopArts/butterfly_2",
-            img3: "evPopArts/butterfly_3",
+            img1: "evPopArts/strawberry_1",
+            img2: "evPopArts/strawberry_2",
+            img3: "evPopArts/strawberry_3",
           },
         ]
       : event === "sexpedition"
