@@ -237,6 +237,11 @@ const GirlDependencies = ({ girlsInfo }) => {
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
+          // progressElement: [
+          //   <div className="sliderCircle" key="circle1" />,
+          //   <div className="sliderCircle" key="circle1" />,
+          //   <div className="sliderCircle" key="circle3" />,
+          // ],
           // content: true,
           // arrows: true,
         }}
@@ -253,6 +258,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // render={{ type: "virtual" }}
         // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
+        // type="sliderMenu"
         // type="slider"
         // crossCount={3}
         // scrollTop={{ value: [86, 86] }}
