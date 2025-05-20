@@ -2,56 +2,10 @@ import { useState } from "react";
 
 import { nexusTrigger } from "nexus-state";
 
-export const cssFiles = [
-  "screen-fapopoly-rules",
-  // "screen-unipop-subscription",
-  // "v2-screen-tower",
-  // "v2-screen-tower-relics",
-  // "v2-screen-events-btlpass",
-  // "screen-superhero",
-  // "popup-loseboss",
-  // "screen-event_main-sale",
-  // "screen-change-openchest",
-  // "screen-change-all",
-  // "screen-change-givepic",
-  // "screen-change-collpop",
-  // "v2-screen-offer-boss-chest-pop",
-  // "v2-screen-error",
-  // "screen-rating",
-  // "screen-rating-popstart",
-  // "screen-fortuna-dual-pack",
-  // "quests-ui",
-  // "screen-fortuna-winpop",
-  // "pop-wpck-end",
-  // "pop-wpck-all",
-  // "pop-wpck1",
-  // "pop-wpck2",
-  // "pop-wpck3",
-  // "pop-wpck4",
-  // "pop-wpck5",
-  // "screen-fortuna-round-main_16x",
-  // "screen-base",
-  // "screen-change-addchest",
-  // "shop-diamondbuy",
-  // "screen-rating-reward",
-  // "screen-rating-rankchange",
-  // "v2-screen-hero",
-  // "v2-screen-hero-promotion",
-  // "v2-screen-xmas-pop1",
-  // "v2-screen-xmas-pop2",
-  // "v2-screen-xmas-pop3",
-  // "sh2-openchest",
-  // "v2-screen-offer",
-  // "v2-screen-main-relics-pop",
-  // "screen-chests-shop",
-  // "screen-info-pop",
-  // // "pop-dark-btlpas",
-  // "screen-bank",
-  // "screen-rating-fullcoll",
-  // "screen-bank-5st",
-  // "fap_market",
-  // "store-items",
-];
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import Button from "../UIComponents/Button";
+
+export const cssFiles = ["shorts-gallery"];
 
 const childClickStopPropagation = (e) => {
   e.stopPropagation();
@@ -137,7 +91,27 @@ export default function MainScreen01AllPopups({ pageName, children }) {
       <div className="right-side"></div>
       <div className="left-side">
         <div className="left-panel wide">
-          <div className="heroes-list-all-box"></div>
+          <div className="heroes-list-all-box">
+            <MorphScroll
+              className="shortsGallery"
+              size={[1098, 497]}
+              objectsSize={[1098, 507]}
+              progressTrigger={{
+                wheel: true,
+                progressElement: [
+                  <Button key="1" className="menuBtn" text="COLLECTION" />,
+                  <Button key="2" className="menuBtn" text="CHARACTERS" />,
+                ],
+              }}
+              render={{ type: "virtual" }}
+              direction="x"
+              type="sliderMenu"
+              progressReverse
+            >
+              <div className="collectionTab">Heroes</div>
+              <div className="charactersTab">Heroes</div>
+            </MorphScroll>
+          </div>
         </div>
         <div className="tabs-all-box">
           <a className="tabs-all heroes" href="#/">
