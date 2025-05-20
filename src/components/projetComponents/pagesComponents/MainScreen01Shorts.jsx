@@ -4,8 +4,10 @@ import { nexusTrigger } from "nexus-state";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import Button from "../UIComponents/Button";
+import FraimedTitle from "../UIComponents/FraimedTitle";
+import PersonAva from "../UIComponents/PersonAva";
 
-export const cssFiles = ["shorts-gallery"];
+export const cssFiles = ["shorts-gallery", "dating"];
 
 const childClickStopPropagation = (e) => {
   e.stopPropagation();
@@ -92,15 +94,44 @@ export default function MainScreen01AllPopups({ pageName, children }) {
       <div className="left-side">
         <div className="left-panel wide">
           <div className="heroes-list-all-box">
+            <Button
+              className="info"
+              text="i"
+              onClick={() => {
+                nexusTrigger({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup contentOnly framedPop",
+                      popCont: "InfoPopFramed",
+                      props: {
+                        inner:
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                        girlImg: "img/break-girls/break-girl915.png",
+                      },
+                    },
+                  },
+                });
+              }}
+            />
+
             <MorphScroll
               className="shortsGallery"
               size={[1098, 497]}
               objectsSize={[1098, 507]}
               progressTrigger={{
-                wheel: true,
                 progressElement: [
-                  <Button key="1" className="menuBtn" text="COLLECTION" />,
-                  <Button key="2" className="menuBtn" text="CHARACTERS" />,
+                  <FraimedTitle
+                    key="1"
+                    className="titBtn corners"
+                    text="COLLECTION"
+                  />,
+                  <FraimedTitle
+                    key="2"
+                    className="titBtn corners"
+                    text="CHARACTERS"
+                  />,
                 ],
               }}
               render={{ type: "virtual" }}
@@ -108,7 +139,43 @@ export default function MainScreen01AllPopups({ pageName, children }) {
               type="sliderMenu"
               progressReverse
             >
-              <div className="collectionTab">Heroes</div>
+              <div className="collectionTab">
+                <div className="collectionBox">
+                  <div className="collectionWrap">
+                    <PersonAva
+                      className="active"
+                      img={`img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`}
+                    />
+                    <PersonAva
+                      className="active"
+                      img={`img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`}
+                    />
+                    <PersonAva
+                      className="closed"
+                      img={`img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`}
+                    />
+                  </div>
+                  <Button className="get-collection" text="GET" />
+                </div>
+
+                <div className="collectionBox active">
+                  <div className="collectionWrap">
+                    <PersonAva
+                      className="active"
+                      img={`img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`}
+                    />
+                    <PersonAva
+                      className="active"
+                      img={`img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`}
+                    />
+                    <PersonAva
+                      className="closed"
+                      img={`img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`}
+                    />
+                  </div>
+                  <Button className="get-collection" text="GET" />
+                </div>
+              </div>
               <div className="charactersTab">Heroes</div>
             </MorphScroll>
           </div>
