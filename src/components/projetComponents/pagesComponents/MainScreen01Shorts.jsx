@@ -6,6 +6,7 @@ import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll"
 import Button from "../UIComponents/Button";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import PersonAva from "../UIComponents/PersonAva";
+import Collection from "../UIComponents/Collection";
 
 export const cssFiles = ["shorts-gallery", "dating"];
 
@@ -140,41 +141,59 @@ export default function MainScreen01AllPopups({ pageName, children }) {
               progressReverse
             >
               <div className="collectionTab">
-                <div className="collectionBox">
-                  <div className="collectionWrap">
-                    <PersonAva
-                      className="active"
-                      img={`img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`}
-                    />
-                    <PersonAva
-                      className="active"
-                      img={`img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`}
-                    />
-                    <PersonAva
-                      className="closed"
-                      img={`img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`}
-                    />
-                  </div>
-                  <Button className="get-collection" text="GET" />
-                </div>
+                <Collection
+                  collectionData={{
+                    girls: [
+                      {
+                        img: `img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`,
+                        className: "active",
+                      },
+                      {
+                        img: `img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`,
+                        className: "closed",
+                      },
+                    ],
+                  }}
+                />
 
-                <div className="collectionBox active">
-                  <div className="collectionWrap">
-                    <PersonAva
-                      className="active"
-                      img={`img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`}
-                    />
-                    <PersonAva
-                      className="active"
-                      img={`img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`}
-                    />
-                    <PersonAva
-                      className="closed"
-                      img={`img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`}
-                    />
-                  </div>
-                  <Button className="get-collection" text="GET" />
-                </div>
+                <Collection
+                  collectionData={{
+                    girls: [
+                      {
+                        img: `img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`,
+                        className: "active",
+                      },
+                      {
+                        img: `img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`,
+                        className: "active",
+                      },
+                      {
+                        img: `img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`,
+                        className: "active",
+                      },
+                    ],
+                  }}
+                />
+
+                <Collection
+                  collectionData={{
+                    girls: [
+                      {
+                        img: `img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`,
+                        className: "active",
+                      },
+                      {
+                        img: `img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`,
+                        className: "active",
+                      },
+                      {
+                        img: `img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`,
+                        className: "active",
+                      },
+                    ],
+                    get: true,
+                  }}
+                />
               </div>
               <div className="charactersTab">Heroes</div>
             </MorphScroll>
