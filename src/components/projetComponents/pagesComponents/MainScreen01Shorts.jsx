@@ -1,21 +1,21 @@
-import { useState } from "react";
+import React from "react";
 
 import { nexusTrigger } from "nexus-state";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import Button from "../UIComponents/Button";
 import FraimedTitle from "../UIComponents/FraimedTitle";
-import PersonAva from "../UIComponents/PersonAva";
 import Collection from "../UIComponents/Collection";
+import ScrollThumb from "../UIComponents/ScrollThumb";
+
+import collectionData from "../data/collectionData";
 
 export const cssFiles = ["shorts-gallery", "dating"];
 
-const childClickStopPropagation = (e) => {
-  e.stopPropagation();
-};
-
-export default function MainScreen01AllPopups({ pageName, children }) {
-  const [xmasPop, setXmasPop] = useState("xmas-pop1");
+export default function MainScreen01Shorts({ pageName, children }) {
+  const collections = collectionData.map((item, index) => {
+    return <Collection key={index} collectionData={item} />;
+  });
 
   return (
     <div className="main world1">
@@ -120,7 +120,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             <MorphScroll
               className="shortsGallery"
               size={[1098, 497]}
-              objectsSize={[1098, 507]}
+              objectsSize={[1098, 497]}
               progressTrigger={{
                 progressElement: [
                   <FraimedTitle
@@ -139,62 +139,24 @@ export default function MainScreen01AllPopups({ pageName, children }) {
               direction="x"
               type="sliderMenu"
               progressReverse
+              wrapperMargin={[22, 0]}
             >
-              <div className="collectionTab">
-                <Collection
-                  collectionData={{
-                    girls: [
-                      {
-                        img: `img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`,
-                        className: "active",
-                      },
-                      {
-                        img: `img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`,
-                        className: "closed",
-                      },
-                    ],
-                  }}
-                />
-
-                <Collection
-                  collectionData={{
-                    girls: [
-                      {
-                        img: `img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`,
-                        className: "active",
-                      },
-                      {
-                        img: `img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`,
-                        className: "active",
-                      },
-                      {
-                        img: `img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`,
-                        className: "active",
-                      },
-                    ],
-                  }}
-                />
-
-                <Collection
-                  collectionData={{
-                    girls: [
-                      {
-                        img: `img/images/superhero/suphero-897/x1/avatar/sh-ava-1.jpg`,
-                        className: "active",
-                      },
-                      {
-                        img: `img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`,
-                        className: "active",
-                      },
-                      {
-                        img: `img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`,
-                        className: "active",
-                      },
-                    ],
-                    get: true,
-                  }}
-                />
-              </div>
+              <MorphScroll
+                className="collectionTab"
+                size={[1056, 454]}
+                objectsSize={[144, 424]}
+                gap={44}
+                wrapperMargin={[22, 0]}
+                edgeGradient={{ color: "#473c3a" }}
+                progressTrigger={{
+                  wheel: true,
+                  progressElement: <ScrollThumb />,
+                }}
+                direction="x"
+                wrapperAlign={"center"}
+              >
+                {collections}
+              </MorphScroll>
               <div className="charactersTab">Heroes</div>
             </MorphScroll>
           </div>
