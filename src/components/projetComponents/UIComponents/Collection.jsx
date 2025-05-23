@@ -24,30 +24,21 @@ const Collection = ({ collectionData, onClick }) => {
 
   return (
     <div
-      className={`collectionBox ${
-        status ? "down" : allAvaIsActive ? "active" : ""
-      }`.trim()}
+      className={`collectionBox${
+        status ? " down" : allAvaIsActive ? " active" : ""
+      }${allAvaIsActive ? "" : " disabled"}`.trim()}
     >
-      <div className={`btnWrap ${allAvaIsActive ? "" : "disabled"}`.trim()}>
-        <div
-          className={`collection-chest ${
-            status ? "check" : allAvaIsActive ? "open" : ""
-          }`.trim()}
-        >
-          <Button
-            className="infoOnly"
-            text="i"
-            // onClick={handleClick}
-            // {allAvaIsActive && onClick ? onClick : undefined}
-          />
-        </div>
-        <Button
-          className={`${status ? "green check" : "btnGold"} get-collection`}
-          text={`${status ? "COLLECTED" : "COLLECT"}`}
-          onClick={handleClick}
-          // {allAvaIsActive && onClick ? onClick : undefined}
-        />
-      </div>
+      <div
+        className={`collection-chest ${
+          status ? "check" : allAvaIsActive ? "open" : ""
+        }`.trim()}
+      ></div>
+      <Button
+        className={`${status ? "green check" : "btnGold"} get-collection`}
+        text={`${status ? "COLLECTED" : "COLLECT"}`}
+        onClick={handleClick}
+        // {allAvaIsActive && onClick ? onClick : undefined}
+      />
       <div className="collectionWrap">
         <div className="collectionBg">
           <div className="collection-valueBox">
