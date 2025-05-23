@@ -8,29 +8,44 @@ const Collection = ({ collectionData, onClick }) => {
     return <PersonAva key={index} className={item.className} img={item.img} />;
   });
 
+  // !!! стейт только для теста кнопки
+  const [get, setGet] = React.useState(false);
+  const handleClick = () => {
+    setGet(true);
+  };
+  // !!!
+
   const activeCards = collectionData.girls.filter(
     (item) => item.className === "active"
   ).length;
 
   const allAvaIsActive = collectionData.girls.length === activeCards;
-  const status = collectionData.get;
+  const status = collectionData.get || get;
 
   return (
     <div
-      className={`collectionBox ${allAvaIsActive ? "active" : ""} ${
-        collectionData.get ? "down" : ""
+      className={`collectionBox ${
+        status ? "down" : allAvaIsActive ? "active" : ""
       }`.trim()}
     >
       <div className={`btnWrap ${allAvaIsActive ? "" : "disabled"}`.trim()}>
         <div
           className={`collection-chest ${
-            collectionData.get ? "check" : allAvaIsActive ? "open" : ""
+            status ? "check" : allAvaIsActive ? "open" : ""
           }`.trim()}
-        ></div>
+        >
+          <Button
+            className="infoOnly"
+            text="i"
+            // onClick={handleClick}
+            // {allAvaIsActive && onClick ? onClick : undefined}
+          />
+        </div>
         <Button
           className={`${status ? "green check" : "btnGold"} get-collection`}
           text={`${status ? "COLLECTED" : "COLLECT"}`}
-          onClick={allAvaIsActive && onClick ? onClick : undefined}
+          onClick={handleClick}
+          // {allAvaIsActive && onClick ? onClick : undefined}
         />
       </div>
       <div className="collectionWrap">

@@ -145,9 +145,9 @@ export default function MainScreen01Shorts({ pageName, children }) {
                 className="collectionTab"
                 size={[1056, 454]}
                 objectsSize={[144, 424]}
-                gap={44}
-                wrapperMargin={[22, 0]}
-                edgeGradient={{ color: "#473c3a" }}
+                gap={66}
+                wrapperMargin={[33, 0]}
+                edgeGradient={{ color: "#342A33" }}
                 progressTrigger={{
                   wheel: true,
                   progressElement: <ScrollThumb />,
