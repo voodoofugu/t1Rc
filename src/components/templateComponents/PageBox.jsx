@@ -75,6 +75,7 @@ export default function PageBox() {
     <div className="h-calcScreenH-112 m-auto w-[calc(100%-20px)]">
       <MorphScroll
         className="templateScroll"
+        size="auto"
         objectsSize={[238, 156]}
         gap={60}
         wrapperMargin={[0, 14]}

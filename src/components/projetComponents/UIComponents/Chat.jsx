@@ -20,6 +20,7 @@ const Chat = ({ girlInfo }) => {
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
+  const wasFirstMassageVisible = React.useRef(false);
 
   const [chatMapArray, setChatMapArray] = React.useState([
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -45,6 +46,11 @@ const Chat = ({ girlInfo }) => {
   }
   const setLastElementsFunction = React.useCallback(
     (entry) => {
+      if (!wasFirstMassageVisible.current) {
+        wasFirstMassageVisible.current = true;
+        return;
+      }
+
       setLastElements((prevState) => ({
         ...prevState,
         [girlInfo.id]: prevState[girlInfo.id] - 10,
@@ -151,6 +157,8 @@ const Chat = ({ girlInfo }) => {
       }, 1000);
       timeoutsRef.current.push(timeout);
     }
+
+    if (wasFirstMassageVisible.current) wasFirstMassageVisible.current = false;
   }, [girlInfo.id]);
 
   React.useEffect(() => {
