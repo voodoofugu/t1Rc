@@ -7,6 +7,7 @@ import Button from "../UIComponents/Button";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Collection from "../UIComponents/Collection";
 import ScrollThumb from "../UIComponents/ScrollThumb";
+import ColorPickerPop from "../UIComponents/ColorPickerPop";
 
 import collectionData from "../data/collectionData";
 
@@ -213,6 +214,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
           </a>
         </div>
       </div>
+      <ColorPickerPop />
       {children}
     </div>
   );
