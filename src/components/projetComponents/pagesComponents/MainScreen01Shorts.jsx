@@ -7,16 +7,77 @@ import Button from "../UIComponents/Button";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Collection from "../UIComponents/Collection";
 import ScrollThumb from "../UIComponents/ScrollThumb";
-import ColorPickerPop from "../UIComponents/ColorPickerPop";
+import ItemBox from "../UIComponents/ItemBox";
+
+import useGoogleDocs from "../../hooks/useGoogleDocs";
+
+// import ColorPickerPop from "../UIComponents/ColorPickerPop";
 
 import collectionData from "../data/collectionData";
 
-export const cssFiles = ["shorts-gallery", "dating"];
+export const cssFiles = [
+  "shorts-gallery",
+  "dating",
+  // "color-picker"
+];
+
+const sheetId = "1FwL6TJLN5XoEAuAxj8cdZoeD55eWX2NJYpXUCZFL3bI";
+const gid = "551457807";
 
 export default function MainScreen01Shorts({ pageName, children }) {
   const collections = collectionData.map((item, index) => {
     return <Collection key={index} collectionData={item} />;
   });
+
+  const { data, loading } = useGoogleDocs(sheetId, gid);
+  // const character = data.find((d) => d.id === "967");
+  const character = data[954];
+  console.log("character", character);
+
+  const scroll = loading ? (
+    <MorphScroll
+      className="shortsGallery"
+      size={[1098, 497]}
+      objectsSize={[1098, 497]}
+      progressTrigger={{
+        progressElement: [
+          <FraimedTitle key="1" className="titBtn corners" text="COLLECTION" />,
+          <FraimedTitle key="2" className="titBtn corners" text="CHARACTERS" />,
+        ],
+      }}
+      render={{ type: "virtual" }}
+      direction="x"
+      type="sliderMenu"
+      progressReverse
+      wrapperMargin={[22, 0]}
+    >
+      <MorphScroll
+        className="collectionTab"
+        size={[1056, 454]}
+        objectsSize={[144, 424]}
+        gap={66}
+        wrapperMargin={[33, 0]}
+        edgeGradient={{ color: "#342A33" }}
+        progressTrigger={{
+          wheel: true,
+          progressElement: <ScrollThumb />,
+        }}
+        direction="x"
+        wrapperAlign={"center"}
+      >
+        {collections}
+      </MorphScroll>
+      <div className="charactersTab">
+        <ItemBox
+          itemClass={`cardAva selectable `}
+          heroClass={character.class_type}
+          // cardType={character.card_type}
+          rare={character.rare}
+          itemPic={`img/images/superhero/suphero-${character.id}/x2/avatar/sh-ava-6.jpg`}
+        />
+      </div>
+    </MorphScroll>
+  ) : null;
 
   return (
     <div className="main world1">
@@ -117,49 +178,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
                 });
               }}
             />
-
-            <MorphScroll
-              className="shortsGallery"
-              size={[1098, 497]}
-              objectsSize={[1098, 497]}
-              progressTrigger={{
-                progressElement: [
-                  <FraimedTitle
-                    key="1"
-                    className="titBtn corners"
-                    text="COLLECTION"
-                  />,
-                  <FraimedTitle
-                    key="2"
-                    className="titBtn corners"
-                    text="CHARACTERS"
-                  />,
-                ],
-              }}
-              render={{ type: "virtual" }}
-              direction="x"
-              type="sliderMenu"
-              progressReverse
-              wrapperMargin={[22, 0]}
-            >
-              <MorphScroll
-                className="collectionTab"
-                size={[1056, 454]}
-                objectsSize={[144, 424]}
-                gap={66}
-                wrapperMargin={[33, 0]}
-                edgeGradient={{ color: "#342A33" }}
-                progressTrigger={{
-                  wheel: true,
-                  progressElement: <ScrollThumb />,
-                }}
-                direction="x"
-                wrapperAlign={"center"}
-              >
-                {collections}
-              </MorphScroll>
-              <div className="charactersTab">Heroes</div>
-            </MorphScroll>
+            {scroll}
           </div>
         </div>
         <div className="tabs-all-box">
@@ -214,7 +233,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
           </a>
         </div>
       </div>
-      <ColorPickerPop />
+      {/* <ColorPickerPop /> */}
       {children}
     </div>
   );

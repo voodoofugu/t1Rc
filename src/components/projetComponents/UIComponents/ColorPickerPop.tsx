@@ -184,7 +184,7 @@ function ColorPickerPop() {
   const hueCanvasRef = useRef<HTMLCanvasElement>(null);
   const paletteCanvasRef = useRef<HTMLCanvasElement>(null);
 
-  const color = useRef<string>("#fff");
+  const color = useRef<string>("#ffffff");
   const hueColor = useRef<string>("hsl(0, 100%, 50%)");
   const paletteThumbXY = useRef({ x: 0, y: 0 });
   const hueThumbX = useRef({ x: 0 });
@@ -266,7 +266,7 @@ function ColorPickerPop() {
       );
       const y = Math.min(
         Math.max(moveEvent.clientY - rect.top, 0),
-        canvas.height
+        canvas.height - 1
       );
       paletteThumbXY.current = { x, y };
 
@@ -310,34 +310,54 @@ function ColorPickerPop() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+    const { width, height } = canvas;
+    const gradient = ctx.createLinearGradient(0, 0, width, 0);
+
+    const borderOffset = 1 / width; // ширина в долях — 1 пиксель
+
+    // Добавим чуть больше контроля над цветами:
     for (let i = 0; i <= 360; i += 60) {
-      gradient.addColorStop(i / 360, `hsl(${i}, 100%, 50%)`);
+      const stop = i / 360;
+
+      // Уточнённые позиции вокруг каждого цвета
+      const start = Math.max(0, stop - borderOffset / 2);
+      const end = Math.min(1, stop + borderOffset / 2);
+
+      gradient.addColorStop(start, `hsl(${i}, 100%, 50%)`);
+      gradient.addColorStop(end, `hsl(${i}, 100%, 50%)`);
     }
+
     ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(0, 0, width, height);
   }, []);
 
   useEffect(() => {
     const canvas = paletteCanvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
     if (!ctx) return;
 
     const { width, height } = canvas;
 
-    ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, width, height);
+    const whiteHueGradient = ctx.createLinearGradient(0, 0, width, 0);
+    const borderOffset = 1 / width; // или Math.min(1 / width, 0.01)
 
-    const hueGradient = ctx.createLinearGradient(0, 0, width, 0);
-    hueGradient.addColorStop(0, `${hueColor.current}`);
-    hueGradient.addColorStop(1, "transparent");
-    ctx.fillStyle = hueGradient;
+    whiteHueGradient.addColorStop(0, "#ffffff");
+    whiteHueGradient.addColorStop(borderOffset, "#ffffff");
+    whiteHueGradient.addColorStop(1 - borderOffset, hueColor.current);
+    whiteHueGradient.addColorStop(1, hueColor.current);
+
+    ctx.fillStyle = whiteHueGradient;
     ctx.fillRect(0, 0, width, height);
 
     const blackGradient = ctx.createLinearGradient(0, 0, 0, height);
+    const borderOffsetY = 1 / height;
+
     blackGradient.addColorStop(0, "transparent");
-    blackGradient.addColorStop(1, "#000");
+    blackGradient.addColorStop(borderOffsetY, "transparent");
+    blackGradient.addColorStop(1 - borderOffsetY, "#000000");
+    blackGradient.addColorStop(1, "#000000");
+
     ctx.fillStyle = blackGradient;
     ctx.fillRect(0, 0, width, height);
   }, [hueColor.current]);

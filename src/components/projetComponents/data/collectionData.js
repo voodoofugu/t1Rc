@@ -2,11 +2,11 @@ const collectionData = [
   {
     girls: [
       {
-        img: `img/images/superhero/suphero-898/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-937/x1/avatar/sh-ava-1.jpg`,
         className: "active",
       },
       {
-        img: `img/images/superhero/suphero-899/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-938/x1/avatar/sh-ava-1.jpg`,
         className: "active",
       },
     ],
@@ -15,27 +15,11 @@ const collectionData = [
   {
     girls: [
       {
-        img: `img/images/superhero/suphero-900/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-939/x1/avatar/sh-ava-1.jpg`,
         className: "active",
       },
       {
-        img: `img/images/superhero/suphero-901/x1/avatar/sh-ava-1.jpg`,
-        className: "active",
-      },
-    ],
-  },
-  {
-    girls: [
-      {
-        img: `img/images/superhero/suphero-902/x1/avatar/sh-ava-1.jpg`,
-        className: "active",
-      },
-      {
-        img: `img/images/superhero/suphero-903/x1/avatar/sh-ava-1.jpg`,
-        className: "active",
-      },
-      {
-        img: `img/images/superhero/suphero-904/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-940/x1/avatar/sh-ava-1.jpg`,
         className: "active",
       },
     ],
@@ -43,15 +27,31 @@ const collectionData = [
   {
     girls: [
       {
-        img: `img/images/superhero/suphero-905/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-941/x1/avatar/sh-ava-1.jpg`,
         className: "active",
       },
       {
-        img: `img/images/superhero/suphero-906/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-942/x1/avatar/sh-ava-1.jpg`,
+        className: "active",
+      },
+      {
+        img: `img/images/superhero/suphero-943/x1/avatar/sh-ava-1.jpg`,
+        className: "active",
+      },
+    ],
+  },
+  {
+    girls: [
+      {
+        img: `img/images/superhero/suphero-944/x1/avatar/sh-ava-1.jpg`,
+        className: "active",
+      },
+      {
+        img: `img/images/superhero/suphero-945/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
       {
-        img: `img/images/superhero/suphero-907/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-946/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
     ],
@@ -59,31 +59,15 @@ const collectionData = [
   {
     girls: [
       {
-        img: `img/images/superhero/suphero-908/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-947/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
       {
-        img: `img/images/superhero/suphero-909/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-948/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
       {
-        img: `img/images/superhero/suphero-910/x1/avatar/sh-ava-1.jpg`,
-        className: "closed",
-      },
-    ],
-  },
-  {
-    girls: [
-      {
-        img: `img/images/superhero/suphero-911/x1/avatar/sh-ava-1.jpg`,
-        className: "closed",
-      },
-      {
-        img: `img/images/superhero/suphero-912/x1/avatar/sh-ava-1.jpg`,
-        className: "closed",
-      },
-      {
-        img: `img/images/superhero/suphero-913/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-949/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
     ],
@@ -91,15 +75,31 @@ const collectionData = [
   {
     girls: [
       {
-        img: `img/images/superhero/suphero-914/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-950/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
       {
-        img: `img/images/superhero/suphero-915/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-951/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
       {
-        img: `img/images/superhero/suphero-916/x1/avatar/sh-ava-1.jpg`,
+        img: `img/images/superhero/suphero-952/x1/avatar/sh-ava-1.jpg`,
+        className: "closed",
+      },
+    ],
+  },
+  {
+    girls: [
+      {
+        img: `img/images/superhero/suphero-953/x1/avatar/sh-ava-1.jpg`,
+        className: "closed",
+      },
+      {
+        img: `img/images/superhero/suphero-954/x1/avatar/sh-ava-1.jpg`,
+        className: "closed",
+      },
+      {
+        img: `img/images/superhero/suphero-955/x1/avatar/sh-ava-1.jpg`,
         className: "closed",
       },
     ],
