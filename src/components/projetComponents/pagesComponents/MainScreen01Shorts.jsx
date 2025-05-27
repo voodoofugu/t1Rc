@@ -24,15 +24,31 @@ export const cssFiles = [
 const sheetId = "1FwL6TJLN5XoEAuAxj8cdZoeD55eWX2NJYpXUCZFL3bI";
 const gid = "551457807";
 
-export default function MainScreen01Shorts({ pageName, children }) {
-  const collections = collectionData.map((item, index) => {
-    return <Collection key={index} collectionData={item} />;
-  });
+const girlClass = [
+  "warrior",
+  "bard",
+  "cleric",
+  "druid",
+  "barbarian",
+  "archer",
+  "wizard",
+  "gunner",
+];
 
+export default function MainScreen01Shorts({ pageName, children }) {
   const { data, loading } = useGoogleDocs(sheetId, gid);
   // const character = data.find((d) => d.id === "967");
   const character = data[954];
-  console.log("character", character);
+
+  const collections = collectionData.map((item, index) => {
+    return (
+      <Collection
+        key={index}
+        collectionData={item}
+        tooltipData={<div>your rewards</div>}
+      />
+    );
+  });
 
   const scroll = loading ? (
     <MorphScroll
@@ -69,11 +85,11 @@ export default function MainScreen01Shorts({ pageName, children }) {
       </MorphScroll>
       <div className="charactersTab">
         <ItemBox
-          itemClass={`cardAva selectable `}
-          heroClass={character.class_type}
-          // cardType={character.card_type}
-          rare={character.rare}
-          itemPic={`img/images/superhero/suphero-${character.id}/x2/avatar/sh-ava-6.jpg`}
+          itemClass={`cardAvaX2 selectable `}
+          heroClass={girlClass[character.class_type - 1]}
+          cardType="superhero"
+          rare={character.rare[0]}
+          itemPic={`img/images/superhero/suphero-${character.id}/x2/sh-6.jpg`}
         />
       </div>
     </MorphScroll>
