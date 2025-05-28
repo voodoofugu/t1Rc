@@ -3,15 +3,31 @@ import { createPortal } from "react-dom";
 
 import useIdent from "../../hooks/useIdent";
 
-type PositionT = [
-  "top" | "bottom" | "left" | "right",
-  "center" | "start" | "end"
-];
+// !!! доделать тип "auto" для позиции
+// !!! решить проблему удаления tooltip при наведении на него
+// !!! понять как обработать tooltip хвостик
+// !!! вернуть правильное добавление fadeIn
+
+type PositionT =
+  | [
+      "top" | "bottom" | "left" | "right" | "auto",
+      "center" | "start" | "end" | "auto"
+    ]
+  | "auto";
+
 type TooltipT = {
   className?: string;
   targetContent?: React.ReactElement;
   position?: PositionT;
   children: React.ReactNode;
+};
+
+type TooltipInstance = {
+  id: string;
+  visible: boolean;
+  style: React.CSSProperties;
+  className: string;
+  content: React.ReactNode;
 };
 
 export default function Tooltip({
@@ -20,89 +36,91 @@ export default function Tooltip({
   position,
   children,
 }: TooltipT) {
-  const tooltipRef = React.useRef<HTMLDivElement | null>(null);
-  const style = React.useRef<Record<string, string>>({});
+  const tooltipCallerRef = React.useRef<HTMLDivElement | null>(null);
+  const style = React.useRef<React.CSSProperties>({});
   const timer = React.useRef<ReturnType<typeof setTimeout>>(null);
 
-  const [visible, setVisible] = React.useState(false);
+  const [tooltips, setTooltips] = React.useState<TooltipInstance[]>([]);
+  console.log("tooltips", tooltips);
 
   const tooltipId = useIdent();
+  const tooltipCallerClass = `tlp-${tooltipId}`;
   const tooltipLayer = document.querySelector(".tooltip-layer");
 
-  const handleEnter = () => {
-    if (!tooltipLayer) return;
-    tooltipRef.current = document.querySelector(`.tooltip-${tooltipId}`);
-    if (!tooltipRef.current) return;
+  const tlpStyleLocal: React.CSSProperties | undefined = React.useMemo(() => {
+    if (!position) return undefined;
 
-    const rect = tooltipRef.current.getBoundingClientRect();
-    const difference =
-      window.innerWidth < 1200 ? 0 : (window.innerWidth - 1200) / 2;
+    return tlpStyle(position);
+  }, [position]);
 
-    const [tooltipRefHalfWidth, tooltipRefHalfHeight] = (() => {
-      let width = 0,
-        height = 0;
-      if (!position || position.length !== 2) return [width, height];
+  const handleEnterLocal = React.useCallback(() => {
+    tooltipCallerRef.current = document.querySelector(`.${tooltipCallerClass}`);
+    if (!tooltipCallerRef.current || !targetContent) return;
 
-      if (["top", "bottom"].includes(position[0])) {
-        width = tooltipRef.current.offsetWidth / 2;
-      } else {
-        height = tooltipRef.current.offsetHeight / 2;
+    handleEnter(
+      tooltipCallerRef.current,
+      style,
+      position,
+      tlpStyleLocal,
+      () => {
+        setTooltips((prev) => [
+          ...prev,
+          {
+            id: tooltipId,
+            visible: true,
+            style: style.current,
+            className: `${
+              React.isValidElement<{ className?: string }>(targetContent)
+                ? targetContent.props.className || ""
+                : ""
+            } ${position?.[0] || ""}`,
+            content: targetContent,
+          },
+        ]);
       }
+    );
+  }, [position, tooltipCallerClass]);
 
-      return [width, height];
-    })();
-
-    const [neededRectLeft, neededRectTop] = (() => {
-      let left = rect.left,
-        top = rect.bottom;
-
-      if (position) {
-        if (position[0] === "top") {
-          top = rect.top;
-        } else if (position[0] === "bottom") {
-          top = rect.bottom;
-        } else if (position[0] === "left") {
-          top = rect.left;
-        } else if (position[0] === "right") {
-          top = rect.right;
-        }
-      }
-      return [left, top];
-    })();
-
-    style.current = {
-      left: `${
-        neededRectLeft + window.scrollX - difference + tooltipRefHalfWidth
-      }px`,
-      top: `${neededRectTop + window.scrollY + tooltipRefHalfHeight}px`,
-    };
-
-    setVisible(true);
+  const removeTooltip = (id: string) => {
+    setTooltips((prev) => prev.filter((tlp) => tlp.id !== id));
   };
 
   const handleLeave = () => {
-    Array.from(tooltipLayer?.children || []).forEach((child) => {
-      child.classList.remove("fadeIn");
-    });
-    style.current = {};
-    tooltipRef.current = null;
+    if (timer.current) clearTimeout(timer.current);
 
-    timer.current = setTimeout(() => setVisible(false), 100);
+    Array.from(tooltipLayer?.children || []).forEach((child) => {
+      if (child.classList.contains("fadeOut")) return;
+
+      child.classList.remove("fadeIn");
+      child.classList.add("fadeOut");
+    });
+
+    style.current = {};
+    tooltipCallerRef.current = null;
+    timer.current = setTimeout(() => {
+      removeTooltip(tooltipId);
+    }, 1000);
   };
 
   const isSingleValidElement =
     React.isValidElement(children) && !Array.isArray(children);
 
   const commonProps = {
-    onMouseEnter: handleEnter,
+    onMouseEnter: handleEnterLocal,
     onMouseLeave: handleLeave,
-    className: `${
-      React.isValidElement<{ className?: string }>(children)
-        ? children.props.className
-        : ""
-    }${className ? ` ${className}` : ""} tooltip-${tooltipId}`,
+    className: [
+      React.isValidElement(children) && (children.props as any).className,
+      className,
+      tooltipCallerClass,
+    ]
+      .filter(Boolean)
+      .join(" "),
   };
 
+  // оборачиваемый объект копируется для того, чтобы навешать на него обработчики событий
+  // и классы чтобы не создавать лишний div
+  // но если это массив элементов или например текст, то оборачиваем в div
+  // чтобы не нарушать структуру DOM
   const wrappedChild = isSingleValidElement ? (
     React.cloneElement(children, commonProps)
   ) : (
@@ -110,40 +128,122 @@ export default function Tooltip({
   );
 
   React.useEffect(() => {
-    if (visible) {
-      Array.from(tooltipLayer?.children || []).forEach((child) => {
-        child.classList.add("fadeIn", `${position && position[0]}`);
-      });
-    }
-
     return () => {
-      clearTimeout(timer.current ? timer.current : undefined);
+      if (timer.current) clearTimeout(timer.current);
     };
-  }, [visible]);
+  }, []);
 
-  return (
-    <>
+  React.useEffect(() => {
+    const children = tooltipLayer?.children;
+    if (children && children.length > 0) {
+      const lastChild = children[children.length - 1];
+      lastChild.classList.add("fadeIn", position?.[0] || "");
+    }
+  }, [tooltipLayer, position, tooltips.length]);
+
+  // копирование стилей для того, чтобы не менять оригинальный объект
+  // просто налету добавляем вычисленные стили
+  return typeof window !== "undefined" ? (
+    <React.Fragment>
       {wrappedChild}
-      {typeof window !== "undefined" && tooltipLayer && visible && targetContent
-        ? createPortal(
-            React.cloneElement<React.HTMLAttributes<HTMLElement>>(
-              targetContent as React.ReactElement<
-                React.HTMLAttributes<HTMLElement>
-              >,
-              {
-                style: {
-                  ...(React.isValidElement<{ style?: React.CSSProperties }>(
-                    targetContent
-                  )
-                    ? targetContent.props.style
-                    : {}),
-                  ...style.current,
-                },
-              }
-            ),
-            tooltipLayer
+      {tooltipLayer && targetContent
+        ? tooltips.map((tlp) =>
+            createPortal(
+              React.cloneElement(
+                tlp.content as React.ReactElement<
+                  React.HTMLAttributes<HTMLElement>
+                >,
+                {
+                  style: tlp.style,
+                  className: tlp.className,
+                }
+              ),
+              tooltipLayer,
+              tlp.id // key
+            )
           )
         : null}
-    </>
+    </React.Fragment>
+  ) : (
+    children
   );
+}
+
+function handleEnter(
+  tooltipCallerRef: HTMLElement,
+  style: React.MutableRefObject<React.CSSProperties>,
+  position?: PositionT,
+  tlpStyle?: React.CSSProperties,
+  callback?: () => void
+) {
+  const rect = tooltipCallerRef.getBoundingClientRect();
+  // разница от экрана игры
+  const differenceLeft =
+    window.innerWidth < 1200 ? 0 : (window.innerWidth - 1200) / 2;
+
+  const [neededRectLeft, neededRectTop] = (() => {
+    let left = rect.left;
+    let top = rect.bottom;
+    if (!position) return [left, top];
+
+    const [offset, align] = position;
+
+    // Смещение
+    if (["top", "bottom"].includes(offset)) {
+      top = offset === "top" ? rect.top : rect.bottom;
+
+      if (align === "center") {
+        left = rect.left + tooltipCallerRef.offsetWidth / 2;
+      } else if (align === "end") {
+        left = rect.right;
+      } else left = rect.left;
+    }
+
+    // Выравнивание
+    if (offset === "left" || offset === "right") {
+      left = offset === "left" ? rect.left : rect.right;
+
+      if (align === "center") {
+        top = rect.top + tooltipCallerRef.offsetHeight / 2;
+      } else if (align === "end") {
+        top = rect.bottom;
+      } else top = rect.top;
+    }
+
+    return [left, top];
+  })();
+
+  style.current = {
+    left: `${neededRectLeft + window.scrollX - differenceLeft}px`,
+    top: `${neededRectTop + window.scrollY}px`,
+    ...tlpStyle,
+  };
+
+  callback && callback();
+}
+
+function tlpStyle(position: PositionT): React.CSSProperties {
+  return {
+    transform: `translate(${
+      ["top", "bottom"].includes(position[0])
+        ? position[1] === "center"
+          ? "-50%"
+          : position[1] === "end"
+          ? "-99%"
+          : "0"
+        : position[0] === "left"
+        ? "-99%"
+        : "0"
+    }, ${
+      ["left", "right"].includes(position[0])
+        ? position[1] === "center"
+          ? "-50%"
+          : position[1] === "end"
+          ? "-99%"
+          : "0"
+        : position[0] === "top"
+        ? "-99%"
+        : "0"
+    })`,
+  };
 }
