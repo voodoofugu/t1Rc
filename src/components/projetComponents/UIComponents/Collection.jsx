@@ -30,20 +30,21 @@ const Collection = ({ collectionData, onClick, tooltipData }) => {
       }`.trim()}
     ></div>
   );
-  const chestWithTooltip = tooltipData ? (
-    <Tooltip
-      position={["top", "center"]}
-      targetContent={
-        <div className="achiev-hint default">
-          <div className="tooltip">{tooltipData}</div>
-        </div>
-      }
-    >
-      {chest}
-    </Tooltip>
-  ) : (
-    chest
-  );
+  const chestWithTooltip =
+    tooltipData && !status ? (
+      <Tooltip
+        position={["top", "center"]}
+        targetContent={
+          <div className="achiev-hint default">
+            <div className="tooltip">{tooltipData}</div>
+          </div>
+        }
+      >
+        {chest}
+      </Tooltip>
+    ) : (
+      chest
+    );
 
   return (
     <div

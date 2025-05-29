@@ -8,6 +8,7 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 import Collection from "../UIComponents/Collection";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ItemBox from "../UIComponents/ItemBox";
+import VideoTag from "../UIComponents/VideoTag";
 
 import useGoogleDocs from "../../hooks/useGoogleDocs";
 
@@ -25,20 +26,65 @@ const sheetId = "1FwL6TJLN5XoEAuAxj8cdZoeD55eWX2NJYpXUCZFL3bI";
 const gid = "551457807";
 
 const girlClass = [
-  "warrior",
-  "bard",
+  "sword", // warrior
+  "quitar", // bard
   "cleric",
   "druid",
   "barbarian",
-  "archer",
+  "ranger", // archer
   "wizard",
-  "gunner",
+  "gun", // gunner
 ];
 
 export default function MainScreen01Shorts({ pageName, children }) {
   const { data, loading } = useGoogleDocs(sheetId, gid);
   // const character = data.find((d) => d.id === "967");
-  const character = data[954];
+  // const character = data[954];
+  const lastIndex = 954;
+  const totalItems = 19;
+  const startIndex = lastIndex - totalItems + 1;
+
+  const girlsCards = data.slice(startIndex, lastIndex + 1).map((item) => {
+    return (
+      <ItemBox
+        key={item.id}
+        itemClass={`videoCard selectable `}
+        heroClass={girlClass[item.class_type - 1]}
+        cardType="superhero"
+        rare={item.rare[0]}
+        itemPic={`img/images/superhero/suphero-${item.id}/x2/sh-6.jpg`}
+        count={
+          <>
+            {item.name.split(" ")[0]} <br />
+            {item.name.split(" ")[1]}
+          </>
+        }
+        onClick={() => {
+          nexusTrigger({
+            type: "handlePopup",
+            payload: {
+              type: "open",
+              data: {
+                mpopClass: "m-popup uki-story-popup contentOnly",
+                popCont: "InfoPopFramed",
+                props: {
+                  inner: (
+                    <VideoTag
+                      className="relics-vidio"
+                      poster="img/images/superhero/suphero-965/x2/sh-6.jpg"
+                      source={["img/images/superhero/suphero-965/video.mp4"]}
+                      autoPlay
+                      loop
+                    />
+                  ),
+                },
+              },
+            },
+          });
+        }}
+      />
+    );
+  });
 
   const collections = collectionData.map((item, index) => {
     return (
@@ -57,8 +103,8 @@ export default function MainScreen01Shorts({ pageName, children }) {
       objectsSize={[1098, 497]}
       progressTrigger={{
         progressElement: [
-          <FraimedTitle key="1" className="titBtn corners" text="COLLECTION" />,
-          <FraimedTitle key="2" className="titBtn corners" text="CHARACTERS" />,
+          <FraimedTitle key="1" className="titBtn corners" text="CHARACTERS" />,
+          <FraimedTitle key="2" className="titBtn corners" text="COLLECTION" />,
         ],
       }}
       render={{ type: "virtual" }}
@@ -68,8 +114,24 @@ export default function MainScreen01Shorts({ pageName, children }) {
       wrapperMargin={[22, 0]}
     >
       <MorphScroll
+        className="charactersTab"
+        size={[1056, 448]}
+        objectsSize={[162, 192]}
+        gap={28}
+        wrapperMargin={[0, 20]}
+        edgeGradient={{ color: "#342A33" }}
+        progressTrigger={{
+          wheel: true,
+          progressElement: <ScrollThumb />,
+        }}
+        wrapperAlign={"center"}
+        key={"charactersTab"}
+      >
+        {girlsCards}
+      </MorphScroll>
+      <MorphScroll
         className="collectionTab"
-        size={[1056, 454]}
+        size={[1056, 448]}
         objectsSize={[144, 424]}
         gap={66}
         wrapperMargin={[33, 0]}
@@ -80,18 +142,10 @@ export default function MainScreen01Shorts({ pageName, children }) {
         }}
         direction="x"
         wrapperAlign={"center"}
+        key={"collectionTab"}
       >
         {collections}
       </MorphScroll>
-      <div className="charactersTab">
-        <ItemBox
-          itemClass={`cardAvaX2 selectable `}
-          heroClass={girlClass[character.class_type - 1]}
-          cardType="superhero"
-          rare={character.rare[0]}
-          itemPic={`img/images/superhero/suphero-${character.id}/x2/sh-6.jpg`}
-        />
-      </div>
     </MorphScroll>
   ) : null;
 
