@@ -4,8 +4,13 @@ import Button from "../UIComponents/Button";
 import PersonAva from "../UIComponents/PersonAva";
 import Tooltip from "../UIComponents/Tooltip";
 
-const Collection = ({ collectionData, onClick, tooltipData }) => {
-  const avatars = collectionData.girls.map((item, index) => {
+const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
+  let bgId = "";
+  const avatars = girlsData.girls.map((item, index) => {
+    if (index === 0) {
+      bgId = item.img.split("/")[3];
+    }
+
     return <PersonAva key={index} className={item.className} img={item.img} />;
   });
 
@@ -16,12 +21,12 @@ const Collection = ({ collectionData, onClick, tooltipData }) => {
   };
   // !!!
 
-  const activeCards = collectionData.girls.filter(
+  const activeCards = girlsData.girls.filter(
     (item) => item.className === "active"
   ).length;
 
-  const allAvaIsActive = collectionData.girls.length === activeCards;
-  const status = collectionData.get || get;
+  const allAvaIsActive = girlsData.girls.length === activeCards;
+  const status = girlsData.get || get;
 
   const chest = (
     <div
@@ -61,12 +66,18 @@ const Collection = ({ collectionData, onClick, tooltipData }) => {
       />
       <div className="collectionWrap">
         <div className="collectionBg">
-          <div className="collection-valueBox">
-            <div className="value">{`${activeCards}/${collectionData.girls.length}`}</div>
-          </div>
+          <img
+            src={`img/images/superhero/${bgId}/x2/sh-1.jpg`}
+            loading="lazy"
+          />
         </div>
-        {avatars}
+        <div className="collection-valueBox">
+          <div className="value">{`${activeCards}/${girlsData.girls.length}`}</div>
+        </div>
+        <div className="characterWrap">{avatars}</div>
       </div>
+      <div className="collectionTit">{name}</div>
+      <div className="collectionText">{text}</div>
     </div>
   );
 };

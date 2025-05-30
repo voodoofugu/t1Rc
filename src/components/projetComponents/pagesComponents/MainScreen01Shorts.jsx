@@ -44,53 +44,63 @@ export default function MainScreen01Shorts({ pageName, children }) {
   const totalItems = 19;
   const startIndex = lastIndex - totalItems + 1;
 
-  const girlsCards = data.slice(startIndex, lastIndex + 1).map((item) => {
-    return (
-      <ItemBox
-        key={item.id}
-        itemClass={`videoCard selectable `}
-        heroClass={girlClass[item.class_type - 1]}
-        cardType="superhero"
-        rare={item.rare[0]}
-        itemPic={`img/images/superhero/suphero-${item.id}/x2/sh-6.jpg`}
-        count={
-          <>
-            {item.name.split(" ")[0]} <br />
-            {item.name.split(" ")[1]}
-          </>
-        }
-        onClick={() => {
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup uki-story-popup contentOnly",
-                popCont: "InfoPopFramed",
-                props: {
-                  inner: (
-                    <VideoTag
-                      className="relics-vidio"
-                      poster="img/images/superhero/suphero-965/x2/sh-6.jpg"
-                      source={["img/images/superhero/suphero-965/video.mp4"]}
-                      autoPlay
-                      loop
-                    />
-                  ),
-                },
-              },
-            },
-          });
-        }}
-      />
-    );
-  });
+  const girlsCards = data
+    .slice(startIndex, lastIndex + 1)
+    .map((item, index) => {
+      return (
+        <ItemBox
+          key={item.id}
+          itemClass={`videoCard ${index === 0 ? "close" : "selectable"}`}
+          heroClass={girlClass[item.class_type - 1]}
+          cardType="superhero"
+          rare={item.rare[0]}
+          itemPic={`img/images/superhero/suphero-${item.id}/x2/sh-6.jpg`}
+          count={
+            <>
+              {item.name.split(" ")[0]} <br />
+              {item.name.split(" ")[1]}
+            </>
+          }
+          onClick={
+            index === 0
+              ? null
+              : () => {
+                  nexusTrigger({
+                    type: "handlePopup",
+                    payload: {
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup contentOnly framedPop videoPop",
+                        popCont: "VideoPop",
+                        props: {
+                          content: (
+                            <VideoTag
+                              className="videoGallery"
+                              poster={`img/images/superhero/suphero-${item.id}/x2/sh-6.jpg`}
+                              source={[
+                                `img/images/superhero/suphero-${item.id}/video.mp4`,
+                              ]}
+                              autoPlay
+                              loop
+                            />
+                          ),
+                        },
+                      },
+                    },
+                  });
+                }
+          }
+        />
+      );
+    });
 
   const collections = collectionData.map((item, index) => {
     return (
       <Collection
         key={index}
-        collectionData={item}
+        name="Name of Collection"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt."
+        girlsData={item}
         tooltipData={<div>your rewards</div>}
       />
     );
@@ -103,8 +113,8 @@ export default function MainScreen01Shorts({ pageName, children }) {
       objectsSize={[1098, 497]}
       progressTrigger={{
         progressElement: [
-          <FraimedTitle key="1" className="titBtn corners" text="CHARACTERS" />,
-          <FraimedTitle key="2" className="titBtn corners" text="COLLECTION" />,
+          <FraimedTitle key="1" className="titBtn corners" text="COLLECTION" />,
+          <FraimedTitle key="2" className="titBtn corners" text="CHARACTERS" />,
         ],
       }}
       render={{ type: "virtual" }}
@@ -113,6 +123,23 @@ export default function MainScreen01Shorts({ pageName, children }) {
       progressReverse
       wrapperMargin={[22, 0]}
     >
+      <MorphScroll
+        className="collectionTab"
+        size={[1056, 448]}
+        objectsSize={[286, 424]}
+        gap={66}
+        wrapperMargin={[33, 0]}
+        edgeGradient={{ color: "#342A33" }}
+        progressTrigger={{
+          wheel: true,
+          progressElement: <ScrollThumb />,
+        }}
+        direction="x"
+        wrapperAlign={"center"}
+        key={"collectionTab"}
+      >
+        {collections}
+      </MorphScroll>
       <MorphScroll
         className="charactersTab"
         size={[1056, 448]}
@@ -128,23 +155,6 @@ export default function MainScreen01Shorts({ pageName, children }) {
         key={"charactersTab"}
       >
         {girlsCards}
-      </MorphScroll>
-      <MorphScroll
-        className="collectionTab"
-        size={[1056, 448]}
-        objectsSize={[144, 424]}
-        gap={66}
-        wrapperMargin={[33, 0]}
-        edgeGradient={{ color: "#342A33" }}
-        progressTrigger={{
-          wheel: true,
-          progressElement: <ScrollThumb />,
-        }}
-        direction="x"
-        wrapperAlign={"center"}
-        key={"collectionTab"}
-      >
-        {collections}
       </MorphScroll>
     </MorphScroll>
   ) : null;
