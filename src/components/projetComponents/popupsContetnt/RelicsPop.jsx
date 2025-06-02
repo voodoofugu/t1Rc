@@ -111,7 +111,7 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/superhero/suphero-971/x2/sh-4.jpg",
+        "img/images/hero-all/tithero-545/x2/tithero-4.jpg",
         "Summer's Day Orgy!",
         [
           "img/ic-vl-heart-dark-blue.png",
