@@ -484,6 +484,15 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             "Лето",
             [
               [
+                "evPopArts/ic-summer",
+                "287:21:43",
+                {
+                  mpopClass: "m-popup main-relics-pop summer contentOnly",
+                  popCont: "RelicsPop",
+                  props: { event: "summer" },
+                },
+              ],
+              [
                 "evPopArts/butterflyIcn",
                 "287:21:43",
                 {

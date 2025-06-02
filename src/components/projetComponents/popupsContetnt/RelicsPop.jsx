@@ -26,20 +26,13 @@ export default memo(function RelicsPop({ event }) {
           "img/ic-ny-sneg-5.png",
         ],
         "img/v2-xmas-chest-green.png",
+        "img/bGs/xmasBg.jpg",
       ],
     },
     {
       vl: [
         "img/images/superhero/suphero-969/x2/sh-6.jpg",
         "Send us to Valentine's Day Orgy!",
-        // [
-        //   "img/ic-vl-heart-dark-blue.png",
-        //   "img/ic-vl-heart-red.png",
-        //   "img/ic-vl-heart-dark-lilac.png",
-        //   "img/ic-vl-heart-green.png",
-        //   "img/ic-vl-heart-pink.png",
-        //   "img/ic-vl-heart-blue.png",
-        // ],
         [
           "img/evPopArts/puzzle-darkBlue.png",
           "img/evPopArts/puzzle-gray.png",
@@ -49,6 +42,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/puzzle-red.png",
         ],
         "img/v2-vl-candys-box.png",
+        "img/bGs/mountainsBg.jpg",
       ],
     },
     {
@@ -64,6 +58,7 @@ export default memo(function RelicsPop({ event }) {
           "img/ic-march-flower-blue.png",
         ],
         "img/ic-march-bouquet.png",
+        "img/bGs/mountainsBg.jpg",
       ],
     },
     {
@@ -79,6 +74,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/egg_6.png",
         ],
         "img/evPopArts/eggs_basket.png",
+        "img/bGs/mountainsBg.jpg",
       ],
     },
     {
@@ -94,6 +90,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/thongs_6.png",
         ],
         "img/evPopArts/strawberry_icn.png",
+        "img/bGs/mountainsBg.jpg",
       ],
     },
     {
@@ -109,23 +106,33 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/greenPotion_icn.png",
         ],
         "img/evPopArts/candyBag.png",
+        "img/bGs/halloweenBg.jpg",
+      ],
+    },
+    {
+      summer: [
+        "img/images/superhero/suphero-971/x2/sh-4.jpg",
+        "Summer's Day Orgy!",
+        [
+          "img/ic-vl-heart-dark-blue.png",
+          "img/ic-vl-heart-red.png",
+          "img/ic-vl-heart-dark-lilac.png",
+          "img/ic-vl-heart-green.png",
+          "img/ic-vl-heart-pink.png",
+          "img/ic-vl-heart-blue.png",
+        ],
+        "img/evPopArts/candyBag.png",
+        "img/bGs/beachBg2.jpg",
       ],
     },
   ];
-
-  const bg =
-    event === "xmas"
-      ? "img/bGs/xmasBg.jpg"
-      : "vl"
-      ? "img/bGs/mountainsBg.jpg"
-      : "img/bGs/halloweenBg.jpg";
 
   const evData = data.find((item) => item[event]);
   const popupState = useNexus("popupState");
 
   return (
     <>
-      <ImageBg className="bG framedBg" img={bg} />
+      <ImageBg className="bG framedBg" img={evData?.[event][4]} />
 
       <FraimedTitle className="cornersTop" text="Orgy Event" />
 
