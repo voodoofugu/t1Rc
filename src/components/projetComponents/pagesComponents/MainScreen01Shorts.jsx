@@ -126,9 +126,9 @@ export default function MainScreen01Shorts({ pageName, children }) {
       <MorphScroll
         className="collectionTab"
         size={[1056, 448]}
-        objectsSize={[286, 424]}
-        gap={66}
-        wrapperMargin={[33, 0]}
+        objectsSize={[300, 380]}
+        gap={28}
+        wrapperMargin={[40, 0]}
         edgeGradient={{ color: "#342A33" }}
         progressTrigger={{
           wheel: true,

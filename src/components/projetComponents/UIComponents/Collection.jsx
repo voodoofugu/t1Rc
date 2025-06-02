@@ -51,6 +51,26 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
       chest
     );
 
+  const bgStyle = {
+    backgroundImage: `linear-gradient(
+                      314deg,
+                      rgba(255, 255, 255, 0) 0%,
+                      rgba(255, 255, 255, 0) 24%,
+                      rgba(255, 255, 255, 0) 26%,
+                      rgba(255, 255, 255, 0.06) 46%,
+                      rgba(255, 255, 255, 0) 48%,
+                      rgba(255, 255, 255, 0) 58%,
+                      rgba(255, 255, 255, 0.06) 60%,
+                      rgba(255, 255, 255, 0) 68%,
+                      rgba(255, 255, 255, 0) 70%,
+                      rgba(255, 255, 255, 0) 100%
+                    ),
+                    linear-gradient(357deg, rgba(151, 83, 83, 0.9) 0%, rgba(40, 79, 105, 0.9) 100%),
+                    url(img/images/superhero/${bgId}/x2/sh-1.jpg)`,
+    backgroundPosition: "left bottom",
+    backgroundRepeat: "no-repeat",
+  };
+
   return (
     <div
       className={`collectionBox${
@@ -65,12 +85,7 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
         // {allAvaIsActive && onClick ? onClick : undefined}
       />
       <div className="collectionWrap">
-        <div className="collectionBg">
-          <img
-            src={`img/images/superhero/${bgId}/x2/sh-1.jpg`}
-            loading="lazy"
-          />
-        </div>
+        <div className="collectionBg" style={bgStyle}></div>
         <div className="collection-valueBox">
           <div className="value">{`${activeCards}/${girlsData.girls.length}`}</div>
         </div>
