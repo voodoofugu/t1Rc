@@ -3,6 +3,7 @@ import React from "react";
 import Button from "../UIComponents/Button";
 import PersonAva from "../UIComponents/PersonAva";
 import Tooltip from "../UIComponents/Tooltip";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
   let bgId = "";
@@ -57,10 +58,10 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
                       rgba(255, 255, 255, 0) 0%,
                       rgba(255, 255, 255, 0) 24%,
                       rgba(255, 255, 255, 0) 26%,
-                      rgba(255, 255, 255, 0.06) 46%,
+                      rgba(255, 255, 255, 0.08) 46%,
                       rgba(255, 255, 255, 0) 48%,
                       rgba(255, 255, 255, 0) 58%,
-                      rgba(255, 255, 255, 0.06) 60%,
+                      rgba(255, 255, 255, 0.08) 60%,
                       rgba(255, 255, 255, 0) 68%,
                       rgba(255, 255, 255, 0) 70%,
                       rgba(255, 255, 255, 0) 100%
@@ -90,9 +91,10 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
           <div className="value">{`${activeCards}/${girlsData.girls.length}`}</div>
         </div>
         <div className="characterWrap">{avatars}</div>
+        {/* <div className="collectionTit">{name}</div> */}
+        <FraimedTitle className="cornersTop collectionTit" text={name} />
+        <div className="collectionText">{text}</div>
       </div>
-      <div className="collectionTit">{name}</div>
-      <div className="collectionText">{text}</div>
     </div>
   );
 };

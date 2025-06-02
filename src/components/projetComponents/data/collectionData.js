@@ -7,10 +7,9 @@ const collectionData = [
       },
       {
         img: `img/images/superhero/suphero-950/x1/avatar/sh-ava-1.jpg`,
-        className: "active",
+        className: "closed",
       },
     ],
-    get: true,
   },
   {
     girls: [
@@ -39,6 +38,7 @@ const collectionData = [
         className: "active",
       },
     ],
+    get: true,
   },
   {
     girls: [
