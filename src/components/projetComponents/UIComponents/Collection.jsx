@@ -1,9 +1,12 @@
 import React from "react";
 
+import { nexusTrigger } from "nexus-state";
+
 import Button from "../UIComponents/Button";
 import PersonAva from "../UIComponents/PersonAva";
 import Tooltip from "../UIComponents/Tooltip";
 import FraimedTitle from "../UIComponents/FraimedTitle";
+import VideoTag from "../UIComponents/VideoTag";
 
 const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
   let bgId = "";
@@ -12,7 +15,46 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
       bgId = item.img.split("/")[3];
     }
 
-    return <PersonAva key={index} className={item.className} img={item.img} />;
+    return (
+      <PersonAva
+        key={index}
+        className={item.className}
+        img={item.img}
+        onClick={
+          item.className === "closed"
+            ? null
+            : () => {
+                nexusTrigger({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup contentOnly framedPop videoPop",
+                      popCont: "VideoPop",
+                      props: {
+                        content: (
+                          <VideoTag
+                            className="videoGallery"
+                            poster={`img/images/superhero/${
+                              item.img.split("/")[3]
+                            }/x2/sh-6.jpg`}
+                            source={[
+                              `img/images/superhero/${
+                                item.img.split("/")[3]
+                              }/video.mp4`,
+                            ]}
+                            autoPlay
+                            loop
+                          />
+                        ),
+                      },
+                    },
+                  },
+                });
+              }
+        }
+      />
+    );
   });
 
   // !!! стейт только для теста кнопки
@@ -91,7 +133,6 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
           <div className="value">{`${activeCards}/${girlsData.girls.length}`}</div>
         </div>
         <div className="characterWrap">{avatars}</div>
-        {/* <div className="collectionTit">{name}</div> */}
         <FraimedTitle className="cornersTop collectionTit" text={name} />
         <div className="collectionText">{text}</div>
       </div>
