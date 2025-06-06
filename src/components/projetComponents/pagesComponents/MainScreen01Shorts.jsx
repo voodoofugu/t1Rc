@@ -112,7 +112,11 @@ export default function MainScreen01Shorts({ pageName, children }) {
       size={[1098, 497]}
       progressTrigger={{
         progressElement: [
-          <FraimedTitle key="1" className="titBtn corners" text="COLLECTION" />,
+          <FraimedTitle
+            key="1"
+            className="titBtn corners"
+            text="COLLECTIONS"
+          />,
           <FraimedTitle key="2" className="titBtn corners" text="CHARACTERS" />,
         ],
       }}
@@ -126,7 +130,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
         className="collectionTab"
         size={[1056, 448]}
         objectsSize={[300, 380]}
-        gap={40}
+        gap={44}
         wrapperMargin={[40, 0]}
         edgeGradient={{ color: "#342A33" }}
         progressTrigger={{
