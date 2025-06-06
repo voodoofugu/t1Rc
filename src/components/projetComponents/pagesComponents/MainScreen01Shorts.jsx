@@ -306,7 +306,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
             <div>
               <div className="tabs-name">Shorts</div>
               <div className="tabs-pic">
-                <img src="img/tab-10.png" loading="lazy" />
+                <img src="img/tab-13.png" loading="lazy" />
               </div>
             </div>
           </a>
