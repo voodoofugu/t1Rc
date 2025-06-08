@@ -36,7 +36,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       // render={{ type: "default" }}
       // render={{ type: "lazy", stopLoadOnScroll: true }}
       render={{ type: "virtual" }}
-      progressVisibility="hover"
+      scrollBarOnHover
       wrapperAlign={["center", "start"]}
       emptyElements={{
         mode: "clear",

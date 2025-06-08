@@ -232,7 +232,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         gap={10}
         wrapperMargin={[0, 10]}
         progressReverse
-        progressVisibility="hover"
+        scrollBarOnHover
         edgeGradient={{ color: "#572e19" }}
         progressTrigger={{
           wheel: true,
