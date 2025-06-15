@@ -255,13 +255,13 @@ const GirlDependencies = ({ girlsInfo }) => {
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"
         // render={{ type: "lazy" }}
-        // render={{ type: "virtual" }}
+        render={{ type: "virtual" }}
         // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
         // type="sliderMenu"
         // type="slider"
         // crossCount={3}
-        // scrollTop={{ value: [86, 86] }}
+        // scrollPosition={{ value: 86 }}
       >
         {/* <FakeComponent key="q1" /> */}
         {girlsInfo.map((item, index) => (
