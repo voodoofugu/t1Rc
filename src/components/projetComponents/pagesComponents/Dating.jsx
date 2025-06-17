@@ -255,7 +255,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // fallback={<div>loading</div>}
         // edgeGradient="#5b2914"
         // render={{ type: "lazy" }}
-        render={{ type: "virtual" }}
+        // render={{ type: "virtual" }}
         // emptyElements={{ mode: "clear" }}
         // scrollTop={{ value: "end" }}
         // type="sliderMenu"
