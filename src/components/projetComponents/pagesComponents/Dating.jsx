@@ -248,15 +248,21 @@ const GirlDependencies = ({ girlsInfo }) => {
         wrapperAlign="center"
         // elementsAlign="center"
         // elementsDirection="column"
-        // direction="hybridY"
+        // direction="hybrid"
         // direction="x"
         // rootMargin={[0, 0]}
         // suspending
-        // fallback={<div>loading</div>}
+        // fallback={
+        //   <PersonAva
+        //     img={`img/images/superhero/suphero-/x1/avatar/sh-ava-1.jpg`}
+        //   />
+        // }
         // edgeGradient="#5b2914"
-        // render={{ type: "lazy" }}
+        // render={{ type: "lazy", stopLoadOnScroll: true }}
         // render={{ type: "virtual" }}
-        // emptyElements={{ mode: "clear" }}
+        // emptyElements={{
+        //   mode: "fallback",
+        // }}
         // scrollTop={{ value: "end" }}
         // type="sliderMenu"
         // type="slider"
