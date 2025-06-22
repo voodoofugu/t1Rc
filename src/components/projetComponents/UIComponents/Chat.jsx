@@ -276,14 +276,11 @@ const Chat = ({ girlInfo }) => {
           <MorphScroll
             className="chatDaiting"
             size={[490, 496]}
-            objectsSize={[450, "none"]}
             wrapperMinSize={"full"}
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollPosition={{ value: "end" }}
             wrapperAlign={"center"}
             edgeGradient
-            // render={{ type: "virtual" }}
-            // render={{ type: "lazy" }}
           >
             {chatMapArray.map((item, index) => {
               const textIndex = arrayFromChatProgress[index];

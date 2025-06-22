@@ -26,7 +26,6 @@ export default function InfoPopFramed({ inner, girlImg }) {
         </div>
         <MorphScroll
           size={[700, 342]}
-          objectsSize={[700, "none"]}
           wrapperMargin={[0, 20]}
           progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           wrapperAlign={["center", "center"]}
