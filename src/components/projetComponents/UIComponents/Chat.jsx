@@ -276,6 +276,7 @@ const Chat = ({ girlInfo }) => {
           <MorphScroll
             className="chatDaiting"
             size={[490, 496]}
+            // objectsSize={[490, "size"]}
             wrapperMinSize={"full"}
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollPosition={{ value: "end" }}

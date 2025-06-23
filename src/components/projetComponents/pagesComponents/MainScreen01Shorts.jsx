@@ -110,6 +110,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
     <MorphScroll
       className="shortsGallery"
       size={[1098, 497]}
+      objectsSize="size"
       progressTrigger={{
         progressElement: [
           <FraimedTitle
