@@ -12,36 +12,7 @@ export const cssFiles = [
   "screen-rating-hint",
 ];
 
-function Tooltip() {
-  const timerRef = useRef(null);
-
-  const [scrollVisibility, setScrollVisibility] = useState(false);
-  const [scrollClasses, setScrollClasses] = useState("prize-textBox");
-
-  const scrollHandler = (motion) => {
-    if (timerRef.current) {
-      clearTimeout(timerRef.current);
-    }
-
-    if (!motion && !scrollVisibility) {
-      timerRef.current = setTimeout(() => {
-        setScrollVisibility(true);
-        timerRef.current = null;
-      }, 1000);
-    } else if (!motion) {
-      timerRef.current = setTimeout(() => {
-        setScrollClasses("prize-textBox hide");
-
-        timerRef.current = setTimeout(() => {
-          setScrollVisibility(motion);
-          setScrollClasses("prize-textBox");
-          timerRef.current = null;
-        }, 200);
-      }, 1000);
-    }
-  };
-
-  const text = `Her skin is like bronze polished by the sun, and her long red hair
+const text = `Her skin is like bronze polished by the sun, and her long red hair
               is a flame of passion. She sings not only with her voice, but her
               body becomes a melody, her every movement a rhythm of seduction.
               The psaltery in her hands is not just an instrument, but a weapon
@@ -50,10 +21,39 @@ function Tooltip() {
               be burned. Strings of Vice - She strikes the strings of the
               psaltery, emitting vibrations that penetrate the flesh of her
               enemies, making them feel aroused and weak.`;
-  const scrollProps = {
-    scrollPosition: scrollVisibility
-      ? { value: "end", duration: text.length * 50 }
-      : { value: 0, duration: 0 },
+
+function Tooltip() {
+  const timerRef = useRef(null); // для очистки таймера
+  const scrollPositionRef = useRef({ value: 0, duration: 0 });
+
+  const [scrollVisibility, setScrollVisibility] = useState(false);
+  const [scrollClasses, setScrollClasses] = useState("prize-textBox");
+
+  const textDuration = text.length * 50;
+
+  const scrollHandler = (motion) => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+
+    if (!motion && !scrollVisibility) {
+      timerRef.current = setTimeout(() => {
+        scrollPositionRef.current = { value: "end", duration: textDuration };
+        setScrollVisibility(true);
+        timerRef.current = null;
+      }, 1000);
+    } else if (!motion) {
+      timerRef.current = setTimeout(() => {
+        setScrollClasses("prize-textBox hide");
+
+        timerRef.current = setTimeout(() => {
+          scrollPositionRef.current = { value: 0, duration: 0 };
+          setScrollVisibility(motion);
+          setScrollClasses("prize-textBox");
+          timerRef.current = null;
+        }, 200);
+      }, 1000);
+    }
   };
 
   return (
@@ -65,121 +65,6 @@ function Tooltip() {
         transform: "translate(-50%, -50%)",
       }}
     >
-      {/* <div className="rating-hint-box">
-        <div>
-          <div className="rating-hint-box-name">сундук топ ранга</div>
-          <div className>
-            <div className>
-              <div className="hint-box">
-                <div className="hint-prize-box">
-                  <img src="img/rating-bras-wat@1x.png" />
-                </div>
-                <div className="rank-reward-num">1</div>
-                <div className="prize-name-text-box">
-                  <div className="name-text-box">
-                    <div className="hint-prize-name">bracelet</div>
-                    <div className="hint-prize-text">
-                      Random royal bracelet, that will please any girl.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hint-box">
-                <div className="hint-prize-box">
-                  <img src="img/rating-neck-wat@1x.png" />
-                </div>
-                <div className="rank-reward-num">1</div>
-                <div className="prize-name-text-box">
-                  <div className="name-text-box">
-                    <div className="hint-prize-name">chain</div>
-                    <div className="hint-prize-text">
-                      Random royal chain, that will please any girl.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hint-box">
-                <div className="hint-prize-box">
-                  <img src="img/rating-ring-wat@1x.png" />
-                </div>
-                <div className="rank-reward-num">2</div>
-                <div className="prize-name-text-box">
-                  <div className="name-text-box">
-                    <div className="hint-prize-name">ring</div>
-                    <div className="hint-prize-text">
-                      Random royal ring, that will please any girl.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hint-box">
-                <div className="hint-prize-box">
-                  <img src="img/arrow_up1.png" />
-                </div>
-                <div className="rank-reward-num">3</div>
-                <div className="prize-name-text-box">
-                  <div className="name-text-box">
-                    <div className="hint-prize-name">Heroine promote</div>
-                    <div className="hint-prize-text">
-                      Promotion of the random heroine.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hint-box">
-                <div className="hint-prize-box">
-                  <img src="img/ic-abil-gold.png" />
-                  <div className="newtime t72h">
-                    <div className="newclocktime">72</div>
-                  </div>
-                </div>
-                <div className="rank-reward-num">72</div>
-                <div className="prize-name-text-box">
-                  <div className="name-text-box">
-                    <div className="hint-prize-name">Gold for 72h</div>
-                    <div className="hint-prize-text">
-                      You instantly get Gold, as if you played for 72h.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hint-box">
-                <div className="hint-prize-box">
-                  <img src="img/ms-stone-all.png" />
-                </div>
-                <div className="rank-reward-num">big</div>
-                <div className="prize-name-text-box">
-                  <div className="name-text-box">
-                    <div className="hint-prize-name">big pack Master Gems</div>
-                    <div className="hint-prize-text">
-                      These are gems for guild master leveling up! Contains some
-                      amount of different gems: strength, intelligence, charisma
-                      and luck
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hint-box">
-                <div className="hint-prize-box">
-                  <img src="img/evPopArts/potion_red.png" />
-                </div>
-                <div className="rank-reward-num">big</div>
-                <div className="prize-name-text-box">
-                  <div className="name-text-box">
-                    <div className="hint-prize-name">big pack of essence</div>
-                    <div className="hint-prize-text">
-                      Essence, through which superheroines become stronger.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hint-box empty" />
-              <div className="hint-box empty" />
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div className="rating-hint-box-rel">
         <div className="prize-one-box-all-rel">
           <div className="girl-box">
@@ -189,12 +74,6 @@ function Tooltip() {
             />
           </div>
           <div className="prize-name-box">Himeko Akira</div>
-          {/* <div className="prize-dps-box">
-            <div className="prize-dps-text">124sD4</div>
-          </div>
-          <div className="prize-promote-box">
-            <div className="prize-promote-text" />
-          </div> */}
           <div className="prize-name-box small">rare hero</div>
           <MorphScroll
             className={scrollClasses}
@@ -205,7 +84,7 @@ function Tooltip() {
             }}
             edgeGradient={{ color: "#C6BDB4", size: 16 }}
             wrapperMargin={[10, 0]}
-            scrollPosition={scrollProps.scrollPosition}
+            scrollPosition={scrollPositionRef.current}
             isScrolling={scrollHandler}
             wrapperAlign={"center"}
           >
