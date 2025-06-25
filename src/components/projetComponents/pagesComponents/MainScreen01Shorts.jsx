@@ -128,6 +128,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
       wrapperMargin={[22, 0]}
     >
       <MorphScroll
+        key={"collectionTab"}
         className="collectionTab"
         size={[1056, 448]}
         objectsSize={[300, 380]}
@@ -140,11 +141,11 @@ export default function MainScreen01Shorts({ pageName, children }) {
         }}
         direction="x"
         wrapperAlign={"center"}
-        key={"collectionTab"}
       >
         {collections}
       </MorphScroll>
       <MorphScroll
+        key={"charactersTab"}
         className="charactersTab"
         size={[1056, 448]}
         objectsSize={[162, 192]}
@@ -156,7 +157,6 @@ export default function MainScreen01Shorts({ pageName, children }) {
           progressElement: <ScrollThumb />,
         }}
         wrapperAlign={"center"}
-        key={"charactersTab"}
       >
         {girlsCards}
       </MorphScroll>
@@ -217,13 +217,45 @@ export default function MainScreen01Shorts({ pageName, children }) {
 
       <div className="quest-box-all">
         <div className="quest-box-scroll">
-          <div className="quest-box">
-            <li className="quest">
-              <img
-                className="icon"
-                loading="lazy"
-                src="img/ic-abil-reborn.png"
-              />
+          <div
+            className="quest-box"
+            style={{
+              position: "absolute",
+              top: "50%",
+              transform: "translateY(-50%)",
+            }}
+          >
+            <li
+              className="quest"
+              onClick={() => {
+                nexusTrigger({
+                  type: "handlePopup",
+                  payload: {
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+                      popCont: "CongraPop",
+                      props: {
+                        titleText: "You got a new Short!",
+                        rewardsData: [
+                          {
+                            itemClass: "shortCard",
+                            heroClass: "wizard",
+                            cardType: "superhero",
+                            itemPic:
+                              "img/images/superhero/suphero-952/x1/avatar/sh-ava-1.jpg",
+                          },
+                        ],
+                      },
+                    },
+                  },
+                });
+              }}
+            >
+              <img className="icon" loading="lazy" src="img/tab-13.png" />
+              <div className="timerbox">
+                <div className="timer">GET SHORT</div>
+              </div>
             </li>
           </div>
         </div>

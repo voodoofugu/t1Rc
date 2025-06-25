@@ -7,7 +7,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
-export default function CongraPop({ rewardsData }) {
+export default function CongraPop({ rewardsData, titleText }) {
   return (
     <>
       <div
@@ -26,7 +26,10 @@ export default function CongraPop({ rewardsData }) {
           <div className="frame bottom"></div>
         </div>
 
-        <FraimedTitle className="cornersTop" text="Congratulations" />
+        <FraimedTitle
+          className="cornersTop"
+          text={titleText || "Congratulations"}
+        />
 
         <MorphScroll
           className="rewardsScroll"
@@ -36,8 +39,8 @@ export default function CongraPop({ rewardsData }) {
           wrapperMargin={[5, 0]}
           progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           progressElement={<ScrollThumb />}
-          elementsAlign={"center"}
-          wrapperAlign={["center", "center"]}
+          elementsAlign="center"
+          wrapperAlign="center"
         >
           {rewardsData.map((item, index) => (
             <ItemBox key={index} {...item} />
