@@ -65,7 +65,7 @@ export default function ItemBox({
       {get && (
         <Button
           className="max green"
-          text={`get ${count}`}
+          text={`${typeof get === "string" ? get : ""}${count}`}
           onClick={!selectable ? onClick : undefined}
         />
       )}

@@ -905,13 +905,9 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
                   style={{ height: "17%" }}
                 ></div>
                 <div className="fapop-times-around-text">
-                  Floor
+                  Floor 1/13
                   <br />
-                  1/13
-                  <br />
-                  Trips
-                  <br />
-                  0/13
+                  Trips 0/13
                 </div>
               </div>
             </div>
