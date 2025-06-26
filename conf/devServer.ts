@@ -4,6 +4,7 @@ import path from "path";
 
 export function devServer(options: BuildOptions): DevServerConfiguration {
   return {
+    host: "0.0.0.0",
     port: options.port ?? 3000,
     open: true,
     historyApiFallback: true,
