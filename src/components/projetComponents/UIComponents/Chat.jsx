@@ -20,7 +20,6 @@ const Chat = ({ girlInfo }) => {
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
-  const wasFirstMassageVisible = React.useRef(false);
 
   const [chatMapArray, setChatMapArray] = React.useState([
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -30,6 +29,7 @@ const Chat = ({ girlInfo }) => {
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
   const [rect, setRect] = React.useState(null);
+
   const setRectFunction = React.useCallback((newRect) => {
     setRect(newRect);
   }, []);
@@ -46,11 +46,6 @@ const Chat = ({ girlInfo }) => {
   }
   const setLastElementsFunction = React.useCallback(
     (entry) => {
-      if (!wasFirstMassageVisible.current) {
-        wasFirstMassageVisible.current = true;
-        return;
-      }
-
       setLastElements((prevState) => ({
         ...prevState,
         [girlInfo.id]: prevState[girlInfo.id] - 10,
@@ -158,14 +153,10 @@ const Chat = ({ girlInfo }) => {
       timeoutsRef.current.push(timeout);
     }
 
-    if (wasFirstMassageVisible.current) wasFirstMassageVisible.current = false;
-  }, [girlInfo.id]);
-
-  React.useEffect(() => {
     return () => {
       clearAllTimeouts();
     };
-  }, []);
+  }, [girlInfo.id]);
 
   // content
   const messageContent = (message, item, index) => {

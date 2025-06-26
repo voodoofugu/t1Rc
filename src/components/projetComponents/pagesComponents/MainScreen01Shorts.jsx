@@ -156,7 +156,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
           wheel: true,
           progressElement: <ScrollThumb />,
         }}
-        wrapperAlign={"center"}
+        wrapperAlign={["center", "start"]}
       >
         {girlsCards}
       </MorphScroll>

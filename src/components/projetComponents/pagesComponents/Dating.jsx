@@ -228,7 +228,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         className="scrollAvatars"
         size={[104, 494]}
         // size={[190, 190]}
-        objectsSize={[86, 86]}
+        objectsSize={"firstChild"}
         // objectsSize={["none", "none"]}
         gap={10}
         wrapperMargin={[0, 10]}
