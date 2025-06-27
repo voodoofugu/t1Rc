@@ -29,27 +29,29 @@ const Chat = ({ girlInfo }) => {
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
   const [rect, setRect] = React.useState(null);
+  const [lastElements, setLastElements] = React.useState({
+    [girlInfo.id]: -10,
+    loadingReady: false,
+  });
 
   const setRectFunction = React.useCallback((newRect) => {
     setRect(newRect);
   }, []);
 
-  const [lastElements, setLastElements] = React.useState({
-    [girlInfo.id]: -10,
-    loadingReady: false,
-  });
   if (!lastElements[girlInfo.id]) {
     setLastElements({
       [girlInfo.id]: -10,
       loadingReady: false,
     });
   }
+
   const setLastElementsFunction = React.useCallback(
     (entry) => {
-      setLastElements((prevState) => ({
-        ...prevState,
-        [girlInfo.id]: prevState[girlInfo.id] - 10,
-      }));
+      if (entry.isIntersecting)
+        setLastElements((prevState) => ({
+          ...prevState,
+          [girlInfo.id]: prevState[girlInfo.id] - 10,
+        }));
     },
     [lastElements.loadingReady]
   );
@@ -267,7 +269,6 @@ const Chat = ({ girlInfo }) => {
           <MorphScroll
             className="chatDaiting"
             size={[490, 496]}
-            // objectsSize={[490, "size"]}
             wrapperMinSize={"full"}
             progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
             scrollPosition={{ value: "end" }}
@@ -285,6 +286,7 @@ const Chat = ({ girlInfo }) => {
                 ) {
                   return (
                     <IntersectionTracker
+                      className={`${textIndex}`}
                       key={`message${textIndex}`}
                       visibleContent
                       onVisible={setLastElementsFunction}

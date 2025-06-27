@@ -229,7 +229,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         size={[104, 494]}
         // size={[190, 190]}
         objectsSize={"firstChild"}
-        // objectsSize={["none", "none"]}
+        // objectsSize={[86, 86]}
         gap={10}
         wrapperMargin={[0, 10]}
         progressReverse
