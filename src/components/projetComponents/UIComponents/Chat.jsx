@@ -20,6 +20,7 @@ const Chat = ({ girlInfo }) => {
 
   const btnBoxRef = React.useRef(null);
   const fallbackBoxRef = React.useRef(null);
+  const firstMessageRender = React.useRef(false); // защита от загрузки при первом рендере
 
   const [chatMapArray, setChatMapArray] = React.useState([
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -47,7 +48,10 @@ const Chat = ({ girlInfo }) => {
 
   const setLastElementsFunction = React.useCallback(
     (entry) => {
-      if (entry.isIntersecting)
+      if (!firstMessageRender.current) {
+        firstMessageRender.current = true;
+        return;
+      } else if (entry.isIntersecting)
         setLastElements((prevState) => ({
           ...prevState,
           [girlInfo.id]: prevState[girlInfo.id] - 10,
@@ -153,6 +157,7 @@ const Chat = ({ girlInfo }) => {
         }));
       }, 1000);
       timeoutsRef.current.push(timeout);
+      firstMessageRender.current = false;
     }
 
     return () => {
@@ -289,8 +294,8 @@ const Chat = ({ girlInfo }) => {
                       className={`${textIndex}`}
                       key={`message${textIndex}`}
                       visibleContent
-                      onVisible={setLastElementsFunction}
-                      threshold={1}
+                      onIntersection={setLastElementsFunction}
+                      threshold={0}
                     >
                       {messageContent(message, item, index)}
                     </IntersectionTracker>
@@ -308,72 +313,70 @@ const Chat = ({ girlInfo }) => {
               key="nextMessageBox"
               onResize={setRectFunction}
             >
-              {
-                <>
-                  {nextMessage && (nextMessage.Hero || nextMessage.Quest) && (
-                    <div className="btnBox" ref={btnBoxRef}>
-                      {nextMessage &&
-                        "Hero" in nextMessage &&
-                        messageFallback === "none" && (
-                          <Delay delay={800} renderOnTimeout>
-                            {nextMessage.Hero.map((text, index) => (
-                              <Delay
-                                key={`nextMessage${index}`}
-                                delay={index * 100 + 500}
+              <>
+                {nextMessage && (nextMessage.Hero || nextMessage.Quest) && (
+                  <div className="btnBox" ref={btnBoxRef}>
+                    {nextMessage &&
+                      "Hero" in nextMessage &&
+                      messageFallback === "none" && (
+                        <Delay delay={800} renderOnTimeout>
+                          {nextMessage.Hero.map((text, index) => (
+                            <Delay
+                              key={`nextMessage${index}`}
+                              delay={index * 100 + 500}
+                            >
+                              <Message
+                                className="btnMessage"
+                                text={text}
+                                onClick={() => {
+                                  !chatProgressHandleCondition.current &&
+                                    (btnBoxRef.current.style.height = `${rect.height}px`);
+                                  chatProgressHandle(index);
+                                }}
                               >
-                                <Message
-                                  className="btnMessage"
-                                  text={text}
+                                <PersonAva img={`img/dating/heroAva.jpg`} />
+                              </Message>
+                            </Delay>
+                          ))}
+                        </Delay>
+                      )}
+
+                    {nextMessage &&
+                      "Quest" in nextMessage &&
+                      messageFallback === "none" && (
+                        <Delay delay={800} renderOnTimeout>
+                          {nextMessage.Quest.map((text, index) => (
+                            <Delay
+                              key={`nextMessage${index}`}
+                              delay={index * 100 + 500}
+                            >
+                              <Message
+                                className="infoMessage quest"
+                                text={text}
+                              >
+                                <Button
+                                  className="btnGold"
+                                  text={"Перейти"}
                                   onClick={() => {
                                     !chatProgressHandleCondition.current &&
-                                      (btnBoxRef.current.style.height = `${rect.height}px`);
-                                    chatProgressHandle(index);
+                                      chatProgressHandle(0);
                                   }}
-                                >
-                                  <PersonAva img={`img/dating/heroAva.jpg`} />
-                                </Message>
-                              </Delay>
-                            ))}
-                          </Delay>
-                        )}
-
-                      {nextMessage &&
-                        "Quest" in nextMessage &&
-                        messageFallback === "none" && (
-                          <Delay delay={800} renderOnTimeout>
-                            {nextMessage.Quest.map((text, index) => (
-                              <Delay
-                                key={`nextMessage${index}`}
-                                delay={index * 100 + 500}
-                              >
-                                <Message
-                                  className="infoMessage quest"
-                                  text={text}
-                                >
-                                  <Button
-                                    className="btnGold"
-                                    text={"Перейти"}
-                                    onClick={() => {
-                                      !chatProgressHandleCondition.current &&
-                                        chatProgressHandle(0);
-                                    }}
-                                  />
-                                  <ProgressBar
-                                    className="messageProgressBar"
-                                    progressSize={[312, 6]}
-                                    textWithProgress="max"
-                                    currentProgress={4}
-                                    maxProgress={10}
-                                  />
-                                </Message>
-                              </Delay>
-                            ))}
-                          </Delay>
-                        )}
-                    </div>
-                  )}
-                </>
-              }
+                                />
+                                <ProgressBar
+                                  className="messageProgressBar"
+                                  progressSize={[312, 6]}
+                                  textWithProgress="max"
+                                  currentProgress={4}
+                                  maxProgress={10}
+                                />
+                              </Message>
+                            </Delay>
+                          ))}
+                        </Delay>
+                      )}
+                  </div>
+                )}
+              </>
             </ResizeTracker>
           </MorphScroll>
 
