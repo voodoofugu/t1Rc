@@ -133,47 +133,47 @@ function formatColor(hex: string, format: "hex" | "rgb" | "hsl") {
   return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
-type CanvasClickOptions = {
-  canvasRef: React.RefObject<HTMLCanvasElement>;
-  cursorDuringDrag: string;
-  onMove: (e: MouseEvent, ctx: CanvasRenderingContext2D, rect: DOMRect) => void;
-  triggerUpdate: () => void;
-};
+// type CanvasClickOptions = {
+//   canvasRef: React.RefObject<HTMLCanvasElement>;
+//   cursorDuringDrag: string;
+//   onMove: (e: MouseEvent, ctx: CanvasRenderingContext2D, rect: DOMRect) => void;
+//   triggerUpdate: () => void;
+// };
 
-const handleCanvasClick = (
-  e: React.MouseEvent,
-  { canvasRef, cursorDuringDrag, onMove, triggerUpdate }: CanvasClickOptions
-) => {
-  const controller = new AbortController();
-  const signal = controller.signal;
+// const handleCanvasClick = (
+//   e: React.MouseEvent,
+//   { canvasRef, cursorDuringDrag, onMove, triggerUpdate }: CanvasClickOptions
+// ) => {
+//   const controller = new AbortController();
+//   const signal = controller.signal;
 
-  const canvas = canvasRef.current;
-  if (!canvas) return;
+//   const canvas = canvasRef.current;
+//   if (!canvas) return;
 
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return;
+//   const ctx = canvas.getContext("2d");
+//   if (!ctx) return;
 
-  const rect = canvas.getBoundingClientRect();
+//   const rect = canvas.getBoundingClientRect();
 
-  const handleMove = (moveEvent: MouseEvent) => {
-    onMove(moveEvent, ctx, rect);
-  };
+//   const handleMove = (moveEvent: MouseEvent) => {
+//     onMove(moveEvent, ctx, rect);
+//   };
 
-  const handleUp = () => {
-    controller.abort();
-    canvas.style.cursor = "crosshair";
-    document.body.style.cursor = "default";
-  };
+//   const handleUp = () => {
+//     controller.abort();
+//     canvas.style.cursor = "crosshair";
+//     document.body.style.cursor = "default";
+//   };
 
-  window.addEventListener("mousemove", handleMove, { signal });
-  window.addEventListener("mouseup", handleUp, { signal });
+//   window.addEventListener("mousemove", handleMove, { signal });
+//   window.addEventListener("mouseup", handleUp, { signal });
 
-  handleMove(e.nativeEvent);
+//   handleMove(e.nativeEvent);
 
-  canvas.style.cursor = cursorDuringDrag;
-  document.body.style.cursor = cursorDuringDrag;
-  triggerUpdate();
-};
+//   canvas.style.cursor = cursorDuringDrag;
+//   document.body.style.cursor = cursorDuringDrag;
+//   triggerUpdate();
+// };
 
 function ColorPickerPop() {
   const [_, forceUpdate] = useState<number>(0); // для принудительного обновления
@@ -192,15 +192,30 @@ function ColorPickerPop() {
 
   const pickColor = async () => {
     try {
-      // @ts-ignore
+      // @ts-expect-error нет типа EyeDropper в TypeScript
       const eyeDropper = new EyeDropper();
       const result = await eyeDropper.open();
       color.current = result.sRGBHex;
       await navigator.clipboard.writeText(result.sRGBHex);
 
+      // Обновляем палитру и цветовой круг
+      if (!paletteCanvasRef.current) return;
+      const { h, s, l } = hexToHsl(result.sRGBHex);
+      hueColor.current = `hsl(${h}, 100%, 50%)`;
+
+      const canvas = paletteCanvasRef.current;
+      const ctx = canvas.getContext("2d", { willReadFrequently: true });
+      if (!ctx) return;
+
+      const { width, height } = canvas;
+      const x = Math.round((s / 100) * (width - 1));
+      const y = Math.round(((100 - l) / 100) * (height - 1));
+      paletteThumbXY.current = { x, y };
+      hueThumbX.current.x = Math.round((h / 360) * width);
+
       triggerUpdate();
     } catch (e) {
-      console.error("Ошибка выбора цвета", e);
+      console.error("Error picking color", e);
     }
   };
 
