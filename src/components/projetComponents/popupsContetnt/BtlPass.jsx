@@ -31,7 +31,7 @@ export default function BtlPass({ event }) {
       : event === "spring"
       ? "images/hero-all/tithero-430/icons/break-girl"
       : event === "summer"
-      ? "images/hero-all/tithero-542/icons/break-girl4"
+      ? "images/hero-all/tithero-557/icons/break-girl4"
       : event === "autumn"
       ? "images/hero-all/tithero-440/icons/break-girl"
       : event === "sexpedition"
@@ -201,12 +201,12 @@ export default function BtlPass({ event }) {
             <ItemBox
               itemClass={`cardAva`}
               itemPic="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
-              unique={["sh"]}
+              cardType="sh"
             />
             <ItemBox
               itemClass={`cardAva`}
               itemPic="img/images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg"
-              unique={["dh", "dark"]}
+              cardType="dh"
             />
           </div>
           <ProgressBar
