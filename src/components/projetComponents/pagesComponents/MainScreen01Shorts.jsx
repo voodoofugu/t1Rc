@@ -19,7 +19,7 @@ import collectionData from "../data/collectionData";
 export const cssFiles = [
   "shorts-gallery",
   "dating",
-  // "color-picker"
+  // "color-picker", // styles for ColorPickerPop
 ];
 
 const sheetId = "1FwL6TJLN5XoEAuAxj8cdZoeD55eWX2NJYpXUCZFL3bI";

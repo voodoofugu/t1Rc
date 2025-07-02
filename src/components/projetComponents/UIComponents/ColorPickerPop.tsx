@@ -1,33 +1,62 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+// import useDebounce from "../../hooks/useDebounce";
 
-function hexToRgb(hex: string) {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return { r, g, b };
+function hexToRgba(hex: string) {
+  hex = hex.replace(/^#/, "");
+
+  if (hex.length === 3) {
+    hex = hex
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  } else if (hex.length === 4) {
+    hex = hex
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  }
+
+  const r = parseInt(hex.slice(0, 2), 16);
+  const g = parseInt(hex.slice(2, 4), 16);
+  const b = parseInt(hex.slice(4, 6), 16);
+  const a = hex.length === 8 ? parseInt(hex.slice(6, 8), 16) / 255 : undefined;
+
+  return { r, g, b, a };
 }
 
-function rgbToHsl(r: number, g: number, b: number) {
+function rgbToHsl(r: number, g: number, b: number, alpha?: number) {
   r /= 255;
   g /= 255;
   b /= 255;
+
   const max = Math.max(r, g, b),
     min = Math.min(r, g, b);
   let h = 0,
-    s = 0,
-    l = (max + min) / 2;
+    s = 0;
+  const l = (max + min) / 2;
+
   if (max !== min) {
     const d = max - min;
     s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-    if (max === r) h = (g - b) / d + (g < b ? 6 : 0);
-    else if (max === g) h = (b - r) / d + 2;
-    else h = (r - g) / d + 4;
+    switch (max) {
+      case r:
+        h = (g - b) / d + (g < b ? 6 : 0);
+        break;
+      case g:
+        h = (b - r) / d + 2;
+        break;
+      case b:
+        h = (r - g) / d + 4;
+        break;
+    }
     h /= 6;
   }
+
   return {
     h: Math.round(h * 360),
     s: Math.round(s * 100),
     l: Math.round(l * 100),
+    alpha: alpha && Math.round(alpha * 100) / 100,
   };
 }
 
@@ -74,7 +103,7 @@ function hexToHsl(hex: string): { h: number; s: number; l: number } {
   };
 }
 
-function hslToHex(h: number, s: number, l: number): string {
+function hslToHex(h: number, s: number, l: number, a?: number): string {
   s /= 100;
   l /= 100;
 
@@ -85,95 +114,79 @@ function hslToHex(h: number, s: number, l: number): string {
   let r = 0,
     g = 0,
     b = 0;
+  if (h < 60) [r, g, b] = [c, x, 0];
+  else if (h < 120) [r, g, b] = [x, c, 0];
+  else if (h < 180) [r, g, b] = [0, c, x];
+  else if (h < 240) [r, g, b] = [0, x, c];
+  else if (h < 300) [r, g, b] = [x, 0, c];
+  else [r, g, b] = [c, 0, x];
 
-  if (0 <= h && h < 60) {
-    r = c;
-    g = x;
-    b = 0;
-  } else if (60 <= h && h < 120) {
-    r = x;
-    g = c;
-    b = 0;
-  } else if (120 <= h && h < 180) {
-    r = 0;
-    g = c;
-    b = x;
-  } else if (180 <= h && h < 240) {
-    r = 0;
-    g = x;
-    b = c;
-  } else if (240 <= h && h < 300) {
-    r = x;
-    g = 0;
-    b = c;
-  } else if (300 <= h && h < 360) {
-    r = c;
-    g = 0;
-    b = x;
-  }
+  const toHex = (v: number) =>
+    Math.round((v + m) * 255)
+      .toString(16)
+      .padStart(2, "0");
+  const alphaHex =
+    a &&
+    Math.round(a * 255)
+      .toString(16)
+      .padStart(2, "0");
 
-  const rHex = Math.round((r + m) * 255)
-    .toString(16)
-    .padStart(2, "0");
-  const gHex = Math.round((g + m) * 255)
-    .toString(16)
-    .padStart(2, "0");
-  const bHex = Math.round((b + m) * 255)
-    .toString(16)
-    .padStart(2, "0");
-
-  return `#${rHex}${gHex}${bHex}`;
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}${a && a < 1 ? alphaHex : ""}`;
 }
 
 function formatColor(hex: string, format: "hex" | "rgb" | "hsl") {
   if (format === "hex") return hex;
-  const { r, g, b } = hexToRgb(hex);
-  if (format === "rgb") return `rgb(${r}, ${g}, ${b})`;
-  const { h, s, l } = rgbToHsl(r, g, b);
-  return `hsl(${h}, ${s}%, ${l}%)`;
+  const { r, g, b, a } = hexToRgba(hex);
+  if (format === "rgb")
+    return a ? `rgba(${r}, ${g}, ${b}, ${a})` : `rgb(${r}, ${g}, ${b})`;
+  const { h, s, l, alpha } = rgbToHsl(r, g, b, a);
+  return alpha
+    ? `hsla(${h}, ${s}%, ${l}%, ${alpha})`
+    : `hsl(${h}, ${s}%, ${l}%)`;
 }
 
-// type CanvasClickOptions = {
-//   canvasRef: React.RefObject<HTMLCanvasElement>;
-//   cursorDuringDrag: string;
-//   onMove: (e: MouseEvent, ctx: CanvasRenderingContext2D, rect: DOMRect) => void;
-//   triggerUpdate: () => void;
-// };
+type CanvasClickOptions = {
+  canvasRef: React.RefObject<HTMLCanvasElement | null>;
+  cursorDuringDrag: string;
+  onMove: (e: MouseEvent, ctx: CanvasRenderingContext2D, rect: DOMRect) => void;
+  triggerUpdate: () => void;
+};
 
-// const handleCanvasClick = (
-//   e: React.MouseEvent,
-//   { canvasRef, cursorDuringDrag, onMove, triggerUpdate }: CanvasClickOptions
-// ) => {
-//   const controller = new AbortController();
-//   const signal = controller.signal;
+const handleCanvasClick = (
+  e: React.MouseEvent,
+  { canvasRef, cursorDuringDrag, onMove, triggerUpdate }: CanvasClickOptions
+) => {
+  const canvas = canvasRef.current;
+  if (!canvas) return;
 
-//   const canvas = canvasRef.current;
-//   if (!canvas) return;
+  const controller = new AbortController();
+  const signal = controller.signal;
 
-//   const ctx = canvas.getContext("2d");
-//   if (!ctx) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
 
-//   const rect = canvas.getBoundingClientRect();
+  const rect = canvas.getBoundingClientRect();
+  const handleMove = (moveEvent: MouseEvent) => {
+    onMove(moveEvent, ctx, rect);
+    triggerUpdate();
+  };
 
-//   const handleMove = (moveEvent: MouseEvent) => {
-//     onMove(moveEvent, ctx, rect);
-//   };
+  const handleUp = () => {
+    controller.abort();
+    canvas.style.cursor = "";
+    document.body.style.cursor = "default";
+  };
 
-//   const handleUp = () => {
-//     controller.abort();
-//     canvas.style.cursor = "crosshair";
-//     document.body.style.cursor = "default";
-//   };
+  window.addEventListener("mousemove", handleMove, { signal });
+  window.addEventListener("mouseup", handleUp, { signal });
 
-//   window.addEventListener("mousemove", handleMove, { signal });
-//   window.addEventListener("mouseup", handleUp, { signal });
+  // Вызываем сразу при клике (без ожидания движения)
+  handleMove(e.nativeEvent);
 
-//   handleMove(e.nativeEvent);
-
-//   canvas.style.cursor = cursorDuringDrag;
-//   document.body.style.cursor = cursorDuringDrag;
-//   triggerUpdate();
-// };
+  canvas.style.cursor = cursorDuringDrag;
+  document.body.style.cursor = cursorDuringDrag;
+  triggerUpdate();
+};
 
 function ColorPickerPop() {
   const [_, forceUpdate] = useState<number>(0); // для принудительного обновления
@@ -183,11 +196,13 @@ function ColorPickerPop() {
 
   const hueCanvasRef = useRef<HTMLCanvasElement>(null);
   const paletteCanvasRef = useRef<HTMLCanvasElement>(null);
+  const fillCanvasRef = useRef<HTMLCanvasElement>(null);
 
   const color = useRef<string>("#ffffff");
   const hueColor = useRef<string>("hsl(0, 100%, 50%)");
   const paletteThumbXY = useRef({ x: 0, y: 0 });
-  const hueThumbX = useRef({ x: 0 });
+  const hueThumbX = useRef(0);
+  const fillThumbX = useRef(0);
   const colorFormat = useRef<"hex" | "rgb" | "hsl">("hex");
 
   const pickColor = async () => {
@@ -211,7 +226,7 @@ function ColorPickerPop() {
       const x = Math.round((s / 100) * (width - 1));
       const y = Math.round(((100 - l) / 100) * (height - 1));
       paletteThumbXY.current = { x, y };
-      hueThumbX.current.x = Math.round((h / 360) * width);
+      hueThumbX.current = Math.round((h / 360) * width);
 
       triggerUpdate();
     } catch (e) {
@@ -219,100 +234,55 @@ function ColorPickerPop() {
     }
   };
 
-  const handleHueClick = (e: React.MouseEvent) => {
-    const controller = new AbortController();
-    const signal = controller.signal;
+  const handlePaletteClick = useCallback((e: React.MouseEvent) => {
+    handleCanvasClick(e, {
+      canvasRef: paletteCanvasRef,
+      cursorDuringDrag: "all-scroll",
+      onMove: (e: MouseEvent, ctx: CanvasRenderingContext2D, rect: DOMRect) => {
+        const x = Math.min(Math.max(e.clientX - rect.left, 0), rect.width - 1);
+        const y = Math.min(Math.max(e.clientY - rect.top, 0), rect.height - 1);
+        paletteThumbXY.current = { x, y };
 
-    const { h, s, l } = hexToHsl(color.current);
+        const pixel = ctx.getImageData(x, y, 1, 1).data;
+        const hex = `#${[pixel[0], pixel[1], pixel[2]]
+          .map((v) => v.toString(16).padStart(2, "0"))
+          .join("")}`;
+        color.current = hex;
+      },
+      triggerUpdate,
+    });
+  }, []);
 
-    const handleMove = (moveEvent: MouseEvent) => {
-      const canvas = hueCanvasRef.current;
-      if (!canvas) return;
+  const handleHueClick = useCallback((e: React.MouseEvent) => {
+    handleCanvasClick(e, {
+      canvasRef: hueCanvasRef,
+      cursorDuringDrag: "ew-resize",
+      onMove: (e: MouseEvent, ctx: CanvasRenderingContext2D, rect: DOMRect) => {
+        const { h, s, l } = hexToHsl(color.current);
+        const x = Math.min(Math.max(e.clientX - rect.left, 0), rect.width - 1);
+        hueThumbX.current = x;
 
-      const rect = canvas.getBoundingClientRect();
-      const x = Math.min(
-        Math.max(moveEvent.clientX - rect.left, 0),
-        canvas.width - 1
-      );
-      hueThumbX.current.x = x;
+        const hueValue = (x / rect.width) * 360;
+        hueColor.current = `hsl(${Math.round(hueValue)}, 100%, 50%)`;
 
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
+        const newColor = hslToHex(hueValue, s, l);
+        color.current = newColor;
+      },
+      triggerUpdate,
+    });
+  }, []);
 
-      const hueValue = (x / canvas.width) * 360;
-      hueColor.current = `hsl(${Math.round(hueValue)}, 100%, 50%)`;
-
-      const newColor = hslToHex(hueValue, s, l);
-      color.current = newColor;
-
-      triggerUpdate();
-    };
-
-    const handleUp = () => {
-      controller.abort();
-
-      hueCanvasRef.current!.style.cursor = "crosshair";
-      document.body.style.cursor = "default";
-    };
-
-    window.addEventListener("mousemove", handleMove, { signal });
-    window.addEventListener("mouseup", handleUp, { signal });
-
-    // Вызываем сразу при клике (без ожидания движения)
-    handleMove(e.nativeEvent);
-
-    triggerUpdate();
-    hueCanvasRef.current!.style.cursor = "ew-resize";
-    document.body.style.cursor = "ew-resize";
-  };
-
-  const handlePaletteClick = (e: React.MouseEvent) => {
-    const controller = new AbortController();
-    const signal = controller.signal;
-
-    const handleMove = (moveEvent: MouseEvent) => {
-      const canvas = paletteCanvasRef.current;
-      if (!canvas) return;
-
-      const rect = canvas.getBoundingClientRect();
-      const x = Math.min(
-        Math.max(moveEvent.clientX - rect.left, 0),
-        canvas.width - 1
-      );
-      const y = Math.min(
-        Math.max(moveEvent.clientY - rect.top, 0),
-        canvas.height - 1
-      );
-      paletteThumbXY.current = { x, y };
-
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
-      const pixel = ctx.getImageData(x, y, 1, 1).data;
-      const hex = `#${[pixel[0], pixel[1], pixel[2]]
-        .map((v) => v.toString(16).padStart(2, "0"))
-        .join("")}`;
-      color.current = hex;
-
-      triggerUpdate();
-    };
-
-    const handleUp = () => {
-      controller.abort();
-
-      paletteCanvasRef.current!.style.cursor = "crosshair";
-      document.body.style.cursor = "default";
-    };
-
-    window.addEventListener("mousemove", handleMove, { signal });
-    window.addEventListener("mouseup", handleUp, { signal });
-
-    // Вызываем сразу при клике (без ожидания движения)
-    handleMove(e.nativeEvent);
-
-    triggerUpdate();
-    paletteCanvasRef.current!.style.cursor = "all-scroll";
-    document.body.style.cursor = "all-scroll";
-  };
+  const handleFillClick = useCallback((e: React.MouseEvent) => {
+    handleCanvasClick(e, {
+      canvasRef: fillCanvasRef,
+      cursorDuringDrag: "ew-resize",
+      onMove: (e: MouseEvent, ctx: CanvasRenderingContext2D, rect: DOMRect) => {
+        const x = Math.min(Math.max(e.clientX - rect.left, 0), rect.width - 1);
+        fillThumbX.current = x;
+      },
+      triggerUpdate,
+    });
+  }, []);
 
   const onChangeColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
     colorFormat.current = e.target.value as "hex" | "rgb" | "hsl";
@@ -377,6 +347,36 @@ function ColorPickerPop() {
     ctx.fillRect(0, 0, width, height);
   }, [hueColor.current]);
 
+  useEffect(() => {
+    const canvas = fillCanvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const { width, height } = canvas;
+
+    // Шаг клеток (чекерборда)
+    const step = 3;
+
+    // 1. Рисуем шахматный фон (checkerboard)
+    for (let y = 0; y < height; y += step) {
+      for (let x = 0; x < width; x += step) {
+        const isDark = (x / step + y / step) % 2 === 0;
+        ctx.fillStyle = isDark ? "#ccc" : "#fff";
+        ctx.fillRect(x, y, step, step);
+      }
+    }
+
+    // 2. Накладываем градиент color → transparent
+    const gradient = ctx.createLinearGradient(0, 0, width, 0);
+    gradient.addColorStop(0, color.current);
+    gradient.addColorStop(1, "transparent");
+
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, width, height);
+  }, [color.current]);
+
   return (
     <div className="popup">
       <h1>Color Picker</h1>
@@ -393,24 +393,6 @@ function ColorPickerPop() {
       </div>
 
       <div className="canvasBox">
-        <div className="hueWrap">
-          <div
-            className="thumb"
-            style={{
-              backgroundColor: hueColor.current,
-              left: hueThumbX.current.x,
-            }}
-            onMouseDown={handleHueClick}
-          />
-          <canvas
-            ref={hueCanvasRef}
-            onMouseDown={handleHueClick}
-            className="canvas"
-            width={200}
-            height={8}
-          />
-        </div>
-
         <div className="paletteWrap">
           <div
             className="thumb"
@@ -427,6 +409,41 @@ function ColorPickerPop() {
             className="canvas"
             width={200}
             height={100}
+          />
+        </div>
+
+        <div className="hueWrap">
+          <div
+            className="thumb"
+            style={{
+              backgroundColor: hueColor.current,
+              left: hueThumbX.current,
+            }}
+            onMouseDown={handleHueClick}
+          />
+          <canvas
+            ref={hueCanvasRef}
+            onMouseDown={handleHueClick}
+            className="canvas"
+            width={200}
+            height={6}
+          />
+        </div>
+
+        <div className="fillWrap">
+          <div
+            className="thumb"
+            style={{
+              left: fillThumbX.current,
+            }}
+            onMouseDown={handleFillClick}
+          />
+          <canvas
+            ref={fillCanvasRef}
+            onMouseDown={handleFillClick}
+            className="canvas"
+            width={200}
+            height={6}
           />
         </div>
       </div>
