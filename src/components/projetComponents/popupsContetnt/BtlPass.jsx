@@ -201,7 +201,7 @@ export default function BtlPass({ event }) {
             <ItemBox
               itemClass={`cardAva`}
               itemPic="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
-              cardType="sh"
+              cardType="s"
             />
             <ItemBox
               itemClass={`cardAva`}
