@@ -42,7 +42,7 @@ const Button = ({
   textIcn = "",
   crossedOutText = "",
   discountSticker,
-  img = false,
+  img,
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -78,6 +78,10 @@ const Button = ({
         {img ? (
           typeof img === "string" ? (
             <img className="btnImg" src={img} loading="lazy" />
+          ) : Array.isArray(img) ? (
+            img.map((i, index) => (
+              <img key={index} className="btnImg" src={i} loading="lazy" />
+            ))
           ) : (
             <div className="btnImg"></div>
           )

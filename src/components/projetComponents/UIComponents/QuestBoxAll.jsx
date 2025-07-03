@@ -1,94 +1,85 @@
-import { memo, useState } from "react";
+import { useState } from "react";
 import { nexusTrigger } from "nexus-state";
 
-function Quest({ img, timerbox, payload }) {
-  const renderImages = () => {
-    if (Array.isArray(img)) {
-      return img.map((i, index) => (
-        <img key={index} className="icon" src={`img/${i}.png`} loading="lazy" />
-      ));
-    } else if (typeof img === "string") {
-      return <img className="icon" src={`img/${img}.png`} loading="lazy" />;
-    } else {
-      return null;
-    }
-  };
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
+import Button from "../UIComponents/Button";
 
+function QuestBtn({ img, timerbox, payload }) {
   return (
-    <div
-      className={`quest`}
+    <Button
+      className="imgOnly quest"
+      img={
+        Array.isArray(img) ? img.map((i) => `img/${i}.png`) : `img/${img}.png`
+      }
       onClick={() => {
-        payload
-          ? nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  ...payload,
-                },
+        payload &&
+          nexusTrigger({
+            type: "handlePopup",
+            payload: {
+              type: "open",
+              data: {
+                ...payload,
               },
-            })
-          : "";
+            },
+          });
       }}
     >
-      {renderImages()}
-
-      {timerbox ? (
+      {timerbox && (
         <div className="timerbox">
           <div className="timer">{timerbox}</div>
         </div>
-      ) : (
-        ""
       )}
-    </div>
+    </Button>
   );
 }
-const MemoQuest = memo(Quest);
 
 function QuestBox({ closed, tit, quest }) {
   const [closedState, setClosedState] = useState(closed);
   return (
     <div className={`quest-box wrap${closedState ? " closed" : ""}`}>
-      <div
+      <Button
         className="quest-title-btn"
+        text={tit}
         onClick={() => setClosedState(!closedState)}
-      >
-        {tit}
-      </div>
+      />
       <div className="quest-wrap">
         {quest.map((q, index) => (
-          <MemoQuest key={index} img={q[0]} timerbox={q[1]} payload={q[2]} />
+          <QuestBtn key={index} img={q[0]} timerbox={q[1]} payload={q[2]} />
         ))}
       </div>
     </div>
   );
 }
-const MemoQuestBox = memo(QuestBox);
 
-export default memo(function QuestBoxAll({
-  questBox,
-  questBoxWrap,
-  questBox2,
-}) {
+export default function QuestBoxAll({ questBox, questBoxWrap, questBox2 }) {
   return (
     <div className="quest-box-all">
-      <div className="quest-box-scroll">
-        {questBox.map((q, index) => (
-          <MemoQuest key={index} img={q[0]} timerbox={q[1]} payload={q[2]} />
+      <MorphScroll
+        className="quest-box-scroll"
+        size={[78, 550]}
+        gap={8}
+        progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
+        edgeGradient={{ color: "#4A3F3D" }}
+        wrapperAlign="center"
+        scrollBarOnHover
+      >
+        {questBox.map((q, i) => (
+          <QuestBtn key={`q1-${i}`} img={q[0]} timerbox={q[1]} payload={q[2]} />
         ))}
-        {questBoxWrap.map((q, index) => (
-          <MemoQuestBox
-            key={index}
+        {questBoxWrap.map((q, i) => (
+          <QuestBox
+            key={`q-${i}`}
             closed={q[0]}
             tit={q[1]}
             quest={q[2]}
             payload={q[2]}
           />
         ))}
-        {questBox2.map((q, index) => (
-          <MemoQuest key={index} img={q[0]} timerbox={q[1]} payload={q[2]} />
+        {questBox2.map((q, i) => (
+          <QuestBtn key={`q2-${i}`} img={q[0]} timerbox={q[1]} payload={q[2]} />
         ))}
-      </div>
+      </MorphScroll>
       <div className="opt-panel-box">
         <div className="color-bg"></div>
         <div className="btn feedback"></div>
@@ -99,4 +90,4 @@ export default memo(function QuestBoxAll({
       <div className="btn-discord"></div>
     </div>
   );
-});
+}
