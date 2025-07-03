@@ -205,8 +205,8 @@ export default function BtlPass({ event }) {
             />
             <ItemBox
               itemClass={`cardAva`}
-              itemPic="img/images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg"
-              cardType="dh"
+              itemPic="img/ic-vl-heart-red.png"
+              count="100"
             />
           </div>
           <ProgressBar
