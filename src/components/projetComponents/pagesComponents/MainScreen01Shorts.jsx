@@ -12,15 +12,9 @@ import VideoTag from "../UIComponents/VideoTag";
 
 import useGoogleDocs from "../../hooks/useGoogleDocs";
 
-// import ColorPickerPop from "../UIComponents/ColorPickerPop";
-
 import collectionData from "../data/collectionData";
 
-export const cssFiles = [
-  "shorts-gallery",
-  "dating",
-  // "color-picker", // styles for ColorPickerPop
-];
+export const cssFiles = ["shorts-gallery", "dating"];
 
 const sheetId = "1FwL6TJLN5XoEAuAxj8cdZoeD55eWX2NJYpXUCZFL3bI";
 const gid = "551457807";
@@ -349,7 +343,6 @@ export default function MainScreen01Shorts({ pageName, children }) {
           </a>
         </div>
       </div>
-      {/* <ColorPickerPop /> */}
       {children}
     </div>
   );
