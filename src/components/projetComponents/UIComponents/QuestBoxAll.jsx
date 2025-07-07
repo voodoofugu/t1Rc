@@ -80,14 +80,37 @@ export default function QuestBoxAll({ questBox, questBoxWrap, questBox2 }) {
           <QuestBtn key={`q2-${i}`} img={q[0]} timerbox={q[1]} payload={q[2]} />
         ))}
       </MorphScroll>
-      <div className="opt-panel-box">
+      {/* <div className="opt-panel-box">
         <div className="color-bg"></div>
         <div className="btn feedback"></div>
         <div className="btn statistic"></div>
         <div className="btn settings"></div>
         <div className="btn ru"></div>
       </div>
-      <div className="btn-discord"></div>
+      <div className="btn-discord"></div> */}
+
+      <Button
+        className="btn-panel settings"
+        textIcn="img/svg-icons/settings.svg"
+      >
+        <div className="panel">
+          <Button textIcn="img/svg-icons/statistics.svg" />
+          <Button className="language ru" textIcn />
+          <Button className="bigger" textIcn="img/svg-icons/setup.svg" />
+        </div>
+      </Button>
+
+      <Button
+        className="btn-panel contacts"
+        textIcn="img/svg-icons/feedback.svg"
+      >
+        <div className="panel">
+          <Button textIcn="img/svg-icons/chat.svg" />
+          <Button textIcn="img/svg-icons/discord.svg" />
+          <Button textIcn="img/svg-icons/telegram.svg" />
+          <Button textIcn="img/svg-icons/twitter.svg" />
+        </div>
+      </Button>
     </div>
   );
 }
