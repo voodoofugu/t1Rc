@@ -226,10 +226,10 @@ const GirlDependencies = ({ girlsInfo }) => {
       </div> */}
       <MorphScroll
         className="scrollAvatars"
-        size={[104, 494]}
-        // size={[190, 190]}
-        objectsSize={"firstChild"}
-        // objectsSize={[86, 86]}
+        // size={[104, 494]}
+        size={[290, 190]}
+        // objectsSize={"firstChild"}
+        objectsSize={[86, 86]}
         gap={10}
         wrapperMargin={[0, 10]}
         progressReverse
@@ -248,8 +248,8 @@ const GirlDependencies = ({ girlsInfo }) => {
         }}
         wrapperAlign="center"
         // elementsAlign="center"
-        // elementsDirection="column"
-        // direction="hybridY"
+        elementsDirection="column"
+        direction="hybrid"
         // direction="x"
         // rootMargin={[0, 0]}
         // suspending
@@ -261,7 +261,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // scrollTop={{ value: "end" }}
         // type="sliderMenu"
         // type="slider"
-        // crossCount={3}
+        crossCount={4}
         // scrollPosition={{ value: 86 }}
       >
         {/* <FakeComponent key="q1" /> */}
