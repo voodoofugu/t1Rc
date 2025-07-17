@@ -122,7 +122,7 @@ export default memo(function RelicsPop({ event }) {
           "img/ic-vl-heart-blue.png",
         ],
         "img/evPopArts/candyBag.png",
-        "img/bGs/beachBg2.jpg",
+        "img/bGs/beachBg4.jpg",
       ],
     },
   ];
