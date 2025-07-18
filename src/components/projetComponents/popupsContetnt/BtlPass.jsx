@@ -50,7 +50,7 @@ export default function BtlPass({ event }) {
       : event === "spring"
       ? "ic-march-flower-dark-blue"
       : event === "summer"
-      ? "evPopArts/strawberry_1"
+      ? "evPopArts/ic-moon-heart-1"
       : event === "autumn"
       ? "ic-autumn-leaf"
       : event === "sexpedition"
@@ -108,9 +108,9 @@ export default function BtlPass({ event }) {
       ? [
           "BuyShop",
           {
-            img1: "evPopArts/strawberry_1",
-            img2: "evPopArts/strawberry_2",
-            img3: "evPopArts/strawberry_3",
+            img1: "evPopArts/ic-moon-heart-1",
+            img2: "evPopArts/ic-moon-heart-2",
+            img3: "evPopArts/ic-moon-heart-3",
           },
         ]
       : event === "sexpedition"
@@ -165,7 +165,7 @@ export default function BtlPass({ event }) {
       />
 
       <Button
-        className="lightGreen schop"
+        className="blue schop"
         text="Buy Currency"
         img={`img/${icon}.png`}
         onClick={() =>
