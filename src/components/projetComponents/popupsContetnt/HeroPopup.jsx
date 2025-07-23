@@ -1,4 +1,7 @@
-import React, { memo, useState } from "react";
+import { memo, useState } from "react";
+
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 
@@ -53,75 +56,43 @@ function HeroRightSideCont1() {
       <div className="girllvlall-box">
         <div className="girllvl-box">
           <div className="girllvl-name">формы героя</div>
-          <div className="girl-box-scroll-box">
-            <div className="girl-box-scroll">
-              <div className="girl-box">
-                <img
-                  src="img/images/hero-all/tithero-5005/x1/tithero-5005-1.jpg"
-                  loading="lazy"
-                />
-                <div className="herostar-box-promotion">
-                  <div className="herostar lvl01"></div>
+
+          <MorphScroll
+            className="girl-box-scroll-box"
+            size={[538, 222]}
+            objectsSize={[136, 198]}
+            progressTrigger={{
+              wheel: true,
+              progressElement: <ScrollThumb />,
+            }}
+            edgeGradient={{ color: "#955b25" }}
+            direction="x"
+            gap={10}
+            wrapperAlign={["center", "center"]}
+            wrapperMargin={[8, 0]}
+          >
+            {[1, 2, 3, 4, 5].map((element) => {
+              console.log("element", element);
+              return (
+                <div
+                  className={`girl-box ${element === 1 ? "active" : ""}`}
+                  key={element}
+                >
+                  <img
+                    src={`img/images/hero-all/tithero-5005/x1/tithero-5005-${element}.jpg`}
+                    loading="lazy"
+                  />
+                  <div className="herostar-box-promotion">
+                    <div className="herostar lvl05"></div>
+                  </div>
+                  <div className="girl-box-disable">
+                    <div className="block-icon"></div>
+                    <div className="block-text">повысьте 11 раз(а)</div>
+                  </div>
                 </div>
-                <div className="girl-box-disable">
-                  <div className="block-icon"></div>
-                  <div className="block-text">повысьте 0 раз(а)</div>
-                </div>
-              </div>
-              <div className="girl-box">
-                <img
-                  src="img/images/hero-all/tithero-5005/x1/tithero-5005-2.jpg"
-                  loading="lazy"
-                />
-                <div className="herostar-box-promotion">
-                  <div className="herostar lvl02"></div>
-                </div>
-                <div className="girl-box-disable">
-                  <div className="block-icon"></div>
-                  <div className="block-text">повысьте 1 раз(а)</div>
-                </div>
-              </div>
-              <div className="girl-box">
-                <img
-                  src="img/images/hero-all/tithero-5005/x1/tithero-5005-3.jpg"
-                  loading="lazy"
-                />
-                <div className="herostar-box-promotion">
-                  <div className="herostar lvl03"></div>
-                </div>
-                <div className="girl-box-disable">
-                  <div className="block-icon"></div>
-                  <div className="block-text">повысьте 3 раз(а)</div>
-                </div>
-              </div>
-              <div className="girl-box active">
-                <img
-                  src="img/images/hero-all/tithero-5005/x1/tithero-5005-4.jpg"
-                  loading="lazy"
-                />
-                <div className="herostar-box-promotion">
-                  <div className="herostar lvl04"></div>
-                </div>
-                <div className="girl-box-disable">
-                  <div className="block-icon"></div>
-                  <div className="block-text">повысьте 7 раз(а)</div>
-                </div>
-              </div>
-              <div className="girl-box disable">
-                <img
-                  src="img/images/hero-all/tithero-5005/x1/tithero-5005-5.jpg"
-                  loading="lazy"
-                />
-                <div className="herostar-box-promotion">
-                  <div className="herostar lvl05"></div>
-                </div>
-                <div className="girl-box-disable">
-                  <div className="block-icon"></div>
-                  <div className="block-text">повысьте 11 раз(а)</div>
-                </div>
-              </div>
-            </div>
-          </div>
+              );
+            })}
+          </MorphScroll>
         </div>
       </div>
     </>
