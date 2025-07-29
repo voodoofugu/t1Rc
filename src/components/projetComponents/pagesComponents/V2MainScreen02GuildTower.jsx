@@ -449,9 +449,8 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                                     type: "open",
                                     data: {
                                       mpopClass:
-                                        "m-popup main-relics-pop tower",
-                                      popTit: "Buy Relics",
-                                      popCont: "MainRelics",
+                                        "m-popup main-relics-pop contentOnly",
+                                      popCont: "RelicsPop2",
                                       props: { hole: `${hole}` },
                                     },
                                   },
@@ -530,9 +529,8 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                 payload: {
                   type: "open",
                   data: {
-                    mpopClass: "m-popup main-relics-pop tower",
-                    popTit: "Buy Relics",
-                    popCont: "MainRelics",
+                    mpopClass: "m-popup main-relics-pop tower contentOnly",
+                    popCont: "RelicsPop2",
                     props: { hole: `${hole}` },
                   },
                 },
