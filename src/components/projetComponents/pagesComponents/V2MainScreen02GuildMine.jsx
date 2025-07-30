@@ -245,16 +245,7 @@ export default function V2MainScreen02GuildMine() {
                         backgroundSize: "cover",
                       }}
                     >
-                      <canvas
-                        width="800"
-                        height="600"
-                        style={{
-                          touchAction: "none",
-                          width: "120px",
-                          height: "305px",
-                          cursor: "inherit",
-                        }}
-                      ></canvas>
+                      <div className="mine-img mine1" />
                     </div>
                     <div className="mine-buy-plus"></div>
                     <div className="color-btn mithril">
@@ -280,16 +271,7 @@ export default function V2MainScreen02GuildMine() {
                         backgroundSize: "cover",
                       }}
                     >
-                      <canvas
-                        width="800"
-                        height="600"
-                        style={{
-                          touchAction: "none",
-                          width: "120px",
-                          height: "305px",
-                          cursor: "inherit",
-                        }}
-                      ></canvas>
+                      <div className="mine-img mine2" />
                     </div>
                     <div className="mine-buy-plus"></div>
                     <div className="color-btn mithril">
@@ -315,16 +297,7 @@ export default function V2MainScreen02GuildMine() {
                         backgroundSize: "cover",
                       }}
                     >
-                      <canvas
-                        width="800"
-                        height="600"
-                        style={{
-                          touchAction: "none",
-                          width: "120px",
-                          height: "305px",
-                          cursor: "inherit",
-                        }}
-                      ></canvas>
+                      <div className="mine-img mine3" />
                     </div>
                     <div className="mine-buy-plus"></div>
                     <div className="color-btn diamond">
@@ -350,16 +323,7 @@ export default function V2MainScreen02GuildMine() {
                         backgroundSize: "cover",
                       }}
                     >
-                      <canvas
-                        width="800"
-                        height="600"
-                        style={{
-                          touchAction: "none",
-                          width: "120px",
-                          height: "305px",
-                          cursor: "inherit",
-                        }}
-                      ></canvas>
+                      <div className="mine-img mine4" />
                     </div>
                     <div className="mine-buy-plus"></div>
                     <div
