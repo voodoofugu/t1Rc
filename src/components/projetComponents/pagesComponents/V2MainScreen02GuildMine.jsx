@@ -236,16 +236,6 @@ export default function V2MainScreen02GuildMine() {
                 <div className="mine-workers-name">workers</div>
                 <div className="mine-worker-box-all">
                   <div className="mine-worker-box">
-                    {/* <div
-                      className="mine-worker-pic"
-                      style={{
-                        backgroundImage:
-                          "url('../img/images/back/new/06-Cave.jpg')",
-                        backgroundPosition: "0% center",
-                        backgroundSize: "cover",
-                      }}
-                    >
-                    </div> */}
                     <div className="mine-img mine1" />
                     <div className="mine-buy-plus"></div>
                     <div className="color-btn mithril">
