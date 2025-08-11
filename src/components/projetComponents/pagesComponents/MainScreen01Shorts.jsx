@@ -41,14 +41,19 @@ export default function MainScreen01Shorts({ pageName, children }) {
   const girlsCards = data
     .slice(startIndex, lastIndex + 1)
     .map((item, index) => {
+      const disabledIndex = [0, 1];
+      const stabilityItemId = item.id < 10 ? `0${item.id}` : item.id;
+
       return (
         <ItemBox
           key={item.id}
-          itemClass={`videoCard ${index === 0 ? "close" : "selectable"}`}
+          itemClass={`videoCard ${
+            disabledIndex.includes(index) ? "close" : "selectable"
+          }`}
           heroClass={girlClass[item.class_type - 1]}
           cardType="superhero"
           rare={item.rare[0]}
-          itemPic={`img/images/superhero/suphero-${item.id}/x2/sh-6.jpg`}
+          itemPic={`img/images/superhero/suphero-${stabilityItemId}/x2/sh-6.jpg`}
           count={
             <>
               {item.name.split(" ")[0]} <br />
@@ -56,7 +61,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
             </>
           }
           onClick={
-            index === 0
+            disabledIndex.includes(index)
               ? null
               : () => {
                   nexusTrigger({
@@ -70,9 +75,9 @@ export default function MainScreen01Shorts({ pageName, children }) {
                           content: (
                             <VideoTag
                               className="videoGallery"
-                              poster={`img/images/superhero/suphero-${item.id}/x2/sh-6.jpg`}
+                              poster={`img/images/superhero/suphero-${stabilityItemId}/x2/sh-6.jpg`}
                               source={[
-                                `img/images/superhero/suphero-${item.id}/video.mp4`,
+                                `img/images/superhero/suphero-${stabilityItemId}/video.mp4`,
                               ]}
                               autoPlay
                               loop
