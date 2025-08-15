@@ -1,13 +1,17 @@
 import pluginJs from "@eslint/js";
-import tseslint from "typescript-eslint";
 import pluginReact from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import tseslint from "typescript-eslint";
 
 export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    plugins: {
+      react: pluginReact,
+      "react-hooks": reactHooks,
+    },
     settings: {
       react: {
         version: "detect",
@@ -21,6 +25,7 @@ export default [
       "**/*.d.ts",
     ],
     rules: {
+      ...pluginReact.configs.flat.recommended.rules, // подключаем recommended правила react
       "react/prop-types": "off",
       "@typescript-eslint/no-unused-vars": "off",
       "no-unused-expressions": [
@@ -36,6 +41,8 @@ export default [
       "@typescript-eslint/no-empty-object-type": "off",
       "react/display-name": "off",
       "no-undef": "off",
+      "react-hooks/rules-of-hooks": "error", // проверка правил хуков
+      "react-hooks/exhaustive-deps": "warn", // проверка зависимостей
     },
     languageOptions: {
       parserOptions: {

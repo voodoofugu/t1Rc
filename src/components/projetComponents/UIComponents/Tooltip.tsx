@@ -28,10 +28,6 @@ export default function Tooltip({
   position,
   children,
 }: TooltipT) {
-  if (typeof window === "undefined") {
-    return <>{children}</>;
-  }
-
   const tooltipCallerRef = React.useRef<HTMLElement | null>(null);
   const tooltipRef = React.useRef<HTMLElement | null>(null);
   const style = React.useRef<React.CSSProperties>({});
@@ -198,7 +194,9 @@ export default function Tooltip({
     }
   }, [isVisible, tooltipId]);
 
-  return (
+  return typeof window === "undefined" ? (
+    <>{children}</>
+  ) : (
     <React.Fragment>
       {wrappedChild}
       {tooltipLayer && targetContent

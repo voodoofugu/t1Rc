@@ -45,6 +45,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       // fallback={<div style={{ color: "#fff", fontSize: "20px" }}>loading</div>}
     >
       <EmptyElement />
+      <EmptyElement />
       {heroBoxData.map((item, index) => (
         <HeroBox
           key={index}
