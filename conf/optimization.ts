@@ -12,8 +12,8 @@ export function optimization({
     minimizer: [],
   };
 
-  if (isDev) {
-  }
+  // if (isDev) {
+  // }
 
   if (isProd) {
     (optimizationConf.minimizer ??= []).push(

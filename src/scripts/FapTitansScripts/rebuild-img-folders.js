@@ -1,5 +1,7 @@
-const fs = require("fs/promises");
-const path = require("path");
+// const fs = require("fs/promises");
+// const path = require("path");
+import path from "path";
+import fs from "fs/promises";
 
 const folderType = "h"; // h / s / a
 function getOutputDirName() {

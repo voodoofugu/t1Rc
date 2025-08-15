@@ -26,6 +26,7 @@
     "src/**/*",
     "pathMap.ts",
     "eslint.config.mjs",
-    "tailwind.config.ts"
+    "tailwind.config.ts",
+    "webpack.config.ts"
   ]
 }

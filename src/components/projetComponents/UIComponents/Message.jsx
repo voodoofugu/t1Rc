@@ -18,7 +18,10 @@ const Message = ({
         active ? "active" : ""
       }`}
       onClick={() => {
-        if (onClick) onClick(), setActive(!active);
+        if (onClick) {
+          onClick();
+          setActive(!active);
+        }
       }}
     >
       {text && <div className="text">{text}</div>}

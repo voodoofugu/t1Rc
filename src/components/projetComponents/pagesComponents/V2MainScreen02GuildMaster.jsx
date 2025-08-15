@@ -274,9 +274,9 @@ export default function V2MainScreen02GuildMaster({ pageName, children }) {
                     <HeroMenuBox
                       activeMenu={activeMenu}
                       setActiveMenu={setActiveMenu}
-                      tab1={["stats", "Stats", <StatsBoxAll />]}
-                      tab2={["abil", "Abils", <AbilsBoxAll />]}
-                      tab3={["skin", "Skins", <SkinBoxAll />]}
+                      tab1={["stats", "Stats", <StatsBoxAll key={"stats"} />]}
+                      tab2={["abil", "Abils", <AbilsBoxAll key={"abil"} />]}
+                      tab3={["skin", "Skins", <SkinBoxAll key={"skin"} />]}
                     />
                   </div>
                 </div>

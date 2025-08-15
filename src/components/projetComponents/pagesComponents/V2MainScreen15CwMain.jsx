@@ -8,7 +8,7 @@ export default function V2MainScreen15CwMain() {
       <div
         className="main-bg"
         style={{
-          backgroundImage: "url('../img/images/back/new/09-River.jpg')",
+          backgroundImage: "url(../img/images/back/new/09-River.jpg)",
         }}
       ></div>
       <div className="header">
@@ -111,13 +111,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          That's really going to fuck up my ability to bring my
+                          Thats really going to fuck up my ability to bring my
                           might up. Lots of wasted promotions.
                         </div>
                       </div>
@@ -126,8 +125,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -140,8 +138,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -155,8 +152,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Jim4:
@@ -169,8 +165,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Jim4:
@@ -183,8 +178,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -197,8 +191,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Jim4:
@@ -211,8 +204,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             EnriqueVS:
@@ -225,8 +217,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             EnriqueVS:
@@ -239,8 +230,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Jim4:
@@ -253,8 +243,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             MrYellow:
@@ -267,8 +256,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Jim4:
@@ -281,8 +269,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Jim4:
@@ -295,8 +282,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             MrYellow:
@@ -309,8 +295,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -323,8 +308,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -337,8 +321,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Jim4:
@@ -351,8 +334,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -365,8 +347,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -380,8 +361,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Dru1da:
@@ -397,8 +377,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Dru1da:
@@ -414,8 +393,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             outcastknight:
@@ -428,13 +406,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          Special agent.. what is your name on our list. I don't
+                          Special agent.. what is your name on our list. I dont
                           see it
                         </div>
                       </div>
@@ -443,8 +420,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -458,8 +434,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -474,8 +449,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -489,14 +463,13 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
                           When playing you would never have to worry about gold
-                          to upgrade your heros any more. And you don't have to
+                          to upgrade your heros any more. And you dont have to
                           do anything different than you do now
                         </div>
                       </div>
@@ -505,8 +478,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -519,13 +491,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          It's about playing smarter not harder
+                          Its about playing smarter not harder
                         </div>
                       </div>
                       <div className="cw-log-box user-select">
@@ -533,8 +504,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -548,14 +518,13 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
                           Even in dark tower last time. I spent a total of an
-                          hour and got number one. It doesn't do me any. Good
+                          hour and got number one. It doesnt do me any. Good
                           since i have all the heros they hthey give you for
                           being top 3
                         </div>
@@ -565,14 +534,13 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          I don't compete against anyone. I just ay like I
-                          always have but with less stress and more gaming
+                          I dont compete against anyone. I just ay like I always
+                          have but with less stress and more gaming
                         </div>
                       </div>
                       <div className="cw-log-box user-select">
@@ -580,13 +548,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          You don't need to be competitive. I. Agine getting
+                          You dont need to be competitive. I. Agine getting
                           further along and spending half the effort to do it
                         </div>
                       </div>
@@ -595,13 +562,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Unknown Stand User:
                           </span>
-                          I'm not as competitive when it comes to this game
+                          Im not as competitive when it comes to this game
                         </div>
                       </div>
                       <div className="cw-log-box user-select">
@@ -609,8 +575,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Unknown Stand User:
@@ -623,14 +588,13 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          It's just me and jim4 on discord. Between the two of
-                          us we can help you out. .
+                          Its just me and jim4 on discord. Between the two of us
+                          we can help you out. .
                         </div>
                       </div>
                       <div className="cw-log-box user-select">
@@ -638,14 +602,13 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          I've found lots of little tricks to make the game
-                          easier. I've been playing a long time now. Also have 2
+                          Ive found lots of little tricks to make the game
+                          easier. Ive been playing a long time now. Also have 2
                           # accts to test things out with.. my second acct wZ
                           blowing this one WY until I accidentally hit reborn Nd
                           rezt tbat acct
@@ -656,8 +619,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -670,13 +632,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          I don't want someone from another team to read it then
+                          I dont want someone from another team to read it then
                           go tell his buddies. That would create too much
                           competition... Y k ow?
                         </div>
@@ -686,15 +647,14 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
                           I can tell you what to do to get there quickly like I
-                          did but you need to install discord. I won't tell you
-                          here. Because you don't know who's watching
+                          did but you need to install discord. I wont tell you
+                          here. Because you dont know whos watching
                         </div>
                       </div>
                       <div className="cw-log-box user-select">
@@ -702,13 +662,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          Promotions for my heros. That's how I got l to where I
+                          Promotions for my heros. Thats how I got l to where I
                           am so fast
                         </div>
                       </div>
@@ -717,8 +676,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -731,8 +689,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -748,8 +705,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Unknown Stand User:
@@ -762,13 +718,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          If it does nothing to further my game I don't bother
+                          If it does nothing to further my game I dont bother
                           with it. Especially if it wants me to reborn
                         </div>
                       </div>
@@ -777,13 +732,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
                           </span>
-                          I don't play fapopoly.. gives me nothing to further my
+                          I dont play fapopoly.. gives me nothing to further my
                           game.
                         </div>
                       </div>
@@ -792,8 +746,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             amthebigdog:
@@ -806,13 +759,12 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Unknown Stand User:
                           </span>
-                          How'd we get destroyed this badly?
+                          Howd we get destroyed this badly?
                         </div>
                       </div>
                       <div className="cw-log-box user-select">
@@ -820,8 +772,7 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Unknown Stand User:
@@ -834,15 +785,14 @@ export default function V2MainScreen15CwMain() {
                         <div className="cw-log-text">
                           <span
                             style={{
-                              color:
-                                "rgb(\r\n                                                                84,\r\n                                                                71,\r\n                                                                70\r\n                                                            )",
+                              color: "rgb(84,71,70)",
                             }}
                           >
                             Unknown Stand User:
                           </span>
-                          Also, isn't it next to impossible to get to floor 13
-                          in fapopoly without free reborns? Or do you just
-                          ignore that event?
+                          Also, isnt it next to impossible to get to floor 13 in
+                          fapopoly without free reborns? Or do you just ignore
+                          that event?
                         </div>
                       </div>
                     </div>
