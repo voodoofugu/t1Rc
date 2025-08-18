@@ -72,7 +72,6 @@ function HeroRightSideCont1() {
             wrapperMargin={[8, 0]}
           >
             {[1, 2, 3, 4, 5].map((element) => {
-              console.log("element", element);
               return (
                 <div
                   className={`girl-box ${element === 1 ? "active" : ""}`}
