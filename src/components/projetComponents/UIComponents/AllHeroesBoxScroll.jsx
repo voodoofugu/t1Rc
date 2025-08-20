@@ -80,6 +80,7 @@ export default function AllHeroesBoxScroll({ numX }) {
           }}
         />
       ))}
+      <EmptyElement />
     </MorphScroll>
   );
 }

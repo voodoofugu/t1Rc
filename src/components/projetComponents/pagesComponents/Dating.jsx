@@ -258,7 +258,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // render={{ type: "lazy" }}
         // render={{ type: "virtual" }}
         // emptyElements={{ mode: "clear" }}
-        // scrollTop={{ value: "end" }}
+        // scrollPosition={{ value: "end" }}
         // type="sliderMenu"
         // type="slider"
         // crossCount={4}
