@@ -33,7 +33,7 @@ export default function BtlPass({ event }) {
       : event === "summer"
       ? "images/hero-all/tithero-557/icons/break-girl4"
       : event === "autumn"
-      ? "images/hero-all/tithero-440/icons/break-girl"
+      ? "images/hero-all/tithero-565/icons/break-girl"
       : event === "sexpedition"
       ? "images/hero-all/tithero-423/icons/break-girl4"
       : null;
@@ -52,7 +52,7 @@ export default function BtlPass({ event }) {
       : event === "summer"
       ? "evPopArts/ic-moon-heart-1"
       : event === "autumn"
-      ? "ic-autumn-leaf"
+      ? "evPopArts/ic-autumn-crystal_1"
       : event === "sexpedition"
       ? "evPopArts/gem_icn"
       : null;
@@ -121,6 +121,15 @@ export default function BtlPass({ event }) {
             img2: "evPopArts/gem_icn2",
             img3: "evPopArts/gem_icn3",
             img4: "evPopArts/gem_icn4",
+          },
+        ]
+      : event === "autumn"
+      ? [
+          "BuyShop",
+          {
+            img1: "evPopArts/ic-autumn-crystal_1",
+            img2: "evPopArts/ic-autumn-crystal_2",
+            img3: "evPopArts/ic-autumn-crystal_3",
           },
         ]
       : null;
