@@ -263,6 +263,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         // type="slider"
         // crossCount={4}
         // scrollPosition={{ value: 86 }}
+        // scrollBarEdge={20}
       >
         {/* <FakeComponent key="q1" /> */}
         {girlsInfo.map((item, index) => (
