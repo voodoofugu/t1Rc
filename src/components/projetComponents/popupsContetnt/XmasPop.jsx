@@ -2,11 +2,20 @@ import { useState, useLayoutEffect } from "react";
 import { nexusTrigger, nexusUpdate } from "nexus-state";
 
 import ItemBox from "../UIComponents/ItemBox";
-import elements from "../data/PopResValue";
 import StoreItemBox from "../UIComponents/StoreItemBox";
 import ImageBg from "../UIComponents/ImageBg";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
 
-const girlImg = "images/hero-all/tithero-540/icons/break-girl4";
+import elements from "../data/PopResValue";
+
+const girlImg = "images/hero-all/tithero-589/icons/break-girl";
+
+// const icImg = (event) => {
+//   if (event === "xmas") return "img/ic-dildo-gold100.png";
+//   if (event === "spring") return "img/ic-dildo-gold100.png";
+//   if (event === "autumn") return "img/evPopArts/ic-pearls.png";
+// };
 
 function XmasPop1({ setXmasPopLocal }) {
   return (
@@ -66,7 +75,7 @@ function XmasPop1({ setXmasPopLocal }) {
             <div className="xmas-level">level</div>
             <div className="xmas-reward">reward</div>
           </div>
-          <div className="xmas-level-simple-box-scroll indiana-scroll-container">
+          {/* <div className="xmas-level-simple-box-scroll indiana-scroll-container">
             <div className="xmas-level-level">
               <div
                 className="xmas-level-level-prg"
@@ -93,7 +102,43 @@ function XmasPop1({ setXmasPopLocal }) {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
+
+          <MorphScroll
+            className="btlpass_scroll xmas-scroll"
+            size={[534, 112]}
+            objectsSize={[70, 114]}
+            progressTrigger={{
+              wheel: true,
+              progressElement: <ScrollThumb />,
+              content: true,
+            }}
+            edgeGradient
+            render={{ type: "virtual" }}
+            direction="x"
+            wrapperMargin={[2, 0]}
+          >
+            {elements.map((element, index) => (
+              <ItemBox
+                itemClass={`wh60 ${element.itemClass}`}
+                itemPic={element.itemPic}
+                count={element.count}
+                get={element.itemClass === "get" && true}
+                key={index}
+                countOut={index + 1}
+                onClick={() => {
+                  element.itemClass === "get" &&
+                    nexusUpdate({
+                      notif: {
+                        view: true,
+                        img: element.itemPic,
+                        text: `You got ${element.count}`,
+                      },
+                    });
+                }}
+              />
+            ))}
+          </MorphScroll>
         </div>
       </div>
       <div className="xmas-btn-box">
@@ -297,12 +342,17 @@ function XmasPop3({ setXmasPopLocal }) {
               <div className="daily-prgbar-text">0/3</div>
             </div>
             <div className="daily-parth-claim-box">
-              <div className="daily-reward">
+              {/* <div className="daily-reward">
                 <div className="daily-reward-pic">
-                  <img src="img/ic-dildo-gold.png" loading="lazy" />
+                  <img src="img/ic-dildo-gold100.png" loading="lazy" />
                 </div>
                 <div className="daily-reward-count">20</div>
-              </div>
+              </div> */}
+              <ItemBox
+                itemClass="wh68 dailyReward"
+                itemPic="img/ic-dildo-gold100.png"
+                count={20}
+              />
               <div className="color-btn disabled">
                 <div className="color-btn-text">
                   <span>claim reward</span>
@@ -322,12 +372,11 @@ function XmasPop3({ setXmasPopLocal }) {
               <div className="daily-prgbar-text">0/1</div>
             </div>
             <div className="daily-parth-claim-box">
-              <div className="daily-reward">
-                <div className="daily-reward-pic">
-                  <img src="img/ic-dildo-gold.png" loading="lazy" />
-                </div>
-                <div className="daily-reward-count">10</div>
-              </div>
+              <ItemBox
+                itemClass="wh68 dailyReward"
+                itemPic="img/ic-dildo-gold100.png"
+                count={1}
+              />
               <div className="color-btn disabled">
                 <div className="color-btn-text">
                   <span>claim reward</span>
@@ -349,12 +398,11 @@ function XmasPop3({ setXmasPopLocal }) {
               <div className="daily-prgbar-text">0/10</div>
             </div>
             <div className="daily-parth-claim-box">
-              <div className="daily-reward">
-                <div className="daily-reward-pic">
-                  <img src="img/ic-dildo-gold.png" loading="lazy" />
-                </div>
-                <div className="daily-reward-count">10</div>
-              </div>
+              <ItemBox
+                itemClass="wh68 dailyReward"
+                itemPic="img/ic-dildo-gold100.png"
+                count={10}
+              />
               <div className="color-btn disabled">
                 <div className="color-btn-text">
                   <span>claim reward</span>
@@ -376,12 +424,11 @@ function XmasPop3({ setXmasPopLocal }) {
               <div className="daily-prgbar-text">0/5</div>
             </div>
             <div className="daily-parth-claim-box">
-              <div className="daily-reward">
-                <div className="daily-reward-pic">
-                  <img src="img/ic-dildo-gold.png" loading="lazy" />
-                </div>
-                <div className="daily-reward-count">10</div>
-              </div>
+              <ItemBox
+                itemClass="wh68 dailyReward"
+                itemPic="img/ic-dildo-gold100.png"
+                count={5}
+              />
               <div className="color-btn disabled">
                 <div className="color-btn-text">
                   <span>claim reward</span>
@@ -403,12 +450,11 @@ function XmasPop3({ setXmasPopLocal }) {
               <div className="daily-prgbar-text">0/10</div>
             </div>
             <div className="daily-parth-claim-box">
-              <div className="daily-reward">
-                <div className="daily-reward-pic">
-                  <img src="img/ic-dildo-gold.png" loading="lazy" />
-                </div>
-                <div className="daily-reward-count">20</div>
-              </div>
+              <ItemBox
+                itemClass="wh68 dailyReward"
+                itemPic="img/ic-dildo-gold100.png"
+                count={10}
+              />
               <div className="color-btn disabled">
                 <div className="color-btn-text">
                   <span>claim reward</span>
@@ -430,12 +476,11 @@ function XmasPop3({ setXmasPopLocal }) {
               <div className="daily-prgbar-text">0/15</div>
             </div>
             <div className="daily-parth-claim-box">
-              <div className="daily-reward">
-                <div className="daily-reward-pic">
-                  <img src="img/ic-dildo-gold.png" loading="lazy" />
-                </div>
-                <div className="daily-reward-count">30</div>
-              </div>
+              <ItemBox
+                itemClass="wh68 dailyReward"
+                itemPic="img/ic-dildo-gold100.png"
+                count={15}
+              />
               <div className="color-btn disabled">
                 <div className="color-btn-text">
                   <span>claim reward</span>
@@ -472,11 +517,11 @@ export default function XmasPop({ xmasPop, event }) {
   }, [xmasPopLocal]);
 
   return xmasPopLocal === "xmas-pop1" ? (
-    <XmasPop1 setXmasPopLocal={setXmasPopLocal} />
+    <XmasPop1 setXmasPopLocal={setXmasPopLocal} event={event} />
   ) : xmasPopLocal === "xmas-pop2" ? (
-    <XmasPop2 setXmasPopLocal={setXmasPopLocal} />
+    <XmasPop2 setXmasPopLocal={setXmasPopLocal} event={event} />
   ) : xmasPopLocal === "xmas-pop3" ? (
-    <XmasPop3 setXmasPopLocal={setXmasPopLocal} />
+    <XmasPop3 setXmasPopLocal={setXmasPopLocal} event={event} />
   ) : (
     ""
   );

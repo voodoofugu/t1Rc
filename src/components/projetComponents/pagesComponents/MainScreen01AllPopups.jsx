@@ -539,6 +539,15 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                   props: { event: "autumn" },
                 },
               ],
+              [
+                "evPopArts/flowerChest",
+                "287:21:43",
+                {
+                  popTit: "Wave’s Touch Battle pass",
+                  popCont: "XmasPop",
+                  props: { xmasPop: xmasPop, event: "autumn" },
+                },
+              ],
             ],
           ],
           [
