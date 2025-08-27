@@ -125,6 +125,22 @@ export default memo(function RelicsPop({ event }) {
         "img/bGs/beachBg4.jpg",
       ],
     },
+    {
+      autumn: [
+        "img/images/hero-all/tithero-545/x2/tithero-4.jpg",
+        "Crimson Masquerade Event",
+        [
+          "img/evPopArts/mask_1.png",
+          "img/evPopArts/mask_2.png",
+          "img/evPopArts/mask_3.png",
+          "img/evPopArts/mask_4.png",
+          "img/evPopArts/mask_5.png",
+          "img/evPopArts/mask_6.png",
+        ],
+        "img/evPopArts/candyBag.png",
+        "img/bGs/masqueradeBg.jpg",
+      ],
+    },
   ];
 
   const evData = data.find((item) => item[event]);
@@ -134,7 +150,7 @@ export default memo(function RelicsPop({ event }) {
     <>
       <ImageBg className="bG framedBg" img={evData?.[event][4]} />
 
-      <FraimedTitle className="cornersTop" text="Orgy Event" />
+      <FraimedTitle className="cornersTop" text={evData?.[event][1]} />
 
       <Button
         className="exit"

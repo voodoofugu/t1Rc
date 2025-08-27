@@ -548,6 +548,15 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                   props: { xmasPop: xmasPop, event: "autumn" },
                 },
               ],
+              [
+                "evPopArts/ic-masquerade",
+                "287:21:43",
+                {
+                  mpopClass: "m-popup main-relics-pop easter contentOnly",
+                  popCont: "RelicsPop",
+                  props: { event: "autumn" },
+                },
+              ],
             ],
           ],
           [
