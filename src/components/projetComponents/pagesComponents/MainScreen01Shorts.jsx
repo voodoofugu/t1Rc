@@ -131,9 +131,9 @@ export default function MainScreen01Shorts({ pageName, children }) {
         className="collectionTab"
         size={[1056, 448]}
         objectsSize={[300, 380]}
-        gap={44}
+        gap={38}
         wrapperMargin={[40, 0]}
-        edgeGradient={{ color: "#342A33" }}
+        edgeGradient={{ color: "#463b3a" }}
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
@@ -148,9 +148,9 @@ export default function MainScreen01Shorts({ pageName, children }) {
         className="charactersTab"
         size={[1056, 448]}
         objectsSize={[162, 192]}
-        gap={28}
+        gap={24}
         wrapperMargin={[0, 20]}
-        edgeGradient={{ color: "#342A33" }}
+        edgeGradient={{ color: "#463b3a" }}
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
