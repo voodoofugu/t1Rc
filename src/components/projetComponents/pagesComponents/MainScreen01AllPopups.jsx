@@ -342,7 +342,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "ic-blackfriday",
+                "evPopArts/ic-black-friday",
                 "9D 00:44:09",
                 {
                   mpopClass: "m-popup sale-event-pop bf-event",
