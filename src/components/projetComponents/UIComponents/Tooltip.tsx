@@ -212,7 +212,7 @@ export default function Tooltip({
 
 function handleEnter(
   tooltipCallerRef: HTMLElement,
-  style: React.MutableRefObject<React.CSSProperties>,
+  style: React.RefObject<React.CSSProperties>,
   position?: PositionT,
   tlpStyle?: React.CSSProperties,
   callback?: () => void
