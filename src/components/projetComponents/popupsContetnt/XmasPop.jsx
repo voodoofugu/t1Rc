@@ -9,7 +9,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";
 
-const girlImg = "images/hero-all/tithero-589/icons/break-girl";
+const girlImg = "images/hero-all/tithero-597/icons/break-girl";
 
 // const icImg = (event) => {
 //   if (event === "xmas") return "img/ic-dildo-gold100.png";
