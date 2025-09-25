@@ -540,7 +540,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "evPopArts/flowerChest",
+                "evPopArts/ic-bp",
                 "287:21:43",
                 {
                   popTit: "Wave’s Touch Battle pass",
