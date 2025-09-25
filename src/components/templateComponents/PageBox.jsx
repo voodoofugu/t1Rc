@@ -1,11 +1,4 @@
-import {
-  memo,
-  useMemo,
-  useState,
-  useLayoutEffect,
-  useCallback,
-  useEffect,
-} from "react";
+import { useMemo, useState, useLayoutEffect } from "react";
 import { useNexus } from "nexus-state";
 // import { MorphScroll } from "morphing-scroll";
 
@@ -35,10 +28,11 @@ export default function PageBox() {
     }
   }, [searchData]);
 
-  const components = useCallback(
-    usedPages.map((pageName, index) => (
-      <Cell key={`${index}`} pageName={pageName} isScrolling={isScrolling} />
-    )),
+  const components = useMemo(
+    () =>
+      usedPages.map((pageName, index) => (
+        <Cell key={`${index}`} pageName={pageName} isScrolling={isScrolling} />
+      )),
     [usedPages, isScrolling]
   );
 

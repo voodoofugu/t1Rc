@@ -24,6 +24,7 @@ export const initialStates = {
   sAndLStates,
   notif: null as {} | null,
   warpop: null as {} | null,
+  windowScale: null as number | null,
 };
 
 export const initialFuncs = {

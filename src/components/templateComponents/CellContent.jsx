@@ -25,6 +25,7 @@ const loadFill = (
 function CellContent({ pageName }) {
   const activePage = useNexus("activePage");
   const searchText = useNexus("searchText");
+  const windowScale = useNexus("windowScale");
 
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const [style, setStyle] = useState(false);
@@ -40,6 +41,31 @@ function CellContent({ pageName }) {
   );
   const DynamicComponent = module?.default;
   const cssFiles = module?.cssFiles;
+
+  const getDynamicComponent = (content) => {
+    if (!DynamicComponent) return null;
+    const style = windowScale
+      ? {
+          transform: `scale(${windowScale}) translateX(-50%)`,
+          transformOrigin: "left top",
+          position: "absolute",
+          left: "50%",
+        }
+      : {};
+
+    return (
+      <div id="resize" style={style}>
+        <DynamicComponent pageName={pageName} key={pageName}>
+          {content && (
+            <>
+              <ComponToLoad pageName={pageName} />
+              <div className="tooltip-layer" />
+            </>
+          )}
+        </DynamicComponent>
+      </div>
+    );
+  };
 
   const computePositionData = (event) => {
     const rect = event.currentTarget.getBoundingClientRect();
@@ -138,30 +164,13 @@ function CellContent({ pageName }) {
                       encap
                     >
                       <div className="likeBody" id={pageName}>
-                        {DynamicComponent && (
-                          <>
-                            <DynamicComponent
-                              pageName={pageName}
-                              key={pageName}
-                            >
-                              <ComponToLoad pageName={pageName} />
-                              <div className="tooltip-layer" />
-                            </DynamicComponent>
-                          </>
-                        )}
+                        {getDynamicComponent(true)}
                         <PageCloseBtn onClick={pageClose} />
                       </div>
                     </StyledAtom>
                   ) : (
                     <div className="likeBody" id={pageName}>
-                      {DynamicComponent && (
-                        <>
-                          <DynamicComponent pageName={pageName} key={pageName}>
-                            <ComponToLoad pageName={pageName} />
-                            <div className="tooltip-layer" />
-                          </DynamicComponent>
-                        </>
-                      )}
+                      {getDynamicComponent(true)}
                       <PageCloseBtn onClick={pageClose} />
                     </div>
                   )}
@@ -179,19 +188,13 @@ function CellContent({ pageName }) {
         <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
           <StyledAtom fileNames={cssFiles} fallback={<Loading />} encap>
             <div className="likeBody" id={pageName}>
-              {DynamicComponent ? (
-                <DynamicComponent pageName={pageName} key={pageName} />
-              ) : (
-                loadFill
-              )}
+              {getDynamicComponent() || loadFill}
             </div>
           </StyledAtom>
         </div>
       ) : (
         <div className="scale-[0.180134] translate-y-10 pointer-events-none absolute rounded-50 w-1200 h-640 shadow-shadow3 overflow-hidden bg-white dark:shadow-shadow7">
-          {DynamicComponent && (
-            <DynamicComponent pageName={pageName} key={pageName} />
-          )}
+          {getDynamicComponent()}
         </div>
       )}
       <a
