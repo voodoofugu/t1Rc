@@ -19,11 +19,11 @@ export default memo(function Template() {
       heightScale = 0;
 
     if (width < windowWidth) {
-      widthScale = Number((width / windowWidth).toFixed(2));
+      widthScale = Number((width / windowWidth).toFixed(4));
     }
 
     if (height < windowHeight) {
-      heightScale = Number((height / windowHeight).toFixed(2));
+      heightScale = Number((height / windowHeight).toFixed(4));
     }
 
     // Получаем массив только положительных чисел
