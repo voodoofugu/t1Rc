@@ -44,14 +44,15 @@ function CellContent({ pageName }) {
 
   const getDynamicComponent = (content) => {
     if (!DynamicComponent) return null;
-    const style = windowScale
-      ? {
-          transform: `scale(${windowScale}) translateX(-50%)`,
-          transformOrigin: "left top",
-          position: "absolute",
-          left: "50%",
-        }
-      : {};
+    const style =
+      activePage && windowScale
+        ? {
+            transform: `scale(${windowScale}) translateX(-50%)`,
+            transformOrigin: "left top",
+            position: "absolute",
+            left: "50%",
+          }
+        : {};
 
     return (
       <div id="resize" style={style}>
