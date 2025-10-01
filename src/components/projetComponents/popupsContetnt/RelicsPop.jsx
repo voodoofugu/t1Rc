@@ -127,18 +127,18 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       autumn: [
-        "img/images/hero-all/tithero-545/x2/tithero-4.jpg",
+        "img/images/hero-all/tithero-607/x2/tithero-1.jpg",
         "Crimson Masquerade Event",
         [
-          "img/evPopArts/mask_1.png",
-          "img/evPopArts/mask_2.png",
-          "img/evPopArts/mask_3.png",
-          "img/evPopArts/mask_4.png",
-          "img/evPopArts/mask_5.png",
-          "img/evPopArts/mask_6.png",
+          "img/evPopArts/puzzle-black.png",
+          "img/evPopArts/puzzle-darkBlue.png",
+          "img/evPopArts/puzzle-darkGreen.png",
+          "img/evPopArts/puzzle-gray.png",
+          "img/evPopArts/puzzle-green.png",
+          "img/evPopArts/puzzle-lightBlue.png",
         ],
-        "img/evPopArts/candyBag.png",
-        "img/bGs/masqueradeBg.jpg",
+        "img/evPopArts/puzzle-heart.png",
+        "img/bGs/autumnBg-puzzle.jpg",
       ],
     },
   ];
