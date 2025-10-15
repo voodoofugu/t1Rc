@@ -95,10 +95,10 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       hw: [
-        "img/images/superhero/suphero-890/x2/sh-1.jpg",
+        "img/images/hero-all/tithero-617/x2/tithero-4.jpg",
         "Halloween's Day Orgy!",
         [
-          "img/evPopArts/pumpkin1_icn.png",
+          "img/evPopArts/bat_icn.png",
           "img/evPopArts/pumpkin2_icn.png",
           "img/evPopArts/cat_icn.png",
           "img/evPopArts/cat_icn.png",
