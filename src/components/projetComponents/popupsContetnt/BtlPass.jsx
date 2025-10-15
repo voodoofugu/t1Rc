@@ -23,7 +23,7 @@ export default function BtlPass({ event }) {
     event === "xmas"
       ? "images/hero-all/tithero-449/icons/break-girl4"
       : event === "hw"
-      ? "images/hero-all/tithero-429/icons/break-girl"
+      ? "images/hero-all/tithero-616/icons/break-girl"
       : event === "bf"
       ? "images/hero-all/tithero-429/icons/break-girl"
       : event === "vl"
@@ -42,7 +42,7 @@ export default function BtlPass({ event }) {
     event === "xmas"
       ? "ic-ny-sneg-4"
       : event === "hw"
-      ? "evPopArts/bat_icn"
+      ? "evPopArts/pumpkin1_icn"
       : event === "bf"
       ? "ic-tickets-bf-1"
       : event === "vl"
@@ -71,10 +71,10 @@ export default function BtlPass({ event }) {
       ? [
           "BuyShop",
           {
-            img1: "evPopArts/bat_icn_1",
-            img2: "evPopArts/bat_icn_2",
-            img3: "evPopArts/bat_icn_3",
-            img4: "evPopArts/bat_icn_4",
+            img1: "evPopArts/pumpkin1_icn_1",
+            img2: "evPopArts/pumpkin1_icn_2",
+            img3: "evPopArts/pumpkin1_icn_3",
+            img4: "evPopArts/pumpkin1_icn_4",
           },
         ]
       : event === "bf"
