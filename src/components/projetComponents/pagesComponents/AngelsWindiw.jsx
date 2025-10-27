@@ -13,10 +13,9 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 import data_angels from "../../../scripts/FapTitansScripts/data_angels";
 
 export const cssFiles = [
-  "dating",
+  "angels-window",
   "screen-superhero",
   "screen-unipop-subscription",
-  "daiting-gifts-pop",
 ];
 
 export default function Dating({ pageName, children }) {
@@ -25,7 +24,9 @@ export default function Dating({ pageName, children }) {
       <div className="main-bg dating"></div>
       <div className="dating_content">
         <div className="datingBG"></div>
-        <div className="dating_title">Angels Room</div>
+        <div className="angels-tit-wrap">
+          <div className="angels-tit">Angels Room</div>
+        </div>
 
         <Button className="exit" text="✖" />
         <Button
