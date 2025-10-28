@@ -23,10 +23,9 @@ export default function Dating({ pageName, children }) {
     <div className="main world1">
       <div className="main-bg dating"></div>
       <div className="dating_content">
-        <div className="datingBG"></div>
-        <div className="angels-tit-wrap">
-          <div className="angels-tit">Angels Room</div>
-        </div>
+        <div className="angels-window-bg"></div>
+        <div className="angels-tit-wrap"></div>
+        <div className="angels-tit">Angels Room</div>
 
         <Button className="exit" text="✖" />
         <Button
@@ -77,9 +76,9 @@ const GirlDependencies = ({ data_angels }) => {
   return (
     <>
       <Button
-        className="orange giftsBtn"
-        text="Girl gifts"
-        img="img/dating/giftsIcn.png"
+        className=" angels-chest"
+        text="Get pieces"
+        img="img/darkworld-chest-agels.png"
         onClick={() => {}}
       />
 
@@ -92,61 +91,16 @@ const GirlDependencies = ({ data_angels }) => {
       </div>
 
       <ProgressBar
-        className="progressBarOfSympathy framedText"
-        progressSize={[10, 400]}
+        className="angels-prog"
+        progressSize={[400, 10]}
         currentProgress={2}
         maxProgress={6}
-        serifsPerProgress
-        yDirection
-        // text
-        itemsBoxFirst={[
-          <ItemBox
-            itemClass="wh44"
-            itemPic="img/dating/datingCoin.png"
-            count={1}
-            key={1}
-          />,
-          <ItemBox
-            itemClass="wh44"
-            itemPic="img/dating/datingCoin.png"
-            count={1}
-            key={2}
-          />,
-          <ItemBox
-            itemClass="wh44"
-            itemPic="img/dating/datingCoin.png"
-            count={1}
-            key={3}
-          />,
-          <ItemBox
-            itemClass="wh44"
-            itemPic="img/dating/datingCoin.png"
-            count={1}
-            key={4}
-          />,
-          <ItemBox
-            itemClass="wh44"
-            itemPic="img/dating/datingCoin.png"
-            count={1}
-            key={5}
-          />,
-          <ItemBox
-            itemClass="wh44"
-            itemPic="img/dating/datingCoin.png"
-            count={1}
-            key={6}
-          />,
-        ]}
-      >
-        <PersonAva
-          img={`img/images/superhero/suphero-${data_angels[girlIndex].id}/x1/avatar/sh-ava-1.jpg`}
-        />
-      </ProgressBar>
+      />
 
       <div className="girlName">
         <FraimedTitle
           className="corners"
-          text={data_angels[girlIndex].name}
+          text={`${data_angels[girlIndex].name} - lvl ${data_angels[girlIndex].level}`}
           key={data_angels[girlIndex].name}
         />
       </div>
@@ -159,7 +113,7 @@ const GirlDependencies = ({ data_angels }) => {
         wrapperMargin={[0, 10]}
         progressReverse
         scrollBarOnHover
-        edgeGradient={{ color: "#572e19" }}
+        edgeGradient={{ color: "#877875" }}
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
