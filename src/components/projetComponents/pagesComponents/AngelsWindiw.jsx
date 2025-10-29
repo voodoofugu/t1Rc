@@ -82,20 +82,30 @@ const GirlDependencies = ({ data_angels }) => {
         onClick={() => {}}
       />
 
-      <div className={`girlFigure ${data_angels[girlIndex].condition}`}>
+      <div
+        className={`girlFigure${
+          data_angels[girlIndex].condition
+            ? " " + data_angels[girlIndex].condition
+            : ""
+        }`}
+        key={data_angels[girlIndex].id}
+      >
         <img
-          key={data_angels[girlIndex].id}
           src={`img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${imgNum}.jpg`}
           loading="lazy"
         />
+        <div className="angels-info">
+          <div
+            className={`angels-stars lvl_${data_angels[girlIndex].level}`}
+          ></div>
+          <ProgressBar
+            className="angels-prog"
+            progressSize={[580, 10]}
+            currentProgress={2}
+            maxProgress={6}
+          />
+        </div>
       </div>
-
-      <ProgressBar
-        className="angels-prog"
-        progressSize={[400, 10]}
-        currentProgress={2}
-        maxProgress={6}
-      />
 
       <div className="girlName">
         <FraimedTitle
