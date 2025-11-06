@@ -76,7 +76,7 @@ const GirlDependencies = ({ data_angels }) => {
   return (
     <>
       <Button
-        className=" angels-chest"
+        className="angels-chest"
         text="Get pieces"
         img="img/darkworld-chest-agels.png"
         onClick={() => {}}
@@ -90,28 +90,28 @@ const GirlDependencies = ({ data_angels }) => {
         }`}
         key={data_angels[girlIndex].id}
       >
-        <img
-          src={`img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${imgNum}.jpg`}
-          loading="lazy"
-        />
-        <div className="angels-info">
-          <div
-            className={`angels-stars lvl_${data_angels[girlIndex].level}`}
-          ></div>
-          <ProgressBar
-            className="angels-prog"
-            progressSize={[580, 10]}
-            currentProgress={2}
-            maxProgress={6}
-          />
-        </div>
-      </div>
+        <div className="content-wrap">
+          <div class="b-fs"></div>
 
-      <div className="girlName">
+          <img
+            src={`img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${imgNum}.jpg`}
+            loading="lazy"
+          />
+          <div className="angels-info">
+            <div
+              className={`angels-stars lvl_${data_angels[girlIndex].level}`}
+            ></div>
+            <ProgressBar
+              className="angels-prog"
+              progressSize={[580, 10]}
+              currentProgress={2}
+              maxProgress={6}
+            />
+          </div>
+        </div>
         <FraimedTitle
           className="corners"
           text={`${data_angels[girlIndex].name} - lvl ${data_angels[girlIndex].level}`}
-          key={data_angels[girlIndex].name}
         />
       </div>
 
