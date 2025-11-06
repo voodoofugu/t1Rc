@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, useMemo } from "react";
 import { nexusTrigger } from "nexus-state";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 
@@ -59,19 +59,33 @@ export default function Dating({ pageName, children }) {
 }
 
 const GirlDependencies = ({ data_angels }) => {
-  const [girlIndex, setGirlIndex] = React.useState(0);
-  console.log("girlIndex", girlIndex);
+  // state
+  const [girlIndex, setGirlIndex] = useState(0);
 
-  const imgNum =
-    data_angels[girlIndex].level > 10
-      ? 2
-      : data_angels[girlIndex].level > 20
-      ? 3
-      : data_angels[girlIndex].level > 30
-      ? 4
-      : data_angels[girlIndex].level > 40
-      ? 5
-      : 1;
+  const imgNum = data_angels[girlIndex].level;
+  const position = 554 * (imgNum ? imgNum : 1) - 554;
+
+  const [progElems, imgs] = useMemo(() => {
+    const values = [1, 2, 3, 4, 5];
+    const prog = [];
+    const im = [];
+
+    for (const v of values) {
+      prog.push(
+        <div key={`stage-${v}`} className={`stage-progress st-${v}`}></div>
+      );
+      im.push(
+        <img
+          key={`img-${v}`}
+          src={`img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${v}.jpg`}
+          loading="lazy"
+          alt=""
+        />
+      );
+    }
+
+    return [prog, im];
+  }, [girlIndex, data_angels]);
 
   return (
     <>
@@ -91,12 +105,23 @@ const GirlDependencies = ({ data_angels }) => {
         key={data_angels[girlIndex].id}
       >
         <div className="content-wrap">
-          <div class="b-fs"></div>
+          <div className="b-fs"></div>
 
-          <img
-            src={`img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${imgNum}.jpg`}
-            loading="lazy"
-          />
+          <MorphScroll
+            className="angelImgScroll"
+            size="auto"
+            objectsSize={[554, 500]} // попробовать починить "size"
+            edgeGradient={{ size: 20, color: "rgba(255,200,86,0.4)" }}
+            type="slider"
+            progressTrigger={{
+              arrows: { contentReduce: false },
+              progressElement: progElems,
+            }}
+            direction="x"
+            scrollPosition={position}
+          >
+            {imgs}
+          </MorphScroll>
           <div className="angels-info">
             <div
               className={`angels-stars lvl_${data_angels[girlIndex].level}`}
@@ -114,6 +139,8 @@ const GirlDependencies = ({ data_angels }) => {
           text={`${data_angels[girlIndex].name} - lvl ${data_angels[girlIndex].level}`}
         />
       </div>
+
+      <div className="figure-stages-box"></div>
 
       <MorphScroll
         className="scrollAvatars"
