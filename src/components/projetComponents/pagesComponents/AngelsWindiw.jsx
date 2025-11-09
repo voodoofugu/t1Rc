@@ -65,6 +65,7 @@ const GirlDependencies = ({ data_angels }) => {
   const imgNum = data_angels[girlIndex].level;
   const position = 554 * (imgNum ? imgNum : 1) - 554;
 
+  // делаем массивы для картинок и заодно для иконок прогресса
   const [progElems, imgs] = useMemo(() => {
     const values = [1, 2, 3, 4, 5];
     const prog = [];
@@ -75,12 +76,16 @@ const GirlDependencies = ({ data_angels }) => {
         <div key={`stage-${v}`} className={`stage-progress st-${v}`}></div>
       );
       im.push(
-        <img
-          key={`img-${v}`}
-          src={`img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${v}.jpg`}
-          loading="lazy"
-          alt=""
-        />
+        <div
+          key={`space-${v}`}
+          className={`img-wrap ${v > imgNum ? "disabled" : ""}`}
+        >
+          <img
+            src={`img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${v}.jpg`}
+            loading="lazy"
+            alt=""
+          />
+        </div>
       );
     }
 
@@ -104,40 +109,41 @@ const GirlDependencies = ({ data_angels }) => {
         }`}
         key={data_angels[girlIndex].id}
       >
-        <div className="content-wrap">
-          <div className="b-fs"></div>
-
-          <MorphScroll
-            className="angelImgScroll"
-            size="auto"
-            objectsSize={[554, 500]} // попробовать починить "size"
-            edgeGradient={{ size: 20, color: "rgba(255,200,86,0.4)" }}
-            type="slider"
-            progressTrigger={{
-              arrows: { contentReduce: false },
-              progressElement: progElems,
-            }}
-            direction="x"
-            scrollPosition={position}
-          >
-            {imgs}
-          </MorphScroll>
-          <div className="angels-info">
-            <div
-              className={`angels-stars lvl_${data_angels[girlIndex].level}`}
-            ></div>
-            <ProgressBar
-              className="angels-prog"
-              progressSize={[580, 10]}
-              currentProgress={2}
-              maxProgress={6}
-            />
-          </div>
+        <MorphScroll
+          className="angelImgScroll"
+          size="auto"
+          objectsSize={[554, 500]} // попробовать починить "size"
+          edgeGradient={{ size: 20, color: "rgba(255,200,86,0.4)" }}
+          type="slider"
+          progressTrigger={{
+            arrows: {
+              element: <div className="arrows"></div>,
+              contentReduce: false,
+            },
+            progressElement: progElems,
+          }}
+          direction="x"
+          scrollPosition={position}
+          render="virtual"
+        >
+          {imgs}
+        </MorphScroll>
+        <div className="angels-info">
+          <div
+            className={`angels-stars lvl_${data_angels[girlIndex].level}`}
+          ></div>
+          <ProgressBar
+            className="angels-prog"
+            progressSize={[552, 10]}
+            currentProgress={2}
+            maxProgress={6}
+          />
         </div>
         <FraimedTitle
           className="corners"
           text={`${data_angels[girlIndex].name} - lvl ${data_angels[girlIndex].level}`}
         />
+        <div className="b-fs"></div>
       </div>
 
       <div className="figure-stages-box"></div>

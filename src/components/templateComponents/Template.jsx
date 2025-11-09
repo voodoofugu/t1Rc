@@ -43,7 +43,7 @@ export default memo(function Template() {
           "v2-screen-main",
           "v2-screen-main-dark-world",
           "keyframes-animations",
-          "customScroll",
+          // "customScroll", // дефолтные стили для morphing-scroll
           "ui-elements",
           "screen-achiev",
         ]}
