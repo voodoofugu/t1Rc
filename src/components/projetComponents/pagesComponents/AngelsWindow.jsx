@@ -22,7 +22,6 @@ function AngelsWindow({ pageName, children }) {
   // state
   const [girlIndex, setGirlIndex] = useState(0);
   const [girlImgNum, setGirleImgNum] = useState(data_angels[girlIndex].level);
-  console.log("girlImgNum", girlImgNum);
 
   const currentImgNum = data_angels[girlIndex].level;
   const position = 554 * (currentImgNum ? currentImgNum : 1) - 554; // для первого рендеринга
@@ -154,7 +153,7 @@ function AngelsWindow({ pageName, children }) {
             <MorphScroll
               className="angelImgScroll"
               size="auto"
-              objectsSize={[554, 500]} // попробовать починить "size"
+              objectsSize="size"
               edgeGradient={{ size: 20, color: "rgba(255,200,86,0.4)" }}
               type="slider"
               progressTrigger={{
