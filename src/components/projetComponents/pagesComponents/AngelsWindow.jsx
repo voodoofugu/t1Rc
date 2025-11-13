@@ -172,6 +172,7 @@ function AngelsWindow({ pageName, children }) {
             >
               {imgs}
             </MorphScroll>
+
             <div className="angels-info">
               <div
                 className={`angels-stars lvl_${data_angels[girlIndex].level}`}
@@ -207,6 +208,44 @@ function AngelsWindow({ pageName, children }) {
               }}
             ></div>
           </div>
+
+          <MorphScroll
+            className="additional-hero"
+            size={[260, 380]}
+            objectsSize="firstChild"
+            gap={10}
+            wrapperMargin={[0, 14]}
+            edgeGradient={{ color: "#968d87" }}
+            progressTrigger={{
+              wheel: true,
+              progressElement: <ScrollThumb />,
+            }}
+            wrapperAlign="center"
+          >
+            {[1, 2, 3, 4, 5, 6].map((v, i) => (
+              <div className="hero-box" key={i}>
+                <ItemBox
+                  // itemClass="wh68"
+                  itemPic="img/images/hero-all/tithero-515/x1/ava/tithero-ava-1.jpg"
+                  count={"Shiranui Kaede".split(" ")[1]} // добавлять только имя
+                />
+                <div className="gd-lvl-pds-box-all">
+                  <div className="hero-level-box">
+                    buff lvl<div className="hero-level">0</div>
+                  </div>
+                  <div className="hero-dps-box">
+                    dps<div className="hero-dps">3.5OD4</div>
+                  </div>
+                  <div className="hero-dps-box cw">
+                    CW<div className="hero-dps">0%</div>
+                  </div>
+                  <div className="hero-dps-box pos">
+                    Pos<div className="hero-dps">+0</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </MorphScroll>
         </div>
       </div>
 
