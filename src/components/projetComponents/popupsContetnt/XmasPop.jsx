@@ -9,13 +9,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";
 
-const girlImg = "images/hero-all/tithero-597/icons/break-girl4";
-
-// const icImg = (event) => {
-//   if (event === "xmas") return "img/ic-dildo-gold100.png";
-//   if (event === "spring") return "img/ic-dildo-gold100.png";
-//   if (event === "autumn") return "img/evPopArts/ic-pearls.png";
-// };
+const girlImg = "images/hero-all/tithero-637/icons/break-girl";
 
 function XmasPop1({ setXmasPopLocal }) {
   return (
@@ -75,34 +69,6 @@ function XmasPop1({ setXmasPopLocal }) {
             <div className="xmas-level">level</div>
             <div className="xmas-reward">reward</div>
           </div>
-          {/* <div className="xmas-level-simple-box-scroll indiana-scroll-container">
-            <div className="xmas-level-level">
-              <div
-                className="xmas-level-level-prg"
-                style={{
-                  width: "1%",
-                }}
-              ></div>
-              <div className="xmas-level-level-num-box">
-                {elements.map((element, index) => (
-                  <div key={index} className="xmas-level-level-num">
-                    {index + 1}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="xmas-level-reward">
-              {elements.map((element, index) => (
-                <ItemBox
-                  key={index}
-                  itemClass={`wh60 ${element.itemClass}`}
-                  itemPic={element.itemPic}
-                  count={element.count}
-                  get={element.itemClass === "get" && true}
-                />
-              ))}
-            </div>
-          </div> */}
 
           <MorphScroll
             className="btlpass_scroll xmas-scroll"
@@ -208,20 +174,6 @@ function XmasPop2({ setXmasPopLocal }) {
         </div>
         <div className="store-item-all">
           <div className="store-item-all-name">x-mas chests</div>
-          {/* <div className="store-item-box">
-            <div className="store-name">1 XMas Chest</div>
-            <div className="item-box">
-              <img src="img/v2-xmas-chest-red.png" loading="lazy" />
-            </div>
-            <div className="color-btn diamond">
-              <div className="color-btn-text">
-                <div className="diamonds">
-                  buy
-                  <span className="f-diamond">18</span>
-                </div>
-              </div>
-            </div>
-          </div> */}
           <StoreItemBox
             storeItemName="1 XMas Chest"
             currencyIcon="img/ic-diamond.png"
