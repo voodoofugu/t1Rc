@@ -127,7 +127,7 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       autumn: [
-        "img/images/hero-all/tithero-607/x2/tithero-1.jpg",
+        "img/images/hero-all/tithero-626/x2/tithero-1.jpg",
         "Crimson Masquerade Event",
         [
           "img/evPopArts/puzzle-black.png",
@@ -138,7 +138,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/puzzle-lightBlue.png",
         ],
         "img/evPopArts/puzzle-heart.png",
-        "img/bGs/autumnBg-puzzle.jpg",
+        "img/bGs/hallBg4.jpg",
       ],
     },
   ];
