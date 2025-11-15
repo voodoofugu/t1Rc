@@ -10,15 +10,6 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function BtlPass({ event }) {
-  // const edgeGradient =
-  //   event === "autumn"
-  //     ? "#b01a6c"
-  //     : event === "xmas"
-  //     ? "#288cbe"
-  //     : event === "vl"
-  //     ? "#c32e76"
-  //     : "#202c38";
-
   const girlImg =
     event === "xmas"
       ? "images/hero-all/tithero-449/icons/break-girl4"
@@ -33,7 +24,7 @@ export default function BtlPass({ event }) {
       : event === "summer"
       ? "images/hero-all/tithero-557/icons/break-girl4"
       : event === "autumn"
-      ? "images/hero-all/tithero-608/icons/break-girl4"
+      ? "images/hero-all/tithero-639/icons/break-girl"
       : event === "sexpedition"
       ? "images/hero-all/tithero-423/icons/break-girl4"
       : null;
@@ -52,7 +43,7 @@ export default function BtlPass({ event }) {
       : event === "summer"
       ? "evPopArts/ic-moon-heart-1"
       : event === "autumn"
-      ? "evPopArts/ic-autumn-crystal_1"
+      ? "evPopArts/lipsCoin_1"
       : event === "sexpedition"
       ? "evPopArts/gem_icn"
       : null;
@@ -127,9 +118,9 @@ export default function BtlPass({ event }) {
       ? [
           "BuyShop",
           {
-            img1: "evPopArts/ic-autumn-crystal_1",
-            img2: "evPopArts/ic-autumn-crystal_2",
-            img3: "evPopArts/ic-autumn-crystal_3",
+            img1: "evPopArts/lipsCoin_1",
+            img2: "evPopArts/lipsCoin_2",
+            img3: "evPopArts/lipsCoin_3",
           },
         ]
       : null;
@@ -246,9 +237,6 @@ export default function BtlPass({ event }) {
             edgeGradient
             render={{ type: "virtual" }}
             direction="x"
-            // type="slider"
-            // wrapperAlign={["center", "center"]}
-            // progressReverse
           >
             {elements.map((element, index) => (
               <ItemBox
@@ -271,49 +259,6 @@ export default function BtlPass({ event }) {
               />
             ))}
           </MorphScroll>
-
-          {/* <div
-            style={{
-              position: "absolute",
-              transform: "rotate(-90deg)",
-              transformOrigin: "left top",
-              left: "120px",
-            }}
-          >
-            <MorphScroll
-              className="btlpass_scroll"
-              size={[128, 1000]}
-              objectsSize={[112, 80]}
-              progressTrigger={{
-                wheel: true,
-                progressElement: <ScrollThumb />,
-                content: true,
-              }}
-              edgeGradient
-              render={{ type: "virtual" }}
-            >
-              {elements.map((element, index) => (
-                <ItemBox
-                  itemClass={`wh68 ${element.itemClass}`}
-                  itemPic={element.itemPic}
-                  count={element.count}
-                  get={element.itemClass === "get" && true}
-                  key={index}
-                  countOut={index + 1}
-                  onClick={() => {
-                    element.itemClass === "get" &&
-                      nexusUpdate({
-                        notif: {
-                          view: true,
-                          img: element.itemPic,
-                          text: `You got ${element.count}`,
-                        },
-                      });
-                  }}
-                />
-              ))}
-            </MorphScroll>
-          </div> */}
         </div>
       </div>
 
