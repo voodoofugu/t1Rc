@@ -27,9 +27,9 @@ function AngelsWindow({ pageName, children }) {
   const position = 554 * (currentImgNum ? currentImgNum : 1) - 554; // для первого рендеринга
 
   const arrowHandler = useCallback((e) => {
-    if (e.target?.closest(".ms-arrow-box").className.includes("left")) {
+    if (e.target?.closest(".ms-arrow-box").className.includes("left"))
       setGirleImgNum((prev) => prev - 1);
-    } else setGirleImgNum((prev) => prev + 1);
+    else setGirleImgNum((prev) => prev + 1);
   }, []);
 
   // делаем массивы для картинок и заодно для иконок прогресса
@@ -167,6 +167,10 @@ function AngelsWindow({ pageName, children }) {
                 content: true,
               }}
               direction="x"
+              // scrollPosition={{
+              //   value: position,
+              //   duration: 1000,
+              // }}
               scrollPosition={position}
               render="virtual"
             >
