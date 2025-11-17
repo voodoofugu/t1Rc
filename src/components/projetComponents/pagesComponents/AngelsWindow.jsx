@@ -167,11 +167,11 @@ function AngelsWindow({ pageName, children }) {
                 content: true,
               }}
               direction="x"
-              // scrollPosition={{
-              //   value: position,
-              //   duration: 1000,
-              // }}
-              scrollPosition={position}
+              scrollPosition={{
+                value: position,
+                duration: 1000,
+              }}
+              // scrollPosition={position}
               render="virtual"
             >
               {imgs}
