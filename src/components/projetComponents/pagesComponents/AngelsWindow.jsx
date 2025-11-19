@@ -26,10 +26,8 @@ function AngelsWindow({ pageName, children }) {
   const currentImgNum = data_angels[girlIndex].level;
   const position = 554 * (currentImgNum ? currentImgNum : 1) - 554; // для первого рендеринга
 
-  const arrowHandler = useCallback((e) => {
-    if (e.target?.closest(".ms-arrow-box").className.includes("left"))
-      setGirleImgNum((prev) => prev - 1);
-    else setGirleImgNum((prev) => prev + 1);
+  const onScrollValue = useCallback((left, top) => {
+    setGirleImgNum(Math.round(left / 554) + 1);
   }, []);
 
   // делаем массивы для картинок и заодно для иконок прогресса
@@ -158,20 +156,16 @@ function AngelsWindow({ pageName, children }) {
               type="slider"
               progressTrigger={{
                 arrows: {
-                  element: (
-                    <div className="arrows" onClick={arrowHandler}></div>
-                  ),
+                  element: <div className="arrows"></div>,
                   contentReduce: false,
                 },
                 progressElement: progElems,
                 content: true,
+                wheel: true,
               }}
               direction="x"
-              scrollPosition={{
-                value: position,
-                duration: 1000,
-              }}
-              // scrollPosition={position}
+              scrollPosition={position}
+              onScrollValue={onScrollValue}
               render="virtual"
             >
               {imgs}
