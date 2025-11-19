@@ -64,7 +64,7 @@ export default function HeroBox({
         )}
 
         <ItemBox
-          itemClass={`cardAva${offerDisabledExist ? " close" : ""}`}
+          className={`cardAva${offerDisabledExist ? " close" : ""}`}
           heroClass={heroClass}
           cardType={cardType}
           squadRank={squadRank}
@@ -75,7 +75,7 @@ export default function HeroBox({
           <div className="heroAbilWrap">
             <div className="highlightBg"></div>
             <ItemBox
-              itemClass="wh44 selectable"
+              className="wh44 selectable"
               itemPic={`img/images/hero-all/tithero-${imgId}/icons/ic-abil.jpg`}
               onClick={abilOnClick}
             />

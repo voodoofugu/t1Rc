@@ -95,7 +95,7 @@ export default memo(function Wpck5() {
             <div className="unique-skill-box">
               <div className="unique-skill">
                 <ItemBox
-                  itemClass="wh60"
+                  className="wh60"
                   itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
@@ -104,7 +104,7 @@ export default memo(function Wpck5() {
               </div>
               <div className="unique-skill">
                 <ItemBox
-                  itemClass="wh60"
+                  className="wh60"
                   itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
@@ -113,7 +113,7 @@ export default memo(function Wpck5() {
               </div>
               <div className="unique-skill">
                 <ItemBox
-                  itemClass="wh60"
+                  className="wh60"
                   itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
@@ -122,7 +122,7 @@ export default memo(function Wpck5() {
               </div>
               <div className="unique-skill">
                 <ItemBox
-                  itemClass="wh60"
+                  className="wh60"
                   itemPic="img/images/hero-all/tithero-430/icons/ic-abil.jpg"
                 />
                 <div className="skill-text-box">
@@ -137,7 +137,7 @@ export default memo(function Wpck5() {
           <div className="box1">
             <div className="prize-name-box small">повышение</div>
             <ItemBox
-              itemClass="cardAva"
+              className="cardAva"
               itemPic="img/images/hero-all/tithero-00/x1/ava/tithero-ava-1.jpg"
             >
               <div className="prize-promote-box">

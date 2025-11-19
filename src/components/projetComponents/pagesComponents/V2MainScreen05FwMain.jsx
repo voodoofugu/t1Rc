@@ -123,17 +123,17 @@ export default function V2MainScreen05FwMain() {
                 {elements.map((element, index) => (
                   <div className="rewardsWrap" key={index}>
                     <ItemBox
-                      itemClass={`wh68 ${element.itemClass}`}
+                      className={`wh68 ${element.className}`}
                       itemPic={element.itemPic}
                       count={element.count}
-                      get={element.itemClass === "get" && true}
+                      get={element.className === "get" && true}
                       countOut={index + 1}
                     />
                     <ItemBox
-                      itemClass={`wh68 ${element.itemClass}`}
+                      className={`wh68 ${element.className}`}
                       itemPic={element.itemPic}
                       count={element.count}
-                      get={element.itemClass === "get" && true}
+                      get={element.className === "get" && true}
                     />
                   </div>
                 ))}

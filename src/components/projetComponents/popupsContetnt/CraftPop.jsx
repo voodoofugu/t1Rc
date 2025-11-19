@@ -70,12 +70,12 @@ export default function CraftPop() {
                   items={
                     <>
                       <ItemBox
-                        itemClass="check"
+                        className="check"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"30/30"}
                       />
                       <ItemBox
-                        itemClass="check"
+                        className="check"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"30/30"}
                       />
@@ -89,7 +89,7 @@ export default function CraftPop() {
                         get={true}
                       />
                       <ItemBox
-                        itemClass="wh60"
+                        className="wh60"
                         itemPic="img/sAndL/heroKeyIcn.png"
                         count={1}
                       />
@@ -119,7 +119,7 @@ export default function CraftPop() {
                         count={1}
                       />
                       <ItemBox
-                        itemClass="wh60"
+                        className="wh60"
                         itemPic="img/sAndL/heroKeyIcn.png"
                         count={1}
                       />
@@ -154,7 +154,7 @@ export default function CraftPop() {
                         count={1}
                       />
                       <ItemBox
-                        itemClass="wh60"
+                        className="wh60"
                         itemPic="img/sAndL/heroKeyIcn.png"
                         count={1}
                       />
@@ -192,7 +192,7 @@ export default function CraftPop() {
                         count={1}
                       />
                       <ItemBox
-                        itemClass="wh60"
+                        className="wh60"
                         itemPic="img/sAndL/heroKeyIcn.png"
                         count={1}
                       />

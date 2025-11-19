@@ -33,17 +33,17 @@ export default memo(function AngelPopX3() {
             </div>
             <div className="reward-box">
               <ItemBox
-                itemClass="wh60"
+                className="wh60"
                 itemPic="img/v2-res-diamond.png"
                 count="1000"
               />
               <ItemBox
-                itemClass="wh60"
+                className="wh60"
                 itemPic="img/v2-res-diamond.png"
                 count="1000"
               />
               <ItemBox
-                itemClass="wh60"
+                className="wh60"
                 itemPic="img/v2-res-diamond.png"
                 count="1000"
               />
@@ -96,22 +96,22 @@ export default memo(function AngelPopX3() {
             </div>
             <div className="reward-box">
               <ItemBox
-                itemClass="wh60"
+                className="wh60"
                 itemPic="img/v2-res-diamond.png"
                 count="1000"
               />
               <ItemBox
-                itemClass="wh60"
+                className="wh60"
                 itemPic="img/v2-res-diamond.png"
                 count="1000"
               />
               <ItemBox
-                itemClass="wh60"
+                className="wh60"
                 itemPic="img/v2-res-diamond.png"
                 count="1000"
               />
               <ItemBox
-                itemClass="wh60"
+                className="wh60"
                 itemPic="img/v2-res-diamond.png"
                 count="1000"
               />

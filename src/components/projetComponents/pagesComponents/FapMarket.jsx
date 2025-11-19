@@ -189,7 +189,7 @@ export default function FapMarket({ pageName, children }) {
               >
                 <ItemBox
                   itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
-                  itemClass="piecesHero"
+                  className="piecesHero"
                   count={100}
                   sale="-50%"
                 />
@@ -202,7 +202,7 @@ export default function FapMarket({ pageName, children }) {
               >
                 <ItemBox
                   itemPic="img/evPopArts/potion_green.png"
-                  itemClass="check"
+                  className="check"
                   count={1000}
                 />
               </StoreItemBox>

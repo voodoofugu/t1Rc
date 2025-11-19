@@ -29,7 +29,7 @@ export default function DaitingGiftsPop({ girleID }) {
           className="oneItem"
           btnWrap={<Button className="green big" text="Open" />}
         >
-          <ItemBox itemClass="wh200" itemPic="img/dating/giftsIcn.png" />
+          <ItemBox className="wh200" itemPic="img/dating/giftsIcn.png" />
           <ResCount value="234" />
         </OfferCardBox>
 
@@ -37,7 +37,7 @@ export default function DaitingGiftsPop({ girleID }) {
           title="Any Pack"
           rewardCard={
             <ItemBox
-              itemClass="cardAvaX2"
+              className="cardAvaX2"
               itemPic={`img/images/superhero/suphero-${girleID}/x2/avatar/sh-ava-1.jpg`}
               count="+1000 Coins"
             />
@@ -53,17 +53,17 @@ export default function DaitingGiftsPop({ girleID }) {
           }
         >
           <ItemBox
-            itemClass="wh60"
+            className="wh60"
             itemPic="img/v2-res-diamond.png"
             count="1000"
           />
           <ItemBox
-            itemClass="wh60"
+            className="wh60"
             itemPic="img/v2-res-diamond.png"
             count="1000"
           />
           <ItemBox
-            itemClass="wh60"
+            className="wh60"
             itemPic="img/v2-res-diamond.png"
             count="1000"
           />

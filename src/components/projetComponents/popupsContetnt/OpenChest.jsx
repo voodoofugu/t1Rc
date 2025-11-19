@@ -101,7 +101,7 @@ export default memo(function OpenChest() {
             "img/change-ic-essence.png",
             "img/change-ic-gem-master.png",
           ].map((item, index) => (
-            <ItemBox itemClass="wh68" itemPic={item} key={index} />
+            <ItemBox className="wh68" itemPic={item} key={index} />
           ))}
         </div>
       </div>

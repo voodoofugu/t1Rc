@@ -7,7 +7,7 @@ function NmPopContentChest({ hole }) {
     <div className="nm-pop-content">
       <div className="nsale-main-left-box">
         <ItemBox
-          itemClass="wh130"
+          className="wh130"
           count="27"
           itemPic={hole ? "img/hole/holeChest@2x.png" : "img/v2-ns-chest.png"}
         />
@@ -214,7 +214,7 @@ function NmPopContentMagicStage({ handleMenuClick, hole }) {
       <div className="np-pop-stupen-pop-rew-box-all">
         <div className="np-pop-stupen-pop-rew-box">
           <ItemBox
-            itemClass="new"
+            className="new"
             count="50"
             itemPic="img/images/goddess/goddess-4/x2/ava/goddess-ava-1.jpg"
           />
@@ -307,13 +307,13 @@ function NmPopContentFountain({ hole }) {
       </div>
       <div className="nm-pop-fon-rew-box-all">
         <ItemBox
-          itemClass="check"
+          className="check"
           count="5000"
           countOut="10"
           itemPic="img/evPopArts/potion_yellow.png"
         />
         <ItemBox
-          itemClass="check"
+          className="check"
           count="giga x5"
           countOut="20"
           itemPic="img/ms-stone-all.png"

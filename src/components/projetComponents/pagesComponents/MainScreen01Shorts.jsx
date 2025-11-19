@@ -47,7 +47,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
       return (
         <ItemBox
           key={item.id}
-          itemClass={`videoCard ${
+          className={`videoCard ${
             disabledIndex.includes(index) ? "close" : "selectable"
           }`}
           heroClass={girlClass[item.class_type - 1]}
@@ -238,7 +238,7 @@ export default function MainScreen01Shorts({ pageName, children }) {
                         titleText: "You got a new Short!",
                         rewardsData: [
                           {
-                            itemClass: "shortCard",
+                            className: "shortCard",
                             heroClass: "wizard",
                             cardType: "superhero",
                             itemPic:

@@ -26,23 +26,23 @@ function XmasPop1({ setXmasPopLocal }) {
           </div>
           <div className="xmas-squad-holder">
             <ItemBox
-              itemClass="cardAva"
+              className="cardAva"
               itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
             />
 
             <ItemBox
-              itemClass="cardAva"
+              className="cardAva"
               itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
             />
 
             <ItemBox
-              itemClass="cardAva"
+              className="cardAva"
               itemPic="img/images/superhero/suphero-771/x1/avatar/771sh-ava-1.jpg"
               unique={["sh"]}
             />
 
             <ItemBox
-              itemClass="cardAva"
+              className="cardAva"
               itemPic="img/images/superhero/suphero-777/x1/avatar/777sh-ava-1.jpg"
               unique={["sh"]}
             />
@@ -86,14 +86,14 @@ function XmasPop1({ setXmasPopLocal }) {
           >
             {elements.map((element, index) => (
               <ItemBox
-                itemClass={`wh60 ${element.itemClass}`}
+                className={`wh60 ${element.className}`}
                 itemPic={element.itemPic}
                 count={element.count}
-                get={element.itemClass === "get" && true}
+                get={element.className === "get" && true}
                 key={index}
                 countOut={index + 1}
                 onClick={() => {
-                  element.itemClass === "get" &&
+                  element.className === "get" &&
                     nexusUpdate({
                       notif: {
                         view: true,
@@ -301,7 +301,7 @@ function XmasPop3({ setXmasPopLocal }) {
                 <div className="daily-reward-count">20</div>
               </div> */}
               <ItemBox
-                itemClass="wh68 dailyReward"
+                className="wh68 dailyReward"
                 itemPic="img/ic-dildo-gold100.png"
                 count={20}
               />
@@ -325,7 +325,7 @@ function XmasPop3({ setXmasPopLocal }) {
             </div>
             <div className="daily-parth-claim-box">
               <ItemBox
-                itemClass="wh68 dailyReward"
+                className="wh68 dailyReward"
                 itemPic="img/ic-dildo-gold100.png"
                 count={1}
               />
@@ -351,7 +351,7 @@ function XmasPop3({ setXmasPopLocal }) {
             </div>
             <div className="daily-parth-claim-box">
               <ItemBox
-                itemClass="wh68 dailyReward"
+                className="wh68 dailyReward"
                 itemPic="img/ic-dildo-gold100.png"
                 count={10}
               />
@@ -377,7 +377,7 @@ function XmasPop3({ setXmasPopLocal }) {
             </div>
             <div className="daily-parth-claim-box">
               <ItemBox
-                itemClass="wh68 dailyReward"
+                className="wh68 dailyReward"
                 itemPic="img/ic-dildo-gold100.png"
                 count={5}
               />
@@ -403,7 +403,7 @@ function XmasPop3({ setXmasPopLocal }) {
             </div>
             <div className="daily-parth-claim-box">
               <ItemBox
-                itemClass="wh68 dailyReward"
+                className="wh68 dailyReward"
                 itemPic="img/ic-dildo-gold100.png"
                 count={10}
               />
@@ -429,7 +429,7 @@ function XmasPop3({ setXmasPopLocal }) {
             </div>
             <div className="daily-parth-claim-box">
               <ItemBox
-                itemClass="wh68 dailyReward"
+                className="wh68 dailyReward"
                 itemPic="img/ic-dildo-gold100.png"
                 count={15}
               />

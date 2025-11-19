@@ -60,7 +60,7 @@ export default function ArmySetupCW() {
       } else {
         return new Set(
           getHeroData()
-            .filter((item) => !item.itemClass?.includes("block"))
+            .filter((item) => !item.className?.includes("block"))
             .map((item) => extractKey(item.itemPic))
         );
       }
@@ -145,7 +145,7 @@ export default function ArmySetupCW() {
               <ItemBox
                 key={extractKey(item.itemPic)}
                 {...item}
-                itemClass={`${item.itemClass || ""} ${
+                className={`${item.className || ""} ${
                   activeKeys.has(extractKey(item.itemPic)) ? "check" : ""
                 }`}
                 onClick={() => toggleActive(extractKey(item.itemPic))}

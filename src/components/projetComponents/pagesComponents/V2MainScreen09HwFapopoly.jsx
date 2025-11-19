@@ -916,37 +916,37 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
 
               <div className="fapop-rewards-box">
                 <ItemBox
-                  itemClass="wh68"
+                  className="wh68"
                   itemPic="img/images/superhero/suphero-08/x1/avatar/08sh-ava-1.jpg"
                   countOut="75"
                 />
                 <ItemBox
-                  itemClass="wh68"
+                  className="wh68"
                   itemPic="img/ic-abil-dps-plus@2x.png"
                   count="x2"
                   countOut="50"
                 />
                 <ItemBox
-                  itemClass="wh68"
+                  className="wh68"
                   itemPic="img/arrow_up1.png"
                   count="15"
                   countOut="35"
                 />
                 <ItemBox
-                  itemClass="wh68"
+                  className="wh68"
                   itemPic="img/sh-icon-chest-128.png"
                   count="35"
                   countOut="20"
                 />
                 <ItemBox
-                  itemClass="wh68"
+                  className="wh68"
                   itemPic="img/ic-abil-gold-up.png"
                   count="10K%"
                   countOut="10"
                   get={true}
                 />
                 <ItemBox
-                  itemClass="wh68 check"
+                  className="wh68 check"
                   itemPic="img/sh-icon-chest-128.png"
                   count="1"
                   countOut="3"
@@ -962,7 +962,7 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             className="fapop-prgbar-box-all"
           >
             <ItemBox
-              itemClass="wh60"
+              className="wh60"
               itemPic="img/evPopArts/fapop-token-ic.png"
               count={1}
             />

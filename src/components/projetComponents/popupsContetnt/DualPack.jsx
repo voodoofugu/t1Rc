@@ -101,7 +101,7 @@ export default function DualPack({ event }) {
           <ItemBox itemPic="img/pse-uncommons.png" count={20} />
           <ItemBox itemPic="img/evPopArts/potion_green.png" count={1000} />
           <ItemBox
-            itemClass="piecesHero"
+            className="piecesHero"
             itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
             count={100}
           />
@@ -198,12 +198,12 @@ export default function DualPack({ event }) {
           <div className="sv-chain2"></div>
           <div className="sv-text">rewards for purchasing both packs</div>
           <ItemBox
-            itemClass="wh94"
+            className="wh94"
             itemPic="img/fapop-token4.png"
             count={100}
           />
           <ItemBox
-            itemClass="wh94"
+            className="wh94"
             itemPic="img/ic-tickets-bf-1.png"
             count={150}
             unique={["unique"]}

@@ -131,37 +131,37 @@ const GirlDependencies = ({ girlsInfo }) => {
         // text
         itemsBoxFirst={[
           <ItemBox
-            itemClass="wh44"
+            className="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={1}
           />,
           <ItemBox
-            itemClass="wh44"
+            className="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={2}
           />,
           <ItemBox
-            itemClass="wh44"
+            className="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={3}
           />,
           <ItemBox
-            itemClass="wh44"
+            className="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={4}
           />,
           <ItemBox
-            itemClass="wh44"
+            className="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={5}
           />,
           <ItemBox
-            itemClass="wh44"
+            className="wh44"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={6}
@@ -169,37 +169,37 @@ const GirlDependencies = ({ girlsInfo }) => {
         ]}
         itemsBoxLast={[
           <ItemBox
-            itemClass="wh44 simpleItem"
+            className="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={1}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            className="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={2}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            className="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={3}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            className="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={4}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            className="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={5}
           />,
           <ItemBox
-            itemClass="wh44 simpleItem"
+            className="wh44 simpleItem"
             itemPic="img/dating/datingCoin.png"
             count={1}
             key={6}

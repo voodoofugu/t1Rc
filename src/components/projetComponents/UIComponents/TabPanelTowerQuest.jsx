@@ -616,7 +616,7 @@ export default function TabPanelTowerQuest({ hole, setLeftPanel }) {
         </div>
         <div className="s-girl-reward-box">
           <ItemBox
-            itemClass={`wh94 check`}
+            className={`wh94 check`}
             itemPic="img/images/hero-all/tithero-356/x1/ava/tithero-356-1-ava.jpg"
             unique={["d hero", "dark"]}
             count={10}

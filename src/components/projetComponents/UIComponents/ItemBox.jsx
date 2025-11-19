@@ -15,7 +15,7 @@ const arabicToRoman = {
 };
 
 export default function ItemBox({
-  itemClass,
+  className,
   itemPic,
   count,
   countOut,
@@ -31,12 +31,12 @@ export default function ItemBox({
   onClick,
   children,
 }) {
-  const selectable = itemClass && itemClass.includes("selectable");
+  const selectable = className && className.includes("selectable");
   const greekNum = squadRank && arabicToRoman[squadRank];
 
   return (
     <div
-      className={`itemBox${itemClass ? " " + itemClass : ""}`}
+      className={`itemBox${className ? " " + className : ""}`}
       onClick={selectable ? onClick : undefined}
     >
       {notif && <div className="notif">{notif}</div>}

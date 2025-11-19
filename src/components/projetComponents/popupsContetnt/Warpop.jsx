@@ -86,7 +86,7 @@ export default function Warpop() {
                 <span>0</span>
               </div> */}
               <ItemBox
-                itemClass="wh68 simpleItem clan"
+                className="wh68 simpleItem clan"
                 itemPic="img/v2-fw-icon-fr0.png"
                 countOut={10}
               />
@@ -109,12 +109,12 @@ export default function Warpop() {
                 </div>
               </div> */}
               <ItemBox
-                itemClass="wh68 simpleItem clan"
+                className="wh68 simpleItem clan"
                 itemPic={["img/v2-cw-bg34.png", "img/v2-cw-p03.png"]}
                 countOut={10}
               />
               <ItemBox
-                itemClass="wh68 simpleItem clan"
+                className="wh68 simpleItem clan"
                 itemPic={["img/v2-cw-bg34.png", "img/v2-cw-p03.png"]}
                 countOut={10}
               />

@@ -813,7 +813,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                       </div>
                       <div className="rate">10</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/images/hero-all/tithero-00/x1/ava/tithero-ava-1.jpg"
                         count={10}
                       />
@@ -837,7 +837,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-item-box">
                       <div className="store-name">Takaro Kaminoken</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/images/hero-all/tithero-230/x1/ava/tithero-230-1-ava.jpg"
                         count={10}
                       />
@@ -861,7 +861,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-item-box">
                       <div className="store-name">Chiasa Saike</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/images/hero-all/tithero-231/x1/ava/tithero-231-1-ava.jpg"
                         count={10}
                       />
@@ -885,7 +885,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-item-box">
                       <div className="store-name">Azumi Uchubito</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/images/hero-all/tithero-310/x1/ava/tithero-310-1-ava.jpg"
                         count={10}
                       />
@@ -911,7 +911,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-item-box">
                       <div className="store-name">Dark Super Chests 1</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/sh-icon-chest-dark.png"
                         count={100}
                       />
@@ -935,7 +935,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-item-box">
                       <div className="store-name">Dark Super Chests 2</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/sh-icon-chest-dark.png"
                         count={20}
                       />
@@ -959,7 +959,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-item-box">
                       <div className="store-name">Rika Mahojo</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/images/hero-all/tithero-311/x1/ava/tithero-311-1-ava.jpg"
                         count={10}
                       />
@@ -983,7 +983,7 @@ export default function V2MainScreen18Mine({ pageName }) {
                     <div className="store-item-box">
                       <div className="store-name">Yukiko Hikogatana</div>
                       <ItemBox
-                        itemClass="piecesHero"
+                        className="piecesHero"
                         itemPic="img/images/hero-all/tithero-360/x1/ava/tithero-360-1-ava.jpg"
                         count={10}
                       />

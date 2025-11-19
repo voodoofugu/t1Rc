@@ -24,12 +24,12 @@ export default memo(function SaleEventPop({ event }) {
         <FraimedTitle className="cornersBottom" text="Rewards" />
         <div className="rewards-content">
           <ItemBox
-            itemClass="wh100"
+            className="wh100"
             count="999"
             itemPic={`img/${ticketImg}.png`}
           />
           <ItemBox
-            itemClass="wh100"
+            className="wh100"
             count="999"
             itemPic={`img/${ticketImg}.png`}
           />

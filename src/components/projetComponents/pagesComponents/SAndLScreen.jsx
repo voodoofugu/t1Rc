@@ -46,29 +46,29 @@ export default function SAndLScreen({ pageName, children }) {
       [10, 20, 30, 40, 60],
       [
         {
-          itemClass: "wh44",
+          className: "wh44",
           itemPic: "img/sAndL/whiteDice_icn1.png",
           count: 1,
         },
         {
-          itemClass: "wh44",
+          className: "wh44",
           itemPic: "img/images/superhero/suphero-762/x2/avatar/762sh-ava-1.jpg",
           count: 700,
           rare: "u",
         },
         {
-          itemClass: "wh44",
+          className: "wh44",
           itemPic: "img/images/superhero/suphero-948/x2/avatar/sh-ava-1.jpg",
           count: 700,
           rare: "e",
         },
         {
-          itemClass: "wh44 piecesHero",
+          className: "wh44 piecesHero",
           itemPic: "img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg",
           count: 100,
         },
         {
-          itemClass: "wh44 check",
+          className: "wh44 check",
           itemPic: "img/evPopArts/potion_green.png",
           count: 1000,
         },
@@ -226,7 +226,7 @@ export default function SAndLScreen({ pageName, children }) {
         <div className="head">
           <div className="progresBar">
             <ItemBox
-              itemClass="wh44"
+              className="wh44"
               itemPic="img/sAndL/whiteDice_icn1.png"
               count={1}
               // get={true}

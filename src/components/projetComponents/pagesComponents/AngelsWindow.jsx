@@ -161,7 +161,6 @@ function AngelsWindow({ pageName, children }) {
                 },
                 progressElement: progElems,
                 content: true,
-                wheel: true,
               }}
               direction="x"
               scrollPosition={position}
@@ -207,43 +206,87 @@ function AngelsWindow({ pageName, children }) {
             ></div>
           </div>
 
-          <MorphScroll
-            className="additional-hero"
-            size={[260, 380]}
-            objectsSize="firstChild"
-            gap={10}
-            wrapperMargin={[0, 14]}
-            edgeGradient={{ color: "#968d87" }}
-            progressTrigger={{
-              wheel: true,
-              progressElement: <ScrollThumb />,
-            }}
-            wrapperAlign="center"
-          >
-            {[1, 2, 3, 4, 5, 6].map((v, i) => (
-              <div className="hero-box" key={i}>
-                <ItemBox
-                  // itemClass="wh68"
-                  itemPic="img/images/hero-all/tithero-515/x1/ava/tithero-ava-1.jpg"
-                  count={"Shiranui Kaede".split(" ")[1]} // добавлять только имя
-                />
-                <div className="gd-lvl-pds-box-all">
-                  <div className="hero-level-box">
-                    buff lvl<div className="hero-level">0</div>
-                  </div>
-                  <div className="hero-dps-box">
-                    dps<div className="hero-dps">3.5OD4</div>
-                  </div>
-                  <div className="hero-dps-box cw">
-                    CW<div className="hero-dps">0%</div>
-                  </div>
-                  <div className="hero-dps-box pos">
-                    Pos<div className="hero-dps">+0</div>
-                  </div>
+          <div className="additional-hero-box">
+            <div className="additional-hero-header">
+              <MorphScroll
+                className="currency-scroll"
+                size={[124, 44]}
+                objectsSize={44}
+                edgeGradient={{ color: "rgba(0, 0, 0, 0.4)", size: 14 }}
+                type="slider"
+                progressTrigger={{
+                  arrows: {
+                    element: <div className="arrows"></div>,
+                    loop: true,
+                  },
+                }}
+                direction="x"
+              >
+                <div className="hero-box">
+                  <ItemBox
+                    className="wh44 simpleItem"
+                    itemPic="img/evPopArts/potion_yellow.png"
+                  />
                 </div>
-              </div>
-            ))}
-          </MorphScroll>
+                <div className="hero-box">
+                  <ItemBox
+                    className="wh44 simpleItem"
+                    itemPic="img/evPopArts/potion_green.png"
+                  />
+                </div>
+                <div className="hero-box">
+                  <ItemBox
+                    className="wh44 simpleItem"
+                    itemPic="img/evPopArts/potion_blue.png"
+                  />
+                </div>
+              </MorphScroll>
+            </div>
+            <MorphScroll
+              className="additional-scroll"
+              size={[260, 380]}
+              objectsSize="firstChild"
+              gap={10}
+              wrapperMargin={[0, 14]}
+              edgeGradient={{ color: "rgba(0, 0, 0, 0.4)" }}
+              progressTrigger={{
+                wheel: true,
+                progressElement: <ScrollThumb />,
+              }}
+              wrapperAlign="center"
+            >
+              {[1, 2, 3, 4, 5, 6].map((v, i) => (
+                <div className="hero-box" key={i}>
+                  <ItemBox
+                    className="hero"
+                    heroClass="gun"
+                    itemPic="img/images/hero-all/tithero-515/x1/ava/tithero-ava-1.jpg"
+                    count={"Shiranui Kaede".split(" ")[1]} // добавлять только имя
+                  />
+                  <div className="gd-lvl-pds-box-all">
+                    <div className="hero-level-box">
+                      buff lvl<div className="hero-level">0</div>
+                    </div>
+                    <div className="hero-dps-box">
+                      dps<div className="hero-dps">3.5OD4</div>
+                    </div>
+                    <div className="hero-dps-box">
+                      CW<div className="hero-dps">0%</div>
+                    </div>
+                    <div className="hero-dps-box">
+                      Pos<div className="hero-dps">+0</div>
+                    </div>
+                  </div>
+                  <Button
+                    className="green up-btn"
+                    text="up"
+                    textIcn="img/darkworld-chest-agels.png"
+                    onClick={() => {}}
+                  />
+                </div>
+              ))}
+            </MorphScroll>
+          </div>
         </div>
       </div>
 

@@ -92,16 +92,16 @@ export default function DarkBtlPass() {
           </div>
           <div className="squad-holder">
             <ItemBox
-              itemClass={`cardAva`}
+              className={`cardAva`}
               itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
             />
             <ItemBox
-              itemClass={`cardAva`}
+              className={`cardAva`}
               itemPic="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
               unique={["sh"]}
             />
             <ItemBox
-              itemClass={`cardAva`}
+              className={`cardAva`}
               itemPic="img/images/superhero/suphero-656/x1/avatar/656sh-ava-1.jpg"
               unique={["dh", "dark"]}
             />
@@ -146,17 +146,17 @@ export default function DarkBtlPass() {
             {elements.map((element, index) => (
               <div className="rewardsWrap" key={index}>
                 <ItemBox
-                  itemClass={`wh68 ${element.itemClass}`}
+                  className={`wh68 ${element.className}`}
                   itemPic={element.itemPic}
                   count={element.count}
-                  get={element.itemClass === "get" && true}
+                  get={element.className === "get" && true}
                   countOut={index + 1}
                 />
                 <ItemBox
-                  itemClass={`wh68 ${element.itemClass}`}
+                  className={`wh68 ${element.className}`}
                   itemPic={element.itemPic}
                   count={element.count}
-                  get={element.itemClass === "get" && true}
+                  get={element.className === "get" && true}
                 />
               </div>
             ))}

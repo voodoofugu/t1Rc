@@ -61,7 +61,7 @@ export default function Notification({
           className={`notifWrap${localClassName ? ` ${localClassName}` : ""}`}
           onClick={() => handleAnim(0, 200)}
         >
-          {localImg && <ItemBox itemClass="wh44" itemPic={localImg} />}
+          {localImg && <ItemBox className="wh44" itemPic={localImg} />}
           <div className="notifText">{localText}</div>
           <div className="closeIcn"></div>
         </div>

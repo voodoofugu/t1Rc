@@ -67,7 +67,7 @@ export default memo(function RelicsPop2({ event }) {
               text="1 set of Relics"
             />
             <ItemBox
-              itemClass="byeCardsItem wh94"
+              className="byeCardsItem wh94"
               itemPic="img/card-ic-koloda@2x.png"
             />
             <Button
@@ -82,7 +82,7 @@ export default memo(function RelicsPop2({ event }) {
               text="5 set of Relics"
             />
             <ItemBox
-              itemClass="byeCardsItem wh94"
+              className="byeCardsItem wh94"
               itemPic="img/card-ic-koloda2@2x.png"
             />
             <Button
@@ -97,7 +97,7 @@ export default memo(function RelicsPop2({ event }) {
               text="20 set of Relics"
             />
             <ItemBox
-              itemClass="byeCardsItem wh94"
+              className="byeCardsItem wh94"
               itemPic="img/card-ic-koloda3@2x.png"
             />
             <Button
@@ -112,7 +112,7 @@ export default memo(function RelicsPop2({ event }) {
               text="50 set of Relics"
             />
             <ItemBox
-              itemClass="byeCardsItem wh94"
+              className="byeCardsItem wh94"
               itemPic="img/card-ic-koloda4@2x.png"
             />
             <Button
@@ -132,7 +132,7 @@ export default memo(function RelicsPop2({ event }) {
             serifsPerProgress
             itemsBoxFirst={[
               <ItemBox
-                itemClass="check"
+                className="check"
                 itemPic="img/card-ic-koloda@2x.png"
                 countOut="50"
                 arrow="bottom"
@@ -161,7 +161,7 @@ export default memo(function RelicsPop2({ event }) {
             ]}
           >
             <ItemBox
-              itemClass="wh100"
+              className="wh100"
               itemPic="img/card-ic-koloda@2x.png"
               count="0/400"
             />

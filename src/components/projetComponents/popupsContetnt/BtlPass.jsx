@@ -195,16 +195,16 @@ export default function BtlPass({ event }) {
           </div>
           <div className="squad-holder">
             <ItemBox
-              itemClass={`cardAva`}
+              className={`cardAva`}
               itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
             />
             <ItemBox
-              itemClass={`cardAva`}
+              className={`cardAva`}
               itemPic="img/images/superhero/suphero-653/x1/avatar/653sh-ava-1.jpg"
               cardType="s"
             />
             <ItemBox
-              itemClass={`cardAva`}
+              className={`cardAva`}
               itemPic="img/ic-vl-heart-red.png"
               count="100"
             />
@@ -240,14 +240,14 @@ export default function BtlPass({ event }) {
           >
             {elements.map((element, index) => (
               <ItemBox
-                itemClass={`wh68 ${element.itemClass}`}
+                className={`wh68 ${element.className}`}
                 itemPic={element.itemPic}
                 count={element.count}
-                get={element.itemClass === "get" && true}
+                get={element.className === "get" && true}
                 key={index}
                 countOut={index + 1}
                 onClick={() => {
-                  element.itemClass === "get" &&
+                  element.className === "get" &&
                     nexusUpdate({
                       notif: {
                         view: true,

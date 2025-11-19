@@ -29,7 +29,7 @@ export default memo(function ItemNotiz({
                   {items.map((item, index) => (
                     <ItemBox
                       key={index}
-                      itemClass="wh44"
+                      className="wh44"
                       itemPic={item[0]}
                       count={item[1]}
                     />

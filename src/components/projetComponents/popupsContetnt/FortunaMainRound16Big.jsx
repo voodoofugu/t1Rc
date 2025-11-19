@@ -297,7 +297,7 @@ export default function FortunaMainRound16Big() {
               text="mission clear"
               textWithProgress="max"
             >
-              <ItemBox itemClass="wh44" itemPic="img/heartCoin.png" />
+              <ItemBox className="wh44" itemPic="img/heartCoin.png" />
             </ProgressBar>
             <Button
               className="lightGreen"
@@ -321,7 +321,7 @@ export default function FortunaMainRound16Big() {
               text="Go to rewards"
             />
             <div className="fortuna-reward-box-all">
-              <ItemBox itemClass="wh44" itemPic="img/sh-icon-chest-128.png" />
+              <ItemBox className="wh44" itemPic="img/sh-icon-chest-128.png" />
             </div>
           </div>
         </div>

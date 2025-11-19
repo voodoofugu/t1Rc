@@ -219,7 +219,7 @@ export default memo(function RelicsPop({ event }) {
             textIcn="img/violet_piece.png"
             itemsBoxFirst={[
               <ItemBox
-                itemClass="check"
+                className="check"
                 itemPic="img/images/hero-all/tithero-349/x2/ava/tithero-349-1-ava.jpg"
                 countOut={"5K"}
                 arrow="bottom"
@@ -247,7 +247,7 @@ export default memo(function RelicsPop({ event }) {
             ]}
           >
             <ItemBox
-              itemClass="wh100"
+              className="wh100"
               itemPic={evData?.[event][2][0]}
               count={"0/10K"}
             />
@@ -255,7 +255,7 @@ export default memo(function RelicsPop({ event }) {
         </div>
         <div className="main-relics-bonus-box xmas">
           <ItemBox
-            itemClass="wh100"
+            className="wh100"
             itemPic={evData?.[event][2][1]}
             count={"0/10K"}
           />
@@ -273,7 +273,7 @@ export default memo(function RelicsPop({ event }) {
           </div>
           <div className="relics-coll-box-all">
             <ItemBox
-              itemClass="check"
+              className="check"
               itemPic="img/images/hero-all/tithero-343/x2/ava/tithero-343-1-ava.jpg"
               countOut={"5K"}
               arrow="bottom"
@@ -303,7 +303,7 @@ export default memo(function RelicsPop({ event }) {
         </div>
         <div className="main-relics-bonus-box xmas">
           <ItemBox
-            itemClass="wh100"
+            className="wh100"
             itemPic={evData?.[event][2][3]}
             count={"0/10K"}
           />
@@ -321,7 +321,7 @@ export default memo(function RelicsPop({ event }) {
           </div>
           <div className="relics-coll-box-all">
             <ItemBox
-              itemClass="check"
+              className="check"
               itemPic="img/images/hero-all/tithero-345/x2/ava/tithero-345-1-ava.jpg"
               countOut={"5K"}
               arrow="bottom"
@@ -351,7 +351,7 @@ export default memo(function RelicsPop({ event }) {
         </div>
         <div className="main-relics-bonus-box xmas">
           <ItemBox
-            itemClass="wh100"
+            className="wh100"
             itemPic={evData?.[event][2][3]}
             count={"0/10K"}
           />
@@ -369,7 +369,7 @@ export default memo(function RelicsPop({ event }) {
           </div>
           <div className="relics-coll-box-all">
             <ItemBox
-              itemClass="check"
+              className="check"
               itemPic="img/images/hero-all/tithero-350/x2/ava/tithero-350-1-ava.jpg"
               countOut={"5K"}
               arrow="bottom"
@@ -399,7 +399,7 @@ export default memo(function RelicsPop({ event }) {
         </div>
         <div className="main-relics-bonus-box xmas">
           <ItemBox
-            itemClass="wh100"
+            className="wh100"
             itemPic={evData?.[event][2][4]}
             count={"224/10K"}
           />
@@ -417,7 +417,7 @@ export default memo(function RelicsPop({ event }) {
           </div>
           <div className="relics-coll-box-all">
             <ItemBox
-              itemClass="check"
+              className="check"
               itemPic="img/images/hero-all/tithero-348/x2/ava/tithero-348-1-ava.jpg"
               countOut={"5K"}
               arrow="bottom"
@@ -447,7 +447,7 @@ export default memo(function RelicsPop({ event }) {
         </div>
         <div className="main-relics-bonus-box xmas">
           <ItemBox
-            itemClass="wh100"
+            className="wh100"
             itemPic={evData?.[event][2][5]}
             count={"0/10K"}
           />
@@ -465,7 +465,7 @@ export default memo(function RelicsPop({ event }) {
           </div>
           <div className="relics-coll-box-all">
             <ItemBox
-              itemClass="check"
+              className="check"
               itemPic="img/images/hero-all/tithero-344/x2/ava/tithero-344-1-ava.jpg"
               countOut={"5K"}
               arrow="bottom"

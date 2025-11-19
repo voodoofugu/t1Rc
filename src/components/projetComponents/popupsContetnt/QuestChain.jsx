@@ -148,7 +148,7 @@ export default function QuestChain() {
           </div>
         </div>
         <ItemBox
-          itemClass="wh94"
+          className="wh94"
           unique={["dark hero", "dark"]}
           itemPic="img/images/hero-all/tithero-356/x1/ava/tithero-356-1-ava.jpg"
         />
