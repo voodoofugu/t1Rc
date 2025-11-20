@@ -22,13 +22,24 @@ function AngelsWindow({ pageName, children }) {
   // state
   const [girlIndex, setGirlIndex] = useState(0);
   const [girlImgNum, setGirleImgNum] = useState(data_angels[girlIndex].level);
+  const [potionImgNum, setPotionImgNum] = useState(1);
 
   const currentImgNum = data_angels[girlIndex].level;
   const position = 554 * (currentImgNum ? currentImgNum : 1) - 554; // для первого рендеринга
 
-  const onScrollValue = useCallback((left, top) => {
+  const onScrollValueGirle = useCallback((left) => {
     setGirleImgNum(Math.round(left / 554) + 1);
   }, []);
+  const onScrollValuePotion = useCallback((left) => {
+    setPotionImgNum(Math.round(left / 40) + 1);
+  }, []);
+
+  const [potion, text] =
+    potionImgNum === 1
+      ? ["img/evPopArts/potion_yellow.png", "buff"]
+      : potionImgNum === 2
+      ? ["img/evPopArts/potion_green.png", "per"]
+      : ["img/evPopArts/potion_blue.png", "pos"];
 
   // делаем массивы для картинок и заодно для иконок прогресса
   const [progElems, imgs] = useMemo(() => {
@@ -56,6 +67,72 @@ function AngelsWindow({ pageName, children }) {
 
     return [prog, im];
   }, [girlIndex, data_angels]);
+
+  const scenesNodes = useMemo(() => {
+    const girl = data_angels[girlIndex];
+    const count = girl.scenes; // число
+
+    return Array.from({ length: count }, (_, i) => (
+      <ItemBox
+        key={i}
+        className="wh60 selectable"
+        itemPic={`img/images/goddess/goddess-${
+          girl.id
+        }/comics/ava/goddess-com-ava-${i + 1}.jpg`}
+        onClick={() => {
+          nexusTrigger({
+            type: "handlePopup",
+            payload: {
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly",
+                popCont: "FullImgPop",
+                img: `img/images/goddess/goddess-${
+                  data_angels[girlIndex].id
+                }/comics/goddess-com-${i + 1}.jpg`,
+              },
+            },
+          });
+        }}
+      />
+    ));
+  }, [girlIndex]);
+
+  const allHero = [1, 2, 3, 4, 5, 6].map((v, i) => (
+    <div className="hero-box" key={i}>
+      <ItemBox
+        className="hero"
+        heroClass="gun"
+        itemPic="img/images/hero-all/tithero-515/x1/ava/tithero-ava-1.jpg"
+        count={"Shiranui Kaede".split(" ")[1]} // добавлять только имя
+      />
+      <div className="gd-lvl-pds-box-all">
+        <div className="hero-param-box yellow">
+          buff<div className="value">0</div>
+        </div>
+        <div className="hero-param-box green">
+          CW<div className="value">0%</div>
+        </div>
+        <div className="hero-param-box blue">
+          Pos<div className="value">+0</div>
+        </div>
+        <div className="hero-param-box">
+          dps<div className="value">3.5OD4</div>
+        </div>
+      </div>
+      <Button
+        className="green max up-btn"
+        text={`up ${text}`}
+        textIcn={potion}
+        onClick={() => {}}
+      />
+      {v === 2 && (
+        <div className="buy-box">
+          <Button className="green" text="buy" onClick={() => {}} />
+        </div>
+      )}
+    </div>
+  ));
 
   return (
     <div className="main world1">
@@ -164,7 +241,7 @@ function AngelsWindow({ pageName, children }) {
               }}
               direction="x"
               scrollPosition={position}
-              onScrollValue={onScrollValue}
+              onScrollValue={onScrollValueGirle}
               render="virtual"
             >
               {imgs}
@@ -210,9 +287,8 @@ function AngelsWindow({ pageName, children }) {
             <div className="additional-hero-header">
               <MorphScroll
                 className="currency-scroll"
-                size={[124, 44]}
-                objectsSize={44}
-                edgeGradient={{ color: "rgba(0, 0, 0, 0.4)", size: 14 }}
+                size={[120, 60]}
+                objectsSize={[40, 60]}
                 type="slider"
                 progressTrigger={{
                   arrows: {
@@ -221,71 +297,59 @@ function AngelsWindow({ pageName, children }) {
                   },
                 }}
                 direction="x"
+                onScrollValue={onScrollValuePotion}
+                render="virtual"
               >
                 <div className="hero-box">
                   <ItemBox
-                    className="wh44 simpleItem"
+                    className="wh40 simpleItem"
                     itemPic="img/evPopArts/potion_yellow.png"
+                    count="21.4K"
                   />
                 </div>
                 <div className="hero-box">
                   <ItemBox
-                    className="wh44 simpleItem"
+                    className="wh40 simpleItem"
                     itemPic="img/evPopArts/potion_green.png"
+                    count="21.4K"
                   />
                 </div>
                 <div className="hero-box">
                   <ItemBox
-                    className="wh44 simpleItem"
+                    className="wh40 simpleItem"
                     itemPic="img/evPopArts/potion_blue.png"
+                    count="21.4K"
                   />
                 </div>
               </MorphScroll>
             </div>
+
             <MorphScroll
               className="additional-scroll"
-              size={[260, 380]}
+              size={[260, 400]}
               objectsSize="firstChild"
               gap={10}
               wrapperMargin={[0, 14]}
-              edgeGradient={{ color: "rgba(0, 0, 0, 0.4)" }}
+              edgeGradient={{ color: "#a18f8b", size: 20 }}
               progressTrigger={{
                 wheel: true,
                 progressElement: <ScrollThumb />,
               }}
               wrapperAlign="center"
             >
-              {[1, 2, 3, 4, 5, 6].map((v, i) => (
-                <div className="hero-box" key={i}>
-                  <ItemBox
-                    className="hero"
-                    heroClass="gun"
-                    itemPic="img/images/hero-all/tithero-515/x1/ava/tithero-ava-1.jpg"
-                    count={"Shiranui Kaede".split(" ")[1]} // добавлять только имя
-                  />
-                  <div className="gd-lvl-pds-box-all">
-                    <div className="hero-level-box">
-                      buff lvl<div className="hero-level">0</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      dps<div className="hero-dps">3.5OD4</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      CW<div className="hero-dps">0%</div>
-                    </div>
-                    <div className="hero-dps-box">
-                      Pos<div className="hero-dps">+0</div>
-                    </div>
-                  </div>
-                  <Button
-                    className="green up-btn"
-                    text="up"
-                    textIcn="img/darkworld-chest-agels.png"
-                    onClick={() => {}}
-                  />
-                </div>
-              ))}
+              {allHero}
             </MorphScroll>
+
+            <div className="prog-bar-box">
+              <ProgressBar
+                className="progressBarOfSympathy framedText"
+                progressSize={[260, 10]}
+                currentProgress={1.5}
+                maxProgress={data_angels[girlIndex].scenes}
+                serifsPerProgress
+                itemsBoxFirst={scenesNodes}
+              />
+            </div>
           </div>
         </div>
       </div>
