@@ -14,36 +14,36 @@ const ProgressBar = ({
   yDirection,
   children,
 }) => {
-  const widthPerProgress = yDirection
-    ? height / maxProgress
-    : width / maxProgress;
+  const heightOrWidth = yDirection ? height : width;
+  const widthPerProgress = heightOrWidth / maxProgress;
   const progressWidth = widthPerProgress * currentProgress;
-  const itemsBoxWidth = yDirection
-    ? height - widthPerProgress
-    : width - widthPerProgress;
+  const itemsBoxWidth = heightOrWidth - widthPerProgress;
 
   const localProgressSize = yDirection ? [height, width] : [width, height];
 
-  const renderItemsBox = (items, className) => (
-    <div
-      className={`itemsBoxWrap ${className}`}
-      style={{ width: `${itemsBoxWidth}px` }}
-    >
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className={`itemWrap${
-            index > currentProgress - 1 ? " disabled" : ""
-          }`}
-          style={{
-            transform: `translateX(calc(-50% + ${widthPerProgress}px * ${index}))`,
-          }}
-        >
-          {item}
-        </div>
-      ))}
-    </div>
-  );
+  const renderItemsBox = (items, className) =>
+    items && (
+      <div
+        className={`itemsBoxWrap ${className}`}
+        style={{
+          width: `${heightOrWidth - heightOrWidth / items.length}px`,
+        }}
+      >
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className="itemWrap"
+            style={{
+              transform: `translateX(calc(-50% + ${
+                heightOrWidth / items.length
+              }px * ${index}))`,
+            }}
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    );
 
   return (
     <div
@@ -63,8 +63,8 @@ const ProgressBar = ({
             height: `${localProgressSize[1]}px`,
           }}
         >
-          {itemsBoxFirst && renderItemsBox(itemsBoxFirst, "first")}
-          {itemsBoxLast && renderItemsBox(itemsBoxLast, "last")}
+          {renderItemsBox(itemsBoxFirst, "first")}
+          {renderItemsBox(itemsBoxLast, "last")}
 
           <div
             className="progressScaleWrap"

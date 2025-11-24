@@ -34,12 +34,12 @@ function AngelsWindow({ pageName, children }) {
     setPotionImgNum(Math.round(left / 40) + 1);
   }, []);
 
-  const [potion, text] =
+  const potion =
     potionImgNum === 1
-      ? ["img/evPopArts/potion_yellow.png", "buff"]
+      ? "img/evPopArts/potion_yellow.png"
       : potionImgNum === 2
-      ? ["img/evPopArts/potion_green.png", "per"]
-      : ["img/evPopArts/potion_blue.png", "pos"];
+      ? "img/evPopArts/potion_green.png"
+      : "img/evPopArts/potion_blue.png";
 
   // делаем массивы для картинок и заодно для иконок прогресса
   const [progElems, imgs] = useMemo(() => {
@@ -68,40 +68,50 @@ function AngelsWindow({ pageName, children }) {
     return [prog, im];
   }, [girlIndex, data_angels]);
 
+  const currentPrgHero = 1.5; // заглушка
   const scenesNodes = useMemo(() => {
     const girl = data_angels[girlIndex];
     const count = girl.scenes; // число
+    const max = 4;
+    const rest = max - count;
+    const normalizedIndex = (index) => index + 1 - rest;
 
-    return Array.from({ length: count }, (_, i) => (
-      <ItemBox
-        key={i}
-        className="wh60 selectable"
-        itemPic={`img/images/goddess/goddess-${
-          girl.id
-        }/comics/ava/goddess-com-ava-${i + 1}.jpg`}
-        onClick={() => {
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup contentOnly",
-                popCont: "FullImgPop",
-                img: `img/images/goddess/goddess-${
-                  data_angels[girlIndex].id
-                }/comics/goddess-com-${i + 1}.jpg`,
-              },
-            },
-          });
-        }}
-      />
-    ));
+    return Array.from({ length: max }, (_, i) =>
+      i + 1 <= max - count ? (
+        <div key={i} className="fallback"></div>
+      ) : (
+        <ItemBox
+          key={i}
+          className={`wh60 selectable${
+            normalizedIndex(i) > currentPrgHero ? " disabled" : ""
+          }`}
+          itemPic={`img/images/goddess/goddess-${
+            girl.id
+          }/comics/ava/goddess-com-ava-${normalizedIndex(i)}.jpg`}
+          onClick={() => {
+            normalizedIndex(i) <= currentPrgHero &&
+              nexusTrigger({
+                type: "handlePopup",
+                payload: {
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly",
+                    popCont: "FullImgPop",
+                    img: `img/images/goddess/goddess-${
+                      data_angels[girlIndex].id
+                    }/comics/goddess-com-${normalizedIndex(i)}.jpg`,
+                  },
+                },
+              });
+          }}
+        />
+      )
+    );
   }, [girlIndex]);
 
   const allHero = [1, 2, 3, 4, 5, 6].map((v, i) => (
-    <div className="hero-box" key={i}>
+    <div className={`hero-box${v === 2 ? " disabled" : ""}`} key={i}>
       <ItemBox
-        className="hero"
         heroClass="gun"
         itemPic="img/images/hero-all/tithero-515/x1/ava/tithero-ava-1.jpg"
         count={"Shiranui Kaede".split(" ")[1]} // добавлять только имя
@@ -121,14 +131,14 @@ function AngelsWindow({ pageName, children }) {
         </div>
       </div>
       <Button
-        className="green max up-btn"
-        text={`up ${text}`}
+        className="green max"
+        text="253"
         textIcn={potion}
         onClick={() => {}}
       />
       {v === 2 && (
         <div className="buy-box">
-          <Button className="green" text="buy" onClick={() => {}} />
+          <Button className="lightBlue" text="buy" onClick={() => {}} />
         </div>
       )}
     </div>
@@ -208,13 +218,17 @@ function AngelsWindow({ pageName, children }) {
           <div className="stars-info-box">
             <div className="star-info">
               <div className="star-tit">Current Star</div>
-              <div>Max Buff Level: 100</div>
-              <div>Buff Bonus: x1</div>
+              <div className="star-text-box">
+                <div>Max Buff Level: 100</div>
+                <div>Buff Bonus: x1</div>
+              </div>
             </div>
             <div className="star-info next">
               <div className="star-tit">Next Star</div>
-              <div>Max Buff Level: 250</div>
-              <div>Buff Bonus: x2</div>
+              <div className="star-text-box">
+                <div>Max Buff Level: 250</div>
+                <div>Buff Bonus: x2</div>
+              </div>
             </div>
           </div>
 
@@ -240,7 +254,8 @@ function AngelsWindow({ pageName, children }) {
                 content: true,
               }}
               direction="x"
-              scrollPosition={position}
+              // scrollPosition={position}
+              scrollPosition={{ value: position, duration: 1000 }}
               onScrollValue={onScrollValueGirle}
               render="virtual"
             >
@@ -256,6 +271,7 @@ function AngelsWindow({ pageName, children }) {
                 progressSize={[552, 10]}
                 currentProgress={2}
                 maxProgress={6}
+                textWithProgress={"max"}
               />
             </div>
             <FraimedTitle
@@ -285,6 +301,13 @@ function AngelsWindow({ pageName, children }) {
 
           <div className="additional-hero-box">
             <div className="additional-hero-header">
+              <Button className="btnGold add-btn" text="+" onClick={() => {}} />
+              <Button
+                className="green quant-btn"
+                text="x1"
+                onClick={() => {}}
+              />
+
               <MorphScroll
                 className="currency-scroll"
                 size={[120, 60]}
@@ -326,11 +349,11 @@ function AngelsWindow({ pageName, children }) {
 
             <MorphScroll
               className="additional-scroll"
-              size={[260, 400]}
+              size={[264, 338]}
               objectsSize="firstChild"
-              gap={10}
-              wrapperMargin={[0, 14]}
-              edgeGradient={{ color: "#a18f8b", size: 20 }}
+              gap={12}
+              wrapperMargin={[0, 4]}
+              edgeGradient={{ color: "#584a49", size: 20 }}
               progressTrigger={{
                 wheel: true,
                 progressElement: <ScrollThumb />,
@@ -343,8 +366,8 @@ function AngelsWindow({ pageName, children }) {
             <div className="prog-bar-box">
               <ProgressBar
                 className="progressBarOfSympathy framedText"
-                progressSize={[260, 10]}
-                currentProgress={1.5}
+                progressSize={[250, 10]}
+                currentProgress={currentPrgHero}
                 maxProgress={data_angels[girlIndex].scenes}
                 serifsPerProgress
                 itemsBoxFirst={scenesNodes}
