@@ -270,10 +270,11 @@ function GuardianWindow({ pageName, children }) {
               ></div>
               <ProgressBar
                 className="guardian-prog"
-                progressSize={[552, 10]}
+                progressSize={[552, 12]}
                 currentProgress={2}
                 maxProgress={6}
                 textWithProgress={"max"}
+                textIcn={true}
               />
             </div>
             <FraimedTitle
@@ -316,7 +317,8 @@ function GuardianWindow({ pageName, children }) {
                           "m-popup contentOnly framedPop addGuardianHeroPop",
                         popCont: "AddGuardianHero",
                         props: {
-                          girlImg: "img/break-girls/break-girl915.png",
+                          girlImg:
+                            "img/images/hero-all/tithero-636/icons/break-girl.png",
                         },
                       },
                     },

@@ -1,3 +1,4 @@
+import React from "react";
 import { nexusTrigger } from "nexus-state";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
@@ -9,6 +10,8 @@ import ResCount from "../UIComponents/ResCount";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function AddGuardianHero({ girlImg }) {
+  const [count, setCount] = React.useState(0);
+
   const allHero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((v, i) => (
     <div
       className={`hero-box${v === 2 ? " disabled" : ""} selectable`}
@@ -19,6 +22,11 @@ export default function AddGuardianHero({ girlImg }) {
         [el, el.querySelector(".itemBox")].map((elem) => {
           elem.classList.toggle("check");
         });
+
+        setCount(
+          el.closest(".ms-objects-wrapper").querySelectorAll(".hero-box .check")
+            .length * 200
+        );
       }}
     >
       <ItemBox
@@ -62,17 +70,14 @@ export default function AddGuardianHero({ girlImg }) {
               payload: {
                 type: "open",
                 data: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy Dices",
-                  popCont: [
-                    "BuyShop",
-                    {
-                      img1: "angel_spirit_1",
-                      img2: "angel_spirit_2",
-                      img3: "angel_spirit_3",
-                      img4: "angel_spirit_4",
-                    },
-                  ],
+                  mpopClass: "m-popup  contentOnly framedPop essence-buy",
+                  popCont: "BuyShop",
+                  props: {
+                    img1: "evPopArts/angel_spirit_1",
+                    img2: "evPopArts/angel_spirit_2",
+                    img3: "evPopArts/angel_spirit_3",
+                    img4: "evPopArts/angel_spirit_4",
+                  },
                 },
               },
             });
@@ -95,6 +100,18 @@ export default function AddGuardianHero({ girlImg }) {
         >
           {allHero}
         </MorphScroll>
+
+        <Button
+          className="btnGold max get-btn"
+          text={`${count} - pay`}
+          textIcn="img/evPopArts/angel_spirit_1.png"
+          onClick={() =>
+            nexusTrigger({
+              type: "handlePopup",
+              payload: { type: "close" },
+            })
+          }
+        />
 
         <Button
           className="exit"
