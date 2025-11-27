@@ -3,7 +3,7 @@ import { nexusTrigger } from "nexus-state";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 
 import ItemBox from "../UIComponents/ItemBox";
-// import ResCount from "../UIComponents/ResCount";
+import ResCount from "../UIComponents/ResCount";
 import PersonAva from "../UIComponents/PersonAva";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
@@ -183,6 +183,31 @@ function GuardianWindow({ pageName, children }) {
           text="Get pieces"
           img="img/darkworld-chest-agels.png"
           onClick={() => {}}
+        />
+
+        <ResCount
+          className="spirit-count"
+          img="img/evPopArts/angel_spirit_1.png"
+          value="234"
+          plus
+          onClick={() => {
+            nexusTrigger({
+              type: "handlePopup",
+              payload: {
+                type: "open",
+                data: {
+                  mpopClass: "m-popup  contentOnly framedPop essence-buy",
+                  popCont: "BuyShop",
+                  props: {
+                    img1: "evPopArts/angel_spirit_1",
+                    img2: "evPopArts/angel_spirit_2",
+                    img3: "evPopArts/angel_spirit_3",
+                    img4: "evPopArts/angel_spirit_4",
+                  },
+                },
+              },
+            });
+          }}
         />
 
         <MorphScroll
