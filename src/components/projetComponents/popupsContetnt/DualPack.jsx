@@ -8,7 +8,7 @@ export default function DualPack({ event }) {
   return (
     <>
       <div className="sv-sale-pack-box buy">
-        <div className="lhero-box">
+        <div className="lhero-box" data-label="legendary">
           <div className="lhero-pic">
             <img
               src="img/images/superhero/suphero-762/x2/762sh-1.jpg"
@@ -108,7 +108,7 @@ export default function DualPack({ event }) {
         </div>
       </div>
       <div className="sv-sale-pack-box next">
-        <div className="lhero-box">
+        <div className="lhero-box" data-label="legendary">
           <div className="lhero-pic">
             <img
               src="img/images/hero-all/tithero-5002/x1/tithero-5002-1.jpg"
