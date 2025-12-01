@@ -150,7 +150,7 @@ function GuardianWindow({ pageName, children }) {
   return (
     <div className="main world1">
       <div className="main-bg dating"></div>
-      <div className="dating_content">
+      <div className="guardian-window">
         <div className="guardian-window-bg"></div>
         <div className="guardian-tit-wrap"></div>
         <div className="guardian-tit">Guardians Room</div>
