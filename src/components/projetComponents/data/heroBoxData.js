@@ -7,7 +7,7 @@ const heroBoxData = [
     dps: "777",
     power: "123",
     timer: "15:01:33",
-    className: "selectable cardAva block",
+    className: "selectable cardAva block offer",
     imgId: 446,
     heroClass: "gun",
     cardType: "h",
