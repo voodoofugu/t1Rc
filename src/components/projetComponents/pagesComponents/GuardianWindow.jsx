@@ -13,6 +13,7 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 import data_angels from "../../../scripts/FapTitansScripts/data_angels";
 
 export const cssFiles = [
+  // "dating",
   "guardian-window",
   "screen-superhero",
   "screen-unipop-subscription",
@@ -243,23 +244,6 @@ function GuardianWindow({ pageName, children }) {
         </MorphScroll>
 
         <div key={data_angels[girlIndex].id}>
-          <div className="stars-info-box">
-            <div className="star-info">
-              <div className="star-tit">Current Star</div>
-              <div className="star-text-box">
-                <div>Max Buff Level: 100</div>
-                <div>Buff Bonus: x1</div>
-              </div>
-            </div>
-            <div className="star-info next">
-              <div className="star-tit">Next Star</div>
-              <div className="star-text-box">
-                <div>Max Buff Level: 250</div>
-                <div>Buff Bonus: x2</div>
-              </div>
-            </div>
-          </div>
-
           <div
             className={`girlFigure${
               data_angels[girlIndex].condition
@@ -289,133 +273,162 @@ function GuardianWindow({ pageName, children }) {
               {imgs}
             </MorphScroll>
 
-            <div className="guardian-info">
-              <div
-                className={`guardian-stars lvl_${data_angels[girlIndex].level}`}
-              ></div>
-              <ProgressBar
-                className="guardian-prog"
-                progressSize={[552, 12]}
-                currentProgress={2}
-                maxProgress={6}
-                textWithProgress={"max"}
-                textIcn={true}
-              />
-            </div>
             <FraimedTitle
               className="corners"
               text={`${data_angels[girlIndex].name} - lvl ${data_angels[girlIndex].level}`}
             />
 
-            <div
-              className={`b-fs${girlImgNum > currentImgNum ? " disabled" : ""}`}
-              onClick={() => {
-                if (girlImgNum > currentImgNum) return;
+            {data_angels[girlIndex].condition === "closed" ? (
+              <Button className="btnGold" text="buy" onClick={() => {}} />
+            ) : (
+              <>
+                <div className="guardian-info">
+                  <div
+                    className={`guardian-stars lvl_${data_angels[girlIndex].level}`}
+                  ></div>
+                  <ProgressBar
+                    className="guardian-prog"
+                    progressSize={[552, 12]}
+                    currentProgress={2}
+                    maxProgress={6}
+                    textWithProgress={"max"}
+                    textIcn={true}
+                  />
+                </div>
 
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup contentOnly",
-                      popCont: "FullImgPop",
-                      img: `img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${girlImgNum}.jpg`,
-                    },
-                  },
-                });
-              }}
-            ></div>
-          </div>
+                <div
+                  className={`b-fs${
+                    girlImgNum > currentImgNum ? " disabled" : ""
+                  }`}
+                  onClick={() => {
+                    if (girlImgNum > currentImgNum) return;
 
-          <div className="additional-hero-box">
-            <div className="additional-hero-header">
-              <Button
-                className="btnGold add-btn"
-                text="+"
-                onClick={() => {
-                  nexusTrigger({
-                    type: "handlePopup",
-                    payload: {
-                      type: "open",
-                      data: {
-                        mpopClass:
-                          "m-popup contentOnly framedPop addGuardianHeroPop",
-                        popCont: "AddGuardianHero",
-                        props: {
-                          girlImg:
-                            "img/images/hero-all/tithero-636/icons/break-girl.png",
+                    nexusTrigger({
+                      type: "handlePopup",
+                      payload: {
+                        type: "open",
+                        data: {
+                          mpopClass: "m-popup contentOnly",
+                          popCont: "FullImgPop",
+                          img: `img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${girlImgNum}.jpg`,
                         },
                       },
-                    },
-                  });
-                }}
-              />
-              <Button
-                className="green quant-btn"
-                text="x1"
-                onClick={() => {}}
-              />
-
-              <MorphScroll
-                className="currency-scroll"
-                size={[120, 60]}
-                objectsSize={[40, 60]}
-                type="slider"
-                progressTrigger={{
-                  arrows: {
-                    element: <div className="arrows"></div>,
-                    loop: true,
-                  },
-                }}
-                direction="x"
-                onScrollValue={onScrollValuePotion}
-                render="virtual"
-              >
-                <ItemBox
-                  className="wh40 simpleItem"
-                  itemPic="img/evPopArts/potion_yellow.png"
-                  count="21.4K"
-                />
-                <ItemBox
-                  className="wh40 simpleItem"
-                  itemPic="img/evPopArts/potion_green.png"
-                  count="21.4K"
-                />
-                <ItemBox
-                  className="wh40 simpleItem"
-                  itemPic="img/evPopArts/potion_blue.png"
-                  count="21.4K"
-                />
-              </MorphScroll>
-            </div>
-
-            <MorphScroll
-              className="additional-scroll"
-              size={[264, 338]}
-              objectsSize="firstChild"
-              gap={12}
-              wrapperMargin={[0, 4]}
-              edgeGradient={{ color: "#584a49", size: 20 }}
-              progressTrigger={{
-                wheel: true,
-                progressElement: <ScrollThumb />,
-              }}
-              wrapperAlign="center"
-            >
-              {allHero}
-            </MorphScroll>
-
-            <div className="prog-bar-box">
-              <ProgressBar
-                className="progressBarOfSympathy framedText"
-                progressSize={[250, 10]}
-                currentProgress={currentPrgHero}
-                maxProgress={data_angels[girlIndex].scenes}
-                serifsPerProgress
-                itemsBoxFirst={scenesNodes}
-              />
-            </div>
+                    });
+                  }}
+                ></div>
+              </>
+            )}
           </div>
+
+          {data_angels[girlIndex].condition !== "closed" && (
+            <>
+              <div className="stars-info-box">
+                <div className="star-info">
+                  <div className="star-tit">Current Star</div>
+                  <div className="star-text-box">
+                    <div>Max Buff Level: 100</div>
+                    <div>Buff Bonus: x1</div>
+                  </div>
+                </div>
+                <div className="star-info next">
+                  <div className="star-tit">Next Star</div>
+                  <div className="star-text-box">
+                    <div>Max Buff Level: 250</div>
+                    <div>Buff Bonus: x2</div>
+                  </div>
+                </div>
+              </div>
+              <div className="additional-hero-box">
+                <div className="additional-hero-header">
+                  <Button
+                    className="btnGold add-btn"
+                    text="+"
+                    onClick={() => {
+                      nexusTrigger({
+                        type: "handlePopup",
+                        payload: {
+                          type: "open",
+                          data: {
+                            mpopClass:
+                              "m-popup contentOnly framedPop addGuardianHeroPop",
+                            popCont: "AddGuardianHero",
+                            props: {
+                              girlImg:
+                                "img/images/hero-all/tithero-636/icons/break-girl.png",
+                            },
+                          },
+                        },
+                      });
+                    }}
+                  />
+                  <Button
+                    className="green quant-btn"
+                    text="x1"
+                    onClick={() => {}}
+                  />
+
+                  <MorphScroll
+                    className="currency-scroll"
+                    size={[120, 60]}
+                    objectsSize={[40, 60]}
+                    type="slider"
+                    progressTrigger={{
+                      arrows: {
+                        element: <div className="arrows"></div>,
+                        loop: true,
+                      },
+                    }}
+                    direction="x"
+                    onScrollValue={onScrollValuePotion}
+                    render="virtual"
+                  >
+                    <ItemBox
+                      className="wh40 simpleItem"
+                      itemPic="img/evPopArts/potion_yellow.png"
+                      count="21.4K"
+                    />
+                    <ItemBox
+                      className="wh40 simpleItem"
+                      itemPic="img/evPopArts/potion_green.png"
+                      count="21.4K"
+                    />
+                    <ItemBox
+                      className="wh40 simpleItem"
+                      itemPic="img/evPopArts/potion_blue.png"
+                      count="21.4K"
+                    />
+                  </MorphScroll>
+                </div>
+
+                <MorphScroll
+                  className="additional-scroll"
+                  size={[264, 338]}
+                  objectsSize="firstChild"
+                  gap={12}
+                  wrapperMargin={[0, 4]}
+                  edgeGradient={{ color: "#584a49", size: 20 }}
+                  progressTrigger={{
+                    wheel: true,
+                    progressElement: <ScrollThumb />,
+                  }}
+                  wrapperAlign="center"
+                >
+                  {allHero}
+                </MorphScroll>
+
+                <div className="prog-bar-box">
+                  <ProgressBar
+                    className="progressBarOfSympathy framedText"
+                    progressSize={[250, 10]}
+                    currentProgress={currentPrgHero}
+                    maxProgress={data_angels[girlIndex].scenes}
+                    serifsPerProgress
+                    itemsBoxFirst={scenesNodes}
+                  />
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
