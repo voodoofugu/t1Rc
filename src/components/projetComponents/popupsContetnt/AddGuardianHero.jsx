@@ -96,6 +96,7 @@ export default function AddGuardianHero({ girlImg }) {
           gap={14}
           progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
           wrapperAlign="center"
+          elementsAlign="center"
           edgeGradient={true}
         >
           {allHero}

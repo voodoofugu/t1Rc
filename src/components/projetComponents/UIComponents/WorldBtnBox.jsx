@@ -9,7 +9,7 @@ const inlineStyles = {
   width: "140px",
 };
 
-export default function WorldBtnBox({ pageName }) {
+export default function WorldBtnBox({ pageName, onClick }) {
   const currentPath = window.location.hash.substring(3).split("/")[0];
   const [isDarkWorld, setIsDarkWorld] = useState(false);
   const btnClickHandler = () => {
@@ -28,10 +28,10 @@ export default function WorldBtnBox({ pageName }) {
       const updateUI = () => {
         main.classList.toggle("world1", !isDarkWorld);
         main.classList.toggle("world3", isDarkWorld);
-        reG.classList.toggle("resource-gold", !isDarkWorld);
-        reG.classList.toggle("resource-dark_gold", isDarkWorld);
-        reI.src = isDarkWorld ? "rc/v2-res-gold.png" : "img/v2-res-dark.png";
-        vvT.style.display = isDarkWorld ? "block" : "none";
+        // reG.classList.toggle("resource-gold", !isDarkWorld);
+        // reG.classList.toggle("resource-dark_gold", isDarkWorld);
+        // reI.src = isDarkWorld ? "rc/v2-res-gold.png" : "img/v2-res-dark.png";
+        // vvT.style.display = isDarkWorld ? "block" : "none";
       };
 
       const worldBtn = document.querySelector(".color-btn.green.world-btn");
@@ -52,7 +52,10 @@ export default function WorldBtnBox({ pageName }) {
 
   return (
     <div style={inlineStyles}>
-      <div className="color-btn green world-btn">
+      <div
+        className="color-btn green world-btn"
+        onClick={() => onClick(isDarkWorld)}
+      >
         <div className="color-btn-text">
           {isDarkWorld ? "To Light" : "To Dark"}
         </div>

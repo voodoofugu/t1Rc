@@ -9,6 +9,7 @@ import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import FraimedTitle from "../UIComponents/FraimedTitle";
+import WorldBtnBox from "../UIComponents/WorldBtnBox";
 
 import data_angels from "../../../scripts/FapTitansScripts/data_angels";
 
@@ -24,6 +25,7 @@ function GuardianWindow({ pageName, children }) {
   const [girlIndex, setGirlIndex] = useState(0);
   const [girlImgNum, setGirleImgNum] = useState(data_angels[girlIndex].level);
   const [potionImgNum, setPotionImgNum] = useState(1);
+  const [darkWorld, setDarkWorld] = useState(false);
 
   const guardianImgWidth = 554;
 
@@ -180,7 +182,7 @@ function GuardianWindow({ pageName, children }) {
         />
 
         <Button
-          className="guardian-chest"
+          className={`guardian-chest${darkWorld ? " lightBlue" : ""}`}
           text="Get pieces"
           img="img/darkworld-chest-agels.png"
           onClick={() => {}}
@@ -219,7 +221,7 @@ function GuardianWindow({ pageName, children }) {
           wrapperMargin={[0, 10]}
           progressReverse
           scrollBarOnHover
-          edgeGradient={{ color: "#968d87" }}
+          edgeGradient
           progressTrigger={{
             wheel: true,
             progressElement: <ScrollThumb />,
@@ -255,7 +257,7 @@ function GuardianWindow({ pageName, children }) {
               className="angelImgScroll"
               size={[guardianImgWidth, 500]}
               objectsSize="size"
-              edgeGradient={{ size: 20, color: "rgba(255,200,86,0.4)" }}
+              edgeGradient={{ size: 20 }}
               type="slider"
               progressTrigger={{
                 arrows: {
@@ -338,71 +340,82 @@ function GuardianWindow({ pageName, children }) {
                   </div>
                 </div>
               </div>
+
               <div className="additional-hero-box">
                 <div className="additional-hero-header">
-                  <Button
-                    className="btnGold add-btn"
-                    text="+"
-                    onClick={() => {
-                      nexusTrigger({
-                        type: "handlePopup",
-                        payload: {
-                          type: "open",
-                          data: {
-                            mpopClass:
-                              "m-popup contentOnly framedPop addGuardianHeroPop",
-                            popCont: "AddGuardianHero",
-                            props: {
-                              girlImg:
-                                "img/images/hero-all/tithero-636/icons/break-girl.png",
+                  {darkWorld && (
+                    <Button
+                      className="btnGold add-btn"
+                      text="+"
+                      onClick={() => {
+                        nexusTrigger({
+                          type: "handlePopup",
+                          payload: {
+                            type: "open",
+                            data: {
+                              mpopClass:
+                                "m-popup contentOnly framedPop addGuardianHeroPop",
+                              popCont: "AddGuardianHero",
+                              props: {
+                                girlImg:
+                                  "img/images/hero-all/tithero-636/icons/break-girl.png",
+                              },
                             },
                           },
-                        },
-                      });
-                    }}
-                  />
+                        });
+                      }}
+                    />
+                  )}
                   <Button
                     className="green quant-btn"
                     text="x1"
                     onClick={() => {}}
                   />
 
-                  <MorphScroll
-                    className="currency-scroll"
-                    size={[120, 60]}
-                    objectsSize={[40, 60]}
-                    type="slider"
-                    progressTrigger={{
-                      arrows: {
-                        element: <div className="arrows"></div>,
-                        loop: true,
-                      },
-                    }}
-                    direction="x"
-                    onScrollValue={onScrollValuePotion}
-                    render="virtual"
-                  >
+                  {darkWorld ? (
                     <ItemBox
                       className="wh40 simpleItem"
                       itemPic="img/evPopArts/potion_yellow.png"
                       count="21.4K"
                     />
-                    <ItemBox
-                      className="wh40 simpleItem"
-                      itemPic="img/evPopArts/potion_green.png"
-                      count="21.4K"
-                    />
-                    <ItemBox
-                      className="wh40 simpleItem"
-                      itemPic="img/evPopArts/potion_blue.png"
-                      count="21.4K"
-                    />
-                  </MorphScroll>
+                  ) : (
+                    <MorphScroll
+                      className="currency-scroll"
+                      size={[120, 60]}
+                      objectsSize={[40, 60]}
+                      type="slider"
+                      progressTrigger={{
+                        arrows: {
+                          element: <div className="arrows"></div>,
+                          loop: true,
+                        },
+                      }}
+                      direction="x"
+                      onScrollValue={onScrollValuePotion}
+                      render="virtual"
+                    >
+                      <ItemBox
+                        className="wh40 simpleItem"
+                        itemPic="img/evPopArts/potion_yellow.png"
+                        count="21.4K"
+                      />
+                      <ItemBox
+                        className="wh40 simpleItem"
+                        itemPic="img/evPopArts/potion_green.png"
+                        count="21.4K"
+                      />
+                      <ItemBox
+                        className="wh40 simpleItem"
+                        itemPic="img/evPopArts/potion_blue.png"
+                        count="21.4K"
+                      />
+                    </MorphScroll>
+                  )}
                 </div>
 
                 <MorphScroll
                   className="additional-scroll"
-                  size={[264, 338]}
+                  size={[264, darkWorld ? 434 : 338]}
                   objectsSize="firstChild"
                   gap={12}
                   wrapperMargin={[0, 4]}
@@ -416,22 +429,40 @@ function GuardianWindow({ pageName, children }) {
                   {allHero}
                 </MorphScroll>
 
-                <div className="prog-bar-box">
-                  <ProgressBar
-                    className="progressBarOfSympathy framedText"
-                    progressSize={[250, 10]}
-                    currentProgress={currentPrgHero}
-                    maxProgress={data_angels[girlIndex].scenes}
-                    serifsPerProgress
-                    itemsBoxFirst={scenesNodes}
-                  />
-                </div>
+                {!darkWorld && (
+                  <div className="prog-bar-box">
+                    <ProgressBar
+                      className="progressBarOfSympathy framedText"
+                      progressSize={[250, 10]}
+                      currentProgress={currentPrgHero}
+                      maxProgress={data_angels[girlIndex].scenes}
+                      serifsPerProgress
+                      itemsBoxFirst={scenesNodes}
+                    />
+                  </div>
+                )}
               </div>
+
+              {darkWorld && (
+                <div className="dps">
+                  <div className="value">
+                    <b>Total:</b>
+                    2.32B
+                  </div>
+                  <div className="dps-title">
+                    DPS
+                    <div className="icon-dps" />
+                  </div>
+                </div>
+              )}
             </>
           )}
         </div>
       </div>
-
+      <WorldBtnBox
+        pageName={pageName}
+        onClick={(isDark) => setDarkWorld(isDark)}
+      />
       {children}
     </div>
   );
