@@ -1,5 +1,7 @@
 import { nexusTrigger, useNexus } from "nexus-state";
 
+import Button from "../UIComponents/Button";
+
 export default function FullImgPop() {
   const popupState = useNexus("popupState");
 
@@ -20,8 +22,10 @@ export default function FullImgPop() {
         <div className="pic-wrap">
           <img className="pic" src={img} loading="lazy" />
         </div>
-        <div
-          className="btn-close-x"
+
+        <Button
+          className="exit"
+          text="✖"
           onClick={() =>
             nexusTrigger({
               type: "handlePopup",

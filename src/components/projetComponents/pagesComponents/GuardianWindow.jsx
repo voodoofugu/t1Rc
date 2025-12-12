@@ -84,7 +84,7 @@ function GuardianWindow({ pageName, children }) {
 
     return Array.from({ length: max }, (_, i) =>
       i + 1 <= max - count ? (
-        <div key={i} className="fallback"></div>
+        <div key={i} className="fallbackBg"></div>
       ) : (
         <ItemBox
           key={i}
