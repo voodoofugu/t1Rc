@@ -436,18 +436,16 @@ function GuardianWindow({ pageName, children }) {
                   </MorphScroll>
                 )}
 
-                {!darkWorld && (
-                  <div className="prog-bar-box">
-                    <ProgressBar
-                      className="progressBarOfSympathy framedText"
-                      progressSize={[250, 10]}
-                      currentProgress={currentPrgHero}
-                      maxProgress={data_angels[girlIndex].scenes}
-                      serifsPerProgress
-                      itemsBoxFirst={scenesNodes}
-                    />
-                  </div>
-                )}
+                <div className="prog-bar-box">
+                  <ProgressBar
+                    className="progressBarOfSympathy framedText"
+                    progressSize={[250, 10]}
+                    currentProgress={currentPrgHero}
+                    maxProgress={data_angels[girlIndex].scenes}
+                    serifsPerProgress
+                    itemsBoxFirst={scenesNodes}
+                  />
+                </div>
               </div>
 
               {darkWorld && (
