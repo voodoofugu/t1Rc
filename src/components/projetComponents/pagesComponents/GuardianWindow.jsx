@@ -152,7 +152,7 @@ function GuardianWindow({ pageName, children }) {
 
   return (
     <div className="main world1">
-      <div className="main-bg dating"></div>
+      <div className="main-bg"></div>
       <div className="guardian-window">
         <div className="guardian-window-bg"></div>
         <div className="guardian-tit-wrap"></div>
@@ -413,21 +413,28 @@ function GuardianWindow({ pageName, children }) {
                   )}
                 </div>
 
-                <MorphScroll
-                  className="additional-scroll"
-                  size={[264, darkWorld ? 434 : 338]}
-                  objectsSize="firstChild"
-                  gap={12}
-                  wrapperMargin={[0, 4]}
-                  edgeGradient={{ color: "#584a49", size: 20 }}
-                  progressTrigger={{
-                    wheel: true,
-                    progressElement: <ScrollThumb />,
-                  }}
-                  wrapperAlign="center"
-                >
-                  {allHero}
-                </MorphScroll>
+                {darkWorld ? (
+                  <FraimedTitle
+                    className="corners fallback"
+                    text="Add Heroes"
+                  />
+                ) : (
+                  <MorphScroll
+                    className="additional-scroll"
+                    size={[264, darkWorld ? 434 : 338]}
+                    objectsSize="firstChild"
+                    gap={12}
+                    wrapperMargin={[0, 4]}
+                    edgeGradient={{ color: "#584a49", size: 20 }}
+                    progressTrigger={{
+                      wheel: true,
+                      progressElement: <ScrollThumb />,
+                    }}
+                    wrapperAlign={["center", "start"]}
+                  >
+                    {allHero}
+                  </MorphScroll>
+                )}
 
                 {!darkWorld && (
                   <div className="prog-bar-box">
@@ -444,7 +451,7 @@ function GuardianWindow({ pageName, children }) {
               </div>
 
               {darkWorld && (
-                <div className="dps">
+                <div className="dps-counter">
                   <div className="value">
                     <b>Total:</b>
                     2.32B
