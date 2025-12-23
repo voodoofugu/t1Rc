@@ -12,7 +12,7 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 export default function BtlPass({ event }) {
   const girlImg =
     event === "xmas"
-      ? "images/hero-all/tithero-651/icons/break-girl4"
+      ? "images/hero-all/tithero-658/icons/break-girl"
       : event === "hw"
       ? "images/hero-all/tithero-616/icons/break-girl"
       : event === "bf"
@@ -27,6 +27,25 @@ export default function BtlPass({ event }) {
       ? "images/hero-all/tithero-639/icons/break-girl"
       : event === "sexpedition"
       ? "images/hero-all/tithero-423/icons/break-girl4"
+      : null;
+
+  const imgBg =
+    event === "xmas"
+      ? "img/bGs/winterBg.jpg"
+      : event === "hw"
+      ? "img/bGs/halloweenBg2.jpg"
+      : event === "bf"
+      ? "img/bGs/v2-bf-pop-bg.jpg"
+      : event === "vl"
+      ? "img/bGs/clubBg2.jpg"
+      : event === "spring"
+      ? "img/bGs/march-pop-bg.jpg"
+      : event === "summer"
+      ? "img/bGs/beachBg4.jpg"
+      : event === "autumn"
+      ? "img/bGs/cityBg.jpg"
+      : event === "sexpedition"
+      ? "img/bGs/sexpeditionBg.jpg"
       : null;
 
   const icon =
@@ -127,7 +146,7 @@ export default function BtlPass({ event }) {
 
   return (
     <>
-      <ImageBg className="bG framedBg" img />
+      <ImageBg className="bG framedBg" img={imgBg} />
 
       <Button
         className="info"
