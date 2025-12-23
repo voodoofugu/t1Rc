@@ -362,7 +362,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "ic-xmas",
                 "00:44:09",
                 {
-                  mpopClass: "m-popup events-btlpass-pop xmas contentOnly",
+                  mpopClass: "m-popup events-btlpass-pop contentOnly",
                   popCont: "BtlPass",
                   props: { event: "xmas" },
                 },
