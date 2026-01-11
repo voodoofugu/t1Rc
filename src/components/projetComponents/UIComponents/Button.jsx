@@ -23,6 +23,7 @@ const BtnWrap = ({
           {children}
         </a>
       ) : (
+        // вместо div тут должен быть button
         <div
           className={btnClass}
           onClick={onClick}
