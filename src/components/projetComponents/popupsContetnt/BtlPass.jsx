@@ -12,7 +12,7 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 export default function BtlPass({ event }) {
   const girlImg =
     event === "xmas"
-      ? "images/hero-all/tithero-658/icons/break-girl4"
+      ? "images/hero-all/tithero-675/icons/break-girl4"
       : event === "hw"
       ? "images/hero-all/tithero-616/icons/break-girl"
       : event === "bf"
@@ -31,7 +31,7 @@ export default function BtlPass({ event }) {
 
   const imgBg =
     event === "xmas"
-      ? "img/bGs/xmasBg4.jpg"
+      ? "img/bGs/roomBg1.jpg"
       : event === "hw"
       ? "img/bGs/halloweenBg2.jpg"
       : event === "bf"
@@ -50,7 +50,7 @@ export default function BtlPass({ event }) {
 
   const icon =
     event === "xmas"
-      ? "evPopArts/gift_1"
+      ? "evPopArts/heartEars_1"
       : event === "hw"
       ? "evPopArts/pumpkin1_icn"
       : event === "bf"
@@ -72,9 +72,9 @@ export default function BtlPass({ event }) {
       ? [
           "BuyShop",
           {
-            img1: "evPopArts/gift_1",
-            img2: "evPopArts/gift_2",
-            img3: "evPopArts/gift_3",
+            img1: "evPopArts/heartEars_1",
+            img2: "evPopArts/heartEars_2",
+            img3: "evPopArts/heartEars_3",
           },
         ]
       : event === "hw"
