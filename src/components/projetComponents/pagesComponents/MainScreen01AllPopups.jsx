@@ -1577,7 +1577,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           </a>
         </div>
       </div>
-      <div className="slider-layer" style={{ display: "block" }}>
+      {/* <div className="slider-layer" style={{ display: "block" }}>
         <div className="slider-popup open">
           <div className="title">Новое достижение: Opulence!</div>
           <div className="icon">
@@ -1594,7 +1594,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           </div>
           <div className="close-btn"></div>
         </div>
-      </div>
+      </div> */}
       <WorldBtnBox pageName={pageName} />
       {children}
     </div>
