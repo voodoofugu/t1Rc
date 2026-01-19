@@ -1,150 +1,170 @@
-// // @flow
+export interface Options {
+  resolution?: number;
+  baseUrl?: string;
+  spineAtlasFile?: string;
+  fileName?: string;
+  fileExt?: string;
+}
 
-// // import spineHash from "conf/spine";
-// // import { loadResource, Resources } from "utils/animation/loader";
-// PIXI = window.PIXI;
+type SpineResource = {
+  spineData: unknown;
+};
 
-// import App from "App";
-// import { cdnURL } from "utils/jsxHelpers";
-// // eslint-disable-next-line no-unused-vars
-// import spine from "vendor/pixi-spine-3.8";
+export default class SpineLibrary {
+  static libraries: Record<string, SpineLibrary> = {};
 
-// type Options = ?{
-//   resolution?: number,
-//   baseUrl?: string,
-//   spineAtlasFile?: string,
-//   fileName?: string,
-//   fileExt?: string,
-// };
+  data: SpineResource | null = null;
+  name: string;
+  options: Options;
+  loading: Promise<SpineLibrary> | null = null;
+  loaded = false;
+  retry = false;
+  loader: PIXI.loaders.Loader | null = null;
 
-// export default class SpineLibrary {
-//   static libraries: { [name: string]: SpineLibrary } = {};
-//   // data: ?{ spineData: Object } = null;
-//   // name: string;
-//   // options: Options;
-//   // loading: ?Promise<SpineLibrary> = null;
-//   // loaded = false;
-//   // retry = false;
+  constructor(name: string, options: Options) {
+    this.name = name;
+    this.options = options;
+    this.loader = new PIXI.loaders.Loader();
+  }
 
-//   constructor(name: string, options: Options) {
-//     this.name = name;
-//     this.options = options;
-//     this.loader = new PIXI.loaders.Loader();
-//   }
+  // ------------------------
+  // Public API
+  // ------------------------
 
-//   get = () => {
-//     if (this.loaded && this.data && this.data.spineData) {
-//       return new PIXI.spine.Spine(this.data.spineData);
-//     } else {
-//       if (!this.retry) {
-//         this.retry = true;
-//         this.load().then(() => {
-//           return this.get();
-//         });
-//       }
-//     }
-//     return null;
-//   };
+  get = (): PIXI.spine.Spine | null => {
+    if (this.loaded && this.data?.spineData) {
+      return new PIXI.spine.Spine(this.data.spineData as any);
+    }
 
-//   load(options: Options): Promise<SpineLibrary> {
-//     if (this.loading) return this.loading;
-//     if (this.loaded) return Promise.resolve(this);
+    if (!this.retry) {
+      this.retry = true;
+      this.load().finally(() => {
+        this.retry = false;
+      });
+    }
 
-//     options = options
-//       ? this.options
-//         ? Object.assign({}, this.options, options)
-//         : options
-//       : this.options || {};
+    return null;
+  };
 
-//     let resolution = options.resolution || App.getDevicePixelRatio();
-//     resolution = resolution > 1 ? 2 : 1;
-//     const resExt = resolution === 1 ? "@1x" : "@2x";
-//     let spineAtlasFile = options && options.spineAtlasFile;
+  load(options?: Options): Promise<SpineLibrary> {
+    if (this.loading) return this.loading;
+    if (this.loaded) return Promise.resolve(this);
+    if (!this.loader) return Promise.resolve(this);
 
-//     let name = this.name;
-//     let fileName = options.fileName || "spine";
-//     const fileExt = options.fileExt || "json";
-//     let path = `${name}/${fileName}.${fileExt}`;
+    const mergedOptions: Options = options
+      ? this.options
+        ? { ...this.options, ...options }
+        : options
+      : this.options || {};
 
-//     if (!spineAtlasFile) {
-//       spineAtlasFile = `${name}${resExt}.atlas`;
-//     } else {
-//       fileName = spineAtlasFile;
-//       path = `${name}.json`;
-//       spineAtlasFile = `${name}${resExt}.atlas`;
-//       name = `${name}:${fileName}:${resExt}`;
-//     }
+    // resolution изменён, App заменён на window
+    let resolution =
+      mergedOptions.resolution ??
+      Math.max(1, Math.floor(window.devicePixelRatio || 1));
 
-//     const hash = false;
-//     let baseUrl = cdnURL(`monsters-new/`);
-//     if (hash) {
-//       baseUrl = `static/${hash[`r${resolution}`]}/monsters-new/`;
-//     }
-//     const add = () => {
-//       if (!this.loader.resources[name]) {
-//         this.loader.add(name, baseUrl + path, {
-//           ...options,
-//           baseUrl,
-//           spineAtlasFile,
-//           name,
-//           path,
-//           metadata: {
-//             spineAtlasFile: baseUrl + spineAtlasFile,
-//           },
-//           url: baseUrl + path,
-//         });
-//       }
-//     };
-//     if (this.loader.loading) this.loader.onComplete.add(add);
-//     else add();
+    resolution = resolution > 1 ? 2 : 1;
+    const resExt = resolution === 1 ? "@1x" : "@2x";
 
-//     return new Promise(resolve => {
-//       this.loader.load((_loader, resources) => {
-//         resolve(resources);
-//       });
-//     }).then(resources => {
-//       this.data = resources[name];
-//       this.loading = null;
-//       this.loaded = true;
-//       return this;
-//     });
-//   }
+    let spineAtlasFile = mergedOptions.spineAtlasFile;
 
-//   static add(
-//     name: string,
-//     options?: ?Options = null,
-//     load: boolean = false
-//   ): SpineLibrary {
-//     const spineAtlasFile = options && options.spineAtlasFile;
-//     const localName = spineAtlasFile
-//       ? `${name}:${spineAtlasFile}`
-//       : name;
-//     let lib = this.libraries[localName];
-//     if (!lib) {
-//       lib = new SpineLibrary(name, options);
-//       this.libraries[localName] = lib;
-//       if (load) lib.load();
-//       return lib;
-//     } else {
-//       if (load && !lib.loaded && !lib.loading) {
-//         lib.load();
-//       }
-//     }
-//     return this.libraries[localName];
-//   }
+    let name = this.name;
+    let fileName = mergedOptions.fileName || "spine";
+    const fileExt = mergedOptions.fileExt || "json";
+    let path = `${name}/${fileName}.${fileExt}`;
 
-//   static get(
-//     name: string,
-//     options: ?Options = null,
-//     load: boolean = false
-//   ) {
-//     const spineAtlasFile = options && options.spineAtlasFile;
-//     const localName = spineAtlasFile
-//       ? `${name}:${spineAtlasFile}`
-//       : name;
-//     let lib = this.libraries[localName];
-//     if (lib) return lib;
+    if (!spineAtlasFile) {
+      spineAtlasFile = `${name}${resExt}.atlas`;
+    } else {
+      fileName = spineAtlasFile;
+      path = `${name}.json`;
+      spineAtlasFile = `${name}${resExt}.atlas`;
+      name = `${name}:${fileName}:${resExt}`;
+    }
 
-//     return SpineLibrary.add(name, options, load);
-//   }
-// }
+    const baseUrl = mergedOptions.baseUrl ?? "";
+
+    const add = () => {
+      if (!this.loader?.resources[name]) {
+        this.loader?.add(name, baseUrl + path, {
+          ...mergedOptions,
+          baseUrl,
+          spineAtlasFile,
+          name,
+          path,
+          metadata: {
+            spineAtlasFile: baseUrl + spineAtlasFile,
+          },
+          url: baseUrl + path,
+        });
+      }
+    };
+
+    if (this.loader.loading) {
+      this.loader.onComplete.add(add);
+    } else {
+      add();
+    }
+
+    this.loading = new Promise<PIXI.loaders.ResourceDictionary>((resolve) => {
+      this.loader!.load(
+        (
+          _loader: PIXI.loaders.Loader,
+          resources: PIXI.loaders.ResourceDictionary,
+        ) => {
+          resolve(resources);
+        },
+      );
+    }).then((resources) => {
+      this.data = resources[name] as SpineResource;
+      return this;
+    });
+
+    return this.loading;
+  }
+
+  // ------------------------
+  // Static API
+  // ------------------------
+
+  static add(
+    name: string,
+    options: Options | null = null,
+    load: boolean = false,
+  ): SpineLibrary {
+    const spineAtlasFile = options?.spineAtlasFile;
+    const localName = spineAtlasFile ? `${name}:${spineAtlasFile}` : name;
+
+    let lib = this.libraries[localName];
+
+    if (!lib) {
+      lib = new SpineLibrary(name, options || {});
+      this.libraries[localName] = lib;
+
+      if (load) {
+        lib.load();
+      }
+
+      return lib;
+    }
+
+    if (load && !lib.loaded && !lib.loading) {
+      lib.load();
+    }
+
+    return lib;
+  }
+
+  static get(
+    name: string,
+    options: Options | null = null,
+    load: boolean = false,
+  ) {
+    const spineAtlasFile = options?.spineAtlasFile;
+    const localName = spineAtlasFile ? `${name}:${spineAtlasFile}` : name;
+
+    const lib = this.libraries[localName];
+    if (lib) return lib;
+
+    return SpineLibrary.add(name, options, load);
+  }
+}

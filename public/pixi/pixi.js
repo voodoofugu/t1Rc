@@ -23288,11 +23288,12 @@ object-assign
           function checkMaxIfStatmentsInShader(maxIfs, gl) {
             var createTempContext = !gl;
 
-            if (maxIfs === 0) {
-              throw new Error(
-                "Invalid value of `0` passed to `checkMaxIfStatementsInShader`"
-              );
-            }
+            if (maxIfs < 1) maxIfs = 1; // защита от нуля
+            // if (maxIfs === 0) {
+            //   throw new Error(
+            //     "Invalid value of `0` passed to `checkMaxIfStatementsInShader`"
+            //   );
+            // }
 
             if (createTempContext) {
               var tinyCanvas = document.createElement("canvas");

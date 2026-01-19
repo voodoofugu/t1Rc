@@ -22,7 +22,7 @@ export function devServer(options: BuildOptions): DevServerConfiguration {
         publicPath: "/img/",
       },
       {
-        directory: path.join("src", "scripts/pixi-animate"),
+        directory: path.resolve(process.cwd(), "public/pixi"),
         publicPath: "/pixi/",
       },
     ],

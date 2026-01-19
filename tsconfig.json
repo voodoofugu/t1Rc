@@ -13,7 +13,8 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "eventemitter3": ["src/libs/eventemitter3.js"]
     }
   },
   "ts-node": {
@@ -24,9 +25,12 @@
   },
   "include": [
     "src/**/*",
+    "types/**/*.d.ts",
     "pathMap.ts",
     "eslint.config.mjs",
     "tailwind.config.ts",
-    "webpack.config.ts"
+    "webpack.config.ts",
+    "public/pixi/pixi.js",
+    "public/pixi/pixi-spine-3.8.js"
   ]
 }

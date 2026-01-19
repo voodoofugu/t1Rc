@@ -11,6 +11,19 @@ export function resolvers(options: BuildOptions): Configuration["resolve"] {
         options.paths.mainDir,
         "src/components/projetComponents"
       ),
+      eventemitter3: path.resolve(
+        options.paths.mainDir,
+        "src/libs/eventemitter3.js"
+      ),
+    },
+    // полифилы для pixi
+    fallback: {
+      path: require.resolve("path-browserify"),
+      fs: false,
+      os: false,
+      crypto: false,
+      stream: false,
+      util: require.resolve("util/"),
     },
   };
 }
