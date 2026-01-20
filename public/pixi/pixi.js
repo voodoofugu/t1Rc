@@ -47,7 +47,7 @@
           e,
           t,
           n,
-          r
+          r,
         );
       }
       return n[o].exports;
@@ -127,22 +127,22 @@
             return v >= 1000000000
               ? 9
               : v >= 100000000
-              ? 8
-              : v >= 10000000
-              ? 7
-              : v >= 1000000
-              ? 6
-              : v >= 100000
-              ? 5
-              : v >= 10000
-              ? 4
-              : v >= 1000
-              ? 3
-              : v >= 100
-              ? 2
-              : v >= 10
-              ? 1
-              : 0;
+                ? 8
+                : v >= 10000000
+                  ? 7
+                  : v >= 1000000
+                    ? 6
+                    : v >= 100000
+                      ? 5
+                      : v >= 10000
+                        ? 4
+                        : v >= 1000
+                          ? 3
+                          : v >= 100
+                            ? 2
+                            : v >= 10
+                              ? 1
+                              : 0;
           };
 
           //Counts number of bits
@@ -426,7 +426,7 @@
                     minX,
                     minY,
                     size,
-                    1
+                    1,
                   );
 
                   // if this didn't work, try curing all small self-intersections locally
@@ -669,7 +669,7 @@
                   hy < my ? qx : hx,
                   hy,
                   p.x,
-                  p.y
+                  p.y,
                 )
               ) {
                 tan = Math.abs(hy - p.y) / (hx - p.x); // tangential
@@ -982,7 +982,7 @@
               var c = triangles[i + 2] * dim;
               trianglesArea += Math.abs(
                 (data[a] - data[c]) * (data[b + 1] - data[a + 1]) -
-                  (data[a] - data[b]) * (data[c + 1] - data[a + 1])
+                  (data[a] - data[b]) * (data[c + 1] - data[a + 1]),
               );
             }
 
@@ -1147,7 +1147,7 @@
             a2,
             a3,
             a4,
-            a5
+            a5,
           ) {
             var evt = prefix ? prefix + event : event;
 
@@ -1164,16 +1164,20 @@
 
               switch (len) {
                 case 1:
-                  return listeners.fn.call(listeners.context), true;
+                  return (listeners.fn.call(listeners.context), true);
                 case 2:
-                  return listeners.fn.call(listeners.context, a1), true;
+                  return (listeners.fn.call(listeners.context, a1), true);
                 case 3:
-                  return listeners.fn.call(listeners.context, a1, a2), true;
+                  return (listeners.fn.call(listeners.context, a1, a2), true);
                 case 4:
-                  return listeners.fn.call(listeners.context, a1, a2, a3), true;
+                  return (
+                    listeners.fn.call(listeners.context, a1, a2, a3),
+                    true
+                  );
                 case 5:
                   return (
-                    listeners.fn.call(listeners.context, a1, a2, a3, a4), true
+                    listeners.fn.call(listeners.context, a1, a2, a3, a4),
+                    true
                   );
                 case 6:
                   return (
@@ -1236,7 +1240,7 @@
               evt = prefix ? prefix + event : event;
 
             if (!this._events[evt])
-              (this._events[evt] = listener), this._eventsCount++;
+              ((this._events[evt] = listener), this._eventsCount++);
             else if (!this._events[evt].fn) this._events[evt].push(listener);
             else this._events[evt] = [this._events[evt], listener];
 
@@ -1257,7 +1261,7 @@
               evt = prefix ? prefix + event : event;
 
             if (!this._events[evt])
-              (this._events[evt] = listener), this._eventsCount++;
+              ((this._events[evt] = listener), this._eventsCount++);
             else if (!this._events[evt].fn) this._events[evt].push(listener);
             else this._events[evt] = [this._events[evt], listener];
 
@@ -1278,7 +1282,7 @@
             event,
             fn,
             context,
-            once
+            once,
           ) {
             var evt = prefix ? prefix + event : event;
 
@@ -1426,7 +1430,7 @@
                   "GT-P1000" + // Galaxy Tab 7 inch
                   ")", // End non-capturing group
 
-                "i"
+                "i",
               ); // Case-insensitive matching
 
             var match = function (regex, userAgent) {
@@ -1563,7 +1567,7 @@ object-assign
           function toObject(val) {
             if (val === null || val === undefined) {
               throw new TypeError(
-                "Object.assign cannot be called with null or undefined"
+                "Object.assign cannot be called with null or undefined",
               );
             }
 
@@ -1834,7 +1838,7 @@ object-assign
               gl.COLOR_ATTACHMENT0,
               gl.TEXTURE_2D,
               this.texture.texture,
-              0
+              0,
             );
           };
 
@@ -1855,13 +1859,13 @@ object-assign
               gl.FRAMEBUFFER,
               gl.DEPTH_STENCIL_ATTACHMENT,
               gl.RENDERBUFFER,
-              this.stencil
+              this.stencil,
             );
             gl.renderbufferStorage(
               gl.RENDERBUFFER,
               gl.DEPTH_STENCIL,
               this.width,
-              this.height
+              this.height,
             );
           };
 
@@ -1918,7 +1922,7 @@ object-assign
                 gl.RENDERBUFFER,
                 gl.DEPTH_STENCIL,
                 width,
-                height
+                height,
               );
             }
           };
@@ -2154,7 +2158,7 @@ object-assign
 
             gl.pixelStorei(
               gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,
-              this.premultiplyAlpha
+              this.premultiplyAlpha,
             );
 
             var newWidth = source.videoWidth || source.width;
@@ -2167,7 +2171,7 @@ object-assign
                 this.format,
                 this.format,
                 this.type,
-                source
+                source,
               );
             } else {
               gl.texSubImage2D(
@@ -2177,7 +2181,7 @@ object-assign
                 0,
                 this.format,
                 this.type,
-                source
+                source,
               );
             }
 
@@ -2219,7 +2223,7 @@ object-assign
             // what type of data?
             gl.pixelStorei(
               gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL,
-              this.premultiplyAlpha
+              this.premultiplyAlpha,
             );
 
             if (width !== this.width || height !== this.height) {
@@ -2232,7 +2236,7 @@ object-assign
                 0,
                 this.format,
                 this.type,
-                data || null
+                data || null,
               );
             } else {
               gl.texSubImage2D(
@@ -2244,7 +2248,7 @@ object-assign
                 height,
                 this.format,
                 this.type,
-                data || null
+                data || null,
               );
             }
 
@@ -2288,13 +2292,13 @@ object-assign
               gl.texParameteri(
                 gl.TEXTURE_2D,
                 gl.TEXTURE_MIN_FILTER,
-                linear ? gl.LINEAR_MIPMAP_LINEAR : gl.NEAREST_MIPMAP_NEAREST
+                linear ? gl.LINEAR_MIPMAP_LINEAR : gl.NEAREST_MIPMAP_NEAREST,
               );
             } else {
               gl.texParameteri(
                 gl.TEXTURE_2D,
                 gl.TEXTURE_MIN_FILTER,
-                linear ? gl.LINEAR : gl.NEAREST
+                linear ? gl.LINEAR : gl.NEAREST,
               );
             }
           };
@@ -2310,7 +2314,7 @@ object-assign
             gl.texParameteri(
               gl.TEXTURE_2D,
               gl.TEXTURE_MAG_FILTER,
-              linear ? gl.LINEAR : gl.NEAREST
+              linear ? gl.LINEAR : gl.NEAREST,
             );
           };
 
@@ -2354,12 +2358,12 @@ object-assign
             gl.texParameteri(
               gl.TEXTURE_2D,
               gl.TEXTURE_WRAP_S,
-              gl.CLAMP_TO_EDGE
+              gl.CLAMP_TO_EDGE,
             );
             gl.texParameteri(
               gl.TEXTURE_2D,
               gl.TEXTURE_WRAP_T,
-              gl.CLAMP_TO_EDGE
+              gl.CLAMP_TO_EDGE,
             );
           };
 
@@ -2383,12 +2387,12 @@ object-assign
             gl.texParameteri(
               gl.TEXTURE_2D,
               gl.TEXTURE_WRAP_S,
-              gl.MIRRORED_REPEAT
+              gl.MIRRORED_REPEAT,
             );
             gl.texParameteri(
               gl.TEXTURE_2D,
               gl.TEXTURE_WRAP_T,
-              gl.MIRRORED_REPEAT
+              gl.MIRRORED_REPEAT,
             );
           };
 
@@ -2565,7 +2569,7 @@ object-assign
                 attrib.type || gl.FLOAT,
                 attrib.normalized || false,
                 attrib.stride || 0,
-                attrib.start || 0
+                attrib.start || 0,
               );
             }
 
@@ -2591,7 +2595,7 @@ object-assign
             type,
             normalized,
             stride,
-            start
+            start,
           ) {
             this.attributes.push({
               buffer: buffer,
@@ -2614,7 +2618,7 @@ object-assign
            * @param buffer   {PIXI.gl.GLBuffer}
            */
           VertexArrayObject.prototype.addIndex = function (
-            buffer /*, options*/
+            buffer /*, options*/,
           ) {
             this.indexBuffer = buffer;
 
@@ -2693,7 +2697,7 @@ object-assign
             if (!gl) {
               // fail, not able to get a context
               throw new Error(
-                "This browser does not support webGL. Try using the canvas renderer"
+                "This browser does not support webGL. Try using the canvas renderer",
               );
             }
 
@@ -2803,7 +2807,7 @@ object-assign
             var glFragShader = compileShader(
               gl,
               gl.FRAGMENT_SHADER,
-              fragmentSrc
+              fragmentSrc,
             );
 
             var program = gl.createProgram();
@@ -2817,7 +2821,7 @@ object-assign
               console.error("Pixi.js Error: Could not initialize shader.");
               console.error(
                 "gl.VALIDATE_STATUS",
-                gl.getProgramParameter(program, gl.VALIDATE_STATUS)
+                gl.getProgramParameter(program, gl.VALIDATE_STATUS),
               );
               console.error("gl.getError()", gl.getError());
 
@@ -2825,7 +2829,7 @@ object-assign
               if (gl.getProgramInfoLog(program) !== "") {
                 console.warn(
                   "Pixi.js Warning: gl.getProgramInfoLog()",
-                  gl.getProgramInfoLog(program)
+                  gl.getProgramInfoLog(program),
                 );
               }
 
@@ -2957,7 +2961,7 @@ object-assign
 
             var totalAttributes = gl.getProgramParameter(
               program,
-              gl.ACTIVE_ATTRIBUTES
+              gl.ACTIVE_ATTRIBUTES,
             );
 
             for (var i = 0; i < totalAttributes; i++) {
@@ -2984,7 +2988,7 @@ object-assign
               type || gl.FLOAT,
               normalized || false,
               stride || 0,
-              start || 0
+              start || 0,
             );
           };
 
@@ -3010,7 +3014,7 @@ object-assign
 
             var totalUniforms = gl.getProgramParameter(
               program,
-              gl.ACTIVE_UNIFORMS
+              gl.ACTIVE_UNIFORMS,
             );
 
             for (var i = 0; i < totalUniforms; i++) {
@@ -3350,7 +3354,7 @@ object-assign
                 // Skip empty and invalid entries
                 if (typeof path !== "string") {
                   throw new TypeError(
-                    "Arguments to path.resolve must be strings"
+                    "Arguments to path.resolve must be strings",
                   );
                 } else if (!path) {
                   continue;
@@ -3368,7 +3372,7 @@ object-assign
                 filter(resolvedPath.split("/"), function (p) {
                   return !!p;
                 }),
-                !resolvedAbsolute
+                !resolvedAbsolute,
               ).join("/");
 
               return (resolvedAbsolute ? "/" : "") + resolvedPath || ".";
@@ -3385,7 +3389,7 @@ object-assign
                 filter(path.split("/"), function (p) {
                   return !!p;
                 }),
-                !isAbsolute
+                !isAbsolute,
               ).join("/");
 
               if (!path && !isAbsolute) {
@@ -3410,11 +3414,11 @@ object-assign
                 filter(paths, function (p, index) {
                   if (typeof p !== "string") {
                     throw new TypeError(
-                      "Arguments to path.join must be strings"
+                      "Arguments to path.join must be strings",
                     );
                   }
                   return p;
-                }).join("/")
+                }).join("/"),
               );
             };
 
@@ -3850,7 +3854,7 @@ object-assign
                     if ((extra & 0xfc00) == 0xdc00) {
                       // low surrogate
                       output.push(
-                        ((value & 0x3ff) << 10) + (extra & 0x3ff) + 0x10000
+                        ((value & 0x3ff) << 10) + (extra & 0x3ff) + 0x10000,
                       );
                     } else {
                       // unmatched surrogate; only append this code unit, in case the next
@@ -3879,7 +3883,7 @@ object-assign
                   if (value > 0xffff) {
                     value -= 0x10000;
                     output += stringFromCharCode(
-                      ((value >>> 10) & 0x3ff) | 0xd800
+                      ((value >>> 10) & 0x3ff) | 0xd800,
                     );
                     value = 0xdc00 | (value & 0x3ff);
                   }
@@ -3944,7 +3948,7 @@ object-assign
                   delta = floor(delta / baseMinusTMin);
                 }
                 return floor(
-                  k + ((baseMinusTMin + 1) * delta) / (delta + skew)
+                  k + ((baseMinusTMin + 1) * delta) / (delta + skew),
                 );
               }
 
@@ -3997,7 +4001,6 @@ object-assign
                 for (
                   index = basic > 0 ? basic + 1 : 0;
                   index < inputLength /* no final expression */;
-
                 ) {
                   // `index` is the index of the next character to be consumed.
                   // Decode a generalized variable-length integer into `delta`,
@@ -4153,8 +4156,8 @@ object-assign
                         baseMinusT = base - t;
                         output.push(
                           stringFromCharCode(
-                            digitToBasic(t + (qMinusT % baseMinusT), 0)
-                          )
+                            digitToBasic(t + (qMinusT % baseMinusT), 0),
+                          ),
                         );
                         q = floor(qMinusT / baseMinusT);
                       }
@@ -4163,7 +4166,7 @@ object-assign
                       bias = adapt(
                         delta,
                         handledCPCountPlusOne,
-                        handledCPCount == basicLength
+                        handledCPCount == basicLength,
                       );
                       delta = 0;
                       ++handledCPCount;
@@ -4273,10 +4276,10 @@ object-assign
             typeof global !== "undefined"
               ? global
               : typeof self !== "undefined"
-              ? self
-              : typeof window !== "undefined"
-              ? window
-              : {}
+                ? self
+                : typeof window !== "undefined"
+                  ? window
+                  : {},
           );
         },
         {},
@@ -4591,11 +4594,11 @@ object-assign
           Url.prototype.parse = function (
             url,
             parseQueryString,
-            slashesDenoteHost
+            slashesDenoteHost,
           ) {
             if (!util.isString(url)) {
               throw new TypeError(
-                "Parameter 'url' must be a string, not " + typeof url
+                "Parameter 'url' must be a string, not " + typeof url,
               );
             }
 
@@ -4797,7 +4800,7 @@ object-assign
               if (ipv6Hostname) {
                 this.hostname = this.hostname.substr(
                   1,
-                  this.hostname.length - 2
+                  this.hostname.length - 2,
                 );
                 if (rest[0] !== "/") {
                   rest = "/" + rest;
@@ -5204,8 +5207,8 @@ object-assign
               result.hostname = result.host = isAbsolute
                 ? ""
                 : srcPath.length
-                ? srcPath.shift()
-                : "";
+                  ? srcPath.shift()
+                  : "";
               //occationaly the auth can get stuck only in host
               //this especially happens in cases like
               //url.resolveObject('mailto:local1@domain1', 'local2@domain2')
@@ -5659,14 +5662,14 @@ object-assign
               // if loading already you can only add resources that have a parent.
               if (this.loading && (!options || !options.parentResource)) {
                 throw new Error(
-                  "Cannot add resources while the loader is running."
+                  "Cannot add resources while the loader is running.",
                 );
               }
 
               // check if resource already exists.
               if (this.resources[name]) {
                 throw new Error(
-                  'Resource named "' + name + '" already exists.'
+                  'Resource named "' + name + '" already exists.',
                 );
               }
 
@@ -5871,7 +5874,7 @@ object-assign
 
             Loader.prototype._loadResource = function _loadResource(
               resource,
-              dequeue
+              dequeue,
             ) {
               var _this2 = this;
 
@@ -5893,11 +5896,11 @@ object-assign
                   } else {
                     resource._onLoadBinding = resource.onComplete.once(
                       _this2._onLoad,
-                      _this2
+                      _this2,
                     );
                     resource.load();
                   }
-                }
+                },
               );
             };
 
@@ -5945,7 +5948,7 @@ object-assign
                     _this3.onError.nexusTrigger(
                       resource.error,
                       _this3,
-                      resource
+                      resource,
                     );
                   } else {
                     _this3.onLoad.nexusTrigger(_this3, resource);
@@ -5953,7 +5956,7 @@ object-assign
 
                   _this3._resourcesParsing.splice(
                     _this3._resourcesParsing.indexOf(resource),
-                    1
+                    1,
                   );
 
                   // do completion check
@@ -5964,7 +5967,7 @@ object-assign
                     _this3.progress = MAX_PROGRESS;
                     _this3._onComplete();
                   }
-                }
+                },
               );
             };
 
@@ -6053,7 +6056,7 @@ object-assign
              */
             Resource.setExtensionLoadType = function setExtensionLoadType(
               extname,
-              loadType
+              loadType,
             ) {
               setExtMap(Resource._loadTypeMap, extname, loadType);
             };
@@ -6068,7 +6071,7 @@ object-assign
 
             Resource.setExtensionXhrType = function setExtensionXhrType(
               extname,
-              xhrType
+              xhrType,
             ) {
               setExtMap(Resource._xhrTypeMap, extname, xhrType);
             };
@@ -6096,7 +6099,7 @@ object-assign
 
               if (typeof name !== "string" || typeof url !== "string") {
                 throw new Error(
-                  "Both name and url are required for constructing a resource."
+                  "Both name and url are required for constructing a resource.",
                 );
               }
 
@@ -6112,7 +6115,7 @@ object-assign
               // set data url flag, needs to be set early for some _determineX checks to work.
               this._setFlag(
                 Resource.STATUS_FLAGS.DATA_URL,
-                url.indexOf("data:") === 0
+                url.indexOf("data:") === 0,
               );
 
               /**
@@ -6357,22 +6360,22 @@ object-assign
                 this.data.removeEventListener(
                   "error",
                   this._boundOnError,
-                  false
+                  false,
                 );
                 this.data.removeEventListener(
                   "load",
                   this._boundComplete,
-                  false
+                  false,
                 );
                 this.data.removeEventListener(
                   "progress",
                   this._boundOnProgress,
-                  false
+                  false,
                 );
                 this.data.removeEventListener(
                   "canplaythrough",
                   this._boundComplete,
-                  false
+                  false,
                 );
               }
 
@@ -6381,22 +6384,22 @@ object-assign
                   this.xhr.removeEventListener(
                     "error",
                     this._boundXhrOnError,
-                    false
+                    false,
                   );
                   this.xhr.removeEventListener(
                     "abort",
                     this._boundXhrOnAbort,
-                    false
+                    false,
                   );
                   this.xhr.removeEventListener(
                     "progress",
                     this._boundOnProgress,
-                    false
+                    false,
                   );
                   this.xhr.removeEventListener(
                     "load",
                     this._boundXhrOnLoad,
-                    false
+                    false,
                   );
                 } else {
                   this.xhr.onerror = null;
@@ -6408,7 +6411,7 @@ object-assign
 
               if (this.isComplete) {
                 throw new Error(
-                  "Complete called again for an already completed resource."
+                  "Complete called again for an already completed resource.",
                 );
               }
 
@@ -6577,7 +6580,7 @@ object-assign
               this.data.addEventListener(
                 "progress",
                 this._boundOnProgress,
-                false
+                false,
               );
             };
 
@@ -6590,7 +6593,7 @@ object-assign
              */
 
             Resource.prototype._loadSourceElement = function _loadSourceElement(
-              type
+              type,
             ) {
               if (this.metadata.loadElement) {
                 this.data = this.metadata.loadElement;
@@ -6618,7 +6621,7 @@ object-assign
                 } else if (Array.isArray(this.url)) {
                   for (var i = 0; i < this.url.length; ++i) {
                     this.data.appendChild(
-                      this._createSource(type, this.url[i])
+                      this._createSource(type, this.url[i]),
                     );
                   }
                 } else {
@@ -6631,12 +6634,12 @@ object-assign
               this.data.addEventListener(
                 "progress",
                 this._boundOnProgress,
-                false
+                false,
               );
               this.data.addEventListener(
                 "canplaythrough",
                 this._boundComplete,
-                false
+                false,
               );
 
               this.data.load();
@@ -6726,7 +6729,7 @@ object-assign
             Resource.prototype._createSource = function _createSource(
               type,
               url,
-              mime
+              mime,
             ) {
               if (!mime) {
                 mime = type + "/" + url.substr(url.lastIndexOf(".") + 1);
@@ -6749,7 +6752,7 @@ object-assign
 
             Resource.prototype._onError = function _onError(event) {
               this.abort(
-                "Failed to load element using: " + event.target.nodeName
+                "Failed to load element using: " + event.target.nodeName,
               );
             };
 
@@ -6782,7 +6785,7 @@ object-assign
                   xhr.status +
                   ', text: "' +
                   xhr.statusText +
-                  '"'
+                  '"',
               );
             };
 
@@ -6795,7 +6798,7 @@ object-assign
 
             Resource.prototype._xhrOnAbort = function _xhrOnAbort() {
               this.abort(
-                reqType(this.xhr) + " Request was aborted by the user."
+                reqType(this.xhr) + " Request was aborted by the user.",
               );
             };
 
@@ -6852,7 +6855,7 @@ object-assign
 
                       this.data = domparser.parseFromString(
                         xhr.responseText,
-                        "text/xml"
+                        "text/xml",
                       );
                     } else {
                       var div = document.createElement("div");
@@ -6880,7 +6883,7 @@ object-assign
                     "] " +
                     xhr.statusText +
                     ": " +
-                    xhr.responseURL
+                    xhr.responseURL,
                 );
 
                 return;
@@ -6986,7 +6989,7 @@ object-assign
 
                 ext = url.substring(
                   slashIndex + 1,
-                  url.indexOf(";", slashIndex)
+                  url.indexOf(";", slashIndex),
                 );
               } else {
                 var queryStart = url.indexOf("?");
@@ -7801,7 +7804,7 @@ object-assign
                 value: function has(node) {
                   if (!(node instanceof MiniSignalBinding)) {
                     throw new Error(
-                      "MiniSignal#has(): First arg must be a MiniSignalBinding object."
+                      "MiniSignal#has(): First arg must be a MiniSignalBinding object.",
                     );
                   }
 
@@ -7834,12 +7837,12 @@ object-assign
 
                   if (typeof fn !== "function") {
                     throw new Error(
-                      "MiniSignal#add(): First arg must be a Function."
+                      "MiniSignal#add(): First arg must be a Function.",
                     );
                   }
                   return _addMiniSignalBinding(
                     this,
-                    new MiniSignalBinding(fn, false, thisArg)
+                    new MiniSignalBinding(fn, false, thisArg),
                   );
                 },
               },
@@ -7853,12 +7856,12 @@ object-assign
 
                   if (typeof fn !== "function") {
                     throw new Error(
-                      "MiniSignal#once(): First arg must be a Function."
+                      "MiniSignal#once(): First arg must be a Function.",
                     );
                   }
                   return _addMiniSignalBinding(
                     this,
-                    new MiniSignalBinding(fn, true, thisArg)
+                    new MiniSignalBinding(fn, true, thisArg),
                   );
                 },
               },
@@ -7867,7 +7870,7 @@ object-assign
                 value: function detach(node) {
                   if (!(node instanceof MiniSignalBinding)) {
                     throw new Error(
-                      "MiniSignal#detach(): First arg must be a MiniSignalBinding object."
+                      "MiniSignal#detach(): First arg must be a MiniSignalBinding object.",
                     );
                   }
                   if (node._owner !== this) return this;
@@ -8015,7 +8018,7 @@ object-assign
           // add some extra variables to the container..
           core.utils.mixins.delayMixin(
             core.DisplayObject.prototype,
-            _accessibleTarget2.default
+            _accessibleTarget2.default,
           );
 
           var KEY_CODE_TAB = 9;
@@ -8181,7 +8184,7 @@ object-assign
               window.document.addEventListener(
                 "mousemove",
                 this._onMouseMove,
-                true
+                true,
               );
               window.removeEventListener("keydown", this._onKeyDown, false);
 
@@ -8208,7 +8211,7 @@ object-assign
 
               window.document.removeEventListener(
                 "mousemove",
-                this._onMouseMove
+                this._onMouseMove,
               );
               window.addEventListener("keydown", this._onKeyDown, false);
 
@@ -8325,7 +8328,7 @@ object-assign
              */
 
             AccessibilityManager.prototype.capHitArea = function capHitArea(
-              hitArea
+              hitArea,
             ) {
               if (hitArea.x < 0) {
                 hitArea.width += hitArea.x;
@@ -8354,7 +8357,7 @@ object-assign
              */
 
             AccessibilityManager.prototype.addChild = function addChild(
-              displayObject
+              displayObject,
             ) {
               //    this.activate();
 
@@ -8414,7 +8417,7 @@ object-assign
               interactionManager.dispatchEvent(
                 e.target.displayObject,
                 "click",
-                interactionManager.eventData
+                interactionManager.eventData,
               );
             };
 
@@ -8431,7 +8434,7 @@ object-assign
               interactionManager.dispatchEvent(
                 e.target.displayObject,
                 "mouseover",
-                interactionManager.eventData
+                interactionManager.eventData,
               );
             };
 
@@ -8443,14 +8446,14 @@ object-assign
              */
 
             AccessibilityManager.prototype._onFocusOut = function _onFocusOut(
-              e
+              e,
             ) {
               var interactionManager = this.renderer.plugins.interaction;
 
               interactionManager.dispatchEvent(
                 e.target.displayObject,
                 "mouseout",
-                interactionManager.eventData
+                interactionManager.eventData,
               );
             };
 
@@ -8494,7 +8497,7 @@ object-assign
 
               window.document.removeEventListener(
                 "mousemove",
-                this._onMouseMove
+                this._onMouseMove,
               );
               window.removeEventListener("keydown", this._onKeyDown);
 
@@ -8510,11 +8513,11 @@ object-assign
 
           core.WebGLRenderer.registerPlugin(
             "accessibility",
-            AccessibilityManager
+            AccessibilityManager,
           );
           core.CanvasRenderer.registerPlugin(
             "accessibility",
-            AccessibilityManager
+            AccessibilityManager,
           );
         },
         { "../core": 63, "./accessibleTarget": 39, ismobilejs: 4 },
@@ -8706,7 +8709,7 @@ object-assign
                     forceCanvas: !!arg4,
                     sharedTicker: !!arg5,
                   },
-                  arg3
+                  arg3,
                 );
               }
 
@@ -8721,7 +8724,7 @@ object-assign
                   forceCanvas: false,
                   sharedLoader: false,
                 },
-                options
+                options,
               );
 
               /**
@@ -8729,7 +8732,7 @@ object-assign
                * @member {PIXI.WebGLRenderer|PIXI.CanvasRenderer}
                */
               this.renderer = (0, _autoDetectRenderer.autoDetectRenderer)(
-                options
+                options,
               );
 
               /**
@@ -8811,7 +8814,7 @@ object-assign
               {
                 key: "ticker",
                 set: function set(
-                  ticker // eslint-disable-line require-jsdoc
+                  ticker, // eslint-disable-line require-jsdoc
                 ) {
                   if (this._ticker) {
                     this._ticker.remove(this.render, this);
@@ -8884,7 +8887,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -8897,7 +8900,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -8909,7 +8912,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -8961,13 +8964,13 @@ object-assign
                   gl,
                   checkPrecision(
                     vertexSrc,
-                    _settings2.default.PRECISION_VERTEX
+                    _settings2.default.PRECISION_VERTEX,
                   ),
                   checkPrecision(
                     fragmentSrc,
-                    _settings2.default.PRECISION_FRAGMENT
-                  )
-                )
+                    _settings2.default.PRECISION_FRAGMENT,
+                  ),
+                ),
               );
             }
 
@@ -9582,7 +9585,7 @@ object-assign
               x0,
               y0,
               x1,
-              y1
+              y1,
             ) {
               var matrix = transform.worldTransform;
               var a = matrix.a;
@@ -9645,7 +9648,7 @@ object-assign
               transform,
               vertices,
               beginOffset,
-              endOffset
+              endOffset,
             ) {
               var matrix = transform.worldTransform;
               var a = matrix.a;
@@ -9705,7 +9708,7 @@ object-assign
 
             Bounds.prototype.addBoundsMask = function addBoundsMask(
               bounds,
-              mask
+              mask,
             ) {
               var _minX = bounds.minX > mask.minX ? bounds.minX : mask.minX;
               var _minY = bounds.minY > mask.minY ? bounds.minY : mask.minY;
@@ -9734,7 +9737,7 @@ object-assign
 
             Bounds.prototype.addBoundsArea = function addBoundsArea(
               bounds,
-              area
+              area,
             ) {
               var _minX = bounds.minX > area.x ? bounds.minX : area.x;
               var _minY = bounds.minY > area.y ? bounds.minY : area.y;
@@ -9810,7 +9813,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -9823,7 +9826,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -9835,7 +9838,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -9873,7 +9876,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _DisplayObject.call(this)
+                _DisplayObject.call(this),
               );
 
               _this.children = [];
@@ -9947,7 +9950,7 @@ object-assign
                     "addChildAt: The index " +
                     index +
                     " supplied is out of bounds " +
-                    this.children.length
+                    this.children.length,
                 );
               }
 
@@ -9980,7 +9983,7 @@ object-assign
 
             Container.prototype.swapChildren = function swapChildren(
               child,
-              child2
+              child2,
             ) {
               if (child === child2) {
                 return;
@@ -10006,7 +10009,7 @@ object-assign
 
               if (index === -1) {
                 throw new Error(
-                  "The supplied DisplayObject must be a child of the caller"
+                  "The supplied DisplayObject must be a child of the caller",
                 );
               }
 
@@ -10022,7 +10025,7 @@ object-assign
 
             Container.prototype.setChildIndex = function setChildIndex(
               child,
-              index
+              index,
             ) {
               if (index < 0 || index >= this.children.length) {
                 throw new Error("The supplied index is out of bounds");
@@ -10046,7 +10049,7 @@ object-assign
             Container.prototype.getChildAt = function getChildAt(index) {
               if (index < 0 || index >= this.children.length) {
                 throw new Error(
-                  "getChildAt: Index (" + index + ") does not exist."
+                  "getChildAt: Index (" + index + ") does not exist.",
                 );
               }
 
@@ -10161,7 +10164,7 @@ object-assign
               }
 
               throw new RangeError(
-                "removeChildren: numeric values are outside the acceptable range."
+                "removeChildren: numeric values are outside the acceptable range.",
               );
             };
 
@@ -10210,7 +10213,7 @@ object-assign
                   child._mask.calculateBounds();
                   this._bounds.addBoundsMask(
                     child._bounds,
-                    child._mask._bounds
+                    child._mask._bounds,
                   );
                 } else if (child.filterArea) {
                   this._bounds.addBoundsArea(child._bounds, child.filterArea);
@@ -10288,7 +10291,7 @@ object-assign
                   if (this._enabledFilters.length) {
                     renderer.filterManager.pushFilter(
                       this,
-                      this._enabledFilters
+                      this._enabledFilters,
                     );
                   }
                 }
@@ -10328,7 +10331,7 @@ object-assign
              */
 
             Container.prototype._renderWebGL = function _renderWebGL(
-              renderer
+              renderer,
             ) {};
             // this is where content itself gets rendered...
 
@@ -10340,7 +10343,7 @@ object-assign
              */
 
             Container.prototype._renderCanvas = function _renderCanvas(
-              renderer
+              renderer,
             ) {};
             // this is where content itself gets rendered...
 
@@ -10414,7 +10417,7 @@ object-assign
                   return this.scale.x * this.getLocalBounds().width;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   var width = this.getLocalBounds().width;
 
@@ -10439,7 +10442,7 @@ object-assign
                   return this.scale.y * this.getLocalBounds().height;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   var height = this.getLocalBounds().height;
 
@@ -10526,7 +10529,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -10539,7 +10542,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -10551,7 +10554,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -10580,7 +10583,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _EventEmitter.call(this)
+                _EventEmitter.call(this),
               );
 
               var TransformClass =
@@ -10732,7 +10735,7 @@ object-assign
                   this.transform.updateTransform(this.parent.transform);
                 } else {
                   this.transform.updateTransform(
-                    this._tempDisplayObjectParent.transform
+                    this._tempDisplayObjectParent.transform,
                   );
                 }
               };
@@ -10749,7 +10752,7 @@ object-assign
 
             DisplayObject.prototype.getBounds = function getBounds(
               skipUpdate,
-              rect
+              rect,
             ) {
               if (!skipUpdate) {
                 if (!this.parent) {
@@ -10785,7 +10788,7 @@ object-assign
              */
 
             DisplayObject.prototype.getLocalBounds = function getLocalBounds(
-              rect
+              rect,
             ) {
               var transformRef = this.transform;
               var parentRef = this.parent;
@@ -10821,7 +10824,7 @@ object-assign
 
             DisplayObject.prototype.toGlobal = function toGlobal(
               position,
-              point
+              point,
             ) {
               var skipUpdate =
                 arguments.length > 2 && arguments[2] !== undefined
@@ -10862,7 +10865,7 @@ object-assign
               position,
               from,
               point,
-              skipUpdate
+              skipUpdate,
             ) {
               if (from) {
                 position = from.toGlobal(position, point, skipUpdate);
@@ -10894,7 +10897,7 @@ object-assign
              */
 
             DisplayObject.prototype.renderWebGL = function renderWebGL(
-              renderer
+              renderer,
             ) {};
             // OVERWRITE;
 
@@ -10905,7 +10908,7 @@ object-assign
              */
 
             DisplayObject.prototype.renderCanvas = function renderCanvas(
-              renderer
+              renderer,
             ) {};
             // OVERWRITE;
 
@@ -11045,7 +11048,7 @@ object-assign
                   return this.position.x;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.transform.position.x = value;
                 },
@@ -11063,7 +11066,7 @@ object-assign
                   return this.position.y;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.transform.position.y = value;
                 },
@@ -11107,7 +11110,7 @@ object-assign
                   return this.transform.position;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.transform.position.copy(value);
                 },
@@ -11125,7 +11128,7 @@ object-assign
                   return this.transform.scale;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.transform.scale.copy(value);
                 },
@@ -11143,7 +11146,7 @@ object-assign
                   return this.transform.pivot;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.transform.pivot.copy(value);
                 },
@@ -11161,7 +11164,7 @@ object-assign
                   return this.transform.skew;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.transform.skew.copy(value);
                 },
@@ -11178,7 +11181,7 @@ object-assign
                   return this.transform.rotation;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.transform.rotation = value;
                 },
@@ -11223,7 +11226,7 @@ object-assign
                   return this._mask;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (this._mask) {
                     this._mask.renderable = true;
@@ -11250,7 +11253,7 @@ object-assign
                   return this._filters && this._filters.slice();
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._filters = value && value.slice();
                 },
@@ -11319,7 +11322,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -11332,7 +11335,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -11344,7 +11347,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -11376,7 +11379,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _TransformBase.call(this)
+                _TransformBase.call(this),
               );
 
               _this.position = new _math.Point(0, 0);
@@ -11397,7 +11400,7 @@ object-assign
                 _this.updateSkew,
                 _this,
                 0,
-                0
+                0,
               );
 
               /**
@@ -11461,7 +11464,7 @@ object-assign
              */
 
             Transform.prototype.updateTransform = function updateTransform(
-              parentTransform
+              parentTransform,
             ) {
               var lt = this.localTransform;
 
@@ -11512,7 +11515,7 @@ object-assign
                   return this._rotation;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._rotation = value;
                   this.updateSkew();
@@ -11587,7 +11590,7 @@ object-assign
              */
 
             TransformBase.prototype.updateTransform = function updateTransform(
-              parentTransform
+              parentTransform,
             ) {
               var pt = parentTransform.worldTransform;
               var wt = this.worldTransform;
@@ -11664,7 +11667,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -11677,7 +11680,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -11689,7 +11692,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -11720,14 +11723,14 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _TransformBase.call(this)
+                _TransformBase.call(this),
               );
 
               _this.position = new _math.ObservablePoint(
                 _this.onChange,
                 _this,
                 0,
-                0
+                0,
               );
 
               /**
@@ -11739,7 +11742,7 @@ object-assign
                 _this.onChange,
                 _this,
                 1,
-                1
+                1,
               );
 
               /**
@@ -11751,7 +11754,7 @@ object-assign
                 _this.onChange,
                 _this,
                 0,
-                0
+                0,
               );
 
               /**
@@ -11763,7 +11766,7 @@ object-assign
                 _this.updateSkew,
                 _this,
                 0,
-                0
+                0,
               );
 
               _this._rotation = 0;
@@ -11886,7 +11889,7 @@ object-assign
              */
 
             TransformStatic.prototype.setFromMatrix = function setFromMatrix(
-              matrix
+              matrix,
             ) {
               matrix.decompose(this);
               this._localID++;
@@ -11905,7 +11908,7 @@ object-assign
                   return this._rotation;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._rotation = value;
                   this.updateSkew();
@@ -11977,7 +11980,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -11990,7 +11993,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -12002,7 +12005,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -12048,7 +12051,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _Container.call(this)
+                _Container.call(this),
               );
 
               _this.fillAlpha = 1;
@@ -12271,7 +12274,7 @@ object-assign
                 if (this.currentPath.shape.points.length) {
                   // halfway through a line? start a new one!
                   var shape = new _math.Polygon(
-                    this.currentPath.shape.points.slice(-2)
+                    this.currentPath.shape.points.slice(-2),
                   );
 
                   shape.closed = false;
@@ -12336,7 +12339,7 @@ object-assign
               cpX,
               cpY,
               toX,
-              toY
+              toY,
             ) {
               if (this.currentPath) {
                 if (this.currentPath.shape.points.length === 0) {
@@ -12366,7 +12369,7 @@ object-assign
 
                 points.push(
                   xa + (cpX + (toX - cpX) * j - xa) * j,
-                  ya + (cpY + (toY - cpY) * j - ya) * j
+                  ya + (cpY + (toY - cpY) * j - ya) * j,
                 );
               }
 
@@ -12393,7 +12396,7 @@ object-assign
               cpX2,
               cpY2,
               toX,
-              toY
+              toY,
             ) {
               if (this.currentPath) {
                 if (this.currentPath.shape.points.length === 0) {
@@ -12419,7 +12422,7 @@ object-assign
                 cpY2,
                 toX,
                 toY,
-                points
+                points,
               );
 
               this.dirty++;
@@ -12488,7 +12491,7 @@ object-assign
                   radius,
                   startAngle,
                   endAngle,
-                  b1 * a2 > b2 * a1
+                  b1 * a2 > b2 * a1,
                 );
               }
 
@@ -12517,7 +12520,7 @@ object-assign
               cy,
               radius,
               startAngle,
-              endAngle
+              endAngle,
             ) {
               var anticlockwise =
                 arguments.length > 5 && arguments[5] !== undefined
@@ -12581,7 +12584,7 @@ object-assign
 
                 points.push(
                   (cTheta * c + sTheta * s) * radius + cx,
-                  (cTheta * -s + sTheta * c) * radius + cy
+                  (cTheta * -s + sTheta * c) * radius + cy,
                 );
               }
 
@@ -12651,7 +12654,7 @@ object-assign
               x,
               y,
               width,
-              height
+              height,
             ) {
               this.drawShape(new _math.Rectangle(x, y, width, height));
 
@@ -12673,10 +12676,10 @@ object-assign
               y,
               width,
               height,
-              radius
+              radius,
             ) {
               this.drawShape(
-                new _math.RoundedRectangle(x, y, width, height, radius)
+                new _math.RoundedRectangle(x, y, width, height, radius),
               );
 
               return this;
@@ -12711,7 +12714,7 @@ object-assign
               x,
               y,
               width,
-              height
+              height,
             ) {
               this.drawShape(new _math.Ellipse(x, y, width, height));
 
@@ -12829,13 +12832,13 @@ object-assign
              */
 
             Graphics.prototype._renderSpriteRect = function _renderSpriteRect(
-              renderer
+              renderer,
             ) {
               var rect = this.graphicsData[0].shape;
 
               if (!this._spriteRect) {
                 this._spriteRect = new _Sprite2.default(
-                  new _Texture2.default(_Texture2.default.WHITE)
+                  new _Texture2.default(_Texture2.default.WHITE),
                 );
               }
 
@@ -12879,7 +12882,7 @@ object-assign
              */
 
             Graphics.prototype._renderCanvas = function _renderCanvas(
-              renderer
+              renderer,
             ) {
               if (this.isMask === true) {
                 return;
@@ -12909,7 +12912,7 @@ object-assign
                 lb.minX,
                 lb.minY,
                 lb.maxX,
-                lb.maxY
+                lb.maxY,
               );
             };
 
@@ -13086,7 +13089,7 @@ object-assign
                 this.fillAlpha,
                 this.filling,
                 this.nativeLines,
-                shape
+                shape,
               );
 
               this.graphicsData.push(data);
@@ -13122,7 +13125,7 @@ object-assign
                   bounds.width,
                   bounds.height,
                   scaleMode,
-                  resolution
+                  resolution,
                 );
 
                 if (!canvasRenderer) {
@@ -13142,7 +13145,7 @@ object-assign
                 var texture = _Texture2.default.fromCanvas(
                   canvasBuffer.baseTexture._canvasRenderTarget.canvas,
                   scaleMode,
-                  "graphics"
+                  "graphics",
                 );
 
                 texture.baseTexture.resolution = resolution;
@@ -13285,7 +13288,7 @@ object-assign
               fillAlpha,
               fill,
               nativeLines,
-              shape
+              shape,
             ) {
               _classCallCheck(this, GraphicsData);
 
@@ -13361,7 +13364,7 @@ object-assign
                 this.fillAlpha,
                 this.fill,
                 this.nativeLines,
-                this.shape
+                this.shape,
               );
             };
 
@@ -13449,7 +13452,7 @@ object-assign
              */
 
             CanvasGraphicsRenderer.prototype.render = function render(
-              graphics
+              graphics,
             ) {
               var renderer = this.renderer;
               var context = renderer.context;
@@ -13468,7 +13471,7 @@ object-assign
                 transform.c * resolution,
                 transform.d * resolution,
                 transform.tx * resolution,
-                transform.ty * resolution
+                transform.ty * resolution,
               );
 
               if (graphics.dirty) {
@@ -13517,7 +13520,7 @@ object-assign
                       shape.x,
                       shape.y,
                       shape.width,
-                      shape.height
+                      shape.height,
                     );
                   }
                   if (data.lineWidth) {
@@ -13528,7 +13531,7 @@ object-assign
                       shape.x,
                       shape.y,
                       shape.width,
-                      shape.height
+                      shape.height,
                     );
                   }
                 } else if (data.type === _const.SHAPES.CIRC) {
@@ -13606,21 +13609,21 @@ object-assign
                     rx,
                     ry + height,
                     rx + radius,
-                    ry + height
+                    ry + height,
                   );
                   context.lineTo(rx + width - radius, ry + height);
                   context.quadraticCurveTo(
                     rx + width,
                     ry + height,
                     rx + width,
-                    ry + height - radius
+                    ry + height - radius,
                   );
                   context.lineTo(rx + width, ry + radius);
                   context.quadraticCurveTo(
                     rx + width,
                     ry,
                     rx + width - radius,
-                    ry
+                    ry,
                   );
                   context.lineTo(rx + radius, ry);
                   context.quadraticCurveTo(rx, ry, rx, ry + radius);
@@ -13714,7 +13717,7 @@ object-assign
 
           _CanvasRenderer2.default.registerPlugin(
             "graphics",
-            CanvasGraphicsRenderer
+            CanvasGraphicsRenderer,
           );
         },
         { "../../const": 44, "../../renderers/canvas/CanvasRenderer": 75 },
@@ -13769,7 +13772,7 @@ object-assign
 
               path.push(
                 dt3 * fromX + 3 * dt2 * j * cpX + 3 * dt * t2 * cpX2 + t3 * toX,
-                dt3 * fromY + 3 * dt2 * j * cpY + 3 * dt * t2 * cpY2 + t3 * toY
+                dt3 * fromY + 3 * dt2 * j * cpY + 3 * dt * t2 * cpY2 + t3 * toY,
               );
             }
 
@@ -13815,7 +13818,7 @@ object-assign
           var _buildRoundedRectangle = require("./utils/buildRoundedRectangle");
 
           var _buildRoundedRectangle2 = _interopRequireDefault(
-            _buildRoundedRectangle
+            _buildRoundedRectangle,
           );
 
           var _buildCircle = require("./utils/buildCircle");
@@ -13835,7 +13838,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -13848,7 +13851,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -13860,7 +13863,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -13886,7 +13889,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _ObjectRenderer.call(this, renderer)
+                _ObjectRenderer.call(this, renderer),
               );
 
               _this.graphicsDataPool = [];
@@ -13971,7 +13974,7 @@ object-assign
                 } else {
                   webGLData.vao.draw(
                     gl.TRIANGLE_STRIP,
-                    webGLData.indices.length
+                    webGLData.indices.length,
                   );
                 }
               }
@@ -13985,7 +13988,7 @@ object-assign
              */
 
             GraphicsRenderer.prototype.updateGraphics = function updateGraphics(
-              graphics
+              graphics,
             ) {
               var gl = this.renderer.gl;
 
@@ -14045,14 +14048,14 @@ object-assign
                   (0, _buildPoly2.default)(
                     data,
                     webGLData,
-                    webGLDataNativeLines
+                    webGLDataNativeLines,
                   );
                 }
                 if (data.type === _const.SHAPES.RECT) {
                   (0, _buildRectangle2.default)(
                     data,
                     webGLData,
-                    webGLDataNativeLines
+                    webGLDataNativeLines,
                   );
                 } else if (
                   data.type === _const.SHAPES.CIRC ||
@@ -14061,13 +14064,13 @@ object-assign
                   (0, _buildCircle2.default)(
                     data,
                     webGLData,
-                    webGLDataNativeLines
+                    webGLDataNativeLines,
                   );
                 } else if (data.type === _const.SHAPES.RREC) {
                   (0, _buildRoundedRectangle2.default)(
                     data,
                     webGLData,
-                    webGLDataNativeLines
+                    webGLDataNativeLines,
                   );
                 }
 
@@ -14098,7 +14101,7 @@ object-assign
             GraphicsRenderer.prototype.getWebGLData = function getWebGLData(
               gl,
               type,
-              nativeLines
+              nativeLines,
             ) {
               var webGLData = gl.data[gl.data.length - 1];
 
@@ -14112,7 +14115,7 @@ object-assign
                   new _WebGLGraphicsData2.default(
                     this.renderer.gl,
                     this.primitiveShader,
-                    this.renderer.state.attribsState
+                    this.renderer.state.attribsState,
                   );
                 webGLData.nativeLines = nativeLines;
                 webGLData.reset(type);
@@ -14242,7 +14245,7 @@ object-assign
 
               this.vao = new _pixiGlCore2.default.VertexArrayObject(
                 gl,
-                attribsState
+                attribsState,
               )
                 .addIndex(this.indexBuffer)
                 .addAttribute(
@@ -14251,7 +14254,7 @@ object-assign
                   gl.FLOAT,
                   false,
                   4 * 6,
-                  0
+                  0,
                 )
                 .addAttribute(
                   this.buffer,
@@ -14259,7 +14262,7 @@ object-assign
                   gl.FLOAT,
                   false,
                   4 * 6,
-                  2 * 4
+                  2 * 4,
                 );
             }
 
@@ -14338,7 +14341,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -14351,7 +14354,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -14363,7 +14366,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -14412,8 +14415,8 @@ object-assign
                     "void main(void){",
                     "   gl_FragColor = vColor;",
                     "}",
-                  ].join("\n")
-                )
+                  ].join("\n"),
+                ),
               );
             }
 
@@ -14505,7 +14508,7 @@ object-assign
                   r,
                   g,
                   b,
-                  alpha
+                  alpha,
                 );
 
                 indices.push(vecPos++, vecPos++);
@@ -14522,14 +14525,14 @@ object-assign
               for (var _i = 0; _i < totalSegs + 1; _i++) {
                 graphicsData.points.push(
                   x + Math.sin(seg * _i) * width,
-                  y + Math.cos(seg * _i) * height
+                  y + Math.cos(seg * _i) * height,
                 );
               }
 
               (0, _buildLine2.default)(
                 graphicsData,
                 webGLData,
-                webGLDataNativeLines
+                webGLDataNativeLines,
               );
 
               graphicsData.points = tempPoints;
@@ -14547,7 +14550,7 @@ object-assign
           exports.default = function (
             graphicsData,
             webGLData,
-            webGLDataNativeLines
+            webGLDataNativeLines,
           ) {
             if (graphicsData.nativeLines) {
               buildNativeLine(graphicsData, webGLDataNativeLines);
@@ -14591,7 +14594,7 @@ object-assign
             var firstPoint = new _math.Point(points[0], points[1]);
             var lastPoint = new _math.Point(
               points[points.length - 2],
-              points[points.length - 1]
+              points[points.length - 1],
             );
 
             // if the first point is the last point - gonna have issues :)
@@ -14604,7 +14607,7 @@ object-assign
 
               lastPoint = new _math.Point(
                 points[points.length - 2],
-                points[points.length - 1]
+                points[points.length - 1],
               );
 
               var midPointX = lastPoint.x + (firstPoint.x - lastPoint.x) * 0.5;
@@ -14910,7 +14913,7 @@ object-assign
                   r,
                   g,
                   b,
-                  alpha
+                  alpha,
                 );
               }
             }
@@ -14919,7 +14922,7 @@ object-assign
               (0, _buildLine2.default)(
                 graphicsData,
                 webGLData,
-                webGLDataNativeLines
+                webGLDataNativeLines,
               );
             }
           }
@@ -14957,7 +14960,7 @@ object-assign
           function buildRectangle(
             graphicsData,
             webGLData,
-            webGLDataNativeLines
+            webGLDataNativeLines,
           ) {
             // --- //
             // need to convert points to a nice regular data
@@ -15001,7 +15004,7 @@ object-assign
                 vertPos + 1,
                 vertPos + 2,
                 vertPos + 3,
-                vertPos + 3
+                vertPos + 3,
               );
             }
 
@@ -15024,7 +15027,7 @@ object-assign
               (0, _buildLine2.default)(
                 graphicsData,
                 webGLData,
-                webGLDataNativeLines
+                webGLDataNativeLines,
               );
 
               graphicsData.points = tempPoints;
@@ -15068,7 +15071,7 @@ object-assign
           function buildRoundedRectangle(
             graphicsData,
             webGLData,
-            webGLDataNativeLines
+            webGLDataNativeLines,
           ) {
             var rrectData = graphicsData.shape;
             var x = rrectData.x;
@@ -15088,7 +15091,7 @@ object-assign
               y + height,
               x + radius,
               y + height,
-              recPoints
+              recPoints,
             );
             quadraticBezierCurve(
               x + width - radius,
@@ -15097,7 +15100,7 @@ object-assign
               y + height,
               x + width,
               y + height - radius,
-              recPoints
+              recPoints,
             );
             quadraticBezierCurve(
               x + width,
@@ -15106,7 +15109,7 @@ object-assign
               y,
               x + width - radius,
               y,
-              recPoints
+              recPoints,
             );
             quadraticBezierCurve(
               x + radius,
@@ -15115,7 +15118,7 @@ object-assign
               y,
               x,
               y + radius + 0.0000000001,
-              recPoints
+              recPoints,
             );
 
             // this tiny number deals with the issue that occurs when points overlap and earcut fails to triangulate the item.
@@ -15157,7 +15160,7 @@ object-assign
               (0, _buildLine2.default)(
                 graphicsData,
                 webGLData,
-                webGLDataNativeLines
+                webGLDataNativeLines,
               );
 
               graphicsData.points = tempPoints;
@@ -15904,7 +15907,7 @@ object-assign
              */
             matrixAppendRotationInv: function matrixAppendRotationInv(
               matrix,
-              rotation
+              rotation,
             ) {
               var tx =
                 arguments.length > 2 && arguments[2] !== undefined
@@ -16295,7 +16298,7 @@ object-assign
               scaleY,
               rotation,
               skewX,
-              skewY
+              skewY,
             ) {
               var sr = Math.sin(rotation);
               var cr = Math.cos(rotation);
@@ -16619,7 +16622,7 @@ object-assign
                   return this._x;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (this._x !== value) {
                     this._x = value;
@@ -16639,7 +16642,7 @@ object-assign
                   return this._y;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (this._y !== value) {
                     this._y = value;
@@ -16982,7 +16985,7 @@ object-assign
                 this.x - this.radius,
                 this.y - this.radius,
                 this.radius * 2,
-                this.radius * 2
+                this.radius * 2,
               );
             };
 
@@ -17127,7 +17130,7 @@ object-assign
                 this.x - this.width,
                 this.y - this.height,
                 this.width,
-                this.height
+                this.height,
               );
             };
 
@@ -17505,12 +17508,12 @@ object-assign
               var x1 = Math.min(this.x, rectangle.x);
               var x2 = Math.max(
                 this.x + this.width,
-                rectangle.x + rectangle.width
+                rectangle.x + rectangle.width,
               );
               var y1 = Math.min(this.y, rectangle.y);
               var y2 = Math.max(
                 this.y + this.height,
-                rectangle.y + rectangle.height
+                rectangle.y + rectangle.height,
               );
 
               this.x = x1;
@@ -17579,7 +17582,7 @@ object-assign
                     return new Rectangle(0, 0, 0, 0);
                   },
                 },
-              ]
+              ],
             );
 
             return Rectangle;
@@ -17695,7 +17698,7 @@ object-assign
                 this.y,
                 this.width,
                 this.height,
-                this.radius
+                this.radius,
               );
             };
 
@@ -17812,7 +17815,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -17825,7 +17828,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -17837,7 +17840,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -17884,7 +17887,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _EventEmitter.call(this)
+                _EventEmitter.call(this),
               );
 
               (0, _utils.sayHello)(system);
@@ -17896,7 +17899,7 @@ object-assign
                     width: options,
                     height: arg2 || _settings2.default.RENDER_OPTIONS.height,
                   },
-                  arg3
+                  arg3,
                 );
               }
 
@@ -17904,7 +17907,7 @@ object-assign
               options = Object.assign(
                 {},
                 _settings2.default.RENDER_OPTIONS,
-                options
+                options,
               );
 
               /**
@@ -17935,7 +17938,7 @@ object-assign
                 0,
                 0,
                 options.width,
-                options.height
+                options.height,
               );
 
               /**
@@ -18065,7 +18068,7 @@ object-assign
              */
             SystemRenderer.prototype.resize = function resize(
               screenWidth,
-              screenHeight
+              screenHeight,
             ) {
               this.screen.width = screenWidth;
               this.screen.height = screenHeight;
@@ -18092,7 +18095,7 @@ object-assign
             SystemRenderer.prototype.generateTexture = function generateTexture(
               displayObject,
               scaleMode,
-              resolution
+              resolution,
             ) {
               var bounds = displayObject.getLocalBounds();
 
@@ -18100,7 +18103,7 @@ object-assign
                 bounds.width | 0,
                 bounds.height | 0,
                 scaleMode,
-                resolution
+                resolution,
               );
 
               tempMatrix.tx = -bounds.x;
@@ -18111,7 +18114,7 @@ object-assign
                 renderTexture,
                 false,
                 tempMatrix,
-                true
+                true,
               );
 
               return renderTexture;
@@ -18191,7 +18194,7 @@ object-assign
                   return this._backgroundColor;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._backgroundColor = value;
                   this._backgroundColorString = (0, _utils.hex2string)(value);
@@ -18237,7 +18240,7 @@ object-assign
           var _mapCanvasBlendModesToPixi = require("./utils/mapCanvasBlendModesToPixi");
 
           var _mapCanvasBlendModesToPixi2 = _interopRequireDefault(
-            _mapCanvasBlendModesToPixi
+            _mapCanvasBlendModesToPixi,
           );
 
           var _utils = require("../../utils");
@@ -18261,7 +18264,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -18274,7 +18277,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -18286,7 +18289,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -18329,7 +18332,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _SystemRenderer.call(this, "Canvas", options, arg2, arg3)
+                _SystemRenderer.call(this, "Canvas", options, arg2, arg3),
               );
 
               _this.type = _const.RENDERER_TYPE.CANVAS;
@@ -18416,7 +18419,7 @@ object-assign
               renderTexture,
               clear,
               transform,
-              skipUpdateTransform
+              skipUpdateTransform,
             ) {
               if (!this.view) {
                 return;
@@ -18437,7 +18440,7 @@ object-assign
                     new _CanvasRenderTarget2.default(
                       renderTexture.width,
                       renderTexture.height,
-                      renderTexture.resolution
+                      renderTexture.resolution,
                     );
                   renderTexture.source =
                     renderTexture._canvasRenderTarget.canvas;
@@ -18539,7 +18542,7 @@ object-assign
              */
 
             CanvasRenderer.prototype.setBlendMode = function setBlendMode(
-              blendMode
+              blendMode,
             ) {
               if (this._activeBlendMode === blendMode) {
                 return;
@@ -18583,12 +18586,12 @@ object-assign
 
             CanvasRenderer.prototype.resize = function resize(
               screenWidth,
-              screenHeight
+              screenHeight,
             ) {
               _SystemRenderer.prototype.resize.call(
                 this,
                 screenWidth,
-                screenHeight
+                screenHeight,
               );
 
               // reset the scale mode.. oddly this seems to be reset when the canvas is resized.
@@ -18687,7 +18690,7 @@ object-assign
                 transform.c * resolution,
                 transform.d * resolution,
                 transform.tx * resolution,
-                transform.ty * resolution
+                transform.ty * resolution,
               );
 
               // TODO suport sprite alpha masks??
@@ -18784,21 +18787,21 @@ object-assign
                       rx,
                       ry + height,
                       rx + radius,
-                      ry + height
+                      ry + height,
                     );
                     context.lineTo(rx + width - radius, ry + height);
                     context.quadraticCurveTo(
                       rx + width,
                       ry + height,
                       rx + width,
-                      ry + height - radius
+                      ry + height - radius,
                     );
                     context.lineTo(rx + width, ry + radius);
                     context.quadraticCurveTo(
                       rx + width,
                       ry,
                       rx + width - radius,
-                      ry
+                      ry,
                     );
                     context.lineTo(rx + radius, ry);
                     context.quadraticCurveTo(rx, ry, rx, ry + radius);
@@ -18917,7 +18920,7 @@ object-assign
                 0,
                 0,
                 this.canvas.width,
-                this.canvas.height
+                this.canvas.height,
               );
             };
 
@@ -18930,7 +18933,7 @@ object-assign
 
             CanvasRenderTarget.prototype.resize = function resize(
               width,
-              height
+              height,
             ) {
               this.canvas.width = width * this.resolution;
               this.canvas.height = height * this.resolution;
@@ -18959,7 +18962,7 @@ object-assign
                   return this.canvas.width;
                 },
                 set: function set(
-                  val // eslint-disable-line require-jsdoc
+                  val, // eslint-disable-line require-jsdoc
                 ) {
                   this.canvas.width = val;
                 },
@@ -18976,7 +18979,7 @@ object-assign
                   return this.canvas.height;
                 },
                 set: function set(
-                  val // eslint-disable-line require-jsdoc
+                  val, // eslint-disable-line require-jsdoc
                 ) {
                   this.canvas.height = val;
                 },
@@ -19066,7 +19069,7 @@ object-assign
           var _canUseNewCanvasBlendModes = require("./canUseNewCanvasBlendModes");
 
           var _canUseNewCanvasBlendModes2 = _interopRequireDefault(
-            _canUseNewCanvasBlendModes
+            _canUseNewCanvasBlendModes,
           );
 
           function _interopRequireDefault(obj) {
@@ -19242,7 +19245,7 @@ object-assign
              */
 
             TextureGarbageCollector.prototype.unload = function unload(
-              displayObject
+              displayObject,
             ) {
               var tm = this.renderer.textureManager;
 
@@ -19354,7 +19357,7 @@ object-assign
 
             TextureManager.prototype.updateTexture = function updateTexture(
               texture,
-              location
+              location,
             ) {
               // assume it good!
               // texture = texture.baseTexture || texture;
@@ -19398,7 +19401,7 @@ object-assign
                     texture.width,
                     texture.height,
                     texture.scaleMode,
-                    texture.resolution
+                    texture.resolution,
                   );
 
                   renderTarget.resize(texture.width, texture.height);
@@ -19411,7 +19414,7 @@ object-assign
                     null,
                     null,
                     null,
-                    null
+                    null,
                   );
                   glTexture.bind(location);
                   glTexture.premultiplyAlpha = true;
@@ -19451,7 +19454,7 @@ object-assign
               else if (isRenderTexture) {
                 texture._glRenderTargets[this.renderer.CONTEXT_UID].resize(
                   texture.width,
-                  texture.height
+                  texture.height,
                 );
               } else {
                 glTexture.upload(texture.source);
@@ -19469,7 +19472,7 @@ object-assign
 
             TextureManager.prototype.destroyTexture = function destroyTexture(
               texture,
-              skipRemove
+              skipRemove,
             ) {
               texture = texture.baseTexture || texture;
 
@@ -19582,7 +19585,7 @@ object-assign
           var _TextureGarbageCollector = require("./TextureGarbageCollector");
 
           var _TextureGarbageCollector2 = _interopRequireDefault(
-            _TextureGarbageCollector
+            _TextureGarbageCollector,
           );
 
           var _WebGLState = require("./WebGLState");
@@ -19592,7 +19595,7 @@ object-assign
           var _mapWebGLDrawModesToPixi = require("./utils/mapWebGLDrawModesToPixi");
 
           var _mapWebGLDrawModesToPixi2 = _interopRequireDefault(
-            _mapWebGLDrawModesToPixi
+            _mapWebGLDrawModesToPixi,
           );
 
           var _validateContext = require("./utils/validateContext");
@@ -19620,7 +19623,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -19633,7 +19636,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -19645,7 +19648,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -19699,7 +19702,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _SystemRenderer.call(this, "WebGL", options, arg2, arg3)
+                _SystemRenderer.call(this, "WebGL", options, arg2, arg3),
               );
 
               _this.legacy = _this.options.legacy;
@@ -19723,12 +19726,12 @@ object-assign
               _this.view.addEventListener(
                 "webglcontextlost",
                 _this.handleContextLost,
-                false
+                false,
               );
               _this.view.addEventListener(
                 "webglcontextrestored",
                 _this.handleContextRestored,
-                false
+                false,
               );
 
               /**
@@ -19793,7 +19796,7 @@ object-assign
                 _this.options.context ||
                 _pixiGlCore2.default.createContext(
                   _this.view,
-                  _this._contextOptions
+                  _this._contextOptions,
                 );
 
               _this.CONTEXT_UID = CONTEXT_UID++;
@@ -19839,7 +19842,7 @@ object-assign
               _this.filterManager = new _FilterManager2.default(_this);
               // map some webGL blend and drawmodes..
               _this.drawModes = (0, _mapWebGLDrawModesToPixi2.default)(
-                _this.gl
+                _this.gl,
               );
 
               _this._nextTextureLocation = 0;
@@ -19898,7 +19901,7 @@ object-assign
                 this.height,
                 null,
                 this.resolution,
-                true
+                true,
               );
               this.rootRenderTarget.clearColor = this._backgroundColorRgba;
 
@@ -19909,7 +19912,7 @@ object-assign
                 gl,
                 null,
                 1,
-                1
+                1,
               );
 
               var tempObj = { _glTextures: {} };
@@ -19947,7 +19950,7 @@ object-assign
               renderTexture,
               clear,
               transform,
-              skipUpdateTransform
+              skipUpdateTransform,
             ) {
               // can be handy to know!
               this.renderingToScreen = !renderTexture;
@@ -20031,14 +20034,14 @@ object-assign
 
             WebGLRenderer.prototype.resize = function resize(
               screenWidth,
-              screenHeight
+              screenHeight,
             ) {
               //  if(width * this.resolution === this.width && height * this.resolution === this.height)return;
 
               _SystemRenderer3.default.prototype.resize.call(
                 this,
                 screenWidth,
-                screenHeight
+                screenHeight,
               );
 
               this.rootRenderTarget.resize(screenWidth, screenHeight);
@@ -20060,7 +20063,7 @@ object-assign
              */
 
             WebGLRenderer.prototype.setBlendMode = function setBlendMode(
-              blendMode
+              blendMode,
             ) {
               this.state.setBlendMode(blendMode);
             };
@@ -20082,7 +20085,7 @@ object-assign
              */
 
             WebGLRenderer.prototype.setTransform = function setTransform(
-              matrix
+              matrix,
             ) {
               this._activeRenderTarget.transform = matrix;
             };
@@ -20161,7 +20164,7 @@ object-assign
                   }
 
                   this.stencilManager.setMaskStack(
-                    renderTarget.stencilMaskStack
+                    renderTarget.stencilMaskStack,
                   );
                 }
 
@@ -20178,7 +20181,7 @@ object-assign
 
             WebGLRenderer.prototype.bindShader = function bindShader(
               shader,
-              autoProject
+              autoProject,
             ) {
               // TODO cache
               if (this._activeShader !== shader) {
@@ -20213,7 +20216,7 @@ object-assign
             WebGLRenderer.prototype.bindTexture = function bindTexture(
               texture,
               location,
-              forceLocation
+              forceLocation,
             ) {
               texture = texture || this.emptyTextures[location];
               texture = texture.baseTexture || texture;
@@ -20261,7 +20264,7 @@ object-assign
              */
 
             WebGLRenderer.prototype.unbindTexture = function unbindTexture(
-              texture
+              texture,
             ) {
               var gl = this.gl;
 
@@ -20274,7 +20277,7 @@ object-assign
                   gl.activeTexture(gl.TEXTURE0 + i);
                   gl.bindTexture(
                     gl.TEXTURE_2D,
-                    this.emptyTextures[i]._glTextures[this.CONTEXT_UID].texture
+                    this.emptyTextures[i]._glTextures[this.CONTEXT_UID].texture,
                   );
                 }
               }
@@ -20291,7 +20294,7 @@ object-assign
             WebGLRenderer.prototype.createVao = function createVao() {
               return new _pixiGlCore2.default.VertexArrayObject(
                 this.gl,
-                this.state.attribState
+                this.state.attribState,
               );
             };
 
@@ -20376,11 +20379,11 @@ object-assign
               // remove listeners
               this.view.removeEventListener(
                 "webglcontextlost",
-                this.handleContextLost
+                this.handleContextLost,
               );
               this.view.removeEventListener(
                 "webglcontextrestored",
-                this.handleContextRestored
+                this.handleContextRestored,
               );
 
               this.textureManager.destroy();
@@ -20469,7 +20472,7 @@ object-assign
           var _mapWebGLBlendModesToPixi = require("./utils/mapWebGLBlendModesToPixi");
 
           var _mapWebGLBlendModesToPixi2 = _interopRequireDefault(
-            _mapWebGLBlendModesToPixi
+            _mapWebGLBlendModesToPixi,
           );
 
           function _interopRequireDefault(obj) {
@@ -20635,7 +20638,7 @@ object-assign
 
               this.gl.blendFunc(
                 this.blendModes[value][0],
-                this.blendModes[value][1]
+                this.blendModes[value][1],
               );
             };
 
@@ -20772,7 +20775,7 @@ object-assign
           var _extractUniformsFromSrc = require("./extractUniformsFromSrc");
 
           var _extractUniformsFromSrc2 = _interopRequireDefault(
-            _extractUniformsFromSrc
+            _extractUniformsFromSrc,
           );
 
           var _utils = require("../../../utils");
@@ -20832,7 +20835,7 @@ object-assign
                 (0, _extractUniformsFromSrc2.default)(
                   this.vertexSrc,
                   this.fragmentSrc,
-                  "projectionMatrix|uSampler"
+                  "projectionMatrix|uSampler",
                 );
 
               /**
@@ -20911,7 +20914,7 @@ object-assign
               input,
               output,
               clear,
-              currentState
+              currentState,
             ) {
               // --- //
               //  this.uniforms.filterMatrix = filterManager.calculateSpriteMatrix(tempMatrix, window.panda );
@@ -21023,7 +21026,7 @@ object-assign
 
           function extractUniformsFromString(string) {
             var maskRegex = new RegExp(
-              "^(projectionMatrix|uSampler|filterArea|filterClamp)$"
+              "^(projectionMatrix|uSampler|filterArea|filterClamp)$",
             );
 
             var uniforms = {};
@@ -21089,7 +21092,7 @@ object-assign
           function calculateScreenSpaceMatrix(
             outputMatrix,
             filterArea,
-            textureSize
+            textureSize,
           ) {
             // let worldTransform = sprite.worldTransform.copy(Matrix.TEMP_MATRIX),
             // let texture = {width:1136, height:700};//sprite._texture.baseTexture;
@@ -21099,7 +21102,7 @@ object-assign
 
             mappedMatrix.translate(
               filterArea.x / textureSize.width,
-              filterArea.y / textureSize.height
+              filterArea.y / textureSize.height,
             );
 
             mappedMatrix.scale(textureSize.width, textureSize.height);
@@ -21110,13 +21113,13 @@ object-assign
           function calculateNormalizedScreenSpaceMatrix(
             outputMatrix,
             filterArea,
-            textureSize
+            textureSize,
           ) {
             var mappedMatrix = outputMatrix.identity();
 
             mappedMatrix.translate(
               filterArea.x / textureSize.width,
-              filterArea.y / textureSize.height
+              filterArea.y / textureSize.height,
             );
 
             var translateScaleX = textureSize.width / filterArea.width;
@@ -21132,10 +21135,10 @@ object-assign
             outputMatrix,
             filterArea,
             textureSize,
-            sprite
+            sprite,
           ) {
             var worldTransform = sprite.worldTransform.copy(
-              _math.Matrix.TEMP_MATRIX
+              _math.Matrix.TEMP_MATRIX,
             );
             var texture = sprite._texture.baseTexture;
 
@@ -21147,7 +21150,7 @@ object-assign
 
             mappedMatrix.translate(
               filterArea.x / textureSize.width,
-              filterArea.y / textureSize.height
+              filterArea.y / textureSize.height,
             );
 
             mappedMatrix.scale(1, ratio);
@@ -21203,7 +21206,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -21216,7 +21219,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -21228,7 +21231,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -21259,8 +21262,8 @@ object-assign
                 _Filter.call(
                   this,
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 otherMatrix;\n\nvarying vec2 vMaskCoord;\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = aTextureCoord;\n    vMaskCoord = ( otherMatrix * vec3( aTextureCoord, 1.0)  ).xy;\n}\n",
-                  "varying vec2 vMaskCoord;\nvarying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform float alpha;\nuniform sampler2D mask;\n\nvoid main(void)\n{\n    // check clip! this will stop the mask bleeding out from the edges\n    vec2 text = abs( vMaskCoord - 0.5 );\n    text = step(0.5, text);\n\n    float clip = 1.0 - max(text.y, text.x);\n    vec4 original = texture2D(uSampler, vTextureCoord);\n    vec4 masky = texture2D(mask, vMaskCoord);\n\n    original *= (masky.r * masky.a * alpha * clip);\n\n    gl_FragColor = original;\n}\n"
-                )
+                  "varying vec2 vMaskCoord;\nvarying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform float alpha;\nuniform sampler2D mask;\n\nvoid main(void)\n{\n    // check clip! this will stop the mask bleeding out from the edges\n    vec2 text = abs( vMaskCoord - 0.5 );\n    text = step(0.5, text);\n\n    float clip = 1.0 - max(text.y, text.x);\n    vec4 original = texture2D(uSampler, vTextureCoord);\n    vec4 masky = texture2D(mask, vMaskCoord);\n\n    original *= (masky.r * masky.a * alpha * clip);\n\n    gl_FragColor = original;\n}\n",
+                ),
               );
 
               sprite.renderable = false;
@@ -21281,14 +21284,14 @@ object-assign
             SpriteMaskFilter.prototype.apply = function apply(
               filterManager,
               input,
-              output
+              output,
             ) {
               var maskSprite = this.maskSprite;
 
               this.uniforms.mask = maskSprite._texture;
               this.uniforms.otherMatrix = filterManager.calculateSpriteMatrix(
                 this.maskMatrix,
-                maskSprite
+                maskSprite,
               );
               this.uniforms.alpha = maskSprite.worldAlpha;
 
@@ -21357,7 +21360,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -21370,7 +21373,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -21382,7 +21385,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -21432,14 +21435,14 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _WebGLManager.call(this, renderer)
+                _WebGLManager.call(this, renderer),
               );
 
               _this.gl = _this.renderer.gl;
               // know about sprites!
               _this.quad = new _Quad2.default(
                 _this.gl,
-                renderer.state.attribState
+                renderer.state.attribState,
               );
 
               _this.shaderCache = {};
@@ -21459,7 +21462,7 @@ object-assign
 
             FilterManager.prototype.pushFilter = function pushFilter(
               target,
-              filters
+              filters,
             ) {
               var renderer = this.renderer;
 
@@ -21526,7 +21529,7 @@ object-assign
                 renderer.gl,
                 sourceFrame.width,
                 sourceFrame.height,
-                resolution
+                resolution,
               );
 
               currentState.target = target;
@@ -21566,7 +21569,7 @@ object-assign
                   currentState.renderTarget,
                   lastState.renderTarget,
                   false,
-                  currentState
+                  currentState,
                 );
                 this.freePotRenderTarget(currentState.renderTarget);
               } else {
@@ -21575,12 +21578,12 @@ object-assign
                   this.renderer.gl,
                   currentState.sourceFrame.width,
                   currentState.sourceFrame.height,
-                  currentState.resolution
+                  currentState.resolution,
                 );
 
                 flop.setFrame(
                   currentState.destinationFrame,
-                  currentState.sourceFrame
+                  currentState.sourceFrame,
                 );
 
                 // finally lets clear the render target before drawing to it..
@@ -21602,7 +21605,7 @@ object-assign
                   flip,
                   lastState.renderTarget,
                   false,
-                  currentState
+                  currentState,
                 );
 
                 this.freePotRenderTarget(flip);
@@ -21629,7 +21632,7 @@ object-assign
               filter,
               input,
               output,
-              clear
+              clear,
             ) {
               var renderer = this.renderer;
               var gl = renderer.gl;
@@ -21645,7 +21648,7 @@ object-assign
                     shader = new _Shader2.default(
                       this.gl,
                       filter.vertexSrc,
-                      filter.fragmentSrc
+                      filter.fragmentSrc,
                     );
 
                     filter.glShaders[renderer.CONTEXT_UID] = this.shaderCache[
@@ -21657,7 +21660,7 @@ object-assign
                     new _Shader2.default(
                       this.gl,
                       filter.vertexSrc,
-                      filter.fragmentSrc
+                      filter.fragmentSrc,
                     );
                 }
 
@@ -21681,7 +21684,7 @@ object-assign
               if (output === renderer.maskManager.scissorRenderTarget) {
                 renderer.maskManager.pushScissorMask(
                   null,
-                  renderer.maskManager.scissorData
+                  renderer.maskManager.scissorData,
                 );
               }
 
@@ -21705,7 +21708,7 @@ object-assign
 
               gl.bindTexture(
                 gl.TEXTURE_2D,
-                tex._glTextures[this.renderer.CONTEXT_UID].texture
+                tex._glTextures[this.renderer.CONTEXT_UID].texture,
               );
             };
 
@@ -21718,7 +21721,7 @@ object-assign
 
             FilterManager.prototype.syncUniforms = function syncUniforms(
               shader,
-              filter
+              filter,
             ) {
               var uniformData = filter.uniformData;
               var uniforms = filter.uniforms;
@@ -21769,7 +21772,7 @@ object-assign
                   if (uniforms[i].baseTexture) {
                     shader.uniforms[i] = this.renderer.bindTexture(
                       uniforms[i].baseTexture,
-                      textureCount
+                      textureCount,
                     );
                   } else {
                     shader.uniforms[i] = textureCount;
@@ -21827,19 +21830,19 @@ object-assign
 
             FilterManager.prototype.getRenderTarget = function getRenderTarget(
               clear,
-              resolution
+              resolution,
             ) {
               var currentState = this.filterData.stack[this.filterData.index];
               var renderTarget = this.getPotRenderTarget(
                 this.renderer.gl,
                 currentState.sourceFrame.width,
                 currentState.sourceFrame.height,
-                resolution || currentState.resolution
+                resolution || currentState.resolution,
               );
 
               renderTarget.setFrame(
                 currentState.destinationFrame,
-                currentState.sourceFrame
+                currentState.sourceFrame,
               );
 
               return renderTarget;
@@ -21873,7 +21876,7 @@ object-assign
                 return filterTransforms.calculateScreenSpaceMatrix(
                   outputMatrix,
                   currentState.sourceFrame,
-                  currentState.renderTarget.size
+                  currentState.renderTarget.size,
                 );
               };
 
@@ -21892,7 +21895,7 @@ object-assign
                   outputMatrix,
                   currentState.sourceFrame,
                   currentState.renderTarget.size,
-                  currentState.destinationFrame
+                  currentState.destinationFrame,
                 );
               };
 
@@ -21912,7 +21915,7 @@ object-assign
                   outputMatrix,
                   currentState.sourceFrame,
                   currentState.renderTarget.size,
-                  sprite
+                  sprite,
                 );
               };
 
@@ -21945,7 +21948,7 @@ object-assign
                 // TODO you could return a bigger texture if there is not one in the pool?
                 minWidth = _bitTwiddle2.default.nextPow2(minWidth * resolution);
                 minHeight = _bitTwiddle2.default.nextPow2(
-                  minHeight * resolution
+                  minHeight * resolution,
                 );
 
                 var key = ((minWidth & 0xffff) << 16) | (minHeight & 0xffff);
@@ -21969,13 +21972,13 @@ object-assign
                     minWidth,
                     minHeight,
                     null,
-                    1
+                    1,
                   );
 
                   // set the current one back
                   gl.bindTexture(
                     gl.TEXTURE_2D,
-                    tex._glTextures[this.renderer.CONTEXT_UID].texture
+                    tex._glTextures[this.renderer.CONTEXT_UID].texture,
                   );
                 }
 
@@ -22068,7 +22071,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -22081,7 +22084,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -22093,7 +22096,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -22118,7 +22121,7 @@ object-assign
               // TODO - we don't need both!
               var _this = _possibleConstructorReturn(
                 this,
-                _WebGLManager.call(this, renderer)
+                _WebGLManager.call(this, renderer),
               );
 
               _this.scissor = false;
@@ -22141,7 +22144,7 @@ object-assign
 
             MaskManager.prototype.pushMask = function pushMask(
               target,
-              maskData
+              maskData,
             ) {
               // TODO the root check means scissor rect will not
               // be used on render textures more info here:
@@ -22202,7 +22205,7 @@ object-assign
 
             MaskManager.prototype.pushSpriteMask = function pushSpriteMask(
               target,
-              maskData
+              maskData,
             ) {
               var alphaMaskFilter = this.alphaMaskPool[this.alphaMaskIndex];
 
@@ -22240,7 +22243,7 @@ object-assign
              */
 
             MaskManager.prototype.pushStencilMask = function pushStencilMask(
-              maskData
+              maskData,
             ) {
               this.renderer.currentRenderer.stop();
               this.renderer.stencilManager.pushStencil(maskData);
@@ -22264,7 +22267,7 @@ object-assign
 
             MaskManager.prototype.pushScissorMask = function pushScissorMask(
               target,
-              maskData
+              maskData,
             ) {
               maskData.renderable = true;
 
@@ -22285,7 +22288,7 @@ object-assign
                   ? renderTarget.size.height - bounds.y - bounds.height
                   : bounds.y) * resolution,
                 bounds.width * resolution,
-                bounds.height * resolution
+                bounds.height * resolution,
               );
 
               this.scissorRenderTarget = renderTarget;
@@ -22339,7 +22342,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -22352,7 +22355,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -22364,7 +22367,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -22388,7 +22391,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _WebGLManager.call(this, renderer)
+                _WebGLManager.call(this, renderer),
               );
 
               _this.stencilMaskStack = null;
@@ -22402,7 +22405,7 @@ object-assign
              */
 
             StencilManager.prototype.setMaskStack = function setMaskStack(
-              stencilMaskStack
+              stencilMaskStack,
             ) {
               this.stencilMaskStack = stencilMaskStack;
 
@@ -22422,7 +22425,7 @@ object-assign
              */
 
             StencilManager.prototype.pushStencil = function pushStencil(
-              graphics
+              graphics,
             ) {
               this.renderer.setObjectRenderer(this.renderer.plugins.graphics);
 
@@ -22577,7 +22580,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -22590,7 +22593,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -22602,7 +22605,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -22625,7 +22628,7 @@ object-assign
 
               return _possibleConstructorReturn(
                 this,
-                _WebGLManager.apply(this, arguments)
+                _WebGLManager.apply(this, arguments),
               );
             }
 
@@ -22683,7 +22686,7 @@ object-assign
           var _createIndicesForQuads = require("../../../utils/createIndicesForQuads");
 
           var _createIndicesForQuads2 = _interopRequireDefault(
-            _createIndicesForQuads
+            _createIndicesForQuads,
           );
 
           function _interopRequireDefault(obj) {
@@ -22756,7 +22759,7 @@ object-assign
                 _pixiGlCore2.default.GLBuffer.createVertexBuffer(
                   gl,
                   this.interleaved,
-                  gl.STATIC_DRAW
+                  gl.STATIC_DRAW,
                 );
 
               /**
@@ -22768,7 +22771,7 @@ object-assign
                 _pixiGlCore2.default.GLBuffer.createIndexBuffer(
                   gl,
                   this.indices,
-                  gl.STATIC_DRAW
+                  gl.STATIC_DRAW,
                 );
 
               /**
@@ -22795,7 +22798,7 @@ object-assign
                   this.gl.FLOAT,
                   false,
                   4 * 4,
-                  0
+                  0,
                 )
                 .addAttribute(
                   this.vertexBuffer,
@@ -22803,7 +22806,7 @@ object-assign
                   this.gl.FLOAT,
                   false,
                   4 * 4,
-                  2 * 4
+                  2 * 4,
                 );
             };
 
@@ -22817,7 +22820,7 @@ object-assign
 
             Quad.prototype.map = function map(
               targetTextureFrame,
-              destinationFrame
+              destinationFrame,
             ) {
               var x = 0; // destinationFrame.x / targetTextureFrame.width;
               var y = 0; // destinationFrame.y / targetTextureFrame.height;
@@ -22938,7 +22941,7 @@ object-assign
               height,
               scaleMode,
               resolution,
-              root
+              root,
             ) {
               _classCallCheck(this, RenderTarget);
 
@@ -23063,7 +23066,7 @@ object-assign
                 this.frameBuffer = _pixiGlCore.GLFramebuffer.createRGBA(
                   gl,
                   100,
-                  100
+                  100,
                 );
 
                 if (this.scaleMode === _const.SCALE_MODES.NEAREST) {
@@ -23127,7 +23130,7 @@ object-assign
 
             RenderTarget.prototype.setFrame = function setFrame(
               destinationFrame,
-              sourceFrame
+              sourceFrame,
             ) {
               this.destinationFrame =
                 destinationFrame || this.destinationFrame || this.defaultFrame;
@@ -23160,7 +23163,7 @@ object-assign
                   this.destinationFrame.x | 0,
                   this.destinationFrame.y | 0,
                   (this.destinationFrame.width * this.resolution) | 0,
-                  (this.destinationFrame.height * this.resolution) | 0
+                  (this.destinationFrame.height * this.resolution) | 0,
                 );
               } else {
                 gl.disable(gl.SCISSOR_TEST);
@@ -23171,7 +23174,7 @@ object-assign
                 this.destinationFrame.x | 0,
                 this.destinationFrame.y | 0,
                 (this.destinationFrame.width * this.resolution) | 0,
-                (this.destinationFrame.height * this.resolution) | 0
+                (this.destinationFrame.height * this.resolution) | 0,
               );
             };
 
@@ -23229,7 +23232,7 @@ object-assign
 
               this.frameBuffer.resize(
                 width * this.resolution,
-                height * this.resolution
+                height * this.resolution,
               );
 
               var projectionFrame = this.frame || this.size;
@@ -23288,12 +23291,11 @@ object-assign
           function checkMaxIfStatmentsInShader(maxIfs, gl) {
             var createTempContext = !gl;
 
-            if (maxIfs < 1) maxIfs = 1; // защита от нуля
-            // if (maxIfs === 0) {
-            //   throw new Error(
-            //     "Invalid value of `0` passed to `checkMaxIfStatementsInShader`"
-            //   );
-            // }
+            if (maxIfs === 0) {
+              throw new Error(
+                "Invalid value of `0` passed to `checkMaxIfStatementsInShader`",
+              );
+            }
 
             if (createTempContext) {
               var tinyCanvas = document.createElement("canvas");
@@ -23309,7 +23311,7 @@ object-assign
             while (true) {
               var fragmentSrc = fragTemplate.replace(
                 /%forloop%/gi,
-                generateIfTestSrc(maxIfs)
+                generateIfTestSrc(maxIfs),
               );
 
               gl.shaderSource(shader, fragmentSrc);
@@ -23484,7 +23486,7 @@ object-assign
             // this is going to be fairly simple for now.. but at least we have room to grow!
             if (!attributes.stencil) {
               console.warn(
-                "Provided WebGL context does not have a stencil buffer, masks may not render correctly"
+                "Provided WebGL context does not have a stencil buffer, masks may not render correctly",
               );
             }
           }
@@ -23500,7 +23502,7 @@ object-assign
           var _maxRecommendedTextures = require("./utils/maxRecommendedTextures");
 
           var _maxRecommendedTextures2 = _interopRequireDefault(
-            _maxRecommendedTextures
+            _maxRecommendedTextures,
           );
 
           var _canUploadSameBuffer = require("./utils/canUploadSameBuffer");
@@ -23786,7 +23788,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -23799,7 +23801,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -23811,7 +23813,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -23855,12 +23857,12 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _Container.call(this)
+                _Container.call(this),
               );
 
               _this._anchor = new _math.ObservablePoint(
                 _this._onAnchorUpdate,
-                _this
+                _this,
               );
 
               /**
@@ -24293,7 +24295,7 @@ object-assign
                 throw new Error(
                   'The frameId "' +
                     frameId +
-                    '" does not exist in the texture cache'
+                    '" does not exist in the texture cache',
                 );
               }
 
@@ -24315,10 +24317,10 @@ object-assign
             Sprite.fromImage = function fromImage(
               imageId,
               crossorigin,
-              scaleMode
+              scaleMode,
             ) {
               return new Sprite(
-                _Texture2.default.fromImage(imageId, crossorigin, scaleMode)
+                _Texture2.default.fromImage(imageId, crossorigin, scaleMode),
               );
             };
 
@@ -24335,7 +24337,7 @@ object-assign
                   return Math.abs(this.scale.x) * this._texture.orig.width;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   var s = (0, _utils.sign)(this.scale.x) || 1;
 
@@ -24355,7 +24357,7 @@ object-assign
                   return Math.abs(this.scale.y) * this._texture.orig.height;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   var s = (0, _utils.sign)(this.scale.y) || 1;
 
@@ -24378,7 +24380,7 @@ object-assign
                   return this._anchor;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._anchor.copy(value);
                 },
@@ -24397,7 +24399,7 @@ object-assign
                   return this._tint;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._tint = value;
                   this._tintRGB =
@@ -24416,7 +24418,7 @@ object-assign
                   return this._texture;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (this._texture === value) {
                     return;
@@ -24576,7 +24578,7 @@ object-assign
                     wt,
                     texture.rotate,
                     dx,
-                    dy
+                    dy,
                   );
                   // the anchor has already been applied above, so lets set it to zero
                   dx = 0;
@@ -24594,7 +24596,7 @@ object-assign
                     wt.c,
                     wt.d,
                     (wt.tx * renderer.resolution) | 0,
-                    (wt.ty * renderer.resolution) | 0
+                    (wt.ty * renderer.resolution) | 0,
                   );
 
                   dx = dx | 0;
@@ -24606,7 +24608,7 @@ object-assign
                     wt.c,
                     wt.d,
                     wt.tx * renderer.resolution,
-                    wt.ty * renderer.resolution
+                    wt.ty * renderer.resolution,
                   );
                 }
 
@@ -24620,7 +24622,7 @@ object-assign
                     sprite.tintedTexture =
                       _CanvasTinter2.default.getTintedTexture(
                         sprite,
-                        sprite.tint
+                        sprite.tint,
                       );
                   }
 
@@ -24633,7 +24635,7 @@ object-assign
                     dx * renderer.resolution,
                     dy * renderer.resolution,
                     width * renderer.resolution,
-                    height * renderer.resolution
+                    height * renderer.resolution,
                   );
                 } else {
                   renderer.context.drawImage(
@@ -24645,7 +24647,7 @@ object-assign
                     dx * renderer.resolution,
                     dy * renderer.resolution,
                     width * renderer.resolution,
-                    height * renderer.resolution
+                    height * renderer.resolution,
                   );
                 }
               }
@@ -24667,7 +24669,7 @@ object-assign
 
           _CanvasRenderer2.default.registerPlugin(
             "sprite",
-            CanvasSpriteRenderer
+            CanvasSpriteRenderer,
           );
         },
         {
@@ -24688,7 +24690,7 @@ object-assign
           var _canUseNewCanvasBlendModes = require("../../renderers/canvas/utils/canUseNewCanvasBlendModes");
 
           var _canUseNewCanvasBlendModes2 = _interopRequireDefault(
-            _canUseNewCanvasBlendModes
+            _canUseNewCanvasBlendModes,
           );
 
           function _interopRequireDefault(obj) {
@@ -24758,7 +24760,7 @@ object-assign
             tintWithMultiply: function tintWithMultiply(
               texture,
               color,
-              canvas
+              canvas,
             ) {
               var context = canvas.getContext("2d");
               var crop = texture._frame.clone();
@@ -24788,7 +24790,7 @@ object-assign
                 0,
                 0,
                 crop.width,
-                crop.height
+                crop.height,
               );
 
               context.globalCompositeOperation = "destination-atop";
@@ -24802,7 +24804,7 @@ object-assign
                 0,
                 0,
                 crop.width,
-                crop.height
+                crop.height,
               );
             },
 
@@ -24842,7 +24844,7 @@ object-assign
                 0,
                 0,
                 crop.width,
-                crop.height
+                crop.height,
               );
 
               // context.globalCompositeOperation = 'copy';
@@ -24859,7 +24861,7 @@ object-assign
             tintWithPerPixel: function tintWithPerPixel(
               texture,
               color,
-              canvas
+              canvas,
             ) {
               var context = canvas.getContext("2d");
               var crop = texture._frame.clone();
@@ -24883,7 +24885,7 @@ object-assign
                 0,
                 0,
                 crop.width,
-                crop.height
+                crop.height,
               );
 
               var rgbValues = (0, _utils.hex2rgb)(color);
@@ -24895,7 +24897,7 @@ object-assign
                 0,
                 0,
                 crop.width,
-                crop.height
+                crop.height,
               );
 
               var pixels = pixelData.data;
@@ -25058,19 +25060,19 @@ object-assign
           var _createIndicesForQuads = require("../../utils/createIndicesForQuads");
 
           var _createIndicesForQuads2 = _interopRequireDefault(
-            _createIndicesForQuads
+            _createIndicesForQuads,
           );
 
           var _generateMultiTextureShader = require("./generateMultiTextureShader");
 
           var _generateMultiTextureShader2 = _interopRequireDefault(
-            _generateMultiTextureShader
+            _generateMultiTextureShader,
           );
 
           var _checkMaxIfStatmentsInShader = require("../../renderers/webgl/utils/checkMaxIfStatmentsInShader");
 
           var _checkMaxIfStatmentsInShader2 = _interopRequireDefault(
-            _checkMaxIfStatmentsInShader
+            _checkMaxIfStatmentsInShader,
           );
 
           var _BatchBuffer = require("./BatchBuffer");
@@ -25102,7 +25104,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -25115,7 +25117,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -25127,7 +25129,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -25164,7 +25166,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _ObjectRenderer.call(this, renderer)
+                _ObjectRenderer.call(this, renderer),
               );
 
               _this.vertSize = 5;
@@ -25193,7 +25195,7 @@ object-assign
                 i *= 2
               ) {
                 _this.buffers.push(
-                  new _BatchBuffer2.default(i * 4 * _this.vertByteSize)
+                  new _BatchBuffer2.default(i * 4 * _this.vertByteSize),
                 );
               }
 
@@ -25254,7 +25256,7 @@ object-assign
                   // step 1: first check max textures the GPU can handle.
                   this.MAX_TEXTURES = Math.min(
                     gl.getParameter(gl.MAX_TEXTURE_IMAGE_UNITS),
-                    _settings2.default.SPRITE_MAX_TEXTURES
+                    _settings2.default.SPRITE_MAX_TEXTURES,
                   );
 
                   // step 2: check the maximum number of if statements the shader can have too..
@@ -25264,7 +25266,7 @@ object-assign
 
                 this.shader = (0, _generateMultiTextureShader2.default)(
                   gl,
-                  this.MAX_TEXTURES
+                  this.MAX_TEXTURES,
                 );
 
                 // create a couple of buffers
@@ -25272,7 +25274,7 @@ object-assign
                   _pixiGlCore2.default.GLBuffer.createIndexBuffer(
                     gl,
                     this.indices,
-                    gl.STATIC_DRAW
+                    gl.STATIC_DRAW,
                   );
 
                 // we use the second shader as the first one depending on your browser may omit aTextureId
@@ -25287,7 +25289,7 @@ object-assign
                     _pixiGlCore2.default.GLBuffer.createVertexBuffer(
                       gl,
                       null,
-                      gl.STREAM_DRAW
+                      gl.STREAM_DRAW,
                     ));
 
                   // build the vao object that will render..
@@ -25300,7 +25302,7 @@ object-assign
                       gl.FLOAT,
                       false,
                       this.vertByteSize,
-                      0
+                      0,
                     )
                     .addAttribute(
                       vertexBuffer,
@@ -25308,7 +25310,7 @@ object-assign
                       gl.UNSIGNED_SHORT,
                       true,
                       this.vertByteSize,
-                      2 * 4
+                      2 * 4,
                     )
                     .addAttribute(
                       vertexBuffer,
@@ -25316,7 +25318,7 @@ object-assign
                       gl.UNSIGNED_BYTE,
                       true,
                       this.vertByteSize,
-                      3 * 4
+                      3 * 4,
                     );
 
                   if (attrs.aTextureId) {
@@ -25326,7 +25328,7 @@ object-assign
                       gl.FLOAT,
                       false,
                       this.vertByteSize,
-                      4 * 4
+                      4 * 4,
                     );
                   }
 
@@ -25571,7 +25573,7 @@ object-assign
                     _pixiGlCore2.default.GLBuffer.createVertexBuffer(
                       gl,
                       null,
-                      gl.STREAM_DRAW
+                      gl.STREAM_DRAW,
                     ));
 
                   // build the vao object that will render..
@@ -25584,7 +25586,7 @@ object-assign
                       gl.FLOAT,
                       false,
                       this.vertByteSize,
-                      0
+                      0,
                     )
                     .addAttribute(
                       vertexBuffer,
@@ -25592,7 +25594,7 @@ object-assign
                       gl.UNSIGNED_SHORT,
                       true,
                       this.vertByteSize,
-                      2 * 4
+                      2 * 4,
                     )
                     .addAttribute(
                       vertexBuffer,
@@ -25600,7 +25602,7 @@ object-assign
                       gl.UNSIGNED_BYTE,
                       true,
                       this.vertByteSize,
-                      3 * 4
+                      3 * 4,
                     );
 
                   if (attrs.aTextureId) {
@@ -25610,7 +25612,7 @@ object-assign
                       gl.FLOAT,
                       false,
                       this.vertByteSize,
-                      4 * 4
+                      4 * 4,
                     );
                   }
 
@@ -25622,7 +25624,7 @@ object-assign
                 this.vertexBuffers[this.vertexCount].upload(
                   buffer.vertices,
                   0,
-                  false
+                  false,
                 );
 
                 this.vertexCount++;
@@ -25631,7 +25633,7 @@ object-assign
                 this.vertexBuffers[this.vertexCount].upload(
                   buffer.vertices,
                   0,
-                  true
+                  true,
                 );
               }
 
@@ -25653,7 +25655,7 @@ object-assign
                     this.renderer.bindTexture(
                       currentTexture,
                       group.ids[_j],
-                      true
+                      true,
                     );
                   }
 
@@ -25668,7 +25670,7 @@ object-assign
                   gl.TRIANGLES,
                   group.size * 6,
                   gl.UNSIGNED_SHORT,
-                  group.start * 6 * 2
+                  group.start * 6 * 2,
                 );
               }
 
@@ -25797,7 +25799,7 @@ object-assign
             fragmentSrc = fragmentSrc.replace(/%count%/gi, maxTextures);
             fragmentSrc = fragmentSrc.replace(
               /%forloop%/gi,
-              generateSampleSrc(maxTextures)
+              generateSampleSrc(maxTextures),
             );
 
             var shader = new _Shader2.default(gl, vertexSrc, fragmentSrc);
@@ -25910,7 +25912,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -25923,7 +25925,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -25935,7 +25937,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -25983,7 +25985,7 @@ object-assign
               var texture = _Texture2.default.fromCanvas(
                 canvas,
                 _settings2.default.SCALE_MODE,
-                "text"
+                "text",
               );
 
               texture.orig = new _math.Rectangle();
@@ -25992,12 +25994,12 @@ object-assign
               // base texture is already automatically added to the cache, now adding the actual texture
               var _this = _possibleConstructorReturn(
                 this,
-                _Sprite.call(this, texture)
+                _Sprite.call(this, texture),
               );
 
               _Texture2.default.addToCache(
                 _this._texture,
-                _this._texture.baseTexture.textureCacheIds[0]
+                _this._texture.baseTexture.textureCacheIds[0],
               );
 
               /**
@@ -26084,7 +26086,7 @@ object-assign
                 this._text,
                 this._style,
                 this._style.wordWrap,
-                this.canvas
+                this.canvas,
               );
               var width = measured.width;
               var height = measured.height;
@@ -26095,10 +26097,10 @@ object-assign
               var fontProperties = measured.fontProperties;
 
               this.canvas.width = Math.ceil(
-                (width + style.padding * 2) * this.resolution
+                (width + style.padding * 2) * this.resolution,
               );
               this.canvas.height = Math.ceil(
-                (height + style.padding * 2) * this.resolution
+                (height + style.padding * 2) * this.resolution,
               );
 
               this.context.scale(this.resolution, this.resolution);
@@ -26107,7 +26109,7 @@ object-assign
                 0,
                 0,
                 this.canvas.width,
-                this.canvas.height
+                this.canvas.height,
               );
 
               this.context.font = this._font;
@@ -26152,7 +26154,7 @@ object-assign
                     this.drawLetterSpacing(
                       lines[i],
                       linePositionX + xShadowOffset + style.padding,
-                      linePositionY + yShadowOffset + style.padding
+                      linePositionY + yShadowOffset + style.padding,
                     );
 
                     if (style.stroke && style.strokeThickness) {
@@ -26161,7 +26163,7 @@ object-assign
                         lines[i],
                         linePositionX + xShadowOffset + style.padding,
                         linePositionY + yShadowOffset + style.padding,
-                        true
+                        true,
                       );
                       this.context.strokeStyle = style.stroke;
                     }
@@ -26195,7 +26197,7 @@ object-assign
                     lines[_i],
                     linePositionX + style.padding,
                     linePositionY + style.padding,
-                    true
+                    true,
                   );
                 }
 
@@ -26203,7 +26205,7 @@ object-assign
                   this.drawLetterSpacing(
                     lines[_i],
                     linePositionX + style.padding,
-                    linePositionY + style.padding
+                    linePositionY + style.padding,
                   );
                 }
               }
@@ -26224,7 +26226,7 @@ object-assign
             Text.prototype.drawLetterSpacing = function drawLetterSpacing(
               text,
               x,
-              y
+              y,
             ) {
               var isStroke =
                 arguments.length > 3 && arguments[3] !== undefined
@@ -26387,7 +26389,7 @@ object-assign
 
             Text.prototype._generateFillStyle = function _generateFillStyle(
               style,
-              lines
+              lines,
             ) {
               if (!Array.isArray(style.fill)) {
                 return style.fill;
@@ -26437,7 +26439,7 @@ object-assign
                   width / 2,
                   0,
                   width / 2,
-                  height
+                  height,
                 );
 
                 // we need to repeat the gradient so that each individual line of text has the same vertical gradient effect
@@ -26464,7 +26466,7 @@ object-assign
                   0,
                   height / 2,
                   width,
-                  height / 2
+                  height / 2,
                 );
 
                 // can just evenly space out the gradients in this case, as multiple lines makes no difference
@@ -26530,7 +26532,7 @@ object-assign
                   return Math.abs(this.scale.x) * this._texture.orig.width;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.updateText(true);
 
@@ -26554,7 +26556,7 @@ object-assign
                   return Math.abs(this.scale.y) * this._texture.orig.height;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.updateText(true);
 
@@ -26577,7 +26579,7 @@ object-assign
                   return this._style;
                 },
                 set: function set(
-                  style // eslint-disable-line require-jsdoc
+                  style, // eslint-disable-line require-jsdoc
                 ) {
                   style = style || {};
 
@@ -26603,12 +26605,12 @@ object-assign
                   return this._text;
                 },
                 set: function set(
-                  text // eslint-disable-line require-jsdoc
+                  text, // eslint-disable-line require-jsdoc
                 ) {
                   text = String(
                     text === "" || text === null || text === undefined
                       ? " "
-                      : text
+                      : text,
                   );
 
                   if (this._text === text) {
@@ -26676,7 +26678,7 @@ object-assign
               lineWidths,
               lineHeight,
               maxLineWidth,
-              fontProperties
+              fontProperties,
             ) {
               _classCallCheck(this, TextMetrics);
 
@@ -26704,7 +26706,7 @@ object-assign
             TextMetrics.measureText = function measureText(
               text,
               style,
-              wordWrap
+              wordWrap,
             ) {
               var canvas =
                 arguments.length > 3 && arguments[3] !== undefined
@@ -26745,7 +26747,7 @@ object-assign
               var height =
                 Math.max(
                   lineHeight,
-                  fontProperties.fontSize + style.strokeThickness
+                  fontProperties.fontSize + style.strokeThickness,
                 ) +
                 (lines.length - 1) * lineHeight;
 
@@ -26762,7 +26764,7 @@ object-assign
                 lineWidths,
                 lineHeight,
                 maxLineWidth,
-                fontProperties
+                fontProperties,
               );
             };
 
@@ -27609,7 +27611,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -27622,7 +27624,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -27634,7 +27636,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -27706,7 +27708,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _BaseTexture.call(this, null, scaleMode)
+                _BaseTexture.call(this, null, scaleMode),
               );
 
               _this.resolution = resolution || _settings2.default.RESOLUTION;
@@ -27757,7 +27759,7 @@ object-assign
 
             BaseRenderTexture.prototype.resize = function resize(
               width,
-              height
+              height,
             ) {
               if (width === this.width && height === this.height) {
                 return;
@@ -27828,7 +27830,7 @@ object-assign
           var _determineCrossOrigin = require("../utils/determineCrossOrigin");
 
           var _determineCrossOrigin2 = _interopRequireDefault(
-            _determineCrossOrigin
+            _determineCrossOrigin,
           );
 
           var _bitTwiddle = require("bit-twiddle");
@@ -27848,7 +27850,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -27861,7 +27863,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -27873,7 +27875,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -27901,7 +27903,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _EventEmitter.call(this)
+                _EventEmitter.call(this),
               );
 
               _this.uid = (0, _utils.uid)();
@@ -28331,7 +28333,7 @@ object-assign
                   var firstSubType = dataUri.subType.split("+")[0];
 
                   imageType = (0, _utils.getUrlFileExtension)(
-                    "." + firstSubType
+                    "." + firstSubType,
                   );
 
                   if (!imageType) {
@@ -28382,7 +28384,7 @@ object-assign
                 if (dataUri.encoding === "base64") {
                   if (!atob) {
                     throw new Error(
-                      "Your browser doesn't support base64 conversions."
+                      "Your browser doesn't support base64 conversions.",
                     );
                   }
                   svgString = atob(dataUri.data);
@@ -28448,7 +28450,7 @@ object-assign
 
                 if (!svgWidth || !svgHeight) {
                   throw new Error(
-                    "The SVG image must have width and height defined (in pixels), canvas API needs them."
+                    "The SVG image must have width and height defined (in pixels), canvas API needs them.",
                   );
                 }
 
@@ -28477,7 +28479,7 @@ object-assign
                     0,
                     0,
                     this.realWidth,
-                    this.realHeight
+                    this.realHeight,
                   );
 
                 // Replace the original source image with the canvas
@@ -28572,7 +28574,7 @@ object-assign
               imageUrl,
               crossorigin,
               scaleMode,
-              sourceScale
+              sourceScale,
             ) {
               var baseTexture = _utils.BaseTextureCache[imageUrl];
 
@@ -28586,7 +28588,7 @@ object-assign
                   imageUrl.indexOf("data:") !== 0
                 ) {
                   image.crossOrigin = (0, _determineCrossOrigin2.default)(
-                    imageUrl
+                    imageUrl,
                   );
                 }
 
@@ -28599,7 +28601,7 @@ object-assign
 
                 // if there is an @2x at the end of the url we are going to assume its a highres image
                 baseTexture.resolution = (0, _utils.getResolutionOfUrl)(
-                  imageUrl
+                  imageUrl,
                 );
 
                 image.src = imageUrl; // Setting this triggers load
@@ -28657,7 +28659,7 @@ object-assign
                   source,
                   undefined,
                   scaleMode,
-                  sourceScale
+                  sourceScale,
                 );
               } else if (source instanceof HTMLImageElement) {
                 var imageUrl = source.src;
@@ -28673,7 +28675,7 @@ object-assign
 
                   // if there is an @2x at the end of the url we are going to assume its a highres image
                   baseTexture.resolution = (0, _utils.getResolutionOfUrl)(
-                    imageUrl
+                    imageUrl,
                   );
 
                   BaseTexture.addToCache(baseTexture, imageUrl);
@@ -28720,7 +28722,7 @@ object-assign
              */
 
             BaseTexture.removeFromCache = function removeFromCache(
-              baseTexture
+              baseTexture,
             ) {
               if (typeof baseTexture === "string") {
                 var baseTextureFromCache = _utils.BaseTextureCache[baseTexture];
@@ -28792,7 +28794,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -28805,7 +28807,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -28817,7 +28819,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -28887,7 +28889,7 @@ object-assign
                     width +
                     ", " +
                     height +
-                    ") instead of the ctor directly."
+                    ") instead of the ctor directly.",
                 );
                 _legacyRenderer = arguments[0];
                 /* eslint-enable prefer-rest-params */
@@ -28897,7 +28899,7 @@ object-assign
                   width,
                   height,
                   scaleMode,
-                  resolution
+                  resolution,
                 );
               }
 
@@ -28909,7 +28911,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _Texture.call(this, baseRenderTexture, frame)
+                _Texture.call(this, baseRenderTexture, frame),
               );
 
               _this.legacyRenderer = _legacyRenderer;
@@ -28936,7 +28938,7 @@ object-assign
             RenderTexture.prototype.resize = function resize(
               width,
               height,
-              doNotResizeBaseTexture
+              doNotResizeBaseTexture,
             ) {
               // TODO - could be not required..
               this.valid = width > 0 && height > 0;
@@ -28965,15 +28967,15 @@ object-assign
               width,
               height,
               scaleMode,
-              resolution
+              resolution,
             ) {
               return new RenderTexture(
                 new _BaseRenderTexture2.default(
                   width,
                   height,
                   scaleMode,
-                  resolution
-                )
+                  resolution,
+                ),
               );
             };
 
@@ -29081,7 +29083,7 @@ object-assign
                * @type {number}
                */
               this.resolution = this._updateResolution(
-                resolutionFilename || this.baseTexture.imageUrl
+                resolutionFilename || this.baseTexture.imageUrl,
               );
 
               /**
@@ -29130,7 +29132,7 @@ object-assign
                 // Use a defaultValue of `null` to check if a url-based resolution is set
                 var resolution = (0, _utils.getResolutionOfUrl)(
                   resolutionFilename,
-                  null
+                  null,
                 );
 
                 // No resolution found via URL
@@ -29176,7 +29178,7 @@ object-assign
              */
 
             Spritesheet.prototype._processFrames = function _processFrames(
-              initialFrameIndex
+              initialFrameIndex,
             ) {
               var frameIndex = initialFrameIndex;
               var maxFrames = Spritesheet.BATCH_SIZE;
@@ -29195,7 +29197,7 @@ object-assign
                     0,
                     0,
                     this._frames[i].sourceSize.w / this.resolution,
-                    this._frames[i].sourceSize.h / this.resolution
+                    this._frames[i].sourceSize.h / this.resolution,
                   );
 
                   if (this._frames[i].rotated) {
@@ -29203,14 +29205,14 @@ object-assign
                       rect.x / this.resolution,
                       rect.y / this.resolution,
                       rect.h / this.resolution,
-                      rect.w / this.resolution
+                      rect.w / this.resolution,
                     );
                   } else {
                     frame = new _.Rectangle(
                       rect.x / this.resolution,
                       rect.y / this.resolution,
                       rect.w / this.resolution,
-                      rect.h / this.resolution
+                      rect.h / this.resolution,
                     );
                   }
 
@@ -29220,7 +29222,7 @@ object-assign
                       this._frames[i].spriteSourceSize.x / this.resolution,
                       this._frames[i].spriteSourceSize.y / this.resolution,
                       rect.w / this.resolution,
-                      rect.h / this.resolution
+                      rect.h / this.resolution,
                     );
                   }
 
@@ -29229,7 +29231,7 @@ object-assign
                     frame,
                     orig,
                     trim,
-                    this._frames[i].rotated ? 2 : 0
+                    this._frames[i].rotated ? 2 : 0,
                   );
 
                   // lets also add the frame to pixi's global cache for fromFrame and fromImage functions
@@ -29370,7 +29372,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -29383,7 +29385,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -29395,7 +29397,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -29449,7 +29451,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _EventEmitter.call(this)
+                _EventEmitter.call(this),
               );
 
               _this.noFrame = false;
@@ -29521,7 +29523,7 @@ object-assign
                 _this._rotate = 2;
               } else if (_this._rotate % 2 !== 0) {
                 throw new Error(
-                  "attempt to use diamond-shaped UVs. If you are sure, set rotation manually"
+                  "attempt to use diamond-shaped UVs. If you are sure, set rotation manually",
                 );
               }
 
@@ -29531,7 +29533,7 @@ object-assign
                     0,
                     0,
                     baseTexture.width,
-                    baseTexture.height
+                    baseTexture.height,
                   );
 
                   // if there is no frame we should monitor for any base texture changes..
@@ -29595,7 +29597,7 @@ object-assign
                     0,
                     0,
                     baseTexture.width,
-                    baseTexture.height
+                    baseTexture.height,
                   );
                 } else {
                   this.frame = this._frame;
@@ -29669,7 +29671,7 @@ object-assign
                 this.frame,
                 this.orig,
                 this.trim,
-                this.rotate
+                this.rotate,
               );
             };
 
@@ -29705,7 +29707,7 @@ object-assign
               imageUrl,
               crossorigin,
               scaleMode,
-              sourceScale
+              sourceScale,
             ) {
               var texture = _utils.TextureCache[imageUrl];
 
@@ -29715,8 +29717,8 @@ object-assign
                     imageUrl,
                     crossorigin,
                     scaleMode,
-                    sourceScale
-                  )
+                    sourceScale,
+                  ),
                 );
                 Texture.addToCache(texture, imageUrl);
               }
@@ -29740,7 +29742,7 @@ object-assign
                 throw new Error(
                   'The frameId "' +
                     frameId +
-                    '" does not exist in the texture cache'
+                    '" does not exist in the texture cache',
                 );
               }
 
@@ -29764,7 +29766,7 @@ object-assign
                   : "canvas";
 
               return new Texture(
-                _BaseTexture2.default.fromCanvas(canvas, scaleMode, origin)
+                _BaseTexture2.default.fromCanvas(canvas, scaleMode, origin),
               );
             };
 
@@ -29783,7 +29785,7 @@ object-assign
               }
 
               return new Texture(
-                _VideoBaseTexture2.default.fromVideo(video, scaleMode)
+                _VideoBaseTexture2.default.fromVideo(video, scaleMode),
               );
             };
 
@@ -29798,7 +29800,7 @@ object-assign
 
             Texture.fromVideoUrl = function fromVideoUrl(videoUrl, scaleMode) {
               return new Texture(
-                _VideoBaseTexture2.default.fromUrl(videoUrl, scaleMode)
+                _VideoBaseTexture2.default.fromUrl(videoUrl, scaleMode),
               );
             };
 
@@ -29837,7 +29839,7 @@ object-assign
                 return Texture.fromCanvas(
                   source,
                   _settings2.default.SCALE_MODE,
-                  "HTMLCanvasElement"
+                  "HTMLCanvasElement",
                 );
               } else if (source instanceof HTMLVideoElement) {
                 return Texture.fromVideo(source);
@@ -29864,7 +29866,7 @@ object-assign
               var baseTexture = new _BaseTexture2.default(
                 source,
                 undefined,
-                (0, _utils.getResolutionOfUrl)(imageUrl)
+                (0, _utils.getResolutionOfUrl)(imageUrl),
               );
               var texture = new Texture(baseTexture);
 
@@ -29959,7 +29961,7 @@ object-assign
                   return this._frame;
                 },
                 set: function set(
-                  frame // eslint-disable-line require-jsdoc
+                  frame, // eslint-disable-line require-jsdoc
                 ) {
                   this._frame = frame;
 
@@ -29983,7 +29985,7 @@ object-assign
                           " + " +
                           frame.height +
                           " > " +
-                          this.baseTexture.height)
+                          this.baseTexture.height),
                     );
                   }
 
@@ -30019,7 +30021,7 @@ object-assign
                   return this._rotate;
                 },
                 set: function set(
-                  rotate // eslint-disable-line require-jsdoc
+                  rotate, // eslint-disable-line require-jsdoc
                 ) {
                   this._rotate = rotate;
                   if (this.valid) {
@@ -30287,7 +30289,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -30300,7 +30302,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -30312,7 +30314,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -30374,7 +30376,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _BaseTexture.call(this, source, scaleMode)
+                _BaseTexture.call(this, source, scaleMode),
               );
 
               _this.width = source.videoWidth;
@@ -30458,7 +30460,7 @@ object-assign
                 _ticker.shared.add(
                   this.update,
                   this,
-                  _const.UPDATE_PRIORITY.HIGH
+                  _const.UPDATE_PRIORITY.HIGH,
                 );
                 this._isAutoUpdating = true;
               }
@@ -30490,7 +30492,7 @@ object-assign
                 this.source.removeEventListener("canplay", this._onCanPlay);
                 this.source.removeEventListener(
                   "canplaythrough",
-                  this._onCanPlay
+                  this._onCanPlay,
                 );
 
                 this.width = this.source.videoWidth;
@@ -30577,15 +30579,15 @@ object-assign
                   video.appendChild(
                     createSource(
                       videoSrc[i].src || videoSrc[i],
-                      videoSrc[i].mime
-                    )
+                      videoSrc[i].mime,
+                    ),
                   );
                 }
               }
               // single object or string
               else {
                 video.appendChild(
-                  createSource(videoSrc.src || videoSrc, videoSrc.mime)
+                  createSource(videoSrc.src || videoSrc, videoSrc.mime),
                 );
               }
 
@@ -30607,7 +30609,7 @@ object-assign
                   return this._autoUpdate;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (value !== this._autoUpdate) {
                     this._autoUpdate = value;
@@ -30619,7 +30621,7 @@ object-assign
                       _ticker.shared.add(
                         this.update,
                         this,
-                        _const.UPDATE_PRIORITY.HIGH
+                        _const.UPDATE_PRIORITY.HIGH,
                       );
                       this._isAutoUpdating = true;
                     }
@@ -30903,7 +30905,7 @@ object-assign
                   : _const.UPDATE_PRIORITY.NORMAL;
 
               return this._addListener(
-                new _TickerListener2.default(fn, context, priority)
+                new _TickerListener2.default(fn, context, priority),
               );
             };
 
@@ -30923,7 +30925,7 @@ object-assign
                   : _const.UPDATE_PRIORITY.NORMAL;
 
               return this._addListener(
-                new _TickerListener2.default(fn, context, priority, true)
+                new _TickerListener2.default(fn, context, priority, true),
               );
             };
 
@@ -31145,12 +31147,12 @@ object-assign
                   return 1000 / this._maxElapsedMS;
                 },
                 set: function set(
-                  fps // eslint-disable-line require-jsdoc
+                  fps, // eslint-disable-line require-jsdoc
                 ) {
                   // Clamp: 0 to TARGET_FPMS
                   var minFPMS = Math.min(
                     Math.max(0, fps) / 1000,
-                    _settings2.default.TARGET_FPMS
+                    _settings2.default.TARGET_FPMS,
                   );
 
                   this._maxElapsedMS = 1 / minFPMS;
@@ -31878,7 +31880,7 @@ object-assign
                   _const.VERSION +
                   " - " +
                   type +
-                  " - http://www.pixijs.com/"
+                  " - http://www.pixijs.com/",
               );
             }
 
@@ -32087,7 +32089,7 @@ object-assign
               Object.defineProperty(
                 target,
                 propertyName,
-                Object.getOwnPropertyDescriptor(source, propertyName)
+                Object.getOwnPropertyDescriptor(source, propertyName),
               );
             }
           }
@@ -32265,7 +32267,7 @@ object-assign
               bound.left,
               bound.top,
               width,
-              height
+              height,
             );
 
             return {
@@ -32301,7 +32303,7 @@ object-assign
                   "%cDeprecation Warning: %c%s",
                   "color:#614108;background:#fffbe6",
                   "font-weight:normal;color:#614108;background:#fffbe6",
-                  msg
+                  msg,
                 );
                 console.warn(stack);
                 console.groupEnd();
@@ -32335,7 +32337,7 @@ object-assign
                 get: function get() {
                   throw new ReferenceError(
                     "SpriteBatch does not exist any more, " +
-                      "please use the new ParticleContainer instead."
+                      "please use the new ParticleContainer instead.",
                   );
                 },
               },
@@ -32354,7 +32356,7 @@ object-assign
                 get: function get() {
                   throw new ReferenceError(
                     "The loader system was overhauled in pixi v3, " +
-                      "please see the new PIXI.loaders.Loader class."
+                      "please see the new PIXI.loaders.Loader class.",
                   );
                 },
               },
@@ -32370,7 +32372,7 @@ object-assign
               Stage: {
                 get: function get() {
                   warn(
-                    "You do not need to use a PIXI Stage any more, you can simply render any container."
+                    "You do not need to use a PIXI Stage any more, you can simply render any container.",
                   );
 
                   return core.Container;
@@ -32388,7 +32390,7 @@ object-assign
               DisplayObjectContainer: {
                 get: function get() {
                   warn(
-                    "DisplayObjectContainer has been shortened to Container, please use Container from now on."
+                    "DisplayObjectContainer has been shortened to Container, please use Container from now on.",
                   );
 
                   return core.Container;
@@ -32406,7 +32408,7 @@ object-assign
               Strip: {
                 get: function get() {
                   warn(
-                    "The Strip class has been renamed to Mesh and moved to mesh.Mesh, please use mesh.Mesh from now on."
+                    "The Strip class has been renamed to Mesh and moved to mesh.Mesh, please use mesh.Mesh from now on.",
                   );
 
                   return mesh.Mesh;
@@ -32424,7 +32426,7 @@ object-assign
               Rope: {
                 get: function get() {
                   warn(
-                    "The Rope class has been moved to mesh.Rope, please use mesh.Rope from now on."
+                    "The Rope class has been moved to mesh.Rope, please use mesh.Rope from now on.",
                   );
 
                   return mesh.Rope;
@@ -32443,7 +32445,7 @@ object-assign
                 get: function get() {
                   warn(
                     "The ParticleContainer class has been moved to particles.ParticleContainer, " +
-                      "please use particles.ParticleContainer from now on."
+                      "please use particles.ParticleContainer from now on.",
                   );
 
                   return particles.ParticleContainer;
@@ -32461,7 +32463,7 @@ object-assign
               MovieClip: {
                 get: function get() {
                   warn(
-                    "The MovieClip class has been moved to extras.AnimatedSprite, please use extras.AnimatedSprite."
+                    "The MovieClip class has been moved to extras.AnimatedSprite, please use extras.AnimatedSprite.",
                   );
 
                   return extras.AnimatedSprite;
@@ -32480,7 +32482,7 @@ object-assign
                 get: function get() {
                   warn(
                     "The TilingSprite class has been moved to extras.TilingSprite, " +
-                      "please use extras.TilingSprite from now on."
+                      "please use extras.TilingSprite from now on.",
                   );
 
                   return extras.TilingSprite;
@@ -32499,7 +32501,7 @@ object-assign
                 get: function get() {
                   warn(
                     "The BitmapText class has been moved to extras.BitmapText, " +
-                      "please use extras.BitmapText from now on."
+                      "please use extras.BitmapText from now on.",
                   );
 
                   return extras.BitmapText;
@@ -32517,7 +32519,7 @@ object-assign
               blendModes: {
                 get: function get() {
                   warn(
-                    "The blendModes has been moved to BLEND_MODES, please use BLEND_MODES from now on."
+                    "The blendModes has been moved to BLEND_MODES, please use BLEND_MODES from now on.",
                   );
 
                   return core.BLEND_MODES;
@@ -32535,7 +32537,7 @@ object-assign
               scaleModes: {
                 get: function get() {
                   warn(
-                    "The scaleModes has been moved to SCALE_MODES, please use SCALE_MODES from now on."
+                    "The scaleModes has been moved to SCALE_MODES, please use SCALE_MODES from now on.",
                   );
 
                   return core.SCALE_MODES;
@@ -32554,7 +32556,7 @@ object-assign
                 get: function get() {
                   warn(
                     "The BaseTextureCache class has been moved to utils.BaseTextureCache, " +
-                      "please use utils.BaseTextureCache from now on."
+                      "please use utils.BaseTextureCache from now on.",
                   );
 
                   return core.utils.BaseTextureCache;
@@ -32573,7 +32575,7 @@ object-assign
                 get: function get() {
                   warn(
                     "The TextureCache class has been moved to utils.TextureCache, " +
-                      "please use utils.TextureCache from now on."
+                      "please use utils.TextureCache from now on.",
                   );
 
                   return core.utils.TextureCache;
@@ -32591,7 +32593,7 @@ object-assign
               math: {
                 get: function get() {
                   warn(
-                    "The math namespace is deprecated, please access members already accessible on PIXI."
+                    "The math namespace is deprecated, please access members already accessible on PIXI.",
                   );
 
                   return core;
@@ -32608,7 +32610,7 @@ object-assign
               AbstractFilter: {
                 get: function get() {
                   warn(
-                    "AstractFilter has been renamed to Filter, please use PIXI.Filter"
+                    "AstractFilter has been renamed to Filter, please use PIXI.Filter",
                   );
 
                   return core.Filter;
@@ -32625,7 +32627,7 @@ object-assign
               TransformManual: {
                 get: function get() {
                   warn(
-                    "TransformManual has been renamed to TransformBase, please update your pixi-spine"
+                    "TransformManual has been renamed to TransformBase, please update your pixi-spine",
                   );
 
                   return core.TransformBase;
@@ -32642,14 +32644,14 @@ object-assign
               TARGET_FPMS: {
                 get: function get() {
                   warn(
-                    "PIXI.TARGET_FPMS has been deprecated, please use PIXI.settings.TARGET_FPMS"
+                    "PIXI.TARGET_FPMS has been deprecated, please use PIXI.settings.TARGET_FPMS",
                   );
 
                   return core.settings.TARGET_FPMS;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.TARGET_FPMS has been deprecated, please use PIXI.settings.TARGET_FPMS"
+                    "PIXI.TARGET_FPMS has been deprecated, please use PIXI.settings.TARGET_FPMS",
                   );
 
                   core.settings.TARGET_FPMS = value;
@@ -32666,14 +32668,14 @@ object-assign
               FILTER_RESOLUTION: {
                 get: function get() {
                   warn(
-                    "PIXI.FILTER_RESOLUTION has been deprecated, please use PIXI.settings.FILTER_RESOLUTION"
+                    "PIXI.FILTER_RESOLUTION has been deprecated, please use PIXI.settings.FILTER_RESOLUTION",
                   );
 
                   return core.settings.FILTER_RESOLUTION;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.FILTER_RESOLUTION has been deprecated, please use PIXI.settings.FILTER_RESOLUTION"
+                    "PIXI.FILTER_RESOLUTION has been deprecated, please use PIXI.settings.FILTER_RESOLUTION",
                   );
 
                   core.settings.FILTER_RESOLUTION = value;
@@ -32690,14 +32692,14 @@ object-assign
               RESOLUTION: {
                 get: function get() {
                   warn(
-                    "PIXI.RESOLUTION has been deprecated, please use PIXI.settings.RESOLUTION"
+                    "PIXI.RESOLUTION has been deprecated, please use PIXI.settings.RESOLUTION",
                   );
 
                   return core.settings.RESOLUTION;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.RESOLUTION has been deprecated, please use PIXI.settings.RESOLUTION"
+                    "PIXI.RESOLUTION has been deprecated, please use PIXI.settings.RESOLUTION",
                   );
 
                   core.settings.RESOLUTION = value;
@@ -32714,14 +32716,14 @@ object-assign
               MIPMAP_TEXTURES: {
                 get: function get() {
                   warn(
-                    "PIXI.MIPMAP_TEXTURES has been deprecated, please use PIXI.settings.MIPMAP_TEXTURES"
+                    "PIXI.MIPMAP_TEXTURES has been deprecated, please use PIXI.settings.MIPMAP_TEXTURES",
                   );
 
                   return core.settings.MIPMAP_TEXTURES;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.MIPMAP_TEXTURES has been deprecated, please use PIXI.settings.MIPMAP_TEXTURES"
+                    "PIXI.MIPMAP_TEXTURES has been deprecated, please use PIXI.settings.MIPMAP_TEXTURES",
                   );
 
                   core.settings.MIPMAP_TEXTURES = value;
@@ -32738,14 +32740,14 @@ object-assign
               SPRITE_BATCH_SIZE: {
                 get: function get() {
                   warn(
-                    "PIXI.SPRITE_BATCH_SIZE has been deprecated, please use PIXI.settings.SPRITE_BATCH_SIZE"
+                    "PIXI.SPRITE_BATCH_SIZE has been deprecated, please use PIXI.settings.SPRITE_BATCH_SIZE",
                   );
 
                   return core.settings.SPRITE_BATCH_SIZE;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.SPRITE_BATCH_SIZE has been deprecated, please use PIXI.settings.SPRITE_BATCH_SIZE"
+                    "PIXI.SPRITE_BATCH_SIZE has been deprecated, please use PIXI.settings.SPRITE_BATCH_SIZE",
                   );
 
                   core.settings.SPRITE_BATCH_SIZE = value;
@@ -32762,14 +32764,14 @@ object-assign
               SPRITE_MAX_TEXTURES: {
                 get: function get() {
                   warn(
-                    "PIXI.SPRITE_MAX_TEXTURES has been deprecated, please use PIXI.settings.SPRITE_MAX_TEXTURES"
+                    "PIXI.SPRITE_MAX_TEXTURES has been deprecated, please use PIXI.settings.SPRITE_MAX_TEXTURES",
                   );
 
                   return core.settings.SPRITE_MAX_TEXTURES;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.SPRITE_MAX_TEXTURES has been deprecated, please use PIXI.settings.SPRITE_MAX_TEXTURES"
+                    "PIXI.SPRITE_MAX_TEXTURES has been deprecated, please use PIXI.settings.SPRITE_MAX_TEXTURES",
                   );
 
                   core.settings.SPRITE_MAX_TEXTURES = value;
@@ -32786,14 +32788,14 @@ object-assign
               RETINA_PREFIX: {
                 get: function get() {
                   warn(
-                    "PIXI.RETINA_PREFIX has been deprecated, please use PIXI.settings.RETINA_PREFIX"
+                    "PIXI.RETINA_PREFIX has been deprecated, please use PIXI.settings.RETINA_PREFIX",
                   );
 
                   return core.settings.RETINA_PREFIX;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.RETINA_PREFIX has been deprecated, please use PIXI.settings.RETINA_PREFIX"
+                    "PIXI.RETINA_PREFIX has been deprecated, please use PIXI.settings.RETINA_PREFIX",
                   );
 
                   core.settings.RETINA_PREFIX = value;
@@ -32810,7 +32812,7 @@ object-assign
               DEFAULT_RENDER_OPTIONS: {
                 get: function get() {
                   warn(
-                    "PIXI.DEFAULT_RENDER_OPTIONS has been deprecated, please use PIXI.settings.DEFAULT_RENDER_OPTIONS"
+                    "PIXI.DEFAULT_RENDER_OPTIONS has been deprecated, please use PIXI.settings.DEFAULT_RENDER_OPTIONS",
                   );
 
                   return core.settings.RENDER_OPTIONS;
@@ -32836,7 +32838,7 @@ object-assign
                     "PIXI." +
                       deprecation.parent +
                       ".DEFAULT has been deprecated, " +
-                      ("please use PIXI.settings." + deprecation.target)
+                      ("please use PIXI.settings." + deprecation.target),
                   );
 
                   return core.settings[deprecation.target];
@@ -32846,7 +32848,7 @@ object-assign
                     "PIXI." +
                       deprecation.parent +
                       ".DEFAULT has been deprecated, " +
-                      ("please use PIXI.settings." + deprecation.target)
+                      ("please use PIXI.settings." + deprecation.target),
                   );
 
                   core.settings[deprecation.target] = value;
@@ -32869,14 +32871,14 @@ object-assign
               PRECISION: {
                 get: function get() {
                   warn(
-                    "PIXI.settings.PRECISION has been deprecated, please use PIXI.settings.PRECISION_FRAGMENT"
+                    "PIXI.settings.PRECISION has been deprecated, please use PIXI.settings.PRECISION_FRAGMENT",
                   );
 
                   return core.settings.PRECISION_FRAGMENT;
                 },
                 set: function set(value) {
                   warn(
-                    "PIXI.settings.PRECISION has been deprecated, please use PIXI.settings.PRECISION_FRAGMENT"
+                    "PIXI.settings.PRECISION has been deprecated, please use PIXI.settings.PRECISION_FRAGMENT",
                   );
 
                   core.settings.PRECISION_FRAGMENT = value;
@@ -32895,7 +32897,7 @@ object-assign
               MovieClip: {
                 get: function get() {
                   warn(
-                    "The MovieClip class has been renamed to AnimatedSprite, please use AnimatedSprite from now on."
+                    "The MovieClip class has been renamed to AnimatedSprite, please use AnimatedSprite from now on.",
                   );
 
                   return extras.AnimatedSprite;
@@ -32906,7 +32908,7 @@ object-assign
             core.DisplayObject.prototype.generateTexture =
               function generateTexture(renderer, scaleMode, resolution) {
                 warn(
-                  "generateTexture has moved to the renderer, please use renderer.generateTexture(displayObject)"
+                  "generateTexture has moved to the renderer, please use renderer.generateTexture(displayObject)",
                 );
 
                 return renderer.generateTexture(this, scaleMode, resolution);
@@ -32914,11 +32916,11 @@ object-assign
 
             core.Graphics.prototype.generateTexture = function generateTexture(
               scaleMode,
-              resolution
+              resolution,
             ) {
               warn(
                 "graphics generate texture has moved to the renderer. " +
-                  "Or to render a graphics to a texture using canvas please use generateCanvasTexture"
+                  "Or to render a graphics to a texture using canvas please use generateCanvasTexture",
               );
 
               return this.generateCanvasTexture(scaleMode, resolution);
@@ -32928,53 +32930,53 @@ object-assign
               displayObject,
               matrix,
               clear,
-              updateTransform
+              updateTransform,
             ) {
               this.legacyRenderer.render(
                 displayObject,
                 this,
                 clear,
                 matrix,
-                !updateTransform
+                !updateTransform,
               );
               warn(
-                "RenderTexture.render is now deprecated, please use renderer.render(displayObject, renderTexture)"
+                "RenderTexture.render is now deprecated, please use renderer.render(displayObject, renderTexture)",
               );
             };
 
             core.RenderTexture.prototype.getImage = function getImage(target) {
               warn(
-                "RenderTexture.getImage is now deprecated, please use renderer.extract.image(target)"
+                "RenderTexture.getImage is now deprecated, please use renderer.extract.image(target)",
               );
 
               return this.legacyRenderer.extract.image(target);
             };
 
             core.RenderTexture.prototype.getBase64 = function getBase64(
-              target
+              target,
             ) {
               warn(
-                "RenderTexture.getBase64 is now deprecated, please use renderer.extract.base64(target)"
+                "RenderTexture.getBase64 is now deprecated, please use renderer.extract.base64(target)",
               );
 
               return this.legacyRenderer.extract.base64(target);
             };
 
             core.RenderTexture.prototype.getCanvas = function getCanvas(
-              target
+              target,
             ) {
               warn(
-                "RenderTexture.getCanvas is now deprecated, please use renderer.extract.canvas(target)"
+                "RenderTexture.getCanvas is now deprecated, please use renderer.extract.canvas(target)",
               );
 
               return this.legacyRenderer.extract.canvas(target);
             };
 
             core.RenderTexture.prototype.getPixels = function getPixels(
-              target
+              target,
             ) {
               warn(
-                "RenderTexture.getPixels is now deprecated, please use renderer.extract.pixels(target)"
+                "RenderTexture.getPixels is now deprecated, please use renderer.extract.pixels(target)",
               );
 
               return this.legacyRenderer.pixels(target);
@@ -32991,7 +32993,7 @@ object-assign
             core.Sprite.prototype.setTexture = function setTexture(texture) {
               this.texture = texture;
               warn(
-                "setTexture is now deprecated, please use the texture property, e.g : sprite.texture = texture;"
+                "setTexture is now deprecated, please use the texture property, e.g : sprite.texture = texture;",
               );
             };
 
@@ -33005,7 +33007,7 @@ object-assign
             extras.BitmapText.prototype.setText = function setText(text) {
               this.text = text;
               warn(
-                "setText is now deprecated, please use the text property, e.g : myBitmapText.text = 'my text';"
+                "setText is now deprecated, please use the text property, e.g : myBitmapText.text = 'my text';",
               );
             };
 
@@ -33019,7 +33021,7 @@ object-assign
             core.Text.prototype.setText = function setText(text) {
               this.text = text;
               warn(
-                "setText is now deprecated, please use the text property, e.g : myText.text = 'my text';"
+                "setText is now deprecated, please use the text property, e.g : myText.text = 'my text';",
               );
             };
 
@@ -33035,7 +33037,7 @@ object-assign
             core.Text.calculateFontProperties =
               function calculateFontProperties(font) {
                 warn(
-                  "Text.calculateFontProperties is now deprecated, please use the TextMetrics.measureFont"
+                  "Text.calculateFontProperties is now deprecated, please use the TextMetrics.measureFont",
                 );
 
                 return core.TextMetrics.measureFont(font);
@@ -33075,7 +33077,7 @@ object-assign
             core.Text.prototype.setStyle = function setStyle(style) {
               this.style = style;
               warn(
-                "setStyle is now deprecated, please use the style property, e.g : myText.style = style;"
+                "setStyle is now deprecated, please use the style property, e.g : myText.style = style;",
               );
             };
 
@@ -33091,7 +33093,7 @@ object-assign
             core.Text.prototype.determineFontProperties =
               function determineFontProperties(fontStyle) {
                 warn(
-                  "determineFontProperties is now deprecated, please use TextMetrics.measureFont method"
+                  "determineFontProperties is now deprecated, please use TextMetrics.measureFont method",
                 );
 
                 return core.TextMetrics.measureFont(fontStyle);
@@ -33107,7 +33109,7 @@ object-assign
              */
             core.Text.getFontStyle = function getFontStyle(style) {
               warn(
-                "getFontStyle is now deprecated, please use TextStyle.toFontString() instead"
+                "getFontStyle is now deprecated, please use TextStyle.toFontString() instead",
               );
 
               style = style || {};
@@ -33130,7 +33132,7 @@ object-assign
                 get: function get() {
                   warn(
                     "text style property 'font' is now deprecated, please use the " +
-                      "'fontFamily', 'fontSize', 'fontStyle', 'fontVariant' and 'fontWeight' properties from now on"
+                      "'fontFamily', 'fontSize', 'fontStyle', 'fontVariant' and 'fontWeight' properties from now on",
                   );
 
                   var fontSizeString =
@@ -33153,7 +33155,7 @@ object-assign
                 set: function set(font) {
                   warn(
                     "text style property 'font' is now deprecated, please use the " +
-                      "'fontFamily','fontSize',fontStyle','fontVariant' and 'fontWeight' properties from now on"
+                      "'fontFamily','fontSize',fontStyle','fontVariant' and 'fontWeight' properties from now on",
                   );
 
                   // can work out fontStyle from search of whole string
@@ -33190,7 +33192,7 @@ object-assign
                   for (var _i = 0; _i < fontSizeIndex; ++_i) {
                     if (
                       splits[_i].match(
-                        /(bold|bolder|lighter|100|200|300|400|500|600|700|800|900)/
+                        /(bold|bolder|lighter|100|200|300|400|500|600|700|800|900)/,
                       )
                     ) {
                       this._fontWeight = splits[_i];
@@ -33229,7 +33231,7 @@ object-assign
             core.Texture.prototype.setFrame = function setFrame(frame) {
               this.frame = frame;
               warn(
-                "setFrame is now deprecated, please use the frame property, e.g: myTexture.frame = frame;"
+                "setFrame is now deprecated, please use the frame property, e.g: myTexture.frame = frame;",
               );
             };
 
@@ -33244,11 +33246,11 @@ object-assign
              */
             core.Texture.addTextureToCache = function addTextureToCache(
               texture,
-              id
+              id,
             ) {
               core.Texture.addToCache(texture, id);
               warn(
-                "Texture.addTextureToCache is deprecated, please use Texture.addToCache from now on."
+                "Texture.addTextureToCache is deprecated, please use Texture.addToCache from now on.",
               );
             };
 
@@ -33266,7 +33268,7 @@ object-assign
                 warn(
                   "Texture.removeTextureFromCache is deprecated, please use Texture.removeFromCache from now on. " +
                     "Be aware that Texture.removeFromCache does not automatically its BaseTexture from the BaseTextureCache. " +
-                    "For that, use BaseTexture.removeFromCache"
+                    "For that, use BaseTexture.removeFromCache",
                 );
 
                 core.BaseTexture.removeFromCache(id);
@@ -33285,7 +33287,7 @@ object-assign
               AbstractFilter: {
                 get: function get() {
                   warn(
-                    "AstractFilter has been renamed to Filter, please use PIXI.Filter"
+                    "AstractFilter has been renamed to Filter, please use PIXI.Filter",
                   );
 
                   return core.AbstractFilter;
@@ -33302,7 +33304,7 @@ object-assign
               SpriteMaskFilter: {
                 get: function get() {
                   warn(
-                    "filters.SpriteMaskFilter is an undocumented alias, please use SpriteMaskFilter from now on."
+                    "filters.SpriteMaskFilter is an undocumented alias, please use SpriteMaskFilter from now on.",
                   );
 
                   return core.SpriteMaskFilter;
@@ -33319,7 +33321,7 @@ object-assign
              */
             core.utils.uuid = function () {
               warn(
-                "utils.uuid() is deprecated, please use utils.uid() from now on."
+                "utils.uuid() is deprecated, please use utils.uid() from now on.",
               );
 
               return core.utils.uid();
@@ -33334,7 +33336,7 @@ object-assign
              */
             core.utils.canUseNewCanvasBlendModes = function () {
               warn(
-                "utils.canUseNewCanvasBlendModes() is deprecated, please use CanvasTinter.canUseMultiply from now on"
+                "utils.canUseNewCanvasBlendModes() is deprecated, please use CanvasTinter.canUseMultiply from now on",
               );
 
               return core.CanvasTinter.canUseMultiply;
@@ -33352,7 +33354,7 @@ object-assign
               set: function set(bool) {
                 if (bool) {
                   warn(
-                    "PIXI.utils._saidHello is deprecated, please use PIXI.utils.skipHello()"
+                    "PIXI.utils._saidHello is deprecated, please use PIXI.utils.skipHello()",
                   );
                   this.skipHello();
                 }
@@ -33376,11 +33378,11 @@ object-assign
              */
             prepare.BasePrepare.prototype.register = function register(
               addHook,
-              uploadHook
+              uploadHook,
             ) {
               warn(
                 "renderer.plugins.prepare.register is now deprecated, " +
-                  "please use renderer.plugins.prepare.registerFindHook & renderer.plugins.prepare.registerUploadHook"
+                  "please use renderer.plugins.prepare.registerFindHook & renderer.plugins.prepare.registerUploadHook",
               );
 
               if (addHook) {
@@ -33407,7 +33409,7 @@ object-assign
               set: function set() {
                 warn(
                   "PIXI.CanvasPrepare.UPLOADS_PER_FRAME has been removed. Please set " +
-                    "renderer.plugins.prepare.limiter.maxItemsPerFrame on your renderer"
+                    "renderer.plugins.prepare.limiter.maxItemsPerFrame on your renderer",
                 );
                 // because we don't have a reference to the renderer, we can't actually set
                 // the uploads per frame, so we'll have to stick with the warning.
@@ -33415,7 +33417,7 @@ object-assign
               get: function get() {
                 warn(
                   "PIXI.CanvasPrepare.UPLOADS_PER_FRAME has been removed. Please use " +
-                    "renderer.plugins.prepare.limiter"
+                    "renderer.plugins.prepare.limiter",
                 );
 
                 return NaN;
@@ -33435,7 +33437,7 @@ object-assign
               set: function set() {
                 warn(
                   "PIXI.WebGLPrepare.UPLOADS_PER_FRAME has been removed. Please set " +
-                    "renderer.plugins.prepare.limiter.maxItemsPerFrame on your renderer"
+                    "renderer.plugins.prepare.limiter.maxItemsPerFrame on your renderer",
                 );
                 // because we don't have a reference to the renderer, we can't actually set
                 // the uploads per frame, so we'll have to stick with the warning.
@@ -33443,7 +33445,7 @@ object-assign
               get: function get() {
                 warn(
                   "PIXI.WebGLPrepare.UPLOADS_PER_FRAME has been removed. Please use " +
-                    "renderer.plugins.prepare.limiter"
+                    "renderer.plugins.prepare.limiter",
                 );
 
                 return NaN;
@@ -33459,7 +33461,7 @@ object-assign
                   isJson: {
                     get: function get() {
                       warn(
-                        "The isJson property is deprecated, please use `resource.type === Resource.TYPE.JSON`."
+                        "The isJson property is deprecated, please use `resource.type === Resource.TYPE.JSON`.",
                       );
 
                       return this.type === Resource.TYPE.JSON;
@@ -33468,7 +33470,7 @@ object-assign
                   isXml: {
                     get: function get() {
                       warn(
-                        "The isXml property is deprecated, please use `resource.type === Resource.TYPE.XML`."
+                        "The isXml property is deprecated, please use `resource.type === Resource.TYPE.XML`.",
                       );
 
                       return this.type === Resource.TYPE.XML;
@@ -33477,7 +33479,7 @@ object-assign
                   isImage: {
                     get: function get() {
                       warn(
-                        "The isImage property is deprecated, please use `resource.type === Resource.TYPE.IMAGE`."
+                        "The isImage property is deprecated, please use `resource.type === Resource.TYPE.IMAGE`.",
                       );
 
                       return this.type === Resource.TYPE.IMAGE;
@@ -33486,7 +33488,7 @@ object-assign
                   isAudio: {
                     get: function get() {
                       warn(
-                        "The isAudio property is deprecated, please use `resource.type === Resource.TYPE.AUDIO`."
+                        "The isAudio property is deprecated, please use `resource.type === Resource.TYPE.AUDIO`.",
                       );
 
                       return this.type === Resource.TYPE.AUDIO;
@@ -33495,7 +33497,7 @@ object-assign
                   isVideo: {
                     get: function get() {
                       warn(
-                        "The isVideo property is deprecated, please use `resource.type === Resource.TYPE.VIDEO`."
+                        "The isVideo property is deprecated, please use `resource.type === Resource.TYPE.VIDEO`.",
                       );
 
                       return this.type === Resource.TYPE.VIDEO;
@@ -33507,7 +33509,7 @@ object-assign
                   before: {
                     get: function get() {
                       warn(
-                        "The before() method is deprecated, please use pre()."
+                        "The before() method is deprecated, please use pre().",
                       );
 
                       return this.pre;
@@ -33516,7 +33518,7 @@ object-assign
                   after: {
                     get: function get() {
                       warn(
-                        "The after() method is deprecated, please use use()."
+                        "The after() method is deprecated, please use use().",
                       );
 
                       return this.use;
@@ -33539,18 +33541,18 @@ object-assign
               {
                 set: function set(value) {
                   warn(
-                    "Property defaultCursor has been replaced with 'cursor'. "
+                    "Property defaultCursor has been replaced with 'cursor'. ",
                   );
                   this.cursor = value;
                 },
                 get: function get() {
                   warn(
-                    "Property defaultCursor has been replaced with 'cursor'. "
+                    "Property defaultCursor has been replaced with 'cursor'. ",
                   );
 
                   return this.cursor;
                 },
-              }
+              },
             );
 
             /**
@@ -33566,18 +33568,18 @@ object-assign
               {
                 set: function set(value) {
                   warn(
-                    "Property defaultCursorStyle has been replaced with 'cursorStyles.default'. "
+                    "Property defaultCursorStyle has been replaced with 'cursorStyles.default'. ",
                   );
                   this.cursorStyles.default = value;
                 },
                 get: function get() {
                   warn(
-                    "Property defaultCursorStyle has been replaced with 'cursorStyles.default'. "
+                    "Property defaultCursorStyle has been replaced with 'cursorStyles.default'. ",
                   );
 
                   return this.cursorStyles.default;
                 },
-              }
+              },
             );
 
             /**
@@ -33594,19 +33596,19 @@ object-assign
                 set: function set(value) {
                   warn(
                     "Property currentCursorStyle has been removed." +
-                      "See the currentCursorMode property, which works differently."
+                      "See the currentCursorMode property, which works differently.",
                   );
                   this.currentCursorMode = value;
                 },
                 get: function get() {
                   warn(
                     "Property currentCursorStyle has been removed." +
-                      "See the currentCursorMode property, which works differently."
+                      "See the currentCursorMode property, which works differently.",
                   );
 
                   return this.currentCursorMode;
                 },
-              }
+              },
             );
           }
         },
@@ -33746,7 +33748,7 @@ object-assign
                 frame.x * resolution,
                 frame.y * resolution,
                 width,
-                height
+                height,
               );
 
               canvasBuffer.context.putImageData(canvasData, 0, 0);
@@ -33796,7 +33798,7 @@ object-assign
                 0,
                 0,
                 frame.width * resolution,
-                frame.height * resolution
+                frame.height * resolution,
               ).data;
             };
 
@@ -33993,7 +33995,7 @@ object-assign
 
                 // set up an array of pixels
                 var webglPixels = new Uint8Array(
-                  BYTES_PER_PIXEL * width * height
+                  BYTES_PER_PIXEL * width * height,
                 );
 
                 // read pixels to the array
@@ -34006,7 +34008,7 @@ object-assign
                   height,
                   gl.RGBA,
                   gl.UNSIGNED_BYTE,
-                  webglPixels
+                  webglPixels,
                 );
 
                 // add the pixels to the canvas
@@ -34014,7 +34016,7 @@ object-assign
                   0,
                   0,
                   width,
-                  height
+                  height,
                 );
 
                 canvasData.data.set(webglPixels);
@@ -34027,7 +34029,7 @@ object-assign
                   canvasBuffer.context.drawImage(
                     canvasBuffer.canvas,
                     0,
-                    -height
+                    -height,
                   );
                 }
               }
@@ -34080,7 +34082,7 @@ object-assign
               var height = frame.height * resolution;
 
               var webglPixels = new Uint8Array(
-                BYTES_PER_PIXEL * width * height
+                BYTES_PER_PIXEL * width * height,
               );
 
               if (textureBuffer) {
@@ -34096,7 +34098,7 @@ object-assign
                   height,
                   gl.RGBA,
                   gl.UNSIGNED_BYTE,
-                  webglPixels
+                  webglPixels,
                 );
               }
 
@@ -34175,7 +34177,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -34188,7 +34190,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -34200,7 +34202,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -34255,8 +34257,8 @@ object-assign
                   this,
                   textures[0] instanceof core.Texture
                     ? textures[0]
-                    : textures[0].texture
-                )
+                    : textures[0].texture,
+                ),
               );
 
               _this._textures = null;
@@ -34355,7 +34357,7 @@ object-assign
                 core.ticker.shared.add(
                   this.update,
                   this,
-                  core.UPDATE_PRIORITY.HIGH
+                  core.UPDATE_PRIORITY.HIGH,
                 );
               }
             };
@@ -34367,7 +34369,7 @@ object-assign
              */
 
             AnimatedSprite.prototype.gotoAndStop = function gotoAndStop(
-              frameNumber
+              frameNumber,
             ) {
               this.stop();
 
@@ -34387,7 +34389,7 @@ object-assign
              */
 
             AnimatedSprite.prototype.gotoAndPlay = function gotoAndPlay(
-              frameNumber
+              frameNumber,
             ) {
               var previousFrame = this.currentFrame;
 
@@ -34545,7 +34547,7 @@ object-assign
                   return this._textures;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (value[0] instanceof core.Texture) {
                     this._textures = value;
@@ -34651,7 +34653,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -34664,7 +34666,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -34676,7 +34678,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -34732,7 +34734,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _core$Container.call(this)
+                _core$Container.call(this),
               );
 
               _this._textWidth = 0;
@@ -34811,7 +34813,7 @@ object-assign
                 },
                 _this,
                 0,
-                0
+                0,
               );
 
               /**
@@ -34900,7 +34902,7 @@ object-assign
                   charCode: charCode,
                   position: new core.Point(
                     pos.x + charData.xOffset,
-                    pos.y + charData.yOffset
+                    pos.y + charData.yOffset,
                   ),
                 });
                 lastLineWidth =
@@ -34908,7 +34910,7 @@ object-assign
                 pos.x += charData.xAdvance;
                 maxLineHeight = Math.max(
                   maxLineHeight,
-                  charData.yOffset + charData.texture.height
+                  charData.yOffset + charData.texture.height,
                 );
                 prevCharCode = charCode;
               }
@@ -35044,7 +35046,7 @@ object-assign
                   parseInt(letter.getAttribute("x"), 10) + texture.frame.x,
                   parseInt(letter.getAttribute("y"), 10) + texture.frame.y,
                   parseInt(letter.getAttribute("width"), 10),
-                  parseInt(letter.getAttribute("height"), 10)
+                  parseInt(letter.getAttribute("height"), 10),
                 );
 
                 data.chars[charCode] = {
@@ -35084,7 +35086,7 @@ object-assign
                   return this._font.tint;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._font.tint =
                     typeof value === "number" && value >= 0 ? value : 0xffffff;
@@ -35105,7 +35107,7 @@ object-assign
                   return this._font.align;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._font.align = value || "left";
 
@@ -35127,7 +35129,7 @@ object-assign
                   return this._anchor;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (typeof value === "number") {
                     this._anchor.set(value);
@@ -35148,7 +35150,7 @@ object-assign
                   return this._font;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (!value) {
                     return;
@@ -35186,7 +35188,7 @@ object-assign
                   return this._text;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   value = value.toString() || " ";
                   if (this._text === value) {
@@ -35341,7 +35343,7 @@ object-assign
              */
             TextureTransform.prototype.multiplyUvs = function multiplyUvs(
               uvs,
-              out
+              out,
             ) {
               if (out === undefined) {
                 out = uvs;
@@ -35387,7 +35389,7 @@ object-assign
                 uvs.x3 - uvs.x0,
                 uvs.y3 - uvs.y0,
                 uvs.x0,
-                uvs.y0
+                uvs.y0,
               );
 
               var orig = tex.orig;
@@ -35400,7 +35402,7 @@ object-assign
                   0,
                   orig.height / trim.height,
                   -trim.x / trim.width,
-                  -trim.y / trim.height
+                  -trim.y / trim.height,
                 );
                 this.mapCoord.append(tempMat);
               }
@@ -35431,7 +35433,7 @@ object-assign
                   return this._texture;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._texture = value;
                   this._lastTextureID = -1;
@@ -35511,7 +35513,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -35524,7 +35526,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -35536,7 +35538,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -35581,7 +35583,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _core$Sprite.call(this, texture)
+                _core$Sprite.call(this, texture),
               );
 
               _this.tileTransform = new core.TransformStatic();
@@ -35664,7 +35666,7 @@ object-assign
              */
 
             TilingSprite.prototype._renderWebGL = function _renderWebGL(
-              renderer
+              renderer,
             ) {
               // tweak our texture temporarily..
               var texture = this._texture;
@@ -35688,7 +35690,7 @@ object-assign
              */
 
             TilingSprite.prototype._renderCanvas = function _renderCanvas(
-              renderer
+              renderer,
             ) {
               var texture = this._texture;
 
@@ -35717,7 +35719,7 @@ object-assign
                 var tempCanvas = new core.CanvasRenderTarget(
                   texture._frame.width,
                   texture._frame.height,
-                  baseTextureResolution
+                  baseTextureResolution,
                 );
 
                 // Tint the tiling sprite
@@ -35733,12 +35735,12 @@ object-assign
                   tempCanvas.context.drawImage(
                     baseTexture.source,
                     -texture._frame.x,
-                    -texture._frame.y
+                    -texture._frame.y,
                   );
                 }
                 this._canvasPattern = tempCanvas.context.createPattern(
                   tempCanvas.canvas,
-                  "repeat"
+                  "repeat",
                 );
               }
 
@@ -35750,7 +35752,7 @@ object-assign
                 transform.c * resolution,
                 transform.d * resolution,
                 transform.tx * resolution,
-                transform.ty * resolution
+                transform.ty * resolution,
               );
 
               renderer.setBlendMode(this.blendMode);
@@ -35761,7 +35763,7 @@ object-assign
               // TODO - this should be rolled into the setTransform above..
               context.scale(
                 this.tileScale.x / baseTextureResolution,
-                this.tileScale.y / baseTextureResolution
+                this.tileScale.y / baseTextureResolution,
               );
 
               var anchorX = this.anchor.x * -this._width;
@@ -35774,7 +35776,7 @@ object-assign
                   -modX + anchorX,
                   -modY + anchorY,
                   (this._width / this.tileScale.x) * baseTextureResolution,
-                  (this._height / this.tileScale.y) * baseTextureResolution
+                  (this._height / this.tileScale.y) * baseTextureResolution,
                 );
               } else {
                 context.translate(modX + anchorX, modY + anchorY);
@@ -35783,7 +35785,7 @@ object-assign
                   -modX,
                   -modY,
                   (this._width / this.tileScale.x) * baseTextureResolution,
-                  (this._height / this.tileScale.y) * baseTextureResolution
+                  (this._height / this.tileScale.y) * baseTextureResolution,
                 );
               }
             };
@@ -35812,7 +35814,7 @@ object-assign
              */
 
             TilingSprite.prototype.getLocalBounds = function getLocalBounds(
-              rect
+              rect,
             ) {
               // we can do a fast local bounds if the sprite has no children!
               if (this.children.length === 0) {
@@ -35843,7 +35845,7 @@ object-assign
              */
 
             TilingSprite.prototype.containsPoint = function containsPoint(
-              point
+              point,
             ) {
               this.worldTransform.applyInverse(point, tempPoint);
 
@@ -35903,7 +35905,7 @@ object-assign
             TilingSprite.fromFrame = function fromFrame(
               frameId,
               width,
-              height
+              height,
             ) {
               var texture = core.utils.TextureCache[frameId];
 
@@ -35912,7 +35914,7 @@ object-assign
                   'The frameId "' +
                     frameId +
                     '" does not exist in the texture cache ' +
-                    this
+                    this,
                 );
               }
 
@@ -35938,12 +35940,12 @@ object-assign
               width,
               height,
               crossorigin,
-              scaleMode
+              scaleMode,
             ) {
               return new TilingSprite(
                 core.Texture.fromImage(imageId, crossorigin, scaleMode),
                 width,
-                height
+                height,
               );
             };
 
@@ -35960,7 +35962,7 @@ object-assign
                   return this.uvTransform.clampMargin;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.uvTransform.clampMargin = value;
                   this.uvTransform.update(true);
@@ -35978,7 +35980,7 @@ object-assign
                   return this.tileTransform.scale;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.tileTransform.scale.copy(value);
                 },
@@ -35995,7 +35997,7 @@ object-assign
                   return this.tileTransform.position;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.tileTransform.position.copy(value);
                 },
@@ -36006,7 +36008,7 @@ object-assign
                   return this._width;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._width = value;
                 },
@@ -36023,7 +36025,7 @@ object-assign
                   return this._height;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._height = value;
                 },
@@ -36261,7 +36263,7 @@ object-assign
 
               var renderTexture = core.RenderTexture.create(
                 bounds.width | 0,
-                bounds.height | 0
+                bounds.height | 0,
               );
 
               var textureCacheId = "cacheAsBitmap_" + (0, _utils.uid)();
@@ -36270,7 +36272,7 @@ object-assign
 
               _BaseTexture2.default.addToCache(
                 renderTexture.baseTexture,
-                textureCacheId
+                textureCacheId,
               );
               _Texture2.default.addToCache(renderTexture, textureCacheId);
 
@@ -36375,7 +36377,7 @@ object-assign
 
               var renderTexture = core.RenderTexture.create(
                 bounds.width | 0,
-                bounds.height | 0
+                bounds.height | 0,
               );
 
               var textureCacheId = "cacheAsBitmap_" + (0, _utils.uid)();
@@ -36384,7 +36386,7 @@ object-assign
 
               _BaseTexture2.default.addToCache(
                 renderTexture.baseTexture,
-                textureCacheId
+                textureCacheId,
               );
               _Texture2.default.addToCache(renderTexture, textureCacheId);
 
@@ -36471,7 +36473,7 @@ object-assign
               this._cacheData.sprite = null;
 
               _BaseTexture2.default.removeFromCache(
-                this._cacheData.textureCacheId
+                this._cacheData.textureCacheId,
               );
               _Texture2.default.removeFromCache(this._cacheData.textureCacheId);
 
@@ -36539,7 +36541,7 @@ object-assign
            * @return {PIXI.DisplayObject} The child with the specified name.
            */
           core.Container.prototype.getChildByName = function getChildByName(
-            name
+            name,
           ) {
             for (var i = 0; i < this.children.length; i++) {
               if (this.children[i].name === name) {
@@ -36717,7 +36719,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -36730,7 +36732,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -36742,7 +36744,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -36774,7 +36776,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _core$ObjectRenderer.call(this, renderer)
+                _core$ObjectRenderer.call(this, renderer),
               );
 
               _this.shader = null;
@@ -36796,12 +36798,12 @@ object-assign
                 this.shader = new core.Shader(
                   gl,
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 translationMatrix;\nuniform mat3 uTransform;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = (uTransform * vec3(aTextureCoord, 1.0)).xy;\n}\n",
-                  "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\nuniform mat3 uMapCoord;\nuniform vec4 uClampFrame;\nuniform vec2 uClampOffset;\n\nvoid main(void)\n{\n    vec2 coord = mod(vTextureCoord - uClampOffset, vec2(1.0, 1.0)) + uClampOffset;\n    coord = (uMapCoord * vec3(coord, 1.0)).xy;\n    coord = clamp(coord, uClampFrame.xy, uClampFrame.zw);\n\n    vec4 sample = texture2D(uSampler, coord);\n    vec4 color = vec4(uColor.rgb * uColor.a, uColor.a);\n\n    gl_FragColor = sample * color ;\n}\n"
+                  "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\nuniform mat3 uMapCoord;\nuniform vec4 uClampFrame;\nuniform vec2 uClampOffset;\n\nvoid main(void)\n{\n    vec2 coord = mod(vTextureCoord - uClampOffset, vec2(1.0, 1.0)) + uClampOffset;\n    coord = (uMapCoord * vec3(coord, 1.0)).xy;\n    coord = clamp(coord, uClampFrame.xy, uClampFrame.zw);\n\n    vec4 sample = texture2D(uSampler, coord);\n    vec4 color = vec4(uColor.rgb * uColor.a, uColor.a);\n\n    gl_FragColor = sample * color ;\n}\n",
                 );
                 this.simpleShader = new core.Shader(
                   gl,
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 translationMatrix;\nuniform mat3 uTransform;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = (uTransform * vec3(aTextureCoord, 1.0)).xy;\n}\n",
-                  "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\n\nvoid main(void)\n{\n    vec4 sample = texture2D(uSampler, vTextureCoord);\n    vec4 color = vec4(uColor.rgb * uColor.a, uColor.a);\n    gl_FragColor = sample * color;\n}\n"
+                  "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\n\nvoid main(void)\n{\n    vec4 sample = texture2D(uSampler, vTextureCoord);\n    vec4 color = vec4(uColor.rgb * uColor.a, uColor.a);\n    gl_FragColor = sample * color;\n}\n",
                 );
 
                 this.renderer.bindVao(null);
@@ -36875,7 +36877,7 @@ object-assign
                 (lt.c * h) / W,
                 (lt.d * h) / H,
                 lt.tx / W,
-                lt.ty / H
+                lt.ty / H,
               );
 
               // that part is the same as above:
@@ -36917,7 +36919,7 @@ object-assign
 
           core.WebGLRenderer.registerPlugin(
             "tilingSprite",
-            TilingSpriteRenderer
+            TilingSpriteRenderer,
           );
         },
         { "../../core": 63, "../../core/const": 44, path: 22 },
@@ -36987,7 +36989,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -37000,7 +37002,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -37012,7 +37014,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -37042,20 +37044,20 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _core$Filter.call(this)
+                _core$Filter.call(this),
               );
 
               _this.blurXFilter = new _BlurXFilter2.default(
                 strength,
                 quality,
                 resolution,
-                kernelSize
+                kernelSize,
               );
               _this.blurYFilter = new _BlurYFilter2.default(
                 strength,
                 quality,
                 resolution,
-                kernelSize
+                kernelSize,
               );
 
               _this.padding = 0;
@@ -37076,7 +37078,7 @@ object-assign
             BlurFilter.prototype.apply = function apply(
               filterManager,
               input,
-              output
+              output,
             ) {
               var renderTarget = filterManager.getRenderTarget(true);
 
@@ -37085,7 +37087,7 @@ object-assign
                 filterManager,
                 renderTarget,
                 output,
-                false
+                false,
               );
 
               filterManager.returnRenderTarget(renderTarget);
@@ -37105,13 +37107,13 @@ object-assign
                   return this.blurXFilter.blur;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.blurXFilter.blur = this.blurYFilter.blur = value;
                   this.padding =
                     Math.max(
                       Math.abs(this.blurXFilter.strength),
-                      Math.abs(this.blurYFilter.strength)
+                      Math.abs(this.blurYFilter.strength),
                     ) * 2;
                 },
 
@@ -37128,7 +37130,7 @@ object-assign
                   return this.blurXFilter.quality;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.blurXFilter.quality = this.blurYFilter.quality = value;
                 },
@@ -37146,13 +37148,13 @@ object-assign
                   return this.blurXFilter.blur;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.blurXFilter.blur = value;
                   this.padding =
                     Math.max(
                       Math.abs(this.blurXFilter.strength),
-                      Math.abs(this.blurYFilter.strength)
+                      Math.abs(this.blurYFilter.strength),
                     ) * 2;
                 },
 
@@ -37169,13 +37171,13 @@ object-assign
                   return this.blurYFilter.blur;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.blurYFilter.blur = value;
                   this.padding =
                     Math.max(
                       Math.abs(this.blurXFilter.strength),
-                      Math.abs(this.blurYFilter.strength)
+                      Math.abs(this.blurYFilter.strength),
                     ) * 2;
                 },
               },
@@ -37219,19 +37221,19 @@ object-assign
           var _generateBlurVertSource = require("./generateBlurVertSource");
 
           var _generateBlurVertSource2 = _interopRequireDefault(
-            _generateBlurVertSource
+            _generateBlurVertSource,
           );
 
           var _generateBlurFragSource = require("./generateBlurFragSource");
 
           var _generateBlurFragSource2 = _interopRequireDefault(
-            _generateBlurFragSource
+            _generateBlurFragSource,
           );
 
           var _getMaxBlurKernelSize = require("./getMaxBlurKernelSize");
 
           var _getMaxBlurKernelSize2 = _interopRequireDefault(
-            _getMaxBlurKernelSize
+            _getMaxBlurKernelSize,
           );
 
           function _interopRequireDefault(obj) {
@@ -37263,7 +37265,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -37276,7 +37278,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -37288,7 +37290,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -37318,7 +37320,7 @@ object-assign
               kernelSize = kernelSize || 5;
               var vertSrc = (0, _generateBlurVertSource2.default)(
                 kernelSize,
-                true
+                true,
               );
               var fragSrc = (0, _generateBlurFragSource2.default)(kernelSize);
 
@@ -37329,8 +37331,8 @@ object-assign
                   // vertex shader
                   vertSrc,
                   // fragment shader
-                  fragSrc
-                )
+                  fragSrc,
+                ),
               );
 
               _this.resolution = resolution || core.settings.RESOLUTION;
@@ -37357,7 +37359,7 @@ object-assign
               filterManager,
               input,
               output,
-              clear
+              clear,
             ) {
               if (this.firstRun) {
                 var gl = filterManager.renderer.gl;
@@ -37365,10 +37367,10 @@ object-assign
 
                 this.vertexSrc = (0, _generateBlurVertSource2.default)(
                   kernelSize,
-                  true
+                  true,
                 );
                 this.fragmentSrc = (0, _generateBlurFragSource2.default)(
-                  kernelSize
+                  kernelSize,
                 );
 
                 this.firstRun = false;
@@ -37418,7 +37420,7 @@ object-assign
                   return this.strength;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.padding = Math.abs(value) * 2;
                   this.strength = value;
@@ -37438,7 +37440,7 @@ object-assign
                   return this._quality;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._quality = value;
                   this.passes = value;
@@ -37489,19 +37491,19 @@ object-assign
           var _generateBlurVertSource = require("./generateBlurVertSource");
 
           var _generateBlurVertSource2 = _interopRequireDefault(
-            _generateBlurVertSource
+            _generateBlurVertSource,
           );
 
           var _generateBlurFragSource = require("./generateBlurFragSource");
 
           var _generateBlurFragSource2 = _interopRequireDefault(
-            _generateBlurFragSource
+            _generateBlurFragSource,
           );
 
           var _getMaxBlurKernelSize = require("./getMaxBlurKernelSize");
 
           var _getMaxBlurKernelSize2 = _interopRequireDefault(
-            _getMaxBlurKernelSize
+            _getMaxBlurKernelSize,
           );
 
           function _interopRequireDefault(obj) {
@@ -37533,7 +37535,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -37546,7 +37548,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -37558,7 +37560,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -37588,7 +37590,7 @@ object-assign
               kernelSize = kernelSize || 5;
               var vertSrc = (0, _generateBlurVertSource2.default)(
                 kernelSize,
-                false
+                false,
               );
               var fragSrc = (0, _generateBlurFragSource2.default)(kernelSize);
 
@@ -37599,8 +37601,8 @@ object-assign
                   // vertex shader
                   vertSrc,
                   // fragment shader
-                  fragSrc
-                )
+                  fragSrc,
+                ),
               );
 
               _this.resolution = resolution || core.settings.RESOLUTION;
@@ -37627,7 +37629,7 @@ object-assign
               filterManager,
               input,
               output,
-              clear
+              clear,
             ) {
               if (this.firstRun) {
                 var gl = filterManager.renderer.gl;
@@ -37635,10 +37637,10 @@ object-assign
 
                 this.vertexSrc = (0, _generateBlurVertSource2.default)(
                   kernelSize,
-                  false
+                  false,
                 );
                 this.fragmentSrc = (0, _generateBlurFragSource2.default)(
-                  kernelSize
+                  kernelSize,
                 );
 
                 this.firstRun = false;
@@ -37687,7 +37689,7 @@ object-assign
                   return this.strength;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.padding = Math.abs(value) * 2;
                   this.strength = value;
@@ -37707,7 +37709,7 @@ object-assign
                   return this._quality;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._quality = value;
                   this.passes = value;
@@ -37926,7 +37928,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -37939,7 +37941,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -37951,7 +37953,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -37990,8 +37992,8 @@ object-assign
                   // vertex shader
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",
                   // fragment shader
-                  "varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform float m[20];\nuniform float uAlpha;\n\nvoid main(void)\n{\n    vec4 c = texture2D(uSampler, vTextureCoord);\n\n    if (uAlpha == 0.0) {\n        gl_FragColor = c;\n        return;\n    }\n\n    // Un-premultiply alpha before applying the color matrix. See issue #3539.\n    if (c.a > 0.0) {\n      c.rgb /= c.a;\n    }\n\n    vec4 result;\n\n    result.r = (m[0] * c.r);\n        result.r += (m[1] * c.g);\n        result.r += (m[2] * c.b);\n        result.r += (m[3] * c.a);\n        result.r += m[4];\n\n    result.g = (m[5] * c.r);\n        result.g += (m[6] * c.g);\n        result.g += (m[7] * c.b);\n        result.g += (m[8] * c.a);\n        result.g += m[9];\n\n    result.b = (m[10] * c.r);\n       result.b += (m[11] * c.g);\n       result.b += (m[12] * c.b);\n       result.b += (m[13] * c.a);\n       result.b += m[14];\n\n    result.a = (m[15] * c.r);\n       result.a += (m[16] * c.g);\n       result.a += (m[17] * c.b);\n       result.a += (m[18] * c.a);\n       result.a += m[19];\n\n    vec3 rgb = mix(c.rgb, result.rgb, uAlpha);\n\n    // Premultiply alpha again.\n    rgb *= result.a;\n\n    gl_FragColor = vec4(rgb, result.a);\n}\n"
-                )
+                  "varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform float m[20];\nuniform float uAlpha;\n\nvoid main(void)\n{\n    vec4 c = texture2D(uSampler, vTextureCoord);\n\n    if (uAlpha == 0.0) {\n        gl_FragColor = c;\n        return;\n    }\n\n    // Un-premultiply alpha before applying the color matrix. See issue #3539.\n    if (c.a > 0.0) {\n      c.rgb /= c.a;\n    }\n\n    vec4 result;\n\n    result.r = (m[0] * c.r);\n        result.r += (m[1] * c.g);\n        result.r += (m[2] * c.b);\n        result.r += (m[3] * c.a);\n        result.r += m[4];\n\n    result.g = (m[5] * c.r);\n        result.g += (m[6] * c.g);\n        result.g += (m[7] * c.b);\n        result.g += (m[8] * c.a);\n        result.g += m[9];\n\n    result.b = (m[10] * c.r);\n       result.b += (m[11] * c.g);\n       result.b += (m[12] * c.b);\n       result.b += (m[13] * c.a);\n       result.b += m[14];\n\n    result.a = (m[15] * c.r);\n       result.a += (m[16] * c.g);\n       result.a += (m[17] * c.b);\n       result.a += (m[18] * c.a);\n       result.a += m[19];\n\n    vec3 rgb = mix(c.rgb, result.rgb, uAlpha);\n\n    // Premultiply alpha again.\n    rgb *= result.a;\n\n    gl_FragColor = vec4(rgb, result.a);\n}\n",
+                ),
               );
 
               _this.uniforms.m = [
@@ -38011,7 +38013,7 @@ object-assign
              */
 
             ColorMatrixFilter.prototype._loadMatrix = function _loadMatrix(
-              matrix
+              matrix,
             ) {
               var multiply =
                 arguments.length > 1 && arguments[1] !== undefined
@@ -38042,7 +38044,7 @@ object-assign
             ColorMatrixFilter.prototype._multiply = function _multiply(
               out,
               a,
-              b
+              b,
             ) {
               // Red Channel
               out[0] = a[0] * b[0] + a[1] * b[5] + a[2] * b[10] + a[3] * b[15];
@@ -38104,7 +38106,7 @@ object-assign
              */
 
             ColorMatrixFilter.prototype._colorMatrix = function _colorMatrix(
-              matrix
+              matrix,
             ) {
               // Create a Float32 Array and normalize the offset component to 0-1
               var m = new Float32Array(matrix);
@@ -38127,7 +38129,7 @@ object-assign
 
             ColorMatrixFilter.prototype.brightness = function brightness(
               b,
-              multiply
+              multiply,
             ) {
               var matrix = [
                 b,
@@ -38165,7 +38167,7 @@ object-assign
 
             ColorMatrixFilter.prototype.greyscale = function greyscale(
               scale,
-              multiply
+              multiply,
             ) {
               var matrix = [
                 scale,
@@ -38201,7 +38203,7 @@ object-assign
              */
 
             ColorMatrixFilter.prototype.blackAndWhite = function blackAndWhite(
-              multiply
+              multiply,
             ) {
               var matrix = [
                 0.3, 0.6, 0.1, 0, 0, 0.3, 0.6, 0.1, 0, 0, 0.3, 0.6, 0.1, 0, 0,
@@ -38290,7 +38292,7 @@ object-assign
 
             ColorMatrixFilter.prototype.contrast = function contrast(
               amount,
-              multiply
+              multiply,
             ) {
               var v = (amount || 0) + 1;
               var o = -128 * (v - 1);
@@ -38417,7 +38419,7 @@ object-assign
              */
 
             ColorMatrixFilter.prototype.technicolor = function technicolor(
-              multiply
+              multiply,
             ) {
               var matrix = [
                 1.9125277891456083, -0.8545344976951645, -0.09155508482755585,
@@ -38469,7 +38471,7 @@ object-assign
              */
 
             ColorMatrixFilter.prototype.kodachrome = function kodachrome(
-              multiply
+              multiply,
             ) {
               var matrix = [
                 1.1285582396593525, -0.3967382283601348, -0.03992559172921793,
@@ -38536,7 +38538,7 @@ object-assign
               toned,
               lightColor,
               darkColor,
-              multiply
+              multiply,
             ) {
               desaturation = desaturation || 0.2;
               toned = toned || 0.15;
@@ -38587,7 +38589,7 @@ object-assign
 
             ColorMatrixFilter.prototype.night = function night(
               intensity,
-              multiply
+              multiply,
             ) {
               intensity = intensity || 0.1;
               var matrix = [
@@ -38628,7 +38630,7 @@ object-assign
 
             ColorMatrixFilter.prototype.predator = function predator(
               amount,
-              multiply
+              multiply,
             ) {
               var matrix = [
                 // row 1
@@ -38705,7 +38707,7 @@ object-assign
                   return this.uniforms.m;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.uniforms.m = value;
                 },
@@ -38727,7 +38729,7 @@ object-assign
                   return this.uniforms.uAlpha;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.uniforms.uAlpha = value;
                 },
@@ -38800,7 +38802,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -38813,7 +38815,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -38825,7 +38827,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -38865,8 +38867,8 @@ object-assign
                   // vertex shader
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 filterMatrix;\n\nvarying vec2 vTextureCoord;\nvarying vec2 vFilterCoord;\n\nvoid main(void)\n{\n   gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n   vFilterCoord = ( filterMatrix * vec3( aTextureCoord, 1.0)  ).xy;\n   vTextureCoord = aTextureCoord;\n}",
                   // fragment shader
-                  "varying vec2 vFilterCoord;\nvarying vec2 vTextureCoord;\n\nuniform vec2 scale;\n\nuniform sampler2D uSampler;\nuniform sampler2D mapSampler;\n\nuniform vec4 filterClamp;\n\nvoid main(void)\n{\n   vec4 map =  texture2D(mapSampler, vFilterCoord);\n\n   map -= 0.5;\n   map.xy *= scale;\n\n   gl_FragColor = texture2D(uSampler, clamp(vec2(vTextureCoord.x + map.x, vTextureCoord.y + map.y), filterClamp.xy, filterClamp.zw));\n}\n"
-                )
+                  "varying vec2 vFilterCoord;\nvarying vec2 vTextureCoord;\n\nuniform vec2 scale;\n\nuniform sampler2D uSampler;\nuniform sampler2D mapSampler;\n\nuniform vec4 filterClamp;\n\nvoid main(void)\n{\n   vec4 map =  texture2D(mapSampler, vFilterCoord);\n\n   map -= 0.5;\n   map.xy *= scale;\n\n   gl_FragColor = texture2D(uSampler, clamp(vec2(vTextureCoord.x + map.x, vTextureCoord.y + map.y), filterClamp.xy, filterClamp.zw));\n}\n",
+                ),
               );
 
               _this.maskSprite = sprite;
@@ -38895,7 +38897,7 @@ object-assign
             DisplacementFilter.prototype.apply = function apply(
               filterManager,
               input,
-              output
+              output,
             ) {
               var ratio =
                 (1 / output.destinationFrame.width) *
@@ -38903,7 +38905,7 @@ object-assign
 
               this.uniforms.filterMatrix = filterManager.calculateSpriteMatrix(
                 this.maskMatrix,
-                this.maskSprite
+                this.maskSprite,
               );
               this.uniforms.scale.x = this.scale.x * ratio;
               this.uniforms.scale.y = this.scale.y * ratio;
@@ -38925,7 +38927,7 @@ object-assign
                   return this.uniforms.mapSampler;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.uniforms.mapSampler = value;
                 },
@@ -38976,7 +38978,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -38989,7 +38991,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -39001,7 +39003,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -39039,8 +39041,8 @@ object-assign
                   // vertex shader
                   "\nattribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 v_rgbNW;\nvarying vec2 v_rgbNE;\nvarying vec2 v_rgbSW;\nvarying vec2 v_rgbSE;\nvarying vec2 v_rgbM;\n\nuniform vec4 filterArea;\n\nvarying vec2 vTextureCoord;\n\nvec2 mapCoord( vec2 coord )\n{\n    coord *= filterArea.xy;\n    coord += filterArea.zw;\n\n    return coord;\n}\n\nvec2 unmapCoord( vec2 coord )\n{\n    coord -= filterArea.zw;\n    coord /= filterArea.xy;\n\n    return coord;\n}\n\nvoid texcoords(vec2 fragCoord, vec2 resolution,\n               out vec2 v_rgbNW, out vec2 v_rgbNE,\n               out vec2 v_rgbSW, out vec2 v_rgbSE,\n               out vec2 v_rgbM) {\n    vec2 inverseVP = 1.0 / resolution.xy;\n    v_rgbNW = (fragCoord + vec2(-1.0, -1.0)) * inverseVP;\n    v_rgbNE = (fragCoord + vec2(1.0, -1.0)) * inverseVP;\n    v_rgbSW = (fragCoord + vec2(-1.0, 1.0)) * inverseVP;\n    v_rgbSE = (fragCoord + vec2(1.0, 1.0)) * inverseVP;\n    v_rgbM = vec2(fragCoord * inverseVP);\n}\n\nvoid main(void) {\n\n   gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n   vTextureCoord = aTextureCoord;\n\n   vec2 fragCoord = vTextureCoord * filterArea.xy;\n\n   texcoords(fragCoord, filterArea.xy, v_rgbNW, v_rgbNE, v_rgbSW, v_rgbSE, v_rgbM);\n}",
                   // fragment shader
-                  'varying vec2 v_rgbNW;\nvarying vec2 v_rgbNE;\nvarying vec2 v_rgbSW;\nvarying vec2 v_rgbSE;\nvarying vec2 v_rgbM;\n\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\n\n/**\n Basic FXAA implementation based on the code on geeks3d.com with the\n modification that the texture2DLod stuff was removed since it\'s\n unsupported by WebGL.\n \n --\n \n From:\n https://github.com/mitsuhiko/webgl-meincraft\n \n Copyright (c) 2011 by Armin Ronacher.\n \n Some rights reserved.\n \n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are\n met:\n \n * Redistributions of source code must retain the above copyright\n notice, this list of conditions and the following disclaimer.\n \n * Redistributions in binary form must reproduce the above\n copyright notice, this list of conditions and the following\n disclaimer in the documentation and/or other materials provided\n with the distribution.\n \n * The names of the contributors may not be used to endorse or\n promote products derived from this software without specific\n prior written permission.\n \n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\n\n#ifndef FXAA_REDUCE_MIN\n#define FXAA_REDUCE_MIN   (1.0/ 128.0)\n#endif\n#ifndef FXAA_REDUCE_MUL\n#define FXAA_REDUCE_MUL   (1.0 / 8.0)\n#endif\n#ifndef FXAA_SPAN_MAX\n#define FXAA_SPAN_MAX     8.0\n#endif\n\n//optimized version for mobile, where dependent\n//texture reads can be a bottleneck\nvec4 fxaa(sampler2D tex, vec2 fragCoord, vec2 resolution,\n          vec2 v_rgbNW, vec2 v_rgbNE,\n          vec2 v_rgbSW, vec2 v_rgbSE,\n          vec2 v_rgbM) {\n    vec4 color;\n    mediump vec2 inverseVP = vec2(1.0 / resolution.x, 1.0 / resolution.y);\n    vec3 rgbNW = texture2D(tex, v_rgbNW).xyz;\n    vec3 rgbNE = texture2D(tex, v_rgbNE).xyz;\n    vec3 rgbSW = texture2D(tex, v_rgbSW).xyz;\n    vec3 rgbSE = texture2D(tex, v_rgbSE).xyz;\n    vec4 texColor = texture2D(tex, v_rgbM);\n    vec3 rgbM  = texColor.xyz;\n    vec3 luma = vec3(0.299, 0.587, 0.114);\n    float lumaNW = dot(rgbNW, luma);\n    float lumaNE = dot(rgbNE, luma);\n    float lumaSW = dot(rgbSW, luma);\n    float lumaSE = dot(rgbSE, luma);\n    float lumaM  = dot(rgbM,  luma);\n    float lumaMin = min(lumaM, min(min(lumaNW, lumaNE), min(lumaSW, lumaSE)));\n    float lumaMax = max(lumaM, max(max(lumaNW, lumaNE), max(lumaSW, lumaSE)));\n    \n    mediump vec2 dir;\n    dir.x = -((lumaNW + lumaNE) - (lumaSW + lumaSE));\n    dir.y =  ((lumaNW + lumaSW) - (lumaNE + lumaSE));\n    \n    float dirReduce = max((lumaNW + lumaNE + lumaSW + lumaSE) *\n                          (0.25 * FXAA_REDUCE_MUL), FXAA_REDUCE_MIN);\n    \n    float rcpDirMin = 1.0 / (min(abs(dir.x), abs(dir.y)) + dirReduce);\n    dir = min(vec2(FXAA_SPAN_MAX, FXAA_SPAN_MAX),\n              max(vec2(-FXAA_SPAN_MAX, -FXAA_SPAN_MAX),\n                  dir * rcpDirMin)) * inverseVP;\n    \n    vec3 rgbA = 0.5 * (\n                       texture2D(tex, fragCoord * inverseVP + dir * (1.0 / 3.0 - 0.5)).xyz +\n                       texture2D(tex, fragCoord * inverseVP + dir * (2.0 / 3.0 - 0.5)).xyz);\n    vec3 rgbB = rgbA * 0.5 + 0.25 * (\n                                     texture2D(tex, fragCoord * inverseVP + dir * -0.5).xyz +\n                                     texture2D(tex, fragCoord * inverseVP + dir * 0.5).xyz);\n    \n    float lumaB = dot(rgbB, luma);\n    if ((lumaB < lumaMin) || (lumaB > lumaMax))\n        color = vec4(rgbA, texColor.a);\n    else\n        color = vec4(rgbB, texColor.a);\n    return color;\n}\n\nvoid main() {\n\n      vec2 fragCoord = vTextureCoord * filterArea.xy;\n\n      vec4 color;\n\n    color = fxaa(uSampler, fragCoord, filterArea.xy, v_rgbNW, v_rgbNE, v_rgbSW, v_rgbSE, v_rgbM);\n\n      gl_FragColor = color;\n}\n'
-                )
+                  'varying vec2 v_rgbNW;\nvarying vec2 v_rgbNE;\nvarying vec2 v_rgbSW;\nvarying vec2 v_rgbSE;\nvarying vec2 v_rgbM;\n\nvarying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform vec4 filterArea;\n\n/**\n Basic FXAA implementation based on the code on geeks3d.com with the\n modification that the texture2DLod stuff was removed since it\'s\n unsupported by WebGL.\n \n --\n \n From:\n https://github.com/mitsuhiko/webgl-meincraft\n \n Copyright (c) 2011 by Armin Ronacher.\n \n Some rights reserved.\n \n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that the following conditions are\n met:\n \n * Redistributions of source code must retain the above copyright\n notice, this list of conditions and the following disclaimer.\n \n * Redistributions in binary form must reproduce the above\n copyright notice, this list of conditions and the following\n disclaimer in the documentation and/or other materials provided\n with the distribution.\n \n * The names of the contributors may not be used to endorse or\n promote products derived from this software without specific\n prior written permission.\n \n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT\n OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,\n SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT\n LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,\n DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\n THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n */\n\n#ifndef FXAA_REDUCE_MIN\n#define FXAA_REDUCE_MIN   (1.0/ 128.0)\n#endif\n#ifndef FXAA_REDUCE_MUL\n#define FXAA_REDUCE_MUL   (1.0 / 8.0)\n#endif\n#ifndef FXAA_SPAN_MAX\n#define FXAA_SPAN_MAX     8.0\n#endif\n\n//optimized version for mobile, where dependent\n//texture reads can be a bottleneck\nvec4 fxaa(sampler2D tex, vec2 fragCoord, vec2 resolution,\n          vec2 v_rgbNW, vec2 v_rgbNE,\n          vec2 v_rgbSW, vec2 v_rgbSE,\n          vec2 v_rgbM) {\n    vec4 color;\n    mediump vec2 inverseVP = vec2(1.0 / resolution.x, 1.0 / resolution.y);\n    vec3 rgbNW = texture2D(tex, v_rgbNW).xyz;\n    vec3 rgbNE = texture2D(tex, v_rgbNE).xyz;\n    vec3 rgbSW = texture2D(tex, v_rgbSW).xyz;\n    vec3 rgbSE = texture2D(tex, v_rgbSE).xyz;\n    vec4 texColor = texture2D(tex, v_rgbM);\n    vec3 rgbM  = texColor.xyz;\n    vec3 luma = vec3(0.299, 0.587, 0.114);\n    float lumaNW = dot(rgbNW, luma);\n    float lumaNE = dot(rgbNE, luma);\n    float lumaSW = dot(rgbSW, luma);\n    float lumaSE = dot(rgbSE, luma);\n    float lumaM  = dot(rgbM,  luma);\n    float lumaMin = min(lumaM, min(min(lumaNW, lumaNE), min(lumaSW, lumaSE)));\n    float lumaMax = max(lumaM, max(max(lumaNW, lumaNE), max(lumaSW, lumaSE)));\n    \n    mediump vec2 dir;\n    dir.x = -((lumaNW + lumaNE) - (lumaSW + lumaSE));\n    dir.y =  ((lumaNW + lumaSW) - (lumaNE + lumaSE));\n    \n    float dirReduce = max((lumaNW + lumaNE + lumaSW + lumaSE) *\n                          (0.25 * FXAA_REDUCE_MUL), FXAA_REDUCE_MIN);\n    \n    float rcpDirMin = 1.0 / (min(abs(dir.x), abs(dir.y)) + dirReduce);\n    dir = min(vec2(FXAA_SPAN_MAX, FXAA_SPAN_MAX),\n              max(vec2(-FXAA_SPAN_MAX, -FXAA_SPAN_MAX),\n                  dir * rcpDirMin)) * inverseVP;\n    \n    vec3 rgbA = 0.5 * (\n                       texture2D(tex, fragCoord * inverseVP + dir * (1.0 / 3.0 - 0.5)).xyz +\n                       texture2D(tex, fragCoord * inverseVP + dir * (2.0 / 3.0 - 0.5)).xyz);\n    vec3 rgbB = rgbA * 0.5 + 0.25 * (\n                                     texture2D(tex, fragCoord * inverseVP + dir * -0.5).xyz +\n                                     texture2D(tex, fragCoord * inverseVP + dir * 0.5).xyz);\n    \n    float lumaB = dot(rgbB, luma);\n    if ((lumaB < lumaMin) || (lumaB > lumaMax))\n        color = vec4(rgbA, texColor.a);\n    else\n        color = vec4(rgbB, texColor.a);\n    return color;\n}\n\nvoid main() {\n\n      vec2 fragCoord = vTextureCoord * filterArea.xy;\n\n      vec4 color;\n\n    color = fxaa(uSampler, fragCoord, filterArea.xy, v_rgbNW, v_rgbNE, v_rgbSW, v_rgbSE, v_rgbM);\n\n      gl_FragColor = color;\n}\n',
+                ),
               );
             }
 
@@ -39199,7 +39201,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -39212,7 +39214,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -39224,7 +39226,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -39270,8 +39272,8 @@ object-assign
                   // vertex shader
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",
                   // fragment shader
-                  "precision highp float;\n\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\n\nuniform float uNoise;\nuniform float uSeed;\nuniform sampler2D uSampler;\n\nfloat rand(vec2 co)\n{\n    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);\n}\n\nvoid main()\n{\n    vec4 color = texture2D(uSampler, vTextureCoord);\n    float randomValue = rand(gl_FragCoord.xy * uSeed);\n    float diff = (randomValue - 0.5) * uNoise;\n\n    // Un-premultiply alpha before applying the color matrix. See issue #3539.\n    if (color.a > 0.0) {\n        color.rgb /= color.a;\n    }\n\n    color.r += diff;\n    color.g += diff;\n    color.b += diff;\n\n    // Premultiply alpha again.\n    color.rgb *= color.a;\n\n    gl_FragColor = color;\n}\n"
-                )
+                  "precision highp float;\n\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\n\nuniform float uNoise;\nuniform float uSeed;\nuniform sampler2D uSampler;\n\nfloat rand(vec2 co)\n{\n    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);\n}\n\nvoid main()\n{\n    vec4 color = texture2D(uSampler, vTextureCoord);\n    float randomValue = rand(gl_FragCoord.xy * uSeed);\n    float diff = (randomValue - 0.5) * uNoise;\n\n    // Un-premultiply alpha before applying the color matrix. See issue #3539.\n    if (color.a > 0.0) {\n        color.rgb /= color.a;\n    }\n\n    color.r += diff;\n    color.g += diff;\n    color.b += diff;\n\n    // Premultiply alpha again.\n    color.rgb *= color.a;\n\n    gl_FragColor = color;\n}\n",
+                ),
               );
 
               _this.noise = noise;
@@ -39293,7 +39295,7 @@ object-assign
                   return this.uniforms.uNoise;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.uniforms.uNoise = value;
                 },
@@ -39310,7 +39312,7 @@ object-assign
                   return this.uniforms.uSeed;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.uniforms.uSeed = value;
                 },
@@ -39361,7 +39363,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -39374,7 +39376,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -39386,7 +39388,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -39417,8 +39419,8 @@ object-assign
                   // vertex shader
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}",
                   // fragment shader
-                  "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\n\nvoid main(void)\n{\n   gl_FragColor = texture2D(uSampler, vTextureCoord);\n}\n"
-                )
+                  "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\n\nvoid main(void)\n{\n   gl_FragColor = texture2D(uSampler, vTextureCoord);\n}\n",
+                ),
               );
 
               _this.glShaderKey = "void";
@@ -39526,7 +39528,7 @@ object-assign
               function getLocalPosition(displayObject, point, globalPos) {
                 return displayObject.worldTransform.applyInverse(
                   globalPos || this.global,
-                  point
+                  point,
                 );
               };
 
@@ -39663,7 +39665,7 @@ object-assign
           var _InteractionTrackingData = require("./InteractionTrackingData");
 
           var _InteractionTrackingData2 = _interopRequireDefault(
-            _InteractionTrackingData
+            _InteractionTrackingData,
           );
 
           var _eventemitter = require("eventemitter3");
@@ -39703,7 +39705,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -39716,7 +39718,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -39728,7 +39730,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -39739,7 +39741,7 @@ object-assign
           // Mix interactiveTarget into core.DisplayObject.prototype, after deprecation has been handled
           core.utils.mixins.delayMixin(
             core.DisplayObject.prototype,
-            _interactiveTarget2.default
+            _interactiveTarget2.default,
           );
 
           var MOUSE_POINTER_ID = "MOUSE";
@@ -39778,7 +39780,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _EventEmitter.call(this)
+                _EventEmitter.call(this),
               );
 
               options = options || {};
@@ -39994,7 +39996,7 @@ object-assign
 
               _this.setTargetElement(
                 _this.renderer.view,
-                _this.renderer.resolution
+                _this.renderer.resolution,
               );
 
               /**
@@ -40403,7 +40405,7 @@ object-assign
 
             InteractionManager.prototype.hitTest = function hitTest(
               globalPoint,
-              root
+              root,
             ) {
               // clear the target for our hit test
               hitTestEvent.target = null;
@@ -40460,7 +40462,7 @@ object-assign
               core.ticker.shared.add(
                 this.update,
                 this,
-                core.UPDATE_PRIORITY.INTERACTION
+                core.UPDATE_PRIORITY.INTERACTION,
               );
 
               if (window.navigator.msPointerEnabled) {
@@ -40479,12 +40481,12 @@ object-assign
                 window.document.addEventListener(
                   "pointermove",
                   this.onPointerMove,
-                  true
+                  true,
                 );
                 this.interactionDOMElement.addEventListener(
                   "pointerdown",
                   this.onPointerDown,
-                  true
+                  true,
                 );
                 // pointerout is fired in addition to pointerup (for touch events) and pointercancel
                 // we already handle those, so for the purposes of what we do in onPointerOut, we only
@@ -40492,39 +40494,39 @@ object-assign
                 this.interactionDOMElement.addEventListener(
                   "pointerleave",
                   this.onPointerOut,
-                  true
+                  true,
                 );
                 this.interactionDOMElement.addEventListener(
                   "pointerover",
                   this.onPointerOver,
-                  true
+                  true,
                 );
                 window.addEventListener(
                   "pointercancel",
                   this.onPointerCancel,
-                  true
+                  true,
                 );
                 window.addEventListener("pointerup", this.onPointerUp, true);
               } else {
                 window.document.addEventListener(
                   "mousemove",
                   this.onPointerMove,
-                  true
+                  true,
                 );
                 this.interactionDOMElement.addEventListener(
                   "mousedown",
                   this.onPointerDown,
-                  true
+                  true,
                 );
                 this.interactionDOMElement.addEventListener(
                   "mouseout",
                   this.onPointerOut,
-                  true
+                  true,
                 );
                 this.interactionDOMElement.addEventListener(
                   "mouseover",
                   this.onPointerOver,
-                  true
+                  true,
                 );
                 window.addEventListener("mouseup", this.onPointerUp, true);
 
@@ -40532,22 +40534,22 @@ object-assign
                   this.interactionDOMElement.addEventListener(
                     "touchstart",
                     this.onPointerDown,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.addEventListener(
                     "touchcancel",
                     this.onPointerCancel,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.addEventListener(
                     "touchend",
                     this.onPointerUp,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.addEventListener(
                     "touchmove",
                     this.onPointerMove,
-                    true
+                    true,
                   );
                 }
               }
@@ -40580,53 +40582,53 @@ object-assign
                   window.document.removeEventListener(
                     "pointermove",
                     this.onPointerMove,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.removeEventListener(
                     "pointerdown",
                     this.onPointerDown,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.removeEventListener(
                     "pointerleave",
                     this.onPointerOut,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.removeEventListener(
                     "pointerover",
                     this.onPointerOver,
-                    true
+                    true,
                   );
                   window.removeEventListener(
                     "pointercancel",
                     this.onPointerCancel,
-                    true
+                    true,
                   );
                   window.removeEventListener(
                     "pointerup",
                     this.onPointerUp,
-                    true
+                    true,
                   );
                 } else {
                   window.document.removeEventListener(
                     "mousemove",
                     this.onPointerMove,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.removeEventListener(
                     "mousedown",
                     this.onPointerDown,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.removeEventListener(
                     "mouseout",
                     this.onPointerOut,
-                    true
+                    true,
                   );
                   this.interactionDOMElement.removeEventListener(
                     "mouseover",
                     this.onPointerOver,
-                    true
+                    true,
                   );
                   window.removeEventListener("mouseup", this.onPointerUp, true);
 
@@ -40634,22 +40636,22 @@ object-assign
                     this.interactionDOMElement.removeEventListener(
                       "touchstart",
                       this.onPointerDown,
-                      true
+                      true,
                     );
                     this.interactionDOMElement.removeEventListener(
                       "touchcancel",
                       this.onPointerCancel,
-                      true
+                      true,
                     );
                     this.interactionDOMElement.removeEventListener(
                       "touchend",
                       this.onPointerUp,
-                      true
+                      true,
                     );
                     this.interactionDOMElement.removeEventListener(
                       "touchmove",
                       this.onPointerMove,
-                      true
+                      true,
                     );
                   }
                 }
@@ -40703,14 +40705,14 @@ object-assign
                       this.configureInteractionEventForDOMEvent(
                         this.eventData,
                         interactionData.originalEvent,
-                        interactionData
+                        interactionData,
                       );
 
                     this.processInteractive(
                       interactionEvent,
                       this.renderer._lastObjectRendered,
                       this.processPointerOverOut,
-                      true
+                      true,
                     );
                   }
                 }
@@ -40728,7 +40730,7 @@ object-assign
              */
 
             InteractionManager.prototype.setCursorMode = function setCursorMode(
-              mode
+              mode,
             ) {
               mode = mode || "default";
               // if the mode didn't actually change, bail early
@@ -40772,7 +40774,7 @@ object-assign
             InteractionManager.prototype.dispatchEvent = function dispatchEvent(
               displayObject,
               eventString,
-              eventData
+              eventData,
             ) {
               if (!eventData.stopped) {
                 eventData.currentTarget = displayObject;
@@ -40844,7 +40846,7 @@ object-assign
                 displayObject,
                 func,
                 hitTest,
-                interactive
+                interactive,
               ) {
                 if (!displayObject || !displayObject.visible) {
                   return false;
@@ -40899,7 +40901,7 @@ object-assign
                       child,
                       func,
                       hitTest,
-                      interactiveParent
+                      interactiveParent,
                     );
 
                     if (childHit) {
@@ -40938,12 +40940,12 @@ object-assign
                     if (displayObject.hitArea) {
                       displayObject.worldTransform.applyInverse(
                         point,
-                        this._tempPoint
+                        this._tempPoint,
                       );
                       if (
                         displayObject.hitArea.contains(
                           this._tempPoint.x,
-                          this._tempPoint.y
+                          this._tempPoint.y,
                         )
                       ) {
                         hit = true;
@@ -40977,7 +40979,7 @@ object-assign
              */
 
             InteractionManager.prototype.onPointerDown = function onPointerDown(
-              originalEvent
+              originalEvent,
             ) {
               var events = this.normalizeToPointerData(originalEvent);
 
@@ -41005,7 +41007,7 @@ object-assign
                   this.configureInteractionEventForDOMEvent(
                     this.eventData,
                     event,
-                    interactionData
+                    interactionData,
                   );
 
                 interactionEvent.data.originalEvent = originalEvent;
@@ -41014,7 +41016,7 @@ object-assign
                   interactionEvent,
                   this.renderer._lastObjectRendered,
                   this.processPointerDown,
-                  true
+                  true,
                 );
 
                 this.emit("pointerdown", interactionEvent);
@@ -41025,7 +41027,7 @@ object-assign
 
                   this.emit(
                     isRightButton ? "rightdown" : "mousedown",
-                    this.eventData
+                    this.eventData,
                   );
                 }
               }
@@ -41044,7 +41046,7 @@ object-assign
               function processPointerDown(
                 interactionEvent,
                 displayObject,
-                hit
+                hit,
               ) {
                 var e = interactionEvent.data.originalEvent;
 
@@ -41058,14 +41060,14 @@ object-assign
                   this.dispatchEvent(
                     displayObject,
                     "pointerdown",
-                    interactionEvent
+                    interactionEvent,
                   );
 
                   if (e.type === "touchstart" || e.pointerType === "touch") {
                     this.dispatchEvent(
                       displayObject,
                       "touchstart",
-                      interactionEvent
+                      interactionEvent,
                     );
                   } else if (
                     e.type === "mousedown" ||
@@ -41082,7 +41084,7 @@ object-assign
                     this.dispatchEvent(
                       displayObject,
                       isRightButton ? "rightdown" : "mousedown",
-                      interactionEvent
+                      interactionEvent,
                     );
                   }
                 }
@@ -41120,7 +41122,7 @@ object-assign
                     this.configureInteractionEventForDOMEvent(
                       this.eventData,
                       event,
-                      interactionData
+                      interactionData,
                     );
 
                   interactionEvent.data.originalEvent = originalEvent;
@@ -41130,12 +41132,12 @@ object-assign
                     interactionEvent,
                     this.renderer._lastObjectRendered,
                     func,
-                    cancelled || !eventAppend
+                    cancelled || !eventAppend,
                   );
 
                   this.emit(
                     cancelled ? "pointercancel" : "pointerup" + eventAppend,
-                    interactionEvent
+                    interactionEvent,
                   );
 
                   if (event.pointerType === "mouse") {
@@ -41145,16 +41147,16 @@ object-assign
                       isRightButton
                         ? "rightup" + eventAppend
                         : "mouseup" + eventAppend,
-                      interactionEvent
+                      interactionEvent,
                     );
                   } else if (event.pointerType === "touch") {
                     this.emit(
                       cancelled ? "touchcancel" : "touchend" + eventAppend,
-                      interactionEvent
+                      interactionEvent,
                     );
                     this.releaseInteractionDataForPointerId(
                       event.pointerId,
-                      interactionData
+                      interactionData,
                     );
                   }
                 }
@@ -41191,14 +41193,14 @@ object-assign
                   this.dispatchEvent(
                     displayObject,
                     "pointercancel",
-                    interactionEvent
+                    interactionEvent,
                   );
 
                   if (e.type === "touchcancel" || e.pointerType === "touch") {
                     this.dispatchEvent(
                       displayObject,
                       "touchcancel",
-                      interactionEvent
+                      interactionEvent,
                     );
                   }
                 }
@@ -41212,7 +41214,7 @@ object-assign
              */
 
             InteractionManager.prototype.onPointerUp = function onPointerUp(
-              event
+              event,
             ) {
               this.onPointerComplete(event, false, this.processPointerUp);
             };
@@ -41255,21 +41257,21 @@ object-assign
                     this.dispatchEvent(
                       displayObject,
                       isRightButton ? "rightup" : "mouseup",
-                      interactionEvent
+                      interactionEvent,
                     );
 
                     if (isDown) {
                       this.dispatchEvent(
                         displayObject,
                         isRightButton ? "rightclick" : "click",
-                        interactionEvent
+                        interactionEvent,
                       );
                     }
                   } else if (isDown) {
                     this.dispatchEvent(
                       displayObject,
                       isRightButton ? "rightupoutside" : "mouseupoutside",
-                      interactionEvent
+                      interactionEvent,
                     );
                   }
                   // update the down state of the tracking data
@@ -41287,26 +41289,26 @@ object-assign
                   this.dispatchEvent(
                     displayObject,
                     "pointerup",
-                    interactionEvent
+                    interactionEvent,
                   );
                   if (isTouch)
                     this.dispatchEvent(
                       displayObject,
                       "touchend",
-                      interactionEvent
+                      interactionEvent,
                     );
 
                   if (trackingData) {
                     this.dispatchEvent(
                       displayObject,
                       "pointertap",
-                      interactionEvent
+                      interactionEvent,
                     );
                     if (isTouch) {
                       this.dispatchEvent(
                         displayObject,
                         "tap",
-                        interactionEvent
+                        interactionEvent,
                       );
                       // touches are no longer over (if they ever were) when we get the touchend
                       // so we should ensure that we don't keep pretending that they are
@@ -41317,13 +41319,13 @@ object-assign
                   this.dispatchEvent(
                     displayObject,
                     "pointerupoutside",
-                    interactionEvent
+                    interactionEvent,
                   );
                   if (isTouch)
                     this.dispatchEvent(
                       displayObject,
                       "touchendoutside",
-                      interactionEvent
+                      interactionEvent,
                     );
                 }
                 // Only remove the tracking data if there is no over/down state still associated with it
@@ -41340,7 +41342,7 @@ object-assign
              */
 
             InteractionManager.prototype.onPointerMove = function onPointerMove(
-              originalEvent
+              originalEvent,
             ) {
               var events = this.normalizeToPointerData(originalEvent);
 
@@ -41362,7 +41364,7 @@ object-assign
                   this.configureInteractionEventForDOMEvent(
                     this.eventData,
                     event,
-                    interactionData
+                    interactionData,
                   );
 
                 interactionEvent.data.originalEvent = originalEvent;
@@ -41374,7 +41376,7 @@ object-assign
                   interactionEvent,
                   this.renderer._lastObjectRendered,
                   this.processPointerMove,
-                  interactive
+                  interactive,
                 );
                 this.emit("pointermove", interactionEvent);
                 if (event.pointerType === "touch")
@@ -41403,7 +41405,7 @@ object-assign
               function processPointerMove(
                 interactionEvent,
                 displayObject,
-                hit
+                hit,
               ) {
                 var e = interactionEvent.data.originalEvent;
 
@@ -41417,7 +41419,7 @@ object-assign
                   this.processPointerOverOut(
                     interactionEvent,
                     displayObject,
-                    hit
+                    hit,
                   );
                 }
 
@@ -41425,19 +41427,19 @@ object-assign
                   this.dispatchEvent(
                     displayObject,
                     "pointermove",
-                    interactionEvent
+                    interactionEvent,
                   );
                   if (isTouch)
                     this.dispatchEvent(
                       displayObject,
                       "touchmove",
-                      interactionEvent
+                      interactionEvent,
                     );
                   if (isMouse)
                     this.dispatchEvent(
                       displayObject,
                       "mousemove",
-                      interactionEvent
+                      interactionEvent,
                     );
                 }
               };
@@ -41450,7 +41452,7 @@ object-assign
              */
 
             InteractionManager.prototype.onPointerOut = function onPointerOut(
-              originalEvent
+              originalEvent,
             ) {
               var events = this.normalizeToPointerData(originalEvent);
 
@@ -41467,7 +41469,7 @@ object-assign
               var interactionEvent = this.configureInteractionEventForDOMEvent(
                 this.eventData,
                 event,
-                interactionData
+                interactionData,
               );
 
               interactionEvent.data.originalEvent = event;
@@ -41476,7 +41478,7 @@ object-assign
                 interactionEvent,
                 this.renderer._lastObjectRendered,
                 this.processPointerOverOut,
-                false
+                false,
               );
 
               this.emit("pointerout", interactionEvent);
@@ -41486,7 +41488,7 @@ object-assign
                 // we can get touchleave events after touchend, so we want to make sure we don't
                 // introduce memory leaks
                 this.releaseInteractionDataForPointerId(
-                  interactionData.identifier
+                  interactionData.identifier,
                 );
               }
             };
@@ -41504,7 +41506,7 @@ object-assign
               function processPointerOverOut(
                 interactionEvent,
                 displayObject,
-                hit
+                hit,
               ) {
                 var e = interactionEvent.data.originalEvent;
 
@@ -41531,13 +41533,13 @@ object-assign
                     this.dispatchEvent(
                       displayObject,
                       "pointerover",
-                      interactionEvent
+                      interactionEvent,
                     );
                     if (isMouse) {
                       this.dispatchEvent(
                         displayObject,
                         "mouseover",
-                        interactionEvent
+                        interactionEvent,
                       );
                     }
                   }
@@ -41552,13 +41554,13 @@ object-assign
                   this.dispatchEvent(
                     displayObject,
                     "pointerout",
-                    this.eventData
+                    this.eventData,
                   );
                   if (isMouse) {
                     this.dispatchEvent(
                       displayObject,
                       "mouseout",
-                      interactionEvent
+                      interactionEvent,
                     );
                   }
                   // if there is no mouse down information for the pointer, then it is safe to delete
@@ -41576,7 +41578,7 @@ object-assign
              */
 
             InteractionManager.prototype.onPointerOver = function onPointerOver(
-              originalEvent
+              originalEvent,
             ) {
               var events = this.normalizeToPointerData(originalEvent);
 
@@ -41588,7 +41590,7 @@ object-assign
               var interactionEvent = this.configureInteractionEventForDOMEvent(
                 this.eventData,
                 event,
-                interactionData
+                interactionData,
               );
 
               interactionEvent.data.originalEvent = event;
@@ -41666,14 +41668,14 @@ object-assign
               function configureInteractionEventForDOMEvent(
                 interactionEvent,
                 pointerEvent,
-                interactionData
+                interactionData,
               ) {
                 interactionEvent.data = interactionData;
 
                 this.mapPositionToPoint(
                   interactionData.global,
                   pointerEvent.clientX,
-                  pointerEvent.clientY
+                  pointerEvent.clientY,
                 );
 
                 // This is the way InteractionManager processed touch events before the refactoring, so I've kept
@@ -41897,7 +41899,7 @@ object-assign
 
             InteractionTrackingData.prototype._doSet = function _doSet(
               flag,
-              yn
+              yn,
             ) {
               if (yn) {
                 this._flags = this._flags | flag;
@@ -42285,7 +42287,7 @@ object-assign
                   function (res) {
                     parse(resource, res.texture);
                     next();
-                  }
+                  },
                 );
               }
             };
@@ -42328,7 +42330,7 @@ object-assign
           function parse(resource, texture) {
             resource.bitmapFont = _extras.BitmapText.registerFont(
               resource.data,
-              texture
+              texture,
             );
           }
         },
@@ -42522,7 +42524,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -42535,7 +42537,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -42547,7 +42549,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -42618,7 +42620,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _ResourceLoader.call(this, baseUrl, concurrency)
+                _ResourceLoader.call(this, baseUrl, concurrency),
               );
 
               _eventemitter2.default.call(_this);
@@ -42692,7 +42694,7 @@ object-assign
 
           Resource.setExtensionXhrType(
             "fnt",
-            Resource.XHR_RESPONSE_TYPE.DOCUMENT
+            Resource.XHR_RESPONSE_TYPE.DOCUMENT,
           );
         },
         {
@@ -42744,7 +42746,7 @@ object-assign
                   var spritesheet = new _core.Spritesheet(
                     res.texture.baseTexture,
                     resource.data,
-                    resource.url
+                    resource.url,
                   );
 
                   spritesheet.parse(function () {
@@ -42752,7 +42754,7 @@ object-assign
                     resource.textures = spritesheet.textures;
                     next();
                   });
-                }
+                },
               );
             };
           };
@@ -42779,7 +42781,7 @@ object-assign
 
             return _url2.default.resolve(
               resource.url.replace(baseUrl, ""),
-              resource.data.meta.image
+              resource.data.meta.image,
             );
           }
         },
@@ -42801,7 +42803,7 @@ object-assign
                 resource.texture = _Texture2.default.fromLoader(
                   resource.data,
                   resource.url,
-                  resource.name
+                  resource.name,
                 );
               }
               next();
@@ -42881,7 +42883,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -42894,7 +42896,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -42906,7 +42908,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -42945,7 +42947,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _core$Container.call(this)
+                _core$Container.call(this),
               );
 
               _this._texture = texture;
@@ -43145,7 +43147,7 @@ object-assign
                 this.transform,
                 this.vertices,
                 0,
-                this.vertices.length
+                this.vertices.length,
               );
             };
 
@@ -43202,7 +43204,7 @@ object-assign
                   return this._texture;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   if (this._texture === value) {
                     return;
@@ -43233,7 +43235,7 @@ object-assign
                   return core.utils.rgb2hex(this.tintRgb);
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this.tintRgb = core.utils.hex2rgb(value, this.tintRgb);
                 },
@@ -43302,7 +43304,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -43315,7 +43317,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -43327,7 +43329,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -43384,13 +43386,13 @@ object-assign
               leftWidth,
               topHeight,
               rightWidth,
-              bottomHeight
+              bottomHeight,
             ) {
               _classCallCheck(this, NineSlicePlane);
 
               var _this = _possibleConstructorReturn(
                 this,
-                _Plane.call(this, texture, 4, 4)
+                _Plane.call(this, texture, 4, 4),
               );
 
               var uvs = _this.uvs;
@@ -43547,7 +43549,7 @@ object-assign
              */
 
             NineSlicePlane.prototype._renderCanvas = function _renderCanvas(
-              renderer
+              renderer,
             ) {
               var context = renderer.context;
 
@@ -43563,7 +43565,7 @@ object-assign
                   transform.c * res,
                   transform.d * res,
                   (transform.tx * res) | 0,
-                  (transform.ty * res) | 0
+                  (transform.ty * res) | 0,
                 );
               } else {
                 context.setTransform(
@@ -43572,7 +43574,7 @@ object-assign
                   transform.c * res,
                   transform.d * res,
                   transform.tx * res,
-                  transform.ty * res
+                  transform.ty * res,
                 );
               }
 
@@ -43616,7 +43618,7 @@ object-assign
               x1,
               y1,
               x2,
-              y2
+              y2,
             ) {
               // otherwise you get weird results when using slices of that are 0 wide or high.
               var uvs = this.uvs;
@@ -43655,7 +43657,7 @@ object-assign
                 vertices[x1],
                 vertices[y1],
                 dw,
-                dh
+                dh,
               );
             };
 
@@ -43672,7 +43674,7 @@ object-assign
                   return this._width;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._width = value;
                   this.updateVerticalVertices();
@@ -43690,7 +43692,7 @@ object-assign
                   return this._height;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._height = value;
                   this.updateHorizontalVertices();
@@ -43708,7 +43710,7 @@ object-assign
                   return this._leftWidth;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._leftWidth = value;
 
@@ -43737,7 +43739,7 @@ object-assign
                   return this._rightWidth;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._rightWidth = value;
 
@@ -43766,7 +43768,7 @@ object-assign
                   return this._topHeight;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._topHeight = value;
 
@@ -43795,7 +43797,7 @@ object-assign
                   return this._bottomHeight;
                 },
                 set: function set(
-                  value // eslint-disable-line require-jsdoc
+                  value, // eslint-disable-line require-jsdoc
                 ) {
                   this._bottomHeight = value;
 
@@ -43844,7 +43846,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -43857,7 +43859,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -43869,7 +43871,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -43912,7 +43914,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _Mesh.call(this, texture)
+                _Mesh.call(this, texture),
               );
 
               _this._ready = true;
@@ -44025,7 +44027,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -44038,7 +44040,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -44050,7 +44052,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -44090,7 +44092,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _Mesh.call(this, texture)
+                _Mesh.call(this, texture),
               );
 
               _this.points = points;
@@ -44356,7 +44358,7 @@ object-assign
                   transform.c * res,
                   transform.d * res,
                   (transform.tx * res) | 0,
-                  (transform.ty * res) | 0
+                  (transform.ty * res) | 0,
                 );
               } else {
                 context.setTransform(
@@ -44365,7 +44367,7 @@ object-assign
                   transform.c * res,
                   transform.d * res,
                   transform.tx * res,
-                  transform.ty * res
+                  transform.ty * res,
                 );
               }
 
@@ -44565,7 +44567,7 @@ object-assign
                   deltaB / delta,
                   deltaE / delta,
                   deltaC / delta,
-                  deltaF / delta
+                  deltaF / delta,
                 );
 
                 context.drawImage(
@@ -44577,7 +44579,7 @@ object-assign
                   0,
                   0,
                   textureWidth,
-                  textureHeight
+                  textureHeight,
                 );
 
                 context.restore();
@@ -44763,7 +44765,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -44776,7 +44778,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -44788,7 +44790,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -44819,7 +44821,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _core$ObjectRenderer.call(this, renderer)
+                _core$ObjectRenderer.call(this, renderer),
               );
 
               _this.shader = null;
@@ -44839,7 +44841,7 @@ object-assign
                 this.shader = new core.Shader(
                   gl,
                   "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 translationMatrix;\nuniform mat3 uTransform;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = (uTransform * vec3(aTextureCoord, 1.0)).xy;\n}\n",
-                  "varying vec2 vTextureCoord;\nuniform float alpha;\nuniform vec3 tint;\n\nuniform sampler2D uSampler;\n\nvoid main(void)\n{\n    gl_FragColor = texture2D(uSampler, vTextureCoord) * vec4(tint * alpha, alpha);\n}\n"
+                  "varying vec2 vTextureCoord;\nuniform float alpha;\nuniform vec3 tint;\n\nuniform sampler2D uSampler;\n\nvoid main(void)\n{\n    gl_FragColor = texture2D(uSampler, vTextureCoord) * vec4(tint * alpha, alpha);\n}\n",
                 );
               };
 
@@ -44869,17 +44871,17 @@ object-assign
                     _pixiGlCore2.default.GLBuffer.createVertexBuffer(
                       gl,
                       mesh.vertices,
-                      gl.STREAM_DRAW
+                      gl.STREAM_DRAW,
                     ),
                   uvBuffer: _pixiGlCore2.default.GLBuffer.createVertexBuffer(
                     gl,
                     mesh.uvs,
-                    gl.STREAM_DRAW
+                    gl.STREAM_DRAW,
                   ),
                   indexBuffer: _pixiGlCore2.default.GLBuffer.createIndexBuffer(
                     gl,
                     mesh.indices,
-                    gl.STATIC_DRAW
+                    gl.STATIC_DRAW,
                   ),
                   // build the vao object that will render..
                   vao: null,
@@ -44896,7 +44898,7 @@ object-assign
                     gl.FLOAT,
                     false,
                     2 * 4,
-                    0
+                    0,
                   )
                   .addAttribute(
                     glData.uvBuffer,
@@ -44904,7 +44906,7 @@ object-assign
                     gl.FLOAT,
                     false,
                     2 * 4,
-                    0
+                    0,
                   );
 
                 mesh._glDatas[renderer.CONTEXT_UID] = glData;
@@ -44996,7 +44998,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -45009,7 +45011,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -45021,7 +45023,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -45084,7 +45086,7 @@ object-assign
               // so max number of particles is 65536 / 4 = 16384
               var _this = _possibleConstructorReturn(
                 this,
-                _core$Container.call(this)
+                _core$Container.call(this),
               );
 
               var maxBatchSize = 16384;
@@ -45173,7 +45175,7 @@ object-assign
              */
 
             ParticleContainer.prototype.setProperties = function setProperties(
-              properties
+              properties,
             ) {
               if (properties) {
                 this._properties[0] =
@@ -45218,7 +45220,7 @@ object-assign
              */
 
             ParticleContainer.prototype.renderWebGL = function renderWebGL(
-              renderer
+              renderer,
             ) {
               var _this2 = this;
 
@@ -45254,7 +45256,7 @@ object-assign
             ParticleContainer.prototype.onChildrenChange =
               function onChildrenChange(smallestChildIndex) {
                 var bufferIndex = Math.floor(
-                  smallestChildIndex / this._batchSize
+                  smallestChildIndex / this._batchSize,
                 );
 
                 if (bufferIndex < this._bufferToUpdate) {
@@ -45270,7 +45272,7 @@ object-assign
              */
 
             ParticleContainer.prototype.renderCanvas = function renderCanvas(
-              renderer
+              renderer,
             ) {
               if (
                 !this.visible ||
@@ -45321,7 +45323,7 @@ object-assign
                       transform.c,
                       transform.d,
                       transform.tx * renderer.resolution,
-                      transform.ty * renderer.resolution
+                      transform.ty * renderer.resolution,
                     );
 
                     isRotated = false;
@@ -45354,7 +45356,7 @@ object-assign
                       childTransform.c,
                       childTransform.d,
                       (childTransform.tx * renderer.resolution) | 0,
-                      (childTransform.ty * renderer.resolution) | 0
+                      (childTransform.ty * renderer.resolution) | 0,
                     );
                   } else {
                     context.setTransform(
@@ -45363,7 +45365,7 @@ object-assign
                       childTransform.c,
                       childTransform.d,
                       childTransform.tx * renderer.resolution,
-                      childTransform.ty * renderer.resolution
+                      childTransform.ty * renderer.resolution,
                     );
                   }
 
@@ -45385,7 +45387,7 @@ object-assign
                   positionX * renderer.resolution,
                   positionY * renderer.resolution,
                   finalWidth * renderer.resolution,
-                  finalHeight * renderer.resolution
+                  finalHeight * renderer.resolution,
                 );
               }
             };
@@ -45466,7 +45468,7 @@ object-assign
           var _createIndicesForQuads = require("../../core/utils/createIndicesForQuads");
 
           var _createIndicesForQuads2 = _interopRequireDefault(
-            _createIndicesForQuads
+            _createIndicesForQuads,
           );
 
           function _interopRequireDefault(obj) {
@@ -45509,7 +45511,7 @@ object-assign
               gl,
               properties,
               dynamicPropertyFlags,
-              size
+              size,
             ) {
               _classCallCheck(this, ParticleBuffer);
 
@@ -45605,7 +45607,7 @@ object-assign
                 _pixiGlCore2.default.GLBuffer.createIndexBuffer(
                   gl,
                   this.indices,
-                  gl.STATIC_DRAW
+                  gl.STATIC_DRAW,
                 );
 
               this.dynamicStride = 0;
@@ -45619,13 +45621,13 @@ object-assign
               }
 
               this.dynamicData = new Float32Array(
-                this.size * this.dynamicStride * 4
+                this.size * this.dynamicStride * 4,
               );
               this.dynamicBuffer =
                 _pixiGlCore2.default.GLBuffer.createVertexBuffer(
                   gl,
                   this.dynamicData,
-                  gl.STREAM_DRAW
+                  gl.STREAM_DRAW,
                 );
 
               // static //
@@ -45642,17 +45644,17 @@ object-assign
               }
 
               this.staticData = new Float32Array(
-                this.size * this.staticStride * 4
+                this.size * this.staticStride * 4,
               );
               this.staticBuffer =
                 _pixiGlCore2.default.GLBuffer.createVertexBuffer(
                   gl,
                   this.staticData,
-                  gl.STATIC_DRAW
+                  gl.STATIC_DRAW,
                 );
 
               this.vao = new _pixiGlCore2.default.VertexArrayObject(
-                gl
+                gl,
               ).addIndex(this.indexBuffer);
 
               for (var _i2 = 0; _i2 < this.dynamicProperties.length; ++_i2) {
@@ -45664,7 +45666,7 @@ object-assign
                   gl.FLOAT,
                   false,
                   this.dynamicStride * 4,
-                  _property2.offset * 4
+                  _property2.offset * 4,
                 );
               }
 
@@ -45677,7 +45679,7 @@ object-assign
                   gl.FLOAT,
                   false,
                   this.staticStride * 4,
-                  _property3.offset * 4
+                  _property3.offset * 4,
                 );
               }
             };
@@ -45693,7 +45695,7 @@ object-assign
             ParticleBuffer.prototype.uploadDynamic = function uploadDynamic(
               children,
               startIndex,
-              amount
+              amount,
             ) {
               for (var i = 0; i < this.dynamicProperties.length; i++) {
                 var property = this.dynamicProperties[i];
@@ -45704,7 +45706,7 @@ object-assign
                   amount,
                   this.dynamicData,
                   this.dynamicStride,
-                  property.offset
+                  property.offset,
                 );
               }
 
@@ -45722,7 +45724,7 @@ object-assign
             ParticleBuffer.prototype.uploadStatic = function uploadStatic(
               children,
               startIndex,
-              amount
+              amount,
             ) {
               for (var i = 0; i < this.staticProperties.length; i++) {
                 var property = this.staticProperties[i];
@@ -45733,7 +45735,7 @@ object-assign
                   amount,
                   this.staticData,
                   this.staticStride,
-                  property.offset
+                  property.offset,
                 );
               }
 
@@ -45809,7 +45811,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -45822,7 +45824,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -45834,7 +45836,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -45882,7 +45884,7 @@ object-assign
                */
               var _this = _possibleConstructorReturn(
                 this,
-                _core$ObjectRenderer.call(this, renderer)
+                _core$ObjectRenderer.call(this, renderer),
               );
 
               _this.shader = null;
@@ -46053,8 +46055,8 @@ object-assign
                       gl,
                       this.properties,
                       dynamicPropertyFlags,
-                      batchSize
-                    )
+                      batchSize,
+                    ),
                   );
                 }
 
@@ -46078,7 +46080,7 @@ object-assign
               amount,
               array,
               stride,
-              offset
+              offset,
             ) {
               var w0 = 0;
               var w1 = 0;
@@ -46141,7 +46143,7 @@ object-assign
               amount,
               array,
               stride,
-              offset
+              offset,
             ) {
               for (var i = 0; i < amount; i++) {
                 var spritePosition = children[startIndex + i].position;
@@ -46178,7 +46180,7 @@ object-assign
               amount,
               array,
               stride,
-              offset
+              offset,
             ) {
               for (var i = 0; i < amount; i++) {
                 var spriteRotation = children[startIndex + i].rotation;
@@ -46208,7 +46210,7 @@ object-assign
               amount,
               array,
               stride,
-              offset
+              offset,
             ) {
               for (var i = 0; i < amount; ++i) {
                 var textureUvs = children[startIndex + i]._texture._uvs;
@@ -46262,7 +46264,7 @@ object-assign
               amount,
               array,
               stride,
-              offset
+              offset,
             ) {
               for (var i = 0; i < amount; i++) {
                 var spriteAlpha = children[startIndex + i].alpha;
@@ -46326,7 +46328,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -46339,7 +46341,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -46351,7 +46353,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -46410,8 +46412,8 @@ object-assign
                     "  if (color.a == 0.0) discard;",
                     "  gl_FragColor = color;",
                     "}",
-                  ].join("\n")
-                )
+                  ].join("\n"),
+                ),
               );
             }
 
@@ -46585,10 +46587,10 @@ object-assign
             typeof global !== "undefined"
               ? global
               : typeof self !== "undefined"
-              ? self
-              : typeof window !== "undefined"
-              ? window
-              : {}
+                ? self
+                : typeof window !== "undefined"
+                  ? window
+                  : {},
           );
         },
         {},
@@ -46682,7 +46684,7 @@ object-assign
                * @type {PIXI.prepare.CountLimiter|PIXI.prepare.TimeLimiter}
                */
               this.limiter = new _CountLimiter2.default(
-                core.settings.UPLOADS_PER_FRAME
+                core.settings.UPLOADS_PER_FRAME,
               );
 
               /**
@@ -46792,7 +46794,7 @@ object-assign
                   SharedTicker.addOnce(
                     this.tick,
                     this,
-                    core.UPDATE_PRIORITY.UTILITY
+                    core.UPDATE_PRIORITY.UTILITY,
                   );
                 }
               } else if (done) {
@@ -46855,7 +46857,7 @@ object-assign
                 SharedTicker.addOnce(
                   this.tick,
                   this,
-                  core.UPDATE_PRIORITY.UTILITY
+                  core.UPDATE_PRIORITY.UTILITY,
                 );
               }
             };
@@ -46869,7 +46871,7 @@ object-assign
              */
 
             BasePrepare.prototype.registerFindHook = function registerFindHook(
-              addHook
+              addHook,
             ) {
               if (addHook) {
                 this.addHooks.push(addHook);
@@ -47154,7 +47156,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -47167,7 +47169,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -47179,7 +47181,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -47213,7 +47215,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _BasePrepare.call(this, renderer)
+                _BasePrepare.call(this, renderer),
               );
 
               _this.uploadHookHelper = _this;
@@ -47290,7 +47292,7 @@ object-assign
                 0,
                 0,
                 prepare.canvas.width,
-                prepare.canvas.height
+                prepare.canvas.height,
               );
 
               return true;
@@ -47536,7 +47538,7 @@ object-assign
           function _possibleConstructorReturn(self, call) {
             if (!self) {
               throw new ReferenceError(
-                "this hasn't been initialised - super() hasn't been called"
+                "this hasn't been initialised - super() hasn't been called",
               );
             }
             return call &&
@@ -47549,7 +47551,7 @@ object-assign
             if (typeof superClass !== "function" && superClass !== null) {
               throw new TypeError(
                 "Super expression must either be null or a function, not " +
-                  typeof superClass
+                  typeof superClass,
               );
             }
             subClass.prototype = Object.create(
@@ -47561,7 +47563,7 @@ object-assign
                   writable: true,
                   configurable: true,
                 },
-              }
+              },
             );
             if (superClass)
               Object.setPrototypeOf
@@ -47589,7 +47591,7 @@ object-assign
 
               var _this = _possibleConstructorReturn(
                 this,
-                _BasePrepare.call(this, renderer)
+                _BasePrepare.call(this, renderer),
               );
 
               _this.uploadHookHelper = _this.renderer;
@@ -47818,10 +47820,10 @@ object-assign
             typeof global !== "undefined"
               ? global
               : typeof self !== "undefined"
-              ? self
-              : typeof window !== "undefined"
-              ? window
-              : {}
+                ? self
+                : typeof window !== "undefined"
+                  ? window
+                  : {},
           );
         },
         {
@@ -47841,7 +47843,7 @@ object-assign
       ],
     },
     {},
-    [185]
+    [185],
   )(185);
 });
 

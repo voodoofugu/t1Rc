@@ -8,10 +8,31 @@ declare namespace PIXI {
     addChild(child: DisplayObject): void;
     destroy(options?: any): void;
   }
+
   class Graphics extends Container {
     beginFill(color: number): void;
     drawRect(x: number, y: number, w: number, h: number): void;
     endFill(): void;
+    x: number;
+    y: number;
+  }
+
+  class Texture {
+    baseTexture: any;
+    width: number;
+    height: number;
+
+    static from(source: string | HTMLImageElement): Texture;
+  }
+
+  class Sprite extends Container {
+    texture: Texture;
+    width: number;
+    height: number;
+    x: number;
+    y: number;
+
+    constructor(texture: Texture);
   }
 
   interface ApplicationOptions {
@@ -23,11 +44,15 @@ declare namespace PIXI {
     antialias?: boolean;
     resolution?: number;
     autoStart?: boolean;
+    preferWebGL?: boolean;
+    forceCanvas?: boolean;
   }
 
   class Application {
     stage: Container;
     renderer: any;
+
+    view: HTMLCanvasElement;
 
     constructor(options?: ApplicationOptions);
 

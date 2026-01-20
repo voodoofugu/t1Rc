@@ -113,7 +113,7 @@ export default function Loading({ noBG, addStyle }) {
     <>
       <style>{LoadCss}</style>
       {!noBG && <div className="blurBg"></div>}
-      <div className="loader" style={addStyle}>
+      <div className="loader" style={addStyle ? addStyle : null}>
         <div className="inner one"></div>
         <div className="inner two"></div>
         <div className="inner three"></div>

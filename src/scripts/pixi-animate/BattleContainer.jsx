@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import App from "App";
-import PIXIComponent from "utils/pixi/PIXIComponent";
+import PIXIComponent from "./PIXIComponent";
 
 import BattleView from "./BattleView";
 
@@ -62,16 +62,10 @@ class BattleContainer extends Component {
           ) : null}
         </div>
         <div
-          onMouseDown={e => {
+          onMouseDown={(e) => {
             this.view.clickHandler({
-              x:
-                e.clientX -
-                e.currentTarget.getBoundingClientRect().x +
-                100,
-              y:
-                e.clientY -
-                e.currentTarget.getBoundingClientRect().y +
-                100,
+              x: e.clientX - e.currentTarget.getBoundingClientRect().x + 100,
+              y: e.clientY - e.currentTarget.getBoundingClientRect().y + 100,
             });
           }}
           style={{

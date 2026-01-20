@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import { Component, CSSProperties } from "react";
 
 import { PIXIView } from "./PIXIView";
-import LoadingProgress from "./LoadingProgress";
+import Loading from "../../components/templateComponents/Loading";
 
 declare const DEBUG: number;
-
 interface PIXIComponentProps {
   width: number;
   height: number;
+  style?: CSSProperties;
   stageOptions?: Partial<PIXI.ApplicationOptions>;
   view?: PIXIView;
   className?: string;
@@ -17,14 +17,16 @@ interface PIXIComponentProps {
 export default class PIXIComponent extends Component<PIXIComponentProps> {
   private canvas: HTMLCanvasElement | null = null;
   private app: PIXI.Application | null = null;
-  private loading = false;
+  state = {
+    loading: false,
+  };
 
   render() {
-    const { width, height, className } = this.props;
-    const isLoading = Boolean(this.app && this.loading);
+    const { width, height, className, style } = this.props;
+    const isLoading = Boolean(this.app && this.state.loading);
 
     return (
-      <div className={className || ""} style={{ width, height }}>
+      <div className={className || ""} style={{ ...style, width, height }}>
         <canvas
           width={width}
           height={height}
@@ -32,7 +34,7 @@ export default class PIXIComponent extends Component<PIXIComponentProps> {
           style={{ width, height }}
         />
 
-        {isLoading && <LoadingProgress />}
+        {isLoading && <Loading noBG={false} addStyle="" />}
 
         {false && DEBUG && (
           <button
@@ -48,6 +50,15 @@ export default class PIXIComponent extends Component<PIXIComponentProps> {
         )}
       </div>
     );
+  }
+
+  // ! добавлено для обновления
+  componentDidUpdate(prevProps: PIXIComponentProps) {
+    if (!this.app) return;
+
+    if (this.props.view && this.props.view !== prevProps.view) {
+      this.initView(this.props.view);
+    }
   }
 
   // ------------------------
@@ -87,6 +98,9 @@ export default class PIXIComponent extends Component<PIXIComponentProps> {
       height,
       view: this.canvas,
       resolution,
+      preferWebGL: false, // добавлено
+      forceCanvas: true, // добавлено
+      backgroundColor: 0x1099bb,
       // backgroundAlpha: 0,
       ...(stageOptions ?? {}),
     };
@@ -99,7 +113,7 @@ export default class PIXIComponent extends Component<PIXIComponentProps> {
 
     if (view) this.initView(view);
     else {
-      this.loading = true;
+      this.setState({ loading: true });
       console.warn("PIXIComponent: view is not provided");
     }
   }
@@ -107,15 +121,16 @@ export default class PIXIComponent extends Component<PIXIComponentProps> {
   private initView(view: PIXIView) {
     const result = view.getSymbol();
 
-    if (!result || !view.isLoading) return;
+    if (!result) return;
 
     if (typeof (result as Promise<PIXI.Container>).then === "function") {
-      this.loading = true;
+      this.setState({ loading: true });
       (result as Promise<PIXI.Container>).then(this.setView).finally(() => {
-        this.loading = false;
+        this.setState({ loading: false });
       });
     } else {
       this.setView(result as PIXI.Container);
+      this.setState({ loading: false });
     }
   }
 
