@@ -28,6 +28,7 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.12",
+    "@types/pixi.js": "^4.8.9",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "@types/webpack": "^5.28.5",
