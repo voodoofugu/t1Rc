@@ -1,30 +1,29 @@
 import { Component, CSSProperties } from "react";
 
-import PixiLoaderView from "./PixiLoaderView";
+import { PIXIView } from "./PIXIView";
+import Loading from "../../components/templateComponents/Loading";
 
 declare const DEBUG: number;
-
-type ViewFactory = () => PIXI.Container | Promise<PIXI.Container>;
-
 interface PIXIComponentProps {
   width: number;
   height: number;
   style?: CSSProperties;
   stageOptions?: Partial<PIXI.ApplicationOptions>;
-  view?: ViewFactory;
+  view?: PIXIView;
   className?: string;
   onStageInit?: () => void;
 }
 
-class PIXIComponent2 extends Component<PIXIComponentProps> {
+export default class PIXIComponent extends Component<PIXIComponentProps> {
   private canvas: HTMLCanvasElement | null = null;
   private app: PIXI.Application | null = null;
-  private currentView?: PIXI.Container;
-  private loader?: PixiLoaderView;
-  private viewToken = 0;
+  state = {
+    loading: false,
+  };
 
   render() {
     const { width, height, className, style } = this.props;
+    const isLoading = Boolean(this.app && this.state.loading);
 
     return (
       <div className={className || ""} style={{ ...style, width, height }}>
@@ -34,6 +33,8 @@ class PIXIComponent2 extends Component<PIXIComponentProps> {
           ref={this.refCanvas}
           style={{ width, height }}
         />
+
+        {isLoading && <Loading noBG={false} addStyle="" />}
 
         {false && DEBUG && (
           <button
@@ -51,10 +52,11 @@ class PIXIComponent2 extends Component<PIXIComponentProps> {
     );
   }
 
+  // ! добавлено для обновления
   componentDidUpdate(prevProps: PIXIComponentProps) {
     if (!this.app) return;
 
-    if (this.props.view !== prevProps.view && this.props.view) {
+    if (this.props.view && this.props.view !== prevProps.view) {
       this.initView(this.props.view);
     }
   }
@@ -73,6 +75,16 @@ class PIXIComponent2 extends Component<PIXIComponentProps> {
   };
 
   // ------------------------
+  // Public API
+  // ------------------------
+  setRenderable(renderable: boolean) {
+    if (!this.app) return;
+
+    if (renderable) this.app.start();
+    else this.app.stop();
+  }
+
+  // ------------------------
   // Stage init
   // ------------------------
   private initStage() {
@@ -86,57 +98,46 @@ class PIXIComponent2 extends Component<PIXIComponentProps> {
       height,
       view: this.canvas,
       resolution,
-      forceCanvas: true,
+      // preferWebGL: false, // добавлено
+      forceCanvas: true, // добавлено
       backgroundColor: 0x1099bb,
+      // backgroundAlpha: 0,
       ...(stageOptions ?? {}),
     };
 
     const app = new PIXI.Application(opts);
     this.app = app;
+
+    // для отладки
     (globalThis as any).__PIXI_APP__ = app;
 
-    // добавляем лоадер
-    this.loader = new PixiLoaderView(width, height);
-    app.stage.addChild(this.loader);
-
     if (view) this.initView(view);
-  }
-
-  // ------------------------
-  // View lifecycle
-  // ------------------------
-  private initView(factory: ViewFactory) {
-    const token = ++this.viewToken;
-    const result = factory();
-
-    const apply = (container: PIXI.Container) => {
-      if (token !== this.viewToken) return;
-
-      // удаляем старый view
-      if (this.currentView) {
-        this.app?.stage.removeChild(this.currentView);
-        this.currentView.destroy?.();
-      }
-
-      this.currentView = container;
-      this.app?.stage.addChild(container);
-
-      // убираем лоадер
-      if (this.loader) {
-        this.app?.stage.removeChild(this.loader);
-        this.loader.destroy();
-        this.loader = undefined;
-      }
-
-      this.props.onStageInit?.();
-    };
-
-    if (result instanceof Promise) {
-      result.then(apply).catch(console.error);
-    } else {
-      apply(result);
+    else {
+      this.setState({ loading: true });
+      console.warn("PIXIComponent: view is not provided");
     }
   }
+
+  private initView(view: PIXIView) {
+    const result = view.getSymbol();
+
+    if (!result) return;
+
+    if (typeof (result as Promise<PIXI.Container>).then === "function") {
+      this.setState({ loading: true });
+      (result as Promise<PIXI.Container>).then(this.setView).finally(() => {
+        this.setState({ loading: false });
+      });
+    } else {
+      this.setView(result as PIXI.Container);
+      this.setState({ loading: false });
+    }
+  }
+
+  private setView = (symbol: PIXI.Container) => {
+    this.app?.stage.addChild(symbol);
+    this.props.onStageInit?.();
+  };
 
   // ------------------------
   // Utils
@@ -163,15 +164,7 @@ class PIXIComponent2 extends Component<PIXIComponentProps> {
   // Destroy
   // ------------------------
   private destroy = () => {
-    if (this.loader) {
-      this.loader.destroy();
-      this.loader = undefined;
-    }
-
-    if (this.currentView) {
-      this.currentView.destroy?.();
-      this.currentView = undefined;
-    }
+    this.props.view?.destroy();
 
     if (!this.app) return;
 
@@ -180,5 +173,3 @@ class PIXIComponent2 extends Component<PIXIComponentProps> {
     this.app = null;
   };
 }
-
-export default PIXIComponent2;

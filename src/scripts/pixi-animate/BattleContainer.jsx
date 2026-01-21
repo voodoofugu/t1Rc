@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import App from "App";
-import PIXIComponent from "./PIXIComponent";
+import PIXIComponent from "./PIXIComponentOld";
 
 import BattleView from "./BattleView";
 
