@@ -1,21 +1,23 @@
 import { useEffect, useRef } from "react";
-import { useNexus, nexusUpdate } from "nexus-state";
+import nexus from "../../../nexus/nexusConfig";
 import useStorage, { StorageItemT } from "../../components/hooks/useStorage";
+
+import type { MyState } from "../../../nexus/nexusConfig";
 
 type StorageType = {
   watch?: boolean;
-  storageData?: [keyof StatesT, type?: "local" | "session"][];
+  storageData?: [keyof MyState, type?: "local" | "session"][];
 };
 
 export default function Storage({ watch, storageData }: StorageType): null {
-  const nexusAll = useNexus();
+  const nexusAll = nexus.use();
   const hasInitialized = useRef(false);
 
   useEffect(() => {
     // берем данные из хранилища и обновляем состояния
     if (!storageData?.length || hasInitialized.current) return;
 
-    const dataToUpdate: Partial<StatesT> = {};
+    const dataToUpdate: Partial<MyState> = {};
     storageData.forEach(([key, storageType]) => {
       const storage = storageType === "local" ? localStorage : sessionStorage;
       const rawData = storage.getItem(key as string);
@@ -23,18 +25,19 @@ export default function Storage({ watch, storageData }: StorageType): null {
       if (rawData) {
         try {
           const parsedData = JSON.parse(rawData);
-          dataToUpdate[key as keyof StatesT] = parsedData;
+          dataToUpdate[key as keyof MyState] = parsedData;
         } catch (error) {
           console.error(`Ошибка парсинга данных для ключа "${key}":`, error);
         }
       }
     });
 
-    if (Object.keys(dataToUpdate).length > 0) {
-      nexusUpdate({
-        _NEXUS_: dataToUpdate,
-      });
-    }
+    // !!! проверить зачем оно
+    // if (Object.keys(dataToUpdate).length > 0) {
+    //   nexus.set({
+    //     _NEXUS_: dataToUpdate,
+    //   });
+    // }
 
     hasInitialized.current = true; // Предотвращаем повторное выполнение эффекта
   }, [storageData]);
@@ -43,7 +46,7 @@ export default function Storage({ watch, storageData }: StorageType): null {
     storageData && Array.isArray(storageData)
       ? storageData.map((item) => ({
           name: item[0] as string,
-          value: item[0] && nexusAll ? nexusAll[item[0] as keyof StatesT] : {},
+          value: item[0] && nexusAll ? nexusAll[item[0] as keyof MyState] : {},
           type: item[1] ? (item[1] as "local" | "session") : "session",
         }))
       : [];

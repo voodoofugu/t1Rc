@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
@@ -29,18 +29,15 @@ function GuardianChestsWindow({ pageName, children }) {
           className="info"
           text="i"
           onClick={() => {
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup contentOnly framedPop",
-                  popCont: "InfoPopFramed",
-                  props: {
-                    inner:
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                    girlImg: "img/break-girls/break-girl915.png",
-                  },
+            nexus.acts.handlePopup({
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly framedPop",
+                popCont: "InfoPopFramed",
+                props: {
+                  inner:
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                  girlImg: "img/break-girls/break-girl915.png",
                 },
               },
             });
@@ -53,19 +50,16 @@ function GuardianChestsWindow({ pageName, children }) {
           value="234"
           plus
           onClick={() => {
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup  contentOnly framedPop essence-buy",
-                  popCont: "BuyShop",
-                  props: {
-                    img1: "evPopArts/angel_spirit_1",
-                    img2: "evPopArts/angel_spirit_2",
-                    img3: "evPopArts/angel_spirit_3",
-                    img4: "evPopArts/angel_spirit_4",
-                  },
+            nexus.acts.handlePopup({
+              type: "open",
+              data: {
+                mpopClass: "m-popup  contentOnly framedPop essence-buy",
+                popCont: "BuyShop",
+                props: {
+                  img1: "evPopArts/angel_spirit_1",
+                  img2: "evPopArts/angel_spirit_2",
+                  img3: "evPopArts/angel_spirit_3",
+                  img4: "evPopArts/angel_spirit_4",
                 },
               },
             });

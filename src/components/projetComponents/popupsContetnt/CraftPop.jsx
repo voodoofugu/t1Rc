@@ -70,12 +70,12 @@ export default function CraftPop() {
                   items={
                     <>
                       <ItemBox
-                        className="check"
+                        className="check wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"30/30"}
                       />
                       <ItemBox
-                        className="check"
+                        className="check wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"30/30"}
                       />
@@ -89,9 +89,8 @@ export default function CraftPop() {
                         get={true}
                       />
                       <ItemBox
-                        className="wh60"
+                        className="wh60 simpleItem"
                         itemPic="img/sAndL/heroKeyIcn.png"
-                        count={1}
                       />
                     </>
                   }
@@ -101,12 +100,18 @@ export default function CraftPop() {
                 <ItemSection
                   items={
                     <>
-                      <ItemBox itemPic="img/sAndL/ringIcn.png" count={"2/30"} />
                       <ItemBox
+                        className="wh68"
+                        itemPic="img/sAndL/ringIcn.png"
+                        count={"2/30"}
+                      />
+                      <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"5/30"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"12/30"}
                       />
@@ -119,9 +124,8 @@ export default function CraftPop() {
                         count={1}
                       />
                       <ItemBox
-                        className="wh60"
+                        className="wh60 simpleItem"
                         itemPic="img/sAndL/heroKeyIcn.png"
-                        count={1}
                       />
                     </>
                   }
@@ -132,16 +136,23 @@ export default function CraftPop() {
                 <ItemSection
                   items={
                     <>
-                      <ItemBox itemPic="img/sAndL/ringIcn.png" count={"2/30"} />
                       <ItemBox
+                        className="wh68"
+                        itemPic="img/sAndL/ringIcn.png"
+                        count={"2/30"}
+                      />
+                      <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"5/30"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"12/30"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/necklaceIcn.png"
                         count={"28/30"}
                       />
@@ -154,9 +165,8 @@ export default function CraftPop() {
                         count={1}
                       />
                       <ItemBox
-                        className="wh60"
+                        className="wh60 simpleItem"
                         itemPic="img/sAndL/heroKeyIcn.png"
-                        count={1}
                       />
                     </>
                   }
@@ -166,20 +176,28 @@ export default function CraftPop() {
                 <ItemSection
                   items={
                     <>
-                      <ItemBox itemPic="img/sAndL/ringIcn.png" count={"2/30"} />
                       <ItemBox
+                        className="wh68"
+                        itemPic="img/sAndL/ringIcn.png"
+                        count={"2/30"}
+                      />
+                      <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"5/30"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"12/30"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/necklaceIcn.png"
                         count={"28/30"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"14/30"}
                       />
@@ -192,9 +210,8 @@ export default function CraftPop() {
                         count={1}
                       />
                       <ItemBox
-                        className="wh60"
+                        className="wh60 simpleItem"
                         itemPic="img/sAndL/heroKeyIcn.png"
-                        count={1}
                       />
                     </>
                   }
@@ -214,10 +231,12 @@ export default function CraftPop() {
                   items={
                     <>
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"30"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"20"}
                       />
@@ -232,12 +251,18 @@ export default function CraftPop() {
                 <ItemSection
                   items={
                     <>
-                      <ItemBox itemPic="img/sAndL/ringIcn.png" count={"2/30"} />
                       <ItemBox
+                        className="wh68"
+                        itemPic="img/sAndL/ringIcn.png"
+                        count={"2/30"}
+                      />
+                      <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"5"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"12"}
                       />
@@ -252,16 +277,23 @@ export default function CraftPop() {
                 <ItemSection
                   items={
                     <>
-                      <ItemBox itemPic="img/sAndL/ringIcn.png" count={"2/30"} />
                       <ItemBox
+                        className="wh68"
+                        itemPic="img/sAndL/ringIcn.png"
+                        count={"2/30"}
+                      />
+                      <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"5"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"12"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/necklaceIcn.png"
                         count={"28"}
                       />
@@ -276,20 +308,28 @@ export default function CraftPop() {
                 <ItemSection
                   items={
                     <>
-                      <ItemBox itemPic="img/sAndL/ringIcn.png" count={"2/30"} />
                       <ItemBox
+                        className="wh68"
+                        itemPic="img/sAndL/ringIcn.png"
+                        count={"2/30"}
+                      />
+                      <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"5"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/braceletIcn.png"
                         count={"12"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/necklaceIcn.png"
                         count={"28"}
                       />
                       <ItemBox
+                        className="wh68"
                         itemPic="img/sAndL/earringsIcn.png"
                         count={"14"}
                       />

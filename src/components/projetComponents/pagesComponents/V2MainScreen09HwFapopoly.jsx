@@ -1,4 +1,4 @@
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 import ItemBox from "../UIComponents/ItemBox";
 
 export const cssFiles = [
@@ -769,15 +769,12 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
           <div
             className="bfIcon"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup events-btlpass-pop hw",
-                    popTit: "HALLOWEEN EVENT PASS",
-                    popCont: "BtlPass",
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup events-btlpass-pop hw",
+                  popTit: "HALLOWEEN EVENT PASS",
+                  popCont: "BtlPass",
                 },
               });
             }}
@@ -787,22 +784,19 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
           <div
             className="bfIcon second"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup essence-buy",
-                    popTit: "Buy Event Tokens",
-                    popCont: [
-                      "BuyShop",
-                      {
-                        img1: "heartCoin-1",
-                        img2: "heartCoin-2",
-                        img3: "heartCoin-3",
-                      },
-                    ],
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup essence-buy",
+                  popTit: "Buy Event Tokens",
+                  popCont: [
+                    "BuyShop",
+                    {
+                      img1: "heartCoin-1",
+                      img2: "heartCoin-2",
+                      img3: "heartCoin-3",
+                    },
+                  ],
                 },
               });
             }}
@@ -813,15 +807,12 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             <div
               className="color-btn rating"
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup fapop-rating",
-                      popTit: "rating",
-                      popCont: "FapopRating",
-                    },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup fapop-rating",
+                    popTit: "rating",
+                    popCont: "FapopRating",
                   },
                 });
               }}
@@ -838,15 +829,12 @@ export default function V2MainScreen09HwFapopoly({ pageName, children }) {
             <div
               className="color-btn token"
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup fapop-shop buyed",
-                      popTit: "tokens",
-                      popCont: "FapopShopBuyed",
-                    },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup fapop-shop buyed",
+                    popTit: "tokens",
+                    popCont: "FapopShopBuyed",
                   },
                 });
               }}

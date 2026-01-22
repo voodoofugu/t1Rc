@@ -1,29 +1,19 @@
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default function DatingImgPop({ img }) {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       ></div>
       <div className="content">
         <img className="pic" src={img} loading="lazy" />
         <div
           className="btn-close-x"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
       </div>
     </>

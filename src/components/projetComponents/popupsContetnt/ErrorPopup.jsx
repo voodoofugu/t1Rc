@@ -1,8 +1,8 @@
 import React, { memo } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default memo(function ErrorPopup() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -15,12 +15,7 @@ export default memo(function ErrorPopup() {
       </div>
       <div
         className="btn-simple-gold btn-ok"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       >
         Ок
       </div>

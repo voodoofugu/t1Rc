@@ -1,7 +1,7 @@
 import { useState } from "react";
 import WorldBtnBox from "../UIComponents/WorldBtnBox";
 
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import QuestBoxAll from "../UIComponents/QuestBoxAll";
 import Notification from "../UIComponents/Notification";
@@ -92,14 +92,11 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           <div
             className="avatar-box-all"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    popCont: "SignInUP",
-                    mpopClass: "m-popup red sign-up",
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  popCont: "SignInUP",
+                  mpopClass: "m-popup red sign-up",
                 },
               });
             }}
@@ -137,15 +134,12 @@ export default function MainScreen01AllPopups({ pageName, children }) {
           <div
             className="res-chest-btn"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup chests-shop",
-                    popTit: "Chest Shop",
-                    popCont: "ChestsShop",
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup chests-shop",
+                  popTit: "Chest Shop",
+                  popCont: "ChestsShop",
                 },
               });
             }}

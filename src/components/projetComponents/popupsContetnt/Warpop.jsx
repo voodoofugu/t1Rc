@@ -1,12 +1,12 @@
 import React from "react";
-import { nexusTrigger, useNexus, nexusUpdate } from "nexus-state";
+import nexus from "nexus";
 
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
 import ItemBox from "../UIComponents/ItemBox";
 
 export default function Warpop() {
-  const warpop = useNexus("warpop");
+  const warpop = nexus.use("warpop");
 
   const warpopBoxRef = React.useRef(null);
   const warpopBackRef = React.useRef(null);
@@ -22,7 +22,7 @@ export default function Warpop() {
     warpopBoxRef.current.classList.add("close");
     warpopBackRef.current.classList.add("close");
     timeoutRef.current = setTimeout(() => {
-      nexusUpdate({
+      nexus.set({
         warpop: null,
       });
     }, 250);
@@ -146,14 +146,11 @@ export default function Warpop() {
             className="green max warPopBtn"
             text="clash in progress"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup army-setup contentOnly",
-                    popCont: "ArmySetupCW",
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup army-setup contentOnly",
+                  popCont: "ArmySetupCW",
                 },
               });
             }}

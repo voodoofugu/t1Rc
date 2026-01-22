@@ -1,4 +1,4 @@
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 export const cssFiles = ["screen-fortuna-round-main_16x", "daiting-gifts-pop"];
 
@@ -18,15 +18,12 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup fortuna-main-round",
-                      popTit: "wheel of fortune - spin your discount!",
-                      popCont: "FortunaMainRound16",
-                    },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup fortuna-main-round",
+                    popTit: "wheel of fortune - spin your discount!",
+                    popCont: "FortunaMainRound16",
                   },
                 });
               }}
@@ -39,14 +36,11 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup fortuna-main-round contentOnly",
-                      popCont: "FortunaMainRound16Big",
-                    },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup fortuna-main-round contentOnly",
+                    popCont: "FortunaMainRound16Big",
                   },
                 });
               }}
@@ -59,20 +53,17 @@ export default function MainScreen16FortunaRoundMainpop({
             <div
               className="quest quest-fortune"
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup fortuna-main-round",
-                      popStyle: {
-                        width: "960px",
-                        height: "620px",
-                        left: "120px",
-                      },
-                      popTit: "wheel of fortune - spin your discount!",
-                      popCont: "FortunaMainRound25",
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup fortuna-main-round",
+                    popStyle: {
+                      width: "960px",
+                      height: "620px",
+                      left: "120px",
                     },
+                    popTit: "wheel of fortune - spin your discount!",
+                    popCont: "FortunaMainRound25",
                   },
                 });
               }}

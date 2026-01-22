@@ -1,6 +1,6 @@
 import React from "react";
 
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import Button from "../UIComponents/Button";
@@ -64,26 +64,23 @@ export default function MainScreen01Shorts({ pageName, children }) {
             disabledIndex.includes(index)
               ? null
               : () => {
-                  nexusTrigger({
-                    type: "handlePopup",
-                    payload: {
-                      type: "open",
-                      data: {
-                        mpopClass: "m-popup contentOnly framedPop videoPop",
-                        popCont: "VideoPop",
-                        props: {
-                          content: (
-                            <VideoTag
-                              className="videoGallery"
-                              poster={`img/images/superhero/suphero-${stabilityItemId}/x2/sh-6.jpg`}
-                              source={[
-                                `img/images/superhero/suphero-${stabilityItemId}/video.mp4`,
-                              ]}
-                              autoPlay
-                              loop
-                            />
-                          ),
-                        },
+                  nexus.acts.handlePopup({
+                    type: "open",
+                    data: {
+                      mpopClass: "m-popup contentOnly framedPop videoPop",
+                      popCont: "VideoPop",
+                      props: {
+                        content: (
+                          <VideoTag
+                            className="videoGallery"
+                            poster={`img/images/superhero/suphero-${stabilityItemId}/x2/sh-6.jpg`}
+                            source={[
+                              `img/images/superhero/suphero-${stabilityItemId}/video.mp4`,
+                            ]}
+                            autoPlay
+                            loop
+                          />
+                        ),
                       },
                     },
                   });
@@ -227,25 +224,22 @@ export default function MainScreen01Shorts({ pageName, children }) {
             <li
               className="quest"
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup contentOnly framedPop heroRewardPop",
-                      popCont: "CongraPop",
-                      props: {
-                        titleText: "You got a new Short!",
-                        rewardsData: [
-                          {
-                            className: "shortCard",
-                            heroClass: "wizard",
-                            cardType: "superhero",
-                            itemPic:
-                              "img/images/superhero/suphero-952/x1/avatar/sh-ava-1.jpg",
-                          },
-                        ],
-                      },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+                    popCont: "CongraPop",
+                    props: {
+                      titleText: "You got a new Short!",
+                      rewardsData: [
+                        {
+                          className: "shortCard",
+                          heroClass: "wizard",
+                          cardType: "superhero",
+                          itemPic:
+                            "img/images/superhero/suphero-952/x1/avatar/sh-ava-1.jpg",
+                        },
+                      ],
                     },
                   },
                 });
@@ -276,18 +270,15 @@ export default function MainScreen01Shorts({ pageName, children }) {
               className="info"
               text="i"
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup contentOnly framedPop",
-                      popCont: "InfoPopFramed",
-                      props: {
-                        inner:
-                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                        girlImg: "img/break-girls/break-girl915.png",
-                      },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly framedPop",
+                    popCont: "InfoPopFramed",
+                    props: {
+                      inner:
+                        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                      girlImg: "img/break-girls/break-girl915.png",
                     },
                   },
                 });

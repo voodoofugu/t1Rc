@@ -1,4 +1,4 @@
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import ResCount from "../UIComponents/ResCount";
 import StoreItemBox from "../UIComponents/StoreItemBox";
@@ -47,27 +47,24 @@ export default function FapMarket({ pageName, children }) {
             timer="23:54:55"
             updateBtn
             onClick={() =>
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup info-pop",
-                    popTit: "Info",
-                    popCont: "InfoPop",
-                    props: {
-                      text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
-                      btnText1: "cancel",
-                      btnText2: "buy 1/3",
-                      btnClass1: "blue",
-                      btnClass2: "green",
-                      btn2curency: ["img/ic-diamond.png", 150],
-                    },
-                    count: {
-                      icon: "img/ic-diamond.png",
-                      value: 200,
-                      add: true,
-                    },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup info-pop",
+                  popTit: "Info",
+                  popCont: "InfoPop",
+                  props: {
+                    text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
+                    btnText1: "cancel",
+                    btnText2: "buy 1/3",
+                    btnClass1: "blue",
+                    btnClass2: "green",
+                    btn2curency: ["img/ic-diamond.png", 150],
+                  },
+                  count: {
+                    icon: "img/ic-diamond.png",
+                    value: 200,
+                    add: true,
                   },
                 },
               })
@@ -80,23 +77,20 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup essence-buy",
-                      popTit: "Buy Dices",
-                      popCont: [
-                        "BuyShop",
-                        {
-                          img1: "diamond1",
-                          img2: "diamond2",
-                          img3: "diamond4",
-                          img4: "diamond6",
-                        },
-                      ],
-                    },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup essence-buy",
+                    popTit: "Buy Dices",
+                    popCont: [
+                      "BuyShop",
+                      {
+                        img1: "diamond1",
+                        img2: "diamond2",
+                        img3: "diamond4",
+                        img4: "diamond6",
+                      },
+                    ],
                   },
                 });
               }}
@@ -106,23 +100,20 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup essence-buy",
-                      popTit: "Buy Dices",
-                      popCont: [
-                        "BuyShop",
-                        {
-                          img1: "evPopArts/potion_black_1",
-                          img2: "evPopArts/potion_black_2",
-                          img3: "evPopArts/potion_black_3",
-                          img4: "evPopArts/potion_black_4",
-                        },
-                      ],
-                    },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup essence-buy",
+                    popTit: "Buy Dices",
+                    popCont: [
+                      "BuyShop",
+                      {
+                        img1: "evPopArts/potion_black_1",
+                        img2: "evPopArts/potion_black_2",
+                        img3: "evPopArts/potion_black_3",
+                        img4: "evPopArts/potion_black_4",
+                      },
+                    ],
                   },
                 });
               }}
@@ -132,23 +123,20 @@ export default function FapMarket({ pageName, children }) {
               value="234"
               plus
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup essence-buy",
-                      popTit: "Buy Dices",
-                      popCont: [
-                        "BuyShop",
-                        {
-                          img1: "v2-f-e1",
-                          img2: "v2-f-e2",
-                          img3: "v2-f-e3",
-                          img4: "v2-f-e4",
-                        },
-                      ],
-                    },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup essence-buy",
+                    popTit: "Buy Dices",
+                    popCont: [
+                      "BuyShop",
+                      {
+                        img1: "v2-f-e1",
+                        img2: "v2-f-e2",
+                        img3: "v2-f-e3",
+                        img4: "v2-f-e4",
+                      },
+                    ],
                   },
                 });
               }}

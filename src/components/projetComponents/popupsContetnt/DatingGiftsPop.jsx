@@ -1,4 +1,4 @@
-import { useNexus, nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
@@ -6,18 +6,13 @@ import ResCount from "../UIComponents/ResCount";
 import OfferCardBox from "../UIComponents/OfferCardBox";
 
 export default function DaitingGiftsPop({ girleID }) {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       ></div>
 
       <div className="content">
@@ -71,12 +66,7 @@ export default function DaitingGiftsPop({ girleID }) {
 
         <div
           className="btn-close-x"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
       </div>
     </>

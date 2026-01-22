@@ -11,6 +11,7 @@ export function resolvers(options: BuildOptions): Configuration["resolve"] {
         options.paths.mainDir,
         "src/components/projetComponents",
       ),
+      nexus: path.resolve(options.paths.mainDir, "nexus/nexusConfig.ts"),
     },
   };
 }

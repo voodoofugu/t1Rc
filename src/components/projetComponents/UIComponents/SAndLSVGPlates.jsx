@@ -1,5 +1,5 @@
 import { memo, useEffect, useState } from "react";
-import { nexusUpdate } from "nexus-state";
+import nexus from "nexus";
 
 import ItemNotiz from "./ItemNotiz";
 
@@ -220,7 +220,7 @@ export default memo(function SAndLSVGPlates({
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
-    nexusUpdate({
+    nexus.set({
       sAndLStates: (prev) => ({
         ...prev,
         activeTime: 150,
@@ -234,7 +234,7 @@ export default memo(function SAndLSVGPlates({
   useEffect(() => {
     if (targetPlate !== sAndLStates.activePlate) {
       interval = setTimeout(() => {
-        nexusUpdate({
+        nexus.set({
           sAndLStates: (prev) => ({
             ...prev,
             activePlate:
@@ -249,7 +249,7 @@ export default memo(function SAndLSVGPlates({
           sAndLStates.activePlate === targetPlate + 1
         ) {
           clearInterval(interval);
-          nexusUpdate({
+          nexus.set({
             sAndLStates: (prev) => ({
               ...prev,
               animInProgress: false,
@@ -266,12 +266,12 @@ export default memo(function SAndLSVGPlates({
   useEffect(() => {
     const validIndexes = specialIndexes.slice(0, -1); // Игнорируем последнюю строку с "chest"
     const index = validIndexes.findIndex(
-      (item) => sAndLStates.activePlate === item[0][0]
+      (item) => sAndLStates.activePlate === item[0][0],
     );
     if (!sAndLStates.animInProgress && index !== -1) {
       const targetPlate = validIndexes[index][0][1];
       setTimeout(() => {
-        nexusUpdate({
+        nexus.set({
           sAndLStates: (prev) => ({
             ...prev,
             animPortal: true,
@@ -280,7 +280,7 @@ export default memo(function SAndLSVGPlates({
       }, 400);
       setTimeout(() => {
         setTargetPlate(targetPlate);
-        nexusUpdate({
+        nexus.set({
           sAndLStates: (prev) => ({
             ...prev,
             activePlate: targetPlate,
@@ -301,7 +301,7 @@ export default memo(function SAndLSVGPlates({
   // Обработчик клика по плашке
   const handleClick = (index) => {
     if (!sAndLStates.animInProgress && index !== sAndLStates.activePlate) {
-      nexusUpdate({
+      nexus.set({
         sAndLStates: (prev) => ({
           ...prev,
           animInProgress: true,
@@ -314,7 +314,7 @@ export default memo(function SAndLSVGPlates({
   // Обработчик наведения на плашку если она равна индексу chest
   const handleMouseOver = (index) => {
     const isChest = specialIndexes.find(
-      (item) => item[1] === "chest" && item[0].includes(index)
+      (item) => item[1] === "chest" && item[0].includes(index),
     );
     setHoveredIndex(isChest ? index + 1 : null);
   };

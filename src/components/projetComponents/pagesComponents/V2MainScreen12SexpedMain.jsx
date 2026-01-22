@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 export const cssFiles = [
   "v2-screen-sexped-main",
@@ -22,7 +22,7 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
       // закрытие попапов
       [
         ...document.querySelectorAll(
-          ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+          ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup",
         ),
       ].map((i) => {
         i.style.display = "none";
@@ -40,7 +40,7 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
       });
       [
         ...document.querySelectorAll(
-          ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-of-type(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+          ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-of-type(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn",
         ),
       ].map((i) => {
         i.addEventListener("click", () => {
@@ -49,7 +49,7 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
           setTimeout(function () {
             re.style.display = "none";
             i.closest(
-              ".m-popup, .ratingpop-box, .quest-popup, .popup"
+              ".m-popup, .ratingpop-box, .quest-popup, .popup",
             ).style.display = "none";
             po.classList.remove("dialog-emersion-exit");
           }, 100);
@@ -76,7 +76,7 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
 
       // окна игрофой механики
       const mainBg = document.querySelector(
-        ".main-bg-scroll-box.indiana-scroll-container"
+        ".main-bg-scroll-box.indiana-scroll-container",
       );
       const seMiS = document.querySelector(".sexped-mission-screen");
       const seFiS = document.querySelector(".sexped-fight-screen");
@@ -195,16 +195,13 @@ export default function V2MainScreen12SexpedMain({ pageName, children }) {
           <div
             className="color-btn rating"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass:
-                      "m-popup events-btlpass-pop sexpedition contentOnly",
-                    popCont: "BtlPass",
-                    props: { event: "sexpedition" },
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass:
+                    "m-popup events-btlpass-pop sexpedition contentOnly",
+                  popCont: "BtlPass",
+                  props: { event: "sexpedition" },
                 },
               });
             }}

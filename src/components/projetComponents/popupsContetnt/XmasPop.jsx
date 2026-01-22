@@ -1,5 +1,5 @@
 import { useState, useLayoutEffect } from "react";
-import { nexusTrigger, nexusUpdate } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import StoreItemBox from "../UIComponents/StoreItemBox";
@@ -94,7 +94,7 @@ function XmasPop1({ setXmasPopLocal }) {
                 countOut={index + 1}
                 onClick={() => {
                   element.className === "get" &&
-                    nexusUpdate({
+                    nexus.set({
                       notif: {
                         view: true,
                         img: element.itemPic,
@@ -118,12 +118,7 @@ function XmasPop1({ setXmasPopLocal }) {
         </div>
         <div
           className="color-btn green"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         >
           <div className="color-btn-text">close</div>
         </div>
@@ -460,7 +455,7 @@ export default function XmasPop({ xmasPop, event }) {
   const [xmasPopLocal, setXmasPopLocal] = useState(xmasPop);
 
   useLayoutEffect(() => {
-    nexusUpdate({
+    nexus.set({
       popupState: (prev) => ({
         ...prev,
         mpopClass: `m-popup ${xmasPopLocal} ${event}`,

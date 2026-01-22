@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import StateChangeBtn from "../UIComponents/StateChangeBtn";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
@@ -147,7 +147,7 @@ function Tooltip() {
 }
 
 export default function V2MainScreen06Rating({ pageName }) {
-  const activePage = useNexus("activePage");
+  const activePage = nexus.use("activePage");
 
   const [tooltip, setTooltip] = useState(false);
 

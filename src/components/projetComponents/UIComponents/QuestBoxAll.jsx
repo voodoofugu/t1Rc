@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
@@ -14,13 +14,10 @@ function QuestBtn({ img, timerbox, payload }) {
       }
       onClick={() => {
         payload &&
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                ...payload,
-              },
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              ...payload,
             },
           });
       }}

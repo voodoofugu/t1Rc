@@ -1,4 +1,4 @@
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
@@ -6,18 +6,13 @@ import ImageBg from "../UIComponents/ImageBg";
 import Button from "../UIComponents/Button";
 
 export default function InfoPopFramed({ inner, girlImg }) {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       ></div>
       <div className="content">
         <div className="popupFrame">
@@ -36,12 +31,7 @@ export default function InfoPopFramed({ inner, girlImg }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
       </div>
 

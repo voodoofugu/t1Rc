@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 import ComicsPop from "../popupsContetnt/ComicsPop";
 
 export const cssFiles = ["quests_all", "quests-ui", "v2-screen-uki-story-pop"];
@@ -114,7 +114,7 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
       // переключалка в main квестах
       const secN = document.querySelectorAll(".section-name");
       let elements = Array.from(
-        document.querySelectorAll(".journal-parth-box-scroll")
+        document.querySelectorAll(".journal-parth-box-scroll"),
       );
       elements.pop(); // убираем последний элемент
       console.log(elements);
@@ -1312,14 +1312,11 @@ export default function V2MainScreen08UkiDaily({ pageName, children }) {
                 <div
                   className="journal-comics"
                   onClick={() => {
-                    nexusTrigger({
-                      type: "handlePopup",
-                      payload: {
-                        type: "open",
-                        data: {
-                          mpopClass: "m-popup uki-story-popup contentOnly",
-                          popCont: "ComicsPop",
-                        },
+                    nexus.acts.handlePopup({
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup uki-story-popup contentOnly",
+                        popCont: "ComicsPop",
                       },
                     });
                   }}

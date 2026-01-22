@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import Button from "../UIComponents/Button";
 import ItemBox from "../UIComponents/ItemBox";
@@ -61,7 +61,7 @@ export default function ArmySetupCW() {
         return new Set(
           getHeroData()
             .filter((item) => !item.className?.includes("block"))
-            .map((item) => extractKey(item.itemPic))
+            .map((item) => extractKey(item.itemPic)),
         );
       }
     });
@@ -86,18 +86,15 @@ export default function ArmySetupCW() {
         className="info"
         text="i"
         onClick={() => {
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup contentOnly framedPop",
-                popCont: "InfoPopFramed",
-                props: {
-                  inner:
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                  girlImg: "img/break-girls/break-girl915.png",
-                },
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popCont: "InfoPopFramed",
+              props: {
+                inner:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                girlImg: "img/break-girls/break-girl915.png",
               },
             },
           });
@@ -109,12 +106,7 @@ export default function ArmySetupCW() {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
       <div className="armySetupCont">
@@ -185,12 +177,7 @@ export default function ArmySetupCW() {
       <Button
         className="lightGreen attackBtn disabled"
         text="Attack"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
     </>
   );

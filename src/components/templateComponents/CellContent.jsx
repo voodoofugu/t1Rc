@@ -1,7 +1,8 @@
 import { memo, useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
-import { useNexus, nexusUpdate } from "nexus-state";
 import { StyledAtom } from "styled-atom";
+
+import nexus from "../../../nexus/nexusConfig";
 
 import useDynamicImport from "../hooks/useDynamicImport";
 
@@ -23,9 +24,9 @@ const loadFill = (
 );
 
 function CellContent({ pageName }) {
-  const activePage = useNexus("activePage");
-  const searchText = useNexus("searchText");
-  const windowScale = useNexus("windowScale");
+  const activePage = nexus.use("activePage");
+  const searchText = nexus.use("searchText");
+  const windowScale = nexus.use("windowScale");
 
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const [style, setStyle] = useState(false);
@@ -36,8 +37,9 @@ function CellContent({ pageName }) {
     left: 0,
   });
 
-  const module = useDynamicImport(`${activePage || pageName || ""}`, (name) =>
-    import(`@prCo/pagesComponents/${name}`)
+  const module = useDynamicImport(
+    `${activePage || pageName || ""}`,
+    (name) => import(`@prCo/pagesComponents/${name}`),
   );
   const DynamicComponent = module?.default;
   const cssFiles = module?.cssFiles;
@@ -83,7 +85,7 @@ function CellContent({ pageName }) {
 
       setPosition(positionData);
 
-      nexusUpdate({
+      nexus.set({
         pageData: positionData,
         activePage: pageName,
       });
@@ -110,7 +112,7 @@ function CellContent({ pageName }) {
     setStyle(false);
 
     setTimeout(() => {
-      nexusUpdate({
+      nexus.set({
         activePage: "",
         pageData: null,
       });
@@ -125,7 +127,7 @@ function CellContent({ pageName }) {
         const statesNewTab = window.location.hash.substring(3);
         const hashParts = statesNewTab.split("/");
 
-        nexusUpdate({
+        nexus.set({
           pageData: {
             scrollTop: hashParts[1],
             top: hashParts[2],
@@ -176,7 +178,7 @@ function CellContent({ pageName }) {
                     </div>
                   )}
                 </div>,
-                document.querySelector("#templateBody")
+                document.querySelector("#templateBody"),
               )}
             </>
           ) : (

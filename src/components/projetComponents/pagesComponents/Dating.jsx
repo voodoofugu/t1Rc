@@ -1,5 +1,6 @@
 import React from "react";
-import { nexusTrigger } from "nexus-state";
+
+import nexus from "nexus";
 // import { Scroll } from "morphing-scroll";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 
@@ -52,7 +53,7 @@ export default function Dating({ pageName, children }) {
           className="info"
           text="i"
           onClick={() => {
-            nexusTrigger({
+            nexus.set({
               type: "handlePopup",
               payload: {
                 type: "open",
@@ -97,7 +98,7 @@ const GirlDependencies = ({ girlsInfo }) => {
         text="Girl gifts"
         img="img/dating/giftsIcn.png"
         onClick={() => {
-          nexusTrigger({
+          nexus.set({
             type: "handlePopup",
             payload: {
               type: "open",

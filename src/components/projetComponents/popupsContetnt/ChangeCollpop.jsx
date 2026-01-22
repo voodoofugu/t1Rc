@@ -1,20 +1,15 @@
 import React, { memo } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default memo(function ChangeCollpop() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
       <div className="color-box"></div>
       <div
         className="close-btn-box"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       >
         <div className="color-btn close">
           <div className="color-btn-text">закрыть</div>

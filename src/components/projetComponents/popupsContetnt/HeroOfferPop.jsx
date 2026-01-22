@@ -1,4 +1,4 @@
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import ImageBg from "../UIComponents/ImageBg";
 import ItemBox from "../UIComponents/ItemBox";
@@ -11,12 +11,7 @@ export default function HeroOfferPop({ imgId, name, heroClass, cardType }) {
     <>
       <div
         className="closeBG"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       ></div>
 
       <div className="content">
@@ -74,22 +69,19 @@ export default function HeroOfferPop({ imgId, name, heroClass, cardType }) {
               text="49.90$"
               crossedOutText="99.90$"
               onClick={() =>
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup contentOnly framedPop heroRewardPop",
-                      popCont: "CongraPop",
-                      props: {
-                        rewardsData: [
-                          {
-                            heroClass: `${heroClass}`,
-                            cardType: `${cardType}`,
-                            itemPic: `img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`,
-                          },
-                        ],
-                      },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+                    popCont: "CongraPop",
+                    props: {
+                      rewardsData: [
+                        {
+                          heroClass: `${heroClass}`,
+                          cardType: `${cardType}`,
+                          itemPic: `img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`,
+                        },
+                      ],
                     },
                   },
                 })
@@ -104,12 +96,7 @@ export default function HeroOfferPop({ imgId, name, heroClass, cardType }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
       </div>
 

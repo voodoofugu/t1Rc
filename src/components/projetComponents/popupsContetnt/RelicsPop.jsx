@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
@@ -144,7 +144,7 @@ export default memo(function RelicsPop({ event }) {
   ];
 
   const evData = data.find((item) => item[event]);
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -155,12 +155,7 @@ export default memo(function RelicsPop({ event }) {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
       <div className="main-relics-girl-box">

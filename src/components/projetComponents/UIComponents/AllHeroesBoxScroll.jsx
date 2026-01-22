@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import HeroBox from "../UIComponents/HeroBox";
 
@@ -52,29 +52,22 @@ export default function AllHeroesBoxScroll({ numX }) {
           {...item}
           btnNumX={numX}
           onClick={() => {
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup hero-popup",
-                  popTit: "Moe Kasa",
-                  popCont: "HeroPopup",
-                },
+            nexus.acts.handlePopup({
+              type: "open",
+              data: {
+                mpopClass: "m-popup hero-popup",
+                popTit: "Moe Kasa",
+                popCont: "HeroPopup",
               },
             });
           }}
           btnOnClick={() => {
-            // index === 2 &&
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup contentOnly framedPop heroOfferPop",
-                  popCont: "HeroOfferPop",
-                  props: { ...item },
-                },
+            nexus.acts.handlePopup({
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly framedPop heroOfferPop",
+                popCont: "HeroOfferPop",
+                props: { ...item },
               },
             });
           }}

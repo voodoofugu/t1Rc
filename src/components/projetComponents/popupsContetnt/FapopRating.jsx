@@ -1,7 +1,7 @@
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default function FapopRating() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -405,12 +405,7 @@ export default function FapopRating() {
       <div className="color-btn">
         <div
           className="color-btn-text"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         >
           закрыть
         </div>

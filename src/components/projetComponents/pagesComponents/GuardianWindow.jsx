@@ -1,5 +1,5 @@
 import { useState, useMemo, useCallback } from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 
 import ItemBox from "../UIComponents/ItemBox";
@@ -44,8 +44,8 @@ function GuardianWindow({ pageName, children }) {
     potionImgNum === 1
       ? "img/evPopArts/potion_yellow.png"
       : potionImgNum === 2
-      ? "img/evPopArts/potion_green.png"
-      : "img/evPopArts/potion_blue.png";
+        ? "img/evPopArts/potion_green.png"
+        : "img/evPopArts/potion_blue.png";
 
   // делаем массивы для картинок и заодно для иконок прогресса
   const [progElems, imgs] = useMemo(() => {
@@ -55,7 +55,7 @@ function GuardianWindow({ pageName, children }) {
 
     for (const v of values) {
       prog.push(
-        <div key={`stage-${v}`} className={`stage-progress st-${v}`}></div>
+        <div key={`stage-${v}`} className={`stage-progress st-${v}`}></div>,
       );
       im.push(
         <div
@@ -67,7 +67,7 @@ function GuardianWindow({ pageName, children }) {
             loading="lazy"
             alt=""
           />
-        </div>
+        </div>,
       );
     }
 
@@ -96,22 +96,19 @@ function GuardianWindow({ pageName, children }) {
           }/comics/ava/goddess-com-ava-${normalizedIndex(i)}.jpg`}
           onClick={() => {
             normalizedIndex(i) <= currentPrgHero &&
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup contentOnly",
-                    popCont: "FullImgPop",
-                    img: `img/images/goddess/goddess-${
-                      data_angels[girlIndex].id
-                    }/comics/goddess-com-${normalizedIndex(i)}.jpg`,
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup contentOnly",
+                  popCont: "FullImgPop",
+                  img: `img/images/goddess/goddess-${
+                    data_angels[girlIndex].id
+                  }/comics/goddess-com-${normalizedIndex(i)}.jpg`,
                 },
               });
           }}
         />
-      )
+      ),
     );
   }, [girlIndex]);
 
@@ -163,18 +160,15 @@ function GuardianWindow({ pageName, children }) {
           className="info"
           text="i"
           onClick={() => {
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup contentOnly framedPop",
-                  popCont: "InfoPopFramed",
-                  props: {
-                    inner:
-                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                    girlImg: "img/break-girls/break-girl915.png",
-                  },
+            nexus.acts.handlePopup({
+              type: "open",
+              data: {
+                mpopClass: "m-popup contentOnly framedPop",
+                popCont: "InfoPopFramed",
+                props: {
+                  inner:
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                  girlImg: "img/break-girls/break-girl915.png",
                 },
               },
             });
@@ -194,19 +188,16 @@ function GuardianWindow({ pageName, children }) {
           value="234"
           plus
           onClick={() => {
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup  contentOnly framedPop essence-buy",
-                  popCont: "BuyShop",
-                  props: {
-                    img1: "evPopArts/angel_spirit_1",
-                    img2: "evPopArts/angel_spirit_2",
-                    img3: "evPopArts/angel_spirit_3",
-                    img4: "evPopArts/angel_spirit_4",
-                  },
+            nexus.acts.handlePopup({
+              type: "open",
+              data: {
+                mpopClass: "m-popup  contentOnly framedPop essence-buy",
+                popCont: "BuyShop",
+                props: {
+                  img1: "evPopArts/angel_spirit_1",
+                  img2: "evPopArts/angel_spirit_2",
+                  img3: "evPopArts/angel_spirit_3",
+                  img4: "evPopArts/angel_spirit_4",
                 },
               },
             });
@@ -305,15 +296,12 @@ function GuardianWindow({ pageName, children }) {
                   onClick={() => {
                     if (girlImgNum > currentImgNum) return;
 
-                    nexusTrigger({
-                      type: "handlePopup",
-                      payload: {
-                        type: "open",
-                        data: {
-                          mpopClass: "m-popup contentOnly",
-                          popCont: "FullImgPop",
-                          img: `img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${girlImgNum}.jpg`,
-                        },
+                    nexus.acts.handlePopup({
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup contentOnly",
+                        popCont: "FullImgPop",
+                        img: `img/images/goddess/goddess-${data_angels[girlIndex].id}/x2/goddess-${girlImgNum}.jpg`,
                       },
                     });
                   }}
@@ -348,18 +336,15 @@ function GuardianWindow({ pageName, children }) {
                       className="btnGold add-btn"
                       text="+"
                       onClick={() => {
-                        nexusTrigger({
-                          type: "handlePopup",
-                          payload: {
-                            type: "open",
-                            data: {
-                              mpopClass:
-                                "m-popup contentOnly framedPop addGuardianHeroPop",
-                              popCont: "AddGuardianHero",
-                              props: {
-                                girlImg:
-                                  "img/images/hero-all/tithero-636/icons/break-girl.png",
-                              },
+                        nexus.acts.handlePopup({
+                          type: "open",
+                          data: {
+                            mpopClass:
+                              "m-popup contentOnly framedPop addGuardianHeroPop",
+                            popCont: "AddGuardianHero",
+                            props: {
+                              girlImg:
+                                "img/images/hero-all/tithero-636/icons/break-girl.png",
                             },
                           },
                         });

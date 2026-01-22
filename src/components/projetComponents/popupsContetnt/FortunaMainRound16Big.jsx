@@ -1,4 +1,4 @@
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ProgressBar from "../UIComponents/ProgressBar";
@@ -8,7 +8,7 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function FortunaMainRound16Big() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -22,12 +22,7 @@ export default function FortunaMainRound16Big() {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
       <ResCount
@@ -35,19 +30,16 @@ export default function FortunaMainRound16Big() {
         value="234"
         plus
         onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup essence-buy contentOnly framedPop",
-                popCont: "BuyShop",
-                props: {
-                  img1: "heartCoin-1",
-                  img2: "heartCoin-2",
-                  img3: "heartCoin-3",
-                  img4: "heartCoin-4",
-                },
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup essence-buy contentOnly framedPop",
+              popCont: "BuyShop",
+              props: {
+                img1: "heartCoin-1",
+                img2: "heartCoin-2",
+                img3: "heartCoin-3",
+                img4: "heartCoin-4",
               },
             },
           })
@@ -58,40 +50,37 @@ export default function FortunaMainRound16Big() {
         className="info"
         text="i"
         onClick={() => {
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup contentOnly framedPop",
-                popCont: "InfoPopFramed",
-                props: {
-                  inner: (
-                    <div className="rrules-box">
-                      <div className="rules-name">Rules</div>
-                      <div className="rules-text">
-                        <div>
-                          1. During the time of the event, you can spin the
-                          Great Wheel of Fortune for diamonds.
-                        </div>
-                        <div>
-                          2. Each use of the Push button gives a prize and
-                          increases points counter.
-                        </div>
-                        <div>
-                          3. As soon as enough points accumulate, you can get a
-                          guaranteed prize!
-                        </div>
-                        <div>
-                          4. You can get FREE WHEEL ROLLS for doing daily quests
-                          EACH DAY OF AN EVENT.
-                        </div>
-                        <div>5. Remember, fortune loves stubborn.</div>
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popCont: "InfoPopFramed",
+              props: {
+                inner: (
+                  <div className="rrules-box">
+                    <div className="rules-name">Rules</div>
+                    <div className="rules-text">
+                      <div>
+                        1. During the time of the event, you can spin the Great
+                        Wheel of Fortune for diamonds.
                       </div>
+                      <div>
+                        2. Each use of the Push button gives a prize and
+                        increases points counter.
+                      </div>
+                      <div>
+                        3. As soon as enough points accumulate, you can get a
+                        guaranteed prize!
+                      </div>
+                      <div>
+                        4. You can get FREE WHEEL ROLLS for doing daily quests
+                        EACH DAY OF AN EVENT.
+                      </div>
+                      <div>5. Remember, fortune loves stubborn.</div>
                     </div>
-                  ),
-                  girlImg: "img/break-girls/break-girl915.png",
-                },
+                  </div>
+                ),
+                girlImg: "img/break-girls/break-girl915.png",
               },
             },
           });

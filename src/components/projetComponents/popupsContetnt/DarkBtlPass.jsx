@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
@@ -11,7 +11,7 @@ import ImageBg from "../UIComponents/ImageBg";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function DarkBtlPass() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -21,19 +21,16 @@ export default function DarkBtlPass() {
         className="info"
         text="i"
         onClick={() => {
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup contentOnly framedPop",
-                popTit: "",
-                popCont: "InfoPopFramed",
-                props: {
-                  inner:
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                  girlImg: "img/break-girls/break-girl915.png",
-                },
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popTit: "",
+              popCont: "InfoPopFramed",
+              props: {
+                inner:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                girlImg: "img/break-girls/break-girl915.png",
               },
             },
           });
@@ -45,12 +42,7 @@ export default function DarkBtlPass() {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
       <Button
@@ -58,19 +50,16 @@ export default function DarkBtlPass() {
         text="Buy Currency"
         img="img/ic-red-potion-1.png"
         onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup essence-buy contentOnly framedPop",
-                popCont: "BuyShop",
-                props: {
-                  img1: "ic-red-potion-1",
-                  img2: "ic-red-potion-2",
-                  img3: "ic-red-potion-3",
-                  img4: "ic-red-potion-4",
-                },
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup essence-buy contentOnly framedPop",
+              popCont: "BuyShop",
+              props: {
+                img1: "ic-red-potion-1",
+                img2: "ic-red-potion-2",
+                img3: "ic-red-potion-3",
+                img4: "ic-red-potion-4",
               },
             },
           })

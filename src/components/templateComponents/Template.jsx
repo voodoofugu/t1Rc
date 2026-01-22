@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { StyledAtom } from "styled-atom";
-import { nexusUpdate } from "nexus-state";
+import nexus from "../../../nexus/nexusConfig";
 
 import PageBox from "./PageBox";
 
@@ -29,7 +29,7 @@ export default memo(function Template() {
     // Получаем массив только положительных чисел
     const scales = [widthScale, heightScale].filter((n) => n > 0);
 
-    nexusUpdate({
+    nexus.set({
       windowScale: scales.length > 0 ? Math.min(...scales) : 0,
     });
   };

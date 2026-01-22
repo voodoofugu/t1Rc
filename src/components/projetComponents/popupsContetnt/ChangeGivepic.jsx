@@ -1,8 +1,8 @@
 import { memo } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default memo(function ChangeGivepic() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -37,15 +37,12 @@ export default memo(function ChangeGivepic() {
           <div
             className="change-btn-info"
             onClick={() =>
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup change-collpop",
-                    popTit: "collection",
-                    popCont: "ChangeCollpop",
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup change-collpop",
+                  popTit: "collection",
+                  popCont: "ChangeCollpop",
                 },
               })
             }
@@ -76,12 +73,7 @@ export default memo(function ChangeGivepic() {
       </div>
       <div
         className="color-btn okgoit green"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       >
         <div className="color-btn-text">ок</div>
       </div>

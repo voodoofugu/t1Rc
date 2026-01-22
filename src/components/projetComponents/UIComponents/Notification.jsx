@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { useNexus, nexusUpdate } from "nexus-state";
+
+import nexus from "nexus";
 
 import ItemBox from "./ItemBox";
 
@@ -15,7 +16,7 @@ export default function Notification({
   const timer2 = useRef(null);
   const randomKey = Math.random().toString(36).slice(2, 6);
 
-  const notifState = useNexus("notif");
+  const notifState = nexus.use("notif");
 
   const localView = view || notifState?.view;
   const localClassName = className || notifState?.className;
@@ -38,7 +39,7 @@ export default function Notification({
 
     timer2.current = setTimeout(() => {
       clearTimeouts();
-      nexusUpdate({
+      nexus.set({
         notif: {},
       });
     }, t2);

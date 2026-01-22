@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import SVGIcon from "../UIComponents/SVGIcon.jsx";
@@ -25,7 +25,7 @@ function getRandomNumber() {
 }
 
 export default function SAndLScreen({ pageName, children }) {
-  const sAndLStates = useNexus("sAndLStates");
+  const sAndLStates = nexus.use("sAndLStates");
 
   const [diceStateClass, setDiceStateClass] = React.useState("");
   const [diceValue, setDiceValue] = React.useState(0);
@@ -83,13 +83,13 @@ export default function SAndLScreen({ pageName, children }) {
 
       if (specialIndexes.some(([indexes]) => indexes.includes(index))) {
         const matchingEntry = specialIndexes.find(([indexes]) =>
-          indexes.includes(index)
+          indexes.includes(index),
         );
         additionalClass = matchingEntry ? matchingEntry[1] : "";
       }
 
       const matchingEntryForItems = specialIndexesForItems.find(([indexes]) =>
-        indexes.includes(index)
+        indexes.includes(index),
       );
 
       if (matchingEntryForItems) {
@@ -113,7 +113,7 @@ export default function SAndLScreen({ pageName, children }) {
           {additionalObject && <ItemBox {...additionalObject} />}
         </div>
       );
-    }
+    },
   );
 
   const activePathName = Object.keys(pathsPositions)[sAndLStates.activePlate];
@@ -123,23 +123,27 @@ export default function SAndLScreen({ pageName, children }) {
     const diceNum = getRandomNumber();
     const diceClass = diceColor ? "gold" : "white";
 
-    nexusTrigger({
-      type: "ANIM_IN_PROG",
-      payload: true,
-    });
+    // !!! неизвестная экшен
+    // nexus.acts({
+    //   type: "ANIM_IN_PROG",
+    //   payload: true,
+    // });
 
     setDiceStateClass(`roll ${diceClass}`);
     setTimeout(() => {
       setDiceStateClass(`${diceClass}_diceNum${diceNum} ${diceClass}`);
       setDiceValue(diceNum);
-      setTimeout(() => {
-        setDiceStateClass(`${diceClass}_diceNum${diceNum} ${diceClass} off`);
-        setTimeout(() => {
-          setDiceStateClass("");
-          setDiceValue(0);
-          setDiceColor(false);
-        }, 400);
-      }, sAndLStates.activeTime * diceNum + 1200);
+      setTimeout(
+        () => {
+          setDiceStateClass(`${diceClass}_diceNum${diceNum} ${diceClass} off`);
+          setTimeout(() => {
+            setDiceStateClass("");
+            setDiceValue(0);
+            setDiceColor(false);
+          }, 400);
+        },
+        sAndLStates.activeTime * diceNum + 1200,
+      );
     }, 800);
   }
 
@@ -162,7 +166,7 @@ export default function SAndLScreen({ pageName, children }) {
         <div className="sAndL">
           <SAndLSVGPlates
             sAndLStates={sAndLStates}
-            dispatch={nexusTrigger}
+            dispatch={nexus.acts}
             diceValue={diceValue}
             specialIndexes={specialIndexes}
             pageName={pageName}
@@ -172,11 +176,11 @@ export default function SAndLScreen({ pageName, children }) {
             className={`heroFigure ${
               sAndLStates.animPortal ? "unvisible" : ""
             }`}
-            style={{
-              top: activePlateStyles.top,
-              left: activePlateStyles.left,
-              transition: `all ${sAndLStates.activeTime}ms linear`,
-            }}
+            // style={{ // !!! не работает
+            //   top: activePlateStyles.top,
+            //   left: activePlateStyles.left,
+            //   transition: `all ${sAndLStates.activeTime}ms linear`,
+            // }}
           ></div>
         </div>
         <div className="bott">
@@ -239,15 +243,12 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn questBtn"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup questChain",
-                    popTit: "Quest Chain",
-                    popCont: "QuestChain",
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup questChain",
+                  popTit: "Quest Chain",
+                  popCont: "QuestChain",
                 },
               });
             }}
@@ -260,16 +261,13 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn craftBtn"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup psemain sAndL",
-                    popTit: "Craft Room",
-                    popCont: "CraftPop",
-                    infBtn: true,
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup psemain sAndL",
+                  popTit: "Craft Room",
+                  popCont: "CraftPop",
+                  infBtn: true,
                 },
               });
             }}
@@ -281,15 +279,12 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="color-btn ratingBtn"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup fapop-rating",
-                    popTit: "rating",
-                    popCont: "FapopRating",
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup fapop-rating",
+                  popTit: "rating",
+                  popCont: "FapopRating",
                 },
               });
             }}
@@ -303,21 +298,18 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="btnI"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup info-pop",
-                    popTit: "Info",
-                    popCont: [
-                      "InfoPop",
-                      {
-                        text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
-                        btnText1: "I understand",
-                      },
-                    ],
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup info-pop",
+                  popTit: "Info",
+                  popCont: [
+                    "InfoPop",
+                    {
+                      text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
+                      btnText1: "I understand",
+                    },
+                  ],
                 },
               });
             }}
@@ -327,15 +319,12 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup fortuna-main uni-sale",
-                    popTit: "Dual pack",
-                    popCont: ["DualPack", { event: "uni-sale" }],
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup fortuna-main uni-sale",
+                  popTit: "Dual pack",
+                  popCont: ["DualPack", { event: "uni-sale" }],
                 },
               });
             }}
@@ -349,23 +338,20 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup essence-buy",
-                    popTit: "Buy White Dices",
-                    popCont: [
-                      "BuyShop",
-                      {
-                        img1: "sAndL/whiteDice_shop1",
-                        img2: "sAndL/whiteDice_shop2",
-                        img3: "sAndL/whiteDice_shop3",
-                        img4: "sAndL/whiteDice_shop4",
-                      },
-                    ],
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup essence-buy",
+                  popTit: "Buy White Dices",
+                  popCont: [
+                    "BuyShop",
+                    {
+                      img1: "sAndL/whiteDice_shop1",
+                      img2: "sAndL/whiteDice_shop2",
+                      img3: "sAndL/whiteDice_shop3",
+                      img4: "sAndL/whiteDice_shop4",
+                    },
+                  ],
                 },
               });
             }}
@@ -379,23 +365,20 @@ export default function SAndLScreen({ pageName, children }) {
           <div
             className="offerBtn"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: {
-                  type: "open",
-                  data: {
-                    mpopClass: "m-popup essence-buy",
-                    popTit: "Buy Gold Dices",
-                    popCont: [
-                      "BuyShop",
-                      {
-                        img1: "sAndL/goldDice_shop1",
-                        img2: "sAndL/goldDice_shop2",
-                        img3: "sAndL/goldDice_shop3",
-                        img4: "sAndL/goldDice_shop4",
-                      },
-                    ],
-                  },
+              nexus.acts.handlePopup({
+                type: "open",
+                data: {
+                  mpopClass: "m-popup essence-buy",
+                  popTit: "Buy Gold Dices",
+                  popCont: [
+                    "BuyShop",
+                    {
+                      img1: "sAndL/goldDice_shop1",
+                      img2: "sAndL/goldDice_shop2",
+                      img3: "sAndL/goldDice_shop3",
+                      img4: "sAndL/goldDice_shop4",
+                    },
+                  ],
                 },
               });
             }}

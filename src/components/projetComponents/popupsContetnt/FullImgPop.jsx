@@ -1,21 +1,16 @@
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import Button from "../UIComponents/Button";
 
 export default function FullImgPop() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   const img = popupState.img;
   return (
     <>
       <div
         className="closeBG"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       ></div>
 
       <div className="content fullImgPop">
@@ -26,12 +21,7 @@ export default function FullImgPop() {
         <Button
           className="exit"
           text="✖"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
       </div>
     </>

@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ComicsBallon from "../UIComponents/ComicsBallon";
@@ -18,12 +18,7 @@ export default memo(function RelicsPop2({ event }) {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
       <div className="main-relics-girl-box">

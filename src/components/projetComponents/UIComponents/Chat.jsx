@@ -1,6 +1,6 @@
 import React from "react";
 
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ResizeTracker from "../../../../morphing-scroll/src/components/ResizeTracker";
@@ -26,7 +26,7 @@ const Chat = ({ girlInfo }) => {
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
   const [chatProgress, setChatProgress] = React.useState(
-    chatMapArray.length - 1
+    chatMapArray.length - 1,
   );
   const [messageFallback, setMessageFallback] = React.useState("none"); // none, message, photo
   const [rect, setRect] = React.useState(null);
@@ -57,7 +57,7 @@ const Chat = ({ girlInfo }) => {
           [girlInfo.id]: prevState[girlInfo.id] - 10,
         }));
     },
-    [lastElements.loadingReady]
+    [lastElements.loadingReady],
   );
 
   // variables
@@ -69,7 +69,7 @@ const Chat = ({ girlInfo }) => {
 
   const lastMessageIndices = chatMapArray.slice(lastElements[girlInfo.id]);
   const lastMessagesFromChatProgress = arrayFromChatProgress.slice(
-    lastElements[girlInfo.id]
+    lastElements[girlInfo.id],
   );
 
   const firstUnloadedIndexes = React.useMemo(() => {
@@ -96,9 +96,12 @@ const Chat = ({ girlInfo }) => {
         : setMessageFallback("message");
 
       if (fallbackBoxRef.current) {
-        const timeoutId3 = setTimeout(() => {
-          fallbackBoxRef.current.classList.add("hiddenInner");
-        }, nextMessage.Girl[0].split(" ")[0].length * 100 + 1400);
+        const timeoutId3 = setTimeout(
+          () => {
+            fallbackBoxRef.current.classList.add("hiddenInner");
+          },
+          nextMessage.Girl[0].split(" ")[0].length * 100 + 1400,
+        );
         timeoutsRef.current.push(timeoutId3);
       }
     }
@@ -197,16 +200,13 @@ const Chat = ({ girlInfo }) => {
           {message.Girl[item] === "img" ? (
             <Message
               onClick={() => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup uki-story-popup contentOnly",
-                      popCont: "DatingImgPop",
-                      props: {
-                        img: `img/images/superhero/suphero-${girlInfo.id}/x1/sh-6.jpg`,
-                      },
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup uki-story-popup contentOnly",
+                    popCont: "DatingImgPop",
+                    props: {
+                      img: `img/images/superhero/suphero-${girlInfo.id}/x1/sh-6.jpg`,
                     },
                   },
                 });

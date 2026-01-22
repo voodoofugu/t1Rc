@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import Button from "../UIComponents/Button";
 
@@ -52,12 +52,7 @@ export default function SignIn() {
             <Button
               className="lastBtn"
               text="Close"
-              onClick={() =>
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: { type: "close" },
-                })
-              }
+              onClick={() => nexus.acts.handlePopup({ type: "close" })}
             />
           </div>
         </div>
@@ -66,12 +61,7 @@ export default function SignIn() {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
     </>
   );

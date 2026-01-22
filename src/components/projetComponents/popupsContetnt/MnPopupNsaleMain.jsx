@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { nexusUpdate } from "nexus-state";
+import nexus from "nexus";
 import ItemBox from "../UIComponents/ItemBox";
 
 function NmPopContentChest({ hole }) {
@@ -382,19 +382,19 @@ export default function MnPopupNsaleMain({ hole }) {
   const [activeMenu, setActiveMenu] = useState("chest");
 
   useEffect(() => {
-    nexusUpdate({
+    nexus.set({
       popupState: (prev) => ({
         ...prev,
         mpopClass: `mn-popup ${
           activeMenu === "magic"
             ? "nsale-stupen"
             : activeMenu === "magicStage"
-            ? "nsale-stupen pop"
-            : activeMenu === "fountain"
-            ? "nsale-fountain"
-            : activeMenu === "offer"
-            ? "nsale-shop"
-            : "nsale-main"
+              ? "nsale-stupen pop"
+              : activeMenu === "fountain"
+                ? "nsale-fountain"
+                : activeMenu === "offer"
+                  ? "nsale-shop"
+                  : "nsale-main"
         }${hole ? " hole" : ""}`,
       }),
     });

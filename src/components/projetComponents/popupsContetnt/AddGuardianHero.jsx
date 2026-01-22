@@ -1,5 +1,5 @@
 import React from "react";
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
@@ -25,7 +25,7 @@ export default function AddGuardianHero({ girlImg }) {
 
         setCount(
           el.closest(".ms-objects-wrapper").querySelectorAll(".hero-box .check")
-            .length * 200
+            .length * 200,
         );
       }}
     >
@@ -46,12 +46,7 @@ export default function AddGuardianHero({ girlImg }) {
     <>
       <div
         className="closeBG"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       ></div>
       <div className="content">
         <div className="popupFrame">
@@ -65,19 +60,16 @@ export default function AddGuardianHero({ girlImg }) {
           value="234"
           plus
           onClick={() => {
-            nexusTrigger({
-              type: "handlePopup",
-              payload: {
-                type: "open",
-                data: {
-                  mpopClass: "m-popup  contentOnly framedPop essence-buy",
-                  popCont: "BuyShop",
-                  props: {
-                    img1: "evPopArts/angel_spirit_1",
-                    img2: "evPopArts/angel_spirit_2",
-                    img3: "evPopArts/angel_spirit_3",
-                    img4: "evPopArts/angel_spirit_4",
-                  },
+            nexus.acts.handlePopup({
+              type: "open",
+              data: {
+                mpopClass: "m-popup  contentOnly framedPop essence-buy",
+                popCont: "BuyShop",
+                props: {
+                  img1: "evPopArts/angel_spirit_1",
+                  img2: "evPopArts/angel_spirit_2",
+                  img3: "evPopArts/angel_spirit_3",
+                  img4: "evPopArts/angel_spirit_4",
                 },
               },
             });
@@ -106,23 +98,13 @@ export default function AddGuardianHero({ girlImg }) {
           className="btnGold max get-btn"
           text={`${count} - pay`}
           textIcn="img/evPopArts/angel_spirit_1.png"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
 
         <Button
           className="exit"
           text="✖"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
       </div>
 

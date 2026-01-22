@@ -1,5 +1,5 @@
 import React from "react";
-import { useNexus, nexusUpdate } from "nexus-state";
+import nexus from "nexus";
 
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
@@ -29,7 +29,7 @@ function mapCellSelectHandler(mapCellRef, index, type) {
     el.classList.remove("selected");
   });
   mapCellRef.classList.toggle("selected");
-  nexusUpdate({
+  nexus.set({
     warpop: {
       key: index,
       visible: true,
@@ -52,7 +52,7 @@ function MapCell({
   img,
   children,
 }) {
-  const warpop = useNexus("warpop");
+  const warpop = nexus.use("warpop");
 
   const mapCellRef = React.useRef(null);
 

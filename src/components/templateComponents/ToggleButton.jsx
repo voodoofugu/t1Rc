@@ -1,14 +1,14 @@
 import { useEffect, useRef } from "react";
-import { useNexus, nexusUpdate } from "nexus-state";
+import nexus from "../../../nexus/nexusConfig";
 
 export default function ToggleButton() {
-  const theme = useNexus("darkTheme");
+  const theme = nexus.use("darkTheme");
 
   const templateMainRef = useRef(null);
   const toggleButtonRef = useRef(null);
 
   const handleClick = () => {
-    nexusUpdate({
+    nexus.set({
       darkTheme: (prev) => !prev,
     });
   };

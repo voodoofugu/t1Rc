@@ -1,6 +1,6 @@
 import React from "react";
 
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import Button from "../UIComponents/Button";
 import PersonAva from "../UIComponents/PersonAva";
@@ -24,30 +24,27 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
           item.className === "closed"
             ? null
             : () => {
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: {
-                    type: "open",
-                    data: {
-                      mpopClass: "m-popup contentOnly framedPop videoPop",
-                      popCont: "VideoPop",
-                      props: {
-                        content: (
-                          <VideoTag
-                            className="videoGallery"
-                            poster={`img/images/superhero/${
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly framedPop videoPop",
+                    popCont: "VideoPop",
+                    props: {
+                      content: (
+                        <VideoTag
+                          className="videoGallery"
+                          poster={`img/images/superhero/${
+                            item.img.split("/")[3]
+                          }/x2/sh-6.jpg`}
+                          source={[
+                            `img/images/superhero/${
                               item.img.split("/")[3]
-                            }/x2/sh-6.jpg`}
-                            source={[
-                              `img/images/superhero/${
-                                item.img.split("/")[3]
-                              }/video.mp4`,
-                            ]}
-                            autoPlay
-                            loop
-                          />
-                        ),
-                      },
+                            }/video.mp4`,
+                          ]}
+                          autoPlay
+                          loop
+                        />
+                      ),
                     },
                   },
                 });
@@ -65,7 +62,7 @@ const Collection = ({ name, text, girlsData, onClick, tooltipData }) => {
   // !!!
 
   const activeCards = girlsData.girls.filter(
-    (item) => item.className === "active"
+    (item) => item.className === "active",
   ).length;
 
   const allAvaIsActive = girlsData.girls.length === activeCards;

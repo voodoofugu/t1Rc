@@ -1,5 +1,5 @@
 import React from "react";
-import { useNexus, nexusTrigger, nexusUpdate } from "nexus-state";
+import nexus from "nexus";
 
 export const cssFiles = ["v2-screen-goddess-main", "v2-screen-goddess-picture"];
 
@@ -150,14 +150,11 @@ export default function V2MainScreen21GoddessMain({ children }) {
                 <div
                   className="b-fs"
                   onClick={() => {
-                    nexusTrigger({
-                      type: "handlePopup",
-                      payload: {
-                        type: "open",
-                        data: {
-                          mpopClass: "m-popup goddess-picture",
-                          popCont: "GoddessPicture",
-                        },
+                    nexus.acts.handlePopup({
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup goddess-picture",
+                        popCont: "GoddessPicture",
                       },
                     });
                   }}

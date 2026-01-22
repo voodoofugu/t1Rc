@@ -1,8 +1,8 @@
 import React, { memo } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default memo(function LoseBoss() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -31,12 +31,7 @@ export default memo(function LoseBoss() {
         <div className="lbclose-btn">
           <div
             className="btn-text"
-            onClick={() =>
-              nexusTrigger({
-                type: "handlePopup",
-                payload: { type: "close" },
-              })
-            }
+            onClick={() => nexus.acts.handlePopup({ type: "close" })}
           >
             закрыть
           </div>

@@ -6,12 +6,12 @@ import {
   startTransition,
   useDeferredValue,
 } from "react";
-import { useNexus, nexusUpdate } from "nexus-state";
+import nexus from "../../../nexus/nexusConfig";
 
 import PageList from "../projetComponents/pagesComponents/a_pageList.json";
 
 export default function SearchButton() {
-  const searchText = useNexus("searchText");
+  const searchText = nexus.use("searchText");
   const [focus, setFocus] = useState(false);
 
   const clearBtnRef = useRef(null);
@@ -48,16 +48,16 @@ export default function SearchButton() {
       if (
         filteredData.length !== prevFilteredValueRef.current.length ||
         !filteredData.every(
-          (value, index) => value === prevFilteredValueRef.current[index]
+          (value, index) => value === prevFilteredValueRef.current[index],
         )
       ) {
-        nexusUpdate({
+        nexus.set({
           searchData: filteredData.length > 0 ? filteredData : null,
         });
         prevFilteredValueRef.current = filteredData;
       }
     },
-    [loadedData, PageList]
+    [loadedData, PageList],
   );
 
   const handleFocus = () => {
@@ -69,7 +69,7 @@ export default function SearchButton() {
   };
 
   const handleClear = () => {
-    nexusUpdate({
+    nexus.set({
       searchText: "",
     });
     inputFocus();
@@ -124,9 +124,9 @@ export default function SearchButton() {
         value={deferredSearchText}
         onChange={(event) =>
           startTransition(() =>
-            nexusUpdate({
+            nexus.set({
               searchText: event.target.value,
-            })
+            }),
           )
         }
         autoComplete="off"
@@ -141,8 +141,8 @@ export default function SearchButton() {
             focus && deferredSearchText
               ? "before:border-none before:left-50% before:top-5 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-15 before:bg-red-500 after:left-50% after:top-5 after:-translate-x-1/2 after:w-3 after:h-15 after:bg-red-500"
               : focus
-              ? "before:border-none before:left-50% before:top-5 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-15 before:bg-indigo-400 after:left-50% after:top-5 after:-translate-x-1/2 after:w-3 after:h-15 after:bg-indigo-400"
-              : "before:w-13 before:h-13 before:border-2 before:border-indigo-400 before:left-3 before:top-3 after:w-3 after:h-10 after:bg-indigo-400 after:left-15 after:top-12"
+                ? "before:border-none before:left-50% before:top-5 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-15 before:bg-indigo-400 after:left-50% after:top-5 after:-translate-x-1/2 after:w-3 after:h-15 after:bg-indigo-400"
+                : "before:w-13 before:h-13 before:border-2 before:border-indigo-400 before:left-3 before:top-3 after:w-3 after:h-10 after:bg-indigo-400 after:left-15 after:top-12"
           }`}
         ></div>
       </div>

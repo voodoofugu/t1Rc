@@ -1,15 +1,16 @@
-import { useNexus, nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import useDynamicImport from "../../hooks/useDynamicImport";
 
 import FraimedTitle from "./FraimedTitle";
 
 export default function Popup({ pageName }) {
-  const activePage = useNexus("activePage");
-  const popupState = useNexus("popupState");
+  const activePage = nexus.use("activePage");
+  const popupState = nexus.use("popupState");
 
-  const module = useDynamicImport(`${popupState?.popCont || ""}`, (name) =>
-    import(`@prCo/popupsContetnt/${name}`)
+  const module = useDynamicImport(
+    `${popupState?.popCont || ""}`,
+    (name) => import(`@prCo/popupsContetnt/${name}`),
   );
   const DynamicComponent = module?.default;
 
@@ -23,10 +24,7 @@ export default function Popup({ pageName }) {
           <div
             className="screen-blend-55"
             onClick={() => {
-              nexusTrigger({
-                type: "handlePopup",
-                payload: { type: "close" },
-              });
+              nexus.acts.handlePopup({ type: "close" });
             }}
           ></div>
           <div id="popupContainer">

@@ -1,8 +1,8 @@
 import React, { memo } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default memo(function QuestPopup({ done }) {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -39,24 +39,14 @@ export default memo(function QuestPopup({ done }) {
           {!done ? (
             <div
               className="btn-simple-silver btn-close"
-              onClick={() =>
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: { type: "close" },
-                })
-              }
+              onClick={() => nexus.acts.handlePopup({ type: "close" })}
             >
               <div className="txt">Закрыть</div>
             </div>
           ) : (
             <div
               className="btn-simple-gold btn-get"
-              onClick={() =>
-                nexusTrigger({
-                  type: "handlePopup",
-                  payload: { type: "close" },
-                })
-              }
+              onClick={() => nexus.acts.handlePopup({ type: "close" })}
             >
               <div className="txt">Получить награду!</div>
             </div>

@@ -14,7 +14,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "eventemitter3": ["src/libs/eventemitter3.js"]
+      "nexus": ["nexus/nexusConfig.ts"]
     }
   },
   "ts-node": {

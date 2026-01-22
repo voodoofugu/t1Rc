@@ -1,5 +1,5 @@
 import { useMemo, useState, useLayoutEffect } from "react";
-import { useNexus } from "nexus-state";
+import nexus from "../../../nexus/nexusConfig";
 // import { MorphScroll } from "morphing-scroll";
 
 import MorphScroll from "../../../morphing-scroll/src/components/MorphScroll";
@@ -11,7 +11,7 @@ import PageList from "../projetComponents/pagesComponents/a_pageList";
 import useStorage from "../hooks/useStorage";
 
 export default function PageBox() {
-  const searchData = useNexus("searchData");
+  const searchData = nexus.use("searchData");
 
   const [isScrolling, setIsScrolling] = useState();
   const [scrollTopValue, setScrollTopValue] = useState(0);
@@ -33,7 +33,7 @@ export default function PageBox() {
       usedPages.map((pageName, index) => (
         <Cell key={`${index}`} pageName={pageName} isScrolling={isScrolling} />
       )),
-    [usedPages, isScrolling]
+    [usedPages, isScrolling],
   );
 
   useStorage([

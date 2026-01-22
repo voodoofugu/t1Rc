@@ -1,20 +1,15 @@
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import Button from "../UIComponents/Button";
 
 export default function VideoPop({ content }) {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
       <div
         className="closeBG"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       ></div>
 
       <div className="content">
@@ -27,12 +22,7 @@ export default function VideoPop({ content }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() =>
-            nexusTrigger({
-              type: "handlePopup",
-              payload: { type: "close" },
-            })
-          }
+          onClick={() => nexus.acts.handlePopup({ type: "close" })}
         />
       </div>
     </>

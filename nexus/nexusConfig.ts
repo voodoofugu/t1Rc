@@ -1,32 +1,46 @@
+import { createReactNexus } from "nexus-state";
+
 import handlePopup from "./actions/handlePopup";
 
 import popupState from "./states/popupState";
 import sAndLStates from "./states/sAndLStates";
 import pageData from "./states/pageData";
 
-type InitialStatesT = typeof initialStates;
-type InitialFuncsT = typeof initialFuncs;
-declare global {
-  interface StatesT extends InitialStatesT {}
-  interface FuncsT extends InitialFuncsT {}
-}
+type MyState = {
+  darkTheme: boolean;
+  searchText: string;
+  activePage: string;
+  searchData: string[] | null;
+  pageData: typeof pageData;
 
-export const initialStates = {
-  // template
-  darkTheme: false,
-  searchText: "",
-  activePage: "",
-  searchData: null as string[] | null,
-  pageData,
-
-  // project
-  popupState,
-  sAndLStates,
-  notif: null as {} | null,
-  warpop: null as {} | null,
-  windowScale: null as number | null,
+  popupState: typeof popupState;
+  sAndLStates: typeof sAndLStates;
+  notif: {} | null;
+  warpop: {} | null;
+  windowScale: number | null;
 };
 
-export const initialFuncs = {
-  handlePopup,
+type MyActs = {
+  handlePopup: typeof handlePopup;
 };
+
+const nexus = createReactNexus<MyState, MyActs>({
+  state: {
+    darkTheme: false,
+    searchText: "",
+    activePage: "",
+    searchData: null,
+    pageData,
+
+    popupState,
+    sAndLStates,
+    notif: null,
+    warpop: null,
+    windowScale: null,
+  },
+
+  acts: [handlePopup],
+});
+
+export default nexus;
+export type { MyState, MyActs };

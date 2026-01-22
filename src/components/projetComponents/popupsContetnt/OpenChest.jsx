@@ -1,5 +1,5 @@
 import { memo, useState } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
@@ -8,7 +8,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 
 export default memo(function OpenChest() {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   return (
     <>
@@ -16,12 +16,7 @@ export default memo(function OpenChest() {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
       <PopResValue resClass="chest" resValue="1000" />

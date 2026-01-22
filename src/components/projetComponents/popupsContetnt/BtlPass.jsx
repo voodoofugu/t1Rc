@@ -1,4 +1,4 @@
-import { useNexus, nexusTrigger, nexusUpdate } from "nexus-state";
+import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
 import elements from "../data/PopResValue";
@@ -14,58 +14,58 @@ export default function BtlPass({ event }) {
     event === "xmas"
       ? "images/hero-all/tithero-675/icons/break-girl4"
       : event === "hw"
-      ? "images/hero-all/tithero-616/icons/break-girl"
-      : event === "bf"
-      ? "images/hero-all/tithero-429/icons/break-girl"
-      : event === "vl"
-      ? "images/hero-all/tithero-509/icons/break-girl4"
-      : event === "spring"
-      ? "images/hero-all/tithero-430/icons/break-girl"
-      : event === "summer"
-      ? "images/hero-all/tithero-557/icons/break-girl4"
-      : event === "autumn"
-      ? "images/hero-all/tithero-639/icons/break-girl"
-      : event === "sexpedition"
-      ? "images/hero-all/tithero-423/icons/break-girl4"
-      : null;
+        ? "images/hero-all/tithero-616/icons/break-girl"
+        : event === "bf"
+          ? "images/hero-all/tithero-429/icons/break-girl"
+          : event === "vl"
+            ? "images/hero-all/tithero-509/icons/break-girl4"
+            : event === "spring"
+              ? "images/hero-all/tithero-430/icons/break-girl"
+              : event === "summer"
+                ? "images/hero-all/tithero-557/icons/break-girl4"
+                : event === "autumn"
+                  ? "images/hero-all/tithero-639/icons/break-girl"
+                  : event === "sexpedition"
+                    ? "images/hero-all/tithero-423/icons/break-girl4"
+                    : null;
 
   const imgBg =
     event === "xmas"
       ? "img/bGs/roomBg1.jpg"
       : event === "hw"
-      ? "img/bGs/halloweenBg2.jpg"
-      : event === "bf"
-      ? "img/bGs/v2-bf-pop-bg.jpg"
-      : event === "vl"
-      ? "img/bGs/clubBg2.jpg"
-      : event === "spring"
-      ? "img/bGs/march-pop-bg.jpg"
-      : event === "summer"
-      ? "img/bGs/beachBg4.jpg"
-      : event === "autumn"
-      ? "img/bGs/cityBg.jpg"
-      : event === "sexpedition"
-      ? "img/bGs/sexpeditionBg.jpg"
-      : null;
+        ? "img/bGs/halloweenBg2.jpg"
+        : event === "bf"
+          ? "img/bGs/v2-bf-pop-bg.jpg"
+          : event === "vl"
+            ? "img/bGs/clubBg2.jpg"
+            : event === "spring"
+              ? "img/bGs/march-pop-bg.jpg"
+              : event === "summer"
+                ? "img/bGs/beachBg4.jpg"
+                : event === "autumn"
+                  ? "img/bGs/cityBg.jpg"
+                  : event === "sexpedition"
+                    ? "img/bGs/sexpeditionBg.jpg"
+                    : null;
 
   const icon =
     event === "xmas"
       ? "evPopArts/heartEars_1"
       : event === "hw"
-      ? "evPopArts/pumpkin1_icn"
-      : event === "bf"
-      ? "ic-tickets-bf-1"
-      : event === "vl"
-      ? "evPopArts/ic-shoe"
-      : event === "spring"
-      ? "ic-march-flower-dark-blue"
-      : event === "summer"
-      ? "evPopArts/ic-moon-heart-1"
-      : event === "autumn"
-      ? "evPopArts/lipsCoin_1"
-      : event === "sexpedition"
-      ? "evPopArts/gem_icn"
-      : null;
+        ? "evPopArts/pumpkin1_icn"
+        : event === "bf"
+          ? "ic-tickets-bf-1"
+          : event === "vl"
+            ? "evPopArts/ic-shoe"
+            : event === "spring"
+              ? "ic-march-flower-dark-blue"
+              : event === "summer"
+                ? "evPopArts/ic-moon-heart-1"
+                : event === "autumn"
+                  ? "evPopArts/lipsCoin_1"
+                  : event === "sexpedition"
+                    ? "evPopArts/gem_icn"
+                    : null;
 
   const buyShopCont =
     event === "xmas"
@@ -78,71 +78,71 @@ export default function BtlPass({ event }) {
           },
         ]
       : event === "hw"
-      ? [
-          "BuyShop",
-          {
-            img1: "evPopArts/pumpkin1_icn_1",
-            img2: "evPopArts/pumpkin1_icn_2",
-            img3: "evPopArts/pumpkin1_icn_3",
-            img4: "evPopArts/pumpkin1_icn_4",
-          },
-        ]
-      : event === "bf"
-      ? [
-          "BuyShop",
-          {
-            img1: "ic-tickets-bf-1",
-            img2: "ic-tickets-bf-2",
-            img3: "ic-tickets-bf-3",
-          },
-        ]
-      : event === "vl"
-      ? [
-          "BuyShop",
-          {
-            img1: "evPopArts/ic-shoe",
-            img2: "evPopArts/ic-shoe",
-            img3: "evPopArts/ic-shoe",
-          },
-        ]
-      : event === "spring"
-      ? [
-          "BuyShop",
-          {
-            img1: "ic-march-flower-pink-1",
-            img2: "ic-march-flower-pink-2",
-            img3: "ic-march-flower-pink-3",
-          },
-        ]
-      : event === "summer"
-      ? [
-          "BuyShop",
-          {
-            img1: "evPopArts/ic-moon-heart-1",
-            img2: "evPopArts/ic-moon-heart-2",
-            img3: "evPopArts/ic-moon-heart-3",
-          },
-        ]
-      : event === "sexpedition"
-      ? [
-          "BuyShop",
-          {
-            img1: "evPopArts/gem_icn1",
-            img2: "evPopArts/gem_icn2",
-            img3: "evPopArts/gem_icn3",
-            img4: "evPopArts/gem_icn4",
-          },
-        ]
-      : event === "autumn"
-      ? [
-          "BuyShop",
-          {
-            img1: "evPopArts/lipsCoin_1",
-            img2: "evPopArts/lipsCoin_2",
-            img3: "evPopArts/lipsCoin_3",
-          },
-        ]
-      : null;
+        ? [
+            "BuyShop",
+            {
+              img1: "evPopArts/pumpkin1_icn_1",
+              img2: "evPopArts/pumpkin1_icn_2",
+              img3: "evPopArts/pumpkin1_icn_3",
+              img4: "evPopArts/pumpkin1_icn_4",
+            },
+          ]
+        : event === "bf"
+          ? [
+              "BuyShop",
+              {
+                img1: "ic-tickets-bf-1",
+                img2: "ic-tickets-bf-2",
+                img3: "ic-tickets-bf-3",
+              },
+            ]
+          : event === "vl"
+            ? [
+                "BuyShop",
+                {
+                  img1: "evPopArts/ic-shoe",
+                  img2: "evPopArts/ic-shoe",
+                  img3: "evPopArts/ic-shoe",
+                },
+              ]
+            : event === "spring"
+              ? [
+                  "BuyShop",
+                  {
+                    img1: "ic-march-flower-pink-1",
+                    img2: "ic-march-flower-pink-2",
+                    img3: "ic-march-flower-pink-3",
+                  },
+                ]
+              : event === "summer"
+                ? [
+                    "BuyShop",
+                    {
+                      img1: "evPopArts/ic-moon-heart-1",
+                      img2: "evPopArts/ic-moon-heart-2",
+                      img3: "evPopArts/ic-moon-heart-3",
+                    },
+                  ]
+                : event === "sexpedition"
+                  ? [
+                      "BuyShop",
+                      {
+                        img1: "evPopArts/gem_icn1",
+                        img2: "evPopArts/gem_icn2",
+                        img3: "evPopArts/gem_icn3",
+                        img4: "evPopArts/gem_icn4",
+                      },
+                    ]
+                  : event === "autumn"
+                    ? [
+                        "BuyShop",
+                        {
+                          img1: "evPopArts/lipsCoin_1",
+                          img2: "evPopArts/lipsCoin_2",
+                          img3: "evPopArts/lipsCoin_3",
+                        },
+                      ]
+                    : null;
 
   return (
     <>
@@ -152,18 +152,15 @@ export default function BtlPass({ event }) {
         className="info"
         text="i"
         onClick={() => {
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup contentOnly framedPop",
-                popCont: "InfoPopFramed",
-                props: {
-                  inner:
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                  girlImg: "img/break-girls/break-girl915.png",
-                },
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popCont: "InfoPopFramed",
+              props: {
+                inner:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                girlImg: "img/break-girls/break-girl915.png",
               },
             },
           });
@@ -175,12 +172,7 @@ export default function BtlPass({ event }) {
       <Button
         className="exit"
         text="✖"
-        onClick={() =>
-          nexusTrigger({
-            type: "handlePopup",
-            payload: { type: "close" },
-          })
-        }
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
       <Button
@@ -189,15 +181,12 @@ export default function BtlPass({ event }) {
         img={`img/${icon}.png`}
         onClick={() =>
           buyShopCont &&
-          nexusTrigger({
-            type: "handlePopup",
-            payload: {
-              type: "open",
-              data: {
-                mpopClass: "m-popup essence-buy contentOnly framedPop",
-                popCont: buyShopCont[0],
-                props: buyShopCont[1],
-              },
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup essence-buy contentOnly framedPop",
+              popCont: buyShopCont[0],
+              props: buyShopCont[1],
             },
           })
         }
@@ -267,7 +256,7 @@ export default function BtlPass({ event }) {
                 countOut={index + 1}
                 onClick={() => {
                   element.className === "get" &&
-                    nexusUpdate({
+                    nexus.set({
                       notif: {
                         view: true,
                         img: element.itemPic,

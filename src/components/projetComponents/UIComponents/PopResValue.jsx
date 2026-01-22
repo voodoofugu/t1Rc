@@ -1,22 +1,19 @@
 import { memo } from "react";
-import { nexusTrigger, useNexus } from "nexus-state";
+import nexus from "nexus";
 
 export default memo(function PopResValue({ resClass, resValue, notPlus }) {
-  const popupState = useNexus("popupState");
+  const popupState = nexus.use("popupState");
 
   let click = null;
 
   if (resClass === "chest") {
     click = () =>
-      nexusTrigger({
-        type: "handlePopup",
-        payload: {
-          type: "open",
-          data: {
-            mpopClass: "m-popup change-addchest",
-            popTit: "Купите еще Boss Chests!",
-            popCont: "ChangeAddchest",
-          },
+      nexus.acts.handlePopup({
+        type: "open",
+        data: {
+          mpopClass: "m-popup change-addchest",
+          popTit: "Купите еще Boss Chests!",
+          popCont: "ChangeAddchest",
         },
       });
   }

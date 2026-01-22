@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 
@@ -209,21 +209,18 @@ export default function V2MainScreen02GuildMaster({ pageName, children }) {
                 <div
                   className="color-btn-info"
                   onClick={() => {
-                    nexusTrigger({
-                      type: "handlePopup",
-                      payload: {
-                        type: "open",
-                        data: {
-                          mpopClass: "m-popup info-pop",
-                          popTit: "Info",
-                          popCont: [
-                            "InfoPop",
-                            {
-                              text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
-                              btnText1: "I understand",
-                            },
-                          ],
-                        },
+                    nexus.acts.handlePopup({
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup info-pop",
+                        popTit: "Info",
+                        popCont: [
+                          "InfoPop",
+                          {
+                            text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
+                            btnText1: "I understand",
+                          },
+                        ],
                       },
                     });
                   }}

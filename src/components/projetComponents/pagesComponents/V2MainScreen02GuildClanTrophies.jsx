@@ -1,6 +1,6 @@
 import TrophyResBoxAll from "../UIComponents/TrophyResBoxAll";
 
-import { nexusTrigger } from "nexus-state";
+import nexus from "nexus";
 
 export const cssFiles = ["clan-trophies", "screen-superhero"];
 
@@ -20,15 +20,12 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    nexusTrigger({
-                      type: "handlePopup",
-                      payload: {
-                        type: "open",
-                        data: {
-                          mpopClass: "m-popup clan-trophy",
-                          popTit: "Earth Charmer",
-                          popCont: "ClanTrophy",
-                        },
+                    nexus.acts.handlePopup({
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup clan-trophy",
+                        popTit: "Earth Charmer",
+                        popCont: "ClanTrophy",
                       },
                     });
                   }}
@@ -69,15 +66,12 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    nexusTrigger({
-                      type: "handlePopup",
-                      payload: {
-                        type: "open",
-                        data: {
-                          mpopClass: "m-popup clan-trophy",
-                          popTit: "Earth Charmer",
-                          popCont: "ClanTrophy",
-                        },
+                    nexus.acts.handlePopup({
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup clan-trophy",
+                        popTit: "Earth Charmer",
+                        popCont: "ClanTrophy",
                       },
                     });
                   }}
@@ -123,15 +117,12 @@ export default function V2MainScreen02GuildClanTrophies({
                 <div
                   className="titans-garage-item"
                   onClick={() => {
-                    nexusTrigger({
-                      type: "handlePopup",
-                      payload: {
-                        type: "open",
-                        data: {
-                          mpopClass: "m-popup clan-trophy",
-                          popTit: "Earth Charmer",
-                          popCont: "ClanTrophy",
-                        },
+                    nexus.acts.handlePopup({
+                      type: "open",
+                      data: {
+                        mpopClass: "m-popup clan-trophy",
+                        popTit: "Earth Charmer",
+                        popCont: "ClanTrophy",
                       },
                     });
                   }}
