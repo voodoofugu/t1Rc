@@ -130,8 +130,8 @@ function createTutorGirlView(): Promise<PIXI.Container> {
     const loader = new PIXI.loaders.Loader(); // почему-то обратить к PIXI.loader нельзя из-за NEXUS
 
     loader
-      .add("tutorGirl", "../spine/tutor-girl/tutorGirl.json")
-      .add("drop", "../spine/tutor-girl/drop.json")
+      .add("tutorGirl", "/pixi-src/tutorGirl.json")
+      .add("drop", "/pixi-src/drop.json")
       .load((_, resources) => {
         try {
           const view = buildScene(container, resources);

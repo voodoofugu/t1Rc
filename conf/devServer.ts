@@ -25,6 +25,10 @@ export function devServer(options: BuildOptions): DevServerConfiguration {
         directory: path.join("public", "pixi"),
         publicPath: "/pixi/",
       },
+      {
+        directory: path.join("public", "pixi-src"),
+        publicPath: "/pixi-src/",
+      },
     ],
   };
 }

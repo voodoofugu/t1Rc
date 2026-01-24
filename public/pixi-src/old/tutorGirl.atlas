@@ -1,0 +1,265 @@
+
+tutorGirl.png
+size: 1015,1015
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+armor left
+  rotate: true
+  xy: 659, 599
+  size: 33, 66
+  orig: 33, 66
+  offset: 0, 0
+  index: -1
+armor little right
+  rotate: true
+  xy: 877, 635
+  size: 39, 40
+  orig: 39, 40
+  offset: 0, 0
+  index: -1
+armor middle
+  rotate: false
+  xy: 910, 889
+  size: 74, 58
+  orig: 74, 58
+  offset: 0, 0
+  index: -1
+armor right
+  rotate: false
+  xy: 95, 41
+  size: 82, 80
+  orig: 82, 80
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 2, 401
+  size: 292, 619
+  orig: 292, 619
+  offset: 0, 0
+  index: -1
+book
+  rotate: false
+  xy: 794, 12
+  size: 86, 105
+  orig: 86, 105
+  offset: 0, 0
+  index: -1
+chain down
+  rotate: true
+  xy: 919, 635
+  size: 18, 76
+  orig: 18, 99
+  offset: 0, 0
+  index: -1
+chain up
+  rotate: true
+  xy: 919, 655
+  size: 19, 88
+  orig: 113, 120
+  offset: 34, 32
+  index: -1
+cloth long down
+  rotate: false
+  xy: 296, 594
+  size: 300, 272
+  orig: 300, 272
+  offset: 0, 0
+  index: -1
+cloth long up
+  rotate: true
+  xy: 2, 123
+  size: 276, 411
+  orig: 276, 411
+  offset: 0, 0
+  index: -1
+cloth up
+  rotate: true
+  xy: 901, 133
+  size: 154, 118
+  orig: 154, 118
+  offset: 0, 0
+  index: -1
+diadem
+  rotate: false
+  xy: 727, 602
+  size: 75, 30
+  orig: 75, 35
+  offset: 0, 0
+  index: -1
+drop
+  rotate: true
+  xy: 986, 883
+  size: 14, 24
+  orig: 14, 24
+  offset: 0, 0
+  index: -1
+eye bg
+  rotate: true
+  xy: 993, 970
+  size: 50, 20
+  orig: 50, 20
+  offset: 0, 0
+  index: -1
+eye left
+  rotate: false
+  xy: 830, 869
+  size: 10, 8
+  orig: 10, 8
+  offset: 0, 0
+  index: -1
+eye right
+  rotate: false
+  xy: 831, 621
+  size: 12, 11
+  orig: 12, 11
+  offset: 0, 0
+  index: -1
+hair down
+  rotate: false
+  xy: 789, 289
+  size: 206, 311
+  orig: 206, 311
+  offset: 0, 0
+  index: -1
+hair up
+  rotate: true
+  xy: 901, 24
+  size: 107, 105
+  orig: 142, 105
+  offset: 35, 0
+  index: -1
+hair up bg
+  rotate: false
+  xy: 2, 34
+  size: 91, 87
+  orig: 91, 87
+  offset: 0, 0
+  index: -1
+hand left
+  rotate: true
+  xy: 877, 676
+  size: 201, 143
+  orig: 201, 143
+  offset: 0, 0
+  index: -1
+hand right
+  rotate: false
+  xy: 415, 137
+  size: 127, 276
+  orig: 127, 276
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 415, 36
+  size: 80, 99
+  orig: 80, 99
+  offset: 0, 0
+  index: -1
+heart
+  rotate: false
+  xy: 830, 879
+  size: 78, 68
+  orig: 78, 68
+  offset: 0, 0
+  index: -1
+leg left
+  rotate: true
+  xy: 296, 868
+  size: 152, 532
+  orig: 152, 532
+  offset: 0, 0
+  index: -1
+leg right
+  rotate: true
+  xy: 296, 415
+  size: 177, 491
+  orig: 177, 491
+  offset: 0, 0
+  index: -1
+light
+  rotate: false
+  xy: 731, 119
+  size: 168, 168
+  orig: 168, 168
+  offset: 0, 0
+  index: -1
+mace
+  rotate: true
+  xy: 598, 634
+  size: 232, 277
+  orig: 232, 277
+  offset: 0, 0
+  index: -1
+neck
+  rotate: true
+  xy: 598, 597
+  size: 35, 59
+  orig: 39, 62
+  offset: 4, 0
+  index: -1
+red
+  rotate: false
+  xy: 877, 615
+  size: 47, 18
+  orig: 47, 18
+  offset: 0, 0
+  index: -1
+ribbon down
+  rotate: false
+  xy: 656, 29
+  size: 136, 88
+  orig: 168, 98
+  offset: 24, 0
+  index: -1
+ribbon long down
+  rotate: false
+  xy: 544, 42
+  size: 110, 156
+  orig: 110, 156
+  offset: 0, 0
+  index: -1
+ribbon long up
+  rotate: false
+  xy: 544, 200
+  size: 185, 213
+  orig: 208, 240
+  offset: 23, 0
+  index: -1
+ribbon up
+  rotate: false
+  xy: 830, 949
+  size: 161, 71
+  orig: 168, 71
+  offset: 7, 0
+  index: -1
+ring down
+  rotate: true
+  xy: 804, 621
+  size: 11, 25
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+ring up
+  rotate: true
+  xy: 986, 899
+  size: 11, 26
+  orig: 20, 26
+  offset: 0, 0
+  index: -1
+surprise
+  rotate: false
+  xy: 986, 912
+  size: 26, 35
+  orig: 26, 35
+  offset: 0, 0
+  index: -1
+twinkle
+  rotate: false
+  xy: 993, 951
+  size: 17, 17
+  orig: 17, 17
+  offset: 0, 0
+  index: -1
