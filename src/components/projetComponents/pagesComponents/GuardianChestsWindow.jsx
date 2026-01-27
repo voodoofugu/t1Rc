@@ -31,9 +31,34 @@ function GuardianChestsWindow({ pageName, children }) {
       guardianWindowRef.current.classList.add("open-chest-" + chest);
     }, 600);
     setTimeout(() => {
+      nexus.acts.handlePopup({
+        type: "open",
+        data: {
+          mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+          popCont: "CongraPop",
+          props: {
+            rewardsData: [
+              {
+                cardType: "a",
+                itemPic: `img/images/goddess/goddess-20/x2/ava/goddess-ava-1.jpg`,
+              },
+              {
+                cardType: "a",
+                itemPic: `img/images/goddess/goddess-21/x2/ava/goddess-ava-1.jpg`,
+              },
+              {
+                cardType: "a",
+                itemPic: `img/images/goddess/goddess-22/x2/ava/goddess-ava-1.jpg`,
+              },
+            ],
+          },
+        },
+      });
+    }, 1200);
+    setTimeout(() => {
       guardianWindowRef.current.classList.remove("anim-chest-" + chest);
       guardianWindowRef.current.classList.remove("open-chest-" + chest);
-    }, 3000);
+    }, 1800);
   };
 
   const chestInfoOpen = (ev) => {
@@ -49,6 +74,10 @@ function GuardianChestsWindow({ pageName, children }) {
     guardianWindowRef.current.classList.remove("info-chest");
     guardianWindowRef.current.classList.remove(infoChest);
     setInfoChest("");
+  };
+
+  const quantityChange = () => {
+    quantity === 1 ? setQuantity(10) : setQuantity(1);
   };
 
   return (
@@ -223,9 +252,14 @@ function GuardianChestsWindow({ pageName, children }) {
             </div>
           </div>
         </div>
+
+        <Button
+          className="quantity-btn lightGreen"
+          text={`x${quantity}`}
+          onClick={quantityChange}
+        />
       </div>
 
-      <Button className="quantity-btn green" text={`x${quantity}`} />
       {children}
     </div>
   );
