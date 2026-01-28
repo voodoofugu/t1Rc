@@ -18,7 +18,7 @@ export default function BtlPass({ event }) {
         : event === "bf"
           ? "images/hero-all/tithero-429/icons/break-girl"
           : event === "vl"
-            ? "images/hero-all/tithero-509/icons/break-girl4"
+            ? "images/hero-all/tithero-687/icons/break-girl"
             : event === "spring"
               ? "images/hero-all/tithero-430/icons/break-girl"
               : event === "summer"
@@ -37,7 +37,7 @@ export default function BtlPass({ event }) {
         : event === "bf"
           ? "img/bGs/v2-bf-pop-bg.jpg"
           : event === "vl"
-            ? "img/bGs/clubBg2.jpg"
+            ? "img/bGs/vDayBg2.jpg"
             : event === "spring"
               ? "img/bGs/march-pop-bg.jpg"
               : event === "summer"
@@ -56,7 +56,7 @@ export default function BtlPass({ event }) {
         : event === "bf"
           ? "ic-tickets-bf-1"
           : event === "vl"
-            ? "evPopArts/ic-shoe"
+            ? "evPopArts/ic-vl-coin-1"
             : event === "spring"
               ? "ic-march-flower-dark-blue"
               : event === "summer"
@@ -100,9 +100,9 @@ export default function BtlPass({ event }) {
             ? [
                 "BuyShop",
                 {
-                  img1: "evPopArts/ic-shoe",
-                  img2: "evPopArts/ic-shoe",
-                  img3: "evPopArts/ic-shoe",
+                  img1: "evPopArts/ic-vl-coin-1",
+                  img2: "evPopArts/ic-vl-coin-2",
+                  img3: "evPopArts/ic-vl-coin-3",
                 },
               ]
             : event === "spring"
