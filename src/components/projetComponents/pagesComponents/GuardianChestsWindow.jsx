@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
@@ -21,44 +21,56 @@ function GuardianChestsWindow({ pageName, children }) {
 
   //refs
   const guardianWindowRef = useRef(null);
+  const controllerRef = useRef(null); // для очищения анимаций (но это не обязательно)
 
+  // funcs
   const chestOnClick = (ev) => {
+    controllerRef.current?.abort();
+    controllerRef.current = new AbortController();
+    const { signal } = controllerRef.current;
+
     const parent = ev.target.closest(".chest-box");
     const chest = parent.getAttribute("data-chest");
 
-    guardianWindowRef.current.classList.add("anim-chest-" + chest);
+    guardianWindowRef.current?.classList.add("anim-chest-" + chest);
     setTimeout(() => {
-      guardianWindowRef.current.classList.add("open-chest-" + chest);
-    }, 600);
-    setTimeout(() => {
-      nexus.acts.handlePopup({
-        type: "open",
-        data: {
-          mpopClass: "m-popup contentOnly framedPop heroRewardPop",
-          popCont: "CongraPop",
-          props: {
-            rewardsData: [
-              {
-                cardType: "a",
-                itemPic: `img/images/goddess/goddess-20/x2/ava/goddess-ava-1.jpg`,
-              },
-              {
-                cardType: "a",
-                itemPic: `img/images/goddess/goddess-21/x2/ava/goddess-ava-1.jpg`,
-              },
-              {
-                cardType: "a",
-                itemPic: `img/images/goddess/goddess-22/x2/ava/goddess-ava-1.jpg`,
-              },
-            ],
+      if (signal.aborted) return;
+
+      guardianWindowRef.current?.classList.add("open-chest-" + chest);
+      setTimeout(() => {
+        if (signal.aborted) return;
+
+        nexus.acts.handlePopup({
+          type: "open",
+          data: {
+            mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+            popCont: "CongraPop",
+            props: {
+              rewardsData: [
+                {
+                  cardType: "a",
+                  itemPic: `img/images/goddess/goddess-20/x2/ava/goddess-ava-1.jpg`,
+                },
+                {
+                  cardType: "a",
+                  itemPic: `img/images/goddess/goddess-21/x2/ava/goddess-ava-1.jpg`,
+                },
+                {
+                  cardType: "a",
+                  itemPic: `img/images/goddess/goddess-22/x2/ava/goddess-ava-1.jpg`,
+                },
+              ],
+            },
           },
-        },
-      });
-    }, 1200);
-    setTimeout(() => {
-      guardianWindowRef.current.classList.remove("anim-chest-" + chest);
-      guardianWindowRef.current.classList.remove("open-chest-" + chest);
-    }, 1800);
+        });
+        setTimeout(() => {
+          if (signal.aborted) return;
+
+          guardianWindowRef.current?.classList.remove("anim-chest-" + chest);
+          guardianWindowRef.current?.classList.remove("open-chest-" + chest);
+        }, 600);
+      }, 600);
+    }, 600);
   };
 
   const chestInfoOpen = (ev) => {
@@ -80,6 +92,13 @@ function GuardianChestsWindow({ pageName, children }) {
     quantity === 1 ? setQuantity(10) : setQuantity(1);
   };
 
+  // effects
+  useEffect(() => {
+    // на всякий случай если анимация идёт а пользователь закрыл окно
+    return controllerRef.current?.abort();
+  }, []);
+
+  // render
   return (
     <div className="main world1">
       <div className="main-bg"></div>
