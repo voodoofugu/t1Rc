@@ -5,6 +5,9 @@ import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
+import Notification from "../UIComponents/Notification";
 
 import data_angels from "../../../scripts/FapTitansScripts/data_angels";
 
@@ -224,11 +227,46 @@ function GuardianChestsWindow({ pageName, children }) {
           <Button className="exit" text="✖" onClick={chestInfoClose} />
 
           <div className="chest-info-content">
-            <div className="chest-text">
-              In this Chest you can get from 1 to 10 Pieces this Guardians:
+            <div className="text">
+              In this Chest you can get from{" "}
+              <div className="text-selected">1</div> to{" "}
+              <div className="text-selected">10</div> Pieces this Guardians:
             </div>
 
-            <div className="info-text-box">
+            <MorphScroll
+              className="guardians-scroll"
+              size={[500, 224]}
+              objectsSize={94}
+              gap={16}
+              wrapperMargin={[0, 10]}
+              // edgeGradient="#1e191c"
+              edgeGradient="rgba(180,120,0,0.3)"
+              progressTrigger={{
+                wheel: true,
+                progressElement: <ScrollThumb />,
+              }}
+              wrapperAlign="center"
+              scrollBarEdge={10}
+            >
+              {data_angels.map((item) => (
+                <ItemBox
+                  className="wh94"
+                  key={item.id}
+                  cardType="a"
+                  itemPic={`img/images/goddess/goddess-${item.id}/x1/ava/goddess-ava-1.jpg`}
+                >
+                  <ProgressBar
+                    className="guardians-prg-bar"
+                    progressSize={[50, 24]}
+                    maxProgress={100}
+                    currentProgress={10}
+                    textWithProgress={"max"}
+                  />
+                </ItemBox>
+              ))}
+            </MorphScroll>
+
+            <div className="text table">
               <div className="info-header">Chance of Dropping:</div>
               <div className="text-content">
                 <div className="text">
@@ -268,6 +306,14 @@ function GuardianChestsWindow({ pageName, children }) {
                   Angel Pieces
                 </div>
               </div>
+            </div>
+
+            <div className="notifWrap chip-info">
+              <ItemBox
+                className="simpleItem wh68"
+                itemPic="img/earthworld-chest-points-chip-icon.png"
+              />
+              <div className="notifText">+30 Chest Points</div>
             </div>
           </div>
         </div>
