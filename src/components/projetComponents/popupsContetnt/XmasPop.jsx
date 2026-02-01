@@ -9,9 +9,9 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";
 
-const girlImg = "images/hero-all/tithero-676/icons/break-girl";
+const girlImg = "images/hero-all/tithero-688/icons/break-girl";
 
-function XmasPop1({ setXmasPopLocal }) {
+function XmasPop1({ setNewPopClass }) {
   return (
     <>
       <div className="color-box"></div>
@@ -111,7 +111,7 @@ function XmasPop1({ setXmasPopLocal }) {
         <div className="color-btn quest">
           <div
             className="color-btn-text"
-            onClick={() => setXmasPopLocal("xmas-pop3")}
+            onClick={() => setNewPopClass("xmas-pop3")}
           >
             quest
           </div>
@@ -126,7 +126,7 @@ function XmasPop1({ setXmasPopLocal }) {
           <div
             className="color-btn-text"
             onClick={() => {
-              setXmasPopLocal("xmas-pop2");
+              setNewPopClass("xmas-pop2");
             }}
           >
             shop
@@ -137,7 +137,7 @@ function XmasPop1({ setXmasPopLocal }) {
   );
 }
 
-function XmasPop2({ setXmasPopLocal }) {
+function XmasPop2({ setNewPopClass }) {
   return (
     <>
       <div className="color-box"></div>
@@ -207,7 +207,7 @@ function XmasPop2({ setXmasPopLocal }) {
         <div className="color-btn">
           <div
             className="color-btn-text"
-            onClick={() => setXmasPopLocal("xmas-pop1")}
+            onClick={() => setNewPopClass("xmas-pop1")}
           >
             back
           </div>
@@ -217,7 +217,7 @@ function XmasPop2({ setXmasPopLocal }) {
   );
 }
 
-function XmasPop3({ setXmasPopLocal }) {
+function XmasPop3({ setNewPopClass }) {
   return (
     <>
       <div className="color-box"></div>
@@ -441,7 +441,7 @@ function XmasPop3({ setXmasPopLocal }) {
         <div className="color-btn">
           <div
             className="color-btn-text"
-            onClick={() => setXmasPopLocal("xmas-pop1")}
+            onClick={() => setNewPopClass("xmas-pop1")}
           >
             back
           </div>
@@ -451,24 +451,25 @@ function XmasPop3({ setXmasPopLocal }) {
   );
 }
 
-export default function XmasPop({ xmasPop, event }) {
-  const [xmasPopLocal, setXmasPopLocal] = useState(xmasPop);
+export default function XmasPop({ event }) {
+  const setNewPopClass = (classN) =>
+    nexus.set((prev) => ({
+      popupState: {
+        ...prev.popupState,
+        mpopClass: `m-popup ${classN ? classN : "xmas-pop1"} ${event}`,
+      },
+    }));
 
-  useLayoutEffect(() => {
-    nexus.set({
-      popupState: (prev) => ({
-        ...prev,
-        mpopClass: `m-popup ${xmasPopLocal} ${event}`,
-      }),
-    });
-  }, [xmasPopLocal]);
+  useLayoutEffect(() => setNewPopClass(), []);
 
-  return xmasPopLocal === "xmas-pop1" ? (
-    <XmasPop1 setXmasPopLocal={setXmasPopLocal} event={event} />
-  ) : xmasPopLocal === "xmas-pop2" ? (
-    <XmasPop2 setXmasPopLocal={setXmasPopLocal} event={event} />
-  ) : xmasPopLocal === "xmas-pop3" ? (
-    <XmasPop3 setXmasPopLocal={setXmasPopLocal} event={event} />
+  const mpopClass = nexus.get("popupState").mpopClass;
+
+  return mpopClass?.includes("xmas-pop1") ? (
+    <XmasPop1 setNewPopClass={setNewPopClass} />
+  ) : mpopClass?.includes("xmas-pop2") ? (
+    <XmasPop2 setNewPopClass={setNewPopClass} />
+  ) : mpopClass?.includes("xmas-pop3") ? (
+    <XmasPop3 setNewPopClass={setNewPopClass} />
   ) : (
     ""
   );
