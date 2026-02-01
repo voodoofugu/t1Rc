@@ -7,7 +7,6 @@ import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
-import Notification from "../UIComponents/Notification";
 
 import data_angels from "../../../scripts/FapTitansScripts/data_angels";
 
@@ -235,10 +234,10 @@ function GuardianChestsWindow({ pageName, children }) {
 
             <MorphScroll
               className="guardians-scroll"
-              size={[500, 224]}
+              size={[440, 256]}
               objectsSize={94}
-              gap={16}
-              wrapperMargin={[0, 10]}
+              gap={22}
+              wrapperMargin={[0, 22]}
               // edgeGradient="#1e191c"
               edgeGradient="rgba(180,120,0,0.3)"
               progressTrigger={{
@@ -246,7 +245,7 @@ function GuardianChestsWindow({ pageName, children }) {
                 progressElement: <ScrollThumb />,
               }}
               wrapperAlign="center"
-              scrollBarEdge={10}
+              scrollBarEdge={22}
             >
               {data_angels.map((item) => (
                 <ItemBox
