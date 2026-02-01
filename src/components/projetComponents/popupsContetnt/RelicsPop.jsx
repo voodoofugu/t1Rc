@@ -15,7 +15,7 @@ export default memo(function RelicsPop({ event }) {
   let data = [
     {
       xmas: [
-        "img/images/superhero/suphero-997/x1/sh-6.jpg",
+        "img/images/superhero/suphero-1000/x1/sh-6.jpg",
         "Send us to XXXMAS Orgy!",
         [
           "img/evPopArts/snowflake_blue.png",
@@ -26,7 +26,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/snowflake_yellow.png",
         ],
         "img/v2-xmas-chest-green.png",
-        "img/bGs/valentinesDayBg.jpg",
+        "img/bGs/roomBg.jpg",
       ],
     },
     {
