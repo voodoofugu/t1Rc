@@ -31,7 +31,11 @@ export default function AllHeroesBoxScroll({ numX }) {
       objectsSize={[230, 124]}
       gap={12}
       wrapperMargin={[0, 5]}
-      progressTrigger={{ wheel: true, progressElement: <ScrollThumb /> }}
+      progressTrigger={{
+        wheel: true,
+        progressElement: <ScrollThumb />,
+        // content: true,
+      }}
       edgeGradient={{ color: "#584a49" }}
       // render={{ type: "default" }}
       // render={{ type: "lazy", stopLoadOnScroll: true }}
@@ -43,6 +47,8 @@ export default function AllHeroesBoxScroll({ numX }) {
         clickTrigger: { selector: ".exit", delay: 220 },
       }}
       // fallback={<div style={{ color: "#fff", fontSize: "20px" }}>loading</div>}
+      // direction="hybrid"
+      // crossCount={5}
     >
       <EmptyElement />
       <EmptyElement />

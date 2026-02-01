@@ -70,8 +70,6 @@ const childClickStopPropagation = (e) => {
 };
 
 export default function MainScreen01AllPopups({ pageName, children }) {
-  const [xmasPop, setXmasPop] = useState("xmas-pop1");
-
   return (
     <div className="main world1">
       <div
@@ -367,7 +365,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   popTit: "XXXMAS Celebration Pass",
                   popCont: "XmasPop",
-                  props: { xmasPop: xmasPop, event: "xmas" },
+                  props: { event: "xmas" },
                 },
               ],
               [
@@ -474,7 +472,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   popTit: "Spring Celebration Pass",
                   popCont: "XmasPop",
-                  props: { xmasPop: xmasPop, event: "spring" },
+                  props: { event: "spring" },
                 },
               ],
             ],
@@ -539,7 +537,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 {
                   popTit: "Wave’s Touch Battle pass",
                   popCont: "XmasPop",
-                  props: { xmasPop: xmasPop, event: "autumn" },
+                  props: { event: "autumn" },
                 },
               ],
               [
