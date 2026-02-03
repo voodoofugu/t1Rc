@@ -87,7 +87,9 @@ function GuardianChestsWindow({ pageName, children }) {
   const chestInfoClose = () => {
     guardianWindowRef.current.classList.remove("info-chest");
     guardianWindowRef.current.classList.remove(infoChest);
-    setInfoChest("");
+    setTimeout(() => {
+      setInfoChest("");
+    }, 400);
   };
 
   const quantityChange = () => {
@@ -239,7 +241,7 @@ function GuardianChestsWindow({ pageName, children }) {
               gap={22}
               wrapperMargin={[0, 22]}
               // edgeGradient="#1e191c"
-              edgeGradient="rgba(180,120,0,0.3)"
+              edgeGradient={true}
               progressTrigger={{
                 wheel: true,
                 progressElement: <ScrollThumb />,
@@ -249,14 +251,14 @@ function GuardianChestsWindow({ pageName, children }) {
             >
               {data_angels.map((item) => (
                 <ItemBox
-                  className="wh94"
+                  className="wh94 guardians-box"
                   key={item.id}
                   cardType="a"
                   itemPic={`img/images/goddess/goddess-${item.id}/x1/ava/goddess-ava-1.jpg`}
                 >
                   <ProgressBar
                     className="guardians-prg-bar"
-                    progressSize={[50, 24]}
+                    progressSize={[60, 16]}
                     maxProgress={100}
                     currentProgress={10}
                     textWithProgress={"max"}
@@ -272,37 +274,37 @@ function GuardianChestsWindow({ pageName, children }) {
                   <div className="text-selected">100%</div>
                   to Drop
                   <div className="text-selected selected2">1</div>
-                  Angel Pieces
+                  Guardian Pieces
                 </div>
                 <div className="text">
                   <div className="text-selected">70%</div>
                   to Drop
                   <div className="text-selected selected2">2</div>
-                  Angel Pieces
+                  Guardian Pieces
                 </div>
                 <div className="text">
                   <div className="text-selected">50%</div>
                   to Drop
                   <div className="text-selected selected2">3</div>
-                  Angel Pieces
+                  Guardian Pieces
                 </div>
                 <div className="text">
                   <div className="text-selected">30%</div>
                   to Drop
                   <div className="text-selected selected2">4</div>
-                  Angel Pieces
+                  Guardian Pieces
                 </div>
                 <div className="text">
                   <div className="text-selected">5%</div>
                   to Drop
                   <div className="text-selected selected2">5</div>
-                  Angel Pieces
+                  Guardian Pieces
                 </div>
                 <div className="text">
                   <div className="text-selected">1%</div>
                   to Drop
                   <div className="text-selected selected2">10</div>
-                  Angel Pieces
+                  Guardian Pieces
                 </div>
               </div>
             </div>
