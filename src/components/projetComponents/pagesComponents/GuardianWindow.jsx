@@ -262,6 +262,9 @@ function GuardianWindow({ pageName, children }) {
               scrollPosition={position}
               onScrollValue={onScrollValueGirle}
               render="virtual"
+              // direction="hybrid"
+              // scrollBarOnHover
+              // crossCount={2}
             >
               {imgs}
             </MorphScroll>
