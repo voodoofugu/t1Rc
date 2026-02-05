@@ -106,8 +106,8 @@ function GuardianChestsWindow({ pageName, children }) {
   return (
     <div className="main world1">
       <div className="main-bg"></div>
-      <div className="guardian-window" ref={guardianWindowRef}>
-        <div className="guardian-window-bg"></div>
+      <div className="guardianChest-window" ref={guardianWindowRef}>
+        <div className="guardianChest-window-bg"></div>
         <div className="header">
           <div className="guardian-tit">Guardians Chests</div>
 
