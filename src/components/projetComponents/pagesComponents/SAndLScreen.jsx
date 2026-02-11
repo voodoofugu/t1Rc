@@ -2,7 +2,9 @@ import React from "react";
 import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
-import SVGIcon from "../UIComponents/SVGIcon.jsx";
+import SVGIcon from "../UIComponents/SVGIcon";
+import Button from "../UIComponents/Button";
+import ProgressBar from "../UIComponents/ProgressBar";
 
 import SAndLSVGPlates, { pathsPositions } from "../UIComponents/SAndLSVGPlates";
 
@@ -116,18 +118,12 @@ export default function SAndLScreen({ pageName, children }) {
     },
   );
 
-  const activePathName = Object.keys(pathsPositions)[sAndLStates.activePlate];
+  const activePathName = Object.keys(pathsPositions)[sAndLStates.activePlate]; // получаем текущую ячейку
   const activePlateStyles = pathsPositions[activePathName];
 
   function addRollClass() {
     const diceNum = getRandomNumber();
     const diceClass = diceColor ? "gold" : "white";
-
-    // !!! неизвестная экшен
-    // nexus.acts({
-    //   type: "ANIM_IN_PROG",
-    //   payload: true,
-    // });
 
     setDiceStateClass(`roll ${diceClass}`);
     setTimeout(() => {
@@ -166,7 +162,7 @@ export default function SAndLScreen({ pageName, children }) {
         <div className="sAndL">
           <SAndLSVGPlates
             sAndLStates={sAndLStates}
-            dispatch={nexus.acts}
+            // dispatch={nexus.acts}
             diceValue={diceValue}
             specialIndexes={specialIndexes}
             pageName={pageName}
@@ -176,72 +172,51 @@ export default function SAndLScreen({ pageName, children }) {
             className={`heroFigure ${
               sAndLStates.animPortal ? "unvisible" : ""
             }`}
-            // style={{ // !!! не работает
-            //   top: activePlateStyles.top,
-            //   left: activePlateStyles.left,
-            //   transition: `all ${sAndLStates.activeTime}ms linear`,
-            // }}
+            style={{
+              top: activePlateStyles.top,
+              left: activePlateStyles.left,
+              transition: `all ${sAndLStates.activeTime}ms linear`,
+            }}
           ></div>
         </div>
         <div className="bott">
           <div className="diceBox">
-            <div
-              className="color-btn green"
-              onClick={() => {
-                sAndLStates.animInProgress && addRollClass();
-              }}
-            >
-              <div className="color-btn-text">
-                white dice
-                <div className="diceCount">12</div>
-              </div>
-            </div>
-            <div
-              className="color-btn gold"
-              onClick={() => {
-                sAndLStates.animInProgress && setDiceColor(true);
-              }}
-            >
-              <div className="color-btn-text">
-                gold dice
-                <div className="diceCount">221</div>
-              </div>
-            </div>
+            <Button
+              className="white max diceBtn"
+              text={`white dice<p>12`}
+              onClick={() => !sAndLStates.animInProgress && addRollClass()}
+            />
+            <Button
+              className="gold max diceBtn"
+              text={`gold dice<p>10`}
+              onClick={() => !sAndLStates.animInProgress && setDiceColor(true)}
+            />
             <div className={`diceWrap ${diceStateClass}`}>
               <div className="dice"></div>
               <div className="dice"></div>
-              {diceValue ? (
-                <div
-                  className="boxTitle blue"
-                  style={{
-                    animation: `topUpAnim ${
-                      sAndLStates.activeTime * diceValue + 1200
-                    }ms ease-in-out forwards`,
-                  }}
-                >
-                  {diceValue}
-                </div>
-              ) : (
-                ""
-              )}
             </div>
           </div>
         </div>
         <div className="head">
-          <div className="progresBar">
+          <ProgressBar
+            className="progressBarOfSympathy sAndL-progresBar"
+            progressSize={[280, 24]}
+            maxProgress={10}
+            currentProgress={4}
+            textWithProgress={"max"}
+            text="quest chain:"
+          >
             <ItemBox
               className="wh44"
               itemPic="img/sAndL/whiteDice_icn1.png"
               count={1}
               // get={true}
             />
-            <div className="bar-scale">
-              <div className="bar-scale-patf" style={{ width: "40%" }}></div>
-            </div>
-            <div className="bar-value">6 quests in quest chain 0/6</div>
-          </div>
-          <div
-            className="color-btn questBtn"
+          </ProgressBar>
+          <Button
+            className="darkOrange questBtn notif"
+            text="quest chain"
+            img="img/questChainIcn.png"
             onClick={() => {
               nexus.acts.handlePopup({
                 type: "open",
@@ -252,14 +227,12 @@ export default function SAndLScreen({ pageName, children }) {
                 },
               });
             }}
-          >
-            <img className="icn" src="img/questChainIcn.png" loading="lazy" />
-            <div className="color-btn-text">Quest Chain</div>
-            <div className="notif"></div>
-          </div>
+          />
 
-          <div
-            className="color-btn craftBtn"
+          <Button
+            className="orange craftBtn"
+            text="craft room"
+            img="img/sAndL/anvilIcn.png"
             onClick={() => {
               nexus.acts.handlePopup({
                 type: "open",
@@ -271,13 +244,12 @@ export default function SAndLScreen({ pageName, children }) {
                 },
               });
             }}
-          >
-            <img className="icn" src="img/sAndL/anvilIcn.png" loading="lazy" />
-            <div className="color-btn-text">Craft Room</div>
-          </div>
+          />
 
-          <div
-            className="color-btn ratingBtn"
+          <Button
+            className="blue ratingBtn"
+            text="rating"
+            img="img/sAndL/ratingIcn.png"
             onClick={() => {
               nexus.acts.handlePopup({
                 type: "open",
@@ -288,36 +260,35 @@ export default function SAndLScreen({ pageName, children }) {
                 },
               });
             }}
-          >
-            <img className="icn" src="img/sAndL/ratingIcn.png" loading="lazy" />
-            <div className="color-btn-text">Rating</div>
-          </div>
+          />
 
-          <div className="btnX"></div>
-          <div className="boxTitle gold">Новый мир 1 lvl</div>
-          <div
-            className="btnI"
+          <Button className="exit" text="✖" />
+          <Button
+            className="info"
+            text="i"
             onClick={() => {
               nexus.acts.handlePopup({
                 type: "open",
                 data: {
-                  mpopClass: "m-popup info-pop",
-                  popTit: "Info",
-                  popCont: [
-                    "InfoPop",
-                    {
-                      text: "Here you can raise your character's stats, upgrade your abilities, and get an interesting look from events.",
-                      btnText1: "I understand",
-                    },
-                  ],
+                  mpopClass: "m-popup contentOnly framedPop",
+                  popCont: "InfoPopFramed",
+                  props: {
+                    inner:
+                      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                    girlImg: "img/break-girls/break-girl915.png",
+                  },
                 },
               });
             }}
-          ></div>
+          />
+
+          <div className="boxTitle gold">Новый мир 1 lvl</div>
         </div>
+
         <div className="offerWrap">
-          <div
-            className="offerBtn"
+          <Button
+            className="imgOnly"
+            img="img/sAndL/ev_duPack_ic.png"
             onClick={() => {
               nexus.acts.handlePopup({
                 type: "open",
@@ -328,15 +299,11 @@ export default function SAndLScreen({ pageName, children }) {
                 },
               });
             }}
-          >
-            <img
-              className="icon"
-              src="img/sAndL/ev_duPack_ic.png"
-              loading="lazy"
-            />
-          </div>
-          <div
-            className="offerBtn"
+          />
+
+          <Button
+            className="imgOnly"
+            img="img/sAndL/whiteDice_shop.png"
             onClick={() => {
               nexus.acts.handlePopup({
                 type: "open",
@@ -355,15 +322,11 @@ export default function SAndLScreen({ pageName, children }) {
                 },
               });
             }}
-          >
-            <img
-              className="icon"
-              src="img/sAndL/whiteDice_shop.png"
-              loading="lazy"
-            />
-          </div>
-          <div
-            className="offerBtn"
+          />
+
+          <Button
+            className="imgOnly"
+            img="img/sAndL/goldDice_shop.png"
             onClick={() => {
               nexus.acts.handlePopup({
                 type: "open",
@@ -382,14 +345,7 @@ export default function SAndLScreen({ pageName, children }) {
                 },
               });
             }}
-          >
-            <img
-              className="icon"
-              src="img/sAndL/goldDice_shop.png"
-              loading="lazy"
-            />
-            <div className="notif"></div>
-          </div>
+          />
         </div>
       </div>
       {children}

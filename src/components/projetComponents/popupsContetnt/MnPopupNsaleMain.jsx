@@ -382,9 +382,9 @@ export default function MnPopupNsaleMain({ hole }) {
   const [activeMenu, setActiveMenu] = useState("chest");
 
   useEffect(() => {
-    nexus.set({
-      popupState: (prev) => ({
-        ...prev,
+    nexus.set((prev) => ({
+      popupState: {
+        ...prev.popupState,
         mpopClass: `mn-popup ${
           activeMenu === "magic"
             ? "nsale-stupen"
@@ -396,8 +396,8 @@ export default function MnPopupNsaleMain({ hole }) {
                   ? "nsale-shop"
                   : "nsale-main"
         }${hole ? " hole" : ""}`,
-      }),
-    });
+      },
+    }));
   }, [activeMenu, hole]);
 
   function handleMenuClick(menuSectionName) {

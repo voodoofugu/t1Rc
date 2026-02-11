@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect, useState, useRef } from "react";
 import nexus from "nexus";
 
 import ItemNotiz from "./ItemNotiz";
@@ -211,55 +211,57 @@ const paths = [
 
 export default memo(function SAndLSVGPlates({
   sAndLStates,
-  dispatch,
   pageName,
   diceValue,
   specialIndexes,
 }) {
+  // - states -
   const [targetPlate, setTargetPlate] = useState(sAndLStates.activePlate);
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  useEffect(() => {
-    nexus.set({
-      sAndLStates: (prev) => ({
-        ...prev,
-        activeTime: 150,
-      }),
-    });
-  }, [dispatch]);
+  // - refs -
+  const intervalRef = useRef(0);
 
-  let interval;
+  // - effects -
+  useEffect(() => {
+    nexus.set((prev) => ({
+      sAndLStates: {
+        ...prev.sAndLStates,
+        activeTime: 150,
+      },
+    }));
+  }, []);
 
   // Пошаговая анимация
   useEffect(() => {
     if (targetPlate !== sAndLStates.activePlate) {
-      interval = setTimeout(() => {
-        nexus.set({
-          sAndLStates: (prev) => ({
-            ...prev,
+      intervalRef.current = setTimeout(() => {
+        nexus.set((prev) => ({
+          sAndLStates: {
+            ...prev.sAndLStates,
             activePlate:
               sAndLStates.activePlate < targetPlate
                 ? sAndLStates.activePlate + 1
                 : sAndLStates.activePlate - 1,
-          }),
-        });
+          },
+        }));
 
         if (
           sAndLStates.activePlate === targetPlate - 1 ||
           sAndLStates.activePlate === targetPlate + 1
         ) {
-          clearInterval(interval);
-          nexus.set({
-            sAndLStates: (prev) => ({
-              ...prev,
+          clearInterval(intervalRef.current);
+          nexus.set((prev) => ({
+            sAndLStates: {
+              ...prev.sAndLStates,
               animInProgress: false,
-            }),
-          });
+            },
+          }));
         }
       }, sAndLStates.activeTime - 50);
     }
 
-    return () => clearInterval(interval);
+    return () => clearInterval(intervalRef.current);
   }, [sAndLStates.activePlate, targetPlate]);
 
   // Работа с порталами
@@ -271,22 +273,23 @@ export default memo(function SAndLSVGPlates({
     if (!sAndLStates.animInProgress && index !== -1) {
       const targetPlate = validIndexes[index][0][1];
       setTimeout(() => {
-        nexus.set({
-          sAndLStates: (prev) => ({
-            ...prev,
+        nexus.set((prev) => ({
+          sAndLStates: {
+            ...prev.sAndLStates,
             animPortal: true,
-          }),
-        });
+          },
+        }));
       }, 400);
+
       setTimeout(() => {
         setTargetPlate(targetPlate);
-        nexus.set({
-          sAndLStates: (prev) => ({
-            ...prev,
+        nexus.set((prev) => ({
+          sAndLStates: {
+            ...prev.sAndLStates,
             activePlate: targetPlate,
             animPortal: false,
-          }),
-        });
+          },
+        }));
       }, 800);
     }
   }, [specialIndexes, sAndLStates.activePlate, sAndLStates.animInProgress]);
@@ -301,12 +304,12 @@ export default memo(function SAndLSVGPlates({
   // Обработчик клика по плашке
   const handleClick = (index) => {
     if (!sAndLStates.animInProgress && index !== sAndLStates.activePlate) {
-      nexus.set({
-        sAndLStates: (prev) => ({
-          ...prev,
+      nexus.set((prev) => ({
+        sAndLStates: {
+          ...prev.sAndLStates,
           animInProgress: true,
-        }),
-      });
+        },
+      }));
       setTargetPlate(index);
     }
   };
@@ -332,7 +335,7 @@ export default memo(function SAndLSVGPlates({
           d={path}
           onClick={() => handleClick(index)}
           onMouseOver={() => handleMouseOver(index)}
-          onMouseLeave={() => handleMouseLeave()}
+          onMouseLeave={handleMouseLeave}
         />
       ))}
 
