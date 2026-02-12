@@ -240,7 +240,6 @@ export default function SAndLScreen({ pageName, children }) {
                   mpopClass: "m-popup psemain sAndL",
                   popTit: "Craft Room",
                   popCont: "CraftPop",
-                  infBtn: true,
                 },
               });
             }}
