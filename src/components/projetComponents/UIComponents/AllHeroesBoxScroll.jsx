@@ -39,6 +39,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       edgeGradient={{ color: "#584a49" }}
       // render={{ type: "default" }}
       // render={{ type: "lazy", stopLoadOnScroll: true }}
+      // render={{ type: "virtual", rootMargin: [400, 0, 0, 0] }}
       render={{ type: "virtual" }}
       scrollBarOnHover
       wrapperAlign={["center", "start"]}
@@ -48,6 +49,8 @@ export default function AllHeroesBoxScroll({ numX }) {
       }}
       // fallback={<div style={{ color: "#fff", fontSize: "20px" }}>loading</div>}
       // direction="hybrid"
+      // direction="x"
+      // direction="qweqwe" это показывает ошибку
       // crossCount={5}
     >
       <EmptyElement />
