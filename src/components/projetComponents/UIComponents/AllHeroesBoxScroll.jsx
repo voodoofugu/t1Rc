@@ -40,7 +40,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       // render={{ type: "default" }}
       // render={{ type: "lazy", stopLoadOnScroll: true }}
       // render={{ type: "virtual", rootMargin: [400, 0, 0, 0] }}
-      render={{ type: "virtual" }}
+      // render={{ type: "virtual", visibilityChecking: true }}
       scrollBarOnHover
       wrapperAlign={["center", "start"]}
       emptyElements={{
