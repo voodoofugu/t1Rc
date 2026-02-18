@@ -595,6 +595,19 @@ export default function MainScreen01AllPopups({ pageName, children }) {
               ["icon-sunduk-200-2", "Reward"],
               ["arrow-green", "Top"],
               ["ic-abil-gold@2x", "CONRGRA"],
+              [
+                "star-icn",
+                "stars-pop",
+                {
+                  mpopClass: "m-popup contentOnly framedPop",
+                  popCont: "StarsPop",
+                  props: {
+                    img: ["03/x1/sh-1", "03/x1/sh-2"],
+                    stars: 2,
+                    cardType: "s",
+                  },
+                },
+              ],
             ],
           ],
         ]}
