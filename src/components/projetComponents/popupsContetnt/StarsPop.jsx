@@ -18,7 +18,9 @@ export default function StarsPop({ img, stars, cardType }) {
         return "";
     }
   };
-  const path = [pathSwitch(img[0]), pathSwitch(img[1])];
+  const path = Array.isArray(img)
+    ? [pathSwitch(img[0]), pathSwitch(img[1])]
+    : pathSwitch(img);
 
   const starsBoxClasses = `stars-box${stars ? ` stars-${stars}` : ""}${stars === 6 && cardType === "s" ? " supernova" : ""}`;
 
