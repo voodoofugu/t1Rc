@@ -1,21 +1,21 @@
-import nexus from "nexus";
+import nexus from 'nexus';
 
-import Button from "../UIComponents/Button";
-import ItemBox from "../UIComponents/ItemBox";
+import Button from '../UIComponents/Button';
+import ItemBox from '../UIComponents/ItemBox';
 
 export default function StarsPop({ img, stars, cardType }) {
   // сокращение что бы не писать длинные пути
   const pathSwitch = (img) => {
     switch (cardType) {
-      case "h":
+      case 'h':
         return `img/images/hero-all/tithero-${img}.jpg`;
-      case "s":
+      case 's':
         return `img/images/superhero/suphero-${img}.jpg`;
-      case "g":
+      case 'g':
         return `img/images/goddess/goddess-${img}.jpg`;
 
       default:
-        return "";
+        return '';
     }
   };
   const path = [pathSwitch(img[0]), pathSwitch(img[1])];
@@ -24,7 +24,7 @@ export default function StarsPop({ img, stars, cardType }) {
     <>
       <div
         className="closeBG"
-        onClick={() => nexus.acts.handlePopup({ type: "close" })}
+        onClick={() => nexus.acts.handlePopup({ type: 'close' })}
       ></div>
       <div className="content">
         <div className="popupFrame">
@@ -32,9 +32,15 @@ export default function StarsPop({ img, stars, cardType }) {
           <div className="frame bottom"></div>
         </div>
 
-        <ItemBox className={`cardFool`} itemPic={path} cardType={cardType}>
+        <ItemBox
+          className={`cardFull`}
+          itemPic={path}
+          cardType={cardType}
+        >
           <div className="highlightBg"></div>
-          <div className={`stars-box${stars ? ` stars-${stars}` : ""}`}>
+          <div
+            className={`stars-box${stars ? ` stars-${stars}` : ''}`}
+          >
             {[...Array(stars)].map((_, i) => (
               <div key={i} className="star"></div>
             ))}
@@ -44,7 +50,7 @@ export default function StarsPop({ img, stars, cardType }) {
         <Button
           className="exit"
           text="✖"
-          onClick={() => nexus.acts.handlePopup({ type: "close" })}
+          onClick={() => nexus.acts.handlePopup({ type: 'close' })}
         />
       </div>
     </>
