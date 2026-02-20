@@ -22,7 +22,8 @@ export default function StarsPop({ img, stars, cardType }) {
     ? [pathSwitch(img[0]), pathSwitch(img[1])]
     : pathSwitch(img);
 
-  const starsBoxClasses = `stars-box${stars ? ` stars-${stars}` : ""}${stars === 6 && cardType === "s" ? " supernova" : ""}`;
+  const supRedOrNova = stars === 6 ? " ult" : stars === 7 ? " supernova" : "";
+  const starsBoxClasses = `stars-box${stars ? ` stars-${stars}` : ""}${cardType === "s" ? supRedOrNova : ""}`;
 
   return (
     <>
