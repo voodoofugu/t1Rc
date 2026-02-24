@@ -307,17 +307,14 @@ export default function SAndLScreen({ pageName, children }) {
               nexus.acts.handlePopup({
                 type: "open",
                 data: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy White Dices",
-                  popCont: [
-                    "BuyShop",
-                    {
-                      img1: "sAndL/whiteDice_shop1",
-                      img2: "sAndL/whiteDice_shop2",
-                      img3: "sAndL/whiteDice_shop3",
-                      img4: "sAndL/whiteDice_shop4",
-                    },
-                  ],
+                  mpopClass: "m-popup  contentOnly framedPop essence-buy",
+                  popCont: "BuyShop",
+                  props: {
+                    img1: "sAndL/whiteDice_shop1",
+                    img2: "sAndL/whiteDice_shop2",
+                    img3: "sAndL/whiteDice_shop3",
+                    img4: "sAndL/whiteDice_shop4",
+                  },
                 },
               });
             }}
@@ -330,17 +327,14 @@ export default function SAndLScreen({ pageName, children }) {
               nexus.acts.handlePopup({
                 type: "open",
                 data: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy Gold Dices",
-                  popCont: [
-                    "BuyShop",
-                    {
-                      img1: "sAndL/goldDice_shop1",
-                      img2: "sAndL/goldDice_shop2",
-                      img3: "sAndL/goldDice_shop3",
-                      img4: "sAndL/goldDice_shop4",
-                    },
-                  ],
+                  mpopClass: "m-popup  contentOnly framedPop essence-buy",
+                  popCont: "BuyShop",
+                  props: {
+                    img1: "sAndL/goldDice_shop1",
+                    img2: "sAndL/goldDice_shop2",
+                    img3: "sAndL/goldDice_shop3",
+                    img4: "sAndL/goldDice_shop4",
+                  },
                 },
               });
             }}
