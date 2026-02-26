@@ -31,18 +31,18 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       vl: [
-        "img/images/superhero/suphero-969/x2/sh-6.jpg",
+        "img/images/superhero/suphero-1003/x2/sh-6.jpg",
         "Send us to Valentine's Day Orgy!",
         [
-          "img/evPopArts/puzzle-darkBlue.png",
-          "img/evPopArts/puzzle-gray.png",
-          "img/evPopArts/puzzle-green.png",
-          "img/evPopArts/puzzle-lightBlue.png",
-          "img/evPopArts/puzzle-pink.png",
-          "img/evPopArts/puzzle-red.png",
+          "img/evPopArts/flower-blue.png",
+          "img/evPopArts/flower-green.png",
+          "img/evPopArts/flower-lilac.png",
+          "img/evPopArts/flower-orange.png",
+          "img/evPopArts/flower-pink.png",
+          "img/evPopArts/flower-purple.png",
         ],
-        "img/v2-vl-candys-box.png",
-        "img/bGs/mountainsBg.jpg",
+        "img/evPopArts/ic-bouquet.png",
+        "img/bGs/flowerBg.jpg",
       ],
     },
     {
