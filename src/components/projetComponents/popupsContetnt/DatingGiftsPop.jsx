@@ -32,7 +32,7 @@ export default function DaitingGiftsPop({ girleID }) {
           title="Any Pack"
           rewardCard={
             <ItemBox
-              className="cardAvaX2"
+              className="wh180-long"
               itemPic={`img/images/superhero/suphero-${girleID}/x2/avatar/sh-ava-1.jpg`}
               count="+1000 Coins"
             />

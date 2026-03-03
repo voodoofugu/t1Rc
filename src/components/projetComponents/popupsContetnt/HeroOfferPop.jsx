@@ -26,7 +26,7 @@ export default function HeroOfferPop({ imgId, name, heroClass, cardType }) {
           title={name}
           rewardCard={
             <ItemBox
-              className="cardAvaX2"
+              className="wh180-long"
               heroClass={heroClass}
               cardType={cardType}
               itemPic={`img/images/hero-all/tithero-${imgId}/x2/ava/tithero-ava-1.jpg`}
