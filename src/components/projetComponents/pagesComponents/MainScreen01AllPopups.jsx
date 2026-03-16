@@ -163,6 +163,14 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             },
           ],
           [
+            "ic-abil-reborn",
+            "NEW",
+            {
+              mpopClass: "m-popup contentOnly framedPop",
+              popCont: "RebornPopupNew",
+            },
+          ],
+          [
             "ic-abil-reborn-blue",
             "DARK",
             {
