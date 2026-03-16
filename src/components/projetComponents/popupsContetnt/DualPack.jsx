@@ -179,6 +179,7 @@ export default function DualPack({ event }) {
               <div className="price-nutaku"></div>
             </div>
           </div>
+          <div className="sale-banner">-50%</div>
         </div>
         <div className="sv-reward-box-all">
           <ItemBox
