@@ -82,6 +82,9 @@ export default function RebornPopup() {
                   <li>0 Бесплатных VIP реинкарнаций</li>
                 </ol>
               </div>
+              <div className="textBox">
+                VIP players get <b>0</b> premium reborn for free
+              </div>
             </>
           }
         >
