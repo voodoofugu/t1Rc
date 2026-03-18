@@ -53,6 +53,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       // direction="x"
       // direction="qweqwe" это показывает ошибку
       // crossCount={5}
+      dragScroll
     >
       <EmptyElement />
       <EmptyElement />
