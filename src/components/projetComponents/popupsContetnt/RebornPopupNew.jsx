@@ -33,8 +33,6 @@ export default function RebornPopup() {
                   <li>Прогресс Гильдии и её бонусы</li>
                   <li>Кристаллы и Короны</li>
                   <li>VIP уровень</li>
-                  <li>Открытые картинки</li>
-                  <li>Повышения ваших героев</li>
                 </ol>
               </div>
               <div className="textBox">
@@ -83,7 +81,9 @@ export default function RebornPopup() {
                 </ol>
               </div>
               <div className="textBox">
-                VIP players get <b>0</b> premium reborn for free
+                <div className="text-center">
+                  VIP players get <b>0</b> premium reborn for free
+                </div>
               </div>
             </>
           }
