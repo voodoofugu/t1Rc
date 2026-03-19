@@ -49,11 +49,12 @@ export default function AllHeroesBoxScroll({ numX }) {
       }}
       scrollPosition={null}
       // fallback={<div style={{ color: "#fff", fontSize: "20px" }}>loading</div>}
-      // direction="hybrid"
       // direction="x"
       // direction="qweqwe" это показывает ошибку
-      // crossCount={5}
       dragScroll
+      // scrollBarEdge={10}
+      // direction="hybrid"
+      // crossCount={5}
     >
       <EmptyElement />
       <EmptyElement />
