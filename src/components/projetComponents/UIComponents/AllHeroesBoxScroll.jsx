@@ -55,6 +55,7 @@ export default function AllHeroesBoxScroll({ numX }) {
       // scrollBarEdge={10}
       // direction="hybrid"
       // crossCount={5}
+      wrapperMinSize={[472, 0]}
     >
       <EmptyElement />
       <EmptyElement />
