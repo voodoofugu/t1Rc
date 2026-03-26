@@ -101,7 +101,7 @@ export default function FortunaMainRound16Big() {
 
       <ImageBg
         className="girl"
-        img="img/images/hero-all/tithero-720/icons/break-girl.png"
+        img="img/images/hero-all/tithero-729/icons/break-girl.png"
       />
 
       <div className="fortuna-main-box">
