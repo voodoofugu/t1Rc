@@ -12,7 +12,7 @@ export default function FortunaMainRound16Big() {
 
   return (
     <>
-      <ImageBg className="bG framedBg" img="img/bGs/natureBg5.jpg" />
+      <ImageBg className="bG framedBg" img="img/bGs/natureBg6.jpg" />
 
       <FraimedTitle
         className="cornersTop"
