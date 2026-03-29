@@ -111,18 +111,18 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/hero-all/tithero-545/x2/tithero-4.jpg",
-        "Summer's Day Orgy!",
+        "img/images/hero-all/tithero-731/x2/tithero-4.jpg",
+        "Velvet Wings",
         [
-          "img/ic-vl-heart-dark-blue.png",
-          "img/ic-vl-heart-red.png",
-          "img/ic-vl-heart-dark-lilac.png",
-          "img/ic-vl-heart-green.png",
-          "img/ic-vl-heart-pink.png",
-          "img/ic-vl-heart-blue.png",
+          "img/evPopArts/ic-butterfly-black.png",
+          "img/evPopArts/ic-butterfly-blue.png",
+          "img/evPopArts/ic-butterfly-darkGreen.png",
+          "img/evPopArts/ic-butterfly-green.png",
+          "img/evPopArts/ic-butterfly-orange.png",
+          "img/evPopArts/ic-butterfly-purple.png",
         ],
-        "img/evPopArts/candyBag.png",
-        "img/bGs/beachBg4.jpg",
+        "img/evPopArts/ic-butterfly-pot.png",
+        "img/bGs/natureBg7.jpg",
       ],
     },
     {
