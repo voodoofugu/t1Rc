@@ -100,7 +100,7 @@ export default function V2MainScreen05FwMain() {
                 />
               </ClanWarBox>
             </div>
-            {/* <div className="btn-close-x"></div> */}
+
             <div className="fw-level-box-all">
               <div className="fw-sim-el-box">
                 <div className="fw-simple">simple</div>
