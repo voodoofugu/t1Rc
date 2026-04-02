@@ -22,7 +22,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "images/hero-all/tithero-430/icons/break-girl"
               : event === "summer"
-                ? "images/hero-all/tithero-557/icons/break-girl4"
+                ? "images/hero-all/tithero-736/icons/break-girl"
                 : event === "autumn"
                   ? "images/hero-all/tithero-639/icons/break-girl"
                   : event === "sexpedition"
@@ -41,7 +41,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "img/bGs/march-pop-bg.jpg"
               : event === "summer"
-                ? "img/bGs/beachBg4.jpg"
+                ? "img/bGs/sceneBg2.jpg"
                 : event === "autumn"
                   ? "img/bGs/cityBg.jpg"
                   : event === "sexpedition"
@@ -60,7 +60,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "ic-march-flower-dark-blue"
               : event === "summer"
-                ? "evPopArts/ic-moon-heart-1"
+                ? "evPopArts/ic-gemstone-1"
                 : event === "autumn"
                   ? "evPopArts/lipsCoin_1"
                   : event === "sexpedition"
@@ -118,9 +118,9 @@ export default function BtlPass({ event }) {
                 ? [
                     "BuyShop",
                     {
-                      img1: "evPopArts/ic-moon-heart-1",
-                      img2: "evPopArts/ic-moon-heart-2",
-                      img3: "evPopArts/ic-moon-heart-3",
+                      img1: "evPopArts/ic-gemstone-1",
+                      img2: "evPopArts/ic-gemstone-2",
+                      img3: "evPopArts/ic-gemstone-3",
                     },
                   ]
                 : event === "sexpedition"
