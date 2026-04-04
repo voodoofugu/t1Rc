@@ -5,6 +5,7 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ResCount from "../UIComponents/ResCount";
+import ClanWarBox from "../UIComponents/ClanWarBox";
 
 import elements from "../data/PopResValue";
 
@@ -13,18 +14,6 @@ export const cssFiles = [
   "v2-screen-fw-map",
   "screen-unipop-subscription",
 ];
-
-function ClanWarBox({ className, img, btnText, onClick, children }) {
-  return (
-    <div className={`fw-main-bl ${className}`}>
-      <div className="fw-main-bl-pic">
-        <img src={img} loading="lazy" />
-      </div>
-      <Button className="clanWarBtn" text={btnText} onClick={() => onClick} />
-      {children}
-    </div>
-  );
-}
 
 export default function V2MainScreen05FwMain() {
   return (
@@ -90,7 +79,7 @@ export default function V2MainScreen05FwMain() {
 
               <ClanWarBox
                 className="fraction"
-                title="fraction"
+                title="rating"
                 img="img/v2-fw-icon-fraction.png"
                 btnText="rating"
               >

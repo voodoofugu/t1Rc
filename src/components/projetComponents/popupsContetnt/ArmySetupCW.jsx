@@ -109,6 +109,12 @@ export default function ArmySetupCW() {
         onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
+      <Button
+        className="green max selectBtn"
+        text={`${selectAll ? "Remove" : "Select All"}`}
+        onClick={() => toggleSelect()}
+      />
+
       <div className="armySetupCont">
         <HeroMenuBox
           activeMenu={activeMenu}
@@ -120,7 +126,7 @@ export default function ArmySetupCW() {
 
         <MorphScroll
           className="armySetupScroll"
-          size={[1100, 436]}
+          size={[1000, 400]}
           objectsSize={[94, 107]}
           wrapperMargin={[6, 0]}
           gap={12}
@@ -145,11 +151,6 @@ export default function ArmySetupCW() {
             ))}
         </MorphScroll>
 
-        <Button
-          className="green max selectBtn"
-          text={`${selectAll ? "Remove" : "Select All"}`}
-          onClick={() => toggleSelect()}
-        />
         <ResCount className="max armyPower" value="POWER 234" />
 
         <Info className="powerInfo" text="power needed 10" />

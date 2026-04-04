@@ -43,7 +43,11 @@ export default function HeroBox({
   const offerDisabledExist = offerExist || disabledExist;
 
   return visible ? (
-    <div className="heroCardBox">
+    <div
+      className="heroCardBox"
+      draggable="true"
+      // ms-custom-drag=""
+    >
       {highlightExist && <div className="highlightBg"></div>}
       <div className="clickArea" onClick={onClick}></div>
       <div

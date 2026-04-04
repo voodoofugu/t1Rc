@@ -5,6 +5,7 @@ import FraimedTitle from "../UIComponents/FraimedTitle";
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ResCount from "../UIComponents/ResCount";
+import ClanWarBox from "../UIComponents/ClanWarBox";
 
 import elements from "../data/PopResValue";
 
@@ -37,69 +38,39 @@ export default function V2MainScreen15CwMain3() {
               <Button className="back" text />
 
               <div className="fw-main-bl-box">
-                <div className="fw-main-bl map">
-                  <div className="fw-main-bl-name">map of war</div>
-                  <div className="fw-main-bl-pic">
-                    <img src="img/v2-fw-icon-maps.png" loading="lazy" />
-                  </div>
-                  <div
-                    className="color-btn"
-                    style={{
-                      filter: "grayscale(1)",
-                    }}
-                  >
-                    <div className="color-btn-text">
-                      <div className="t">00:00:00</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="fw-main-bl shop">
-                  <div className="fw-main-bl-pic" style={{ top: "75px" }}>
-                    <img src="img/v2-fw-icon-shop.png" loading="lazy" />
-                  </div>
-                  <div className="color-btn shop">
-                    <div className="color-btn-text">Shop</div>
-                  </div>
-                  <div
-                    className="color-btn"
-                    style={{
-                      filter: "grayscale(1)",
-                    }}
-                  >
-                    <div className="color-btn-text">Clans</div>
-                  </div>
-                  <div className="fw-map-name-box-all cw">
-                    <div className="fw-map-time-box">
-                      <div>
-                        <div className="fw-map-time1">
-                          clash starts in:
-                          <span className="t">17:25:18</span>
-                        </div>
-                        <div className="fw-map-time2">
-                          Map locks 3 mins before clash
-                        </div>
-                      </div>
-                    </div>
-                    <div className="fw-map-name-box">
-                      <div className="fw-map-name">day 0</div>
-                      <div className="fw-map-date">Round 0/16</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="fw-main-bl fraction">
-                  <div className="fw-main-bl-name">rating</div>
-                  <div className="fw-main-bl-pic">
-                    <img src="img/v2-fw-icon-fraction.png" loading="lazy" />
-                  </div>
-                  <div
-                    className="color-btn"
-                    style={{
-                      filter: "grayscale(1)",
-                    }}
-                  >
-                    <div className="color-btn-text">rating</div>
-                  </div>
-                </div>
+                <ClanWarBox
+                  className="map"
+                  img="img/v2-fw-icon-maps.png"
+                  btnText="to battle"
+                >
+                  <FraimedTitle
+                    className="corners blue clanWarTit"
+                    text="map of war"
+                  />
+                </ClanWarBox>
+
+                <ClanWarBox
+                  className="shop"
+                  title="shop"
+                  img="img/v2-fw-icon-shop.png"
+                  btnText="shop"
+                >
+                  <FraimedTitle
+                    className="corners blue clanWarTit"
+                    text="shop"
+                  />
+                </ClanWarBox>
+
+                <ClanWarBox
+                  className="fraction"
+                  img="img/v2-fw-icon-fraction.png"
+                  btnText="rating"
+                >
+                  <FraimedTitle
+                    className="corners blue clanWarTit"
+                    text="fraction"
+                  />
+                </ClanWarBox>
               </div>
 
               <div className="fw-level-box-all">
@@ -152,45 +123,6 @@ export default function V2MainScreen15CwMain3() {
               </ImageBg>
             </div>
           </div>
-        </div>
-        <div className="tabs-all-box">
-          <a className="tabs-all heroes" href="#/">
-            <div style={{ width: "100%", height: "100%" }}>
-              <div className="tabs-name">Heroes</div>
-              <div className="tabs-pic">
-                <img src="img/tab-01.png" loading="lazy" />
-              </div>
-            </div>
-          </a>
-          <a
-            className="tabs-all guild selected"
-            aria-current="page"
-            href="#/guild"
-          >
-            <div style={{ width: "100%", height: "100%" }}>
-              <div className="tabs-name">Guild base</div>
-              <div className="tabs-pic">
-                <img src="img/tab-08.png" loading="lazy" />
-              </div>
-            </div>
-            <div className="v2-tab-notif notif notif20"></div>
-          </a>
-          <a className="tabs-all album" href="#/galery/pictures">
-            <div style={{ width: "100%", height: "100%" }}>
-              <div className="tabs-name">Gallery</div>
-              <div className="tabs-pic">
-                <img src="img/tab-05.png" loading="lazy" />
-              </div>
-            </div>
-          </a>
-          <a className="tabs-all rating" href="#/rating/jewerly">
-            <div style={{ width: "100%", height: "100%" }}>
-              <div className="tabs-name">Rating Tab</div>
-              <div className="tabs-pic">
-                <img src="img/tab-02.png" loading="lazy" />
-              </div>
-            </div>
-          </a>
         </div>
       </div>
     </div>
