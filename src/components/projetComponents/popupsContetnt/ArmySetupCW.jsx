@@ -134,8 +134,13 @@ export default function ArmySetupCW() {
           edgeGradient={{ color: "#52413f" }}
           render={{ type: "virtual" }}
           rootMargin={[0, 100]}
+          // direction="x"
+          // direction="hybrid"
           wrapperAlign={["center", "center"]}
-          elementsAlign={"center"}
+          elementsAlign="center"
+          // elementsAlign="end"
+          // elementsDirection="column"
+          crossCount={4}
         >
           {getHeroData()
             .filter((item) => !heroClass || item.heroClass === heroClass) // Фильтрация по heroClass
