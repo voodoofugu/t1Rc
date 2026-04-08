@@ -37,28 +37,28 @@ export default function PageBox() {
   );
 
   // флаг для установки scrollTop только в новом окне
-  let isNewWindow = false;
-  if (window.location.hash.length > 2) {
-    const sectionChar = window.location.hash[2];
-    if (sectionChar === "&") isNewWindow = true;
-  }
+  const neededHash = useMemo(() => {
+    const hash = window?.location.hash;
+    if (hash.length > 2 && hash[2] === "&") return hash;
+
+    return null;
+  }, []);
 
   useStorage([
     {
       name: "scrollTop",
       value: Math.round(scrollTopValue) || false,
       onLoad: (value) => {
-        if (!isNewWindow) return;
+        if (!neededHash) return;
         setScrollNew((prev) => ({ ...prev, value }));
       },
     },
   ]);
 
   useLayoutEffect(() => {
-    if (isNewWindow) return;
+    if (neededHash) return; // ранний выход
 
-    const statesNewTab = window.location.hash.substring(3);
-    const hashParts = statesNewTab.split("/");
+    const hashParts = neededHash.substring(3).split("/");
     setScrollTopValue(Number(hashParts[1]));
     setScrollNew((prev) => ({
       ...prev,
