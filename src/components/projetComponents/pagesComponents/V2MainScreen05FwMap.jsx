@@ -1,6 +1,3 @@
-import React from "react";
-import nexus from "nexus";
-
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
 import Warpop from "../popupsContetnt/Warpop";

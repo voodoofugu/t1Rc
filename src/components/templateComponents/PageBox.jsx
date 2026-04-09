@@ -57,14 +57,13 @@ export default function PageBox() {
 
   useLayoutEffect(() => {
     if (!neededHash) return; // ранний выход
-    console.log("neededHash", neededHash);
 
     const hashParts = neededHash.substring(3).split("/");
     setScrollTopValue(Number(hashParts[1]));
     setScrollNew((prev) => ({
       ...prev,
       value: Number(hashParts[1]),
-      duration: 100,
+      // duration: 100,
     }));
   }, []);
 

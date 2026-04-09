@@ -74,10 +74,16 @@ export default function ArmySetupCW() {
         return filteredData("hero-all");
       case "supHeroBtn":
         return filteredData("superhero");
+      case "mercBtn":
+        return filteredData("merc");
       default:
         return filteredData();
     }
   };
+
+  const allHeroes = getHeroData();
+
+  // render
   return (
     <>
       <ImageBg className="bG framedBg" img />
@@ -122,6 +128,7 @@ export default function ArmySetupCW() {
           tab1={["girlsBtn", "All Hero"]}
           tab2={["heroBtn", "Hero"]}
           tab3={["supHeroBtn", "Super Hero"]}
+          tab4={["mercBtn", "Merc"]}
         />
 
         <MorphScroll
@@ -142,18 +149,22 @@ export default function ArmySetupCW() {
           // elementsDirection="column"
           // crossCount={4}
         >
-          {getHeroData()
-            .filter((item) => !heroClass || item.heroClass === heroClass) // Фильтрация по heroClass
-            .map((item) => (
-              <ItemBox
-                key={extractKey(item.itemPic)}
-                {...item}
-                className={`${item.className || ""} ${
-                  activeKeys.has(extractKey(item.itemPic)) ? "check" : ""
-                }`}
-                onClick={() => toggleActive(extractKey(item.itemPic))}
-              />
-            ))}
+          {!allHeroes.length && activeMenu === "mercBtn" ? (
+            <Button className="btnGold max mercShopBtn" text="to shop" />
+          ) : (
+            allHeroes
+              .filter((item) => !heroClass || item.heroClass === heroClass) // Фильтрация по heroClass
+              .map((item) => (
+                <ItemBox
+                  key={extractKey(item.itemPic)}
+                  {...item}
+                  className={`${item.className || ""} ${
+                    activeKeys.has(extractKey(item.itemPic)) ? "check" : ""
+                  }`}
+                  onClick={() => toggleActive(extractKey(item.itemPic))}
+                />
+              ))
+          )}
         </MorphScroll>
 
         <ResCount className="max armyPower" value="POWER 234" />

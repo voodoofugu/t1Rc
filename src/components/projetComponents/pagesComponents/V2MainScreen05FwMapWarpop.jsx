@@ -1,14 +1,17 @@
-import React from "react";
-
 import Button from "../UIComponents/Button";
+import MapCell from "../UIComponents/MapCell";
+import Warpop from "../popupsContetnt/Warpop";
+
+import mapCell from "../data/mapCell";
 
 export const cssFiles = [
   "v2-screen-fw-map",
   "v2-screen-fw-map-warpop",
   "v2-screen-fw-main",
+  "v2-screen-fw-army-setup",
 ];
 
-export default function V2MainScreen05FwMapWarpop() {
+export default function V2MainScreen05FwMapWarpop({ children }) {
   return (
     <div className="main world1">
       <div className="main-bg fw-map"></div>
@@ -32,91 +35,11 @@ export default function V2MainScreen05FwMapWarpop() {
       </div>
 
       <div className="fw-map-claim-box-all fw">
-        <div className="fw-map-claim-box"></div>
-        <div className="fw-map-claim-box fr1 w1">
-          <div className="fw-icon-fr">
-            <img src="img/v2-fw-icon-fr1.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-ws">
-            <img src="img/v2-fw-icon-w1.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-sword">
-            <img src="img/v2-fw-icon-w3.png" loading="lazy" />
-          </div>
-        </div>
-        <div className="fw-map-claim-box fr1">
-          <div className="fw-icon-fr">
-            <img src="img/v2-fw-icon-fr1.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-ws">
-            <img src="img/v2-fw-icon-w2.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-sword">
-            <img src="img/v2-fw-icon-w3.png" loading="lazy" />
-          </div>
-        </div>
-        <div className="fw-map-claim-box fr1"></div>
-        <div className="fw-map-claim-box"></div>
-        <div className="fw-map-claim-box">
-          <div className="fw-icon-sword your">
-            <img src="img/v2-fw-icon-shield-2.png" />
-          </div>
-        </div>
-        <div className="fw-map-claim-box fr2 select">
-          <div className="fw-icon-fr">
-            <img src="img/v2-fw-icon-fr2.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-ws">
-            <img src="img/v2-fw-icon-w2.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-sword">
-            <img src="img/v2-fw-icon-w3.png" loading="lazy" />
-          </div>
-        </div>
-        <div className="fw-map-claim-box fr2"></div>
-        <div className="fw-map-claim-box fr2"></div>
-        <div className="fw-map-claim-box fr2"></div>
-        <div className="fw-map-claim-box">
-          <div className="fw-icon-fr">
-            <img src="img/v2-fw-icon-fr3.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-ws">
-            <img src="img/v2-fw-icon-w1.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-sword">
-            <img src="img/v2-fw-icon-w3.png" loading="lazy" />
-          </div>
-        </div>
-        <div className="fw-map-claim-box"></div>
-        <div className="fw-map-claim-box"></div>
-        <div className="fw-map-claim-box"></div>
-        <div className="fw-map-claim-box fr3">
-          <div className="fw-icon-fr">
-            <img src="img/v2-fw-icon-fr3.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-ws">
-            <img src="img/v2-fw-icon-w2.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-sword">
-            <img src="img/v2-fw-icon-w3.png" loading="lazy" />
-          </div>
-        </div>
-        <div className="fw-map-claim-box fr3"></div>
-        <div className="fw-map-claim-box fr3">
-          <div className="fw-icon-fr">
-            <img src="img/v2-fw-icon-fr1.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-ws">
-            <img src="img/v2-fw-icon-w1.png" loading="lazy" />
-          </div>
-          <div className="fw-icon-sword">
-            <img src="img/v2-fw-icon-w3.png" loading="lazy" />
-          </div>
-        </div>
-        <div className="fw-map-claim-box fr3"></div>
-        <div className="fw-map-claim-box fr3"></div>
-        <div className="fw-map-claim-box fr3"></div>
+        {mapCell.map((item, index) =>
+          index > 19 ? null : <MapCell key={index} index={index} {...item} />,
+        )}
       </div>
+
       <div className="fw-round-box-all">
         <div className="fw-round-box-name">раунд</div>
         <div className="fw-round-box">
@@ -138,6 +61,9 @@ export default function V2MainScreen05FwMapWarpop() {
           <div className="fw-round-num">16</div>
         </div>
       </div>
+
+      <Warpop />
+      {children}
     </div>
   );
 }

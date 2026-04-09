@@ -2795,6 +2795,24 @@ const girleCards = [
     count: "81 / +12%",
     heroClass: "druid",
   },
+  // {
+  //   className: "selectable cardAva",
+  //   itemPic: "img/images/mercenaries/mer-06-ava.jpg",
+  //   count: "81 / +12%",
+  //   heroClass: "",
+  // },
+  // {
+  //   className: "selectable cardAva",
+  //   itemPic: "img/images/mercenaries/mer-06-ava.jpg",
+  //   count: "81 / +12%",
+  //   heroClass: "",
+  // },
+  // {
+  //   className: "selectable cardAva",
+  //   itemPic: "img/images/mercenaries/mer-06-ava.jpg",
+  //   count: "81 / +12%",
+  //   heroClass: "",
+  // },
 ];
 
 export default girleCards;
