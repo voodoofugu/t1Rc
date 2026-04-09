@@ -49,21 +49,22 @@ export default function PageBox() {
       name: "scrollTop",
       value: Math.round(scrollTopValue) || false,
       onLoad: (value) => {
-        if (!neededHash) return;
+        if (neededHash) return;
         setScrollNew((prev) => ({ ...prev, value }));
       },
     },
   ]);
 
   useLayoutEffect(() => {
-    if (neededHash) return; // ранний выход
+    if (!neededHash) return; // ранний выход
+    console.log("neededHash", neededHash);
 
     const hashParts = neededHash.substring(3).split("/");
     setScrollTopValue(Number(hashParts[1]));
     setScrollNew((prev) => ({
       ...prev,
       value: Number(hashParts[1]),
-      duration: 0,
+      duration: 100,
     }));
   }, []);
 
