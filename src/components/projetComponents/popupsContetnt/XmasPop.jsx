@@ -9,7 +9,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";
 
-const girlImg = "images/hero-all/tithero-735/icons/break-girl";
+const girlImg = "images/hero-all/tithero-743/icons/break-girl";
 
 function XmasPop1({ setNewPopClass }) {
   return (
@@ -456,7 +456,7 @@ export default function XmasPop({ event }) {
     nexus.set((prev) => ({
       popupState: {
         ...prev.popupState,
-        mpopClass: `m-popup ${classN ? classN : "xmas-pop1"} ${event}`,
+        mpopClass: `m-popup ${classN ? classN : "xmas-pop1"}`,
       },
     }));
 
