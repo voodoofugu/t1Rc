@@ -2,6 +2,26 @@ import { useState, useEffect } from "react";
 import nexus from "nexus";
 import ItemBox from "../UIComponents/ItemBox";
 
+import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import ScrollThumb from "../UIComponents/ScrollThumb";
+
+function GateElement({ hole, handleMenuClick, num }) {
+  return (
+    <div
+      className={`nm-pop-stupen-buble-box ${num < 3 ? "open" : "close"}`}
+      onClick={() => handleMenuClick("magicStage")}
+    >
+      <div className="nm-pop-stupen-buble">
+        <img src={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}></img>
+      </div>
+      <div className="nm-pop-stupen-name">
+        {hole ? `gate ${num}` : `stage ${num}`}
+      </div>
+    </div>
+  );
+}
+const allElementsArr = Array.from({ length: 10 }, (_, i) => i + 1);
+
 function NmPopContentChest({ hole }) {
   return (
     <div className="nm-pop-content">
@@ -9,7 +29,9 @@ function NmPopContentChest({ hole }) {
         <ItemBox
           className="wh130"
           count="27"
-          itemPic={hole ? "img/hole/holeChest@2x.png" : "img/v2-ns-chest.png"}
+          itemPic={
+            hole ? "img/hole/holeChest@2x.png" : "img/hole/towerChest.png"
+          }
         />
         <div className="color-btn ">
           <div className="color-btn-text">
@@ -114,9 +136,37 @@ function NmPopContentMagic({ handleMenuClick, hole }) {
           <div className="countValue">0</div>
         </div>
       )}
-      <div className="koi-arrow slick-disabled"></div>
-      <div className="koi-arrow right"></div>
-      <div className="stageWrap">
+
+      <MorphScroll
+        className="stageWrap"
+        size={[750, 350]}
+        objectsSize={[150, "size"]}
+        progressTrigger={{
+          arrows: {
+            element: <div className="koi-arrow right" />,
+            contentReduce: false,
+            loop: true,
+            size: 50,
+          },
+          content: true,
+        }}
+        type="slider"
+        edgeGradient={{ color: "#202a64" }}
+        direction="x"
+      >
+        {allElementsArr.map((v) => {
+          return (
+            <GateElement
+              key={v}
+              hole={hole}
+              handleMenuClick={handleMenuClick}
+              num={v}
+            />
+          );
+        })}
+      </MorphScroll>
+
+      {/* <div className="stageWrap">
         <div style={{ width: "max-content", display: "flex" }}>
           <div style={{ width: "152px" }}>
             <div
@@ -186,10 +236,11 @@ function NmPopContentMagic({ handleMenuClick, hole }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
+
 function NmPopContentMagicStage({ handleMenuClick, hole }) {
   return (
     <div className="nm-pop-content">
@@ -378,7 +429,7 @@ function NmPopContentOffer({ hole }) {
   );
 }
 
-export default function MnPopupNsaleMain({ hole }) {
+function MnPopupNsaleMain({ hole }) {
   const [activeMenu, setActiveMenu] = useState("chest");
 
   useEffect(() => {
@@ -451,9 +502,7 @@ export default function MnPopupNsaleMain({ hole }) {
           }`}
           onClick={() => handleMenuClick("chest")}
         >
-          <div className="mn-pop-menu-pic">
-            {hole ? "" : <img src="img/v2-ns-chest.png" alt="Chest" />}
-          </div>
+          <div className="mn-pop-menu-pic" />
           <div className="mn-pop-menu-text">chest</div>
         </div>
         <div
@@ -464,13 +513,7 @@ export default function MnPopupNsaleMain({ hole }) {
           }`}
           onClick={() => handleMenuClick("magic")}
         >
-          <div className="mn-pop-menu-pic">
-            {hole ? (
-              ""
-            ) : (
-              <img src="img/evPopArts/magicBall_icn.png" alt="Magic" />
-            )}
-          </div>
+          <div className="mn-pop-menu-pic" />
           <div className="mn-pop-menu-text">{hole ? "gates" : "magic"}</div>
         </div>
         <div
@@ -479,9 +522,7 @@ export default function MnPopupNsaleMain({ hole }) {
           }`}
           onClick={() => handleMenuClick("fountain")}
         >
-          <div className="mn-pop-menu-pic">
-            {hole ? "" : <img src="img/v2-ns-coin2.png" alt="Fountain" />}
-          </div>
+          <div className="mn-pop-menu-pic" />
           <div className="mn-pop-menu-text">{hole ? "source" : "fountain"}</div>
         </div>
         <div
@@ -490,9 +531,7 @@ export default function MnPopupNsaleMain({ hole }) {
           }`}
           onClick={() => handleMenuClick("offer")}
         >
-          <div className="mn-pop-menu-pic">
-            {hole ? "" : <img src="img/v2-ns-money.png" alt="Offer" />}
-          </div>
+          <div className="mn-pop-menu-pic" />
           <div className="mn-pop-menu-text">offer</div>
         </div>
       </div>
@@ -500,3 +539,5 @@ export default function MnPopupNsaleMain({ hole }) {
     </>
   );
 }
+
+export default MnPopupNsaleMain;

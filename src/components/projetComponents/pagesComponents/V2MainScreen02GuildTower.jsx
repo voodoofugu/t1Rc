@@ -310,7 +310,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                             type: "open",
                             data: {
                               popCont: "MnPopupNsaleMain",
-                              props: { hole: `${hole}` },
+                              props: { hole },
                               btnXClass: "mn-pop-btn-close-x",
                             },
                           });
