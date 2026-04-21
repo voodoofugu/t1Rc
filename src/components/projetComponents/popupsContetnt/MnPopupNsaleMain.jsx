@@ -11,12 +11,8 @@ function GateElement({ hole, handleMenuClick, num }) {
       className={`nm-pop-stupen-buble-box ${num < 3 ? "open" : "close"}`}
       onClick={() => handleMenuClick("magicStage")}
     >
-      <div className="nm-pop-stupen-buble">
-        <img src={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}></img>
-      </div>
-      <div className="nm-pop-stupen-name">
-        {hole ? `gate ${num}` : `stage ${num}`}
-      </div>
+      <div className="nm-pop-stupen-buble"></div>
+      <div className="nm-pop-stupen-name">gate {num}</div>
     </div>
   );
 }
@@ -486,6 +482,7 @@ function MnPopupNsaleMain({ hole }) {
       <div className="mn-pop-bg-all">
         <div className="mn-pop-bg"></div>
       </div>
+
       <div className="mn-pop-timer">
         <div className="mn-pop-timer-text">time left:</div>
         <div className="mn-pop-timer-time">
@@ -535,6 +532,7 @@ function MnPopupNsaleMain({ hole }) {
           <div className="mn-pop-menu-text">offer</div>
         </div>
       </div>
+
       {contentComponent}
     </>
   );
