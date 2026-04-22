@@ -139,11 +139,12 @@ function NmPopContentMagic({ handleMenuClick, hole }) {
         objectsSize={[150, "size"]}
         progressTrigger={{
           arrows: {
-            element: <div className="koi-arrow right" />,
+            element: <div className="koi-arrow" />,
             contentReduce: false,
             loop: true,
             size: 50,
           },
+          progressElement: <div className="stage-progress" />,
           content: true,
         }}
         type="slider"
