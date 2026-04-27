@@ -111,7 +111,7 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/hero-all/tithero-731/x2/tithero-4.jpg",
+        "img/images/superhero/suphero-1011/x2/sh-6.jpg",
         "Velvet Wings",
         [
           "img/evPopArts/ic-butterfly-black.png",
@@ -122,7 +122,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/ic-butterfly-purple.png",
         ],
         "img/evPopArts/ic-butterfly-pot.png",
-        "img/bGs/natureBg7.jpg",
+        "img/bGs/natureBg8.jpg",
       ],
     },
     {
