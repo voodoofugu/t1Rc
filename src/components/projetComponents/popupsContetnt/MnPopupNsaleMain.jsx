@@ -9,13 +9,16 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 function GateElement({ hole, handleMenuClick, num }) {
   return (
-    <div
-      className={`nm-pop-stupen-buble-box ${num < 3 ? "open" : "close"}`}
-      onClick={() => handleMenuClick("magicStage")}
-    >
-      <div className="nm-pop-stupen-buble"></div>
-      <div className="nm-pop-stupen-name">gate {num}</div>
-    </div>
+    <>
+      <div
+        className={`nm-pop-stupen-buble-box ${num < 3 ? "open" : "close"}`}
+        onClick={() => handleMenuClick("magicStage")}
+      >
+        <div className="nm-pop-stupen-buble"></div>
+        <div className="nm-pop-stupen-name">gate {num}</div>
+      </div>
+      {hole ? null : <div className="lanternsLight" />}
+    </>
   );
 }
 const allElementsArr = Array.from({ length: 10 }, (_, i) => i + 1);
