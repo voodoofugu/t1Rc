@@ -17,7 +17,11 @@ function GateElement({ hole, handleMenuClick, num }) {
         <div className="nm-pop-stupen-buble"></div>
         <div className="nm-pop-stupen-name">gate {num}</div>
       </div>
-      {hole ? null : <div className="lanternsLight" />}
+      {hole ? null : (
+        <div className="lanternsLight">
+          <div className="backLight" />
+        </div>
+      )}
     </>
   );
 }
