@@ -25,12 +25,18 @@ function GateElement({ hole, handleMenuClick, num }) {
     </>
   );
 }
-const allElementsArr = Array.from({ length: 10 }, (_, i) => i + 1);
+const elementsArr = (count) => {
+  return Array.from({ length: count }, (_, i) => i + 1);
+};
 
 function NmPopContentChest({ hole }) {
   return (
     <div className="nm-pop-content">
-      <div className="nsale-main-left-box">
+      <ItemBox
+        className="wh320 simpleItem"
+        itemPic={hole ? "img/hole/holeChest@2x.png" : "img/hole/towerChest.png"}
+      />
+      {/* <div className="nsale-main-left-box">
         <ItemBox
           className="wh130"
           count="27"
@@ -54,26 +60,9 @@ function NmPopContentChest({ hole }) {
       <div className="nsale-main-r-top-box">
         <div className="nsale-main-r-top-text2">
           {hole ? (
-            <>
-              During the event, you will receive Sacred Chests upon defeating
-              monsters in the depths of <b>the abyss</b>. Open these{" "}
-              <b>Sacred Chests</b> to obtain <b>Spiritual Keys</b>, which can be
-              used to <b>unlock the Gates</b> and reveal{" "}
-              <b>bountiful rewards</b> within. In addition to the Spiritual
-              Keys, there are also other generous gifts waiting for you inside
-              the Sacred Chests!
-            </>
+            <>the Sacred Chests!</>
           ) : (
-            <>
-              During the event, you'll obtain Magic Boxes when killing monsters
-              in&nbsp;
-              <b style={{ color: "rgb(84, 71, 70)", fontSize: "16px" }}>
-                {hole ? "Dark Hole" : "Dark Tower"}
-              </b>
-              .<br />
-              Open boxes to get generous rewards, collect magic energy and
-              exchange it for unique girls and prizes!
-            </>
+            <>exchange it for unique girls and prizes!</>
           )}
         </div>
         <div className="color-btn gblue koi-rb">
@@ -121,7 +110,7 @@ function NmPopContentChest({ hole }) {
           />
         </div>
       </div>
-      <div className="nsale-plus"></div>
+      <div className="nsale-plus"></div> */}
     </div>
   );
 }
@@ -157,10 +146,10 @@ function NmPopContentMagic({ handleMenuClick, hole }) {
           content: true,
         }}
         type="slider"
-        edgeGradient={{ color: "#202a64" }}
+        edgeGradient={{ color: "#2b2e43" }}
         direction="x"
       >
-        {allElementsArr.map((v) => {
+        {elementsArr(15).map((v) => {
           return (
             <GateElement
               key={v}
@@ -176,6 +165,27 @@ function NmPopContentMagic({ handleMenuClick, hole }) {
 }
 
 function NmPopContentMagicStage({ handleMenuClick, hole }) {
+  const currencyValue = 150; // просто пример валюты ивента
+
+  const Card = ({ itemClass, img, count, cost, rare, cardType, purchased }) => {
+    return (
+      <div className="np-pop-stupen-pop-rew-box">
+        <ItemBox
+          className={`wh94${itemClass ? " " + itemClass : ""}${purchased ? " check" : ""}`}
+          count={count}
+          itemPic={img}
+          rare={rare}
+          cardType={cardType}
+        />
+        <Button
+          className={`buy-btn${currencyValue < cost && !purchased ? " disabled" : ""}${purchased ? " green check" : ""}`}
+          textIcn={purchased ? "" : "img/v2-ns-ball.png"}
+          text={purchased ? "sold" : `${cost}`}
+        />
+      </div>
+    );
+  };
+
   return (
     <div className="nm-pop-content">
       <FraimedTitle
@@ -185,70 +195,37 @@ function NmPopContentMagicStage({ handleMenuClick, hole }) {
 
       <div className="nmPopCount">
         <div className="countPic"></div>
-        <div className="countValue">0</div>
+        <div className="countValue">{currencyValue}</div>
       </div>
       {hole ? (
         ""
       ) : (
         <div className="nmPopCount countTwo">
           <div className="countPic"></div>
-          <div className="countValue">0</div>
+          <div className="countValue">{currencyValue}</div>
         </div>
       )}
       <div className="np-pop-stupen-pop-m-text">
         Unlock the next stage by claiming any 2 items
       </div>
       <div className="np-pop-stupen-pop-rew-box-all">
-        <div className="np-pop-stupen-pop-rew-box">
-          <ItemBox
-            className="new"
-            count="50"
-            itemPic="img/images/goddess/goddess-4/x2/ava/goddess-ava-1.jpg"
-          />
-          <div className="np-pop-stupen-pop-rew-box-limit">limit: 1</div>
-          <div className="color-btn">
-            <div className="color-btn-text">
-              <div>
-                buy
-                <span className="f-ball"></span>
-                100
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="np-pop-stupen-pop-rew-box">
-          <ItemBox count="20" itemPic="img/trophy/trophy/ava/003_ava_1.png" />
-          <div className="np-pop-stupen-pop-rew-box-limit">limit: 1</div>
-          <div className="color-btn" style={{ filter: "grayscale(1)" }}>
-            <div className="color-btn-text">
-              <div>
-                buy
-                <span className="f-ball"></span>
-                100
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="np-pop-stupen-pop-rew-box">
-          <ItemBox
-            count="10"
-            itemPic="img/images/superhero/suphero-10/x1/avatar/10sh-ava-1.jpg"
-          />
-          <div className="np-pop-stupen-pop-rew-box-limit">limit: 1</div>
-          <div className="color-btn" style={{ filter: "grayscale(1)" }}>
-            <div className="color-btn-text">
-              <div>
-                buy
-                <span className="f-ball"></span>
-                100
-              </div>
-            </div>
-          </div>
-        </div>
+        <Card
+          itemClass="new"
+          img="img/images/goddess/goddess-4/x2/ava/goddess-ava-1.jpg"
+          count="50"
+          cost="100"
+          cardType="a"
+          purchased
+        />
+        <Card
+          img="img/images/superhero/suphero-1009/x1/avatar/sh-ava-1.jpg"
+          count="20"
+          cost="150"
+          rare="e"
+          cardType="s"
+        />
+        <Card img="img/evPopArts/angel_spirit_1.png" count="10" cost="200" />
       </div>
-      {/* <div className="color-btn back" onClick={() => handleMenuClick("magic")}>
-        <div className="color-btn-text">back</div>
-      </div> */}
 
       <Button className="back" text onClick={() => handleMenuClick("magic")} />
     </div>
@@ -325,43 +302,48 @@ function NmPopContentFountain({ hole }) {
 }
 
 function NmPopContentOffer({ hole }) {
+  const ExampleOffer = () => {
+    return (
+      <div className="nm-pop-offer-box-all">
+        <div className="n-sale-box">
+          <ItemBox
+            count="1250"
+            itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
+          />
+          <ItemBox
+            count="100"
+            itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
+          />
+          <ItemBox count="50" itemPic="img/card-ic-koloda2@2x.png" />
+        </div>
+        <div className="store-button">
+          <div className="but-price">$49.99</div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="nm-pop-content">
       <div className="nm-pop-offer-scroll-box">
-        <div className="nm-pop-offer-scroll">
-          <div className="nm-pop-offer-box-all">
-            <div className="n-sale-box">
-              <ItemBox
-                count="300"
-                itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
-              />
-              <ItemBox
-                count="25"
-                itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
-              />
-              <ItemBox count="25" itemPic="img/card-ic-koloda2@2x.png" />
-            </div>
-            <div className="store-button">
-              <div className="but-price">$19.99</div>
-            </div>
-          </div>
-          <div className="nm-pop-offer-box-all">
-            <div className="n-sale-box">
-              <ItemBox
-                count="1250"
-                itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
-              />
-              <ItemBox
-                count="100"
-                itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
-              />
-              <ItemBox count="50" itemPic="img/card-ic-koloda2@2x.png" />
-            </div>
-            <div className="store-button">
-              <div className="but-price">$49.99</div>
-            </div>
-          </div>
-        </div>
+        <MorphScroll
+          className="nm-pop-offer"
+          size={[750, 350]}
+          objectsSize={[650, 114]}
+          progressTrigger={{
+            wheel: true,
+            progressElement: <ScrollThumb />,
+          }}
+          edgeGradient={{ color: "#2b2e43" }}
+          wrapperAlign={"center"}
+          wrapperMargin={20}
+          gap={20}
+          scrollBarEdge={20}
+        >
+          {elementsArr(3).map((v) => {
+            return <ExampleOffer key={v} />;
+          })}
+        </MorphScroll>
       </div>
     </div>
   );
@@ -434,7 +416,12 @@ function MnPopupNsaleMain({ hole }) {
       <div className="mn-pop-title">
         {hole ? "Tower Magic Chest Event" : "Tower Magic Box Event"}
       </div>
-      <div className="mn-pop-btn-close-x" />
+
+      <Button
+        className="imgOnly close"
+        img="img/v2-nsale-bg-btnclose.png"
+        onClick={() => nexus.acts.handlePopup({ type: "close" })}
+      />
 
       <div className="mn-pop-menu-box">
         <div
