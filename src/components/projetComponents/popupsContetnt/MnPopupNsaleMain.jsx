@@ -182,7 +182,7 @@ function NmPopContentMagicStage({ handleMenuClick, hole }) {
 
   const Card = ({ itemClass, img, count, cost, rare, cardType, purchased }) => {
     return (
-      <div className="np-pop-stupen-pop-rew-box">
+      <div className={`np-pop-stupen-pop-rew-box${purchased ? " sold" : ""}`}>
         <ItemBox
           className={`wh94${itemClass ? " " + itemClass : ""}${purchased ? " check" : ""}`}
           count={count}
