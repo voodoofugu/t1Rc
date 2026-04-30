@@ -30,11 +30,24 @@ const elementsArr = (count) => {
 };
 
 function NmPopContentChest({ hole }) {
+  const chestsValue = 150; // просто пример
+
   return (
     <div className="nm-pop-content">
       <ItemBox
-        className="wh320 simpleItem"
-        itemPic={hole ? "img/hole/holeChest@2x.png" : "img/hole/towerChest.png"}
+        className="wh280 simpleItem maim-chest"
+        itemPic={
+          hole ? "img/hole/holeChest@2x.png" : "img/hole/towerChest-open.png"
+        }
+        count={chestsValue}
+      />
+      <Button
+        className={`max j-blue open-btn${!chestsValue ? " disabled" : ""}`}
+        text="Open Chest"
+      />
+      <Button
+        className={`max j-violet open-btn${!chestsValue ? " disabled" : ""}`}
+        text="Open All"
       />
       {/* <div className="nsale-main-left-box">
         <ItemBox
