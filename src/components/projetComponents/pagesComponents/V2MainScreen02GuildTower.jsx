@@ -21,6 +21,8 @@ import HeroMenuBox from "../UIComponents/HeroMenuBox";
 // import SwitchTab from "../UIComponents/SwitchTab";
 import RatingPedBox from "../UIComponents/RatingPedBox";
 import ResCount from "../UIComponents/ResCount";
+import Button from "../UIComponents/Button";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 import TitHeroBox from "../UIComponents/TitHeroBox";
 
@@ -107,7 +109,6 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
       <div className="quest-box-all">
         <div className="quest-box-scroll">
           <div className="quest-box">
-            {/* кнопки */}
             <div
               className="quest"
               onClick={() => {
@@ -183,7 +184,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                   type: "open",
                   data: {
                     popCont: "MnPopupNsaleMain",
-                    props: { hole: `${hole}` },
+                    props: { hole },
                     btnXClass: "mn-pop-btn-close-x",
                   },
                 });
@@ -194,7 +195,7 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                 src={
                   hole === true
                     ? "img/hole/holeChest.png"
-                    : "img/v2-ns-chest.png"
+                    : "img/hole/towerChest.png"
                 }
                 loading="lazy"
               />
@@ -298,13 +299,37 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                 {fight === false && (
                   <>
                     <div className="tower-right-wrap">
-                      <div className="btn-close-x"></div>
-                      <div className="tab-panel-box-title">
-                        {hole === true ? "dark hole" : "dark tower"}
-                      </div>
-                      <div className="color-btn-info"></div>
-                      <div
-                        className="color-btn gblue rb-koi"
+                      <FraimedTitle
+                        className="tabPanelTit"
+                        text={hole === true ? "dark hole" : "dark tower"}
+                      />
+
+                      <Button
+                        className="info"
+                        text="i"
+                        onClick={() => {
+                          nexus.acts.handlePopup({
+                            type: "open",
+                            data: {
+                              mpopClass: "m-popup contentOnly framedPop",
+                              popCont: "InfoPopFramed",
+                              props: {
+                                inner:
+                                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                                girlImg: "img/break-girls/break-girl915.png",
+                              },
+                            },
+                          });
+                        }}
+                      />
+                      <Button
+                        className="blue event-pop"
+                        img={
+                          hole
+                            ? "img/hole/holeChest.png"
+                            : "img/hole/towerChest.png"
+                        }
+                        text="Chests 256"
                         onClick={() => {
                           nexus.acts.handlePopup({
                             type: "open",
@@ -315,31 +340,14 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
                             },
                           });
                         }}
-                      >
-                        <img
-                          className="domik"
-                          src={
-                            hole
-                              ? "img/hole/holeChest.png"
-                              : "img/v2-ns-chest.png"
-                          }
-                          loading="lazy"
-                        />
-                        <div className="color-btn-text">
-                          {hole ? "Chests 256" : "Boxes 256"}
-                        </div>
-                      </div>
-                      <div
-                        className="color-btn questBtn"
+                      />
+                      <Button
+                        className="darkOrange questBtn"
+                        img="img/questChainIcn.png"
+                        text="Quest Chain"
                         onClick={() => setLeftPanel(false)}
-                      >
-                        <img
-                          className="icn"
-                          src="img/questChainIcn.png"
-                          loading="lazy"
-                        />
-                        <div className="color-btn-text">Quest Chain</div>
-                      </div>
+                      />
+
                       <HeroMenuBox
                         activeMenu={activeMenu}
                         setActiveMenu={setActiveMenu}

@@ -3,7 +3,7 @@ import type { MyState } from "../nexusConfig";
 
 let timeoutId: NodeJS.Timeout | null = null;
 
-const handlePopup = createActs<MyState>((_, set) => {
+const handlePopup = createActs<MyState>((get, set) => {
   function handlePopupFunc(
     type: "open" | "close",
     data?: Partial<MyState["popupState"]>,
@@ -15,13 +15,41 @@ const handlePopup = createActs<MyState>((_, set) => {
           timeoutId = null;
         }
 
-        set({
-          popupState: {
-            popupVisible: true,
-            dialogEmersion: "show dialog-emersion-enter",
-            ...data,
-          },
-        });
+        // обрабатываем закрытие popup
+        const isVisible = get("popupState")?.popupVisible;
+
+        if (isVisible) {
+          set((prev) => ({
+            popupState: {
+              ...prev.popupState,
+              dialogEmersion: "show dialog-emersion-exit",
+            },
+          }));
+
+          timeoutId = setTimeout(() => {
+            set({
+              popupState: null,
+            });
+          }, 200);
+          timeoutId = setTimeout(() => {
+            set({
+              popupState: {
+                popupVisible: true,
+                dialogEmersion: "show dialog-emersion-enter",
+                ...data,
+              },
+            });
+            timeoutId = null;
+          }, 201);
+        } else {
+          set({
+            popupState: {
+              popupVisible: true,
+              dialogEmersion: "show dialog-emersion-enter",
+              ...data,
+            },
+          });
+        }
 
         return;
       }

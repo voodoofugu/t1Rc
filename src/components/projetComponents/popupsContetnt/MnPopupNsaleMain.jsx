@@ -35,95 +35,89 @@ function NmPopContentChest({ hole }) {
   return (
     <div className="nm-pop-content">
       <ItemBox
-        className="wh280 simpleItem maim-chest"
+        className="wh260 simpleItem maim-chest"
         itemPic={
-          hole ? "img/hole/holeChest@2x.png" : "img/hole/towerChest-open.png"
+          hole
+            ? "img/hole/holeChest-open@2x.png"
+            : "img/hole/towerChest-open.png"
         }
-        count={chestsValue}
-      />
+      >
+        <Button className="info info-btn" text="i" />
+
+        <div className="rewards-box">
+          <div className="rewards-tit">Possible Rewards:</div>
+          <div className="rewards-wrap">
+            <ItemBox
+              className="wh68"
+              count="1"
+              countOut="16.67%"
+              itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
+            />
+            <ItemBox
+              className="wh68"
+              count="gems"
+              countOut="16.67%"
+              itemPic="img/change-ic-gem-master.png"
+            />
+            <ItemBox
+              className="wh68"
+              count="1h"
+              countOut="16.67%"
+              itemPic="img/change-ic-gold.png"
+            />
+            <ItemBox
+              className="wh68"
+              count="pack"
+              countOut="16.67%"
+              itemPic="img/change-ic-essence.png"
+            />
+            <ItemBox
+              className="wh68"
+              count="15K"
+              countOut="16.67%"
+              itemPic="img/v2-res-mithril2.png"
+            />
+            <ItemBox
+              className="wh68"
+              count="1"
+              countOut="16.67%"
+              itemPic="img/change-ic-ticket.png"
+            />
+            <ItemBox
+              className="wh68"
+              count="1"
+              countOut="100%"
+              itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
+            />
+          </div>
+        </div>
+      </ItemBox>
       <Button
         className={`max j-blue open-btn${!chestsValue ? " disabled" : ""}`}
-        text="Open Chest"
+        text={`Open Chest ${chestsValue}`}
       />
       <Button
-        className={`max j-violet open-btn${!chestsValue ? " disabled" : ""}`}
+        className={`max j-violet open-btn${!chestsValue ? " disabled" : ""} last`}
         text="Open All"
       />
-      {/* <div className="nsale-main-left-box">
-        <ItemBox
-          className="wh130"
-          count="27"
-          itemPic={
-            hole ? "img/hole/holeChest@2x.png" : "img/hole/towerChest.png"
-          }
-        />
-        <div className="color-btn ">
-          <div className="color-btn-text">
-            {hole ? "open chest" : "open box"}
-          </div>
-        </div>
-        <div className="color-btn ">
-          <div className="color-btn-text">open all</div>
-        </div>
-        <ItemBox
-          count="1"
-          itemPic={hole ? "img/hole/holeKay.png" : "img/v2-ns-ball.png"}
-        />
-      </div>
-      <div className="nsale-main-r-top-box">
-        <div className="nsale-main-r-top-text2">
-          {hole ? (
-            <>the Sacred Chests!</>
-          ) : (
-            <>exchange it for unique girls and prizes!</>
-          )}
-        </div>
-        <div className="color-btn gblue koi-rb">
-          <img
-            className="domik"
-            src={hole ? "img/hole/holeIcn.png" : "img/rating-sign-gold@1x.png"}
-          ></img>
-          <div className="color-btn-text">
-            {hole ? "Forbidden ABYSS" : "Dark Tower"}
-          </div>
-        </div>
-      </div>
-      <div className="nsale-main-r-bottom-box">
-        <div className="nsale-main-r-bottom-posrew">possible rewards</div>
-        <div className="nsale-pr-box-all">
-          <ItemBox
-            count="1"
-            countOut="16.67%"
-            itemPic={hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}
-          />
-          <ItemBox
-            count="gems"
-            countOut="16.67%"
-            itemPic="img/change-ic-gem-master.png"
-          />
-          <ItemBox
-            count="1h"
-            countOut="16.67%"
-            itemPic="img/change-ic-gold.png"
-          />
-          <ItemBox
-            count="pack"
-            countOut="16.67%"
-            itemPic="img/change-ic-essence.png"
-          />
-          <ItemBox
-            count="15K"
-            countOut="16.67%"
-            itemPic="img/v2-res-mithril2.png"
-          />
-          <ItemBox
-            count="1"
-            countOut="16.67%"
-            itemPic="img/change-ic-ticket.png"
-          />
-        </div>
-      </div>
-      <div className="nsale-plus"></div> */}
+      <Button
+        className="info"
+        text="i"
+        onClick={() => {
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popCont: "InfoPopFramed",
+              props: {
+                inner:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                girlImg: "img/break-girls/break-girl915.png",
+              },
+            },
+          });
+        }}
+      />
     </div>
   );
 }
