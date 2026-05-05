@@ -100,24 +100,6 @@ function NmPopContentChest({ hole }) {
         className={`max j-violet open-btn${!chestsValue ? " disabled" : ""} last`}
         text="Open All"
       />
-      <Button
-        className="info"
-        text="i"
-        onClick={() => {
-          nexus.acts.handlePopup({
-            type: "open",
-            data: {
-              mpopClass: "m-popup contentOnly framedPop",
-              popCont: "InfoPopFramed",
-              props: {
-                inner:
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
-                girlImg: "img/break-girls/break-girl915.png",
-              },
-            },
-          });
-        }}
-      />
     </div>
   );
 }
@@ -425,8 +407,26 @@ function MnPopupNsaleMain({ hole }) {
       </div>
 
       <Button
-        className="imgOnly close"
-        img="img/v2-nsale-bg-btnclose.png"
+        className="info"
+        text="i"
+        onClick={() => {
+          nexus.acts.handlePopup({
+            type: "open",
+            data: {
+              mpopClass: "m-popup contentOnly framedPop",
+              popCont: "InfoPopFramed",
+              props: {
+                inner:
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book ",
+                girlImg: "img/break-girls/break-girl915.png",
+              },
+            },
+          });
+        }}
+      />
+      <Button
+        className="exit"
+        text="✖"
         onClick={() => nexus.acts.handlePopup({ type: "close" })}
       />
 
