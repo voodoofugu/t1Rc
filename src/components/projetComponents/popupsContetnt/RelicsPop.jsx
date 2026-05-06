@@ -111,18 +111,18 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/superhero/suphero-1011/x2/sh-6.jpg",
-        "Velvet Wings",
+        "img/images/hero-all/tithero-762/x2/tithero-4.jpg",
+        "Melt Rush",
         [
-          "img/evPopArts/ic-butterfly-black.png",
-          "img/evPopArts/ic-butterfly-blue.png",
-          "img/evPopArts/ic-butterfly-darkGreen.png",
-          "img/evPopArts/ic-butterfly-green.png",
-          "img/evPopArts/ic-butterfly-orange.png",
-          "img/evPopArts/ic-butterfly-purple.png",
+          "img/evPopArts/ice-cream-white.png",
+          "img/evPopArts/ice-cream-blue.png",
+          "img/evPopArts/ice-cream-brown.png",
+          "img/evPopArts/ice-cream-green.png",
+          "img/evPopArts/ice-cream-orange.png",
+          "img/evPopArts/ice-cream-lilac.png",
         ],
-        "img/evPopArts/ic-butterfly-pot.png",
-        "img/bGs/natureBg8.jpg",
+        "img/evPopArts/ice-cream-box.png",
+        "img/bGs/beachBg8.jpg",
       ],
     },
     {
