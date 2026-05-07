@@ -9,7 +9,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";
 
-const girlImg = "images/hero-all/tithero-743/icons/break-girl";
+const girlImg = "images/hero-all/tithero-760/icons/break-girl";
 
 function XmasPop1({ setNewPopClass }) {
   return (
@@ -20,9 +20,7 @@ function XmasPop1({ setNewPopClass }) {
       <div className="xmas-box-all">
         <div className="xmas-collect-box-all">
           <div className="xmas-collect-box">
-            <div className="xmas-collect-box-text">
-              collect dildos to get xxxmas girls!
-            </div>
+            <div className="xmas-collect-box-text">SIREN STRINGS PASS</div>
           </div>
           <div className="xmas-squad-holder">
             <ItemBox
@@ -456,7 +454,7 @@ export default function XmasPop({ event }) {
     nexus.set((prev) => ({
       popupState: {
         ...prev.popupState,
-        mpopClass: `m-popup ${classN ? classN : "xmas-pop1"}`,
+        mpopClass: `m-popup ${classN ? classN : "xmas-pop1"} xmas`,
       },
     }));
 

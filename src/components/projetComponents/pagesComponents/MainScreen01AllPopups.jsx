@@ -478,6 +478,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "evPopArts/flowerChest",
                 "287:21:43",
                 {
+                  mpopClass: "m-popup xmas",
                   popTit: "Spring Celebration Pass",
                   popCont: "XmasPop",
                   props: { event: "spring" },
