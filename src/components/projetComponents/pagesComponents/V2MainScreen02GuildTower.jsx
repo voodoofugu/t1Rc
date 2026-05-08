@@ -498,45 +498,55 @@ export default function V2MainScreen02GuildTower({ pageName, children }) {
           {leftPanel === false && (
             <TabPanelTowerQuest hole={hole} setLeftPanel={setLeftPanel} />
           )}
-          <TrophyResBoxAll
-            class1={hole === true ? "relicsCards" : "relicset"}
-            class2={hole === true ? "holeGem" : "cards"}
-            onClick1={() => {
-              nexus.acts.handlePopup({
-                type: "open",
-                data: {
-                  mpopClass: "m-popup main-relics-pop tower contentOnly",
-                  popCont: "RelicsPop2",
-                  props: { hole: `${hole}` },
-                },
-              });
-            }}
-            onClick2={() => {
-              nexus.acts.handlePopup({
-                type: "open",
-                data: {
-                  mpopClass: "m-popup essence-buy",
-                  popTit: "Buy Hole Gems",
-                  popCont: "BuyShop",
-                  props: hole
-                    ? {
-                        img1: "hole/holeGem-1",
-                        img2: "hole/holeGem-2",
-                        img3: "hole/holeGem-3",
-                        img4: "hole/holeGem-4",
-                        diamond: true,
-                      }
-                    : {
-                        img1: "v2-gold-ticket2",
-                        img2: "v2-gold-ticket2",
-                        img3: "v2-gold-ticket2",
-                        img4: "v2-gold-ticket2",
-                        diamond: true,
-                      },
-                },
-              });
-            }}
-          />
+
+          <div className="trophy-res-box-all">
+            <ResCount
+              className="fw-main-btlpass"
+              plus
+              value="4.13K"
+              img={`img/${hole ? "hole/relicsCards" : "card-ic-koloda"}.png`}
+              onClick={() => {
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup main-relics-pop tower contentOnly",
+                    popCont: "RelicsPop2",
+                    props: { hole: `${hole}` },
+                  },
+                });
+              }}
+            />
+            <ResCount
+              className="fw-main-btlpass"
+              plus
+              value="4.13K"
+              img={`img/${hole ? "hole/holeGem" : "gold-ticket"}.png`}
+              onClick={() => {
+                nexus.acts.handlePopup({
+                  type: "open",
+                  data: {
+                    mpopClass: "m-popup contentOnly framedPop essence-buy",
+                    popCont: "BuyShop",
+                    props: hole
+                      ? {
+                          img1: "hole/holeGem-1",
+                          img2: "hole/holeGem-2",
+                          img3: "hole/holeGem-3",
+                          img4: "hole/holeGem-4",
+                          diamond: true,
+                        }
+                      : {
+                          img1: "v2-gold-ticket2",
+                          img2: "v2-gold-ticket2",
+                          img3: "v2-gold-ticket2",
+                          img4: "v2-gold-ticket2",
+                          diamond: true,
+                        },
+                  },
+                });
+              }}
+            />
+          </div>
         </div>
         <div className="tabs-all-box">
           <a className="tabs-all heroes selected" href="#/">

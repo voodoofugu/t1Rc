@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import nexus from "nexus";
 import ItemBox from "../UIComponents/ItemBox";
 import FraimedTitle from "../UIComponents/FraimedTitle";
@@ -9,9 +9,11 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 function GateElement({ hole, handleMenuClick, num }) {
   return (
-    <>
+    <div
+      className={`gateElement${hole ? " hole" : ""}${num < 3 ? " open" : ""}`}
+    >
       <div
-        className={`nm-pop-stupen-buble-box ${num < 3 ? "open" : "close"}`}
+        className="nm-pop-stupen-buble-box"
         onClick={() => handleMenuClick("magicStage")}
       >
         <div className="nm-pop-stupen-buble"></div>
@@ -22,27 +24,74 @@ function GateElement({ hole, handleMenuClick, num }) {
           <div className="backLight" />
         </div>
       )}
-    </>
+    </div>
   );
 }
+
 const elementsArr = (count) => {
   return Array.from({ length: count }, (_, i) => i + 1);
 };
 
 function NmPopContentChest({ hole }) {
+  // - refs
+  const popContentRef = useRef(null);
+  const controllerRef = useRef(null); // для очищения анимаций
+
+  // - funcs
+  const chestHandler = () => {
+    controllerRef.current?.abort();
+    controllerRef.current = new AbortController();
+    const { signal } = controllerRef.current;
+
+    popContentRef.current?.classList.add("anim-chest");
+    setTimeout(() => {
+      if (signal.aborted) return;
+
+      popContentRef.current?.classList.add("open-chest");
+      setTimeout(() => {
+        if (signal.aborted) return;
+
+        // открываем попап с наградами
+        nexus.acts.handlePopup({
+          type: "open",
+          data: {
+            mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+            popCont: "CongraPop",
+            props: {
+              rewardsData: [
+                {
+                  itemPic: `${hole ? "img/hole/holeCoin.png" : "img/v2-ns-coin2.png"}`,
+                  count: "150",
+                },
+                {
+                  itemPic: "img/change-ic-gem-master.png",
+                  count: "x20",
+                },
+                {
+                  itemPic: "img/change-ic-gold.png",
+                  count: "1h",
+                },
+              ],
+            },
+          },
+        });
+        setTimeout(() => {
+          if (signal.aborted) return;
+
+          popContentRef.current?.classList.remove("anim-chest");
+          popContentRef.current?.classList.remove("open-chest");
+        }, 600);
+      }, 600);
+    }, 600);
+  };
+
+  // - vars
   const chestsValue = 150; // просто пример
 
   return (
-    <div className="nm-pop-content">
-      <ItemBox
-        className="wh260 simpleItem maim-chest"
-        itemPic={
-          hole
-            ? "img/hole/holeChest-open@2x.png"
-            : "img/hole/towerChest-open.png"
-        }
-      >
-        <Button className="info info-btn" text="i" />
+    <div className="nm-pop-content" ref={popContentRef}>
+      <ItemBox className="wh260 simpleItem maim-chest" itemPic={true}>
+        <Button className="info" text="i" />
 
         <div className="rewards-box">
           <div className="rewards-tit">Possible Rewards:</div>
@@ -92,13 +141,16 @@ function NmPopContentChest({ hole }) {
           </div>
         </div>
       </ItemBox>
+
       <Button
         className={`max j-blue open-btn${!chestsValue ? " disabled" : ""}`}
         text={`Open Chest ${chestsValue}`}
+        onClick={chestHandler}
       />
       <Button
         className={`max j-violet open-btn${!chestsValue ? " disabled" : ""} last`}
         text="Open All"
+        onClick={chestHandler}
       />
     </div>
   );
@@ -135,7 +187,7 @@ function NmPopContentMagic({ handleMenuClick, hole }) {
           content: true,
         }}
         type="slider"
-        edgeGradient={{ color: "#2b2e43" }}
+        edgeGradient={true}
         direction="x"
       >
         {elementsArr(15).map((v) => {
@@ -323,7 +375,7 @@ function NmPopContentOffer({ hole }) {
             wheel: true,
             progressElement: <ScrollThumb />,
           }}
-          edgeGradient={{ color: "#2b2e43" }}
+          edgeGradient={true}
           wrapperAlign={"center"}
           wrapperMargin={20}
           gap={20}

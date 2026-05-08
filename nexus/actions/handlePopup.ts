@@ -27,9 +27,7 @@ const handlePopup = createActs<MyState>((get, set) => {
           }));
 
           timeoutId = setTimeout(() => {
-            set({
-              popupState: null,
-            });
+            set({ popupState: null });
           }, 200);
           timeoutId = setTimeout(() => {
             set({
@@ -40,7 +38,7 @@ const handlePopup = createActs<MyState>((get, set) => {
               },
             });
             timeoutId = null;
-          }, 201);
+          }, 210);
         } else {
           set({
             popupState: {

@@ -9,7 +9,7 @@ export default function TrophyResBoxAll({
   return (
     <div className="trophy-res-box-all">
       <div className={`trophy-res-box ${class1}`}>
-        <div className="trophy-value">696969К</div>
+        <div className="trophy-value">6969К</div>
         {onClick1 ? (
           <div className="trophy-value-btn-add" onClick={onClick1}></div>
         ) : (
@@ -17,7 +17,7 @@ export default function TrophyResBoxAll({
         )}
       </div>
       <div className={`trophy-res-box ${class2}`}>
-        <div className="trophy-value">696969К</div>
+        <div className="trophy-value">6969К</div>
         {onClick1 ? (
           <div className="trophy-value-btn-add" onClick={onClick2}></div>
         ) : (
