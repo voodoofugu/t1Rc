@@ -78,7 +78,6 @@ export default function PageBox() {
         size="auto"
         objectsSize={[238, 156]}
         gap={60}
-        wrapperMargin={[0, 14]}
         progressTrigger={{
           wheel: true,
           progressElement: true,
@@ -86,6 +85,7 @@ export default function PageBox() {
         edgeGradient={{ color: "rgb(199, 210, 254)" }}
         // elementsAlign="center"
         wrapperAlign={["center", "start"]}
+        wrapperMargin={[14, 0, 38, 0]}
         render={{ type: "virtual" }}
         scrollPosition={scrollNew}
         onScrollValue={(_, t) => setScrollTopValue(t)}
