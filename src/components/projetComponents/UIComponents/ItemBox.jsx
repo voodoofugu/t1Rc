@@ -24,7 +24,7 @@ export default function ItemBox({
   arrow, // left, right, top, bottom
   rare,
   heroClass,
-  cardType, // s, h, g
+  cardType, // s, h, g, dh
   squadRank,
   notif,
   sale,
