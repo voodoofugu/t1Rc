@@ -25,7 +25,7 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
       // закрытие попапов
       [
         ...document.querySelectorAll(
-          ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+          ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup",
         ),
       ].map((i) => {
         i.style.display = "none";
@@ -43,7 +43,7 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
       });
       [
         ...document.querySelectorAll(
-          ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+          ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-child(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn",
         ),
       ].map((i) => {
         i.addEventListener("click", () => {
@@ -52,7 +52,7 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
           setTimeout(function () {
             re.style.display = "none";
             i.closest(
-              ".m-popup, .ratingpop-box, .quest-popup, .popup"
+              ".m-popup, .ratingpop-box, .quest-popup, .popup",
             ).style.display = "none";
             po.classList.remove("dialog-emersion-exit");
           }, 100);
@@ -198,6 +198,7 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                           src="img/images\hero-all\tithero-351\x1/tithero-351-1.jpg"
                           loading="lazy"
                         />
+                        <img className="heroClass" src="img/cur2-gun.png" />
                       </div>
 
                       <Tooltip
@@ -210,7 +211,7 @@ export default function V2Unipop20Pse2Pop({ pageName }) {
                           </div>
                         }
                       >
-                        <Button className="infoOnly" text="i" />
+                        {/* <Button className="infoOnly" text="i" /> */}
                       </Tooltip>
 
                       <div className="info-box">
