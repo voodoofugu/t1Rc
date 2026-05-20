@@ -1,6 +1,10 @@
 import React from "react";
 
-export const cssFiles = ["screen-unipop-starterpack"];
+import Button from "../UIComponents/Button";
+import FraimedTitle from "../UIComponents/FraimedTitle";
+import ItemBox from "../UIComponents/ItemBox";
+
+export const cssFiles = ["screen-unipop-spack"];
 
 export default function V2Unipop20Starterpack() {
   return (
@@ -45,127 +49,89 @@ export default function V2Unipop20Starterpack() {
             </div>
             <div className="unipop-box-right-box">
               <div className="right-box-f">
-                <div className="right-box-f-name-box">starter pack</div>
+                <div className="right-box-f-name-box">Стартовый пакет</div>
                 <div className="red-timer-box">
-                  <div className="time-text">TIME LEFT</div>
-                  <div className="time">23:12:57</div>
+                  <div className="time-text">Осталось</div>
+                  <div className="time">47:56:22</div>
                 </div>
+
                 <div className="noobpack-box">
-                  <div className="moredps-box"></div>
-                  <div className="cardnameback">
-                    <div className="card-text">noob pack</div>
+                  <FraimedTitle
+                    className="cornersTop packTit"
+                    text="Novice pack"
+                  />
+
+                  <div className="rewardBox">
+                    <ItemBox
+                      className="wh94"
+                      unique={["unique"]}
+                      cardType="h"
+                      itemPic="img/images/hero-all/tithero-353/x1/ava/tithero-353-1-ava.jpg"
+                    />
+                    <ItemBox className="wh94" itemPic="img/ic-abil-dps2.png" />
+                    <ItemBox
+                      className="wh94"
+                      count="+100%"
+                      itemPic="img/change-ic-gold.png"
+                    />
+                    <ItemBox
+                      className="wh94"
+                      count="2.44M"
+                      itemPic="img/change-ic-gold.png"
+                    />
                   </div>
-                  <div className="moregold-box noob">
-                    <div className="pack-pack">
-                      <img src="img/change-ic-gold.png" loading="lazy" />
-                      <div className="rate-text">+500%</div>
-                      <div className="more-text">More GOLD Dropped</div>
-                    </div>
-                  </div>
-                  <div className="card-box mini">
-                    <div className="card">
-                      <img
-                        className="card-img"
-                        src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="card-name">
-                      <span className="cn">Limited Edition Card</span>
-                      <br />
-                      Mr. Garry
-                    </div>
-                  </div>
-                  <div className="buy-box">
-                    <div className="buy-text-box">
-                      <div className="moregold-oldprice">
-                        a <span className="ss">60$</span> value...
-                      </div>
-                      <div className="moregold-newprice">Now for only 15$</div>
-                    </div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">BUY</div>
-                    </div>
-                  </div>
+
+                  <Button className="max green buy-btn" text="buy 1.99$" />
                 </div>
+
                 <div className="kingpack-box">
-                  <div className="card-box">
-                    <div className="card">
-                      <img
-                        className="card-img"
-                        src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="card-name">
-                      <span className="cn">Limited Edition Card</span>
-                      <br />
-                      Mr. Garry
-                    </div>
-                    <div className="cardnameback">
-                      <div className="card-text">King pack</div>
-                    </div>
+                  <FraimedTitle
+                    className="cornersTop packTit"
+                    text="King pack"
+                  />
+
+                  <div className="rewardBox">
+                    <ItemBox
+                      className="wh94"
+                      unique={["unique"]}
+                      cardType="h"
+                      itemPic="img/images/hero-all/tithero-68/x1/ava/tithero-68-1-ava.jpg"
+                    />
+                    <ItemBox
+                      className="wh94"
+                      unique={["unique"]}
+                      cardType="h"
+                      itemPic="img/images/hero-all/tithero-45/x1/ava/tithero-45-1-ava.jpg"
+                    />
+                    <ItemBox
+                      className="wh94"
+                      unique={["unique"]}
+                      cardType="h"
+                      itemPic="img/images/hero-all/tithero-80/x1/ava/tithero-80-1-ava.jpg"
+                    />
+                    <ItemBox className="wh94" itemPic="img/ic-abil-dps2.png" />
+                    <ItemBox
+                      className="wh94"
+                      count="+10K%"
+                      itemPic="img/change-ic-gold.png"
+                    />
+                    <ItemBox
+                      className="wh94"
+                      count="22M"
+                      itemPic="img/change-ic-gold.png"
+                    />
+                    <ItemBox
+                      className="wh94"
+                      count="150"
+                      itemPic="img/diamond5.png"
+                    />
                   </div>
-                  <div className="card-box mini">
-                    <div className="card">
-                      <img
-                        className="card-img"
-                        src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="card-name">
-                      <span className="cn">Limited Edition Card</span>
-                      <br />
-                      Mr. Garry
-                    </div>
-                  </div>
-                  <div className="card-box mini">
-                    <div className="card">
-                      <img
-                        className="card-img"
-                        src="img/images/hero-all/tithero-194/x2/tithero-194-1.jpg"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="card-name">
-                      <span className="cn">Limited Edition Card</span>
-                      <br />
-                      Mr. Garry
-                    </div>
-                  </div>
-                  <div className="moregold-box king">
-                    <div className="pack-pack">
-                      <img src="img/change-sun1.png" loading="lazy" />
-                      <div className="rate-text small-text">
-                        Boss chests x50
-                      </div>
-                    </div>
-                  </div>
-                  <div className="moregold-box king two">
-                    <div className="pack-pack">
-                      <img src="img/change-ic-gold.png" loading="lazy" />
-                      <div className="rate-text">+1000%</div>
-                    </div>
-                  </div>
-                  <div className="buy-box">
-                    <div className="buy-text-box">
-                      <div className="moregold-oldprice">
-                        a <span className="ss">60$</span> value...
-                      </div>
-                      <div className="moregold-newprice">Now for only 30$</div>
-                    </div>
-                    <div className="color-btn green">
-                      <div className="color-btn-text">BUY</div>
-                    </div>
-                  </div>
-                  <div className="moredps-box"></div>
+
+                  <Button className="max green buy-btn" text="buy 29.99$" />
                 </div>
-                <div className="or-box">или</div>
+
                 <div className="sale-box">
-                  <div className="sale-text">
-                    <div>50%</div>off
-                  </div>
+                  <div className="sale-text">Скидка 80%</div>
                 </div>
               </div>
             </div>
