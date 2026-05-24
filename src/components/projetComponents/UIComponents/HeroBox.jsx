@@ -45,7 +45,7 @@ export default function HeroBox({
   return visible ? (
     <div
       className="heroCardBox"
-      draggable="true"
+      // draggable="true"
       // ms-custom-drag=""
     >
       {highlightExist && <div className="highlightBg"></div>}
