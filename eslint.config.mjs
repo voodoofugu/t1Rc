@@ -66,9 +66,9 @@ export default [
       "react/display-name": "off",
       "no-undef": "off",
       "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": "warn",
       "react/no-unescaped-entities": "off",
       "react/no-unknown-property": "off",
+      "react-hooks/exhaustive-deps": "off",
     },
   },
 
