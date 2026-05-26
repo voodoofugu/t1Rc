@@ -52,7 +52,7 @@ export default function V2MainScreen15CwMain3() {
                 <ClanWarBox
                   className="shop"
                   title="shop"
-                  img="img/v2-fw-icon-shop.png"
+                  img="img/wars-shop.png"
                   btnText="shop"
                 >
                   <FraimedTitle

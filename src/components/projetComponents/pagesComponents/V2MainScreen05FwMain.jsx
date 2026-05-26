@@ -54,7 +54,7 @@ export default function V2MainScreen05FwMain() {
 
               <ClanWarBox
                 className="shop"
-                img="img/v2-fw-icon-shop.png"
+                img="img/wars-shop.png"
                 btnText="clans"
               >
                 <div className="fw-map-name-box-all cw">
