@@ -3,6 +3,7 @@ import React from "react";
 import ItemBox from "../UIComponents/ItemBox";
 import Button from "../UIComponents/Button";
 import Tooltip from "../UIComponents/Tooltip";
+import FraimedTitle from "../UIComponents/FraimedTitle";
 
 export default function DualPack({ event }) {
   return (
@@ -11,7 +12,7 @@ export default function DualPack({ event }) {
         <div className="lhero-box" data-label="legendary">
           <div className="lhero-pic">
             <img
-              src="img/images/superhero/suphero-762/x2/762sh-1.jpg"
+              src="img/images/hero-all/tithero-702/x1/tithero-1.jpg"
               loading="lazy"
             />
           </div>
@@ -87,21 +88,25 @@ export default function DualPack({ event }) {
           </div>
         </div>
         <div className="sv-sale-btn-box">
-          <div className="store-button">
-            <div className="but-price old">$80</div>
-            <div className="but-price">$19.99</div>
-          </div>
+          <Button className="green check buy-btn" text="sold" />
         </div>
         <div className="sv-reward-box-all">
-          <ItemBox
-            itemPic="img/images/superhero/suphero-762/x2/avatar/762sh-ava-1.jpg"
-            count={700}
-            rare="u"
+          <FraimedTitle
+            className="corners reward-box-tit"
+            text="Tanigawa Bonus"
           />
-          <ItemBox itemPic="img/pse-uncommons.png" count={20} />
-          <ItemBox itemPic="img/evPopArts/potion_green.png" count={1000} />
           <ItemBox
-            className="piecesHero"
+            className="wh68"
+            itemPic="img/pse-uncommons.png"
+            count={20}
+          />
+          <ItemBox
+            className="wh68"
+            itemPic="img/evPopArts/potion_green.png"
+            count={1000}
+          />
+          <ItemBox
+            className="piecesHero wh68"
             itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
             count={100}
           />
@@ -111,7 +116,7 @@ export default function DualPack({ event }) {
         <div className="lhero-box" data-label="legendary">
           <div className="lhero-pic">
             <img
-              src="img/images/hero-all/tithero-5002/x1/tithero-5002-1.jpg"
+              src="img/images/hero-all/tithero-703/x1/tithero-1.jpg"
               loading="lazy"
             />
           </div>
@@ -169,35 +174,33 @@ export default function DualPack({ event }) {
           </div>
         </div>
         <div className="sv-sale-btn-box">
-          <div className="store-button">
-            <div className="but-price old">
-              200
-              <div className="price-nutaku"></div>
-            </div>
-            <div className="but-price">
-              49.99
-              <div className="price-nutaku"></div>
-            </div>
-          </div>
+          <Button
+            className="max btnGold buy-btn"
+            textIcn="img/ico-nutaku2.png"
+            text="49.99"
+            crossedOutText="99.99"
+          />
           <div className="sale-banner">-50%</div>
         </div>
         <div className="sv-reward-box-all">
+          <FraimedTitle className="corners reward-box-tit" text="Eiko Bonus" />
+          <ItemBox className="wh68" itemPic="img/pse-rares.png" count={10} />
           <ItemBox
-            itemPic="img/images/superhero/suphero-761/x2/avatar/761sh-ava-1.jpg"
-            count={700}
-            rare="c"
+            className="wh68"
+            itemPic="img/diamond6-shop.png"
+            count={150}
           />
-          <ItemBox itemPic="img/pse-rares.png" count={10} />
-          <ItemBox itemPic="img/diamond6-shop.png" count={150} />
-          <ItemBox itemPic="img/evPopArts/potion_blue.png" count={1000} />
+          <ItemBox
+            className="wh68"
+            itemPic="img/evPopArts/potion_blue.png"
+            count={1000}
+          />
         </div>
       </div>
-      {event === "uni-sale" ? (
-        <div className="sv-sale-uni-box-all">
-          <div className="sv-uni-all"></div>
-          <div className="sv-chain1"></div>
-          <div className="sv-chain2"></div>
-          <div className="sv-text">rewards for purchasing both packs</div>
+      <div className="sv-sale-uni-box-all">
+        <FraimedTitle className="cornersTop frameTit" text="Buy both Offers" />
+        <div className="bonus-tit">Claim all Bonus Rewards</div>
+        <div className="rewards-box">
           <ItemBox
             className="wh94"
             itemPic="img/fapop-token4.png"
@@ -210,25 +213,12 @@ export default function DualPack({ event }) {
             unique={["unique"]}
           />
         </div>
-      ) : event === "sv-sale" ? (
-        <div className="sv-sale-heart-box-all">
-          <div className="sv-heart-left"></div>
-          <div className="sv-heart-right"></div>
-          <div className="sv-chain1"></div>
-          <div className="sv-chain2"></div>
-          <div className="sv-reward-box">
-            <div className="sv-reward-pic">
-              <img src="img/sh-icon-chest-128.png" loading="lazy" />
-            </div>
-            <div className="sv-reward-count">100</div>
-            <div>
-              <div className="sv-reward-block"></div>
-            </div>
-          </div>
-        </div>
-      ) : (
-        ""
-      )}
+
+        <Button
+          className="max btnGold disabled bonus-btn"
+          text="get shared bonus"
+        />
+      </div>
       <div className="wpck-timer-box">
         <div className="time-left">осталось</div>
         <div className="time-sec">00:00:00</div>
