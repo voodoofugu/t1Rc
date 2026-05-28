@@ -197,7 +197,7 @@ export default function DualPack({ event }) {
           />
         </div>
       </div>
-      <div className="sv-sale-uni-box-all" data-state="completed">
+      <div className="sv-sale-uni-box-all">
         <FraimedTitle className="cornersTop frameTit" text="Buy both Offers" />
         <div className="bonus-tit">Claim all Bonus Rewards</div>
         <div className="rewards-box">
@@ -213,11 +213,6 @@ export default function DualPack({ event }) {
             unique={["unique"]}
           />
         </div>
-
-        <Button
-          className="max btnGold disabled bonus-btn"
-          text="get shared bonus"
-        />
       </div>
       <div className="wpck-timer-box">
         <div className="time-left">осталось</div>
