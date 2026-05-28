@@ -90,7 +90,7 @@ export default function DualPack({ event }) {
         <div className="sv-sale-btn-box">
           <Button className="green check buy-btn" text="sold" />
         </div>
-        <div className="sv-reward-box-all">
+        <div className="sv-reward-box-all" data-state="completed">
           <FraimedTitle
             className="corners reward-box-tit"
             text="Tanigawa Bonus"
@@ -182,7 +182,7 @@ export default function DualPack({ event }) {
           />
           <div className="sale-banner">-50%</div>
         </div>
-        <div className="sv-reward-box-all">
+        <div className="sv-reward-box-all" data-state="completed">
           <FraimedTitle className="corners reward-box-tit" text="Eiko Bonus" />
           <ItemBox className="wh68" itemPic="img/pse-rares.png" count={10} />
           <ItemBox
@@ -197,7 +197,7 @@ export default function DualPack({ event }) {
           />
         </div>
       </div>
-      <div className="sv-sale-uni-box-all">
+      <div className="sv-sale-uni-box-all" data-state="completed">
         <FraimedTitle className="cornersTop frameTit" text="Buy both Offers" />
         <div className="bonus-tit">Claim all Bonus Rewards</div>
         <div className="rewards-box">
