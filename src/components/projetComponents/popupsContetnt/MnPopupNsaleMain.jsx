@@ -144,12 +144,12 @@ function NmPopContentChest({ hole }) {
 
       <Button
         className={`max j-blue open-btn${!chestsValue ? " disabled" : ""}`}
-        text={`Open one of ${chestsValue}`}
+        text="Open chest"
         onClick={chestHandler}
       />
       <Button
         className={`max j-violet open-btn${!chestsValue ? " disabled" : ""} last`}
-        text="Open All"
+        text={`Open All ${chestsValue}`}
         onClick={chestHandler}
       />
     </div>
