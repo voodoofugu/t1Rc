@@ -55,7 +55,7 @@ function NmPopContentChest({ hole }) {
         nexus.acts.handlePopup({
           type: "open",
           data: {
-            mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+            mpopClass: "m-popup contentOnly framedPop withTitle",
             popCont: "CongraPop",
             props: {
               rewardsData: [
@@ -144,7 +144,7 @@ function NmPopContentChest({ hole }) {
 
       <Button
         className={`max j-blue open-btn${!chestsValue ? " disabled" : ""}`}
-        text={`Open Chest ${chestsValue}`}
+        text={`Open one of ${chestsValue}`}
         onClick={chestHandler}
       />
       <Button

@@ -45,7 +45,7 @@ function GuardianChestsWindow({ pageName, children }) {
         nexus.acts.handlePopup({
           type: "open",
           data: {
-            mpopClass: "m-popup contentOnly framedPop heroRewardPop",
+            mpopClass: "m-popup contentOnly framedPop withTitle",
             popCont: "CongraPop",
             props: {
               rewardsData: [
