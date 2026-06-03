@@ -9,17 +9,17 @@ import Page404 from "../projetComponents/pagesComponents/Page404";
 
 export default function App() {
   return (
-    <DemoWorkbench
-      title="Template"
-      demos={t1RcDemos}
-      cssLoader={(cssName) => import(`../../styles/css/${cssName}.css`)}
-      renderSvgDefs={() => (
-        <SvgFilters>
-          <DistortionFilter />
-        </SvgFilters>
-      )}
-      renderDemoContent={(pageName) => <ComponToLoad pageName={pageName} />}
-      notFoundComponent={Page404}
-    />
+    <>
+      <SvgFilters>
+        <DistortionFilter />
+      </SvgFilters>
+      <DemoWorkbench
+        title="Template"
+        demos={t1RcDemos}
+        cssLoader={(cssName) => import(`../../styles/css/${cssName}.css`)}
+        renderDemoContent={(pageName) => <ComponToLoad pageName={pageName} />}
+        notFoundComponent={Page404}
+      />
+    </>
   );
 }
