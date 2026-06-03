@@ -1,9 +1,28 @@
 import { Component, CSSProperties } from "react";
 
 import { PIXIView } from "./PIXIView";
-import Loading from "../../components/templateComponents/Loading";
 
 declare const DEBUG: number;
+
+function Loading(_props: { noBG?: boolean; addStyle?: string }) {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "rgba(4, 8, 42, 0.4)",
+        color: "#fff",
+        fontSize: 12,
+        fontWeight: 700,
+      }}
+    >
+      Loading…
+    </div>
+  );
+}
 interface PIXIComponentProps {
   width: number;
   height: number;

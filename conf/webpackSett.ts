@@ -21,6 +21,11 @@ export default function webpackSett(
       clean: true,
     },
     optimization: optimization(options),
+    performance: {
+      hints: options.mode === "production" ? "warning" : false,
+      maxAssetSize: 512 * 1024,
+      maxEntrypointSize: 512 * 1024,
+    },
     plugins: plugins(options),
     module: {
       rules: loaders(options),

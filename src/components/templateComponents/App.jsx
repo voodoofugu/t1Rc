@@ -1,33 +1,25 @@
-import { StyleCore, StyledAtom } from "styled-atom";
+import DemoWorkbench from "demo-workbench";
+import "demo-workbench/styles.css";
 
-import Template from "./Template";
-import TitlePage from "./Title";
-
-import SvgFilters from "../../../src/svg-filters/SvgFilters";
-import DistortionFilter from "../../../src/svg-filters/DistortionFilter";
-
-import Storage from "../../components/templateComponents/Storage";
+import SvgFilters from "../../svg-filters/SvgFilters";
+import DistortionFilter from "../../svg-filters/DistortionFilter";
+import t1RcDemos from "../projetComponents/demoManifest";
+import ComponToLoad from "../projetComponents/UIComponents/ComponToLoad";
+import Page404 from "../projetComponents/pagesComponents/Page404";
 
 export default function App() {
   return (
-    <>
-      <SvgFilters>
-        <DistortionFilter />
-      </SvgFilters>
-
-      <StyleCore path={(name) => import(`../../styles/css/${name}.css`)} />
-      <StyledAtom fileNames={["output"]} />
-      <Storage
-        watch
-        storageData={[
-          ["darkTheme", "local"],
-          ["searchText"],
-          ["pageData"],
-          ["popupState"],
-        ]}
-      />
-      <TitlePage />
-      <Template />
-    </>
+    <DemoWorkbench
+      title="Template"
+      demos={t1RcDemos}
+      cssLoader={(cssName) => import(`../../styles/css/${cssName}.css`)}
+      renderSvgDefs={() => (
+        <SvgFilters>
+          <DistortionFilter />
+        </SvgFilters>
+      )}
+      renderDemoContent={(pageName) => <ComponToLoad pageName={pageName} />}
+      notFoundComponent={Page404}
+    />
   );
 }

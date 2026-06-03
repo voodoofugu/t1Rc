@@ -4,7 +4,10 @@
   "version": "1.2.2",
   "main": "src/index.tsx",
   "scripts": {
+    "build:demo-workbench": "npm --prefix ../demo-workbench run build",
+    "prestart": "npm run build:demo-workbench",
     "start": "ts-node --transpile-only ./node_modules/webpack/bin/webpack serve --env mode=development",
+    "prebuild": "npm run build:demo-workbench",
     "build": "webpack --env mode=production",
     "compileScss": "ts-node src/scripts/templateScripts/compileScss.ts",
     "tailwindcss": "npx tailwindcss -i src/styles/tailwind/input.css -o src/styles/css/output.css --watch --minify",
@@ -15,9 +18,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "demo-workbench": "file:../demo-workbench",
     "eslint-plugin-react-hooks": "^5.2.0",
     "keytask-core": "^1.0.0",
-    "morphing-scroll": "^2.6.0",
+    "morphing-scroll": "^2.9.0",
     "nexus-state": "^3.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
