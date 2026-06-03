@@ -1,5 +1,4 @@
 import DemoWorkbench from "demo-workbench";
-import "demo-workbench/styles.css";
 
 import SvgFilters from "../../svg-filters/SvgFilters";
 import DistortionFilter from "../../svg-filters/DistortionFilter";
