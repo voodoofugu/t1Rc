@@ -12,6 +12,14 @@ export function resolvers(options: BuildOptions): Configuration["resolve"] {
         "src/components/projetComponents",
       ),
       nexus: path.resolve(options.paths.mainDir, "nexus/nexusConfig.ts"),
+      "demo-workbench$": path.resolve(
+        options.paths.mainDir,
+        "../demo-workbench/src/index.ts",
+      ),
+      "demo-workbench/styles.css$": path.resolve(
+        options.paths.mainDir,
+        "../demo-workbench/dist/styles.css",
+      ),
       react: path.resolve(options.paths.mainDir, "node_modules/react"),
       "react-dom": path.resolve(options.paths.mainDir, "node_modules/react-dom"),
     },

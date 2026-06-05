@@ -1,5 +1,3 @@
-import React from "react";
-
 import nexus from "nexus";
 
 import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
@@ -10,14 +8,9 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 import ItemBox from "../UIComponents/ItemBox";
 import VideoTag from "../UIComponents/VideoTag";
 
-import useGoogleDocs from "../../hooks/useGoogleDocs";
-
 import collectionData from "../data/collectionData";
 
 export const cssFiles = ["shorts-gallery", "dating"];
-
-const sheetId = "1FwL6TJLN5XoEAuAxj8cdZoeD55eWX2NJYpXUCZFL3bI";
-const gid = "551457807";
 
 const girlClass = [
   "sword", // warrior
@@ -31,14 +24,11 @@ const girlClass = [
 ];
 
 export default function MainScreen01Shorts({ pageName, children }) {
-  const { data, loading } = useGoogleDocs(sheetId, gid);
-  // const character = data.find((d) => d.id === "967");
-  // const character = data[954];
   const lastIndex = 954;
   const totalItems = 19;
   const startIndex = lastIndex - totalItems + 1;
 
-  const girlsCards = data
+  const girlsCards = collectionData
     .slice(startIndex, lastIndex + 1)
     .map((item, index) => {
       const disabledIndex = [0, 1];
@@ -102,62 +92,56 @@ export default function MainScreen01Shorts({ pageName, children }) {
     );
   });
 
-  const scroll = loading ? (
+  <MorphScroll
+    className="shortsGallery"
+    size={[1098, 497]}
+    objectsSize="size"
+    progressTrigger={{
+      progressElement: [
+        <FraimedTitle key="1" className="titBtn corners" text="COLLECTIONS" />,
+        <FraimedTitle key="2" className="titBtn corners" text="CHARACTERS" />,
+      ],
+    }}
+    render={{ type: "virtual" }}
+    direction="x"
+    type="sliderMenu"
+    progressReverse
+    wrapperMargin={[22, 0]}
+  >
     <MorphScroll
-      className="shortsGallery"
-      size={[1098, 497]}
-      objectsSize="size"
+      key={"collectionTab"}
+      className="collectionTab"
+      size={[1056, 448]}
+      objectsSize={[300, 380]}
+      gap={38}
+      wrapperMargin={[40, 0]}
+      edgeGradient={{ color: "#463b3a" }}
       progressTrigger={{
-        progressElement: [
-          <FraimedTitle
-            key="1"
-            className="titBtn corners"
-            text="COLLECTIONS"
-          />,
-          <FraimedTitle key="2" className="titBtn corners" text="CHARACTERS" />,
-        ],
+        wheel: true,
+        progressElement: <ScrollThumb />,
       }}
-      render={{ type: "virtual" }}
       direction="x"
-      type="sliderMenu"
-      progressReverse
-      wrapperMargin={[22, 0]}
+      wrapperAlign={"center"}
     >
-      <MorphScroll
-        key={"collectionTab"}
-        className="collectionTab"
-        size={[1056, 448]}
-        objectsSize={[300, 380]}
-        gap={38}
-        wrapperMargin={[40, 0]}
-        edgeGradient={{ color: "#463b3a" }}
-        progressTrigger={{
-          wheel: true,
-          progressElement: <ScrollThumb />,
-        }}
-        direction="x"
-        wrapperAlign={"center"}
-      >
-        {collections}
-      </MorphScroll>
-      <MorphScroll
-        key={"charactersTab"}
-        className="charactersTab"
-        size={[1056, 448]}
-        objectsSize={[162, 192]}
-        gap={24}
-        wrapperMargin={[0, 20]}
-        edgeGradient={{ color: "#463b3a" }}
-        progressTrigger={{
-          wheel: true,
-          progressElement: <ScrollThumb />,
-        }}
-        wrapperAlign={["center", "start"]}
-      >
-        {girlsCards}
-      </MorphScroll>
+      {collections}
     </MorphScroll>
-  ) : null;
+    <MorphScroll
+      key={"charactersTab"}
+      className="charactersTab"
+      size={[1056, 448]}
+      objectsSize={[162, 192]}
+      gap={24}
+      wrapperMargin={[0, 20]}
+      edgeGradient={{ color: "#463b3a" }}
+      progressTrigger={{
+        wheel: true,
+        progressElement: <ScrollThumb />,
+      }}
+      wrapperAlign={["center", "start"]}
+    >
+      {girlsCards}
+    </MorphScroll>
+  </MorphScroll>;
 
   return (
     <div className="main world1">

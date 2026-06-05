@@ -2,7 +2,6 @@ import DemoWorkbench from "demo-workbench";
 
 import SvgFilters from "../../svg-filters/SvgFilters";
 import DistortionFilter from "../../svg-filters/DistortionFilter";
-import t1RcDemos from "../projetComponents/demoManifest";
 import ComponToLoad from "../projetComponents/UIComponents/ComponToLoad";
 import Page404 from "../projetComponents/pagesComponents/Page404";
 
@@ -14,8 +13,19 @@ export default function App() {
       </SvgFilters>
       <DemoWorkbench
         title="Template"
-        demos={t1RcDemos}
-        cssLoader={(cssName) => import(`../../styles/css/${cssName}.css`)}
+        demoLoader={(name) => import(`@prCo/pagesComponents/${name}`)}
+        styleLoader={(styleName) => import(`../../styles/css/${styleName}.css`)}
+        baseCssFiles={[
+          "v2-screen-main",
+          "v2-screen-main-dark-world",
+          "01-all-res",
+          "01-all",
+          "ui-elements",
+          "keyframes-animations",
+          "reset",
+        ]}
+        bodyBg="#9f8978"
+        bodySelectorReplacement=".likeBody"
         renderDemoContent={(pageName) => <ComponToLoad pageName={pageName} />}
         notFoundComponent={Page404}
       />
