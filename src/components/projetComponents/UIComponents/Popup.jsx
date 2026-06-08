@@ -7,9 +7,12 @@ import FraimedTitle from "./FraimedTitle";
 export default function Popup({ pageName }) {
   const activePage = nexus.use("activePage");
   const popupState = nexus.use("popupState");
+  const popCont = popupState?.popCont;
+  const popupComponentName = Array.isArray(popCont) ? popCont[0] : popCont;
+  const popupComponentProps = Array.isArray(popCont) ? popCont[1] || {} : {};
 
   const module = useDynamicImport(
-    `${popupState?.popCont || ""}`,
+    popupComponentName || "",
     (name) => import(`@prCo/popupsContetnt/${name}`),
   );
   const DynamicComponent = module?.default;
@@ -50,7 +53,7 @@ export default function Popup({ pageName }) {
 
               {DynamicComponent ? (
                 <DynamicComponent
-                  {...(popupState.popCont ? popupState.popCont[1] : {})}
+                  {...popupComponentProps}
                   {...(popupState.props || {})}
                 />
               ) : (

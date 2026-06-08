@@ -1,4 +1,5 @@
 import {
+  discoverWorkbenchFileNames,
   getWorkbenchCompileWatchPaths,
   watchWorkbenchCompile,
   workbenchCompile,
@@ -11,6 +12,8 @@ import type {
 const watch =
   process.argv.includes("--watch") || process.argv.includes("watch");
 
+const popupInputDir = "src/components/projetComponents/popupsContetnt";
+
 const options: WorkbenchCompileOptions = {
   styles: {
     inputDir: "titans_rc/styles/scss",
@@ -21,42 +24,54 @@ const options: WorkbenchCompileOptions = {
   demos: {
     inputDir: "src/components/projetComponents/pagesComponents",
   },
-  popups: {
-    inputDir: "src/components/projetComponents/popupsContetnt",
-  },
 };
 
-function printResult(result: WorkbenchCompileResult) {
+function printResult(result: WorkbenchCompileResult, popupNames?: string[]) {
   if (result.styles) {
     const files = result.styles.files.map((file) => file.outputFile).join(", ");
     console.log(`✨ styles: compiled ${result.styles.files.length}${files ? ` (${files})` : ""}`);
   }
 
-  if (result.demos || result.popups) {
-    const outputFiles = result.demos?.outputFiles ?? result.popups?.outputFiles ?? [];
+  if (result.demos) {
+    const outputFiles = result.demos.outputFiles;
     const target = outputFiles.length
       ? outputFiles.join(", ")
       : "demo-workbench internal registry";
     console.log(
-      `📚 registry: stored ${result.demos?.names.length ?? 0} page(s), ${result.popups?.names.length ?? 0} popup name(s): ${target}`,
+      `📚 registry: stored ${result.demos.names.length} page(s): ${target}`,
     );
   }
+
+  if (popupNames) {
+    console.log(`🪟 popups: discovered ${popupNames.length} popup file(s)`);
+  }
+}
+
+async function getPopupNames() {
+  return discoverWorkbenchFileNames({ inputDir: popupInputDir });
 }
 
 async function main() {
   if (!watch) {
-    printResult(await workbenchCompile(options));
+    const [result, popupNames] = await Promise.all([
+      workbenchCompile(options),
+      getPopupNames(),
+    ]);
+    printResult(result, popupNames);
     return;
   }
 
-  const watchPaths = getWorkbenchCompileWatchPaths(options);
+  const watchPaths = getWorkbenchCompileWatchPaths(options, [popupInputDir]);
   console.log(`demo-workbench: watching ${watchPaths.join(", ")}`);
 
   // Watch/rebuild is now owned by demo-workbench, so this project only keeps
   // t1Rc-specific paths and style rewrite options here.
   await watchWorkbenchCompile({
     ...options,
-    onBuild: printResult,
+    watchPaths: [popupInputDir],
+    onBuild: async (result) => {
+      printResult(result, await getPopupNames());
+    },
   });
 }
 

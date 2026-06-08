@@ -2,16 +2,20 @@ type PopupStateT = {
   mpopClass?: string;
   popStyle?: Record<string, any>;
   popTit?: string;
-  popCont?: string;
+  popCont?: string | [string, Record<string, any>?];
   btnXClass?: string;
   infBtn?: boolean;
   timer?: boolean;
-  count?: number;
+  count?: {
+    value?: string | number;
+    icon?: string;
+    add?: boolean;
+  };
   popupVisible?: boolean;
   dialogEmersion?: string;
   popOpen?: () => void;
   popClose?: () => void;
-  props?: any[];
+  props?: Record<string, any>;
 };
 
 const popupState: PopupStateT | null = null;
