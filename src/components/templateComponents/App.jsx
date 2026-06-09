@@ -25,7 +25,6 @@ export default function App() {
           "reset",
         ]}
         bodyBg="#9f8978"
-        bodySelectorReplacement=".likeBody"
         renderDemoContent={(pageName) => <ComponToLoad pageName={pageName} />}
         notFoundComponent={Page404}
       />

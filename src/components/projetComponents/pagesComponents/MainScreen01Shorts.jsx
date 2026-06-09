@@ -92,57 +92,6 @@ export default function MainScreen01Shorts({ pageName, children }) {
     );
   });
 
-  <MorphScroll
-    className="shortsGallery"
-    size={[1098, 497]}
-    objectsSize="size"
-    progressTrigger={{
-      progressElement: [
-        <FraimedTitle key="1" className="titBtn corners" text="COLLECTIONS" />,
-        <FraimedTitle key="2" className="titBtn corners" text="CHARACTERS" />,
-      ],
-    }}
-    render={{ type: "virtual" }}
-    direction="x"
-    type="sliderMenu"
-    progressReverse
-    wrapperMargin={[22, 0]}
-  >
-    <MorphScroll
-      key={"collectionTab"}
-      className="collectionTab"
-      size={[1056, 448]}
-      objectsSize={[300, 380]}
-      gap={38}
-      wrapperMargin={[40, 0]}
-      edgeGradient={{ color: "#463b3a" }}
-      progressTrigger={{
-        wheel: true,
-        progressElement: <ScrollThumb />,
-      }}
-      direction="x"
-      wrapperAlign={"center"}
-    >
-      {collections}
-    </MorphScroll>
-    <MorphScroll
-      key={"charactersTab"}
-      className="charactersTab"
-      size={[1056, 448]}
-      objectsSize={[162, 192]}
-      gap={24}
-      wrapperMargin={[0, 20]}
-      edgeGradient={{ color: "#463b3a" }}
-      progressTrigger={{
-        wheel: true,
-        progressElement: <ScrollThumb />,
-      }}
-      wrapperAlign={["center", "start"]}
-    >
-      {girlsCards}
-    </MorphScroll>
-  </MorphScroll>;
-
   return (
     <div className="main world1">
       <div
@@ -268,7 +217,65 @@ export default function MainScreen01Shorts({ pageName, children }) {
                 });
               }}
             />
-            {scroll}
+            <MorphScroll
+              className="shortsGallery"
+              size={[1098, 497]}
+              objectsSize="size"
+              progressTrigger={{
+                progressElement: [
+                  <FraimedTitle
+                    key="1"
+                    className="titBtn corners"
+                    text="COLLECTIONS"
+                  />,
+                  <FraimedTitle
+                    key="2"
+                    className="titBtn corners"
+                    text="CHARACTERS"
+                  />,
+                ],
+              }}
+              render={{ type: "virtual" }}
+              direction="x"
+              type="sliderMenu"
+              progressReverse
+              wrapperMargin={[22, 0]}
+            >
+              <MorphScroll
+                key={"collectionTab"}
+                className="collectionTab"
+                size={[1056, 448]}
+                objectsSize={[300, 380]}
+                gap={38}
+                wrapperMargin={[40, 0]}
+                edgeGradient={{ color: "#463b3a" }}
+                progressTrigger={{
+                  wheel: true,
+                  progressElement: <ScrollThumb />,
+                }}
+                direction="x"
+                wrapperAlign={"center"}
+              >
+                {collections}
+              </MorphScroll>
+              <MorphScroll
+                key={"charactersTab"}
+                className="charactersTab"
+                size={[1056, 448]}
+                objectsSize={[162, 192]}
+                gap={24}
+                wrapperMargin={[0, 20]}
+                edgeGradient={{ color: "#463b3a" }}
+                progressTrigger={{
+                  wheel: true,
+                  progressElement: <ScrollThumb />,
+                }}
+                wrapperAlign={["center", "start"]}
+              >
+                {girlsCards}
+              </MorphScroll>
+            </MorphScroll>
+            ;
           </div>
         </div>
         <div className="tabs-all-box">

@@ -29,7 +29,9 @@ const options: WorkbenchCompileOptions = {
 function printResult(result: WorkbenchCompileResult, popupNames?: string[]) {
   if (result.styles) {
     const files = result.styles.files.map((file) => file.outputFile).join(", ");
-    console.log(`✨ styles: compiled ${result.styles.files.length}${files ? ` (${files})` : ""}`);
+    console.log(
+      `✨ styles: compiled ${result.styles.files.length}${files ? ` (${files})` : ""}`,
+    );
   }
 
   if (result.demos) {
@@ -62,7 +64,7 @@ async function main() {
   }
 
   const watchPaths = getWorkbenchCompileWatchPaths(options, [popupInputDir]);
-  console.log(`demo-workbench: watching ${watchPaths.join(", ")}`);
+  console.log(`demo-workbench: 👀 watching ${watchPaths.join(", ")}`);
 
   // Watch/rebuild is now owned by demo-workbench, so this project only keeps
   // t1Rc-specific paths and style rewrite options here.
