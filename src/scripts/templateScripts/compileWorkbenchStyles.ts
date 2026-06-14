@@ -1,12 +1,16 @@
+import { mkdirSync, writeFileSync } from "node:fs";
+import * as path from "node:path";
 import {
   discoverWorkbenchFileNames,
   getWorkbenchCompileWatchPaths,
+  WORKBENCH_STYLE_RELOAD_MANIFEST_FILE,
   watchWorkbenchCompile,
   workbenchCompile,
 } from "demo-workbench/node";
 import type {
   WorkbenchCompileOptions,
   WorkbenchCompileResult,
+  WorkbenchStyleReloadManifest,
 } from "demo-workbench/node";
 
 const watch =
@@ -17,9 +21,11 @@ const popupInputDir = "src/components/projetComponents/popupsContetnt";
 const options: WorkbenchCompileOptions = {
   styles: {
     inputDir: "titans_rc/styles/scss",
-    outputDir: "src/styles/css",
-    bodySelectorReplacement: ".likeBody",
+    // outputDir: "src/styles/css", // Original output directory
+    // isolateStyles: false,
+    outputDir: "src/styles/workbench-css",
     assetUrlPrefix: "http://localhost:3000/img/",
+    clean: true,
   },
   demos: {
     inputDir: "src/components/projetComponents/pagesComponents",
@@ -35,22 +41,34 @@ function printResult(result: WorkbenchCompileResult, popupNames?: string[]) {
   }
 
   if (result.demos) {
-    const outputFiles = result.demos.outputFiles;
-    const target = outputFiles.length
-      ? outputFiles.join(", ")
-      : "demo-workbench internal registry";
     console.log(
-      `📚 registry: stored ${result.demos.names.length} page(s): ${target}`,
+      `📄 pages: discovered ${result.demos.names.length} page file(s)`,
     );
   }
 
   if (popupNames) {
-    console.log(`🪟 popups: discovered ${popupNames.length} popup file(s)`);
+    console.log(`🗄️ popups: discovered ${popupNames.length} popup file(s)`);
   }
 }
 
 async function getPopupNames() {
   return discoverWorkbenchFileNames({ inputDir: popupInputDir });
+}
+
+function writeDisabledStyleReloadManifest() {
+  if (!options.styles) return;
+
+  const outputFile = path.resolve(
+    options.styles.outputDir,
+    WORKBENCH_STYLE_RELOAD_MANIFEST_FILE,
+  );
+  const manifest = {
+    enabled: false,
+    updatedAt: new Date().toISOString(),
+  } satisfies WorkbenchStyleReloadManifest;
+
+  mkdirSync(path.dirname(outputFile), { recursive: true });
+  writeFileSync(outputFile, `${JSON.stringify(manifest, null, 2)}\n`);
 }
 
 async function main() {
@@ -68,12 +86,40 @@ async function main() {
 
   // Watch/rebuild is now owned by demo-workbench, so this project only keeps
   // t1Rc-specific paths and style rewrite options here.
-  await watchWorkbenchCompile({
+  const watcher = await watchWorkbenchCompile({
     ...options,
     watchPaths: [popupInputDir],
+    styleReload: true,
     onBuild: async (result) => {
       printResult(result, await getPopupNames());
     },
+  });
+
+  console.log(
+    `demo-workbench: style reload stream ${watcher.styleReloadUrl}`,
+  );
+
+  let isClosing = false;
+  const closeWatcher = async () => {
+    if (isClosing) return;
+    isClosing = true;
+    writeDisabledStyleReloadManifest();
+    await watcher.close();
+    process.exit(0);
+  };
+
+  process.once("exit", writeDisabledStyleReloadManifest);
+  process.once("SIGINT", () => {
+    closeWatcher().catch((error: unknown) => {
+      console.error(error instanceof Error ? error.message : error);
+      process.exit(1);
+    });
+  });
+  process.once("SIGTERM", () => {
+    closeWatcher().catch((error: unknown) => {
+      console.error(error instanceof Error ? error.message : error);
+      process.exit(1);
+    });
   });
 }
 

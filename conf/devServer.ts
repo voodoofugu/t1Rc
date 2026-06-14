@@ -29,6 +29,11 @@ export function devServer(options: BuildOptions): DevServerConfiguration {
         directory: path.join("public", "pixi-src"),
         publicPath: "/pixi-src/",
       },
+      {
+        directory: path.join("src", "styles", "workbench-css"),
+        publicPath: "/workbench-css/",
+        watch: false,
+      },
     ],
   };
 }
