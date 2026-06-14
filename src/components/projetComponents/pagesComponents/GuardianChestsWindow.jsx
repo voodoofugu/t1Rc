@@ -5,7 +5,7 @@ import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";
 import ProgressBar from "../UIComponents/ProgressBar";
 import Button from "../UIComponents/Button";
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import data_angels from "../../../scripts/FapTitansScripts/data_angels";

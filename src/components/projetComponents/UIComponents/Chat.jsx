@@ -1,10 +1,11 @@
 import React from "react";
+import {
+  MorphScroll,
+  IntersectionTracker,
+  ResizeTracker,
+} from "morphing-scroll";
 
 import nexus from "nexus";
-
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
-import ResizeTracker from "../../../../morphing-scroll/src/components/ResizeTracker";
-import IntersectionTracker from "../../../../morphing-scroll/src/components/IntersectionTracker";
 
 import PersonAva from "../UIComponents/PersonAva";
 import Button from "../UIComponents/Button";

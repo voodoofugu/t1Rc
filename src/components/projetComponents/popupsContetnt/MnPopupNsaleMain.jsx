@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
+import { MorphScroll } from "morphing-scroll";
+
 import nexus from "nexus";
+
 import ItemBox from "../UIComponents/ItemBox";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Button from "../UIComponents/Button";
-
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 function GateElement({ hole, handleMenuClick, num }) {

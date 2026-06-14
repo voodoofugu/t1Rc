@@ -2,7 +2,7 @@ import React, { memo } from "react";
 import { createPortal } from "react-dom";
 
 import ItemBox from "../UIComponents/ItemBox";
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export default memo(function ItemNotiz({

@@ -1,7 +1,7 @@
 import React from "react";
 import nexus from "nexus";
 
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 import ImageBg from "../UIComponents/ImageBg";
 import Button from "../UIComponents/Button";

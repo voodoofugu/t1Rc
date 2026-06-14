@@ -1,6 +1,3 @@
 [submodule "titans_rc"]
 	path = titans_rc
 	url = git@github.com:hooligapps/titans_rc.git
-[submodule "morphing-scroll"]
-	path = morphing-scroll
-	url = git@github.com:voodoofugu/morphing-scroll.git

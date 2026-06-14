@@ -1,11 +1,9 @@
 import React from "react";
+import { MorphScroll } from "morphing-scroll";
 
 import nexus from "nexus";
-// import { Scroll } from "morphing-scroll";
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
 
 import ItemBox from "../UIComponents/ItemBox";
-// import ResCount from "../UIComponents/ResCount";
 import PersonAva from "../UIComponents/PersonAva";
 import girlsInfo from "../../../scripts/FapTitansScripts/date_girlsInfo";
 import Chat from "../UIComponents/Chat";
@@ -20,25 +18,6 @@ export const cssFiles = [
   "screen-unipop-subscription",
   "daiting-gifts-pop",
 ];
-
-// function multiply(a, b, c) {
-//   return a * b * c;
-// }
-// function curry(fn) {
-//   return function curried(...args) {
-//     if (args.length >= fn.length) {
-//       return fn.apply(this, args);
-//     }
-//     return (...nextArgs) => curried(...args, ...nextArgs);
-//   };
-// }
-
-// const curriedMultiply = curry(multiply);
-// console.log(curriedMultiply(2)(3)(4));
-
-function FakeComponent() {
-  return null;
-}
 
 export default function Dating({ pageName, children }) {
   return (
@@ -223,13 +202,9 @@ const GirlDependencies = ({ girlsInfo }) => {
         />
       </div>
 
-      {/* <div className="girlMood">
-      </div> */}
       <MorphScroll
         className="scrollAvatars"
         size={[104, 494]}
-        // size={[290, 190]}
-        // objectsSize={"firstChild"}
         objectsSize={[86, 86]}
         gap={10}
         wrapperMargin={[0, 10]}
@@ -239,34 +214,9 @@ const GirlDependencies = ({ girlsInfo }) => {
         progressTrigger={{
           wheel: true,
           progressElement: <ScrollThumb />,
-          // progressElement: [
-          //   <div className="sliderCircle" key="circle1" />,
-          //   <div className="sliderCircle" key="circle1" />,
-          //   <div className="sliderCircle" key="circle3" />,
-          // ],
-          // content: true,
-          // arrows: true,
         }}
         wrapperAlign="center"
-        // elementsAlign="center"
-        // elementsDirection="column"
-        // direction="hybrid"
-        // direction="x"
-        // rootMargin={[0, 0]}
-        // suspending
-        // fallback={<div>loading</div>}
-        // edgeGradient="#5b2914"
-        // render={{ type: "lazy" }}
-        // render={{ type: "virtual" }}
-        // emptyElements={{ mode: "clear" }}
-        // scrollPosition={{ value: "end" }}
-        // type="sliderMenu"
-        // type="slider"
-        // crossCount={4}
-        // scrollPosition={{ value: 86 }}
-        // scrollBarEdge={20}
       >
-        {/* <FakeComponent key="q1" /> */}
         {girlsInfo.map((item, index) => (
           <PersonAva
             key={item.id}
@@ -277,7 +227,6 @@ const GirlDependencies = ({ girlsInfo }) => {
             onClick={() => setGirlIndex(index)}
           />
         ))}
-        {/* <FakeComponent key="q2" /> */}
       </MorphScroll>
     </>
   );

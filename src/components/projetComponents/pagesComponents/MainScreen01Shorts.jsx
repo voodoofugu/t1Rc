@@ -1,6 +1,6 @@
 import nexus from "nexus";
 
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 import Button from "../UIComponents/Button";
 import FraimedTitle from "../UIComponents/FraimedTitle";
 import Collection from "../UIComponents/Collection";

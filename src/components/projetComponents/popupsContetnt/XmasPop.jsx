@@ -4,7 +4,7 @@ import nexus from "nexus";
 import ItemBox from "../UIComponents/ItemBox";
 import StoreItemBox from "../UIComponents/StoreItemBox";
 import ImageBg from "../UIComponents/ImageBg";
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";

@@ -7,6 +7,7 @@ import {
   watchWorkbenchCompile,
   workbenchCompile,
 } from "demo-workbench/node";
+
 import type {
   WorkbenchCompileOptions,
   WorkbenchCompileResult,
@@ -95,9 +96,7 @@ async function main() {
     },
   });
 
-  console.log(
-    `demo-workbench: style reload stream ${watcher.styleReloadUrl}`,
-  );
+  console.log(`demo-workbench: style reload stream ${watcher.styleReloadUrl}`);
 
   let isClosing = false;
   const closeWatcher = async () => {

@@ -3,7 +3,7 @@ import nexus from "nexus";
 
 import HeroBox from "../UIComponents/HeroBox";
 
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import heroBoxData from "../data/heroBoxData";

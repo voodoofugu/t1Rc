@@ -1,6 +1,6 @@
 import { useState, useMemo, useCallback } from "react";
 import nexus from "nexus";
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 
 import ItemBox from "../UIComponents/ItemBox";
 import ResCount from "../UIComponents/ResCount";

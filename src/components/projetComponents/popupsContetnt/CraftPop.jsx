@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import HeroMenuBox from "../UIComponents/HeroMenuBox";
 import ItemBox from "../UIComponents/ItemBox";
-import MorphScroll from "../../../../morphing-scroll/src/components/MorphScroll";
+import { MorphScroll } from "morphing-scroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 function ItemSection({ items, lastItem, arrow, plus1, plus2, completed }) {
