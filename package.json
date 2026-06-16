@@ -1,5 +1,6 @@
 {
-  "name": "voodoofugu",
+  "name": "t1Rc",
+  "description": "React shell for titans_rc project.",
   "author": "Georg Schilin",
   "version": "1.0.0",
   "main": "src/index.tsx",
@@ -10,8 +11,6 @@
   },
   "dependencies": {
     "demo-workbench": "1.0.0-beta.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "keytask-core": "^1.0.0",
     "morphing-scroll": "2.10.3",
     "nexus-state": "^3.1.0",
     "react": "^19.1.0",
@@ -28,6 +27,7 @@
     "esbuild-loader": "^4.1.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "html-webpack-plugin": "^5.6.0",
     "ts-node": "^10.9.2",

@@ -29,7 +29,6 @@
     "types/**/*.d.ts",
     "pathMap.ts",
     "eslint.config.mjs",
-    "tailwind.config.ts",
     "webpack.config.ts",
     "public/pixi/pixi.js",
     "public/pixi/pixi-spine-3.8.js"
