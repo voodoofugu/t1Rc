@@ -8,7 +8,7 @@ export const cssFiles = [
 ];
 
 export default function V2MainScreen23PortalMap({ pageName }) {
-  const currentPath = window.location.hash.substring(3).split("/")[0];
+  const currentPath = document.querySelector("title").innerHTML;
 
   useEffect(() => {
     if (pageName === currentPath) {
@@ -21,7 +21,7 @@ export default function V2MainScreen23PortalMap({ pageName }) {
       // закрытие попапов
       [
         ...document.querySelectorAll(
-          ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup"
+          ".m-popup, .ratingpop-box, .quest-popup, .popup, .reborn-popup",
         ),
       ].map((i) => {
         i.style.display = "none";
@@ -39,7 +39,7 @@ export default function V2MainScreen23PortalMap({ pageName }) {
       });
       [
         ...document.querySelectorAll(
-          ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-of-type(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn"
+          ".btn-close-x, .btn-close, .lbclose-btn, .ok-all-box, .openchest-btn-close, .color-btn.close, .ratingballon-box > div.color-btn, .error-popup > .btn-simple-gold, .btlpass-btn-box > div:nth-of-type(1), .fortuna-winpop2 > div.color-btn, .btlpass-info > div.color-btn",
         ),
       ].map((i) => {
         i.addEventListener("click", () => {
@@ -48,7 +48,7 @@ export default function V2MainScreen23PortalMap({ pageName }) {
           setTimeout(function () {
             re.style.display = "none";
             i.closest(
-              ".m-popup, .ratingpop-box, .quest-popup, .popup"
+              ".m-popup, .ratingpop-box, .quest-popup, .popup",
             ).style.display = "none";
             po.classList.remove("dialog-emersion-exit");
           }, 100);
