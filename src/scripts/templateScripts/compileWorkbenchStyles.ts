@@ -35,9 +35,8 @@ const options: WorkbenchCompileOptions = {
 
 function printResult(result: WorkbenchCompileResult, popupNames?: string[]) {
   if (result.styles) {
-    const files = result.styles.files.map((file) => file.outputFile).join(", ");
     console.log(
-      `✨ styles: compiled ${result.styles.files.length}${files ? ` (${files})` : ""}`,
+      `✨ styles: discovered ${result.styles.files.length} css file(s)`,
     );
   }
 

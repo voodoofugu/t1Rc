@@ -9,6 +9,12 @@
 - `demo-workbench` работает как локальный билд/демо-менеджер и помогает быстро переключаться между страницами и попапами.
 - `nexus` (`nexus-state`) обеспечивает глобальный стейт и действия, которые используются во всём приложении.
 
+## Инициализация submodule `titans_rc`
+
+```bash
+git submodule update --init --recursive
+```
+
 ## Как это устроено
 
 - `src/` — основной React-код.
@@ -16,7 +22,7 @@
 - `src/components/projetComponents/` — страницы, попапы и UI-компоненты Titans.
 - `nexus/` — глобальный стейт-менеджер: `nexus/nexusConfig.ts`, `nexus/actions`, `nexus/states`.
 - `titans_rc/` — оригинальные ресурсы проекта Titans: `img`, `styles`, `html` и т.д.
-- `demo-workbench/` подключён как локальный модуль и используется для страницы/стиля/навигации внутри демо.
+- `demo-workbench/` библиотека используется для отображения страницы/стиля/навигации внутри демо.
 - `conf/` и `webpack.config.ts` — сборка и резолверы, которые прокидывают `titans_rc` и `demo-workbench` в сборку.
 
 ## Что делает `demo-workbench`
@@ -64,6 +70,6 @@ npm run lint
 
 ## Полезные ссылки
 
-- `package.json` — локальные зависимости и скрипты.
-- `conf/resolvers.ts` — алиасы для `demo-workbench` и `nexus`.
-- `webpack.config.ts` — публичный путь к `titans_rc/img`.
+- `nexus-state` — [глобальный стейт-менеджер](https://github.com/voodoofugu/nexus-state).
+- `demo-workbench` — [демо-менеджер](https://github.com/voodoofugu/demo-workbench).
+- `morphing-scroll` — [библиотека сколла](https://github.com/voodoofugu/morphing-scroll).
