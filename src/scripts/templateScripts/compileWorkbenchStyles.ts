@@ -6,7 +6,7 @@ import {
   WORKBENCH_STYLE_RELOAD_MANIFEST_FILE,
   watchWorkbenchCompile,
   workbenchCompile,
-} from "demo-workbench/node";
+} from "demo-workbench/node"; // использовать /node не удобно
 
 import type {
   WorkbenchCompileOptions,

@@ -2,7 +2,6 @@ import React from "react";
 import nexus from "nexus";
 
 import ItemBox from "../UIComponents/ItemBox";
-import SVGIcon from "../UIComponents/SVGIcon";
 import Button from "../UIComponents/Button";
 import ProgressBar from "../UIComponents/ProgressBar";
 
@@ -157,7 +156,6 @@ export default function SAndLScreen({ pageName, children }) {
           backgroundImage: "url('../img/sAndL/map01.jpg')",
         }}
       ></div>
-      <SVGIcon svgID="arrow_circle_left" />
       <div className="sAndLWrap">
         <div className="sAndL">
           <SAndLSVGPlates

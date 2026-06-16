@@ -6,14 +6,13 @@
   "scripts": {
     "start": "ts-node --transpile-only ./node_modules/webpack/bin/webpack serve --env mode=development",
     "compileStyles": "ts-node src/scripts/templateScripts/compileWorkbenchStyles.ts",
-    "compileStyles:watch": "ts-node src/scripts/templateScripts/compileWorkbenchStyles.ts --watch",
-    "lint": "eslint ."
+    "compileStyles:watch": "ts-node src/scripts/templateScripts/compileWorkbenchStyles.ts --watch"
   },
   "dependencies": {
-    "demo-workbench": "file:../demo-workbench",
+    "demo-workbench": "1.0.0-beta.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "keytask-core": "^1.0.0",
-    "morphing-scroll": "^2.9.0",
+    "morphing-scroll": "2.10.3",
     "nexus-state": "^3.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -22,31 +21,20 @@
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
-    "@types/express": "^5.0.0",
-    "@types/jest": "^29.5.12",
     "@types/pixi.js": "^4.8.9",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "@types/webpack": "^5.28.5",
-    "@types/ws": "^8.5.10",
-    "css-loader": "^7.1.2",
-    "dotenv": "^16.4.5",
     "esbuild-loader": "^4.1.0",
     "eslint": "^9.33.0",
     "eslint-plugin-react": "^7.36.1",
-    "express": "^4.21.0",
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "html-webpack-plugin": "^5.6.0",
-    "jest": "^29.7.0",
-    "path-browserify": "^1.0.1",
-    "sass": "^1.71.1",
-    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "typescript-eslint": "^8.39.1",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.0",
-    "ws": "^8.17.0"
+    "webpack-dev-server": "^5.2.0"
   }
 }

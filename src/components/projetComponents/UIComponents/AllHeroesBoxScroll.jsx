@@ -34,12 +34,8 @@ export default function AllHeroesBoxScroll({ numX }) {
       progressTrigger={{
         wheel: true,
         progressElement: <ScrollThumb />,
-        // content: true,
       }}
       edgeGradient={{ color: "#584a49" }}
-      // render={{ type: "default" }}
-      // render={{ type: "lazy", stopLoadOnScroll: true }}
-      // render={{ type: "virtual", rootMargin: [400, 0, 0, 0] }}
       render={{ type: "virtual", trackVisibility: true }}
       scrollBarOnHover
       wrapperAlign={["center", "start"]}
@@ -48,13 +44,6 @@ export default function AllHeroesBoxScroll({ numX }) {
         clickTrigger: { selector: ".exit", delay: 220 },
       }}
       scrollPosition={null}
-      // fallback={<div style={{ color: "#fff", fontSize: "20px" }}>loading</div>}
-      // direction="x"
-      // direction="qweqwe" это показывает ошибку
-      // dragScroll
-      // scrollBarEdge={10}
-      // direction="hybrid"
-      // crossCount={5}
       wrapperMinSize={[472, 0]}
     >
       <EmptyElement />

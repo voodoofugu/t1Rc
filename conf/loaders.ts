@@ -2,21 +2,6 @@ import { ModuleOptions } from "webpack";
 import { BuildOptions } from "./types";
 
 export function loaders(options: BuildOptions): ModuleOptions["rules"] {
-  const isDev = options.mode === "development";
-
-  const cssLoader = {
-    test: /\.(c|sa|sc)ss$/i,
-    exclude: /src\/styles\/tailwind\/(?!output\.css)/,
-    use: {
-      loader: "css-loader",
-      options: {
-        modules: {
-          localIdentName: isDev ? "[local]" : "[local]",
-        },
-      },
-    },
-  };
-
   const fileLoader = {
     test: /\.(woff2?|jpe?g|png|webp|gif|svg)$/i,
     use: {
@@ -40,5 +25,5 @@ export function loaders(options: BuildOptions): ModuleOptions["rules"] {
     },
   };
 
-  return [cssLoader, fileLoader, esbuildLoader];
+  return [fileLoader, esbuildLoader];
 }
