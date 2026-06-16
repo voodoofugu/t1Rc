@@ -1,11 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from "react";
-
-/**
- * Хук для управления состоянием с использованием localStorage или sessionStorage.
- * @param {string} storageKey - Ключ, используемый для хранения в localStorage или sessionStorage.
- * @param {string} storageType - Тип хранилища: "local" или "session".
- * @returns {[string, (value: string) => void]} - Массив, содержащий текущее значение и функцию для его обновления.
- */
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 type DataT =
   | Record<string, unknown>
@@ -27,88 +20,79 @@ export default function useStorage(
     name: string;
     value: unknown;
     type: "local" | "session";
-  }) => void
+  }) => void,
 ) {
-  const [currentValues, setCurrentValues] = useState(() =>
-    storItem.reduce((acc, { name, type }) => {
-      const storageType = type === "local" ? localStorage : sessionStorage;
-      const storedValue = storageType.getItem(name);
-      acc[name] = storedValue ? JSON.parse(storedValue) : null;
-      return acc;
-    }, {} as Record<string, unknown>)
+  const restoredRef = useRef(false);
+
+  const [currentValues, setCurrentValues] = useState<Record<string, unknown>>(
+    () => {
+      if (typeof window === "undefined") return {};
+
+      return storItem.reduce(
+        (acc, { name, type = "session" }) => {
+          const storage = type === "local" ? localStorage : sessionStorage;
+          const storedValue = storage.getItem(name);
+
+          acc[name] = storedValue ? JSON.parse(storedValue) : null;
+
+          return acc;
+        },
+        {} as Record<string, unknown>,
+      );
+    },
   );
 
   useLayoutEffect(() => {
     storItem.forEach((item) => {
-      if (item.onLoad) {
-        const storageType =
-          item.type === "local" ? localStorage : sessionStorage;
-        const storedValue = storageType.getItem(item.name);
+      if (!item.onLoad) return;
 
-        if (storedValue) {
-          const parsedValue = JSON.parse(storedValue);
-          item.onLoad(parsedValue);
-        }
+      const storage = item.type === "local" ? localStorage : sessionStorage;
+
+      const storedValue = storage.getItem(item.name);
+
+      if (storedValue !== null) {
+        item.onLoad(JSON.parse(storedValue));
       }
     });
+
+    restoredRef.current = true;
   }, []);
 
   useEffect(() => {
-    if (
-      typeof window === "undefined" ||
-      !window.localStorage ||
-      !window.sessionStorage
-    ) {
-      console.warn("Storage is not available in this environment.");
-      return;
-    }
+    if (!restoredRef.current) return;
 
     storItem.forEach((item) => {
       try {
-        const storageType =
-          item.type === "local" ? localStorage : sessionStorage;
+        const storage = item.type === "local" ? localStorage : sessionStorage;
 
         if (item.remove) {
-          storageType.removeItem(item.name);
-          setCurrentValues((prev) => {
-            if (prev[item.name] !== null) {
-              return { ...prev, [item.name]: null };
-            }
-            return prev;
-          });
+          storage.removeItem(item.name);
+          setCurrentValues((prev) => ({ ...prev, [item.name]: null }));
           return;
         }
 
-        if (item.value) {
-          const serializedValue = JSON.stringify(item.value);
-          if (storageType.getItem(item.name) !== serializedValue) {
-            storageType.setItem(item.name, serializedValue);
-            setCurrentValues((prev) => ({ ...prev, [item.name]: item.value }));
-          }
-        } else {
-          storageType.removeItem(item.name);
+        if (!("value" in item)) return;
+
+        const serializedValue = JSON.stringify(item.value);
+
+        if (storage.getItem(item.name) !== serializedValue) {
+          storage.setItem(item.name, serializedValue);
+          setCurrentValues((prev) => ({
+            ...prev,
+            [item.name]: item.value,
+          }));
         }
 
-        // Вызов коллбека
-        if (callback) {
-          callback({
-            name: item.name,
-            value: item.value ?? null,
-            type: item.type || "session",
-          });
-        }
+        callback?.({
+          name: item.name,
+          value: item.value,
+          type: item.type || "session",
+        });
       } catch (error) {
-        console.error(
-          `Failed to save item "${item.name}" to ${
-            item.type || "local"
-          } storage:`,
-          error
-        );
+        console.error(`Failed to save item "${item.name}"`, error);
       }
     });
   }, [storItem, callback]);
 
   return currentValues;
 }
-
-export type StorageItemT = Parameters<typeof useStorage>[0];
