@@ -111,18 +111,22 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/hero-all/tithero-762/x2/tithero-4.jpg",
-        "Melt Rush",
+        "img/images/hero-all/tithero-781/x2/tithero-4.jpg",
+        "Thorn Kiss",
         [
-          "img/evPopArts/ice-cream-white.png",
-          "img/evPopArts/ice-cream-blue.png",
-          "img/evPopArts/ice-cream-brown.png",
-          "img/evPopArts/ice-cream-green.png",
-          "img/evPopArts/ice-cream-orange.png",
-          "img/evPopArts/ice-cream-lilac.png",
+          "img/evPopArts/rose-leaf-01.png",
+          "img/evPopArts/rose-leaf-02.png",
+          "img/evPopArts/rose-leaf-03.png",
+          "img/evPopArts/rose-leaf-04.png",
+          "img/evPopArts/rose-leaf-05.png",
+          "img/evPopArts/rose-leaf-06.png",
+          "img/evPopArts/rose-leaf-07.png",
+          "img/evPopArts/rose-leaf-08.png",
+          "img/evPopArts/rose-leaf-09.png",
+          "img/evPopArts/rose-leaf-10.png"
         ],
-        "img/evPopArts/ice-cream-box.png",
-        "img/bGs/beachBg8.jpg",
+        "img/evPopArts/rose-leaf-box.png",
+        "img/bGs/beachBg8_1.jpg",
       ],
     },
     {
@@ -183,6 +187,7 @@ export default memo(function RelicsPop({ event }) {
             top: "344px",
             left: "50%",
             width: "min-content",
+            minWidth: "170px",
             transform: "translateX(-80%)",
           }}
           changeDirectionArrow
