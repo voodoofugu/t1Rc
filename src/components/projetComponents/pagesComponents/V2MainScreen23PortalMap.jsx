@@ -70,9 +70,18 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
   const [mapNum, setMapNum] = useState(1);
   const [currentLoc, setCurrentLoc] = useState(1);
 
-  const currentLP = 6000;
+  const currentLP = 5488;
+  const nextLocStage = Math.ceil(currentLP / 1000);
 
   const currentPath = document.querySelector("title").innerHTML;
+  const currentMapData = mapsData[mapNum];
+
+  const isLocVisited = (locNum) => {
+    return currentMapData[locNum].visited;
+  };
+  const setLocVisited = (locNum) => {
+    currentMapData[locNum].visited = true;
+  };
 
   useEffect(() => {
     if (pageName === currentPath) {
@@ -214,13 +223,18 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
 
       <div className="portal-map-box">
         <div className={`map-locs-wrap map-0${mapNum}`}>
-          {mapsData[mapNum].map((name, i) => (
+          {currentMapData.map((loc, i) => (
             <LocBox
               key={i}
-              locName={name}
-              className={`${currentLP > 1000 * (i + 1) ? "" : "lock"}${currentLoc === i + 1 ? " active" : ""}`}
+              locName={loc.name}
+              className={`${currentLP > 1000 * i ? (isLocVisited(i) ? "" : "foropen") : "lock"}${currentLoc === i + 1 ? " active" : ""}`}
               locNum={i + 1}
-              setActiveLoc={() => setCurrentLoc(i + 1)}
+              setActiveLoc={() => {
+                // устанавливаю текущую локацию если она открыта
+                if (currentLP > 1000 * i) setCurrentLoc(i + 1);
+                // отмечаю что локация была посещена
+                if (!currentMapData[i].visited) setLocVisited(i);
+              }}
             >
               <div className="station-wrap">
                 <div className="station"></div>
@@ -243,13 +257,15 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
             </LocBox>
           ))}
 
-          <div className="inf-btn step5">
-            <div className="inf-text">LP 5000</div>
-          </div>
+          {currentMapData[nextLocStage - 1].visited && (
+            <div className={`inf-btn step${nextLocStage}`}>
+              <div className="inf-text">from {nextLocStage}000 LP</div>
+            </div>
+          )}
         </div>
 
         <div className="title-wrap">
-          <div className="header-title">{mapsData[mapNum][currentLoc]}</div>
+          <div className="header-title">{currentMapData[currentLoc].name}</div>
         </div>
         <div
           className={`arrow left${mapNum === 1 ? " unactive" : ""}`}
@@ -268,12 +284,19 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
                 mpopClass: "m-popup world-district",
                 popCont: "WorldDistrict",
                 popTit: "Watchtowers",
+                props: {
+                  mapNum: mapNum,
+                  locNum: currentLoc,
+                },
               },
             });
           }}
         >
           <div className="bar-scale">
-            <div className="bar-scale-patf" style={{ width: "40%" }}></div>
+            <div
+              className="bar-scale-patf"
+              style={{ width: `${(currentLP / 10000) * 100}%` }}
+            ></div>
           </div>
           <div className="bar-value">{currentLP}/10000 LP</div>
           <div className="bar-text">
