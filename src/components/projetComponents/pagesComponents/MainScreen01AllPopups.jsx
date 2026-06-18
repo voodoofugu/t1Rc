@@ -371,7 +371,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 "v2-xmas-chest-red",
                 "287:21:43",
                 {
-                  popTit: "XXXMAS Celebration Pass",
+                  popTit: "Golden Vice Pass",
                   popCont: "XmasPop",
                   props: { event: "xmas" },
                 },
