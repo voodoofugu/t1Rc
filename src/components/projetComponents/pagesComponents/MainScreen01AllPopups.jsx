@@ -368,7 +368,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "v2-xmas-chest-red",
+                "evPopArts/GoldenVicePass",
                 "287:21:43",
                 {
                   popTit: "Golden Vice Pass",
