@@ -111,7 +111,7 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/hero-all/tithero-781/x2/tithero-4.jpg",
+        "img/images/hero-all/tithero-781/x2/icons/tithero-4.jpg",
         "Thorn Kiss",
         [
           "img/evPopArts/rose-leaf-01.png",
@@ -123,7 +123,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/rose-leaf-07.png",
           "img/evPopArts/rose-leaf-08.png",
           "img/evPopArts/rose-leaf-09.png",
-          "img/evPopArts/rose-leaf-10.png"
+          "img/evPopArts/rose-leaf-10.png",
         ],
         "img/evPopArts/rose-leaf-box.png",
         "img/bGs/beachBg8_1.jpg",
