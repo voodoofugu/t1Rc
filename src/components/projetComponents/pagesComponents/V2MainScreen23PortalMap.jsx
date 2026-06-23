@@ -79,7 +79,7 @@ const LocBox = ({
 export default function V2MainScreen23PortalMap({ children, pageName }) {
   const [mapNum, setMapNum] = useState(1);
   const [currentLoc, setCurrentLoc] = useState(1);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [noticePosition, setNoticePosition] = useState(null);
 
   const currentLP = 11000;
   const currentMaxLP = 10000 * mapNum;
@@ -97,24 +97,29 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
   };
 
   // Обработчик наведения
-  const handleMouseOver = (i) => {
-    setHoveredIndex(i);
+  const handleMouseOver = (e) => {
+    if (e.target.classList.contains("open")) return;
+
+    const portalRect = document
+      .querySelector(".portal-map-box")
+      .getBoundingClientRect();
+    const targetRect = e.target.getBoundingClientRect();
+
+    setNoticePosition({
+      top: targetRect.top - portalRect.top + targetRect.height / 2,
+      left: targetRect.left - portalRect.left + targetRect.width / 2,
+    });
   };
 
   // Обработчик ухода мыши
   const handleMouseLeave = () => {
-    setHoveredIndex(null);
+    setNoticePosition(null);
   };
 
   useEffect(() => {
     if (pageName === currentPath) {
-      // всплывашка
       const chests = document.querySelectorAll(".chest");
-      [...chests].map((chest, index) => {
-        if (chest.classList.contains("close")) {
-          chest.querySelector(".chest-notif").innerHTML = "LP 1000";
-        }
-
+      [...chests].map((chest) => {
         // переключаем состояния сундуков
         chest.addEventListener("click", () => {
           let currentClassName = "";
@@ -208,8 +213,6 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
                 // отмечаю что локация была посещена
                 if (!currentMapData[i].visited) setLocVisited(i);
               }}
-              onMouseOver={() => handleMouseOver(i)}
-              onMouseLeave={handleMouseLeave}
             >
               <div className="station-wrap">
                 <div className="station"></div>
@@ -222,11 +225,19 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
               </div>
               <div className="chest-wrap">
                 {/* "chest chest-1 ready" */}
-                <div className="chest chest-1 open">
-                  <div className="chest-notif">claim</div>
+                <div
+                  className="chest chest-1 open"
+                  onMouseOver={(e) => handleMouseOver(e, i)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="chest-notif">LP 1000</div>
                 </div>
-                <div className="chest chest-2 closed">
-                  <div className="chest-notif">claim</div>
+                <div
+                  className="chest chest-2 closed"
+                  onMouseOver={(e) => handleMouseOver(e, i)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="chest-notif">LP 1000</div>
                 </div>
               </div>
             </LocBox>
@@ -327,22 +338,24 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
         </div>
       </div>
 
-      {hoveredIndex !== null && (
+      {noticePosition && (
         <ItemNotiz
           pageName={pageName}
-          positiom={{ top: 10, left: 10 }}
+          positiom={noticePosition}
           items={[
             ["img/sAndL/ringIcn.png", 1],
             ["img/sAndL/necklaceIcn.png", 6],
             ["img/sAndL/jewelryBagIcn.png", 12],
             ["img/sAndL/heroKeyIcn.png", 88],
           ]}
-          onMouseOver={() => setHoveredIndex(hoveredIndex)}
+          onMouseOver={() => setNoticePosition(noticePosition)}
           onMouseLeave={() => {
-            setHoveredIndex(null);
+            setNoticePosition(null);
           }}
+          selectorToRender={`#${pageName}`}
         />
       )}
+
       {children}
     </div>
   );
