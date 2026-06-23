@@ -2,7 +2,7 @@ import nexus from "nexus";
 
 import Button from "../UIComponents/Button";
 
-export default function WorldDistrict({ mapNum, locNum }) {
+export default function WorldDistrict({ mapNum, locNum, locName }) {
   return (
     <>
       <Button
@@ -12,7 +12,7 @@ export default function WorldDistrict({ mapNum, locNum }) {
       />
 
       <div className={`map-locs-wrap map-0${mapNum}`}>
-        <div className="map-locs-title">District loot</div>
+        <div className="map-locs-title">{locName}</div>
         <div className="loc-box">
           <div className={`map-bg map-location${locNum}`}></div>
           <div className="lock-num-box">

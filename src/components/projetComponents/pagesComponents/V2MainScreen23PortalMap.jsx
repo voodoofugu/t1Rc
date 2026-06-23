@@ -4,6 +4,7 @@ import nexus from "nexus";
 import { mapsData, clipPathMap, maxLocNum } from "../data/portalMapData";
 
 import Button from "../UIComponents/Button";
+import ItemNotiz from "../UIComponents/ItemNotiz";
 
 export const cssFiles = [
   "screen-achiev",
@@ -32,7 +33,14 @@ const infoContent = (
   </ol>
 );
 
-const LocBox = ({ children, className, locNum, setActiveLoc }) => {
+const LocBox = ({
+  children,
+  className,
+  locNum,
+  setActiveLoc,
+  onMouseLeave,
+  onMouseOver,
+}) => {
   const clipPath =
     locNum < 4
       ? clipPathMap[locNum - 1]
@@ -46,6 +54,8 @@ const LocBox = ({ children, className, locNum, setActiveLoc }) => {
     <div
       className={`loc-box${className ? ` ${className}` : ""}`}
       onClick={setActiveLoc}
+      onMouseOver={onMouseOver}
+      onMouseLeave={onMouseLeave}
     >
       <div className={`map-bg map-location${locNum}`}>
         {[1, 2, 3, 9, 10].includes(locNum) && (
@@ -69,9 +79,12 @@ const LocBox = ({ children, className, locNum, setActiveLoc }) => {
 export default function V2MainScreen23PortalMap({ children, pageName }) {
   const [mapNum, setMapNum] = useState(1);
   const [currentLoc, setCurrentLoc] = useState(1);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const currentLP = 5488;
-  const nextLocStage = Math.ceil(currentLP / 1000);
+  const currentLP = 11000;
+  const currentMaxLP = 10000 * mapNum;
+  let nextLocStage = Math.ceil((currentLP - 10000 * (mapNum - 1)) / 1000);
+  if (nextLocStage < 0) nextLocStage = 1;
 
   const currentPath = document.querySelector("title").innerHTML;
   const currentMapData = mapsData[mapNum];
@@ -83,49 +96,23 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
     currentMapData[locNum].visited = true;
   };
 
+  // Обработчик наведения
+  const handleMouseOver = (i) => {
+    setHoveredIndex(i);
+  };
+
+  // Обработчик ухода мыши
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   useEffect(() => {
     if (pageName === currentPath) {
       // всплывашка
-      const popUp = document.querySelector(".chest-pop-up");
       const chests = document.querySelectorAll(".chest");
-      const win = document.querySelector(".main");
       [...chests].map((chest, index) => {
         if (chest.classList.contains("close")) {
           chest.querySelector(".chest-notif").innerHTML = "LP 1000";
-        }
-        if (!chest.classList.contains("open")) {
-          chest.addEventListener("mouseenter", () => {
-            // двигаем по X
-            popUp.style.transform = `translateX(${
-              chest.getBoundingClientRect().x -
-              win.getBoundingClientRect().x -
-              popUp.getBoundingClientRect().width / 2 +
-              chest.getBoundingClientRect().width / 2
-            }px)`;
-            // двигаем по Y
-            popUp.style.transform += ` translateY(${
-              chest.getBoundingClientRect().y - win.getBoundingClientRect().y
-            }px)`;
-
-            popUp.classList.add("active");
-
-            const addLeft = [0, 1, 2, 3];
-            if (addLeft.includes(index)) {
-              popUp.classList.add("left");
-            }
-            const addRigt = [16, 17, 18, 19];
-            if (addRigt.includes(index)) {
-              popUp.classList.add("right");
-            }
-            const center = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-            if (center.includes(index)) {
-              popUp.classList.remove("left");
-              popUp.classList.remove("right");
-            }
-          });
-          chest.addEventListener("mouseleave", () => {
-            popUp.classList.remove("active");
-          });
         }
 
         // переключаем состояния сундуков
@@ -161,30 +148,6 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
         });
       });
 
-      // тултип
-      const tooltip = document.querySelector(".tooltip-layer");
-      tooltip.style.display = "none";
-      const acHint = document.querySelector(".achiev-hint");
-      const popGirl = document.querySelectorAll(".pop-up-girl");
-      [...popGirl].map((popGirl) => {
-        popGirl.addEventListener("mouseenter", () => {
-          tooltip.style.display = "block";
-          acHint.style.left =
-            popGirl.getBoundingClientRect().x -
-            win.getBoundingClientRect().x -
-            acHint.getBoundingClientRect().width / 2 +
-            popGirl.getBoundingClientRect().width / 2 +
-            "px";
-          acHint.style.top =
-            popGirl.getBoundingClientRect().y -
-            win.getBoundingClientRect().y +
-            56 +
-            "px";
-        });
-        popUp.addEventListener("mouseleave", () => {
-          tooltip.style.display = "none";
-        });
-      });
       return;
     }
     return () => {};
@@ -193,10 +156,20 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
   const arrowHandler = (event) => {
     if (event.target.classList.contains("left")) {
       if (mapNum === 1) return;
-      setMapNum(mapNum - 1);
+
+      const newMapNum = mapNum - 1;
+      setMapNum(newMapNum);
+
+      if (!mapsData[newMapNum][0].visited) setCurrentLoc(0);
+      else setCurrentLoc(1);
     } else {
       if (mapNum === maxLocNum) return;
-      setMapNum(mapNum + 1);
+
+      const newMapNum = mapNum + 1;
+      setMapNum(newMapNum);
+
+      if (!mapsData[newMapNum][0].visited) setCurrentLoc(0);
+      else setCurrentLoc(1);
     }
   };
 
@@ -223,18 +196,20 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
 
       <div className="portal-map-box">
         <div className={`map-locs-wrap map-0${mapNum}`}>
-          {currentMapData.map((loc, i) => (
+          {currentMapData.map((_, i) => (
             <LocBox
               key={i}
-              locName={loc.name}
-              className={`${currentLP > 1000 * i ? (isLocVisited(i) ? "" : "foropen") : "lock"}${currentLoc === i + 1 ? " active" : ""}`}
+              className={`${currentLP > i * 1000 + 10000 * (mapNum - 1) ? (isLocVisited(i) ? "" : "foropen") : "lock"}${currentLoc === i + 1 ? " active" : ""}`}
               locNum={i + 1}
               setActiveLoc={() => {
                 // устанавливаю текущую локацию если она открыта
-                if (currentLP > 1000 * i) setCurrentLoc(i + 1);
+                if (currentLP > i * 1000 + 10000 * (mapNum - 1))
+                  setCurrentLoc(i + 1);
                 // отмечаю что локация была посещена
                 if (!currentMapData[i].visited) setLocVisited(i);
               }}
+              onMouseOver={() => handleMouseOver(i)}
+              onMouseLeave={handleMouseLeave}
             >
               <div className="station-wrap">
                 <div className="station"></div>
@@ -257,15 +232,17 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
             </LocBox>
           ))}
 
-          {currentMapData[nextLocStage - 1].visited && (
+          {nextLocStage < 10 && currentMapData[nextLocStage - 1].visited && (
             <div className={`inf-btn step${nextLocStage}`}>
-              <div className="inf-text">from {nextLocStage}000 LP</div>
+              <div className="inf-text">from {nextLocStage + 1}000 LP</div>
             </div>
           )}
         </div>
 
         <div className="title-wrap">
-          <div className="header-title">{currentMapData[currentLoc].name}</div>
+          <div className="header-title">
+            {`${currentLoc ? currentMapData[currentLoc - 1].name : "—"}`}
+          </div>
         </div>
         <div
           className={`arrow left${mapNum === 1 ? " unactive" : ""}`}
@@ -278,15 +255,18 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
         <div
           className="progres-bar"
           onClick={() => {
+            if (!currentLoc) return;
+
             nexus.acts.handlePopup({
               type: "open",
               data: {
                 mpopClass: "m-popup world-district",
                 popCont: "WorldDistrict",
-                popTit: "Watchtowers",
+                popTit: "District loot",
                 props: {
                   mapNum: mapNum,
                   locNum: currentLoc,
+                  locName: currentMapData[currentLoc - 1].name,
                 },
               },
             });
@@ -295,10 +275,12 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
           <div className="bar-scale">
             <div
               className="bar-scale-patf"
-              style={{ width: `${(currentLP / 10000) * 100}%` }}
+              style={{ width: `${(currentLP / currentMaxLP) * 100}%` }}
             ></div>
           </div>
-          <div className="bar-value">{currentLP}/10000 LP</div>
+          <div className="bar-value">
+            {currentLP}/{currentMaxLP} LP
+          </div>
           <div className="bar-text">
             This shows the progress of the location or LP
           </div>
@@ -345,38 +327,22 @@ export default function V2MainScreen23PortalMap({ children, pageName }) {
         </div>
       </div>
 
-      <div className="chest-pop-up">
-        <div className="pop-up-bg"></div>
-        <div className="chests-scroll-box">
-          <div className="chests-scroll">
-            <div className="pop-up-girl girl-1">
-              <img
-                src="img/images/hero-all/tithero-5007/x1/ava/tithero-5007-1-ava.jpg"
-                loading="lazy"
-              />
-              <div className="value">100</div>
-            </div>
-            <div className="pop-up-girl girl-2">
-              <img src="img/evPopArts/potion_red.png" loading="lazy" />
-              <div className="value">100</div>
-            </div>
-            <div className="pop-up-girl girl-3">
-              <img
-                src="img/images/hero-all/tithero-5009/x1/ava/tithero-5009-1-ava.jpg"
-                loading="lazy"
-              />
-              <div className="value">100</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="tooltip-layer">
-        <div className="achiev-hint">
-          <div className="tooltip">
-            <div className="descr">инфа сотка</div>
-          </div>
-        </div>
-      </div>
+      {hoveredIndex !== null && (
+        <ItemNotiz
+          pageName={pageName}
+          positiom={{ top: 10, left: 10 }}
+          items={[
+            ["img/sAndL/ringIcn.png", 1],
+            ["img/sAndL/necklaceIcn.png", 6],
+            ["img/sAndL/jewelryBagIcn.png", 12],
+            ["img/sAndL/heroKeyIcn.png", 88],
+          ]}
+          onMouseOver={() => setHoveredIndex(hoveredIndex)}
+          onMouseLeave={() => {
+            setHoveredIndex(null);
+          }}
+        />
+      )}
       {children}
     </div>
   );
