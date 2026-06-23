@@ -353,6 +353,7 @@ export default memo(function SAndLSVGPlates({
           onMouseLeave={() => {
             setHoveredIndex(null);
           }}
+          selectorToRender="#SAndLScreen .sAndL"
         />
       )}
     </svg>

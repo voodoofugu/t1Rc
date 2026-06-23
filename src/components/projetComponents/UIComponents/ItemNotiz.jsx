@@ -6,11 +6,11 @@ import { MorphScroll } from "morphing-scroll";
 import ScrollThumb from "../UIComponents/ScrollThumb";
 
 export default memo(function ItemNotiz({
-  pageName,
   items,
   positiom,
   onMouseOver,
   onMouseLeave,
+  selectorToRender,
 }) {
   return (
     <>
@@ -53,7 +53,7 @@ export default memo(function ItemNotiz({
               </MorphScroll>
             </div>
           </div>,
-          document.querySelector(`#${pageName} .sAndL`),
+          document.querySelector(selectorToRender),
         )}
     </>
   );
