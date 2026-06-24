@@ -23,7 +23,6 @@ const options: WorkbenchCompileOptions = {
   styles: {
     inputDir: "titans_rc/styles/scss",
     // outputDir: "src/styles/css", // Original output directory
-    // isolateStyles: false,
     outputDir: "src/styles/workbench-css",
     assetUrlPrefix: "http://localhost:3000/img/",
     clean: true,

@@ -10,7 +10,8 @@
     "compileStyles:watch": "ts-node src/scripts/templateScripts/compileWorkbenchStyles.ts --watch"
   },
   "dependencies": {
-    "demo-workbench": "1.0.0-beta.0",
+    "chokidar": "^5.0.0",
+    "demo-workbench": "1.0.0-beta.1",
     "morphing-scroll": "^2.10.3",
     "nexus-state": "^3.1.0",
     "react": "^19.1.0",

@@ -1,6 +1,6 @@
 import DemoWorkbench from "demo-workbench";
 
-import ComponToLoad from "../projetComponents/UIComponents/ComponToLoad";
+import ComponToLoad from "./ComponToLoad";
 import Page404 from "../projetComponents/pagesComponents/Page404";
 
 const styleReloadManifestUrl =
@@ -45,7 +45,6 @@ export default function App() {
         "reset",
       ]}
       bodyBg="#9f8978"
-      baseCss="background: #9f8978;"
       renderDemoContent={(pageName) => <ComponToLoad pageName={pageName} />}
       notFoundComponent={Page404}
     />
