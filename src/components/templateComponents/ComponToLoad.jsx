@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import nexus from "nexus";
 
-import Popup from "./Popup.jsx";
-import Notification from "./Notification";
+import Popup from "../projetComponents/UIComponents/Popup.jsx";
+import Notification from "../projetComponents/UIComponents/Notification.jsx";
 
 export default function ComponToLoad({ pageName }) {
   useEffect(() => {
