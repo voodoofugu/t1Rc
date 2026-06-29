@@ -157,7 +157,14 @@ function NmPopContentChest({ hole }) {
   );
 }
 
+let scrollPos = 0;
 function NmPopContentMagic({ handleMenuClick, hole }) {
+  const firstRender = useRef(false);
+
+  useEffect(() => {
+    if (!firstRender.current) firstRender.current = true;
+  }, []);
+
   return (
     <div className="nm-pop-content">
       <div className="nmPopCount">
@@ -190,6 +197,10 @@ function NmPopContentMagic({ handleMenuClick, hole }) {
         type="slider"
         edgeGradient={true}
         direction="x"
+        onScrollValue={(left) => {
+          if (firstRender.current) scrollPos = left;
+        }}
+        scrollPosition={!firstRender.current && scrollPos ? scrollPos : null}
       >
         {elementsArr(15).map((v) => {
           return (
