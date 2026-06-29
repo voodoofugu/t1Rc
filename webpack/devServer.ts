@@ -20,14 +20,17 @@ export function devServer(options: BuildOptions): DevServerConfiguration {
       {
         directory: path.join("titans_rc", "img"),
         publicPath: "/img/",
+        watch: false,
       },
       {
         directory: path.join("public", "pixi"),
         publicPath: "/pixi/",
+        watch: false,
       },
       {
         directory: path.join("public", "pixi-src"),
         publicPath: "/pixi-src/",
+        watch: false,
       },
       {
         directory: path.join("src", "styles", "workbench-css"),
