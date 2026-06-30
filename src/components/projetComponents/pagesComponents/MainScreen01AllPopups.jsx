@@ -368,10 +368,10 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "evPopArts/GoldenVicePass",
+                "evPopArts/Celestial_Desire_icon",
                 "287:21:43",
                 {
-                  popTit: "Golden Vice Pass",
+                  popTit: "CELESTIAL DESIRE PASS",
                   popCont: "XmasPop",
                   props: { event: "xmas" },
                 },

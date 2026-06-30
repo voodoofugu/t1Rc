@@ -9,7 +9,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";
 
-const girlImg = "images/hero-all/tithero-787/icons/break-girl";
+const girlImg = "images/hero-all/tithero-791/icons/break-girl";
 
 function XmasPop1({ setNewPopClass }) {
   return (
