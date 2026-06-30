@@ -22,7 +22,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "images/hero-all/tithero-430/icons/break-girl"
               : event === "summer"
-                ? "images/hero-all/tithero-786/icons/break-girl4"
+                ? "images/hero-all/tithero-794/icons/break-girl4"
                 : event === "autumn"
                   ? "images/hero-all/tithero-639/icons/break-girl"
                   : event === "sexpedition"
@@ -41,7 +41,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "img/bGs/march-pop-bg.jpg"
               : event === "summer"
-                ? "img/bGs/swimmingPoolBg.jpg"
+                ? "img/bGs/swimmingPoolBg02.jpg"
                 : event === "autumn"
                   ? "img/bGs/cityBg.jpg"
                   : event === "sexpedition"
@@ -56,11 +56,11 @@ export default function BtlPass({ event }) {
         : event === "bf"
           ? "ic-tickets-bf-1"
           : event === "vl"
-            ? "evPopArts/ic-black_orchid-01"
+            ? "evPopArts/ic-bounty_heat-01"
             : event === "spring"
               ? "ic-march-flower-dark-blue"
               : event === "summer"
-                ? "evPopArts/ic-black_orchid-01"
+                ? "evPopArts/ic-bounty_heat-01"
                 : event === "autumn"
                   ? "evPopArts/lipsCoin_1"
                   : event === "sexpedition"
@@ -100,9 +100,9 @@ export default function BtlPass({ event }) {
             ? [
                 "BuyShop",
                 {
-                  img1: "evPopArts/ic-black_orchid-01",
-                  img2: "evPopArts/ic-black_orchid-02",
-                  img3: "evPopArts/ic-black_orchid-03",
+                  img1: "evPopArts/ic-bounty_heat-01",
+                  img2: "evPopArts/ic-bounty_heat-02",
+                  img3: "evPopArts/ic-bounty_heat-03",
                 },
               ]
             : event === "spring"
@@ -118,9 +118,9 @@ export default function BtlPass({ event }) {
                 ? [
                     "BuyShop",
                     {
-                      img1: "evPopArts/ic-black_orchid-01",
-                      img2: "evPopArts/ic-black_orchid-02",
-                      img3: "evPopArts/ic-black_orchid-03",
+                      img1: "evPopArts/ic-bounty_heat-01",
+                      img2: "evPopArts/ic-bounty_heat-02",
+                      img3: "evPopArts/ic-bounty_heat-03",
                     },
                   ]
                 : event === "sexpedition"
