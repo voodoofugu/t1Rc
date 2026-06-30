@@ -20,7 +20,7 @@ function XmasPop1({ setNewPopClass }) {
       <div className="xmas-box-all">
         <div className="xmas-collect-box-all">
           <div className="xmas-collect-box">
-            <div className="xmas-collect-box-text">SIREN STRINGS PASS</div>
+            <div className="xmas-collect-box-text">Claim rare rewards and irresistible heroines!</div>
           </div>
           <div className="xmas-squad-holder">
             <ItemBox
@@ -172,7 +172,7 @@ function XmasPop2({ setNewPopClass }) {
             currencyIcon="img/ic-diamond.png"
             buyValue="18"
           >
-            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+            <ItemBox itemPic="img/evPopArts/celestial_desire_box.png" />
           </StoreItemBox>
 
           <StoreItemBox
@@ -180,7 +180,7 @@ function XmasPop2({ setNewPopClass }) {
             currencyIcon="img/ic-diamond.png"
             buyValue="43"
           >
-            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+            <ItemBox itemPic="img/evPopArts/celestial_desire_box.png" />
           </StoreItemBox>
 
           <StoreItemBox
@@ -188,7 +188,7 @@ function XmasPop2({ setNewPopClass }) {
             currencyIcon="img/ic-diamond.png"
             buyValue="63"
           >
-            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+            <ItemBox itemPic="img/evPopArts/celestial_desire_box.png" />
           </StoreItemBox>
 
           <StoreItemBox
@@ -197,7 +197,7 @@ function XmasPop2({ setNewPopClass }) {
             buyValue="sold"
             check
           >
-            <ItemBox itemPic="img/v2-xmas-chest-red.png" />
+            <ItemBox itemPic="img/evPopArts/celestial_desire_box.png" />
           </StoreItemBox>
         </div>
       </div>
@@ -238,7 +238,7 @@ function XmasPop3({ setNewPopClass }) {
             <div className="xmas-prg-bar-num">30</div>
           </div>
           <div className="xmas-level-rew-pic">
-            <img src="img/v2-xmas-chest-red.png" loading="lazy" />
+            <img src="img/evPopArts/celestial_desire_box.png" loading="lazy" />
           </div>
           <div className="xmas-level-rew-num-check"></div>
           <div className="color-btn green">
@@ -251,7 +251,7 @@ function XmasPop3({ setNewPopClass }) {
             <div className="xmas-prg-bar-num">70</div>
           </div>
           <div className="xmas-level-rew-pic">
-            <img src="img/v2-xmas-chest-red.png" loading="lazy" />
+            <img src="img/evPopArts/celestial_desire_box.png" loading="lazy" />
           </div>
           <div className="xmas-level-rew-num-check"></div>
           <div className="color-btn green">
@@ -264,7 +264,7 @@ function XmasPop3({ setNewPopClass }) {
             <div className="xmas-prg-bar-num">100</div>
           </div>
           <div className="xmas-level-rew-pic">
-            <img src="img/v2-xmas-chest-red.png" loading="lazy" />
+            <img src="img/evPopArts/celestial_desire_box.png" loading="lazy" />
           </div>
           <div className="xmas-level-rew-num-check"></div>
           <div className="color-btn green">
