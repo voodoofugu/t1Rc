@@ -491,7 +491,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             "Лето",
             [
               [
-                "evPopArts/ThornKiss",
+                "evPopArts/Golden_Mirage_icon",
                 "287:21:43",
                 {
                   mpopClass: "m-popup main-relics-pop summer contentOnly",

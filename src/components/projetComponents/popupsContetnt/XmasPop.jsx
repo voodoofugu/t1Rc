@@ -114,12 +114,12 @@ function XmasPop1({ setNewPopClass }) {
             quest
           </div>
         </div>
-        <div
+        {/* <div
           className="color-btn green"
           onClick={() => nexus.acts.handlePopup({ type: "close" })}
         >
           <div className="color-btn-text">close</div>
-        </div>
+        </div> */}
         <div className="color-btn shop">
           <div
             className="color-btn-text"
@@ -131,6 +131,7 @@ function XmasPop1({ setNewPopClass }) {
           </div>
         </div>
       </div>
+      <div class="btn-close-x"></div>
     </>
   );
 }
