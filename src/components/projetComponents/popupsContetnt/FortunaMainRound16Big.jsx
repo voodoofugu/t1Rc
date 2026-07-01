@@ -12,7 +12,7 @@ export default function FortunaMainRound16Big() {
 
   return (
     <>
-      <ImageBg className="bG framedBg" img="img/bGs/beachBg10.jpg" />
+      <ImageBg className="bG framedBg" img="img/bGs/wave_beach01.jpg" />
 
       <FraimedTitle
         className="cornersTop"
@@ -101,7 +101,7 @@ export default function FortunaMainRound16Big() {
 
       <ImageBg
         className="girl"
-        img="img/images/hero-all/tithero-785/icons/break-girl4.png"
+        img="img/images/hero-all/tithero-808/icons/break-girl4.png"
       />
 
       <div className="fortuna-main-box">
