@@ -1,4 +1,4 @@
-import { createReactNexus } from "nexus-state";
+import { createReactNexus } from "nexus-state/react";
 
 import handlePopup from "./actions/handlePopup";
 

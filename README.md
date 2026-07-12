@@ -27,7 +27,7 @@ git submodule update --init --recursive
 
 ## Что делает `demo-workbench`
 
-- Загружает страницы по имени через `demoLoader`.
+- Загружает страницы из generated manifest (`myDemos.js`).
 - Загружает CSS-стили через `styleLoader`.
 - Подключает базовые файлы CSS (`baseCssFiles`).
 - Отвечает за удобный интерфейс демо, переключение страниц и проверку UI.
@@ -49,8 +49,8 @@ npm run start
 Для сборки стилей:
 
 ```bash
-npm run compileStyles
-npm run compileStyles:watch
+npm run workbenchCompile
+npm run workbenchCompile:watch
 ```
 
 Для проверки кода:

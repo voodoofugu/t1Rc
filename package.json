@@ -6,14 +6,13 @@
   "main": "src/index.tsx",
   "scripts": {
     "start": "ts-node --transpile-only ./node_modules/webpack/bin/webpack serve --env mode=development",
-    "compileStyles": "ts-node src/scripts/templateScripts/compileWorkbenchStyles.ts",
-    "compileStyles:watch": "ts-node src/scripts/templateScripts/compileWorkbenchStyles.ts --watch"
+    "workbenchCompile": "ts-node --transpile-only src/scripts/templateScripts/workbenchCompile.ts",
+    "workbenchCompile:watch": "ts-node --transpile-only src/scripts/templateScripts/workbenchCompile.ts --watch"
   },
   "dependencies": {
-    "chokidar": "^5.0.0",
-    "demo-workbench": "^1.0.0-beta.1",
-    "morphing-scroll": "^2.10.3",
-    "nexus-state": "^3.1.0",
+    "demo-workbench": "^1.0.3",
+    "morphing-scroll": "^2.10.6",
+    "nexus-state": "^4.0.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-refresh": "^0.16.0"
