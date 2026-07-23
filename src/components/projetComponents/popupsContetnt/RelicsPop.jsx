@@ -111,7 +111,7 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/hero-all/tithero-788/x2/tithero-4.jpg",
+        "img/images/hero-all/tithero-798/x2/tithero-3.jpg",
         "Golden Mirage",
         [
           "img/evPopArts/gem-01.png",
@@ -126,7 +126,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/gem-10.png",
         ],
         "img/evPopArts/gems-box.png",
-        "img/bGs/city_bk01.jpg",
+        "img/bGs/balkon01.jpg",
       ],
     },
     {
