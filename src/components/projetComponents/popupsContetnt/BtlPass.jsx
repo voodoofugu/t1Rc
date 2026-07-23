@@ -22,7 +22,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "images/hero-all/tithero-430/icons/break-girl"
               : event === "summer"
-                ? "images/hero-all/tithero-794/icons/break-girl4"
+                ? "images/hero-all/tithero-825/icons/break-girl4"
                 : event === "autumn"
                   ? "images/hero-all/tithero-639/icons/break-girl"
                   : event === "sexpedition"
@@ -41,7 +41,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "img/bGs/march-pop-bg.jpg"
               : event === "summer"
-                ? "img/bGs/swimmingPoolBg02.jpg"
+                ? "img/bGs/interior01.jpg"
                 : event === "autumn"
                   ? "img/bGs/cityBg.jpg"
                   : event === "sexpedition"
@@ -60,7 +60,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "ic-march-flower-dark-blue"
               : event === "summer"
-                ? "evPopArts/ic-bounty_heat-01"
+                ? "evPopArts/daemon_medalion"
                 : event === "autumn"
                   ? "evPopArts/lipsCoin_1"
                   : event === "sexpedition"
@@ -100,9 +100,9 @@ export default function BtlPass({ event }) {
             ? [
                 "BuyShop",
                 {
-                  img1: "evPopArts/ic-bounty_heat-01",
-                  img2: "evPopArts/ic-bounty_heat-02",
-                  img3: "evPopArts/ic-bounty_heat-03",
+                  img1: "evPopArts/ic-crimson_t-01",
+                  img2: "evPopArts/ic-crimson_t-02",
+                  img3: "evPopArts/ic-crimson_t-03",
                 },
               ]
             : event === "spring"
@@ -118,9 +118,9 @@ export default function BtlPass({ event }) {
                 ? [
                     "BuyShop",
                     {
-                      img1: "evPopArts/ic-bounty_heat-01",
-                      img2: "evPopArts/ic-bounty_heat-02",
-                      img3: "evPopArts/ic-bounty_heat-03",
+                      img1: "evPopArts/ic-crimson_t-01",
+                      img2: "evPopArts/ic-crimson_t-02",
+                      img3: "evPopArts/ic-crimson_t-03",
                     },
                   ]
                 : event === "sexpedition"
@@ -202,6 +202,10 @@ export default function BtlPass({ event }) {
             </div>
           </div>
           <div className="squad-holder">
+            <ItemBox
+              className={`cardAva`}
+              itemPic="img/evPopArts/daemon_medalion.png"
+            />
             <ItemBox
               className={`cardAva`}
               itemPic="img/images/hero-all/tithero-00/x2/ava/tithero-ava-1.jpg"
