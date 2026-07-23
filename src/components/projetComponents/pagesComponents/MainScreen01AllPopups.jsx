@@ -368,10 +368,10 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "evPopArts/Celestial_Desire_icon",
+                "evPopArts/Tropical_Allure",
                 "287:21:43",
                 {
-                  popTit: "CELESTIAL DESIRE PASS",
+                  popTit: "TROPICAL ALLURE PASS",
                   popCont: "XmasPop",
                   props: { event: "xmas" },
                 },
