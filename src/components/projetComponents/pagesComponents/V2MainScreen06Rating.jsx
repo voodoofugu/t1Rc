@@ -601,7 +601,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         </div>
                         <div className="card-girl-box">
                           <img
-                            src="img/images/hero-all/tithero-05/x1/tithero-05-1.jpg"
+                            src="img/trophy/rating/girl01.jpg"
                             loading="lazy"
                           />
                         </div>
@@ -696,7 +696,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         <div className="rating-card-girl-name">Акэми Имма</div>
                         <div className="card-girl-box">
                           <img
-                            src="img/images/hero-all/tithero-13/x1/tithero-13-1.jpg"
+                            src="img/trophy/rating/girl03.jpg"
                             loading="lazy"
                           />
                         </div>
@@ -805,7 +805,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         <div className="rating-card-girl-name">Амая Карасу</div>
                         <div className="card-girl-box">
                           <img
-                            src="img/images/hero-all/tithero-25/x1/tithero-25-1.jpg"
+                            src="img/trophy/rating/girl02.jpg"
                             loading="lazy"
                           />
                         </div>
@@ -902,7 +902,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         </div>
                         <div className="card-girl-box">
                           <img
-                            src="img/images/superhero/suphero-04/x1/04sh-2.jpg"
+                            src="img/trophy/rating/girl04.jpg"
                             loading="lazy"
                           />
                         </div>
@@ -1009,7 +1009,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         <div className="girl-card-box">
                           <img
                             className="girl-card"
-                            src="img/images/hero-all/tithero-05/x1/tithero-05-1.jpg"
+                            src="img/trophy/rating/girl01.jpg"
                             loading="lazy"
                           />
                         </div>
@@ -1107,7 +1107,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         <div className="girl-card-box">
                           <img
                             className="girl-card"
-                            src="img/images/hero-all/tithero-13/x1/tithero-13-1.jpg"
+                            src="img/trophy/rating/girl03.jpg"
                             loading="lazy"
                           />
                         </div>
@@ -1219,7 +1219,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         <div className="girl-card-box">
                           <img
                             className="girl-card"
-                            src="img/images/hero-all/tithero-25/x1/tithero-25-1.jpg"
+                            src="img/trophy/rating/girl02.jpg"
                             loading="lazy"
                           />
                         </div>
@@ -1318,7 +1318,7 @@ export default function V2MainScreen06Rating({ pageName }) {
                         <div className="girl-card-box">
                           <img
                             className="girl-card"
-                            src="img/images/superhero/suphero-04/x1/04sh-2.jpg"
+                            src="img/trophy/rating/girl04.jpg"
                             loading="lazy"
                           />
                         </div>

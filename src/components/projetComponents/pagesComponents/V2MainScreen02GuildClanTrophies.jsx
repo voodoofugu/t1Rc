@@ -34,16 +34,16 @@ export default function V2MainScreen02GuildClanTrophies({
                     className="titans-garage-item-inner"
                     style={{
                       backgroundImage:
-                        "url('../img/images/back/clan/bg_01.jpg')",
+                        "url('../img/trophy/trophy/002_3.jpg')",
                     }}
                   >
-                    <div className="titans-garage-item-image">
+                    {/* <div className="titans-garage-item-image">
                       <img
-                        src="img/trophy/trophy/002_1.png"
+                        src="img/trophy/trophy/002_3.jpg"
                         alt=""
                         loading="lazy"
                       />
-                    </div>
+                    </div> */}
                     <div className="stars">
                       <div className="star checked"></div>
                       <div className="star"></div>
@@ -80,16 +80,16 @@ export default function V2MainScreen02GuildClanTrophies({
                     className="titans-garage-item-inner"
                     style={{
                       backgroundImage:
-                        "url('../img/images/back/clan/bg_02.jpg')",
+                        "url('../img/trophy/trophy/003_3.jpg')",
                     }}
                   >
-                    <div className="titans-garage-item-image">
+                    {/* <div className="titans-garage-item-image">
                       <img
-                        src="img/trophy/trophy/003_1.png"
+                        src="img/trophy/trophy/003_2.png"
                         alt=""
                         loading="lazy"
                       />
-                    </div>
+                    </div> */}
                     <div className="stars">
                       <div className="star"></div>
                       <div className="star"></div>
@@ -131,16 +131,16 @@ export default function V2MainScreen02GuildClanTrophies({
                     className="titans-garage-item-inner"
                     style={{
                       backgroundImage:
-                        "url('../img/images/back/clan/bg_03.jpg')",
+                        "url('../img/trophy/trophy/004_3.jpg')",
                     }}
                   >
-                    <div className="titans-garage-item-image">
+                    {/* <div className="titans-garage-item-image">
                       <img
-                        src="img/trophy/trophy/004_1.png"
+                        src="img/trophy/trophy/004_2.png"
                         alt=""
                         loading="lazy"
                       />
-                    </div>
+                    </div> */}
                     <div className="stars">
                       <div className="star checked"></div>
                       <div className="star checked"></div>
@@ -170,16 +170,16 @@ export default function V2MainScreen02GuildClanTrophies({
                     className="titans-garage-item-inner"
                     style={{
                       backgroundImage:
-                        "url('../img/images/back/clan/bg_04.jpg')",
+                        "url('../img/trophy/trophy/005_3.jpg')",
                     }}
                   >
-                    <div className="titans-garage-item-image">
+                    {/* <div className="titans-garage-item-image">
                       <img
                         src="img/trophy/trophy/006_1.png"
                         alt=""
                         loading="lazy"
                       />
-                    </div>
+                    </div> */}
                     <div className="stars"></div>
                     <div className="ability">Heavenly Mage</div>
                     <div className="titan-progress gold">
@@ -198,16 +198,16 @@ export default function V2MainScreen02GuildClanTrophies({
                     className="titans-garage-item-inner"
                     style={{
                       backgroundImage:
-                        "url('../img/images/back/clan/bg_07.jpg')",
+                        "url('../img/trophy/trophy/006_3.jpg')",
                     }}
                   >
-                    <div className="titans-garage-item-image">
+                    {/* <div className="titans-garage-item-image">
                       <img
                         src="img/trophy/trophy/007_1.png"
                         alt=""
                         loading="lazy"
                       />
-                    </div>
+                    </div> */}
                     <div className="stars"></div>
                     <div className="ability">Noble Keeper</div>
                     <div className="titan-progress gold">
