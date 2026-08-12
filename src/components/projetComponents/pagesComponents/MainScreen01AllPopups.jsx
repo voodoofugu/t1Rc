@@ -368,7 +368,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "evPopArts/Tropical_Allure",
+                "evPopArts/silk_and_sin_icon",
                 "287:21:43",
                 {
                   popTit: "TROPICAL ALLURE PASS",
@@ -491,7 +491,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             "Лето",
             [
               [
-                "evPopArts/Golden_Mirage_icon",
+                "evPopArts/forbidden_heaven",
                 "287:21:43",
                 {
                   mpopClass: "m-popup main-relics-pop summer contentOnly",
@@ -500,7 +500,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "evPopArts/crimsonTempless",
+                "evPopArts/wicked_garden_sidebar_icon",
                 "287:21:43",
                 {
                   mpopClass: "m-popup events-btlpass-pop contentOnly",

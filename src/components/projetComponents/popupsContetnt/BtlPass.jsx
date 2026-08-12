@@ -22,7 +22,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "images/hero-all/tithero-430/icons/break-girl"
               : event === "summer"
-                ? "images/hero-all/tithero-825/icons/break-girl4"
+                ? "images/hero-all/tithero-834/icons/break-girl4"
                 : event === "autumn"
                   ? "images/hero-all/tithero-639/icons/break-girl"
                   : event === "sexpedition"
@@ -41,7 +41,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "img/bGs/march-pop-bg.jpg"
               : event === "summer"
-                ? "img/bGs/interior01.jpg"
+                ? "img/bGs/forest01.jpg"
                 : event === "autumn"
                   ? "img/bGs/cityBg.jpg"
                   : event === "sexpedition"
@@ -60,7 +60,7 @@ export default function BtlPass({ event }) {
             : event === "spring"
               ? "ic-march-flower-dark-blue"
               : event === "summer"
-                ? "evPopArts/daemon_medalion"
+                ? "evPopArts/wicked_garden_icon"
                 : event === "autumn"
                   ? "evPopArts/lipsCoin_1"
                   : event === "sexpedition"
@@ -118,9 +118,9 @@ export default function BtlPass({ event }) {
                 ? [
                     "BuyShop",
                     {
-                      img1: "evPopArts/ic-crimson_t-01",
-                      img2: "evPopArts/ic-crimson_t-02",
-                      img3: "evPopArts/ic-crimson_t-03",
+                      img1: "evPopArts/wicked_garden_01",
+                      img2: "evPopArts/wicked_garden_02",
+                      img3: "evPopArts/wicked_garden_03",
                     },
                   ]
                 : event === "sexpedition"
@@ -204,7 +204,7 @@ export default function BtlPass({ event }) {
           <div className="squad-holder">
             <ItemBox
               className={`cardAva`}
-              itemPic="img/evPopArts/daemon_medalion.png"
+              itemPic="img/evPopArts/wicked_garden_icon.png"
             />
             <ItemBox
               className={`cardAva`}
