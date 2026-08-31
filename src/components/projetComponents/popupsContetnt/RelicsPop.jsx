@@ -111,7 +111,7 @@ export default memo(function RelicsPop({ event }) {
     },
     {
       summer: [
-        "img/images/superhero/suphero-1022/x2/sh-3.jpg",
+        "img/images/hero-all/tithero-838/x2/tithero-4.jpg",
         "Forbidden Heaven",
         [
           "img/evPopArts/culon-01.png",
@@ -126,7 +126,7 @@ export default memo(function RelicsPop({ event }) {
           "img/evPopArts/culon-10.png",
         ],
         "img/evPopArts/culons_all.png",
-        "img/bGs/sky_balkon01.jpg",
+        "img/bGs/interior02.jpg",
       ],
     },
     {
