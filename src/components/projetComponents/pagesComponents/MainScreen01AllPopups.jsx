@@ -368,7 +368,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "evPopArts/silk_and_sin_icon",
+                "evPopArts/enchanted_lust_pass_icon",
                 "287:21:43",
                 {
                   popTit: "TROPICAL ALLURE PASS",
@@ -500,7 +500,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
                 },
               ],
               [
-                "evPopArts/wicked_garden_sidebar_icon",
+                "evPopArts/sinful_sorcery_sidebar_icon",
                 "287:21:43",
                 {
                   mpopClass: "m-popup events-btlpass-pop contentOnly",

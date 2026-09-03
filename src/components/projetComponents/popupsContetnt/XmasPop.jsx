@@ -9,7 +9,7 @@ import ScrollThumb from "../UIComponents/ScrollThumb";
 
 import elements from "../data/PopResValue";
 
-const girlImg = "images/hero-all/tithero-839/icons/break-girl";
+const girlImg = "images/hero-all/tithero-848/icons/break-girl4";
 
 function XmasPop1({ setNewPopClass }) {
   return (
@@ -25,7 +25,7 @@ function XmasPop1({ setNewPopClass }) {
           <div className="xmas-squad-holder">
             <ItemBox
               className="cardAva"
-              itemPic="img/evPopArts/silk_and_sin_box.png"
+              itemPic="img/evPopArts/enchanted_lust_pass_box.png"
             />
             <ItemBox
               className="cardAva"
