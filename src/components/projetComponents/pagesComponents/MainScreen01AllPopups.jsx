@@ -491,7 +491,7 @@ export default function MainScreen01AllPopups({ pageName, children }) {
             "Лето",
             [
               [
-                "evPopArts/forbidden_heaven",
+                "evPopArts/palace_of_desire",
                 "287:21:43",
                 {
                   mpopClass: "m-popup main-relics-pop summer contentOnly",
