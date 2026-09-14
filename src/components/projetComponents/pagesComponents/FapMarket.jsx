@@ -207,7 +207,7 @@ export default function FapMarket({ pageName, children }) {
         </div>
         <div className="textBubble">
           <div className="bubbleInner">
-            <div className="bubbleText">Make me happy and buy some more!</div>
+            <div className="bubbleText">Tempted? I can tell.</div>
           </div>
         </div>
         <div className="fapMarket_girl"></div>
