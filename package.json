@@ -15,17 +15,17 @@
   "dependencies": {
     "demo-workbench": "^1.0.3",
     "morphing-scroll": "^2.10.6",
-    "nexus-state": "^4.0.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-refresh": "^0.16.0"
+    "nexus-state": "^4.0.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-refresh": "^0.19.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.3",
     "@types/pixi.js": "^4.8.9",
-    "@types/react": "^19.0.4",
-    "@types/react-dom": "^19.0.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@types/webpack": "^5.28.5",
     "esbuild-loader": "^4.1.0",
     "eslint": "^9.33.0",
